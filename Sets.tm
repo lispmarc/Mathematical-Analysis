@@ -15570,25 +15570,25 @@
     <\associate|idx>
       <tuple|<tuple|axiom of extent>|<pageref|auto-3>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|\<cal-U\>>>|<pageref|auto-4>>
+      <tuple|<tuple|axiom of subsets>|<pageref|auto-4>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|A<big|cup>B>>|<pageref|auto-5>>
+      <tuple|<tuple|<with|mode|<quote|math>|\<cal-U\>>>|<pageref|auto-5>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|A<big|cap>B>>|<pageref|auto-6>>
+      <tuple|<tuple|<with|mode|<quote|math>|A<big|cup>B>>|<pageref|auto-7>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|\<emptyset\>>>|<pageref|auto-7>>
+      <tuple|<tuple|<with|mode|<quote|math>|A<big|cap>B>>|<pageref|auto-8>>
 
-      <tuple|<tuple|axiom of pairing>|<pageref|auto-10>>
+      <tuple|<tuple|<with|mode|<quote|math>|\<emptyset\>>>|<pageref|auto-9>>
 
-      <tuple|<tuple|cartesian product>|<pageref|auto-11>>
+      <tuple|<tuple|axiom of pairing>|<pageref|auto-11>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|A\<times\>B>>|<pageref|auto-12>>
+      <tuple|<tuple|cartesian product>|<pageref|auto-12>>
 
-      <tuple|<tuple|successor set>|<pageref|auto-14>>
+      <tuple|<tuple|<with|mode|<quote|math>|A\<times\>B>>|<pageref|auto-13>>
 
-      <tuple|<tuple|axiom of infinity>|<pageref|auto-15>>
+      <tuple|<tuple|successor set>|<pageref|auto-15>>
 
-      <tuple|<tuple|axiom of subsets>|<pageref|auto-16>>
+      <tuple|<tuple|axiom of infinity>|<pageref|auto-16>>
 
       <tuple|<tuple|axiom of union>|<pageref|auto-17>>
 
@@ -15732,13 +15732,13 @@
       <no-break><pageref|auto-2>
 
       1.2<space|2spc>Class operations <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-8>
+      <no-break><pageref|auto-6>
 
       1.3<space|2spc>Cartesian products <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-9>
+      <no-break><pageref|auto-10>
 
       1.4<space|2spc>Sets <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-13>
+      <no-break><pageref|auto-14>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|2<space|2spc>Partial
       Functions and Functions> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>

@@ -15,11 +15,12 @@
 
   <\note>
     Unless stated otherwise all the normed spaces in this chapter are assumed
-    to be vector space over the same field <math|\<bbb-K\>>. More specific if
-    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>
+    to be vector space over the same field <math|\<bbb-K\>>. For example if
+    we say that <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>
     and <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
-    are either both \ vector spaces over <math|\<bbb-R\>> or both vector
-    spaces over <math|\<bbb-C\>>.
+    are normed spaces then we assume that either <math|X> and <math|Y> are
+    both vector spaces over the field <math|\<bbb-R\>> or they are both
+    vector spaces over the field <math|\<bbb-C\>>.
   </note>
 
   <\note>
@@ -27,10 +28,8 @@
     not necessary open, this in contrast with most texts who assume that the
     domain is always open. Dropping the requirement that the domain is open
     will introduce extra complications related to the uniqueness of the
-    differentials and derivatives that are resolved using limit points and
-    tangent cones. In some cases the theorems, propositions or lemmas are not
-    valid for general domains and we still require that the domain is open or
-    we have to work with interior points of the domain.
+    differentials and derivatives. These will be resolved by using limit
+    points and tangent cones. If we
   </note>
 
   <section|Fréchet differentiability>
@@ -584,10 +583,10 @@
       <math|<around*|]|a,b|[>>, <math|<around*|[|a,\<infty\>|[>>,
       <math|<around*|]|a,\<infty\>|[>>, <math|<around*|]|-\<infty\>,a|]>> or
       <math|<around*|]|-\<infty\>,a|[>> where <math|a,b\<in\>\<bbb-R\>> with
-      <math|a\<less\>b> then evere element of <math|A> is automatical a limit
-      point of <math|A> [see theorem: <reference|topology every element of a
-      generalized interval is a limit point>] so in those cases the conition
-      that <math|x> is a limit point is automatically satisfied.
+      <math|a\<less\>b> then every element of <math|A> is automatically a
+      limit point of <math|A> [see theorem: <reference|topology every element
+      of a generalized interval is a limit point>] so in those cases the
+      condition that <math|x> is a limit point is automatically satisfied.
     </note>
   </definition>
 
@@ -637,10 +636,10 @@
       <math|<around*|]|a,b|[>>, <math|<around*|[|a,\<infty\>|[>>,
       <math|<around*|]|a,\<infty\>|[>>, <math|<around*|]|-\<infty\>,a|]>> or
       <math|<around*|]|-\<infty\>,a|[>> where <math|a,b\<in\>\<bbb-R\>> with
-      <math|a\<less\>b> then evere element of <math|A> is automatical a limit
-      point of <math|A> [see theorem: <reference|topology every element of a
-      generalized interval is a limit point>] so in those cases the conition
-      that <math|x> is a limit point is automatically satisfied.
+      <math|a\<less\>b> then every element of <math|A> is automatically a
+      limit point of <math|A> [see theorem: <reference|topology every element
+      of a generalized interval is a limit point>] so in those cases the
+      condition that <math|x> is a limit point is automatically satisfied.
     </note>
   </theorem>
 
@@ -946,7 +945,7 @@
         As <math|x> is a limit point of <math|B>, <math|B\<subseteq\>A> it
         follows from [theorem: <reference|topology limit points and subsets>]
         that <math|x> is a limit point of <math|A> which is a necessary
-        condition for the existence of the derivative of <math|f> ay
+        condition for the existence of the derivative of <math|f> at
         <math|x>.
       </note>
 
@@ -1034,8 +1033,8 @@
 
   \;
 
-  Derivating a function is a linear operation as is show in the following
-  theorem.
+  Differentiating a function is a linear operation as is show in the
+  following theorem.
 
   <\theorem>
     <label|diff (f+g)'=f'+g'>Let <math|<around*|\<langle\>|\<bbb-K\>,\<\|\|\>|\<rangle\>>>
@@ -5773,7 +5772,7 @@
   <\note>
     If <math|A> is a open set then <math|A<rsup|\<circ\>><below|=|<text|[theorem:
     <reference|topology open set and interior>]>>A> so that <math|x\<in\>A>
-    automatical implies <math|x\<in\>A<rsup|\<circ\>>>. So in this case we
+    automatically implies <math|x\<in\>A<rsup|\<circ\>>>. So in this case we
     just need the condition <math|x\<in\>A>. <math|>
   </note>
 
@@ -5886,7 +5885,7 @@
     </description>
   </proof>
 
-  Using the above theorem it is easy to prove that partial derivating is
+  Using the above theorem it is easy to prove that partial differentiating is
   local.
 
   <\corollary>
@@ -6708,7 +6707,7 @@
       L<around*|(|x+\<alpha\>\<cdot\>y,z|)>=<around*|(|x+\<alpha\>\<cdot\>y|)>\<cdot\>z=<around*|(|x\<cdot\>z|)>+\<alpha\>\<cdot\><around*|(|y\<cdot\>z|)>=L<around*|(|x,z|)>+\<alpha\>\<cdot\>L<around*|(|y,z|)>
     </equation*>
 
-    proving that <math|L> is bilinear or\ 
+    proving that <math|L> is bi-linear or\ 
 
     <\equation>
       <label|eq 16.20.181>L\<in\>Hom<around*|(|\<bbb-K\>,Y;Y|)>
@@ -6850,8 +6849,8 @@
       <label|eq 16.35.181>D<rsub|x><around*|(|f\<cdot\>g|)><around*|(|y|)>=f<around*|(|x|)>\<cdot\>D<rsub|x>g<around*|(|y|)>+D<rsub|x>f<around*|(|y|)>\<cdot\>g<around*|(|x|)>
     </equation>
 
-    Usinge [theorem: <reference|diff derivate and frechet differential>]
-    again it follows that
+    Using [theorem: <reference|diff derivate and frechet differential>] again
+    it follows that
 
     <\equation*>
       f\<cdot\>g<text| has a derivative at >x
@@ -8354,7 +8353,7 @@
   have that <math|S<rsub|A><around*|(|y|)>=X> so that
   <math|\<forall\>y\<in\>A> <math|D f<around*|(|y|)>=D<rsub|y>f\<in\>L<around*|(|X,Y|)>>
   and <math|D f> is a function from <math|A> to <math|L<around*|(|X,Y|)>>.
-  The <math|2>-times differentisl at <math|x> is then a element of
+  The <math|2>-times differential at <math|x> is then a element of
   <math|L<around*|(|X,L<around*|(|X,Y|)>|)>=L<rsub|2><around*|(|X;Y|)>>. This
   leads to the following definition.
 
@@ -8377,7 +8376,7 @@
 
       <item>For the normed space <math|<around*|\<langle\>|\<bbb-R\>,\<\|\|\>|\<rangle\>>>
       we have every set <math|A\<subseteq\>\<bbb-R\>> such that
-      <math|A\<subseteq\>A<rprime|'>> [see defintion: <reference|topology
+      <math|A\<subseteq\>A<rprime|'>> [see definition: <reference|topology
       limit point>] is differential domain.
 
       <item>For the normed space <math|<around*|\<langle\>|\<bbb-R\>,\<\|\|\>|\<rangle\>>>
@@ -8777,7 +8776,7 @@
   <\theorem>
     <label|diff C-infinity condition>Let <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
     <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
-    be normed spaces, a tangential spanning set <math|A\<subseteq\>X> and
+    be normed spaces, a differential domain set <math|A\<subseteq\>X> and
     <math|f<rigid|:A\<rightarrow\>Y>> a function \ 
 
     <\equation*>
@@ -9107,7 +9106,7 @@
       limit point>, <reference|topology every element of a generalized
       interval is a limit point>] it follows that
       <math|A\<subseteq\>A<rprime|'>>, hence in these cases the condition
-      <math|A\<subseteq\>A<rprime|'>> is satsified automatical.
+      <math|A\<subseteq\>A<rprime|'>> is satisfied automatically.
     </note>
   </definition>
 
@@ -9228,7 +9227,7 @@
     normed space is a limit point>, <reference|topology every element of a
     generalized interval is a limit point>] it follows that
     <math|A\<subseteq\>A<rprime|'>>, hence in these cases the condition
-    <math|A\<subseteq\>A<rprime|'>> is satsified automatical.
+    <math|A\<subseteq\>A<rprime|'>> is satisfied automatically.
   </note>
 
   <\proof>
@@ -9418,7 +9417,7 @@
           <reference|eq 16.161.9>]>><rsub|>>|<cell|\<varepsilon\>\<cdot\>h>>>>
         </eqnarray*>
 
-        Hencet <math|\<forall\>h\<in\>A<rsub|x<rsub|0>>> with
+        Hence <math|\<forall\>h\<in\>A<rsub|x<rsub|0>>> with
         <math|<around*|\||h|\|>\<less\>\<delta\>> we have
 
         <\equation>
@@ -9505,7 +9504,7 @@
   </proof>
 
   We can use the previous theorem to prove theorems about the derivative
-  using simalar theorems about the differential.\ 
+  using similar theorems about the differential.\ 
 
   <\theorem>
     <label|diff higher order derivativing is local>Let
@@ -9611,7 +9610,7 @@
       <math|k+1\<less\>n\<Rightarrow\>1\<less\>n-k> we have by definition
       that <math|\<forall\>x\<in\>A> <math|f> is
       <math|<around*|(|<around*|(|n-k|)>-1|)>>-times differentiable at
-      <math|x>. In particluar, as <math|x<rsub|0>\<in\>A>, <math|f> is
+      <math|x>. In particular, as <math|x<rsub|0>\<in\>A>, <math|f> is
       <math|<around*|(|<around*|(|n-k|)>-1|)>>-times differentiable at
       <math|x<rsub|0>>. As <math|n-<around*|(|k+1|)>=<around*|(|n-k|)>-1> it
       follows that <math|k+1\<in\>S<rsub|n>>.
@@ -9661,7 +9660,7 @@
       that <math|\<forall\>x\<in\>A> <math|f> has a
       <math|<around*|(|<around*|(|n-k|)>-1|)>>-times derivative at <math|x>.
       In particular, as <math|x<rsub|0>\<in\>A>, <math|f> has a
-      <math|<around*|(|<around*|(|n-k|)>-1|)>>-the derivate at
+      <math|<around*|(|<around*|(|n-k|)>-1|)>>-times derivative at
       <math|x<rsub|0>>. As <math|n-<around*|(|k+1|)>=<around*|(|n-k|)>-1> it
       follows that <math|k+1\<in\>S<rsub|n>>
     </description>
@@ -9735,8 +9734,8 @@
           <math|1>-times differentiable [hence Fréchet differentiable] at
           <math|x>. Using theorem [theorem: <reference|diff differentiable
           function is continuous>] it follows that <math|f> is continuous at
-          <math|x>. This proves that <math|f> is a contuous function or that
-          <math|f> is of class <math|C<rsup|0>>.
+          <math|x>. This proves that <math|f> is a continuous function or
+          that <math|f> is of class <math|C<rsup|0>>.
 
           <item*|<math|1\<less\>m>>As <math|f> is of class <math|C<rsup|n>>
           we have <math|\<forall\>x\<in\>A> that <math|f> is <math|n>-times
@@ -9752,7 +9751,7 @@
             defined by >D<rsup|<around*|[|n|]>>f<around*|(|y|)>=D<rsup|<around*|[|n|]>><rsub|y>f
           </equation*>
 
-          is Frechet differentiable at <math|x> or using [theorem:
+          is Fréchet differentiable at <math|x> or using [theorem:
           <reference|diff differentiable function is continuous>]
           <math|D<rsup|<around*|[|n|]>>f> is continuous at <math|x>. So
           <math|\<forall\>x\<in\>A> <math|D<rsup|<around*|[|n|]>>f> is
@@ -9954,7 +9953,7 @@
     </equation*>
 
     Let <math|x\<in\>A> then as <math|f> is <math|<around*|(|n+m|)>>-times
-    differenitable at <math|x> we have by [theorem: <reference|diff n+m
+    differentiable at <math|x> we have by [theorem: <reference|diff n+m
     differentiation>] that <math|D<rsup|<around*|[|n|]>>f> is <math|m>-times
     differentiable at <math|x> with <math|D<rsup|<around*|[|m|]>><rsub|x><around*|(|D<rsup|<around*|[|n|]>>f|)>=D<rsup|<around*|[|n+m|]>><rsub|x>f>.
     Hence we can define\ 
@@ -10260,7 +10259,7 @@
     of class <math|C<rsup|m>>.
   </proof>
 
-  The following theorems will be very usefull in proofs by induction.
+  The following theorems will be very usefully in proofs by induction.
 
   <\theorem>
     <label|diff D^f=D^(n-1)D^1f>Let <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
@@ -10335,7 +10334,7 @@
         >f<text| is >1<text|-times differentiable on >A<text| and
         >D<rsup|<around*|[|1|]>>f:A\<rightarrow\>L<around*|(|X,Y|)><text|
         defined by >D<rsup|<around*|[|1|]>>f<around*|(|x|)>=D<rsup|<around*|[|1|]>><rsub|x>f<text|
-        is ><around*|(|n-1|)><text|-times differetiable at <math|x\<in\>A>
+        is ><around*|(|n-1|)><text|-times differentiable at <math|x\<in\>A>
         then >f<text| is >n<text|-times differentiable at >x<text| with
         >D<rsup|<around*|[|n-1|]>><rsub|x><around*|(|D<rsup|<around*|[|1|]>>f|)>=D<rsup|<around*|[|n|]>><rsub|x>f|}>
       </equation*>
@@ -10558,7 +10557,7 @@
       <item*|<math|1\<Rightarrow\>2>>As <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>>
       we have that <math|1,n-1\<in\>\<bbb-N\>> and
       <math|n=1+<around*|(|n-1|)>> so that by [theorem: <reference|diff
-      f^(n+m)>] <math|> <math|f> has a <math|1>-times derivate on <math|A>
+      f^(n+m)>] <math|> <math|f> has a <math|1>-times derivative on <math|A>
       and\ 
 
       <\equation*>
@@ -10946,7 +10945,7 @@
         are Fréchet differentiable at <math|x> with
         <math|D<rsub|x><rsup|<around*|[|n+1|]>>f=D<rsub|x><rsup|><around*|(|D<rsup|<around*|[|n|]>>f|)>>
         and <math|D<rsub|x><rsup|<around*|[|n+1|]>>g=D<rsub|x><around*|(|D<rsup|<around*|[|n|]>>g|)>>.
-        Let <math|y\<in\>A> then ss <math|n\<in\>S> it follows that
+        Let <math|y\<in\>A> then as <math|n\<in\>S> it follows that
         <math|f+g> is <math|n>-times differentiable at <math|y> and
         <rigid|<math|D<rsub|y><rsup|<around*|[|n|]>><around*|(|f+g|)>=D<rsup|<around*|[|n|]>><rsub|y>f+D<rsub|y><rsup|<around*|[|n|]>>g>>.
         This allows us to define\ 
@@ -11472,7 +11471,7 @@
           defined by >f<rsup|<around*|(|n|)>><around*|(|y|)>=f<rsup|<around*|(|n|)>><rsub|y>
         </equation>
 
-        has a derivate at <math|x> with\ 
+        has a derivative at <math|x> with\ 
 
         <\equation>
           <label|eq 16.210.200>f<rsup|<around*|(|n+1|)>><rsub|x>=<around*|(|f<rsup|<around*|(|n|)>>|)><rprime|'><rsub|x>
@@ -12221,7 +12220,8 @@
       ><around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>,<around*|\<langle\>|Z,<around*|\<\|\|\>||\<\|\|\>><rsub|Z>|\<rangle\>><text|
       are normed spaces, >f:A\<rightarrow\>Y<text| is >n<text|-times
       differentiable at >x<rsub|0><text| and >L\<in\>L<around*|(|Y,Z|)><text|
-      then >L\<circ\>f<text| is >n<text|-times differentable at >x<rsub|0>|}>
+      then >L\<circ\>f<text| is >n<text|-times differentiable at
+      >x<rsub|0>|}>
     </equation*>
 
     then we have:\ 
@@ -12312,7 +12312,7 @@
     <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>,
     <math|<around*|\<langle\>|Z,<around*|\<\|\|\>||\<\|\|\>><rsub|Z>|\<rangle\>>>
     be normed spaces, <math|L\<in\>L<around*|(|Y,Z|)>>, a differential domain
-    set <math|A\<subseteq\>X> and <math|<rigid|f:A\<rightarrow\>Y>> ia
+    set <math|A\<subseteq\>X> and <math|<rigid|f:A\<rightarrow\>Y>> is
     function that is of class <math|C<rsup|n>> then <math|L\<circ\>f> is of
     class \ <math|C<rsup|n>>.
   </lemma>
@@ -12585,7 +12585,7 @@
           defined by >D<rsup|<around*|[|1|]>><around*|(|\<pi\><rsub|i>\<circ\>f|)><around*|(|y|)>=D<rsup|<around*|[|1|]>><rsub|y>f
         </equation*>
 
-        is <math|n>-times diffrentiable at <math|x>. Now for\ 
+        is <math|n>-times differentiable at <math|x>. Now for\ 
 
         <\equation>
           <label|eq 16.194.310><around*|(|D<rsup|<around*|[|1|]>><around*|(|\<pi\><rsub|1>\<circ\>f|)>,\<ldots\>,D<rsup|<around*|[|1|]>><around*|(|\<pi\><rsub|k>\<circ\>f|)>|)><rsub|\<ast\>>:A\<rightarrow\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>L<around*|(|X,Y<rsub|i>|)><text|><rsub|>
@@ -12981,7 +12981,7 @@
       <math|<around*|]|-\<infty\>,a|[>>, <math|<around*|[|a,b|]>>,
       <math|<around*|]|a,b|]>>, <math|<around*|[|a,b|[>> or
       <math|<around*|]|a,b|[>> then by [theorem: <reference|diff differential
-      domain examples>] <math|A>, <math|B> are automatical differential
+      domain examples>] <math|A>, <math|B> are automatically differential
       domain sets.
     </note>
   </theorem>
@@ -13290,7 +13290,7 @@
       <math|<around*|]|-\<infty\>,a|[>>, <math|<around*|[|a,b|]>>,
       <math|<around*|]|a,b|]>>, <math|<around*|[|a,b|[>> or
       <math|<around*|]|a,b|[>> then by [theorem: <reference|diff differential
-      domain examples>] <math|A>, <math|B> are automatical differential
+      domain examples>] <math|A>, <math|B> are automatically differential
       domain sets.
     </note>
   </theorem>
@@ -13686,7 +13686,7 @@
       is a open set and <math|x\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|x,y|)>\<subseteq\>A>
       it follows from [theorem: <reference|topology biggest open subset>]
       that <math|x\<in\>A<rsup|\<circ\>>> hence a local weak extremum is
-      automatical a interior point of <math|A>.
+      automatically a interior point of <math|A>.
     </note>
   </definition>
 
@@ -13708,7 +13708,7 @@
       [definition: <reference|diff minimum maximum>] and [theorem:
       <reference|topology interior point is a limit point in a normed space>]
       that <math|x> is a limit point of <math|A> which is a prerequisite for
-      the existance of a <with|font-series|bold|unique> derivative at
+      the existence of a <with|font-series|bold|unique> derivative at
       <math|x> [see definition: <reference|diff calculus derivate>].
     </note>
   </theorem>
@@ -13917,7 +13917,7 @@
     <math|x\<in\><around*|]|a,b|[>\<subseteq\><around*|[|a,b|]>> it follows
     from [theorem: <reference|topology biggest open subset>] that \ <math|x>
     is a limit point of <math|<around*|[|a,b|]>> which is a prerequisite for
-    the existance of a <with|font-series|bold|unique> derivative at <math|x>
+    the existence of a <with|font-series|bold|unique> derivative at <math|x>
     [see theorem: <reference|diff calculus derivate>].
   </note>
 
@@ -13944,7 +13944,7 @@
       have <math|f<around*|(|x|)>\<in\>f<around*|(|<around*|[|a,b|]>|)>=<around*|[|c,d|]>=<around*|{|k|}>>
       so that <math|f=C<rsub|k>>. As <math|a\<less\>b> there exist a
       <math|\<zeta\>\<in\><around*|]|a,b|[>> and we have for <math|\<zeta\>>
-      that <math|C<rsub|k>> is Fréchet diferentiable at <math|\<zeta\>> [see
+      that <math|C<rsub|k>> is Fréchet differentiable at <math|\<zeta\>> [see
       theorem: <reference|diff constant function is differentiable>] with
       <math|D<rsub|\<zeta\>>f=D<rsub|\<zeta\>>C<rsub|k>=C<rsub|0>> so that by
       [theorem: <reference|diff derivate and frechet differential>]\ 
@@ -14004,7 +14004,7 @@
       <math|x\<in\><around*|]|a,b|[>\<subseteq\><around*|[|a,b|]>> it follows
       from [theorem: <reference|topology biggest open subset>] that
       \ <math|x> is a limit point of <math|<around*|[|a,b|]>> which is a
-      prerequisite for the existance of a <with|font-series|bold|unique>
+      prerequisite for the existence of a <with|font-series|bold|unique>
       derivative at <math|x> [see theorem: <reference|diff calculus
       derivate>].
     </note>
@@ -14090,7 +14090,7 @@
       <reference|topology limit points and subsets>] that
       <math|<around*|[|a,b|]><rprime|'>\<subseteq\>A<rprime|'>> so that
       <math|x> is a limit point of <math|A> which is needed for the
-      derivatieve at <math|x> to even exist.
+      derivative at <math|x> to even exist.
     </note>
   </corollary>
 
@@ -14182,7 +14182,7 @@
       of <math|I>, hence <math|x\<in\>I<rprime|'>>. As <math|I\<subseteq\>A>
       we have by [theorem: <reference|topology limit points and subsets>]
       that <math|I<rprime|'>\<subseteq\>A<rprime|'>> so that <math|x> is a
-      limit point of <math|A> which is needed for the derivatieve at <math|x>
+      limit point of <math|A> which is needed for the derivative at <math|x>
       to even exist.
     </note>
   </corollary>
@@ -14498,7 +14498,7 @@
         <label|eq 16.244.310><around*|(|<around*|(|f<rsub|\|<around*|[|a,b|]>>|)><rprime|'>|)><rprime|'><rsub|x>=<around*|(|f<rsup|><rsub|\|<around*|[|a,b|]>>|)><rsup|<around*|(|2|)>><rsub|x>
       </equation>
 
-      As <math|x\<in\><around*|[|a,b|]>> was choosen arbitrary we can define\ 
+      As <math|x\<in\><around*|[|a,b|]>> was chosen arbitrary we can define\ 
 
       <\equation>
         <label|eq 16.245.310.1><around*|(|f<rsub|><rsub|\|<around*|[|a,b|]>>|)><rsup|<around*|(|2|)>>:<around*|[|a,b|]>\<rightarrow\>\<bbb-R\><text|
@@ -14636,7 +14636,7 @@
       <reference|topology limit points and subsets>] that
       <math|<around*|[|a,b|]><rprime|'>\<subseteq\>A<rprime|'>> so that
       <math|x> is a limit point of <math|A> which is needed for the
-      derivatieve at <math|x> to even exist.
+      derivative at <math|x> to even exist.
     </note>
   </theorem>
 
@@ -14749,7 +14749,7 @@
       <reference|topology limit points and subsets>] that
       <math|<around*|[|a,b|]><rprime|'>\<subseteq\>A<rprime|'>> so that
       <math|x> is a limit point of <math|A> which is needed for the
-      derivatieve at <math|x> to even exist.
+      derivative at <math|x> to even exist.
     </note>
   </theorem>
 
@@ -14781,8 +14781,8 @@
     </equation*>
 
     Let <math|x\<in\><around*|[|a,b|]>>. By [example: <reference|diff
-    derivative of constant>] <math|C<rsub|f<around*|(|a|)>>> has derivates on
-    <math|<around*|[|a,b|]>> with <math|<around*|(|C<rsub|f<around*|(|a|)>>|)><rprime|'>=C<rsub|0>>
+    derivative of constant>] <math|C<rsub|f<around*|(|a|)>>> has derivatives
+    on <math|<around*|[|a,b|]>> with <math|<around*|(|C<rsub|f<around*|(|a|)>>|)><rprime|'>=C<rsub|0>>
     and using [theorem: <reference|diff fundamental theorem of calculus (1)>]
     <math|F> has derivatives on <math|<around*|[|a,b|]>> with
     <math|F<rprime|'>=f<rprime|'>>. Using then the linearity of derivation
@@ -15002,7 +15002,7 @@
     [theorem: <reference|riemann continuous functions are integrable>]\ 
 
     <\equation*>
-      <around*|(|f\<cdot\>g|)><rprime|'><text| is Rieamann integrable>
+      <around*|(|f\<cdot\>g|)><rprime|'><text| is Riemann integrable>
     </equation*>
 
     Finally we have\ 
@@ -15377,7 +15377,7 @@
     Hence we have that\ 
 
     <\equation*>
-      L<rsub|a,b><text| is onvex>
+      L<rsub|a,b><text| is convex>
     </equation*>
 
     Define\ 
@@ -15589,7 +15589,7 @@
       If <math|y\<in\><around*|[|a,\<gamma\>|[>> then
       <math|y\<less\>\<gamma\>=sup<around*|(|A|)>> so that
       <math|\<exists\>z\<in\>A> with <math|y\<less\>z\<Rightarrow\>y\<in\><around*|[|a,z|[>>
-      so that by defintion of <math|A>\ 
+      so that by definition of <math|A>\ 
 
       <\equation*>
         <text| ><around*|\<\|\|\>|f<around*|(|y|)>-f<around*|(|a|)>|\<\|\|\>>\<leqslant\>\<varphi\><around*|(|y|)>-\<varphi\><around*|(|a|)>+\<varepsilon\>\<cdot\><around*|(|y-a|)>
@@ -15640,7 +15640,7 @@
         </equation*>
 
         Further <math|\<forall\>y\<in\><around*|[|a,\<gamma\>|[>> we have by
-        the defintion of <math|A> and <math|\<gamma\>\<in\>A> that\ 
+        the definition of <math|A> and <math|\<gamma\>\<in\>A> that\ 
 
         <\equation*>
           <around*|\<\|\|\>|f<around*|(|y|)>-f<around*|(|a|)>|\<\|\|\>>\<leqslant\>\<varphi\><around*|(|y|)>-\<varphi\><around*|(|a|)>+\<varepsilon\><around*|(|y-a|)>
@@ -15802,7 +15802,7 @@
     </proof>
 
     As <math|><math|<around*|\<\|\|\>|f<around*|(|b|)>-f<around*|(|a|)>|\<\|\|\>>\<leqslant\>\<varphi\><around*|(|b|)>-\<varphi\><around*|(|a|)>+\<varepsilon\>\<cdot\><around*|(|b-a|)>>
-    and <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> was choosen arbitrary it
+    and <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> was chosen arbitrary it
     follows from [theorem: <reference|complex Archimedean property
     consequence (2)>] that\ 
 
@@ -16778,9 +16778,9 @@
       defined by >D<rsup|<around*|[|n|]>>f<around*|(|y|)>=D<rsup|<around*|[|n|]>><rsub|y>f
     </equation*>
 
-    is Fréchet differentiable [hence <math|1>-timese differentiable] at
+    is Fréchet differentiable [hence <math|1>-times differentiable] at
     <math|x> with <math|D<rsup|<around*|[|n+1|]>><rsub|x>f=D<rsub|x><around*|(|D<rsup|<around*|[|n|]>>f|)>>.
-    As <math|x\<in\>U> was choosen arbitrary it follows that
+    As <math|x\<in\>U> was chosen arbitrary it follows that
     <math|D<rsup|<around*|[|n|]>>f> is <math|1>-times differentiable on
     <math|U> and <math|\<forall\>x\<in\>U>
     <math|<rigid|D<rsup|<around*|[|1|]>><rsub|x><around*|(|D<rsup|<around*|[|n|]>>f|)>=D<rsup|<around*|[|n+1|]>><rsub|x>f>>.
@@ -17122,7 +17122,7 @@
     class <math|C<rsup|n-2>> and of class <math|C<rsup|n-1>>, so <math|f> is
     <math|<around*|(|n-2|)>>-times differentiable on <math|U> and
     <math|<around*|(|n-1|)>>-times differentiable on <math|U> so that the
-    following functions are well defined amd
+    following functions are well defined and
     <with|font-series|bold|continuous>
 
     <\equation*>
@@ -18744,7 +18744,7 @@
         and [eq: <reference|eq 16.339.310>], it follows that
         <math|S<rsub|<around*|(|I<rsup|<around*|[|<around*|[|i,x|]>|]>>|)><rsup|-1><around*|(|A|)>><around*|(|x<rsub|i>|)><rsub|>=X<rsub|i>>
         which as <math|i\<in\><around*|{|1,\<ldots\>,n|}>> and
-        <math|x\<in\>A> where choosen arbitray proves that <math|A> is a
+        <math|x\<in\>A> where chosen arbitrary proves that <math|A> is a
         partial differential domain.
 
         <item>Let <math|i\<in\><around*|{|1,\<ldots\>,n|}>> and
@@ -18757,7 +18757,7 @@
         proves by [definition: <reference|diff differential domain>] that
         <math|S<rsub|<around*|(|I<rsup|<around*|[|i,x|]>>|)><rsup|-1><around*|(|A|)>><around*|(|x<rsub|i>|)>=X<rsub|i><rsub|>>.
         Which as <math|i\<in\><around*|{|1,\<ldots\>,n|}>> and
-        <math|x\<in\>A> where choosen arbitray proves that <math|A> is a
+        <math|x\<in\>A> where chosen arbitrary proves that <math|A> is a
         partial differential domain.
       </enumerate>
 
@@ -18770,7 +18770,7 @@
         <math|x\<in\>A>. As <math|A<rsub|i>\<subseteq\><around*|(|A<rsub|i>|)><rprime|'>>
         it follows from [theorem: <reference|diff differential domain
         examples>] that <math|A<rsub|i>> is a differential domain. Hence
-        using (1.b) it follows that <math|A> is a partial differentiabl
+        using (1.b) it follows that <math|A> is a partial differentiable
         domain.
 
         <item>Let <math|i\<in\><around*|{|1,\<ldots\>,n|}>> and
@@ -18785,7 +18785,7 @@
         <math|<around*|]|a<rsub|i>,b<rsub|i>|[>> it follows from from
         [theorem: <reference|diff differential domain examples>] that
         <math|A<rsub|i>> is a differential domain. Hence using (1.b) it
-        follows that <math|A> is a partial differentiabl domain.
+        follows that <math|A> is a partial differentiable domain.
       </enumerate>
     </enumerate>
   </proof>
@@ -19241,7 +19241,7 @@
 
       proving by [lemma: <reference|lemma 16.180.210>] that
       <math|<around*|(|\<Phi\>\<circ\>D<rsup|<around*|[|m|]>>f|)><around*|(|y|)>=D<rsup|<around*|[|m|]>><rsub|i<rsub|m>\<ldots\>i<rsub|1>>f<around*|(|y|)>>
-      so that, as <math|y\<in\>U> was choosen arbitrary
+      so that, as <math|y\<in\>U> was chosen arbitrary
 
       <\equation>
         <label|eq 16.291.124>\<Phi\>\<circ\>D<rsup|<around*|[|m|]>>f=D<rsup|<around*|[|m|]>><rsub|i<rsub|m>\<ldots\>i<rsub|1>>f
@@ -19495,7 +19495,7 @@
   It was show in [example: <reference|diff partial differentiability does not
   mean differentiaility>] that the existence of partial differentials at a
   point does not mean that the function is differentiable at the point. We
-  examine now under which extra conditions <math|>the existance of partial
+  examine now under which extra conditions <math|>the existence of partial
   differentials ensure the existence of the Fréchet differential. First we
   need some extra definitions and lemma's.
 
@@ -19765,7 +19765,7 @@
 
   <\proof>
     Let <math|i\<in\><around*|{|1,\<ldots\>,n|}>>. As <math|x\<in\>U> we have
-    by the hypohesis that <math|f> has a <math|i>-partial differential at
+    by the hypothesis that <math|f> has a <math|i>-partial differential at
     <math|x> so that by the definition of partial differentials [see
     definition: <reference|diff partial differential definition>] that\ 
 
@@ -19808,7 +19808,7 @@
       I<rsup|<around*|[|i,y<rsub|t>|]>>=I<rsup|<around*|[|i,x|]>>
     </equation*>
 
-    Subtituting the above in [eqs: <reference|eq 16.362.310>, <reference|eq
+    Substituting the above in [eqs: <reference|eq 16.362.310>, <reference|eq
     16.363.310>] gives\ 
 
     <\equation>
@@ -19839,7 +19839,7 @@
     that <math|<around*|(|I<rsup|<around*|[|i,x|]>>|)><rsup|-1><around*|(|U|)>>
     is open so that <math|><math|D<rsub|t><around*|(|f\<circ\>I<rsup|<around*|[|i,x|]>>|)>\<in\>L<around*|(|X<rsub|i>,Y|)>>.
     As <math|t\<in\><around*|(|I<rsup|<around*|[|i,x|]>>|)><rsup|-1><around*|(|U|)>>
-    was choosen arbitrary we have that\ 
+    was chosen arbitrary we have that\ 
 
     <\equation>
       <label|eq 16.368.310>f\<circ\>I<rsup|<around*|[|i,x|]>>:<around*|(|I<rsup|<around*|[|i,x|]>>|)><rsup|-1><around*|(|U|)>\<rightarrow\>Y<text|
@@ -20533,7 +20533,7 @@
       <math|<around*|{|i<rsub|j>|}><rsub|j\<in\><around*|{|1,\<ldots\>,m+1|}>>\<subseteq\><around*|{|1,\<ldots\>,n|}>>,
       <math|x\<in\>U> and <math|f:U\<rightarrow\>X> a function such that
       <math|D<rsup|<around*|[|m+1|]>><rsub|x,i<rsub|m+1>,\<ldots\>,i<rsub|1>>f>
-      exist. Then by defintion we have that <math|\<forall\>y\<in\>U>
+      exist. Then by definition we have that <math|\<forall\>y\<in\>U>
       <math|D<rsup|<around*|[|m|]>><rsub|x,i<rsub|m>,\<ldots\>,i<rsub|1>>f>
       exist and the function\ 
 
@@ -20608,7 +20608,7 @@
         <reference|eq 16.399\<point\>310>>>>|<cell|ev<rsub|<wide*|1\<ldots\>1|\<wide-underbrace\>><rsub|m>>\<circ\>D<rsup|<around*|[|m+1|]>><rsub|x,i<rsub|m+1>\<ldots\>i<rsub|1>>f>>|<row|<cell|>|<cell|=>|<cell|D<rsup|<around*|[|m+1|]>><rsub|x,i<rsub|m+1>\<ldots\>i<rsub|1>>f<around*|(|<wide*|1:\<ldots\>:1|\<wide-underbrace\>><rsub|m>|)>>>>>
       </eqnarray*>
 
-      Combinin the above with [eq: <reference|eq 16.402.310>] proves that
+      Combining the above with [eq: <reference|eq 16.402.310>] proves that
       <math|\<partial\><rsup|m><rsub|i<rsub|m>\<ldots\>i<rsub|1>>f> has a
       <math|i<rsub|m+1>>-partial differential at <math|x> and\ 
 
@@ -20975,7 +20975,7 @@
     derivate and partial differential of higher order (1)>].
   </proof>
 
-  For the following theorem we first introduce the ooncept of partial
+  For the following theorem we first introduce the concept of partial
   differentiation and partial derivating of higher order on a open set.
 
   <\definition>
@@ -22799,7 +22799,7 @@
       </equation*>
 
       Finally using [theorem: <reference|diff f is of class C^n if D^1f u=is
-      of class C^n-1 (1)>] it follows tjat\ 
+      of class C^n-1 (1)>] it follows that\ 
 
       <\equation*>
         \<tau\><text| is >C<rsup|\<infty\>><text| on
@@ -22883,7 +22883,7 @@
   </proof>
 
   The restriction of a diffeomorphism of class <math|C<rsup|n>> to a open set
-  is again a diffeormorphism of class as the following theorem shows.
+  is again a diffeomorphism of class as the following theorem shows.
 
   <\theorem>
     <label|diff restriction of a diffeomorphism is a diffeomorphism>Let
@@ -22997,12 +22997,12 @@
     <\enumerate>
       <item>If <math|f:U\<rightarrow\>V> and <math|g:V\<rightarrow\>W> are
       diffeomorphisms with then <math|g\<circ\>f:U\<rightarrow\>W> is a
-      diffeormorphism
+      diffeomorphism
 
       <item>If <math|n\<in\>\<bbb-N\><rsub|0>> and <math|f:U\<rightarrow\>V>
       and <math|g:V\<rightarrow\>W> are diffeomorphisms of class
       <math|C<rsup|n>> then <math|g\<circ\>f:U\<rightarrow\>W> is a
-      diffeormorphism of class <math|C<rsup|n>.>
+      diffeomorphism of class <math|C<rsup|n>.>
     </enumerate>
   </theorem>
 
@@ -23086,7 +23086,7 @@
     </enumerate>
 
     then <math|f> is a <with|font-series|bold|local diffeomorphism of class
-    <math|C<rsup|n>> at <math|x<rsub|0>>>. In othere words using the
+    <math|C<rsup|n>> at <math|x<rsub|0>>>. In other words using the
     definition of a local diffeomorphism of class <math|C<rsup|n>> there
     exist a open set <math|U<rsub|x<rsub|0>>> in <math|X> and a open set
     <math|V<rsub|f<around*|(|x<rsub|0>|)>>> in <math|Y> with
@@ -24081,7 +24081,7 @@
 
       then <math|f> is a <with|font-series|bold|local diffeomorphism of class
       <math|C<rsup|n>> at <math|x<rsub|0>>>. In other words using the
-      definition of a local diffeoremorphism of class <math|C<rsup|n>> there
+      definition of a local diffeomorphism of class <math|C<rsup|n>> there
       exist a open set <math|U<rsub|x<rsub|0>>> in <math|X> with
       <math|x<rsub|0>\<in\>U<rsub|x<rsub|0>>\<subseteq\>U> and a open set
       <math|V<rsub|f<around*|(|x<rsub|0>|)>>> in <math|Y> with
@@ -24574,8 +24574,7 @@
   <subsection|Implicit Function Theorem>
 
   The Inverse Function Theorem allows us to define a function implicit based
-  on a relation that should hold. To illustrate the implicit function theorem
-  consider the function\ 
+  on a relation that should hold. To illustrate this consider the function\ 
 
   <\equation*>
     f:\<bbb-R\><rsup|2>\<rightarrow\>\<bbb-R\><text| defined by
@@ -24583,19 +24582,19 @@
   </equation*>
 
   then we can consider the circle <math|C=<around*|{|<around*|(|x,y|)>\|f<around*|(|x,y|)>=1|}>=<around*|{|*<around*|(|x,y|)>\|x<rsup|2>+y<rsup|2>=1|}>>
-  and ask ourself given a point <math|<around*|(|x<rsub|0>,y<rsub|0>|)>\<in\>C>
-  [hence <math|1=f<around*|(|x<rsub|0>,y<rsub|0>|)>=x<rsub|9><rsup|2>+y<rsub|0><rsup|2>>]
-  can we find a open set <math|U> containing <math|x<rsub|0>> and a function
-  <math|g:U\<rightarrow\>\<bbb-R\>> such that it's graph
-  <math|<around*|{|<around*|(|x,g<around*|(|x|)>|)>\|x\<in\>U|}>> is equal to
-  a arc <math|<rigid|A\<subseteq\><around*|{|<around*|(|x,y|)>\<in\>C\|x\<in\>U|}>>>
+  and a point <math|<around*|(|x<rsub|0>,y<rsub|0>|)>\<in\>C> [hence
+  <math|1=f<around*|(|x<rsub|0>,y<rsub|0>|)>=x<rsub|9><rsup|2>+y<rsub|0><rsup|2>>].
+  Can we find a open set <math|U> containing <math|x<rsub|0>> and a function
+  <with|color|dark green|<math|g:U\<rightarrow\>\<bbb-R\>>> such that it's
+  graph <math|<around*|{|<around*|(|x,g<around*|(|x|)>|)>\|x\<in\>U|}>> is
+  equal to a arc <math|<rigid|A\<subseteq\><around*|{|<around*|(|x,y|)>\<in\>C\|x\<in\>U|}>>>
   [see figure: <reference|fig 4.311>]. In other words does <math|g> satisfies
   <math|\<forall\>x\<in\>U> that <math|<around*|(|x,g<around*|(|x|)>|)>=f<around*|(|x,y|)>=1>.
   If <math|2\<cdot\>y<rsub|0>=\<partial\><rsub|<around*|(|x<rsub|0>,y<rsub|0>|)>,2>f\<neq\>0>
-  [or equivalenly <math|D<rsub|<around*|(|x<rsub|0>,y<rsub|0>|)>,2>f> is a
+  [or equivalently <math|D<rsub|<around*|(|x<rsub|0>,y<rsub|0>|)>,2>f> is a
   bijection] like in [figure: <reference|fig 4.311>] the answer is clearly
-  yes. However if f <math|2\<cdot\>y<rsub|0>=\<partial\><rsub|<around*|(|x<rsub|0>,y<rsub|0>|)>,2>f=0>
-  [or equivalenly <math|D<rsub|<around*|(|x<rsub|0>,y<rsub|0>|)>,2>f> is not
+  yes. However if <math|2\<cdot\>y<rsub|0>=\<partial\><rsub|<around*|(|x<rsub|0>,y<rsub|0>|)>,2>f=0>
+  [or equivalently <math|D<rsub|<around*|(|x<rsub|0>,y<rsub|0>|)>,2>f> is not
   a bijection] like in [figure: <reference|fig 5.311>] the answer is no.
 
   <\big-figure|<with|gr-mode|<tuple|edit|text-at>|gr-frame|<tuple|scale|1cm|<tuple|0.5gw|0.44gh>>|gr-geometry|<tuple|geometry|1par|0.6par>|gr-grid|<tuple|empty>|gr-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|empty>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-point-size|2ln|gr-color|dark
@@ -24605,7 +24604,10 @@
   green|line-width|2ln|<line|<point|-1|0>|<point|-1.0|4.34475016463026>>>|<with|color|dark
   green|line-width|2ln|<line|<point|1|0>|<point|0.999999999999998|4.34475016463026>>>|<with|color|dark
   green|line-width|2ln|<line|<point|3|0>|<point|3.0|3.0>>>|<with|color|dark
-  green|<text-at||<point|-3|1.6>>>>>>
+  green|<text-at|<math|g<around*|(|x|)>>|<point|1.21292|2.362>>>|<with|color|dark
+  green|<text-at|x|<point|1.00483|-0.400003>>>|<with|color|dark
+  green|<text-at|<math|<around*|(|x,g<around*|(|x|)>|)>>|<point|0.607554|4.70782>>>|<with|color|dark
+  green|<text-at||<point|4.56138|1.28369>>>>>>
     <label|fig 4.311>
   </big-figure>
 
@@ -25496,7 +25498,7 @@
   <section|Taylor expansion>
 
   We turn now our attention to Taylor expansions that allows us to
-  approximate a function by a polinomial.\ 
+  approximate a function by a polynomial.\ 
 
   <\theorem>
     <label|diff Taylor I><dueto|Taylor Theorem (I)>Let
@@ -25808,7 +25810,7 @@
         ><around*|\<\|\|\>|f<around*|(|x<rsub|0>+h|)>-f<around*|(|x<rsub|0>|)>-<big|sum><rsub|k=1><rsup|n+1><frac|h<rsup|k>|k!>\<cdot\>f<rsup|<around*|(|k|)>><rsub|x<rsub|0>>|\<\|\|\>>\<leqslant\>\<varepsilon\>\<cdot\><around*|\||h|\|><rsup|n+1>
       </equation*>
 
-      which proves tha <math|n+1\<in\>S>.
+      which proves that <math|n+1\<in\>S>.
     </description>
   </proof>
 
@@ -25838,7 +25840,7 @@
       As <math|f> has a <math|n>-times derivative at <math|x<rsub|0>> it
       follows from [theorem: <reference|diff n-times and m-times derivating>]
       that <math|<rigid|\<forall\>m\<in\><around*|{|1,\<ldots\>,n|}>>>
-      <math|f> has a <math|m>-the derivate at <math|x<rsub|0>> so that
+      <math|f> has a <math|m>-times derivative at <math|x<rsub|0>> so that
       <math|<big|sum><rsub|k=1><rsup|n><frac|k<rsup|n>|k!>\<cdot\>f<rsup|<around*|(|k|)>><rsub|x<rsub|0>>>
       is well defined.
     </note>
@@ -25907,8 +25909,8 @@
     </enumerate>
   </definition>
 
-  Using this defintion we can rephrase [theorem: <reference|diff Taylor I.1>]
-  as follows.
+  Using this definition we can rephrase [theorem: <reference|diff Taylor
+  I.1>] as follows.
 
   <\theorem>
     <label|diff Taylor I.2><dueto|Taylor's Theorem (I.2)>Let
@@ -26819,7 +26821,7 @@
       K\<in\>L<around*|(|X;Y|)>
     </equation*>
 
-    As further <math|X> is open it follows from the defiition of Fréchet
+    As further <math|X> is open it follows from the definition of Fréchet
     differentiability [see definition: <reference|diff differentiability>]
     that <math|\<Phi\>> is Fréchet differentiable at <math|x> with
     <math|D<rsub|x>\<Phi\>=K>. Further
@@ -26907,7 +26909,7 @@
       <math|\<delta\><rsub|1>\<in\>\<bbb-R\><rsup|+>> such that
       <math|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,\<delta\><rsub|1>|)>\<subseteq\>U<rsub|x<rsub|0>>>.
       As <math|f> is <math|<around*|(|n+1|)>>-times differentiable at
-      <math|x<rsub|0>> we have by [thoerem: <reference|diff n-times and
+      <math|x<rsub|0>> we have by [theorem: <reference|diff n-times and
       m-times differentiability>] that <math|\<forall\>k\<in\><around*|{|1,\<ldots\>,n+1|}>>
       <math|f> is <math|k>-times differentiable at <math|x<rsub|0>> so that
       the following function is well defined.
@@ -27182,21 +27184,22 @@
       <math|f<rsup|<around*|(|n|)>><rsub|y>> exist it follows <math|>that
       <math|<around*|(|f<rsup|<around*|(|n-1|)>>|)><rprime|'><rsub|y>> exist
       <math|f<rsup|<around*|(|n|)>><rsub|y>=<around*|(|f<rsup|<around*|(|n-1|)>>|)><rprime|'><rsub|y>>,
-      further by (2) <math|f<rsup|<around*|(|n-1|)>>> is continous.
+      further by (2) <math|f<rsup|<around*|(|n-1|)>>> is continuous.
     </description>
 
     To summarize we have that\ 
 
     <\equation>
       <label|eq 16.572.311>\<forall\>k\<in\><around*|{|1,\<ldots\>,n-1|}><text|
-      >f<rsup|<around*|(|k|)>><text| is continous and
+      >f<rsup|<around*|(|k|)>><text| is continuous and
       >\<forall\>y\<in\><around*|]|m,M|[><text|
       ><around*|(|f<rsup|<around*|(|k|)>>|)><rprime|'><rsub|y><text| exist
       and >f<rsup|<around*|(|k+1|)>><rsub|y>=<around*|(|f<rsup|<around*|(|k|)>>|)><rprime|'><rsub|x>
     </equation>
 
-    Let <math|\<lambda\>\<in\>\<bbb-R\>> [later we choose a specic value for
-    <math|\<lambda\>>] then by the above we can define the following function
+    Let <math|\<lambda\>\<in\>\<bbb-R\>> [later we choose a specific value
+    for <math|\<lambda\>>] then by the above we can define the following
+    function
 
     <\equation>
       <label|eq 16.573.311>g:<around*|[|m,M|]>\<rightarrow\>\<bbb-R\><text|
@@ -27441,7 +27444,7 @@
     <label|lemma 16.391.316>Let <math|n\<in\>\<bbb-N\>>,
     <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
     <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
-    be normes spaces, <math|A\<subseteq\>X> and
+    be normed spaces, <math|A\<subseteq\>X> and
     <math|f:A\<rightarrow\>L<rsub|n><around*|(|X;Y|)>> a continuous function
     then for <math|h\<in\>X> we have that
 
@@ -27473,7 +27476,7 @@
     </eqnarray*>
 
     which proves that <math|\<Theta\>> is continuous at <math|x>. Hence as
-    <math|x\<in\>A> was choosen arbitrary it follows that\ 
+    <math|x\<in\>A> was chosen arbitrary it follows that\ 
 
     <\equation*>
       \<Theta\><text| is continuous>
@@ -27581,7 +27584,7 @@
 
     Hence using [theorem: <reference|diff differentiable function is
     continuous>] <math|D<rsup|<around*|[|k|]>>f> is continuous. So as
-    <math|x\<in\>U> was choosen arbitrary if follows that\ 
+    <math|x\<in\>U> was chosen arbitrary if follows that\ 
 
     <\equation>
       <label|eq 16.597.316>D<rsup|<around*|[|k|]>>f<text| is continuous>
@@ -27795,7 +27798,7 @@
     <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
     <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
     be normed spaces, <math|U> a open set in <math|X>,
-    <math|x<rsub|0>\<in\>U>, <math|h\<in\>X> such that the linevsegment
+    <math|x<rsub|0>\<in\>U>, <math|h\<in\>X> such that the line segment
     <math|L<rsub|x<rsub|0>,x<rsub|0>+h>\<subseteq\>U> and
     <math|f:U\<rightarrow\>Y> a function that is
     <math|<around*|(|n+1|)>>-times differentiable on <math|U> and for which\ 
@@ -27953,7 +27956,7 @@
 
   <\proof>
     As <math|f> is of class <math|C<rsup|n+1>> it follows that <math|f> is
-    <math|<around*|(|n+1|)>>-diferentiable on <math|U> and\ 
+    <math|<around*|(|n+1|)>>-differentiable on <math|U> and\ 
 
     <\equation*>
       D<rsup|<around*|[|n+1|]>>f:U\<rightarrow\>L<rsub|n+1><around*|(|X;Y|)><text|
@@ -28521,10 +28524,8 @@
   The above form of Taylor's theorem allows us to introduce Taylor series
   where a function can be written as a power series.
 
-  TODO
-
   <\theorem>
-    <label|diff Taylor series>Let <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
+    <label|diff Taylor series (2)>Let <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
     be a normed space, <math|a,b\<in\>\<bbb-R\>> with <math|a\<less\>b>
     <math|x<rsub|0>,x\<in\>\<bbb-R\>> with <math|x<rsub|0>\<less\>x>,
     <math|<around*|[|x<rsub|0>,x|]>\<subseteq\><around*|[|a,b|]>> and
@@ -28676,7 +28677,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|15>
-    <associate|page-first|897>
+    <associate|page-first|899>
     <associate|par-first|0tab>
     <associate|par-mode|justify>
     <associate|preamble|false>
@@ -28811,7 +28812,7 @@
     <associate|diff Taylor II.1|<tuple|16.396|?>>
     <associate|diff Taylor II.2|<tuple|16.397|?>>
     <associate|diff Taylor III|<tuple|16.400|?>>
-    <associate|diff Taylor series|<tuple|16.403|?>>
+    <associate|diff Taylor series (2)|<tuple|16.403|?>>
     <associate|diff Ux|<tuple|16.4|?>>
     <associate|diff Ux is open if U is open|<tuple|16.7|?>>
     <associate|diff Ux=-x+U=U-x|<tuple|16.6|?>>
@@ -29569,7 +29570,6 @@
     <associate|eq 16.605.317|<tuple|16.612|?>>
     <associate|eq 16.605.318|<tuple|16.605|?>>
     <associate|eq 16.606.317|<tuple|16.613|?>>
-    <associate|eq 16.606.318|<tuple|16.607|?>>
     <associate|eq 16.607.318|<tuple|16.607|?>>
     <associate|eq 16.608.318|<tuple|16.608|?>>
     <associate|eq 16.614.318|<tuple|16.614|?>>

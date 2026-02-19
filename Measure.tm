@@ -859,9 +859,9 @@
   <\definition>
     <label|measure monotone><dueto|Monotone set function>Let <math|X> be a
     set, <math|\<cal-A\>\<subseteq\>\<cal-P\><around*|(|X|)>> then a set
-    function <math|\<mu\>:\<cal-A\>\<rightarrow\><around*|[|0,\<infty\>|]>>
+    function <math|<rigid|\<mu\>:\<cal-A\>\<rightarrow\><around*|[|0,\<infty\>|]>>>
     is <with|font-series|bold|monotone >if
-    <math|\<forall\>A,B\<in\>\<cal-A\>> then
+    <math|\<forall\>A,B\<in\>\<cal-A\>> with <math|A\<subseteq\>B> we have
     <math|\<mu\><around*|(|A|)>\<leqslant\>\<mu\><around*|(|B|)>>.
   </definition>
 
@@ -873,11 +873,11 @@
     f<with|font-series|bold|inite additive on <math|\<cal-A\>> >if
     <math|\<forall\><around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<cal-A\>>,
     <math|n\<in\>\<bbb-N\>> pairwise disjoint with
-    <math|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>\<in\>\<cal-A\>>
+    <math|<big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>\<in\>\<cal-A\>>
     we have
 
     <\equation*>
-      \<mu\><around*|(|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>|)>=<big|sum><rsub|i=1><rsup|n>\<mu\><around*|(|A<rsub|i>|)>
+      \<mu\><around*|(|<big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>|)>=<big|sum><rsub|i=1><rsup|n>\<mu\><around*|(|A<rsub|i>|)>
     </equation*>
   </definition>
 
@@ -901,13 +901,21 @@
     set, <math|\<cal-A\>\<subseteq\>\<cal-P\><around*|(|X|)>> then a set
     function <math|\<mu\>:\<cal-A\>\<rightarrow\><around*|[|0,\<infty\>|]>>
     is <with|font-series|bold|countable additve on <math|\<cal-A\>> >if
-    <math|\<forall\><around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\>>,
-    <math|n\<in\>\<bbb-N\>> pairwise disjoint with
-    <math|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>\<in\>\<cal-A\>> we have
+    <math|\<forall\><around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\>>
+    pairwise disjoint with <math|<big|sqcup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>\<in\>\<cal-A\>>
+    we have
 
     <\equation*>
-      \<mu\><around*|(|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>=<big|sum><rsub|i=1><rsup|\<infty\>>\<mu\><around*|(|A<rsub|i>|)>
+      \<mu\><around*|(|<big|sqcup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>=<big|sum><rsub|i=1><rsup|\<infty\>>\<mu\><around*|(|A<rsub|i>|)>
     </equation*>
+
+    <\note>
+      As <math|\<forall\>i\<in\>\<bbb-N\>>
+      <math|\<mu\><around*|(|A<rsub|i>|)>\<in\><around*|[|0,\<infty\>|]>> it
+      follows from [definition: <reference|extended infinite sum>] that
+      <math|<big|sum><rsub|i=1><rsup|\<infty\>>\<mu\><around*|(|A<rsub|i>|)>>
+      is well defined.
+    </note>
   </definition>
 
   <\definition>
@@ -922,15 +930,21 @@
     <\equation*>
       \<mu\><around*|(|<big|cup><rsub|i\<in\>\<bbb-N\>>A|)>\<leqslant\><big|sum><rsub|i=1><rsup|\<infty\>>\<mu\><around*|(|A<rsub|i>|)>
     </equation*>
+
+    <\note>
+      As <math|\<forall\>i\<in\>\<bbb-N\>>
+      <math|\<mu\><around*|(|A<rsub|i>|)>\<in\><around*|[|0,\<infty\>|]>> it
+      follows from [definition: <reference|extended infinite sum>] that
+      <math|<big|sum><rsub|i=1><rsup|\<infty\>>\<mu\><around*|(|A<rsub|i>|)>>
+      is well defined.
+    </note>
   </definition>
 
-  \;
-
-  Countable sets are either finite or denumerable,, <math|n\<in\>\<bbb-N\>>
-  so you can ask yourselve why we talk about countable additivity instead of
-  denumerable additivity [because <math|\<bbb-N\>> is denumerable]. However
-  the next theorem shows that countable additivity implies finite additivity
-  justifying the use of the term countable additivity.\ 
+  Countable sets are either finite or denumerable so why do we talk about
+  countable additivity instead of denumerable additivity [because
+  <math|\<bbb-N\>> is a denumerable set]. However the next theorem shows that
+  countable additivity implies finite additivity which justifies the use of
+  the term countable additivity.\ 
 
   <\theorem>
     <label|measure countable additivity implies finite additivity>Let
@@ -938,8 +952,8 @@
     such that <math|\<varnothing\>\<in\>\<cal-A\>> and
     <math|\<mu\>:\<cal-A\>\<rightarrow\><around*|[|0,\<infty\>|]>> a
     countable additive set function on <math|\<cal-A\>> satisfying
-    <math|\<mu\><around*|(|\<varnothing\>|)>=0> is finite additive on
-    <math|\<cal-A\>>.
+    <math|\<mu\><around*|(|\<varnothing\>|)>=0> then <math|\<mu\>> is finite
+    additive on <math|\<cal-A\>>.
   </theorem>
 
   <\note>
@@ -1085,6 +1099,8 @@
       <label|eq 20.63.204>\<mu\><around*|(|<big|cup><rsub|i\<in\>\<bbb-N\>>B<rsub|i>|)>\<leqslant\><big|sum><rsub|i=1><rsup|\<infty\>>\<mu\><around*|(|B<rsub|i>|)>
     </equation>
 
+    Further
+
     <\eqnarray*>
       <tformat|<table|<row|<cell|\<mu\><around*|(|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>|)>>|<cell|\<equallim\><rsub|<text|[eq:
       <reference|eq 20.62.204>]>>>|<cell|\<mu\><around*|(|<big|cup><rsub|i\<in\>\<bbb-N\>>B<rsub|i>|)>>>|<row|<cell|>|<cell|<below|\<leqslant\>|<text|[eq:
@@ -1105,14 +1121,14 @@
     <math|\<cal-R\>> satisfies:
 
     <\enumerate>
-      <item><math|\<cal-R\>\<neq\>\<varnothing\>>
+      <item><math|\<cal-R\>\<neq\>\<varnothing\>>.
 
       <item>If <math|A,B\<in\>\<cal-R\>> then
       <math|A<big|cup>B\<in\>\<cal-R\>> [in other words <math|\<cal-R\>> is
-      <math|\<cup\>>-stable]
+      <math|\<cup\>>-stable].
 
       <item>If <math|A>, <math|B\<in\>\<cal-R\>> then
-      <math|A\\B\<in\>\<cal-R\>>
+      <math|A\\B\<in\>\<cal-R\>>.
     </enumerate>
   </definition>
 
@@ -1128,19 +1144,19 @@
 
     <\enumerate>
       <item>As <math|\<varnothing\>\<in\><around*|{|\<varnothing\>|}>> we
-      have that <math|<around*|{|\<varnothing\>|}>\<neq\>\<varnothing\>>
+      have that <math|<around*|{|\<varnothing\>|}>\<neq\>\<varnothing\>>.
 
       <item>If <math|A,B\<in\><around*|{|\<varnothing\>|}>> then
-      <math|A=B=\<varnothing\>> so that <math|A<big|cup>B=\<varnothing\>\<in\><around*|{|\<varnothing\>|}>>
+      <math|A=B=\<varnothing\>> so that <math|A<big|cup>B=\<varnothing\>\<in\><around*|{|\<varnothing\>|}>>.
 
-      <item>If If <math|A,B\<in\><around*|{|\<varnothing\>|}>> then
-      <math|A=B=\<varnothing\>> so that <math|A\\B=\<varnothing\>\\\<varnothing\>=\<varnothing\>\<in\><around*|{|\<varnothing\>|}>>
+      <item>If <math|A,B\<in\><around*|{|\<varnothing\>|}>> then
+      <math|A=B=\<varnothing\>> so that <math|A\\B=\<varnothing\>\\\<varnothing\>=\<varnothing\>\<in\><around*|{|\<varnothing\>|}>>.
     </enumerate>
   </proof>
 
   <\example>
     <label|measure P(X) is a ring>Let <math|X> be a set then
-    <math|\<cal-P\><around*|(|X|)>> is a ring on <math|X>
+    <math|\<cal-P\><around*|(|X|)>> is a ring on <math|X>.
   </example>
 
   <\proof>
@@ -1165,21 +1181,21 @@
     a ring on <math|X> then we have\ 
 
     <\enumerate>
-      <item><math|\<varnothing\>\<in\>\<cal-R\>>
+      <item><math|\<varnothing\>\<in\>\<cal-R\>>.
 
       <item>If <math|n\<in\>\<bbb-N\>> and
       <math|<around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<cal-R\>>
       a finite family of sets in <math|\<cal-R\>> then
-      <math|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>\<in\>\<cal-R\>>
+      <math|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>\<in\>\<cal-R\>>.
 
       <item>If <math|A,B\<in\>\<cal-R\>> then
       <math|A<big|cap>B\<in\>\<cal-R\>> [in other words <math|\<cal-R\>> is
-      <math|\<cap\>>-stable]
+      <math|\<cap\>>-stable].
 
       <item>If <math|n\<in\>\<bbb-N\>> and
       <math|<around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<cal-R\>>
       a finite family of sets in <math|\<cal-R\>> then
-      <math|<big|cap><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>\<in\>\<cal-R\>>
+      <math|<big|cap><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>\<in\>\<cal-R\>>.
     </enumerate>
   </theorem>
 
@@ -1200,12 +1216,12 @@
       proves that <math|A<big|cap>B\<in\>\<cal-R\>>.
 
       <item>This follows from [theorem: <reference|measure union intersection
-      stable>].
+      stable>] and (3).
     </enumerate>
   </proof>
 
-  A algebra on <math|X> is a ring such that <math|X> is a element of the
-  ring.
+  A algebra on <math|X> is a ring <math|\<cal-R\>> where additional
+  <math|X\<in\>\<cal-R\>>.
 
   <\definition>
     <label|measure algebra><index|algebra of sets><dueto|Algebra>Let <math|X>
@@ -1213,9 +1229,9 @@
     <with|font-series|bold|algebra> on <math|X> if <math|\<cal-A\>> satisfies
 
     <\enumerate>
-      <item><math|\<cal-A\>> is a ring on <math|X>
+      <item><math|\<cal-A\>> is a ring on <math|X>.
 
-      <item><math|X\<in\>\<cal-R\>>
+      <item><math|X\<in\>\<cal-R\>>.
     </enumerate>
   </definition>
 
@@ -1233,7 +1249,7 @@
 
     <\enumerate>
       <item>As <math|X,\<varnothing\>\<in\><around*|{|X,\<varnothing\>|}>>
-      <math|<around*|{|X,\<varnothing\>|}>\<neq\>\<varnothing\>>
+      <math|<around*|{|X,\<varnothing\>|}>\<neq\>\<varnothing\>>.
 
       <item>If <math|A,B\<in\><around*|{|X,\<varnothing\>|}>> then we have
       either:\ 
@@ -1241,26 +1257,29 @@
       <\description>
         <item*|<math|A=X\<wedge\>B=X>>Then
         <math|A<big|cup>B=X\<in\><around*|{|X,\<varnothing\>|}>> and
-        <math|A\\B=X\\X=\<varnothing\>\<in\><around*|{|X,\<varnothing\>|}>>
+        <math|A\\B=X\\X=\<varnothing\>\<in\><around*|{|X,\<varnothing\>|}>>.
 
         <item*|<math|A=\<varnothing\>\<wedge\>B=X>>Then
         <math|A<big|cup>B=X\<in\><around*|{|X,\<varnothing\>|}>> and
-        <math|A\\B=\<varnothing\>\\X=\<varnothing\>\<in\><around*|{|X,\<varnothing\>|}>>
+        <math|A\\B=\<varnothing\>\\X=\<varnothing\>\<in\><around*|{|X,\<varnothing\>|}>>.
 
         <item*|<math|A=X\<wedge\>B=\<varnothing\>>>Then
         <math|A<big|cup>B=X\<in\><around*|{|X,\<varnothing\>|}>> and
-        <math|A\\B=X\\\<varnothing\>=X\<in\><around*|{|X,\<varnothing\>|}>>
+        <math|A\\B=X\\\<varnothing\>=X\<in\><around*|{|X,\<varnothing\>|}>>.
 
         <item*|<math|A=\<varnothing\>\<wedge\>B=\<varnothing\>>>Then
         <math|A<big|cup>B=\<varnothing\>\<in\><around*|{|X,\<varnothing\>|}>>
-        and <math|A\\B=\<varnothing\>\\\<varnothing\>=\<varnothing\>\<in\><around*|{|X,\<varnothing\>|}>>
+        and <math|A\\B=\<varnothing\>\\\<varnothing\>=\<varnothing\>\<in\><around*|{|X,\<varnothing\>|}>>.
       </description>
+
+      so in all cases we have <math|A<big|cup>B\<in\><around*|{|X,\<varnothing\>|}>>
+      and <math|A\\B\<in\><around*|{|X,\<varnothing\>|}>.>
     </enumerate>
   </proof>
 
   <\example>
     <label|measure P(X) is a algebra>Let <math|X> be a set then
-    <math|\<cal-P\><around*|(|X|)>> is a ring on <math|X>
+    <math|\<cal-P\><around*|(|X|)>> is a ring on <math|X>.
   </example>
 
   <\proof>
@@ -1322,7 +1341,7 @@
     </enumerate>
   </proof>
 
-  In most books we have the following equivalent definitons of a algebra
+  In most books we have the following equivalent definitons of a algebra.
 
   <\theorem>
     <label|measure algebra equavalent definition>Let <math|X> be a set and
@@ -1385,7 +1404,7 @@
         definition of a ring].
 
         <item><math|\<forall\>A,B\<in\>\<cal-A\>> we have by the definition
-        of a ring that <math|A\\B\<in\>\<cal-A\>>.
+        of a ring that <math|A<big|cap>B\<in\>\<cal-A\>>.
       </enumerate>
 
       <item*|<math|2\<Rightarrow\>3>>We have:\ 
@@ -1506,14 +1525,14 @@
     on <math|X> if\ 
 
     <\enumerate>
-      <item><math|X\<in\>\<cal-A\>>
+      <item><math|X\<in\>\<cal-A\>>.
 
       <item><math|\<forall\>A\<in\>\<cal-A\>> we have
-      <math|X\\A\<in\>\<cal-A\>>
+      <math|X\\A\<in\>\<cal-A\>>.
 
       <item>If <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\>>
       is a countable family of sets in <math|\<cal-A\>> then
-      <math|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>\<in\>\<cal-A\>>
+      <math|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>\<in\>\<cal-A\>>.
     </enumerate>
 
     <\note>
@@ -1564,6 +1583,18 @@
       <item><math|\<cal-A\>> is a algebra and
       <math|\<forall\><around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\><text|
       we have ><big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>\<in\>\<cal-A\>>
+
+      <item><math|\<cal-A\>> satisfies:
+
+      <\enumerate>
+        <item><math|X\<in\>\<cal-A\>>
+
+        <item><math|\<forall\>A\<in\>\<b-A\><text| we have
+        >X\\A\<in\>\<cal-A\>>
+
+        <item><math|\<forall\><around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\>>
+        we have <math|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>\<in\>\<cal-A\>>
+      </enumerate>
 
       <item><math|\<cal-A\>> satisfies:\ 
 
@@ -1633,8 +1664,8 @@
       </equation*>
 
       As <math|\<cal-A\>> is a algbra we have by [theorem: <reference|measure
-      algebra properties>] it follows that <math|\<forall\>i\<in\>\<bbb-N\>>
-      we have <math|B<rsub|i>\<in\>\<cal-A\>> so that\ 
+      algebra properties>] that <math|\<forall\>i\<in\>\<bbb-N\>> we have
+      <math|B<rsub|i>\<in\>\<cal-A\>> so that\ 
 
       <\equation*>
         <around*|{|B<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\>
@@ -1657,7 +1688,24 @@
       </equation*>
 
       <item*|<math|3\<Rightarrow\>4>>As <math|\<cal-A\>> is a algebra we have
-      by [theorem: <reference|measure algebra properties>] that
+      by \ [theorem: <reference|measure algebra properties>] that
+
+      <\equation*>
+        X\<in\>\<cal-A\>
+      </equation*>
+
+      <\equation*>
+        \<forall\>A\<in\>\<cal-A\><text| we have >X\\A\<in\>\<cal-A\>
+      </equation*>
+
+      Finally by (3) we have\ 
+
+      <\equation*>
+        \<forall\><around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\><text|
+        we have ><big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>\<in\>\<cal-A\>
+      </equation*>
+
+      <item*|<math|4\<Rightarrow\>5>>By (4) we have\ 
 
       <\equation*>
         \<varnothing\>\<in\>\<cal-A\>
@@ -1667,14 +1715,21 @@
         \<forall\>A\<in\>\<cal-A\><text| we have >X\\A\<in\>\<cal-A\>
       </equation*>
 
-      Finally by the definition of a <math|\<sigma\>>-algebra we have\ 
+      and
 
       <\equation*>
         \<forall\><around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\><text|
         we have ><big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>\<in\>\<cal-A\>
       </equation*>
 
-      <item*|<math|4\<Rightarrow\>5>>We have by (3) that\ 
+      As <math|\<varnothing\>\<in\>\<cal-A\>> we have
+      <math|X=X\\\<varnothing\>\<in\>\<cal-A\>> so that we have\ 
+
+      <\equation*>
+        X\<in\>\<cal-A\>
+      </equation*>
+
+      <item*|<math|5\<Rightarrow\>6>>We have by (5) that\ 
 
       <\equation*>
         \<varnothing\>\<in\>\<cal-A\><text| and
@@ -1683,8 +1738,8 @@
 
       Let <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\>>.
       If <math|i\<in\>\<bbb-N\>> then as <math|A<rsub|i>\<in\>\<cal-A\>> it
-      follows that <math|X\\A<rsub|i>\<in\>\<cal-A\>> we have by (3) that
-      <math|<big|cup><rsub|i\<in\>\<bbb-N\>><around*|(|X\\A<rsub|i>|)>\<in\>\<cal-A\>>
+      follows that <math|X\\A<rsub|i>\<in\>\<cal-A\>> further we have by (5)
+      that <math|<big|cup><rsub|i\<in\>\<bbb-N\>><around*|(|X\\A<rsub|i>|)>\<in\>\<cal-A\>>
       so that
 
       <\equation*>
@@ -1709,14 +1764,14 @@
 
       \ <math|>
 
-      <item*|<math|5\<Rightarrow\>6>>By (4) we have that
-      <math|\<varnothing\>\<in\>\<cal-A\>> so that by (4) again we have\ 
+      <item*|<math|6\<Rightarrow\>7>>By (6) we have that
+      <math|\<varnothing\>\<in\>\<cal-A\>> so that by (6) again we have\ 
 
       <\equation*>
         X=X\\\<varnothing\>\<in\>\<cal-A\>
       </equation*>
 
-      further by (4) we have\ 
+      further by (6) we have\ 
 
       <\equation*>
         \<forall\>A\<in\>\<cal-A\><text| we have >X\\A\<in\>\<cal-A\><text|
@@ -1724,7 +1779,7 @@
         we have ><big|cap><rsub|i\<in\>\<bbb-N\>>A<rsub|i>\<in\>\<cal-A\>
       </equation*>
 
-      <item*|<math|6\<Rightarrow\>1>>By (1) we have\ 
+      <item*|<math|6\<Rightarrow\>1>>By (7) we have\ 
 
       <\equation*>
         X\<in\>\<cal-A\><text| and >\<forall\>A\<in\>\<cal-A\><text| we have
@@ -1734,7 +1789,7 @@
       Further if <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\>>
       then <math|\<forall\>i\<in\>\<bbb-N\>> we have
       <math|A<rsub|i>\<in\>\<cal-A\>> so that
-      <math|X\\A<rsub|i>\<in\>\<cal-A\>>. Hence we have\ 
+      <math|X\\A<rsub|i>\<in\>\<cal-A\>>. Hence we have by (6)\ 
 
       <\equation*>
         X\\<around*|(|<big|cap><rsub|i\<in\>\<bbb-N\>><around*|(|X\\A<rsub|i>|)>|)>\<in\>\<cal-A\>
@@ -1765,15 +1820,15 @@
   <\example>
     Let <math|X\<neq\>\<varnothing\>> be a set then
     <math|<around*|{|\<varnothing\>|}>> is not a <math|\<sigma\>>-algebra on
-    <math|X> [see example: <reference|measure {empty set} is a ring>] but
-    <math|<around*|{|\<varnothing\>,X|}>> is a <math|\<sigma\>>-algebra on
-    <math|X>.
+    <math|X> [see example: <reference|measure {emptyset,set} is a measure>]
+    but <math|<around*|{|\<varnothing\>,X|}>> is a <math|\<sigma\>>-algebra
+    on <math|X>.
   </example>
 
   <\proof>
-    Using [example: <reference|measure {empty set} is a ring>] it follows
-    that <math|<around*|{|\<varnothing\>,X|}>> is a algebra on <math|X> so
-    that\ 
+    Using [example: <reference|measure {emptyset,set} is a measure>] it
+    follows that <math|<around*|{|\<varnothing\>,X|}>> is a algebra on
+    <math|X> so that\ 
 
     <\equation*>
       X\<in\>\<cal-A\><text| and >\<forall\>A\<in\>\<cal-A\><text| we have
@@ -1849,26 +1904,26 @@
         Hence we have that\ 
 
         <\equation>
-          <label|eq 20.52.200.1><big|cup><rsub|i\<in\>I>A<rsub|i>\<subseteq\><big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|\<beta\><around*|(|i|)>>
+          <label|eq 20.52.200.1><big|cup><rsub|i\<in\>I>A<rsub|i>\<subseteq\><big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|\<beta\><around*|(|j|)>>
         </equation>
 
         Likewise if <math|x\<in\><big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|\<beta\><around*|(|i|)>>>
         then there exist a <math|j\<in\><around*|{|1,\<ldots\>,n|}>> such
-        that <math|x\<in\>A<rsub|\<beta\><around*|(|j|)>>> which as
+        that <math|<rigid|x\<in\>A<rsub|\<beta\><around*|(|j|)>>>> which as
         <math|\<beta\><around*|(|j|)>\<in\>I> proves that
         <math|x\<in\><big|cup><rsub|i\<in\>I>A<rsub|i>>, hence
         <math|><math|<big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|\<beta\><around*|(|i|)>>\<subseteq\><big|cup><rsub|i\<in\>I>A<rsub|i>>.
         Combining this with [eq: <reference|eq 20.52.200.1>] proves that\ 
 
         <\equation*>
-          <big|cup><rsub|i\<in\>I>A<rsub|i>=<big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|\<beta\><around*|(|i|)>>
+          <big|cup><rsub|i\<in\>I>A<rsub|i>=<big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|\<beta\><around*|(|j|)>>
         </equation*>
 
         As <math|\<forall\>j\<in\><around*|{|1,\<ldots\>,n|}>>
         <math|A<rsub|\<beta\><around*|(|i|)>>\<in\>\<cal-A\>> [because
         <math|\<beta\><around*|(|i|)>\<in\>I>] it follows, as a
         <math|\<sigma\>>-algebra is a ring, from [theorem: <reference|measure
-        ring properties>] that <math|<big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|\<beta\><around*|(|i|)>>\<in\>\<cal-A\>>.
+        ring properties>] that <math|<big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|\<beta\><around*|(|j|)>>\<in\>\<cal-A\>>.
         Hence\ 
 
         <\equation*>
@@ -1888,23 +1943,23 @@
           <label|eq 20.53.200.1><big|cup><rsub|i\<in\>I>A<rsub|i>\<subseteq\><big|cup><rsub|j\<in\>\<bbb-N\>>A<rsub|\<beta\><around*|(|i|)>>
         </equation>
 
-        Likewise if <math|x\<in\><big|cup><rsub|j\<in\>\<bbb-N\>>A<rsub|\<beta\><around*|(|i|)>>>
+        Likewise if <math|x\<in\><big|cup><rsub|j\<in\>\<bbb-N\>>A<rsub|\<beta\><around*|(|j|)>>>
         then there exist a <math|j\<in\>\<bbb-N\>> such that
         <math|x\<in\>A<rsub|\<beta\><around*|(|j|)>>> which as
         <math|\<beta\><around*|(|j|)>\<in\>I> proves that
         <math|x\<in\><big|cup><rsub|i\<in\>I>A<rsub|i>>, hence
-        <math|><math|<big|cup><rsub|j\<in\>\<bbb-N\>>A<rsub|\<beta\><around*|(|i|)>>\<subseteq\><big|cup><rsub|i\<in\>I>A<rsub|i>>.
+        <math|><math|<big|cup><rsub|j\<in\>\<bbb-N\>>A<rsub|\<beta\><around*|(|j|)>>\<subseteq\><big|cup><rsub|i\<in\>I>A<rsub|i>>.
         Combining this with [eq: <reference|eq 20.53.200.1>] proves that\ 
 
         <\equation*>
-          <big|cup><rsub|i\<in\>I>A<rsub|i>=<big|cup><rsub|j\<in\>\<bbb-N\>>A<rsub|\<beta\><around*|(|i|)>>
+          <big|cup><rsub|i\<in\>I>A<rsub|i>=<big|cup><rsub|j\<in\>\<bbb-N\>>A<rsub|\<beta\><around*|(|j|)>>
         </equation*>
 
         As <math|\<forall\>j\<in\>\<bbb-N\>>
-        <math|A<rsub|\<beta\><around*|(|i|)>>\<in\>\<cal-A\>> [because
-        <math|\<beta\><around*|(|i|)>\<in\>I>] it follows, as a
+        <math|A<rsub|\<beta\><around*|(|j|)>>\<in\>\<cal-A\>> [because
+        <math|\<beta\><around*|(|j|)>\<in\>I>] it follows, as a
         <math|\<sigma\>>-algebra is a ring, from [theorem: <reference|measure
-        ring properties>] that <math|<big|cup><rsub|j\<in\>\<bbb-N\>>A<rsub|\<beta\><around*|(|i|)>>\<in\>\<cal-A\>>.
+        ring properties>] that <math|<big|cup><rsub|j\<in\>\<bbb-N\>>A<rsub|\<beta\><around*|(|j|)>>\<in\>\<cal-A\>>.
         Hence\ 
 
         <\equation*>
@@ -1933,14 +1988,10 @@
       it follows that\ 
 
       <\equation*>
-        <big|cap><rsub|i\<in\>I>A<rsub|n>\<in\>\<cal-A\>
+        <big|cap><rsub|i\<in\>I>A<rsub|i>\<in\>\<cal-A\>
       </equation*>
     </enumerate>
   </proof>
-
-  If we have already proved that a subset of <math|\<cal-P\><around*|(|X|)>>
-  is a algebra on <math|X> then the following theorem will be usefull to
-  prove that this subset is actually a <math|\<sigma\>>-algebra.
 
   <\theorem>
     <label|measure condition for a algebra to be a sigma algebra>Let <math|X>
@@ -1974,7 +2025,7 @@
       Further for <math|i\<in\>\<bbb-N\>> we have
 
       <\equation*>
-        B<rsub|i>=<big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,i|}>>B<rsub|j>\<subseteq\><big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,i+1|}>>B<rsub|j>=B<rsub|i+1>
+        B<rsub|i>=<big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,i|}>>A<rsub|j>\<subseteq\><big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,i+1|}>>A<rsub|j>=B<rsub|i+1>
       </equation*>
 
       hence by the hypothese we have\ 
@@ -2006,7 +2057,7 @@
       </equation*>
 
       Applying then [theorem: <reference|measure sigma algebra equivalences>]
-      it follows that <math|\<cal-A\>> is a <math|\<sigma\>>-algebra.
+      it follows that <math|\<cal-A\>> is a <math|\<sigma\>>-algebra.\ 
 
       <item>Let <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\>>
       be such that <math|\<forall\>i\<in\>\<bbb-N\>> we have
@@ -2026,12 +2077,17 @@
         X\\<around*|(|<big|cap><rsub|i\<in\>\<bbb-N\>><around*|(|X\\A<rsub|i>|)>|)>\<in\>\<cal-A\>
       </equation*>
 
-      Further <math|><math|X\\<around*|(|<big|cap><rsub|i\<in\>\<bbb-N\>><around*|(|X\\A<rsub|i>|)>|)>\<equallim\><rsub|<text|[theorem:
-      <reference|family de Morgan>]>><big|cup><rsub|i\<in\>\<bbb-N\>><around*|(|X\\<around*|(|X\\A<rsub|i>|)>|)>\<equallim\><rsub|A<rsub|i>\<subseteq\>X\<wedge\><text|[theorem:
-      <reference|class inclusion and union and
-      intersection>]>><big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>> so that
-      <math|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>\<in\>\<cal-A\>>. Hence
-      we have proved that <math|\<forall\><around*|{|A<rsub|i>|}><rsub|i\<in\>\<cal-A\>>\<subseteq\>\<cal-A\>>
+      Further <math|>
+
+      <\equation*>
+        X\\<around*|(|<big|cap><rsub|i\<in\>\<bbb-N\>><around*|(|X\\A<rsub|i>|)>|)>\<equallim\><rsub|<text|[theorem:
+        <reference|family de Morgan>]>><big|cup><rsub|i\<in\>\<bbb-N\>><around*|(|X\\<around*|(|X\\A<rsub|i>|)>|)>\<equallim\><rsub|A<rsub|i>\<subseteq\>X\<wedge\><text|[theorem:
+        <reference|class inclusion and union and
+        intersection>]>><big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>
+      </equation*>
+
+      so that <math|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>\<in\>\<cal-A\>>.
+      Hence we have proved that <math|\<forall\><around*|{|A<rsub|i>|}><rsub|i\<in\>\<cal-A\>>\<subseteq\>\<cal-A\>>
       with <math|\<forall\>i\<in\>\<bbb-N\>>
       <math|A<rsub|i>\<subseteq\>A<rsub|i+1>>
       <math|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>\<in\>\<cal-A\>> ao that
@@ -2063,8 +2119,8 @@
       <big|cap><rsub|<math-tt|>\<cal-A\>\<in\>\<frak-A\>>\<cal-A\>\<subseteq\>\<cal-P\><around*|(|X|)>
     </equation*>
 
-    \ <math|>As <math|\<forall\>\<cal-A\>\<in\>\<frak-A\>> <math|\<cal-A\>>
-    is a <math|\<sigma\>>-algebra on <math|X> we have by [theorem:
+    <math|>As <math|\<forall\>\<cal-A\>\<in\>\<frak-A\>> <math|\<cal-A\>> is
+    a <math|\<sigma\>>-algebra on <math|X> we have by [theorem:
     <reference|measure sigma algebra equivalences>] that
     <math|X\<in\>\<cal-A\>> hence\ 
 
@@ -2088,7 +2144,7 @@
     then for <math|\<cal-A\>\<in\>\<frak-A\>> we have
     <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\>>
     so that <math|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>\<in\>\<cal-A\>>
-    which as <math|\<cal-A\>\<in\>\<frak-A\>> was chosen arbitrary proves
+    which, as <math|\<cal-A\>\<in\>\<frak-A\>> was chosen arbitrary, proves
     that <math|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|>\<in\><big|cap><rsub|\<cal-A\>\<in\>\<frak-A\>>\<cal-A\>>.
     Hence as <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\><big|cap><rsub|\<cal-A\>\<in\>\<frak-A\>>\<cal-A\>>
     was chosen arbitrary we have that\ 
@@ -2129,12 +2185,11 @@
     >\<sigma\><text|-algebra on >X<text| with
     >\<cal-A\>\<subseteq\>\<cal-T\>|}>>. As
     <math|\<cal-A\>\<subseteq\>\<cal-P\><around*|(|X|)>> and
-    <math|\<cal-P\><around*|(|X|)>> and <math|\<cal-P\><around*|(|X|)>> is a
-    <math|\<sigma\>>-algebra on <math|X> [see example: <reference|measure
-    P(X) is a sigma algebra>] it follows that
-    <math|\<cal-P\><around*|(|X|)>\<in\>\<frak-A\>> hence <math|\<frak-A\>>
-    is not empty. Using then previous lemma [lemma: <reference|measure sigma
-    algebra intersection>] it follows that
+    <math|\<cal-P\><around*|(|X|)>> is a <math|\<sigma\>>-algebra on <math|X>
+    [see example: <reference|measure P(X) is a sigma algebra>] it follows
+    that <math|\<cal-P\><around*|(|X|)>\<in\>\<frak-A\>> hence
+    <math|\<frak-A\>> is not empty. Using then previous lemma [lemma:
+    <reference|measure sigma algebra intersection>] it follows that
 
     <\equation*>
       <big|cap><rsub|\<cal-T\>\<in\>\<frak-A\>>\<cal-T\><text| is a
@@ -2228,8 +2283,7 @@
       inclusion>]>>>|<cell|B<big|cap><around*|(|X\\C<rprime|'>|)>>>>>
     </eqnarray*>
 
-    which proves that <math|B\\C\<in\>\<cal-A\><rsub|\|B>>. Hence we have
-    that\ 
+    which proves that <math|B\\C\<in\>\<cal-A\><rsub|\|B>>. Hence\ 
 
     <\equation*>
       \<forall\>C\<in\>\<cal-A\><rsub|\|B><text| we have that
@@ -2249,11 +2303,11 @@
 
     <\equation*>
       \<forall\><around*|{|C<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\><rsub|\|B><text|
-      we have ><big|cup><rsub|i\<in\>\<bbb-N\>>C<rsub|i>\<in\>\<cal-A\><rsub|\|B>
+      ><big|cup><rsub|i\<in\>\<bbb-N\>>C<rsub|i>\<in\>\<cal-A\><rsub|\|B>
     </equation*>
 
-    So all the conditions for a <math|\<sigma\>>-algebra are satisfied which
-    allows us to conclude that\ 
+    So all the conditions for a <math|\<sigma\>>-algebra are satisfied so
+    that\ 
 
     <\equation*>
       \<cal-A\><rsub|\|B><text| is a >\<sigma\><text|-algebra>
@@ -2309,7 +2363,7 @@
   <\proof>
     If <math|C\<in\><around*|{|C\<subseteq\>X\|C<text| is closed>|}>> then
     <math|C> is closed, hence there exist a open <math|U\<in\>\<cal-T\>> such
-    that <math|C=X\<setminus\>U>. As <math|U\<in\>\<cal-T\>\<in\>\<sigma\><around*|[|\<cal-T\>|]>>
+    that <math|C=X\<setminus\>U>. As <math|U\<in\>\<cal-T\>\<subseteq\>\<sigma\><around*|[|\<cal-T\>|]>>
     it follows that <math|C=X\\U\<in\>\<sigma\><around*|[|\<cal-T\>|]>>. So
     <math|<around*|{|C\<subseteq\>X\|C<text| is
     closed>|}>\<subseteq\>\<sigma\><around*|[|\<cal-T\>|]>> a
@@ -2359,15 +2413,20 @@
     it follows that\ 
 
     <\equation*>
-      T\<in\>\<cal-A\>
+      Y\<in\>\<cal-A\>
     </equation*>
 
     If <math|A\<in\>\<cal-A\>> then <math|A\<subseteq\>Y> and
     <math|f<rsup|-1><around*|(|A|)>\<in\>\<cal-B\><around*|[|X,\<cal-T\><rsub|X>|]>>,
-    as further <math|f<rsup|-1><around*|(|Y\\A|)>\<equallim\><rsub|<text|[theorem:
-    <reference|function properties (1)>]>>Y\\f<rsup|-1><around*|(|A|)>\<in\>\<cal-B\><around*|[|X<rsub|,>\<cal-T\><rsub|X>|]>>
+    as further
+
+    <\equation*>
+      f<rsup|-1><around*|(|Y\\A|)>\<equallim\><rsub|<text|[theorem:
+      <reference|function properties (1)>]>>X\\f<rsup|-1><around*|(|A|)>\<in\>\<cal-B\><around*|[|X<rsub|,>\<cal-T\><rsub|X>|]>
+    </equation*>
+
     it follows that <math|Y\\A\<in\>\<cal-B\><around*|[|X,\<cal-T\><rsub|X>|]>>.
-    Hence we have that\ 
+    Hence we conclude that
 
     <\equation*>
       \<forall\>A\<in\>\<cal-A\><text| we have >Y\\A\<in\>\<cal-A\>
@@ -2375,9 +2434,11 @@
 
     If <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\>>
     then <math|\<forall\>i\<in\>\<bbb-N\>> we have
-    <math|f<rsup|-1><around*|(|A<rsub|i>|)>\<in\>\<cal-B\><around*|[|X,\<cal-T\><rsub|X>|]>>,
-    further <math|f<rsup|-1><around*|(|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>\<equallim\><rsub|<text|[theorem:
-    <reference|family image and preimage>]>><big|cup><rsub|i\<in\>\<bbb-N\>>f<rsup|-1><around*|(|A<rsub|i>|)>\<in\>\<cal-B\><around*|[|X,\<cal-T\><rsub|X>|]>>
+    <math|A<rsub|i>\<subseteq\>Y> and <math|f<rsup|-1><around*|(|A<rsub|i>|)>\<in\>\<cal-B\><around*|[|X,\<cal-T\><rsub|X>|]>>,
+    so that <math|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>\<subseteq\>Y> and
+    <math|f<rsup|-1><around*|(|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>\<equallim\><rsub|<text|[theorem:
+    <reference|family image and preimage>]>><big|cup><rsub|i\<in\>\<bbb-N\>>f<rsup|-1><around*|(|A<rsub|i>|)><below|\<in\>|\<cal-B\><around*|[|X,\<cal-T\><rsub|X>|]><text|
+    is a >\<sigma\><text|-algebra>>\<cal-B\><around*|[|X,\<cal-T\><rsub|X>|]>>
     which proves that\ 
 
     <\equation*>
@@ -2385,14 +2446,15 @@
       we have ><big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>\<in\>\<cal-A\>
     </equation*>
 
-    From the above it follows then that\ 
+    From the above it follows then from [theorems: <reference|measure sigma
+    algebra equivalences>] that
 
     <\equation*>
       \<cal-A\><text| is a >\<sigma\><text|-algebra>
     </equation*>
 
-    If <math|U\<in\>\<cal-T\><rsub|Y>> then as <math|f> is continuous it
-    follows that <math|f<rsup|-1><around*|(|U|)>\<in\>\<cal-T\><rsub|X>\<subseteq\>\<sigma\><around*|(|\<cal-T\><rsub|X>|)>=\<cal-B\><around*|[|X,\<cal-T\><rsub|X>|]>>
+    If <math|U\<in\>\<cal-T\><rsub|Y>> then <math|U\<subseteq\>Y> and, as
+    <math|f> is continuous, that <math|f<rsup|-1><around*|(|U|)>\<in\>\<cal-T\><rsub|X>\<subseteq\>\<sigma\><around*|(|\<cal-T\><rsub|X>|)>=\<cal-B\><around*|[|X,\<cal-T\><rsub|X>|]>>
     from which it follows that <math|U\<in\>\<cal-A\>> hence we have that\ 
 
     <\equation*>
@@ -2401,8 +2463,8 @@
 
     Finally using [theorem: <reference|measure generated sigma algebra>] it
     follows that <math|\<cal-B\><around*|[|Y,\<cal-T\><rsub|Y>|]>=\<sigma\><around*|[|\<cal-T\><rsub|Y>|]>\<subseteq\>\<cal-A\>>
-    from which it follows that <math|\<forall\>a\<in\>\<cal-B\><around*|[|Y,\<cal-T\><rsub|Y>|]>>
-    we have that <math|f<rsup|-1><around*|(|A|)>\<in\>\<cal-B\><around*|[|X,\<cal-T\><rsub|X>|]>>.
+    from which it follows that <math|\<forall\>A\<in\>\<cal-B\><around*|[|Y,\<cal-T\><rsub|Y>|]>>
+    we have <math|f<rsup|-1><around*|(|A|)>\<in\>\<cal-B\><around*|[|X,\<cal-T\><rsub|X>|]>>.
   </proof>
 
   <\corollary>
@@ -2435,7 +2497,7 @@
   </corollary>
 
   <\proof>
-    \ 
+    \ TODO
 
     <\enumerate>
       <item>Take <math|x\<in\>X> then by [theorem: <reference|continuity of
@@ -2446,18 +2508,28 @@
 
       <\equation>
         <label|eq 21.1032.286.1>\<forall\>A\<in\>\<cal-B\><around*|[|X,\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>>>|]><text|
-        that >\<delta\><rsub|-x><rsup|-1><around*|(|A|)>\<in\>\<cal-B\><around*|[|X,\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>>>|]>
+        that ><around*|(|\<delta\><rsub|-x><rsup|>|)><rsup|-1><around*|(|A|)>\<in\>\<cal-B\><around*|[|X,\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>>>|]>
       </equation>
 
-      Further
+      Further if <math|y\<in\><around*|(|\<delta\><rsub|-x>|)><rsup|-1><around*|(|A|)>>
+      then <math|-x+y=\<delta\><rsub|-x><around*|(|y|)>\<in\>A> hence
+      <math|y=x+<around*|(|-x+y|)>\<in\>x+A> which proves that\ 
 
-      <\eqnarray*>
-        <tformat|<table|<row|<cell|y\<in\>\<delta\><rsup|-1><rsub|-x><around*|(|A|)>>|<cell|\<Leftrightarrow\>>|<cell|\<delta\><rsub|-x><around*|(|y|)>\<in\>A>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|-x+y\<in\>A>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|y=x+<around*|(|-x+y|)><text|
-        where ><around*|(|-x+y|)>\<in\>A>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|y=x+a<text|
-        where >a\<in\>A>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|y\<in\>x+A>>>>
-      </eqnarray*>
+      <\equation>
+        <label|eq 21.26.300><around*|(|\<delta\><rsub|-x>|)><rsup|-1><around*|(|A|)>\<subseteq\>x+A
+      </equation>
 
-      which proves that <math|\<delta\><rsup|-1><rsub|-x><around*|(|A|)>=x+A>.
+      If <math|y\<in\>x+A> then there exist a <math|a\<in\>A> such that
+      <math|y=x+a> so that
+
+      <\equation*>
+        <around*|(|\<delta\><rsub|-x>|)><around*|(|y|)>=-x+y=-x+<around*|(|-x+a|)>=a\<in\>A
+      </equation*>
+
+      from which it follows that <math|y\<in\><around*|(|\<delta\><rsub|-x>|)><rsup|-1><around*|(|A|)>>
+      which proves that <math|x+A\<subseteq\><around*|(|\<delta\><rsub|-x>|)><rsup|-1><around*|(|A|)>>.
+      Combining this with [eq: <reference|eq 21.26.300>] proves that
+      <math|<around*|(|\<delta\><rsub|-x>|)><rsup|-1><around*|(|A|)>=x+A>.
       Combining this with [eq: <reference|eq 21.1032.286.1>] proves that\ 
 
       <\equation*>
@@ -2487,23 +2559,22 @@
         <item*|<math|\<alpha\>\<neq\>0>>Using [theorem: <reference|continuity
         scalar product (1)>] the function
         <math|\<mu\><rsub|1\\\<alpha\>>:X\<rightarrow\>X> by
-        <math|\<mu\><rsub|1\\\<alpha\>><around*|(|x|)>=<frac|1|\<alpha\>>\<cdot\>x>
+        <math|\<mu\><rsub|1/\<alpha\>><around*|(|x|)>=<frac|1|\<alpha\>>\<cdot\>x>
         is a continuous function. Hence by [theorem: <reference|measure Borel
         algebra and continuity>] we have that\ 
 
         <\equation>
-          <label|eq 21.1033.286.1>\<mu\><rsup|-1><rsub|1\\\<alpha\>><around*|(|A|)>\<in\>\<cal-B\><around*|[|X,\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>>>|]><rsup|>
+          <label|eq 21.1033.286.1><around*|(|\<mu\><rsub|1/\<alpha\>>|)><rsup|-1><around*|(|A|)>\<in\>\<cal-B\><around*|[|X,\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>>>|]><rsup|>
         </equation>
 
-        Further\ 
-
-        <\eqnarray*>
-          <tformat|<table|<row|<cell|y\<in\>\<mu\><rsup|-1><rsub|1\\\<alpha\>><around*|(|A|)>>|<cell|\<Leftrightarrow\>>|<cell|\<mu\><rsub|1\\\<alpha\>><around*|(|y|)>\<in\>A>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|<frac|1|\<alpha\>>\<cdot\>y\<in\>A>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|y=\<alpha\>\<cdot\><around*|(|<frac|1|\<alpha\>>\<cdot\>y|)><text|
-          where ><frac|1|\<alpha\>>\<cdot\>y\<in\>A>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|y=\<alpha\>\<cdot\>a<text|
-          where >a\<in\>A>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|y\<in\>\<alpha\>\<cdot\>A>>>>
-        </eqnarray*>
-
-        which proves that <math|\<mu\><rsup|-1><rsub|1\\\<alpha\>><around*|(|A|)>=<frac|1|\<alpha\>>\<cdot\>A>.
+        If <math|y\<in\><around*|(|\<mu\><rsub|1\\\<alpha\>>|)><rsup|-1><around*|(|A|)>>
+        then <math|<frac|1|\<alpha\>>\<cdot\>y=<around*|(|\<mu\><rsub|1/\<alpha\>>|)><around*|(|y|)>\<in\>A>
+        so that <math|y=\<alpha\>\<cdot\><around*|(|<frac|1|\<alpha\>>\<cdot\>y|)>\<in\>\<alpha\>\<cdot\>A>,
+        further if <math|y\<in\>\<alpha\>\<cdot\>A> then there exist a
+        <math|a\<in\>A> such that <math|y=\<alpha\>\<cdot\>a> so that
+        <math|<frac|1|\<alpha\>>\<cdot\>y=<frac|1|\<alpha\>>\<cdot\><around*|(|\<alpha\>\<cdot\>a|)>=a\<in\>A>
+        which proves that <math|y\<in\><around*|(|\<mu\><rsub|1/\<alpha\>>|)><rsup|-1><around*|(|A|)>>.
+        Hence <math|\<alpha\>\<cdot\>A=<around*|(|\<mu\><rsub|1/\<alpha\>>|)><rsup|-1><around*|(|A|)>>.
         Combining this with [eq: <reference|eq 21.1033.286.1>] proves that\ 
 
         <\equation*>
@@ -2528,7 +2599,7 @@
     <math|<around*|\<langle\>|\<bbb-R\>,\<cal-T\><rsub|<around*|\|||\|>>|\<rangle\>>>
     be the set of real numbers with the canonical topology
     <math|\<cal-T\><rsub|<around*|\|||\|>>> based on the absolute value norm
-    [see theorem: <reference|normed basis of T\|\|>] then then
+    [see theorem: <reference|normed basis of T\|\|>] then
     <math|\<cal-B\><around*|[|\<bbb-R\>|]>> is the Borel algebra based on
     <math|\<cal-T\><rsub|<around*|\|||\|>>>. In other words\ 
 
@@ -2565,12 +2636,12 @@
     <\note>
       If <math|b=a> then <math|<around*|]|a,b|[>=<around*|[|a,b|[>=<around*|]|a,b|]>=\<varnothing\>>
       and if <math|b\<less\>a> then <math|<around*|[|a,b|]>=<around*|[|a,b|[>=<around*|]|a,b|]>=<around*|]|a,b|[>=\<varnothing\>>
-      then we have valid bounded intervals but they are not elements of
+      then we have valid intervals but they are not elements of
       <math|\<cal-I\><rsub|<around*|[||]>>>,
       <math|\<cal-I\><rsub|<around*|[||[>>>,
       <math|\<cal-I\><rsub|<around*|]||]>>> and
-      <math|\<cal-I\><rsub|<around*|]||[>>>. One reason to exclude these
-      intervals is that the boundary points of these intevals are not well
+      <math|\<cal-I\><rsub|<around*|]||[>>>. The reason to exclude these
+      intervals is that the boundary points of empty intevals are not well
       defined [for eample <math|<around*|[|1,0|[>=<around*|[|2,0|[>=<around*|[|0,0|[>>
       which is needed for defining the length of the interval based on the
       boundary points.
@@ -2663,7 +2734,7 @@
       <item*|<math|\<cal-I\><rsub|<around*|[||[>><big|cap>\<cal-I\><rsub|<around*|]||]>>>>If
       <math|I\<in\>\<cal-I\><rsub|<around*|[||[>><big|cap>\<cal-I\><rsub|<around*|]||]>>>
       then <math|\<varnothing\>\<neq\>I=<around*|[|a,b|[>=<around*|]|c,d|]>>.
-      As \ <math|<around*|[|a,b|]>\<neq\>\<varnothing\>> it follows from
+      As \ <math|<around*|[|a,b|[>\<neq\>\<varnothing\>> it follows from
       [theorem: <reference|interval condition to be empty>] that
       <math|a\<less\>b> so that <math|a\<in\><around*|[|a,b|[>=<around*|]|c,d|]>>
       hence <math|c\<less\>a\<leqslant\>d>. Using [theorem:
@@ -2680,7 +2751,7 @@
       <item*|<math|\<cal-I\><rsub|<around*|[||[>><big|cap>\<cal-I\><rsub|<around*|]||[>>>>If
       <math|I\<in\>\<cal-I\><rsub|<around*|[||[>><big|cap>\<cal-I\><rsub|<around*|]||[>>>
       then <math|\<varnothing\>\<neq\>I=<around*|[|a,b|[>=<around*|]|c,d|[>>.
-      As \ <math|<around*|[|a,b|]>\<neq\>\<varnothing\>> it follows from
+      As \ <math|<around*|[|a,b|[>\<neq\>\<varnothing\>> it follows from
       [theorem: <reference|interval condition to be empty>] that
       <math|a\<less\>b> so that <math|a\<in\><around*|[|a,b|[>=<around*|]|c,d|]>>
       hence <math|c\<less\>a\<less\>d>. Using [theorem: <reference|complex
@@ -2864,7 +2935,7 @@
       </equation>
 
       If <math|x\<in\><big|cap><rsub|n\<in\>\<bbb-N\>><around*|]|a-<frac|1|n>,b|]>>
-      then <math|\<forall\>n\<in\>\<bbb-N\>> then
+      then <math|\<forall\>n\<in\>\<bbb-N\>> we have
       <math|a-<frac|1|n>\<less\>x\<leqslant\>b> or
       <math|a\<less\>x+<frac|1|n>> which by [corollary: <reference|complex
       Archimedean property consequence (2)>] proves that
@@ -2877,7 +2948,7 @@
       </equation*>
 
       <item>Let <math|x\<in\><around*|[|a,b|]>> then
-      <math|a\<leqslant\>x\<leqslant\>b> then
+      <math|a\<leqslant\>x\<leqslant\>b> so that
       <math|\<forall\>n\<in\>\<bbb-N\>> we have
       <math|a\<leqslant\>x\<leqslant\>b\<less\>b+<frac|1|n>>. Which proves
       that\ 
@@ -2898,11 +2969,11 @@
         <around*|[|a,b|]>=<big|cap><rsub|n\<in\>\<bbb-N\>><around*|[|a,b+<frac|1|n>|[>
       </equation*>
 
-      <item>Let <math|x\<in\><around*|[|a,b|]>> then
-      <math|a\<leqslant\>x\<leqslant\>b> and as
+      <item>Let <math|x\<in\><around*|[|a,b|]>> so that
+      <math|a\<leqslant\>x\<leqslant\>b> hence
       <math|\<forall\>n\<in\>\<bbb-N\>> we have
-      <math|a-<frac|1|n>\<less\>x\<less\>b+<frac|1|n>> it follows that
-      <math|x\<in\><around*|]|a-<frac|1|n>,b+<frac|1|n>|[>>. Hence\ 
+      <math|a-<frac|1|n>\<less\>x\<less\>b+<frac|1|n>\<Rightarrow\>x\<in\><around*|]|a-<frac|1|n>,b+<frac|1|n>|[>>.
+      Hence\ 
 
       <\equation>
         <label|eq 18.12.021><around*|[|a,b|]>\<subseteq\><big|cap><rsub|n\<in\>\<bbb-N\>><around*|]|a-<frac|1|n>,b+<frac|1|n>|[>
@@ -2922,9 +2993,9 @@
       </equation*>
 
       <item>Let <math|x\<in\><around*|]|-\<infty\>,a|]>> then
-      <math|x\<leqslant\>a> and as <math|\<forall\>n\<in\>\<bbb-N\>> we have
-      <math|x\<less\>a+<frac|1|n>> it follows that
-      <math|x\<in\><around*|]|-\<infty\>,a+<frac|1|n>|[>>. Hence\ 
+      <math|x\<leqslant\>a> so that <math|\<forall\>n\<in\>\<bbb-N\>> we have
+      <math|x\<less\>a+<frac|1|n>>, hence it follows that
+      <math|<rigid|x\<in\><around*|]|-\<infty\>,a+<frac|1|n>|[>>>. Hence\ 
 
       <\equation>
         <label|eq 18.13.021><around*|]|-\<infty\>,a|]>\<subseteq\><big|cap><rsub|n\<in\>\<bbb-N\>><around*|]|-\<infty\>,a+<frac|1|n>|[>
@@ -2943,8 +3014,8 @@
       </equation*>
 
       <item>Let <math|x\<in\><around*|[|a,\<infty\>|[>> then
-      <math|a\<leqslant\>x> so that <math|\<forall\>n\<in\>\<bbb-N\><rsub|9>>
-      we have <math|a-<frac|1|n>\<less\>x> giving
+      <math|a\<leqslant\>x> so that <math|\<forall\>n\<in\>\<bbb-N\>> we have
+      <math|a-<frac|1|n>\<less\>x> giving
       <math|x\<in\><around*|]|a-<frac|1|n>,\<infty\>|[>> proving that\ 
 
       <\equation>
@@ -2955,8 +3026,8 @@
       then <math|\<forall\>n\<in\>\<bbb-N\>> we have
       <math|a-<frac|1|n>\<less\>x\<Rightarrow\>a\<less\>x+<frac|1|n>> which
       by [corollary: <reference|complex Archimedean property consequence
-      (2)>] proves that <math|x\<in\><around*|[|a,\<infty\>|[>>. Hence
-      <math|<big|cap><rsub|n\<in\>\<bbb-N\>><around*|]|a-<frac|1|n>,\<infty\>|[>\<subseteq\><around*|[|a,\<infty\>|]>>
+      (2)>] proves that <math|a\<leqslant\>x\<Rightarrow\>x\<in\><around*|[|a,\<infty\>|[>>.
+      Hence <math|<big|cap><rsub|n\<in\>\<bbb-N\>><around*|]|a-<frac|1|n>,\<infty\>|[>\<subseteq\><around*|[|a,\<infty\>|]>>
       which together with [eq: <reference|eq 18.14.021>] <math|>proves that
 
       <\equation*>
@@ -3160,8 +3231,6 @@
         <around*|]|a,\<infty\>|[>=\<bbb-R\>\\<around*|]|-\<infty\>,a|]>
       </equation*>
     </enumerate>
-
-    \;
   </proof>
 
   We are now ready to prove alternative forms for
@@ -3195,8 +3264,8 @@
     which is a <math|\<sigma\>>-algebra it follows from [theorem:
     <reference|measure countable union is in sigma algebra>] that
     <math|U=<big|cup><rsub|i\<in\>I><around*|]|a<rsub|i>,\<beta\><rsub|i>|[>\<in\>\<sigma\><around*|(|\<cal-I\><rsub|<around*|]||[>>|)>>.
-    As <math|U\<in\>\<cal-T\><rsub|<around*|\|||\|>>> was chosen arbitrary it
-    follows that <math|\<cal-T\><rsub|<around*|\|||\|>>\<subseteq\>\<sigma\><around*|[|\<cal-I\><rsub|<around*|]||[>>|]>>.
+    Given that <math|U\<in\>\<cal-T\><rsub|<around*|\|||\|>>> was chosen
+    arbitrary it follows that <math|\<cal-T\><rsub|<around*|\|||\|>>\<subseteq\>\<sigma\><around*|[|\<cal-I\><rsub|<around*|]||[>>|]>>.
     Using then [theorem: <reference|measure generated sigma algebra>] it
     follows that\ 
 
@@ -3218,8 +3287,8 @@
     </description>
 
     so that <math|<around*|{|<around*|]|a,b-<frac|1|n>|]>|}><rsub|n\<in\>\<bbb-N\>>\<subseteq\>\<sigma\><around*|[|\<cal-I\><rsub|<around*|]||]>>|]>>
-    from which it follows by [lemma: <reference|measure countable union is in
-    sigma algebra>] that
+    from which it follows by [definition: <reference|measure sigma algebra>]
+    that
 
     <\equation*>
       <around*|]|a,b|[>=<big|cup><rsub|n\<in\>\<bbb-N\>><around*|]|a,b-<frac|1|n>|]>\<in\>\<sigma\><around*|[|\<cal-I\><rsub|<around*|]||]>>|]>
@@ -3243,12 +3312,12 @@
       <math|<around*|[|a+<frac|1|n>,b|]>=\<varnothing\>\<in\>\<sigma\><around*|[|\<cal-I\><rsub|<around*|[||]>>|]>>
 
       <item*|<math|<around*|[|a+<frac|1|n>,b|]>\<neq\>\<varnothing\>>>Then
-      <math|<around*|[|a+<frac|1|n>,b|]>\<in\>\<cal-I\><rsub|<around*|[||]>>\<subseteq\>\<sigma\><around*|[|\<cal-I\><rsub|<around*|[||]>>|)><around*|[||]>>
+      <math|<around*|[|a+<frac|1|n>,b|]>\<in\>\<cal-I\><rsub|<around*|[||]>>\<subseteq\>\<sigma\><around*|[|\<cal-I\><rsub|<around*|[||]>>|)>>
     </description>
 
     so that <math|<around*|{|<around*|[|a+<frac|1|n>,b|]>|}><rsub|n\<in\>\<bbb-N\>>\<subseteq\>\<sigma\><around*|[|\<cal-I\><rsub|<around*|[||]>>|]>>
-    from which it follows by [theorem: <reference|measure countable union is
-    in sigma algebra>] that
+    from which it follows by [definition: <reference|measure sigma algebra>]
+    that
 
     <\equation*>
       <around*|]|a,b|]>=<big|cup><rsub|n\<in\>\<bbb-N\>><around*|[|a+<frac|1|n>,b|]>\<in\>\<sigma\><around*|[|\<cal-I\><rsub|<around*|[||]>>|]>
@@ -3272,12 +3341,12 @@
       <math|<around*|[|a,b+<frac|1|n>|[>=\<varnothing\>\<in\>\<sigma\><around*|[|\<cal-I\><rsub|<around*|[||[>>|]>>
 
       <item*|<math|<around*|[|a,b+<frac|1|n>|[>\<neq\>\<varnothing\>>>Then
-      <math|<around*|[|a,b+<frac|1|n>|[>\<in\>\<sigma\><around*|[|\<cal-I\><rsub|<around*|[||[>>|]>>
+      <math|<around*|[|a,b+<frac|1|n>|[>\<in\>\<cal-I\><rsub|<around*|[||[>>\<subseteq\>\<sigma\><around*|[|\<cal-I\><rsub|<around*|[||[>>|]>>
     </description>
 
     so that <math|<around*|{|<around*|[|a,b+<frac|1|n>|[>|}><rsub|n\<in\>\<bbb-N\>>\<subseteq\>\<sigma\><around*|[|\<cal-I\><rsub|<around*|[||[>>|]>>
-    form which it it follows by [theorem: <reference|measure countable union
-    is in sigma algebra>] that\ 
+    form which it it follows by [theorem: <reference|measure sigma algebra
+    equivalences>] that\ 
 
     <\equation*>
       <around*|[|a,b|]>=<big|cap><rsub|n\<in\>\<bbb-N\>><around*|[|a,b+<frac|1|n>|[>\<in\>\<sigma\><around*|[|\<cal-I\><rsub|<around*|[||[>>|]>
@@ -3296,8 +3365,8 @@
     <math|<around*|[|a,b|[>=<big|cap><rsub|n\<in\>\<bbb-N\>><around*|]|a-<frac|1|n>,b|[>>.
     As <math|\<forall\>n\<in\>\<bbb-N\>> <math|<around*|]|a-<frac|1|n>,b|[>>
     is open it follows that <math|<around*|{|<around*|]|a-<frac|1|n>,b|[>|}><rsub|n\<in\>\<bbb-N\>>\<subseteq\>\<cal-T\><rsub|<around*|\|||\|>>>
-    so that by [theorem <reference|measure countable union is in sigma
-    algebra>] <math|<around*|[|a,b|[>=<big|cap><rsub|n\<in\>\<bbb-N\>><around*|]|a-<frac|1|n>,b|[>\<in\>\<sigma\><around*|[|\<cal-T\><rsub|<around*|\|||\|>>|]>>.
+    so that by [theorem: <reference|measure sigma algebra equivalences>]
+    <math|<around*|[|a,b|[>=<big|cap><rsub|n\<in\>\<bbb-N\>><around*|]|a-<frac|1|n>,b|[>\<in\>\<sigma\><around*|[|\<cal-T\><rsub|<around*|\|||\|>>|]>>.
     Hence we have that <math|\<cal-I\><rsub|<around*|[||[>>\<subseteq\>\<sigma\><around*|[|\<cal-T\><rsub|<around*|\|||\|>>|]>>
     so that\ 
 
@@ -3318,7 +3387,8 @@
 
     <\equation*>
       <around*|[|a,b|]>=<around*|[|a,\<infty\>|]>\\<around*|[|b,\<infty\>|[><below|\<in\>|<text|[theorem:
-      <reference|measure algebra properties>]>>\<sigma\><around*|[|<around*|{|<around*|[|a,\<infty\>|[>\|a\<in\>\<bbb-R\>|}>|]>
+      <reference|measure algebra properties>, <reference|measure sigma
+      algebra equivalences>]>>\<sigma\><around*|[|<around*|{|<around*|[|a,\<infty\>|[>\|a\<in\>\<bbb-R\>|}>|]>
     </equation*>
 
     proving <math|\<cal-I\><rsub|<around*|[||[>>\<subseteq\>\<sigma\><around*|[|<around*|{|<around*|[|a,\<infty\>|[>\|a\<in\>\<bbb-R\>|}>|]>>
@@ -3332,9 +3402,9 @@
     If <math|<around*|[|a,\<infty\>|[>\<in\><around*|{|<around*|[|a,\<infty\>|[>\|a\<in\>\<bbb-R\>|}>>
     then using [lemma: <reference|lemma 20.121.200>] we have that
     <math|<around*|[|a,\<infty\>|[>=<big|cap><rsub|n\<in\>\<bbb-N\>><around*|]|a-<frac|1|n>,\<infty\>|[>>.
-    As <math|<around*|{|<around*|]|a-<frac|1|n>,\<infty\>|[>|}><rsub|n\<in\>\<bbb-N\>>\<subseteq\><around*|{|<around*|]|a-<frac|1|n>,\<infty\>|[>\|n\<in\>\<bbb-N\>|}>\<subseteq\>\<sigma\><around*|[|<around*|{|<around*|]|a,\<infty\>|[>\|a\<in\>\<bbb-R\>|}>|]>>
-    it follows from [theorem: <reference|measure countable union is in sigma
-    algebra>] that
+    As <math|<around*|{|<around*|]|a-<frac|1|n>,\<infty\>|[>|}><rsub|n\<in\>\<bbb-N\>>\<subseteq\><around*|{|<around*|]|a,\<infty\>|[>\|a\<in\>\<bbb-R\>|}>\<subseteq\>\<sigma\><around*|[|<around*|{|<around*|]|a,\<infty\>|[>\|a\<in\>\<bbb-R\>|}>|]>>
+    it follows from [theorem: <reference|measure sigma algebra equivalences>]
+    that
 
     <\equation*>
       <around*|[|a,\<infty\>|[>=<big|cap><rsub|n\<in\>\<bbb-N\>><around*|]|a-<frac|1|n>,\<infty\>|[>\<in\>\<sigma\><around*|[|<around*|{|<around*|]|a,\<infty\>|[>\|a\<in\>\<bbb-R\>|}>|]>
@@ -3362,8 +3432,8 @@
     then by [lemma: <reference|lemma 20.121.200>]
     <math|<around*|]|-\<infty\>,a|]>=<big|cap><rsub|n\<in\>\<bbb-N\>><around*|]|-\<infty\>,a+<frac|1|n>|[>>.
     As <math|<rigid|<around*|{|<around*|]|-\<infty\>,a+<frac|1|n>|[>|}><rsub|n\<in\>\<bbb-N\>>\<subseteq\><around*|{|<around*|]|-\<infty\>,a|[>\|a\<in\>\<bbb-R\>|}>\<subseteq\>\<sigma\><around*|[|<around*|{|<around*|]|-\<infty\>,a|[>\|a\<in\>\<bbb-R\>|}>|]>>>
-    it follows from \ [theorem: <reference|measure countable union is in
-    sigma algebra>] that <math|><math|<around*|]|-\<infty\>,a|]>=<big|cap><rsub|n\<in\>\<bbb-N\>><around*|]|-\<infty\>,a+<frac|1|n>|[>\<in\>\<sigma\><around*|[|<around*|{|<around*|]|-\<infty\>,a|[>\|a\<in\>\<bbb-R\>|}>|]>>.
+    it follows from [theorem: <reference|measure sigma algebra equivalences>]
+    that <math|><math|<around*|]|-\<infty\>,a|]>=<big|cap><rsub|n\<in\>\<bbb-N\>><around*|]|-\<infty\>,a+<frac|1|n>|[>\<in\>\<sigma\><around*|[|<around*|{|<around*|]|-\<infty\>,a|[>\|a\<in\>\<bbb-R\>|}>|]>>.
     Hence
 
     <\equation*>
@@ -3450,11 +3520,12 @@
         <label|eq 20.109.227><around*|[|a,\<infty\>|]>\<subseteq\><big|cap><rsub|n\<in\>\<bbb-N\>><around*|]|a-<frac|1|n>,\<infty\>|]>
       </equation>
 
-      If <math|x\<in\><big|cap><rsub|n\<in\>\<bbb-N\>><around*|]|a-<frac|1|n>,\<infty\>|]>>.
-      Assume that <math|x\<less\>a> then using [theorem: <reference|complex
-      Archimedean property consequence (1)>] there exist a
-      <math|n\<in\>\<bbb-N\>> such that <math|x+<frac|1|n>\<less\>a> or
-      <math|x\<less\>a-<frac|1|n>> so that
+      If <math|x\<in\><big|cap><rsub|n\<in\>\<bbb-N\>><around*|]|a-<frac|1|n>,\<infty\>|]>>
+      then <math|x\<in\><around*|]|a-<frac|1|1>,\<infty\>|]>\<Rightarrow\>a-1\<less\>x>.
+      Assume that <math|x\<less\>a> then <math|x\<in\>\<bbb-R\>> and using
+      [theorem: <reference|complex Archimedean property consequence (1)>]
+      there exist a <math|n\<in\>\<bbb-N\>> such that
+      <math|x+<frac|1|n>\<less\>a> or <math|x\<less\>a-<frac|1|n>> so that
       <math|x\<nin\><around*|]|a-<frac|1|n>,\<infty\>|]>> contradicting
       <math|x\<in\><big|cap><rsub|n\<in\>\<bbb-N\>><around*|]|a-<frac|1|n>,\<infty\>|]>>.
       Hence the assumption is wrong and we have
@@ -3478,7 +3549,7 @@
 
       Let <math|x\<in\><big|cap><rsub|n\<in\>\<bbb-N\>><around*|]|n,\<infty\>|]>>.
       Then <math|x\<in\><around*|[|1,\<infty\>|]>\<Rightarrow\>-\<infty\>\<less\>1\<less\>x\<leqslant\>\<infty\>>
-      so that <math|x\<nin\>-\<infty\>>. Assume that <math|x\<neq\>\<infty\>>
+      so that <math|x\<neq\>-\<infty\>>. Assume that <math|x\<neq\>\<infty\>>
       then <math|x\<in\>\<bbb-R\>> and by [theorem: <reference|complex
       Archimedean property consequence (1)>] there exist a
       <math|n\<in\>\<bbb-N\>> such that <math|x\<less\>n\<Rightarrow\>x\<in\>\<nin\><around*|]|n,\<infty\>|]>>
@@ -3548,11 +3619,11 @@
 
     <\enumerate>
       <item>Let <math|a\<in\>\<bbb-R\>> then
-      <math|<around*|{|<around*|]|a-<frac|1|n>,\<infty\>|]>|}><rsub|n\<in\>\<bbb-N\><rsub|0>>\<subseteq\><around*|{|<around*|]|a,\<infty\>|]>\|a\<in\>\<bbb-R\>|}>\<subseteq\>\<sigma\><around*|(|<around*|{|<around*|]|a,\<infty\>|]>\|a\<in\>\<bbb-R\>|}>|)>>,
-      hence <rigid|<math|<big|cup><rsub|n\<in\>\<bbb-N\><rsub|0>><around*|]|a-<frac|1|n>,\<infty\>|]>\<in\>\<sigma\><around*|(|<around*|{|<around*|]|a,\<infty\>|]>\|a\<in\>\<bbb-R\>|}>|)>>>.
+      <math|<around*|{|<around*|]|a-<frac|1|n>,\<infty\>|]>|}><rsub|n\<in\>\<bbb-N\>>\<subseteq\><around*|{|<around*|]|a,\<infty\>|]>\|a\<in\>\<bbb-R\>|}>\<subseteq\>\<sigma\><around*|(|<around*|{|<around*|]|a,\<infty\>|]>\|a\<in\>\<bbb-R\>|}>|)>>,
+      hence <rigid|<math|<big|cup><rsub|n\<in\>\<bbb-N\>><around*|]|a-<frac|1|n>,\<infty\>|]>\<in\>\<sigma\><around*|(|<around*|{|<around*|]|a,\<infty\>|]>\|a\<in\>\<bbb-R\>|}>|)>>>.
       As <math|<around*|[|a,\<infty\>|]>\<equallim\><rsub|<text|[lemma:
-      <reference|lemma 20.150.227>]>><big|cup><rsub|n\<in\>\<bbb-N\><rsub|0>><around*|]|a-<frac|1|n>,\<infty\>|]>>
-      we have that\ 
+      <reference|lemma 20.150.227>]>><big|cup><rsub|n\<in\>\<bbb-N\>><around*|]|a-<frac|1|n>,\<infty\>|]>>
+      we have by [theorem: <reference|measure sigma algebra equivalences>]\ 
 
       <\equation*>
         <around*|[|a,\<infty\>|]>\<in\>\<sigma\><around*|(|<around*|{|<around*|]|a,\<infty\>|]>\|a\<in\>\<bbb-R\>|}>|)>
@@ -3561,34 +3632,42 @@
       <item>Let <math|a\<in\>\<bbb-R\>> then
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|x\<in\><wide|\<bbb-R\>|\<wide-bar\>>\\<around*|[|a,\<infty\>|]>>|<cell|\<Leftrightarrow\>>|<cell|x\<in\><around*|[|-\<infty\>,\<infty\>|]>\<wedge\>x\<nin\><around*|[|a,\<infty\>|]>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|<around*|(|-\<infty\>\<leqslant\>x\<wedge\>x\<leqslant\>\<infty\>|)>\<wedge\>\<neg\><around*|(|a\<leqslant\>x\<leqslant\>\<infty\>|)>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|<around*|(|-\<infty\>\<leqslant\>x\<wedge\>x\<leqslant\>\<infty\>|)>\<wedge\><around*|(|x\<less\>a\<vee\>\<infty\>\<less\>x|)>>>|<row|<cell|>|<cell|<below|\<Leftrightarrow\>|\<infty\>\<less\>x<text|
+        <tformat|<table|<row|<cell|x\<in\><wide|\<bbb-R\>|\<wide-bar\>>\\<around*|[|a,\<infty\>|]>>|<cell|\<Leftrightarrow\>>|<cell|x\<in\><around*|[|-\<infty\>,\<infty\>|]>\<wedge\>x\<nin\><around*|[|a,\<infty\>|]>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|<around*|(|-\<infty\>\<leqslant\>x\<wedge\>x\<leqslant\>\<infty\>|)>\<wedge\>\<neg\><around*|(|a\<leqslant\>x\<wedge\>x\<leqslant\>\<infty\>|)>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|<around*|(|-\<infty\>\<leqslant\>x\<wedge\>x\<leqslant\>\<infty\>|)>\<wedge\><around*|(|x\<less\>a\<vee\>\<infty\>\<less\>x|)>>>|<row|<cell|>|<cell|<below|\<Leftrightarrow\>|\<infty\>\<less\>x<text|
         is false>>>|<cell|-\<infty\>\<leqslant\>x\<wedge\>x\<leqslant\>\<infty\>\<wedge\>x\<less\>a>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|-\<infty\>\<leqslant\>x\<wedge\>x\<less\>a>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\><around*|[|-\<infty\>,a|[>>>>>
       </eqnarray*>
 
       proving that <math|<around*|[|-\<infty\>,a|[>=<wide|\<bbb-R\>|\<wide-bar\>>\\<around*|[|a,\<infty\>|]>>
       which, as by (1) <math|<around*|[|a,\<infty\>|]>\<in\>\<sigma\><around*|(|<around*|{|<around*|]|a,\<infty\>|]>\|a\<in\>\<bbb-R\>|}>|)>>
       and <rigid|<math|\<sigma\><around*|(|<around*|{|<around*|]|a,\<infty\>|]>\|a\<in\>\<bbb-R\>|}>|)>>>
-      is a <math|\<sigma\>>-algebra, proves\ 
+      is a <math|\<sigma\>>-algebra, proves by [theorem: <reference|measure
+      sigma algebra equivalences>]
 
       <\equation*>
         <around*|[|-\<infty\>,a|[>\<in\>\<sigma\><around*|(|<around*|{|<around*|]|a,\<infty\>|]>\|a\<in\>\<bbb-R\>|}>|)>
       </equation*>
 
-      <item>Let <math|a,b\<in\>\<bbb-R\>> with <math|a\<leqslant\>b> then
+      <item>Let <math|a,b\<in\>\<bbb-R\>> then we have either:\ 
 
-      <\eqnarray*>
-        <tformat|<table|<row|<cell|x\<in\><around*|]|a,\<infty\>|]><big|cap><around*|[|-\<infty\>,b|[>>|<cell|\<Leftrightarrow\>>|<cell|x\<in\><around*|]|a,\<infty\>|]>*\<wedge\>x\<in\><around*|[|-\<infty\>,b|[>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|a\<less\>x\<wedge\>x\<leqslant\>\<infty\>\<wedge\>-\<infty\>\<leqslant\>x\<wedge\>x\<less\>b>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|a\<less\>x\<wedge\>x\<less\>b>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\><around*|]|a,b|[>>>>>
-      </eqnarray*>
+      <\description>
+        <item*|<math|b\<less\>a>>Then <math|<around*|[|a,b|]>=\<varnothing\>\<in\>\<sigma\><around*|(|<around*|{|<around*|]|a,\<infty\>|]>\|a\<in\>\<bbb-R\>|}>|)>>
 
-      proving that <math|<around*|]|a,b|[>=<around*|]|a,\<infty\>|]><big|cap><around*|[|-\<infty\>,b|[>>.
-      As <math|><math|<around*|]|a,\<infty\>|]>\<in\>\<sigma\><around*|(|<around*|{|<around*|]|a,\<infty\>|]>\|a\<in\>\<bbb-R\>|}>|)>>
-      and by (2) <math|<around*|[|-\<infty\>,b|[>\<in\>\<sigma\><around*|(|<around*|{|<around*|]|a,\<infty\>|]>\|a\<in\>\<bbb-R\>|}>|)>>
-      we have that <math|><math|<around*|]|a,\<infty\>|]><big|cap><around*|[|-\<infty\>,b|[>\<in\>\<sigma\><around*|{|<around*|]|a,\<infty\>|]>\|a\<in\>\<bbb-R\>|}>>.
-      So\ 
+        <item*|<math|a\<leqslant\>b>>Then\ 
 
-      <\equation*>
-        <around*|]|a,b|[>\<in\>\<sigma\><around*|(|<around*|{|<around*|]|a,\<infty\>|]>\|a\<in\>\<bbb-R\>|}>|)>
-      </equation*>
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|x\<in\><around*|]|a,\<infty\>|]><big|cap><around*|[|-\<infty\>,b|[>>|<cell|\<Leftrightarrow\>>|<cell|x\<in\><around*|]|a,\<infty\>|]>*\<wedge\>x\<in\><around*|[|-\<infty\>,b|[>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|a\<less\>x\<wedge\>x\<leqslant\>\<infty\>\<wedge\>-\<infty\>\<leqslant\>x\<wedge\>x\<less\>b>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|a\<less\>x\<wedge\>x\<less\>b>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\><around*|]|a,b|[>>>>>
+        </eqnarray*>
+
+        proving that <math|<around*|]|a,b|[>=<around*|]|a,\<infty\>|]><big|cap><around*|[|-\<infty\>,b|[>>.
+        As <math|><math|<around*|]|a,\<infty\>|]>\<in\>\<sigma\><around*|(|<around*|{|<around*|]|a,\<infty\>|]>\|a\<in\>\<bbb-R\>|}>|)>>
+        and by (2) <math|<rigid|<around*|[|-\<infty\>,b|[>\<in\>\<sigma\><around*|(|<around*|{|<around*|]|a,\<infty\>|]>\|a\<in\>\<bbb-R\>|}>|)>>>
+        we have [theorem <math|><math|<around*|]|a,\<infty\>|]><big|cap><around*|[|-\<infty\>,b|[>\<in\>\<sigma\><around*|{|<around*|]|a,\<infty\>|]>\|a\<in\>\<bbb-R\>|}>>.
+        So by ]theorems: <reference|measure algebra equavalent definition>,
+        <reference|measure sigma algebra equivalences>]\ 
+
+        <\equation*>
+          <around*|]|a,b|[>\<in\>\<sigma\><around*|(|<around*|{|<around*|]|a,\<infty\>|]>\|a\<in\>\<bbb-R\>|}>|)>
+        </equation*>
+      </description>
 
       <item>Let <math|U> be a open set in <math|\<bbb-R\>> then by
       [corollary: <reference|normed open set as union of intervals (1)>]
@@ -3601,8 +3680,8 @@
 
       <item>Using [lemma: <reference|lemma 20.150.227>] we have that
       <math|<around*|{|\<infty\>|}>=<big|cap><rsub|n\<in\>\<bbb-N\><rsub|0>><around*|]|n,\<infty\>|]>>
-      which, as <math|<rigid|<around*|{|<around*|]|n,\<infty\>|]>|}><rsub|n\<in\>\<bbb-N\><rsub|0>>\<subseteq\><around*|(|<around*|{|<around*|]|a,\<infty\>|]>\|a\<in\>\<bbb-R\>|}>|)>>>,
-      \ proves that\ 
+      which, as <math|<rigid|<around*|{|<around*|]|n,\<infty\>|]>|}><rsub|n\<in\>\<bbb-N\><rsub|0>>\<subseteq\><around*|(|<around*|{|<around*|]|a,\<infty\>|]>\|a\<in\>\<bbb-R\>|}>|)>\<subseteq\>\<sigma\><around*|(|<around*|{|<around*|]|a,\<infty\>|]>\|a\<in\>\<bbb-R\>|}>|)>>>,
+      \ proves by [theorem: <reference|measure sigma algebra equivalences>]\ 
 
       <\equation*>
         <around*|{|\<infty\>|}>\<in\>\<sigma\><around*|(|<around*|{|<around*|]|a,\<infty\>|]>\|a\<in\>\<bbb-R\>|}>|)>
@@ -3610,7 +3689,7 @@
 
       <item>Using [lemma: <reference|lemma 20.150.227>] we have that
       <math|<around*|{|-\<infty\>|}>=<big|cap><rsub|n\<in\>\<bbb-N\><rsub|0>><around*|[|-\<infty\>,-n|[>>
-      which, as by (2) \ <math|<rigid|<around*|{|<around*|[|-\<infty\>,-n|]>|}><rsub|n\<in\>\<bbb-N\><rsub|0>>\<in\>\<sigma\><around*|(|<around*|{|<around*|]|a,\<infty\>|]>\|a\<in\>\<bbb-R\>|}>|)>>>,
+      which, as by (2) \ <math|<rigid|<around*|{|<around*|[|-\<infty\>,-n|]>|}><rsub|n\<in\>\<bbb-N\><rsub|0>>\<subseteq\>\<sigma\><around*|(|<around*|{|<around*|]|a,\<infty\>|]>\|a\<in\>\<bbb-R\>|}>|)>>>,
       \ proves by [theorem: <reference|measure sigma algebra equivalences>]
       that\ 
 
@@ -3657,9 +3736,9 @@
 
     Also <math|U<big|cap><around*|{|-\<infty\>|}>> is either
     <math|\<emptyset\>\<in\>\<sigma\><around*|[|<around*|{|<around*|]|a,\<infty\>|]>\|a\<in\>\<bbb-R\>|}>|]>>
-    or <math|<around*|{|-\<infty\>|}>> and as by [lemma: <reference|lemma
-    20.151.227>] <rigid|<math|<around*|{|-\<infty\>|}>\<in\>\<sigma\><around*|[|<around*|{|<around*|]|a,\<infty\>|]>\|a\<in\>\<bbb-R\>|}>|]>>>
-    we have that\ 
+    or <math|<around*|{|-\<infty\>|}><below|\<in\>|<text|[lemma:
+    <reference|lemma 20.151.227>]>>\<sigma\><around*|[|<around*|{|<around*|]|a,\<infty\>|]>\|a\<in\>\<bbb-R\>|}>|]>>
+    so that\ 
 
     <\equation>
       <label|eq 20.115.227>U<big|cap><around*|{|-\<infty\>|}>\<in\>\<sigma\><around*|[|<around*|{|<around*|]|a,\<infty\>|]>\|a\<in\>\<bbb-R\>|}>|]>
@@ -3667,8 +3746,8 @@
 
     Finally <math|U<big|cap><around*|{|\<infty\>|}>> is either
     <math|\<emptyset\>\<in\>\<sigma\><around*|[|<around*|{|<around*|]|a,\<infty\>|]>\|a\<in\>\<bbb-R\>|}>|]>>
-    or <math|<around*|{|\<infty\>|}>> and as by \ [lemma: <reference|lemma
-    20.151.227>] <math|<rigid|<around*|{|\<infty\>|}>\<in\>\<sigma\><around*|[|<around*|{|<around*|]|a,\<infty\>|]>\|a\<in\>\<bbb-R\>|}>|]>>>
+    or <math|<around*|{|\<infty\>|}><below|\<in\>|<text|[lemma:
+    <reference|lemma 20.151.227>]>><rigid|<around*|{|\<infty\>|}>\<in\>\<sigma\><around*|[|<around*|{|<around*|]|a,\<infty\>|]>\|a\<in\>\<bbb-R\>|}>|]>>>
     it follows that\ 
 
     <\equation>
@@ -3676,11 +3755,13 @@
     </equation>
 
     From \ [eqs: <reference|eq 20.113.227>, <reference|eq 20.114.227>,
-    <reference|eq 20.115.227> and <reference|eq 20.116.227>] it follows that
-    <math|U\<in\>\<sigma\><around*|[|<around*|{|<around*|]|a,\<infty\>|]>\|a\<in\>\<bbb-R\>|}>|]>>.
+    <reference|eq 20.115.227> and <reference|eq 20.116.227>] it follows from
+    [theorems: <reference|measure algebra equavalent definition>,
+    <reference|measure sigma algebra equivalences>] that
+    <math|<rigid|U\<in\>\<sigma\><around*|[|<around*|{|<around*|]|a,\<infty\>|]>\|a\<in\>\<bbb-R\>|}>|]>>>.
     Hence <math|<rigid|\<cal-T\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>>\<subseteq\>\<sigma\><around*|[|<around*|{|<around*|]|a,\<infty\>|]>\|a\<in\>\<bbb-R\>|}>|]>>>
     [a sigma algebra on <math|<wide|\<bbb-R\>|\<wide-bar\>>>] so that
-    <math|\<sigma\><around*|[|\<cal-T\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>>|]>\<subseteq\>\<sigma\><around*|[|<around*|{|<around*|]|a,\<infty\>|]>\|a\<in\>\<bbb-R\>|}>|]>>,
+    <math|<rigid|\<sigma\><around*|[|\<cal-T\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>>|]>\<subseteq\>\<sigma\><around*|[|<around*|{|<around*|]|a,\<infty\>|]>\|a\<in\>\<bbb-R\>|}>|]>>>,
     combining this with [eq: <reference|eq 20.112.227>] gives
 
     <\equation*>
@@ -3760,7 +3841,7 @@
       \<cal-T\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>>\<subseteq\><around*|{|U\<in\>\<cal-P\><around*|(|<wide|\<bbb-R\>|\<wide-bar\>>|)>\|U<big|cap>\<bbb-R\>\<in\>\<cal-B\><around*|[|\<bbb-R\>|]>|}>
     </equation*>
 
-    and as <math|<around*|{|U\<in\>\<cal-P\><around*|(|<wide|\<bbb-R\>|\<wide-bar\>>|)>\|U<big|cap>\<bbb-R\>\<in\>\<cal-B\><around*|[|\<bbb-R\>|]>|}>>
+    As <math|<around*|{|U\<in\>\<cal-P\><around*|(|<wide|\<bbb-R\>|\<wide-bar\>>|)>\|U<big|cap>\<bbb-R\>\<in\>\<cal-B\><around*|[|\<bbb-R\>|]>|}>>
     is a <math|\<sigma\>>-algebra on <math|<wide|\<bbb-R\>|\<wide-bar\>>>
     [see eq: <reference|eq 20.117.227>] it follows from [theorem:
     <reference|measure generated sigma algebra>] that\ 
@@ -3892,7 +3973,7 @@
       sets>] and closed sets are part of <math|\<sigma\><around*|[|\<cal-T\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>>|]>>
       by [theorem: <reference|measure Borel algebra and closure>]].\ 
 
-      <item><math|A<big|cap><around*|{|-\<infty\>|}>> is either
+      <item><math|A<big|cap><around*|{|\<infty\>|}>> is either
       <math|\<emptyset\>\<in\>\<sigma\><around*|[|\<cal-T\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>>|]>>
       or <math|<around*|{|\<infty\>|}>\<in\>\<sigma\><around*|[|\<cal-T\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>>|]>>
       [as <math|\<infty\>> is closed by [theorem: <reference|extended closed
@@ -3929,17 +4010,23 @@
   </theorem>
 
   <\proof>
-    The first part of the theorem follows from [lemma: <reference|lemma
-    20.153.227 >] and [lemma: <reference|lemma 20.153.227 >]. For the last
-    part. Let <math|A\<in\>\<cal-B\><around*|[|\<bbb-R\>|]>> then
+    The first part of the theorem follows from [lemmas: <reference|lemma
+    20.152.227>,<reference|lemma 20.153.227 >]. For the last part. Let
+    <math|A\<in\>\<cal-B\><around*|[|\<bbb-R\>|]>> then
     <math|A\<subseteq\>\<bbb-R\>\<subseteq\><wide|\<bbb-R\>|\<wide-bar\>>> so
     that <math|A\<in\>\<cal-P\><around*|(|<wide|\<bbb-R\>|\<wide-bar\>>|)>>
     and <math|A=A<big|cap>R\<in\>\<cal-B\><around*|[|\<bbb-R\>|]>> hence
-    <math|A\<in\><around*|{|U\<subseteq\>\<cal-P\><around*|[|<wide|\<bbb-R\>|\<wide-bar\>>|]>\|U<big|cap>\<bbb-R\>\<in\>\<cal-B\><around*|[|\<bbb-R\>|]>|}>=\<cal-B\><around*|[|<wide|\<bbb-R\>|\<wide-bar\>>|]>>.
-    Hence we have <math|\<cal-B\><around*|[|\<bbb-R\>|]>\<subseteq\>\<cal-B\><around*|[|<wide|\<bbb-R\>|\<wide-bar\>>|]>>.
+
+    <\equation*>
+      A\<in\><around*|{|U\<subseteq\>\<cal-P\><around*|[|<wide|\<bbb-R\>|\<wide-bar\>>|]>\|U<big|cap>\<bbb-R\>\<in\>\<cal-B\><around*|[|\<bbb-R\>|]>|}>=\<cal-B\><around*|[|<wide|\<bbb-R\>|\<wide-bar\>>|]>.
+    </equation*>
+
+    which proves that <math|\<cal-B\><around*|[|\<bbb-R\>|]>\<subseteq\>\<cal-B\><around*|[|<wide|\<bbb-R\>|\<wide-bar\>>|]>>.
   </proof>
 
   <subsubsection|Borel algebra on <math|\<bbb-R\><rsup|n>>>
+
+  TODO
 
   <\definition>
     <label|measure Borel algebra on R^n>Let <math|n\<in\>\<bbb-N\>> then the
@@ -43441,8 +43528,8 @@
   </proof>
 
   We prove now a surprising relation between all translation invariant Radon
-  measures on <math|\<bbb-R\>> or and the Borel measure <math|\<lambda\>>.
-  First we introduce Dyadic intervals [similar to Dyadic cubes in [definition
+  measures on <math|\<bbb-R\>> and the Borel measure <math|\<lambda\>>. First
+  we introduce Dyadic intervals [similar to Dyadic cubes in [definition
   <reference|measure Dyadic cubes>] and prove that every open set in
   <math|\<cal-T\><rsub|<around*|\|||\|>>><space|0.6spc>can be written as the
   union of disjoint Dyadic intervals.
@@ -45244,7 +45331,7 @@
     </equation*>
 
     so that <math|det<around*|(|D|)>=<around*|\||det<around*|(|L|)>|\|>>
-    which combined with combined with [eq: <reference|eq 21.1102.291>] gives\ 
+    which combined with [eq: <reference|eq 21.1102.291>] gives\ 
 
     <\equation*>
       \<lambda\><rsup|n><around*|(|L<around*|(|<around*|[|0,1|[><rsup|n>|)>|)>=<around*|\||det<around*|(|L|)>|\|>
@@ -45623,6 +45710,8 @@
 
   \;
 
+  \;
+
   \ 
 </body>
 
@@ -45631,7 +45720,8 @@
     <associate|chapter-nr|20>
     <associate|item-nr|>
     <associate|last-item-nr|2>
-    <associate|page-first|1337>
+    <associate|page-first|1399>
+    <associate|par-first|0fn>
     <associate|section-nr|5>
     <associate|subsection-nr|0>
   </collection>
@@ -45639,77 +45729,77 @@
 
 <\references>
   <\collection>
-    <associate|20.809.248|<tuple|21.816|?>>
-    <associate|21.1044.291|<tuple|21.1050|?>>
-    <associate|Beppo Levi's Theorem|<tuple|21.361|?>>
+    <associate|20.809.248|<tuple|21.817|?>>
+    <associate|21.1044.291|<tuple|21.1051|?>>
+    <associate|Beppo Levi's Theorem|<tuple|21.363|?>>
     <associate|Borel measure on R and R^n are locally
-    finite|<tuple|21.559|?>>
+    finite|<tuple|21.561|?>>
     <associate|Constructing measures and sigma alegebra|<tuple|21.3.4|?>>
-    <associate|Fatou's lemma|<tuple|21.364|?>>
-    <associate|Fubini's theorem|<tuple|21.540|?>>
-    <associate|Hahn Decomposition Theorem|<tuple|21.458|?>>
-    <associate|Holder's Inequality|<tuple|21.407|?>>
-    <associate|Jordon Decomposition|<tuple|21.460|?>>
-    <associate|Jordon Decomposition complex measures|<tuple|21.468|?>>
-    <associate|Jordon Decomposition theorem|<tuple|21.459|?>>
-    <associate|LP space density (1)|<tuple|21.428|?>>
-    <associate|LP space density (2)|<tuple|21.430|?>>
-    <associate|LP space power extension|<tuple|21.420|?>>
-    <associate|LP spaces|<tuple|21.388|?>>
-    <associate|LP spaces (@@)|<tuple|21.396|?>>
-    <associate|LP spaces LP norm is zero|<tuple|21.401|?>>
-    <associate|LP spaces Minkowski's Inequality|<tuple|21.408|?>>
-    <associate|LP spaces absolute value|<tuple|21.399|?>>
-    <associate|LP spaces are Banach spaces|<tuple|21.427|?>>
-    <associate|LP spaces are pseudo normed|<tuple|21.411|?>>
-    <associate|LP spaces canonical example|<tuple|21.389|?>>
-    <associate|LP spaces density|<tuple|21.433|?>>
-    <associate|LP spaces empty set is locally m-null|<tuple|21.403|?>>
-    <associate|LP spaces finite sum|<tuple|21.410|?>>
-    <associate|LP spaces locally m-null set properties|<tuple|21.404|?>>
-    <associate|LP spaces locally u-null sets|<tuple|21.402|?>>
-    <associate|LP spaces neutral element|<tuple|21.390|?>>
-    <associate|LP spaces normed space|<tuple|21.418|?>>
-    <associate|LP spaces null sets is a subspace|<tuple|21.416|?>>
-    <associate|LP spaces p-norm (1)|<tuple|21.400|?>>
-    <associate|LP spaces p-norm (2)|<tuple|21.405|?>>
-    <associate|LP spaces p-null set|<tuple|21.414|?>>
-    <associate|LP spaces p-null set (1)|<tuple|21.415|?>>
-    <associate|LP spaces sum scalar product|<tuple|21.394|?>>
-    <associate|LP spaces sum scalar product (1)|<tuple|21.397|?>>
-    <associate|LP vector space|<tuple|21.398|?>>
+    <associate|Fatou's lemma|<tuple|21.366|?>>
+    <associate|Fubini's theorem|<tuple|21.542|?>>
+    <associate|Hahn Decomposition Theorem|<tuple|21.460|?>>
+    <associate|Holder's Inequality|<tuple|21.409|?>>
+    <associate|Jordon Decomposition|<tuple|21.462|?>>
+    <associate|Jordon Decomposition complex measures|<tuple|21.470|?>>
+    <associate|Jordon Decomposition theorem|<tuple|21.461|?>>
+    <associate|LP space density (1)|<tuple|21.430|?>>
+    <associate|LP space density (2)|<tuple|21.432|?>>
+    <associate|LP space power extension|<tuple|21.422|?>>
+    <associate|LP spaces|<tuple|21.390|?>>
+    <associate|LP spaces (@@)|<tuple|21.398|?>>
+    <associate|LP spaces LP norm is zero|<tuple|21.403|?>>
+    <associate|LP spaces Minkowski's Inequality|<tuple|21.410|?>>
+    <associate|LP spaces absolute value|<tuple|21.401|?>>
+    <associate|LP spaces are Banach spaces|<tuple|21.429|?>>
+    <associate|LP spaces are pseudo normed|<tuple|21.413|?>>
+    <associate|LP spaces canonical example|<tuple|21.391|?>>
+    <associate|LP spaces density|<tuple|21.435|?>>
+    <associate|LP spaces empty set is locally m-null|<tuple|21.405|?>>
+    <associate|LP spaces finite sum|<tuple|21.412|?>>
+    <associate|LP spaces locally m-null set properties|<tuple|21.406|?>>
+    <associate|LP spaces locally u-null sets|<tuple|21.404|?>>
+    <associate|LP spaces neutral element|<tuple|21.392|?>>
+    <associate|LP spaces normed space|<tuple|21.420|?>>
+    <associate|LP spaces null sets is a subspace|<tuple|21.418|?>>
+    <associate|LP spaces p-norm (1)|<tuple|21.402|?>>
+    <associate|LP spaces p-norm (2)|<tuple|21.407|?>>
+    <associate|LP spaces p-null set|<tuple|21.416|?>>
+    <associate|LP spaces p-null set (1)|<tuple|21.417|?>>
+    <associate|LP spaces sum scalar product|<tuple|21.396|?>>
+    <associate|LP spaces sum scalar product (1)|<tuple|21.399|?>>
+    <associate|LP vector space|<tuple|21.400|?>>
     <associate|Lebesgue borel measure and linear
-    isomorphism|<tuple|21.588|?>>
+    isomorphism|<tuple|21.590|?>>
     <associate|Lebesgue borel measure and linear isomorphism
-    (n)|<tuple|21.591|?>>
-    <associate|Lebesgue borel measures are Radon measures|<tuple|21.561|?>>
-    <associate|Lebesgue measure and unitary transformation|<tuple|21.586|?>>
-    <associate|Lebesgue's Dominated Convergence Theorem|<tuple|21.367|?>>
-    <associate|Monotone Convergence Theorem (1)|<tuple|21.357|?>>
-    <associate|Monotone Convergence Theorem (2)|<tuple|21.360|?>>
-    <associate|R^n is the union of ]-i,i[|<tuple|21.67|?>>
-    <associate|Radon measure definition|<tuple|21.547|?>>
-    <associate|Radon-Nikodym (finite case)|<tuple|21.497|?>>
-    <associate|Radon-Nikodym Theorem|<tuple|21.498|?>>
-    <associate|Radon-Nikodym absolute continuity|<tuple|21.489|?>>
+    (n)|<tuple|21.593|?>>
+    <associate|Lebesgue borel measures are Radon measures|<tuple|21.563|?>>
+    <associate|Lebesgue measure and unitary transformation|<tuple|21.588|?>>
+    <associate|Lebesgue's Dominated Convergence Theorem|<tuple|21.369|?>>
+    <associate|Monotone Convergence Theorem (1)|<tuple|21.359|?>>
+    <associate|Monotone Convergence Theorem (2)|<tuple|21.362|?>>
+    <associate|R^n is the union of ]-i,i[|<tuple|21.69|?>>
+    <associate|Radon measure definition|<tuple|21.549|?>>
+    <associate|Radon-Nikodym (finite case)|<tuple|21.499|?>>
+    <associate|Radon-Nikodym Theorem|<tuple|21.500|?>>
+    <associate|Radon-Nikodym absolute continuity|<tuple|21.491|?>>
     <associate|Radon-Nikodym absolute continuity
-    alternative|<tuple|21.493|?>>
+    alternative|<tuple|21.495|?>>
     <associate|Radon-Nikodym absolute continuity
-    equivalence|<tuple|21.500|?>>
+    equivalence|<tuple|21.502|?>>
     <associate|Radon-Nikodym absolute continuity trivial
-    example|<tuple|21.490|?>>
-    <associate|Radon-Nikodym derivative|<tuple|21.504|?>>
-    <associate|Radon-Nikodym integral example|<tuple|21.491|?>>
-    <associate|Radon-Nikodym signed/complex|<tuple|21.503|?>>
-    <associate|Tonelli theorem (1)|<tuple|21.535|?>>
-    <associate|almost everywhere|<tuple|21.269|?>>
-    <associate|almost everywhere and characteristic|<tuple|21.271|?>>
-    <associate|almost everywhere complex functions|<tuple|21.373|?>>
-    <associate|almost everywhere f=g \<less\>=\<gtr\> f-g=0|<tuple|21.273|?>>
-    <associate|almost everywhere functions|<tuple|21.270|?>>
-    <associate|almost everywhere limit is measurable|<tuple|21.276|?>>
-    <associate|almost everywhere measurability|<tuple|21.275|?>>
-    <associate|almost everywhere transitivity|<tuple|21.272|?>>
+    example|<tuple|21.492|?>>
+    <associate|Radon-Nikodym derivative|<tuple|21.506|?>>
+    <associate|Radon-Nikodym integral example|<tuple|21.493|?>>
+    <associate|Radon-Nikodym signed/complex|<tuple|21.505|?>>
+    <associate|Tonelli theorem (1)|<tuple|21.537|?>>
+    <associate|almost everywhere|<tuple|21.271|?>>
+    <associate|almost everywhere and characteristic|<tuple|21.273|?>>
+    <associate|almost everywhere complex functions|<tuple|21.375|?>>
+    <associate|almost everywhere f=g \<less\>=\<gtr\> f-g=0|<tuple|21.275|?>>
+    <associate|almost everywhere functions|<tuple|21.272|?>>
+    <associate|almost everywhere limit is measurable|<tuple|21.278|?>>
+    <associate|almost everywhere measurability|<tuple|21.277|?>>
+    <associate|almost everywhere transitivity|<tuple|21.274|?>>
     <associate|auto-1|<tuple|21|?>>
     <associate|auto-10|<tuple|algebra of sets|?>>
     <associate|auto-100|<tuple|21.5.3.3|?>>
@@ -45868,1561 +45958,1558 @@
     <associate|auto-99|<tuple|<with|mode|<quote|math>|<big|int><rsub|A>f
     d\<mu\>>|?>>
     <associate|cardinality of a product of sets|<tuple|21.1|?>>
-    <associate|charasteristic function|<tuple|21.262|?>>
-    <associate|compact finite measure|<tuple|21.547|?>>
-    <associate|complex integral|<tuple|21.378|?>>
-    <associate|complex integral alternative|<tuple|21.385|?>>
+    <associate|charasteristic function|<tuple|21.264|?>>
+    <associate|compact finite measure|<tuple|21.549|?>>
+    <associate|complex integral|<tuple|21.380|?>>
+    <associate|complex integral alternative|<tuple|21.387|?>>
     <associate|complex integral characteristics
-    multiplication|<tuple|21.380|?>>
-    <associate|complex integral of zero function|<tuple|21.379|?>>
-    <associate|complex integral property|<tuple|21.384|?>>
+    multiplication|<tuple|21.382|?>>
+    <associate|complex integral of zero function|<tuple|21.381|?>>
+    <associate|complex integral property|<tuple|21.386|?>>
     <associate|complex integral real integrable functions are complex
-    integrable|<tuple|21.383|?>>
-    <associate|complex measurable function|<tuple|21.369|?>>
-    <associate|complex measurable function absolute value|<tuple|21.377|?>>
-    <associate|complex measurable function alternative|<tuple|21.374|?>>
-    <associate|complex measurable function condition|<tuple|21.371|?>>
-    <associate|complex measurable function properties|<tuple|21.376|?>>
-    <associate|complex measurable space|<tuple|21.368|?>>
-    <associate|complex measure|<tuple|21.461|?>>
-    <associate|complex measure condition|<tuple|21.467|?>>
-    <associate|complex measure finite addivity|<tuple|21.465|?>>
-    <associate|complex measure integral complex function|<tuple|21.487|?>>
-    <associate|complex measure integral real function|<tuple|21.485|?>>
-    <associate|complex measure properties|<tuple|21.466|?>>
-    <associate|complex measure real/imaginare part|<tuple|21.463|?>>
-    <associate|complex measure variation|<tuple|21.469|?>>
-    <associate|complex measure variation is a measure|<tuple|21.471|?>>
+    integrable|<tuple|21.385|?>>
+    <associate|complex measurable function|<tuple|21.371|?>>
+    <associate|complex measurable function absolute value|<tuple|21.379|?>>
+    <associate|complex measurable function alternative|<tuple|21.376|?>>
+    <associate|complex measurable function condition|<tuple|21.373|?>>
+    <associate|complex measurable function properties|<tuple|21.378|?>>
+    <associate|complex measurable space|<tuple|21.370|?>>
+    <associate|complex measure|<tuple|21.463|?>>
+    <associate|complex measure condition|<tuple|21.469|?>>
+    <associate|complex measure finite addivity|<tuple|21.467|?>>
+    <associate|complex measure integral complex function|<tuple|21.489|?>>
+    <associate|complex measure integral real function|<tuple|21.487|?>>
+    <associate|complex measure properties|<tuple|21.468|?>>
+    <associate|complex measure real/imaginare part|<tuple|21.465|?>>
+    <associate|complex measure variation|<tuple|21.471|?>>
+    <associate|complex measure variation is a measure|<tuple|21.473|?>>
     <associate|corollary 20.111.218|<tuple|21.12|?>>
-    <associate|corollary 21.533.285|<tuple|21.545|?>>
+    <associate|corollary 21.533.285|<tuple|21.547|?>>
     <associate|denumerable union properties|<tuple|21.13|?>>
-    <associate|eq 15.81.439|<tuple|21.345|?>>
-    <associate|eq 18.10.021|<tuple|21.36|?>>
-    <associate|eq 18.11.021|<tuple|21.37|?>>
-    <associate|eq 18.12.021|<tuple|21.38|?>>
-    <associate|eq 18.13.021|<tuple|21.39|?>>
-    <associate|eq 18.14.021|<tuple|21.40|?>>
-    <associate|eq 18.15.021|<tuple|21.41|?>>
-    <associate|eq 18.16.021|<tuple|21.42|?>>
-    <associate|eq 18.17.021|<tuple|21.43|?>>
-    <associate|eq 18.18.021|<tuple|21.44|?>>
-    <associate|eq 18.19.021|<tuple|21.45|?>>
-    <associate|eq 18.20.021|<tuple|21.46|?>>
-    <associate|eq 18.21.021|<tuple|21.47|?>>
-    <associate|eq 18.22.021|<tuple|21.48|?>>
-    <associate|eq 18.240.291|<tuple|21.1107|?>>
-    <associate|eq 18.325.036.7|<tuple|21.389|?>>
-    <associate|eq 18.39.022|<tuple|21.83|?>>
-    <associate|eq 18.40.022|<tuple|21.84|?>>
-    <associate|eq 18.41.022|<tuple|21.85|?>>
-    <associate|eq 18.42.022|<tuple|21.86|?>>
-    <associate|eq 18.43.022|<tuple|21.87|?>>
-    <associate|eq 18.8.020|<tuple|21.34|?>>
-    <associate|eq 18.9.020|<tuple|21.35|?>>
+    <associate|eq 15.81.439|<tuple|21.346|?>>
+    <associate|eq 18.10.021|<tuple|21.37|?>>
+    <associate|eq 18.11.021|<tuple|21.38|?>>
+    <associate|eq 18.12.021|<tuple|21.39|?>>
+    <associate|eq 18.13.021|<tuple|21.40|?>>
+    <associate|eq 18.14.021|<tuple|21.41|?>>
+    <associate|eq 18.15.021|<tuple|21.42|?>>
+    <associate|eq 18.16.021|<tuple|21.43|?>>
+    <associate|eq 18.17.021|<tuple|21.44|?>>
+    <associate|eq 18.18.021|<tuple|21.45|?>>
+    <associate|eq 18.19.021|<tuple|21.46|?>>
+    <associate|eq 18.20.021|<tuple|21.47|?>>
+    <associate|eq 18.21.021|<tuple|21.48|?>>
+    <associate|eq 18.22.021|<tuple|21.49|?>>
+    <associate|eq 18.240.291|<tuple|21.1108|?>>
+    <associate|eq 18.325.036.7|<tuple|21.390|?>>
+    <associate|eq 18.39.022|<tuple|21.84|?>>
+    <associate|eq 18.40.022|<tuple|21.85|?>>
+    <associate|eq 18.41.022|<tuple|21.86|?>>
+    <associate|eq 18.42.022|<tuple|21.87|?>>
+    <associate|eq 18.43.022|<tuple|21.88|?>>
+    <associate|eq 18.8.020|<tuple|21.35|?>>
+    <associate|eq 18.9.020|<tuple|21.36|?>>
     <associate|eq 19.10.039|<tuple|21.12|?>>
     <associate|eq 19.11.039|<tuple|21.13|?>>
-    <associate|eq 19.759.043|<tuple|21.868|?>>
-    <associate|eq 20.100.200|<tuple|21.95|?>>
-    <associate|eq 20.1000.280|<tuple|21.957|?>>
-    <associate|eq 20.1001.280|<tuple|21.958|?>>
-    <associate|eq 20.1002.280|<tuple|21.959|?>>
-    <associate|eq 20.1003.280|<tuple|21.960|?>>
-    <associate|eq 20.1004.280|<tuple|21.961|?>>
-    <associate|eq 20.1005.280|<tuple|21.962|?>>
-    <associate|eq 20.1006.280|<tuple|21.963|?>>
-    <associate|eq 20.1007.280|<tuple|21.964|?>>
-    <associate|eq 20.1008.280|<tuple|21.965|?>>
-    <associate|eq 20.1009.280|<tuple|21.966|?>>
-    <associate|eq 20.101.200|<tuple|21.96|?>>
-    <associate|eq 20.1010.2080|<tuple|21.967|?>>
-    <associate|eq 20.1010.281|<tuple|21.969|?>>
-    <associate|eq 20.1011.280|<tuple|21.968|?>>
-    <associate|eq 20.1011.281|<tuple|21.970|?>>
-    <associate|eq 20.1014.281|<tuple|21.973|?>>
-    <associate|eq 20.1015.281|<tuple|21.974|?>>
-    <associate|eq 20.1015.285|<tuple|21.971|?>>
-    <associate|eq 20.1016.281|<tuple|21.975|?>>
-    <associate|eq 20.1017.281|<tuple|21.976|?>>
-    <associate|eq 20.1018.281|<tuple|21.977|?>>
-    <associate|eq 20.1019.281|<tuple|21.978|?>>
-    <associate|eq 20.102.200|<tuple|21.97|?>>
-    <associate|eq 20.1020.281|<tuple|21.979|?>>
-    <associate|eq 20.1021.281|<tuple|21.980|?>>
-    <associate|eq 20.1022.281|<tuple|21.981|?>>
-    <associate|eq 20.1023.281|<tuple|21.982|?>>
-    <associate|eq 20.1024.281|<tuple|21.983|?>>
-    <associate|eq 20.1025.281|<tuple|21.984|?>>
-    <associate|eq 20.1026.281|<tuple|21.985|?>>
-    <associate|eq 20.1027.281|<tuple|21.986|?>>
-    <associate|eq 20.1028.281|<tuple|21.987|?>>
-    <associate|eq 20.1029.281|<tuple|21.988|?>>
-    <associate|eq 20.103.200|<tuple|21.98|?>>
-    <associate|eq 20.1033.283|<tuple|21.989|?>>
-    <associate|eq 20.1034.284|<tuple|21.990|?>>
-    <associate|eq 20.1035.284|<tuple|21.991|?>>
-    <associate|eq 20.1036.284|<tuple|21.992|?>>
-    <associate|eq 20.1037.284|<tuple|21.993|?>>
-    <associate|eq 20.1038.284|<tuple|21.994|?>>
-    <associate|eq 20.1039.284|<tuple|21.995|?>>
-    <associate|eq 20.104.200|<tuple|21.99|?>>
-    <associate|eq 20.1040.284|<tuple|21.996|?>>
-    <associate|eq 20.1041.285|<tuple|21.997|?>>
-    <associate|eq 20.1042.285|<tuple|21.998|?>>
-    <associate|eq 20.105.200|<tuple|21.100|?>>
-    <associate|eq 20.106.200|<tuple|21.101|?>>
-    <associate|eq 20.107.200|<tuple|21.102|?>>
-    <associate|eq 20.108.200|<tuple|21.103|?>>
-    <associate|eq 20.109.227|<tuple|21.61|?>>
-    <associate|eq 20.110.227|<tuple|21.62|?>>
-    <associate|eq 20.111.227|<tuple|21.63|?>>
+    <associate|eq 19.759.043|<tuple|21.869|?>>
+    <associate|eq 20.100.200|<tuple|21.96|?>>
+    <associate|eq 20.1000.280|<tuple|21.958|?>>
+    <associate|eq 20.1001.280|<tuple|21.959|?>>
+    <associate|eq 20.1002.280|<tuple|21.960|?>>
+    <associate|eq 20.1003.280|<tuple|21.961|?>>
+    <associate|eq 20.1004.280|<tuple|21.962|?>>
+    <associate|eq 20.1005.280|<tuple|21.963|?>>
+    <associate|eq 20.1006.280|<tuple|21.964|?>>
+    <associate|eq 20.1007.280|<tuple|21.965|?>>
+    <associate|eq 20.1008.280|<tuple|21.966|?>>
+    <associate|eq 20.1009.280|<tuple|21.967|?>>
+    <associate|eq 20.101.200|<tuple|21.97|?>>
+    <associate|eq 20.1010.2080|<tuple|21.968|?>>
+    <associate|eq 20.1010.281|<tuple|21.970|?>>
+    <associate|eq 20.1011.280|<tuple|21.969|?>>
+    <associate|eq 20.1011.281|<tuple|21.971|?>>
+    <associate|eq 20.1014.281|<tuple|21.974|?>>
+    <associate|eq 20.1015.281|<tuple|21.975|?>>
+    <associate|eq 20.1015.285|<tuple|21.972|?>>
+    <associate|eq 20.1016.281|<tuple|21.976|?>>
+    <associate|eq 20.1017.281|<tuple|21.977|?>>
+    <associate|eq 20.1018.281|<tuple|21.978|?>>
+    <associate|eq 20.1019.281|<tuple|21.979|?>>
+    <associate|eq 20.102.200|<tuple|21.98|?>>
+    <associate|eq 20.1020.281|<tuple|21.980|?>>
+    <associate|eq 20.1021.281|<tuple|21.981|?>>
+    <associate|eq 20.1022.281|<tuple|21.982|?>>
+    <associate|eq 20.1023.281|<tuple|21.983|?>>
+    <associate|eq 20.1024.281|<tuple|21.984|?>>
+    <associate|eq 20.1025.281|<tuple|21.985|?>>
+    <associate|eq 20.1026.281|<tuple|21.986|?>>
+    <associate|eq 20.1027.281|<tuple|21.987|?>>
+    <associate|eq 20.1028.281|<tuple|21.988|?>>
+    <associate|eq 20.1029.281|<tuple|21.989|?>>
+    <associate|eq 20.103.200|<tuple|21.99|?>>
+    <associate|eq 20.1033.283|<tuple|21.990|?>>
+    <associate|eq 20.1034.284|<tuple|21.991|?>>
+    <associate|eq 20.1035.284|<tuple|21.992|?>>
+    <associate|eq 20.1036.284|<tuple|21.993|?>>
+    <associate|eq 20.1037.284|<tuple|21.994|?>>
+    <associate|eq 20.1038.284|<tuple|21.995|?>>
+    <associate|eq 20.1039.284|<tuple|21.996|?>>
+    <associate|eq 20.104.200|<tuple|21.100|?>>
+    <associate|eq 20.1040.284|<tuple|21.997|?>>
+    <associate|eq 20.1041.285|<tuple|21.998|?>>
+    <associate|eq 20.1042.285|<tuple|21.999|?>>
+    <associate|eq 20.105.200|<tuple|21.101|?>>
+    <associate|eq 20.106.200|<tuple|21.102|?>>
+    <associate|eq 20.107.200|<tuple|21.103|?>>
+    <associate|eq 20.108.200|<tuple|21.104|?>>
+    <associate|eq 20.109.227|<tuple|21.62|?>>
+    <associate|eq 20.110.227|<tuple|21.63|?>>
+    <associate|eq 20.111.227|<tuple|21.64|?>>
     <associate|eq 20.112.201|<tuple|21.1|?>>
-    <associate|eq 20.112.227|<tuple|21.64|?>>
-    <associate|eq 20.113.201|<tuple|21.106|?>>
-    <associate|eq 20.113.227|<tuple|21.65|?>>
-    <associate|eq 20.114.201|<tuple|21.107|?>>
-    <associate|eq 20.114.227|<tuple|21.66|?>>
-    <associate|eq 20.115.201|<tuple|21.108|?>>
-    <associate|eq 20.115.227|<tuple|21.67|?>>
-    <associate|eq 20.116.201|<tuple|21.109|?>>
-    <associate|eq 20.116.227|<tuple|21.68|?>>
-    <associate|eq 20.117.201|<tuple|21.110|?>>
-    <associate|eq 20.117.227|<tuple|21.69|?>>
-    <associate|eq 20.118.118.201|<tuple|21.111|?>>
-    <associate|eq 20.118.227|<tuple|21.70|?>>
-    <associate|eq 20.119.201|<tuple|21.112|?>>
-    <associate|eq 20.119.227|<tuple|21.71|?>>
-    <associate|eq 20.120.201|<tuple|21.113|?>>
-    <associate|eq 20.120.227|<tuple|21.72|?>>
-    <associate|eq 20.121.201|<tuple|21.114|?>>
-    <associate|eq 20.121.227|<tuple|21.73|?>>
-    <associate|eq 20.122.201|<tuple|21.115|?>>
-    <associate|eq 20.122.227|<tuple|21.74|?>>
-    <associate|eq 20.123.201|<tuple|21.116|?>>
-    <associate|eq 20.123.227|<tuple|21.75|?>>
-    <associate|eq 20.124.201|<tuple|21.117|?>>
-    <associate|eq 20.124.227|<tuple|21.76|?>>
-    <associate|eq 20.125.227|<tuple|21.77|?>>
-    <associate|eq 20.126.201.1|<tuple|21.118|?>>
-    <associate|eq 20.126.201.2|<tuple|21.119|?>>
-    <associate|eq 20.126.227|<tuple|21.78|?>>
-    <associate|eq 20.127.201.1|<tuple|21.120|?>>
-    <associate|eq 20.127.227|<tuple|21.79|?>>
-    <associate|eq 20.128.227|<tuple|21.80|?>>
-    <associate|eq 20.129.227|<tuple|21.81|?>>
-    <associate|eq 20.130.227|<tuple|21.82|?>>
-    <associate|eq 20.131.202|<tuple|21.121|?>>
-    <associate|eq 20.132.202|<tuple|21.122|?>>
-    <associate|eq 20.133.202|<tuple|21.137|?>>
-    <associate|eq 20.134.202|<tuple|21.138|?>>
-    <associate|eq 20.135.202|<tuple|21.139|?>>
-    <associate|eq 20.136.202|<tuple|21.140|?>>
-    <associate|eq 20.137.202|<tuple|21.141|?>>
-    <associate|eq 20.138.202|<tuple|21.142|?>>
-    <associate|eq 20.139.202|<tuple|21.143|?>>
-    <associate|eq 20.140.202|<tuple|21.144|?>>
-    <associate|eq 20.140.210.1|<tuple|21.123|?>>
-    <associate|eq 20.141.202|<tuple|21.145|?>>
-    <associate|eq 20.141.210.2|<tuple|21.124|?>>
-    <associate|eq 20.142.202|<tuple|21.146|?>>
-    <associate|eq 20.142.210.3|<tuple|21.125|?>>
-    <associate|eq 20.143.202|<tuple|21.147|?>>
-    <associate|eq 20.144.202|<tuple|21.148|?>>
-    <associate|eq 20.145.202|<tuple|21.149|?>>
-    <associate|eq 20.146.202|<tuple|21.150|?>>
-    <associate|eq 20.147.202|<tuple|21.151|?>>
-    <associate|eq 20.148.202|<tuple|21.152|?>>
-    <associate|eq 20.149.202|<tuple|21.153|?>>
-    <associate|eq 20.150.202|<tuple|21.154|?>>
-    <associate|eq 20.151.202|<tuple|21.155|?>>
-    <associate|eq 20.152.202|<tuple|21.156|?>>
-    <associate|eq 20.152.241|<tuple|21.104|?>>
-    <associate|eq 20.153.202|<tuple|21.157|?>>
-    <associate|eq 20.153.241|<tuple|21.105|?>>
-    <associate|eq 20.154.202|<tuple|21.158|?>>
-    <associate|eq 20.155.202|<tuple|21.160|?>>
-    <associate|eq 20.156.202|<tuple|21.161|?>>
-    <associate|eq 20.157.202|<tuple|21.162|?>>
-    <associate|eq 20.158.202|<tuple|21.163|?>>
-    <associate|eq 20.159.202|<tuple|21.164|?>>
-    <associate|eq 20.160.202|<tuple|21.165|?>>
-    <associate|eq 20.161.202|<tuple|21.166|?>>
-    <associate|eq 20.163\<point\>202|<tuple|21.126|?>>
-    <associate|eq 20.164.202|<tuple|21.127|?>>
-    <associate|eq 20.165.202|<tuple|21.128|?>>
-    <associate|eq 20.165.204|<tuple|21.178|?>>
-    <associate|eq 20.166.202|<tuple|21.129|?>>
-    <associate|eq 20.167.202|<tuple|21.130|?>>
-    <associate|eq 20.168.202|<tuple|21.131|?>>
-    <associate|eq 20.169.202|<tuple|21.132|?>>
-    <associate|eq 20.170.202|<tuple|21.133|?>>
-    <associate|eq 20.171.202|<tuple|21.134|?>>
-    <associate|eq 20.172.202|<tuple|21.135|?>>
-    <associate|eq 20.173.1|<tuple|21.159|?>>
-    <associate|eq 20.173.202|<tuple|21.136|?>>
-    <associate|eq 20.177.204|<tuple|21.167|?>>
-    <associate|eq 20.188.217|<tuple|21.168|?>>
-    <associate|eq 20.189.217|<tuple|21.169|?>>
-    <associate|eq 20.190.210|<tuple|21.182|?>>
-    <associate|eq 20.190.217|<tuple|21.170|?>>
-    <associate|eq 20.191.210|<tuple|21.183|?>>
-    <associate|eq 20.191.217|<tuple|21.171|?>>
-    <associate|eq 20.191.217.1|<tuple|21.171|?>>
-    <associate|eq 20.192.210|<tuple|21.184|?>>
-    <associate|eq 20.192.217|<tuple|21.173|?>>
-    <associate|eq 20.193.210|<tuple|21.185|?>>
-    <associate|eq 20.193.217|<tuple|21.174|?>>
-    <associate|eq 20.194.210|<tuple|21.186|?>>
-    <associate|eq 20.195.210|<tuple|21.187|?>>
-    <associate|eq 20.195.217|<tuple|21.175|?>>
-    <associate|eq 20.196.210|<tuple|21.188|?>>
-    <associate|eq 20.196.217|<tuple|21.176|?>>
-    <associate|eq 20.197.210|<tuple|21.189|?>>
-    <associate|eq 20.197.217|<tuple|21.177|?>>
-    <associate|eq 20.198.210|<tuple|21.190|?>>
-    <associate|eq 20.199.210|<tuple|21.191|?>>
-    <associate|eq 20.200.210|<tuple|21.192|?>>
-    <associate|eq 20.201.210|<tuple|21.193|?>>
-    <associate|eq 20.202.204|<tuple|21.254|?>>
-    <associate|eq 20.202.210|<tuple|21.194|?>>
-    <associate|eq 20.203.204|<tuple|21.255|?>>
-    <associate|eq 20.203.218|<tuple|21.179|?>>
-    <associate|eq 20.204.204|<tuple|21.256|?>>
-    <associate|eq 20.204.218|<tuple|21.180|?>>
-    <associate|eq 20.205.204|<tuple|21.257|?>>
-    <associate|eq 20.205.218|<tuple|21.181|?>>
-    <associate|eq 20.206.204|<tuple|21.258|?>>
-    <associate|eq 20.206.210|<tuple|21.202|?>>
-    <associate|eq 20.206.211|<tuple|21.195|?>>
-    <associate|eq 20.207.204|<tuple|21.259|?>>
-    <associate|eq 20.207.210|<tuple|21.203|?>>
-    <associate|eq 20.207.211|<tuple|21.196|?>>
-    <associate|eq 20.208.210|<tuple|21.204|?>>
-    <associate|eq 20.208.211|<tuple|21.197|?>>
-    <associate|eq 20.209.210|<tuple|21.205|?>>
-    <associate|eq 20.209.211|<tuple|21.198|?>>
-    <associate|eq 20.210.210|<tuple|21.206|?>>
-    <associate|eq 20.210.211|<tuple|21.199|?>>
-    <associate|eq 20.211.210|<tuple|21.207|?>>
-    <associate|eq 20.211.211|<tuple|21.200|?>>
-    <associate|eq 20.212.210|<tuple|21.208|?>>
-    <associate|eq 20.213.210|<tuple|21.209|?>>
-    <associate|eq 20.215.205|<tuple|21.261|?>>
-    <associate|eq 20.216.205|<tuple|21.262|?>>
-    <associate|eq 20.217.205|<tuple|21.264|?>>
-    <associate|eq 20.217.206|<tuple|21.263|?>>
-    <associate|eq 20.218.205|<tuple|21.265|?>>
-    <associate|eq 20.219.205|<tuple|21.266|?>>
-    <associate|eq 20.220.205|<tuple|21.267|?>>
-    <associate|eq 20.220.212|<tuple|21.211|?>>
-    <associate|eq 20.220.212.1|<tuple|21.210|?>>
-    <associate|eq 20.221.205|<tuple|21.268|?>>
-    <associate|eq 20.221.212|<tuple|21.212|?>>
-    <associate|eq 20.222.205|<tuple|21.269|?>>
-    <associate|eq 20.222.212|<tuple|21.213|?>>
-    <associate|eq 20.223.203|<tuple|21.270|?>>
-    <associate|eq 20.223.212|<tuple|21.214|?>>
-    <associate|eq 20.224.205|<tuple|21.271|?>>
-    <associate|eq 20.225.205|<tuple|21.272|?>>
-    <associate|eq 20.225.212|<tuple|21.215|?>>
-    <associate|eq 20.225.219|<tuple|21.201|?>>
-    <associate|eq 20.226.205|<tuple|21.273|?>>
-    <associate|eq 20.226.212|<tuple|21.216|?>>
-    <associate|eq 20.227.212|<tuple|21.217|?>>
-    <associate|eq 20.228.212|<tuple|21.218|?>>
-    <associate|eq 20.229.212|<tuple|21.219|?>>
-    <associate|eq 20.230.212|<tuple|21.220|?>>
-    <associate|eq 20.231.212|<tuple|21.221|?>>
-    <associate|eq 20.232.212|<tuple|21.222|?>>
-    <associate|eq 20.233.212|<tuple|21.223|?>>
-    <associate|eq 20.245.228|<tuple|21.387|?>>
-    <associate|eq 20.248.220|<tuple|21.224|?>>
-    <associate|eq 20.249.220|<tuple|21.225|?>>
-    <associate|eq 20.250.220|<tuple|21.226|?>>
-    <associate|eq 20.251.220|<tuple|21.227|?>>
-    <associate|eq 20.252.220|<tuple|21.228|?>>
-    <associate|eq 20.253.220|<tuple|21.229|?>>
-    <associate|eq 20.254.220|<tuple|21.230|?>>
-    <associate|eq 20.255.220|<tuple|21.231|?>>
-    <associate|eq 20.256.220|<tuple|21.232|?>>
-    <associate|eq 20.257.216|<tuple|21.238|?>>
-    <associate|eq 20.257.220|<tuple|21.233|?>>
-    <associate|eq 20.258.216|<tuple|21.239|?>>
-    <associate|eq 20.258.220|<tuple|21.234|?>>
-    <associate|eq 20.259.216|<tuple|21.240|?>>
-    <associate|eq 20.259.220|<tuple|21.235|?>>
-    <associate|eq 20.260.216|<tuple|21.241|?>>
-    <associate|eq 20.260.220|<tuple|21.236|?>>
-    <associate|eq 20.261.216|<tuple|21.242|?>>
-    <associate|eq 20.261.220|<tuple|21.237|?>>
-    <associate|eq 20.262.216|<tuple|21.243|?>>
-    <associate|eq 20.263.216|<tuple|21.245|?>>
-    <associate|eq 20.264.216|<tuple|21.246|?>>
-    <associate|eq 20.265.216|<tuple|21.247|?>>
-    <associate|eq 20.266.216|<tuple|21.248|?>>
-    <associate|eq 20.267.216|<tuple|21.249|?>>
-    <associate|eq 20.268.216|<tuple|21.250|?>>
-    <associate|eq 20.269.216|<tuple|21.252|?>>
-    <associate|eq 20.273.220|<tuple|21.244|?>>
-    <associate|eq 20.273.226|<tuple|21.349|?>>
-    <associate|eq 20.274.220|<tuple|21.251|?>>
-    <associate|eq 20.275.220|<tuple|21.253|?>>
-    <associate|eq 20.284.221|<tuple|21.260|?>>
-    <associate|eq 20.290.279|<tuple|21.877|?>>
-    <associate|eq 20.294.279|<tuple|21.881|?>>
-    <associate|eq 20.295.220|<tuple|21.274|?>>
-    <associate|eq 20.296.220|<tuple|21.275|?>>
-    <associate|eq 20.297.220|<tuple|21.278|?>>
-    <associate|eq 20.298.220|<tuple|21.277|?>>
-    <associate|eq 20.299.220|<tuple|21.276|?>>
-    <associate|eq 20.300.220|<tuple|21.279|?>>
-    <associate|eq 20.301.221|<tuple|21.278|?>>
-    <associate|eq 20.304.221|<tuple|21.286|?>>
-    <associate|eq 20.305.221|<tuple|21.287|?>>
-    <associate|eq 20.306.221|<tuple|21.288|?>>
-    <associate|eq 20.307.221|<tuple|21.289|?>>
-    <associate|eq 20.308.221|<tuple|21.290|?>>
-    <associate|eq 20.309.221|<tuple|21.291|?>>
-    <associate|eq 20.310.221|<tuple|21.292|?>>
-    <associate|eq 20.311.221|<tuple|21.280|?>>
-    <associate|eq 20.312.221|<tuple|21.281|?>>
-    <associate|eq 20.313.221|<tuple|21.282|?>>
-    <associate|eq 20.314.221|<tuple|21.283|?>>
-    <associate|eq 20.315.221|<tuple|21.284|?>>
-    <associate|eq 20.316.221|<tuple|21.285|?>>
-    <associate|eq 20.317.222|<tuple|21.293|?>>
-    <associate|eq 20.318.222|<tuple|21.294|?>>
-    <associate|eq 20.319.222|<tuple|21.295|?>>
-    <associate|eq 20.320.224|<tuple|21.297|?>>
-    <associate|eq 20.320.226|<tuple|21.296|?>>
-    <associate|eq 20.321.224|<tuple|21.298|?>>
-    <associate|eq 20.322.224|<tuple|21.299|?>>
-    <associate|eq 20.323.224|<tuple|21.300|?>>
-    <associate|eq 20.325.226|<tuple|21.301|?>>
-    <associate|eq 20.327.224|<tuple|21.302|?>>
-    <associate|eq 20.328.224|<tuple|21.303|?>>
-    <associate|eq 20.329.224|<tuple|21.304|?>>
-    <associate|eq 20.330.224|<tuple|21.305|?>>
-    <associate|eq 20.331.224|<tuple|21.306|?>>
-    <associate|eq 20.332.224|<tuple|21.307|?>>
-    <associate|eq 20.333.224|<tuple|21.308|?>>
-    <associate|eq 20.334.224|<tuple|21.309|?>>
-    <associate|eq 20.335.224|<tuple|21.310|?>>
-    <associate|eq 20.336.224|<tuple|21.311|?>>
-    <associate|eq 20.337.224|<tuple|21.312|?>>
-    <associate|eq 20.338.224|<tuple|21.313|?>>
-    <associate|eq 20.343.224|<tuple|21.315|?>>
-    <associate|eq 20.344.224|<tuple|21.316|?>>
-    <associate|eq 20.345.224|<tuple|21.317|?>>
-    <associate|eq 20.345.225|<tuple|21.320|?>>
-    <associate|eq 20.346.225|<tuple|21.321|?>>
-    <associate|eq 20.3463224|<tuple|21.318|?>>
-    <associate|eq 20.347.224|<tuple|21.319|?>>
-    <associate|eq 20.347.225|<tuple|21.322|?>>
-    <associate|eq 20.348.225|<tuple|21.323|?>>
-    <associate|eq 20.349.225|<tuple|21.324|?>>
-    <associate|eq 20.350.225|<tuple|21.325|?>>
-    <associate|eq 20.351.225|<tuple|21.326|?>>
-    <associate|eq 20.352.225|<tuple|21.327|?>>
-    <associate|eq 20.353.225|<tuple|21.328|?>>
-    <associate|eq 20.354.225|<tuple|21.329|?>>
-    <associate|eq 20.355.225|<tuple|21.330|?>>
-    <associate|eq 20.356.225|<tuple|21.331|?>>
-    <associate|eq 20.357.225|<tuple|21.332|?>>
-    <associate|eq 20.358.225|<tuple|21.333|?>>
-    <associate|eq 20.359.225|<tuple|21.334|?>>
-    <associate|eq 20.360.225|<tuple|21.335|?>>
-    <associate|eq 20.361.225|<tuple|21.336|?>>
-    <associate|eq 20.361.226|<tuple|21.338|?>>
-    <associate|eq 20.362.225|<tuple|21.337|?>>
-    <associate|eq 20.362.226|<tuple|21.339|?>>
-    <associate|eq 20.363.226|<tuple|21.340|?>>
-    <associate|eq 20.364.226|<tuple|21.341|?>>
-    <associate|eq 20.365.226|<tuple|21.342|?>>
-    <associate|eq 20.366.226|<tuple|21.343|?>>
-    <associate|eq 20.367.226|<tuple|21.344|?>>
-    <associate|eq 20.369.226|<tuple|21.346|?>>
-    <associate|eq 20.371.226|<tuple|21.347|?>>
-    <associate|eq 20.372.226|<tuple|21.348|?>>
-    <associate|eq 20.374.226|<tuple|21.356|?>>
-    <associate|eq 20.375.226|<tuple|21.357|?>>
-    <associate|eq 20.376.226|<tuple|21.358|?>>
-    <associate|eq 20.377.226|<tuple|21.359|?>>
-    <associate|eq 20.378.226|<tuple|21.360|?>>
-    <associate|eq 20.379.226|<tuple|21.361|?>>
-    <associate|eq 20.380.226|<tuple|21.362|?>>
-    <associate|eq 20.381.226|<tuple|21.363|?>>
-    <associate|eq 20.382.226|<tuple|21.364|?>>
-    <associate|eq 20.383.226|<tuple|21.365|?>>
-    <associate|eq 20.384.226|<tuple|21.366|?>>
-    <associate|eq 20.385.226|<tuple|21.367|?>>
-    <associate|eq 20.386.226|<tuple|21.368|?>>
-    <associate|eq 20.387.226|<tuple|21.369|?>>
-    <associate|eq 20.388.226|<tuple|21.370|?>>
-    <associate|eq 20.389.226|<tuple|21.371|?>>
-    <associate|eq 20.390.226|<tuple|21.372|?>>
-    <associate|eq 20.413.227|<tuple|21.377|?>>
-    <associate|eq 20.414.227|<tuple|21.378|?>>
-    <associate|eq 20.415.227|<tuple|21.379|?>>
-    <associate|eq 20.415.260|<tuple|21.375|?>>
-    <associate|eq 20.415.264|<tuple|21.373|?>>
-    <associate|eq 20.416.227|<tuple|21.380|?>>
-    <associate|eq 20.416.260|<tuple|21.376|?>>
-    <associate|eq 20.416.264|<tuple|21.374|?>>
-    <associate|eq 20.417.227|<tuple|21.381|?>>
-    <associate|eq 20.418.227|<tuple|21.382|?>>
-    <associate|eq 20.419.227|<tuple|21.383|?>>
-    <associate|eq 20.421.227|<tuple|21.384|?>>
-    <associate|eq 20.422.228|<tuple|21.385|?>>
-    <associate|eq 20.424.228|<tuple|21.386|?>>
-    <associate|eq 20.426.228|<tuple|21.388|?>>
-    <associate|eq 20.428.228|<tuple|21.390|?>>
-    <associate|eq 20.429.228|<tuple|21.391|?>>
-    <associate|eq 20.430.228|<tuple|21.392|?>>
-    <associate|eq 20.431.228|<tuple|21.393|?>>
-    <associate|eq 20.432.228|<tuple|21.394|?>>
-    <associate|eq 20.433.228|<tuple|21.395|?>>
-    <associate|eq 20.434.228|<tuple|21.396|?>>
-    <associate|eq 20.435.228|<tuple|21.397|?>>
-    <associate|eq 20.436.228|<tuple|21.404|?>>
-    <associate|eq 20.437.228|<tuple|21.405|?>>
-    <associate|eq 20.440.229|<tuple|21.406|?>>
-    <associate|eq 20.440.249|<tuple|21.398|?>>
-    <associate|eq 20.441.229|<tuple|21.407|?>>
-    <associate|eq 20.441.249|<tuple|21.399|?>>
-    <associate|eq 20.442.229|<tuple|21.408|?>>
-    <associate|eq 20.442.249|<tuple|21.400|?>>
-    <associate|eq 20.443.229|<tuple|21.409|?>>
-    <associate|eq 20.443.249|<tuple|21.401|?>>
-    <associate|eq 20.444.229|<tuple|21.410|?>>
-    <associate|eq 20.444.249|<tuple|21.402|?>>
-    <associate|eq 20.445.229|<tuple|21.411|?>>
-    <associate|eq 20.446.229|<tuple|21.412|?>>
-    <associate|eq 20.447.229|<tuple|21.413|?>>
-    <associate|eq 20.448.229|<tuple|21.414|?>>
-    <associate|eq 20.449.229|<tuple|21.415|?>>
-    <associate|eq 20.451.229|<tuple|21.417|?>>
-    <associate|eq 20.452.229|<tuple|21.418|?>>
-    <associate|eq 20.453.229|<tuple|21.419|?>>
-    <associate|eq 20.454.229|<tuple|21.420|?>>
-    <associate|eq 20.455.229|<tuple|21.421|?>>
-    <associate|eq 20.456\<point\>229|<tuple|21.422|?>>
-    <associate|eq 20.457.229|<tuple|21.423|?>>
-    <associate|eq 20.458.229|<tuple|21.424|?>>
-    <associate|eq 20.459.229|<tuple|21.425|?>>
-    <associate|eq 20.460.229|<tuple|21.426|?>>
-    <associate|eq 20.461.229|<tuple|21.427|?>>
-    <associate|eq 20.462.229|<tuple|21.428|?>>
-    <associate|eq 20.463.229|<tuple|21.429|?>>
-    <associate|eq 20.464.229|<tuple|21.430|?>>
-    <associate|eq 20.465\<point\>229|<tuple|21.431|?>>
-    <associate|eq 20.466.229|<tuple|21.432|?>>
-    <associate|eq 20.467.229|<tuple|21.433|?>>
-    <associate|eq 20.468.229|<tuple|21.434|?>>
-    <associate|eq 20.469.229|<tuple|21.435|?>>
-    <associate|eq 20.470.229|<tuple|21.436|?>>
-    <associate|eq 20.471.229|<tuple|21.437|?>>
-    <associate|eq 20.472.229|<tuple|21.439|?>>
-    <associate|eq 20.472.231|<tuple|21.438|?>>
-    <associate|eq 20.473.229|<tuple|21.440|?>>
-    <associate|eq 20.476.229|<tuple|21.441|?>>
-    <associate|eq 20.477.229|<tuple|21.442|?>>
-    <associate|eq 20.478.229|<tuple|21.443|?>>
-    <associate|eq 20.479.229|<tuple|21.444|?>>
-    <associate|eq 20.480.229|<tuple|21.445|?>>
-    <associate|eq 20.481.229|<tuple|21.446|?>>
-    <associate|eq 20.482.229|<tuple|21.447|?>>
-    <associate|eq 20.482.230|<tuple|21.449|?>>
-    <associate|eq 20.483.229|<tuple|21.448|?>>
-    <associate|eq 20.484.229|<tuple|21.450|?>>
-    <associate|eq 20.484.230|<tuple|21.451|?>>
-    <associate|eq 20.485.230|<tuple|21.452|?>>
-    <associate|eq 20.487.231|<tuple|21.453|?>>
-    <associate|eq 20.488.231|<tuple|21.485|?>>
-    <associate|eq 20.489.231|<tuple|21.486|?>>
-    <associate|eq 20.490.231|<tuple|21.487|?>>
-    <associate|eq 20.490.249|<tuple|21.467|?>>
-    <associate|eq 20.492.231|<tuple|21.489|?>>
-    <associate|eq 20.493.231|<tuple|21.490|?>>
-    <associate|eq 20.494.231|<tuple|21.491|?>>
-    <associate|eq 20.495.231|<tuple|21.492|?>>
-    <associate|eq 20.496.231|<tuple|21.493|?>>
-    <associate|eq 20.497.231|<tuple|21.494|?>>
-    <associate|eq 20.498.231|<tuple|21.495|?>>
-    <associate|eq 20.498.263|<tuple|21.456|?>>
-    <associate|eq 20.499.231|<tuple|21.496|?>>
-    <associate|eq 20.499.263|<tuple|21.457|?>>
-    <associate|eq 20.500.231|<tuple|21.468|?>>
-    <associate|eq 20.500.232|<tuple|21.482|?>>
-    <associate|eq 20.501.231|<tuple|21.469|?>>
-    <associate|eq 20.501.232|<tuple|21.483|?>>
-    <associate|eq 20.502.231|<tuple|21.470|?>>
-    <associate|eq 20.502.232|<tuple|21.484|?>>
-    <associate|eq 20.503.231|<tuple|21.471|?>>
-    <associate|eq 20.503.261|<tuple|21.474|?>>
-    <associate|eq 20.504.231|<tuple|21.472|?>>
-    <associate|eq 20.504.261|<tuple|21.475|?>>
-    <associate|eq 20.504.263|<tuple|21.462|?>>
-    <associate|eq 20.505.231|<tuple|21.473|?>>
-    <associate|eq 20.506.231|<tuple|21.477|?>>
-    <associate|eq 20.506.263|<tuple|21.464|?>>
-    <associate|eq 20.507.231|<tuple|21.476|?>>
-    <associate|eq 20.508.231|<tuple|21.478|?>>
-    <associate|eq 20.509.231|<tuple|21.479|?>>
-    <associate|eq 20.510.231|<tuple|21.480|?>>
-    <associate|eq 20.511.231|<tuple|21.481|?>>
-    <associate|eq 20.515.232|<tuple|21.497|?>>
-    <associate|eq 20.515.233|<tuple|21.498|?>>
-    <associate|eq 20.516.232|<tuple|21.503|?>>
-    <associate|eq 20.516.233|<tuple|21.499|?>>
-    <associate|eq 20.517.232|<tuple|21.507|?>>
-    <associate|eq 20.517.233|<tuple|21.500|?>>
-    <associate|eq 20.518.232|<tuple|21.508|?>>
-    <associate|eq 20.518.233|<tuple|21.501|?>>
-    <associate|eq 20.519.232|<tuple|21.529|?>>
-    <associate|eq 20.519.233|<tuple|21.502|?>>
-    <associate|eq 20.52.200|<tuple|21.27|?>>
+    <associate|eq 20.112.227|<tuple|21.65|?>>
+    <associate|eq 20.113.201|<tuple|21.107|?>>
+    <associate|eq 20.113.227|<tuple|21.66|?>>
+    <associate|eq 20.114.201|<tuple|21.108|?>>
+    <associate|eq 20.114.227|<tuple|21.67|?>>
+    <associate|eq 20.115.201|<tuple|21.109|?>>
+    <associate|eq 20.115.227|<tuple|21.68|?>>
+    <associate|eq 20.116.201|<tuple|21.110|?>>
+    <associate|eq 20.116.227|<tuple|21.69|?>>
+    <associate|eq 20.117.201|<tuple|21.111|?>>
+    <associate|eq 20.117.227|<tuple|21.70|?>>
+    <associate|eq 20.118.118.201|<tuple|21.112|?>>
+    <associate|eq 20.118.227|<tuple|21.71|?>>
+    <associate|eq 20.119.201|<tuple|21.113|?>>
+    <associate|eq 20.119.227|<tuple|21.72|?>>
+    <associate|eq 20.120.201|<tuple|21.114|?>>
+    <associate|eq 20.120.227|<tuple|21.73|?>>
+    <associate|eq 20.121.201|<tuple|21.115|?>>
+    <associate|eq 20.121.227|<tuple|21.74|?>>
+    <associate|eq 20.122.201|<tuple|21.116|?>>
+    <associate|eq 20.122.227|<tuple|21.75|?>>
+    <associate|eq 20.123.201|<tuple|21.117|?>>
+    <associate|eq 20.123.227|<tuple|21.76|?>>
+    <associate|eq 20.124.201|<tuple|21.118|?>>
+    <associate|eq 20.124.227|<tuple|21.77|?>>
+    <associate|eq 20.125.227|<tuple|21.78|?>>
+    <associate|eq 20.126.201.1|<tuple|21.119|?>>
+    <associate|eq 20.126.201.2|<tuple|21.120|?>>
+    <associate|eq 20.126.227|<tuple|21.79|?>>
+    <associate|eq 20.127.201.1|<tuple|21.121|?>>
+    <associate|eq 20.127.227|<tuple|21.80|?>>
+    <associate|eq 20.128.227|<tuple|21.81|?>>
+    <associate|eq 20.129.227|<tuple|21.82|?>>
+    <associate|eq 20.130.227|<tuple|21.83|?>>
+    <associate|eq 20.131.202|<tuple|21.122|?>>
+    <associate|eq 20.132.202|<tuple|21.123|?>>
+    <associate|eq 20.133.202|<tuple|21.138|?>>
+    <associate|eq 20.134.202|<tuple|21.139|?>>
+    <associate|eq 20.135.202|<tuple|21.140|?>>
+    <associate|eq 20.136.202|<tuple|21.141|?>>
+    <associate|eq 20.137.202|<tuple|21.142|?>>
+    <associate|eq 20.138.202|<tuple|21.143|?>>
+    <associate|eq 20.139.202|<tuple|21.144|?>>
+    <associate|eq 20.140.202|<tuple|21.145|?>>
+    <associate|eq 20.140.210.1|<tuple|21.124|?>>
+    <associate|eq 20.141.202|<tuple|21.146|?>>
+    <associate|eq 20.141.210.2|<tuple|21.125|?>>
+    <associate|eq 20.142.202|<tuple|21.147|?>>
+    <associate|eq 20.142.210.3|<tuple|21.126|?>>
+    <associate|eq 20.143.202|<tuple|21.148|?>>
+    <associate|eq 20.144.202|<tuple|21.149|?>>
+    <associate|eq 20.145.202|<tuple|21.150|?>>
+    <associate|eq 20.146.202|<tuple|21.151|?>>
+    <associate|eq 20.147.202|<tuple|21.152|?>>
+    <associate|eq 20.148.202|<tuple|21.153|?>>
+    <associate|eq 20.149.202|<tuple|21.154|?>>
+    <associate|eq 20.150.202|<tuple|21.155|?>>
+    <associate|eq 20.151.202|<tuple|21.156|?>>
+    <associate|eq 20.152.202|<tuple|21.157|?>>
+    <associate|eq 20.152.241|<tuple|21.105|?>>
+    <associate|eq 20.153.202|<tuple|21.158|?>>
+    <associate|eq 20.153.241|<tuple|21.106|?>>
+    <associate|eq 20.154.202|<tuple|21.159|?>>
+    <associate|eq 20.155.202|<tuple|21.161|?>>
+    <associate|eq 20.156.202|<tuple|21.162|?>>
+    <associate|eq 20.157.202|<tuple|21.163|?>>
+    <associate|eq 20.158.202|<tuple|21.164|?>>
+    <associate|eq 20.159.202|<tuple|21.165|?>>
+    <associate|eq 20.160.202|<tuple|21.166|?>>
+    <associate|eq 20.161.202|<tuple|21.167|?>>
+    <associate|eq 20.163\<point\>202|<tuple|21.127|?>>
+    <associate|eq 20.164.202|<tuple|21.128|?>>
+    <associate|eq 20.165.202|<tuple|21.129|?>>
+    <associate|eq 20.165.204|<tuple|21.179|?>>
+    <associate|eq 20.166.202|<tuple|21.130|?>>
+    <associate|eq 20.167.202|<tuple|21.131|?>>
+    <associate|eq 20.168.202|<tuple|21.132|?>>
+    <associate|eq 20.169.202|<tuple|21.133|?>>
+    <associate|eq 20.170.202|<tuple|21.134|?>>
+    <associate|eq 20.171.202|<tuple|21.135|?>>
+    <associate|eq 20.172.202|<tuple|21.136|?>>
+    <associate|eq 20.173.1|<tuple|21.160|?>>
+    <associate|eq 20.173.202|<tuple|21.137|?>>
+    <associate|eq 20.177.204|<tuple|21.168|?>>
+    <associate|eq 20.188.217|<tuple|21.169|?>>
+    <associate|eq 20.189.217|<tuple|21.170|?>>
+    <associate|eq 20.190.210|<tuple|21.183|?>>
+    <associate|eq 20.190.217|<tuple|21.171|?>>
+    <associate|eq 20.191.210|<tuple|21.184|?>>
+    <associate|eq 20.191.217|<tuple|21.172|?>>
+    <associate|eq 20.191.217.1|<tuple|21.172|?>>
+    <associate|eq 20.192.210|<tuple|21.185|?>>
+    <associate|eq 20.192.217|<tuple|21.174|?>>
+    <associate|eq 20.193.210|<tuple|21.186|?>>
+    <associate|eq 20.193.217|<tuple|21.175|?>>
+    <associate|eq 20.194.210|<tuple|21.187|?>>
+    <associate|eq 20.195.210|<tuple|21.188|?>>
+    <associate|eq 20.195.217|<tuple|21.176|?>>
+    <associate|eq 20.196.210|<tuple|21.189|?>>
+    <associate|eq 20.196.217|<tuple|21.177|?>>
+    <associate|eq 20.197.210|<tuple|21.190|?>>
+    <associate|eq 20.197.217|<tuple|21.178|?>>
+    <associate|eq 20.198.210|<tuple|21.191|?>>
+    <associate|eq 20.199.210|<tuple|21.192|?>>
+    <associate|eq 20.200.210|<tuple|21.193|?>>
+    <associate|eq 20.201.210|<tuple|21.194|?>>
+    <associate|eq 20.202.204|<tuple|21.255|?>>
+    <associate|eq 20.202.210|<tuple|21.195|?>>
+    <associate|eq 20.203.204|<tuple|21.256|?>>
+    <associate|eq 20.203.218|<tuple|21.180|?>>
+    <associate|eq 20.204.204|<tuple|21.257|?>>
+    <associate|eq 20.204.218|<tuple|21.181|?>>
+    <associate|eq 20.205.204|<tuple|21.258|?>>
+    <associate|eq 20.205.218|<tuple|21.182|?>>
+    <associate|eq 20.206.204|<tuple|21.259|?>>
+    <associate|eq 20.206.210|<tuple|21.203|?>>
+    <associate|eq 20.206.211|<tuple|21.196|?>>
+    <associate|eq 20.207.204|<tuple|21.260|?>>
+    <associate|eq 20.207.210|<tuple|21.204|?>>
+    <associate|eq 20.207.211|<tuple|21.197|?>>
+    <associate|eq 20.208.210|<tuple|21.205|?>>
+    <associate|eq 20.208.211|<tuple|21.198|?>>
+    <associate|eq 20.209.210|<tuple|21.206|?>>
+    <associate|eq 20.209.211|<tuple|21.199|?>>
+    <associate|eq 20.210.210|<tuple|21.207|?>>
+    <associate|eq 20.210.211|<tuple|21.200|?>>
+    <associate|eq 20.211.210|<tuple|21.208|?>>
+    <associate|eq 20.211.211|<tuple|21.201|?>>
+    <associate|eq 20.212.210|<tuple|21.209|?>>
+    <associate|eq 20.213.210|<tuple|21.210|?>>
+    <associate|eq 20.215.205|<tuple|21.262|?>>
+    <associate|eq 20.216.205|<tuple|21.263|?>>
+    <associate|eq 20.217.205|<tuple|21.265|?>>
+    <associate|eq 20.217.206|<tuple|21.264|?>>
+    <associate|eq 20.218.205|<tuple|21.266|?>>
+    <associate|eq 20.219.205|<tuple|21.267|?>>
+    <associate|eq 20.220.205|<tuple|21.268|?>>
+    <associate|eq 20.220.212|<tuple|21.212|?>>
+    <associate|eq 20.220.212.1|<tuple|21.211|?>>
+    <associate|eq 20.221.205|<tuple|21.269|?>>
+    <associate|eq 20.221.212|<tuple|21.213|?>>
+    <associate|eq 20.222.205|<tuple|21.270|?>>
+    <associate|eq 20.222.212|<tuple|21.214|?>>
+    <associate|eq 20.223.203|<tuple|21.271|?>>
+    <associate|eq 20.223.212|<tuple|21.215|?>>
+    <associate|eq 20.224.205|<tuple|21.272|?>>
+    <associate|eq 20.225.205|<tuple|21.273|?>>
+    <associate|eq 20.225.212|<tuple|21.216|?>>
+    <associate|eq 20.225.219|<tuple|21.202|?>>
+    <associate|eq 20.226.205|<tuple|21.274|?>>
+    <associate|eq 20.226.212|<tuple|21.217|?>>
+    <associate|eq 20.227.212|<tuple|21.218|?>>
+    <associate|eq 20.228.212|<tuple|21.219|?>>
+    <associate|eq 20.229.212|<tuple|21.220|?>>
+    <associate|eq 20.230.212|<tuple|21.221|?>>
+    <associate|eq 20.231.212|<tuple|21.222|?>>
+    <associate|eq 20.232.212|<tuple|21.223|?>>
+    <associate|eq 20.233.212|<tuple|21.224|?>>
+    <associate|eq 20.245.228|<tuple|21.388|?>>
+    <associate|eq 20.248.220|<tuple|21.225|?>>
+    <associate|eq 20.249.220|<tuple|21.226|?>>
+    <associate|eq 20.250.220|<tuple|21.227|?>>
+    <associate|eq 20.251.220|<tuple|21.228|?>>
+    <associate|eq 20.252.220|<tuple|21.229|?>>
+    <associate|eq 20.253.220|<tuple|21.230|?>>
+    <associate|eq 20.254.220|<tuple|21.231|?>>
+    <associate|eq 20.255.220|<tuple|21.232|?>>
+    <associate|eq 20.256.220|<tuple|21.233|?>>
+    <associate|eq 20.257.216|<tuple|21.239|?>>
+    <associate|eq 20.257.220|<tuple|21.234|?>>
+    <associate|eq 20.258.216|<tuple|21.240|?>>
+    <associate|eq 20.258.220|<tuple|21.235|?>>
+    <associate|eq 20.259.216|<tuple|21.241|?>>
+    <associate|eq 20.259.220|<tuple|21.236|?>>
+    <associate|eq 20.260.216|<tuple|21.242|?>>
+    <associate|eq 20.260.220|<tuple|21.237|?>>
+    <associate|eq 20.261.216|<tuple|21.243|?>>
+    <associate|eq 20.261.220|<tuple|21.238|?>>
+    <associate|eq 20.262.216|<tuple|21.244|?>>
+    <associate|eq 20.263.216|<tuple|21.246|?>>
+    <associate|eq 20.264.216|<tuple|21.247|?>>
+    <associate|eq 20.265.216|<tuple|21.248|?>>
+    <associate|eq 20.266.216|<tuple|21.249|?>>
+    <associate|eq 20.267.216|<tuple|21.250|?>>
+    <associate|eq 20.268.216|<tuple|21.251|?>>
+    <associate|eq 20.269.216|<tuple|21.253|?>>
+    <associate|eq 20.273.220|<tuple|21.245|?>>
+    <associate|eq 20.273.226|<tuple|21.350|?>>
+    <associate|eq 20.274.220|<tuple|21.252|?>>
+    <associate|eq 20.275.220|<tuple|21.254|?>>
+    <associate|eq 20.284.221|<tuple|21.261|?>>
+    <associate|eq 20.290.279|<tuple|21.878|?>>
+    <associate|eq 20.294.279|<tuple|21.882|?>>
+    <associate|eq 20.295.220|<tuple|21.275|?>>
+    <associate|eq 20.296.220|<tuple|21.276|?>>
+    <associate|eq 20.297.220|<tuple|21.279|?>>
+    <associate|eq 20.298.220|<tuple|21.278|?>>
+    <associate|eq 20.299.220|<tuple|21.277|?>>
+    <associate|eq 20.300.220|<tuple|21.280|?>>
+    <associate|eq 20.301.221|<tuple|21.279|?>>
+    <associate|eq 20.304.221|<tuple|21.287|?>>
+    <associate|eq 20.305.221|<tuple|21.288|?>>
+    <associate|eq 20.306.221|<tuple|21.289|?>>
+    <associate|eq 20.307.221|<tuple|21.290|?>>
+    <associate|eq 20.308.221|<tuple|21.291|?>>
+    <associate|eq 20.309.221|<tuple|21.292|?>>
+    <associate|eq 20.310.221|<tuple|21.293|?>>
+    <associate|eq 20.311.221|<tuple|21.281|?>>
+    <associate|eq 20.312.221|<tuple|21.282|?>>
+    <associate|eq 20.313.221|<tuple|21.283|?>>
+    <associate|eq 20.314.221|<tuple|21.284|?>>
+    <associate|eq 20.315.221|<tuple|21.285|?>>
+    <associate|eq 20.316.221|<tuple|21.286|?>>
+    <associate|eq 20.317.222|<tuple|21.294|?>>
+    <associate|eq 20.318.222|<tuple|21.295|?>>
+    <associate|eq 20.319.222|<tuple|21.296|?>>
+    <associate|eq 20.320.224|<tuple|21.298|?>>
+    <associate|eq 20.320.226|<tuple|21.297|?>>
+    <associate|eq 20.321.224|<tuple|21.299|?>>
+    <associate|eq 20.322.224|<tuple|21.300|?>>
+    <associate|eq 20.323.224|<tuple|21.301|?>>
+    <associate|eq 20.325.226|<tuple|21.302|?>>
+    <associate|eq 20.327.224|<tuple|21.303|?>>
+    <associate|eq 20.328.224|<tuple|21.304|?>>
+    <associate|eq 20.329.224|<tuple|21.305|?>>
+    <associate|eq 20.330.224|<tuple|21.306|?>>
+    <associate|eq 20.331.224|<tuple|21.307|?>>
+    <associate|eq 20.332.224|<tuple|21.308|?>>
+    <associate|eq 20.333.224|<tuple|21.309|?>>
+    <associate|eq 20.334.224|<tuple|21.310|?>>
+    <associate|eq 20.335.224|<tuple|21.311|?>>
+    <associate|eq 20.336.224|<tuple|21.312|?>>
+    <associate|eq 20.337.224|<tuple|21.313|?>>
+    <associate|eq 20.338.224|<tuple|21.314|?>>
+    <associate|eq 20.343.224|<tuple|21.316|?>>
+    <associate|eq 20.344.224|<tuple|21.317|?>>
+    <associate|eq 20.345.224|<tuple|21.318|?>>
+    <associate|eq 20.345.225|<tuple|21.321|?>>
+    <associate|eq 20.346.225|<tuple|21.322|?>>
+    <associate|eq 20.3463224|<tuple|21.319|?>>
+    <associate|eq 20.347.224|<tuple|21.320|?>>
+    <associate|eq 20.347.225|<tuple|21.323|?>>
+    <associate|eq 20.348.225|<tuple|21.324|?>>
+    <associate|eq 20.349.225|<tuple|21.325|?>>
+    <associate|eq 20.350.225|<tuple|21.326|?>>
+    <associate|eq 20.351.225|<tuple|21.327|?>>
+    <associate|eq 20.352.225|<tuple|21.328|?>>
+    <associate|eq 20.353.225|<tuple|21.329|?>>
+    <associate|eq 20.354.225|<tuple|21.330|?>>
+    <associate|eq 20.355.225|<tuple|21.331|?>>
+    <associate|eq 20.356.225|<tuple|21.332|?>>
+    <associate|eq 20.357.225|<tuple|21.333|?>>
+    <associate|eq 20.358.225|<tuple|21.334|?>>
+    <associate|eq 20.359.225|<tuple|21.335|?>>
+    <associate|eq 20.360.225|<tuple|21.336|?>>
+    <associate|eq 20.361.225|<tuple|21.337|?>>
+    <associate|eq 20.361.226|<tuple|21.339|?>>
+    <associate|eq 20.362.225|<tuple|21.338|?>>
+    <associate|eq 20.362.226|<tuple|21.340|?>>
+    <associate|eq 20.363.226|<tuple|21.341|?>>
+    <associate|eq 20.364.226|<tuple|21.342|?>>
+    <associate|eq 20.365.226|<tuple|21.343|?>>
+    <associate|eq 20.366.226|<tuple|21.344|?>>
+    <associate|eq 20.367.226|<tuple|21.345|?>>
+    <associate|eq 20.369.226|<tuple|21.347|?>>
+    <associate|eq 20.371.226|<tuple|21.348|?>>
+    <associate|eq 20.372.226|<tuple|21.349|?>>
+    <associate|eq 20.374.226|<tuple|21.357|?>>
+    <associate|eq 20.375.226|<tuple|21.358|?>>
+    <associate|eq 20.376.226|<tuple|21.359|?>>
+    <associate|eq 20.377.226|<tuple|21.360|?>>
+    <associate|eq 20.378.226|<tuple|21.361|?>>
+    <associate|eq 20.379.226|<tuple|21.362|?>>
+    <associate|eq 20.380.226|<tuple|21.363|?>>
+    <associate|eq 20.381.226|<tuple|21.364|?>>
+    <associate|eq 20.382.226|<tuple|21.365|?>>
+    <associate|eq 20.383.226|<tuple|21.366|?>>
+    <associate|eq 20.384.226|<tuple|21.367|?>>
+    <associate|eq 20.385.226|<tuple|21.368|?>>
+    <associate|eq 20.386.226|<tuple|21.369|?>>
+    <associate|eq 20.387.226|<tuple|21.370|?>>
+    <associate|eq 20.388.226|<tuple|21.371|?>>
+    <associate|eq 20.389.226|<tuple|21.372|?>>
+    <associate|eq 20.390.226|<tuple|21.373|?>>
+    <associate|eq 20.413.227|<tuple|21.378|?>>
+    <associate|eq 20.414.227|<tuple|21.379|?>>
+    <associate|eq 20.415.227|<tuple|21.380|?>>
+    <associate|eq 20.415.260|<tuple|21.376|?>>
+    <associate|eq 20.415.264|<tuple|21.374|?>>
+    <associate|eq 20.416.227|<tuple|21.381|?>>
+    <associate|eq 20.416.260|<tuple|21.377|?>>
+    <associate|eq 20.416.264|<tuple|21.375|?>>
+    <associate|eq 20.417.227|<tuple|21.382|?>>
+    <associate|eq 20.418.227|<tuple|21.383|?>>
+    <associate|eq 20.419.227|<tuple|21.384|?>>
+    <associate|eq 20.421.227|<tuple|21.385|?>>
+    <associate|eq 20.422.228|<tuple|21.386|?>>
+    <associate|eq 20.424.228|<tuple|21.387|?>>
+    <associate|eq 20.426.228|<tuple|21.389|?>>
+    <associate|eq 20.428.228|<tuple|21.391|?>>
+    <associate|eq 20.429.228|<tuple|21.392|?>>
+    <associate|eq 20.430.228|<tuple|21.393|?>>
+    <associate|eq 20.431.228|<tuple|21.394|?>>
+    <associate|eq 20.432.228|<tuple|21.395|?>>
+    <associate|eq 20.433.228|<tuple|21.396|?>>
+    <associate|eq 20.434.228|<tuple|21.397|?>>
+    <associate|eq 20.435.228|<tuple|21.398|?>>
+    <associate|eq 20.436.228|<tuple|21.405|?>>
+    <associate|eq 20.437.228|<tuple|21.406|?>>
+    <associate|eq 20.440.229|<tuple|21.407|?>>
+    <associate|eq 20.440.249|<tuple|21.399|?>>
+    <associate|eq 20.441.229|<tuple|21.408|?>>
+    <associate|eq 20.441.249|<tuple|21.400|?>>
+    <associate|eq 20.442.229|<tuple|21.409|?>>
+    <associate|eq 20.442.249|<tuple|21.401|?>>
+    <associate|eq 20.443.229|<tuple|21.410|?>>
+    <associate|eq 20.443.249|<tuple|21.402|?>>
+    <associate|eq 20.444.229|<tuple|21.411|?>>
+    <associate|eq 20.444.249|<tuple|21.403|?>>
+    <associate|eq 20.445.229|<tuple|21.412|?>>
+    <associate|eq 20.446.229|<tuple|21.413|?>>
+    <associate|eq 20.447.229|<tuple|21.414|?>>
+    <associate|eq 20.448.229|<tuple|21.415|?>>
+    <associate|eq 20.449.229|<tuple|21.416|?>>
+    <associate|eq 20.451.229|<tuple|21.418|?>>
+    <associate|eq 20.452.229|<tuple|21.419|?>>
+    <associate|eq 20.453.229|<tuple|21.420|?>>
+    <associate|eq 20.454.229|<tuple|21.421|?>>
+    <associate|eq 20.455.229|<tuple|21.422|?>>
+    <associate|eq 20.456\<point\>229|<tuple|21.423|?>>
+    <associate|eq 20.457.229|<tuple|21.424|?>>
+    <associate|eq 20.458.229|<tuple|21.425|?>>
+    <associate|eq 20.459.229|<tuple|21.426|?>>
+    <associate|eq 20.460.229|<tuple|21.427|?>>
+    <associate|eq 20.461.229|<tuple|21.428|?>>
+    <associate|eq 20.462.229|<tuple|21.429|?>>
+    <associate|eq 20.463.229|<tuple|21.430|?>>
+    <associate|eq 20.464.229|<tuple|21.431|?>>
+    <associate|eq 20.465\<point\>229|<tuple|21.432|?>>
+    <associate|eq 20.466.229|<tuple|21.433|?>>
+    <associate|eq 20.467.229|<tuple|21.434|?>>
+    <associate|eq 20.468.229|<tuple|21.435|?>>
+    <associate|eq 20.469.229|<tuple|21.436|?>>
+    <associate|eq 20.470.229|<tuple|21.437|?>>
+    <associate|eq 20.471.229|<tuple|21.438|?>>
+    <associate|eq 20.472.229|<tuple|21.440|?>>
+    <associate|eq 20.472.231|<tuple|21.439|?>>
+    <associate|eq 20.473.229|<tuple|21.441|?>>
+    <associate|eq 20.476.229|<tuple|21.442|?>>
+    <associate|eq 20.477.229|<tuple|21.443|?>>
+    <associate|eq 20.478.229|<tuple|21.444|?>>
+    <associate|eq 20.479.229|<tuple|21.445|?>>
+    <associate|eq 20.480.229|<tuple|21.446|?>>
+    <associate|eq 20.481.229|<tuple|21.447|?>>
+    <associate|eq 20.482.229|<tuple|21.448|?>>
+    <associate|eq 20.482.230|<tuple|21.450|?>>
+    <associate|eq 20.483.229|<tuple|21.449|?>>
+    <associate|eq 20.484.229|<tuple|21.451|?>>
+    <associate|eq 20.484.230|<tuple|21.452|?>>
+    <associate|eq 20.485.230|<tuple|21.453|?>>
+    <associate|eq 20.487.231|<tuple|21.454|?>>
+    <associate|eq 20.488.231|<tuple|21.486|?>>
+    <associate|eq 20.489.231|<tuple|21.487|?>>
+    <associate|eq 20.490.231|<tuple|21.488|?>>
+    <associate|eq 20.490.249|<tuple|21.468|?>>
+    <associate|eq 20.492.231|<tuple|21.490|?>>
+    <associate|eq 20.493.231|<tuple|21.491|?>>
+    <associate|eq 20.494.231|<tuple|21.492|?>>
+    <associate|eq 20.495.231|<tuple|21.493|?>>
+    <associate|eq 20.496.231|<tuple|21.494|?>>
+    <associate|eq 20.497.231|<tuple|21.495|?>>
+    <associate|eq 20.498.231|<tuple|21.496|?>>
+    <associate|eq 20.498.263|<tuple|21.457|?>>
+    <associate|eq 20.499.231|<tuple|21.497|?>>
+    <associate|eq 20.499.263|<tuple|21.458|?>>
+    <associate|eq 20.500.231|<tuple|21.469|?>>
+    <associate|eq 20.500.232|<tuple|21.483|?>>
+    <associate|eq 20.501.231|<tuple|21.470|?>>
+    <associate|eq 20.501.232|<tuple|21.484|?>>
+    <associate|eq 20.502.231|<tuple|21.471|?>>
+    <associate|eq 20.502.232|<tuple|21.485|?>>
+    <associate|eq 20.503.231|<tuple|21.472|?>>
+    <associate|eq 20.503.261|<tuple|21.475|?>>
+    <associate|eq 20.504.231|<tuple|21.473|?>>
+    <associate|eq 20.504.261|<tuple|21.476|?>>
+    <associate|eq 20.504.263|<tuple|21.463|?>>
+    <associate|eq 20.505.231|<tuple|21.474|?>>
+    <associate|eq 20.506.231|<tuple|21.478|?>>
+    <associate|eq 20.506.263|<tuple|21.465|?>>
+    <associate|eq 20.507.231|<tuple|21.477|?>>
+    <associate|eq 20.508.231|<tuple|21.479|?>>
+    <associate|eq 20.509.231|<tuple|21.480|?>>
+    <associate|eq 20.510.231|<tuple|21.481|?>>
+    <associate|eq 20.511.231|<tuple|21.482|?>>
+    <associate|eq 20.515.232|<tuple|21.498|?>>
+    <associate|eq 20.515.233|<tuple|21.499|?>>
+    <associate|eq 20.516.232|<tuple|21.504|?>>
+    <associate|eq 20.516.233|<tuple|21.500|?>>
+    <associate|eq 20.517.232|<tuple|21.508|?>>
+    <associate|eq 20.517.233|<tuple|21.501|?>>
+    <associate|eq 20.518.232|<tuple|21.509|?>>
+    <associate|eq 20.518.233|<tuple|21.502|?>>
+    <associate|eq 20.519.232|<tuple|21.530|?>>
+    <associate|eq 20.519.233|<tuple|21.503|?>>
+    <associate|eq 20.52.200|<tuple|21.28|?>>
     <associate|eq 20.52.200.1|<tuple|21.21|?>>
-    <associate|eq 20.520.232|<tuple|21.530|?>>
-    <associate|eq 20.521.232|<tuple|21.531|?>>
-    <associate|eq 20.522.232|<tuple|21.532|?>>
-    <associate|eq 20.523.232|<tuple|21.533|?>>
-    <associate|eq 20.524.232|<tuple|21.534|?>>
-    <associate|eq 20.525.232|<tuple|21.538|?>>
-    <associate|eq 20.525.232.1|<tuple|21.535|?>>
-    <associate|eq 20.526.232|<tuple|21.536|?>>
-    <associate|eq 20.527.232|<tuple|21.537|?>>
-    <associate|eq 20.529.232|<tuple|21.539|?>>
-    <associate|eq 20.53.200|<tuple|21.28|?>>
+    <associate|eq 20.520.232|<tuple|21.531|?>>
+    <associate|eq 20.521.232|<tuple|21.532|?>>
+    <associate|eq 20.522.232|<tuple|21.533|?>>
+    <associate|eq 20.523.232|<tuple|21.534|?>>
+    <associate|eq 20.524.232|<tuple|21.535|?>>
+    <associate|eq 20.525.232|<tuple|21.539|?>>
+    <associate|eq 20.525.232.1|<tuple|21.536|?>>
+    <associate|eq 20.526.232|<tuple|21.537|?>>
+    <associate|eq 20.527.232|<tuple|21.538|?>>
+    <associate|eq 20.529.232|<tuple|21.540|?>>
+    <associate|eq 20.53.200|<tuple|21.29|?>>
     <associate|eq 20.53.200.1|<tuple|21.22|?>>
-    <associate|eq 20.530.232|<tuple|21.540|?>>
-    <associate|eq 20.531.232|<tuple|21.541|?>>
-    <associate|eq 20.532.232|<tuple|21.542|?>>
-    <associate|eq 20.533.232|<tuple|21.543|?>>
-    <associate|eq 20.54.200|<tuple|21.29|?>>
+    <associate|eq 20.530.232|<tuple|21.541|?>>
+    <associate|eq 20.531.232|<tuple|21.542|?>>
+    <associate|eq 20.532.232|<tuple|21.543|?>>
+    <associate|eq 20.533.232|<tuple|21.544|?>>
+    <associate|eq 20.54.200|<tuple|21.30|?>>
     <associate|eq 20.54.200.1|<tuple|21.23|?>>
     <associate|eq 20.54.202|<tuple|21.2|?>>
-    <associate|eq 20.540.234|<tuple|21.546|?>>
-    <associate|eq 20.541.234|<tuple|21.547|?>>
-    <associate|eq 20.541.243|<tuple|21.544|?>>
-    <associate|eq 20.542.234|<tuple|21.548|?>>
-    <associate|eq 20.542.243|<tuple|21.545|?>>
-    <associate|eq 20.543.234|<tuple|21.549|?>>
-    <associate|eq 20.544.234|<tuple|21.550|?>>
-    <associate|eq 20.545.234|<tuple|21.551|?>>
-    <associate|eq 20.546.234|<tuple|21.552|?>>
-    <associate|eq 20.547.234|<tuple|21.553|?>>
-    <associate|eq 20.548.234|<tuple|21.554|?>>
-    <associate|eq 20.548.282|<tuple|21.504|?>>
-    <associate|eq 20.549.240|<tuple|21.555|?>>
-    <associate|eq 20.549.282|<tuple|21.505|?>>
-    <associate|eq 20.55.200|<tuple|21.30|?>>
+    <associate|eq 20.540.234|<tuple|21.547|?>>
+    <associate|eq 20.541.234|<tuple|21.548|?>>
+    <associate|eq 20.541.243|<tuple|21.545|?>>
+    <associate|eq 20.542.234|<tuple|21.549|?>>
+    <associate|eq 20.542.243|<tuple|21.546|?>>
+    <associate|eq 20.543.234|<tuple|21.550|?>>
+    <associate|eq 20.544.234|<tuple|21.551|?>>
+    <associate|eq 20.545.234|<tuple|21.552|?>>
+    <associate|eq 20.546.234|<tuple|21.553|?>>
+    <associate|eq 20.547.234|<tuple|21.554|?>>
+    <associate|eq 20.548.234|<tuple|21.555|?>>
+    <associate|eq 20.548.282|<tuple|21.505|?>>
+    <associate|eq 20.549.240|<tuple|21.556|?>>
+    <associate|eq 20.549.282|<tuple|21.506|?>>
+    <associate|eq 20.55.200|<tuple|21.31|?>>
     <associate|eq 20.55.200.1|<tuple|21.24|?>>
     <associate|eq 20.55.202|<tuple|21.3|?>>
-    <associate|eq 20.550.240|<tuple|21.556|?>>
-    <associate|eq 20.550.263|<tuple|21.511|?>>
-    <associate|eq 20.550.282|<tuple|21.506|?>>
-    <associate|eq 20.551.240|<tuple|21.557|?>>
-    <associate|eq 20.551.263|<tuple|21.512|?>>
-    <associate|eq 20.552.240|<tuple|21.558|?>>
-    <associate|eq 20.552.263|<tuple|21.513|?>>
-    <associate|eq 20.553.240|<tuple|21.559|?>>
-    <associate|eq 20.553.263|<tuple|21.514|?>>
-    <associate|eq 20.554.240|<tuple|21.560|?>>
-    <associate|eq 20.554.263|<tuple|21.515|?>>
-    <associate|eq 20.555.240|<tuple|21.561|?>>
-    <associate|eq 20.555.263|<tuple|21.516|?>>
-    <associate|eq 20.556.240|<tuple|21.562|?>>
-    <associate|eq 20.556.263|<tuple|21.517|?>>
-    <associate|eq 20.557.240|<tuple|21.563|?>>
-    <associate|eq 20.557.263|<tuple|21.518|?>>
-    <associate|eq 20.558.240|<tuple|21.564|?>>
-    <associate|eq 20.558.263|<tuple|21.519|?>>
-    <associate|eq 20.559.240|<tuple|21.565|?>>
-    <associate|eq 20.56.200|<tuple|21.31|?>>
+    <associate|eq 20.550.240|<tuple|21.557|?>>
+    <associate|eq 20.550.263|<tuple|21.512|?>>
+    <associate|eq 20.550.282|<tuple|21.507|?>>
+    <associate|eq 20.551.240|<tuple|21.558|?>>
+    <associate|eq 20.551.263|<tuple|21.513|?>>
+    <associate|eq 20.552.240|<tuple|21.559|?>>
+    <associate|eq 20.552.263|<tuple|21.514|?>>
+    <associate|eq 20.553.240|<tuple|21.560|?>>
+    <associate|eq 20.553.263|<tuple|21.515|?>>
+    <associate|eq 20.554.240|<tuple|21.561|?>>
+    <associate|eq 20.554.263|<tuple|21.516|?>>
+    <associate|eq 20.555.240|<tuple|21.562|?>>
+    <associate|eq 20.555.263|<tuple|21.517|?>>
+    <associate|eq 20.556.240|<tuple|21.563|?>>
+    <associate|eq 20.556.263|<tuple|21.518|?>>
+    <associate|eq 20.557.240|<tuple|21.564|?>>
+    <associate|eq 20.557.263|<tuple|21.519|?>>
+    <associate|eq 20.558.240|<tuple|21.565|?>>
+    <associate|eq 20.558.263|<tuple|21.520|?>>
+    <associate|eq 20.559.240|<tuple|21.566|?>>
+    <associate|eq 20.56.200|<tuple|21.32|?>>
     <associate|eq 20.56.202|<tuple|21.4|?>>
-    <associate|eq 20.560.240|<tuple|21.566|?>>
-    <associate|eq 20.561.240|<tuple|21.567|?>>
-    <associate|eq 20.562.240|<tuple|21.568|?>>
-    <associate|eq 20.563.240|<tuple|21.569|?>>
-    <associate|eq 20.564.240|<tuple|21.570|?>>
-    <associate|eq 20.565.240|<tuple|21.571|?>>
-    <associate|eq 20.566.240|<tuple|21.572|?>>
-    <associate|eq 20.567.240|<tuple|21.573|?>>
-    <associate|eq 20.568.240|<tuple|21.574|?>>
-    <associate|eq 20.569.240|<tuple|21.575|?>>
-    <associate|eq 20.57.200|<tuple|21.32|?>>
+    <associate|eq 20.560.240|<tuple|21.567|?>>
+    <associate|eq 20.561.240|<tuple|21.568|?>>
+    <associate|eq 20.562.240|<tuple|21.569|?>>
+    <associate|eq 20.563.240|<tuple|21.570|?>>
+    <associate|eq 20.564.240|<tuple|21.571|?>>
+    <associate|eq 20.565.240|<tuple|21.572|?>>
+    <associate|eq 20.566.240|<tuple|21.573|?>>
+    <associate|eq 20.567.240|<tuple|21.574|?>>
+    <associate|eq 20.568.240|<tuple|21.575|?>>
+    <associate|eq 20.569.240|<tuple|21.576|?>>
+    <associate|eq 20.57.200|<tuple|21.33|?>>
     <associate|eq 20.57.203|<tuple|21.14|?>>
     <associate|eq 20.57.212|<tuple|21.5|?>>
-    <associate|eq 20.570.240|<tuple|21.576|?>>
-    <associate|eq 20.571.240|<tuple|21.577|?>>
-    <associate|eq 20.572.240|<tuple|21.578|?>>
-    <associate|eq 20.573.240|<tuple|21.579|?>>
-    <associate|eq 20.574.240|<tuple|21.580|?>>
-    <associate|eq 20.575.240|<tuple|21.581|?>>
-    <associate|eq 20.576.240|<tuple|21.582|?>>
-    <associate|eq 20.577.240|<tuple|21.583|?>>
-    <associate|eq 20.578.240|<tuple|21.584|?>>
-    <associate|eq 20.579.240|<tuple|21.585|?>>
-    <associate|eq 20.58.200|<tuple|21.33|?>>
+    <associate|eq 20.570.240|<tuple|21.577|?>>
+    <associate|eq 20.571.240|<tuple|21.578|?>>
+    <associate|eq 20.572.240|<tuple|21.579|?>>
+    <associate|eq 20.573.240|<tuple|21.580|?>>
+    <associate|eq 20.574.240|<tuple|21.581|?>>
+    <associate|eq 20.575.240|<tuple|21.582|?>>
+    <associate|eq 20.576.240|<tuple|21.583|?>>
+    <associate|eq 20.577.240|<tuple|21.584|?>>
+    <associate|eq 20.578.240|<tuple|21.585|?>>
+    <associate|eq 20.579.240|<tuple|21.586|?>>
+    <associate|eq 20.58.200|<tuple|21.34|?>>
     <associate|eq 20.58.203|<tuple|21.15|?>>
     <associate|eq 20.58.212|<tuple|21.6|?>>
-    <associate|eq 20.580.240|<tuple|21.586|?>>
-    <associate|eq 20.581.240|<tuple|21.587|?>>
-    <associate|eq 20.582.240|<tuple|21.588|?>>
-    <associate|eq 20.583.240|<tuple|21.591|?>>
-    <associate|eq 20.584.240|<tuple|21.592|?>>
-    <associate|eq 20.585.240|<tuple|21.593|?>>
-    <associate|eq 20.586.240|<tuple|21.594|?>>
-    <associate|eq 20.587.240|<tuple|21.595|?>>
+    <associate|eq 20.580.240|<tuple|21.587|?>>
+    <associate|eq 20.581.240|<tuple|21.588|?>>
+    <associate|eq 20.582.240|<tuple|21.589|?>>
+    <associate|eq 20.583.240|<tuple|21.592|?>>
+    <associate|eq 20.584.240|<tuple|21.593|?>>
+    <associate|eq 20.585.240|<tuple|21.594|?>>
+    <associate|eq 20.586.240|<tuple|21.595|?>>
+    <associate|eq 20.587.240|<tuple|21.596|?>>
     <associate|eq 20.59.203|<tuple|21.16|?>>
     <associate|eq 20.59.212|<tuple|21.7|?>>
-    <associate|eq 20.590.241|<tuple|21.597|?>>
-    <associate|eq 20.591.241|<tuple|21.598|?>>
-    <associate|eq 20.592.241|<tuple|21.599|?>>
-    <associate|eq 20.594.244|<tuple|21.600|?>>
-    <associate|eq 20.595.244|<tuple|21.601|?>>
-    <associate|eq 20.596.244|<tuple|21.602|?>>
-    <associate|eq 20.597.245|<tuple|21.603|?>>
-    <associate|eq 20.598.245|<tuple|21.604|?>>
-    <associate|eq 20.598.249|<tuple|21.454|?>>
-    <associate|eq 20.599.245|<tuple|21.605|?>>
-    <associate|eq 20.599.249|<tuple|21.455|?>>
+    <associate|eq 20.590.241|<tuple|21.598|?>>
+    <associate|eq 20.591.241|<tuple|21.599|?>>
+    <associate|eq 20.592.241|<tuple|21.600|?>>
+    <associate|eq 20.594.244|<tuple|21.601|?>>
+    <associate|eq 20.595.244|<tuple|21.602|?>>
+    <associate|eq 20.596.244|<tuple|21.603|?>>
+    <associate|eq 20.597.245|<tuple|21.604|?>>
+    <associate|eq 20.598.245|<tuple|21.605|?>>
+    <associate|eq 20.598.249|<tuple|21.455|?>>
+    <associate|eq 20.599.245|<tuple|21.606|?>>
+    <associate|eq 20.599.249|<tuple|21.456|?>>
     <associate|eq 20.60.203|<tuple|21.17|?>>
     <associate|eq 20.60.218|<tuple|21.8|?>>
-    <associate|eq 20.600.245|<tuple|21.606|?>>
-    <associate|eq 20.601.245|<tuple|21.607|?>>
-    <associate|eq 20.602.245|<tuple|21.608|?>>
-    <associate|eq 20.603.245|<tuple|21.609|?>>
-    <associate|eq 20.603.249|<tuple|21.458|?>>
-    <associate|eq 20.604.245|<tuple|21.610|?>>
-    <associate|eq 20.604.249|<tuple|21.459|?>>
-    <associate|eq 20.605.246|<tuple|21.611|?>>
-    <associate|eq 20.605.249|<tuple|21.460|?>>
-    <associate|eq 20.606.246|<tuple|21.612|?>>
-    <associate|eq 20.606.249|<tuple|21.461|?>>
-    <associate|eq 20.607.246|<tuple|21.613|?>>
-    <associate|eq 20.607.249|<tuple|21.463|?>>
-    <associate|eq 20.607.250|<tuple|21.509|?>>
-    <associate|eq 20.608.246|<tuple|21.614|?>>
-    <associate|eq 20.608.249|<tuple|21.465|?>>
-    <associate|eq 20.608.250|<tuple|21.510|?>>
-    <associate|eq 20.609.246|<tuple|21.615|?>>
-    <associate|eq 20.609.249|<tuple|21.466|?>>
+    <associate|eq 20.600.245|<tuple|21.607|?>>
+    <associate|eq 20.601.245|<tuple|21.608|?>>
+    <associate|eq 20.602.245|<tuple|21.609|?>>
+    <associate|eq 20.603.245|<tuple|21.610|?>>
+    <associate|eq 20.603.249|<tuple|21.459|?>>
+    <associate|eq 20.604.245|<tuple|21.611|?>>
+    <associate|eq 20.604.249|<tuple|21.460|?>>
+    <associate|eq 20.605.246|<tuple|21.612|?>>
+    <associate|eq 20.605.249|<tuple|21.461|?>>
+    <associate|eq 20.606.246|<tuple|21.613|?>>
+    <associate|eq 20.606.249|<tuple|21.462|?>>
+    <associate|eq 20.607.246|<tuple|21.614|?>>
+    <associate|eq 20.607.249|<tuple|21.464|?>>
+    <associate|eq 20.607.250|<tuple|21.510|?>>
+    <associate|eq 20.608.246|<tuple|21.615|?>>
+    <associate|eq 20.608.249|<tuple|21.466|?>>
+    <associate|eq 20.608.250|<tuple|21.511|?>>
+    <associate|eq 20.609.246|<tuple|21.616|?>>
+    <associate|eq 20.609.249|<tuple|21.467|?>>
     <associate|eq 20.61.204|<tuple|21.18|?>>
     <associate|eq 20.61.218|<tuple|21.9|?>>
-    <associate|eq 20.610.246|<tuple|21.616|?>>
-    <associate|eq 20.611.246|<tuple|21.617|?>>
-    <associate|eq 20.612.246|<tuple|21.618|?>>
-    <associate|eq 20.613.246|<tuple|21.620|?>>
-    <associate|eq 20.614.246|<tuple|21.621|?>>
-    <associate|eq 20.615.246|<tuple|21.622|?>>
-    <associate|eq 20.616.246|<tuple|21.623|?>>
-    <associate|eq 20.617.247|<tuple|21.624|?>>
-    <associate|eq 20.617.250|<tuple|21.520|?>>
-    <associate|eq 20.618.247|<tuple|21.625|?>>
-    <associate|eq 20.618.250|<tuple|21.521|?>>
-    <associate|eq 20.619.246|<tuple|21.626|?>>
-    <associate|eq 20.619.250|<tuple|21.522|?>>
+    <associate|eq 20.610.246|<tuple|21.617|?>>
+    <associate|eq 20.611.246|<tuple|21.618|?>>
+    <associate|eq 20.612.246|<tuple|21.619|?>>
+    <associate|eq 20.613.246|<tuple|21.621|?>>
+    <associate|eq 20.614.246|<tuple|21.622|?>>
+    <associate|eq 20.615.246|<tuple|21.623|?>>
+    <associate|eq 20.616.246|<tuple|21.624|?>>
+    <associate|eq 20.617.247|<tuple|21.625|?>>
+    <associate|eq 20.617.250|<tuple|21.521|?>>
+    <associate|eq 20.618.247|<tuple|21.626|?>>
+    <associate|eq 20.618.250|<tuple|21.522|?>>
+    <associate|eq 20.619.246|<tuple|21.627|?>>
+    <associate|eq 20.619.250|<tuple|21.523|?>>
     <associate|eq 20.62.204|<tuple|21.19|?>>
     <associate|eq 20.62.218|<tuple|21.10|?>>
-    <associate|eq 20.620.246|<tuple|21.627|?>>
-    <associate|eq 20.620.250|<tuple|21.523|?>>
-    <associate|eq 20.621.246|<tuple|21.629|?>>
-    <associate|eq 20.621.250|<tuple|21.524|?>>
-    <associate|eq 20.622.246|<tuple|21.630|?>>
-    <associate|eq 20.622.250|<tuple|21.525|?>>
-    <associate|eq 20.623.246|<tuple|21.631|?>>
-    <associate|eq 20.623.250|<tuple|21.526|?>>
-    <associate|eq 20.624.246|<tuple|21.632|?>>
-    <associate|eq 20.624.250|<tuple|21.527|?>>
-    <associate|eq 20.625.246|<tuple|21.633|?>>
-    <associate|eq 20.625.250|<tuple|21.528|?>>
-    <associate|eq 20.626.246|<tuple|21.634|?>>
-    <associate|eq 20.627.246|<tuple|21.635|?>>
-    <associate|eq 20.628.246|<tuple|21.636|?>>
-    <associate|eq 20.628.263|<tuple|21.589|?>>
-    <associate|eq 20.629.246|<tuple|21.637|?>>
-    <associate|eq 20.629.263|<tuple|21.590|?>>
+    <associate|eq 20.620.246|<tuple|21.628|?>>
+    <associate|eq 20.620.250|<tuple|21.524|?>>
+    <associate|eq 20.621.246|<tuple|21.630|?>>
+    <associate|eq 20.621.250|<tuple|21.525|?>>
+    <associate|eq 20.622.246|<tuple|21.631|?>>
+    <associate|eq 20.622.250|<tuple|21.526|?>>
+    <associate|eq 20.623.246|<tuple|21.632|?>>
+    <associate|eq 20.623.250|<tuple|21.527|?>>
+    <associate|eq 20.624.246|<tuple|21.633|?>>
+    <associate|eq 20.624.250|<tuple|21.528|?>>
+    <associate|eq 20.625.246|<tuple|21.634|?>>
+    <associate|eq 20.625.250|<tuple|21.529|?>>
+    <associate|eq 20.626.246|<tuple|21.635|?>>
+    <associate|eq 20.627.246|<tuple|21.636|?>>
+    <associate|eq 20.628.246|<tuple|21.637|?>>
+    <associate|eq 20.628.263|<tuple|21.590|?>>
+    <associate|eq 20.629.246|<tuple|21.638|?>>
+    <associate|eq 20.629.263|<tuple|21.591|?>>
     <associate|eq 20.63.204|<tuple|21.20|?>>
     <associate|eq 20.63.218|<tuple|21.11|?>>
-    <associate|eq 20.630.249|<tuple|21.638|?>>
-    <associate|eq 20.631.246|<tuple|21.639|?>>
-    <associate|eq 20.632.246|<tuple|21.640|?>>
-    <associate|eq 20.633.246|<tuple|21.642|?>>
-    <associate|eq 20.634.246|<tuple|21.643|?>>
-    <associate|eq 20.635.246|<tuple|21.644|?>>
-    <associate|eq 20.635.263|<tuple|21.596|?>>
-    <associate|eq 20.636.246|<tuple|21.645|?>>
-    <associate|eq 20.637.247|<tuple|21.646|?>>
-    <associate|eq 20.638.246|<tuple|21.650|?>>
-    <associate|eq 20.639.246|<tuple|21.651|?>>
-    <associate|eq 20.640.246|<tuple|21.652|?>>
-    <associate|eq 20.641.246|<tuple|21.653|?>>
-    <associate|eq 20.642.246|<tuple|21.654|?>>
-    <associate|eq 20.643.246|<tuple|21.655|?>>
-    <associate|eq 20.644.246|<tuple|21.656|?>>
-    <associate|eq 20.645.246|<tuple|21.657|?>>
-    <associate|eq 20.646.246|<tuple|21.658|?>>
-    <associate|eq 20.647.246|<tuple|21.659|?>>
-    <associate|eq 20.648\<point\>246|<tuple|21.660|?>>
-    <associate|eq 20.649.246|<tuple|21.661|?>>
-    <associate|eq 20.651.247|<tuple|21.662|?>>
-    <associate|eq 20.652.247|<tuple|21.663|?>>
-    <associate|eq 20.653.247|<tuple|21.664|?>>
-    <associate|eq 20.654\<point\>247|<tuple|21.665|?>>
-    <associate|eq 20.655.247|<tuple|21.666|?>>
-    <associate|eq 20.656.246|<tuple|21.668|?>>
-    <associate|eq 20.656.247|<tuple|21.667|?>>
-    <associate|eq 20.657.247|<tuple|21.668|?>>
-    <associate|eq 20.658.247|<tuple|21.669|?>>
-    <associate|eq 20.659.247|<tuple|21.670|?>>
-    <associate|eq 20.660.247|<tuple|21.671|?>>
-    <associate|eq 20.660.265|<tuple|21.619|?>>
-    <associate|eq 20.661.247|<tuple|21.672|?>>
-    <associate|eq 20.662.247|<tuple|21.673|?>>
-    <associate|eq 20.663.247|<tuple|21.674|?>>
-    <associate|eq 20.664.247|<tuple|21.675|?>>
-    <associate|eq 20.665.247|<tuple|21.676|?>>
-    <associate|eq 20.666.247|<tuple|21.678|?>>
-    <associate|eq 20.667.247|<tuple|21.679|?>>
-    <associate|eq 20.668.247|<tuple|21.680|?>>
-    <associate|eq 20.669.247|<tuple|21.681|?>>
-    <associate|eq 20.669.265|<tuple|21.628|?>>
-    <associate|eq 20.670.247|<tuple|21.682|?>>
-    <associate|eq 20.671.247|<tuple|21.683|?>>
-    <associate|eq 20.672.247|<tuple|21.684|?>>
-    <associate|eq 20.673.247|<tuple|21.685|?>>
-    <associate|eq 20.674.247|<tuple|21.686|?>>
-    <associate|eq 20.675.247|<tuple|21.687|?>>
-    <associate|eq 20.676.247|<tuple|21.688|?>>
-    <associate|eq 20.677.247|<tuple|21.689|?>>
-    <associate|eq 20.678.247|<tuple|21.690|?>>
-    <associate|eq 20.679.247|<tuple|21.691|?>>
-    <associate|eq 20.680.247|<tuple|21.693|?>>
-    <associate|eq 20.680.247.1|<tuple|21.692|?>>
-    <associate|eq 20.681.247|<tuple|21.694|?>>
-    <associate|eq 20.682.247|<tuple|21.695|?>>
-    <associate|eq 20.682.265|<tuple|21.641|?>>
-    <associate|eq 20.683.247|<tuple|21.696|?>>
-    <associate|eq 20.685.248|<tuple|21.697|?>>
-    <associate|eq 20.686.248|<tuple|21.698|?>>
-    <associate|eq 20.687.248|<tuple|21.699|?>>
-    <associate|eq 20.688.248|<tuple|21.700|?>>
-    <associate|eq 20.688.265|<tuple|21.647|?>>
-    <associate|eq 20.689.248|<tuple|21.701|?>>
-    <associate|eq 20.689.265|<tuple|21.648|?>>
-    <associate|eq 20.690.248|<tuple|21.702|?>>
-    <associate|eq 20.690.265|<tuple|21.649|?>>
-    <associate|eq 20.691.248|<tuple|21.703|?>>
-    <associate|eq 20.692.248|<tuple|21.704|?>>
-    <associate|eq 20.693.248|<tuple|21.705|?>>
-    <associate|eq 20.694.248|<tuple|21.706|?>>
-    <associate|eq 20.695.248|<tuple|21.707|?>>
-    <associate|eq 20.696.248|<tuple|21.708|?>>
-    <associate|eq 20.698.248|<tuple|21.710|?>>
-    <associate|eq 20.699.248|<tuple|21.711|?>>
-    <associate|eq 20.700.248|<tuple|21.712|?>>
-    <associate|eq 20.701.248|<tuple|21.713|?>>
-    <associate|eq 20.702.248|<tuple|21.714|?>>
-    <associate|eq 20.703.248|<tuple|21.715|?>>
-    <associate|eq 20.704.248|<tuple|21.716|?>>
-    <associate|eq 20.705.248|<tuple|21.717|?>>
-    <associate|eq 20.706.248|<tuple|21.718|?>>
-    <associate|eq 20.707.248|<tuple|21.719|?>>
-    <associate|eq 20.708.248|<tuple|21.720|?>>
-    <associate|eq 20.709.248|<tuple|21.721|?>>
-    <associate|eq 20.710.248|<tuple|21.722|?>>
-    <associate|eq 20.711.248|<tuple|21.723|?>>
-    <associate|eq 20.712.248|<tuple|21.724|?>>
-    <associate|eq 20.713.248|<tuple|21.725|?>>
-    <associate|eq 20.714.248|<tuple|21.726|?>>
-    <associate|eq 20.715.248|<tuple|21.727|?>>
-    <associate|eq 20.716.248|<tuple|21.728|?>>
-    <associate|eq 20.717.248|<tuple|21.729|?>>
-    <associate|eq 20.718.248|<tuple|21.730|?>>
-    <associate|eq 20.718.265|<tuple|21.677|?>>
-    <associate|eq 20.719.248|<tuple|21.731|?>>
-    <associate|eq 20.720.248|<tuple|21.732|?>>
-    <associate|eq 20.721.248|<tuple|21.733|?>>
-    <associate|eq 20.723.248|<tuple|21.737|?>>
-    <associate|eq 20.724.148|<tuple|21.738|?>>
-    <associate|eq 20.725.248|<tuple|21.739|?>>
-    <associate|eq 20.726.248|<tuple|21.740|?>>
-    <associate|eq 20.727.248|<tuple|21.741|?>>
-    <associate|eq 20.728.248|<tuple|21.742|?>>
-    <associate|eq 20.729.248|<tuple|21.743|?>>
-    <associate|eq 20.730.248|<tuple|21.744|?>>
-    <associate|eq 20.731.248|<tuple|21.745|?>>
-    <associate|eq 20.732.248|<tuple|21.746|?>>
-    <associate|eq 20.733.248|<tuple|21.747|?>>
-    <associate|eq 20.734.248|<tuple|21.748|?>>
-    <associate|eq 20.735.248|<tuple|21.749|?>>
-    <associate|eq 20.736.248|<tuple|21.750|?>>
-    <associate|eq 20.737.248|<tuple|21.751|?>>
-    <associate|eq 20.738.248|<tuple|21.752|?>>
-    <associate|eq 20.739.248|<tuple|21.753|?>>
-    <associate|eq 20.740.248|<tuple|21.754|?>>
-    <associate|eq 20.741.248|<tuple|21.755|?>>
-    <associate|eq 20.742.248|<tuple|21.756|?>>
-    <associate|eq 20.743.248|<tuple|21.757|?>>
-    <associate|eq 20.744.248|<tuple|21.758|?>>
-    <associate|eq 20.745.248|<tuple|21.759|?>>
-    <associate|eq 20.746.248|<tuple|21.760|?>>
-    <associate|eq 20.747.248|<tuple|21.761|?>>
-    <associate|eq 20.748.248|<tuple|21.762|?>>
-    <associate|eq 20.749.248|<tuple|21.763|?>>
-    <associate|eq 20.751.248|<tuple|21.765|?>>
-    <associate|eq 20.752.248|<tuple|21.766|?>>
-    <associate|eq 20.753.248|<tuple|21.767|?>>
-    <associate|eq 20.754.248|<tuple|21.768|?>>
-    <associate|eq 20.755.243|<tuple|21.769|?>>
-    <associate|eq 20.756.248|<tuple|21.770|?>>
-    <associate|eq 20.757.248|<tuple|21.771|?>>
-    <associate|eq 20.758.248|<tuple|21.772|?>>
-    <associate|eq 20.759.248|<tuple|21.773|?>>
-    <associate|eq 20.76.200|<tuple|21.49|?>>
-    <associate|eq 20.760.248|<tuple|21.774|?>>
-    <associate|eq 20.768.248|<tuple|21.775|?>>
-    <associate|eq 20.769.248|<tuple|21.776|?>>
-    <associate|eq 20.77.200|<tuple|21.50|?>>
-    <associate|eq 20.770.248|<tuple|21.777|?>>
-    <associate|eq 20.771.248|<tuple|21.778|?>>
-    <associate|eq 20.772.248|<tuple|21.779|?>>
-    <associate|eq 20.773.248|<tuple|21.780|?>>
-    <associate|eq 20.774.248|<tuple|21.781|?>>
-    <associate|eq 20.775.248|<tuple|21.782|?>>
-    <associate|eq 20.775.265|<tuple|21.734|?>>
-    <associate|eq 20.776.248|<tuple|21.783|?>>
-    <associate|eq 20.776.265|<tuple|21.735|?>>
-    <associate|eq 20.777.248|<tuple|21.784|?>>
-    <associate|eq 20.777.265|<tuple|21.736|?>>
-    <associate|eq 20.778.248|<tuple|21.785|?>>
-    <associate|eq 20.779.248|<tuple|21.786|?>>
-    <associate|eq 20.78.200|<tuple|21.51|?>>
-    <associate|eq 20.780.248|<tuple|21.787|?>>
-    <associate|eq 20.781.248|<tuple|21.788|?>>
-    <associate|eq 20.782.248|<tuple|21.789|?>>
-    <associate|eq 20.783.248|<tuple|21.790|?>>
-    <associate|eq 20.784.248|<tuple|21.791|?>>
-    <associate|eq 20.785.248|<tuple|21.792|?>>
-    <associate|eq 20.786.248|<tuple|21.793|?>>
-    <associate|eq 20.787.248|<tuple|21.794|?>>
-    <associate|eq 20.788.248|<tuple|21.795|?>>
-    <associate|eq 20.789.248|<tuple|21.796|?>>
-    <associate|eq 20.79.200|<tuple|21.52|?>>
-    <associate|eq 20.790.248|<tuple|21.797|?>>
-    <associate|eq 20.791.231|<tuple|21.488|?>>
-    <associate|eq 20.791.248|<tuple|21.798|?>>
-    <associate|eq 20.792.248|<tuple|21.799|?>>
-    <associate|eq 20.793.248|<tuple|21.800|?>>
-    <associate|eq 20.794.248|<tuple|21.801|?>>
-    <associate|eq 20.795.248|<tuple|21.802|?>>
-    <associate|eq 20.796.248|<tuple|21.803|?>>
-    <associate|eq 20.797.248|<tuple|21.804|?>>
-    <associate|eq 20.798.248|<tuple|21.805|?>>
-    <associate|eq 20.799.248|<tuple|21.806|?>>
-    <associate|eq 20.80.200|<tuple|21.53|?>>
-    <associate|eq 20.800.248|<tuple|21.807|?>>
-    <associate|eq 20.801.248|<tuple|21.808|?>>
-    <associate|eq 20.802.248|<tuple|21.809|?>>
-    <associate|eq 20.803.248|<tuple|21.810|?>>
-    <associate|eq 20.804.248|<tuple|21.811|?>>
-    <associate|eq 20.805.248|<tuple|21.812|?>>
-    <associate|eq 20.806.248|<tuple|21.813|?>>
-    <associate|eq 20.807.248|<tuple|21.814|?>>
-    <associate|eq 20.808.248|<tuple|21.815|?>>
-    <associate|eq 20.81.200|<tuple|21.54|?>>
-    <associate|eq 20.810.248|<tuple|21.817|?>>
-    <associate|eq 20.811.248|<tuple|21.818|?>>
-    <associate|eq 20.813.248|<tuple|21.819|?>>
-    <associate|eq 20.814.248|<tuple|21.820|?>>
-    <associate|eq 20.815.248|<tuple|21.821|?>>
-    <associate|eq 20.816.248|<tuple|21.822|?>>
-    <associate|eq 20.817.249|<tuple|21.823|?>>
-    <associate|eq 20.818.249|<tuple|21.824|?>>
-    <associate|eq 20.819.249|<tuple|21.825|?>>
-    <associate|eq 20.82.200|<tuple|21.55|?>>
-    <associate|eq 20.820.249|<tuple|21.826|?>>
-    <associate|eq 20.821.249|<tuple|21.827|?>>
-    <associate|eq 20.822.249|<tuple|21.828|?>>
-    <associate|eq 20.83.200|<tuple|21.56|?>>
-    <associate|eq 20.84.200|<tuple|21.57|?>>
-    <associate|eq 20.85.200|<tuple|21.58|?>>
-    <associate|eq 20.86.200|<tuple|21.59|?>>
-    <associate|eq 20.87.200|<tuple|21.60|?>>
-    <associate|eq 20.870.265|<tuple|21.829|?>>
-    <associate|eq 20.871.265|<tuple|21.832|?>>
-    <associate|eq 20.871.266|<tuple|21.830|?>>
-    <associate|eq 20.872.266|<tuple|21.831|?>>
-    <associate|eq 20.874.265|<tuple|21.833|?>>
-    <associate|eq 20.875.265|<tuple|21.834|?>>
-    <associate|eq 20.876.265|<tuple|21.835|?>>
-    <associate|eq 20.877.265|<tuple|21.836|?>>
-    <associate|eq 20.878.265|<tuple|21.837|?>>
-    <associate|eq 20.879.265|<tuple|21.838|?>>
-    <associate|eq 20.880.265|<tuple|21.839|?>>
-    <associate|eq 20.880.266|<tuple|21.848|?>>
-    <associate|eq 20.881.265|<tuple|21.840|?>>
-    <associate|eq 20.882.265|<tuple|21.841|?>>
-    <associate|eq 20.884.265|<tuple|21.842|?>>
-    <associate|eq 20.885.266|<tuple|21.843|?>>
-    <associate|eq 20.886.265|<tuple|21.845|?>>
-    <associate|eq 20.886.266|<tuple|21.844|?>>
-    <associate|eq 20.888.266|<tuple|21.847|?>>
-    <associate|eq 20.888.268|<tuple|21.846|?>>
-    <associate|eq 20.890.266|<tuple|21.849|?>>
-    <associate|eq 20.891.269|<tuple|21.850|?>>
-    <associate|eq 20.892.266|<tuple|21.851|?>>
-    <associate|eq 20.893.266|<tuple|21.852|?>>
-    <associate|eq 20.894.266|<tuple|21.853|?>>
-    <associate|eq 20.896.267|<tuple|21.854|?>>
-    <associate|eq 20.897.268|<tuple|21.855|?>>
-    <associate|eq 20.898.268|<tuple|21.856|?>>
-    <associate|eq 20.900.269|<tuple|21.857|?>>
-    <associate|eq 20.901.269|<tuple|21.858|?>>
-    <associate|eq 20.902.269|<tuple|21.859|?>>
-    <associate|eq 20.903.269|<tuple|21.862|?>>
-    <associate|eq 20.903.270|<tuple|21.860|?>>
-    <associate|eq 20.904.269|<tuple|21.863|?>>
-    <associate|eq 20.904.271|<tuple|21.861|?>>
-    <associate|eq 20.905.269|<tuple|21.864|?>>
-    <associate|eq 20.907.270|<tuple|21.865|?>>
-    <associate|eq 20.909.271|<tuple|21.866|?>>
-    <associate|eq 20.910.271|<tuple|21.867|?>>
-    <associate|eq 20.913.271|<tuple|21.870|?>>
-    <associate|eq 20.914.271|<tuple|21.871|?>>
-    <associate|eq 20.915.271|<tuple|21.872|?>>
-    <associate|eq 20.916.271|<tuple|21.873|?>>
-    <associate|eq 20.918.249|<tuple|21.875|?>>
-    <associate|eq 20.919.279|<tuple|21.876|?>>
-    <associate|eq 20.921.279|<tuple|21.878|?>>
-    <associate|eq 20.922.279|<tuple|21.879|?>>
-    <associate|eq 20.923.279|<tuple|21.880|?>>
-    <associate|eq 20.925.279|<tuple|21.882|?>>
-    <associate|eq 20.926.279|<tuple|21.883|?>>
-    <associate|eq 20.927.279|<tuple|21.884|?>>
-    <associate|eq 20.928.279|<tuple|21.885|?>>
-    <associate|eq 20.929.279|<tuple|21.886|?>>
-    <associate|eq 20.93.200|<tuple|21.88|?>>
-    <associate|eq 20.930.279|<tuple|21.887|?>>
-    <associate|eq 20.931.279|<tuple|21.888|?>>
-    <associate|eq 20.932.279|<tuple|21.889|?>>
-    <associate|eq 20.933.279|<tuple|21.890|?>>
-    <associate|eq 20.934.279|<tuple|21.891|?>>
-    <associate|eq 20.935.279|<tuple|21.892|?>>
-    <associate|eq 20.936.279|<tuple|21.893|?>>
-    <associate|eq 20.937.279|<tuple|21.894|?>>
-    <associate|eq 20.938.279|<tuple|21.895|?>>
-    <associate|eq 20.939.279|<tuple|21.896|?>>
-    <associate|eq 20.94.200|<tuple|21.89|?>>
-    <associate|eq 20.940.279|<tuple|21.897|?>>
-    <associate|eq 20.941.279|<tuple|21.898|?>>
-    <associate|eq 20.942.279|<tuple|21.899|?>>
-    <associate|eq 20.943.279|<tuple|21.900|?>>
-    <associate|eq 20.944.279|<tuple|21.901|?>>
-    <associate|eq 20.945.279|<tuple|21.902|?>>
-    <associate|eq 20.946.279|<tuple|21.903|?>>
-    <associate|eq 20.947.279|<tuple|21.904|?>>
-    <associate|eq 20.948.279|<tuple|21.905|?>>
-    <associate|eq 20.949.279|<tuple|21.906|?>>
-    <associate|eq 20.95.200|<tuple|21.90|?>>
-    <associate|eq 20.950.279|<tuple|21.907|?>>
-    <associate|eq 20.951.279|<tuple|21.908|?>>
-    <associate|eq 20.952.279|<tuple|21.909|?>>
-    <associate|eq 20.953.279|<tuple|21.910|?>>
-    <associate|eq 20.954.279|<tuple|21.923|?>>
-    <associate|eq 20.954.280|<tuple|21.911|?>>
-    <associate|eq 20.955.279|<tuple|21.924|?>>
-    <associate|eq 20.955.280|<tuple|21.912|?>>
-    <associate|eq 20.956.279|<tuple|21.925|?>>
-    <associate|eq 20.956.280|<tuple|21.913|?>>
-    <associate|eq 20.957.279|<tuple|21.926|?>>
-    <associate|eq 20.957.280|<tuple|21.914|?>>
-    <associate|eq 20.958.280|<tuple|21.915|?>>
-    <associate|eq 20.959.280|<tuple|21.916|?>>
-    <associate|eq 20.96.200|<tuple|21.91|?>>
-    <associate|eq 20.960.280|<tuple|21.917|?>>
-    <associate|eq 20.961.280|<tuple|21.918|?>>
-    <associate|eq 20.962.280|<tuple|21.919|?>>
-    <associate|eq 20.963.280|<tuple|21.920|?>>
-    <associate|eq 20.964.280|<tuple|21.921|?>>
-    <associate|eq 20.965.280|<tuple|21.922|?>>
-    <associate|eq 20.97.200|<tuple|21.92|?>>
-    <associate|eq 20.970.280|<tuple|21.927|?>>
-    <associate|eq 20.971.280|<tuple|21.928|?>>
-    <associate|eq 20.972.280|<tuple|21.929|?>>
-    <associate|eq 20.973.280|<tuple|21.930|?>>
-    <associate|eq 20.974.280|<tuple|21.931|?>>
-    <associate|eq 20.975.280|<tuple|21.932|?>>
-    <associate|eq 20.976.280|<tuple|21.933|?>>
-    <associate|eq 20.977.280|<tuple|21.934|?>>
-    <associate|eq 20.978.280|<tuple|21.935|?>>
-    <associate|eq 20.979.280|<tuple|21.936|?>>
-    <associate|eq 20.98.200|<tuple|21.93|?>>
-    <associate|eq 20.980.280|<tuple|21.937|?>>
-    <associate|eq 20.981.280|<tuple|21.938|?>>
-    <associate|eq 20.982.280|<tuple|21.939|?>>
-    <associate|eq 20.983.280|<tuple|21.940|?>>
-    <associate|eq 20.984.280|<tuple|21.941|?>>
-    <associate|eq 20.985.280|<tuple|21.942|?>>
-    <associate|eq 20.986.280|<tuple|21.943|?>>
-    <associate|eq 20.987.280|<tuple|21.944|?>>
-    <associate|eq 20.988.280|<tuple|21.946|?>>
-    <associate|eq 20.988.281|<tuple|21.945|?>>
-    <associate|eq 20.989.280|<tuple|21.947|?>>
-    <associate|eq 20.99.200|<tuple|21.94|?>>
-    <associate|eq 20.990.280|<tuple|21.948|?>>
-    <associate|eq 20.991.280|<tuple|21.949|?>>
-    <associate|eq 20.992.280|<tuple|21.950|?>>
-    <associate|eq 20.993.280|<tuple|21.951|?>>
-    <associate|eq 20.994.280|<tuple|21.952|?>>
-    <associate|eq 20.995.280|<tuple|21.953|?>>
-    <associate|eq 20.996.280|<tuple|21.954|?>>
-    <associate|eq 20.997.280|<tuple|21.955|?>>
-    <associate|eq 20.999.280|<tuple|21.956|?>>
-    <associate|eq 21.1000.285|<tuple|21.1008|?>>
-    <associate|eq 21.1001.285|<tuple|21.1009|?>>
-    <associate|eq 21.1002.285|<tuple|21.1010|?>>
-    <associate|eq 21.1003.285|<tuple|21.1011|?>>
-    <associate|eq 21.1004.286|<tuple|21.1012|?>>
-    <associate|eq 21.1005.286|<tuple|21.1013|?>>
-    <associate|eq 21.1006.286|<tuple|21.1014|?>>
-    <associate|eq 21.1007.286|<tuple|21.1015|?>>
-    <associate|eq 21.1008.286|<tuple|21.1016|?>>
-    <associate|eq 21.1009.286|<tuple|21.1017|?>>
-    <associate|eq 21.1010.286|<tuple|21.1018|?>>
-    <associate|eq 21.1011.286|<tuple|21.1019|?>>
-    <associate|eq 21.1012.286|<tuple|21.1020|?>>
-    <associate|eq 21.1013.286|<tuple|21.1021|?>>
-    <associate|eq 21.1014.286|<tuple|21.1022|?>>
-    <associate|eq 21.1015.286|<tuple|21.1023|?>>
-    <associate|eq 21.1016.286|<tuple|21.1024|?>>
-    <associate|eq 21.1017.286|<tuple|21.1025|?>>
-    <associate|eq 21.1018.286|<tuple|21.1026|?>>
-    <associate|eq 21.1019.286|<tuple|21.1027|?>>
-    <associate|eq 21.1020.286|<tuple|21.1028|?>>
-    <associate|eq 21.1021.286|<tuple|21.1029|?>>
-    <associate|eq 21.1022.286|<tuple|21.1030|?>>
-    <associate|eq 21.1023.286|<tuple|21.1031|?>>
-    <associate|eq 21.1024.286|<tuple|21.1032|?>>
-    <associate|eq 21.1025.286|<tuple|21.1033|?>>
-    <associate|eq 21.1026.286|<tuple|21.1034|?>>
-    <associate|eq 21.1027.286|<tuple|21.1035|?>>
-    <associate|eq 21.1028.286|<tuple|21.1036|?>>
-    <associate|eq 21.1029.286|<tuple|21.1037|?>>
-    <associate|eq 21.1030.286|<tuple|21.1038|?>>
-    <associate|eq 21.1031.286|<tuple|21.1039|?>>
-    <associate|eq 21.1032.286|<tuple|21.1040|?>>
+    <associate|eq 20.630.249|<tuple|21.639|?>>
+    <associate|eq 20.631.246|<tuple|21.640|?>>
+    <associate|eq 20.632.246|<tuple|21.641|?>>
+    <associate|eq 20.633.246|<tuple|21.643|?>>
+    <associate|eq 20.634.246|<tuple|21.644|?>>
+    <associate|eq 20.635.246|<tuple|21.645|?>>
+    <associate|eq 20.635.263|<tuple|21.597|?>>
+    <associate|eq 20.636.246|<tuple|21.646|?>>
+    <associate|eq 20.637.247|<tuple|21.647|?>>
+    <associate|eq 20.638.246|<tuple|21.651|?>>
+    <associate|eq 20.639.246|<tuple|21.652|?>>
+    <associate|eq 20.640.246|<tuple|21.653|?>>
+    <associate|eq 20.641.246|<tuple|21.654|?>>
+    <associate|eq 20.642.246|<tuple|21.655|?>>
+    <associate|eq 20.643.246|<tuple|21.656|?>>
+    <associate|eq 20.644.246|<tuple|21.657|?>>
+    <associate|eq 20.645.246|<tuple|21.658|?>>
+    <associate|eq 20.646.246|<tuple|21.659|?>>
+    <associate|eq 20.647.246|<tuple|21.660|?>>
+    <associate|eq 20.648\<point\>246|<tuple|21.661|?>>
+    <associate|eq 20.649.246|<tuple|21.662|?>>
+    <associate|eq 20.651.247|<tuple|21.663|?>>
+    <associate|eq 20.652.247|<tuple|21.664|?>>
+    <associate|eq 20.653.247|<tuple|21.665|?>>
+    <associate|eq 20.654\<point\>247|<tuple|21.666|?>>
+    <associate|eq 20.655.247|<tuple|21.667|?>>
+    <associate|eq 20.656.246|<tuple|21.669|?>>
+    <associate|eq 20.656.247|<tuple|21.668|?>>
+    <associate|eq 20.657.247|<tuple|21.669|?>>
+    <associate|eq 20.658.247|<tuple|21.670|?>>
+    <associate|eq 20.659.247|<tuple|21.671|?>>
+    <associate|eq 20.660.247|<tuple|21.672|?>>
+    <associate|eq 20.660.265|<tuple|21.620|?>>
+    <associate|eq 20.661.247|<tuple|21.673|?>>
+    <associate|eq 20.662.247|<tuple|21.674|?>>
+    <associate|eq 20.663.247|<tuple|21.675|?>>
+    <associate|eq 20.664.247|<tuple|21.676|?>>
+    <associate|eq 20.665.247|<tuple|21.677|?>>
+    <associate|eq 20.666.247|<tuple|21.679|?>>
+    <associate|eq 20.667.247|<tuple|21.680|?>>
+    <associate|eq 20.668.247|<tuple|21.681|?>>
+    <associate|eq 20.669.247|<tuple|21.682|?>>
+    <associate|eq 20.669.265|<tuple|21.629|?>>
+    <associate|eq 20.670.247|<tuple|21.683|?>>
+    <associate|eq 20.671.247|<tuple|21.684|?>>
+    <associate|eq 20.672.247|<tuple|21.685|?>>
+    <associate|eq 20.673.247|<tuple|21.686|?>>
+    <associate|eq 20.674.247|<tuple|21.687|?>>
+    <associate|eq 20.675.247|<tuple|21.688|?>>
+    <associate|eq 20.676.247|<tuple|21.689|?>>
+    <associate|eq 20.677.247|<tuple|21.690|?>>
+    <associate|eq 20.678.247|<tuple|21.691|?>>
+    <associate|eq 20.679.247|<tuple|21.692|?>>
+    <associate|eq 20.680.247|<tuple|21.694|?>>
+    <associate|eq 20.680.247.1|<tuple|21.693|?>>
+    <associate|eq 20.681.247|<tuple|21.695|?>>
+    <associate|eq 20.682.247|<tuple|21.696|?>>
+    <associate|eq 20.682.265|<tuple|21.642|?>>
+    <associate|eq 20.683.247|<tuple|21.697|?>>
+    <associate|eq 20.685.248|<tuple|21.698|?>>
+    <associate|eq 20.686.248|<tuple|21.699|?>>
+    <associate|eq 20.687.248|<tuple|21.700|?>>
+    <associate|eq 20.688.248|<tuple|21.701|?>>
+    <associate|eq 20.688.265|<tuple|21.648|?>>
+    <associate|eq 20.689.248|<tuple|21.702|?>>
+    <associate|eq 20.689.265|<tuple|21.649|?>>
+    <associate|eq 20.690.248|<tuple|21.703|?>>
+    <associate|eq 20.690.265|<tuple|21.650|?>>
+    <associate|eq 20.691.248|<tuple|21.704|?>>
+    <associate|eq 20.692.248|<tuple|21.705|?>>
+    <associate|eq 20.693.248|<tuple|21.706|?>>
+    <associate|eq 20.694.248|<tuple|21.707|?>>
+    <associate|eq 20.695.248|<tuple|21.708|?>>
+    <associate|eq 20.696.248|<tuple|21.709|?>>
+    <associate|eq 20.698.248|<tuple|21.711|?>>
+    <associate|eq 20.699.248|<tuple|21.712|?>>
+    <associate|eq 20.700.248|<tuple|21.713|?>>
+    <associate|eq 20.701.248|<tuple|21.714|?>>
+    <associate|eq 20.702.248|<tuple|21.715|?>>
+    <associate|eq 20.703.248|<tuple|21.716|?>>
+    <associate|eq 20.704.248|<tuple|21.717|?>>
+    <associate|eq 20.705.248|<tuple|21.718|?>>
+    <associate|eq 20.706.248|<tuple|21.719|?>>
+    <associate|eq 20.707.248|<tuple|21.720|?>>
+    <associate|eq 20.708.248|<tuple|21.721|?>>
+    <associate|eq 20.709.248|<tuple|21.722|?>>
+    <associate|eq 20.710.248|<tuple|21.723|?>>
+    <associate|eq 20.711.248|<tuple|21.724|?>>
+    <associate|eq 20.712.248|<tuple|21.725|?>>
+    <associate|eq 20.713.248|<tuple|21.726|?>>
+    <associate|eq 20.714.248|<tuple|21.727|?>>
+    <associate|eq 20.715.248|<tuple|21.728|?>>
+    <associate|eq 20.716.248|<tuple|21.729|?>>
+    <associate|eq 20.717.248|<tuple|21.730|?>>
+    <associate|eq 20.718.248|<tuple|21.731|?>>
+    <associate|eq 20.718.265|<tuple|21.678|?>>
+    <associate|eq 20.719.248|<tuple|21.732|?>>
+    <associate|eq 20.720.248|<tuple|21.733|?>>
+    <associate|eq 20.721.248|<tuple|21.734|?>>
+    <associate|eq 20.723.248|<tuple|21.738|?>>
+    <associate|eq 20.724.148|<tuple|21.739|?>>
+    <associate|eq 20.725.248|<tuple|21.740|?>>
+    <associate|eq 20.726.248|<tuple|21.741|?>>
+    <associate|eq 20.727.248|<tuple|21.742|?>>
+    <associate|eq 20.728.248|<tuple|21.743|?>>
+    <associate|eq 20.729.248|<tuple|21.744|?>>
+    <associate|eq 20.730.248|<tuple|21.745|?>>
+    <associate|eq 20.731.248|<tuple|21.746|?>>
+    <associate|eq 20.732.248|<tuple|21.747|?>>
+    <associate|eq 20.733.248|<tuple|21.748|?>>
+    <associate|eq 20.734.248|<tuple|21.749|?>>
+    <associate|eq 20.735.248|<tuple|21.750|?>>
+    <associate|eq 20.736.248|<tuple|21.751|?>>
+    <associate|eq 20.737.248|<tuple|21.752|?>>
+    <associate|eq 20.738.248|<tuple|21.753|?>>
+    <associate|eq 20.739.248|<tuple|21.754|?>>
+    <associate|eq 20.740.248|<tuple|21.755|?>>
+    <associate|eq 20.741.248|<tuple|21.756|?>>
+    <associate|eq 20.742.248|<tuple|21.757|?>>
+    <associate|eq 20.743.248|<tuple|21.758|?>>
+    <associate|eq 20.744.248|<tuple|21.759|?>>
+    <associate|eq 20.745.248|<tuple|21.760|?>>
+    <associate|eq 20.746.248|<tuple|21.761|?>>
+    <associate|eq 20.747.248|<tuple|21.762|?>>
+    <associate|eq 20.748.248|<tuple|21.763|?>>
+    <associate|eq 20.749.248|<tuple|21.764|?>>
+    <associate|eq 20.751.248|<tuple|21.766|?>>
+    <associate|eq 20.752.248|<tuple|21.767|?>>
+    <associate|eq 20.753.248|<tuple|21.768|?>>
+    <associate|eq 20.754.248|<tuple|21.769|?>>
+    <associate|eq 20.755.243|<tuple|21.770|?>>
+    <associate|eq 20.756.248|<tuple|21.771|?>>
+    <associate|eq 20.757.248|<tuple|21.772|?>>
+    <associate|eq 20.758.248|<tuple|21.773|?>>
+    <associate|eq 20.759.248|<tuple|21.774|?>>
+    <associate|eq 20.76.200|<tuple|21.50|?>>
+    <associate|eq 20.760.248|<tuple|21.775|?>>
+    <associate|eq 20.768.248|<tuple|21.776|?>>
+    <associate|eq 20.769.248|<tuple|21.777|?>>
+    <associate|eq 20.77.200|<tuple|21.51|?>>
+    <associate|eq 20.770.248|<tuple|21.778|?>>
+    <associate|eq 20.771.248|<tuple|21.779|?>>
+    <associate|eq 20.772.248|<tuple|21.780|?>>
+    <associate|eq 20.773.248|<tuple|21.781|?>>
+    <associate|eq 20.774.248|<tuple|21.782|?>>
+    <associate|eq 20.775.248|<tuple|21.783|?>>
+    <associate|eq 20.775.265|<tuple|21.735|?>>
+    <associate|eq 20.776.248|<tuple|21.784|?>>
+    <associate|eq 20.776.265|<tuple|21.736|?>>
+    <associate|eq 20.777.248|<tuple|21.785|?>>
+    <associate|eq 20.777.265|<tuple|21.737|?>>
+    <associate|eq 20.778.248|<tuple|21.786|?>>
+    <associate|eq 20.779.248|<tuple|21.787|?>>
+    <associate|eq 20.78.200|<tuple|21.52|?>>
+    <associate|eq 20.780.248|<tuple|21.788|?>>
+    <associate|eq 20.781.248|<tuple|21.789|?>>
+    <associate|eq 20.782.248|<tuple|21.790|?>>
+    <associate|eq 20.783.248|<tuple|21.791|?>>
+    <associate|eq 20.784.248|<tuple|21.792|?>>
+    <associate|eq 20.785.248|<tuple|21.793|?>>
+    <associate|eq 20.786.248|<tuple|21.794|?>>
+    <associate|eq 20.787.248|<tuple|21.795|?>>
+    <associate|eq 20.788.248|<tuple|21.796|?>>
+    <associate|eq 20.789.248|<tuple|21.797|?>>
+    <associate|eq 20.79.200|<tuple|21.53|?>>
+    <associate|eq 20.790.248|<tuple|21.798|?>>
+    <associate|eq 20.791.231|<tuple|21.489|?>>
+    <associate|eq 20.791.248|<tuple|21.799|?>>
+    <associate|eq 20.792.248|<tuple|21.800|?>>
+    <associate|eq 20.793.248|<tuple|21.801|?>>
+    <associate|eq 20.794.248|<tuple|21.802|?>>
+    <associate|eq 20.795.248|<tuple|21.803|?>>
+    <associate|eq 20.796.248|<tuple|21.804|?>>
+    <associate|eq 20.797.248|<tuple|21.805|?>>
+    <associate|eq 20.798.248|<tuple|21.806|?>>
+    <associate|eq 20.799.248|<tuple|21.807|?>>
+    <associate|eq 20.80.200|<tuple|21.54|?>>
+    <associate|eq 20.800.248|<tuple|21.808|?>>
+    <associate|eq 20.801.248|<tuple|21.809|?>>
+    <associate|eq 20.802.248|<tuple|21.810|?>>
+    <associate|eq 20.803.248|<tuple|21.811|?>>
+    <associate|eq 20.804.248|<tuple|21.812|?>>
+    <associate|eq 20.805.248|<tuple|21.813|?>>
+    <associate|eq 20.806.248|<tuple|21.814|?>>
+    <associate|eq 20.807.248|<tuple|21.815|?>>
+    <associate|eq 20.808.248|<tuple|21.816|?>>
+    <associate|eq 20.81.200|<tuple|21.55|?>>
+    <associate|eq 20.810.248|<tuple|21.818|?>>
+    <associate|eq 20.811.248|<tuple|21.819|?>>
+    <associate|eq 20.813.248|<tuple|21.820|?>>
+    <associate|eq 20.814.248|<tuple|21.821|?>>
+    <associate|eq 20.815.248|<tuple|21.822|?>>
+    <associate|eq 20.816.248|<tuple|21.823|?>>
+    <associate|eq 20.817.249|<tuple|21.824|?>>
+    <associate|eq 20.818.249|<tuple|21.825|?>>
+    <associate|eq 20.819.249|<tuple|21.826|?>>
+    <associate|eq 20.82.200|<tuple|21.56|?>>
+    <associate|eq 20.820.249|<tuple|21.827|?>>
+    <associate|eq 20.821.249|<tuple|21.828|?>>
+    <associate|eq 20.822.249|<tuple|21.829|?>>
+    <associate|eq 20.83.200|<tuple|21.57|?>>
+    <associate|eq 20.84.200|<tuple|21.58|?>>
+    <associate|eq 20.85.200|<tuple|21.59|?>>
+    <associate|eq 20.86.200|<tuple|21.60|?>>
+    <associate|eq 20.87.200|<tuple|21.61|?>>
+    <associate|eq 20.870.265|<tuple|21.830|?>>
+    <associate|eq 20.871.265|<tuple|21.833|?>>
+    <associate|eq 20.871.266|<tuple|21.831|?>>
+    <associate|eq 20.872.266|<tuple|21.832|?>>
+    <associate|eq 20.874.265|<tuple|21.834|?>>
+    <associate|eq 20.875.265|<tuple|21.835|?>>
+    <associate|eq 20.876.265|<tuple|21.836|?>>
+    <associate|eq 20.877.265|<tuple|21.837|?>>
+    <associate|eq 20.878.265|<tuple|21.838|?>>
+    <associate|eq 20.879.265|<tuple|21.839|?>>
+    <associate|eq 20.880.265|<tuple|21.840|?>>
+    <associate|eq 20.880.266|<tuple|21.849|?>>
+    <associate|eq 20.881.265|<tuple|21.841|?>>
+    <associate|eq 20.882.265|<tuple|21.842|?>>
+    <associate|eq 20.884.265|<tuple|21.843|?>>
+    <associate|eq 20.885.266|<tuple|21.844|?>>
+    <associate|eq 20.886.265|<tuple|21.846|?>>
+    <associate|eq 20.886.266|<tuple|21.845|?>>
+    <associate|eq 20.888.266|<tuple|21.848|?>>
+    <associate|eq 20.888.268|<tuple|21.847|?>>
+    <associate|eq 20.890.266|<tuple|21.850|?>>
+    <associate|eq 20.891.269|<tuple|21.851|?>>
+    <associate|eq 20.892.266|<tuple|21.852|?>>
+    <associate|eq 20.893.266|<tuple|21.853|?>>
+    <associate|eq 20.894.266|<tuple|21.854|?>>
+    <associate|eq 20.896.267|<tuple|21.855|?>>
+    <associate|eq 20.897.268|<tuple|21.856|?>>
+    <associate|eq 20.898.268|<tuple|21.857|?>>
+    <associate|eq 20.900.269|<tuple|21.858|?>>
+    <associate|eq 20.901.269|<tuple|21.859|?>>
+    <associate|eq 20.902.269|<tuple|21.860|?>>
+    <associate|eq 20.903.269|<tuple|21.863|?>>
+    <associate|eq 20.903.270|<tuple|21.861|?>>
+    <associate|eq 20.904.269|<tuple|21.864|?>>
+    <associate|eq 20.904.271|<tuple|21.862|?>>
+    <associate|eq 20.905.269|<tuple|21.865|?>>
+    <associate|eq 20.907.270|<tuple|21.866|?>>
+    <associate|eq 20.909.271|<tuple|21.867|?>>
+    <associate|eq 20.910.271|<tuple|21.868|?>>
+    <associate|eq 20.913.271|<tuple|21.871|?>>
+    <associate|eq 20.914.271|<tuple|21.872|?>>
+    <associate|eq 20.915.271|<tuple|21.873|?>>
+    <associate|eq 20.916.271|<tuple|21.874|?>>
+    <associate|eq 20.918.249|<tuple|21.876|?>>
+    <associate|eq 20.919.279|<tuple|21.877|?>>
+    <associate|eq 20.921.279|<tuple|21.879|?>>
+    <associate|eq 20.922.279|<tuple|21.880|?>>
+    <associate|eq 20.923.279|<tuple|21.881|?>>
+    <associate|eq 20.925.279|<tuple|21.883|?>>
+    <associate|eq 20.926.279|<tuple|21.884|?>>
+    <associate|eq 20.927.279|<tuple|21.885|?>>
+    <associate|eq 20.928.279|<tuple|21.886|?>>
+    <associate|eq 20.929.279|<tuple|21.887|?>>
+    <associate|eq 20.93.200|<tuple|21.89|?>>
+    <associate|eq 20.930.279|<tuple|21.888|?>>
+    <associate|eq 20.931.279|<tuple|21.889|?>>
+    <associate|eq 20.932.279|<tuple|21.890|?>>
+    <associate|eq 20.933.279|<tuple|21.891|?>>
+    <associate|eq 20.934.279|<tuple|21.892|?>>
+    <associate|eq 20.935.279|<tuple|21.893|?>>
+    <associate|eq 20.936.279|<tuple|21.894|?>>
+    <associate|eq 20.937.279|<tuple|21.895|?>>
+    <associate|eq 20.938.279|<tuple|21.896|?>>
+    <associate|eq 20.939.279|<tuple|21.897|?>>
+    <associate|eq 20.94.200|<tuple|21.90|?>>
+    <associate|eq 20.940.279|<tuple|21.898|?>>
+    <associate|eq 20.941.279|<tuple|21.899|?>>
+    <associate|eq 20.942.279|<tuple|21.900|?>>
+    <associate|eq 20.943.279|<tuple|21.901|?>>
+    <associate|eq 20.944.279|<tuple|21.902|?>>
+    <associate|eq 20.945.279|<tuple|21.903|?>>
+    <associate|eq 20.946.279|<tuple|21.904|?>>
+    <associate|eq 20.947.279|<tuple|21.905|?>>
+    <associate|eq 20.948.279|<tuple|21.906|?>>
+    <associate|eq 20.949.279|<tuple|21.907|?>>
+    <associate|eq 20.95.200|<tuple|21.91|?>>
+    <associate|eq 20.950.279|<tuple|21.908|?>>
+    <associate|eq 20.951.279|<tuple|21.909|?>>
+    <associate|eq 20.952.279|<tuple|21.910|?>>
+    <associate|eq 20.953.279|<tuple|21.911|?>>
+    <associate|eq 20.954.279|<tuple|21.924|?>>
+    <associate|eq 20.954.280|<tuple|21.912|?>>
+    <associate|eq 20.955.279|<tuple|21.925|?>>
+    <associate|eq 20.955.280|<tuple|21.913|?>>
+    <associate|eq 20.956.279|<tuple|21.926|?>>
+    <associate|eq 20.956.280|<tuple|21.914|?>>
+    <associate|eq 20.957.279|<tuple|21.927|?>>
+    <associate|eq 20.957.280|<tuple|21.915|?>>
+    <associate|eq 20.958.280|<tuple|21.916|?>>
+    <associate|eq 20.959.280|<tuple|21.917|?>>
+    <associate|eq 20.96.200|<tuple|21.92|?>>
+    <associate|eq 20.960.280|<tuple|21.918|?>>
+    <associate|eq 20.961.280|<tuple|21.919|?>>
+    <associate|eq 20.962.280|<tuple|21.920|?>>
+    <associate|eq 20.963.280|<tuple|21.921|?>>
+    <associate|eq 20.964.280|<tuple|21.922|?>>
+    <associate|eq 20.965.280|<tuple|21.923|?>>
+    <associate|eq 20.97.200|<tuple|21.93|?>>
+    <associate|eq 20.970.280|<tuple|21.928|?>>
+    <associate|eq 20.971.280|<tuple|21.929|?>>
+    <associate|eq 20.972.280|<tuple|21.930|?>>
+    <associate|eq 20.973.280|<tuple|21.931|?>>
+    <associate|eq 20.974.280|<tuple|21.932|?>>
+    <associate|eq 20.975.280|<tuple|21.933|?>>
+    <associate|eq 20.976.280|<tuple|21.934|?>>
+    <associate|eq 20.977.280|<tuple|21.935|?>>
+    <associate|eq 20.978.280|<tuple|21.936|?>>
+    <associate|eq 20.979.280|<tuple|21.937|?>>
+    <associate|eq 20.98.200|<tuple|21.94|?>>
+    <associate|eq 20.980.280|<tuple|21.938|?>>
+    <associate|eq 20.981.280|<tuple|21.939|?>>
+    <associate|eq 20.982.280|<tuple|21.940|?>>
+    <associate|eq 20.983.280|<tuple|21.941|?>>
+    <associate|eq 20.984.280|<tuple|21.942|?>>
+    <associate|eq 20.985.280|<tuple|21.943|?>>
+    <associate|eq 20.986.280|<tuple|21.944|?>>
+    <associate|eq 20.987.280|<tuple|21.945|?>>
+    <associate|eq 20.988.280|<tuple|21.947|?>>
+    <associate|eq 20.988.281|<tuple|21.946|?>>
+    <associate|eq 20.989.280|<tuple|21.948|?>>
+    <associate|eq 20.99.200|<tuple|21.95|?>>
+    <associate|eq 20.990.280|<tuple|21.949|?>>
+    <associate|eq 20.991.280|<tuple|21.950|?>>
+    <associate|eq 20.992.280|<tuple|21.951|?>>
+    <associate|eq 20.993.280|<tuple|21.952|?>>
+    <associate|eq 20.994.280|<tuple|21.953|?>>
+    <associate|eq 20.995.280|<tuple|21.954|?>>
+    <associate|eq 20.996.280|<tuple|21.955|?>>
+    <associate|eq 20.997.280|<tuple|21.956|?>>
+    <associate|eq 20.999.280|<tuple|21.957|?>>
+    <associate|eq 21.1000.285|<tuple|21.1009|?>>
+    <associate|eq 21.1001.285|<tuple|21.1010|?>>
+    <associate|eq 21.1002.285|<tuple|21.1011|?>>
+    <associate|eq 21.1003.285|<tuple|21.1012|?>>
+    <associate|eq 21.1004.286|<tuple|21.1013|?>>
+    <associate|eq 21.1005.286|<tuple|21.1014|?>>
+    <associate|eq 21.1006.286|<tuple|21.1015|?>>
+    <associate|eq 21.1007.286|<tuple|21.1016|?>>
+    <associate|eq 21.1008.286|<tuple|21.1017|?>>
+    <associate|eq 21.1009.286|<tuple|21.1018|?>>
+    <associate|eq 21.1010.286|<tuple|21.1019|?>>
+    <associate|eq 21.1011.286|<tuple|21.1020|?>>
+    <associate|eq 21.1012.286|<tuple|21.1021|?>>
+    <associate|eq 21.1013.286|<tuple|21.1022|?>>
+    <associate|eq 21.1014.286|<tuple|21.1023|?>>
+    <associate|eq 21.1015.286|<tuple|21.1024|?>>
+    <associate|eq 21.1016.286|<tuple|21.1025|?>>
+    <associate|eq 21.1017.286|<tuple|21.1026|?>>
+    <associate|eq 21.1018.286|<tuple|21.1027|?>>
+    <associate|eq 21.1019.286|<tuple|21.1028|?>>
+    <associate|eq 21.1020.286|<tuple|21.1029|?>>
+    <associate|eq 21.1021.286|<tuple|21.1030|?>>
+    <associate|eq 21.1022.286|<tuple|21.1031|?>>
+    <associate|eq 21.1023.286|<tuple|21.1032|?>>
+    <associate|eq 21.1024.286|<tuple|21.1033|?>>
+    <associate|eq 21.1025.286|<tuple|21.1034|?>>
+    <associate|eq 21.1026.286|<tuple|21.1035|?>>
+    <associate|eq 21.1027.286|<tuple|21.1036|?>>
+    <associate|eq 21.1028.286|<tuple|21.1037|?>>
+    <associate|eq 21.1029.286|<tuple|21.1038|?>>
+    <associate|eq 21.1030.286|<tuple|21.1039|?>>
+    <associate|eq 21.1031.286|<tuple|21.1040|?>>
+    <associate|eq 21.1032.286|<tuple|21.1041|?>>
     <associate|eq 21.1032.286.1|<tuple|21.25|?>>
-    <associate|eq 21.1033.286|<tuple|21.1041|?>>
-    <associate|eq 21.1033.286.1|<tuple|21.26|?>>
-    <associate|eq 21.1036.287|<tuple|21.1042|?>>
-    <associate|eq 21.1037.287|<tuple|21.1043|?>>
-    <associate|eq 21.1038.287|<tuple|21.1044|?>>
-    <associate|eq 21.1039.287|<tuple|21.1045|?>>
-    <associate|eq 21.1040.290|<tuple|21.1046|?>>
-    <associate|eq 21.1041.290|<tuple|21.1047|?>>
-    <associate|eq 21.1042.290|<tuple|21.1048|?>>
-    <associate|eq 21.1043.290|<tuple|21.1049|?>>
-    <associate|eq 21.1044.290|<tuple|21.1068|?>>
-    <associate|eq 21.1045.290|<tuple|21.1069|?>>
-    <associate|eq 21.1045.291|<tuple|21.1051|?>>
-    <associate|eq 21.1046.290|<tuple|21.1070|?>>
-    <associate|eq 21.1046.291|<tuple|21.1052|?>>
-    <associate|eq 21.1047.291|<tuple|21.1053|?>>
-    <associate|eq 21.1048.291|<tuple|21.1054|?>>
-    <associate|eq 21.1049.291|<tuple|21.1055|?>>
-    <associate|eq 21.1050.291|<tuple|21.1056|?>>
-    <associate|eq 21.1051.291|<tuple|21.1057|?>>
-    <associate|eq 21.1052.291|<tuple|21.1058|?>>
-    <associate|eq 21.1054.291|<tuple|21.1060|?>>
-    <associate|eq 21.1055.291|<tuple|21.1061|?>>
-    <associate|eq 21.1056.291|<tuple|21.1062|?>>
-    <associate|eq 21.1057.291|<tuple|21.1063|?>>
-    <associate|eq 21.1058.291|<tuple|21.1064|?>>
-    <associate|eq 21.1059.291|<tuple|21.1065|?>>
-    <associate|eq 21.1060.291|<tuple|21.1066|?>>
-    <associate|eq 21.1061.291|<tuple|21.1067|?>>
-    <associate|eq 21.1065.291|<tuple|21.1071|?>>
-    <associate|eq 21.1066.291|<tuple|21.1072|?>>
-    <associate|eq 21.1067.291|<tuple|21.1073|?>>
-    <associate|eq 21.1068.291|<tuple|21.1074|?>>
-    <associate|eq 21.1069.291|<tuple|21.1074|?>>
-    <associate|eq 21.1070.291|<tuple|21.1076|?>>
-    <associate|eq 21.1071.291|<tuple|21.1077|?>>
-    <associate|eq 21.1072.291|<tuple|21.1078|?>>
-    <associate|eq 21.1073.291|<tuple|21.1079|?>>
-    <associate|eq 21.1074.291|<tuple|21.1080|?>>
-    <associate|eq 21.1075.291|<tuple|21.1081|?>>
-    <associate|eq 21.1076.291|<tuple|21.1082|?>>
-    <associate|eq 21.1077.291|<tuple|21.1083|?>>
-    <associate|eq 21.1078.291|<tuple|21.1084|?>>
-    <associate|eq 21.1079.291|<tuple|21.1085|?>>
-    <associate|eq 21.1080.292|<tuple|21.1086|?>>
-    <associate|eq 21.1081.291|<tuple|21.1089|?>>
-    <associate|eq 21.1081.292|<tuple|21.1087|?>>
-    <associate|eq 21.1082.291|<tuple|21.1090|?>>
-    <associate|eq 21.1082.292|<tuple|21.1088|?>>
-    <associate|eq 21.1083.291|<tuple|21.1091|?>>
-    <associate|eq 21.1084.291|<tuple|21.1092|?>>
-    <associate|eq 21.1085.291|<tuple|21.1093|?>>
-    <associate|eq 21.1086.291|<tuple|21.1094|?>>
-    <associate|eq 21.1087.291|<tuple|21.1095|?>>
-    <associate|eq 21.1088.291|<tuple|21.1096|?>>
-    <associate|eq 21.1089.291|<tuple|21.1097|?>>
-    <associate|eq 21.1090.291|<tuple|21.1098|?>>
-    <associate|eq 21.1091.291|<tuple|21.1099|?>>
-    <associate|eq 21.1092.291|<tuple|21.1100|?>>
-    <associate|eq 21.1093.291|<tuple|21.1101|?>>
-    <associate|eq 21.1094.291|<tuple|21.1102|?>>
-    <associate|eq 21.1095.291|<tuple|21.1103|?>>
-    <associate|eq 21.1096.291|<tuple|21.1104|?>>
-    <associate|eq 21.1097.291|<tuple|21.1105|?>>
-    <associate|eq 21.1098.291|<tuple|21.1106|?>>
-    <associate|eq 21.1099.291|<tuple|21.1107|?>>
-    <associate|eq 21.1100.291|<tuple|21.1108|?>>
-    <associate|eq 21.1101.291|<tuple|21.1109|?>>
-    <associate|eq 21.1102.291|<tuple|21.1110|?>>
-    <associate|eq 21.1103.291|<tuple|21.1111|?>>
-    <associate|eq 21.1104.291|<tuple|21.1112|?>>
-    <associate|eq 21.1105.291|<tuple|21.1113|?>>
-    <associate|eq 21.1106.291|<tuple|21.1114|?>>
-    <associate|eq 21.1107.291|<tuple|21.1115|?>>
-    <associate|eq 21.1108.291|<tuple|21.1116|?>>
-    <associate|eq 21.1109.291|<tuple|21.1117|?>>
-    <associate|eq 21.1110.291|<tuple|21.1118|?>>
-    <associate|eq 21.1111.291|<tuple|21.1119|?>>
-    <associate|eq 21.1112.291|<tuple|21.1120|?>>
-    <associate|eq 21.1113.291|<tuple|21.1121|?>>
-    <associate|eq 21.1114.291|<tuple|21.1122|?>>
-    <associate|eq 21.1115.291|<tuple|21.1123|?>>
-    <associate|eq 21.1116.291|<tuple|21.1124|?>>
-    <associate|eq 21.1117.291|<tuple|21.1125|?>>
-    <associate|eq 21.1118.291|<tuple|21.1126|?>>
-    <associate|eq 21.1127\<point\>300|<tuple|21.1127|?>>
-    <associate|eq 21.1128\<point\>300|<tuple|21.1128|?>>
-    <associate|eq 21.1130.300|<tuple|21.1130|?>>
-    <associate|eq 21.1229.300|<tuple|21.1129|?>>
-    <associate|eq 21.350.293|<tuple|21.350|?>>
-    <associate|eq 21.351.293|<tuple|21.351|?>>
-    <associate|eq 21.352.293|<tuple|21.352|?>>
-    <associate|eq 21.353.293|<tuple|21.353|?>>
-    <associate|eq 21.354.296|<tuple|21.354|?>>
-    <associate|eq 21.355.296|<tuple|21.355|?>>
-    <associate|eq 21.991.285|<tuple|21.999|?>>
-    <associate|eq 21.992.285|<tuple|21.1000|?>>
-    <associate|eq 21.992.285.1|<tuple|21.1000|?>>
-    <associate|eq 21.993.285|<tuple|21.1001|?>>
-    <associate|eq 21.994.285|<tuple|21.1002|?>>
-    <associate|eq 21.995.285|<tuple|21.1003|?>>
-    <associate|eq 21.996.285|<tuple|21.1004|?>>
-    <associate|eq 21.997.285|<tuple|21.1005|?>>
-    <associate|eq 21.998.285|<tuple|21.1006|?>>
-    <associate|eq 21.999.285|<tuple|21.1007|?>>
+    <associate|eq 21.1033.286|<tuple|21.1042|?>>
+    <associate|eq 21.1033.286.1|<tuple|21.27|?>>
+    <associate|eq 21.1036.287|<tuple|21.1043|?>>
+    <associate|eq 21.1037.287|<tuple|21.1044|?>>
+    <associate|eq 21.1038.287|<tuple|21.1045|?>>
+    <associate|eq 21.1039.287|<tuple|21.1046|?>>
+    <associate|eq 21.1040.290|<tuple|21.1047|?>>
+    <associate|eq 21.1041.290|<tuple|21.1048|?>>
+    <associate|eq 21.1042.290|<tuple|21.1049|?>>
+    <associate|eq 21.1043.290|<tuple|21.1050|?>>
+    <associate|eq 21.1044.290|<tuple|21.1069|?>>
+    <associate|eq 21.1045.290|<tuple|21.1070|?>>
+    <associate|eq 21.1045.291|<tuple|21.1052|?>>
+    <associate|eq 21.1046.290|<tuple|21.1071|?>>
+    <associate|eq 21.1046.291|<tuple|21.1053|?>>
+    <associate|eq 21.1047.291|<tuple|21.1054|?>>
+    <associate|eq 21.1048.291|<tuple|21.1055|?>>
+    <associate|eq 21.1049.291|<tuple|21.1056|?>>
+    <associate|eq 21.1050.291|<tuple|21.1057|?>>
+    <associate|eq 21.1051.291|<tuple|21.1058|?>>
+    <associate|eq 21.1052.291|<tuple|21.1059|?>>
+    <associate|eq 21.1054.291|<tuple|21.1061|?>>
+    <associate|eq 21.1055.291|<tuple|21.1062|?>>
+    <associate|eq 21.1056.291|<tuple|21.1063|?>>
+    <associate|eq 21.1057.291|<tuple|21.1064|?>>
+    <associate|eq 21.1058.291|<tuple|21.1065|?>>
+    <associate|eq 21.1059.291|<tuple|21.1066|?>>
+    <associate|eq 21.1060.291|<tuple|21.1067|?>>
+    <associate|eq 21.1061.291|<tuple|21.1068|?>>
+    <associate|eq 21.1065.291|<tuple|21.1072|?>>
+    <associate|eq 21.1066.291|<tuple|21.1073|?>>
+    <associate|eq 21.1067.291|<tuple|21.1074|?>>
+    <associate|eq 21.1068.291|<tuple|21.1075|?>>
+    <associate|eq 21.1069.291|<tuple|21.1075|?>>
+    <associate|eq 21.1070.291|<tuple|21.1077|?>>
+    <associate|eq 21.1071.291|<tuple|21.1078|?>>
+    <associate|eq 21.1072.291|<tuple|21.1079|?>>
+    <associate|eq 21.1073.291|<tuple|21.1080|?>>
+    <associate|eq 21.1074.291|<tuple|21.1081|?>>
+    <associate|eq 21.1075.291|<tuple|21.1082|?>>
+    <associate|eq 21.1076.291|<tuple|21.1083|?>>
+    <associate|eq 21.1077.291|<tuple|21.1084|?>>
+    <associate|eq 21.1078.291|<tuple|21.1085|?>>
+    <associate|eq 21.1079.291|<tuple|21.1086|?>>
+    <associate|eq 21.1080.292|<tuple|21.1087|?>>
+    <associate|eq 21.1081.291|<tuple|21.1090|?>>
+    <associate|eq 21.1081.292|<tuple|21.1088|?>>
+    <associate|eq 21.1082.291|<tuple|21.1091|?>>
+    <associate|eq 21.1082.292|<tuple|21.1089|?>>
+    <associate|eq 21.1083.291|<tuple|21.1092|?>>
+    <associate|eq 21.1084.291|<tuple|21.1093|?>>
+    <associate|eq 21.1085.291|<tuple|21.1094|?>>
+    <associate|eq 21.1086.291|<tuple|21.1095|?>>
+    <associate|eq 21.1087.291|<tuple|21.1096|?>>
+    <associate|eq 21.1088.291|<tuple|21.1097|?>>
+    <associate|eq 21.1089.291|<tuple|21.1098|?>>
+    <associate|eq 21.1090.291|<tuple|21.1099|?>>
+    <associate|eq 21.1091.291|<tuple|21.1100|?>>
+    <associate|eq 21.1092.291|<tuple|21.1101|?>>
+    <associate|eq 21.1093.291|<tuple|21.1102|?>>
+    <associate|eq 21.1094.291|<tuple|21.1103|?>>
+    <associate|eq 21.1095.291|<tuple|21.1104|?>>
+    <associate|eq 21.1096.291|<tuple|21.1105|?>>
+    <associate|eq 21.1097.291|<tuple|21.1106|?>>
+    <associate|eq 21.1098.291|<tuple|21.1107|?>>
+    <associate|eq 21.1099.291|<tuple|21.1108|?>>
+    <associate|eq 21.1100.291|<tuple|21.1109|?>>
+    <associate|eq 21.1101.291|<tuple|21.1110|?>>
+    <associate|eq 21.1102.291|<tuple|21.1111|?>>
+    <associate|eq 21.1103.291|<tuple|21.1112|?>>
+    <associate|eq 21.1104.291|<tuple|21.1113|?>>
+    <associate|eq 21.1105.291|<tuple|21.1114|?>>
+    <associate|eq 21.1106.291|<tuple|21.1115|?>>
+    <associate|eq 21.1107.291|<tuple|21.1116|?>>
+    <associate|eq 21.1108.291|<tuple|21.1117|?>>
+    <associate|eq 21.1109.291|<tuple|21.1118|?>>
+    <associate|eq 21.1110.291|<tuple|21.1119|?>>
+    <associate|eq 21.1111.291|<tuple|21.1120|?>>
+    <associate|eq 21.1112.291|<tuple|21.1121|?>>
+    <associate|eq 21.1113.291|<tuple|21.1122|?>>
+    <associate|eq 21.1114.291|<tuple|21.1123|?>>
+    <associate|eq 21.1115.291|<tuple|21.1124|?>>
+    <associate|eq 21.1116.291|<tuple|21.1125|?>>
+    <associate|eq 21.1117.291|<tuple|21.1126|?>>
+    <associate|eq 21.1118.291|<tuple|21.1127|?>>
+    <associate|eq 21.26.300|<tuple|21.26|?>>
+    <associate|eq 21.350.293|<tuple|21.351|?>>
+    <associate|eq 21.351.293|<tuple|21.352|?>>
+    <associate|eq 21.352.293|<tuple|21.353|?>>
+    <associate|eq 21.353.293|<tuple|21.354|?>>
+    <associate|eq 21.354.296|<tuple|21.355|?>>
+    <associate|eq 21.355.296|<tuple|21.356|?>>
+    <associate|eq 21.991.285|<tuple|21.1000|?>>
+    <associate|eq 21.992.285|<tuple|21.1001|?>>
+    <associate|eq 21.992.285.1|<tuple|21.1001|?>>
+    <associate|eq 21.993.285|<tuple|21.1002|?>>
+    <associate|eq 21.994.285|<tuple|21.1003|?>>
+    <associate|eq 21.995.285|<tuple|21.1004|?>>
+    <associate|eq 21.996.285|<tuple|21.1005|?>>
+    <associate|eq 21.997.285|<tuple|21.1006|?>>
+    <associate|eq 21.998.285|<tuple|21.1007|?>>
+    <associate|eq 21.999.285|<tuple|21.1008|?>>
     <associate|figure 20.6.234|<tuple|21.6|?>>
     <associate|figure 20.7.234|<tuple|21.7|?>>
-    <associate|integral convention|<tuple|21.526|?>>
-    <associate|interval power|<tuple|21.65|?>>
-    <associate|label 20.147.200|<tuple|21.91|?>>
-    <associate|label 20.252.221|<tuple|21.183|?>>
+    <associate|integral convention|<tuple|21.528|?>>
+    <associate|interval power|<tuple|21.67|?>>
+    <associate|label 20.147.200|<tuple|21.93|?>>
+    <associate|label 20.252.221|<tuple|21.185|?>>
     <associate|lemma 20.102.202|<tuple|21.7|?>>
     <associate|lemma 20.109.213|<tuple|21.10|?>>
     <associate|lemma 20.110.214|<tuple|21.11|?>>
-    <associate|lemma 20.119.200|<tuple|21.51|?>>
-    <associate|lemma 20.121.200|<tuple|21.52|?>>
-    <associate|lemma 20.129.200|<tuple|21.68|?>>
-    <associate|lemma 20.132.200|<tuple|21.73|?>>
-    <associate|lemma 20.136.200|<tuple|21.79|?>>
-    <associate|lemma 20.138.200|<tuple|21.81|?>>
-    <associate|lemma 20.139.200|<tuple|21.82|?>>
-    <associate|lemma 20.141.200|<tuple|21.83|?>>
-    <associate|lemma 20.150.227|<tuple|21.55|?>>
-    <associate|lemma 20.151.227|<tuple|21.56|?>>
-    <associate|lemma 20.152.227|<tuple|21.57|?>>
-    <associate|lemma 20.153.227 |<tuple|21.58|?>>
-    <associate|lemma 20.158.223|<tuple|21.72|?>>
+    <associate|lemma 20.119.200|<tuple|21.53|?>>
+    <associate|lemma 20.121.200|<tuple|21.54|?>>
+    <associate|lemma 20.129.200|<tuple|21.70|?>>
+    <associate|lemma 20.132.200|<tuple|21.75|?>>
+    <associate|lemma 20.136.200|<tuple|21.81|?>>
+    <associate|lemma 20.138.200|<tuple|21.83|?>>
+    <associate|lemma 20.139.200|<tuple|21.84|?>>
+    <associate|lemma 20.141.200|<tuple|21.85|?>>
+    <associate|lemma 20.150.227|<tuple|21.57|?>>
+    <associate|lemma 20.151.227|<tuple|21.58|?>>
+    <associate|lemma 20.152.227|<tuple|21.59|?>>
+    <associate|lemma 20.153.227 |<tuple|21.60|?>>
+    <associate|lemma 20.158.223|<tuple|21.74|?>>
     <associate|lemma 20.161.201|<tuple|21.6|?>>
-    <associate|lemma 20.172.1|<tuple|21.123|?>>
-    <associate|lemma 20.183.240|<tuple|21.86|?>>
-    <associate|lemma 20.184.240|<tuple|21.87|?>>
-    <associate|lemma 20.204.217|<tuple|21.137|?>>
-    <associate|lemma 20.225.220|<tuple|21.157|?>>
-    <associate|lemma 20.226.220|<tuple|21.158|?>>
-    <associate|lemma 20.228.220|<tuple|21.159|?>>
-    <associate|lemma 20.229.220|<tuple|21.160|?>>
-    <associate|lemma 20.246.220|<tuple|21.177|?>>
-    <associate|lemma 20.248.220|<tuple|21.178|?>>
-    <associate|lemma 20.256.220|<tuple|21.185|?>>
-    <associate|lemma 20.268.224|<tuple|21.195|?>>
-    <associate|lemma 20.269.224|<tuple|21.196|?>>
-    <associate|lemma 20.270.225|<tuple|21.197|?>>
-    <associate|lemma 20.271.225|<tuple|21.198|?>>
-    <associate|lemma 20.272.226|<tuple|21.200|?>>
-    <associate|lemma 20.286.226|<tuple|21.218|?>>
-    <associate|lemma 20.287.224|<tuple|21.194|?>>
-    <associate|lemma 20.298.246|<tuple|21.209|?>>
-    <associate|lemma 20.309.227|<tuple|21.247|?>>
-    <associate|lemma 20.349.249|<tuple|21.265|?>>
-    <associate|lemma 20.351.229|<tuple|21.297|?>>
-    <associate|lemma 20.371.262|<tuple|21.283|?>>
-    <associate|lemma 20.377.232|<tuple|21.322|?>>
-    <associate|lemma 20.447.245|<tuple|21.391|?>>
-    <associate|lemma 20.448.245|<tuple|21.392|?>>
-    <associate|lemma 20.449.245|<tuple|21.393|?>>
-    <associate|lemma 20.463.246|<tuple|21.406|?>>
-    <associate|lemma 20.476.246|<tuple|21.419|?>>
-    <associate|lemma 20.477.246|<tuple|21.422|?>>
-    <associate|lemma 20.479.246|<tuple|21.423|?>>
-    <associate|lemma 20.480.246|<tuple|21.425|?>>
-    <associate|lemma 20.482.247|<tuple|21.426|?>>
-    <associate|lemma 20.491.248|<tuple|21.429|?>>
-    <associate|lemma 20.505.265|<tuple|21.421|?>>
-    <associate|lemma 20.513.248|<tuple|21.452|?>>
-    <associate|lemma 20.514.248|<tuple|21.453|?>>
-    <associate|lemma 20.515.248|<tuple|21.454|?>>
-    <associate|lemma 20.516.248|<tuple|21.455|?>>
-    <associate|lemma 20.555.149|<tuple|21.492|?>>
-    <associate|lemma 20.557.249|<tuple|21.494|?>>
-    <associate|lemma 20.558.249|<tuple|21.495|?>>
-    <associate|lemma 20.559.249|<tuple|21.496|?>>
-    <associate|lemma 20.594.271|<tuple|21.501|?>>
-    <associate|lemma 20.595.271|<tuple|21.502|?>>
-    <associate|lemma 20.613.279|<tuple|21.520|?>>
-    <associate|lemma 20.614.279|<tuple|21.521|?>>
-    <associate|lemma 20.619.279|<tuple|21.523|?>>
-    <associate|lemma 20.621.280|<tuple|21.525|?>>
-    <associate|lemma 20.628.280|<tuple|21.531|?>>
-    <associate|lemma 20.629.280|<tuple|21.532|?>>
-    <associate|lemma 20.630.280|<tuple|21.534|?>>
-    <associate|lemma 20.635.281|<tuple|21.539|?>>
-    <associate|lemma 21.530.285|<tuple|21.542|?>>
-    <associate|lemma 21.532.285|<tuple|21.544|?>>
-    <associate|lemma 21.558.288|<tuple|21.565|?>>
-    <associate|lemma 21.562.291|<tuple|21.569|?>>
-    <associate|lemma 21.563.291|<tuple|21.570|?>>
-    <associate|lemma 21.578.291|<tuple|21.583|?>>
-    <associate|lemma 21.579.291|<tuple|21.584|?>>
-    <associate|lemma 21.582.291|<tuple|21.587|?>>
-    <associate|lemma 21.584.291|<tuple|21.589|?>>
-    <associate|lemma 21.585.291|<tuple|21.590|?>>
+    <associate|lemma 20.172.1|<tuple|21.125|?>>
+    <associate|lemma 20.183.240|<tuple|21.88|?>>
+    <associate|lemma 20.184.240|<tuple|21.89|?>>
+    <associate|lemma 20.204.217|<tuple|21.139|?>>
+    <associate|lemma 20.225.220|<tuple|21.159|?>>
+    <associate|lemma 20.226.220|<tuple|21.160|?>>
+    <associate|lemma 20.228.220|<tuple|21.161|?>>
+    <associate|lemma 20.229.220|<tuple|21.162|?>>
+    <associate|lemma 20.246.220|<tuple|21.179|?>>
+    <associate|lemma 20.248.220|<tuple|21.180|?>>
+    <associate|lemma 20.256.220|<tuple|21.187|?>>
+    <associate|lemma 20.268.224|<tuple|21.197|?>>
+    <associate|lemma 20.269.224|<tuple|21.198|?>>
+    <associate|lemma 20.270.225|<tuple|21.199|?>>
+    <associate|lemma 20.271.225|<tuple|21.200|?>>
+    <associate|lemma 20.272.226|<tuple|21.202|?>>
+    <associate|lemma 20.286.226|<tuple|21.220|?>>
+    <associate|lemma 20.287.224|<tuple|21.196|?>>
+    <associate|lemma 20.298.246|<tuple|21.211|?>>
+    <associate|lemma 20.309.227|<tuple|21.249|?>>
+    <associate|lemma 20.349.249|<tuple|21.267|?>>
+    <associate|lemma 20.351.229|<tuple|21.299|?>>
+    <associate|lemma 20.371.262|<tuple|21.285|?>>
+    <associate|lemma 20.377.232|<tuple|21.324|?>>
+    <associate|lemma 20.447.245|<tuple|21.393|?>>
+    <associate|lemma 20.448.245|<tuple|21.394|?>>
+    <associate|lemma 20.449.245|<tuple|21.395|?>>
+    <associate|lemma 20.463.246|<tuple|21.408|?>>
+    <associate|lemma 20.476.246|<tuple|21.421|?>>
+    <associate|lemma 20.477.246|<tuple|21.424|?>>
+    <associate|lemma 20.479.246|<tuple|21.425|?>>
+    <associate|lemma 20.480.246|<tuple|21.427|?>>
+    <associate|lemma 20.482.247|<tuple|21.428|?>>
+    <associate|lemma 20.491.248|<tuple|21.431|?>>
+    <associate|lemma 20.505.265|<tuple|21.423|?>>
+    <associate|lemma 20.513.248|<tuple|21.454|?>>
+    <associate|lemma 20.514.248|<tuple|21.455|?>>
+    <associate|lemma 20.515.248|<tuple|21.456|?>>
+    <associate|lemma 20.516.248|<tuple|21.457|?>>
+    <associate|lemma 20.555.149|<tuple|21.494|?>>
+    <associate|lemma 20.557.249|<tuple|21.496|?>>
+    <associate|lemma 20.558.249|<tuple|21.497|?>>
+    <associate|lemma 20.559.249|<tuple|21.498|?>>
+    <associate|lemma 20.594.271|<tuple|21.503|?>>
+    <associate|lemma 20.595.271|<tuple|21.504|?>>
+    <associate|lemma 20.613.279|<tuple|21.522|?>>
+    <associate|lemma 20.614.279|<tuple|21.523|?>>
+    <associate|lemma 20.619.279|<tuple|21.525|?>>
+    <associate|lemma 20.621.280|<tuple|21.527|?>>
+    <associate|lemma 20.628.280|<tuple|21.533|?>>
+    <associate|lemma 20.629.280|<tuple|21.534|?>>
+    <associate|lemma 20.630.280|<tuple|21.536|?>>
+    <associate|lemma 20.635.281|<tuple|21.541|?>>
+    <associate|lemma 21.530.285|<tuple|21.544|?>>
+    <associate|lemma 21.532.285|<tuple|21.546|?>>
+    <associate|lemma 21.558.288|<tuple|21.567|?>>
+    <associate|lemma 21.562.291|<tuple|21.571|?>>
+    <associate|lemma 21.563.291|<tuple|21.572|?>>
+    <associate|lemma 21.578.291|<tuple|21.585|?>>
+    <associate|lemma 21.579.291|<tuple|21.586|?>>
+    <associate|lemma 21.582.291|<tuple|21.589|?>>
+    <associate|lemma 21.584.291|<tuple|21.591|?>>
+    <associate|lemma 21.585.291|<tuple|21.592|?>>
     <associate|measurability of image of a measurable set by a
-    homeomorphism|<tuple|21.574|?>>
-    <associate|measurable function|<tuple|21.221|?>>
-    <associate|measurable function (1)|<tuple|21.234|?>>
-    <associate|measurable function (4)|<tuple|21.238|?>>
-    <associate|measurable function (5)|<tuple|21.239|?>>
-    <associate|measurable function Borel|<tuple|21.231|?>>
-    <associate|measurable function alternative (1)|<tuple|21.248|?>>
-    <associate|measurable function and continuity|<tuple|21.249|?>>
+    homeomorphism|<tuple|21.576|?>>
+    <associate|measurable function|<tuple|21.223|?>>
+    <associate|measurable function (1)|<tuple|21.236|?>>
+    <associate|measurable function (4)|<tuple|21.240|?>>
+    <associate|measurable function (5)|<tuple|21.241|?>>
+    <associate|measurable function Borel|<tuple|21.233|?>>
+    <associate|measurable function alternative (1)|<tuple|21.250|?>>
+    <associate|measurable function and continuity|<tuple|21.251|?>>
     <associate|measurable function and generated sigma
-    algebra|<tuple|21.245|?>>
-    <associate|measurable function charasteristic|<tuple|21.264|?>>
-    <associate|measurable function charasteristic product|<tuple|21.266|?>>
+    algebra|<tuple|21.247|?>>
+    <associate|measurable function charasteristic|<tuple|21.266|?>>
+    <associate|measurable function charasteristic product|<tuple|21.268|?>>
     <associate|measurable function charasteristic
-    properties|<tuple|21.263|?>>
-    <associate|measurable function comparisation|<tuple|21.250|?>>
-    <associate|measurable function comparisation definition|<tuple|21.246|?>>
-    <associate|measurable function composition|<tuple|21.224|?>>
-    <associate|measurable function constant function|<tuple|21.223|?>>
-    <associate|measurable function extension|<tuple|21.244|?>>
-    <associate|measurable function extension (1)|<tuple|21.227|?>>
-    <associate|measurable function extension (2)|<tuple|21.230|?>>
-    <associate|measurable function extension (3)|<tuple|21.242|?>>
-    <associate|measurable function extension (4)|<tuple|21.243|?>>
-    <associate|measurable function extension definition|<tuple|21.240|?>>
-    <associate|measurable function in sub space|<tuple|21.267|?>>
-    <associate|measurable function in sub space (1)|<tuple|21.268|?>>
-    <associate|measurable function limit|<tuple|21.261|?>>
-    <associate|measurable function min and max|<tuple|21.258|?>>
-    <associate|measurable function min and max (1)|<tuple|21.259|?>>
-    <associate|measurable function product with scalar|<tuple|21.255|?>>
-    <associate|measurable function properties (1)|<tuple|21.257|?>>
-    <associate|measurable function real or extended|<tuple|21.237|?>>
-    <associate|measurable function restriction (1)|<tuple|21.225|?>>
-    <associate|measurable function restriction (2)|<tuple|21.226|?>>
-    <associate|measurable function sum (finite)|<tuple|21.251|?>>
-    <associate|measurable function sum finite|<tuple|21.254|?>>
-    <associate|measurable function sup inf limit|<tuple|21.260|?>>
-    <associate|measurable locally finiteness|<tuple|21.552|?>>
+    properties|<tuple|21.265|?>>
+    <associate|measurable function comparisation|<tuple|21.252|?>>
+    <associate|measurable function comparisation definition|<tuple|21.248|?>>
+    <associate|measurable function composition|<tuple|21.226|?>>
+    <associate|measurable function constant function|<tuple|21.225|?>>
+    <associate|measurable function extension|<tuple|21.246|?>>
+    <associate|measurable function extension (1)|<tuple|21.229|?>>
+    <associate|measurable function extension (2)|<tuple|21.232|?>>
+    <associate|measurable function extension (3)|<tuple|21.244|?>>
+    <associate|measurable function extension (4)|<tuple|21.245|?>>
+    <associate|measurable function extension definition|<tuple|21.242|?>>
+    <associate|measurable function in sub space|<tuple|21.269|?>>
+    <associate|measurable function in sub space (1)|<tuple|21.270|?>>
+    <associate|measurable function limit|<tuple|21.263|?>>
+    <associate|measurable function min and max|<tuple|21.260|?>>
+    <associate|measurable function min and max (1)|<tuple|21.261|?>>
+    <associate|measurable function product with scalar|<tuple|21.257|?>>
+    <associate|measurable function properties (1)|<tuple|21.259|?>>
+    <associate|measurable function real or extended|<tuple|21.239|?>>
+    <associate|measurable function restriction (1)|<tuple|21.227|?>>
+    <associate|measurable function restriction (2)|<tuple|21.228|?>>
+    <associate|measurable function sum (finite)|<tuple|21.253|?>>
+    <associate|measurable function sum finite|<tuple|21.256|?>>
+    <associate|measurable function sup inf limit|<tuple|21.262|?>>
+    <associate|measurable locally finiteness|<tuple|21.554|?>>
     <associate|measure A.B minus C.D|<tuple|21.2|?>>
-    <associate|measure Borel algebra|<tuple|21.44|?>>
-    <associate|measure Borel algebra and closure|<tuple|21.45|?>>
-    <associate|measure Borel algebra and continuity|<tuple|21.46|?>>
-    <associate|measure Borel algebra on R|<tuple|21.53|?>>
-    <associate|measure Borel algebra on R^n|<tuple|21.60|?>>
+    <associate|measure Borel algebra|<tuple|21.46|?>>
+    <associate|measure Borel algebra and closure|<tuple|21.47|?>>
+    <associate|measure Borel algebra and continuity|<tuple|21.48|?>>
+    <associate|measure Borel algebra on R|<tuple|21.55|?>>
+    <associate|measure Borel algebra on R^n|<tuple|21.62|?>>
     <associate|measure Borel algebra on R^n (equivalences
-    1)|<tuple|21.191|?>>
-    <associate|measure Borel algebra on R^n (equivalences 2)|<tuple|21.88|?>>
-    <associate|measure Borel algebra on R^n (equivalences)|<tuple|21.84|?>>
-    <associate|measure Borel algebra on R^n rectangles|<tuple|21.89|?>>
+    1)|<tuple|21.193|?>>
+    <associate|measure Borel algebra on R^n (equivalences 2)|<tuple|21.90|?>>
+    <associate|measure Borel algebra on R^n (equivalences)|<tuple|21.86|?>>
+    <associate|measure Borel algebra on R^n rectangles|<tuple|21.91|?>>
     <associate|measure Borel algebra on the extended real
-    numbers|<tuple|21.54|?>>
+    numbers|<tuple|21.56|?>>
     <associate|measure Borel algebra on the extended real numbers
-    (1)|<tuple|21.59|?>>
-    <associate|measure Borel measure of T(A)|<tuple|21.578|?>>
-    <associate|measure Borel measure of T(A) (1)|<tuple|21.581|?>>
+    (1)|<tuple|21.61|?>>
+    <associate|measure Borel measure of T(A)|<tuple|21.580|?>>
+    <associate|measure Borel measure of T(A) (1)|<tuple|21.583|?>>
     <associate|measure Borel measure on R and linear
-    isomorphism|<tuple|21.580|?>>
-    <associate|measure Caratheodory|<tuple|21.118|?>>
+    isomorphism|<tuple|21.582|?>>
+    <associate|measure Caratheodory|<tuple|21.120|?>>
     <associate|measure Caratheodory produces complete measure
-    space|<tuple|21.214|?>>
-    <associate|measure Dyadic cubes|<tuple|21.76|?>>
-    <associate|measure Dyadic cubes properties|<tuple|21.80|?>>
-    <associate|measure Dyadic intervals|<tuple|21.568|?>>
-    <associate|measure Dyadic intervals and open sets|<tuple|21.571|?>>
-    <associate|measure Dynkin system|<tuple|21.119|?>>
-    <associate|measure Dynkin system P(X)|<tuple|21.122|?>>
+    space|<tuple|21.216|?>>
+    <associate|measure Dyadic cubes|<tuple|21.78|?>>
+    <associate|measure Dyadic cubes properties|<tuple|21.82|?>>
+    <associate|measure Dyadic intervals|<tuple|21.570|?>>
+    <associate|measure Dyadic intervals and open sets|<tuple|21.573|?>>
+    <associate|measure Dynkin system|<tuple|21.121|?>>
+    <associate|measure Dynkin system P(X)|<tuple|21.124|?>>
     <associate|measure Dynkin system condition for sigma
-    algebra|<tuple|21.125|?>>
+    algebra|<tuple|21.127|?>>
     <associate|measure Dynkin system condition for sigma algebra
-    (1)|<tuple|21.126|?>>
-    <associate|measure Dynkin system generated|<tuple|21.124|?>>
-    <associate|measure Dynkin system properties|<tuple|21.121|?>>
+    (1)|<tuple|21.128|?>>
+    <associate|measure Dynkin system generated|<tuple|21.126|?>>
+    <associate|measure Dynkin system properties|<tuple|21.123|?>>
     <associate|measure Lebesgue measure of half-open closed
-    rectangles|<tuple|21.204|?>>
+    rectangles|<tuple|21.206|?>>
     <associate|measure Lebesgue measure of half-open open
-    intervals|<tuple|21.206|?>>
-    <associate|measure Lebesgue measure space on R|<tuple|21.179|?>>
-    <associate|measure Lebesgue measure space on R^n|<tuple|21.202|?>>
-    <associate|measure Lebesgue measure spaces are complete|<tuple|21.215|?>>
-    <associate|measure P(X) is a algebra|<tuple|21.28|?>>
-    <associate|measure P(X) is a ring|<tuple|21.24|?>>
-    <associate|measure P(X) is a sigma algebra|<tuple|21.36|?>>
-    <associate|measure R^n alternative definition|<tuple|21.189|?>>
-    <associate|measure Radon and Borel measure on R|<tuple|21.572|?>>
-    <associate|measure Radon and Borel measure on R^n|<tuple|21.573|?>>
-    <associate|measure Radon condition|<tuple|21.557|?>>
-    <associate|measure Radon condition (1)|<tuple|21.558|?>>
-    <associate|measure [a,b[ in R^n|<tuple|21.64|?>>
-    <associate|measure additive function monotone|<tuple|21.139|?>>
+    intervals|<tuple|21.208|?>>
+    <associate|measure Lebesgue measure space on R|<tuple|21.181|?>>
+    <associate|measure Lebesgue measure space on R^n|<tuple|21.204|?>>
+    <associate|measure Lebesgue measure spaces are complete|<tuple|21.217|?>>
+    <associate|measure P(X) is a algebra|<tuple|21.30|?>>
+    <associate|measure P(X) is a ring|<tuple|21.26|?>>
+    <associate|measure P(X) is a sigma algebra|<tuple|21.38|?>>
+    <associate|measure R^n alternative definition|<tuple|21.191|?>>
+    <associate|measure Radon and Borel measure on R|<tuple|21.574|?>>
+    <associate|measure Radon and Borel measure on R^n|<tuple|21.575|?>>
+    <associate|measure Radon condition|<tuple|21.559|?>>
+    <associate|measure Radon condition (1)|<tuple|21.560|?>>
+    <associate|measure [a,b[ in R^n|<tuple|21.66|?>>
+    <associate|measure additive function monotone|<tuple|21.141|?>>
     <associate|measure additive set function|<tuple|21.15|?>>
-    <associate|measure algebra|<tuple|21.26|?>>
-    <associate|measure algebra equavalent definition|<tuple|21.30|?>>
-    <associate|measure algebra properties|<tuple|21.29|?>>
-    <associate|measure alternative definition for a content|<tuple|21.149|?>>
-    <associate|measure begin end|<tuple|21.74|?>>
-    <associate|measure begin end (R)|<tuple|21.169|?>>
-    <associate|measure borel algebrat on R|<tuple|21.48|?>>
-    <associate|measure bounded intervals|<tuple|21.49|?>>
-    <associate|measure compact class approximation|<tuple|21.153|?>>
-    <associate|measure compact class approximation (1)|<tuple|21.154|?>>
-    <associate|measure compact class approximation (2)|<tuple|21.163|?>>
-    <associate|measure compact class approximation (3)|<tuple|21.164|?>>
-    <associate|measure compact finite and intervals|<tuple|21.554|?>>
-    <associate|measure compact finite and rectangles|<tuple|21.555|?>>
-    <associate|measure compact finite and scalar product|<tuple|21.550|?>>
-    <associate|measure complete measure|<tuple|21.212|?>>
-    <associate|measure complete measure characterization|<tuple|21.213|?>>
-    <associate|measure completing of a measure space|<tuple|21.219|?>>
-    <associate|measure completion of a measure space|<tuple|21.216|?>>
+    <associate|measure algebra|<tuple|21.28|?>>
+    <associate|measure algebra equavalent definition|<tuple|21.32|?>>
+    <associate|measure algebra properties|<tuple|21.31|?>>
+    <associate|measure alternative definition for a content|<tuple|21.151|?>>
+    <associate|measure begin end|<tuple|21.76|?>>
+    <associate|measure begin end (R)|<tuple|21.171|?>>
+    <associate|measure borel algebrat on R|<tuple|21.50|?>>
+    <associate|measure bounded intervals|<tuple|21.51|?>>
+    <associate|measure compact class approximation|<tuple|21.155|?>>
+    <associate|measure compact class approximation (1)|<tuple|21.156|?>>
+    <associate|measure compact class approximation (2)|<tuple|21.165|?>>
+    <associate|measure compact class approximation (3)|<tuple|21.166|?>>
+    <associate|measure compact finite and intervals|<tuple|21.556|?>>
+    <associate|measure compact finite and rectangles|<tuple|21.557|?>>
+    <associate|measure compact finite and scalar product|<tuple|21.552|?>>
+    <associate|measure complete measure|<tuple|21.214|?>>
+    <associate|measure complete measure characterization|<tuple|21.215|?>>
+    <associate|measure completing of a measure space|<tuple|21.221|?>>
+    <associate|measure completion of a measure space|<tuple|21.218|?>>
     <associate|measure condition for a algebra to be a sigma
-    algebra|<tuple|21.38|?>>
-    <associate|measure content|<tuple|21.146|?>>
-    <associate|measure content extension|<tuple|21.162|?>>
-    <associate|measure content on R^n|<tuple|21.199|?>>
-    <associate|measure content properties|<tuple|21.150|?>>
+    algebra|<tuple|21.40|?>>
+    <associate|measure content|<tuple|21.148|?>>
+    <associate|measure content extension|<tuple|21.164|?>>
+    <associate|measure content on R^n|<tuple|21.201|?>>
+    <associate|measure content properties|<tuple|21.152|?>>
     <associate|measure countable additive set function|<tuple|21.17|?>>
     <associate|measure countable additivity implies
-    additivity|<tuple|21.92|?>>
+    additivity|<tuple|21.94|?>>
     <associate|measure countable additivity implies finite
-    additivity|<tuple|21.19|?>>
-    <associate|measure countable sub-additive set function|<tuple|21.18|?>>
+    additivity|<tuple|21.21|?>>
+    <associate|measure countable sub-additive set function|<tuple|21.19|?>>
     <associate|measure countable sub-additivity implies
-    sub-additivity|<tuple|21.21|?>>
-    <associate|measure countable union is in sigma algebra|<tuple|21.37|?>>
-    <associate|measure countable union pairwise|<tuple|21.96|?>>
+    sub-additivity|<tuple|21.23|?>>
+    <associate|measure countable union is in sigma algebra|<tuple|21.39|?>>
+    <associate|measure countable union pairwise|<tuple|21.98|?>>
     <associate|measure create a new measure based on a measure and a
-    homeomorphism|<tuple|21.575|?>>
+    homeomorphism|<tuple|21.577|?>>
     <associate|measure create a new measure based on a measure and a linear
-    isomorphism|<tuple|21.577|?>>
-    <associate|measure extending pre-measure to a measure|<tuple|21.143|?>>
-    <associate|measure finite measure|<tuple|21.109|?>>
-    <associate|measure finite product of semi-rings|<tuple|21.187|?>>
-    <associate|measure finite product of semi-rings (1)|<tuple|21.188|?>>
-    <associate|measure generated ring|<tuple|21.155|?>>
-    <associate|measure generated sigma algebra|<tuple|21.40|?>>
-    <associate|measure generated sigma algebra (1)|<tuple|21.41|?>>
-    <associate|measure generated sigma algebra on R|<tuple|21.168|?>>
-    <associate|measure half open intervals in R^n|<tuple|21.69|?>>
-    <associate|measure halfo open spaces|<tuple|21.85|?>>
-    <associate|measure integral|<tuple|21.332|?>>
-    <associate|measure integral (1)|<tuple|21.339|?>>
-    <associate|measure integral alternative|<tuple|21.347|?>>
-    <associate|measure integral alternative (1)|<tuple|21.356|?>>
-    <associate|measure integral alternative (2)|<tuple|21.336|?>>
-    <associate|measure integral and a.e. equalitiy|<tuple|21.348|?>>
-    <associate|measure integral difference|<tuple|21.344|?>>
-    <associate|measure integral domination theorem|<tuple|21.349|?>>
-    <associate|measure integral extension|<tuple|21.338|?>>
-    <associate|measure integral f+ f-|<tuple|21.326|?>>
-    <associate|measure integral f+ f- alternative|<tuple|21.328|?>>
-    <associate|measure integral f+ f- are measurable|<tuple|21.329|?>>
-    <associate|measure integral f+ f- properties|<tuple|21.331|?>>
-    <associate|measure integral measure construction|<tuple|21.363|?>>
+    isomorphism|<tuple|21.579|?>>
+    <associate|measure extending pre-measure to a measure|<tuple|21.145|?>>
+    <associate|measure finite measure|<tuple|21.111|?>>
+    <associate|measure finite product of semi-rings|<tuple|21.189|?>>
+    <associate|measure finite product of semi-rings (1)|<tuple|21.190|?>>
+    <associate|measure generated ring|<tuple|21.157|?>>
+    <associate|measure generated sigma algebra|<tuple|21.42|?>>
+    <associate|measure generated sigma algebra (1)|<tuple|21.43|?>>
+    <associate|measure generated sigma algebra on R|<tuple|21.170|?>>
+    <associate|measure half open intervals in R^n|<tuple|21.71|?>>
+    <associate|measure halfo open spaces|<tuple|21.87|?>>
+    <associate|measure integral|<tuple|21.334|?>>
+    <associate|measure integral (1)|<tuple|21.341|?>>
+    <associate|measure integral alternative|<tuple|21.349|?>>
+    <associate|measure integral alternative (1)|<tuple|21.358|?>>
+    <associate|measure integral alternative (2)|<tuple|21.338|?>>
+    <associate|measure integral and a.e. equalitiy|<tuple|21.350|?>>
+    <associate|measure integral difference|<tuple|21.346|?>>
+    <associate|measure integral domination theorem|<tuple|21.351|?>>
+    <associate|measure integral extension|<tuple|21.340|?>>
+    <associate|measure integral f+ f-|<tuple|21.328|?>>
+    <associate|measure integral f+ f- alternative|<tuple|21.330|?>>
+    <associate|measure integral f+ f- are measurable|<tuple|21.331|?>>
+    <associate|measure integral f+ f- properties|<tuple|21.333|?>>
+    <associate|measure integral measure construction|<tuple|21.365|?>>
     <associate|measure integral of almost zero function is
-    zero|<tuple|21.343|?>>
-    <associate|measure integral of zero function (1)|<tuple|21.335|?>>
-    <associate|measure integral on sub measure spaces|<tuple|21.342|?>>
-    <associate|measure integral properties|<tuple|21.345|?>>
-    <associate|measure integral properties (1)|<tuple|21.353|?>>
-    <associate|measure integral properties (2)|<tuple|21.355|?>>
-    <associate|measure integral sigma finite|<tuple|21.351|?>>
-    <associate|measure integral to measure over|<tuple|21.341|?>>
-    <associate|measure integral zero is a.e. zero|<tuple|21.352|?>>
-    <associate|measure length definition|<tuple|21.174|?>>
+    zero|<tuple|21.345|?>>
+    <associate|measure integral of zero function (1)|<tuple|21.337|?>>
+    <associate|measure integral on sub measure spaces|<tuple|21.344|?>>
+    <associate|measure integral properties|<tuple|21.347|?>>
+    <associate|measure integral properties (1)|<tuple|21.355|?>>
+    <associate|measure integral properties (2)|<tuple|21.357|?>>
+    <associate|measure integral sigma finite|<tuple|21.353|?>>
+    <associate|measure integral to measure over|<tuple|21.343|?>>
+    <associate|measure integral zero is a.e. zero|<tuple|21.354|?>>
+    <associate|measure length definition|<tuple|21.176|?>>
     <associate|measure length of union of pairwise half opem
-    intervals|<tuple|21.176|?>>
-    <associate|measure measurable set equivalences|<tuple|21.116|?>>
-    <associate|measure measurable sets|<tuple|21.115|?>>
-    <associate|measure measurable sets properties|<tuple|21.117|?>>
-    <associate|measure measurable space|<tuple|21.33|?>>
-    <associate|measure measure conditions|<tuple|21.112|?>>
-    <associate|measure measure definition|<tuple|21.93|?>>
-    <associate|measure measure finite|<tuple|21.110|?>>
-    <associate|measure measure on A\|B|<tuple|21.106|?>>
-    <associate|measure measure space|<tuple|21.95|?>>
-    <associate|measure measure space properties (1)|<tuple|21.108|?>>
-    <associate|measure measure space properties (2)|<tuple|21.97|?>>
-    <associate|measure measure space properties (3)|<tuple|21.111|?>>
-    <associate|measure measure space properties (4)|<tuple|21.98|?>>
+    intervals|<tuple|21.178|?>>
+    <associate|measure measurable set equivalences|<tuple|21.118|?>>
+    <associate|measure measurable sets|<tuple|21.117|?>>
+    <associate|measure measurable sets properties|<tuple|21.119|?>>
+    <associate|measure measurable space|<tuple|21.35|?>>
+    <associate|measure measure conditions|<tuple|21.114|?>>
+    <associate|measure measure definition|<tuple|21.95|?>>
+    <associate|measure measure finite|<tuple|21.112|?>>
+    <associate|measure measure on A\|B|<tuple|21.108|?>>
+    <associate|measure measure space|<tuple|21.97|?>>
+    <associate|measure measure space properties (1)|<tuple|21.110|?>>
+    <associate|measure measure space properties (2)|<tuple|21.99|?>>
+    <associate|measure measure space properties (3)|<tuple|21.113|?>>
+    <associate|measure measure space properties (4)|<tuple|21.100|?>>
     <associate|measure monotone|<tuple|21.14|?>>
-    <associate|measure null set|<tuple|21.208|?>>
-    <associate|measure null set properties|<tuple|21.211|?>>
-    <associate|measure on sub sigma algebra|<tuple|21.105|?>>
-    <associate|measure open closed rectangles|<tuple|21.71|?>>
-    <associate|measure order on R^n|<tuple|21.61|?>>
-    <associate|measure order on half open intervals|<tuple|21.175|?>>
-    <associate|measure outer measure|<tuple|21.113|?>>
-    <associate|measure outer measure construction|<tuple|21.130|?>>
+    <associate|measure null set|<tuple|21.210|?>>
+    <associate|measure null set properties|<tuple|21.213|?>>
+    <associate|measure on sub sigma algebra|<tuple|21.107|?>>
+    <associate|measure open closed rectangles|<tuple|21.73|?>>
+    <associate|measure order on R^n|<tuple|21.63|?>>
+    <associate|measure order on half open intervals|<tuple|21.177|?>>
+    <associate|measure outer measure|<tuple|21.115|?>>
+    <associate|measure outer measure construction|<tuple|21.132|?>>
     <associate|measure outer measure construction from
-    pre-measure|<tuple|21.142|?>>
-    <associate|measure outer measure is finite subadditive|<tuple|21.114|?>>
+    pre-measure|<tuple|21.144|?>>
+    <associate|measure outer measure is finite subadditive|<tuple|21.116|?>>
     <associate|measure pairwise disjoint|<tuple|21.3|?>>
     <associate|measure pairwise disjoint sets and bijections|<tuple|21.5|?>>
-    <associate|measure pre-measure|<tuple|21.135|?>>
-    <associate|measure pre-measure equivalences|<tuple|21.151|?>>
-    <associate|measure pre-measure is a content|<tuple|21.148|?>>
-    <associate|measure pre-measure is additive|<tuple|21.138|?>>
+    <associate|measure pre-measure|<tuple|21.137|?>>
+    <associate|measure pre-measure equivalences|<tuple|21.153|?>>
+    <associate|measure pre-measure is a content|<tuple|21.150|?>>
+    <associate|measure pre-measure is additive|<tuple|21.140|?>>
     <associate|measure pre-measure is countable
-    sub-additive|<tuple|21.141|?>>
-    <associate|measure pre-measure monotonity|<tuple|21.140|?>>
-    <associate|measure product of two semi-rings|<tuple|21.181|?>>
-    <associate|measure proto-measure|<tuple|21.129|?>>
-    <associate|measure proto-ring|<tuple|21.128|?>>
-    <associate|measure regularity|<tuple|21.546|?>>
-    <associate|measure regularity and scalar product|<tuple|21.549|?>>
-    <associate|measure regularity and uniqueness|<tuple|21.551|?>>
-    <associate|measure ring|<tuple|21.22|?>>
-    <associate|measure ring is a semi-ring|<tuple|21.145|?>>
-    <associate|measure ring properties|<tuple|21.25|?>>
-    <associate|measure semi-ring|<tuple|21.132|?>>
-    <associate|measure semi-ring bijection|<tuple|21.184|?>>
-    <associate|measure semi-ring on R^n|<tuple|21.190|?>>
-    <associate|measure semi-ring on the set of real numbers|<tuple|21.167|?>>
+    sub-additive|<tuple|21.143|?>>
+    <associate|measure pre-measure monotonity|<tuple|21.142|?>>
+    <associate|measure product of two semi-rings|<tuple|21.183|?>>
+    <associate|measure proto-measure|<tuple|21.131|?>>
+    <associate|measure proto-ring|<tuple|21.130|?>>
+    <associate|measure regularity|<tuple|21.548|?>>
+    <associate|measure regularity and scalar product|<tuple|21.551|?>>
+    <associate|measure regularity and uniqueness|<tuple|21.553|?>>
+    <associate|measure ring|<tuple|21.24|?>>
+    <associate|measure ring is a semi-ring|<tuple|21.147|?>>
+    <associate|measure ring properties|<tuple|21.27|?>>
+    <associate|measure semi-ring|<tuple|21.134|?>>
+    <associate|measure semi-ring bijection|<tuple|21.186|?>>
+    <associate|measure semi-ring on R^n|<tuple|21.192|?>>
+    <associate|measure semi-ring on the set of real numbers|<tuple|21.169|?>>
     <associate|measure semi-ring on the set of real numbers
-    (1)|<tuple|21.166|?>>
-    <associate|measure semi-ring to ring|<tuple|21.161|?>>
-    <associate|measure sigma algebra|<tuple|21.31|?>>
-    <associate|measure sigma algebra equivalences|<tuple|21.34|?>>
-    <associate|measure sigma algebra intersection|<tuple|21.39|?>>
-    <associate|measure sigma finite disjoint|<tuple|21.100|?>>
-    <associate|measure sigma finite increasing|<tuple|21.101|?>>
-    <associate|measure sigma finite measure|<tuple|21.102|?>>
-    <associate|measure sigma finite set|<tuple|21.99|?>>
-    <associate|measure sub measure space|<tuple|21.42|?>>
+    (1)|<tuple|21.168|?>>
+    <associate|measure semi-ring to ring|<tuple|21.163|?>>
+    <associate|measure sigma algebra|<tuple|21.33|?>>
+    <associate|measure sigma algebra equivalences|<tuple|21.36|?>>
+    <associate|measure sigma algebra intersection|<tuple|21.41|?>>
+    <associate|measure sigma finite disjoint|<tuple|21.102|?>>
+    <associate|measure sigma finite increasing|<tuple|21.103|?>>
+    <associate|measure sigma finite measure|<tuple|21.104|?>>
+    <associate|measure sigma finite set|<tuple|21.101|?>>
+    <associate|measure sub measure space|<tuple|21.44|?>>
     <associate|measure sub-additive set function|<tuple|21.16|?>>
-    <associate|measure sum and scalar product of measures|<tuple|21.103|?>>
+    <associate|measure sum and scalar product of measures|<tuple|21.105|?>>
     <associate|measure the Borel measure is translation invariant
-    (1)|<tuple|21.566|?>>
+    (1)|<tuple|21.568|?>>
     <associate|measure the Borel measure is translation invariant
-    (2)|<tuple|21.567|?>>
-    <associate|measure translation invariant|<tuple|21.563|?>>
-    <associate|measure translation of a measurable set|<tuple|21.562|?>>
-    <associate|measure translation of a measurable set (1)|<tuple|21.47|?>>
+    (2)|<tuple|21.569|?>>
+    <associate|measure translation invariant|<tuple|21.565|?>>
+    <associate|measure translation of a measurable set|<tuple|21.564|?>>
+    <associate|measure translation of a measurable set (1)|<tuple|21.49|?>>
     <associate|measure union intersection stable|<tuple|21.9|?>>
-    <associate|measure uniqueness of extension of a measure|<tuple|21.127|?>>
-    <associate|measure volume function|<tuple|21.192|?>>
-    <associate|measure volume is a pre-measure|<tuple|21.201|?>>
-    <associate|measure {empty set} is a ring|<tuple|21.23|?>>
-    <associate|measure {emptyset,set} is a measure|<tuple|21.27|?>>
+    <associate|measure uniqueness of extension of a measure|<tuple|21.129|?>>
+    <associate|measure volume function|<tuple|21.194|?>>
+    <associate|measure volume is a pre-measure|<tuple|21.203|?>>
+    <associate|measure {empty set} is a ring|<tuple|21.25|?>>
+    <associate|measure {emptyset,set} is a measure|<tuple|21.29|?>>
     <associate|non negative function as limit of simple
-    functions|<tuple|21.313|?>>
-    <associate|non negative integral|<tuple|21.302|?>>
-    <associate|non negative integral (1)|<tuple|21.308|?>>
-    <associate|non negative integral alternative|<tuple|21.317|?>>
-    <associate|non negative integral and a.e. equality|<tuple|21.321|?>>
-    <associate|non negative integral characteristics|<tuple|21.307|?>>
-    <associate|non negative integral constant|<tuple|21.306|?>>
-    <associate|non negative integral finite integral|<tuple|21.324|?>>
-    <associate|non negative integral finite sum|<tuple|21.320|?>>
-    <associate|non negative integral is a extension|<tuple|21.305|?>>
-    <associate|non negative integral limit|<tuple|21.315|?>>
+    functions|<tuple|21.315|?>>
+    <associate|non negative integral|<tuple|21.304|?>>
+    <associate|non negative integral (1)|<tuple|21.310|?>>
+    <associate|non negative integral alternative|<tuple|21.319|?>>
+    <associate|non negative integral and a.e. equality|<tuple|21.323|?>>
+    <associate|non negative integral characteristics|<tuple|21.309|?>>
+    <associate|non negative integral constant|<tuple|21.308|?>>
+    <associate|non negative integral finite integral|<tuple|21.326|?>>
+    <associate|non negative integral finite sum|<tuple|21.322|?>>
+    <associate|non negative integral is a extension|<tuple|21.307|?>>
+    <associate|non negative integral limit|<tuple|21.317|?>>
     <associate|non negative integral scalar product, sum
-    inequality|<tuple|21.319|?>>
-    <associate|non negative integral sub measure space (1)|<tuple|21.310|?>>
-    <associate|non negative integral sub measure space (2)|<tuple|21.312|?>>
-    <associate|non negative integral sub measure space (3)|<tuple|21.311|?>>
-    <associate|non negative integral zero a.e. function|<tuple|21.318|?>>
-    <associate|non negative measurable function|<tuple|21.235|?>>
-    <associate|note 20.198.210|<tuple|21.131|?>>
-    <associate|note 21.580.291|<tuple|21.585|?>>
-    <associate|product |<tuple|21.507|?>>
-    <associate|product algebra|<tuple|21.510|?>>
-    <associate|product algebra equivalences|<tuple|21.513|?>>
-    <associate|product algebra equivalences (1)|<tuple|21.514|?>>
-    <associate|product algebra measure|<tuple|21.516|?>>
-    <associate|product algebra measure (1)|<tuple|21.517|?>>
-    <associate|product algebra on Borel algebras of R|<tuple|21.515|?>>
-    <associate|product algebra properties (1)|<tuple|21.512|?>>
-    <associate|product generated sigma algebra|<tuple|21.508|?>>
-    <associate|product generated sigma algebra (1)|<tuple|21.509|?>>
-    <associate|product measure (1)|<tuple|21.527|?>>
-    <associate|signed measure|<tuple|21.441|?>>
-    <associate|signed measure Hahn Decomposition|<tuple|21.456|?>>
-    <associate|signed measure Hahn Decomposition condition|<tuple|21.457|?>>
-    <associate|signed measure as a difference of measures|<tuple|21.444|?>>
-    <associate|signed measure conditions|<tuple|21.449|?>>
-    <associate|signed measure empty set is positive/negatie|<tuple|21.451|?>>
-    <associate|signed measure finite addivity|<tuple|21.446|?>>
-    <associate|signed measure finite measure|<tuple|21.443|?>>
-    <associate|signed measure finite sum distributivity|<tuple|21.437|?>>
-    <associate|signed measure integral complex function|<tuple|21.483|?>>
-    <associate|signed measure intgral real function|<tuple|21.481|?>>
-    <associate|signed measure positive/negative set|<tuple|21.450|?>>
-    <associate|signed measure product with scalar|<tuple|21.445|?>>
-    <associate|signed measure properties (1)|<tuple|21.447|?>>
-    <associate|signed measure properties (2)|<tuple|21.448|?>>
-    <associate|signed semi groups|<tuple|21.436|?>>
-    <associate|simple function|<tuple|21.277|?>>
-    <associate|simple function 2 point measurability|<tuple|21.291|?>>
-    <associate|simple function alternative|<tuple|21.278|?>>
-    <associate|simple function constant|<tuple|21.289|?>>
-    <associate|simple function integral|<tuple|21.294|?>>
-    <associate|simple function integral constant function|<tuple|21.296|?>>
+    inequality|<tuple|21.321|?>>
+    <associate|non negative integral sub measure space (1)|<tuple|21.312|?>>
+    <associate|non negative integral sub measure space (2)|<tuple|21.314|?>>
+    <associate|non negative integral sub measure space (3)|<tuple|21.313|?>>
+    <associate|non negative integral zero a.e. function|<tuple|21.320|?>>
+    <associate|non negative measurable function|<tuple|21.237|?>>
+    <associate|note 20.198.210|<tuple|21.133|?>>
+    <associate|note 21.580.291|<tuple|21.587|?>>
+    <associate|product |<tuple|21.509|?>>
+    <associate|product algebra|<tuple|21.512|?>>
+    <associate|product algebra equivalences|<tuple|21.515|?>>
+    <associate|product algebra equivalences (1)|<tuple|21.516|?>>
+    <associate|product algebra measure|<tuple|21.518|?>>
+    <associate|product algebra measure (1)|<tuple|21.519|?>>
+    <associate|product algebra on Borel algebras of R|<tuple|21.517|?>>
+    <associate|product algebra properties (1)|<tuple|21.514|?>>
+    <associate|product generated sigma algebra|<tuple|21.510|?>>
+    <associate|product generated sigma algebra (1)|<tuple|21.511|?>>
+    <associate|product measure (1)|<tuple|21.529|?>>
+    <associate|signed measure|<tuple|21.443|?>>
+    <associate|signed measure Hahn Decomposition|<tuple|21.458|?>>
+    <associate|signed measure Hahn Decomposition condition|<tuple|21.459|?>>
+    <associate|signed measure as a difference of measures|<tuple|21.446|?>>
+    <associate|signed measure conditions|<tuple|21.451|?>>
+    <associate|signed measure empty set is positive/negatie|<tuple|21.453|?>>
+    <associate|signed measure finite addivity|<tuple|21.448|?>>
+    <associate|signed measure finite measure|<tuple|21.445|?>>
+    <associate|signed measure finite sum distributivity|<tuple|21.439|?>>
+    <associate|signed measure integral complex function|<tuple|21.485|?>>
+    <associate|signed measure intgral real function|<tuple|21.483|?>>
+    <associate|signed measure positive/negative set|<tuple|21.452|?>>
+    <associate|signed measure product with scalar|<tuple|21.447|?>>
+    <associate|signed measure properties (1)|<tuple|21.449|?>>
+    <associate|signed measure properties (2)|<tuple|21.450|?>>
+    <associate|signed semi groups|<tuple|21.438|?>>
+    <associate|simple function|<tuple|21.279|?>>
+    <associate|simple function 2 point measurability|<tuple|21.293|?>>
+    <associate|simple function alternative|<tuple|21.280|?>>
+    <associate|simple function constant|<tuple|21.291|?>>
+    <associate|simple function integral|<tuple|21.296|?>>
+    <associate|simple function integral constant function|<tuple|21.298|?>>
     <associate|simple function integral monotone convergence
-    theorem|<tuple|21.300|?>>
-    <associate|simple function integral properties|<tuple|21.298|?>>
-    <associate|simple function integral properties (1)|<tuple|21.299|?>>
-    <associate|simple function measurable (0)|<tuple|21.284|?>>
-    <associate|simple function measurable (1)|<tuple|21.290|?>>
-    <associate|simple function measurable definition (1)|<tuple|21.281|?>>
-    <associate|simple function measurable definition (2)|<tuple|21.286|?>>
+    theorem|<tuple|21.302|?>>
+    <associate|simple function integral properties|<tuple|21.300|?>>
+    <associate|simple function integral properties (1)|<tuple|21.301|?>>
+    <associate|simple function measurable (0)|<tuple|21.286|?>>
+    <associate|simple function measurable (1)|<tuple|21.292|?>>
+    <associate|simple function measurable definition (1)|<tuple|21.283|?>>
+    <associate|simple function measurable definition (2)|<tuple|21.288|?>>
     <associate|simple function measurable sum and scalar
-    product|<tuple|21.285|?>>
-    <associate|simple function property|<tuple|21.279|?>>
-    <associate|simple function representation|<tuple|21.292|?>>
-    <associate|simple function sum scalar product|<tuple|21.280|?>>
-    <associate|space of measures|<tuple|21.472|?>>
+    product|<tuple|21.287|?>>
+    <associate|simple function property|<tuple|21.281|?>>
+    <associate|simple function representation|<tuple|21.294|?>>
+    <associate|simple function sum scalar product|<tuple|21.282|?>>
+    <associate|space of measures|<tuple|21.474|?>>
     <associate|space of measures bounded functions are
-    integrable|<tuple|21.480|?>>
+    integrable|<tuple|21.482|?>>
     <associate|space of measures bounded measurable
-    functions|<tuple|21.478|?>>
-    <associate|space of measures bounded normed space|<tuple|21.479|?>>
-    <associate|space of measures is a Banach space|<tuple|21.477|?>>
-    <associate|space of measures is a vector space|<tuple|21.474|?>>
-    <associate|space of measures normed space complex case|<tuple|21.476|?>>
-    <associate|space of measures normed space real case|<tuple|21.475|?>>
-    <associate|space of measures total variation is finite|<tuple|21.473|?>>
+    functions|<tuple|21.480|?>>
+    <associate|space of measures bounded normed space|<tuple|21.481|?>>
+    <associate|space of measures is a Banach space|<tuple|21.479|?>>
+    <associate|space of measures is a vector space|<tuple|21.476|?>>
+    <associate|space of measures normed space complex case|<tuple|21.478|?>>
+    <associate|space of measures normed space real case|<tuple|21.477|?>>
+    <associate|space of measures total variation is finite|<tuple|21.475|?>>
   </collection>
 </references>
 
