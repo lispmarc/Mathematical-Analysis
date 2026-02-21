@@ -5225,7 +5225,7 @@
   <math|\<bbb-R\><rsup|n>>.
 
   <\theorem>
-    <label|measure Borel algebra on R^n (equivalences)>Let
+    <label|measure Borel algebras on R^n equivalences>Let
     <math|n\<in\>\<bbb-N\>> then we have\ 
 
     <\equation*>
@@ -5285,8 +5285,6 @@
     </equation*>
   </proof>
 
-  TODO
-
   <\definition>
     <label|measure halfo open spaces>Let <math|n\<in\>\<bbb-N\>> then for
     <math|i\<in\><around*|{|1,\<ldots\>,n|}>> and <math|a\<in\>\<bbb-R\>> we
@@ -5297,9 +5295,9 @@
       <around*|]|-\<infty\>,a|[><rsub|i>=<around*|{|x\<in\>\<bbb-R\>\|x<rsub|i>\<less\>a|}>
     </equation*>
 
-    The set <math|<around*|]|-\<infty\>,a|[><rsub|i>> is called a lower half
-    open space. The set of all lower half spaces is noted as
-    <math|\<cal-H\><rsup|n>> hence\ 
+    The set <math|<around*|]|-\<infty\>,a|[><rsub|i>> is called a
+    <with|font-series|bold|lower half open space>. The set of all lower half
+    spaces is noted as <math|\<cal-H\><rsup|n>> hence\ 
 
     <\equation*>
       \<cal-H\><rsup|n>=<around*|{|<around*|]|-\<infty\>,a|[><rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>\<wedge\>a\<in\>\<bbb-R\>|}>
@@ -5333,7 +5331,7 @@
   </proof>
 
   Next we show that every half open interval can be written as a finite
-  intersection of lower half open spaces.
+  intersection of differences of lower half open spaces.
 
   <\lemma>
     <label|lemma 20.184.240>Let <math|n\<in\>\<bbb-N\>>,
@@ -5376,9 +5374,9 @@
     <reference|lemma 20.183.240>], so that
     <math|H\<in\>\<sigma\><around*|[|\<cal-T\><rsub|\<bbb-R\><rsup|n>>|]>\<equallim\><rsub|<text|[theorem:
     <reference|measure Borel algebra on R^n (equivalences
-    1)>]>>\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>>. Hence
-    <math|\<cal-H\><rsup|n>\<subseteq\>\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>>
-    giving
+    1)>]>>\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>>, which proves that
+    \ <math|\<cal-H\><rsup|n>\<subseteq\>\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>>,
+    so using [theorem: <reference|measure generated sigma algebra>]
 
     <\equation>
       <label|eq 20.153.241>\<sigma\><around*|[|\<cal-H\><rsup|n>|]>\<subseteq\>\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>
@@ -5388,8 +5386,10 @@
     <math|\<exists\>a,b\<in\>\<bbb-R\><rsup|n>> such that
     <math|R=<around*|[|a,b|[>>, using the previous lemma [see lemma:
     <reference|lemma 20.184.240>] we have then that
-    <math|R=<around*|[|a,b|[>=<big|cap><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|(|<around*|]|-\<infty\>,b<rsub|i>|[><rsub|i>\\<around*|]|-\<infty\>,a<rsub|i>|[><rsub|i>|)>\<in\>\<sigma\><around*|[|\<cal-H\><rsup|n>|]>>.
-    So <math|\<sigma\><around*|[|\<cal-R\><rsup|n><rsub|<around*|[||[>>|]>\<subseteq\>\<sigma\><around*|[|\<cal-H\><rsup|n>|]>>
+    <math|R=<around*|[|a,b|[>=<big|cap><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|(|<around*|]|-\<infty\>,b<rsub|i>|[><rsub|i>\\<around*|]|-\<infty\>,a<rsub|i>|[><rsub|i>|)><below|\<in\>|<text|[theorem:
+    <reference|measure sigma algebra equivalences>,<reference|measure algebra
+    equavalent definition>]>>\<sigma\><around*|[|\<cal-H\><rsup|n>|]>>. So
+    <math|\<sigma\><around*|[|\<cal-R\><rsup|n><rsub|<around*|[||[>>|]>\<subseteq\>\<sigma\><around*|[|\<cal-H\><rsup|n>|]>>
     which as <math|\<sigma\><around*|[|\<cal-R\><rsup|>|]>\<equallim\><rsub|<text|[theorem:
     <reference|measure Borel algebra on R^n (equivalences
     1)>]>>\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>> proves that
@@ -5421,8 +5421,8 @@
       open set so that <math|R\<in\>\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>>.
 
       <item*|<math|R\<in\>\<cal-R\><rsup|n><rsub|<around*|[||[>>>>By
-      [theorem: <reference|measure Borel algebra on R^n (equivalences 1)>] it
-      follows that <math|R\<in\>\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>>
+      [theorem: <reference|measure Borel algebras on R^n equivalences>] it
+      follows that <math|R\<in\>\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>>.
 
       <item*|<math|R\<in\>\<cal-R\><rsub|<around*|]||]>><rsup|n>>>Then there
       exists <math|a,b\<in\>\<bbb-R\><rsup|n>> with <math|a\<less\>b> such
@@ -5432,13 +5432,13 @@
       hence we have that\ 
 
       <\equation*>
-        <around*|[|a,b|]><big|cap><around*|]|a,b+1|]>\<in\>\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>
+        <around*|[|a,b|]><big|cap><around*|]|a,b+1|[>\<in\>\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>
       </equation*>
 
       Now\ 
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|x\<in\><around*|[|a,b|]><big|cap><around*|]|a,b+1|]>>|<cell|\<Leftrightarrow\>>|<cell|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>
+        <tformat|<table|<row|<cell|x\<in\><around*|[|a,b|]><big|cap><around*|]|a,b+1|[>>|<cell|\<Leftrightarrow\>>|<cell|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>
         x<rsub|i>\<in\><around*|[|a<rsub|i>,b<rsub|i>|]>\<wedge\>x<rsub|i>\<in\><around*|]|a<rsub|i>,b<rsub|i>+1|[>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><text|
         >a<rsub|i>\<leqslant\>x<rsub|i>\<wedge\>x<rsub|i>\<leqslant\>b<rsub|i>\<wedge\>a<rsub|i>\<less\>x<rsub|i>\<wedge\>x<rsub|i>\<less\>b<rsub|i>+1>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><text|
         >a<rsub|i>\<less\>x<rsub|i>\<wedge\>x<rsub|i>\<leqslant\>b<rsub|i>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\><around*|]|a,b|]>>>>>
@@ -5456,16 +5456,22 @@
 
   <subsection|Measure definition and properties>
 
-  For a measurable space we have some simplication in the definitions of
-  additivity, sub-additivity, countable additivity and countable
-  sub-additivity bexause of the extra properties of a
-  <math|\<sigma\>>-algebra.
+  We turn our attention now on associating with every set in a measure
+  algebra a non negative number that represent the \<#2018\>size\<#2018\> or
+  \<#2018\>volume\<#2018\> of this set. This leads to the study of set
+  functions that satisfies the additive properties expected of a
+  \<#2019\>volume'. Thanks to the extra properties of a
+  <math|\<sigma\>>-algebra we have the following equivalently statements
+  about additivity defined in [definitions: <reference|measure additive set
+  function>, <reference|measure sub-additive set function>,
+  <reference|measure countable additive set function> and <reference|measure
+  countable sub-additive set function>]
 
   <\theorem>
     Let <math|<around*|\<langle\>|X,\<cal-A\>|\<rangle\>>> be a measurable
     space [see definition: <reference|measure measurable space>] and
-    <math|\<mu\>:\<cal-A\>\<rightarrow\><around*|[|0,\<infty\>|[>> a function
-    then we say that:\ 
+    <math|\<mu\>:\<cal-A\>\<rightarrow\><around*|[|0,\<infty\>|]>> a set
+    function then we have the following :\ 
 
     <\enumerate>
       <item><math|\<mu\>> is <with|font-series|bold|finite additive
@@ -5512,28 +5518,28 @@
     <\enumerate>
       <item>This follows from the fact that
       <math|\<forall\><around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<cal-A\>>
-      we have as <math|\<cal-A\>> is a <math|\<sigma\>>-algebra that
+      we have, as <math|\<cal-A\>> is a <math|\<sigma\>>-algebra, that
       <math|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>\<in\>\<cal-A\>>
       and the definition of additivity [see definition: <reference|measure
       additive set function>].
 
       <item>This follows from the fact that
       <math|\<forall\><around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<cal-A\>>
-      we have as <math|\<cal-A\>> is a <math|\<sigma\>>-algebra that
+      we have, as <math|\<cal-A\>> is a <math|\<sigma\>>-algebra, that
       <math|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>\<in\>\<cal-A\>>
       and the definition of sub-additivity [see definition:
       <reference|measure sub-additive set function>].
 
       <item>This follows from the fact that
       <math|\<forall\><around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\>>
-      we have as <math|\<cal-A\>> is a <math|\<sigma\>>-algebra that
+      we have, as <math|\<cal-A\>> is a <math|\<sigma\>>-algebra, that
       <math|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>\<in\>\<cal-A\>> and the
       definition of countable additivity [see definition: <reference|measure
       countable additive set function>].
 
       <item>This follows from the fact that
       <math|\<forall\><around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\>>
-      we have as <math|\<cal-A\>> is a <math|\<sigma\>>-algebra that
+      we have, as <math|\<cal-A\>> is a <math|\<sigma\>>-algebra, that
       <math|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>\<in\>\<cal-A\>> and the
       definition of countable sub-additivity [see definition:
       <reference|measure countable sub-additive set function>].
@@ -5546,13 +5552,13 @@
   <\lemma>
     <label|label 20.147.200>Let <math|<around*|\<langle\>|X,\<cal-A\>|\<rangle\>>>
     be a measurable space and <math|\<mu\>:\<cal-A\>\<rightarrow\><around*|[|0,\<infty\>|]>>
-    a function then we have
+    a set function then we have
 
     <\enumerate>
       <item><math|\<mu\>> is finate additive <math|\<Leftrightarrow\>>
       <math|\<forall\>A,B\<in\>\<cal-A\>> with
       <math|A<big|cap>B=\<emptyset\>> we have
-      <math|\<mu\><around*|(|A<big|cup>B|)>=\<mu\><around*|(|A|)>+\<mu\><around*|(|B|)>>
+      <math|\<mu\><around*|(|A<big|sqcup>B|)>=\<mu\><around*|(|A|)>+\<mu\><around*|(|B|)>>
 
       <item><math|\<mu\>> is finite sub additive <math|\<Leftrightarrow\>>
       \ <math|\<forall\>A,B\<in\>\<cal-A\>> we have
@@ -5576,7 +5582,7 @@
         So by assumption we have that\ 
 
         <\equation*>
-          \<mu\><around*|(|A<big|cup>B|)>=\<mu\><around*|(|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,2|}>>A<rsub|i>|)>=<big|sum><rsub|i=1><rsup|2>\<mu\><around*|(|A<rsub|i>|)>=\<mu\><around*|(|A<rsub|1>|)>+\<mu\><around*|(|A<rsub|2>|)>=\<mu\><around*|(|A|)>+\<mu\><around*|(|B|)>
+          \<mu\><around*|(|A<big|sqcup>B|)>=\<mu\><around*|(|<big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,2|}>>A<rsub|i>|)>=<big|sum><rsub|i=1><rsup|2>\<mu\><around*|(|A<rsub|i>|)>=\<mu\><around*|(|A<rsub|1>|)>+\<mu\><around*|(|A<rsub|2>|)>=\<mu\><around*|(|A|)>+\<mu\><around*|(|B|)>
         </equation*>
 
         <item*|<math|\<Leftarrow\>>>Let
@@ -5585,7 +5591,7 @@
           \<cal-S\>=<around*|{|n\<in\>\<bbb-N\><rsub|0>\|<text|<math|If
           >><around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<cal-A\><text|
           is a pairwise disjoint family then we have that
-          ><rigid|\<mu\><around*|(|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>|)>=<big|sum>\<mu\><around*|(|A<rsub|i>|)>>|}>
+          ><rigid|\<mu\><around*|(|<big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>|)>=<big|sum>\<mu\><around*|(|A<rsub|i>|)>>|}>
         </equation*>
 
         then we have:
@@ -5593,18 +5599,18 @@
         <\description>
           <item*|<math|1\<in\>\<cal-S\>>>Let
           <math|<around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,1|}>>\<subseteq\>\<cal-A\>>
-          then <math|\<mu\><around*|(|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,1|}>>A<rsub|i>|)>=\<mu\><around*|(|A<rsub|1>|)>=<big|sum><rsub|i=1><rsup|1>\<mu\><around*|(|A<rsub|i>|)>>
+          then <math|\<mu\><around*|(|<big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,1|}>>A<rsub|i>|)>=\<mu\><around*|(|A<rsub|1>|)>=<big|sum><rsub|i=1><rsup|1>\<mu\><around*|(|A<rsub|i>|)>>
           proving that <math|1\<in\>\<cal-S\>>
 
           <item*|<math|n\<in\>\<cal-S\>\<Rightarrow\>n+1\<in\>\<cal-S\>>>Let
           <math|<around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>\<subseteq\>\<cal-A\>>
-          be pairwise disjoint. Take <math|<rigid|A=<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>>>
+          be pairwise disjoint. Take <math|<rigid|A=<big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>>>
           and <math|B=A<rsub|n+1>>, then <math|A<big|cup>B=<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>A<rsub|i>>
-          and <rigid|<math|A<big|cap>B=<around*|(|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>|)><big|cap>A<rsub|n+1>=<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|(|A<rsub|i><big|cap>A<rsub|i+1>|)>=\<emptyset\>>>.
+          and <rigid|<math|A<big|cap>B=<around*|(|<big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>|)><big|cap>A<rsub|n+1>=<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|(|A<rsub|i><big|cap>A<rsub|i+1>|)>=\<emptyset\>>>.
           Hence we have
 
           <\eqnarray*>
-            <tformat|<table|<row|<cell|\<mu\><around*|(|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>|)>>|<cell|=>|<cell|\<mu\><around*|(|A<big|cup>B|)>>>|<row|<cell|>|<cell|=>|<cell|\<mu\><around*|(|A|)>+\<mu\><around*|(|B|)>>>|<row|<cell|>|<cell|=>|<cell|\<mu\><around*|(|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>|)>+\<mu\><around*|(|A<rsub|n+1>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|n\<in\>\<cal-S\>>>|<cell|<around*|(|<big|sum><rsub|i=1><rsup|n>\<mu\><around*|(|A<rsub|i>|)>|)>+\<mu\><around*|(|A<rsub|n+1>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|n+1>\<mu\><around*|(|A<rsub|i>|)>>>>>
+            <tformat|<table|<row|<cell|\<mu\><around*|(|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>A<rsub|i>|)>>|<cell|=>|<cell|\<mu\><around*|(|A<big|sqcup>B|)>>>|<row|<cell|>|<cell|=>|<cell|\<mu\><around*|(|A|)>+\<mu\><around*|(|B|)>>>|<row|<cell|>|<cell|=>|<cell|\<mu\><around*|(|<big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>|)>+\<mu\><around*|(|A<rsub|n+1>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|n\<in\>\<cal-S\>>>|<cell|<around*|(|<big|sum><rsub|i=1><rsup|n>\<mu\><around*|(|A<rsub|i>|)>|)>+\<mu\><around*|(|A<rsub|n+1>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|n+1>\<mu\><around*|(|A<rsub|i>|)>>>>>
           </eqnarray*>
 
           proving that <math|n+1\<in\>\<cal-S\>>.
@@ -5651,7 +5657,7 @@
           . Hence we have
 
           <\eqnarray*>
-            <tformat|<table|<row|<cell|\<mu\><around*|(|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>|)>>|<cell|=>|<cell|\<mu\><around*|(|A<big|cup>B|)>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|\<mu\><around*|(|A|)>+\<mu\><around*|(|B|)>>>|<row|<cell|>|<cell|=>|<cell|\<mu\><around*|(|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>|)>+\<mu\><around*|(|A<rsub|n+1>|)>>>|<row|<cell|>|<cell|\<leqslant\><rsub|n\<in\>\<cal-S\>>>|<cell|<around*|(|<big|sum><rsub|i=1><rsup|n>\<mu\><around*|(|A<rsub|i>|)>|)>+\<mu\><around*|(|A<rsub|n+1>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|n+1>\<mu\><around*|(|A<rsub|i>|)>>>>>
+            <tformat|<table|<row|<cell|\<mu\><around*|(|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>A<rsub|i>|)>>|<cell|=>|<cell|\<mu\><around*|(|A<big|cup>B|)>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|\<mu\><around*|(|A|)>+\<mu\><around*|(|B|)>>>|<row|<cell|>|<cell|=>|<cell|\<mu\><around*|(|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>|)>+\<mu\><around*|(|A<rsub|n+1>|)>>>|<row|<cell|>|<cell|\<leqslant\><rsub|n\<in\>\<cal-S\>>>|<cell|<around*|(|<big|sum><rsub|i=1><rsup|n>\<mu\><around*|(|A<rsub|i>|)>|)>+\<mu\><around*|(|A<rsub|n+1>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|n+1>\<mu\><around*|(|A<rsub|i>|)>>>>>
           </eqnarray*>
 
           proving that <math|n+1\<in\>\<cal-S\>>.
@@ -5684,11 +5690,16 @@
     additivity implies additivity>].
   </proof>
 
+  We are ready now to define a measure on a <math|\<sigma\>>-algebra which is
+  a countable set function that associate with every set in the
+  <math|\<sigma\>>-algebra a non negative number which represents the
+  \<#2018\>size\<#2018\> or \<#2018\>volume\<#2018\> of this set.
+
   <\definition>
     <label|measure measure definition>Let
     <math|<around*|\<langle\>|X,\<cal-A\>|\<rangle\>>> be a measurable space
     then <math|\<mu\>:\<cal-A\>\<rightarrow\><around*|[|0,\<infty\>|]>> is a
-    measure on <math|\<cal-A\>> if\ 
+    <with|font-series|bold|measure on <math|\<cal-A\>>> if\ 
 
     <\enumerate>
       <item><math|\<mu\><around*|(|\<varnothing\>|)>=0>
@@ -5738,9 +5749,58 @@
   </definition>
 
   <\theorem>
-    <label|measure countable union pairwise>Let
+    <label|measure measure space properties (1)>Let
     <math|<around*|\<langle\>|X,\<cal-A\>,\<mu\>|\<rangle\>>> be a measure
-    space and <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\>>
+    space then\ 
+
+    <\enumerate>
+      <item><math|\<forall\>A,B\<in\>\<cal-A\>> with <math|A\<subseteq\>B> we
+      have <math|\<mu\><around*|(|A|)>\<leqslant\>\<mu\><around*|(|B|)>>
+
+      <item><math|\<forall\>A,B\<in\>\<cal-A\>> with <math|A\<subseteq\>B>
+      and <math|\<mu\><around*|(|A|)>\<less\>\<infty\>> we have
+      <math|\<mu\><around*|(|B\\A|)>=\<mu\><around*|(|B|)>-\<mu\><around*|(|A|)>>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>If <math|A\<subseteq\>B> then
+      <math|A<big|cap><around*|(|B\\A|)>=\<varnothing\>> and
+      <math|B=A<big|cup><around*|(|B\\A|)>> so that by [theorem:
+      <reference|measure countable additivity implies additivity>] we have\ 
+
+      <\equation*>
+        \<mu\><around*|(|B|)>=\<mu\><around*|(|A|)>+\<mu\><around*|(|B\\A|)>
+      </equation*>
+
+      Further as <math|0\<leqslant\>\<mu\><around*|(|B\\A|)>> we have by
+      [theorem: <reference|extended 0\<less\>=y and z=x+y then x\<less\>=z>]
+      that <math|\<mu\><around*|(|A|)>\<leqslant\>\<mu\><around*|(|B|)>>.
+
+      <item>If <math|A\<subseteq\>B> and <math|\<mu\><around*|(|A|)>\<less\>\<infty\>>
+      then as <math|0\<leqslant\>\<mu\><around*|(|A|)>> we have that
+      <math|\<mu\><around*|(|A|)>\<in\>\<bbb-R\>>, further by (1)
+
+      <\equation*>
+        \<mu\><around*|(|B|)>=\<mu\><around*|(|A|)>+\<mu\><around*|(|B\\A|)>
+      </equation*>
+
+      so that by [theorem: <reference|extended x+z=y+z=\<gtr\>x-y>]
+      <math|\<mu\><around*|(|B\\A|)>=\<mu\><around*|(|B|)>-\<mu\><around*|(|A|)>>.
+    </enumerate>
+  </proof>
+
+  As sequences of pairwise disjoint sets in a <math|\<sigma\>>-algebra plays
+  a important role in the definition of a measure the following theorem will
+  be usefull.
+
+  <\theorem>
+    <label|measure countable union pairwise>Let
+    <math|<around*|\<langle\>|X,\<cal-A\>|\<rangle\>>> be a measurable space
+    and <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\>>
     then there exist a <with|font-series|bold|pairwise disjoint family>
     <math|<around*|{|B<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\>>
     such that
@@ -5825,12 +5885,20 @@
       ><big|sqcup><rsub|i\<in\>\<bbb-N\>>B<rsub|i>=<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>
     </equation>
 
+    Using [theorem: <reference|measure measure space properties (1)>] on the
+    above we have\ 
+
+    <\equation>
+      <label|eq 21.109.300>\<forall\>i\<in\>\<bbb-N\><text| we have
+      >\<mu\><around*|(|B<rsub|i>|)>\<leqslant\>\<mu\><around*|(|A<rsub|i>|)>
+    </equation>
+
     So\ 
 
     <\eqnarray*>
       <tformat|<table|<row|<cell|\<mu\><around*|(|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>>|<cell|\<equallim\><rsub|<text|[eq:
       <reference|eq 20.113.201>]>>>|<cell|\<mu\><around*|(|<big|sqcup><rsub|i\<in\>\<bbb-N\>>B<rsub|i>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|\<infty\>>\<mu\><around*|(|B<rsub|i>|)>>>|<row|<cell|>|<cell|<below|\<leqslant\>|<text|[eq:
-      <reference|eq 20.113.201>]>\<wedge\><text|[theorem: <reference|extended
+      <reference|eq 21.109.300>]>\<wedge\><text|[theorem: <reference|extended
       infinite sum properties>]>>>|<cell|<big|sum><rsub|i=1><rsup|\<infty\>>\<mu\><around*|(|A<rsub|i>|)>>>>>
     </eqnarray*>
   </proof>
@@ -5861,14 +5929,12 @@
 
     <\eqnarray*>
       <tformat|<table|<row|<cell|\<mu\><around*|(|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>|)>>|<cell|=>|<cell|\<mu\><around*|(|<around*|(|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>B<rsub|i>|)><big|cup>\<varnothing\>|)>>>|<row|<cell|>|<cell|=>|<cell|\<mu\><around*|(|<around*|(|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>B<rsub|i>|)><big|cup><around*|(|<big|cup><rsub|i\<in\>\<bbb-N\>\\<around*|{|1,\<ldots\>,n|}>>B<rsub|i>|)>|)>>>|<row|<cell|>|<cell|<below|\<equallim\>|<text|[theorem:
-      <reference|family properties (2)>]>>>|<cell|\<mu\><around*|(|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>B<rsub|i>|)>>>|<row|<cell|>|<cell|<below|\<leqslant\>|<text|[theorem:
+      <reference|family properties (2)>]>>>|<cell|\<mu\><around*|(|<big|cup><rsub|i\<in\>\<bbb-N\>>B<rsub|i>|)>>>|<row|<cell|>|<cell|<below|\<leqslant\>|<text|[theorem:
       <reference|measure measure space properties
       (2)>]>>>|<cell|<big|sum><rsub|i=1><rsup|\<infty\>>\<mu\><around*|(|B<rsub|i>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
       <reference|extended series and index
       translation>]>>>|<cell|<big|sum><rsub|i=1><rsup|n>\<mu\><around*|(|B<rsub|i>|)>+<big|sum><rsub|i=n+1><rsup|\<infty\>>\<mu\><around*|(|B<rsub|i>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|n>\<mu\><around*|(|A<rsub|i>|)>>>>>
     </eqnarray*>
-
-    \;
   </proof>
 
   Once we have defined a measure space we can define <math|\<sigma\>>-finite
@@ -5885,7 +5951,7 @@
     <math|A=<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>>.
   </definition>
 
-  We can refine the above condition to disjoint sets or increasing sets.\ 
+  We can find two equivalent definitions for <math|\<sigma\>>-finite sets.
 
   <\theorem>
     <label|measure sigma finite disjoint>Let
@@ -5907,8 +5973,9 @@
     <\description>
       <item*|<math|\<Rightarrow\>>>As <math|A> is <math|\<sigma\>>-finite
       under <math|\<mu\>> there exist a <math|<around*|{|B<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\>>
-      such that <math|A=<big|cup><rsub|i\<in\>\<bbb-N\>>B<rsub|i>>. Define
-      now
+      such that <math|A=<big|cup><rsub|i\<in\>\<bbb-N\>>B<rsub|i>> with
+      <math|\<forall\>i\<in\>\<bbb-N\>> <math|\<mu\><around*|(|A<rsub|i>|)>\<less\>\<infty\>>.
+      Define now
 
       <\equation*>
         <around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\><text|
@@ -5918,7 +5985,7 @@
         and >\<forall\>i\<in\>\<bbb-N\><text| >A<rsub|i>\<subseteq\>B<rsub|i>
       </equation*>
 
-      then by [lemma: <reference|lemma 20.161.201>] we have that 0
+      then by [lemma: <reference|lemma 20.161.201>] we have that
 
       <\equation*>
         <around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>><text| is pairwise
@@ -5926,7 +5993,8 @@
       </equation*>
 
       Further, as <math|\<forall\>i\<in\>\<bbb-N\>> we have
-      <math|A<rsub|i>\<subseteq\>B<rsub|i>>, it follows that
+      <math|A<rsub|i>\<subseteq\>B<rsub|i>>, it follows from [theorem:
+      <reference|measure measure space properties (1)>] that
       <math|\<mu\><around*|(|A<rsub|i>|)>\<leqslant\>\<mu\><around*|(|B<rsub|i>|)>\<less\>\<infty\>>.
 
       <item*|<math|\<Leftarrow\>>>This is trivial.
@@ -5980,8 +6048,6 @@
 
       <item*|<math|\<Leftarrow\>>>This is trivial
     </description>
-
-    \;
   </proof>
 
   <\definition>
@@ -6124,7 +6190,7 @@
       have <math|\<mu\><rsub|\|\<cal-B\>><around*|(|\<emptyset\>|)>=\<mu\><around*|(|\<emptyset\>|)>=0>
 
       <item>If <math|><math|<around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\><rsub|0>>\<subseteq\>\<cal-B\>\<subseteq\>\<cal-A\>>
-      is a pairwise disjoint family then
+      is a pairwise disjoint family then\ 
 
       <\equation*>
         \<mu\><rsub|\|\<cal-B\>><around*|(|<big|sqcup><rsub|i\<in\>\<bbb-N\><rsub|0>>A<rsub|i>|)>=\<mu\><around*|(|<big|sqcup><rsub|i\<in\>\<bbb-N\><rsub|0>>A<rsub|i>|)>=<big|sum><rsub|i=1><rsup|\<infty\>>\<mu\><around*|(|A<rsub|i>|)>=<big|sum><rsub|i=1><rsup|\<infty\>>\<mu\><rsub|\|\<cal-B\>><around*|(|A<rsub|i>|)>
@@ -6183,51 +6249,6 @@
     <math|\<cal-A\><rsub|\|A>>.
   </proof>
 
-  <\theorem>
-    <label|measure measure space properties (1)>Let
-    <math|<around*|\<langle\>|X,\<cal-A\>,\<mu\>|\<rangle\>>> be a measure
-    space then\ 
-
-    <\enumerate>
-      <item><math|\<forall\>A,B\<in\>\<cal-A\>> with <math|A\<subseteq\>B> we
-      have <math|\<mu\><around*|(|A|)>\<leqslant\>\<mu\><around*|(|B|)>>
-
-      <item><math|\<forall\>A,B\<in\>\<cal-A\>> with <math|A\<subseteq\>B>
-      and <math|\<mu\><around*|(|A|)>\<less\>\<infty\>> we have
-      <math|\<mu\><around*|(|B\\A|)>=\<mu\><around*|(|B|)>-\<mu\><around*|(|A|)>>
-    </enumerate>
-  </theorem>
-
-  <\proof>
-    \ 
-
-    <\enumerate>
-      <item>If <math|A\<subseteq\>B> then
-      <math|A<big|cap><around*|(|B\\A|)>=\<varnothing\>> and
-      <math|B=A<big|cup><around*|(|B\\A|)>> so that by [theorem:
-      <reference|measure countable additivity implies additivity>] we have\ 
-
-      <\equation*>
-        \<mu\><around*|(|B|)>=\<mu\><around*|(|A|)>+\<mu\><around*|(|B\\A|)>
-      </equation*>
-
-      Further as <math|0\<leqslant\>\<mu\><around*|(|B\\A|)>> we have by
-      [theorem: <reference|extended 0\<less\>=y and z=x+y then x\<less\>=z>]
-      that <math|\<mu\><around*|(|A|)>\<leqslant\>\<mu\><around*|(|B|)>>.
-
-      <item>If <math|A\<subseteq\>B> and <math|\<mu\><around*|(|A|)>\<less\>\<infty\>>
-      then as <math|0\<leqslant\>\<mu\><around*|(|A|)>> we have that
-      <math|\<mu\><around*|(|A|)>\<in\>\<bbb-R\>>, further by (1)
-
-      <\equation*>
-        \<mu\><around*|(|B|)>=\<mu\><around*|(|A|)>+\<mu\><around*|(|B\\A|)>
-      </equation*>
-
-      so that by [theorem: <reference|extended x+z=y+z=\<gtr\>x-y>]
-      <math|\<mu\><around*|(|B\\A|)>=\<mu\><around*|(|B|)>-\<mu\><around*|(|A|)>>.
-    </enumerate>
-  </proof>
-
   <\definition>
     <label|measure finite measure><index|finite measure>Let
     <math|<around*|\<langle\>|X,\<cal-A\>,\<mu\>|\<rangle\>>> be a measure
@@ -6276,11 +6297,11 @@
         \<mu\><around*|(|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>=<below|lim|i\<rightarrow\>\<infty\>>\<mu\><around*|(|A<rsub|i>|)>=sup<around*|(|<around*|{|\<mu\><around*|(|A<rsub|i>|)>\|i\<in\>\<bbb-N\>|}>|)>
       </equation*>
 
-      <item><math|\<forall\><around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\>>
+      <item>If <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\>>
       satisfies <math|\<forall\>i\<in\>\<bbb-N\>>
       <math|A<rsub|i+1>\<subseteq\>A<rsub|i>> and
       <math|\<exists\>k\<in\>\<bbb-N\>> such that
-      <math|\<mu\><around*|(|A<rsub|k>|)>\<less\>\<infty\>> then\ 
+      <math|\<mu\><around*|(|A<rsub|k>|)>\<less\>\<infty\>> then
 
       <\equation*>
         \<mu\><around*|(|<big|cap><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>=<below|lim|i\<rightarrow\>\<infty\>>\<mu\><around*|(|A<rsub|i>|)>=inf<around*|(|<around*|{|\<mu\><around*|(|A<rsub|i>|)>\|i\<in\>\<bbb-N\>|}>|)>
@@ -6295,8 +6316,8 @@
       <item>Define
 
       <\equation*>
-        <around*|{|B<rsub|i>|}><rsub|i\<in\>\<bbb-N\>><text| by
-        >B<rsub|i>=<choice|<tformat|<table|<row|<cell|A<rsub|1><text| if
+        <around*|{|B<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\><text|
+        by >B<rsub|i>=<choice|<tformat|<table|<row|<cell|A<rsub|1><text| if
         >i=1>>|<row|<cell|A<rsub|i>\\A<rsub|i-1><text| if
         >i\<in\><around*|{|2,\<ldots\>,\<infty\>|}>>>>>>\<in\>\<cal-A\>
       </equation*>
@@ -6307,18 +6328,17 @@
       we have for <math|i> either:
 
       <\description>
-        <item*|<math|i=1>>Then <math|1=i\<less\>j\<Rightarrow\>1\<leqslant\>j-1>
-        so that <math|x\<in\>B<rsub|i>=B<rsub|1>=A<rsub|1>\<subseteq\>A<rsub|j-1>>.
-        Further as <math|x\<in\>B<rsub|j>=A<rsub|j>\\A<rsub|j-1>> we have
-        <math|x\<nin\>A<rsub|j-1>> contradicting that we have also
-        <math|x\<in\>A<rsub|j-1>>.\ 
+        <item*|<math|i=1>>Then <math|1=i\<less\>j\<Rightarrow\>i\<leqslant\>j-1\<wedge\>j\<in\><around*|{|2,\<ldots\>,\<infty\>|}>>
+        so that <math|x\<in\>B<rsub|i>=B<rsub|1>=A<rsub|1>\<subseteq\>A<rsub|j-1>>
+        and <math|x\<in\>B<rsub|j>=A<rsub|j>\\A<rsub|j-1>> we have
+        <math|x\<in\>A<rsub|j-1>> and <math|x\<nin\>A<rsub|j-1>> a
+        contradiction..\ 
 
-        <item*|<math|1\<less\>i>>Then <math|i\<less\>j\<Rightarrow\>i\<leqslant\>j-1>
-        so that <math|A<rsub|i>\<subseteq\>A<rsub|j-1>>. As
-        <math|x\<in\>B<rsub|i>=A<rsub|i>\\A<rsub|i-1>> it follows that
-        <math|x\<in\>A<rsub|i>\<Rightarrow\>x\<in\>A<rsub|j-1>> but as
-        <math|x\<in\>B<rsub|j>=A<rsub|j>\\A<rsub|j-1>> we have that
-        <math|x\<nin\>A<rsub|j-1>> hence we have a contradiction.
+        <item*|<math|1\<less\>i>>Then <math|1\<less\>i\<less\>j\<Rightarrow\>i\<leqslant\>j-1\<wedge\>j\<in\><around*|{|2,\<ldots\>,\<infty\>|}>>
+        so that <math|x\<in\>A<rsub|i>\<subseteq\>A<rsub|j-1>> and
+        <rigid|<math|x\<in\>B<rsub|j>=A<rsub|j>\\A<rsub|j-1>>> so that
+        <math|x\<in\>A<rsub|j-1>> and <math|x\<in\>A<rsub|j-1>> a
+        contradiction.
       </description>
 
       so the assumption must be wrong proving that
@@ -6354,7 +6374,7 @@
       </description>
 
       proving that <math|A<rsub|n>\<subseteq\><big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>B<rsub|i>>
-      which by [eq: <reference|eq 20.115.201>] gives
+      which by [eq: <reference|eq 20.115.201>] proves that
       <math|A<rsub|n>=<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>B<rsub|i>>.
       Hence\ 
 
@@ -6364,14 +6384,14 @@
       </equation>
 
       From the above it follows that <math|\<forall\>n\<in\>\<bbb-N\>>
-      <math|A<rsub|n>\<subseteq\><big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>B<rsub|i>\<subseteq\><big|cup><rsub|i\<in\>\<bbb-N\>>B<rsub|i>>
-      proving that <math|<big|cup><rsub|n\<in\>\<bbb-N\>>A<rsub|n>\<subseteq\><big|cup><rsub|n\<in\>\<bbb-N\>>B<rsub|n>>,
+      <math|A<rsub|n>=<big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>B<rsub|i>\<subseteq\><big|sqcup><rsub|i\<in\>\<bbb-N\>>B<rsub|i>>
+      proving that <math|<rigid|<big|cup><rsub|n\<in\>\<bbb-N\>>A<rsub|n>\<subseteq\><big|cup><rsub|n\<in\>\<bbb-N\>>B<rsub|n>>>,
       futher <math|\<forall\>i\<in\>\<bbb-N\>> we have
       <math|B<rsub|i>=<choice|<tformat|<table|<row|<cell|A<rsub|1>\<subseteq\>A<rsub|i><text|
       if >i=1>>|<row|<cell|A<rsub|i>\\A<rsub|i-1>\<subseteq\>A<rsub|i><text|
-      if >i\<in\><around*|{|2,\<ldots\>,\<infty\>|}>>>>>>\<subseteq\>A<rsub|i>>
+      if >i\<in\><around*|{|2,\<ldots\>,\<infty\>|}>>>>>>\<subseteq\>A<rsub|i>\<subseteq\><big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>>
       so that <math|<big|cup><rsub|i\<in\>\<bbb-N\>>B<rsub|i>\<subseteq\><big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>>.
-      Hence we have taking in account [eq: <reference|eq 20.114.201>]
+      Hence we have
 
       <\equation>
         <label|eq 20.117.201><big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>=<big|sqcup><rsub|i\<in\>\<bbb-N\>>B<rsub|i>
@@ -6382,14 +6402,14 @@
       <\eqnarray*>
         <tformat|<table|<row|<cell|\<mu\><around*|(|<big|cup><rsub|i\<in\>\<bbb-N\><rsub|0>>A<rsub|i>|)>>|<cell|=>|<cell|\<mu\><around*|(|<big|sqcup><rsub|i\<in\>\<bbb-N\><rsub|0>>B<rsub|i>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|\<infty\>><rsub|>\<mu\><around*|(|B<rsub|i>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|def>>|<cell|<below|lim|n\<rightarrow\>\<infty\>><around*|(|<big|sum><rsub|i=1><rsup|n>\<mu\><around*|(|B<rsub|i>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
         <reference|measure countable additivity implies
-        additivity>]>>>|<cell|<below|lim|n\<rightarrow\>\<infty\>><around*|(|\<mu\><around*|(|<big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>B<rsub|i>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|<reference|eq
-        20.116.201>>>>|<cell|<below|lim|n\<rightarrow\>\<infty\>>\<mu\><around*|(|A<rsub|n>|)>>>>>
+        additivity>]>>>|<cell|<below|lim|n\<rightarrow\>\<infty\>><around*|(|\<mu\><around*|(|<big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>B<rsub|i>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+        <reference|eq 20.116.201>]>>>|<cell|<below|lim|n\<rightarrow\>\<infty\>>\<mu\><around*|(|A<rsub|n>|)>>>>>
       </eqnarray*>
 
       So that\ 
 
       <\equation*>
-        \<mu\><around*|(|<big|cup><rsub|i\<in\>\<bbb-N\><rsub|0>>A<rsub|i>|)>=<below|lim|n\<rightarrow\>\<infty\>>\<mu\><around*|(|A<rsub|n>|)>
+        \<mu\><around*|(|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>=<below|lim|n\<rightarrow\>\<infty\>>\<mu\><around*|(|A<rsub|n>|)>
       </equation*>
 
       As <math|\<forall\>i\<in\>\<bbb-N\>> we have
@@ -6416,7 +6436,7 @@
       </equation>
 
       Define <math|<around*|{|B<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>> by
-      <math|B<rsub|i>=A<rsub|>\\A<rsub|i>>. Let <math|i\<in\>\<bbb-N\>> then
+      <math|B<rsub|i>=A<rsub|1>\\A<rsub|i>>. Let <math|i\<in\>\<bbb-N\>> then
       for <math|x\<in\>B<rsub|i>> we have
       <math|x\<in\>A<rsub|1>\<wedge\>x\<nin\>A<rsub|i>\<supseteq\>A<rsub|i+1>>
       so that <math|x\<in\>A<rsub|1>\\A<rsub|i+1>=B<rsub|i+1>>. Hence we have\ 
@@ -6469,7 +6489,7 @@
         <reference|measure measure space properties
         (1)>>>>|<cell|\<mu\><around*|(|A<rsub|1>|)>-\<mu\><around*|(|<big|cup><rsub|i\<in\>\<bbb-N\>>B<rsub|i>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
         <reference|eq 20.120.201>]>>>|<cell|\<mu\><around*|(|A<rsub|1>|)>-<below|lim|i\<rightarrow\>\<infty\>>\<mu\><around*|(|B<rsub|i>|)>>>|<row|<cell|>|<cell|=>|<cell|\<mu\><around*|(|A<rsub|1>|)>-<below|lim|i\<rightarrow\>\<infty\>>\<mu\><around*|(|A<rsub|1>\\A<rsub|i>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
-        <reference|eq 20.122.201>]>\<wedge\><text|[theorem:
+        <reference|eq 20.118.118.201>]>\<wedge\><text|[theorem:
         <reference|measure measure space properties
         (1)>>>>|<cell|\<mu\><around*|(|A<rsub|1>|)>-<below|lim<rsub|i\<rightarrow\>\<infty\>>|><around*|(|\<mu\><around*|(|A<rsub|1>|)>-\<mu\><around*|(|A<rsub|i>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorems:
         <reference|extended limit properties>, <reference|extended limit
@@ -6482,7 +6502,7 @@
         <label|eq 20.124.201>\<forall\><around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>><text|
         with >\<mu\><around*|(|A<rsub|1>|)>\<less\>\<infty\><text| and
         >\<forall\>i\<in\>\<bbb-N\><text|
-        >A<rsub|i+1>\<subseteq\>A<rsub|><text| we have
+        >A<rsub|i+1>\<subseteq\>A<rsub|i><text| we have
         >\<mu\><around*|(|<big|cap><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>=<below|lim|i\<rightarrow\>\<infty\>>\<mu\><around*|(|A<rsub|i>|)>
       </equation>
 
@@ -6490,7 +6510,7 @@
       <math|<around*|{|C<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\>>
       by <math|C<rsub|i>=A<rsub|i+<around*|(|k-1|)>>> then we have as
       <math|\<mu\><around*|(|A<rsub|k>|)>\<less\>\<infty\>> that
-      <math|\<mu\><around*|(|C<rsub|1>|)>=A<rsub|1+<around*|(|k-1|)>>=A<rsub|1>\<less\>\<infty\>>.
+      <math|\<mu\><around*|(|C<rsub|1>|)>=\<mu\><around*|(|A<rsub|1+<around*|(|k-1|)>>|)>=\<mu\><around*|(|A<rsub|1>|)>\<less\>\<infty\>>.
       Further <math|\<forall\>i\<in\>\<bbb-N\>> we have that
       <math|C<rsub|i+1>=A<rsub|<around*|(|i+<around*|(|k-1|)>|)>+1>\<subseteq\>A<rsub|i+<around*|(|k-1|)>>=C<rsub|i>>.
       So all conditions of [eq: <reference|eq 20.124.201>] are satisfied and
@@ -6518,8 +6538,8 @@
         <label|eq 20.126.201.2><big|cap><rsub|i\<in\>\<bbb-N\>>A<rsub|i>\<subseteq\><big|cap><rsub|i\<in\>\<bbb-N\>>C<rsub|i>
       </equation>
 
-      Let <math|x\<in\><big|cap><rsub|i\<in\>\<bbb-N\>>C<rsub|i>>. Let
-      <math|i\<in\>\<bbb-N\>> then we have for <math|i> either:\ 
+      Let <math|x\<in\><big|cap><rsub|i\<in\>\<bbb-N\>>C<rsub|i>>. For
+      <math|i\<in\>\<bbb-N\>> we have either:\ 
 
       <\description>
         <item*|<math|i\<in\><around*|{|1,\<ldots\>,k-1|}>>>Then
@@ -6529,11 +6549,11 @@
         <item*|<math|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>>Then
         <math|i-<around*|(|k-1|)>\<in\>\<bbb-N\>> so that
         <math|x\<in\>C<rsub|i-<around*|(|k-1|)>>=A<rsub|<around*|(|i-<around*|(|k-1|)>|)>+<around*|(|k-1|)>>=A<rsub|i>>
-        hence <math|x\<in\>A<rsub|i>>
+        so that <math|x\<in\>A<rsub|i>>
       </description>
 
       as <math|i\<in\>\<bbb-N\>> was choosen arbitrary it follows that
-      <math|x\<in\><big|cap><rsub|i\<in\>\<bbb-N\>>A<rsub|i>>, Hence
+      <math|x\<in\><big|cap><rsub|i\<in\>\<bbb-N\>>A<rsub|i>>, hence
       <math|<big|cap><rsub|i\<in\>\<bbb-N\>>C<rsub|i>\<subseteq\><big|cap><rsub|i\<in\>\<bbb-N\>>A<rsub|i>>
       which combined with [eq: <reference|eq 20.126.201.2>] proves that
 
@@ -6558,11 +6578,11 @@
   <\theorem>
     <label|measure measure conditions>Let
     <math|<around*|\<langle\>|X,\<cal-A\>|\<rangle\>>> be a measurable space
-    and <math|\<mu\>:\<cal-A\>\<rightarrow\><around*|[|0,\<infty\>|]>> a
+    and <math|\<mu\>:\<cal-A\>\<rightarrow\><around*|[|0,\<infty\>|]>> a set
     funtion that satisfies:
 
     <\enumerate>
-      <item><math|\<mu\><around*|(|\<varnothing\>|)>=0>
+      <item><math|\<mu\><around*|(|\<varnothing\>|)>=0>.
 
       <item>If <math|n\<in\>\<bbb-N\>,<around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<cal-A\>>
       is a <with|font-series|bold|pairwise disjoint family> then
@@ -6636,8 +6656,7 @@
       <\equation*>
         <around*|{|B<rsub|i>|}><rsub|i\<in\>\<bbb-N\>><text| by
         >B<rsub|i>=<big|sqcup><rsub|j\<in\><around*|{|i+1,\<ldots\>,\<infty\>|}>>A<rsub|j><below|\<in\>|<text|[theorem:
-        <reference|measure countable additivity implies
-        additivity>]>>\<cal-A\>
+        <reference|measure countable union is in sigma algebra>]>>\<cal-A\>
       </equation*>
 
       Let <math|i\<in\>\<bbb-N\>> then <math|B<rsub|i+1>=<big|cup><rsub|j\<in\><around*|{|i+2,\<ldots\>,\<infty\>|}>>A<rsub|j>\<subseteq\><big|cup><rsub|j\<in\><around*|{|i+1,\<ldots\>,n|}>>A<rsub|j>=B<rsub|i>>
@@ -6711,8 +6730,6 @@
       So <math|\<mu\>> is countable additive proving that <math|\<mu\>> is a
       measure.
     </enumerate>
-
-    \;
   </proof>
 
   <subsection|Carathéodory Theorem>
@@ -6730,8 +6747,6 @@
   <math|\<varnothing\>> and a measure must map <math|\<varnothing\>> to
   <math|0> so the set function on <math|\<cal-P\><around*|(|X|)>> must also
   map <math|\<varnothing\>> to <math|0>. This is the idea of a outer-measure.
-
-  \;
 
   <\definition>
     <label|measure outer measure><index|outer
@@ -7030,7 +7045,7 @@
 
           <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>If
           <math|x\<in\>B<big|cap>A<rsub|n+1>> then <math|x\<in\>B> and
-          <math|x\<in\>A<rsub|n+1>> then <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
+          <math|x\<in\>A<rsub|n+1>> then <math|<rigid|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>>
           we have by pairwise disjointedness <math|x\<nin\>A<rsub|i>> so that
           <math|x\<nin\><big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>>
           or <rigid|<math|x\<in\><around*|(|B\\<big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>|)><big|cap>A<rsub|n+1>>>.
@@ -7069,6 +7084,8 @@
 
         Mathematical induction proves then [eq: <reference|eq 20.168.202>].
       </proof>
+
+      TODO
 
       Let <math|n\<in\>\<bbb-N\>> then we have
       <math|<big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>\<subseteq\><big|sqcup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>>
@@ -13310,7 +13327,7 @@
   </theorem>
 
   <\proof>
-    By [theorem: <reference|measure Borel algebra on R^n (equivalences)>] we
+    By [theorem: <reference|measure Borel algebras on R^n equivalences>] we
     only have to prove that <math|\<sigma\><around*|[|\<cal-R\><rsup|n><rsub|<around*|[||[>>|]>=\<sigma\><around*|[|\<cal-R\><rsup|n><rsub|<around*|[||[>><big|sqcup><around*|{|\<varnothing\>|}>|]>>.
     As <math|<rigid|\<cal-R\><rsup|n><rsub|<around*|[||[>>\<subseteq\>\<cal-R\><rsup|n><rsub|<around*|[||[>><big|cup><around*|{|\<varnothing\>|}>\<subseteq\>\<sigma\><around*|[|\<cal-R\><rsup|n><rsub|<around*|[||[>><big|cup><around*|{|\<varnothing\>|}>|]>>>
     and <math|\<sigma\><around*|[|\<cal-R\><rsup|n><rsub|<around*|[||[>><big|cup><around*|{|\<varnothing\>|}>|]>>
@@ -45778,8 +45795,8 @@
 
 <\references>
   <\collection>
-    <associate|20.809.248|<tuple|21.818|?>>
-    <associate|21.1044.291|<tuple|21.1052|?>>
+    <associate|20.809.248|<tuple|21.819|?>>
+    <associate|21.1044.291|<tuple|21.1053|?>>
     <associate|Beppo Levi's Theorem|<tuple|21.364|?>>
     <associate|Borel measure on R and R^n are locally
     finite|<tuple|21.562|?>>
@@ -46035,7 +46052,7 @@
     <associate|corollary 20.111.218|<tuple|21.12|?>>
     <associate|corollary 21.533.285|<tuple|21.548|?>>
     <associate|denumerable union properties|<tuple|21.13|?>>
-    <associate|eq 15.81.439|<tuple|21.347|?>>
+    <associate|eq 15.81.439|<tuple|21.348|?>>
     <associate|eq 18.10.021|<tuple|21.37|?>>
     <associate|eq 18.11.021|<tuple|21.38|?>>
     <associate|eq 18.12.021|<tuple|21.39|?>>
@@ -46049,8 +46066,8 @@
     <associate|eq 18.20.021|<tuple|21.47|?>>
     <associate|eq 18.21.021|<tuple|21.48|?>>
     <associate|eq 18.22.021|<tuple|21.49|?>>
-    <associate|eq 18.240.291|<tuple|21.1109|?>>
-    <associate|eq 18.325.036.7|<tuple|21.391|?>>
+    <associate|eq 18.240.291|<tuple|21.1110|?>>
+    <associate|eq 18.325.036.7|<tuple|21.392|?>>
     <associate|eq 18.39.022|<tuple|21.85|?>>
     <associate|eq 18.40.022|<tuple|21.86|?>>
     <associate|eq 18.41.022|<tuple|21.87|?>>
@@ -46060,53 +46077,53 @@
     <associate|eq 18.9.020|<tuple|21.36|?>>
     <associate|eq 19.10.039|<tuple|21.12|?>>
     <associate|eq 19.11.039|<tuple|21.13|?>>
-    <associate|eq 19.759.043|<tuple|21.870|?>>
+    <associate|eq 19.759.043|<tuple|21.871|?>>
     <associate|eq 20.100.200|<tuple|21.97|?>>
-    <associate|eq 20.1000.280|<tuple|21.959|?>>
-    <associate|eq 20.1001.280|<tuple|21.960|?>>
-    <associate|eq 20.1002.280|<tuple|21.961|?>>
-    <associate|eq 20.1003.280|<tuple|21.962|?>>
-    <associate|eq 20.1004.280|<tuple|21.963|?>>
-    <associate|eq 20.1005.280|<tuple|21.964|?>>
-    <associate|eq 20.1006.280|<tuple|21.965|?>>
-    <associate|eq 20.1007.280|<tuple|21.966|?>>
-    <associate|eq 20.1008.280|<tuple|21.967|?>>
-    <associate|eq 20.1009.280|<tuple|21.968|?>>
+    <associate|eq 20.1000.280|<tuple|21.960|?>>
+    <associate|eq 20.1001.280|<tuple|21.961|?>>
+    <associate|eq 20.1002.280|<tuple|21.962|?>>
+    <associate|eq 20.1003.280|<tuple|21.963|?>>
+    <associate|eq 20.1004.280|<tuple|21.964|?>>
+    <associate|eq 20.1005.280|<tuple|21.965|?>>
+    <associate|eq 20.1006.280|<tuple|21.966|?>>
+    <associate|eq 20.1007.280|<tuple|21.967|?>>
+    <associate|eq 20.1008.280|<tuple|21.968|?>>
+    <associate|eq 20.1009.280|<tuple|21.969|?>>
     <associate|eq 20.101.200|<tuple|21.98|?>>
-    <associate|eq 20.1010.2080|<tuple|21.969|?>>
-    <associate|eq 20.1010.281|<tuple|21.971|?>>
-    <associate|eq 20.1011.280|<tuple|21.970|?>>
-    <associate|eq 20.1011.281|<tuple|21.972|?>>
-    <associate|eq 20.1014.281|<tuple|21.975|?>>
-    <associate|eq 20.1015.281|<tuple|21.976|?>>
-    <associate|eq 20.1015.285|<tuple|21.973|?>>
-    <associate|eq 20.1016.281|<tuple|21.977|?>>
-    <associate|eq 20.1017.281|<tuple|21.978|?>>
-    <associate|eq 20.1018.281|<tuple|21.979|?>>
-    <associate|eq 20.1019.281|<tuple|21.980|?>>
+    <associate|eq 20.1010.2080|<tuple|21.970|?>>
+    <associate|eq 20.1010.281|<tuple|21.972|?>>
+    <associate|eq 20.1011.280|<tuple|21.971|?>>
+    <associate|eq 20.1011.281|<tuple|21.973|?>>
+    <associate|eq 20.1014.281|<tuple|21.976|?>>
+    <associate|eq 20.1015.281|<tuple|21.977|?>>
+    <associate|eq 20.1015.285|<tuple|21.974|?>>
+    <associate|eq 20.1016.281|<tuple|21.978|?>>
+    <associate|eq 20.1017.281|<tuple|21.979|?>>
+    <associate|eq 20.1018.281|<tuple|21.980|?>>
+    <associate|eq 20.1019.281|<tuple|21.981|?>>
     <associate|eq 20.102.200|<tuple|21.99|?>>
-    <associate|eq 20.1020.281|<tuple|21.981|?>>
-    <associate|eq 20.1021.281|<tuple|21.982|?>>
-    <associate|eq 20.1022.281|<tuple|21.983|?>>
-    <associate|eq 20.1023.281|<tuple|21.984|?>>
-    <associate|eq 20.1024.281|<tuple|21.985|?>>
-    <associate|eq 20.1025.281|<tuple|21.986|?>>
-    <associate|eq 20.1026.281|<tuple|21.987|?>>
-    <associate|eq 20.1027.281|<tuple|21.988|?>>
-    <associate|eq 20.1028.281|<tuple|21.989|?>>
-    <associate|eq 20.1029.281|<tuple|21.990|?>>
+    <associate|eq 20.1020.281|<tuple|21.982|?>>
+    <associate|eq 20.1021.281|<tuple|21.983|?>>
+    <associate|eq 20.1022.281|<tuple|21.984|?>>
+    <associate|eq 20.1023.281|<tuple|21.985|?>>
+    <associate|eq 20.1024.281|<tuple|21.986|?>>
+    <associate|eq 20.1025.281|<tuple|21.987|?>>
+    <associate|eq 20.1026.281|<tuple|21.988|?>>
+    <associate|eq 20.1027.281|<tuple|21.989|?>>
+    <associate|eq 20.1028.281|<tuple|21.990|?>>
+    <associate|eq 20.1029.281|<tuple|21.991|?>>
     <associate|eq 20.103.200|<tuple|21.100|?>>
-    <associate|eq 20.1033.283|<tuple|21.991|?>>
-    <associate|eq 20.1034.284|<tuple|21.992|?>>
-    <associate|eq 20.1035.284|<tuple|21.993|?>>
-    <associate|eq 20.1036.284|<tuple|21.994|?>>
-    <associate|eq 20.1037.284|<tuple|21.995|?>>
-    <associate|eq 20.1038.284|<tuple|21.996|?>>
-    <associate|eq 20.1039.284|<tuple|21.997|?>>
+    <associate|eq 20.1033.283|<tuple|21.992|?>>
+    <associate|eq 20.1034.284|<tuple|21.993|?>>
+    <associate|eq 20.1035.284|<tuple|21.994|?>>
+    <associate|eq 20.1036.284|<tuple|21.995|?>>
+    <associate|eq 20.1037.284|<tuple|21.996|?>>
+    <associate|eq 20.1038.284|<tuple|21.997|?>>
+    <associate|eq 20.1039.284|<tuple|21.998|?>>
     <associate|eq 20.104.200|<tuple|21.101|?>>
-    <associate|eq 20.1040.284|<tuple|21.998|?>>
-    <associate|eq 20.1041.285|<tuple|21.999|?>>
-    <associate|eq 20.1042.285|<tuple|21.1000|?>>
+    <associate|eq 20.1040.284|<tuple|21.999|?>>
+    <associate|eq 20.1041.285|<tuple|21.1000|?>>
+    <associate|eq 20.1042.285|<tuple|21.1001|?>>
     <associate|eq 20.105.200|<tuple|21.102|?>>
     <associate|eq 20.106.200|<tuple|21.103|?>>
     <associate|eq 20.107.200|<tuple|21.104|?>>
@@ -46118,1044 +46135,1045 @@
     <associate|eq 20.112.227|<tuple|21.65|?>>
     <associate|eq 20.113.201|<tuple|21.108|?>>
     <associate|eq 20.113.227|<tuple|21.66|?>>
-    <associate|eq 20.114.201|<tuple|21.109|?>>
+    <associate|eq 20.114.201|<tuple|21.110|?>>
     <associate|eq 20.114.227|<tuple|21.67|?>>
-    <associate|eq 20.115.201|<tuple|21.110|?>>
+    <associate|eq 20.115.201|<tuple|21.111|?>>
     <associate|eq 20.115.227|<tuple|21.68|?>>
-    <associate|eq 20.116.201|<tuple|21.111|?>>
+    <associate|eq 20.116.201|<tuple|21.112|?>>
     <associate|eq 20.116.227|<tuple|21.69|?>>
-    <associate|eq 20.117.201|<tuple|21.112|?>>
+    <associate|eq 20.117.201|<tuple|21.113|?>>
     <associate|eq 20.117.227|<tuple|21.70|?>>
-    <associate|eq 20.118.118.201|<tuple|21.113|?>>
+    <associate|eq 20.118.118.201|<tuple|21.114|?>>
     <associate|eq 20.118.227|<tuple|21.71|?>>
-    <associate|eq 20.119.201|<tuple|21.114|?>>
+    <associate|eq 20.119.201|<tuple|21.115|?>>
     <associate|eq 20.119.227|<tuple|21.72|?>>
-    <associate|eq 20.120.201|<tuple|21.115|?>>
+    <associate|eq 20.120.201|<tuple|21.116|?>>
     <associate|eq 20.120.227|<tuple|21.73|?>>
-    <associate|eq 20.121.201|<tuple|21.116|?>>
+    <associate|eq 20.121.201|<tuple|21.117|?>>
     <associate|eq 20.121.227|<tuple|21.74|?>>
-    <associate|eq 20.122.201|<tuple|21.117|?>>
+    <associate|eq 20.122.201|<tuple|21.118|?>>
     <associate|eq 20.122.227|<tuple|21.75|?>>
-    <associate|eq 20.123.201|<tuple|21.118|?>>
+    <associate|eq 20.123.201|<tuple|21.119|?>>
     <associate|eq 20.123.227|<tuple|21.76|?>>
-    <associate|eq 20.124.201|<tuple|21.119|?>>
+    <associate|eq 20.124.201|<tuple|21.120|?>>
     <associate|eq 20.124.227|<tuple|21.77|?>>
     <associate|eq 20.125.227|<tuple|21.78|?>>
-    <associate|eq 20.126.201.1|<tuple|21.120|?>>
-    <associate|eq 20.126.201.2|<tuple|21.121|?>>
+    <associate|eq 20.126.201.1|<tuple|21.121|?>>
+    <associate|eq 20.126.201.2|<tuple|21.122|?>>
     <associate|eq 20.126.227|<tuple|21.79|?>>
-    <associate|eq 20.127.201.1|<tuple|21.122|?>>
+    <associate|eq 20.127.201.1|<tuple|21.123|?>>
     <associate|eq 20.127.227|<tuple|21.80|?>>
     <associate|eq 20.128.227|<tuple|21.81|?>>
     <associate|eq 20.129.227|<tuple|21.82|?>>
     <associate|eq 20.130.227|<tuple|21.83|?>>
-    <associate|eq 20.131.202|<tuple|21.123|?>>
-    <associate|eq 20.132.202|<tuple|21.124|?>>
-    <associate|eq 20.133.202|<tuple|21.139|?>>
-    <associate|eq 20.134.202|<tuple|21.140|?>>
-    <associate|eq 20.135.202|<tuple|21.141|?>>
-    <associate|eq 20.136.202|<tuple|21.142|?>>
-    <associate|eq 20.137.202|<tuple|21.143|?>>
-    <associate|eq 20.138.202|<tuple|21.144|?>>
-    <associate|eq 20.139.202|<tuple|21.145|?>>
-    <associate|eq 20.140.202|<tuple|21.146|?>>
-    <associate|eq 20.140.210.1|<tuple|21.125|?>>
-    <associate|eq 20.141.202|<tuple|21.147|?>>
-    <associate|eq 20.141.210.2|<tuple|21.126|?>>
-    <associate|eq 20.142.202|<tuple|21.148|?>>
-    <associate|eq 20.142.210.3|<tuple|21.127|?>>
-    <associate|eq 20.143.202|<tuple|21.149|?>>
-    <associate|eq 20.144.202|<tuple|21.150|?>>
-    <associate|eq 20.145.202|<tuple|21.151|?>>
-    <associate|eq 20.146.202|<tuple|21.152|?>>
-    <associate|eq 20.147.202|<tuple|21.153|?>>
-    <associate|eq 20.148.202|<tuple|21.154|?>>
-    <associate|eq 20.149.202|<tuple|21.155|?>>
-    <associate|eq 20.150.202|<tuple|21.156|?>>
-    <associate|eq 20.151.202|<tuple|21.157|?>>
-    <associate|eq 20.152.202|<tuple|21.158|?>>
+    <associate|eq 20.131.202|<tuple|21.124|?>>
+    <associate|eq 20.132.202|<tuple|21.125|?>>
+    <associate|eq 20.133.202|<tuple|21.140|?>>
+    <associate|eq 20.134.202|<tuple|21.141|?>>
+    <associate|eq 20.135.202|<tuple|21.142|?>>
+    <associate|eq 20.136.202|<tuple|21.143|?>>
+    <associate|eq 20.137.202|<tuple|21.144|?>>
+    <associate|eq 20.138.202|<tuple|21.145|?>>
+    <associate|eq 20.139.202|<tuple|21.146|?>>
+    <associate|eq 20.140.202|<tuple|21.147|?>>
+    <associate|eq 20.140.210.1|<tuple|21.126|?>>
+    <associate|eq 20.141.202|<tuple|21.148|?>>
+    <associate|eq 20.141.210.2|<tuple|21.127|?>>
+    <associate|eq 20.142.202|<tuple|21.149|?>>
+    <associate|eq 20.142.210.3|<tuple|21.128|?>>
+    <associate|eq 20.143.202|<tuple|21.150|?>>
+    <associate|eq 20.144.202|<tuple|21.151|?>>
+    <associate|eq 20.145.202|<tuple|21.152|?>>
+    <associate|eq 20.146.202|<tuple|21.153|?>>
+    <associate|eq 20.147.202|<tuple|21.154|?>>
+    <associate|eq 20.148.202|<tuple|21.155|?>>
+    <associate|eq 20.149.202|<tuple|21.156|?>>
+    <associate|eq 20.150.202|<tuple|21.157|?>>
+    <associate|eq 20.151.202|<tuple|21.158|?>>
+    <associate|eq 20.152.202|<tuple|21.159|?>>
     <associate|eq 20.152.241|<tuple|21.106|?>>
-    <associate|eq 20.153.202|<tuple|21.159|?>>
+    <associate|eq 20.153.202|<tuple|21.160|?>>
     <associate|eq 20.153.241|<tuple|21.107|?>>
-    <associate|eq 20.154.202|<tuple|21.160|?>>
-    <associate|eq 20.155.202|<tuple|21.162|?>>
-    <associate|eq 20.156.202|<tuple|21.163|?>>
-    <associate|eq 20.157.202|<tuple|21.164|?>>
-    <associate|eq 20.158.202|<tuple|21.165|?>>
-    <associate|eq 20.159.202|<tuple|21.166|?>>
-    <associate|eq 20.160.202|<tuple|21.167|?>>
-    <associate|eq 20.161.202|<tuple|21.168|?>>
-    <associate|eq 20.163\<point\>202|<tuple|21.128|?>>
-    <associate|eq 20.164.202|<tuple|21.129|?>>
-    <associate|eq 20.165.202|<tuple|21.130|?>>
-    <associate|eq 20.165.204|<tuple|21.180|?>>
-    <associate|eq 20.166.202|<tuple|21.131|?>>
-    <associate|eq 20.167.202|<tuple|21.132|?>>
-    <associate|eq 20.168.202|<tuple|21.133|?>>
-    <associate|eq 20.169.202|<tuple|21.134|?>>
-    <associate|eq 20.170.202|<tuple|21.135|?>>
-    <associate|eq 20.171.202|<tuple|21.136|?>>
-    <associate|eq 20.172.202|<tuple|21.137|?>>
-    <associate|eq 20.173.1|<tuple|21.161|?>>
-    <associate|eq 20.173.202|<tuple|21.138|?>>
-    <associate|eq 20.177.204|<tuple|21.169|?>>
-    <associate|eq 20.188.217|<tuple|21.170|?>>
-    <associate|eq 20.189.217|<tuple|21.171|?>>
-    <associate|eq 20.190.210|<tuple|21.184|?>>
-    <associate|eq 20.190.217|<tuple|21.172|?>>
-    <associate|eq 20.191.210|<tuple|21.185|?>>
-    <associate|eq 20.191.217|<tuple|21.173|?>>
-    <associate|eq 20.191.217.1|<tuple|21.173|?>>
-    <associate|eq 20.192.210|<tuple|21.186|?>>
-    <associate|eq 20.192.217|<tuple|21.175|?>>
-    <associate|eq 20.193.210|<tuple|21.187|?>>
-    <associate|eq 20.193.217|<tuple|21.176|?>>
-    <associate|eq 20.194.210|<tuple|21.188|?>>
-    <associate|eq 20.195.210|<tuple|21.189|?>>
-    <associate|eq 20.195.217|<tuple|21.177|?>>
-    <associate|eq 20.196.210|<tuple|21.190|?>>
-    <associate|eq 20.196.217|<tuple|21.178|?>>
-    <associate|eq 20.197.210|<tuple|21.191|?>>
-    <associate|eq 20.197.217|<tuple|21.179|?>>
-    <associate|eq 20.198.210|<tuple|21.192|?>>
-    <associate|eq 20.199.210|<tuple|21.193|?>>
-    <associate|eq 20.200.210|<tuple|21.194|?>>
-    <associate|eq 20.201.210|<tuple|21.195|?>>
-    <associate|eq 20.202.204|<tuple|21.256|?>>
-    <associate|eq 20.202.210|<tuple|21.196|?>>
-    <associate|eq 20.203.204|<tuple|21.257|?>>
-    <associate|eq 20.203.218|<tuple|21.181|?>>
-    <associate|eq 20.204.204|<tuple|21.258|?>>
-    <associate|eq 20.204.218|<tuple|21.182|?>>
-    <associate|eq 20.205.204|<tuple|21.259|?>>
-    <associate|eq 20.205.218|<tuple|21.183|?>>
-    <associate|eq 20.206.204|<tuple|21.260|?>>
-    <associate|eq 20.206.210|<tuple|21.204|?>>
-    <associate|eq 20.206.211|<tuple|21.197|?>>
-    <associate|eq 20.207.204|<tuple|21.261|?>>
-    <associate|eq 20.207.210|<tuple|21.205|?>>
-    <associate|eq 20.207.211|<tuple|21.198|?>>
-    <associate|eq 20.208.210|<tuple|21.206|?>>
-    <associate|eq 20.208.211|<tuple|21.199|?>>
-    <associate|eq 20.209.210|<tuple|21.207|?>>
-    <associate|eq 20.209.211|<tuple|21.200|?>>
-    <associate|eq 20.210.210|<tuple|21.208|?>>
-    <associate|eq 20.210.211|<tuple|21.201|?>>
-    <associate|eq 20.211.210|<tuple|21.209|?>>
-    <associate|eq 20.211.211|<tuple|21.202|?>>
-    <associate|eq 20.212.210|<tuple|21.210|?>>
-    <associate|eq 20.213.210|<tuple|21.211|?>>
-    <associate|eq 20.215.205|<tuple|21.263|?>>
-    <associate|eq 20.216.205|<tuple|21.264|?>>
-    <associate|eq 20.217.205|<tuple|21.266|?>>
-    <associate|eq 20.217.206|<tuple|21.265|?>>
-    <associate|eq 20.218.205|<tuple|21.267|?>>
-    <associate|eq 20.219.205|<tuple|21.268|?>>
-    <associate|eq 20.220.205|<tuple|21.269|?>>
-    <associate|eq 20.220.212|<tuple|21.213|?>>
-    <associate|eq 20.220.212.1|<tuple|21.212|?>>
-    <associate|eq 20.221.205|<tuple|21.270|?>>
-    <associate|eq 20.221.212|<tuple|21.214|?>>
-    <associate|eq 20.222.205|<tuple|21.271|?>>
-    <associate|eq 20.222.212|<tuple|21.215|?>>
-    <associate|eq 20.223.203|<tuple|21.272|?>>
-    <associate|eq 20.223.212|<tuple|21.216|?>>
-    <associate|eq 20.224.205|<tuple|21.273|?>>
-    <associate|eq 20.225.205|<tuple|21.274|?>>
-    <associate|eq 20.225.212|<tuple|21.217|?>>
-    <associate|eq 20.225.219|<tuple|21.203|?>>
-    <associate|eq 20.226.205|<tuple|21.275|?>>
-    <associate|eq 20.226.212|<tuple|21.218|?>>
-    <associate|eq 20.227.212|<tuple|21.219|?>>
-    <associate|eq 20.228.212|<tuple|21.220|?>>
-    <associate|eq 20.229.212|<tuple|21.221|?>>
-    <associate|eq 20.230.212|<tuple|21.222|?>>
-    <associate|eq 20.231.212|<tuple|21.223|?>>
-    <associate|eq 20.232.212|<tuple|21.224|?>>
-    <associate|eq 20.233.212|<tuple|21.225|?>>
-    <associate|eq 20.245.228|<tuple|21.389|?>>
-    <associate|eq 20.248.220|<tuple|21.226|?>>
-    <associate|eq 20.249.220|<tuple|21.227|?>>
-    <associate|eq 20.250.220|<tuple|21.228|?>>
-    <associate|eq 20.251.220|<tuple|21.229|?>>
-    <associate|eq 20.252.220|<tuple|21.230|?>>
-    <associate|eq 20.253.220|<tuple|21.231|?>>
-    <associate|eq 20.254.220|<tuple|21.232|?>>
-    <associate|eq 20.255.220|<tuple|21.233|?>>
-    <associate|eq 20.256.220|<tuple|21.234|?>>
-    <associate|eq 20.257.216|<tuple|21.240|?>>
-    <associate|eq 20.257.220|<tuple|21.235|?>>
-    <associate|eq 20.258.216|<tuple|21.241|?>>
-    <associate|eq 20.258.220|<tuple|21.236|?>>
-    <associate|eq 20.259.216|<tuple|21.242|?>>
-    <associate|eq 20.259.220|<tuple|21.237|?>>
-    <associate|eq 20.260.216|<tuple|21.243|?>>
-    <associate|eq 20.260.220|<tuple|21.238|?>>
-    <associate|eq 20.261.216|<tuple|21.244|?>>
-    <associate|eq 20.261.220|<tuple|21.239|?>>
-    <associate|eq 20.262.216|<tuple|21.245|?>>
-    <associate|eq 20.263.216|<tuple|21.247|?>>
-    <associate|eq 20.264.216|<tuple|21.248|?>>
-    <associate|eq 20.265.216|<tuple|21.249|?>>
-    <associate|eq 20.266.216|<tuple|21.250|?>>
-    <associate|eq 20.267.216|<tuple|21.251|?>>
-    <associate|eq 20.268.216|<tuple|21.252|?>>
-    <associate|eq 20.269.216|<tuple|21.254|?>>
-    <associate|eq 20.273.220|<tuple|21.246|?>>
-    <associate|eq 20.273.226|<tuple|21.351|?>>
-    <associate|eq 20.274.220|<tuple|21.253|?>>
-    <associate|eq 20.275.220|<tuple|21.255|?>>
-    <associate|eq 20.284.221|<tuple|21.262|?>>
-    <associate|eq 20.290.279|<tuple|21.879|?>>
-    <associate|eq 20.294.279|<tuple|21.883|?>>
-    <associate|eq 20.295.220|<tuple|21.276|?>>
-    <associate|eq 20.296.220|<tuple|21.277|?>>
-    <associate|eq 20.297.220|<tuple|21.280|?>>
-    <associate|eq 20.298.220|<tuple|21.279|?>>
-    <associate|eq 20.299.220|<tuple|21.278|?>>
-    <associate|eq 20.300.220|<tuple|21.281|?>>
-    <associate|eq 20.301.221|<tuple|21.280|?>>
-    <associate|eq 20.304.221|<tuple|21.288|?>>
-    <associate|eq 20.305.221|<tuple|21.289|?>>
-    <associate|eq 20.306.221|<tuple|21.290|?>>
-    <associate|eq 20.307.221|<tuple|21.291|?>>
-    <associate|eq 20.308.221|<tuple|21.292|?>>
-    <associate|eq 20.309.221|<tuple|21.293|?>>
-    <associate|eq 20.310.221|<tuple|21.294|?>>
-    <associate|eq 20.311.221|<tuple|21.282|?>>
-    <associate|eq 20.312.221|<tuple|21.283|?>>
-    <associate|eq 20.313.221|<tuple|21.284|?>>
-    <associate|eq 20.314.221|<tuple|21.285|?>>
-    <associate|eq 20.315.221|<tuple|21.286|?>>
-    <associate|eq 20.316.221|<tuple|21.287|?>>
-    <associate|eq 20.317.222|<tuple|21.295|?>>
-    <associate|eq 20.318.222|<tuple|21.296|?>>
-    <associate|eq 20.319.222|<tuple|21.297|?>>
-    <associate|eq 20.320.224|<tuple|21.299|?>>
-    <associate|eq 20.320.226|<tuple|21.298|?>>
-    <associate|eq 20.321.224|<tuple|21.300|?>>
-    <associate|eq 20.322.224|<tuple|21.301|?>>
-    <associate|eq 20.323.224|<tuple|21.302|?>>
-    <associate|eq 20.325.226|<tuple|21.303|?>>
-    <associate|eq 20.327.224|<tuple|21.304|?>>
-    <associate|eq 20.328.224|<tuple|21.305|?>>
-    <associate|eq 20.329.224|<tuple|21.306|?>>
-    <associate|eq 20.330.224|<tuple|21.307|?>>
-    <associate|eq 20.331.224|<tuple|21.308|?>>
-    <associate|eq 20.332.224|<tuple|21.309|?>>
-    <associate|eq 20.333.224|<tuple|21.310|?>>
-    <associate|eq 20.334.224|<tuple|21.311|?>>
-    <associate|eq 20.335.224|<tuple|21.312|?>>
-    <associate|eq 20.336.224|<tuple|21.313|?>>
-    <associate|eq 20.337.224|<tuple|21.314|?>>
-    <associate|eq 20.338.224|<tuple|21.315|?>>
-    <associate|eq 20.343.224|<tuple|21.317|?>>
-    <associate|eq 20.344.224|<tuple|21.318|?>>
-    <associate|eq 20.345.224|<tuple|21.319|?>>
-    <associate|eq 20.345.225|<tuple|21.322|?>>
-    <associate|eq 20.346.225|<tuple|21.323|?>>
-    <associate|eq 20.3463224|<tuple|21.320|?>>
-    <associate|eq 20.347.224|<tuple|21.321|?>>
-    <associate|eq 20.347.225|<tuple|21.324|?>>
-    <associate|eq 20.348.225|<tuple|21.325|?>>
-    <associate|eq 20.349.225|<tuple|21.326|?>>
-    <associate|eq 20.350.225|<tuple|21.327|?>>
-    <associate|eq 20.351.225|<tuple|21.328|?>>
-    <associate|eq 20.352.225|<tuple|21.329|?>>
-    <associate|eq 20.353.225|<tuple|21.330|?>>
-    <associate|eq 20.354.225|<tuple|21.331|?>>
-    <associate|eq 20.355.225|<tuple|21.332|?>>
-    <associate|eq 20.356.225|<tuple|21.333|?>>
-    <associate|eq 20.357.225|<tuple|21.334|?>>
-    <associate|eq 20.358.225|<tuple|21.335|?>>
-    <associate|eq 20.359.225|<tuple|21.336|?>>
-    <associate|eq 20.360.225|<tuple|21.337|?>>
-    <associate|eq 20.361.225|<tuple|21.338|?>>
-    <associate|eq 20.361.226|<tuple|21.340|?>>
-    <associate|eq 20.362.225|<tuple|21.339|?>>
-    <associate|eq 20.362.226|<tuple|21.341|?>>
-    <associate|eq 20.363.226|<tuple|21.342|?>>
-    <associate|eq 20.364.226|<tuple|21.343|?>>
-    <associate|eq 20.365.226|<tuple|21.344|?>>
-    <associate|eq 20.366.226|<tuple|21.345|?>>
-    <associate|eq 20.367.226|<tuple|21.346|?>>
-    <associate|eq 20.369.226|<tuple|21.348|?>>
-    <associate|eq 20.371.226|<tuple|21.349|?>>
-    <associate|eq 20.372.226|<tuple|21.350|?>>
-    <associate|eq 20.374.226|<tuple|21.358|?>>
-    <associate|eq 20.375.226|<tuple|21.359|?>>
-    <associate|eq 20.376.226|<tuple|21.360|?>>
-    <associate|eq 20.377.226|<tuple|21.361|?>>
-    <associate|eq 20.378.226|<tuple|21.362|?>>
-    <associate|eq 20.379.226|<tuple|21.363|?>>
-    <associate|eq 20.380.226|<tuple|21.364|?>>
-    <associate|eq 20.381.226|<tuple|21.365|?>>
-    <associate|eq 20.382.226|<tuple|21.366|?>>
-    <associate|eq 20.383.226|<tuple|21.367|?>>
-    <associate|eq 20.384.226|<tuple|21.368|?>>
-    <associate|eq 20.385.226|<tuple|21.369|?>>
-    <associate|eq 20.386.226|<tuple|21.370|?>>
-    <associate|eq 20.387.226|<tuple|21.371|?>>
-    <associate|eq 20.388.226|<tuple|21.372|?>>
-    <associate|eq 20.389.226|<tuple|21.373|?>>
-    <associate|eq 20.390.226|<tuple|21.374|?>>
-    <associate|eq 20.413.227|<tuple|21.379|?>>
-    <associate|eq 20.414.227|<tuple|21.380|?>>
-    <associate|eq 20.415.227|<tuple|21.381|?>>
-    <associate|eq 20.415.260|<tuple|21.377|?>>
-    <associate|eq 20.415.264|<tuple|21.375|?>>
-    <associate|eq 20.416.227|<tuple|21.382|?>>
-    <associate|eq 20.416.260|<tuple|21.378|?>>
-    <associate|eq 20.416.264|<tuple|21.376|?>>
-    <associate|eq 20.417.227|<tuple|21.383|?>>
-    <associate|eq 20.418.227|<tuple|21.384|?>>
-    <associate|eq 20.419.227|<tuple|21.385|?>>
-    <associate|eq 20.421.227|<tuple|21.386|?>>
-    <associate|eq 20.422.228|<tuple|21.387|?>>
-    <associate|eq 20.424.228|<tuple|21.388|?>>
-    <associate|eq 20.426.228|<tuple|21.390|?>>
-    <associate|eq 20.428.228|<tuple|21.392|?>>
-    <associate|eq 20.429.228|<tuple|21.393|?>>
-    <associate|eq 20.430.228|<tuple|21.394|?>>
-    <associate|eq 20.431.228|<tuple|21.395|?>>
-    <associate|eq 20.432.228|<tuple|21.396|?>>
-    <associate|eq 20.433.228|<tuple|21.397|?>>
-    <associate|eq 20.434.228|<tuple|21.398|?>>
-    <associate|eq 20.435.228|<tuple|21.399|?>>
-    <associate|eq 20.436.228|<tuple|21.406|?>>
-    <associate|eq 20.437.228|<tuple|21.407|?>>
-    <associate|eq 20.440.229|<tuple|21.408|?>>
-    <associate|eq 20.440.249|<tuple|21.400|?>>
-    <associate|eq 20.441.229|<tuple|21.409|?>>
-    <associate|eq 20.441.249|<tuple|21.401|?>>
-    <associate|eq 20.442.229|<tuple|21.410|?>>
-    <associate|eq 20.442.249|<tuple|21.402|?>>
-    <associate|eq 20.443.229|<tuple|21.411|?>>
-    <associate|eq 20.443.249|<tuple|21.403|?>>
-    <associate|eq 20.444.229|<tuple|21.412|?>>
-    <associate|eq 20.444.249|<tuple|21.404|?>>
-    <associate|eq 20.445.229|<tuple|21.413|?>>
-    <associate|eq 20.446.229|<tuple|21.414|?>>
-    <associate|eq 20.447.229|<tuple|21.415|?>>
-    <associate|eq 20.448.229|<tuple|21.416|?>>
-    <associate|eq 20.449.229|<tuple|21.417|?>>
-    <associate|eq 20.451.229|<tuple|21.419|?>>
-    <associate|eq 20.452.229|<tuple|21.420|?>>
-    <associate|eq 20.453.229|<tuple|21.421|?>>
-    <associate|eq 20.454.229|<tuple|21.422|?>>
-    <associate|eq 20.455.229|<tuple|21.423|?>>
-    <associate|eq 20.456\<point\>229|<tuple|21.424|?>>
-    <associate|eq 20.457.229|<tuple|21.425|?>>
-    <associate|eq 20.458.229|<tuple|21.426|?>>
-    <associate|eq 20.459.229|<tuple|21.427|?>>
-    <associate|eq 20.460.229|<tuple|21.428|?>>
-    <associate|eq 20.461.229|<tuple|21.429|?>>
-    <associate|eq 20.462.229|<tuple|21.430|?>>
-    <associate|eq 20.463.229|<tuple|21.431|?>>
-    <associate|eq 20.464.229|<tuple|21.432|?>>
-    <associate|eq 20.465\<point\>229|<tuple|21.433|?>>
-    <associate|eq 20.466.229|<tuple|21.434|?>>
-    <associate|eq 20.467.229|<tuple|21.435|?>>
-    <associate|eq 20.468.229|<tuple|21.436|?>>
-    <associate|eq 20.469.229|<tuple|21.437|?>>
-    <associate|eq 20.470.229|<tuple|21.438|?>>
-    <associate|eq 20.471.229|<tuple|21.439|?>>
-    <associate|eq 20.472.229|<tuple|21.441|?>>
-    <associate|eq 20.472.231|<tuple|21.440|?>>
-    <associate|eq 20.473.229|<tuple|21.442|?>>
-    <associate|eq 20.476.229|<tuple|21.443|?>>
-    <associate|eq 20.477.229|<tuple|21.444|?>>
-    <associate|eq 20.478.229|<tuple|21.445|?>>
-    <associate|eq 20.479.229|<tuple|21.446|?>>
-    <associate|eq 20.480.229|<tuple|21.447|?>>
-    <associate|eq 20.481.229|<tuple|21.448|?>>
-    <associate|eq 20.482.229|<tuple|21.449|?>>
-    <associate|eq 20.482.230|<tuple|21.451|?>>
-    <associate|eq 20.483.229|<tuple|21.450|?>>
-    <associate|eq 20.484.229|<tuple|21.452|?>>
-    <associate|eq 20.484.230|<tuple|21.453|?>>
-    <associate|eq 20.485.230|<tuple|21.454|?>>
-    <associate|eq 20.487.231|<tuple|21.455|?>>
-    <associate|eq 20.488.231|<tuple|21.487|?>>
-    <associate|eq 20.489.231|<tuple|21.488|?>>
-    <associate|eq 20.490.231|<tuple|21.489|?>>
-    <associate|eq 20.490.249|<tuple|21.469|?>>
-    <associate|eq 20.492.231|<tuple|21.491|?>>
-    <associate|eq 20.493.231|<tuple|21.492|?>>
-    <associate|eq 20.494.231|<tuple|21.493|?>>
-    <associate|eq 20.495.231|<tuple|21.494|?>>
-    <associate|eq 20.496.231|<tuple|21.495|?>>
-    <associate|eq 20.497.231|<tuple|21.496|?>>
-    <associate|eq 20.498.231|<tuple|21.497|?>>
-    <associate|eq 20.498.263|<tuple|21.458|?>>
-    <associate|eq 20.499.231|<tuple|21.498|?>>
-    <associate|eq 20.499.263|<tuple|21.459|?>>
-    <associate|eq 20.500.231|<tuple|21.470|?>>
-    <associate|eq 20.500.232|<tuple|21.484|?>>
-    <associate|eq 20.501.231|<tuple|21.471|?>>
-    <associate|eq 20.501.232|<tuple|21.485|?>>
-    <associate|eq 20.502.231|<tuple|21.472|?>>
-    <associate|eq 20.502.232|<tuple|21.486|?>>
-    <associate|eq 20.503.231|<tuple|21.473|?>>
-    <associate|eq 20.503.261|<tuple|21.476|?>>
-    <associate|eq 20.504.231|<tuple|21.474|?>>
-    <associate|eq 20.504.261|<tuple|21.477|?>>
-    <associate|eq 20.504.263|<tuple|21.464|?>>
-    <associate|eq 20.505.231|<tuple|21.475|?>>
-    <associate|eq 20.506.231|<tuple|21.479|?>>
-    <associate|eq 20.506.263|<tuple|21.466|?>>
-    <associate|eq 20.507.231|<tuple|21.478|?>>
-    <associate|eq 20.508.231|<tuple|21.480|?>>
-    <associate|eq 20.509.231|<tuple|21.481|?>>
-    <associate|eq 20.510.231|<tuple|21.482|?>>
-    <associate|eq 20.511.231|<tuple|21.483|?>>
-    <associate|eq 20.515.232|<tuple|21.499|?>>
-    <associate|eq 20.515.233|<tuple|21.500|?>>
-    <associate|eq 20.516.232|<tuple|21.505|?>>
-    <associate|eq 20.516.233|<tuple|21.501|?>>
-    <associate|eq 20.517.232|<tuple|21.509|?>>
-    <associate|eq 20.517.233|<tuple|21.502|?>>
-    <associate|eq 20.518.232|<tuple|21.510|?>>
-    <associate|eq 20.518.233|<tuple|21.503|?>>
-    <associate|eq 20.519.232|<tuple|21.531|?>>
-    <associate|eq 20.519.233|<tuple|21.504|?>>
+    <associate|eq 20.154.202|<tuple|21.161|?>>
+    <associate|eq 20.155.202|<tuple|21.163|?>>
+    <associate|eq 20.156.202|<tuple|21.164|?>>
+    <associate|eq 20.157.202|<tuple|21.165|?>>
+    <associate|eq 20.158.202|<tuple|21.166|?>>
+    <associate|eq 20.159.202|<tuple|21.167|?>>
+    <associate|eq 20.160.202|<tuple|21.168|?>>
+    <associate|eq 20.161.202|<tuple|21.169|?>>
+    <associate|eq 20.163\<point\>202|<tuple|21.129|?>>
+    <associate|eq 20.164.202|<tuple|21.130|?>>
+    <associate|eq 20.165.202|<tuple|21.131|?>>
+    <associate|eq 20.165.204|<tuple|21.181|?>>
+    <associate|eq 20.166.202|<tuple|21.132|?>>
+    <associate|eq 20.167.202|<tuple|21.133|?>>
+    <associate|eq 20.168.202|<tuple|21.134|?>>
+    <associate|eq 20.169.202|<tuple|21.135|?>>
+    <associate|eq 20.170.202|<tuple|21.136|?>>
+    <associate|eq 20.171.202|<tuple|21.137|?>>
+    <associate|eq 20.172.202|<tuple|21.138|?>>
+    <associate|eq 20.173.1|<tuple|21.162|?>>
+    <associate|eq 20.173.202|<tuple|21.139|?>>
+    <associate|eq 20.177.204|<tuple|21.170|?>>
+    <associate|eq 20.188.217|<tuple|21.171|?>>
+    <associate|eq 20.189.217|<tuple|21.172|?>>
+    <associate|eq 20.190.210|<tuple|21.185|?>>
+    <associate|eq 20.190.217|<tuple|21.173|?>>
+    <associate|eq 20.191.210|<tuple|21.186|?>>
+    <associate|eq 20.191.217|<tuple|21.174|?>>
+    <associate|eq 20.191.217.1|<tuple|21.174|?>>
+    <associate|eq 20.192.210|<tuple|21.187|?>>
+    <associate|eq 20.192.217|<tuple|21.176|?>>
+    <associate|eq 20.193.210|<tuple|21.188|?>>
+    <associate|eq 20.193.217|<tuple|21.177|?>>
+    <associate|eq 20.194.210|<tuple|21.189|?>>
+    <associate|eq 20.195.210|<tuple|21.190|?>>
+    <associate|eq 20.195.217|<tuple|21.178|?>>
+    <associate|eq 20.196.210|<tuple|21.191|?>>
+    <associate|eq 20.196.217|<tuple|21.179|?>>
+    <associate|eq 20.197.210|<tuple|21.192|?>>
+    <associate|eq 20.197.217|<tuple|21.180|?>>
+    <associate|eq 20.198.210|<tuple|21.193|?>>
+    <associate|eq 20.199.210|<tuple|21.194|?>>
+    <associate|eq 20.200.210|<tuple|21.195|?>>
+    <associate|eq 20.201.210|<tuple|21.196|?>>
+    <associate|eq 20.202.204|<tuple|21.257|?>>
+    <associate|eq 20.202.210|<tuple|21.197|?>>
+    <associate|eq 20.203.204|<tuple|21.258|?>>
+    <associate|eq 20.203.218|<tuple|21.182|?>>
+    <associate|eq 20.204.204|<tuple|21.259|?>>
+    <associate|eq 20.204.218|<tuple|21.183|?>>
+    <associate|eq 20.205.204|<tuple|21.260|?>>
+    <associate|eq 20.205.218|<tuple|21.184|?>>
+    <associate|eq 20.206.204|<tuple|21.261|?>>
+    <associate|eq 20.206.210|<tuple|21.205|?>>
+    <associate|eq 20.206.211|<tuple|21.198|?>>
+    <associate|eq 20.207.204|<tuple|21.262|?>>
+    <associate|eq 20.207.210|<tuple|21.206|?>>
+    <associate|eq 20.207.211|<tuple|21.199|?>>
+    <associate|eq 20.208.210|<tuple|21.207|?>>
+    <associate|eq 20.208.211|<tuple|21.200|?>>
+    <associate|eq 20.209.210|<tuple|21.208|?>>
+    <associate|eq 20.209.211|<tuple|21.201|?>>
+    <associate|eq 20.210.210|<tuple|21.209|?>>
+    <associate|eq 20.210.211|<tuple|21.202|?>>
+    <associate|eq 20.211.210|<tuple|21.210|?>>
+    <associate|eq 20.211.211|<tuple|21.203|?>>
+    <associate|eq 20.212.210|<tuple|21.211|?>>
+    <associate|eq 20.213.210|<tuple|21.212|?>>
+    <associate|eq 20.215.205|<tuple|21.264|?>>
+    <associate|eq 20.216.205|<tuple|21.265|?>>
+    <associate|eq 20.217.205|<tuple|21.267|?>>
+    <associate|eq 20.217.206|<tuple|21.266|?>>
+    <associate|eq 20.218.205|<tuple|21.268|?>>
+    <associate|eq 20.219.205|<tuple|21.269|?>>
+    <associate|eq 20.220.205|<tuple|21.270|?>>
+    <associate|eq 20.220.212|<tuple|21.214|?>>
+    <associate|eq 20.220.212.1|<tuple|21.213|?>>
+    <associate|eq 20.221.205|<tuple|21.271|?>>
+    <associate|eq 20.221.212|<tuple|21.215|?>>
+    <associate|eq 20.222.205|<tuple|21.272|?>>
+    <associate|eq 20.222.212|<tuple|21.216|?>>
+    <associate|eq 20.223.203|<tuple|21.273|?>>
+    <associate|eq 20.223.212|<tuple|21.217|?>>
+    <associate|eq 20.224.205|<tuple|21.274|?>>
+    <associate|eq 20.225.205|<tuple|21.275|?>>
+    <associate|eq 20.225.212|<tuple|21.218|?>>
+    <associate|eq 20.225.219|<tuple|21.204|?>>
+    <associate|eq 20.226.205|<tuple|21.276|?>>
+    <associate|eq 20.226.212|<tuple|21.219|?>>
+    <associate|eq 20.227.212|<tuple|21.220|?>>
+    <associate|eq 20.228.212|<tuple|21.221|?>>
+    <associate|eq 20.229.212|<tuple|21.222|?>>
+    <associate|eq 20.230.212|<tuple|21.223|?>>
+    <associate|eq 20.231.212|<tuple|21.224|?>>
+    <associate|eq 20.232.212|<tuple|21.225|?>>
+    <associate|eq 20.233.212|<tuple|21.226|?>>
+    <associate|eq 20.245.228|<tuple|21.390|?>>
+    <associate|eq 20.248.220|<tuple|21.227|?>>
+    <associate|eq 20.249.220|<tuple|21.228|?>>
+    <associate|eq 20.250.220|<tuple|21.229|?>>
+    <associate|eq 20.251.220|<tuple|21.230|?>>
+    <associate|eq 20.252.220|<tuple|21.231|?>>
+    <associate|eq 20.253.220|<tuple|21.232|?>>
+    <associate|eq 20.254.220|<tuple|21.233|?>>
+    <associate|eq 20.255.220|<tuple|21.234|?>>
+    <associate|eq 20.256.220|<tuple|21.235|?>>
+    <associate|eq 20.257.216|<tuple|21.241|?>>
+    <associate|eq 20.257.220|<tuple|21.236|?>>
+    <associate|eq 20.258.216|<tuple|21.242|?>>
+    <associate|eq 20.258.220|<tuple|21.237|?>>
+    <associate|eq 20.259.216|<tuple|21.243|?>>
+    <associate|eq 20.259.220|<tuple|21.238|?>>
+    <associate|eq 20.260.216|<tuple|21.244|?>>
+    <associate|eq 20.260.220|<tuple|21.239|?>>
+    <associate|eq 20.261.216|<tuple|21.245|?>>
+    <associate|eq 20.261.220|<tuple|21.240|?>>
+    <associate|eq 20.262.216|<tuple|21.246|?>>
+    <associate|eq 20.263.216|<tuple|21.248|?>>
+    <associate|eq 20.264.216|<tuple|21.249|?>>
+    <associate|eq 20.265.216|<tuple|21.250|?>>
+    <associate|eq 20.266.216|<tuple|21.251|?>>
+    <associate|eq 20.267.216|<tuple|21.252|?>>
+    <associate|eq 20.268.216|<tuple|21.253|?>>
+    <associate|eq 20.269.216|<tuple|21.255|?>>
+    <associate|eq 20.273.220|<tuple|21.247|?>>
+    <associate|eq 20.273.226|<tuple|21.352|?>>
+    <associate|eq 20.274.220|<tuple|21.254|?>>
+    <associate|eq 20.275.220|<tuple|21.256|?>>
+    <associate|eq 20.284.221|<tuple|21.263|?>>
+    <associate|eq 20.290.279|<tuple|21.880|?>>
+    <associate|eq 20.294.279|<tuple|21.884|?>>
+    <associate|eq 20.295.220|<tuple|21.277|?>>
+    <associate|eq 20.296.220|<tuple|21.278|?>>
+    <associate|eq 20.297.220|<tuple|21.281|?>>
+    <associate|eq 20.298.220|<tuple|21.280|?>>
+    <associate|eq 20.299.220|<tuple|21.279|?>>
+    <associate|eq 20.300.220|<tuple|21.282|?>>
+    <associate|eq 20.301.221|<tuple|21.281|?>>
+    <associate|eq 20.304.221|<tuple|21.289|?>>
+    <associate|eq 20.305.221|<tuple|21.290|?>>
+    <associate|eq 20.306.221|<tuple|21.291|?>>
+    <associate|eq 20.307.221|<tuple|21.292|?>>
+    <associate|eq 20.308.221|<tuple|21.293|?>>
+    <associate|eq 20.309.221|<tuple|21.294|?>>
+    <associate|eq 20.310.221|<tuple|21.295|?>>
+    <associate|eq 20.311.221|<tuple|21.283|?>>
+    <associate|eq 20.312.221|<tuple|21.284|?>>
+    <associate|eq 20.313.221|<tuple|21.285|?>>
+    <associate|eq 20.314.221|<tuple|21.286|?>>
+    <associate|eq 20.315.221|<tuple|21.287|?>>
+    <associate|eq 20.316.221|<tuple|21.288|?>>
+    <associate|eq 20.317.222|<tuple|21.296|?>>
+    <associate|eq 20.318.222|<tuple|21.297|?>>
+    <associate|eq 20.319.222|<tuple|21.298|?>>
+    <associate|eq 20.320.224|<tuple|21.300|?>>
+    <associate|eq 20.320.226|<tuple|21.299|?>>
+    <associate|eq 20.321.224|<tuple|21.301|?>>
+    <associate|eq 20.322.224|<tuple|21.302|?>>
+    <associate|eq 20.323.224|<tuple|21.303|?>>
+    <associate|eq 20.325.226|<tuple|21.304|?>>
+    <associate|eq 20.327.224|<tuple|21.305|?>>
+    <associate|eq 20.328.224|<tuple|21.306|?>>
+    <associate|eq 20.329.224|<tuple|21.307|?>>
+    <associate|eq 20.330.224|<tuple|21.308|?>>
+    <associate|eq 20.331.224|<tuple|21.309|?>>
+    <associate|eq 20.332.224|<tuple|21.310|?>>
+    <associate|eq 20.333.224|<tuple|21.311|?>>
+    <associate|eq 20.334.224|<tuple|21.312|?>>
+    <associate|eq 20.335.224|<tuple|21.313|?>>
+    <associate|eq 20.336.224|<tuple|21.314|?>>
+    <associate|eq 20.337.224|<tuple|21.315|?>>
+    <associate|eq 20.338.224|<tuple|21.316|?>>
+    <associate|eq 20.343.224|<tuple|21.318|?>>
+    <associate|eq 20.344.224|<tuple|21.319|?>>
+    <associate|eq 20.345.224|<tuple|21.320|?>>
+    <associate|eq 20.345.225|<tuple|21.323|?>>
+    <associate|eq 20.346.225|<tuple|21.324|?>>
+    <associate|eq 20.3463224|<tuple|21.321|?>>
+    <associate|eq 20.347.224|<tuple|21.322|?>>
+    <associate|eq 20.347.225|<tuple|21.325|?>>
+    <associate|eq 20.348.225|<tuple|21.326|?>>
+    <associate|eq 20.349.225|<tuple|21.327|?>>
+    <associate|eq 20.350.225|<tuple|21.328|?>>
+    <associate|eq 20.351.225|<tuple|21.329|?>>
+    <associate|eq 20.352.225|<tuple|21.330|?>>
+    <associate|eq 20.353.225|<tuple|21.331|?>>
+    <associate|eq 20.354.225|<tuple|21.332|?>>
+    <associate|eq 20.355.225|<tuple|21.333|?>>
+    <associate|eq 20.356.225|<tuple|21.334|?>>
+    <associate|eq 20.357.225|<tuple|21.335|?>>
+    <associate|eq 20.358.225|<tuple|21.336|?>>
+    <associate|eq 20.359.225|<tuple|21.337|?>>
+    <associate|eq 20.360.225|<tuple|21.338|?>>
+    <associate|eq 20.361.225|<tuple|21.339|?>>
+    <associate|eq 20.361.226|<tuple|21.341|?>>
+    <associate|eq 20.362.225|<tuple|21.340|?>>
+    <associate|eq 20.362.226|<tuple|21.342|?>>
+    <associate|eq 20.363.226|<tuple|21.343|?>>
+    <associate|eq 20.364.226|<tuple|21.344|?>>
+    <associate|eq 20.365.226|<tuple|21.345|?>>
+    <associate|eq 20.366.226|<tuple|21.346|?>>
+    <associate|eq 20.367.226|<tuple|21.347|?>>
+    <associate|eq 20.369.226|<tuple|21.349|?>>
+    <associate|eq 20.371.226|<tuple|21.350|?>>
+    <associate|eq 20.372.226|<tuple|21.351|?>>
+    <associate|eq 20.374.226|<tuple|21.359|?>>
+    <associate|eq 20.375.226|<tuple|21.360|?>>
+    <associate|eq 20.376.226|<tuple|21.361|?>>
+    <associate|eq 20.377.226|<tuple|21.362|?>>
+    <associate|eq 20.378.226|<tuple|21.363|?>>
+    <associate|eq 20.379.226|<tuple|21.364|?>>
+    <associate|eq 20.380.226|<tuple|21.365|?>>
+    <associate|eq 20.381.226|<tuple|21.366|?>>
+    <associate|eq 20.382.226|<tuple|21.367|?>>
+    <associate|eq 20.383.226|<tuple|21.368|?>>
+    <associate|eq 20.384.226|<tuple|21.369|?>>
+    <associate|eq 20.385.226|<tuple|21.370|?>>
+    <associate|eq 20.386.226|<tuple|21.371|?>>
+    <associate|eq 20.387.226|<tuple|21.372|?>>
+    <associate|eq 20.388.226|<tuple|21.373|?>>
+    <associate|eq 20.389.226|<tuple|21.374|?>>
+    <associate|eq 20.390.226|<tuple|21.375|?>>
+    <associate|eq 20.413.227|<tuple|21.380|?>>
+    <associate|eq 20.414.227|<tuple|21.381|?>>
+    <associate|eq 20.415.227|<tuple|21.382|?>>
+    <associate|eq 20.415.260|<tuple|21.378|?>>
+    <associate|eq 20.415.264|<tuple|21.376|?>>
+    <associate|eq 20.416.227|<tuple|21.383|?>>
+    <associate|eq 20.416.260|<tuple|21.379|?>>
+    <associate|eq 20.416.264|<tuple|21.377|?>>
+    <associate|eq 20.417.227|<tuple|21.384|?>>
+    <associate|eq 20.418.227|<tuple|21.385|?>>
+    <associate|eq 20.419.227|<tuple|21.386|?>>
+    <associate|eq 20.421.227|<tuple|21.387|?>>
+    <associate|eq 20.422.228|<tuple|21.388|?>>
+    <associate|eq 20.424.228|<tuple|21.389|?>>
+    <associate|eq 20.426.228|<tuple|21.391|?>>
+    <associate|eq 20.428.228|<tuple|21.393|?>>
+    <associate|eq 20.429.228|<tuple|21.394|?>>
+    <associate|eq 20.430.228|<tuple|21.395|?>>
+    <associate|eq 20.431.228|<tuple|21.396|?>>
+    <associate|eq 20.432.228|<tuple|21.397|?>>
+    <associate|eq 20.433.228|<tuple|21.398|?>>
+    <associate|eq 20.434.228|<tuple|21.399|?>>
+    <associate|eq 20.435.228|<tuple|21.400|?>>
+    <associate|eq 20.436.228|<tuple|21.407|?>>
+    <associate|eq 20.437.228|<tuple|21.408|?>>
+    <associate|eq 20.440.229|<tuple|21.409|?>>
+    <associate|eq 20.440.249|<tuple|21.401|?>>
+    <associate|eq 20.441.229|<tuple|21.410|?>>
+    <associate|eq 20.441.249|<tuple|21.402|?>>
+    <associate|eq 20.442.229|<tuple|21.411|?>>
+    <associate|eq 20.442.249|<tuple|21.403|?>>
+    <associate|eq 20.443.229|<tuple|21.412|?>>
+    <associate|eq 20.443.249|<tuple|21.404|?>>
+    <associate|eq 20.444.229|<tuple|21.413|?>>
+    <associate|eq 20.444.249|<tuple|21.405|?>>
+    <associate|eq 20.445.229|<tuple|21.414|?>>
+    <associate|eq 20.446.229|<tuple|21.415|?>>
+    <associate|eq 20.447.229|<tuple|21.416|?>>
+    <associate|eq 20.448.229|<tuple|21.417|?>>
+    <associate|eq 20.449.229|<tuple|21.418|?>>
+    <associate|eq 20.451.229|<tuple|21.420|?>>
+    <associate|eq 20.452.229|<tuple|21.421|?>>
+    <associate|eq 20.453.229|<tuple|21.422|?>>
+    <associate|eq 20.454.229|<tuple|21.423|?>>
+    <associate|eq 20.455.229|<tuple|21.424|?>>
+    <associate|eq 20.456\<point\>229|<tuple|21.425|?>>
+    <associate|eq 20.457.229|<tuple|21.426|?>>
+    <associate|eq 20.458.229|<tuple|21.427|?>>
+    <associate|eq 20.459.229|<tuple|21.428|?>>
+    <associate|eq 20.460.229|<tuple|21.429|?>>
+    <associate|eq 20.461.229|<tuple|21.430|?>>
+    <associate|eq 20.462.229|<tuple|21.431|?>>
+    <associate|eq 20.463.229|<tuple|21.432|?>>
+    <associate|eq 20.464.229|<tuple|21.433|?>>
+    <associate|eq 20.465\<point\>229|<tuple|21.434|?>>
+    <associate|eq 20.466.229|<tuple|21.435|?>>
+    <associate|eq 20.467.229|<tuple|21.436|?>>
+    <associate|eq 20.468.229|<tuple|21.437|?>>
+    <associate|eq 20.469.229|<tuple|21.438|?>>
+    <associate|eq 20.470.229|<tuple|21.439|?>>
+    <associate|eq 20.471.229|<tuple|21.440|?>>
+    <associate|eq 20.472.229|<tuple|21.442|?>>
+    <associate|eq 20.472.231|<tuple|21.441|?>>
+    <associate|eq 20.473.229|<tuple|21.443|?>>
+    <associate|eq 20.476.229|<tuple|21.444|?>>
+    <associate|eq 20.477.229|<tuple|21.445|?>>
+    <associate|eq 20.478.229|<tuple|21.446|?>>
+    <associate|eq 20.479.229|<tuple|21.447|?>>
+    <associate|eq 20.480.229|<tuple|21.448|?>>
+    <associate|eq 20.481.229|<tuple|21.449|?>>
+    <associate|eq 20.482.229|<tuple|21.450|?>>
+    <associate|eq 20.482.230|<tuple|21.452|?>>
+    <associate|eq 20.483.229|<tuple|21.451|?>>
+    <associate|eq 20.484.229|<tuple|21.453|?>>
+    <associate|eq 20.484.230|<tuple|21.454|?>>
+    <associate|eq 20.485.230|<tuple|21.455|?>>
+    <associate|eq 20.487.231|<tuple|21.456|?>>
+    <associate|eq 20.488.231|<tuple|21.488|?>>
+    <associate|eq 20.489.231|<tuple|21.489|?>>
+    <associate|eq 20.490.231|<tuple|21.490|?>>
+    <associate|eq 20.490.249|<tuple|21.470|?>>
+    <associate|eq 20.492.231|<tuple|21.492|?>>
+    <associate|eq 20.493.231|<tuple|21.493|?>>
+    <associate|eq 20.494.231|<tuple|21.494|?>>
+    <associate|eq 20.495.231|<tuple|21.495|?>>
+    <associate|eq 20.496.231|<tuple|21.496|?>>
+    <associate|eq 20.497.231|<tuple|21.497|?>>
+    <associate|eq 20.498.231|<tuple|21.498|?>>
+    <associate|eq 20.498.263|<tuple|21.459|?>>
+    <associate|eq 20.499.231|<tuple|21.499|?>>
+    <associate|eq 20.499.263|<tuple|21.460|?>>
+    <associate|eq 20.500.231|<tuple|21.471|?>>
+    <associate|eq 20.500.232|<tuple|21.485|?>>
+    <associate|eq 20.501.231|<tuple|21.472|?>>
+    <associate|eq 20.501.232|<tuple|21.486|?>>
+    <associate|eq 20.502.231|<tuple|21.473|?>>
+    <associate|eq 20.502.232|<tuple|21.487|?>>
+    <associate|eq 20.503.231|<tuple|21.474|?>>
+    <associate|eq 20.503.261|<tuple|21.477|?>>
+    <associate|eq 20.504.231|<tuple|21.475|?>>
+    <associate|eq 20.504.261|<tuple|21.478|?>>
+    <associate|eq 20.504.263|<tuple|21.465|?>>
+    <associate|eq 20.505.231|<tuple|21.476|?>>
+    <associate|eq 20.506.231|<tuple|21.480|?>>
+    <associate|eq 20.506.263|<tuple|21.467|?>>
+    <associate|eq 20.507.231|<tuple|21.479|?>>
+    <associate|eq 20.508.231|<tuple|21.481|?>>
+    <associate|eq 20.509.231|<tuple|21.482|?>>
+    <associate|eq 20.510.231|<tuple|21.483|?>>
+    <associate|eq 20.511.231|<tuple|21.484|?>>
+    <associate|eq 20.515.232|<tuple|21.500|?>>
+    <associate|eq 20.515.233|<tuple|21.501|?>>
+    <associate|eq 20.516.232|<tuple|21.506|?>>
+    <associate|eq 20.516.233|<tuple|21.502|?>>
+    <associate|eq 20.517.232|<tuple|21.510|?>>
+    <associate|eq 20.517.233|<tuple|21.503|?>>
+    <associate|eq 20.518.232|<tuple|21.511|?>>
+    <associate|eq 20.518.233|<tuple|21.504|?>>
+    <associate|eq 20.519.232|<tuple|21.532|?>>
+    <associate|eq 20.519.233|<tuple|21.505|?>>
     <associate|eq 20.52.200|<tuple|21.28|?>>
     <associate|eq 20.52.200.1|<tuple|21.21|?>>
-    <associate|eq 20.520.232|<tuple|21.532|?>>
-    <associate|eq 20.521.232|<tuple|21.533|?>>
-    <associate|eq 20.522.232|<tuple|21.534|?>>
-    <associate|eq 20.523.232|<tuple|21.535|?>>
-    <associate|eq 20.524.232|<tuple|21.536|?>>
-    <associate|eq 20.525.232|<tuple|21.540|?>>
-    <associate|eq 20.525.232.1|<tuple|21.537|?>>
-    <associate|eq 20.526.232|<tuple|21.538|?>>
-    <associate|eq 20.527.232|<tuple|21.539|?>>
-    <associate|eq 20.529.232|<tuple|21.541|?>>
+    <associate|eq 20.520.232|<tuple|21.533|?>>
+    <associate|eq 20.521.232|<tuple|21.534|?>>
+    <associate|eq 20.522.232|<tuple|21.535|?>>
+    <associate|eq 20.523.232|<tuple|21.536|?>>
+    <associate|eq 20.524.232|<tuple|21.537|?>>
+    <associate|eq 20.525.232|<tuple|21.541|?>>
+    <associate|eq 20.525.232.1|<tuple|21.538|?>>
+    <associate|eq 20.526.232|<tuple|21.539|?>>
+    <associate|eq 20.527.232|<tuple|21.540|?>>
+    <associate|eq 20.529.232|<tuple|21.542|?>>
     <associate|eq 20.53.200|<tuple|21.29|?>>
     <associate|eq 20.53.200.1|<tuple|21.22|?>>
-    <associate|eq 20.530.232|<tuple|21.542|?>>
-    <associate|eq 20.531.232|<tuple|21.543|?>>
-    <associate|eq 20.532.232|<tuple|21.544|?>>
-    <associate|eq 20.533.232|<tuple|21.545|?>>
+    <associate|eq 20.530.232|<tuple|21.543|?>>
+    <associate|eq 20.531.232|<tuple|21.544|?>>
+    <associate|eq 20.532.232|<tuple|21.545|?>>
+    <associate|eq 20.533.232|<tuple|21.546|?>>
     <associate|eq 20.54.200|<tuple|21.30|?>>
     <associate|eq 20.54.200.1|<tuple|21.23|?>>
     <associate|eq 20.54.202|<tuple|21.2|?>>
-    <associate|eq 20.540.234|<tuple|21.548|?>>
-    <associate|eq 20.541.234|<tuple|21.549|?>>
-    <associate|eq 20.541.243|<tuple|21.546|?>>
-    <associate|eq 20.542.234|<tuple|21.550|?>>
-    <associate|eq 20.542.243|<tuple|21.547|?>>
-    <associate|eq 20.543.234|<tuple|21.551|?>>
-    <associate|eq 20.544.234|<tuple|21.552|?>>
-    <associate|eq 20.545.234|<tuple|21.553|?>>
-    <associate|eq 20.546.234|<tuple|21.554|?>>
-    <associate|eq 20.547.234|<tuple|21.555|?>>
-    <associate|eq 20.548.234|<tuple|21.556|?>>
-    <associate|eq 20.548.282|<tuple|21.506|?>>
-    <associate|eq 20.549.240|<tuple|21.557|?>>
-    <associate|eq 20.549.282|<tuple|21.507|?>>
+    <associate|eq 20.540.234|<tuple|21.549|?>>
+    <associate|eq 20.541.234|<tuple|21.550|?>>
+    <associate|eq 20.541.243|<tuple|21.547|?>>
+    <associate|eq 20.542.234|<tuple|21.551|?>>
+    <associate|eq 20.542.243|<tuple|21.548|?>>
+    <associate|eq 20.543.234|<tuple|21.552|?>>
+    <associate|eq 20.544.234|<tuple|21.553|?>>
+    <associate|eq 20.545.234|<tuple|21.554|?>>
+    <associate|eq 20.546.234|<tuple|21.555|?>>
+    <associate|eq 20.547.234|<tuple|21.556|?>>
+    <associate|eq 20.548.234|<tuple|21.557|?>>
+    <associate|eq 20.548.282|<tuple|21.507|?>>
+    <associate|eq 20.549.240|<tuple|21.558|?>>
+    <associate|eq 20.549.282|<tuple|21.508|?>>
     <associate|eq 20.55.200|<tuple|21.31|?>>
     <associate|eq 20.55.200.1|<tuple|21.24|?>>
     <associate|eq 20.55.202|<tuple|21.3|?>>
-    <associate|eq 20.550.240|<tuple|21.558|?>>
-    <associate|eq 20.550.263|<tuple|21.513|?>>
-    <associate|eq 20.550.282|<tuple|21.508|?>>
-    <associate|eq 20.551.240|<tuple|21.559|?>>
-    <associate|eq 20.551.263|<tuple|21.514|?>>
-    <associate|eq 20.552.240|<tuple|21.560|?>>
-    <associate|eq 20.552.263|<tuple|21.515|?>>
-    <associate|eq 20.553.240|<tuple|21.561|?>>
-    <associate|eq 20.553.263|<tuple|21.516|?>>
-    <associate|eq 20.554.240|<tuple|21.562|?>>
-    <associate|eq 20.554.263|<tuple|21.517|?>>
-    <associate|eq 20.555.240|<tuple|21.563|?>>
-    <associate|eq 20.555.263|<tuple|21.518|?>>
-    <associate|eq 20.556.240|<tuple|21.564|?>>
-    <associate|eq 20.556.263|<tuple|21.519|?>>
-    <associate|eq 20.557.240|<tuple|21.565|?>>
-    <associate|eq 20.557.263|<tuple|21.520|?>>
-    <associate|eq 20.558.240|<tuple|21.566|?>>
-    <associate|eq 20.558.263|<tuple|21.521|?>>
-    <associate|eq 20.559.240|<tuple|21.567|?>>
+    <associate|eq 20.550.240|<tuple|21.559|?>>
+    <associate|eq 20.550.263|<tuple|21.514|?>>
+    <associate|eq 20.550.282|<tuple|21.509|?>>
+    <associate|eq 20.551.240|<tuple|21.560|?>>
+    <associate|eq 20.551.263|<tuple|21.515|?>>
+    <associate|eq 20.552.240|<tuple|21.561|?>>
+    <associate|eq 20.552.263|<tuple|21.516|?>>
+    <associate|eq 20.553.240|<tuple|21.562|?>>
+    <associate|eq 20.553.263|<tuple|21.517|?>>
+    <associate|eq 20.554.240|<tuple|21.563|?>>
+    <associate|eq 20.554.263|<tuple|21.518|?>>
+    <associate|eq 20.555.240|<tuple|21.564|?>>
+    <associate|eq 20.555.263|<tuple|21.519|?>>
+    <associate|eq 20.556.240|<tuple|21.565|?>>
+    <associate|eq 20.556.263|<tuple|21.520|?>>
+    <associate|eq 20.557.240|<tuple|21.566|?>>
+    <associate|eq 20.557.263|<tuple|21.521|?>>
+    <associate|eq 20.558.240|<tuple|21.567|?>>
+    <associate|eq 20.558.263|<tuple|21.522|?>>
+    <associate|eq 20.559.240|<tuple|21.568|?>>
     <associate|eq 20.56.200|<tuple|21.32|?>>
     <associate|eq 20.56.202|<tuple|21.4|?>>
-    <associate|eq 20.560.240|<tuple|21.568|?>>
-    <associate|eq 20.561.240|<tuple|21.569|?>>
-    <associate|eq 20.562.240|<tuple|21.570|?>>
-    <associate|eq 20.563.240|<tuple|21.571|?>>
-    <associate|eq 20.564.240|<tuple|21.572|?>>
-    <associate|eq 20.565.240|<tuple|21.573|?>>
-    <associate|eq 20.566.240|<tuple|21.574|?>>
-    <associate|eq 20.567.240|<tuple|21.575|?>>
-    <associate|eq 20.568.240|<tuple|21.576|?>>
-    <associate|eq 20.569.240|<tuple|21.577|?>>
+    <associate|eq 20.560.240|<tuple|21.569|?>>
+    <associate|eq 20.561.240|<tuple|21.570|?>>
+    <associate|eq 20.562.240|<tuple|21.571|?>>
+    <associate|eq 20.563.240|<tuple|21.572|?>>
+    <associate|eq 20.564.240|<tuple|21.573|?>>
+    <associate|eq 20.565.240|<tuple|21.574|?>>
+    <associate|eq 20.566.240|<tuple|21.575|?>>
+    <associate|eq 20.567.240|<tuple|21.576|?>>
+    <associate|eq 20.568.240|<tuple|21.577|?>>
+    <associate|eq 20.569.240|<tuple|21.578|?>>
     <associate|eq 20.57.200|<tuple|21.33|?>>
     <associate|eq 20.57.203|<tuple|21.14|?>>
     <associate|eq 20.57.212|<tuple|21.5|?>>
-    <associate|eq 20.570.240|<tuple|21.578|?>>
-    <associate|eq 20.571.240|<tuple|21.579|?>>
-    <associate|eq 20.572.240|<tuple|21.580|?>>
-    <associate|eq 20.573.240|<tuple|21.581|?>>
-    <associate|eq 20.574.240|<tuple|21.582|?>>
-    <associate|eq 20.575.240|<tuple|21.583|?>>
-    <associate|eq 20.576.240|<tuple|21.584|?>>
-    <associate|eq 20.577.240|<tuple|21.585|?>>
-    <associate|eq 20.578.240|<tuple|21.586|?>>
-    <associate|eq 20.579.240|<tuple|21.587|?>>
+    <associate|eq 20.570.240|<tuple|21.579|?>>
+    <associate|eq 20.571.240|<tuple|21.580|?>>
+    <associate|eq 20.572.240|<tuple|21.581|?>>
+    <associate|eq 20.573.240|<tuple|21.582|?>>
+    <associate|eq 20.574.240|<tuple|21.583|?>>
+    <associate|eq 20.575.240|<tuple|21.584|?>>
+    <associate|eq 20.576.240|<tuple|21.585|?>>
+    <associate|eq 20.577.240|<tuple|21.586|?>>
+    <associate|eq 20.578.240|<tuple|21.587|?>>
+    <associate|eq 20.579.240|<tuple|21.588|?>>
     <associate|eq 20.58.200|<tuple|21.34|?>>
     <associate|eq 20.58.203|<tuple|21.15|?>>
     <associate|eq 20.58.212|<tuple|21.6|?>>
-    <associate|eq 20.580.240|<tuple|21.588|?>>
-    <associate|eq 20.581.240|<tuple|21.589|?>>
-    <associate|eq 20.582.240|<tuple|21.590|?>>
-    <associate|eq 20.583.240|<tuple|21.593|?>>
-    <associate|eq 20.584.240|<tuple|21.594|?>>
-    <associate|eq 20.585.240|<tuple|21.595|?>>
-    <associate|eq 20.586.240|<tuple|21.596|?>>
-    <associate|eq 20.587.240|<tuple|21.597|?>>
+    <associate|eq 20.580.240|<tuple|21.589|?>>
+    <associate|eq 20.581.240|<tuple|21.590|?>>
+    <associate|eq 20.582.240|<tuple|21.591|?>>
+    <associate|eq 20.583.240|<tuple|21.594|?>>
+    <associate|eq 20.584.240|<tuple|21.595|?>>
+    <associate|eq 20.585.240|<tuple|21.596|?>>
+    <associate|eq 20.586.240|<tuple|21.597|?>>
+    <associate|eq 20.587.240|<tuple|21.598|?>>
     <associate|eq 20.59.203|<tuple|21.16|?>>
     <associate|eq 20.59.212|<tuple|21.7|?>>
-    <associate|eq 20.590.241|<tuple|21.599|?>>
-    <associate|eq 20.591.241|<tuple|21.600|?>>
-    <associate|eq 20.592.241|<tuple|21.601|?>>
-    <associate|eq 20.594.244|<tuple|21.602|?>>
-    <associate|eq 20.595.244|<tuple|21.603|?>>
-    <associate|eq 20.596.244|<tuple|21.604|?>>
-    <associate|eq 20.597.245|<tuple|21.605|?>>
-    <associate|eq 20.598.245|<tuple|21.606|?>>
-    <associate|eq 20.598.249|<tuple|21.456|?>>
-    <associate|eq 20.599.245|<tuple|21.607|?>>
-    <associate|eq 20.599.249|<tuple|21.457|?>>
+    <associate|eq 20.590.241|<tuple|21.600|?>>
+    <associate|eq 20.591.241|<tuple|21.601|?>>
+    <associate|eq 20.592.241|<tuple|21.602|?>>
+    <associate|eq 20.594.244|<tuple|21.603|?>>
+    <associate|eq 20.595.244|<tuple|21.604|?>>
+    <associate|eq 20.596.244|<tuple|21.605|?>>
+    <associate|eq 20.597.245|<tuple|21.606|?>>
+    <associate|eq 20.598.245|<tuple|21.607|?>>
+    <associate|eq 20.598.249|<tuple|21.457|?>>
+    <associate|eq 20.599.245|<tuple|21.608|?>>
+    <associate|eq 20.599.249|<tuple|21.458|?>>
     <associate|eq 20.60.203|<tuple|21.17|?>>
     <associate|eq 20.60.218|<tuple|21.8|?>>
-    <associate|eq 20.600.245|<tuple|21.608|?>>
-    <associate|eq 20.601.245|<tuple|21.609|?>>
-    <associate|eq 20.602.245|<tuple|21.610|?>>
-    <associate|eq 20.603.245|<tuple|21.611|?>>
-    <associate|eq 20.603.249|<tuple|21.460|?>>
-    <associate|eq 20.604.245|<tuple|21.612|?>>
-    <associate|eq 20.604.249|<tuple|21.461|?>>
-    <associate|eq 20.605.246|<tuple|21.613|?>>
-    <associate|eq 20.605.249|<tuple|21.462|?>>
-    <associate|eq 20.606.246|<tuple|21.614|?>>
-    <associate|eq 20.606.249|<tuple|21.463|?>>
-    <associate|eq 20.607.246|<tuple|21.615|?>>
-    <associate|eq 20.607.249|<tuple|21.465|?>>
-    <associate|eq 20.607.250|<tuple|21.511|?>>
-    <associate|eq 20.608.246|<tuple|21.616|?>>
-    <associate|eq 20.608.249|<tuple|21.467|?>>
-    <associate|eq 20.608.250|<tuple|21.512|?>>
-    <associate|eq 20.609.246|<tuple|21.617|?>>
-    <associate|eq 20.609.249|<tuple|21.468|?>>
+    <associate|eq 20.600.245|<tuple|21.609|?>>
+    <associate|eq 20.601.245|<tuple|21.610|?>>
+    <associate|eq 20.602.245|<tuple|21.611|?>>
+    <associate|eq 20.603.245|<tuple|21.612|?>>
+    <associate|eq 20.603.249|<tuple|21.461|?>>
+    <associate|eq 20.604.245|<tuple|21.613|?>>
+    <associate|eq 20.604.249|<tuple|21.462|?>>
+    <associate|eq 20.605.246|<tuple|21.614|?>>
+    <associate|eq 20.605.249|<tuple|21.463|?>>
+    <associate|eq 20.606.246|<tuple|21.615|?>>
+    <associate|eq 20.606.249|<tuple|21.464|?>>
+    <associate|eq 20.607.246|<tuple|21.616|?>>
+    <associate|eq 20.607.249|<tuple|21.466|?>>
+    <associate|eq 20.607.250|<tuple|21.512|?>>
+    <associate|eq 20.608.246|<tuple|21.617|?>>
+    <associate|eq 20.608.249|<tuple|21.468|?>>
+    <associate|eq 20.608.250|<tuple|21.513|?>>
+    <associate|eq 20.609.246|<tuple|21.618|?>>
+    <associate|eq 20.609.249|<tuple|21.469|?>>
     <associate|eq 20.61.204|<tuple|21.18|?>>
     <associate|eq 20.61.218|<tuple|21.9|?>>
-    <associate|eq 20.610.246|<tuple|21.618|?>>
-    <associate|eq 20.611.246|<tuple|21.619|?>>
-    <associate|eq 20.612.246|<tuple|21.620|?>>
-    <associate|eq 20.613.246|<tuple|21.622|?>>
-    <associate|eq 20.614.246|<tuple|21.623|?>>
-    <associate|eq 20.615.246|<tuple|21.624|?>>
-    <associate|eq 20.616.246|<tuple|21.625|?>>
-    <associate|eq 20.617.247|<tuple|21.626|?>>
-    <associate|eq 20.617.250|<tuple|21.522|?>>
-    <associate|eq 20.618.247|<tuple|21.627|?>>
-    <associate|eq 20.618.250|<tuple|21.523|?>>
-    <associate|eq 20.619.246|<tuple|21.628|?>>
-    <associate|eq 20.619.250|<tuple|21.524|?>>
+    <associate|eq 20.610.246|<tuple|21.619|?>>
+    <associate|eq 20.611.246|<tuple|21.620|?>>
+    <associate|eq 20.612.246|<tuple|21.621|?>>
+    <associate|eq 20.613.246|<tuple|21.623|?>>
+    <associate|eq 20.614.246|<tuple|21.624|?>>
+    <associate|eq 20.615.246|<tuple|21.625|?>>
+    <associate|eq 20.616.246|<tuple|21.626|?>>
+    <associate|eq 20.617.247|<tuple|21.627|?>>
+    <associate|eq 20.617.250|<tuple|21.523|?>>
+    <associate|eq 20.618.247|<tuple|21.628|?>>
+    <associate|eq 20.618.250|<tuple|21.524|?>>
+    <associate|eq 20.619.246|<tuple|21.629|?>>
+    <associate|eq 20.619.250|<tuple|21.525|?>>
     <associate|eq 20.62.204|<tuple|21.19|?>>
     <associate|eq 20.62.218|<tuple|21.10|?>>
-    <associate|eq 20.620.246|<tuple|21.629|?>>
-    <associate|eq 20.620.250|<tuple|21.525|?>>
-    <associate|eq 20.621.246|<tuple|21.631|?>>
-    <associate|eq 20.621.250|<tuple|21.526|?>>
-    <associate|eq 20.622.246|<tuple|21.632|?>>
-    <associate|eq 20.622.250|<tuple|21.527|?>>
-    <associate|eq 20.623.246|<tuple|21.633|?>>
-    <associate|eq 20.623.250|<tuple|21.528|?>>
-    <associate|eq 20.624.246|<tuple|21.634|?>>
-    <associate|eq 20.624.250|<tuple|21.529|?>>
-    <associate|eq 20.625.246|<tuple|21.635|?>>
-    <associate|eq 20.625.250|<tuple|21.530|?>>
-    <associate|eq 20.626.246|<tuple|21.636|?>>
-    <associate|eq 20.627.246|<tuple|21.637|?>>
-    <associate|eq 20.628.246|<tuple|21.638|?>>
-    <associate|eq 20.628.263|<tuple|21.591|?>>
-    <associate|eq 20.629.246|<tuple|21.639|?>>
-    <associate|eq 20.629.263|<tuple|21.592|?>>
+    <associate|eq 20.620.246|<tuple|21.630|?>>
+    <associate|eq 20.620.250|<tuple|21.526|?>>
+    <associate|eq 20.621.246|<tuple|21.632|?>>
+    <associate|eq 20.621.250|<tuple|21.527|?>>
+    <associate|eq 20.622.246|<tuple|21.633|?>>
+    <associate|eq 20.622.250|<tuple|21.528|?>>
+    <associate|eq 20.623.246|<tuple|21.634|?>>
+    <associate|eq 20.623.250|<tuple|21.529|?>>
+    <associate|eq 20.624.246|<tuple|21.635|?>>
+    <associate|eq 20.624.250|<tuple|21.530|?>>
+    <associate|eq 20.625.246|<tuple|21.636|?>>
+    <associate|eq 20.625.250|<tuple|21.531|?>>
+    <associate|eq 20.626.246|<tuple|21.637|?>>
+    <associate|eq 20.627.246|<tuple|21.638|?>>
+    <associate|eq 20.628.246|<tuple|21.639|?>>
+    <associate|eq 20.628.263|<tuple|21.592|?>>
+    <associate|eq 20.629.246|<tuple|21.640|?>>
+    <associate|eq 20.629.263|<tuple|21.593|?>>
     <associate|eq 20.63.204|<tuple|21.20|?>>
     <associate|eq 20.63.218|<tuple|21.11|?>>
-    <associate|eq 20.630.249|<tuple|21.640|?>>
-    <associate|eq 20.631.246|<tuple|21.641|?>>
-    <associate|eq 20.632.246|<tuple|21.642|?>>
-    <associate|eq 20.633.246|<tuple|21.644|?>>
-    <associate|eq 20.634.246|<tuple|21.645|?>>
-    <associate|eq 20.635.246|<tuple|21.646|?>>
-    <associate|eq 20.635.263|<tuple|21.598|?>>
-    <associate|eq 20.636.246|<tuple|21.647|?>>
-    <associate|eq 20.637.247|<tuple|21.648|?>>
-    <associate|eq 20.638.246|<tuple|21.652|?>>
-    <associate|eq 20.639.246|<tuple|21.653|?>>
-    <associate|eq 20.640.246|<tuple|21.654|?>>
-    <associate|eq 20.641.246|<tuple|21.655|?>>
-    <associate|eq 20.642.246|<tuple|21.656|?>>
-    <associate|eq 20.643.246|<tuple|21.657|?>>
-    <associate|eq 20.644.246|<tuple|21.658|?>>
-    <associate|eq 20.645.246|<tuple|21.659|?>>
-    <associate|eq 20.646.246|<tuple|21.660|?>>
-    <associate|eq 20.647.246|<tuple|21.661|?>>
-    <associate|eq 20.648\<point\>246|<tuple|21.662|?>>
-    <associate|eq 20.649.246|<tuple|21.663|?>>
-    <associate|eq 20.651.247|<tuple|21.664|?>>
-    <associate|eq 20.652.247|<tuple|21.665|?>>
-    <associate|eq 20.653.247|<tuple|21.666|?>>
-    <associate|eq 20.654\<point\>247|<tuple|21.667|?>>
-    <associate|eq 20.655.247|<tuple|21.668|?>>
-    <associate|eq 20.656.246|<tuple|21.670|?>>
-    <associate|eq 20.656.247|<tuple|21.669|?>>
-    <associate|eq 20.657.247|<tuple|21.670|?>>
-    <associate|eq 20.658.247|<tuple|21.671|?>>
-    <associate|eq 20.659.247|<tuple|21.672|?>>
-    <associate|eq 20.660.247|<tuple|21.673|?>>
-    <associate|eq 20.660.265|<tuple|21.621|?>>
-    <associate|eq 20.661.247|<tuple|21.674|?>>
-    <associate|eq 20.662.247|<tuple|21.675|?>>
-    <associate|eq 20.663.247|<tuple|21.676|?>>
-    <associate|eq 20.664.247|<tuple|21.677|?>>
-    <associate|eq 20.665.247|<tuple|21.678|?>>
-    <associate|eq 20.666.247|<tuple|21.680|?>>
-    <associate|eq 20.667.247|<tuple|21.681|?>>
-    <associate|eq 20.668.247|<tuple|21.682|?>>
-    <associate|eq 20.669.247|<tuple|21.683|?>>
-    <associate|eq 20.669.265|<tuple|21.630|?>>
-    <associate|eq 20.670.247|<tuple|21.684|?>>
-    <associate|eq 20.671.247|<tuple|21.685|?>>
-    <associate|eq 20.672.247|<tuple|21.686|?>>
-    <associate|eq 20.673.247|<tuple|21.687|?>>
-    <associate|eq 20.674.247|<tuple|21.688|?>>
-    <associate|eq 20.675.247|<tuple|21.689|?>>
-    <associate|eq 20.676.247|<tuple|21.690|?>>
-    <associate|eq 20.677.247|<tuple|21.691|?>>
-    <associate|eq 20.678.247|<tuple|21.692|?>>
-    <associate|eq 20.679.247|<tuple|21.693|?>>
-    <associate|eq 20.680.247|<tuple|21.695|?>>
-    <associate|eq 20.680.247.1|<tuple|21.694|?>>
-    <associate|eq 20.681.247|<tuple|21.696|?>>
-    <associate|eq 20.682.247|<tuple|21.697|?>>
-    <associate|eq 20.682.265|<tuple|21.643|?>>
-    <associate|eq 20.683.247|<tuple|21.698|?>>
-    <associate|eq 20.685.248|<tuple|21.699|?>>
-    <associate|eq 20.686.248|<tuple|21.700|?>>
-    <associate|eq 20.687.248|<tuple|21.701|?>>
-    <associate|eq 20.688.248|<tuple|21.702|?>>
-    <associate|eq 20.688.265|<tuple|21.649|?>>
-    <associate|eq 20.689.248|<tuple|21.703|?>>
-    <associate|eq 20.689.265|<tuple|21.650|?>>
-    <associate|eq 20.690.248|<tuple|21.704|?>>
-    <associate|eq 20.690.265|<tuple|21.651|?>>
-    <associate|eq 20.691.248|<tuple|21.705|?>>
-    <associate|eq 20.692.248|<tuple|21.706|?>>
-    <associate|eq 20.693.248|<tuple|21.707|?>>
-    <associate|eq 20.694.248|<tuple|21.708|?>>
-    <associate|eq 20.695.248|<tuple|21.709|?>>
-    <associate|eq 20.696.248|<tuple|21.710|?>>
-    <associate|eq 20.698.248|<tuple|21.712|?>>
-    <associate|eq 20.699.248|<tuple|21.713|?>>
-    <associate|eq 20.700.248|<tuple|21.714|?>>
-    <associate|eq 20.701.248|<tuple|21.715|?>>
-    <associate|eq 20.702.248|<tuple|21.716|?>>
-    <associate|eq 20.703.248|<tuple|21.717|?>>
-    <associate|eq 20.704.248|<tuple|21.718|?>>
-    <associate|eq 20.705.248|<tuple|21.719|?>>
-    <associate|eq 20.706.248|<tuple|21.720|?>>
-    <associate|eq 20.707.248|<tuple|21.721|?>>
-    <associate|eq 20.708.248|<tuple|21.722|?>>
-    <associate|eq 20.709.248|<tuple|21.723|?>>
-    <associate|eq 20.710.248|<tuple|21.724|?>>
-    <associate|eq 20.711.248|<tuple|21.725|?>>
-    <associate|eq 20.712.248|<tuple|21.726|?>>
-    <associate|eq 20.713.248|<tuple|21.727|?>>
-    <associate|eq 20.714.248|<tuple|21.728|?>>
-    <associate|eq 20.715.248|<tuple|21.729|?>>
-    <associate|eq 20.716.248|<tuple|21.730|?>>
-    <associate|eq 20.717.248|<tuple|21.731|?>>
-    <associate|eq 20.718.248|<tuple|21.732|?>>
-    <associate|eq 20.718.265|<tuple|21.679|?>>
-    <associate|eq 20.719.248|<tuple|21.733|?>>
-    <associate|eq 20.720.248|<tuple|21.734|?>>
-    <associate|eq 20.721.248|<tuple|21.735|?>>
-    <associate|eq 20.723.248|<tuple|21.739|?>>
-    <associate|eq 20.724.148|<tuple|21.740|?>>
-    <associate|eq 20.725.248|<tuple|21.741|?>>
-    <associate|eq 20.726.248|<tuple|21.742|?>>
-    <associate|eq 20.727.248|<tuple|21.743|?>>
-    <associate|eq 20.728.248|<tuple|21.744|?>>
-    <associate|eq 20.729.248|<tuple|21.745|?>>
-    <associate|eq 20.730.248|<tuple|21.746|?>>
-    <associate|eq 20.731.248|<tuple|21.747|?>>
-    <associate|eq 20.732.248|<tuple|21.748|?>>
-    <associate|eq 20.733.248|<tuple|21.749|?>>
-    <associate|eq 20.734.248|<tuple|21.750|?>>
-    <associate|eq 20.735.248|<tuple|21.751|?>>
-    <associate|eq 20.736.248|<tuple|21.752|?>>
-    <associate|eq 20.737.248|<tuple|21.753|?>>
-    <associate|eq 20.738.248|<tuple|21.754|?>>
-    <associate|eq 20.739.248|<tuple|21.755|?>>
-    <associate|eq 20.740.248|<tuple|21.756|?>>
-    <associate|eq 20.741.248|<tuple|21.757|?>>
-    <associate|eq 20.742.248|<tuple|21.758|?>>
-    <associate|eq 20.743.248|<tuple|21.759|?>>
-    <associate|eq 20.744.248|<tuple|21.760|?>>
-    <associate|eq 20.745.248|<tuple|21.761|?>>
-    <associate|eq 20.746.248|<tuple|21.762|?>>
-    <associate|eq 20.747.248|<tuple|21.763|?>>
-    <associate|eq 20.748.248|<tuple|21.764|?>>
-    <associate|eq 20.749.248|<tuple|21.765|?>>
-    <associate|eq 20.751.248|<tuple|21.767|?>>
-    <associate|eq 20.752.248|<tuple|21.768|?>>
-    <associate|eq 20.753.248|<tuple|21.769|?>>
-    <associate|eq 20.754.248|<tuple|21.770|?>>
-    <associate|eq 20.755.243|<tuple|21.771|?>>
-    <associate|eq 20.756.248|<tuple|21.772|?>>
-    <associate|eq 20.757.248|<tuple|21.773|?>>
-    <associate|eq 20.758.248|<tuple|21.774|?>>
-    <associate|eq 20.759.248|<tuple|21.775|?>>
+    <associate|eq 20.630.249|<tuple|21.641|?>>
+    <associate|eq 20.631.246|<tuple|21.642|?>>
+    <associate|eq 20.632.246|<tuple|21.643|?>>
+    <associate|eq 20.633.246|<tuple|21.645|?>>
+    <associate|eq 20.634.246|<tuple|21.646|?>>
+    <associate|eq 20.635.246|<tuple|21.647|?>>
+    <associate|eq 20.635.263|<tuple|21.599|?>>
+    <associate|eq 20.636.246|<tuple|21.648|?>>
+    <associate|eq 20.637.247|<tuple|21.649|?>>
+    <associate|eq 20.638.246|<tuple|21.653|?>>
+    <associate|eq 20.639.246|<tuple|21.654|?>>
+    <associate|eq 20.640.246|<tuple|21.655|?>>
+    <associate|eq 20.641.246|<tuple|21.656|?>>
+    <associate|eq 20.642.246|<tuple|21.657|?>>
+    <associate|eq 20.643.246|<tuple|21.658|?>>
+    <associate|eq 20.644.246|<tuple|21.659|?>>
+    <associate|eq 20.645.246|<tuple|21.660|?>>
+    <associate|eq 20.646.246|<tuple|21.661|?>>
+    <associate|eq 20.647.246|<tuple|21.662|?>>
+    <associate|eq 20.648\<point\>246|<tuple|21.663|?>>
+    <associate|eq 20.649.246|<tuple|21.664|?>>
+    <associate|eq 20.651.247|<tuple|21.665|?>>
+    <associate|eq 20.652.247|<tuple|21.666|?>>
+    <associate|eq 20.653.247|<tuple|21.667|?>>
+    <associate|eq 20.654\<point\>247|<tuple|21.668|?>>
+    <associate|eq 20.655.247|<tuple|21.669|?>>
+    <associate|eq 20.656.246|<tuple|21.671|?>>
+    <associate|eq 20.656.247|<tuple|21.670|?>>
+    <associate|eq 20.657.247|<tuple|21.671|?>>
+    <associate|eq 20.658.247|<tuple|21.672|?>>
+    <associate|eq 20.659.247|<tuple|21.673|?>>
+    <associate|eq 20.660.247|<tuple|21.674|?>>
+    <associate|eq 20.660.265|<tuple|21.622|?>>
+    <associate|eq 20.661.247|<tuple|21.675|?>>
+    <associate|eq 20.662.247|<tuple|21.676|?>>
+    <associate|eq 20.663.247|<tuple|21.677|?>>
+    <associate|eq 20.664.247|<tuple|21.678|?>>
+    <associate|eq 20.665.247|<tuple|21.679|?>>
+    <associate|eq 20.666.247|<tuple|21.681|?>>
+    <associate|eq 20.667.247|<tuple|21.682|?>>
+    <associate|eq 20.668.247|<tuple|21.683|?>>
+    <associate|eq 20.669.247|<tuple|21.684|?>>
+    <associate|eq 20.669.265|<tuple|21.631|?>>
+    <associate|eq 20.670.247|<tuple|21.685|?>>
+    <associate|eq 20.671.247|<tuple|21.686|?>>
+    <associate|eq 20.672.247|<tuple|21.687|?>>
+    <associate|eq 20.673.247|<tuple|21.688|?>>
+    <associate|eq 20.674.247|<tuple|21.689|?>>
+    <associate|eq 20.675.247|<tuple|21.690|?>>
+    <associate|eq 20.676.247|<tuple|21.691|?>>
+    <associate|eq 20.677.247|<tuple|21.692|?>>
+    <associate|eq 20.678.247|<tuple|21.693|?>>
+    <associate|eq 20.679.247|<tuple|21.694|?>>
+    <associate|eq 20.680.247|<tuple|21.696|?>>
+    <associate|eq 20.680.247.1|<tuple|21.695|?>>
+    <associate|eq 20.681.247|<tuple|21.697|?>>
+    <associate|eq 20.682.247|<tuple|21.698|?>>
+    <associate|eq 20.682.265|<tuple|21.644|?>>
+    <associate|eq 20.683.247|<tuple|21.699|?>>
+    <associate|eq 20.685.248|<tuple|21.700|?>>
+    <associate|eq 20.686.248|<tuple|21.701|?>>
+    <associate|eq 20.687.248|<tuple|21.702|?>>
+    <associate|eq 20.688.248|<tuple|21.703|?>>
+    <associate|eq 20.688.265|<tuple|21.650|?>>
+    <associate|eq 20.689.248|<tuple|21.704|?>>
+    <associate|eq 20.689.265|<tuple|21.651|?>>
+    <associate|eq 20.690.248|<tuple|21.705|?>>
+    <associate|eq 20.690.265|<tuple|21.652|?>>
+    <associate|eq 20.691.248|<tuple|21.706|?>>
+    <associate|eq 20.692.248|<tuple|21.707|?>>
+    <associate|eq 20.693.248|<tuple|21.708|?>>
+    <associate|eq 20.694.248|<tuple|21.709|?>>
+    <associate|eq 20.695.248|<tuple|21.710|?>>
+    <associate|eq 20.696.248|<tuple|21.711|?>>
+    <associate|eq 20.698.248|<tuple|21.713|?>>
+    <associate|eq 20.699.248|<tuple|21.714|?>>
+    <associate|eq 20.700.248|<tuple|21.715|?>>
+    <associate|eq 20.701.248|<tuple|21.716|?>>
+    <associate|eq 20.702.248|<tuple|21.717|?>>
+    <associate|eq 20.703.248|<tuple|21.718|?>>
+    <associate|eq 20.704.248|<tuple|21.719|?>>
+    <associate|eq 20.705.248|<tuple|21.720|?>>
+    <associate|eq 20.706.248|<tuple|21.721|?>>
+    <associate|eq 20.707.248|<tuple|21.722|?>>
+    <associate|eq 20.708.248|<tuple|21.723|?>>
+    <associate|eq 20.709.248|<tuple|21.724|?>>
+    <associate|eq 20.710.248|<tuple|21.725|?>>
+    <associate|eq 20.711.248|<tuple|21.726|?>>
+    <associate|eq 20.712.248|<tuple|21.727|?>>
+    <associate|eq 20.713.248|<tuple|21.728|?>>
+    <associate|eq 20.714.248|<tuple|21.729|?>>
+    <associate|eq 20.715.248|<tuple|21.730|?>>
+    <associate|eq 20.716.248|<tuple|21.731|?>>
+    <associate|eq 20.717.248|<tuple|21.732|?>>
+    <associate|eq 20.718.248|<tuple|21.733|?>>
+    <associate|eq 20.718.265|<tuple|21.680|?>>
+    <associate|eq 20.719.248|<tuple|21.734|?>>
+    <associate|eq 20.720.248|<tuple|21.735|?>>
+    <associate|eq 20.721.248|<tuple|21.736|?>>
+    <associate|eq 20.723.248|<tuple|21.740|?>>
+    <associate|eq 20.724.148|<tuple|21.741|?>>
+    <associate|eq 20.725.248|<tuple|21.742|?>>
+    <associate|eq 20.726.248|<tuple|21.743|?>>
+    <associate|eq 20.727.248|<tuple|21.744|?>>
+    <associate|eq 20.728.248|<tuple|21.745|?>>
+    <associate|eq 20.729.248|<tuple|21.746|?>>
+    <associate|eq 20.730.248|<tuple|21.747|?>>
+    <associate|eq 20.731.248|<tuple|21.748|?>>
+    <associate|eq 20.732.248|<tuple|21.749|?>>
+    <associate|eq 20.733.248|<tuple|21.750|?>>
+    <associate|eq 20.734.248|<tuple|21.751|?>>
+    <associate|eq 20.735.248|<tuple|21.752|?>>
+    <associate|eq 20.736.248|<tuple|21.753|?>>
+    <associate|eq 20.737.248|<tuple|21.754|?>>
+    <associate|eq 20.738.248|<tuple|21.755|?>>
+    <associate|eq 20.739.248|<tuple|21.756|?>>
+    <associate|eq 20.740.248|<tuple|21.757|?>>
+    <associate|eq 20.741.248|<tuple|21.758|?>>
+    <associate|eq 20.742.248|<tuple|21.759|?>>
+    <associate|eq 20.743.248|<tuple|21.760|?>>
+    <associate|eq 20.744.248|<tuple|21.761|?>>
+    <associate|eq 20.745.248|<tuple|21.762|?>>
+    <associate|eq 20.746.248|<tuple|21.763|?>>
+    <associate|eq 20.747.248|<tuple|21.764|?>>
+    <associate|eq 20.748.248|<tuple|21.765|?>>
+    <associate|eq 20.749.248|<tuple|21.766|?>>
+    <associate|eq 20.751.248|<tuple|21.768|?>>
+    <associate|eq 20.752.248|<tuple|21.769|?>>
+    <associate|eq 20.753.248|<tuple|21.770|?>>
+    <associate|eq 20.754.248|<tuple|21.771|?>>
+    <associate|eq 20.755.243|<tuple|21.772|?>>
+    <associate|eq 20.756.248|<tuple|21.773|?>>
+    <associate|eq 20.757.248|<tuple|21.774|?>>
+    <associate|eq 20.758.248|<tuple|21.775|?>>
+    <associate|eq 20.759.248|<tuple|21.776|?>>
     <associate|eq 20.76.200|<tuple|21.50|?>>
-    <associate|eq 20.760.248|<tuple|21.776|?>>
-    <associate|eq 20.768.248|<tuple|21.777|?>>
-    <associate|eq 20.769.248|<tuple|21.778|?>>
+    <associate|eq 20.760.248|<tuple|21.777|?>>
+    <associate|eq 20.768.248|<tuple|21.778|?>>
+    <associate|eq 20.769.248|<tuple|21.779|?>>
     <associate|eq 20.77.200|<tuple|21.51|?>>
-    <associate|eq 20.770.248|<tuple|21.779|?>>
-    <associate|eq 20.771.248|<tuple|21.780|?>>
-    <associate|eq 20.772.248|<tuple|21.781|?>>
-    <associate|eq 20.773.248|<tuple|21.782|?>>
-    <associate|eq 20.774.248|<tuple|21.783|?>>
-    <associate|eq 20.775.248|<tuple|21.784|?>>
-    <associate|eq 20.775.265|<tuple|21.736|?>>
-    <associate|eq 20.776.248|<tuple|21.785|?>>
-    <associate|eq 20.776.265|<tuple|21.737|?>>
-    <associate|eq 20.777.248|<tuple|21.786|?>>
-    <associate|eq 20.777.265|<tuple|21.738|?>>
-    <associate|eq 20.778.248|<tuple|21.787|?>>
-    <associate|eq 20.779.248|<tuple|21.788|?>>
+    <associate|eq 20.770.248|<tuple|21.780|?>>
+    <associate|eq 20.771.248|<tuple|21.781|?>>
+    <associate|eq 20.772.248|<tuple|21.782|?>>
+    <associate|eq 20.773.248|<tuple|21.783|?>>
+    <associate|eq 20.774.248|<tuple|21.784|?>>
+    <associate|eq 20.775.248|<tuple|21.785|?>>
+    <associate|eq 20.775.265|<tuple|21.737|?>>
+    <associate|eq 20.776.248|<tuple|21.786|?>>
+    <associate|eq 20.776.265|<tuple|21.738|?>>
+    <associate|eq 20.777.248|<tuple|21.787|?>>
+    <associate|eq 20.777.265|<tuple|21.739|?>>
+    <associate|eq 20.778.248|<tuple|21.788|?>>
+    <associate|eq 20.779.248|<tuple|21.789|?>>
     <associate|eq 20.78.200|<tuple|21.52|?>>
-    <associate|eq 20.780.248|<tuple|21.789|?>>
-    <associate|eq 20.781.248|<tuple|21.790|?>>
-    <associate|eq 20.782.248|<tuple|21.791|?>>
-    <associate|eq 20.783.248|<tuple|21.792|?>>
-    <associate|eq 20.784.248|<tuple|21.793|?>>
-    <associate|eq 20.785.248|<tuple|21.794|?>>
-    <associate|eq 20.786.248|<tuple|21.795|?>>
-    <associate|eq 20.787.248|<tuple|21.796|?>>
-    <associate|eq 20.788.248|<tuple|21.797|?>>
-    <associate|eq 20.789.248|<tuple|21.798|?>>
+    <associate|eq 20.780.248|<tuple|21.790|?>>
+    <associate|eq 20.781.248|<tuple|21.791|?>>
+    <associate|eq 20.782.248|<tuple|21.792|?>>
+    <associate|eq 20.783.248|<tuple|21.793|?>>
+    <associate|eq 20.784.248|<tuple|21.794|?>>
+    <associate|eq 20.785.248|<tuple|21.795|?>>
+    <associate|eq 20.786.248|<tuple|21.796|?>>
+    <associate|eq 20.787.248|<tuple|21.797|?>>
+    <associate|eq 20.788.248|<tuple|21.798|?>>
+    <associate|eq 20.789.248|<tuple|21.799|?>>
     <associate|eq 20.79.200|<tuple|21.53|?>>
-    <associate|eq 20.790.248|<tuple|21.799|?>>
-    <associate|eq 20.791.231|<tuple|21.490|?>>
-    <associate|eq 20.791.248|<tuple|21.800|?>>
-    <associate|eq 20.792.248|<tuple|21.801|?>>
-    <associate|eq 20.793.248|<tuple|21.802|?>>
-    <associate|eq 20.794.248|<tuple|21.803|?>>
-    <associate|eq 20.795.248|<tuple|21.804|?>>
-    <associate|eq 20.796.248|<tuple|21.805|?>>
-    <associate|eq 20.797.248|<tuple|21.806|?>>
-    <associate|eq 20.798.248|<tuple|21.807|?>>
-    <associate|eq 20.799.248|<tuple|21.808|?>>
+    <associate|eq 20.790.248|<tuple|21.800|?>>
+    <associate|eq 20.791.231|<tuple|21.491|?>>
+    <associate|eq 20.791.248|<tuple|21.801|?>>
+    <associate|eq 20.792.248|<tuple|21.802|?>>
+    <associate|eq 20.793.248|<tuple|21.803|?>>
+    <associate|eq 20.794.248|<tuple|21.804|?>>
+    <associate|eq 20.795.248|<tuple|21.805|?>>
+    <associate|eq 20.796.248|<tuple|21.806|?>>
+    <associate|eq 20.797.248|<tuple|21.807|?>>
+    <associate|eq 20.798.248|<tuple|21.808|?>>
+    <associate|eq 20.799.248|<tuple|21.809|?>>
     <associate|eq 20.80.200|<tuple|21.54|?>>
-    <associate|eq 20.800.248|<tuple|21.809|?>>
-    <associate|eq 20.801.248|<tuple|21.810|?>>
-    <associate|eq 20.802.248|<tuple|21.811|?>>
-    <associate|eq 20.803.248|<tuple|21.812|?>>
-    <associate|eq 20.804.248|<tuple|21.813|?>>
-    <associate|eq 20.805.248|<tuple|21.814|?>>
-    <associate|eq 20.806.248|<tuple|21.815|?>>
-    <associate|eq 20.807.248|<tuple|21.816|?>>
-    <associate|eq 20.808.248|<tuple|21.817|?>>
+    <associate|eq 20.800.248|<tuple|21.810|?>>
+    <associate|eq 20.801.248|<tuple|21.811|?>>
+    <associate|eq 20.802.248|<tuple|21.812|?>>
+    <associate|eq 20.803.248|<tuple|21.813|?>>
+    <associate|eq 20.804.248|<tuple|21.814|?>>
+    <associate|eq 20.805.248|<tuple|21.815|?>>
+    <associate|eq 20.806.248|<tuple|21.816|?>>
+    <associate|eq 20.807.248|<tuple|21.817|?>>
+    <associate|eq 20.808.248|<tuple|21.818|?>>
     <associate|eq 20.81.200|<tuple|21.55|?>>
-    <associate|eq 20.810.248|<tuple|21.819|?>>
-    <associate|eq 20.811.248|<tuple|21.820|?>>
-    <associate|eq 20.813.248|<tuple|21.821|?>>
-    <associate|eq 20.814.248|<tuple|21.822|?>>
-    <associate|eq 20.815.248|<tuple|21.823|?>>
-    <associate|eq 20.816.248|<tuple|21.824|?>>
-    <associate|eq 20.817.249|<tuple|21.825|?>>
-    <associate|eq 20.818.249|<tuple|21.826|?>>
-    <associate|eq 20.819.249|<tuple|21.827|?>>
+    <associate|eq 20.810.248|<tuple|21.820|?>>
+    <associate|eq 20.811.248|<tuple|21.821|?>>
+    <associate|eq 20.813.248|<tuple|21.822|?>>
+    <associate|eq 20.814.248|<tuple|21.823|?>>
+    <associate|eq 20.815.248|<tuple|21.824|?>>
+    <associate|eq 20.816.248|<tuple|21.825|?>>
+    <associate|eq 20.817.249|<tuple|21.826|?>>
+    <associate|eq 20.818.249|<tuple|21.827|?>>
+    <associate|eq 20.819.249|<tuple|21.828|?>>
     <associate|eq 20.82.200|<tuple|21.56|?>>
-    <associate|eq 20.820.249|<tuple|21.828|?>>
-    <associate|eq 20.821.249|<tuple|21.829|?>>
-    <associate|eq 20.822.249|<tuple|21.830|?>>
+    <associate|eq 20.820.249|<tuple|21.829|?>>
+    <associate|eq 20.821.249|<tuple|21.830|?>>
+    <associate|eq 20.822.249|<tuple|21.831|?>>
     <associate|eq 20.83.200|<tuple|21.57|?>>
     <associate|eq 20.84.200|<tuple|21.58|?>>
     <associate|eq 20.85.200|<tuple|21.59|?>>
     <associate|eq 20.86.200|<tuple|21.60|?>>
     <associate|eq 20.87.200|<tuple|21.61|?>>
-    <associate|eq 20.870.265|<tuple|21.831|?>>
-    <associate|eq 20.871.265|<tuple|21.834|?>>
-    <associate|eq 20.871.266|<tuple|21.832|?>>
-    <associate|eq 20.872.266|<tuple|21.833|?>>
-    <associate|eq 20.874.265|<tuple|21.835|?>>
-    <associate|eq 20.875.265|<tuple|21.836|?>>
-    <associate|eq 20.876.265|<tuple|21.837|?>>
-    <associate|eq 20.877.265|<tuple|21.838|?>>
-    <associate|eq 20.878.265|<tuple|21.839|?>>
-    <associate|eq 20.879.265|<tuple|21.840|?>>
-    <associate|eq 20.880.265|<tuple|21.841|?>>
-    <associate|eq 20.880.266|<tuple|21.850|?>>
-    <associate|eq 20.881.265|<tuple|21.842|?>>
-    <associate|eq 20.882.265|<tuple|21.843|?>>
-    <associate|eq 20.884.265|<tuple|21.844|?>>
-    <associate|eq 20.885.266|<tuple|21.845|?>>
-    <associate|eq 20.886.265|<tuple|21.847|?>>
-    <associate|eq 20.886.266|<tuple|21.846|?>>
-    <associate|eq 20.888.266|<tuple|21.849|?>>
-    <associate|eq 20.888.268|<tuple|21.848|?>>
-    <associate|eq 20.890.266|<tuple|21.851|?>>
-    <associate|eq 20.891.269|<tuple|21.852|?>>
-    <associate|eq 20.892.266|<tuple|21.853|?>>
-    <associate|eq 20.893.266|<tuple|21.854|?>>
-    <associate|eq 20.894.266|<tuple|21.855|?>>
-    <associate|eq 20.896.267|<tuple|21.856|?>>
-    <associate|eq 20.897.268|<tuple|21.857|?>>
-    <associate|eq 20.898.268|<tuple|21.858|?>>
-    <associate|eq 20.900.269|<tuple|21.859|?>>
-    <associate|eq 20.901.269|<tuple|21.860|?>>
-    <associate|eq 20.902.269|<tuple|21.861|?>>
-    <associate|eq 20.903.269|<tuple|21.864|?>>
-    <associate|eq 20.903.270|<tuple|21.862|?>>
-    <associate|eq 20.904.269|<tuple|21.865|?>>
-    <associate|eq 20.904.271|<tuple|21.863|?>>
-    <associate|eq 20.905.269|<tuple|21.866|?>>
-    <associate|eq 20.907.270|<tuple|21.867|?>>
-    <associate|eq 20.909.271|<tuple|21.868|?>>
-    <associate|eq 20.910.271|<tuple|21.869|?>>
-    <associate|eq 20.913.271|<tuple|21.872|?>>
-    <associate|eq 20.914.271|<tuple|21.873|?>>
-    <associate|eq 20.915.271|<tuple|21.874|?>>
-    <associate|eq 20.916.271|<tuple|21.875|?>>
-    <associate|eq 20.918.249|<tuple|21.877|?>>
-    <associate|eq 20.919.279|<tuple|21.878|?>>
-    <associate|eq 20.921.279|<tuple|21.880|?>>
-    <associate|eq 20.922.279|<tuple|21.881|?>>
-    <associate|eq 20.923.279|<tuple|21.882|?>>
-    <associate|eq 20.925.279|<tuple|21.884|?>>
-    <associate|eq 20.926.279|<tuple|21.885|?>>
-    <associate|eq 20.927.279|<tuple|21.886|?>>
-    <associate|eq 20.928.279|<tuple|21.887|?>>
-    <associate|eq 20.929.279|<tuple|21.888|?>>
+    <associate|eq 20.870.265|<tuple|21.832|?>>
+    <associate|eq 20.871.265|<tuple|21.835|?>>
+    <associate|eq 20.871.266|<tuple|21.833|?>>
+    <associate|eq 20.872.266|<tuple|21.834|?>>
+    <associate|eq 20.874.265|<tuple|21.836|?>>
+    <associate|eq 20.875.265|<tuple|21.837|?>>
+    <associate|eq 20.876.265|<tuple|21.838|?>>
+    <associate|eq 20.877.265|<tuple|21.839|?>>
+    <associate|eq 20.878.265|<tuple|21.840|?>>
+    <associate|eq 20.879.265|<tuple|21.841|?>>
+    <associate|eq 20.880.265|<tuple|21.842|?>>
+    <associate|eq 20.880.266|<tuple|21.851|?>>
+    <associate|eq 20.881.265|<tuple|21.843|?>>
+    <associate|eq 20.882.265|<tuple|21.844|?>>
+    <associate|eq 20.884.265|<tuple|21.845|?>>
+    <associate|eq 20.885.266|<tuple|21.846|?>>
+    <associate|eq 20.886.265|<tuple|21.848|?>>
+    <associate|eq 20.886.266|<tuple|21.847|?>>
+    <associate|eq 20.888.266|<tuple|21.850|?>>
+    <associate|eq 20.888.268|<tuple|21.849|?>>
+    <associate|eq 20.890.266|<tuple|21.852|?>>
+    <associate|eq 20.891.269|<tuple|21.853|?>>
+    <associate|eq 20.892.266|<tuple|21.854|?>>
+    <associate|eq 20.893.266|<tuple|21.855|?>>
+    <associate|eq 20.894.266|<tuple|21.856|?>>
+    <associate|eq 20.896.267|<tuple|21.857|?>>
+    <associate|eq 20.897.268|<tuple|21.858|?>>
+    <associate|eq 20.898.268|<tuple|21.859|?>>
+    <associate|eq 20.900.269|<tuple|21.860|?>>
+    <associate|eq 20.901.269|<tuple|21.861|?>>
+    <associate|eq 20.902.269|<tuple|21.862|?>>
+    <associate|eq 20.903.269|<tuple|21.865|?>>
+    <associate|eq 20.903.270|<tuple|21.863|?>>
+    <associate|eq 20.904.269|<tuple|21.866|?>>
+    <associate|eq 20.904.271|<tuple|21.864|?>>
+    <associate|eq 20.905.269|<tuple|21.867|?>>
+    <associate|eq 20.907.270|<tuple|21.868|?>>
+    <associate|eq 20.909.271|<tuple|21.869|?>>
+    <associate|eq 20.910.271|<tuple|21.870|?>>
+    <associate|eq 20.913.271|<tuple|21.873|?>>
+    <associate|eq 20.914.271|<tuple|21.874|?>>
+    <associate|eq 20.915.271|<tuple|21.875|?>>
+    <associate|eq 20.916.271|<tuple|21.876|?>>
+    <associate|eq 20.918.249|<tuple|21.878|?>>
+    <associate|eq 20.919.279|<tuple|21.879|?>>
+    <associate|eq 20.921.279|<tuple|21.881|?>>
+    <associate|eq 20.922.279|<tuple|21.882|?>>
+    <associate|eq 20.923.279|<tuple|21.883|?>>
+    <associate|eq 20.925.279|<tuple|21.885|?>>
+    <associate|eq 20.926.279|<tuple|21.886|?>>
+    <associate|eq 20.927.279|<tuple|21.887|?>>
+    <associate|eq 20.928.279|<tuple|21.888|?>>
+    <associate|eq 20.929.279|<tuple|21.889|?>>
     <associate|eq 20.93.200|<tuple|21.90|?>>
-    <associate|eq 20.930.279|<tuple|21.889|?>>
-    <associate|eq 20.931.279|<tuple|21.890|?>>
-    <associate|eq 20.932.279|<tuple|21.891|?>>
-    <associate|eq 20.933.279|<tuple|21.892|?>>
-    <associate|eq 20.934.279|<tuple|21.893|?>>
-    <associate|eq 20.935.279|<tuple|21.894|?>>
-    <associate|eq 20.936.279|<tuple|21.895|?>>
-    <associate|eq 20.937.279|<tuple|21.896|?>>
-    <associate|eq 20.938.279|<tuple|21.897|?>>
-    <associate|eq 20.939.279|<tuple|21.898|?>>
+    <associate|eq 20.930.279|<tuple|21.890|?>>
+    <associate|eq 20.931.279|<tuple|21.891|?>>
+    <associate|eq 20.932.279|<tuple|21.892|?>>
+    <associate|eq 20.933.279|<tuple|21.893|?>>
+    <associate|eq 20.934.279|<tuple|21.894|?>>
+    <associate|eq 20.935.279|<tuple|21.895|?>>
+    <associate|eq 20.936.279|<tuple|21.896|?>>
+    <associate|eq 20.937.279|<tuple|21.897|?>>
+    <associate|eq 20.938.279|<tuple|21.898|?>>
+    <associate|eq 20.939.279|<tuple|21.899|?>>
     <associate|eq 20.94.200|<tuple|21.91|?>>
-    <associate|eq 20.940.279|<tuple|21.899|?>>
-    <associate|eq 20.941.279|<tuple|21.900|?>>
-    <associate|eq 20.942.279|<tuple|21.901|?>>
-    <associate|eq 20.943.279|<tuple|21.902|?>>
-    <associate|eq 20.944.279|<tuple|21.903|?>>
-    <associate|eq 20.945.279|<tuple|21.904|?>>
-    <associate|eq 20.946.279|<tuple|21.905|?>>
-    <associate|eq 20.947.279|<tuple|21.906|?>>
-    <associate|eq 20.948.279|<tuple|21.907|?>>
-    <associate|eq 20.949.279|<tuple|21.908|?>>
+    <associate|eq 20.940.279|<tuple|21.900|?>>
+    <associate|eq 20.941.279|<tuple|21.901|?>>
+    <associate|eq 20.942.279|<tuple|21.902|?>>
+    <associate|eq 20.943.279|<tuple|21.903|?>>
+    <associate|eq 20.944.279|<tuple|21.904|?>>
+    <associate|eq 20.945.279|<tuple|21.905|?>>
+    <associate|eq 20.946.279|<tuple|21.906|?>>
+    <associate|eq 20.947.279|<tuple|21.907|?>>
+    <associate|eq 20.948.279|<tuple|21.908|?>>
+    <associate|eq 20.949.279|<tuple|21.909|?>>
     <associate|eq 20.95.200|<tuple|21.92|?>>
-    <associate|eq 20.950.279|<tuple|21.909|?>>
-    <associate|eq 20.951.279|<tuple|21.910|?>>
-    <associate|eq 20.952.279|<tuple|21.911|?>>
-    <associate|eq 20.953.279|<tuple|21.912|?>>
-    <associate|eq 20.954.279|<tuple|21.925|?>>
-    <associate|eq 20.954.280|<tuple|21.913|?>>
-    <associate|eq 20.955.279|<tuple|21.926|?>>
-    <associate|eq 20.955.280|<tuple|21.914|?>>
-    <associate|eq 20.956.279|<tuple|21.927|?>>
-    <associate|eq 20.956.280|<tuple|21.915|?>>
-    <associate|eq 20.957.279|<tuple|21.928|?>>
-    <associate|eq 20.957.280|<tuple|21.916|?>>
-    <associate|eq 20.958.280|<tuple|21.917|?>>
-    <associate|eq 20.959.280|<tuple|21.918|?>>
+    <associate|eq 20.950.279|<tuple|21.910|?>>
+    <associate|eq 20.951.279|<tuple|21.911|?>>
+    <associate|eq 20.952.279|<tuple|21.912|?>>
+    <associate|eq 20.953.279|<tuple|21.913|?>>
+    <associate|eq 20.954.279|<tuple|21.926|?>>
+    <associate|eq 20.954.280|<tuple|21.914|?>>
+    <associate|eq 20.955.279|<tuple|21.927|?>>
+    <associate|eq 20.955.280|<tuple|21.915|?>>
+    <associate|eq 20.956.279|<tuple|21.928|?>>
+    <associate|eq 20.956.280|<tuple|21.916|?>>
+    <associate|eq 20.957.279|<tuple|21.929|?>>
+    <associate|eq 20.957.280|<tuple|21.917|?>>
+    <associate|eq 20.958.280|<tuple|21.918|?>>
+    <associate|eq 20.959.280|<tuple|21.919|?>>
     <associate|eq 20.96.200|<tuple|21.93|?>>
-    <associate|eq 20.960.280|<tuple|21.919|?>>
-    <associate|eq 20.961.280|<tuple|21.920|?>>
-    <associate|eq 20.962.280|<tuple|21.921|?>>
-    <associate|eq 20.963.280|<tuple|21.922|?>>
-    <associate|eq 20.964.280|<tuple|21.923|?>>
-    <associate|eq 20.965.280|<tuple|21.924|?>>
+    <associate|eq 20.960.280|<tuple|21.920|?>>
+    <associate|eq 20.961.280|<tuple|21.921|?>>
+    <associate|eq 20.962.280|<tuple|21.922|?>>
+    <associate|eq 20.963.280|<tuple|21.923|?>>
+    <associate|eq 20.964.280|<tuple|21.924|?>>
+    <associate|eq 20.965.280|<tuple|21.925|?>>
     <associate|eq 20.97.200|<tuple|21.94|?>>
-    <associate|eq 20.970.280|<tuple|21.929|?>>
-    <associate|eq 20.971.280|<tuple|21.930|?>>
-    <associate|eq 20.972.280|<tuple|21.931|?>>
-    <associate|eq 20.973.280|<tuple|21.932|?>>
-    <associate|eq 20.974.280|<tuple|21.933|?>>
-    <associate|eq 20.975.280|<tuple|21.934|?>>
-    <associate|eq 20.976.280|<tuple|21.935|?>>
-    <associate|eq 20.977.280|<tuple|21.936|?>>
-    <associate|eq 20.978.280|<tuple|21.937|?>>
-    <associate|eq 20.979.280|<tuple|21.938|?>>
+    <associate|eq 20.970.280|<tuple|21.930|?>>
+    <associate|eq 20.971.280|<tuple|21.931|?>>
+    <associate|eq 20.972.280|<tuple|21.932|?>>
+    <associate|eq 20.973.280|<tuple|21.933|?>>
+    <associate|eq 20.974.280|<tuple|21.934|?>>
+    <associate|eq 20.975.280|<tuple|21.935|?>>
+    <associate|eq 20.976.280|<tuple|21.936|?>>
+    <associate|eq 20.977.280|<tuple|21.937|?>>
+    <associate|eq 20.978.280|<tuple|21.938|?>>
+    <associate|eq 20.979.280|<tuple|21.939|?>>
     <associate|eq 20.98.200|<tuple|21.95|?>>
-    <associate|eq 20.980.280|<tuple|21.939|?>>
-    <associate|eq 20.981.280|<tuple|21.940|?>>
-    <associate|eq 20.982.280|<tuple|21.941|?>>
-    <associate|eq 20.983.280|<tuple|21.942|?>>
-    <associate|eq 20.984.280|<tuple|21.943|?>>
-    <associate|eq 20.985.280|<tuple|21.944|?>>
-    <associate|eq 20.986.280|<tuple|21.945|?>>
-    <associate|eq 20.987.280|<tuple|21.946|?>>
-    <associate|eq 20.988.280|<tuple|21.948|?>>
-    <associate|eq 20.988.281|<tuple|21.947|?>>
-    <associate|eq 20.989.280|<tuple|21.949|?>>
+    <associate|eq 20.980.280|<tuple|21.940|?>>
+    <associate|eq 20.981.280|<tuple|21.941|?>>
+    <associate|eq 20.982.280|<tuple|21.942|?>>
+    <associate|eq 20.983.280|<tuple|21.943|?>>
+    <associate|eq 20.984.280|<tuple|21.944|?>>
+    <associate|eq 20.985.280|<tuple|21.945|?>>
+    <associate|eq 20.986.280|<tuple|21.946|?>>
+    <associate|eq 20.987.280|<tuple|21.947|?>>
+    <associate|eq 20.988.280|<tuple|21.949|?>>
+    <associate|eq 20.988.281|<tuple|21.948|?>>
+    <associate|eq 20.989.280|<tuple|21.950|?>>
     <associate|eq 20.99.200|<tuple|21.96|?>>
-    <associate|eq 20.990.280|<tuple|21.950|?>>
-    <associate|eq 20.991.280|<tuple|21.951|?>>
-    <associate|eq 20.992.280|<tuple|21.952|?>>
-    <associate|eq 20.993.280|<tuple|21.953|?>>
-    <associate|eq 20.994.280|<tuple|21.954|?>>
-    <associate|eq 20.995.280|<tuple|21.955|?>>
-    <associate|eq 20.996.280|<tuple|21.956|?>>
-    <associate|eq 20.997.280|<tuple|21.957|?>>
-    <associate|eq 20.999.280|<tuple|21.958|?>>
-    <associate|eq 21.1000.285|<tuple|21.1010|?>>
-    <associate|eq 21.1001.285|<tuple|21.1011|?>>
-    <associate|eq 21.1002.285|<tuple|21.1012|?>>
-    <associate|eq 21.1003.285|<tuple|21.1013|?>>
-    <associate|eq 21.1004.286|<tuple|21.1014|?>>
-    <associate|eq 21.1005.286|<tuple|21.1015|?>>
-    <associate|eq 21.1006.286|<tuple|21.1016|?>>
-    <associate|eq 21.1007.286|<tuple|21.1017|?>>
-    <associate|eq 21.1008.286|<tuple|21.1018|?>>
-    <associate|eq 21.1009.286|<tuple|21.1019|?>>
-    <associate|eq 21.1010.286|<tuple|21.1020|?>>
-    <associate|eq 21.1011.286|<tuple|21.1021|?>>
-    <associate|eq 21.1012.286|<tuple|21.1022|?>>
-    <associate|eq 21.1013.286|<tuple|21.1023|?>>
-    <associate|eq 21.1014.286|<tuple|21.1024|?>>
-    <associate|eq 21.1015.286|<tuple|21.1025|?>>
-    <associate|eq 21.1016.286|<tuple|21.1026|?>>
-    <associate|eq 21.1017.286|<tuple|21.1027|?>>
-    <associate|eq 21.1018.286|<tuple|21.1028|?>>
-    <associate|eq 21.1019.286|<tuple|21.1029|?>>
-    <associate|eq 21.1020.286|<tuple|21.1030|?>>
-    <associate|eq 21.1021.286|<tuple|21.1031|?>>
-    <associate|eq 21.1022.286|<tuple|21.1032|?>>
-    <associate|eq 21.1023.286|<tuple|21.1033|?>>
-    <associate|eq 21.1024.286|<tuple|21.1034|?>>
-    <associate|eq 21.1025.286|<tuple|21.1035|?>>
-    <associate|eq 21.1026.286|<tuple|21.1036|?>>
-    <associate|eq 21.1027.286|<tuple|21.1037|?>>
-    <associate|eq 21.1028.286|<tuple|21.1038|?>>
-    <associate|eq 21.1029.286|<tuple|21.1039|?>>
-    <associate|eq 21.1030.286|<tuple|21.1040|?>>
-    <associate|eq 21.1031.286|<tuple|21.1041|?>>
-    <associate|eq 21.1032.286|<tuple|21.1042|?>>
+    <associate|eq 20.990.280|<tuple|21.951|?>>
+    <associate|eq 20.991.280|<tuple|21.952|?>>
+    <associate|eq 20.992.280|<tuple|21.953|?>>
+    <associate|eq 20.993.280|<tuple|21.954|?>>
+    <associate|eq 20.994.280|<tuple|21.955|?>>
+    <associate|eq 20.995.280|<tuple|21.956|?>>
+    <associate|eq 20.996.280|<tuple|21.957|?>>
+    <associate|eq 20.997.280|<tuple|21.958|?>>
+    <associate|eq 20.999.280|<tuple|21.959|?>>
+    <associate|eq 21.1000.285|<tuple|21.1011|?>>
+    <associate|eq 21.1001.285|<tuple|21.1012|?>>
+    <associate|eq 21.1002.285|<tuple|21.1013|?>>
+    <associate|eq 21.1003.285|<tuple|21.1014|?>>
+    <associate|eq 21.1004.286|<tuple|21.1015|?>>
+    <associate|eq 21.1005.286|<tuple|21.1016|?>>
+    <associate|eq 21.1006.286|<tuple|21.1017|?>>
+    <associate|eq 21.1007.286|<tuple|21.1018|?>>
+    <associate|eq 21.1008.286|<tuple|21.1019|?>>
+    <associate|eq 21.1009.286|<tuple|21.1020|?>>
+    <associate|eq 21.1010.286|<tuple|21.1021|?>>
+    <associate|eq 21.1011.286|<tuple|21.1022|?>>
+    <associate|eq 21.1012.286|<tuple|21.1023|?>>
+    <associate|eq 21.1013.286|<tuple|21.1024|?>>
+    <associate|eq 21.1014.286|<tuple|21.1025|?>>
+    <associate|eq 21.1015.286|<tuple|21.1026|?>>
+    <associate|eq 21.1016.286|<tuple|21.1027|?>>
+    <associate|eq 21.1017.286|<tuple|21.1028|?>>
+    <associate|eq 21.1018.286|<tuple|21.1029|?>>
+    <associate|eq 21.1019.286|<tuple|21.1030|?>>
+    <associate|eq 21.1020.286|<tuple|21.1031|?>>
+    <associate|eq 21.1021.286|<tuple|21.1032|?>>
+    <associate|eq 21.1022.286|<tuple|21.1033|?>>
+    <associate|eq 21.1023.286|<tuple|21.1034|?>>
+    <associate|eq 21.1024.286|<tuple|21.1035|?>>
+    <associate|eq 21.1025.286|<tuple|21.1036|?>>
+    <associate|eq 21.1026.286|<tuple|21.1037|?>>
+    <associate|eq 21.1027.286|<tuple|21.1038|?>>
+    <associate|eq 21.1028.286|<tuple|21.1039|?>>
+    <associate|eq 21.1029.286|<tuple|21.1040|?>>
+    <associate|eq 21.1030.286|<tuple|21.1041|?>>
+    <associate|eq 21.1031.286|<tuple|21.1042|?>>
+    <associate|eq 21.1032.286|<tuple|21.1043|?>>
     <associate|eq 21.1032.286.1|<tuple|21.25|?>>
-    <associate|eq 21.1033.286|<tuple|21.1043|?>>
+    <associate|eq 21.1033.286|<tuple|21.1044|?>>
     <associate|eq 21.1033.286.1|<tuple|21.27|?>>
-    <associate|eq 21.1036.287|<tuple|21.1044|?>>
-    <associate|eq 21.1037.287|<tuple|21.1045|?>>
-    <associate|eq 21.1038.287|<tuple|21.1046|?>>
-    <associate|eq 21.1039.287|<tuple|21.1047|?>>
-    <associate|eq 21.1040.290|<tuple|21.1048|?>>
-    <associate|eq 21.1041.290|<tuple|21.1049|?>>
-    <associate|eq 21.1042.290|<tuple|21.1050|?>>
-    <associate|eq 21.1043.290|<tuple|21.1051|?>>
-    <associate|eq 21.1044.290|<tuple|21.1070|?>>
-    <associate|eq 21.1045.290|<tuple|21.1071|?>>
-    <associate|eq 21.1045.291|<tuple|21.1053|?>>
-    <associate|eq 21.1046.290|<tuple|21.1072|?>>
-    <associate|eq 21.1046.291|<tuple|21.1054|?>>
-    <associate|eq 21.1047.291|<tuple|21.1055|?>>
-    <associate|eq 21.1048.291|<tuple|21.1056|?>>
-    <associate|eq 21.1049.291|<tuple|21.1057|?>>
-    <associate|eq 21.1050.291|<tuple|21.1058|?>>
-    <associate|eq 21.1051.291|<tuple|21.1059|?>>
-    <associate|eq 21.1052.291|<tuple|21.1060|?>>
-    <associate|eq 21.1054.291|<tuple|21.1062|?>>
-    <associate|eq 21.1055.291|<tuple|21.1063|?>>
-    <associate|eq 21.1056.291|<tuple|21.1064|?>>
-    <associate|eq 21.1057.291|<tuple|21.1065|?>>
-    <associate|eq 21.1058.291|<tuple|21.1066|?>>
-    <associate|eq 21.1059.291|<tuple|21.1067|?>>
-    <associate|eq 21.1060.291|<tuple|21.1068|?>>
-    <associate|eq 21.1061.291|<tuple|21.1069|?>>
-    <associate|eq 21.1065.291|<tuple|21.1073|?>>
-    <associate|eq 21.1066.291|<tuple|21.1074|?>>
-    <associate|eq 21.1067.291|<tuple|21.1075|?>>
-    <associate|eq 21.1068.291|<tuple|21.1076|?>>
-    <associate|eq 21.1069.291|<tuple|21.1076|?>>
-    <associate|eq 21.1070.291|<tuple|21.1078|?>>
-    <associate|eq 21.1071.291|<tuple|21.1079|?>>
-    <associate|eq 21.1072.291|<tuple|21.1080|?>>
-    <associate|eq 21.1073.291|<tuple|21.1081|?>>
-    <associate|eq 21.1074.291|<tuple|21.1082|?>>
-    <associate|eq 21.1075.291|<tuple|21.1083|?>>
-    <associate|eq 21.1076.291|<tuple|21.1084|?>>
-    <associate|eq 21.1077.291|<tuple|21.1085|?>>
-    <associate|eq 21.1078.291|<tuple|21.1086|?>>
-    <associate|eq 21.1079.291|<tuple|21.1087|?>>
-    <associate|eq 21.1080.292|<tuple|21.1088|?>>
-    <associate|eq 21.1081.291|<tuple|21.1091|?>>
-    <associate|eq 21.1081.292|<tuple|21.1089|?>>
-    <associate|eq 21.1082.291|<tuple|21.1092|?>>
-    <associate|eq 21.1082.292|<tuple|21.1090|?>>
-    <associate|eq 21.1083.291|<tuple|21.1093|?>>
-    <associate|eq 21.1084.291|<tuple|21.1094|?>>
-    <associate|eq 21.1085.291|<tuple|21.1095|?>>
-    <associate|eq 21.1086.291|<tuple|21.1096|?>>
-    <associate|eq 21.1087.291|<tuple|21.1097|?>>
-    <associate|eq 21.1088.291|<tuple|21.1098|?>>
-    <associate|eq 21.1089.291|<tuple|21.1099|?>>
-    <associate|eq 21.1090.291|<tuple|21.1100|?>>
-    <associate|eq 21.1091.291|<tuple|21.1101|?>>
-    <associate|eq 21.1092.291|<tuple|21.1102|?>>
-    <associate|eq 21.1093.291|<tuple|21.1103|?>>
-    <associate|eq 21.1094.291|<tuple|21.1104|?>>
-    <associate|eq 21.1095.291|<tuple|21.1105|?>>
-    <associate|eq 21.1096.291|<tuple|21.1106|?>>
-    <associate|eq 21.1097.291|<tuple|21.1107|?>>
-    <associate|eq 21.1098.291|<tuple|21.1108|?>>
-    <associate|eq 21.1099.291|<tuple|21.1109|?>>
-    <associate|eq 21.1100.291|<tuple|21.1110|?>>
-    <associate|eq 21.1101.291|<tuple|21.1111|?>>
-    <associate|eq 21.1102.291|<tuple|21.1112|?>>
-    <associate|eq 21.1103.291|<tuple|21.1113|?>>
-    <associate|eq 21.1104.291|<tuple|21.1114|?>>
-    <associate|eq 21.1105.291|<tuple|21.1115|?>>
-    <associate|eq 21.1106.291|<tuple|21.1116|?>>
-    <associate|eq 21.1107.291|<tuple|21.1117|?>>
-    <associate|eq 21.1108.291|<tuple|21.1118|?>>
-    <associate|eq 21.1109.291|<tuple|21.1119|?>>
-    <associate|eq 21.1110.291|<tuple|21.1120|?>>
-    <associate|eq 21.1111.291|<tuple|21.1121|?>>
-    <associate|eq 21.1112.291|<tuple|21.1122|?>>
-    <associate|eq 21.1113.291|<tuple|21.1123|?>>
-    <associate|eq 21.1114.291|<tuple|21.1124|?>>
-    <associate|eq 21.1115.291|<tuple|21.1125|?>>
-    <associate|eq 21.1116.291|<tuple|21.1126|?>>
-    <associate|eq 21.1117.291|<tuple|21.1127|?>>
-    <associate|eq 21.1118.291|<tuple|21.1128|?>>
+    <associate|eq 21.1036.287|<tuple|21.1045|?>>
+    <associate|eq 21.1037.287|<tuple|21.1046|?>>
+    <associate|eq 21.1038.287|<tuple|21.1047|?>>
+    <associate|eq 21.1039.287|<tuple|21.1048|?>>
+    <associate|eq 21.1040.290|<tuple|21.1049|?>>
+    <associate|eq 21.1041.290|<tuple|21.1050|?>>
+    <associate|eq 21.1042.290|<tuple|21.1051|?>>
+    <associate|eq 21.1043.290|<tuple|21.1052|?>>
+    <associate|eq 21.1044.290|<tuple|21.1071|?>>
+    <associate|eq 21.1045.290|<tuple|21.1072|?>>
+    <associate|eq 21.1045.291|<tuple|21.1054|?>>
+    <associate|eq 21.1046.290|<tuple|21.1073|?>>
+    <associate|eq 21.1046.291|<tuple|21.1055|?>>
+    <associate|eq 21.1047.291|<tuple|21.1056|?>>
+    <associate|eq 21.1048.291|<tuple|21.1057|?>>
+    <associate|eq 21.1049.291|<tuple|21.1058|?>>
+    <associate|eq 21.1050.291|<tuple|21.1059|?>>
+    <associate|eq 21.1051.291|<tuple|21.1060|?>>
+    <associate|eq 21.1052.291|<tuple|21.1061|?>>
+    <associate|eq 21.1054.291|<tuple|21.1063|?>>
+    <associate|eq 21.1055.291|<tuple|21.1064|?>>
+    <associate|eq 21.1056.291|<tuple|21.1065|?>>
+    <associate|eq 21.1057.291|<tuple|21.1066|?>>
+    <associate|eq 21.1058.291|<tuple|21.1067|?>>
+    <associate|eq 21.1059.291|<tuple|21.1068|?>>
+    <associate|eq 21.1060.291|<tuple|21.1069|?>>
+    <associate|eq 21.1061.291|<tuple|21.1070|?>>
+    <associate|eq 21.1065.291|<tuple|21.1074|?>>
+    <associate|eq 21.1066.291|<tuple|21.1075|?>>
+    <associate|eq 21.1067.291|<tuple|21.1076|?>>
+    <associate|eq 21.1068.291|<tuple|21.1077|?>>
+    <associate|eq 21.1069.291|<tuple|21.1077|?>>
+    <associate|eq 21.1070.291|<tuple|21.1079|?>>
+    <associate|eq 21.1071.291|<tuple|21.1080|?>>
+    <associate|eq 21.1072.291|<tuple|21.1081|?>>
+    <associate|eq 21.1073.291|<tuple|21.1082|?>>
+    <associate|eq 21.1074.291|<tuple|21.1083|?>>
+    <associate|eq 21.1075.291|<tuple|21.1084|?>>
+    <associate|eq 21.1076.291|<tuple|21.1085|?>>
+    <associate|eq 21.1077.291|<tuple|21.1086|?>>
+    <associate|eq 21.1078.291|<tuple|21.1087|?>>
+    <associate|eq 21.1079.291|<tuple|21.1088|?>>
+    <associate|eq 21.1080.292|<tuple|21.1089|?>>
+    <associate|eq 21.1081.291|<tuple|21.1092|?>>
+    <associate|eq 21.1081.292|<tuple|21.1090|?>>
+    <associate|eq 21.1082.291|<tuple|21.1093|?>>
+    <associate|eq 21.1082.292|<tuple|21.1091|?>>
+    <associate|eq 21.1083.291|<tuple|21.1094|?>>
+    <associate|eq 21.1084.291|<tuple|21.1095|?>>
+    <associate|eq 21.1085.291|<tuple|21.1096|?>>
+    <associate|eq 21.1086.291|<tuple|21.1097|?>>
+    <associate|eq 21.1087.291|<tuple|21.1098|?>>
+    <associate|eq 21.1088.291|<tuple|21.1099|?>>
+    <associate|eq 21.1089.291|<tuple|21.1100|?>>
+    <associate|eq 21.109.300|<tuple|21.109|?>>
+    <associate|eq 21.1090.291|<tuple|21.1101|?>>
+    <associate|eq 21.1091.291|<tuple|21.1102|?>>
+    <associate|eq 21.1092.291|<tuple|21.1103|?>>
+    <associate|eq 21.1093.291|<tuple|21.1104|?>>
+    <associate|eq 21.1094.291|<tuple|21.1105|?>>
+    <associate|eq 21.1095.291|<tuple|21.1106|?>>
+    <associate|eq 21.1096.291|<tuple|21.1107|?>>
+    <associate|eq 21.1097.291|<tuple|21.1108|?>>
+    <associate|eq 21.1098.291|<tuple|21.1109|?>>
+    <associate|eq 21.1099.291|<tuple|21.1110|?>>
+    <associate|eq 21.1100.291|<tuple|21.1111|?>>
+    <associate|eq 21.1101.291|<tuple|21.1112|?>>
+    <associate|eq 21.1102.291|<tuple|21.1113|?>>
+    <associate|eq 21.1103.291|<tuple|21.1114|?>>
+    <associate|eq 21.1104.291|<tuple|21.1115|?>>
+    <associate|eq 21.1105.291|<tuple|21.1116|?>>
+    <associate|eq 21.1106.291|<tuple|21.1117|?>>
+    <associate|eq 21.1107.291|<tuple|21.1118|?>>
+    <associate|eq 21.1108.291|<tuple|21.1119|?>>
+    <associate|eq 21.1109.291|<tuple|21.1120|?>>
+    <associate|eq 21.1110.291|<tuple|21.1121|?>>
+    <associate|eq 21.1111.291|<tuple|21.1122|?>>
+    <associate|eq 21.1112.291|<tuple|21.1123|?>>
+    <associate|eq 21.1113.291|<tuple|21.1124|?>>
+    <associate|eq 21.1114.291|<tuple|21.1125|?>>
+    <associate|eq 21.1115.291|<tuple|21.1126|?>>
+    <associate|eq 21.1116.291|<tuple|21.1127|?>>
+    <associate|eq 21.1117.291|<tuple|21.1128|?>>
+    <associate|eq 21.1118.291|<tuple|21.1129|?>>
     <associate|eq 21.26.300|<tuple|21.26|?>>
-    <associate|eq 21.350.293|<tuple|21.352|?>>
-    <associate|eq 21.351.293|<tuple|21.353|?>>
-    <associate|eq 21.352.293|<tuple|21.354|?>>
-    <associate|eq 21.353.293|<tuple|21.355|?>>
-    <associate|eq 21.354.296|<tuple|21.356|?>>
-    <associate|eq 21.355.296|<tuple|21.357|?>>
+    <associate|eq 21.350.293|<tuple|21.353|?>>
+    <associate|eq 21.351.293|<tuple|21.354|?>>
+    <associate|eq 21.352.293|<tuple|21.355|?>>
+    <associate|eq 21.353.293|<tuple|21.356|?>>
+    <associate|eq 21.354.296|<tuple|21.357|?>>
+    <associate|eq 21.355.296|<tuple|21.358|?>>
     <associate|eq 21.84.300|<tuple|21.84|?>>
-    <associate|eq 21.991.285|<tuple|21.1001|?>>
-    <associate|eq 21.992.285|<tuple|21.1002|?>>
-    <associate|eq 21.992.285.1|<tuple|21.1002|?>>
-    <associate|eq 21.993.285|<tuple|21.1003|?>>
-    <associate|eq 21.994.285|<tuple|21.1004|?>>
-    <associate|eq 21.995.285|<tuple|21.1005|?>>
-    <associate|eq 21.996.285|<tuple|21.1006|?>>
-    <associate|eq 21.997.285|<tuple|21.1007|?>>
-    <associate|eq 21.998.285|<tuple|21.1008|?>>
-    <associate|eq 21.999.285|<tuple|21.1009|?>>
+    <associate|eq 21.991.285|<tuple|21.1002|?>>
+    <associate|eq 21.992.285|<tuple|21.1003|?>>
+    <associate|eq 21.992.285.1|<tuple|21.1003|?>>
+    <associate|eq 21.993.285|<tuple|21.1004|?>>
+    <associate|eq 21.994.285|<tuple|21.1005|?>>
+    <associate|eq 21.995.285|<tuple|21.1006|?>>
+    <associate|eq 21.996.285|<tuple|21.1007|?>>
+    <associate|eq 21.997.285|<tuple|21.1008|?>>
+    <associate|eq 21.998.285|<tuple|21.1009|?>>
+    <associate|eq 21.999.285|<tuple|21.1010|?>>
     <associate|figure 20.6.234|<tuple|21.6|?>>
     <associate|figure 20.7.234|<tuple|21.7|?>>
     <associate|integral convention|<tuple|21.529|?>>
@@ -47296,6 +47314,8 @@
     numbers|<tuple|21.56|?>>
     <associate|measure Borel algebra on the extended real numbers
     (1)|<tuple|21.61|?>>
+    <associate|measure Borel algebras on R^n|<tuple|21.87|?>>
+    <associate|measure Borel algebras on R^n equivalences|<tuple|21.87|?>>
     <associate|measure Borel measure of T(A)|<tuple|21.581|?>>
     <associate|measure Borel measure of T(A) (1)|<tuple|21.584|?>>
     <associate|measure Borel measure on R and linear
@@ -47367,7 +47387,7 @@
     <associate|measure countable sub-additivity implies
     sub-additivity|<tuple|21.23|?>>
     <associate|measure countable union is in sigma algebra|<tuple|21.39|?>>
-    <associate|measure countable union pairwise|<tuple|21.99|?>>
+    <associate|measure countable union pairwise|<tuple|21.100|?>>
     <associate|measure create a new measure based on a measure and a
     homeomorphism|<tuple|21.578|?>>
     <associate|measure create a new measure based on a measure and a linear
@@ -47416,16 +47436,16 @@
     <associate|measure measure conditions|<tuple|21.115|?>>
     <associate|measure measure definition|<tuple|21.96|?>>
     <associate|measure measure finite|<tuple|21.113|?>>
-    <associate|measure measure on A\|B|<tuple|21.109|?>>
+    <associate|measure measure on A\|B|<tuple|21.110|?>>
     <associate|measure measure space|<tuple|21.98|?>>
-    <associate|measure measure space properties (1)|<tuple|21.111|?>>
-    <associate|measure measure space properties (2)|<tuple|21.100|?>>
+    <associate|measure measure space properties (1)|<tuple|21.112|?>>
+    <associate|measure measure space properties (2)|<tuple|21.101|?>>
     <associate|measure measure space properties (3)|<tuple|21.114|?>>
-    <associate|measure measure space properties (4)|<tuple|21.101|?>>
+    <associate|measure measure space properties (4)|<tuple|21.102|?>>
     <associate|measure monotone|<tuple|21.14|?>>
     <associate|measure null set|<tuple|21.211|?>>
     <associate|measure null set properties|<tuple|21.214|?>>
-    <associate|measure on sub sigma algebra|<tuple|21.108|?>>
+    <associate|measure on sub sigma algebra|<tuple|21.109|?>>
     <associate|measure open closed rectangles|<tuple|21.74|?>>
     <associate|measure order on R^n|<tuple|21.63|?>>
     <associate|measure order on half open intervals|<tuple|21.178|?>>
@@ -47462,13 +47482,13 @@
     <associate|measure sigma algebra|<tuple|21.33|?>>
     <associate|measure sigma algebra equivalences|<tuple|21.36|?>>
     <associate|measure sigma algebra intersection|<tuple|21.41|?>>
-    <associate|measure sigma finite disjoint|<tuple|21.103|?>>
-    <associate|measure sigma finite increasing|<tuple|21.104|?>>
-    <associate|measure sigma finite measure|<tuple|21.105|?>>
-    <associate|measure sigma finite set|<tuple|21.102|?>>
+    <associate|measure sigma finite disjoint|<tuple|21.104|?>>
+    <associate|measure sigma finite increasing|<tuple|21.105|?>>
+    <associate|measure sigma finite measure|<tuple|21.106|?>>
+    <associate|measure sigma finite set|<tuple|21.103|?>>
     <associate|measure sub measure space|<tuple|21.44|?>>
     <associate|measure sub-additive set function|<tuple|21.16|?>>
-    <associate|measure sum and scalar product of measures|<tuple|21.106|?>>
+    <associate|measure sum and scalar product of measures|<tuple|21.107|?>>
     <associate|measure the Borel measure is translation invariant
     (1)|<tuple|21.569|?>>
     <associate|measure the Borel measure is translation invariant
