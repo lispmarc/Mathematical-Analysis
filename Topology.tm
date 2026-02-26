@@ -13483,7 +13483,7 @@
 
     <\equation>
       <label|eq 14.115.152><around*|{|E<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-P\><around*|(|X|)><text|
-      by >E<rsub|i>=<big|cap><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>K<rsub|j>
+      by >E<rsub|i>=<big|cap><rsub|j\<in\><around*|{|1,\<ldots\>,i|}>>K<rsub|j>
     </equation>
 
     so that\ 
@@ -13518,7 +13518,7 @@
     <math|I\<subseteq\>\<bbb-N\>> such that\ 
 
     <\equation>
-      <label|eq 14.117.152>K<rsub|1>\<subseteq\><big|cup><rsub|i\<in\>I><around*|(|X\\E<rsub|n>|)>
+      <label|eq 14.117.152>K<rsub|1>\<subseteq\><big|cup><rsub|n\<in\>I><around*|(|X\\E<rsub|n>|)>
     </equation>
 
     Take <math|m=max<around*|(|I|)>> then as <math|\<forall\>i\<in\>I> we
@@ -13534,8 +13534,8 @@
 
     <\equation*>
       E<rsub|m>\<equallim\><rsub|<text|[eq: <reference|eq
-      14.115.152>]>><big|cap><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>>K<rsub|i>\<subseteq\>K<rsub|1>\<subseteq\><rsub|<text|[eq:
-      <reference|eq 14.123.170>]>>X\\E<rsub|m>
+      14.115.152>]>><big|cap><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>>K<rsub|i>\<subseteq\>K<rsub|1><below|\<subseteq\>|<text|[eq:
+      <reference|eq 14.123.170>]>><rsub|>X\\E<rsub|m>
     </equation*>
 
     from which it follows that <math|E<rsub|m>=\<varnothing\>> [for if
@@ -13546,7 +13546,7 @@
     we have <math|<big|cap><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>K<rsub|i>\<neq\>\<varnothing\>>.
     So the assumption is wrong and we must have that there exist a
     <math|N\<in\>\<bbb-N\>> such that <math|<big|cap><rsub|i\<in\><around*|{|1,\<ldots\>,N|}>>K<rsub|i>=\<varnothing\>>
-    from which it follows that <math|C> is a compact class
+    from which it follows that <math|C> is a compact class.
   </proof>
 
   <\theorem>
@@ -23868,7 +23868,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|13>
-    <associate|page-first|683>
+    <associate|page-first|685>
     <associate|page-medium|papyrus>
     <associate|par-first|0tab>
     <associate|section-nr|0>
