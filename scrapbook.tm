@@ -14499,16 +14499,137 @@
     <tformat|<table|<row|<cell|<around*|(|D<rsup|<around*|[|1|]>>f<around*|(|x<rsub|o>+x|)>-D<rsup|<around*|[|1|]>>f<around*|(|x<rsub|0>|)>-<big|sum><rsub|k=1><rsup|n><frac|1|k!>\<cdot\>D<rsup|<around*|[|k|]>><rsub|x<rsub|0>><around*|(|D<rsup|<around*|[|1|]>>f|)><around*|(|<wide*|x:\<ldots\>:x|\<wide-underbrace\>><rsub|k>|)>|)><around*|(|h|)>>|<cell|<below|=|<text|[theorem:
     <reference|diff n+m differentiation>]>>>|<cell|>>|<row|<cell|<around*|(|D<rsup|<around*|[|1|]>>f<around*|(|x<rsub|o>+x|)>-D<rsup|<around*|[|1|]>>f<around*|(|x<rsub|0>|)>-<big|sum><rsub|k=1><rsup|n><frac|1|k!>\<cdot\>D<rsup|<around*|[|k+1|]>><rsub|x<rsub|0>>f<around*|(|<wide*|x:\<ldots\>:x|\<wide-underbrace\>><rsub|k>|)>|)><around*|(|h|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|D<rsup|<around*|[|1|]>>f<around*|(|x<rsub|o>+x|)>-D<rsup|<around*|[|1|]>>f<around*|(|x<rsub|0>|)>-<big|sum><rsub|k=2><rsup|n+1><frac|1|<around*|(|k-1|)>!>\<cdot\>D<rsup|<around*|[|k|]>><rsub|x<rsub|0>>f<around*|(|<wide*|x:\<ldots\>:x|\<wide-underbrace\>><rsub|k-1>|)>|)><around*|(|h|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|D<rsup|<around*|[|1|]>><rsub|x<rsub|0>+x>f-D<rsup|<around*|[|1|]>><rsub|x<rsub|0>>f-<big|sum><rsub|k=2><rsup|n+1><frac|1|<around*|(|k-1|)>!>\<cdot\>D<rsup|<around*|[|k|]>><rsub|x<rsub|0>>f<around*|(|<wide*|x:\<ldots\>:x|\<wide-underbrace\>><rsub|k-1>|)>|)><around*|(|h|)>>|<cell|=>|<cell|>>|<row|<cell|D<rsup|<around*|[|1|]>><rsub|x<rsub|0>+h>f<around*|(|h|)>-D<rsup|<around*|[|1|]>><rsub|x<rsub|0>>f<around*|(|h|)>-<big|sum><rsub|k=2><rsup|n+1><frac|1|<around*|(|k-1|)>!>\<cdot\>D<rsup|<around*|[|k|]>><rsub|x<rsub|0>>f<around*|(|<wide*|x:\<ldots\>:x|\<wide-underbrace\>><rsub|k-1>|)><around*|(|h|)>>|<cell|\<equallim\><rsub|<text|[lemma:
     <reference|lemma 16.53.186>]>>>|<cell|>>|<row|<cell|D<rsup|<around*|[|1|]>><rsub|x<rsub|0>+h>f<around*|(|h|)>-D<rsup|<around*|[|1|]>><rsub|x<rsub|0>>f<around*|(|h|)>-<big|sum><rsub|k=2><rsup|n+1><frac|1|<around*|(|k-1|)>!>\<cdot\>D<rsup|<around*|[|k|]>><rsub|x<rsub|0>>f<around*|(|<wide*|x:\<ldots\>:x|\<wide-underbrace\>><rsub|k-1>:h|)>>|<cell|=>|<cell|>>|<row|<cell|>|<cell|=>|<cell|>>|<row|<cell|D<rsup|<around*|[|1|]>><rsub|x<rsub|0>+h>f<around*|(|h|)>-<big|sum><rsub|k=1><rsup|n+1><frac|1|<around*|(|k-1|)>!>\<cdot\>D<rsup|<around*|[|k|]>><rsub|x<rsub|0>>f<around*|(|<wide*|h:\<ldots\>:h|\<wide-underbrace\>><rsub|k>|)>>|<cell|=>|<cell|>>|<row|<cell|D<rsup|<around*|[|1|]>><rsub|x<rsub|0>+h>f<around*|(|h|)>-<big|sum><rsub|k=1><rsup|n><frac|1|<around*|(|k-1|)>!>\<cdot\>D<rsup|<around*|[|k|]>><rsub|x<rsub|0>>f<around*|(|<wide*|h:\<ldots\>:h|\<wide-underbrace\>><rsub|k>|)>-<frac|1|n!>\<cdot\>D<rsup|<around*|[|n+1|]>><rsub|x<rsub|0>>f<around*|(|<wide*|h:\<ldots\>:h|\<wide-underbrace\>><rsub|n+1>|)>>|<cell|<below|=|<text|[eq:
-    <reference|eq 16.578.316>]>>>|<cell|>>|<row|<cell|>|<cell|>|<cell|>>>>
+    <reference|eq 16.578.316>]>>>|<cell|>>>>
   </eqnarray*>
 
   \;
 
   \;
 
-  \;
+  <\theorem>
+    <label|measurable function sum (finite)>Let
+    <math|<around*|\<langle\>|X,\<cal-A\>|\<rangle\>>> be a measurable space,
+    <math|A\<subseteq\>X> and <math|f,g\<in\>\<cal-M\><around*|[|A,\<cal-A\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
+    such that <math|\<forall\>x\<in\>A> <math|<around*|(|f<around*|(|x|)>,g<around*|(|x|)>|)>\<in\><around*|(|<wide|\<bbb-R\>|\<wide-bar\>>\<times\><wide|\<bbb-R\>|\<wide-bar\>>|)>\\<around*|{|<around*|(|-\<infty\>,\<infty\>|)>,<around*|(|\<infty\>,-\<infty\>|)>|}>>
+    so that\ 
 
-  \;
+    <\equation*>
+      f+g:X\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>><text| defined by
+      ><around*|(|f+g|)><around*|(|x|)>=f<around*|(|x|)>+g<around*|(|x|)>
+    </equation*>
+
+    is well defined then
+
+    <\equation*>
+      f+g\<in\>\<cal-M\><around*|[|A,\<cal-A\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
+    </equation*>
+
+    <\note>
+      If <math|f,g\<in\>\<cal-M\><around*|[|A,\<cal-A\>,\<bbb-R\>|]>> then
+      <math|\<forall\>x\<in\>A>
+
+      <\equation*>
+        <around*|(|f<around*|(|x|)>,g<around*|(|x|)>|)>\<in\>\<bbb-R\>\<times\>\<bbb-R\>\<subseteq\><around*|(|<wide|\<bbb-R\>|\<wide-bar\>>\<times\><wide|\<bbb-R\>|\<wide-bar\>>|)>\\<around*|{|<around*|(|-\<infty\>,\<infty\>|)>,<around*|(|\<infty\>,-\<infty\>|)>|}>\<wedge\><around*|(|f+g|)><around*|(|x|)>\<in\>\<bbb-R\>
+      </equation*>
+
+      so that in this case we have\ 
+
+      <\equation*>
+        f+g\<in\>\<cal-M\><around*|[|A,\<cal-A\>,\<bbb-R\>|]>
+      </equation*>
+    </note>
+
+    <\note>
+      If <math|f,g\<in\>\<cal-M\><rsup|+><around*|[|A,\<cal-A\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
+      then <math|\<forall\>x\<in\>A>
+
+      <\equation*>
+        <around*|(|f<around*|(|x|)>,g<around*|(|x|)>|)>\<in\><around*|[|0,\<infty\>|]>\<times\><around*|[|0,\<infty\>|]>\<subseteq\><around*|(|<wide|\<bbb-R\>|\<wide-bar\>>\<times\><wide|\<bbb-R\>|\<wide-bar\>>|)>\\<around*|{|<around*|(|-\<infty\>,\<infty\>|)>,<around*|(|\<infty\>,-\<infty\>|)>|}>\<wedge\><around*|(|f+g|)><around*|(|x|)>\<in\><around*|[|0,\<infty\>|]>
+      </equation*>
+
+      so that in this case we have\ 
+
+      <\equation*>
+        f+g\<in\>\<cal-M\><rsup|+><around*|[|A,\<cal-A\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
+      </equation*>
+    </note>
+  </theorem>
+
+  <\proof>
+    As <math|\<forall\>t\<in\>A> we have <math|<around*|(|f<around*|(|t|)>,g<around*|(|t|)>|)>\<in\><around*|(|<wide|\<bbb-R\>|\<wide-bar\>>\<times\><wide|\<bbb-R\>|\<wide-bar\>>|)>\\<around*|{|<around*|(|-\<infty\>,\<infty\>|)>,<around*|(|\<infty\>,-\<infty\>|)>|}>>
+    it follows that <math|f+g> is well defined. Let <math|x\<in\>\<bbb-R\>>.
+    If <math|t\<in\><around*|{|f+g\<less\>x|}>> we have
+    <math|f<around*|(|t|)>+g<around*|(|t|)>\<less\>x> so that by [theorem:
+    <reference|extended x+y\<less\>z=\<gtr\>x\<less\>z-y>
+    <math|f<around*|(|t|)>\<less\>x-g<around*|(|t|)>>. Using the density of
+    <math|\<bbb-Q\>> in <math|<wide|\<bbb-R\>|\<wide-bar\>>> [see theorem:
+    <reference|extended density>] there exists a <math|q\<in\>\<bbb-Q\>> such
+    that <math|f<around*|(|t|)>\<less\>q\<less\>x-g<around*|(|t|)>>, hence
+    <math|f<around*|(|t|)>\<less\>q\<wedge\>q\<less\>x-g<around*|(|t|)><below|\<Rightarrow\>|<text|[theorem:
+    <reference|extended x\<less\>y-z=\<gtr\>z\<less\>y-x>]>>f<around*|(|t|)>\<less\>q\<wedge\>g<around*|(|t|)>\<less\>x-q>
+    which proves
+
+    <\equation*>
+      f<around*|(|t|)>\<in\><around*|{|f\<less\>q|}><big|cap><around*|{|g\<less\>x-q|}>\<subseteq\><big|cup><rsub|q\<in\>\<bbb-Q\>><around*|(|<around*|{|f\<less\>q|}><big|cap><around*|{|g\<less\>x-q|}>|)>
+    </equation*>
+
+    hence we have\ 
+
+    <\equation>
+      <label|eq 20.421.227><around*|{|f+g\<less\>x|}>\<subseteq\><big|cup><rsub|q\<in\>\<bbb-Q\>><around*|(|<around*|{|f\<less\>q|}><big|cap><around*|{|g\<less\>x-q|}>|)>
+    </equation>
+
+    For the opposite inclusion. Let <math|t\<in\><big|cup><rsub|q\<in\>\<bbb-Q\>><around*|(|<around*|{|f\<less\>q|}><big|cap><around*|{|g\<less\>x-q|}>|)>>
+    then there exist a <math|q\<in\>\<bbb-Q\>> such that
+    <math|t\<in\><around*|{|f\<less\>q|}>\<wedge\>t\<in\><around*|{|g\<less\>x-q|}>>
+    from which it follows that <math|f<around*|(|t|)>\<less\>q\<wedge\>g<around*|(|t|)>\<less\>x-q>.
+    As <math|<rigid|<around*|(|f<around*|(|t|)>,g<around*|(|t|)>|)>\<subseteq\><around*|(|<wide|\<bbb-R\>|\<wide-bar\>>\<times\><wide|\<bbb-R\>|\<wide-bar\>>|)>\\<around*|{|<around*|(|-\<infty\>,\<infty\>|)>,<around*|(|\<infty\>,-\<infty\>|)>|}>>>
+    and <math|><math|f<around*|(|t|)>\<less\>q\<less\>\<infty\>\<wedge\>g<around*|(|t|)>\<less\>x-q\<less\>\<infty\>>
+    we have the following possible cases for
+    <math|f<around*|(|t|)>,g<around*|(|t|)>>:
+
+    <\description>
+      <item*|<math|f<around*|(|t|)>=-\<infty\>\<wedge\>g<around*|(|t|)>=-\<infty\>>>Then
+      <math|f<around*|(|t|)>+g<around*|(|t|)>=-\<infty\>\<less\>x>.
+
+      <item*|<math|f<around*|(|t|)>\<in\>\<bbb-R\>\<wedge\>g<around*|(|t|)>=-\<infty\>>>Then
+      <math|f<around*|(|t|)>+g<around*|(|t|)>=-\<infty\>\<less\>x>.
+
+      <item*|<math|f<around*|(|t|)>=-\<infty\>\<wedge\>g<around*|(|t|)>\<in\>\<bbb-R\>>>Then
+      <math|f<around*|(|t|)>+g<around*|(|t|)>=-\<infty\>\<less\>x>.
+
+      <item*|<math|f<around*|(|t|)>\<in\>\<bbb-R\>\<wedge\>g<around*|(|t|)>\<in\>\<bbb-R\>>>Then
+      as <math|f<around*|(|t|)>\<less\>q\<wedge\>g<around*|(|t|)>\<less\>x-q>
+      we have <math|f<around*|(|t|)>+g<around*|(|t|)>\<less\>q+<around*|(|x-q|)>=x>
+    </description>
+
+    So in all cases we have <math|f<around*|(|t|)>+g<around*|(|t|)>\<less\>x>
+    from which it follows that <math|t\<in\><around*|{|f+g\<less\>x|}>>.
+    Hence we have <math|<big|cup><rsub|q\<in\>\<bbb-Q\>><around*|(|<around*|{|f\<less\>q|}><big|cap><around*|{|g\<less\>x-q|}>|)>\<subseteq\><around*|{|f+g\<less\>x|}>>.
+    Combining this \ [eq: <reference|eq 20.421.227>] results in\ 
+
+    <\equation*>
+      <around*|{|f+g\<less\>x|}>=<big|cup><rsub|q\<in\>\<bbb-Q\>><around*|(|<around*|{|f\<less\>q|}><big|cap><around*|{|g\<less\>x-q|}>|)>
+    </equation*>
+
+    Let <math|q\<in\>\<bbb-Q\>> then as <math|f,g> are
+    <math|\<cal-A\>>-measurable we have by [theorem: <reference|measurable
+    function alternative (1)>] that <rigid|<math|<around*|{|f\<less\>q|}>,<around*|{|g\<less\>x-q|}>\<in\>\<cal-A\><rsub|\|A><text|
+    from which we conclude that ><around*|{|f\<less\>q|}><big|cap><around*|{|g\<less\>x-q|}>\<in\>\<cal-A\><rsub|\|A>>>.
+    Using [theorem: <reference|measure countable union is in sigma algebra>]
+    and the fact that <math|\<bbb-Q\>> is countable [see theorem:
+    <reference|complex embedding>] it follows that
+    <rigid|<math|<big|cup><rsub|q\<in\>\<bbb-Q\>><around*|(|<around*|{|f\<less\>q|}><big|cap><around*|{|g\<less\>x-q|}>|)>\<in\>\<cal-A\><rsub|\|A>>>
+    hence we have\ 
+
+    <\equation*>
+      <around*|{|f+g\<less\>x|}>\<in\>\<cal-A\><rsub|\|>
+    </equation*>
+
+    As <math|x\<in\>\<bbb-R\>> was choosen arbitrary it follows from the
+    above and [theorem: <reference|measurable function alternative (1)>] that
+    <math|f+g> is <math|\<cal-A\>>-measurable.
+  </proof>
 
   \;
 
@@ -14938,7 +15059,7 @@
     <associate|eq 20.324.224|<tuple|157|58>>
     <associate|eq 20.325.224|<tuple|158|59>>
     <associate|eq 20.326\<point\>224|<tuple|159|59>>
-    <associate|eq 20.421.227|<tuple|232|79>>
+    <associate|eq 20.421.227|<tuple|510|79>>
     <associate|eq 20.422.227|<tuple|231|79>>
     <associate|eq 20.443.229|<tuple|161|60>>
     <associate|eq 20.444.229|<tuple|162|60>>
@@ -15064,7 +15185,7 @@
     <associate|measurability of image of a measurable set by a
     isomorphism|<tuple|64|87>>
     <associate|measurable function sum|<tuple|57|78>>
-    <associate|measurable function sum (finite)|<tuple|60|79>>
+    <associate|measurable function sum (finite)|<tuple|111|79>>
     <associate|measure Borel measure of T(A)|<tuple|65|87>>
     <associate|measure Borel measure of T(A)(1)|<tuple|67|88>>
     <associate|measure length function is a pre-measure|<tuple|47|56>>

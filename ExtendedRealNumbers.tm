@@ -1848,6 +1848,28 @@
   </proof>
 
   <\theorem>
+    <label|extended x\<less\>y-z=\<gtr\>z\<less\>y-x (1)>Let
+    <math|x,y\<in\>\<bbb-R\>\<wedge\>z\<in\><wide|\<bbb-R\>|\<wide-bar\>>>
+    [so that <math|y-z>, <math|y-x> are well defined] then if
+    <math|x\<less\>y-z> it follows that <math|z\<less\>x-y>
+  </theorem>
+
+  <\proof>
+    If <math|z=\<infty\>> then <math|x\<less\>y-\<infty\>=-\<infty\>> which
+    as <math|x\<in\>\<bbb-R\>\<Rightarrow\>-\<infty\>\<less\>x> is a
+    contradiction. Hence for <math|z> we have either:\ 
+
+    <\description>
+      <item*|<math|z=-\<infty\>>>Then as <math|x,y\<in\>\<bbb-R\>\<Rightarrow\>x-y\<in\>\<bbb-R\>>
+      we have that <math|z=-\<infty\>\<less\>x-y>.
+
+      <item*|<math|z\<in\>\<bbb-R\>>>Then as <math|x,y,z\<in\>\<bbb-R\>> we
+      have from <math|x\<less\>y-z> by the properties of the real numbers
+      that <math|z\<less\>y-x>.
+    </description>
+  </proof>
+
+  <\theorem>
     <label|extended 0\<less\>x and 0\<less\>=y then 0\<less\>x+y>Let
     <math|x,y\<in\><wide|\<bbb-R\>|\<wide-bar\>>> with
     <math|0\<less\>x\<wedge\>0\<leqslant\>y> then <math|0\<less\>x+y>
@@ -9171,7 +9193,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|19>
-    <associate|page-first|1219>
+    <associate|page-first|1323>
     <associate|page-medium|papyrus>
     <associate|section-nr|1>
     <associate|subsection-nr|7>
@@ -9250,103 +9272,104 @@
     <associate|eq 20.7.155|<tuple|20.7|32>>
     <associate|eq 20.8.155|<tuple|20.8|34>>
     <associate|eq 20.9.155|<tuple|20.9|34>>
-    <associate|extended -(x.y)|<tuple|20.38|18>>
+    <associate|extended -(x.y)|<tuple|20.39|18>>
     <associate|extended 0\<less\>=x and 0\<less\>=y then
     x-y\<less\>=x|<tuple|20.27|9>>
     <associate|extended 0\<less\>=y and z=x+y then
-    x\<less\>=z|<tuple|20.34|14>>
+    x\<less\>=z|<tuple|20.35|14>>
     <associate|extended 0\<less\>x and 0\<less\>=y then
-    0\<less\>x+y|<tuple|20.33|14>>
+    0\<less\>x+y|<tuple|20.34|14>>
     <associate|extended 1/x|<tuple|20.21|7>>
     <associate|extended abelian semi group|<tuple|20.26|8>>
-    <associate|extended abelian semi group (1)|<tuple|20.37|16>>
-    <associate|extended absolute value|<tuple|20.43|21>>
-    <associate|extended basis for the topology|<tuple|20.47|23>>
+    <associate|extended abelian semi group (1)|<tuple|20.38|16>>
+    <associate|extended absolute value|<tuple|20.44|21>>
+    <associate|extended basis for the topology|<tuple|20.48|23>>
     <associate|extended canonical topologies on the real and extended real
-    space|<tuple|20.50|24>>
-    <associate|extended canonical topology|<tuple|20.49|24>>
-    <associate|extended closed sets|<tuple|20.51|25>>
-    <associate|extended constant sequence|<tuple|20.59|31>>
-    <associate|extended continuous functions|<tuple|20.53|26>>
+    space|<tuple|20.51|24>>
+    <associate|extended canonical topology|<tuple|20.50|24>>
+    <associate|extended closed sets|<tuple|20.52|25>>
+    <associate|extended constant sequence|<tuple|20.60|31>>
+    <associate|extended continuous functions|<tuple|20.54|26>>
     <associate|extended density|<tuple|20.12|3>>
     <associate|extended denumerable sum of denumerable
-    sums|<tuple|20.107|73>>
-    <associate|extended denumerable sum of finite sums|<tuple|20.106|71>>
-    <associate|extended distributitivy|<tuple|20.41|20>>
-    <associate|extended distributitivy finite sum|<tuple|20.97|64>>
-    <associate|extended finite sums|<tuple|20.92|61>>
+    sums|<tuple|20.108|73>>
+    <associate|extended denumerable sum of finite sums|<tuple|20.107|71>>
+    <associate|extended distributitivy|<tuple|20.42|20>>
+    <associate|extended distributitivy finite sum|<tuple|20.98|64>>
+    <associate|extended finite sums|<tuple|20.93|61>>
     <associate|extended fully order|<tuple|20.9|2>>
-    <associate|extended generating basis|<tuple|20.48|23>>
-    <associate|extended inf sup negate|<tuple|20.65|35>>
-    <associate|extended inf(sup) sup(inf)|<tuple|20.56|30>>
+    <associate|extended generating basis|<tuple|20.49|23>>
+    <associate|extended inf sup negate|<tuple|20.66|35>>
+    <associate|extended inf(sup) sup(inf)|<tuple|20.57|30>>
     <associate|extended infinite inf sup|<tuple|20.15|6>>
-    <associate|extended infinite sum|<tuple|20.94|64>>
-    <associate|extended infinite sum of zero elements|<tuple|20.96|64>>
-    <associate|extended infinite sum properties|<tuple|20.98|65>>
-    <associate|extended lemma 20.62.155|<tuple|20.67|36>>
-    <associate|extended lim inf \<less\>= lim sup|<tuple|20.69|39>>
-    <associate|extended lim inf and lim sup|<tuple|20.57|31>>
-    <associate|extended lim inf and lim sup and sum|<tuple|20.64|34>>
-    <associate|extended lim inf lim sup and negation|<tuple|20.66|36>>
+    <associate|extended infinite sum|<tuple|20.95|64>>
+    <associate|extended infinite sum of zero elements|<tuple|20.97|64>>
+    <associate|extended infinite sum properties|<tuple|20.99|65>>
+    <associate|extended lemma 20.62.155|<tuple|20.68|36>>
+    <associate|extended lim inf \<less\>= lim sup|<tuple|20.70|39>>
+    <associate|extended lim inf and lim sup|<tuple|20.58|31>>
+    <associate|extended lim inf and lim sup and sum|<tuple|20.65|34>>
+    <associate|extended lim inf lim sup and negation|<tuple|20.67|36>>
     <associate|extended lim inf lim sup in the set of real
-    numbers|<tuple|20.70|40>>
+    numbers|<tuple|20.71|40>>
     <associate|extended lim inf lim sup in the set of real numbers
-    (1)|<tuple|20.76|43>>
-    <associate|extended lim inf lim sup ineqality (1)|<tuple|20.61|32>>
-    <associate|extended lim inf lim sup ineqality (2)|<tuple|20.62|33>>
-    <associate|extended lim inf lim sup properties|<tuple|20.68|38>>
-    <associate|extended lim inf x_i+n|<tuple|20.60|31>>
-    <associate|extended lim n to infinite|<tuple|20.81|47>>
-    <associate|extended limit|<tuple|20.71|41>>
-    <associate|extended limit (-@@)^n|<tuple|20.74|41>>
-    <associate|extended limit 1/(x_i)|<tuple|20.89|59>>
-    <associate|extended limit 1/n|<tuple|20.77|43>>
-    <associate|extended limit absolute value|<tuple|20.80|46>>
-    <associate|extended limit and finite sum|<tuple|20.87|57>>
-    <associate|extended limit and index translation|<tuple|20.83|48>>
+    (1)|<tuple|20.77|43>>
+    <associate|extended lim inf lim sup ineqality (1)|<tuple|20.62|32>>
+    <associate|extended lim inf lim sup ineqality (2)|<tuple|20.63|33>>
+    <associate|extended lim inf lim sup properties|<tuple|20.69|38>>
+    <associate|extended lim inf x_i+n|<tuple|20.61|31>>
+    <associate|extended lim n to infinite|<tuple|20.82|47>>
+    <associate|extended limit|<tuple|20.72|41>>
+    <associate|extended limit (-@@)^n|<tuple|20.75|41>>
+    <associate|extended limit 1/(x_i)|<tuple|20.90|59>>
+    <associate|extended limit 1/n|<tuple|20.78|43>>
+    <associate|extended limit absolute value|<tuple|20.81|46>>
+    <associate|extended limit and finite sum|<tuple|20.88|57>>
+    <associate|extended limit and index translation|<tuple|20.84|48>>
     <associate|extended limit based on supremum and
-    infinnum|<tuple|20.82|47>>
-    <associate|extended limit constant sequence|<tuple|20.73|41>>
-    <associate|extended limit equivalences|<tuple|20.78|44>>
+    infinnum|<tuple|20.83|47>>
+    <associate|extended limit constant sequence|<tuple|20.74|41>>
+    <associate|extended limit equivalences|<tuple|20.79|44>>
     <associate|extended limit in the (extended) real
-    numbers|<tuple|20.75|41>>
+    numbers|<tuple|20.76|41>>
     <associate|extended limit increasing / decreasing sequence
-    exist|<tuple|20.91|60>>
-    <associate|extended limit properties|<tuple|20.84|48>>
-    <associate|extended negate|<tuple|20.36|15>>
-    <associate|extended negate inequality|<tuple|20.40|20>>
+    exist|<tuple|20.92|60>>
+    <associate|extended limit properties|<tuple|20.85|48>>
+    <associate|extended negate|<tuple|20.37|15>>
+    <associate|extended negate inequality|<tuple|20.41|20>>
     <associate|extended neutral element|<tuple|20.18|7>>
-    <associate|extended open set properties|<tuple|20.52|26>>
-    <associate|extended open set scaling and translation|<tuple|20.54|27>>
+    <associate|extended open set properties|<tuple|20.53|26>>
+    <associate|extended open set scaling and translation|<tuple|20.55|27>>
     <associate|extended order relation|<tuple|20.4|1>>
-    <associate|extended partial sums converges|<tuple|20.93|63>>
+    <associate|extended partial sums converges|<tuple|20.94|63>>
     <associate|extended positive and non negative numbers|<tuple|20.25|8>>
     <associate|extended reals|<tuple|20.1|1>>
     <associate|extended reals finite real number|<tuple|20.3|1>>
-    <associate|extended series and index translation|<tuple|20.99|65>>
-    <associate|extended series and permutations|<tuple|20.100|66>>
+    <associate|extended series and index translation|<tuple|20.100|65>>
+    <associate|extended series and permutations|<tuple|20.101|66>>
     <associate|extended series is finite then all the terms are
-    finite|<tuple|20.110|76>>
+    finite|<tuple|20.111|76>>
     <associate|extended sum|<tuple|20.16|7>>
-    <associate|extended sum of sums|<tuple|20.103|67>>
+    <associate|extended sum of sums|<tuple|20.104|67>>
     <associate|extended sup and inf exist|<tuple|20.13|3>>
     <associate|extended sup inf of real numbers|<tuple|20.14|6>>
-    <associate|extended sup of set and sum|<tuple|20.63|33>>
-    <associate|extended topology od Hsusdorff|<tuple|20.55|29>>
+    <associate|extended sup of set and sum|<tuple|20.64|33>>
+    <associate|extended topology od Hsusdorff|<tuple|20.56|29>>
     <associate|extended x+y\<less\>z=\<gtr\>x\<less\>z-y|<tuple|20.31|13>>
     <associate|extended x+z=y+z=\<gtr\>x-y|<tuple|20.28|9>>
-    <associate|extended x.y|<tuple|20.35|14>>
-    <associate|extended x\<less\>=x+e=\<gtr\>x\<less\>=e|<tuple|20.42|21>>
+    <associate|extended x.y|<tuple|20.36|14>>
+    <associate|extended x\<less\>=x+e=\<gtr\>x\<less\>=e|<tuple|20.43|21>>
     <associate|extended x\<less\>=y then for 0\<less\>=s we have
-    s.x\<less\>=s.y|<tuple|20.39|18>>
+    s.x\<less\>=s.y|<tuple|20.40|18>>
     <associate|extended x\<less\>=y then x+z\<less\>=y+z|<tuple|20.29|12>>
     <associate|extended x\<less\>y =\<gtr\> x\<less\>\<gtr\>@@ and
     y\<less\>\<gtr\>@@|<tuple|20.11|3>>
     <associate|extended x\<less\>y-z=\<gtr\>z\<less\>y-x|<tuple|20.32|14>>
-    <associate|lemma 20.78.156|<tuple|20.88|58>>
-    <associate|lemma 20.80.156|<tuple|20.90|60>>
-    <associate|lemma 20.90.156|<tuple|20.104|69>>
-    <associate|lemma 20.95.156|<tuple|20.109|75>>
+    <associate|extended x\<less\>y-z=\<gtr\>z\<less\>y-x (1)|<tuple|20.33|?>>
+    <associate|lemma 20.78.156|<tuple|20.89|58>>
+    <associate|lemma 20.80.156|<tuple|20.91|60>>
+    <associate|lemma 20.90.156|<tuple|20.105|69>>
+    <associate|lemma 20.95.156|<tuple|20.110|75>>
   </collection>
 </references>
 
@@ -9379,29 +9402,26 @@
       real numbers> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-1><vspace|0.5fn>
 
-      <with|par-left|<quote|1tab>|8<space|2spc>Order relation in
+      20.1<space|2spc>Order relation in <with|mode|<quote|math>|<wide|\<bbb-R\>|\<wide-bar\>>>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-2>
+
+      20.2<space|2spc>Arithmetic operations on
       <with|mode|<quote|math>|<wide|\<bbb-R\>|\<wide-bar\>>>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-2>>
+      <no-break><pageref|auto-3>
 
-      <with|par-left|<quote|1tab>|9<space|2spc>Arithmetic operations on
-      <with|mode|<quote|math>|<wide|\<bbb-R\>|\<wide-bar\>>>
+      20.3<space|2spc>Topology on <with|mode|<quote|math>|<wide|\<bbb-R\>|\<wide-bar\>>>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-3>>
+      <no-break><pageref|auto-7>
 
-      <with|par-left|<quote|1tab>|10<space|2spc>Topology on
-      <with|mode|<quote|math>|<wide|\<bbb-R\>|\<wide-bar\>>>
+      20.4<space|2spc>Sequences in <with|mode|<quote|math>|<wide|\<bbb-R\>|\<wide-bar\>>>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-7>>
+      <no-break><pageref|auto-9>
 
-      <with|par-left|<quote|1tab>|11<space|2spc>Sequences in
-      <with|mode|<quote|math>|<wide|\<bbb-R\>|\<wide-bar\>>>
+      20.5<space|2spc>Series of non negative sequences
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-9>>
-
-      <with|par-left|<quote|1tab>|12<space|2spc>Series of non negative
-      sequences <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-14>>
+      <no-break><pageref|auto-14>
     </associate>
   </collection>
 </auxiliary>
