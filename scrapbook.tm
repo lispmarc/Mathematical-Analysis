@@ -14633,7 +14633,122 @@
 
   \;
 
-  \;
+  <\theorem>
+    <label|measurable function in sub space>Let
+    <math|<around*|\<langle\>|X,\<cal-A\>|\<rangle\>>> be a measurable space,
+    <math|A\<in\>\<cal-A\>> and <math|<around*|\<langle\>|A,\<cal-A\><rsub|\|A>|\<rangle\>>>
+    the measurable space defined by <math|\<cal-A\><rsub|\|A>=<around*|{|C\<in\>\<cal-A\>\|C\<subseteq\>A|}>>
+    [see theorem: <reference|measure sub measure space>] and
+    <math|f:X\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>>> a function then we
+    have\ 
+
+    <\equation*>
+      \<cal-X\><rsub|X,A>\<cdot\>f\<in\>\<cal-M\><around*|[|X,\<cal-A\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>\<Leftrightarrow\>f<rsub|\|A>\<in\>\<cal-M\><around*|[|A,\<cal-A\><rsub|\|A>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>Let <math|B\<in\>\<cal-B\><around*|[|<wide|\<bbb-R\>|\<wide-bar\>>|]>>
+      then as <math|\<cal-X\><rsub|X,A>\<cdot\>f\<in\>\<cal-M\><around*|[|X,\<cal-A\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
+      we have\ 
+
+      <\equation>
+        <label|eq 20.442.249><around*|(|\<cal-X\><rsub|X,A>\<cdot\>f|)><rsup|-1><around*|(|B|)>\<in\>\<cal-A\>
+      </equation>
+
+      For <math|B> we must consider the following cases:\ 
+
+      <\description>
+        <item*|<math|0\<in\>B>>Then by [lemma: <reference|lemma 20.349.249>]\ 
+
+        <\equation>
+          <label|eq 20.443.249><around*|(|X\\A|)><big|cup>f<rsup|-1><around*|(|B|)>=<around*|(|\<cal-X\><rsub|X,A>\<cdot\>f|)><rsup|-1><around*|(|B|)><below|\<in\>|<text|[eq:
+          <reference|eq 20.442.249>]>>\<cal-A\>
+        </equation>
+
+        Further\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|A<big|cap><around*|(|<around*|(|X\\A|)><big|cup>f<rsup|-1><around*|(|B|)>|)>>|<cell|=>|<cell|<around*|(|A<big|cap><around*|(|X\\A|)>|)><big|cup><around*|(|A<big|cap>f<rsup|-1><around*|(|B|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<varnothing\><big|cup><around*|(|A<big|cap>f<rsup|-1><around*|(|B|)>|)>>>|<row|<cell|>|<cell|=>|<cell|A<big|cap>f<rsup|-1><around*|(|B|)>>>|<row|<cell|>|<cell|<below|=|<text|[theorem:
+          <reference|function restricted function
+          properties>]>>>|<cell|<around*|(|f<rsub|\|A>|)><rsup|-1><around*|(|B|)>>>>>
+        </eqnarray*>
+
+        As <math|A\<in\>\<cal-A\>> and by [eq: <reference|eq 20.443.249>]
+        <math|<around*|(|X\\A|)><big|cup>f<rsup|-1><around*|(|B|)>\<in\>\<cal-A\>>
+        it follows that <math|A<big|cap><around*|(|<around*|(|X\\A|)><big|cup>f<rsup|-1><around*|(|B|)>|)>\<in\>\<cal-A\>>
+        so that by the above <math|<around*|(|f<rsub|\|A>|)><rsup|-1><around*|(|B|)>\<in\>\<cal-A\>>.
+
+        <item*|<math|0\<nin\>B>>Then <math|<around*|(|f<rsub|\|A>|)><rsup|-1><around*|(|B|)><below|=|<text|[theorem:
+        <reference|function restricted function
+        properties>]>>A<big|cap>f<rsup|-1><around*|(|B|)>\<equallim\><rsub|<text|[lemma:
+        <reference|lemma 20.349.249>]>><around*|(|\<cal-X\><rsub|X,A>\<cdot\>f|)><rsup|-1><around*|(|B|)><below|\<in\>|<text|[eq:
+        <reference|eq 20.442.249>]>>\<cal-A\>> proving that
+        <math|<around*|(|f<rsub|\|A>|)><rsup|-1><around*|(|B|)>\<in\>\<cal-A\>>.
+      </description>
+
+      So <math|\<forall\>B\<in\>\<cal-B\><around*|[|<wide|\<bbb-R\>|\<wide-bar\>>|]>>
+      <math|<around*|(|f<rsub|\|A>|)><rsup|-1><around*|(|B|)>\<in\>\<cal-A\>>,
+      hence as <math|<around*|(|f<rsub|\|A>|)><rsup|-1><around*|(|B|)><below|=|<text|[theorem:
+      <reference|function restricted function
+      properties>]>>A<big|cap>f<rsup|-1><around*|(|B|)>\<subseteq\>A> it
+      follows that <math|<around*|(|f<rsub|\|A>|)><rsup|-1><around*|(|B|)>\<in\>\<cal-A\><rsub|\|A>>.
+      Which proves that\ 
+
+      <\equation*>
+        f<rsub|\|A>\<in\>\<cal-M\><around*|[|A,\<cal-A\><rsub|\|A>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
+      </equation*>
+
+      <item*|<math|\<Leftarrow\>>>Let <math|B\<in\>\<cal-B\><around*|[|<wide|\<bbb-R\>|\<wide-bar\>>|]>>
+      then, as by the hypothesis <math|f<rsub|\|A>\<in\>\<cal-M\><around*|[|A,\<cal-A\><rsub|\|A>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
+      we have that <math|<around*|(|f<rsub|\|A>|)><rsup|-1><around*|(|B|)>\<in\>\<cal-A\><rsub|\|A>>
+      so that
+
+      <\equation>
+        <label|eq 20.444.249>A<big|cap>f<rsup|-1><around*|(|B|)><below|=|<text|[theorem:
+        <reference|function restricted function
+        properties>]>><around*|(|f<rsub|\|A>|)><rsup|-1><around*|(|B|)>\<in\>\<cal-A\><rsub|\<divides\>A>=<around*|{|B\<in\>\<cal-A\>\|B\<subseteq\>A|}>\<subseteq\>\<cal-A\>
+      </equation>
+
+      Further\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|X\\A|)><big|cup><around*|(|A<big|cap>f<rsup|-1><around*|(|B|)>|)>>|<cell|=>|<cell|<around*|(|<around*|(|X\\A|)><big|cup>A|)><big|cap><around*|(|<around*|(|X\\A|)><big|cup>f<rsup|-1><around*|(|B|)>|)>>>|<row|<cell|>|<cell|=>|<cell|X<big|cap><around*|(|<around*|(|X\\A|)><big|cup>f<rsup|-1><around*|(|B|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|X\\A|)><big|cup>f<rsup|-1><around*|(|B|)>>>>>
+      </eqnarray*>
+
+      As <math|A<big|cap><around*|(|A<big|cap>f<rsup|-1><around*|(|B|)>|)>\<in\>\<cal-A\>>
+      [see eq: <reference|eq 20.444.249>[ and
+      <math|A\<in\>\<cal-A\>\<Rightarrow\>X\\A\<in\>\<cal-A\>> it follows
+      that <math|<rigid|<around*|(|X\\A|)><big|cup><around*|(|A<big|cap>f<rsup|-1><around*|(|B|)>|)>\<in\>\<cal-A\>>>
+      so that by the above\ 
+
+      <\equation>
+        <around*|(|X\\A|)><big|cup>f<rsup|-1><around*|(|B|)>\<in\>\<cal-A\>
+      </equation>
+
+      Now for <math|B> we have either:\ 
+
+      <\description>
+        <item*|<math|0\<in\>B>>Then by [lemma: <reference|lemma 20.349.249>]
+        <math|<around*|(|\<cal-X\><rsub|A>\<cdot\>f|)><rsup|-1><around*|(|B|)>=<around*|(|X\\A|)><big|cup>f<rsup|-1><around*|(|B|)>\<in\>\<cal-A\>>
+
+        <item*|<math|0\<nin\>B>>Then by [lemma: <reference|lemma 20.349.249>]
+        <math|<around*|(|\<cal-X\><rsub|A>\<cdot\>f|)><rsup|-1><around*|(|B|)>=A<big|cap>f<rsup|-1><around*|(|B|)><below|\<in\>|<text|[eq:
+        <reference|eq 20.444.249>]>>\<cal-A\>>
+      </description>
+
+      So <math|\<forall\>B\<in\>\<cal-B\><around*|[|<wide|\<bbb-R\>|\<wide-bar\>>|]>>
+      we have <math|<around*|(|\<cal-X\><rsub|A>\<cdot\>f|)><rsup|-1><around*|(|B|)>\<in\>\<cal-A\>>
+      which proves that\ 
+
+      <\equation*>
+        \<cal-X\><rsub|A>\<cdot\>f\<in\>\<cal-M\><around*|[|X,\<cal-A\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
+      </equation*>
+    </description>
+  </proof>
 
   \;
 
@@ -15061,8 +15176,11 @@
     <associate|eq 20.326\<point\>224|<tuple|159|59>>
     <associate|eq 20.421.227|<tuple|510|79>>
     <associate|eq 20.422.227|<tuple|231|79>>
+    <associate|eq 20.442.249|<tuple|511|?>>
     <associate|eq 20.443.229|<tuple|161|60>>
+    <associate|eq 20.443.249|<tuple|512|?>>
     <associate|eq 20.444.229|<tuple|162|60>>
+    <associate|eq 20.444.249|<tuple|513|?>>
     <associate|eq 20.445.229|<tuple|163|60>>
     <associate|eq 20.490.249|<tuple|201|67>>
     <associate|eq 20.500.231|<tuple|202|67>>
@@ -15184,6 +15302,7 @@
     <associate|lemma 21.591.|<tuple|76|95>>
     <associate|measurability of image of a measurable set by a
     isomorphism|<tuple|64|87>>
+    <associate|measurable function in sub space|<tuple|114|?>>
     <associate|measurable function sum|<tuple|57|78>>
     <associate|measurable function sum (finite)|<tuple|111|79>>
     <associate|measure Borel measure of T(A)|<tuple|65|87>>
