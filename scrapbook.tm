@@ -14750,6 +14750,110 @@
     </description>
   </proof>
 
+  <\theorem>
+    <label|almost everywhere measurability>Let
+    <math|<around*|\<langle\>|X,\<cal-A\>,\<mu\>|\<rangle\>>> be a
+    <with|font-series|bold|complete> measure space [see theorem:
+    <reference|measure complete measure>],
+    <math|f:X\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>>> a
+    <math|\<cal-A\>>-measurable function and
+    <math|g:X\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>>> satisfies
+    <math|f=g> <math|\<mu\>>-a.e. then <math|g> is
+    <math|\<cal-A\>>-measurable.
+  </theorem>
+
+  <\proof>
+    As <math|f=g> <math|\<mu\>>-a.e. there exists a <math|N\<in\>\<cal-A\>>
+    with <math|\<mu\><around*|(|N|)>=0> and
+    <math|<around*|{|x\<in\>X\|f<around*|(|x|)>\<neq\>g<around*|(|x|)>|}>\<subseteq\>N>.
+    So\ 
+
+    <\equation>
+      <label|eq 20.436.228>x\<in\>X\\N\<Rightarrow\>f<around*|(|x|)>=g<around*|(|x|)>
+    </equation>
+
+    . Let <math|t\<in\>\<bbb-R\>> then\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|x\<in\><around*|{|g\<leqslant\>t|}>>|<cell|\<Leftrightarrow\>>|<cell|x\<in\>X\<wedge\>g<around*|(|x|)>\<leqslant\>t>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|<around*|(|x\<in\>X\\N\<vee\>x\<in\>N|)>\<wedge\>g<around*|(|x|)>\<leqslant\>t>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|<around*|(|x\<in\>X\\N\<wedge\>g<around*|(|x|)>\<leqslant\>t|)>\<vee\><around*|(|x\<in\>N\<wedge\>g<around*|(|x|)>\<leqslant\>t|)>>>|<row|<cell|>|<cell|\<Leftrightarrowlim\><rsub|<text|[eq:
+      <reference|eq 20.436.228>]>>>|<cell|<around*|(|x\<in\>X\\N\<wedge\>f<around*|(|x|)>\<leqslant\>t|)>\<vee\><around*|(|x\<in\>N\<wedge\>g<around*|(|x|)>\<leqslant\>t|)>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\><around*|(|<around*|(|X\\N|)><big|cap><around*|{|f\<leqslant\>t|}>|)>\<vee\>x\<in\><around*|(|N<big|cap><around*|{|g\<leqslant\>t|}>|)>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\><around*|(|<around*|(|X\\N|)><big|cap><around*|{|f\<leqslant\>t|}>|)><big|cup><around*|(|N<big|cap><around*|{|g\<leqslant\>t|}>|)>>>>>
+    </eqnarray*>
+
+    which proves that\ 
+
+    <\equation>
+      <label|eq 20.437.228><around*|{|g\<leqslant\>t|}>=<around*|(|<around*|(|X\\N|)><big|cap><around*|{|f\<leqslant\>t|}>|)><big|cup><around*|(|N<big|cap><around*|{|g\<leqslant\>t|}>|)>
+    </equation>
+
+    Given that <math|f> is <math|\<cal-A\>>-measurable we have by [theorem:
+    <reference|measurable function alternative (1)>] that
+    <math|<around*|{|f\<leqslant\>t|}>\<in\>\<cal-A\>>, further as
+    <math|N\<in\>\<cal-A\>> we have also <math|X\\N\<in\>\<cal-A\>>. Finally
+    as <math|N<big|cap><around*|{|g\<leqslant\>t|}>\<subseteq\>N> and
+    <math|\<mu\><around*|(|N|)>=0> it follows from the fact <math|\<mu\>> is
+    complete that <math|N<big|cap><around*|{|g\<leqslant\>t|}>\<in\>\<cal-A\>>.
+    So <math|<around*|(|X\\N<big|cap><around*|{|f\<leqslant\>t|}>|)><big|cup><around*|(|N<big|cap><around*|{|g\<leqslant\>t|}>|)>\<in\>\<cal-A\>>
+    which by [eq: <reference|eq 20.437.228>] proves that
+    <math|<around*|{|g\<leqslant\>t|}>\<in\>\<cal-A\>>. Applying then
+    [theorem: <reference|measurable function alternative (1)>] results in\ 
+
+    <\equation*>
+      g<text| is >\<cal-A\><text|-measurable>
+    </equation*>
+  </proof>
+
+  <\theorem>
+    <label|almost everywhere measurability>Let
+    <math|<around*|\<langle\>|X,\<cal-A\>,\<mu\>|\<rangle\>>> be a
+    <with|font-series|bold|complete> measure space [see theorem:
+    <reference|measure complete measure>],
+    <math|f:X\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>>> a
+    <math|\<cal-A\>>-measurable function and
+    <math|g:X\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>>> satisfies
+    <math|f=g> <math|\<mu\>>-a.e. then <math|g> is
+    <math|\<cal-A\>>-measurable.
+  </theorem>
+
+  <\proof>
+    As <math|f=g> <math|\<mu\>>-a.e. there exists a <math|N\<in\>\<cal-A\>>
+    with <math|\<mu\><around*|(|N|)>=0> and
+    <math|<around*|{|x\<in\>X\|f<around*|(|x|)>\<neq\>g<around*|(|x|)>|}>\<subseteq\>N>.
+    So\ 
+
+    <\equation>
+      <label|eq 20.436.228>x\<in\>X\\N\<Rightarrow\>f<around*|(|x|)>=g<around*|(|x|)>
+    </equation>
+
+    . Let <math|t\<in\>\<bbb-R\>> then\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|x\<in\><around*|{|g\<leqslant\>t|}>>|<cell|\<Leftrightarrow\>>|<cell|x\<in\>X\<wedge\>g<around*|(|x|)>\<leqslant\>t>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|<around*|(|x\<in\>X\\N\<vee\>x\<in\>N|)>\<wedge\>g<around*|(|x|)>\<leqslant\>t>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|<around*|(|x\<in\>X\\N\<wedge\>g<around*|(|x|)>\<leqslant\>t|)>\<vee\><around*|(|x\<in\>N\<wedge\>g<around*|(|x|)>\<leqslant\>t|)>>>|<row|<cell|>|<cell|\<Leftrightarrowlim\><rsub|<text|[eq:
+      <reference|eq 20.436.228>]>>>|<cell|<around*|(|x\<in\>X\\N\<wedge\>f<around*|(|x|)>\<leqslant\>t|)>\<vee\><around*|(|x\<in\>N\<wedge\>g<around*|(|x|)>\<leqslant\>t|)>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\><around*|(|<around*|(|X\\N|)><big|cap><around*|{|f\<leqslant\>t|}>|)>\<vee\>x\<in\><around*|(|N<big|cap><around*|{|g\<leqslant\>t|}>|)>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\><around*|(|<around*|(|X\\N|)><big|cap><around*|{|f\<leqslant\>t|}>|)><big|cup><around*|(|N<big|cap><around*|{|g\<leqslant\>t|}>|)>>>>>
+    </eqnarray*>
+
+    which proves that\ 
+
+    <\equation>
+      <label|eq 20.437.228><around*|{|g\<leqslant\>t|}>=<around*|(|<around*|(|X\\N|)><big|cap><around*|{|f\<leqslant\>t|}>|)><big|cup><around*|(|N<big|cap><around*|{|g\<leqslant\>t|}>|)>
+    </equation>
+
+    Given that <math|f> is <math|\<cal-A\>>-measurable we have by [theorem:
+    <reference|measurable function alternative (1)>] that
+    <math|<around*|{|f\<leqslant\>t|}>\<in\>\<cal-A\>>, further as
+    <math|N\<in\>\<cal-A\>> we have also <math|X\\N\<in\>\<cal-A\>>. Finally
+    as <math|N<big|cap><around*|{|g\<leqslant\>t|}>\<subseteq\>N> and
+    <math|\<mu\><around*|(|N|)>=0> it follows from the fact <math|\<mu\>> is
+    complete that <math|N<big|cap><around*|{|g\<leqslant\>t|}>\<in\>\<cal-A\>>.
+    So <math|<around*|(|X\\N<big|cap><around*|{|f\<leqslant\>t|}>|)><big|cup><around*|(|N<big|cap><around*|{|g\<leqslant\>t|}>|)>\<in\>\<cal-A\>>
+    which by [eq: <reference|eq 20.437.228>] proves that
+    <math|<around*|{|g\<leqslant\>t|}>\<in\>\<cal-A\>>. Applying then
+    [theorem: <reference|measurable function alternative (1)>] results in\ 
+
+    <\equation*>
+      g<text| is >\<cal-A\><text|-measurable>
+    </equation*>
+  </proof>
+
   \;
 
   \;
@@ -14775,6 +14879,7 @@
     <associate|Fubini's theorem|<tuple|63|83>>
     <associate|Holder continuity|<tuple|72|92>>
     <associate|Holder continuity implies continuity|<tuple|73|92>>
+    <associate|almost everywhere measurability|<tuple|116|?>>
     <associate|auto-1|<tuple|open mapping theorem|5>>
     <associate|auto-10|<tuple|higher order differentiation chain rule|?>>
     <associate|auto-11|<tuple|4|?>>
@@ -15180,6 +15285,8 @@
     <associate|eq 20.326\<point\>224|<tuple|159|59>>
     <associate|eq 20.421.227|<tuple|510|79>>
     <associate|eq 20.422.227|<tuple|231|79>>
+    <associate|eq 20.436.228|<tuple|517|?>>
+    <associate|eq 20.437.228|<tuple|518|?>>
     <associate|eq 20.442.249|<tuple|511|?>>
     <associate|eq 20.443.229|<tuple|161|60>>
     <associate|eq 20.443.249|<tuple|512|?>>

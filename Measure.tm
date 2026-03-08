@@ -15916,7 +15916,7 @@
 
     <\equation*>
       f<rsub|A\<uparrow\>X>\<in\>\<cal-M\><around*|[|X,\<cal-A\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>\<Leftrightarrow\><text|
-      >f\<in\>\<cal-M\><around*|[|A,\<cal-A\><rsub|\|A>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
+      >f\<in\>\<cal-M\><around*|[|A,\<cal-A\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
     </equation*>
   </theorem>
 
@@ -18135,9 +18135,9 @@
   <\definition>
     <label|almost everywhere><index|<math|\<mu\><text|-a.e.>>>Let
     <math|<around*|\<langle\>|X,\<cal-A\>,\<mu\>|\<rangle\>>> be a measure
-    space and <math|P<around*|(|x|)>> a predicate then
+    space, <math|A\<subseteq\>X> and <math|P<around*|(|x|)>> a predicate then
     <math|P<around*|(|x|)>> is <with|font-series|bold|<math|\<mu\>>-a.e.
-    true> if <math|<around*|{|x\<in\>X\|\<neg\>P<around*|(|x|)>|}>\<in\>\<cal-N\><rsub|\<mu\>>>.
+    true> if <math|<around*|{|x\|\<neg\>P<around*|(|x|)>|}>\<in\>\<cal-N\><rsub|\<mu\>>>.
     In other words using the definition of <math|\<cal-N\><rsub|\<mu\>>> [see
     definition: <reference|measure null set>]\ 
 
@@ -18150,7 +18150,7 @@
     <math|\<mu\><around*|(|N|)>=0> such that\ 
 
     <\equation*>
-      <around*|{|x\<in\>X\|\<neg\>P<around*|(|x|)>|}>\<subseteq\>N
+      <around*|{|x\|\<neg\>P<around*|(|x|)>|}>\<subseteq\>N
     </equation*>
   </definition>
 
@@ -18599,7 +18599,7 @@
     <reference|eq 21.414.301>, <reference|eq 21.415.301>] that\ 
 
     <\equation*>
-      <around*|(|<label|eq 21.414.301>N<big|cap><around*|{|g\<leqslant\>x|}>|)><big|cup><around*|(|<around*|(|A\\N|)><big|cap><around*|{|f\<leqslant\>x|}>|)>\<in\>\<cal-A\><rsub|\|A>
+      <around*|(|N<big|cap><around*|{|g\<leqslant\>x|}>|)><big|cup><around*|(|<around*|(|A\\N|)><big|cap><around*|{|f\<leqslant\>x|}>|)>\<in\>\<cal-A\><rsub|\|A>
     </equation*>
 
     which combined with [eq: <reference|eq 21.413.301>] proves that\ 
@@ -18677,7 +18677,19 @@
       exist and ><below|lim|n\<rightarrow\>\<infty\>>f<rsub|n><around*|(|x|)>=f<around*|(|x|)>|}>\<subseteq\>N
     </equation*>
 
-    from which it follows that <math|f=f<rsub|\<infty\>>> <math|\<mu\>>-a.e..
+    Further\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|x\<in\><around*|{|x\<in\>X\|f<around*|(|x|)>\<neq\>f<rsub|\<infty\>><around*|(|x|)>|}>>|<cell|\<Leftrightarrow\>>|<cell|x\<in\>X\<wedge\>f<around*|(|x|)>\<neq\>f<rsub|\<infty\>><around*|(|x|)>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\>X\<wedge\>x\<nin\><around*|{|x\<in\>X\|f<around*|(|x|)>=f<rsub|\<infty\>><around*|(|x|)>|}>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\>X\\<around*|{|x\<in\>X\|f<around*|(|x|)>=f<rsub|\<infty\>><around*|(|x|)>|}>>>>>
+    </eqnarray*>
+
+    which proves that
+
+    <\equation*>
+      <around*|{|x\<in\>X\|f<around*|(|x|)>\<neq\>f<rsub|\<infty\>><around*|(|x|)>|}>=X\\<around*|{|x\<in\>X\|f<around*|(|x|)>=f<rsub|\<infty\>><around*|(|x|)>|}>\<subseteq\>N
+    </equation*>
+
+    Hence it follows that <math|f=f<rsub|\<infty\>>> <math|\<mu\>>-a.e..
     Using then the previous theorem [theorem: <reference|almost everywhere
     measurability>] we must conclude that\ 
 
@@ -18685,6 +18697,8 @@
       f<text| is >\<cal-A\><text|-measurable.>
     </equation*>
   </proof>
+
+  \;
 
   <section|The measure integral>
 
@@ -18720,8 +18734,6 @@
   </definition>
 
   We have the following alternative definition of a simple function.
-
-  TODO
 
   <\theorem>
     <label|simple function alternative>Let <math|X> be a non empty set then
@@ -18795,8 +18807,9 @@
       <math|i\<in\><around*|{|1,\<ldots\>,n|}>> such that
       <math|f<around*|(|x|)>=\<beta\><around*|(|i|)>>. Hence
       <math|x\<in\>f<rsup|-1><around*|(|<around*|{|\<beta\><around*|(|i|)>|}>|)>=A<rsub|i>\<subseteq\><big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>>
-      which proves that <math|X\<subseteq\><big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>\<subseteq\>X>
-      or that\ 
+      which proves that <math|X\<subseteq\><big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>>
+      or, as trivially <math|<big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>\<subseteq\>X>,
+      that\ 
 
       <\equation>
         <label|eq 20.441.229>X=<big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>
@@ -18805,7 +18818,7 @@
       Let <math|x\<in\>X> then by [eqs: <reference|eq 20.440.229>,
       <reference|eq 20.441.229>] there exists a
       <math|i\<in\><around*|{|1,\<ldots\>,n|}>> such that
-      <math|x\<in\>A<rsub|i>> and <math|\<forall\>j\<in\><around*|{|1,\<ldots\>,n|}>>
+      <math|x\<in\>A<rsub|i>> and <math|\<forall\>j\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|i|}>>
       <math|x\<nin\>A<rsub|j>>. Hence\ 
 
       <\eqnarray*>
@@ -18943,7 +18956,7 @@
 
       <\description>
         <item*|<math|\<alpha\>=0>>Then <math|<around*|(|\<alpha\>\<cdot\>f|)><around*|(|X|)>=<around*|{|0|}>>
-        which is finite and non empty
+        which is finite and non empty.
 
         <item*|<math|\<alpha\>\<neq\>0>>As <math|f> is a simple function
         there exists a <math|n\<in\>\<bbb-N\>> and a bijection
@@ -18951,7 +18964,7 @@
         Define now
 
         <\equation*>
-          \<alpha\><rsub|f>:<around*|{|1,\<ldots\>,n|}>\<rightarrow\><around*|(|\<alpha\>\<cdot\>f|)><around*|(|X|)><text|
+          \<alpha\><rsub|f>:<around*|{|1,\<ldots\>,n|}>\<rightarrow\><around*|(|\<alpha\>\<cdot\>f|)><around*|(|x|)><text|
           by >\<alpha\><rsub|f><around*|(|i|)>=\<alpha\>\<cdot\>\<beta\><around*|(|i|)>
         </equation*>
 
@@ -19021,8 +19034,8 @@
     </enumerate>
   </proof>
 
-  A example of a simple function <math|f:\<bbb-R\>\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>>>
-  of the form
+  A example of a simple function is a function
+  <math|f:\<bbb-R\>\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>>> of the form
 
   <\equation*>
     f=f<rsub|1>\<cdot\>\<cal-X\><rsub|A<rsub|1>>+f<rsub|2>\<cdot\>\<cal-X\><rsub|A<rsub|2>>+f<rsub|3>\<cdot\>\<cal-X\><rsub|A<rsub|3>>+f<rsub|4>\<cdot\>\<cal-X\><rsub|A<rsub|4>><text|
@@ -19042,7 +19055,7 @@
     f<rsub|1>\<cdot\>size<around*|(|A<rsub|1>|)>+f<rsub|2>\<cdot\>size<around*|(|A<rsub|2>|)>+f<rsub|3>\<cdot\>size<around*|(|A<rsub|3>|)>+f<rsub|4>\<cdot\>size<around*|(|A<rsub|4>|)>
   </equation*>
 
-  so the integral of <math|f> which calculates this size should be of the
+  so the integral of <math|f> which calculates this area should be of the
   form\ 
 
   <\equation*>
@@ -19077,10 +19090,19 @@
 
     <\note>
       If <math|f\<in\>\<cal-S\><around*|[|X,\<cal-A\>|]>> then
-      <math|f\<in\>\<cal-S\><around*|[|X|]><below|\<Rightarrow\>|<text|[definition:
-      <reference|simple function>]>>f<around*|(|X|)>\<subseteq\>\<bbb-R\>>
-      and <math|f\<in\>\<cal-M\><around*|[|X,\<cal-A\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>.
-      Hence we have that\ 
+      <math|f\<in\>\<cal-S\><around*|[|X|]>\<Rightarrow\>f<around*|(|X|)>\<subseteq\>R>
+      and <math|f\<in\>\<cal-M\><around*|[|X,\<cal-A\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
+      so that
+
+      <\equation*>
+        \<cal-S\><around*|[|X,\<cal-A\>|]>\<subseteq\>\<cal-S\><around*|[|X|]><big|cap>\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-R\>|]>
+      </equation*>
+
+      Further if <math|f\<in\>\<cal-S\><around*|[|X|]><big|cap>\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-R\>|]>>
+      then <math|f\<in\>\<cal-S\><around*|[|X|[>> and
+      <math|f\<in\>\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-R\>|]>\<subseteq\>\<cal-M\><around*|(|X,\<cal-A\>,<wide|\<bbb-R\>|\<wide-bar\>>|)>>
+      which proves that <math|><math|\<cal-S\><around*|[|X|]><big|cap>\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-R\>|]>\<subseteq\>\<cal-S\><around*|[|X,\<cal-A\>|]>>.
+      Hence we have\ 
 
       <\equation*>
         \<cal-S\><around*|[|X,\<cal-A\>|]>=\<cal-S\><around*|[|X|]><big|cap>\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-R\>|]>\<subseteq\>\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-R\>|]>\<subseteq\>\<cal-M\><around*|[|X,\<cal-A\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
@@ -19088,10 +19110,8 @@
     </note>
   </definition>
 
-  \;
-
-  We have a simpler alternative definition for
-  <math|\<cal-S\><around*|[|X,\<cal-A\>|]>>
+  We look now at a alternative definition for
+  <math|\<cal-S\><around*|[|X,\<cal-A\>|]>>. First we need a little lemma.
 
   <\lemma>
     <label|lemma 20.371.262>Let <math|X> be a set, <math|n\<in\>\<bbb-N\>>
@@ -19102,10 +19122,10 @@
       <around*|{|B<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>\<subseteq\>\<cal-P\><around*|(|X|)><text|
       defined by >B<rsub|i>=<choice|<tformat|<table|<row|<cell|X\\<around*|(|<big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>|)>
       <text| if >i=n+1>>|<row|<cell|A<rsub|i><text| if
-      >i\<in\><around*|{|1,\<ldots\>,n|}>>>>>>
+      >i\<in\><around*|{|1,\<ldots\>,n|}>>>>>>\<subseteq\>X
     </equation*>
 
-    we have that\ 
+    we have
 
     <\equation*>
       <around*|{|B<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><text|
@@ -19124,9 +19144,19 @@
     then we have for <math|i,j> either:\ 
 
     <\description>
-      <item*|<math|i=n+1>>Then <math|A<rsub|i><big|cap>A<rsub|j>=<around*|(|X\\<around*|(|<big|sqcup><rsub|k\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|k>|)>|)><big|cap>A<rsub|j>\<subseteq\><around*|(|X\\A<rsub|j>|)><big|cap>A<rsub|i>=\<varnothing\>>.
+      <item*|<math|i=n+1>>Then <math|j\<in\><around*|{|1,\<ldots\>,n|}>> so
+      that
 
-      <item*|<math|j=n+1>>Then <math|A<rsub|i><big|cap>A<rsub|j>=A<rsub|i><big|cap><around*|(|X\\<around*|(|<big|sqcup><rsub|k\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|k>|)>|)>\<subseteq\>A<rsub|i><big|cap><around*|(|X\\A<rsub|i>|)>=\<varnothing\>>.
+      <\equation*>
+        A<rsub|i><big|cap>A<rsub|j>=<around*|(|X\\<around*|(|<big|sqcup><rsub|k\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|k>|)>|)><big|cap>A<rsub|j>\<subseteq\><around*|(|X\\A<rsub|j>|)><big|cap>A<rsub|i>=\<varnothing\>.
+      </equation*>
+
+      <item*|<math|j=n+1>>Then <math|i\<in\><around*|{|1,\<ldots\>,n|}>> so
+      that
+
+      <\equation*>
+        A<rsub|i><big|cap>A<rsub|j>=A<rsub|i><big|cap><around*|(|X\\<around*|(|<big|sqcup><rsub|k\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|k>|)>|)>\<subseteq\>A<rsub|i><big|cap><around*|(|X\\A<rsub|i>|)>=\<varnothing\>.
+      </equation*>
 
       <item*|<math|i,j\<in\><around*|{|1,\<ldots\>,n|}>>>Then as
       <math|<around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<cal-P\><around*|(|X|)>>
@@ -19144,7 +19174,7 @@
 
     <\eqnarray*>
       <tformat|<table|<row|<cell|<big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>B<rsub|i>>|<cell|\<equallim\><rsub|<text|[theorem:
-      <reference|family properties (2)>]>>>|<cell|<around*|(|<big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>B<rsub|i>|)><big|cup><around*|(|<big|cup><rsub|i\<in\><around*|{|n+1|}>>B<rsub|i>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>B<rsub|i>|)><big|cup>B<rsub|n+1>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>B<rsub|i>|)><big|cup><around*|(|X\\<around*|(|<big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>B<rsub|i>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|X>>>>
+      <reference|family properties (2)>]>>>|<cell|<around*|(|<big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>B<rsub|i>|)><big|cup><around*|(|<big|cup><rsub|i\<in\><around*|{|n+1|}>>B<rsub|i>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>B<rsub|i>|)><big|cup>B<rsub|n+1>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>B<rsub|i>|)><big|cup><around*|(|X\\<around*|(|<big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>B<rsub|i>|)>|)>>>|<row|<cell|>|<cell|<below|=|<big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>B<rsub|i>\<subseteq\>X>>|<cell|X>>>>
     </eqnarray*>
 
     hence\ 
@@ -19156,15 +19186,18 @@
     \;
   </proof>
 
+  We have now the following equivalences for
+  <math|\<cal-S\><around*|[|X,\<cal-A\>|]>>.
+
   <\theorem>
     <label|simple function measurable (0)>Let
     <math|<around*|\<langle\>|X,\<cal-A\>|\<rangle\>>> be a measurable space
-    then we have the following equivalences:
+    and <math|f:X\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>>> a function then
+    we have the following equivalences:
 
     <\enumerate>
       <item><math|f\<in\>\<cal-S\><around*|[|X,\<cal-A\>|]>> [in other words
-      <math|f\<in\>\<cal-S\><around*|[|X|]>> and
-      <math|f\<in\>\<cal-M\><around*|[|X,\<cal-A\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
+      <math|f\<in\>\<cal-S\><around*|[|X|]><big|cap>\<cal-M\><around*|[|X,\<b-A\>,\<bbb-R\>|]>>]
 
       <item><math|f\<in\>\<cal-S\><around*|[|X|]><text| and
       \ >\<forall\>y\<in\>f<around*|(|X|)>>
@@ -19185,19 +19218,18 @@
     \ 
 
     <\description>
-      <item*|<math|1\<Rightarrow\>2>>As <math|f\<in\>\<cal-S\><around*|[|X,\<cal-A\>|]>>
-      <math|f\<in\>S<around*|[|X|]>\<Rightarrow\>f<around*|(|X|)>\<subseteq\>\<bbb-R\>>
-      and <math|f\<in\>\<cal-M\><around*|[|X,\<cal-A\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>.
+      <item*|<math|1\<Rightarrow\>2>>As <math|f\<in\>\<cal-S\><around*|[|X,\<cal-A\>|]>=\<cal-S\><around*|[|X|]><big|cap>\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-R\>|]>>
+      <math|f\<in\>S<around*|[|X|]>> and <math|f\<in\>\<cal-M\><around*|[|X,\<cal-A\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>.
       \ Let <math|y\<in\>f<around*|(|X|)>> then, as
       <math|f*<around*|(|X|)>\<subseteq\>\<bbb-R\>> it follows that
       <math|y\<in\>\<bbb-R\>>. Applying then [theorem: <reference|measurable
-      function comparisation>] it follows from the fact that <math|f> is
-      <math|\<cal-A\>>-measurable that <math|<rigid|f<rsup|-1><around*|(|<around*|{|y|}>|)>\<equallim\><rsub|<text|[definition:
+      function comparisation>] it follows that
+      <math|<rigid|f<rsup|-1><around*|(|<around*|{|y|}>|)>\<equallim\><rsub|<text|[definition:
       <reference|measurable function comparisation
       definition>]>><around*|{|f=y|}>\<in\>\<cal-A\>>>.
 
-      <item*|<math|2\<Rightarrow\>3>>As <math|f\<in\>S<around*|[|X|]>\<Rightarrow\>f<around*|(|X|)>\<subseteq\>\<bbb-R\>>
-      we can use [theorem: <reference|simple function alternative>] to get a
+      <item*|<math|2\<Rightarrow\>3>>As <math|f\<in\>S<around*|[|X|]>> we can
+      use [theorem: <reference|simple function alternative>] to get a
       <math|n\<in\>\<bbb-N\>> and a bijection
       <math|<rigid|\<beta\>:<around*|{|1,\<ldots\>,n|}>\<rightarrow\>f<around*|(|X|)>>>
       such that for <math|<around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<cal-P\><around*|(|X|)>>
@@ -19211,7 +19243,7 @@
       </equation*>
 
       Using (2) we have <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
-      <math|A<rsub|i>=f<rsup|-1><around*|(|\<beta\><around*|(|i|)>|)>\<in\>\<cal-A\>>
+      <math|A<rsub|i>=f<rsup|-1><around*|(|<around*|{|\<beta\><around*|(|i|)>|}>|)>\<in\>\<cal-A\>>
       so that\ 
 
       <\equation*>
@@ -19219,7 +19251,7 @@
       </equation*>
 
       Finally, define <math|<around*|{|f<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
-      by <math|f<rsub|i>=\<beta\><around*|(|i|)>\<in\>f<around*|(|X|)>\<subseteq\>\<bbb-R\>>
+      by <math|f<rsub|i>=\<beta\><around*|(|i|)>\<in\>f<around*|(|X|)><below|\<subseteq\>|f\<in\>\<cal-S\><around*|[|X|]>\<Rightarrow\>f<around*|(|X|)>\<subseteq\>\<bbb-R\>>\<bbb-R\>>
       then\ 
 
       <\equation*>
@@ -19230,17 +19262,17 @@
       <item*|<math|3\<Rightarrow\>1>>Define\ 
 
       <\equation*>
-        <around*|{|B<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>><text|
+        <around*|{|B<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>\<subseteq\>\<cal-A\><text|
         by >B<rsub|i>=<choice|<tformat|<table|<row|<cell|X\\<around*|(|<big|sqcup><rsub|i\<in\>1,\<ldots\>,n>A<rsub|i>|)><text|
         if >i=n+1>>|<row|<cell|A<rsub|i><text| if
-        >i\<in\><around*|{|1,\<ldots\>,n|}>>>>>>
+        >i\<in\><around*|{|1,\<ldots\>,n|}>>>>>>\<in\>\<cal-A\>
       </equation*>
 
       <\equation*>
         <around*|{|g<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>\<subseteq\>\<bbb-R\><text|
         by >g<rsub|i>=<choice|<tformat|<table|<row|<cell|0<text| if
         >i=n+1>>|<row|<cell|f<rsub|i><text| if
-        >i\<in\><around*|{|1,\<ldots\>,n|}>>>>>>
+        >i\<in\><around*|{|1,\<ldots\>,n|}>>>>>>\<in\>\<bbb-R\>
       </equation*>
 
       Then using [lemma: <reference|lemma 20.371.262>] we have that \ 
@@ -19248,11 +19280,10 @@
       <\equation>
         <label|eq 20.443.229><around*|{|g<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>\<subseteq\>\<bbb-R\><text|,
         ><around*|{|B<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>\<subseteq\>\<cal-A\><text|
-        is pairwise disjoint, ><big|sqcup><rsub|i=1><rsup|n+1>B<rsub|i>=X
+        is pairwise disjoint, >X=<big|sqcup><rsub|i=1><rsup|n+1>B<rsub|i>
       </equation>
 
-      Now <math|\<forall\>x\<in\>X> we have, using the hypothesis that
-      <math|<big|sum><rsub|i=1><rsup|n>f<rsub|i>\<cdot\>\<cal-X\><rsub|X,A<rsub|i>><around*|(|x|)>=f<around*|(|x|)>>
+      Further
 
       <\equation*>
         <big|sum><rsub|i=1><rsup|n+1>g<rsub|i>\<cdot\>\<cal-X\><rsub|X,B<rsub|i>><around*|(|x|)>=g<rsub|n+1>\<cdot\>\<cal-X\><rsub|X,B<rsub|n+1>>+<big|sum><rsub|i=1><rsup|n>g<rsub|i>\<cdot\>\<cal-X\><rsub|X,B<rsub|i>><around*|(|x|)>=0+<big|sum><rsub|i=1><rsup|n>f<rsub|i>\<cdot\>\<cal-X\><rsub|X,A<rsub|i>>=f<around*|(|x|)>
@@ -19296,42 +19327,59 @@
       </equation>
 
       <\proof>
-        Given <math|i\<in\><around*|{|1,\<ldots\>,n+1|}>>. Let
+        Let <math|i\<in\><around*|{|1,\<ldots\>,n+1|}>>. Take
         <math|x\<in\>f<rsup|-1><around*|(|<around*|{|g<rsub|i>|}>|)>> then
-        \ <math|f<around*|(|x|)>=g<rsub|i>>. As
-        <math|x\<in\>X=<big|sqcup><rsub|k\<in\><around*|{|1,\<ldots\>,n+1|}>>B<rsub|k>>
-        there exist a <math|k\<in\><around*|{|1,\<ldots\>,n+1|}>> such that
-        <math|x\<in\>B<rsub|k>>. Using [theorem: <reference|simple function
-        property>] it follows that <math|<rigid|f<around*|(|B<rsub|k>|)>=<around*|{|g<rsub|k>|}>>>
-        which, as <math|x\<in\>B<rsub|k>\<exterior\>f<around*|(|x|)>=g<rsub|i>>,
-        proves that <math|g<rsub|i>=g<rsub|k>>, hence
-        <math|f<around*|(|A<rsub|k>|)>=<around*|{|g<rsub|i>|}>> or
-        <rigid|<math|k\<in\>I<rsub|i>>>. In other words
-        <math|x\<in\>B<rsub|k>\<subseteq\><big|cup><rsub|j\<in\>I<rsub|i>>B<rsub|j>>,
-        so that
+        <math|f<around*|(|x|)>=g<rsub|i>>. As
+        <math|x\<in\>X=<big|cup><rsub|k\<in\><around*|{|1,\<ldots\>,n|}>>B<rsub|k>>
+        there exist a <math|k\<in\><around*|{|1,\<ldots\>,n|}>> such that
+
+        <\equation*>
+          x\<in\>B<rsub|k>
+        </equation*>
+
+        Using [theorem: <reference|simple function property>] it follows that
+
+        <\equation*>
+          <rigid|g<rsub|i>=f<around*|(|x|)>=g<rsub|k>>.
+        </equation*>
+
+        Let <math|y\<in\>B<rsub|k>> then by [theorem: <reference|simple
+        function property>] <math|f<around*|(|y|)>=g<rsub|k>=g<rsub|i>> which
+        proves that\ 
+
+        <\equation*>
+          f<around*|(|B<rsub|k>|)>=<around*|{|g<rsub|i>|}>
+        </equation*>
+
+        so that <math|k\<in\>I<rsub|i>>. Hence
+        <math|B<rsub|k>\<subseteq\><big|sqcup><rsub|j\<in\>I<rsub|i>>B<rsub|j>>
+        which as <math|x\<in\>B<rsub|k>> proves that
+        <math|x\<in\><big|sqcup><rsub|j\<in\>I<rsub|i>>B<rsub|j>>. So we have
+        proves that\ 
 
         <\equation>
-          <label|eq 20.446.229>f<rsup|-1><around*|(|<around*|{|g<rsub|i>|}>|)>\<subseteq\><big|cup><rsub|j\<in\>I<rsub|i>>B<rsub|j>
+          <label|eq 21.422.301>f<rsup|-1><around*|(|<around*|{|g<rsub|i>|}>|)>\<subseteq\><big|sqcup><rsub|j\<in\>I<rsub|i>>B<rsub|j>
         </equation>
 
-        Let <math|x\<in\><big|cup><rsub|j\<in\>I<rsub|i>>B<rsub|j>> then
-        there exist a <math|k\<in\>I<rsub|i>> such that
-        <math|x\<in\>B<rsub|k>>, as <math|k\<in\>I<rsub|i>>
-        <math|f<around*|(|B<rsub|k>|)>=<around*|{|g<rsub|i>|}>>, so that
+        For the opposite inclusion let <math|x\<in\><big|cup><rsub|j\<in\>I<rsub|i>>B<rsub|j>>
+        then there exist a <math|j\<in\>I<rsub|i>> such that
+        <math|x\<in\>B<rsub|j>>. By the definition of <math|I<rsub|i>> we
+        have <math|f<around*|(|B<rsub|j>|)>=<around*|{|g<rsub|i>|}>> so that
         <math|f<around*|(|x|)>=g<rsub|i>> or
         <math|x\<in\>f<rsup|-1><around*|(|<around*|{|g<rsub|i>|}>|)>>. Hence
-        <math|<big|cup><rsub|j\<in\>I<rsub|i>>B<rsub|j>\<subseteq\>f<rsup|-1><around*|(|<around*|{|g<rsub|i>|}>|)>>
-        which combined with [eq: <reference|eq 20.446.229>] proves
-        <math|f<rsup|-1><around*|(|<around*|{|g<rsub|i>|}>|)>=<big|cup><rsub|j\<in\>I<rsub|i>>B<rsub|j>>
-        and thus [eq: <reference|eq 20.445.229>].
+        we have that <math|<big|cup><rsub|j\<in\>I<rsub|i>>B<rsub|j>\<subseteq\>f<rsup|-1><around*|(|<around*|{|g<rsub|i>|}>|)>>
+        which combined with [eq: <reference|eq 21.422.301>] gives\ 
+
+        <\equation*>
+          f<rsup|-1><around*|(|<around*|{|g<rsub|i>|}>|)>=<big|sqcup><rsub|j\<in\>I<rsub|i>>B<rsub|j>
+        </equation*>
       </proof>
 
       Let <math|x\<in\>X=<big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>B<rsub|i>>
       then there exist a <math|i\<in\><around*|{|1,\<ldots\>,n+1|}>> such
       that <math|x\<in\>B<rsub|i>>. Using [theorem: <reference|simple
-      function property>] again it follows that
-      <math|f<around*|(|x|)>=g<rsub|i>> so that
-      <math|<rigid|x\<in\>f<rsup|-1><around*|(|<around*|{|g<rsub|i>|}>|)>\<subseteq\><big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>f<rsup|-1><around*|(|<around*|{|g<rsub|i>|}>|)>>>.
+      function property>] it follows that <math|f<around*|(|x|)>=g<rsub|i>>
+      so that <math|<rigid|x\<in\>f<rsup|-1><around*|(|<around*|{|g<rsub|i>|}>|)>\<subseteq\><big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>f<rsup|-1><around*|(|<around*|{|g<rsub|i>|}>|)>>>.
       Hence we have <math|X\<subseteq\><big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>f<rsup|-1><around*|(|<around*|{|g<rsub|i>|}>|)>>
       and as trivially <math|><math|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>f<rsup|-1><around*|(|<around*|{|g<rsub|i>|}>|)>\<subseteq\>X>
       it follows that\ 
@@ -19353,7 +19401,7 @@
       </eqnarray*>
 
       Let <math|i\<in\><around*|{|1,\<ldots\>,n+1|}>> then for
-      <math|g<rsub|i>> we have either <math|>:\ 
+      <math|g<rsub|i>> we have either<math|>:\ 
 
       <\description>
         <item*|<math|g<rsub|i>\<in\>B>>Then
@@ -19380,9 +19428,7 @@
   </proof>
 
   We show now that <math|\<cal-S\><around*|[|X,\<cal-A\>|]>> is stable under
-  the pointwise sum and product.
-
-  \;
+  the pointwise sum and scalar product.
 
   <\theorem>
     <label|simple function measurable sum and scalar product>Let
@@ -19492,6 +19538,8 @@
 
   We have a simpler alternative definition for
   <math|\<cal-S\><rsup|+><around*|[|X,\<cal-A\>|]>>
+
+  TODO
 
   <\theorem>
     <label|simple function measurable (1)>Let
@@ -46784,8 +46832,6 @@
     <associate|eq 20.433.228|<tuple|21.395|?>>
     <associate|eq 20.434.228|<tuple|21.396|?>>
     <associate|eq 20.435.228|<tuple|21.397|?>>
-    <associate|eq 20.436.228|<tuple|21.416|?>>
-    <associate|eq 20.437.228|<tuple|21.417|?>>
     <associate|eq 20.440.229|<tuple|21.416|?>>
     <associate|eq 20.440.249|<tuple|21.399|?>>
     <associate|eq 20.441.229|<tuple|21.417|?>>
@@ -46794,7 +46840,7 @@
     <associate|eq 20.443.229|<tuple|21.419|?>>
     <associate|eq 20.444.229|<tuple|21.420|?>>
     <associate|eq 20.445.229|<tuple|21.421|?>>
-    <associate|eq 20.446.229|<tuple|21.422|?>>
+    <associate|eq 20.446.229|<tuple|21.423|?>>
     <associate|eq 20.447.229|<tuple|21.423|?>>
     <associate|eq 20.448.229|<tuple|21.424|?>>
     <associate|eq 20.449.229|<tuple|21.425|?>>
@@ -47528,8 +47574,12 @@
     <associate|eq 21.409.301|<tuple|21.409|?>>
     <associate|eq 21.412.301|<tuple|21.412|?>>
     <associate|eq 21.413.301|<tuple|21.413|?>>
-    <associate|eq 21.414.301|<tuple|21.415|?>>
+    <associate|eq 21.414.301|<tuple|21.414|?>>
     <associate|eq 21.415.301|<tuple|21.415|?>>
+    <associate|eq 21.416.301|<tuple|21.416|?>>
+    <associate|eq 21.417.301|<tuple|21.417|?>>
+    <associate|eq 21.418.301|<tuple|21.418|?>>
+    <associate|eq 21.422.301|<tuple|21.422|?>>
     <associate|eq 21.84.300|<tuple|21.84|?>>
     <associate|eq 21.991.285|<tuple|21.1009|?>>
     <associate|eq 21.992.285|<tuple|21.1010|?>>
