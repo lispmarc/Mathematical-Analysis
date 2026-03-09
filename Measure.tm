@@ -19539,8 +19539,6 @@
   We have a simpler alternative definition for
   <math|\<cal-S\><rsup|+><around*|[|X,\<cal-A\>|]>>
 
-  TODO
-
   <\theorem>
     <label|simple function measurable (1)>Let
     <math|<around*|\<langle\>|X,\<cal-A\>|\<rangle\>>> be a measurable space
@@ -19624,7 +19622,7 @@
 
         <item*|<math|x\<in\>X\\<around*|(|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>|)>>>Then
         using [theorem: <reference|simple function property>] we have that
-        <math|f<around*|(|x|)>=0=g<around*|(|x|)>=0>
+        <math|f<around*|(|x|)>=0=g<around*|(|x|)>>
       </description>
 
       As in all cases we have <math|f<around*|(|x|)>=g<around*|(|x|)>> it
@@ -19687,10 +19685,10 @@
     <math|a,b> we have either:
 
     <\description>
-      <item*|<math|a=b>>Then <math|f<rsup|-1><around*|(|<around*|{|a|}>|)>=f<rsup|-1><around*|(|<around*|{|b|}>|)>=X\<in\>\<cal-A\>>
+      <item*|<math|a=b>>Then <math|f<rsup|-1><around*|(|<around*|{|a|}>|)>=f<rsup|-1><around*|(|<around*|{|b|}>|)>=X\<in\>\<cal-A\>>.
 
-      <item*|<math|a\<neq\>b>>Then as <math|\<forall\>x\<in\>A> we have
-      <math|f<around*|(|x|)>=a\<in\><around*|{|a|}>> so that
+      <item*|<math|a\<neq\>b>>Then, as <math|\<forall\>x\<in\>A> we have
+      <math|f<around*|(|x|)>=a\<in\><around*|{|a|}>>,
       <math|A\<subseteq\>f<rsup|-1><around*|(|<around*|{|a|}>|)>>. If
       <math|x\<in\>f<rsup|-1><around*|(|<around*|{|a|}>|)>> then
       <math|f<around*|(|x|)>=a> and we must have that <math|x\<in\>A> [if
@@ -19738,9 +19736,9 @@
     <label|simple function representation>Let
     <math|<around*|\<langle\>|X,\<cal-A\>,\<mu\>|\<rangle\>>> be a measure
     space and <math|f\<in\>\<cal-S\><rsup|+><around*|[|X,\<cal-A\>|]>> then
-    if <math|n,m\<in\>\<bbb-N\>>, <math|<around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<cal-A\>>,
-    <math|<around*|{|B<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>>\<subseteq\>\<cal-A\>>,
-    <math|<around*|{|a<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\><around*|[|0,\<infty\>|[>>
+    if <math|n,m\<in\>\<bbb-N\>>, <math|<around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<cal-A\>>
+    pairwise disjoint, <math|<around*|{|B<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>>\<subseteq\>\<cal-A\>>
+    pairwise disjoint, <math|<around*|{|a<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\><around*|[|0,\<infty\>|[>>
     and <math|<around*|{|b<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>>\<subseteq\><around*|[|0,\<infty\>|[>>
     satisfies\ 
 
@@ -19767,7 +19765,7 @@
   <\proof>
     First we remove all the terms where <math|a<rsub|i>\<cdot\>\<mu\><around*|(|A<rsub|i>|)>=0>
     and <math|b<rsub|i>\<cdot\>\<mu\><around*|(|B<rsub|i>|)>=0>, this will
-    not change the sum. Defiine <math|I=<around*|{|i\<in\><around*|{|1,\<ldots\>,n|}>\|A<rsub|i>\<neq\>\<varnothing\>\<wedge\>a<rsub|i>\<neq\>\<varnothing\>|}>>
+    not change the sum. Define <math|I=<around*|{|i\<in\><around*|{|1,\<ldots\>,n|}>\|A<rsub|i>\<neq\>\<varnothing\>\<wedge\>a<rsub|i>\<neq\>\<varnothing\>|}>>
     and <math|J=<around*|{|i\<in\><around*|{|1,\<ldots\>,m|}>\|B<rsub|i>\<neq\>0\<wedge\>b<rsub|i>\<neq\>\<varnothing\>|}>>.
     Then <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>\\I> we have
     <math|a<rsub|i>\<cdot\>\<mu\><around*|(|A<rsub|i>|)>\<equallim\><rsub|a<rsub|i>=0\<vee\>A<rsub|i>\<neq\>\<varnothing\>>0>
@@ -19849,7 +19847,7 @@
       <reference|eq 20.452.229>]>>B<rsub|i><big|cap><around*|(|<big|sqcup><rsub|j\<in\>I>A<rsub|j>|)>=<big|sqcup><rsub|j\<in\>I><around*|(|A<rsub|j><big|cap>B<rsub|i>|)>
     </equation>
 
-    Define <math|K=<around*|{|<around*|(|i,j|)>\<in\><around*|{|1,\<ldots\>,n|}>\<times\><around*|{|1,\<ldots\>,m|}>\|A<rsub|i><big|cap>B<rsub|j>\<neq\>\<varnothing\>|}>>
+    Define <math|K=<around*|{|<around*|(|i,j|)>\<in\>I\<times\>J\|A<rsub|i><big|cap>B<rsub|j>\<neq\>\<varnothing\>|}>>
     then if <math|<around*|(|i,j|)>\<in\>K> we have
     <math|A<rsub|i><big|cap>B<rsub|j>\<neq\>\<varnothing\>> so there exist a
     <math|x\<in\>A<rsub|i><big|cap>B<rsub|j>> and
@@ -19924,7 +19922,7 @@
     space, <math|a\<in\><around*|[|0,\<infty\>|[>> and
     <math|C<rsub|a>:X\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>>> defined by
     <math|C<rsub|a><around*|(|x|)>=a> then
-    <math|C<rsub|a>\<in\>\<cal-S\><around*|[|X,\<cal-A\>|]>> and
+    <math|C<rsub|a>\<in\>\<cal-S\><rsup|+><around*|[|X,\<cal-A\>|]>> and
     <math|<big|int><rsup|S>C<rsub|a> d\<mu\>=a\<cdot\>\<mu\><around*|(|X|)>>.
   </example>
 
@@ -19979,7 +19977,7 @@
     <math|<rigid|<around*|{|A<rprime|'><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n<rprime|'>|}>>\<subseteq\>\<cal-A\>>>
     pairwise disjoint, <math|<around*|{|B<rprime|'><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,m<rprime|'>|}>>\<subseteq\>\<cal-A\>>
     pairwise disjoint, <math|<rigid|<around*|{|a<rprime|'><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n<rprime|'>|}>>\<subseteq\><around*|[|0,\<infty\>|[>>>
-    and <math|<around*|{|b<rprime|'><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,m<rprime|'>|}>>>
+    and <math|<around*|{|b<rprime|'><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,m<rprime|'>|}>>\<subseteq\><around*|[|0,\<infty\>|[>>
     so that\ 
 
     <\equation>
@@ -20057,7 +20055,7 @@
     is a bijection there exist a <math|k\<in\><around*|{|1,\<ldots\>,n|}>>
     such that <math|\<beta\><around*|(|k|)>=<around*|(|i,j|)>> hence
     <math|x\<in\>A<rsub|\<beta\><around*|(|k|)><rsub|1>><big|cap>B<rsub|\<beta\><around*|(|k|)><rsub|2>>=C<rsub|k>\<subseteq\><big|cup><rsub|k\<in\><around*|{|1,\<ldots\>,n|}>>C<rsub|k>>.
-    Hence <math|X\<subseteq\><big|cup><rsub|k\<in\><around*|{|1,\<ldots\>,n|}>>C<rsub|k>>
+    So <math|X\<subseteq\><big|cup><rsub|k\<in\><around*|{|1,\<ldots\>,n|}>>C<rsub|k>>
     and as trivially <math|><math|<big|cup><rsub|k\<in\><around*|{|1,\<ldots\>,n|}>>C<rsub|k>\<subseteq\>X>
     it follows that\ 
 
@@ -20182,7 +20180,7 @@
     </equation*>
   </proof>
 
-  We prove now that the integral of non negativ.e measurable simple functions
+  We prove now that the integral of non negative measurable simple functions
   has the usual properties of integration.
 
   <\theorem>
@@ -20272,7 +20270,7 @@
       </eqnarray*>
 
       <item>As <math|f,g\<in\>\<cal-S\><rsup|+><around*|[|X,\<cal-A\>|]>>
-      there exists by [lemma: <reference|lemma 20.351.229>]
+      there exists by [lemma: <reference|lemma 20.351.229>] a
       <math|<around*|{|C<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<cal-A\>>
       pairwise disjoint, <math|<rigid|<around*|{|f<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\><around*|[|0,\<infty\>|[>>>
       and <math|<around*|{|g<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\><around*|[|0,\<infty\>|[>>
@@ -20326,7 +20324,7 @@
 
         <item>Assume that <math|\<forall\>x\<in\>X>
         <math|f<around*|(|x|)>\<leqslant\>g<around*|(|x|)>>. Define
-        <math|I=<around*|{|i\<in\><around*|{|1,\<ldots\>,n|}>\|C<rsub|i>\<neq\>\<varnothing\>|}>>
+        <math|I=<around*|{|i\<in\><around*|{|1,\<ldots\>,n|}>\|C<rsub|i>\<neq\>\<varnothing\>|}>\<subseteq\><around*|{|1,\<ldots\>,n|}>>
         then <math|\<forall\>i\<in\>I> there exist a
         <math|C<rsub|i>\<neq\>\<varnothing\>\<Rightarrow\>\<exists\>x\<in\>C<rsub|i>>
         so that <math|f<rsub|i>\<equallim\><rsub|<text|[theorem:
@@ -20350,7 +20348,7 @@
         <item>Let <math|x\<in\>X> then as <math|X\<equallim\><rsub|<text|[eq:
         <reference|eq 20.463.229>]>><big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>C<rsub|i>>
         there exis a <math|i\<in\><around*|{|1,\<ldots\>,n|}>> such that
-        <math|x\<in\>A<rsub|i>>. Using [eq: <reference|eq 20.463.229>]
+        <math|x\<in\>C<rsub|i>>. Using [eq: <reference|eq 20.463.229>]
         together with [theorem: <reference|simple function property>] gives
         then <math|f<around*|(|x|)>=f<rsub|i>> and
         <math|g<around*|(|x|)>=g<rsub|i>>. So\ 
@@ -20388,7 +20386,7 @@
         <item>Let <math|x\<in\>X> then as <math|X\<equallim\><rsub|<text|[eq:
         <reference|eq 20.463.229>]>><big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>C<rsub|i>>
         there exis a <math|i\<in\><around*|{|1,\<ldots\>,n|}>> such that
-        <math|x\<in\>A<rsub|i>>. Using [eq: <reference|eq 20.463.229>]
+        <math|x\<in\>C<rsub|i>>. Using [eq: <reference|eq 20.463.229>]
         together with [theorem: <reference|simple function property>] gives
         then <math|f<around*|(|x|)>=f<rsub|i>> and
         <math|g<around*|(|x|)>=g<rsub|i>>. So\ 
@@ -20401,7 +20399,7 @@
         which proves that\ 
 
         <\equation*>
-          <around*|(|f\<vee\>g|)>=<big|sum><rsub|i=1><rsup|n>min<around*|(|f<rsub|i>,g<rsub|i>|)>\<cdot\>\<cal-X\><rsub|X,C<rsub|i>>
+          <around*|(|f\<vee\>g|)>=<big|sum><rsub|i=1><rsup|n>max<around*|(|f<rsub|i>,g<rsub|i>|)>\<cdot\>\<cal-X\><rsub|X,C<rsub|i>>
         </equation*>
 
         and, as <math|<around*|{|max<around*|(|f<rsub|i>,g<rsub|i>|)>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\><around*|[|0,\<infty\>|[>>
@@ -20419,7 +20417,7 @@
         <\equation*>
           <big|int><rsup|S>f d\<mu\>\<leqslant\><big|int><rsup|S><around*|(|f\<vee\>g|)>
           d\<mu\><text| and ><big|int><rsup|S>g
-          d\<mu\><big|int><rsup|S><around*|(|f\<vee\>g|)> d\<mu\>
+          d\<mu\>\<leqslant\><big|int><rsup|S><around*|(|f\<vee\>g|)> d\<mu\>
         </equation*>
       </enumerate>
 
@@ -20454,14 +20452,14 @@
         (1)>]>>\<mu\><around*|(|N|)>\<equallim\>0> from which it follows that
         <math|f\<cdot\>\<mu\><around*|(|A<rsub|i>|)>=0>
       </description>
+
+      So \ <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>> we have that
+      <math|f<rsub|i>\<cdot\>\<mu\><around*|(|A<rsub|i>|)>=0> proving that\ 
+
+      <\equation*>
+        <big|int><rsup|\<cal-S\>>f d\<mu\>=<big|sum><rsub|i=1><rsup|n>f<rsub|i>\<cdot\>\<mu\><around*|(|A<rsub|i>|)>=0
+      </equation*>
     </enumerate>
-
-    So \ <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>> we have that
-    <math|f<rsub|i>\<cdot\>\<mu\><around*|(|A<rsub|i>|)>=0> proving that\ 
-
-    <\equation*>
-      <big|int><rsup|\<cal-S\>>f d\<mu\>=<big|sum><rsub|i=1><rsup|n>f<rsub|i>\<cdot\>\<mu\><around*|(|A<rsub|i>|)>=0
-    </equation*>
   </proof>
 
   Using mathematical induction we have the following extension of the above
@@ -20474,18 +20472,69 @@
     then we have that\ 
 
     <\enumerate>
+      <item><math|<big|sum><rsub|i=1><rsup|n>f<rsub|i>\<in\>\<cal-S\><rsup|+><around*|[|X,\<cal-A\>|]>>
+
       <item><math|<big|wedge><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>f<rsub|i>\<in\>\<cal-S\><rsup|+><around*|[|X,\<cal-A\>|]>>
+      where <math|>
+
+      <\equation*>
+        <big|wedge><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>f<rsub|i>:X\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>><text|
+        is defined by ><around*|(|<big|wedge><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>f<rsub|i>|)><around*|(|x|)>=min<around*|(|<around*|{|f<rsub|i><around*|(|x|)>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>|)>
+      </equation*>
 
       <item><math|<big|vee><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>f<rsub|i>\<in\>\<cal-S\><rsup|+><around*|[|X,\<cal-A\>|]>>
+      where\ 
+
+      <\equation*>
+        <big|vee><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>f<rsub|i>:X\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>><text|
+        is defined by ><around*|(|<big|vee><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>f<rsub|i>|)><around*|(|x|)>=max<around*|(|<around*|{|f<rsub|i><around*|(|x|)>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>|)>
+      </equation*>
     </enumerate>
 
-    \ 
+    \;
   </corollary>
 
   <\proof>
     \ 
 
     <\enumerate>
+      <item>Let\ 
+
+      <\equation*>
+        S=<around*|{|n\<in\>\<bbb-N\>\|<text|If
+        ><around*|{|f<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<cal-S\><rsup|+><around*|[|X,\<cal-A\>|]><text|
+        then ><big|sum><rsub|i=1><rsup|n>f<rsub|i>\<in\>\<cal-S\><around*|[|X,\<cal-A\>|]>|}>
+      </equation*>
+
+      then we have:\ 
+
+      <\description>
+        <item*|<math|1\<in\>S>>If <math|<around*|{|f<rsub|i>|}><rsub|i\<in\><around*|{|1|}>>\<subseteq\>S<rsup|+><around*|[|X,\<cal-A\>|]>>
+        then <math|\<forall\>x\<in\>X> <math|<around*|(|<big|sum><rsub|i=1><rsup|1>f<rsub|i>|)><around*|(|x|)>=<big|sum><rsub|i=1><rsup|1>f<rsub|i><around*|(|x|)>=f<rsub|1><around*|(|x|)>>
+        so that \ <math|<big|sum><rsub|i=1><rsup|1>f<rsub|i>=f<rsub|1>\<in\>\<cal-S\><rsup|+><around*|[|X,\<cal-A\>|]>>
+        which proves that <math|1\<in\>S>.
+
+        <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>If
+        <math|<around*|{|f<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>\<subseteq\>\<cal-S\><rsup|+><around*|[|X,\<cal-A\>|]>>
+        then we have <math|\<forall\>x\<in\>X>\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<around*|(|<big|sum><rsub|i=1><rsup|n+1>f<rsub|i>|)><around*|(|x|)>>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|n+1>f<rsub|i><around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|f<rsub|n+1><around*|(|x|)>+<big|sum><rsub|i=1><rsup|n>f<rsub|i><around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|f<rsub|n+1>+<big|sum><rsub|i=1><rsup|n>f<rsub|i>|)><around*|(|x|)>>>>>
+        </eqnarray*>
+
+        As <math|n\<in\>S> we have that <math|<big|sum><rsub|i=1><rsup|n>f<rsub|i>\<in\>\<cal-S\><rsup|+><around*|[|X,\<cal-A\>|]>>
+        which as <math|f<rsub|n+1>\<in\>\<cal-S\><around*|[|X,\<cal-A\>|]>>
+        proves by [theorem: \ <reference|simple function integral
+        properties>] that <math|f<rsub|n+1>+<big|sum><rsub|i=1><rsup|n>f<rsub|i>\<in\>\<cal-S\><around*|[|X,\<cal-A\>|]>>.
+        Hence using the above\ 
+
+        <\equation*>
+          <big|sum><rsub|i=1><rsup|n+1>f<rsub|i>\<in\>\<cal-S\><around*|[|X,\<cal-A\>|]>
+        </equation*>
+
+        which proves that <math|m+1\<in\>S>.
+      </description>
+
       <item>Let\ 
 
       <\equation*>
@@ -20562,6 +20611,8 @@
         proving <math|n+1\<in\>\<cal-S\>>.
       </description>
     </enumerate>
+
+    \;
   </proof>
 
   The following theorem is the simple function variant of the monotone
@@ -20571,39 +20622,39 @@
   <\theorem>
     <label|simple function integral monotone convergence theorem>Let
     <math|<around*|\<langle\>|X,\<cal-A\>,\<mu\>|\<rangle\>>> be a measure
-    space, <math|<around*|{|f<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-S\><rsup|+><around*|[|X,\<cal-A\>|]>>
+    space, <math|<around*|{|f<rsub|n>|}><rsub|n\<in\>\<bbb-N\>>\<subseteq\>\<cal-S\><rsup|+><around*|[|X,\<cal-A\>|]>>
     such that
 
-    <\equation*>
-      \<forall\>x\<in\>X<text| we have >\<forall\>k\<in\>\<bbb-N\><text| that
-      >f<rsub|k><around*|(|x|)>\<leqslant\>f<rsub|k+1><around*|(|x|)><text|>
-    </equation*>
+    <\enumerate>
+      <item><math|\<forall\>x\<in\>X> we have
+      <math|\<forall\>n\<in\>\<bbb-N\>> <math|f<rsub|n><around*|(|x|)>\<leqslant\>f<rsub|n+1><around*|(|x|)>>\ 
 
-    and for <math|<below|lim|k\<rightarrow\>\<infty\>>f<rsub|k>:X\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>>>
-    defined by <math|<around*|(|<below|lim|k\<rightarrow\>\<infty\>>f<rsub|n>|)><around*|(|x|)>=<below|lim|k\<rightarrow\>\<infty\>>f<rsub|k><around*|(|x|)>>
-    we have <math|<below|lim|k\<rightarrow\>\<infty\>>f<rsub|k>\<in\>\<cal-S\><rsup|+><around*|[|X,\<cal-A\>|]>>
+      <\note>
+        As <math|\<forall\>x\<in\>X> we have
+        <math|\<forall\>k\<in\>\<bbb-N\>>
+        <math|f<rsub|n><around*|(|x|)>\<leqslant\>f<rsub|n+1><around*|(|x|)>>
+        we have by [theorem: <reference|extended limit increasing /
+        decreasing sequence exist>] that <math|<below|lim|n\<rightarrow\>\<infty\>>f<rsub|n><around*|(|x|)>>
+        exist, as is needed for the requirements of this theorem.
+      </note>
+
+      <item><math|<below|lim|n\<rightarrow\>\<infty\>>f<rsub|n>\<in\>\<cal-S\><rsup|+><around*|[|X,\<cal-A\>|]>>
+      where\ 
+
+      <\equation*>
+        <below|lim|n\<rightarrow\>\<infty\>>f<rsub|n>:X\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>><text|
+        is defined by ><around*|(|<below|lim|n\<rightarrow\>\<infty\>>f<rsub|n>|)><around*|(|x|)>=<below|lim|n\<rightarrow\>\<infty\>>f<rsub|n><around*|(|x|)>
+      </equation*>
+    </enumerate>
+
     then\ 
 
     <\equation*>
-      <below|lim|k\<rightarrow\>\<infty\>><big|int><rsup|S>f<rsub|k>
-      d\<mu\><text| exists>
+      <below|lim|n\<rightarrow\>\<infty\>><big|int><rsup|S>f<rsub|n>d\<mu\><text|
+      exist and ><below|lim|n\<rightarrow\>\<infty\>><big|int><rsup|S>f<rsub|n>d\<mu\>=<big|int><rsup|S><below|lim|n\<rightarrow\>\<infty\>>f<rsub|n>d\<mu\>
     </equation*>
 
-    and
-
-    <\equation*>
-      <big|int><rsup|S><around*|(|<below|lim|k\<rightarrow\>\<infty\>>f<rsub|k>|)>
-      d\<mu\>=<below|lim|k\<rightarrow\>\<infty\>><big|int><rsup|S>f<rsub|n>
-      d\<mu\>
-    </equation*>
-
-    <\note>
-      As <math|\<forall\>x\<in\>X> we have <math|\<forall\>k\<in\>\<bbb-N\>>
-      <math|f<rsub|k><around*|(|x|)>\<leqslant\>f<rsub|k+1><around*|(|x|)>>
-      we have by [theorem: <reference|extended limit increasing / decreasing
-      sequence exist>] that <math|<below|lim|k\<rightarrow\>\<infty\>>f<rsub|k><around*|(|x|)>>
-      exist, as is needed for the requirements of this theorem.
-    </note>
+    \;
   </theorem>
 
   <\proof>
@@ -20685,7 +20736,7 @@
       <\equation*>
         0\<leqslant\><below|lim|i\<rightarrow\>\<infty\>><big|int><rsup|\<cal-S\>>f<rsub|i>
         d\<mu\><below|\<leqslant\>|<text|[eq: <reference|eq
-        20.469.229>]>><big|int><rsup|\<cal-S\>><around*|(|<below|lim|k\<rightarrow\>\<infty\>>f<rsub|k>
+        20.471.229>]>><big|int><rsup|\<cal-S\>><around*|(|<below|lim|k\<rightarrow\>\<infty\>>f<rsub|k>
         |)>d\<mu\>=0
       </equation*>
 
@@ -20855,7 +20906,11 @@
         </equation*>
 
         <item*|<math|x\<nin\><big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>>B<rsub|i,k>>>Then
-        <math|g<rsub|k><around*|(|x|)>=<big|sum><rsub|i=1><rsup|m><around*|(|1-\<varepsilon\>|)>\<cdot\>b<rsub|i>\<cdot\>\<cal-X\><rsub|X,B<rsub|i,k>><around*|(|x|)>=<big|sum><rsub|i=1><rsup|m><around*|(|1-\<varepsilon\>|)>\<cdot\>b<rsub|i>\<cdot\>0=0>
+
+        <\equation*>
+          g<rsub|k><around*|(|x|)>=<big|sum><rsub|i=1><rsup|m><around*|(|1-\<varepsilon\>|)>\<cdot\>b<rsub|i>\<cdot\>\<cal-X\><rsub|X,B<rsub|i,k>><around*|(|x|)>=<big|sum><rsub|i=1><rsup|m><around*|(|1-\<varepsilon\>|)>\<cdot\>b<rsub|i>\<cdot\>0=0
+        </equation*>
+
         so that\ 
 
         <\equation*>
@@ -20890,7 +20945,8 @@
       exists and
 
       <\equation*>
-        <below|lim|k\<rightarrow\>\<infty\>><around*|(|<around*|(|1-\<varepsilon\>|)>\<cdot\>b<rsub|i>\<cdot\>\<mu\><around*|(|B<rsub|i,k>|)>|)>=<around*|(|1-\<varepsilon\>|)>\<cdot\>\<beta\><rsub|i>\<cdot\><below|lim|k\<rightarrow\>\<infty\>>\<mu\><around*|(|B<rsub|i,k>|)>=<around*|(|1-\<varepsilon\>|)>\<cdot\>b<rsub|i>\<cdot\>\<mu\><around*|(|B<rsub|i>|)>
+        <below|lim|k\<rightarrow\>\<infty\>><around*|(|<around*|(|1-\<varepsilon\>|)>\<cdot\>b<rsub|i>\<cdot\>\<mu\><around*|(|B<rsub|i,k>|)>|)>=<around*|(|1-\<varepsilon\>|)>\<cdot\>\<beta\><rsub|i>\<cdot\><below|lim|k\<rightarrow\>\<infty\>>\<mu\><around*|(|B<rsub|i,k>|)><below|=|<text|[eq:
+        <reference|eq 20.481.229>]>><around*|(|1-\<varepsilon\>|)>\<cdot\>b<rsub|i>\<cdot\>\<mu\><around*|(|B<rsub|i>|)>
       </equation*>
 
       Hence using [theorem: <reference|extended limit and finite sum>] on the
@@ -20961,7 +21017,7 @@
         <math|0\<leqslant\><below|lim|k\<rightarrow\>\<infty\>><big|int><rsup|S>f<rsub|k>
         d\<mu\>\<leqslant\><big|int><rsup|S><around*|(|<below|lim|k\<rightarrow\>\<infty\>>f<rsub|k>|)>d\<mu\>\<less\>\<infty\>>
         so that <math|<below|lim|k\<rightarrow\>\<infty\>><big|int><rsup|S>f<rsub|k>
-        d\<mu\>\<in\>\<bbb-R\>\<wedge\><big|int><rsup|S><around*|(|<below|lim|k\<rightarrow\>\<infty\>>f<rsub|k>|)>d\<mu\>>.
+        d\<mu\>\<in\>\<bbb-R\>\<wedge\><big|int><rsup|S><around*|(|<below|lim|k\<rightarrow\>\<infty\>>f<rsub|k>|)>d\<mu\>\<in\>\<bbb-R\>>.
         Hence by [eq: <reference|eq 20.485.230>] we have that\ 
 
         <\equation*>
@@ -21043,19 +21099,21 @@
 
     <\note>
       In the definition of the integral <math|<big|int><rsup|+>f d\<mu\>> we
-      don't use the <math|\<cal-A\>>-measurability of <math|f>,
+      don't use the <math|\<cal-A\>>-measurability of <math|f> because
       <math|sup<around*|(|<around*|{|<big|int><rsup|\<cal-S\>>g
       d\<mu\>\|g\<in\>\<cal-S\><rsup|+><around*|[|X,\<cal-A\>|]><text| and
       >\<forall\>x\<in\>X<text| we have >g<around*|(|x|)>\<leqslant\>f<around*|(|x|)>|}>|)>>
-      is also well defined for a non negative function. However the
-      requirement that <math|f> is <math|\<cal-A\>>-measurable will be
-      usefull later to construct a alternative definition based on a limiting
-      process of simple functions.
+      is also well defined for a non negative function that is not
+      measurable. However the requirement that <math|f> is
+      <math|\<cal-A\>>-measurable will be usefull later to construct a
+      alternative definition based on a limiting process of simple functions.
     </note>
   </definition>
 
   We show now that <math|<big|int><rsup|+>> is actually a extension of
   <math|<big|int><rsup|S>>.
+
+  TODO
 
   <\theorem>
     <label|non negative integral is a extension>Let
@@ -46840,7 +46898,6 @@
     <associate|eq 20.443.229|<tuple|21.419|?>>
     <associate|eq 20.444.229|<tuple|21.420|?>>
     <associate|eq 20.445.229|<tuple|21.421|?>>
-    <associate|eq 20.446.229|<tuple|21.423|?>>
     <associate|eq 20.447.229|<tuple|21.423|?>>
     <associate|eq 20.448.229|<tuple|21.424|?>>
     <associate|eq 20.449.229|<tuple|21.425|?>>
@@ -47576,9 +47633,6 @@
     <associate|eq 21.413.301|<tuple|21.413|?>>
     <associate|eq 21.414.301|<tuple|21.414|?>>
     <associate|eq 21.415.301|<tuple|21.415|?>>
-    <associate|eq 21.416.301|<tuple|21.416|?>>
-    <associate|eq 21.417.301|<tuple|21.417|?>>
-    <associate|eq 21.418.301|<tuple|21.418|?>>
     <associate|eq 21.422.301|<tuple|21.422|?>>
     <associate|eq 21.84.300|<tuple|21.84|?>>
     <associate|eq 21.991.285|<tuple|21.1009|?>>
