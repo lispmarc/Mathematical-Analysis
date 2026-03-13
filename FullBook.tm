@@ -942,195 +942,195 @@
 
     <with|par-left|2tab|21.5.3.2<space|2spc>Integration on measurable
     subspaces <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-698>>
+    <no-break><pageref|auto-696>>
 
     <with|par-left|2tab|21.5.3.3<space|2spc>Properties of the measure
     integral <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-700>>
+    <no-break><pageref|auto-698>>
 
     <with|par-left|1tab|21.5.4<space|2spc>Limit theorems
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-701>>
+    <no-break><pageref|auto-699>>
 
     <with|par-left|1tab|21.5.5<space|2spc>Complex integration
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-702>>
+    <no-break><pageref|auto-700>>
 
     <with|par-left|2tab|21.5.5.1<space|2spc>Measurability of complex valued
     functions <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-703>>
+    <no-break><pageref|auto-701>>
 
     <with|par-left|2tab|21.5.5.2<space|2spc>Complex Measure Integral
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-708>>
+    <no-break><pageref|auto-706>>
 
     <with|par-left|1tab|21.5.6<space|2spc>The spaces
     <with|mode|math|\<cal-L\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>
     and <with|mode|math|L<rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-711>>
+    <no-break><pageref|auto-709>>
 
     <with|par-left|2tab|21.5.6.1<space|2spc>Definition of
     <with|mode|math|\<cal-L\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>
     and <with|mode|math|L<rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-712>>
+    <no-break><pageref|auto-710>>
 
     <with|par-left|2tab|21.5.6.2<space|2spc>The Banach space
     <with|mode|math|<around*|\<langle\>|L<rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>,<around*|\<\|\|\>||\<\|\|\>><rsub|Lp>|\<rangle\>>>
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-716>>
+    <no-break><pageref|auto-714>>
 
     <with|par-left|2tab|21.5.6.3<space|2spc>Density
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-717>>
+    <no-break><pageref|auto-715>>
 
     21.6<space|2spc>Signed and complex measures
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-718>
+    <no-break><pageref|auto-716>
 
     <with|par-left|1tab|21.6.1<space|2spc>Signed measures
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-719>>
+    <no-break><pageref|auto-717>>
 
     <with|par-left|2tab|21.6.1.1<space|2spc>Definition and properities
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-720>>
+    <no-break><pageref|auto-718>>
 
     <with|par-left|2tab|21.6.1.2<space|2spc>Hahn and Jordan decomposition
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-721>>
+    <no-break><pageref|auto-719>>
 
     <with|par-left|1tab|21.6.2<space|2spc>Complex Measure
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-724>>
+    <no-break><pageref|auto-722>>
 
     <with|par-left|2tab|21.6.2.1<space|2spc>Definition and properties
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-725>>
+    <no-break><pageref|auto-723>>
 
     <with|par-left|2tab|21.6.2.2<space|2spc>Jordan decomposition of a complex
     measure <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-727>>
+    <no-break><pageref|auto-725>>
 
     <with|par-left|1tab|21.6.3<space|2spc>Banach space of signed (complex)
     measures <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-728>>
+    <no-break><pageref|auto-726>>
 
     <with|par-left|2tab|21.6.3.1<space|2spc>Integrals based on signed or
     complex measures. <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-731>>
+    <no-break><pageref|auto-729>>
 
     <with|par-left|2tab|21.6.3.2<space|2spc>Radon-Nikodym Theorem
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-734>>
+    <no-break><pageref|auto-732>>
 
     21.7<space|2spc>Product measures <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-738>
+    <no-break><pageref|auto-736>
 
     <with|par-left|1tab|21.7.1<space|2spc>Product of
     <with|mode|math|\<sigma\>>-algebras <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-739>>
+    <no-break><pageref|auto-737>>
 
     <with|par-left|1tab|21.7.2<space|2spc>Product measures
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-740>>
+    <no-break><pageref|auto-738>>
 
     21.8<space|2spc>Change of variables in <with|mode|math|\<bbb-R\><rsup|n>>
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-742>
+    <no-break><pageref|auto-740>
 
     <with|par-left|1tab|21.8.1<space|2spc>Regularity and Radon measures
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-743>>
+    <no-break><pageref|auto-741>>
 
     <with|par-left|2tab|21.8.1.1<space|2spc>Definition of regular and Radon
     measures <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-744>>
+    <no-break><pageref|auto-742>>
 
     <with|par-left|2tab|21.8.1.2<space|2spc><with|mode|math|\<lambda\>> and
     <with|mode|math|\<lambda\><rsup|n>> are Radon measures
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-745>>
+    <no-break><pageref|auto-743>>
 
     <with|par-left|2tab|21.8.1.3<space|2spc>Translation invariance and Radon
     Measures <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-746>>
+    <no-break><pageref|auto-744>>
 
     <with|par-left|1tab|21.8.2<space|2spc>Borel measures and linear
     transformations <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-750>>
+    <no-break><pageref|auto-748>>
 
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|22<space|2spc>Affine
     Spaces> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-751><vspace|0.5fn>
+    <no-break><pageref|auto-749><vspace|0.5fn>
 
     22.1<space|2spc>Definition and properties
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-752>
+    <no-break><pageref|auto-750>
 
     22.2<space|2spc>Eucledian space <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-759>
+    <no-break><pageref|auto-757>
 
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|23<space|2spc>Differential
     Manifolds> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-760><vspace|0.5fn>
+    <no-break><pageref|auto-758><vspace|0.5fn>
 
     23.1<space|2spc> Topological Manifold
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-761>
+    <no-break><pageref|auto-759>
 
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|24<space|2spc>TODO>
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-762><vspace|0.5fn>
+    <no-break><pageref|auto-760><vspace|0.5fn>
 
     24.1<space|2spc>Sets.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-763>
+    <no-break><pageref|auto-761>
 
     24.2<space|2spc>NaturalNumbers.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-764>
+    <no-break><pageref|auto-762>
 
     24.3<space|2spc>Numbers.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-765>
+    <no-break><pageref|auto-763>
 
     24.4<space|2spc>LinearAlgebra.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-766>
+    <no-break><pageref|auto-764>
 
     24.5<space|2spc>DirectSum.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-767>
+    <no-break><pageref|auto-765>
 
     24.6<space|2spc>TensorProduct.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-768>
+    <no-break><pageref|auto-766>
 
     24.7<space|2spc>Topology.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-769>
+    <no-break><pageref|auto-767>
 
     24.8<space|2spc>IntegrationBanach.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-770>
+    <no-break><pageref|auto-768>
 
     24.9<space|2spc>Differentiation.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-771>
+    <no-break><pageref|auto-769>
 
     24.10<space|2spc>FundamentalTheorem.OfAlgebra.tm
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-772>
+    <no-break><pageref|auto-770>
 
     24.11<space|2spc>InnerProductSpaces.tm
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-773>
+    <no-break><pageref|auto-771>
 
     24.12<space|2spc>Exponential.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-774>
+    <no-break><pageref|auto-772>
 
     24.13<space|2spc>Measure.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-775>
+    <no-break><pageref|auto-773>
 
     24.14<space|2spc>Manifold.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-776>
+    <no-break><pageref|auto-774>
 
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|Index>
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-777><vspace|0.5fn>
+    <no-break><pageref|auto-775><vspace|0.5fn>
   </table-of-contents>
 
   <include|Sets.tm>
@@ -1232,7 +1232,7 @@
 
     <index+1|<with|mode|math|<wide|\<cal-M\><around*|[|A,\<cal-A\>|]>|\<wide-bar\>>>|<pageref|auto-673>>
 
-    <index+1|<with|mode|math|<around*|\<langle\>|\<bbb-C\>,B<around*|[|\<bbb-C\>|]>|\<rangle\>>>|<pageref|auto-705>>
+    <index+1|<with|mode|math|<around*|\<langle\>|\<bbb-C\>,B<around*|[|\<bbb-C\>|]>|\<rangle\>>>|<pageref|auto-703>>
 
     <index+1|<with|mode|math|<around*|\<langle\>|\<bbb-Z\>,\<leqslant\>|\<rangle\>>>|<pageref|auto-174>>
 
@@ -1270,11 +1270,11 @@
 
     <index+1|Abel Dirichlet criteria|<pageref|auto-563>>
 
-    <index+1|absolute continuity of complex measures|<pageref|auto-737>>
+    <index+1|absolute continuity of complex measures|<pageref|auto-735>>
 
-    <index+1|absolute continuity of measures|<pageref|auto-735>>
+    <index+1|absolute continuity of measures|<pageref|auto-733>>
 
-    <index+1|absolute continuity of signed measures|<pageref|auto-736>>
+    <index+1|absolute continuity of signed measures|<pageref|auto-734>>
 
     <index+1|absolute convergence|<pageref|auto-400>>
 
@@ -1300,18 +1300,18 @@
 
     <index+1|adjoint mapping|<pageref|auto-521>>
 
-    <index+1|affine isomorphism|<pageref|auto-757>>
+    <index+1|affine isomorphism|<pageref|auto-755>>
 
-    <index+1|affine mapping|<pageref|auto-756>>
+    <index+1|affine mapping|<pageref|auto-754>>
 
-    <index+1|affine space|<pageref|auto-753>>
+    <index+1|affine space|<pageref|auto-751>>
 
     <index+1|<with|mode|math|\<sigma\>>-algebra|<pageref|auto-613>>
 
     <index+1|algebra of sets|<pageref|auto-611>>
 
     <index+1|<with|mode|math|\<sigma\>>-algebra on
-    <with|mode|math|\<bbb-C\>>|<pageref|auto-704>>
+    <with|mode|math|\<bbb-C\>>|<pageref|auto-702>>
 
     <index+1|<with|mode|math|\<cal-A\><with|mode|text|-measurable
     function>>|<pageref|auto-672>>
@@ -1348,7 +1348,7 @@
 
     <index+1|<with|mode|math|\<cal-B\><around*|[|\<bbb-R\>|]>>|<pageref|auto-620>>
 
-    <index+1|<with|mode|math|B<around*|[|X,\<cal-A\>,\<bbb-K\>|]>>|<pageref|auto-733>>
+    <index+1|<with|mode|math|B<around*|[|X,\<cal-A\>,\<bbb-K\>|]>>|<pageref|auto-731>>
 
     <index+1|Baire Category theorem|<pageref|auto-403>>
 
@@ -1370,7 +1370,7 @@
 
     <index+1|Borel algebra|<pageref|auto-617>>
 
-    <index+1|bounded measurable function|<pageref|auto-732>>
+    <index+1|bounded measurable function|<pageref|auto-730>>
 
     <index+1|bounded set|<pageref|auto-320>>
 
@@ -1418,9 +1418,9 @@
 
     <index+1|complex inner product|<pageref|auto-511>>
 
-    <index+1|complex integral|<pageref|auto-709>>
+    <index+1|complex integral|<pageref|auto-707>>
 
-    <index+1|complex measure|<pageref|auto-726>>
+    <index+1|complex measure|<pageref|auto-724>>
 
     <index+1|complex vector space|<pageref|auto-239>>
 
@@ -1460,9 +1460,9 @@
 
     <index+1|<with|mode|math|\<frak-D\>>|<pageref|auto-646>>
 
-    <index+1|<with|mode|math|\<cal-D\><rsub|n>>|<pageref|auto-748>>
+    <index+1|<with|mode|math|\<cal-D\><rsub|n>>|<pageref|auto-746>>
 
-    <index+1|<with|mode|math|\<cal-D\>>|<pageref|auto-749>>
+    <index+1|<with|mode|math|\<cal-D\>>|<pageref|auto-747>>
 
     <index+1|decreasing function|<pageref|auto-79>>
 
@@ -1506,7 +1506,7 @@
 
     <index+1|dual space|<pageref|auto-519>>
 
-    <index+1|Dyadic interval|<pageref|auto-631>, <pageref|auto-747>>
+    <index+1|Dyadic interval|<pageref|auto-631>, <pageref|auto-745>>
 
     <index+1|Dynkim system|<pageref|auto-645>>
 
@@ -1566,12 +1566,10 @@
 
     <index+1|faithful action|<pageref|auto-122>, <pageref|auto-124>>
 
-    <index+1|<with|mode|math|<big|int>f d\<mu\>>|<pageref|auto-696>>
-
-    <index+1|<with|mode|math|<big|int><rsub|A>f d\<mu\>>|<pageref|auto-699>>
+    <index+1|<with|mode|math|<big|int><rsub|A>f d\<mu\>>|<pageref|auto-697>>
 
     <index+1|<with|mode|math|<big|int><rsup|\<bbb-C\>>f
-    d\<mu\>>|<pageref|auto-710>>
+    d\<mu\>>|<pageref|auto-708>>
 
     <index+1|field|<pageref|auto-133>>
 
@@ -1605,7 +1603,7 @@
 
     <index+1|<with|mode|math|\<cal-G\>L<around*|(|X|)>>|<pageref|auto-481>>
 
-    <index+1|global coordinate system|<pageref|auto-755>>
+    <index+1|global coordinate system|<pageref|auto-753>>
 
     <index+1|Gram Schmidt|<pageref|auto-517>>
 
@@ -1619,7 +1617,7 @@
 
     <index+1|<with|mode|math|H<rsup|n>>|<pageref|auto-482>>
 
-    <index+1|Hahn Decomposition Theorem|<pageref|auto-722>>
+    <index+1|Hahn Decomposition Theorem|<pageref|auto-720>>
 
     <index+1|Hausdorff's maximality|<pageref|auto-105>>
 
@@ -1653,7 +1651,7 @@
 
     <index+1|<with|mode|math|Img<around*|(|x|)>>|<pageref|auto-217>>
 
-    <index+1|<with|mode|math|Img<around*|(|f|)>>|<pageref|auto-707>>
+    <index+1|<with|mode|math|Img<around*|(|f|)>>|<pageref|auto-705>>
 
     <index+1|immediate successor|<pageref|auto-98>>
 
@@ -1699,7 +1697,7 @@
 
     <index+1|<with|mode|math|i\<leftrightarrowlim\><rsub|I>>j|<pageref|auto-233>>
 
-    <index+1|Jordon Decomposition|<pageref|auto-723>>
+    <index+1|Jordon Decomposition|<pageref|auto-721>>
 
     <index+1|<with|mode|math|L<around*|(|X,Y|)>>|<pageref|auto-340>>
 
@@ -1707,11 +1705,11 @@
 
     <index+1|<with|mode|math|L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>|<pageref|auto-344>>
 
-    <index+1|<with|mode|math|\<cal-L\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>|<pageref|auto-713>>
+    <index+1|<with|mode|math|\<cal-L\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>|<pageref|auto-711>>
 
     <index+1|<with|mode|math|L<around*|(|X<rsup|n>;Y|)>>|<pageref|auto-347>>
 
-    <index+1|<with|mode|math|\<cal-L\><rsup|\<infty\>><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>|<pageref|auto-714>>
+    <index+1|<with|mode|math|\<cal-L\><rsup|\<infty\>><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>|<pageref|auto-712>>
 
     <index+1|<with|mode|math|L<rsub|n><around*|(|X;Y|)>>|<pageref|auto-437>>
 
@@ -1729,7 +1727,7 @@
 
     <index+1|limit point compactness|<pageref|auto-363>>
 
-    <index+1|line|<pageref|auto-758>>
+    <index+1|line|<pageref|auto-756>>
 
     <index+1|linear dependent set|<pageref|auto-248>>
 
@@ -1745,7 +1743,7 @@
 
     <index+1|Lipschitz condition|<pageref|auto-335>>
 
-    <index+1|local coordinate system|<pageref|auto-754>>
+    <index+1|local coordinate system|<pageref|auto-752>>
 
     <index+1|local diffeomorphism|<pageref|auto-484>>
 
@@ -1771,9 +1769,9 @@
 
     <index+1|<with|mode|math|M<rsup|H>>|<pageref|auto-522>>
 
-    <index+1|<with|mode|math|M<around*|[|X,\<cal-A\>,\<bbb-R\>|]>>|<pageref|auto-729>>
+    <index+1|<with|mode|math|M<around*|[|X,\<cal-A\>,\<bbb-R\>|]>>|<pageref|auto-727>>
 
-    <index+1|<with|mode|math|M<around*|(|X,\<cal-A\>,\<bbb-C\>|)>>|<pageref|auto-730>>
+    <index+1|<with|mode|math|M<around*|(|X,\<cal-A\>,\<bbb-C\>|)>>|<pageref|auto-728>>
 
     <index+1|<with|mode|math|\<varepsilon\>>-mapping|<pageref|auto-425>>
 
@@ -1795,8 +1793,6 @@
 
     <index+1|measurable space|<pageref|auto-614>>
 
-    <index+1|measure integral|<pageref|auto-697>>
-
     <index+1|measure space|<pageref|auto-634>>
 
     <index+1|metric space|<pageref|auto-313>>
@@ -1809,7 +1805,7 @@
 
     <index+1|multiplication of natural numbers|<pageref|auto-146>>
 
-    <index+1|<with|mode|math|\<cal-N\><rsup|p>>|<pageref|auto-715>>
+    <index+1|<with|mode|math|\<cal-N\><rsup|p>>|<pageref|auto-713>>
 
     <index+1|<with|mode|math|\<bbb-N\><rsub|0,\<bbb-R\>>>|<pageref|auto-203>>
 
@@ -1909,7 +1905,7 @@
 
     <index+1|<with|mode|math|Re<around*|(|z|)>>|<pageref|auto-216>>
 
-    <index+1|<with|mode|math|Re<around*|(|f|)>>|<pageref|auto-706>>
+    <index+1|<with|mode|math|Re<around*|(|f|)>>|<pageref|auto-704>>
 
     <index+1|real vector space|<pageref|auto-240>>
 
@@ -1994,7 +1990,7 @@
     <index+1|<with|mode|math|\<infty\>>-times
     differentibility|<pageref|auto-443>>
 
-    <index+1|Tonelli's theorem|<pageref|auto-741>>
+    <index+1|Tonelli's theorem|<pageref|auto-739>>
 
     <index+1|toplinear isomorphism|<pageref|auto-480>>
 
@@ -2122,119 +2118,119 @@
 
 <\references>
   <\collection>
-    <associate|20.809.248|<tuple|21.819|1717|Measure.tm>>
-    <associate|21.1044.291|<tuple|21.1053|1789|Measure.tm>>
+    <associate|20.809.248|<tuple|21.823|1724|Measure.tm>>
+    <associate|21.1044.291|<tuple|21.1057|1797|Measure.tm>>
     <associate|\<less\>A,B,C\<gtr\>=\<less\>D,E,F\<gtr\>=\<gtr\>A=E,B=D,C=F|<tuple|2.5|34|Sets.tm>>
     <associate|\<less\>A,B\<gtr\>=\<less\>C,D\<gtr\>=\<gtr\>A=C,B=D|<tuple|2.3|33|Sets.tm>>
     <associate|Axiom of Replacement|<tuple|2.55|45|Sets.tm>>
-    <associate|Beppo Levi's Theorem|<tuple|21.365|1628|Measure.tm>>
+    <associate|Beppo Levi's Theorem|<tuple|21.372|1635|Measure.tm>>
     <associate|Borel measure on R and R^n are locally
-    finite|<tuple|21.563|1784|Measure.tm>>
+    finite|<tuple|21.570|1792|Measure.tm>>
     <associate|Constructing measures and sigma
     alegebra|<tuple|21.3.4|1468|Measure.tm>>
-    <associate|Fatou's lemma|<tuple|21.368|1631|Measure.tm>>
-    <associate|Fubini's theorem|<tuple|21.544|1766|Measure.tm>>
-    <associate|Hahn Decomposition Theorem|<tuple|21.462|1695|Measure.tm>>
+    <associate|Fatou's lemma|<tuple|21.375|1638|Measure.tm>>
+    <associate|Fubini's theorem|<tuple|21.551|1774|Measure.tm>>
+    <associate|Hahn Decomposition Theorem|<tuple|21.469|1701|Measure.tm>>
     <associate|Hahn-Banach theorem|<tuple|14.211|763|Topology.tm>>
-    <associate|Holder's Inequality|<tuple|21.411|1652|Measure.tm>>
-    <associate|Jordon Decomposition|<tuple|21.464|1698|Measure.tm>>
+    <associate|Holder's Inequality|<tuple|21.418|1659|Measure.tm>>
+    <associate|Jordon Decomposition|<tuple|21.471|1705|Measure.tm>>
     <associate|Jordon Decomposition complex
-    measures|<tuple|21.472|1705|Measure.tm>>
-    <associate|Jordon Decomposition theorem|<tuple|21.463|1696|Measure.tm>>
-    <associate|LP space density (1)|<tuple|21.432|1672|Measure.tm>>
-    <associate|LP space density (2)|<tuple|21.434|1674|Measure.tm>>
-    <associate|LP space power extension|<tuple|21.424|1663|Measure.tm>>
-    <associate|LP spaces|<tuple|21.392|1644|Measure.tm>>
-    <associate|LP spaces (@@)|<tuple|21.400|1649|Measure.tm>>
-    <associate|LP spaces LP norm is zero|<tuple|21.405|1650|Measure.tm>>
-    <associate|LP spaces Minkowski's Inequality|<tuple|21.412|1656|Measure.tm>>
-    <associate|LP spaces absolute value|<tuple|21.403|1650|Measure.tm>>
-    <associate|LP spaces are Banach spaces|<tuple|21.431|1672|Measure.tm>>
-    <associate|LP spaces are pseudo normed|<tuple|21.415|1658|Measure.tm>>
-    <associate|LP spaces canonical example|<tuple|21.393|1644|Measure.tm>>
-    <associate|LP spaces density|<tuple|21.437|1675|Measure.tm>>
+    measures|<tuple|21.479|1712|Measure.tm>>
+    <associate|Jordon Decomposition theorem|<tuple|21.470|1703|Measure.tm>>
+    <associate|LP space density (1)|<tuple|21.439|1679|Measure.tm>>
+    <associate|LP space density (2)|<tuple|21.441|1681|Measure.tm>>
+    <associate|LP space power extension|<tuple|21.431|1670|Measure.tm>>
+    <associate|LP spaces|<tuple|21.399|1651|Measure.tm>>
+    <associate|LP spaces (@@)|<tuple|21.407|1656|Measure.tm>>
+    <associate|LP spaces LP norm is zero|<tuple|21.412|1658|Measure.tm>>
+    <associate|LP spaces Minkowski's Inequality|<tuple|21.419|1663|Measure.tm>>
+    <associate|LP spaces absolute value|<tuple|21.410|1657|Measure.tm>>
+    <associate|LP spaces are Banach spaces|<tuple|21.438|1679|Measure.tm>>
+    <associate|LP spaces are pseudo normed|<tuple|21.422|1665|Measure.tm>>
+    <associate|LP spaces canonical example|<tuple|21.400|1652|Measure.tm>>
+    <associate|LP spaces density|<tuple|21.444|1682|Measure.tm>>
     <associate|LP spaces empty set is locally
-    m-null|<tuple|21.407|1651|Measure.tm>>
-    <associate|LP spaces finite sum|<tuple|21.414|1658|Measure.tm>>
+    m-null|<tuple|21.414|1658|Measure.tm>>
+    <associate|LP spaces finite sum|<tuple|21.421|1665|Measure.tm>>
     <associate|LP spaces locally m-null set
-    properties|<tuple|21.408|1651|Measure.tm>>
-    <associate|LP spaces locally u-null sets|<tuple|21.406|1651|Measure.tm>>
-    <associate|LP spaces neutral element|<tuple|21.394|1645|Measure.tm>>
-    <associate|LP spaces normed space|<tuple|21.422|1662|Measure.tm>>
-    <associate|LP spaces null sets is a subspace|<tuple|21.420|1661|Measure.tm>>
-    <associate|LP spaces p-norm (1)|<tuple|21.404|1650|Measure.tm>>
-    <associate|LP spaces p-norm (2)|<tuple|21.409|1651|Measure.tm>>
-    <associate|LP spaces p-null set|<tuple|21.418|1660|Measure.tm>>
-    <associate|LP spaces p-null set (1)|<tuple|21.419|1660|Measure.tm>>
-    <associate|LP spaces sum scalar product|<tuple|21.398|1647|Measure.tm>>
+    properties|<tuple|21.415|1658|Measure.tm>>
+    <associate|LP spaces locally u-null sets|<tuple|21.413|1658|Measure.tm>>
+    <associate|LP spaces neutral element|<tuple|21.401|1652|Measure.tm>>
+    <associate|LP spaces normed space|<tuple|21.429|1669|Measure.tm>>
+    <associate|LP spaces null sets is a subspace|<tuple|21.427|1668|Measure.tm>>
+    <associate|LP spaces p-norm (1)|<tuple|21.411|1657|Measure.tm>>
+    <associate|LP spaces p-norm (2)|<tuple|21.416|1658|Measure.tm>>
+    <associate|LP spaces p-null set|<tuple|21.425|1667|Measure.tm>>
+    <associate|LP spaces p-null set (1)|<tuple|21.426|1667|Measure.tm>>
+    <associate|LP spaces sum scalar product|<tuple|21.405|1654|Measure.tm>>
     <associate|LP spaces sum scalar product
-    (1)|<tuple|21.401|1649|Measure.tm>>
-    <associate|LP vector space|<tuple|21.402|1650|Measure.tm>>
+    (1)|<tuple|21.408|1656|Measure.tm>>
+    <associate|LP vector space|<tuple|21.409|1657|Measure.tm>>
     <associate|Lebesgue borel measure and linear
-    isomorphism|<tuple|21.592|1805|Measure.tm>>
+    isomorphism|<tuple|21.599|1813|Measure.tm>>
     <associate|Lebesgue borel measure and linear isomorphism
-    (n)|<tuple|21.595|1808|Measure.tm>>
+    (n)|<tuple|21.602|1816|Measure.tm>>
     <associate|Lebesgue borel measures are Radon
-    measures|<tuple|21.565|1784|Measure.tm>>
+    measures|<tuple|21.572|1792|Measure.tm>>
     <associate|Lebesgue measure and unitary
-    transformation|<tuple|21.590|1803|Measure.tm>>
+    transformation|<tuple|21.597|1811|Measure.tm>>
     <associate|Lebesgue's Dominated Convergence
-    Theorem|<tuple|21.371|1632|Measure.tm>>
+    Theorem|<tuple|21.378|1639|Measure.tm>>
     <associate|Monotone Convergence Theorem
-    (1)|<tuple|21.361|1625|Measure.tm>>
+    (1)|<tuple|21.368|1632|Measure.tm>>
     <associate|Monotone Convergence Theorem
-    (2)|<tuple|21.364|1627|Measure.tm>>
+    (2)|<tuple|21.371|1634|Measure.tm>>
     <associate|NQ is conditional complete|<tuple|8.39|250|Numbers.tm>>
     <associate|R^n is the union of ]-i,i[|<tuple|21.70|1436|Measure.tm>>
-    <associate|Radon measure definition|<tuple|21.551|1774|Measure.tm>>
-    <associate|Radon-Nikodym (finite case)|<tuple|21.501|1727|Measure.tm>>
-    <associate|Radon-Nikodym Theorem|<tuple|21.502|1732|Measure.tm>>
-    <associate|Radon-Nikodym absolute continuity|<tuple|21.493|1722|Measure.tm>>
+    <associate|Radon measure definition|<tuple|21.558|1782|Measure.tm>>
+    <associate|Radon-Nikodym (finite case)|<tuple|21.508|1734|Measure.tm>>
+    <associate|Radon-Nikodym Theorem|<tuple|21.509|1739|Measure.tm>>
+    <associate|Radon-Nikodym absolute continuity|<tuple|21.500|1729|Measure.tm>>
     <associate|Radon-Nikodym absolute continuity
-    alternative|<tuple|21.497|1723|Measure.tm>>
+    alternative|<tuple|21.504|1730|Measure.tm>>
     <associate|Radon-Nikodym absolute continuity
-    equivalence|<tuple|21.504|1735|Measure.tm>>
+    equivalence|<tuple|21.511|1742|Measure.tm>>
     <associate|Radon-Nikodym absolute continuity trivial
-    example|<tuple|21.494|1722|Measure.tm>>
-    <associate|Radon-Nikodym derivative|<tuple|21.508|1740|Measure.tm>>
-    <associate|Radon-Nikodym integral example|<tuple|21.495|1722|Measure.tm>>
-    <associate|Radon-Nikodym signed/complex|<tuple|21.507|1738|Measure.tm>>
+    example|<tuple|21.501|1729|Measure.tm>>
+    <associate|Radon-Nikodym derivative|<tuple|21.515|1747|Measure.tm>>
+    <associate|Radon-Nikodym integral example|<tuple|21.502|1729|Measure.tm>>
+    <associate|Radon-Nikodym signed/complex|<tuple|21.514|1745|Measure.tm>>
     <associate|Riemann partition interval|<tuple|15.5|876|IntegrationBanach.tm>>
     <associate|Russell's class|<tuple|1.12|13|Sets.tm>>
-    <associate|Tonelli theorem (1)|<tuple|21.539|1763|Measure.tm>>
-    <associate|affine Eucledean space|<tuple|22.23|1826|AffineSpaces.tm>>
-    <associate|affine P-Q=P'-Q'=\<gtr\>P-P'=Q=Q'|<tuple|22.5|1812|AffineSpaces.tm>>
+    <associate|Tonelli theorem (1)|<tuple|21.546|1771|Measure.tm>>
+    <associate|affine Eucledean space|<tuple|22.23|1834|AffineSpaces.tm>>
+    <associate|affine P-Q=P'-Q'=\<gtr\>P-P'=Q=Q'|<tuple|22.5|1820|AffineSpaces.tm>>
     <associate|affine cartesian cooddinate
-    system|<tuple|22.11|1813|AffineSpaces.tm>>
+    system|<tuple|22.11|1821|AffineSpaces.tm>>
     <associate|affine cartesion coodinate system
-    transform|<tuple|22.13|1813|AffineSpaces.tm>>
+    transform|<tuple|22.13|1821|AffineSpaces.tm>>
     <associate|affine inverse of affine isomorphism is a affine
-    isomorphism|<tuple|22.18|1817|AffineSpaces.tm>>
-    <associate|affine isomorphism|<tuple|22.17|1816|AffineSpaces.tm>>
-    <associate|affine mapping|<tuple|22.15|1816|AffineSpaces.tm>>
-    <associate|affine mapping of a line|<tuple|22.22|1826|AffineSpaces.tm>>
+    isomorphism|<tuple|22.18|1825|AffineSpaces.tm>>
+    <associate|affine isomorphism|<tuple|22.17|1824|AffineSpaces.tm>>
+    <associate|affine mapping|<tuple|22.15|1824|AffineSpaces.tm>>
+    <associate|affine mapping of a line|<tuple|22.22|1834|AffineSpaces.tm>>
     <associate|affine orthonormal coordinate
-    system|<tuple|22.24|1826|AffineSpaces.tm>>
-    <associate|affine space|<tuple|22.1|1811|AffineSpaces.tm>>
-    <associate|affine space P-Q=(P+u)-(Q+u)|<tuple|22.9|1812|AffineSpaces.tm>>
-    <associate|affine space P-Q=-(Q-P)|<tuple|22.7|1812|AffineSpaces.tm>>
-    <associate|affine space Q+(P-Q)=P|<tuple|22.4|1812|AffineSpaces.tm>>
-    <associate|affine space associativity|<tuple|22.8|1812|AffineSpaces.tm>>
-    <associate|affine space isomorphism condition|<tuple|22.19|1818|AffineSpaces.tm>>
-    <associate|affine space line and segment|<tuple|22.21|1825|AffineSpaces.tm>>
+    system|<tuple|22.24|1834|AffineSpaces.tm>>
+    <associate|affine space|<tuple|22.1|1819|AffineSpaces.tm>>
+    <associate|affine space P-Q=(P+u)-(Q+u)|<tuple|22.9|1820|AffineSpaces.tm>>
+    <associate|affine space P-Q=-(Q-P)|<tuple|22.7|1820|AffineSpaces.tm>>
+    <associate|affine space Q+(P-Q)=P|<tuple|22.4|1820|AffineSpaces.tm>>
+    <associate|affine space associativity|<tuple|22.8|1820|AffineSpaces.tm>>
+    <associate|affine space isomorphism condition|<tuple|22.19|1826|AffineSpaces.tm>>
+    <associate|affine space line and segment|<tuple|22.21|1833|AffineSpaces.tm>>
     <associate|affine space local coordinate
-    system|<tuple|22.10|1813|AffineSpaces.tm>>
-    <associate|affine space zero vector|<tuple|22.6|1812|AffineSpaces.tm>>
-    <associate|almost everywhere|<tuple|21.273|1560|Measure.tm>>
-    <associate|almost everywhere and characteristic|<tuple|21.275|1560|Measure.tm>>
-    <associate|almost everywhere complex functions|<tuple|21.377|1636|Measure.tm>>
+    system|<tuple|22.10|1821|AffineSpaces.tm>>
+    <associate|affine space zero vector|<tuple|22.6|1820|AffineSpaces.tm>>
+    <associate|almost everywhere|<tuple|21.275|1562|Measure.tm>>
+    <associate|almost everywhere and characteristic|<tuple|21.277|1562|Measure.tm>>
+    <associate|almost everywhere complex functions|<tuple|21.384|1643|Measure.tm>>
     <associate|almost everywhere f=g \<less\>=\<gtr\>
-    f-g=0|<tuple|21.277|1562|Measure.tm>>
-    <associate|almost everywhere functions|<tuple|21.274|1560|Measure.tm>>
+    f-g=0|<tuple|21.279|1564|Measure.tm>>
+    <associate|almost everywhere functions|<tuple|21.276|1562|Measure.tm>>
     <associate|almost everywhere limit is
-    measurable|<tuple|21.280|1563|Measure.tm>>
-    <associate|almost everywhere measurability|<tuple|21.279|1562|Measure.tm>>
-    <associate|almost everywhere transitivity|<tuple|21.276|1561|Measure.tm>>
+    measurable|<tuple|21.283|1565|Measure.tm>>
+    <associate|almost everywhere measurability|<tuple|21.281|1564|Measure.tm>>
+    <associate|almost everywhere transitivity|<tuple|21.278|1562|Measure.tm>>
     <associate|auto-1|<tuple|1|11|Sets.tm>>
     <associate|auto-10|<tuple|1.3|22|Sets.tm>>
     <associate|auto-100|<tuple|transfinite induction|104|Sets.tm>>
@@ -2859,10 +2855,10 @@
     <associate|auto-625|<tuple|<with|mode|<quote|math>|\<cal-I\>>|1421|Measure.tm>>
     <associate|auto-626|<tuple|21.2.1.2|1429|Measure.tm>>
     <associate|auto-627|<tuple|21.2.1.3|1434|Measure.tm>>
-    <associate|auto-628|<tuple|begin|1438|Measure.tm>>
-    <associate|auto-629|<tuple|end|1438|Measure.tm>>
+    <associate|auto-628|<tuple|begin|1439|Measure.tm>>
+    <associate|auto-629|<tuple|end|1439|Measure.tm>>
     <associate|auto-63|<tuple|preorder|88|Sets.tm>>
-    <associate|auto-630|<tuple|<with|mode|<quote|math>|v<rsup|n><around*|(|I|)>>|1438|Measure.tm>>
+    <associate|auto-630|<tuple|<with|mode|<quote|math>|v<rsup|n><around*|(|I|)>>|1439|Measure.tm>>
     <associate|auto-631|<tuple|Dyadic interval|1439|Measure.tm>>
     <associate|auto-632|<tuple|21.3|1446|Measure.tm>>
     <associate|auto-633|<tuple|21.3.1|1446|Measure.tm>>
@@ -2890,154 +2886,151 @@
     <associate|auto-652|<tuple|pre-measure|1472|Measure.tm>>
     <associate|auto-653|<tuple|21.3.4.2|1480|Measure.tm>>
     <associate|auto-654|<tuple|<with|mode|<quote|math>|\<cal-R\><around*|[|\<cal-S\>|]>>|1489|Measure.tm>>
-    <associate|auto-655|<tuple|21.3.4.3|1498|Measure.tm>>
-    <associate|auto-656|<tuple|21.3.4.4|1508|Measure.tm>>
+    <associate|auto-655|<tuple|21.3.4.3|1497|Measure.tm>>
+    <associate|auto-656|<tuple|21.3.4.4|1507|Measure.tm>>
     <associate|auto-657|<tuple|21.3.4.5|1515|Measure.tm>>
-    <associate|auto-658|<tuple|21.3.4.6|1517|Measure.tm>>
-    <associate|auto-659|<tuple|<with|mode|<quote|math>|vol<rsup|n><around*|(|R|)>>|1517|Measure.tm>>
+    <associate|auto-658|<tuple|21.3.4.6|1516|Measure.tm>>
+    <associate|auto-659|<tuple|<with|mode|<quote|math>|vol<rsup|n><around*|(|R|)>>|1516|Measure.tm>>
     <associate|auto-66|<tuple|partial ordered class|88|Sets.tm>>
-    <associate|auto-660|<tuple|21.1|1518|Measure.tm>>
-    <associate|auto-661|<tuple|21.2|1518|Measure.tm>>
-    <associate|auto-662|<tuple|21.3|1521|Measure.tm>>
-    <associate|auto-663|<tuple|21.4|1523|Measure.tm>>
-    <associate|auto-664|<tuple|21.3.5|1533|Measure.tm>>
+    <associate|auto-660|<tuple|21.1|1517|Measure.tm>>
+    <associate|auto-661|<tuple|21.2|1517|Measure.tm>>
+    <associate|auto-662|<tuple|21.3|1520|Measure.tm>>
+    <associate|auto-663|<tuple|21.4|1522|Measure.tm>>
+    <associate|auto-664|<tuple|21.3.5|1532|Measure.tm>>
     <associate|auto-665|<tuple|<with|mode|<quote|math>|\<mu\><with|mode|<quote|text>|-null
-    set>>|1533|Measure.tm>>
+    set>>|1532|Measure.tm>>
     <associate|auto-666|<tuple|<with|mode|<quote|math>|\<mu\><with|mode|<quote|text>|-negligible
-    set>>|1533|Measure.tm>>
-    <associate|auto-667|<tuple|<with|mode|<quote|math>|\<cal-A\>\<mu\>>|1536|Measure.tm>>
-    <associate|auto-668|<tuple|21.4|1538|Measure.tm>>
-    <associate|auto-669|<tuple|21.4.1|1538|Measure.tm>>
+    set>>|1532|Measure.tm>>
+    <associate|auto-667|<tuple|<with|mode|<quote|math>|\<cal-A\>\<mu\>>|1534|Measure.tm>>
+    <associate|auto-668|<tuple|21.4|1537|Measure.tm>>
+    <associate|auto-669|<tuple|21.4.1|1537|Measure.tm>>
     <associate|auto-67|<tuple|<with|mode|<quote|math>|\<leqslant\>>|88|Sets.tm>>
-    <associate|auto-670|<tuple|measurable function|1538|Measure.tm>>
-    <associate|auto-671|<tuple|<with|mode|<quote|math>|\<cal-A\>,\<cal-B\>>-measurable|1538|Measure.tm>>
+    <associate|auto-670|<tuple|measurable function|1537|Measure.tm>>
+    <associate|auto-671|<tuple|<with|mode|<quote|math>|\<cal-A\>,\<cal-B\>>-measurable|1537|Measure.tm>>
     <associate|auto-672|<tuple|<with|mode|<quote|math>|\<cal-A\><with|mode|<quote|text>|-measurable
     function>>|1540|Measure.tm>>
     <associate|auto-673|<tuple|<with|mode|<quote|math>|<wide|\<cal-M\><around*|[|A,\<cal-A\>|]>|\<wide-bar\>>>|1540|Measure.tm>>
     <associate|auto-674|<tuple|<with|mode|<quote|math>|\<cal-M\><around*|[|A,\<cal-A\>|]>>|1540|Measure.tm>>
-    <associate|auto-675|<tuple|Lebesgue measurable function|1541|Measure.tm>>
-    <associate|auto-676|<tuple|<with|mode|<quote|math>|\<cal-L\><rsup|n>>|1541|Measure.tm>>
+    <associate|auto-675|<tuple|Lebesgue measurable function|1540|Measure.tm>>
+    <associate|auto-676|<tuple|<with|mode|<quote|math>|\<cal-L\><rsup|n>>|1540|Measure.tm>>
     <associate|auto-677|<tuple|<with|mode|<quote|math>|f<rsub|A\<uparrow\>X>>|1541|Measure.tm>>
     <associate|auto-678|<tuple|21.4.2|1545|Measure.tm>>
-    <associate|auto-679|<tuple|21.4.3|1560|Measure.tm>>
+    <associate|auto-679|<tuple|21.4.3|1562|Measure.tm>>
     <associate|auto-68|<tuple|<with|mode|<quote|math>|\<less\>>|88|Sets.tm>>
-    <associate|auto-680|<tuple|<with|mode|<quote|math>|\<mu\><with|mode|<quote|text>|-a.e.>>|1560|Measure.tm>>
-    <associate|auto-681|<tuple|21.5|1563|Measure.tm>>
-    <associate|auto-682|<tuple|21.5.1|1563|Measure.tm>>
-    <associate|auto-683|<tuple|simple function|1563|Measure.tm>>
-    <associate|auto-684|<tuple|21.5|1566|Measure.tm>>
+    <associate|auto-680|<tuple|<with|mode|<quote|math>|\<mu\><with|mode|<quote|text>|-a.e.>>|1562|Measure.tm>>
+    <associate|auto-681|<tuple|21.5|1566|Measure.tm>>
+    <associate|auto-682|<tuple|21.5.1|1566|Measure.tm>>
+    <associate|auto-683|<tuple|simple function|1566|Measure.tm>>
+    <associate|auto-684|<tuple|21.5|1569|Measure.tm>>
     <associate|auto-685|<tuple|integral of a simple
-    function|1574|Measure.tm>>
-    <associate|auto-686|<tuple|<with|mode|<quote|math>|<big|int><rsup|S>f>|1574|Measure.tm>>
-    <associate|auto-687|<tuple|21.5.2|1584|Measure.tm>>
-    <associate|auto-688|<tuple|21.5.2.1|1584|Measure.tm>>
-    <associate|auto-689|<tuple|21.5.2.2|1586|Measure.tm>>
+    function|1578|Measure.tm>>
+    <associate|auto-686|<tuple|<with|mode|<quote|math>|<big|int><rsup|S>f>|1578|Measure.tm>>
+    <associate|auto-687|<tuple|21.5.2|1589|Measure.tm>>
+    <associate|auto-688|<tuple|21.5.2.1|1589|Measure.tm>>
+    <associate|auto-689|<tuple|21.5.2.2|1590|Measure.tm>>
     <associate|auto-69|<tuple|comparable elements|91|Sets.tm>>
-    <associate|auto-690|<tuple|21.5.2.3|1590|Measure.tm>>
-    <associate|auto-691|<tuple|21.6|1591|Measure.tm>>
-    <associate|auto-692|<tuple|21.7|1595|Measure.tm>>
-    <associate|auto-693|<tuple|21.5.2.4|1597|Measure.tm>>
-    <associate|auto-694|<tuple|21.5.3|1602|Measure.tm>>
-    <associate|auto-695|<tuple|21.5.3.1|1602|Measure.tm>>
-    <associate|auto-696|<tuple|<with|mode|<quote|math>|<big|int>f
-    d\<mu\>>|1608|Measure.tm>>
-    <associate|auto-697|<tuple|measure integral|1608|Measure.tm>>
-    <associate|auto-698|<tuple|21.5.3.2|1611|Measure.tm>>
-    <associate|auto-699|<tuple|<with|mode|<quote|math>|<big|int><rsub|A>f
-    d\<mu\>>|1611|Measure.tm>>
+    <associate|auto-690|<tuple|21.5.2.3|1595|Measure.tm>>
+    <associate|auto-691|<tuple|21.6|1596|Measure.tm>>
+    <associate|auto-692|<tuple|21.7|1600|Measure.tm>>
+    <associate|auto-693|<tuple|21.5.2.4|1602|Measure.tm>>
+    <associate|auto-694|<tuple|21.5.3|1607|Measure.tm>>
+    <associate|auto-695|<tuple|21.5.3.1|1607|Measure.tm>>
+    <associate|auto-696|<tuple|21.5.3.2|1618|Measure.tm>>
+    <associate|auto-697|<tuple|<with|mode|<quote|math>|<big|int><rsub|A>f
+    d\<mu\>>|1618|Measure.tm>>
+    <associate|auto-698|<tuple|21.5.3.3|1622|Measure.tm>>
+    <associate|auto-699|<tuple|21.5.4|1632|Measure.tm>>
     <associate|auto-7|<tuple|<with|mode|<quote|math>|A<big|cup>B>|14|Sets.tm>>
     <associate|auto-70|<tuple|comparable elements|91|Sets.tm>>
-    <associate|auto-700|<tuple|21.5.3.3|1615|Measure.tm>>
-    <associate|auto-701|<tuple|21.5.4|1625|Measure.tm>>
-    <associate|auto-702|<tuple|21.5.5|1635|Measure.tm>>
-    <associate|auto-703|<tuple|21.5.5.1|1635|Measure.tm>>
-    <associate|auto-704|<tuple|<with|mode|<quote|math>|\<sigma\>>-algebra on
-    <with|mode|<quote|math>|\<bbb-C\>>|1635|Measure.tm>>
-    <associate|auto-705|<tuple|<with|mode|<quote|math>|<around*|\<langle\>|\<bbb-C\>,B<around*|[|\<bbb-C\>|]>|\<rangle\>>>|1635|Measure.tm>>
-    <associate|auto-706|<tuple|<with|mode|<quote|math>|Re<around*|(|f|)>>|1636|Measure.tm>>
-    <associate|auto-707|<tuple|<with|mode|<quote|math>|Img<around*|(|f|)>>|1636|Measure.tm>>
-    <associate|auto-708|<tuple|21.5.5.2|1640|Measure.tm>>
-    <associate|auto-709|<tuple|complex integral|1640|Measure.tm>>
+    <associate|auto-700|<tuple|21.5.5|1642|Measure.tm>>
+    <associate|auto-701|<tuple|21.5.5.1|1642|Measure.tm>>
+    <associate|auto-702|<tuple|<with|mode|<quote|math>|\<sigma\>>-algebra on
+    <with|mode|<quote|math>|\<bbb-C\>>|1642|Measure.tm>>
+    <associate|auto-703|<tuple|<with|mode|<quote|math>|<around*|\<langle\>|\<bbb-C\>,B<around*|[|\<bbb-C\>|]>|\<rangle\>>>|1642|Measure.tm>>
+    <associate|auto-704|<tuple|<with|mode|<quote|math>|Re<around*|(|f|)>>|1643|Measure.tm>>
+    <associate|auto-705|<tuple|<with|mode|<quote|math>|Img<around*|(|f|)>>|1643|Measure.tm>>
+    <associate|auto-706|<tuple|21.5.5.2|1647|Measure.tm>>
+    <associate|auto-707|<tuple|complex integral|1647|Measure.tm>>
+    <associate|auto-708|<tuple|<with|mode|<quote|math>|<big|int><rsup|\<bbb-C\>>f
+    d\<mu\>>|1647|Measure.tm>>
+    <associate|auto-709|<tuple|21.5.6|1651|Measure.tm>>
     <associate|auto-71|<tuple|totally ordered class|92|Sets.tm>>
-    <associate|auto-710|<tuple|<with|mode|<quote|math>|<big|int><rsup|\<bbb-C\>>f
-    d\<mu\>>|1640|Measure.tm>>
-    <associate|auto-711|<tuple|21.5.6|1644|Measure.tm>>
-    <associate|auto-712|<tuple|21.5.6.1|1644|Measure.tm>>
-    <associate|auto-713|<tuple|<with|mode|<quote|math>|\<cal-L\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>|1644|Measure.tm>>
-    <associate|auto-714|<tuple|<with|mode|<quote|math>|\<cal-L\><rsup|\<infty\>><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>|1649|Measure.tm>>
-    <associate|auto-715|<tuple|<with|mode|<quote|math>|\<cal-N\><rsup|p>>|1660|Measure.tm>>
-    <associate|auto-716|<tuple|21.5.6.2|1663|Measure.tm>>
-    <associate|auto-717|<tuple|21.5.6.3|1672|Measure.tm>>
-    <associate|auto-718|<tuple|21.6|1675|Measure.tm>>
-    <associate|auto-719|<tuple|21.6.1|1675|Measure.tm>>
+    <associate|auto-710|<tuple|21.5.6.1|1651|Measure.tm>>
+    <associate|auto-711|<tuple|<with|mode|<quote|math>|\<cal-L\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>|1651|Measure.tm>>
+    <associate|auto-712|<tuple|<with|mode|<quote|math>|\<cal-L\><rsup|\<infty\>><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>|1656|Measure.tm>>
+    <associate|auto-713|<tuple|<with|mode|<quote|math>|\<cal-N\><rsup|p>>|1667|Measure.tm>>
+    <associate|auto-714|<tuple|21.5.6.2|1670|Measure.tm>>
+    <associate|auto-715|<tuple|21.5.6.3|1679|Measure.tm>>
+    <associate|auto-716|<tuple|21.6|1682|Measure.tm>>
+    <associate|auto-717|<tuple|21.6.1|1682|Measure.tm>>
+    <associate|auto-718|<tuple|21.6.1.1|1682|Measure.tm>>
+    <associate|auto-719|<tuple|21.6.1.2|1697|Measure.tm>>
     <associate|auto-72|<tuple|fully ordered class|92|Sets.tm>>
-    <associate|auto-720|<tuple|21.6.1.1|1675|Measure.tm>>
-    <associate|auto-721|<tuple|21.6.1.2|1690|Measure.tm>>
-    <associate|auto-722|<tuple|Hahn Decomposition Theorem|1695|Measure.tm>>
-    <associate|auto-723|<tuple|Jordon Decomposition|1698|Measure.tm>>
-    <associate|auto-724|<tuple|21.6.2|1700|Measure.tm>>
-    <associate|auto-725|<tuple|21.6.2.1|1700|Measure.tm>>
-    <associate|auto-726|<tuple|complex measure|1700|Measure.tm>>
-    <associate|auto-727|<tuple|21.6.2.2|1705|Measure.tm>>
-    <associate|auto-728|<tuple|21.6.3|1710|Measure.tm>>
-    <associate|auto-729|<tuple|<with|mode|<quote|math>|M<around*|[|X,\<cal-A\>,\<bbb-R\>|]>>|1710|Measure.tm>>
+    <associate|auto-720|<tuple|Hahn Decomposition Theorem|1701|Measure.tm>>
+    <associate|auto-721|<tuple|Jordon Decomposition|1705|Measure.tm>>
+    <associate|auto-722|<tuple|21.6.2|1707|Measure.tm>>
+    <associate|auto-723|<tuple|21.6.2.1|1707|Measure.tm>>
+    <associate|auto-724|<tuple|complex measure|1707|Measure.tm>>
+    <associate|auto-725|<tuple|21.6.2.2|1712|Measure.tm>>
+    <associate|auto-726|<tuple|21.6.3|1716|Measure.tm>>
+    <associate|auto-727|<tuple|<with|mode|<quote|math>|M<around*|[|X,\<cal-A\>,\<bbb-R\>|]>>|1717|Measure.tm>>
+    <associate|auto-728|<tuple|<with|mode|<quote|math>|M<around*|(|X,\<cal-A\>,\<bbb-C\>|)>>|1717|Measure.tm>>
+    <associate|auto-729|<tuple|21.6.3.1|1726|Measure.tm>>
     <associate|auto-73|<tuple|linear ordered class|92|Sets.tm>>
-    <associate|auto-730|<tuple|<with|mode|<quote|math>|M<around*|(|X,\<cal-A\>,\<bbb-C\>|)>>|1710|Measure.tm>>
-    <associate|auto-731|<tuple|21.6.3.1|1719|Measure.tm>>
-    <associate|auto-732|<tuple|bounded measurable function|1719|Measure.tm>>
-    <associate|auto-733|<tuple|<with|mode|<quote|math>|B<around*|[|X,\<cal-A\>,\<bbb-K\>|]>>|1719|Measure.tm>>
-    <associate|auto-734|<tuple|21.6.3.2|1722|Measure.tm>>
-    <associate|auto-735|<tuple|absolute continuity of
-    measures|1722|Measure.tm>>
-    <associate|auto-736|<tuple|absolute continuity of signed
-    measures|1734|Measure.tm>>
-    <associate|auto-737|<tuple|absolute continuity of complex
-    measures|1734|Measure.tm>>
-    <associate|auto-738|<tuple|21.7|1740|Measure.tm>>
-    <associate|auto-739|<tuple|21.7.1|1741|Measure.tm>>
+    <associate|auto-730|<tuple|bounded measurable function|1726|Measure.tm>>
+    <associate|auto-731|<tuple|<with|mode|<quote|math>|B<around*|[|X,\<cal-A\>,\<bbb-K\>|]>>|1726|Measure.tm>>
+    <associate|auto-732|<tuple|21.6.3.2|1729|Measure.tm>>
+    <associate|auto-733|<tuple|absolute continuity of
+    measures|1729|Measure.tm>>
+    <associate|auto-734|<tuple|absolute continuity of signed
+    measures|1742|Measure.tm>>
+    <associate|auto-735|<tuple|absolute continuity of complex
+    measures|1742|Measure.tm>>
+    <associate|auto-736|<tuple|21.7|1748|Measure.tm>>
+    <associate|auto-737|<tuple|21.7.1|1748|Measure.tm>>
+    <associate|auto-738|<tuple|21.7.2|1752|Measure.tm>>
+    <associate|auto-739|<tuple|Tonelli's theorem|1771|Measure.tm>>
     <associate|auto-74|<tuple|chain|92|Sets.tm>>
-    <associate|auto-740|<tuple|21.7.2|1745|Measure.tm>>
-    <associate|auto-741|<tuple|Tonelli's theorem|1763|Measure.tm>>
-    <associate|auto-742|<tuple|21.8|1770|Measure.tm>>
-    <associate|auto-743|<tuple|21.8.1|1770|Measure.tm>>
-    <associate|auto-744|<tuple|21.8.1.1|1770|Measure.tm>>
-    <associate|auto-745|<tuple|21.8.1.2|1777|Measure.tm>>
-    <associate|auto-746|<tuple|21.8.1.3|1784|Measure.tm>>
-    <associate|auto-747|<tuple|Dyadic interval|1788|Measure.tm>>
-    <associate|auto-748|<tuple|<with|mode|<quote|math>|\<cal-D\><rsub|n>>|1788|Measure.tm>>
-    <associate|auto-749|<tuple|<with|mode|<quote|math>|\<cal-D\>>|1788|Measure.tm>>
+    <associate|auto-740|<tuple|21.8|1777|Measure.tm>>
+    <associate|auto-741|<tuple|21.8.1|1777|Measure.tm>>
+    <associate|auto-742|<tuple|21.8.1.1|1777|Measure.tm>>
+    <associate|auto-743|<tuple|21.8.1.2|1785|Measure.tm>>
+    <associate|auto-744|<tuple|21.8.1.3|1792|Measure.tm>>
+    <associate|auto-745|<tuple|Dyadic interval|1796|Measure.tm>>
+    <associate|auto-746|<tuple|<with|mode|<quote|math>|\<cal-D\><rsub|n>>|1796|Measure.tm>>
+    <associate|auto-747|<tuple|<with|mode|<quote|math>|\<cal-D\>>|1796|Measure.tm>>
+    <associate|auto-748|<tuple|21.8.2|1805|Measure.tm>>
+    <associate|auto-749|<tuple|22|1819|AffineSpaces.tm>>
     <associate|auto-75|<tuple|initial segment|92|Sets.tm>>
-    <associate|auto-750|<tuple|21.8.2|1797|Measure.tm>>
-    <associate|auto-751|<tuple|22|1811|AffineSpaces.tm>>
-    <associate|auto-752|<tuple|22.1|1811|AffineSpaces.tm>>
-    <associate|auto-753|<tuple|affine space|1811|AffineSpaces.tm>>
-    <associate|auto-754|<tuple|local coordinate system|1813|AffineSpaces.tm>>
-    <associate|auto-755|<tuple|global coordinate
-    system|1813|AffineSpaces.tm>>
-    <associate|auto-756|<tuple|affine mapping|1816|AffineSpaces.tm>>
-    <associate|auto-757|<tuple|affine isomorphism|1816|AffineSpaces.tm>>
-    <associate|auto-758|<tuple|line|1825|AffineSpaces.tm>>
-    <associate|auto-759|<tuple|22.2|1826|AffineSpaces.tm>>
+    <associate|auto-750|<tuple|22.1|1819|AffineSpaces.tm>>
+    <associate|auto-751|<tuple|affine space|1819|AffineSpaces.tm>>
+    <associate|auto-752|<tuple|local coordinate system|1821|AffineSpaces.tm>>
+    <associate|auto-753|<tuple|global coordinate
+    system|1821|AffineSpaces.tm>>
+    <associate|auto-754|<tuple|affine mapping|1824|AffineSpaces.tm>>
+    <associate|auto-755|<tuple|affine isomorphism|1824|AffineSpaces.tm>>
+    <associate|auto-756|<tuple|line|1833|AffineSpaces.tm>>
+    <associate|auto-757|<tuple|22.2|1834|AffineSpaces.tm>>
+    <associate|auto-758|<tuple|23|1835|Manifold.tm>>
+    <associate|auto-759|<tuple|23.1|1835|Manifold.tm>>
     <associate|auto-76|<tuple|<with|mode|<quote|math>|\<cal-S\><rsub|a>>|92|Sets.tm>>
-    <associate|auto-760|<tuple|23|1827|Manifold.tm>>
-    <associate|auto-761|<tuple|23.1|1827|Manifold.tm>>
-    <associate|auto-762|<tuple|24|1829|Manifold.tm>>
-    <associate|auto-763|<tuple|24.1|1829|Manifold.tm>>
-    <associate|auto-764|<tuple|24.2|1829|Manifold.tm>>
-    <associate|auto-765|<tuple|24.3|1829|Manifold.tm>>
-    <associate|auto-766|<tuple|24.4|1829|Manifold.tm>>
-    <associate|auto-767|<tuple|24.5|1829|Manifold.tm>>
-    <associate|auto-768|<tuple|24.6|1829|Manifold.tm>>
-    <associate|auto-769|<tuple|24.7|1829|Manifold.tm>>
+    <associate|auto-760|<tuple|24|1837|Manifold.tm>>
+    <associate|auto-761|<tuple|24.1|1837|Manifold.tm>>
+    <associate|auto-762|<tuple|24.2|1837|Manifold.tm>>
+    <associate|auto-763|<tuple|24.3|1837|Manifold.tm>>
+    <associate|auto-764|<tuple|24.4|1837|Manifold.tm>>
+    <associate|auto-765|<tuple|24.5|1837|Manifold.tm>>
+    <associate|auto-766|<tuple|24.6|1837|Manifold.tm>>
+    <associate|auto-767|<tuple|24.7|1837|Manifold.tm>>
+    <associate|auto-768|<tuple|24.8|1838|Manifold.tm>>
+    <associate|auto-769|<tuple|24.9|1838|Manifold.tm>>
     <associate|auto-77|<tuple|3.3.2|93|Sets.tm>>
-    <associate|auto-770|<tuple|24.8|1830|Manifold.tm>>
-    <associate|auto-771|<tuple|24.9|1830|Manifold.tm>>
-    <associate|auto-772|<tuple|24.10|1830|Manifold.tm>>
-    <associate|auto-773|<tuple|24.11|1830|Manifold.tm>>
-    <associate|auto-774|<tuple|24.12|1830|Manifold.tm>>
-    <associate|auto-775|<tuple|24.13|1830|Manifold.tm>>
-    <associate|auto-776|<tuple|24.14|1830|Manifold.tm>>
-    <associate|auto-777|<tuple|24.14|1831>>
+    <associate|auto-770|<tuple|24.10|1838|Manifold.tm>>
+    <associate|auto-771|<tuple|24.11|1838|Manifold.tm>>
+    <associate|auto-772|<tuple|24.12|1838|Manifold.tm>>
+    <associate|auto-773|<tuple|24.13|1838|Manifold.tm>>
+    <associate|auto-774|<tuple|24.14|1838|Manifold.tm>>
+    <associate|auto-775|<tuple|24.14|1839>>
     <associate|auto-78|<tuple|increasing function|93|Sets.tm>>
     <associate|auto-79|<tuple|decreasing function|93|Sets.tm>>
     <associate|auto-8|<tuple|<with|mode|<quote|math>|A<big|cap>B>|14|Sets.tm>>
@@ -3129,7 +3122,7 @@
     <associate|cartesian product of the empty set|<tuple|1.53|25|Sets.tm>>
     <associate|cartesian product properties (1)|<tuple|1.56|26|Sets.tm>>
     <associate|cartesian product with enpty set|<tuple|1.54|25|Sets.tm>>
-    <associate|charasteristic function|<tuple|21.266|1556|Measure.tm>>
+    <associate|charasteristic function|<tuple|21.268|1557|Measure.tm>>
     <associate|choice Axiom of choice consequences|<tuple|3.135|122|Sets.tm>>
     <associate|choice Hausdorff maximal principle|<tuple|3.126|116|Sets.tm>>
     <associate|choice Hausdorff's Maximal
@@ -3215,7 +3208,7 @@
     <associate|compact every closed subset of a compact set is
     compact|<tuple|14.257|788|Topology.tm>>
     <associate|compact extreme value theorem|<tuple|14.261|790|Topology.tm>>
-    <associate|compact finite measure|<tuple|21.551|1774|Measure.tm>>
+    <associate|compact finite measure|<tuple|21.558|1782|Measure.tm>>
     <associate|compact finite union of compact
     sets|<tuple|14.251|786|Topology.tm>>
     <associate|compact image of a cmpact set by a continuous
@@ -3315,42 +3308,42 @@
     <associate|complex i^2=-1|<tuple|10.76|334|Numbers.tm>>
     <associate|complex integers are conditional
     complete|<tuple|10.16|309|Numbers.tm>>
-    <associate|complex integral|<tuple|21.382|1640|Measure.tm>>
-    <associate|complex integral alternative|<tuple|21.389|1643|Measure.tm>>
+    <associate|complex integral|<tuple|21.389|1647|Measure.tm>>
+    <associate|complex integral alternative|<tuple|21.396|1650|Measure.tm>>
     <associate|complex integral characteristics
-    multiplication|<tuple|21.384|1640|Measure.tm>>
-    <associate|complex integral of zero function|<tuple|21.383|1640|Measure.tm>>
-    <associate|complex integral property|<tuple|21.388|1641|Measure.tm>>
+    multiplication|<tuple|21.391|1647|Measure.tm>>
+    <associate|complex integral of zero function|<tuple|21.390|1647|Measure.tm>>
+    <associate|complex integral property|<tuple|21.395|1648|Measure.tm>>
     <associate|complex integral real integrable functions are complex
-    integrable|<tuple|21.387|1641|Measure.tm>>
+    integrable|<tuple|21.394|1648|Measure.tm>>
     <associate|complex irrational numbers|<tuple|10.20|310|Numbers.tm>>
     <associate|complex mathematical induction|<tuple|10.35|319|Numbers.tm>>
     <associate|complex max(S+T),min(S+T)|<tuple|10.25|313|Numbers.tm>>
     <associate|complex max(S+s), min(S+s)|<tuple|10.26|314|Numbers.tm>>
     <associate|complex max(a.x) 0\<less\>=a|<tuple|10.27|314|Numbers.tm>>
-    <associate|complex measurable function|<tuple|21.373|1636|Measure.tm>>
+    <associate|complex measurable function|<tuple|21.380|1643|Measure.tm>>
     <associate|complex measurable function absolute
-    value|<tuple|21.381|1640|Measure.tm>>
+    value|<tuple|21.388|1647|Measure.tm>>
     <associate|complex measurable function
-    alternative|<tuple|21.378|1637|Measure.tm>>
+    alternative|<tuple|21.385|1644|Measure.tm>>
     <associate|complex measurable function
-    condition|<tuple|21.375|1636|Measure.tm>>
+    condition|<tuple|21.382|1643|Measure.tm>>
     <associate|complex measurable function
-    properties|<tuple|21.380|1637|Measure.tm>>
-    <associate|complex measurable space|<tuple|21.372|1635|Measure.tm>>
-    <associate|complex measure|<tuple|21.465|1700|Measure.tm>>
-    <associate|complex measure condition|<tuple|21.471|1703|Measure.tm>>
-    <associate|complex measure finite addivity|<tuple|21.469|1701|Measure.tm>>
+    properties|<tuple|21.387|1644|Measure.tm>>
+    <associate|complex measurable space|<tuple|21.379|1642|Measure.tm>>
+    <associate|complex measure|<tuple|21.472|1707|Measure.tm>>
+    <associate|complex measure condition|<tuple|21.478|1710|Measure.tm>>
+    <associate|complex measure finite addivity|<tuple|21.476|1708|Measure.tm>>
     <associate|complex measure integral complex
-    function|<tuple|21.491|1722|Measure.tm>>
+    function|<tuple|21.498|1729|Measure.tm>>
     <associate|complex measure integral real
-    function|<tuple|21.489|1721|Measure.tm>>
-    <associate|complex measure properties|<tuple|21.470|1702|Measure.tm>>
+    function|<tuple|21.496|1728|Measure.tm>>
+    <associate|complex measure properties|<tuple|21.477|1709|Measure.tm>>
     <associate|complex measure real/imaginare
-    part|<tuple|21.467|1700|Measure.tm>>
-    <associate|complex measure variation|<tuple|21.473|1706|Measure.tm>>
+    part|<tuple|21.474|1707|Measure.tm>>
+    <associate|complex measure variation|<tuple|21.480|1712|Measure.tm>>
     <associate|complex measure variation is a
-    measure|<tuple|21.475|1706|Measure.tm>>
+    measure|<tuple|21.482|1713|Measure.tm>>
     <associate|complex n\<less\>2^n|<tuple|10.57|328|Numbers.tm>>
     <associate|complex n\<less\>m and 0\<less\>x\<less\>1 then
     x^n\<less\>x^m|<tuple|10.62|329|Numbers.tm>>
@@ -3547,7 +3540,7 @@
     point|<tuple|16.9|900|Differentiation.tm>>
     <associate|corollary 16.50.192|<tuple|16.131|962|Differentiation.tm>>
     <associate|corollary 20.111.218|<tuple|21.12|1406|Measure.tm>>
-    <associate|corollary 21.533.285|<tuple|21.549|1774|Measure.tm>>
+    <associate|corollary 21.533.285|<tuple|21.556|1782|Measure.tm>>
     <associate|countable AUB and AxB|<tuple|6.76|211|NaturalNumbers.tm>>
     <associate|countable product of a finite family of countable sets is
     countable (2)|<tuple|6.78|211|NaturalNumbers.tm>>
@@ -4802,7 +4795,7 @@
     <associate|eq 15.41.177|<tuple|15.41|898|IntegrationBanach.tm>>
     <associate|eq 15.5.175|<tuple|15.5|879|IntegrationBanach.tm>>
     <associate|eq 15.6.175|<tuple|15.6|879|IntegrationBanach.tm>>
-    <associate|eq 15.81.439|<tuple|21.348|1529|Measure.tm>>
+    <associate|eq 15.81.439|<tuple|21.344|1528|Measure.tm>>
     <associate|eq 16.1.1|<tuple|16.1|900|Differentiation.tm>>
     <associate|eq 16.1.177|<tuple|16.25|921|Differentiation.tm>>
     <associate|eq 16.10.178|<tuple|16.76|934|Differentiation.tm>>
@@ -5519,13 +5512,13 @@
     <associate|eq 18.2.146.1|<tuple|18.2|1227|InnerProductSpaces.tm>>
     <associate|eq 18.20.021|<tuple|21.47|1426|Measure.tm>>
     <associate|eq 18.20.147|<tuple|18.23|1250|InnerProductSpaces.tm>>
-    <associate|eq 18.21.021|<tuple|21.48|1426|Measure.tm>>
+    <associate|eq 18.21.021|<tuple|21.48|1427|Measure.tm>>
     <associate|eq 18.22.021|<tuple|21.49|1427|Measure.tm>>
     <associate|eq 18.22.147|<tuple|18.24|1254|InnerProductSpaces.tm>>
     <associate|eq 18.23.148|<tuple|18.26|1258|InnerProductSpaces.tm>>
     <associate|eq 18.23.149|<tuple|18.25|1256|InnerProductSpaces.tm>>
     <associate|eq 18.24.148|<tuple|18.27|1259|InnerProductSpaces.tm>>
-    <associate|eq 18.240.291|<tuple|21.1110|1805|Measure.tm>>
+    <associate|eq 18.240.291|<tuple|21.1114|1813|Measure.tm>>
     <associate|eq 18.25.148|<tuple|18.28|1260|InnerProductSpaces.tm>>
     <associate|eq 18.26.148|<tuple|18.29|1260|InnerProductSpaces.tm>>
     <associate|eq 18.27.148|<tuple|18.30|1261|InnerProductSpaces.tm>>
@@ -5534,7 +5527,6 @@
     <associate|eq 18.3.146|<tuple|18.4|1227|InnerProductSpaces.tm>>
     <associate|eq 18.31.148|<tuple|18.34|1262|InnerProductSpaces.tm>>
     <associate|eq 18.32.148|<tuple|18.35|1263|InnerProductSpaces.tm>>
-    <associate|eq 18.325.036.7|<tuple|21.392|1551|Measure.tm>>
     <associate|eq 18.33.148|<tuple|18.36|1264|InnerProductSpaces.tm>>
     <associate|eq 18.34.148|<tuple|18.37|1264|InnerProductSpaces.tm>>
     <associate|eq 18.35.148|<tuple|18.38|1264|InnerProductSpaces.tm>>
@@ -5545,7 +5537,7 @@
     <associate|eq 18.4.146|<tuple|18.6|1228|InnerProductSpaces.tm>>
     <associate|eq 18.40.022|<tuple|21.86|1439|Measure.tm>>
     <associate|eq 18.40.149|<tuple|18.42|1270|InnerProductSpaces.tm>>
-    <associate|eq 18.41.022|<tuple|21.87|1439|Measure.tm>>
+    <associate|eq 18.41.022|<tuple|21.87|1440|Measure.tm>>
     <associate|eq 18.42.022|<tuple|21.88|1440|Measure.tm>>
     <associate|eq 18.43.022|<tuple|21.89|1440|Measure.tm>>
     <associate|eq 18.5.146|<tuple|18.7|1228|InnerProductSpaces.tm>>
@@ -5608,7 +5600,7 @@
     <associate|eq 19.60.152|<tuple|19.60|1312|Exponential.tm>>
     <associate|eq 19.7.150|<tuple|19.9|1281|Exponential.tm>>
     <associate|eq 19.7.151|<tuple|19.7|1280|Exponential.tm>>
-    <associate|eq 19.759.043|<tuple|21.871|1736|Measure.tm>>
+    <associate|eq 19.759.043|<tuple|21.875|1743|Measure.tm>>
     <associate|eq 19.8.150|<tuple|19.10|1281|Exponential.tm>>
     <associate|eq 19.9.150|<tuple|19.11|1281|Exponential.tm>>
     <associate|eq 2.1.001|<tuple|2.2|33|Sets.tm>>
@@ -5692,51 +5684,51 @@
     <associate|eq 20.1.155|<tuple|20.1|1347|ExtendedRealNumbers.tm>>
     <associate|eq 20.10.155|<tuple|20.10|1357|ExtendedRealNumbers.tm>>
     <associate|eq 20.100.200|<tuple|21.97|1442|Measure.tm>>
-    <associate|eq 20.1000.280|<tuple|21.960|1764|Measure.tm>>
-    <associate|eq 20.1001.280|<tuple|21.961|1764|Measure.tm>>
-    <associate|eq 20.1002.280|<tuple|21.962|1764|Measure.tm>>
-    <associate|eq 20.1003.280|<tuple|21.963|1764|Measure.tm>>
-    <associate|eq 20.1004.280|<tuple|21.964|1764|Measure.tm>>
-    <associate|eq 20.1005.280|<tuple|21.965|1764|Measure.tm>>
-    <associate|eq 20.1006.280|<tuple|21.966|1764|Measure.tm>>
-    <associate|eq 20.1007.280|<tuple|21.967|1764|Measure.tm>>
-    <associate|eq 20.1008.280|<tuple|21.968|1764|Measure.tm>>
-    <associate|eq 20.1009.280|<tuple|21.969|1765|Measure.tm>>
+    <associate|eq 20.1000.280|<tuple|21.964|1772|Measure.tm>>
+    <associate|eq 20.1001.280|<tuple|21.965|1772|Measure.tm>>
+    <associate|eq 20.1002.280|<tuple|21.966|1772|Measure.tm>>
+    <associate|eq 20.1003.280|<tuple|21.967|1772|Measure.tm>>
+    <associate|eq 20.1004.280|<tuple|21.968|1772|Measure.tm>>
+    <associate|eq 20.1005.280|<tuple|21.969|1772|Measure.tm>>
+    <associate|eq 20.1006.280|<tuple|21.970|1772|Measure.tm>>
+    <associate|eq 20.1007.280|<tuple|21.971|1772|Measure.tm>>
+    <associate|eq 20.1008.280|<tuple|21.972|1772|Measure.tm>>
+    <associate|eq 20.1009.280|<tuple|21.973|1772|Measure.tm>>
     <associate|eq 20.101.200|<tuple|21.98|1442|Measure.tm>>
-    <associate|eq 20.1010.2080|<tuple|21.970|1765|Measure.tm>>
-    <associate|eq 20.1010.281|<tuple|21.972|1766|Measure.tm>>
-    <associate|eq 20.1011.280|<tuple|21.971|1765|Measure.tm>>
-    <associate|eq 20.1011.281|<tuple|21.973|1766|Measure.tm>>
-    <associate|eq 20.1014.281|<tuple|21.976|1767|Measure.tm>>
-    <associate|eq 20.1015.281|<tuple|21.977|1767|Measure.tm>>
-    <associate|eq 20.1015.285|<tuple|21.974|1766|Measure.tm>>
-    <associate|eq 20.1016.281|<tuple|21.978|1767|Measure.tm>>
-    <associate|eq 20.1017.281|<tuple|21.979|1767|Measure.tm>>
-    <associate|eq 20.1018.281|<tuple|21.980|1767|Measure.tm>>
-    <associate|eq 20.1019.281|<tuple|21.981|1767|Measure.tm>>
+    <associate|eq 20.1010.2080|<tuple|21.974|1772|Measure.tm>>
+    <associate|eq 20.1010.281|<tuple|21.976|1774|Measure.tm>>
+    <associate|eq 20.1011.280|<tuple|21.975|1772|Measure.tm>>
+    <associate|eq 20.1011.281|<tuple|21.977|1774|Measure.tm>>
+    <associate|eq 20.1014.281|<tuple|21.980|1774|Measure.tm>>
+    <associate|eq 20.1015.281|<tuple|21.981|1774|Measure.tm>>
+    <associate|eq 20.1015.285|<tuple|21.978|1774|Measure.tm>>
+    <associate|eq 20.1016.281|<tuple|21.982|1774|Measure.tm>>
+    <associate|eq 20.1017.281|<tuple|21.983|1774|Measure.tm>>
+    <associate|eq 20.1018.281|<tuple|21.984|1774|Measure.tm>>
+    <associate|eq 20.1019.281|<tuple|21.985|1774|Measure.tm>>
     <associate|eq 20.102.200|<tuple|21.99|1442|Measure.tm>>
-    <associate|eq 20.1020.281|<tuple|21.982|1767|Measure.tm>>
-    <associate|eq 20.1021.281|<tuple|21.983|1767|Measure.tm>>
-    <associate|eq 20.1022.281|<tuple|21.984|1767|Measure.tm>>
-    <associate|eq 20.1023.281|<tuple|21.985|1767|Measure.tm>>
-    <associate|eq 20.1024.281|<tuple|21.986|1767|Measure.tm>>
-    <associate|eq 20.1025.281|<tuple|21.987|1768|Measure.tm>>
-    <associate|eq 20.1026.281|<tuple|21.988|1768|Measure.tm>>
-    <associate|eq 20.1027.281|<tuple|21.989|1768|Measure.tm>>
-    <associate|eq 20.1028.281|<tuple|21.990|1768|Measure.tm>>
-    <associate|eq 20.1029.281|<tuple|21.991|1768|Measure.tm>>
+    <associate|eq 20.1020.281|<tuple|21.986|1775|Measure.tm>>
+    <associate|eq 20.1021.281|<tuple|21.987|1775|Measure.tm>>
+    <associate|eq 20.1022.281|<tuple|21.988|1775|Measure.tm>>
+    <associate|eq 20.1023.281|<tuple|21.989|1775|Measure.tm>>
+    <associate|eq 20.1024.281|<tuple|21.990|1775|Measure.tm>>
+    <associate|eq 20.1025.281|<tuple|21.991|1775|Measure.tm>>
+    <associate|eq 20.1026.281|<tuple|21.992|1776|Measure.tm>>
+    <associate|eq 20.1027.281|<tuple|21.993|1776|Measure.tm>>
+    <associate|eq 20.1028.281|<tuple|21.994|1776|Measure.tm>>
+    <associate|eq 20.1029.281|<tuple|21.995|1776|Measure.tm>>
     <associate|eq 20.103.200|<tuple|21.100|1442|Measure.tm>>
-    <associate|eq 20.1033.283|<tuple|21.992|1768|Measure.tm>>
-    <associate|eq 20.1034.284|<tuple|21.993|1768|Measure.tm>>
-    <associate|eq 20.1035.284|<tuple|21.994|1768|Measure.tm>>
-    <associate|eq 20.1036.284|<tuple|21.995|1769|Measure.tm>>
-    <associate|eq 20.1037.284|<tuple|21.996|1769|Measure.tm>>
-    <associate|eq 20.1038.284|<tuple|21.997|1769|Measure.tm>>
-    <associate|eq 20.1039.284|<tuple|21.998|1769|Measure.tm>>
+    <associate|eq 20.1033.283|<tuple|21.996|1776|Measure.tm>>
+    <associate|eq 20.1034.284|<tuple|21.997|1776|Measure.tm>>
+    <associate|eq 20.1035.284|<tuple|21.998|1776|Measure.tm>>
+    <associate|eq 20.1036.284|<tuple|21.999|1776|Measure.tm>>
+    <associate|eq 20.1037.284|<tuple|21.1000|1776|Measure.tm>>
+    <associate|eq 20.1038.284|<tuple|21.1001|1776|Measure.tm>>
+    <associate|eq 20.1039.284|<tuple|21.1002|1776|Measure.tm>>
     <associate|eq 20.104.200|<tuple|21.101|1443|Measure.tm>>
-    <associate|eq 20.1040.284|<tuple|21.999|1769|Measure.tm>>
-    <associate|eq 20.1041.285|<tuple|21.1000|1769|Measure.tm>>
-    <associate|eq 20.1042.285|<tuple|21.1001|1769|Measure.tm>>
+    <associate|eq 20.1040.284|<tuple|21.1003|1777|Measure.tm>>
+    <associate|eq 20.1041.285|<tuple|21.1004|1777|Measure.tm>>
+    <associate|eq 20.1042.285|<tuple|21.1005|1777|Measure.tm>>
     <associate|eq 20.105.200|<tuple|21.102|1443|Measure.tm>>
     <associate|eq 20.106.200|<tuple|21.103|1443|Measure.tm>>
     <associate|eq 20.107.200|<tuple|21.104|1444|Measure.tm>>
@@ -5748,7 +5740,7 @@
     <associate|eq 20.112.201|<tuple|21.1|1401|Measure.tm>>
     <associate|eq 20.112.227|<tuple|21.65|1431|Measure.tm>>
     <associate|eq 20.113.201|<tuple|21.108|1449|Measure.tm>>
-    <associate|eq 20.113.227|<tuple|21.66|1431|Measure.tm>>
+    <associate|eq 20.113.227|<tuple|21.66|1432|Measure.tm>>
     <associate|eq 20.114.201|<tuple|21.110|1453|Measure.tm>>
     <associate|eq 20.114.227|<tuple|21.67|1432|Measure.tm>>
     <associate|eq 20.115.201|<tuple|21.111|1454|Measure.tm>>
@@ -5767,7 +5759,7 @@
     <associate|eq 20.121.201|<tuple|21.117|1455|Measure.tm>>
     <associate|eq 20.121.227|<tuple|21.74|1432|Measure.tm>>
     <associate|eq 20.122.201|<tuple|21.118|1455|Measure.tm>>
-    <associate|eq 20.122.227|<tuple|21.75|1432|Measure.tm>>
+    <associate|eq 20.122.227|<tuple|21.75|1433|Measure.tm>>
     <associate|eq 20.123.201|<tuple|21.119|1455|Measure.tm>>
     <associate|eq 20.123.227|<tuple|21.76|1433|Measure.tm>>
     <associate|eq 20.124.201|<tuple|21.120|1455|Measure.tm>>
@@ -5791,7 +5783,7 @@
     <associate|eq 20.136.202|<tuple|21.143|1465|Measure.tm>>
     <associate|eq 20.137.202|<tuple|21.144|1465|Measure.tm>>
     <associate|eq 20.138.202|<tuple|21.145|1465|Measure.tm>>
-    <associate|eq 20.139.202|<tuple|21.146|1465|Measure.tm>>
+    <associate|eq 20.139.202|<tuple|21.146|1466|Measure.tm>>
     <associate|eq 20.14.155|<tuple|20.15|1359|ExtendedRealNumbers.tm>>
     <associate|eq 20.140.202|<tuple|21.147|1466|Measure.tm>>
     <associate|eq 20.140.210.1|<tuple|21.126|1457|Measure.tm>>
@@ -5841,7 +5833,7 @@
     <associate|eq 20.189.217|<tuple|21.172|1472|Measure.tm>>
     <associate|eq 20.19.156|<tuple|20.19|1363|ExtendedRealNumbers.tm>>
     <associate|eq 20.190.210|<tuple|21.185|1478|Measure.tm>>
-    <associate|eq 20.190.217|<tuple|21.173|1472|Measure.tm>>
+    <associate|eq 20.190.217|<tuple|21.173|1473|Measure.tm>>
     <associate|eq 20.191.210|<tuple|21.186|1478|Measure.tm>>
     <associate|eq 20.191.217|<tuple|21.174|1473|Measure.tm>>
     <associate|eq 20.191.217.1|<tuple|21.174|1473|Measure.tm>>
@@ -5862,18 +5854,18 @@
     <associate|eq 20.20.156|<tuple|20.20|1364|ExtendedRealNumbers.tm>>
     <associate|eq 20.200.210|<tuple|21.195|1479|Measure.tm>>
     <associate|eq 20.201.210|<tuple|21.196|1480|Measure.tm>>
-    <associate|eq 20.202.204|<tuple|21.257|1500|Measure.tm>>
+    <associate|eq 20.202.204|<tuple|21.252|1499|Measure.tm>>
     <associate|eq 20.202.210|<tuple|21.197|1480|Measure.tm>>
-    <associate|eq 20.203.204|<tuple|21.258|1500|Measure.tm>>
+    <associate|eq 20.203.204|<tuple|21.253|1499|Measure.tm>>
     <associate|eq 20.203.218|<tuple|21.182|1476|Measure.tm>>
-    <associate|eq 20.204.204|<tuple|21.259|1500|Measure.tm>>
+    <associate|eq 20.204.204|<tuple|21.254|1499|Measure.tm>>
     <associate|eq 20.204.218|<tuple|21.183|1476|Measure.tm>>
-    <associate|eq 20.205.204|<tuple|21.260|1500|Measure.tm>>
+    <associate|eq 20.205.204|<tuple|21.255|1499|Measure.tm>>
     <associate|eq 20.205.218|<tuple|21.184|1476|Measure.tm>>
-    <associate|eq 20.206.204|<tuple|21.261|1501|Measure.tm>>
+    <associate|eq 20.206.204|<tuple|21.256|1500|Measure.tm>>
     <associate|eq 20.206.210|<tuple|21.205|1484|Measure.tm>>
     <associate|eq 20.206.211|<tuple|21.198|1482|Measure.tm>>
-    <associate|eq 20.207.204|<tuple|21.262|1501|Measure.tm>>
+    <associate|eq 20.207.204|<tuple|21.257|1500|Measure.tm>>
     <associate|eq 20.207.210|<tuple|21.206|1484|Measure.tm>>
     <associate|eq 20.207.211|<tuple|21.199|1482|Measure.tm>>
     <associate|eq 20.208.210|<tuple|21.207|1484|Measure.tm>>
@@ -5887,27 +5879,27 @@
     <associate|eq 20.211.211|<tuple|21.203|1483|Measure.tm>>
     <associate|eq 20.212.210|<tuple|21.211|1485|Measure.tm>>
     <associate|eq 20.213.210|<tuple|21.212|1485|Measure.tm>>
-    <associate|eq 20.215.205|<tuple|21.264|1504|Measure.tm>>
-    <associate|eq 20.216.205|<tuple|21.265|1504|Measure.tm>>
-    <associate|eq 20.217.205|<tuple|21.267|1504|Measure.tm>>
-    <associate|eq 20.217.206|<tuple|21.266|1504|Measure.tm>>
-    <associate|eq 20.218.205|<tuple|21.268|1504|Measure.tm>>
-    <associate|eq 20.219.205|<tuple|21.269|1504|Measure.tm>>
+    <associate|eq 20.215.205|<tuple|21.260|1503|Measure.tm>>
+    <associate|eq 20.216.205|<tuple|21.261|1503|Measure.tm>>
+    <associate|eq 20.217.205|<tuple|21.263|1503|Measure.tm>>
+    <associate|eq 20.217.206|<tuple|21.262|1503|Measure.tm>>
+    <associate|eq 20.218.205|<tuple|21.264|1503|Measure.tm>>
+    <associate|eq 20.219.205|<tuple|21.265|1503|Measure.tm>>
     <associate|eq 20.22.156|<tuple|20.22|1364|ExtendedRealNumbers.tm>>
-    <associate|eq 20.220.205|<tuple|21.270|1504|Measure.tm>>
+    <associate|eq 20.220.205|<tuple|21.266|1503|Measure.tm>>
     <associate|eq 20.220.212|<tuple|21.214|1486|Measure.tm>>
     <associate|eq 20.220.212.1|<tuple|21.213|1485|Measure.tm>>
-    <associate|eq 20.221.205|<tuple|21.271|1504|Measure.tm>>
+    <associate|eq 20.221.205|<tuple|21.267|1503|Measure.tm>>
     <associate|eq 20.221.212|<tuple|21.215|1486|Measure.tm>>
-    <associate|eq 20.222.205|<tuple|21.272|1504|Measure.tm>>
+    <associate|eq 20.222.205|<tuple|21.268|1503|Measure.tm>>
     <associate|eq 20.222.212|<tuple|21.216|1486|Measure.tm>>
-    <associate|eq 20.223.203|<tuple|21.273|1504|Measure.tm>>
+    <associate|eq 20.223.203|<tuple|21.269|1503|Measure.tm>>
     <associate|eq 20.223.212|<tuple|21.217|1486|Measure.tm>>
-    <associate|eq 20.224.205|<tuple|21.274|1504|Measure.tm>>
-    <associate|eq 20.225.205|<tuple|21.275|1504|Measure.tm>>
+    <associate|eq 20.224.205|<tuple|21.270|1503|Measure.tm>>
+    <associate|eq 20.225.205|<tuple|21.271|1503|Measure.tm>>
     <associate|eq 20.225.212|<tuple|21.218|1486|Measure.tm>>
     <associate|eq 20.225.219|<tuple|21.204|1484|Measure.tm>>
-    <associate|eq 20.226.205|<tuple|21.276|1505|Measure.tm>>
+    <associate|eq 20.226.205|<tuple|21.272|1504|Measure.tm>>
     <associate|eq 20.226.212|<tuple|21.219|1486|Measure.tm>>
     <associate|eq 20.227.212|<tuple|21.220|1487|Measure.tm>>
     <associate|eq 20.228.212|<tuple|21.221|1488|Measure.tm>>
@@ -5917,7 +5909,6 @@
     <associate|eq 20.231.212|<tuple|21.224|1488|Measure.tm>>
     <associate|eq 20.232.212|<tuple|21.225|1488|Measure.tm>>
     <associate|eq 20.233.212|<tuple|21.226|1488|Measure.tm>>
-    <associate|eq 20.245.228|<tuple|21.390|1550|Measure.tm>>
     <associate|eq 20.248.220|<tuple|21.227|1490|Measure.tm>>
     <associate|eq 20.249.220|<tuple|21.228|1490|Measure.tm>>
     <associate|eq 20.24\<point\>156|<tuple|20.24|1365|ExtendedRealNumbers.tm>>
@@ -5926,966 +5917,972 @@
     <associate|eq 20.251.220|<tuple|21.230|1490|Measure.tm>>
     <associate|eq 20.252.220|<tuple|21.231|1490|Measure.tm>>
     <associate|eq 20.253.220|<tuple|21.232|1491|Measure.tm>>
-    <associate|eq 20.254.220|<tuple|21.233|1491|Measure.tm>>
-    <associate|eq 20.255.220|<tuple|21.234|1491|Measure.tm>>
-    <associate|eq 20.256.220|<tuple|21.235|1491|Measure.tm>>
-    <associate|eq 20.257.216|<tuple|21.241|1495|Measure.tm>>
-    <associate|eq 20.257.220|<tuple|21.236|1492|Measure.tm>>
-    <associate|eq 20.258.216|<tuple|21.242|1495|Measure.tm>>
-    <associate|eq 20.258.220|<tuple|21.237|1492|Measure.tm>>
-    <associate|eq 20.259.216|<tuple|21.243|1495|Measure.tm>>
-    <associate|eq 20.259.220|<tuple|21.238|1493|Measure.tm>>
+    <associate|eq 20.257.216|<tuple|21.236|1494|Measure.tm>>
+    <associate|eq 20.258.216|<tuple|21.237|1494|Measure.tm>>
+    <associate|eq 20.259.216|<tuple|21.238|1494|Measure.tm>>
+    <associate|eq 20.259.220|<tuple|21.233|1492|Measure.tm>>
     <associate|eq 20.26.156|<tuple|20.26|1366|ExtendedRealNumbers.tm>>
-    <associate|eq 20.260.216|<tuple|21.244|1495|Measure.tm>>
-    <associate|eq 20.260.220|<tuple|21.239|1493|Measure.tm>>
-    <associate|eq 20.261.216|<tuple|21.245|1495|Measure.tm>>
-    <associate|eq 20.261.220|<tuple|21.240|1493|Measure.tm>>
-    <associate|eq 20.262.216|<tuple|21.246|1496|Measure.tm>>
-    <associate|eq 20.263.216|<tuple|21.248|1496|Measure.tm>>
-    <associate|eq 20.264.216|<tuple|21.249|1496|Measure.tm>>
-    <associate|eq 20.265.216|<tuple|21.250|1496|Measure.tm>>
-    <associate|eq 20.266.216|<tuple|21.251|1497|Measure.tm>>
-    <associate|eq 20.267.216|<tuple|21.252|1497|Measure.tm>>
-    <associate|eq 20.268.216|<tuple|21.253|1497|Measure.tm>>
-    <associate|eq 20.269.216|<tuple|21.255|1498|Measure.tm>>
+    <associate|eq 20.260.216|<tuple|21.239|1494|Measure.tm>>
+    <associate|eq 20.260.220|<tuple|21.234|1492|Measure.tm>>
+    <associate|eq 20.261.216|<tuple|21.240|1494|Measure.tm>>
+    <associate|eq 20.261.220|<tuple|21.235|1492|Measure.tm>>
+    <associate|eq 20.262.216|<tuple|21.241|1495|Measure.tm>>
+    <associate|eq 20.263.216|<tuple|21.243|1495|Measure.tm>>
+    <associate|eq 20.264.216|<tuple|21.244|1495|Measure.tm>>
+    <associate|eq 20.265.216|<tuple|21.245|1495|Measure.tm>>
+    <associate|eq 20.266.216|<tuple|21.246|1496|Measure.tm>>
+    <associate|eq 20.267.216|<tuple|21.247|1496|Measure.tm>>
+    <associate|eq 20.268.216|<tuple|21.248|1496|Measure.tm>>
+    <associate|eq 20.269.216|<tuple|21.250|1497|Measure.tm>>
     <associate|eq 20.27.156|<tuple|20.27|1367|ExtendedRealNumbers.tm>>
-    <associate|eq 20.273.220|<tuple|21.247|1496|Measure.tm>>
-    <associate|eq 20.273.226|<tuple|21.352|1531|Measure.tm>>
-    <associate|eq 20.274.220|<tuple|21.254|1497|Measure.tm>>
-    <associate|eq 20.275.220|<tuple|21.256|1499|Measure.tm>>
+    <associate|eq 20.273.220|<tuple|21.242|1495|Measure.tm>>
+    <associate|eq 20.273.226|<tuple|21.348|1530|Measure.tm>>
+    <associate|eq 20.274.220|<tuple|21.249|1496|Measure.tm>>
+    <associate|eq 20.275.220|<tuple|21.251|1498|Measure.tm>>
     <associate|eq 20.28.156|<tuple|20.28|1377|ExtendedRealNumbers.tm>>
-    <associate|eq 20.284.221|<tuple|21.263|1502|Measure.tm>>
+    <associate|eq 20.284.221|<tuple|21.258|1501|Measure.tm>>
     <associate|eq 20.29.156|<tuple|20.29|1377|ExtendedRealNumbers.tm>>
-    <associate|eq 20.290.279|<tuple|21.880|1743|Measure.tm>>
-    <associate|eq 20.294.279|<tuple|21.884|1744|Measure.tm>>
-    <associate|eq 20.295.220|<tuple|21.277|1505|Measure.tm>>
-    <associate|eq 20.296.220|<tuple|21.278|1505|Measure.tm>>
-    <associate|eq 20.297.220|<tuple|21.281|1506|Measure.tm>>
-    <associate|eq 20.298.220|<tuple|21.280|1505|Measure.tm>>
-    <associate|eq 20.299.220|<tuple|21.279|1505|Measure.tm>>
+    <associate|eq 20.290.279|<tuple|21.884|1750|Measure.tm>>
+    <associate|eq 20.294.279|<tuple|21.888|1752|Measure.tm>>
+    <associate|eq 20.295.220|<tuple|21.273|1504|Measure.tm>>
+    <associate|eq 20.296.220|<tuple|21.274|1504|Measure.tm>>
+    <associate|eq 20.297.220|<tuple|21.277|1505|Measure.tm>>
+    <associate|eq 20.298.220|<tuple|21.276|1504|Measure.tm>>
+    <associate|eq 20.299.220|<tuple|21.275|1504|Measure.tm>>
     <associate|eq 20.3.155|<tuple|20.3|1347|ExtendedRealNumbers.tm>>
     <associate|eq 20.30.156|<tuple|20.30|1377|ExtendedRealNumbers.tm>>
-    <associate|eq 20.300.220|<tuple|21.282|1506|Measure.tm>>
-    <associate|eq 20.301.221|<tuple|21.281|1506|Measure.tm>>
-    <associate|eq 20.304.221|<tuple|21.289|1511|Measure.tm>>
-    <associate|eq 20.305.221|<tuple|21.290|1511|Measure.tm>>
-    <associate|eq 20.306.221|<tuple|21.291|1512|Measure.tm>>
-    <associate|eq 20.307.221|<tuple|21.292|1512|Measure.tm>>
-    <associate|eq 20.308.221|<tuple|21.293|1512|Measure.tm>>
-    <associate|eq 20.309.221|<tuple|21.294|1512|Measure.tm>>
-    <associate|eq 20.31.156|<tuple|20.31|1378|ExtendedRealNumbers.tm>>
-    <associate|eq 20.310.221|<tuple|21.295|1512|Measure.tm>>
-    <associate|eq 20.311.221|<tuple|21.283|1508|Measure.tm>>
-    <associate|eq 20.312.221|<tuple|21.284|1509|Measure.tm>>
-    <associate|eq 20.313.221|<tuple|21.285|1509|Measure.tm>>
-    <associate|eq 20.314.221|<tuple|21.286|1509|Measure.tm>>
-    <associate|eq 20.315.221|<tuple|21.287|1509|Measure.tm>>
-    <associate|eq 20.316.221|<tuple|21.288|1511|Measure.tm>>
-    <associate|eq 20.317.222|<tuple|21.296|1513|Measure.tm>>
-    <associate|eq 20.318.222|<tuple|21.297|1513|Measure.tm>>
-    <associate|eq 20.319.222|<tuple|21.298|1513|Measure.tm>>
+    <associate|eq 20.300.220|<tuple|21.278|1505|Measure.tm>>
+    <associate|eq 20.301.221|<tuple|21.277|1505|Measure.tm>>
+    <associate|eq 20.304.221|<tuple|21.285|1510|Measure.tm>>
+    <associate|eq 20.305.221|<tuple|21.286|1510|Measure.tm>>
+    <associate|eq 20.306.221|<tuple|21.287|1511|Measure.tm>>
+    <associate|eq 20.307.221|<tuple|21.288|1511|Measure.tm>>
+    <associate|eq 20.308.221|<tuple|21.289|1511|Measure.tm>>
+    <associate|eq 20.309.221|<tuple|21.290|1511|Measure.tm>>
+    <associate|eq 20.31.156|<tuple|20.31|1377|ExtendedRealNumbers.tm>>
+    <associate|eq 20.310.221|<tuple|21.291|1511|Measure.tm>>
+    <associate|eq 20.311.221|<tuple|21.279|1507|Measure.tm>>
+    <associate|eq 20.312.221|<tuple|21.280|1508|Measure.tm>>
+    <associate|eq 20.313.221|<tuple|21.281|1508|Measure.tm>>
+    <associate|eq 20.314.221|<tuple|21.282|1508|Measure.tm>>
+    <associate|eq 20.315.221|<tuple|21.283|1508|Measure.tm>>
+    <associate|eq 20.316.221|<tuple|21.284|1510|Measure.tm>>
+    <associate|eq 20.317.222|<tuple|21.292|1512|Measure.tm>>
+    <associate|eq 20.318.222|<tuple|21.293|1512|Measure.tm>>
+    <associate|eq 20.319.222|<tuple|21.294|1512|Measure.tm>>
     <associate|eq 20.32.156|<tuple|20.32|1382|ExtendedRealNumbers.tm>>
     <associate|eq 20.32.156.1|<tuple|20.33|1382|ExtendedRealNumbers.tm>>
-    <associate|eq 20.320.224|<tuple|21.300|1516|Measure.tm>>
-    <associate|eq 20.320.226|<tuple|21.299|1514|Measure.tm>>
-    <associate|eq 20.321.224|<tuple|21.301|1516|Measure.tm>>
-    <associate|eq 20.322.224|<tuple|21.302|1516|Measure.tm>>
-    <associate|eq 20.323.224|<tuple|21.303|1516|Measure.tm>>
-    <associate|eq 20.325.226|<tuple|21.304|1517|Measure.tm>>
-    <associate|eq 20.327.224|<tuple|21.305|1519|Measure.tm>>
-    <associate|eq 20.328.224|<tuple|21.306|1520|Measure.tm>>
-    <associate|eq 20.329.224|<tuple|21.307|1520|Measure.tm>>
-    <associate|eq 20.330.224|<tuple|21.308|1520|Measure.tm>>
-    <associate|eq 20.331.224|<tuple|21.309|1520|Measure.tm>>
-    <associate|eq 20.332.224|<tuple|21.310|1520|Measure.tm>>
-    <associate|eq 20.333.224|<tuple|21.311|1520|Measure.tm>>
-    <associate|eq 20.334.224|<tuple|21.312|1520|Measure.tm>>
-    <associate|eq 20.335.224|<tuple|21.313|1520|Measure.tm>>
-    <associate|eq 20.336.224|<tuple|21.314|1521|Measure.tm>>
-    <associate|eq 20.337.224|<tuple|21.315|1521|Measure.tm>>
-    <associate|eq 20.338.224|<tuple|21.316|1521|Measure.tm>>
+    <associate|eq 20.320.224|<tuple|21.296|1515|Measure.tm>>
+    <associate|eq 20.320.226|<tuple|21.295|1513|Measure.tm>>
+    <associate|eq 20.321.224|<tuple|21.297|1515|Measure.tm>>
+    <associate|eq 20.322.224|<tuple|21.298|1515|Measure.tm>>
+    <associate|eq 20.323.224|<tuple|21.299|1515|Measure.tm>>
+    <associate|eq 20.325.226|<tuple|21.300|1516|Measure.tm>>
+    <associate|eq 20.327.224|<tuple|21.301|1518|Measure.tm>>
+    <associate|eq 20.328.224|<tuple|21.302|1519|Measure.tm>>
+    <associate|eq 20.329.224|<tuple|21.303|1519|Measure.tm>>
+    <associate|eq 20.330.224|<tuple|21.304|1519|Measure.tm>>
+    <associate|eq 20.331.224|<tuple|21.305|1519|Measure.tm>>
+    <associate|eq 20.332.224|<tuple|21.306|1519|Measure.tm>>
+    <associate|eq 20.333.224|<tuple|21.307|1519|Measure.tm>>
+    <associate|eq 20.334.224|<tuple|21.308|1519|Measure.tm>>
+    <associate|eq 20.335.224|<tuple|21.309|1519|Measure.tm>>
+    <associate|eq 20.336.224|<tuple|21.310|1520|Measure.tm>>
+    <associate|eq 20.337.224|<tuple|21.311|1520|Measure.tm>>
+    <associate|eq 20.338.224|<tuple|21.312|1520|Measure.tm>>
     <associate|eq 20.34.156|<tuple|20.34|1383|ExtendedRealNumbers.tm>>
-    <associate|eq 20.343.224|<tuple|21.318|1522|Measure.tm>>
-    <associate|eq 20.344.224|<tuple|21.319|1522|Measure.tm>>
-    <associate|eq 20.345.224|<tuple|21.320|1522|Measure.tm>>
-    <associate|eq 20.345.225|<tuple|21.323|1524|Measure.tm>>
-    <associate|eq 20.346.225|<tuple|21.324|1524|Measure.tm>>
-    <associate|eq 20.3463224|<tuple|21.321|1522|Measure.tm>>
-    <associate|eq 20.347.224|<tuple|21.322|1522|Measure.tm>>
-    <associate|eq 20.347.225|<tuple|21.325|1524|Measure.tm>>
-    <associate|eq 20.348.225|<tuple|21.326|1525|Measure.tm>>
-    <associate|eq 20.349.225|<tuple|21.327|1525|Measure.tm>>
+    <associate|eq 20.343.224|<tuple|21.314|1521|Measure.tm>>
+    <associate|eq 20.344.224|<tuple|21.315|1521|Measure.tm>>
+    <associate|eq 20.345.224|<tuple|21.316|1521|Measure.tm>>
+    <associate|eq 20.345.225|<tuple|21.319|1523|Measure.tm>>
+    <associate|eq 20.346.225|<tuple|21.320|1523|Measure.tm>>
+    <associate|eq 20.3463224|<tuple|21.317|1521|Measure.tm>>
+    <associate|eq 20.347.224|<tuple|21.318|1522|Measure.tm>>
+    <associate|eq 20.347.225|<tuple|21.321|1523|Measure.tm>>
+    <associate|eq 20.348.225|<tuple|21.322|1524|Measure.tm>>
+    <associate|eq 20.349.225|<tuple|21.323|1524|Measure.tm>>
     <associate|eq 20.35.156|<tuple|20.35|1383|ExtendedRealNumbers.tm>>
-    <associate|eq 20.350.225|<tuple|21.328|1525|Measure.tm>>
-    <associate|eq 20.351.225|<tuple|21.329|1525|Measure.tm>>
-    <associate|eq 20.352.225|<tuple|21.330|1525|Measure.tm>>
-    <associate|eq 20.353.225|<tuple|21.331|1525|Measure.tm>>
-    <associate|eq 20.354.225|<tuple|21.332|1525|Measure.tm>>
-    <associate|eq 20.355.225|<tuple|21.333|1525|Measure.tm>>
-    <associate|eq 20.356.225|<tuple|21.334|1525|Measure.tm>>
-    <associate|eq 20.357.225|<tuple|21.335|1525|Measure.tm>>
-    <associate|eq 20.358.225|<tuple|21.336|1525|Measure.tm>>
-    <associate|eq 20.359.225|<tuple|21.337|1525|Measure.tm>>
+    <associate|eq 20.350.225|<tuple|21.324|1524|Measure.tm>>
+    <associate|eq 20.351.225|<tuple|21.325|1524|Measure.tm>>
+    <associate|eq 20.352.225|<tuple|21.326|1524|Measure.tm>>
+    <associate|eq 20.353.225|<tuple|21.327|1524|Measure.tm>>
+    <associate|eq 20.354.225|<tuple|21.328|1524|Measure.tm>>
+    <associate|eq 20.355.225|<tuple|21.329|1524|Measure.tm>>
+    <associate|eq 20.356.225|<tuple|21.330|1524|Measure.tm>>
+    <associate|eq 20.357.225|<tuple|21.331|1524|Measure.tm>>
+    <associate|eq 20.358.225|<tuple|21.332|1524|Measure.tm>>
+    <associate|eq 20.359.225|<tuple|21.333|1524|Measure.tm>>
     <associate|eq 20.36.156|<tuple|20.36|1383|ExtendedRealNumbers.tm>>
-    <associate|eq 20.360.225|<tuple|21.338|1526|Measure.tm>>
-    <associate|eq 20.361.225|<tuple|21.339|1526|Measure.tm>>
-    <associate|eq 20.361.226|<tuple|21.341|1527|Measure.tm>>
-    <associate|eq 20.362.225|<tuple|21.340|1526|Measure.tm>>
-    <associate|eq 20.362.226|<tuple|21.342|1527|Measure.tm>>
-    <associate|eq 20.363.226|<tuple|21.343|1527|Measure.tm>>
-    <associate|eq 20.364.226|<tuple|21.344|1527|Measure.tm>>
-    <associate|eq 20.365.226|<tuple|21.345|1527|Measure.tm>>
-    <associate|eq 20.366.226|<tuple|21.346|1528|Measure.tm>>
-    <associate|eq 20.367.226|<tuple|21.347|1528|Measure.tm>>
-    <associate|eq 20.369.226|<tuple|21.349|1529|Measure.tm>>
+    <associate|eq 20.360.225|<tuple|21.334|1525|Measure.tm>>
+    <associate|eq 20.361.225|<tuple|21.335|1525|Measure.tm>>
+    <associate|eq 20.361.226|<tuple|21.337|1526|Measure.tm>>
+    <associate|eq 20.362.225|<tuple|21.336|1525|Measure.tm>>
+    <associate|eq 20.362.226|<tuple|21.338|1526|Measure.tm>>
+    <associate|eq 20.363.226|<tuple|21.339|1526|Measure.tm>>
+    <associate|eq 20.364.226|<tuple|21.340|1527|Measure.tm>>
+    <associate|eq 20.365.226|<tuple|21.341|1527|Measure.tm>>
+    <associate|eq 20.366.226|<tuple|21.342|1527|Measure.tm>>
+    <associate|eq 20.367.226|<tuple|21.343|1527|Measure.tm>>
+    <associate|eq 20.369.226|<tuple|21.345|1529|Measure.tm>>
     <associate|eq 20.37.156|<tuple|20.37|1383|ExtendedRealNumbers.tm>>
-    <associate|eq 20.371.226|<tuple|21.350|1531|Measure.tm>>
-    <associate|eq 20.372.226|<tuple|21.351|1531|Measure.tm>>
-    <associate|eq 20.374.226|<tuple|21.359|1536|Measure.tm>>
-    <associate|eq 20.375.226|<tuple|21.360|1536|Measure.tm>>
-    <associate|eq 20.376.226|<tuple|21.361|1536|Measure.tm>>
-    <associate|eq 20.377.226|<tuple|21.362|1537|Measure.tm>>
-    <associate|eq 20.378.226|<tuple|21.363|1537|Measure.tm>>
-    <associate|eq 20.379.226|<tuple|21.364|1537|Measure.tm>>
-    <associate|eq 20.38.156|<tuple|20.38|1387|ExtendedRealNumbers.tm>>
-    <associate|eq 20.380.226|<tuple|21.365|1537|Measure.tm>>
-    <associate|eq 20.381.226|<tuple|21.366|1537|Measure.tm>>
-    <associate|eq 20.382.226|<tuple|21.367|1537|Measure.tm>>
-    <associate|eq 20.383.226|<tuple|21.368|1537|Measure.tm>>
-    <associate|eq 20.384.226|<tuple|21.369|1537|Measure.tm>>
-    <associate|eq 20.385.226|<tuple|21.370|1537|Measure.tm>>
-    <associate|eq 20.386.226|<tuple|21.371|1537|Measure.tm>>
-    <associate|eq 20.387.226|<tuple|21.372|1538|Measure.tm>>
-    <associate|eq 20.388.226|<tuple|21.373|1538|Measure.tm>>
-    <associate|eq 20.389.226|<tuple|21.374|1538|Measure.tm>>
-    <associate|eq 20.39.156|<tuple|20.40|1389|ExtendedRealNumbers.tm>>
+    <associate|eq 20.371.226|<tuple|21.346|1530|Measure.tm>>
+    <associate|eq 20.372.226|<tuple|21.347|1530|Measure.tm>>
+    <associate|eq 20.374.226|<tuple|21.355|1535|Measure.tm>>
+    <associate|eq 20.375.226|<tuple|21.356|1535|Measure.tm>>
+    <associate|eq 20.376.226|<tuple|21.357|1535|Measure.tm>>
+    <associate|eq 20.377.226|<tuple|21.358|1535|Measure.tm>>
+    <associate|eq 20.378.226|<tuple|21.359|1535|Measure.tm>>
+    <associate|eq 20.379.226|<tuple|21.360|1536|Measure.tm>>
+    <associate|eq 20.38.156|<tuple|20.38|1386|ExtendedRealNumbers.tm>>
+    <associate|eq 20.380.226|<tuple|21.361|1536|Measure.tm>>
+    <associate|eq 20.381.226|<tuple|21.362|1536|Measure.tm>>
+    <associate|eq 20.382.226|<tuple|21.363|1536|Measure.tm>>
+    <associate|eq 20.383.226|<tuple|21.364|1536|Measure.tm>>
+    <associate|eq 20.384.226|<tuple|21.365|1536|Measure.tm>>
+    <associate|eq 20.385.226|<tuple|21.366|1536|Measure.tm>>
+    <associate|eq 20.386.226|<tuple|21.367|1536|Measure.tm>>
+    <associate|eq 20.387.226|<tuple|21.368|1536|Measure.tm>>
+    <associate|eq 20.388.226|<tuple|21.369|1536|Measure.tm>>
+    <associate|eq 20.389.226|<tuple|21.370|1537|Measure.tm>>
+    <associate|eq 20.39.156|<tuple|20.40|1388|ExtendedRealNumbers.tm>>
     <associate|eq 20.39.201|<tuple|20.39|1388|ExtendedRealNumbers.tm>>
-    <associate|eq 20.390.226|<tuple|21.375|1538|Measure.tm>>
+    <associate|eq 20.390.226|<tuple|21.371|1537|Measure.tm>>
     <associate|eq 20.4.155|<tuple|20.4|1352|ExtendedRealNumbers.tm>>
     <associate|eq 20.40.156|<tuple|20.41|1389|ExtendedRealNumbers.tm>>
     <associate|eq 20.41.156|<tuple|20.42|1389|ExtendedRealNumbers.tm>>
-    <associate|eq 20.413.227|<tuple|21.380|1543|Measure.tm>>
-    <associate|eq 20.414.227|<tuple|21.381|1543|Measure.tm>>
-    <associate|eq 20.415.227|<tuple|21.382|1543|Measure.tm>>
-    <associate|eq 20.415.260|<tuple|21.378|1539|Measure.tm>>
-    <associate|eq 20.415.264|<tuple|21.376|1539|Measure.tm>>
-    <associate|eq 20.416.227|<tuple|21.383|1543|Measure.tm>>
-    <associate|eq 20.416.260|<tuple|21.379|1540|Measure.tm>>
-    <associate|eq 20.416.264|<tuple|21.377|1539|Measure.tm>>
-    <associate|eq 20.417.227|<tuple|21.384|1544|Measure.tm>>
-    <associate|eq 20.418.227|<tuple|21.385|1544|Measure.tm>>
-    <associate|eq 20.419.227|<tuple|21.386|1546|Measure.tm>>
+    <associate|eq 20.413.227|<tuple|21.375|1542|Measure.tm>>
+    <associate|eq 20.414.227|<tuple|21.376|1542|Measure.tm>>
+    <associate|eq 20.415.227|<tuple|21.377|1542|Measure.tm>>
+    <associate|eq 20.416.227|<tuple|21.378|1542|Measure.tm>>
+    <associate|eq 20.417.227|<tuple|21.379|1543|Measure.tm>>
+    <associate|eq 20.418.227|<tuple|21.380|1544|Measure.tm>>
+    <associate|eq 20.419.227|<tuple|21.381|1545|Measure.tm>>
     <associate|eq 20.42.156|<tuple|20.43|1391|ExtendedRealNumbers.tm>>
-    <associate|eq 20.421.227|<tuple|21.387|1547|Measure.tm>>
-    <associate|eq 20.422.228|<tuple|21.388|1548|Measure.tm>>
-    <associate|eq 20.424.228|<tuple|21.389|1550|Measure.tm>>
-    <associate|eq 20.426.228|<tuple|21.391|1550|Measure.tm>>
-    <associate|eq 20.428.228|<tuple|21.393|1554|Measure.tm>>
-    <associate|eq 20.429.228|<tuple|21.394|1554|Measure.tm>>
-    <associate|eq 20.43.156|<tuple|20.44|1393|ExtendedRealNumbers.tm>>
-    <associate|eq 20.430.228|<tuple|21.395|1554|Measure.tm>>
-    <associate|eq 20.431.228|<tuple|21.396|1554|Measure.tm>>
-    <associate|eq 20.432.228|<tuple|21.397|1555|Measure.tm>>
-    <associate|eq 20.433.228|<tuple|21.398|1555|Measure.tm>>
-    <associate|eq 20.434.228|<tuple|21.399|1555|Measure.tm>>
-    <associate|eq 20.435.228|<tuple|21.400|1555|Measure.tm>>
-    <associate|eq 20.436.228|<tuple|21.407|1562|Measure.tm>>
-    <associate|eq 20.437.228|<tuple|21.408|1562|Measure.tm>>
-    <associate|eq 20.44.156|<tuple|20.45|1393|ExtendedRealNumbers.tm>>
-    <associate|eq 20.440.229|<tuple|21.409|1564|Measure.tm>>
-    <associate|eq 20.440.249|<tuple|21.401|1558|Measure.tm>>
-    <associate|eq 20.441.229|<tuple|21.410|1564|Measure.tm>>
-    <associate|eq 20.441.249|<tuple|21.402|1558|Measure.tm>>
-    <associate|eq 20.442.229|<tuple|21.411|1564|Measure.tm>>
-    <associate|eq 20.442.249|<tuple|21.403|1559|Measure.tm>>
-    <associate|eq 20.443.229|<tuple|21.412|1568|Measure.tm>>
-    <associate|eq 20.443.249|<tuple|21.404|1559|Measure.tm>>
-    <associate|eq 20.444.229|<tuple|21.413|1568|Measure.tm>>
-    <associate|eq 20.444.249|<tuple|21.405|1559|Measure.tm>>
-    <associate|eq 20.445.229|<tuple|21.414|1569|Measure.tm>>
-    <associate|eq 20.446.229|<tuple|21.415|1569|Measure.tm>>
-    <associate|eq 20.447.229|<tuple|21.416|1569|Measure.tm>>
-    <associate|eq 20.448.229|<tuple|21.417|1569|Measure.tm>>
-    <associate|eq 20.449.229|<tuple|21.418|1572|Measure.tm>>
+    <associate|eq 20.422.228|<tuple|21.383|1548|Measure.tm>>
+    <associate|eq 20.424.228|<tuple|21.384|1550|Measure.tm>>
+    <associate|eq 20.428.228|<tuple|21.390|1554|Measure.tm>>
+    <associate|eq 20.429.228|<tuple|21.391|1554|Measure.tm>>
+    <associate|eq 20.43.156|<tuple|20.44|1392|ExtendedRealNumbers.tm>>
+    <associate|eq 20.430.228|<tuple|21.392|1554|Measure.tm>>
+    <associate|eq 20.431.228|<tuple|21.393|1554|Measure.tm>>
+    <associate|eq 20.432.228|<tuple|21.394|1555|Measure.tm>>
+    <associate|eq 20.433.228|<tuple|21.395|1555|Measure.tm>>
+    <associate|eq 20.434.228|<tuple|21.396|1555|Measure.tm>>
+    <associate|eq 20.435.228|<tuple|21.397|1555|Measure.tm>>
+    <associate|eq 20.44.156|<tuple|20.45|1392|ExtendedRealNumbers.tm>>
+    <associate|eq 20.440.229|<tuple|21.416|1567|Measure.tm>>
+    <associate|eq 20.440.249|<tuple|21.399|1558|Measure.tm>>
+    <associate|eq 20.441.229|<tuple|21.417|1567|Measure.tm>>
+    <associate|eq 20.441.249|<tuple|21.400|1559|Measure.tm>>
+    <associate|eq 20.442.229|<tuple|21.418|1567|Measure.tm>>
+    <associate|eq 20.443.229|<tuple|21.419|1572|Measure.tm>>
+    <associate|eq 20.444.229|<tuple|21.420|1572|Measure.tm>>
+    <associate|eq 20.445.229|<tuple|21.421|1572|Measure.tm>>
+    <associate|eq 20.447.229|<tuple|21.423|1572|Measure.tm>>
+    <associate|eq 20.448.229|<tuple|21.424|1573|Measure.tm>>
+    <associate|eq 20.449.229|<tuple|21.425|1576|Measure.tm>>
     <associate|eq 20.45.156|<tuple|20.46|1394|ExtendedRealNumbers.tm>>
-    <associate|eq 20.451.229|<tuple|21.420|1572|Measure.tm>>
-    <associate|eq 20.452.229|<tuple|21.421|1572|Measure.tm>>
-    <associate|eq 20.453.229|<tuple|21.422|1573|Measure.tm>>
-    <associate|eq 20.454.229|<tuple|21.423|1573|Measure.tm>>
-    <associate|eq 20.455.229|<tuple|21.424|1573|Measure.tm>>
-    <associate|eq 20.456\<point\>229|<tuple|21.425|1575|Measure.tm>>
-    <associate|eq 20.457.229|<tuple|21.426|1575|Measure.tm>>
-    <associate|eq 20.458.229|<tuple|21.427|1575|Measure.tm>>
-    <associate|eq 20.459.229|<tuple|21.428|1575|Measure.tm>>
+    <associate|eq 20.451.229|<tuple|21.427|1576|Measure.tm>>
+    <associate|eq 20.452.229|<tuple|21.428|1576|Measure.tm>>
+    <associate|eq 20.453.229|<tuple|21.429|1576|Measure.tm>>
+    <associate|eq 20.454.229|<tuple|21.430|1576|Measure.tm>>
+    <associate|eq 20.455.229|<tuple|21.431|1576|Measure.tm>>
+    <associate|eq 20.456\<point\>229|<tuple|21.432|1578|Measure.tm>>
+    <associate|eq 20.457.229|<tuple|21.433|1579|Measure.tm>>
+    <associate|eq 20.458.229|<tuple|21.434|1579|Measure.tm>>
+    <associate|eq 20.459.229|<tuple|21.435|1579|Measure.tm>>
     <associate|eq 20.46.156|<tuple|20.47|1395|ExtendedRealNumbers.tm>>
-    <associate|eq 20.460.229|<tuple|21.429|1575|Measure.tm>>
-    <associate|eq 20.461.229|<tuple|21.430|1575|Measure.tm>>
-    <associate|eq 20.462.229|<tuple|21.431|1576|Measure.tm>>
-    <associate|eq 20.463.229|<tuple|21.432|1577|Measure.tm>>
-    <associate|eq 20.464.229|<tuple|21.433|1578|Measure.tm>>
-    <associate|eq 20.465\<point\>229|<tuple|21.434|1578|Measure.tm>>
-    <associate|eq 20.466.229|<tuple|21.435|1579|Measure.tm>>
-    <associate|eq 20.467.229|<tuple|21.436|1581|Measure.tm>>
-    <associate|eq 20.468.229|<tuple|21.437|1581|Measure.tm>>
-    <associate|eq 20.469.229|<tuple|21.438|1581|Measure.tm>>
+    <associate|eq 20.460.229|<tuple|21.436|1579|Measure.tm>>
+    <associate|eq 20.461.229|<tuple|21.437|1579|Measure.tm>>
+    <associate|eq 20.462.229|<tuple|21.438|1579|Measure.tm>>
+    <associate|eq 20.463.229|<tuple|21.439|1581|Measure.tm>>
+    <associate|eq 20.464.229|<tuple|21.440|1581|Measure.tm>>
+    <associate|eq 20.465\<point\>229|<tuple|21.441|1582|Measure.tm>>
+    <associate|eq 20.466.229|<tuple|21.442|1583|Measure.tm>>
+    <associate|eq 20.467.229|<tuple|21.443|1585|Measure.tm>>
+    <associate|eq 20.468.229|<tuple|21.444|1585|Measure.tm>>
+    <associate|eq 20.469.229|<tuple|21.445|1586|Measure.tm>>
     <associate|eq 20.47.156|<tuple|20.48|1395|ExtendedRealNumbers.tm>>
-    <associate|eq 20.470.229|<tuple|21.439|1581|Measure.tm>>
-    <associate|eq 20.471.229|<tuple|21.440|1581|Measure.tm>>
-    <associate|eq 20.472.229|<tuple|21.442|1582|Measure.tm>>
-    <associate|eq 20.472.231|<tuple|21.441|1581|Measure.tm>>
-    <associate|eq 20.473.229|<tuple|21.443|1582|Measure.tm>>
-    <associate|eq 20.476.229|<tuple|21.444|1582|Measure.tm>>
-    <associate|eq 20.477.229|<tuple|21.445|1582|Measure.tm>>
-    <associate|eq 20.478.229|<tuple|21.446|1582|Measure.tm>>
-    <associate|eq 20.479.229|<tuple|21.447|1582|Measure.tm>>
+    <associate|eq 20.470.229|<tuple|21.446|1586|Measure.tm>>
+    <associate|eq 20.471.229|<tuple|21.447|1586|Measure.tm>>
+    <associate|eq 20.472.229|<tuple|21.449|1586|Measure.tm>>
+    <associate|eq 20.472.231|<tuple|21.448|1586|Measure.tm>>
+    <associate|eq 20.473.229|<tuple|21.450|1586|Measure.tm>>
+    <associate|eq 20.476.229|<tuple|21.451|1586|Measure.tm>>
+    <associate|eq 20.477.229|<tuple|21.452|1587|Measure.tm>>
+    <associate|eq 20.478.229|<tuple|21.453|1587|Measure.tm>>
+    <associate|eq 20.479.229|<tuple|21.454|1587|Measure.tm>>
     <associate|eq 20.48.156|<tuple|20.49|1396|ExtendedRealNumbers.tm>>
-    <associate|eq 20.480.229|<tuple|21.448|1582|Measure.tm>>
-    <associate|eq 20.481.229|<tuple|21.449|1582|Measure.tm>>
-    <associate|eq 20.482.229|<tuple|21.450|1583|Measure.tm>>
-    <associate|eq 20.482.230|<tuple|21.452|1583|Measure.tm>>
-    <associate|eq 20.483.229|<tuple|21.451|1583|Measure.tm>>
-    <associate|eq 20.484.229|<tuple|21.453|1583|Measure.tm>>
-    <associate|eq 20.484.230|<tuple|21.454|1583|Measure.tm>>
-    <associate|eq 20.485.230|<tuple|21.455|1584|Measure.tm>>
-    <associate|eq 20.487.231|<tuple|21.456|1585|Measure.tm>>
-    <associate|eq 20.488.231|<tuple|21.488|1595|Measure.tm>>
-    <associate|eq 20.489.231|<tuple|21.489|1595|Measure.tm>>
+    <associate|eq 20.480.229|<tuple|21.455|1587|Measure.tm>>
+    <associate|eq 20.481.229|<tuple|21.456|1587|Measure.tm>>
+    <associate|eq 20.482.229|<tuple|21.457|1587|Measure.tm>>
+    <associate|eq 20.482.230|<tuple|21.459|1588|Measure.tm>>
+    <associate|eq 20.483.229|<tuple|21.458|1587|Measure.tm>>
+    <associate|eq 20.484.229|<tuple|21.460|1588|Measure.tm>>
+    <associate|eq 20.484.230|<tuple|21.461|1588|Measure.tm>>
+    <associate|eq 20.485.230|<tuple|21.462|1588|Measure.tm>>
+    <associate|eq 20.487.231|<tuple|21.463|1590|Measure.tm>>
+    <associate|eq 20.488.231|<tuple|21.495|1600|Measure.tm>>
+    <associate|eq 20.489.231|<tuple|21.496|1600|Measure.tm>>
     <associate|eq 20.49.156|<tuple|20.50|1396|ExtendedRealNumbers.tm>>
-    <associate|eq 20.490.231|<tuple|21.490|1595|Measure.tm>>
-    <associate|eq 20.490.249|<tuple|21.470|1590|Measure.tm>>
-    <associate|eq 20.492.231|<tuple|21.492|1596|Measure.tm>>
-    <associate|eq 20.493.231|<tuple|21.493|1596|Measure.tm>>
-    <associate|eq 20.494.231|<tuple|21.494|1596|Measure.tm>>
-    <associate|eq 20.495.231|<tuple|21.495|1596|Measure.tm>>
-    <associate|eq 20.496.231|<tuple|21.496|1596|Measure.tm>>
-    <associate|eq 20.497.231|<tuple|21.497|1596|Measure.tm>>
-    <associate|eq 20.498.231|<tuple|21.498|1596|Measure.tm>>
-    <associate|eq 20.498.263|<tuple|21.459|1586|Measure.tm>>
-    <associate|eq 20.499.231|<tuple|21.499|1596|Measure.tm>>
-    <associate|eq 20.499.263|<tuple|21.460|1587|Measure.tm>>
+    <associate|eq 20.490.231|<tuple|21.497|1600|Measure.tm>>
+    <associate|eq 20.490.249|<tuple|21.477|1595|Measure.tm>>
+    <associate|eq 20.492.231|<tuple|21.499|1601|Measure.tm>>
+    <associate|eq 20.493.231|<tuple|21.500|1601|Measure.tm>>
+    <associate|eq 20.494.231|<tuple|21.501|1601|Measure.tm>>
+    <associate|eq 20.495.231|<tuple|21.502|1601|Measure.tm>>
+    <associate|eq 20.496.231|<tuple|21.503|1601|Measure.tm>>
+    <associate|eq 20.497.231|<tuple|21.504|1601|Measure.tm>>
+    <associate|eq 20.498.231|<tuple|21.505|1601|Measure.tm>>
+    <associate|eq 20.498.263|<tuple|21.466|1591|Measure.tm>>
+    <associate|eq 20.499.231|<tuple|21.506|1601|Measure.tm>>
+    <associate|eq 20.499.263|<tuple|21.467|1591|Measure.tm>>
     <associate|eq 20.5.155|<tuple|20.5|1353|ExtendedRealNumbers.tm>>
-    <associate|eq 20.50.156|<tuple|20.51|1397|ExtendedRealNumbers.tm>>
-    <associate|eq 20.500.231|<tuple|21.471|1591|Measure.tm>>
-    <associate|eq 20.500.232|<tuple|21.485|1593|Measure.tm>>
-    <associate|eq 20.501.231|<tuple|21.472|1591|Measure.tm>>
-    <associate|eq 20.501.232|<tuple|21.486|1593|Measure.tm>>
-    <associate|eq 20.502.231|<tuple|21.473|1591|Measure.tm>>
-    <associate|eq 20.502.232|<tuple|21.487|1593|Measure.tm>>
-    <associate|eq 20.503.231|<tuple|21.474|1591|Measure.tm>>
-    <associate|eq 20.503.261|<tuple|21.477|1592|Measure.tm>>
-    <associate|eq 20.504.231|<tuple|21.475|1591|Measure.tm>>
-    <associate|eq 20.504.261|<tuple|21.478|1592|Measure.tm>>
-    <associate|eq 20.504.263|<tuple|21.465|1588|Measure.tm>>
-    <associate|eq 20.505.231|<tuple|21.476|1591|Measure.tm>>
-    <associate|eq 20.506.231|<tuple|21.480|1592|Measure.tm>>
-    <associate|eq 20.506.263|<tuple|21.467|1588|Measure.tm>>
-    <associate|eq 20.507.231|<tuple|21.479|1592|Measure.tm>>
-    <associate|eq 20.508.231|<tuple|21.481|1592|Measure.tm>>
-    <associate|eq 20.509.231|<tuple|21.482|1593|Measure.tm>>
+    <associate|eq 20.50.156|<tuple|20.51|1396|ExtendedRealNumbers.tm>>
+    <associate|eq 20.500.231|<tuple|21.478|1596|Measure.tm>>
+    <associate|eq 20.500.232|<tuple|21.492|1598|Measure.tm>>
+    <associate|eq 20.501.231|<tuple|21.479|1596|Measure.tm>>
+    <associate|eq 20.501.232|<tuple|21.493|1598|Measure.tm>>
+    <associate|eq 20.502.231|<tuple|21.480|1596|Measure.tm>>
+    <associate|eq 20.502.232|<tuple|21.494|1598|Measure.tm>>
+    <associate|eq 20.503.231|<tuple|21.481|1596|Measure.tm>>
+    <associate|eq 20.503.261|<tuple|21.484|1597|Measure.tm>>
+    <associate|eq 20.504.231|<tuple|21.482|1596|Measure.tm>>
+    <associate|eq 20.504.261|<tuple|21.485|1597|Measure.tm>>
+    <associate|eq 20.504.263|<tuple|21.472|1593|Measure.tm>>
+    <associate|eq 20.505.231|<tuple|21.483|1596|Measure.tm>>
+    <associate|eq 20.506.231|<tuple|21.487|1597|Measure.tm>>
+    <associate|eq 20.506.263|<tuple|21.474|1593|Measure.tm>>
+    <associate|eq 20.507.231|<tuple|21.486|1597|Measure.tm>>
+    <associate|eq 20.508.231|<tuple|21.488|1597|Measure.tm>>
+    <associate|eq 20.509.231|<tuple|21.489|1598|Measure.tm>>
     <associate|eq 20.51.156|<tuple|20.52|1397|ExtendedRealNumbers.tm>>
-    <associate|eq 20.510.231|<tuple|21.483|1593|Measure.tm>>
-    <associate|eq 20.511.231|<tuple|21.484|1593|Measure.tm>>
-    <associate|eq 20.515.232|<tuple|21.500|1598|Measure.tm>>
-    <associate|eq 20.515.233|<tuple|21.501|1600|Measure.tm>>
-    <associate|eq 20.516.232|<tuple|21.506|1601|Measure.tm>>
-    <associate|eq 20.516.233|<tuple|21.502|1601|Measure.tm>>
-    <associate|eq 20.517.232|<tuple|21.510|1612|Measure.tm>>
-    <associate|eq 20.517.233|<tuple|21.503|1601|Measure.tm>>
-    <associate|eq 20.518.232|<tuple|21.511|1612|Measure.tm>>
-    <associate|eq 20.518.233|<tuple|21.504|1601|Measure.tm>>
-    <associate|eq 20.519.232|<tuple|21.532|1616|Measure.tm>>
-    <associate|eq 20.519.233|<tuple|21.505|1601|Measure.tm>>
+    <associate|eq 20.510.231|<tuple|21.490|1598|Measure.tm>>
+    <associate|eq 20.511.231|<tuple|21.491|1598|Measure.tm>>
+    <associate|eq 20.515.232|<tuple|21.507|1603|Measure.tm>>
+    <associate|eq 20.515.233|<tuple|21.508|1605|Measure.tm>>
+    <associate|eq 20.516.232|<tuple|21.513|1607|Measure.tm>>
+    <associate|eq 20.516.233|<tuple|21.509|1606|Measure.tm>>
+    <associate|eq 20.517.232|<tuple|21.514|1619|Measure.tm>>
+    <associate|eq 20.517.233|<tuple|21.510|1606|Measure.tm>>
+    <associate|eq 20.518.232|<tuple|21.515|1619|Measure.tm>>
+    <associate|eq 20.518.233|<tuple|21.511|1606|Measure.tm>>
+    <associate|eq 20.519.232|<tuple|21.536|1623|Measure.tm>>
+    <associate|eq 20.519.233|<tuple|21.512|1606|Measure.tm>>
     <associate|eq 20.52.200|<tuple|21.28|1422|Measure.tm>>
     <associate|eq 20.52.200.1|<tuple|21.21|1416|Measure.tm>>
-    <associate|eq 20.520.232|<tuple|21.533|1616|Measure.tm>>
-    <associate|eq 20.521.232|<tuple|21.534|1616|Measure.tm>>
-    <associate|eq 20.522.232|<tuple|21.535|1616|Measure.tm>>
-    <associate|eq 20.523.232|<tuple|21.536|1616|Measure.tm>>
-    <associate|eq 20.524.232|<tuple|21.537|1617|Measure.tm>>
-    <associate|eq 20.525.232|<tuple|21.541|1617|Measure.tm>>
-    <associate|eq 20.525.232.1|<tuple|21.538|1617|Measure.tm>>
-    <associate|eq 20.526.232|<tuple|21.539|1617|Measure.tm>>
-    <associate|eq 20.527.232|<tuple|21.540|1617|Measure.tm>>
-    <associate|eq 20.529.232|<tuple|21.542|1618|Measure.tm>>
+    <associate|eq 20.520.232|<tuple|21.537|1623|Measure.tm>>
+    <associate|eq 20.521.232|<tuple|21.538|1623|Measure.tm>>
+    <associate|eq 20.522.232|<tuple|21.539|1623|Measure.tm>>
+    <associate|eq 20.523.232|<tuple|21.540|1623|Measure.tm>>
+    <associate|eq 20.524.232|<tuple|21.541|1624|Measure.tm>>
+    <associate|eq 20.525.232|<tuple|21.545|1624|Measure.tm>>
+    <associate|eq 20.525.232.1|<tuple|21.542|1624|Measure.tm>>
+    <associate|eq 20.526.232|<tuple|21.543|1624|Measure.tm>>
+    <associate|eq 20.527.232|<tuple|21.544|1624|Measure.tm>>
+    <associate|eq 20.529.232|<tuple|21.546|1625|Measure.tm>>
     <associate|eq 20.53.200|<tuple|21.29|1422|Measure.tm>>
     <associate|eq 20.53.200.1|<tuple|21.22|1416|Measure.tm>>
-    <associate|eq 20.530.232|<tuple|21.543|1618|Measure.tm>>
-    <associate|eq 20.531.232|<tuple|21.544|1618|Measure.tm>>
-    <associate|eq 20.532.232|<tuple|21.545|1619|Measure.tm>>
-    <associate|eq 20.533.232|<tuple|21.546|1619|Measure.tm>>
+    <associate|eq 20.530.232|<tuple|21.547|1625|Measure.tm>>
+    <associate|eq 20.531.232|<tuple|21.548|1625|Measure.tm>>
+    <associate|eq 20.532.232|<tuple|21.549|1626|Measure.tm>>
+    <associate|eq 20.533.232|<tuple|21.550|1626|Measure.tm>>
     <associate|eq 20.54.200|<tuple|21.30|1422|Measure.tm>>
     <associate|eq 20.54.200.1|<tuple|21.23|1417|Measure.tm>>
     <associate|eq 20.54.202|<tuple|21.2|1402|Measure.tm>>
-    <associate|eq 20.540.234|<tuple|21.549|1621|Measure.tm>>
-    <associate|eq 20.541.234|<tuple|21.550|1622|Measure.tm>>
-    <associate|eq 20.541.243|<tuple|21.547|1619|Measure.tm>>
-    <associate|eq 20.542.234|<tuple|21.551|1622|Measure.tm>>
-    <associate|eq 20.542.243|<tuple|21.548|1620|Measure.tm>>
-    <associate|eq 20.543.234|<tuple|21.552|1623|Measure.tm>>
-    <associate|eq 20.544.234|<tuple|21.553|1623|Measure.tm>>
-    <associate|eq 20.545.234|<tuple|21.554|1623|Measure.tm>>
-    <associate|eq 20.546.234|<tuple|21.555|1624|Measure.tm>>
-    <associate|eq 20.547.234|<tuple|21.556|1624|Measure.tm>>
-    <associate|eq 20.548.234|<tuple|21.557|1624|Measure.tm>>
-    <associate|eq 20.548.282|<tuple|21.507|1609|Measure.tm>>
-    <associate|eq 20.549.240|<tuple|21.558|1626|Measure.tm>>
-    <associate|eq 20.549.282|<tuple|21.508|1609|Measure.tm>>
+    <associate|eq 20.540.234|<tuple|21.553|1628|Measure.tm>>
+    <associate|eq 20.541.234|<tuple|21.554|1629|Measure.tm>>
+    <associate|eq 20.541.243|<tuple|21.551|1626|Measure.tm>>
+    <associate|eq 20.542.234|<tuple|21.555|1629|Measure.tm>>
+    <associate|eq 20.542.243|<tuple|21.552|1626|Measure.tm>>
+    <associate|eq 20.543.234|<tuple|21.556|1630|Measure.tm>>
+    <associate|eq 20.544.234|<tuple|21.557|1630|Measure.tm>>
+    <associate|eq 20.545.234|<tuple|21.558|1630|Measure.tm>>
+    <associate|eq 20.546.234|<tuple|21.559|1631|Measure.tm>>
+    <associate|eq 20.547.234|<tuple|21.560|1631|Measure.tm>>
+    <associate|eq 20.548.234|<tuple|21.561|1631|Measure.tm>>
+    <associate|eq 20.549.240|<tuple|21.562|1633|Measure.tm>>
     <associate|eq 20.55.200|<tuple|21.31|1423|Measure.tm>>
     <associate|eq 20.55.200.1|<tuple|21.24|1417|Measure.tm>>
     <associate|eq 20.55.202|<tuple|21.3|1402|Measure.tm>>
-    <associate|eq 20.550.240|<tuple|21.559|1626|Measure.tm>>
-    <associate|eq 20.550.263|<tuple|21.514|1613|Measure.tm>>
-    <associate|eq 20.550.282|<tuple|21.509|1609|Measure.tm>>
-    <associate|eq 20.551.240|<tuple|21.560|1626|Measure.tm>>
-    <associate|eq 20.551.263|<tuple|21.515|1613|Measure.tm>>
-    <associate|eq 20.552.240|<tuple|21.561|1626|Measure.tm>>
-    <associate|eq 20.552.263|<tuple|21.516|1613|Measure.tm>>
-    <associate|eq 20.553.240|<tuple|21.562|1626|Measure.tm>>
-    <associate|eq 20.553.263|<tuple|21.517|1613|Measure.tm>>
-    <associate|eq 20.554.240|<tuple|21.563|1626|Measure.tm>>
-    <associate|eq 20.554.263|<tuple|21.518|1613|Measure.tm>>
-    <associate|eq 20.555.240|<tuple|21.564|1626|Measure.tm>>
-    <associate|eq 20.555.263|<tuple|21.519|1613|Measure.tm>>
-    <associate|eq 20.556.240|<tuple|21.565|1626|Measure.tm>>
-    <associate|eq 20.556.263|<tuple|21.520|1613|Measure.tm>>
-    <associate|eq 20.557.240|<tuple|21.566|1626|Measure.tm>>
-    <associate|eq 20.557.263|<tuple|21.521|1613|Measure.tm>>
-    <associate|eq 20.558.240|<tuple|21.567|1626|Measure.tm>>
-    <associate|eq 20.558.263|<tuple|21.522|1613|Measure.tm>>
-    <associate|eq 20.559.240|<tuple|21.568|1626|Measure.tm>>
+    <associate|eq 20.550.240|<tuple|21.563|1633|Measure.tm>>
+    <associate|eq 20.550.263|<tuple|21.518|1620|Measure.tm>>
+    <associate|eq 20.551.240|<tuple|21.564|1633|Measure.tm>>
+    <associate|eq 20.551.263|<tuple|21.519|1620|Measure.tm>>
+    <associate|eq 20.552.240|<tuple|21.565|1633|Measure.tm>>
+    <associate|eq 20.552.263|<tuple|21.520|1620|Measure.tm>>
+    <associate|eq 20.553.240|<tuple|21.566|1633|Measure.tm>>
+    <associate|eq 20.553.263|<tuple|21.521|1620|Measure.tm>>
+    <associate|eq 20.554.240|<tuple|21.567|1633|Measure.tm>>
+    <associate|eq 20.554.263|<tuple|21.522|1620|Measure.tm>>
+    <associate|eq 20.555.240|<tuple|21.568|1633|Measure.tm>>
+    <associate|eq 20.555.263|<tuple|21.523|1620|Measure.tm>>
+    <associate|eq 20.556.240|<tuple|21.569|1633|Measure.tm>>
+    <associate|eq 20.556.263|<tuple|21.524|1620|Measure.tm>>
+    <associate|eq 20.557.240|<tuple|21.570|1633|Measure.tm>>
+    <associate|eq 20.557.263|<tuple|21.525|1620|Measure.tm>>
+    <associate|eq 20.558.240|<tuple|21.571|1633|Measure.tm>>
+    <associate|eq 20.558.263|<tuple|21.526|1620|Measure.tm>>
+    <associate|eq 20.559.240|<tuple|21.572|1633|Measure.tm>>
     <associate|eq 20.56.200|<tuple|21.32|1423|Measure.tm>>
     <associate|eq 20.56.202|<tuple|21.4|1402|Measure.tm>>
-    <associate|eq 20.560.240|<tuple|21.569|1627|Measure.tm>>
-    <associate|eq 20.561.240|<tuple|21.570|1628|Measure.tm>>
-    <associate|eq 20.562.240|<tuple|21.571|1629|Measure.tm>>
-    <associate|eq 20.563.240|<tuple|21.572|1629|Measure.tm>>
-    <associate|eq 20.564.240|<tuple|21.573|1629|Measure.tm>>
-    <associate|eq 20.565.240|<tuple|21.574|1631|Measure.tm>>
-    <associate|eq 20.566.240|<tuple|21.575|1631|Measure.tm>>
-    <associate|eq 20.567.240|<tuple|21.576|1631|Measure.tm>>
-    <associate|eq 20.568.240|<tuple|21.577|1632|Measure.tm>>
-    <associate|eq 20.569.240|<tuple|21.578|1632|Measure.tm>>
+    <associate|eq 20.560.240|<tuple|21.573|1634|Measure.tm>>
+    <associate|eq 20.561.240|<tuple|21.574|1635|Measure.tm>>
+    <associate|eq 20.562.240|<tuple|21.575|1636|Measure.tm>>
+    <associate|eq 20.563.240|<tuple|21.576|1636|Measure.tm>>
+    <associate|eq 20.564.240|<tuple|21.577|1636|Measure.tm>>
+    <associate|eq 20.565.240|<tuple|21.578|1638|Measure.tm>>
+    <associate|eq 20.566.240|<tuple|21.579|1638|Measure.tm>>
+    <associate|eq 20.567.240|<tuple|21.580|1638|Measure.tm>>
+    <associate|eq 20.568.240|<tuple|21.581|1639|Measure.tm>>
+    <associate|eq 20.569.240|<tuple|21.582|1639|Measure.tm>>
     <associate|eq 20.57.200|<tuple|21.33|1423|Measure.tm>>
     <associate|eq 20.57.203|<tuple|21.14|1408|Measure.tm>>
     <associate|eq 20.57.212|<tuple|21.5|1404|Measure.tm>>
-    <associate|eq 20.570.240|<tuple|21.579|1632|Measure.tm>>
-    <associate|eq 20.571.240|<tuple|21.580|1632|Measure.tm>>
-    <associate|eq 20.572.240|<tuple|21.581|1632|Measure.tm>>
-    <associate|eq 20.573.240|<tuple|21.582|1633|Measure.tm>>
-    <associate|eq 20.574.240|<tuple|21.583|1633|Measure.tm>>
-    <associate|eq 20.575.240|<tuple|21.584|1633|Measure.tm>>
-    <associate|eq 20.576.240|<tuple|21.585|1633|Measure.tm>>
-    <associate|eq 20.577.240|<tuple|21.586|1633|Measure.tm>>
-    <associate|eq 20.578.240|<tuple|21.587|1633|Measure.tm>>
-    <associate|eq 20.579.240|<tuple|21.588|1633|Measure.tm>>
+    <associate|eq 20.570.240|<tuple|21.583|1639|Measure.tm>>
+    <associate|eq 20.571.240|<tuple|21.584|1639|Measure.tm>>
+    <associate|eq 20.572.240|<tuple|21.585|1639|Measure.tm>>
+    <associate|eq 20.573.240|<tuple|21.586|1640|Measure.tm>>
+    <associate|eq 20.574.240|<tuple|21.587|1640|Measure.tm>>
+    <associate|eq 20.575.240|<tuple|21.588|1640|Measure.tm>>
+    <associate|eq 20.576.240|<tuple|21.589|1640|Measure.tm>>
+    <associate|eq 20.577.240|<tuple|21.590|1640|Measure.tm>>
+    <associate|eq 20.578.240|<tuple|21.591|1640|Measure.tm>>
+    <associate|eq 20.579.240|<tuple|21.592|1640|Measure.tm>>
     <associate|eq 20.58.200|<tuple|21.34|1423|Measure.tm>>
     <associate|eq 20.58.203|<tuple|21.15|1408|Measure.tm>>
     <associate|eq 20.58.212|<tuple|21.6|1404|Measure.tm>>
-    <associate|eq 20.580.240|<tuple|21.589|1633|Measure.tm>>
-    <associate|eq 20.581.240|<tuple|21.590|1633|Measure.tm>>
-    <associate|eq 20.582.240|<tuple|21.591|1633|Measure.tm>>
-    <associate|eq 20.583.240|<tuple|21.594|1634|Measure.tm>>
-    <associate|eq 20.584.240|<tuple|21.595|1634|Measure.tm>>
-    <associate|eq 20.585.240|<tuple|21.596|1634|Measure.tm>>
-    <associate|eq 20.586.240|<tuple|21.597|1634|Measure.tm>>
-    <associate|eq 20.587.240|<tuple|21.598|1634|Measure.tm>>
+    <associate|eq 20.580.240|<tuple|21.593|1640|Measure.tm>>
+    <associate|eq 20.581.240|<tuple|21.594|1640|Measure.tm>>
+    <associate|eq 20.582.240|<tuple|21.595|1640|Measure.tm>>
+    <associate|eq 20.583.240|<tuple|21.598|1641|Measure.tm>>
+    <associate|eq 20.584.240|<tuple|21.599|1641|Measure.tm>>
+    <associate|eq 20.585.240|<tuple|21.600|1641|Measure.tm>>
+    <associate|eq 20.586.240|<tuple|21.601|1641|Measure.tm>>
+    <associate|eq 20.587.240|<tuple|21.602|1641|Measure.tm>>
     <associate|eq 20.59.203|<tuple|21.16|1409|Measure.tm>>
     <associate|eq 20.59.212|<tuple|21.7|1405|Measure.tm>>
-    <associate|eq 20.590.241|<tuple|21.600|1637|Measure.tm>>
-    <associate|eq 20.591.241|<tuple|21.601|1638|Measure.tm>>
-    <associate|eq 20.592.241|<tuple|21.602|1641|Measure.tm>>
-    <associate|eq 20.594.244|<tuple|21.603|1643|Measure.tm>>
-    <associate|eq 20.595.244|<tuple|21.604|1643|Measure.tm>>
-    <associate|eq 20.596.244|<tuple|21.605|1644|Measure.tm>>
-    <associate|eq 20.597.245|<tuple|21.606|1645|Measure.tm>>
-    <associate|eq 20.598.245|<tuple|21.607|1645|Measure.tm>>
-    <associate|eq 20.598.249|<tuple|21.457|1586|Measure.tm>>
-    <associate|eq 20.599.245|<tuple|21.608|1647|Measure.tm>>
-    <associate|eq 20.599.249|<tuple|21.458|1586|Measure.tm>>
+    <associate|eq 20.590.241|<tuple|21.604|1644|Measure.tm>>
+    <associate|eq 20.591.241|<tuple|21.605|1645|Measure.tm>>
+    <associate|eq 20.592.241|<tuple|21.606|1648|Measure.tm>>
+    <associate|eq 20.594.244|<tuple|21.607|1650|Measure.tm>>
+    <associate|eq 20.595.244|<tuple|21.608|1650|Measure.tm>>
+    <associate|eq 20.596.244|<tuple|21.609|1651|Measure.tm>>
+    <associate|eq 20.597.245|<tuple|21.610|1652|Measure.tm>>
+    <associate|eq 20.598.245|<tuple|21.611|1652|Measure.tm>>
+    <associate|eq 20.598.249|<tuple|21.464|1591|Measure.tm>>
+    <associate|eq 20.599.245|<tuple|21.612|1654|Measure.tm>>
+    <associate|eq 20.599.249|<tuple|21.465|1591|Measure.tm>>
     <associate|eq 20.6.155|<tuple|20.6|1354|ExtendedRealNumbers.tm>>
     <associate|eq 20.60.203|<tuple|21.17|1409|Measure.tm>>
     <associate|eq 20.60.218|<tuple|21.8|1406|Measure.tm>>
-    <associate|eq 20.600.245|<tuple|21.609|1647|Measure.tm>>
-    <associate|eq 20.601.245|<tuple|21.610|1648|Measure.tm>>
-    <associate|eq 20.602.245|<tuple|21.611|1648|Measure.tm>>
-    <associate|eq 20.603.245|<tuple|21.612|1648|Measure.tm>>
-    <associate|eq 20.603.249|<tuple|21.461|1587|Measure.tm>>
-    <associate|eq 20.604.245|<tuple|21.613|1648|Measure.tm>>
-    <associate|eq 20.604.249|<tuple|21.462|1587|Measure.tm>>
-    <associate|eq 20.605.246|<tuple|21.614|1652|Measure.tm>>
-    <associate|eq 20.605.249|<tuple|21.463|1587|Measure.tm>>
-    <associate|eq 20.606.246|<tuple|21.615|1652|Measure.tm>>
-    <associate|eq 20.606.249|<tuple|21.464|1588|Measure.tm>>
-    <associate|eq 20.607.246|<tuple|21.616|1652|Measure.tm>>
-    <associate|eq 20.607.249|<tuple|21.466|1588|Measure.tm>>
-    <associate|eq 20.607.250|<tuple|21.512|1613|Measure.tm>>
-    <associate|eq 20.608.246|<tuple|21.617|1653|Measure.tm>>
-    <associate|eq 20.608.249|<tuple|21.468|1588|Measure.tm>>
-    <associate|eq 20.608.250|<tuple|21.513|1613|Measure.tm>>
-    <associate|eq 20.609.246|<tuple|21.618|1653|Measure.tm>>
-    <associate|eq 20.609.249|<tuple|21.469|1588|Measure.tm>>
+    <associate|eq 20.600.245|<tuple|21.613|1655|Measure.tm>>
+    <associate|eq 20.601.245|<tuple|21.614|1655|Measure.tm>>
+    <associate|eq 20.602.245|<tuple|21.615|1655|Measure.tm>>
+    <associate|eq 20.603.245|<tuple|21.616|1655|Measure.tm>>
+    <associate|eq 20.603.249|<tuple|21.468|1591|Measure.tm>>
+    <associate|eq 20.604.245|<tuple|21.617|1655|Measure.tm>>
+    <associate|eq 20.604.249|<tuple|21.469|1592|Measure.tm>>
+    <associate|eq 20.605.246|<tuple|21.618|1659|Measure.tm>>
+    <associate|eq 20.605.249|<tuple|21.470|1592|Measure.tm>>
+    <associate|eq 20.606.246|<tuple|21.619|1659|Measure.tm>>
+    <associate|eq 20.606.249|<tuple|21.471|1592|Measure.tm>>
+    <associate|eq 20.607.246|<tuple|21.620|1660|Measure.tm>>
+    <associate|eq 20.607.249|<tuple|21.473|1593|Measure.tm>>
+    <associate|eq 20.607.250|<tuple|21.516|1620|Measure.tm>>
+    <associate|eq 20.608.246|<tuple|21.621|1660|Measure.tm>>
+    <associate|eq 20.608.249|<tuple|21.475|1593|Measure.tm>>
+    <associate|eq 20.608.250|<tuple|21.517|1620|Measure.tm>>
+    <associate|eq 20.609.246|<tuple|21.622|1660|Measure.tm>>
+    <associate|eq 20.609.249|<tuple|21.476|1593|Measure.tm>>
     <associate|eq 20.61.204|<tuple|21.18|1409|Measure.tm>>
     <associate|eq 20.61.218|<tuple|21.9|1406|Measure.tm>>
-    <associate|eq 20.610.246|<tuple|21.619|1653|Measure.tm>>
-    <associate|eq 20.611.246|<tuple|21.620|1653|Measure.tm>>
-    <associate|eq 20.612.246|<tuple|21.621|1653|Measure.tm>>
-    <associate|eq 20.613.246|<tuple|21.623|1653|Measure.tm>>
-    <associate|eq 20.614.246|<tuple|21.624|1654|Measure.tm>>
-    <associate|eq 20.615.246|<tuple|21.625|1654|Measure.tm>>
-    <associate|eq 20.616.246|<tuple|21.626|1654|Measure.tm>>
-    <associate|eq 20.617.247|<tuple|21.627|1654|Measure.tm>>
-    <associate|eq 20.617.250|<tuple|21.523|1614|Measure.tm>>
-    <associate|eq 20.618.247|<tuple|21.628|1655|Measure.tm>>
-    <associate|eq 20.618.250|<tuple|21.524|1614|Measure.tm>>
-    <associate|eq 20.619.246|<tuple|21.629|1656|Measure.tm>>
-    <associate|eq 20.619.250|<tuple|21.525|1614|Measure.tm>>
+    <associate|eq 20.610.246|<tuple|21.623|1660|Measure.tm>>
+    <associate|eq 20.611.246|<tuple|21.624|1660|Measure.tm>>
+    <associate|eq 20.612.246|<tuple|21.625|1660|Measure.tm>>
+    <associate|eq 20.613.246|<tuple|21.627|1660|Measure.tm>>
+    <associate|eq 20.614.246|<tuple|21.628|1661|Measure.tm>>
+    <associate|eq 20.615.246|<tuple|21.629|1661|Measure.tm>>
+    <associate|eq 20.616.246|<tuple|21.630|1661|Measure.tm>>
+    <associate|eq 20.617.247|<tuple|21.631|1661|Measure.tm>>
+    <associate|eq 20.617.250|<tuple|21.527|1621|Measure.tm>>
+    <associate|eq 20.618.247|<tuple|21.632|1662|Measure.tm>>
+    <associate|eq 20.618.250|<tuple|21.528|1621|Measure.tm>>
+    <associate|eq 20.619.246|<tuple|21.633|1663|Measure.tm>>
+    <associate|eq 20.619.250|<tuple|21.529|1621|Measure.tm>>
     <associate|eq 20.62.204|<tuple|21.19|1409|Measure.tm>>
     <associate|eq 20.62.218|<tuple|21.10|1407|Measure.tm>>
-    <associate|eq 20.620.246|<tuple|21.630|1656|Measure.tm>>
-    <associate|eq 20.620.250|<tuple|21.526|1614|Measure.tm>>
-    <associate|eq 20.621.246|<tuple|21.632|1657|Measure.tm>>
-    <associate|eq 20.621.250|<tuple|21.527|1614|Measure.tm>>
-    <associate|eq 20.622.246|<tuple|21.633|1657|Measure.tm>>
-    <associate|eq 20.622.250|<tuple|21.528|1615|Measure.tm>>
-    <associate|eq 20.623.246|<tuple|21.634|1657|Measure.tm>>
-    <associate|eq 20.623.250|<tuple|21.529|1615|Measure.tm>>
-    <associate|eq 20.624.246|<tuple|21.635|1657|Measure.tm>>
-    <associate|eq 20.624.250|<tuple|21.530|1615|Measure.tm>>
-    <associate|eq 20.625.246|<tuple|21.636|1657|Measure.tm>>
-    <associate|eq 20.625.250|<tuple|21.531|1615|Measure.tm>>
-    <associate|eq 20.626.246|<tuple|21.637|1659|Measure.tm>>
-    <associate|eq 20.627.246|<tuple|21.638|1659|Measure.tm>>
-    <associate|eq 20.628.246|<tuple|21.639|1659|Measure.tm>>
-    <associate|eq 20.628.263|<tuple|21.592|1634|Measure.tm>>
-    <associate|eq 20.629.246|<tuple|21.640|1660|Measure.tm>>
-    <associate|eq 20.629.263|<tuple|21.593|1634|Measure.tm>>
+    <associate|eq 20.620.246|<tuple|21.634|1663|Measure.tm>>
+    <associate|eq 20.620.250|<tuple|21.530|1621|Measure.tm>>
+    <associate|eq 20.621.246|<tuple|21.636|1664|Measure.tm>>
+    <associate|eq 20.621.250|<tuple|21.531|1621|Measure.tm>>
+    <associate|eq 20.622.246|<tuple|21.637|1664|Measure.tm>>
+    <associate|eq 20.622.250|<tuple|21.532|1622|Measure.tm>>
+    <associate|eq 20.623.246|<tuple|21.638|1664|Measure.tm>>
+    <associate|eq 20.623.250|<tuple|21.533|1622|Measure.tm>>
+    <associate|eq 20.624.246|<tuple|21.639|1664|Measure.tm>>
+    <associate|eq 20.624.250|<tuple|21.534|1622|Measure.tm>>
+    <associate|eq 20.625.246|<tuple|21.640|1664|Measure.tm>>
+    <associate|eq 20.625.250|<tuple|21.535|1622|Measure.tm>>
+    <associate|eq 20.626.246|<tuple|21.641|1666|Measure.tm>>
+    <associate|eq 20.627.246|<tuple|21.642|1666|Measure.tm>>
+    <associate|eq 20.628.246|<tuple|21.643|1666|Measure.tm>>
+    <associate|eq 20.628.263|<tuple|21.596|1641|Measure.tm>>
+    <associate|eq 20.629.246|<tuple|21.644|1667|Measure.tm>>
+    <associate|eq 20.629.263|<tuple|21.597|1641|Measure.tm>>
     <associate|eq 20.63.204|<tuple|21.20|1409|Measure.tm>>
     <associate|eq 20.63.218|<tuple|21.11|1407|Measure.tm>>
-    <associate|eq 20.630.249|<tuple|21.641|1660|Measure.tm>>
-    <associate|eq 20.631.246|<tuple|21.642|1660|Measure.tm>>
-    <associate|eq 20.632.246|<tuple|21.643|1661|Measure.tm>>
-    <associate|eq 20.633.246|<tuple|21.645|1662|Measure.tm>>
-    <associate|eq 20.634.246|<tuple|21.646|1663|Measure.tm>>
-    <associate|eq 20.635.246|<tuple|21.647|1663|Measure.tm>>
-    <associate|eq 20.635.263|<tuple|21.599|1635|Measure.tm>>
-    <associate|eq 20.636.246|<tuple|21.648|1663|Measure.tm>>
-    <associate|eq 20.637.247|<tuple|21.649|1663|Measure.tm>>
-    <associate|eq 20.638.246|<tuple|21.653|1665|Measure.tm>>
-    <associate|eq 20.639.246|<tuple|21.654|1665|Measure.tm>>
-    <associate|eq 20.640.246|<tuple|21.655|1665|Measure.tm>>
-    <associate|eq 20.641.246|<tuple|21.656|1665|Measure.tm>>
-    <associate|eq 20.642.246|<tuple|21.657|1666|Measure.tm>>
-    <associate|eq 20.643.246|<tuple|21.658|1666|Measure.tm>>
-    <associate|eq 20.644.246|<tuple|21.659|1666|Measure.tm>>
-    <associate|eq 20.645.246|<tuple|21.660|1666|Measure.tm>>
-    <associate|eq 20.646.246|<tuple|21.661|1666|Measure.tm>>
-    <associate|eq 20.647.246|<tuple|21.662|1666|Measure.tm>>
-    <associate|eq 20.648\<point\>246|<tuple|21.663|1667|Measure.tm>>
-    <associate|eq 20.649.246|<tuple|21.664|1667|Measure.tm>>
-    <associate|eq 20.651.247|<tuple|21.665|1667|Measure.tm>>
-    <associate|eq 20.652.247|<tuple|21.666|1667|Measure.tm>>
-    <associate|eq 20.653.247|<tuple|21.667|1667|Measure.tm>>
-    <associate|eq 20.654\<point\>247|<tuple|21.668|1667|Measure.tm>>
-    <associate|eq 20.655.247|<tuple|21.669|1668|Measure.tm>>
-    <associate|eq 20.656.246|<tuple|21.671|1668|Measure.tm>>
-    <associate|eq 20.656.247|<tuple|21.670|1668|Measure.tm>>
-    <associate|eq 20.657.247|<tuple|21.671|1668|Measure.tm>>
-    <associate|eq 20.658.247|<tuple|21.672|1668|Measure.tm>>
-    <associate|eq 20.659.247|<tuple|21.673|1668|Measure.tm>>
-    <associate|eq 20.660.247|<tuple|21.674|1668|Measure.tm>>
-    <associate|eq 20.660.265|<tuple|21.622|1653|Measure.tm>>
-    <associate|eq 20.661.247|<tuple|21.675|1668|Measure.tm>>
-    <associate|eq 20.662.247|<tuple|21.676|1669|Measure.tm>>
-    <associate|eq 20.663.247|<tuple|21.677|1669|Measure.tm>>
-    <associate|eq 20.664.247|<tuple|21.678|1669|Measure.tm>>
-    <associate|eq 20.665.247|<tuple|21.679|1669|Measure.tm>>
-    <associate|eq 20.666.247|<tuple|21.681|1669|Measure.tm>>
-    <associate|eq 20.667.247|<tuple|21.682|1669|Measure.tm>>
-    <associate|eq 20.668.247|<tuple|21.683|1669|Measure.tm>>
-    <associate|eq 20.669.247|<tuple|21.684|1669|Measure.tm>>
-    <associate|eq 20.669.265|<tuple|21.631|1657|Measure.tm>>
-    <associate|eq 20.670.247|<tuple|21.685|1670|Measure.tm>>
-    <associate|eq 20.671.247|<tuple|21.686|1670|Measure.tm>>
-    <associate|eq 20.672.247|<tuple|21.687|1670|Measure.tm>>
-    <associate|eq 20.673.247|<tuple|21.688|1670|Measure.tm>>
-    <associate|eq 20.674.247|<tuple|21.689|1670|Measure.tm>>
-    <associate|eq 20.675.247|<tuple|21.690|1670|Measure.tm>>
-    <associate|eq 20.676.247|<tuple|21.691|1671|Measure.tm>>
-    <associate|eq 20.677.247|<tuple|21.692|1671|Measure.tm>>
-    <associate|eq 20.678.247|<tuple|21.693|1672|Measure.tm>>
-    <associate|eq 20.679.247|<tuple|21.694|1672|Measure.tm>>
-    <associate|eq 20.680.247|<tuple|21.696|1672|Measure.tm>>
-    <associate|eq 20.680.247.1|<tuple|21.695|1672|Measure.tm>>
-    <associate|eq 20.681.247|<tuple|21.697|1672|Measure.tm>>
-    <associate|eq 20.682.247|<tuple|21.698|1673|Measure.tm>>
-    <associate|eq 20.682.265|<tuple|21.644|1661|Measure.tm>>
-    <associate|eq 20.683.247|<tuple|21.699|1673|Measure.tm>>
-    <associate|eq 20.685.248|<tuple|21.700|1674|Measure.tm>>
-    <associate|eq 20.686.248|<tuple|21.701|1674|Measure.tm>>
-    <associate|eq 20.687.248|<tuple|21.702|1674|Measure.tm>>
-    <associate|eq 20.688.248|<tuple|21.703|1674|Measure.tm>>
-    <associate|eq 20.688.265|<tuple|21.650|1664|Measure.tm>>
-    <associate|eq 20.689.248|<tuple|21.704|1674|Measure.tm>>
-    <associate|eq 20.689.265|<tuple|21.651|1664|Measure.tm>>
-    <associate|eq 20.690.248|<tuple|21.705|1674|Measure.tm>>
-    <associate|eq 20.690.265|<tuple|21.652|1664|Measure.tm>>
-    <associate|eq 20.691.248|<tuple|21.706|1674|Measure.tm>>
-    <associate|eq 20.692.248|<tuple|21.707|1680|Measure.tm>>
-    <associate|eq 20.693.248|<tuple|21.708|1680|Measure.tm>>
-    <associate|eq 20.694.248|<tuple|21.709|1680|Measure.tm>>
-    <associate|eq 20.695.248|<tuple|21.710|1681|Measure.tm>>
-    <associate|eq 20.696.248|<tuple|21.711|1681|Measure.tm>>
-    <associate|eq 20.698.248|<tuple|21.713|1682|Measure.tm>>
-    <associate|eq 20.699.248|<tuple|21.714|1683|Measure.tm>>
+    <associate|eq 20.630.249|<tuple|21.645|1667|Measure.tm>>
+    <associate|eq 20.631.246|<tuple|21.646|1667|Measure.tm>>
+    <associate|eq 20.632.246|<tuple|21.647|1668|Measure.tm>>
+    <associate|eq 20.633.246|<tuple|21.649|1669|Measure.tm>>
+    <associate|eq 20.634.246|<tuple|21.650|1670|Measure.tm>>
+    <associate|eq 20.635.246|<tuple|21.651|1670|Measure.tm>>
+    <associate|eq 20.635.263|<tuple|21.603|1642|Measure.tm>>
+    <associate|eq 20.636.246|<tuple|21.652|1670|Measure.tm>>
+    <associate|eq 20.637.247|<tuple|21.653|1670|Measure.tm>>
+    <associate|eq 20.638.246|<tuple|21.657|1672|Measure.tm>>
+    <associate|eq 20.639.246|<tuple|21.658|1672|Measure.tm>>
+    <associate|eq 20.640.246|<tuple|21.659|1672|Measure.tm>>
+    <associate|eq 20.641.246|<tuple|21.660|1672|Measure.tm>>
+    <associate|eq 20.642.246|<tuple|21.661|1673|Measure.tm>>
+    <associate|eq 20.643.246|<tuple|21.662|1673|Measure.tm>>
+    <associate|eq 20.644.246|<tuple|21.663|1673|Measure.tm>>
+    <associate|eq 20.645.246|<tuple|21.664|1673|Measure.tm>>
+    <associate|eq 20.646.246|<tuple|21.665|1673|Measure.tm>>
+    <associate|eq 20.647.246|<tuple|21.666|1673|Measure.tm>>
+    <associate|eq 20.648\<point\>246|<tuple|21.667|1674|Measure.tm>>
+    <associate|eq 20.649.246|<tuple|21.668|1674|Measure.tm>>
+    <associate|eq 20.651.247|<tuple|21.669|1674|Measure.tm>>
+    <associate|eq 20.652.247|<tuple|21.670|1674|Measure.tm>>
+    <associate|eq 20.653.247|<tuple|21.671|1674|Measure.tm>>
+    <associate|eq 20.654\<point\>247|<tuple|21.672|1674|Measure.tm>>
+    <associate|eq 20.655.247|<tuple|21.673|1675|Measure.tm>>
+    <associate|eq 20.656.246|<tuple|21.675|1675|Measure.tm>>
+    <associate|eq 20.656.247|<tuple|21.674|1675|Measure.tm>>
+    <associate|eq 20.657.247|<tuple|21.675|1675|Measure.tm>>
+    <associate|eq 20.658.247|<tuple|21.676|1675|Measure.tm>>
+    <associate|eq 20.659.247|<tuple|21.677|1675|Measure.tm>>
+    <associate|eq 20.660.247|<tuple|21.678|1675|Measure.tm>>
+    <associate|eq 20.660.265|<tuple|21.626|1660|Measure.tm>>
+    <associate|eq 20.661.247|<tuple|21.679|1675|Measure.tm>>
+    <associate|eq 20.662.247|<tuple|21.680|1676|Measure.tm>>
+    <associate|eq 20.663.247|<tuple|21.681|1676|Measure.tm>>
+    <associate|eq 20.664.247|<tuple|21.682|1676|Measure.tm>>
+    <associate|eq 20.665.247|<tuple|21.683|1676|Measure.tm>>
+    <associate|eq 20.666.247|<tuple|21.685|1676|Measure.tm>>
+    <associate|eq 20.667.247|<tuple|21.686|1676|Measure.tm>>
+    <associate|eq 20.668.247|<tuple|21.687|1676|Measure.tm>>
+    <associate|eq 20.669.247|<tuple|21.688|1676|Measure.tm>>
+    <associate|eq 20.669.265|<tuple|21.635|1664|Measure.tm>>
+    <associate|eq 20.670.247|<tuple|21.689|1677|Measure.tm>>
+    <associate|eq 20.671.247|<tuple|21.690|1677|Measure.tm>>
+    <associate|eq 20.672.247|<tuple|21.691|1677|Measure.tm>>
+    <associate|eq 20.673.247|<tuple|21.692|1677|Measure.tm>>
+    <associate|eq 20.674.247|<tuple|21.693|1677|Measure.tm>>
+    <associate|eq 20.675.247|<tuple|21.694|1677|Measure.tm>>
+    <associate|eq 20.676.247|<tuple|21.695|1678|Measure.tm>>
+    <associate|eq 20.677.247|<tuple|21.696|1678|Measure.tm>>
+    <associate|eq 20.678.247|<tuple|21.697|1679|Measure.tm>>
+    <associate|eq 20.679.247|<tuple|21.698|1679|Measure.tm>>
+    <associate|eq 20.680.247|<tuple|21.700|1679|Measure.tm>>
+    <associate|eq 20.680.247.1|<tuple|21.699|1679|Measure.tm>>
+    <associate|eq 20.681.247|<tuple|21.701|1679|Measure.tm>>
+    <associate|eq 20.682.247|<tuple|21.702|1680|Measure.tm>>
+    <associate|eq 20.682.265|<tuple|21.648|1668|Measure.tm>>
+    <associate|eq 20.683.247|<tuple|21.703|1680|Measure.tm>>
+    <associate|eq 20.685.248|<tuple|21.704|1681|Measure.tm>>
+    <associate|eq 20.686.248|<tuple|21.705|1681|Measure.tm>>
+    <associate|eq 20.687.248|<tuple|21.706|1681|Measure.tm>>
+    <associate|eq 20.688.248|<tuple|21.707|1681|Measure.tm>>
+    <associate|eq 20.688.265|<tuple|21.654|1671|Measure.tm>>
+    <associate|eq 20.689.248|<tuple|21.708|1681|Measure.tm>>
+    <associate|eq 20.689.265|<tuple|21.655|1671|Measure.tm>>
+    <associate|eq 20.690.248|<tuple|21.709|1681|Measure.tm>>
+    <associate|eq 20.690.265|<tuple|21.656|1671|Measure.tm>>
+    <associate|eq 20.691.248|<tuple|21.710|1681|Measure.tm>>
+    <associate|eq 20.692.248|<tuple|21.711|1687|Measure.tm>>
+    <associate|eq 20.693.248|<tuple|21.712|1687|Measure.tm>>
+    <associate|eq 20.694.248|<tuple|21.713|1687|Measure.tm>>
+    <associate|eq 20.695.248|<tuple|21.714|1688|Measure.tm>>
+    <associate|eq 20.696.248|<tuple|21.715|1688|Measure.tm>>
+    <associate|eq 20.698.248|<tuple|21.717|1690|Measure.tm>>
+    <associate|eq 20.699.248|<tuple|21.718|1690|Measure.tm>>
     <associate|eq 20.7.155|<tuple|20.7|1354|ExtendedRealNumbers.tm>>
-    <associate|eq 20.700.248|<tuple|21.715|1683|Measure.tm>>
-    <associate|eq 20.701.248|<tuple|21.716|1683|Measure.tm>>
-    <associate|eq 20.702.248|<tuple|21.717|1684|Measure.tm>>
-    <associate|eq 20.703.248|<tuple|21.718|1684|Measure.tm>>
-    <associate|eq 20.704.248|<tuple|21.719|1684|Measure.tm>>
-    <associate|eq 20.705.248|<tuple|21.720|1685|Measure.tm>>
-    <associate|eq 20.706.248|<tuple|21.721|1685|Measure.tm>>
-    <associate|eq 20.707.248|<tuple|21.722|1686|Measure.tm>>
-    <associate|eq 20.708.248|<tuple|21.723|1686|Measure.tm>>
-    <associate|eq 20.709.248|<tuple|21.724|1686|Measure.tm>>
-    <associate|eq 20.710.248|<tuple|21.725|1686|Measure.tm>>
-    <associate|eq 20.711.248|<tuple|21.726|1686|Measure.tm>>
-    <associate|eq 20.712.248|<tuple|21.727|1687|Measure.tm>>
-    <associate|eq 20.713.248|<tuple|21.728|1687|Measure.tm>>
-    <associate|eq 20.714.248|<tuple|21.729|1687|Measure.tm>>
-    <associate|eq 20.715.248|<tuple|21.730|1687|Measure.tm>>
-    <associate|eq 20.716.248|<tuple|21.731|1688|Measure.tm>>
-    <associate|eq 20.717.248|<tuple|21.732|1688|Measure.tm>>
-    <associate|eq 20.718.248|<tuple|21.733|1688|Measure.tm>>
-    <associate|eq 20.718.265|<tuple|21.680|1669|Measure.tm>>
-    <associate|eq 20.719.248|<tuple|21.734|1688|Measure.tm>>
-    <associate|eq 20.720.248|<tuple|21.735|1689|Measure.tm>>
-    <associate|eq 20.721.248|<tuple|21.736|1692|Measure.tm>>
-    <associate|eq 20.723.248|<tuple|21.740|1693|Measure.tm>>
-    <associate|eq 20.724.148|<tuple|21.741|1693|Measure.tm>>
-    <associate|eq 20.725.248|<tuple|21.742|1693|Measure.tm>>
-    <associate|eq 20.726.248|<tuple|21.743|1693|Measure.tm>>
-    <associate|eq 20.727.248|<tuple|21.744|1693|Measure.tm>>
-    <associate|eq 20.728.248|<tuple|21.745|1693|Measure.tm>>
-    <associate|eq 20.729.248|<tuple|21.746|1694|Measure.tm>>
-    <associate|eq 20.730.248|<tuple|21.747|1695|Measure.tm>>
-    <associate|eq 20.731.248|<tuple|21.748|1695|Measure.tm>>
-    <associate|eq 20.732.248|<tuple|21.749|1695|Measure.tm>>
-    <associate|eq 20.733.248|<tuple|21.750|1695|Measure.tm>>
-    <associate|eq 20.734.248|<tuple|21.751|1695|Measure.tm>>
-    <associate|eq 20.735.248|<tuple|21.752|1695|Measure.tm>>
-    <associate|eq 20.736.248|<tuple|21.753|1695|Measure.tm>>
-    <associate|eq 20.737.248|<tuple|21.754|1695|Measure.tm>>
-    <associate|eq 20.738.248|<tuple|21.755|1696|Measure.tm>>
-    <associate|eq 20.739.248|<tuple|21.756|1696|Measure.tm>>
-    <associate|eq 20.740.248|<tuple|21.757|1696|Measure.tm>>
-    <associate|eq 20.741.248|<tuple|21.758|1696|Measure.tm>>
-    <associate|eq 20.742.248|<tuple|21.759|1696|Measure.tm>>
-    <associate|eq 20.743.248|<tuple|21.760|1697|Measure.tm>>
-    <associate|eq 20.744.248|<tuple|21.761|1697|Measure.tm>>
-    <associate|eq 20.745.248|<tuple|21.762|1698|Measure.tm>>
-    <associate|eq 20.746.248|<tuple|21.763|1698|Measure.tm>>
-    <associate|eq 20.747.248|<tuple|21.764|1698|Measure.tm>>
-    <associate|eq 20.748.248|<tuple|21.765|1698|Measure.tm>>
-    <associate|eq 20.749.248|<tuple|21.766|1698|Measure.tm>>
-    <associate|eq 20.751.248|<tuple|21.768|1699|Measure.tm>>
-    <associate|eq 20.752.248|<tuple|21.769|1699|Measure.tm>>
-    <associate|eq 20.753.248|<tuple|21.770|1699|Measure.tm>>
-    <associate|eq 20.754.248|<tuple|21.771|1699|Measure.tm>>
-    <associate|eq 20.755.243|<tuple|21.772|1699|Measure.tm>>
-    <associate|eq 20.756.248|<tuple|21.773|1699|Measure.tm>>
-    <associate|eq 20.757.248|<tuple|21.774|1701|Measure.tm>>
-    <associate|eq 20.758.248|<tuple|21.775|1701|Measure.tm>>
-    <associate|eq 20.759.248|<tuple|21.776|1701|Measure.tm>>
+    <associate|eq 20.700.248|<tuple|21.719|1690|Measure.tm>>
+    <associate|eq 20.701.248|<tuple|21.720|1691|Measure.tm>>
+    <associate|eq 20.702.248|<tuple|21.721|1691|Measure.tm>>
+    <associate|eq 20.703.248|<tuple|21.722|1691|Measure.tm>>
+    <associate|eq 20.704.248|<tuple|21.723|1691|Measure.tm>>
+    <associate|eq 20.705.248|<tuple|21.724|1692|Measure.tm>>
+    <associate|eq 20.706.248|<tuple|21.725|1692|Measure.tm>>
+    <associate|eq 20.707.248|<tuple|21.726|1693|Measure.tm>>
+    <associate|eq 20.708.248|<tuple|21.727|1693|Measure.tm>>
+    <associate|eq 20.709.248|<tuple|21.728|1693|Measure.tm>>
+    <associate|eq 20.710.248|<tuple|21.729|1693|Measure.tm>>
+    <associate|eq 20.711.248|<tuple|21.730|1693|Measure.tm>>
+    <associate|eq 20.712.248|<tuple|21.731|1694|Measure.tm>>
+    <associate|eq 20.713.248|<tuple|21.732|1694|Measure.tm>>
+    <associate|eq 20.714.248|<tuple|21.733|1694|Measure.tm>>
+    <associate|eq 20.715.248|<tuple|21.734|1694|Measure.tm>>
+    <associate|eq 20.716.248|<tuple|21.735|1695|Measure.tm>>
+    <associate|eq 20.717.248|<tuple|21.736|1695|Measure.tm>>
+    <associate|eq 20.718.248|<tuple|21.737|1695|Measure.tm>>
+    <associate|eq 20.718.265|<tuple|21.684|1676|Measure.tm>>
+    <associate|eq 20.719.248|<tuple|21.738|1695|Measure.tm>>
+    <associate|eq 20.720.248|<tuple|21.739|1696|Measure.tm>>
+    <associate|eq 20.721.248|<tuple|21.740|1698|Measure.tm>>
+    <associate|eq 20.723.248|<tuple|21.744|1699|Measure.tm>>
+    <associate|eq 20.724.148|<tuple|21.745|1699|Measure.tm>>
+    <associate|eq 20.725.248|<tuple|21.746|1700|Measure.tm>>
+    <associate|eq 20.726.248|<tuple|21.747|1700|Measure.tm>>
+    <associate|eq 20.727.248|<tuple|21.748|1700|Measure.tm>>
+    <associate|eq 20.728.248|<tuple|21.749|1700|Measure.tm>>
+    <associate|eq 20.729.248|<tuple|21.750|1700|Measure.tm>>
+    <associate|eq 20.730.248|<tuple|21.751|1701|Measure.tm>>
+    <associate|eq 20.731.248|<tuple|21.752|1702|Measure.tm>>
+    <associate|eq 20.732.248|<tuple|21.753|1702|Measure.tm>>
+    <associate|eq 20.733.248|<tuple|21.754|1702|Measure.tm>>
+    <associate|eq 20.734.248|<tuple|21.755|1702|Measure.tm>>
+    <associate|eq 20.735.248|<tuple|21.756|1702|Measure.tm>>
+    <associate|eq 20.736.248|<tuple|21.757|1702|Measure.tm>>
+    <associate|eq 20.737.248|<tuple|21.758|1702|Measure.tm>>
+    <associate|eq 20.738.248|<tuple|21.759|1702|Measure.tm>>
+    <associate|eq 20.739.248|<tuple|21.760|1702|Measure.tm>>
+    <associate|eq 20.740.248|<tuple|21.761|1703|Measure.tm>>
+    <associate|eq 20.741.248|<tuple|21.762|1703|Measure.tm>>
+    <associate|eq 20.742.248|<tuple|21.763|1703|Measure.tm>>
+    <associate|eq 20.743.248|<tuple|21.764|1703|Measure.tm>>
+    <associate|eq 20.744.248|<tuple|21.765|1704|Measure.tm>>
+    <associate|eq 20.745.248|<tuple|21.766|1704|Measure.tm>>
+    <associate|eq 20.746.248|<tuple|21.767|1705|Measure.tm>>
+    <associate|eq 20.747.248|<tuple|21.768|1705|Measure.tm>>
+    <associate|eq 20.748.248|<tuple|21.769|1705|Measure.tm>>
+    <associate|eq 20.749.248|<tuple|21.770|1705|Measure.tm>>
+    <associate|eq 20.751.248|<tuple|21.772|1706|Measure.tm>>
+    <associate|eq 20.752.248|<tuple|21.773|1706|Measure.tm>>
+    <associate|eq 20.753.248|<tuple|21.774|1706|Measure.tm>>
+    <associate|eq 20.754.248|<tuple|21.775|1706|Measure.tm>>
+    <associate|eq 20.755.243|<tuple|21.776|1706|Measure.tm>>
+    <associate|eq 20.756.248|<tuple|21.777|1706|Measure.tm>>
+    <associate|eq 20.757.248|<tuple|21.778|1707|Measure.tm>>
+    <associate|eq 20.758.248|<tuple|21.779|1707|Measure.tm>>
+    <associate|eq 20.759.248|<tuple|21.780|1707|Measure.tm>>
     <associate|eq 20.76.200|<tuple|21.50|1427|Measure.tm>>
-    <associate|eq 20.760.248|<tuple|21.777|1701|Measure.tm>>
-    <associate|eq 20.768.248|<tuple|21.778|1704|Measure.tm>>
-    <associate|eq 20.769.248|<tuple|21.779|1704|Measure.tm>>
+    <associate|eq 20.760.248|<tuple|21.781|1707|Measure.tm>>
+    <associate|eq 20.768.248|<tuple|21.782|1711|Measure.tm>>
+    <associate|eq 20.769.248|<tuple|21.783|1711|Measure.tm>>
     <associate|eq 20.77.200|<tuple|21.51|1427|Measure.tm>>
-    <associate|eq 20.770.248|<tuple|21.780|1705|Measure.tm>>
-    <associate|eq 20.771.248|<tuple|21.781|1707|Measure.tm>>
-    <associate|eq 20.772.248|<tuple|21.782|1707|Measure.tm>>
-    <associate|eq 20.773.248|<tuple|21.783|1707|Measure.tm>>
-    <associate|eq 20.774.248|<tuple|21.784|1707|Measure.tm>>
-    <associate|eq 20.775.248|<tuple|21.785|1708|Measure.tm>>
-    <associate|eq 20.775.265|<tuple|21.737|1692|Measure.tm>>
-    <associate|eq 20.776.248|<tuple|21.786|1708|Measure.tm>>
-    <associate|eq 20.776.265|<tuple|21.738|1692|Measure.tm>>
-    <associate|eq 20.777.248|<tuple|21.787|1708|Measure.tm>>
-    <associate|eq 20.777.265|<tuple|21.739|1692|Measure.tm>>
-    <associate|eq 20.778.248|<tuple|21.788|1709|Measure.tm>>
-    <associate|eq 20.779.248|<tuple|21.789|1709|Measure.tm>>
+    <associate|eq 20.770.248|<tuple|21.784|1711|Measure.tm>>
+    <associate|eq 20.771.248|<tuple|21.785|1713|Measure.tm>>
+    <associate|eq 20.772.248|<tuple|21.786|1713|Measure.tm>>
+    <associate|eq 20.773.248|<tuple|21.787|1714|Measure.tm>>
+    <associate|eq 20.774.248|<tuple|21.788|1714|Measure.tm>>
+    <associate|eq 20.775.248|<tuple|21.789|1715|Measure.tm>>
+    <associate|eq 20.775.265|<tuple|21.741|1699|Measure.tm>>
+    <associate|eq 20.776.248|<tuple|21.790|1715|Measure.tm>>
+    <associate|eq 20.776.265|<tuple|21.742|1699|Measure.tm>>
+    <associate|eq 20.777.248|<tuple|21.791|1715|Measure.tm>>
+    <associate|eq 20.777.265|<tuple|21.743|1699|Measure.tm>>
+    <associate|eq 20.778.248|<tuple|21.792|1715|Measure.tm>>
+    <associate|eq 20.779.248|<tuple|21.793|1716|Measure.tm>>
     <associate|eq 20.78.200|<tuple|21.52|1428|Measure.tm>>
-    <associate|eq 20.780.248|<tuple|21.790|1711|Measure.tm>>
-    <associate|eq 20.781.248|<tuple|21.791|1711|Measure.tm>>
-    <associate|eq 20.782.248|<tuple|21.792|1711|Measure.tm>>
-    <associate|eq 20.783.248|<tuple|21.793|1711|Measure.tm>>
-    <associate|eq 20.784.248|<tuple|21.794|1711|Measure.tm>>
-    <associate|eq 20.785.248|<tuple|21.795|1711|Measure.tm>>
-    <associate|eq 20.786.248|<tuple|21.796|1712|Measure.tm>>
-    <associate|eq 20.787.248|<tuple|21.797|1713|Measure.tm>>
-    <associate|eq 20.788.248|<tuple|21.798|1713|Measure.tm>>
-    <associate|eq 20.789.248|<tuple|21.799|1713|Measure.tm>>
+    <associate|eq 20.780.248|<tuple|21.794|1717|Measure.tm>>
+    <associate|eq 20.781.248|<tuple|21.795|1718|Measure.tm>>
+    <associate|eq 20.782.248|<tuple|21.796|1718|Measure.tm>>
+    <associate|eq 20.783.248|<tuple|21.797|1718|Measure.tm>>
+    <associate|eq 20.784.248|<tuple|21.798|1718|Measure.tm>>
+    <associate|eq 20.785.248|<tuple|21.799|1718|Measure.tm>>
+    <associate|eq 20.786.248|<tuple|21.800|1719|Measure.tm>>
+    <associate|eq 20.787.248|<tuple|21.801|1720|Measure.tm>>
+    <associate|eq 20.788.248|<tuple|21.802|1720|Measure.tm>>
+    <associate|eq 20.789.248|<tuple|21.803|1720|Measure.tm>>
     <associate|eq 20.79.200|<tuple|21.53|1428|Measure.tm>>
-    <associate|eq 20.790.248|<tuple|21.800|1713|Measure.tm>>
-    <associate|eq 20.791.231|<tuple|21.491|1595|Measure.tm>>
-    <associate|eq 20.791.248|<tuple|21.801|1713|Measure.tm>>
-    <associate|eq 20.792.248|<tuple|21.802|1713|Measure.tm>>
-    <associate|eq 20.793.248|<tuple|21.803|1714|Measure.tm>>
-    <associate|eq 20.794.248|<tuple|21.804|1714|Measure.tm>>
-    <associate|eq 20.795.248|<tuple|21.805|1714|Measure.tm>>
-    <associate|eq 20.796.248|<tuple|21.806|1714|Measure.tm>>
-    <associate|eq 20.797.248|<tuple|21.807|1715|Measure.tm>>
-    <associate|eq 20.798.248|<tuple|21.808|1715|Measure.tm>>
-    <associate|eq 20.799.248|<tuple|21.809|1715|Measure.tm>>
+    <associate|eq 20.790.248|<tuple|21.804|1720|Measure.tm>>
+    <associate|eq 20.791.231|<tuple|21.498|1600|Measure.tm>>
+    <associate|eq 20.791.248|<tuple|21.805|1720|Measure.tm>>
+    <associate|eq 20.792.248|<tuple|21.806|1720|Measure.tm>>
+    <associate|eq 20.793.248|<tuple|21.807|1721|Measure.tm>>
+    <associate|eq 20.794.248|<tuple|21.808|1721|Measure.tm>>
+    <associate|eq 20.795.248|<tuple|21.809|1721|Measure.tm>>
+    <associate|eq 20.796.248|<tuple|21.810|1721|Measure.tm>>
+    <associate|eq 20.797.248|<tuple|21.811|1722|Measure.tm>>
+    <associate|eq 20.798.248|<tuple|21.812|1722|Measure.tm>>
+    <associate|eq 20.799.248|<tuple|21.813|1722|Measure.tm>>
     <associate|eq 20.8.155|<tuple|20.8|1356|ExtendedRealNumbers.tm>>
     <associate|eq 20.80.200|<tuple|21.54|1428|Measure.tm>>
-    <associate|eq 20.800.248|<tuple|21.810|1716|Measure.tm>>
-    <associate|eq 20.801.248|<tuple|21.811|1716|Measure.tm>>
-    <associate|eq 20.802.248|<tuple|21.812|1716|Measure.tm>>
-    <associate|eq 20.803.248|<tuple|21.813|1716|Measure.tm>>
-    <associate|eq 20.804.248|<tuple|21.814|1716|Measure.tm>>
-    <associate|eq 20.805.248|<tuple|21.815|1717|Measure.tm>>
-    <associate|eq 20.806.248|<tuple|21.816|1717|Measure.tm>>
-    <associate|eq 20.807.248|<tuple|21.817|1717|Measure.tm>>
-    <associate|eq 20.808.248|<tuple|21.818|1717|Measure.tm>>
+    <associate|eq 20.800.248|<tuple|21.814|1723|Measure.tm>>
+    <associate|eq 20.801.248|<tuple|21.815|1723|Measure.tm>>
+    <associate|eq 20.802.248|<tuple|21.816|1723|Measure.tm>>
+    <associate|eq 20.803.248|<tuple|21.817|1723|Measure.tm>>
+    <associate|eq 20.804.248|<tuple|21.818|1723|Measure.tm>>
+    <associate|eq 20.805.248|<tuple|21.819|1724|Measure.tm>>
+    <associate|eq 20.806.248|<tuple|21.820|1724|Measure.tm>>
+    <associate|eq 20.807.248|<tuple|21.821|1724|Measure.tm>>
+    <associate|eq 20.808.248|<tuple|21.822|1724|Measure.tm>>
     <associate|eq 20.81.200|<tuple|21.55|1428|Measure.tm>>
-    <associate|eq 20.810.248|<tuple|21.820|1718|Measure.tm>>
-    <associate|eq 20.811.248|<tuple|21.821|1718|Measure.tm>>
-    <associate|eq 20.813.248|<tuple|21.822|1720|Measure.tm>>
-    <associate|eq 20.814.248|<tuple|21.823|1720|Measure.tm>>
-    <associate|eq 20.815.248|<tuple|21.824|1720|Measure.tm>>
-    <associate|eq 20.816.248|<tuple|21.825|1720|Measure.tm>>
-    <associate|eq 20.817.249|<tuple|21.826|1723|Measure.tm>>
-    <associate|eq 20.818.249|<tuple|21.827|1723|Measure.tm>>
-    <associate|eq 20.819.249|<tuple|21.828|1723|Measure.tm>>
+    <associate|eq 20.810.248|<tuple|21.824|1725|Measure.tm>>
+    <associate|eq 20.811.248|<tuple|21.825|1725|Measure.tm>>
+    <associate|eq 20.813.248|<tuple|21.826|1727|Measure.tm>>
+    <associate|eq 20.814.248|<tuple|21.827|1727|Measure.tm>>
+    <associate|eq 20.815.248|<tuple|21.828|1727|Measure.tm>>
+    <associate|eq 20.816.248|<tuple|21.829|1727|Measure.tm>>
+    <associate|eq 20.817.249|<tuple|21.830|1730|Measure.tm>>
+    <associate|eq 20.818.249|<tuple|21.831|1730|Measure.tm>>
+    <associate|eq 20.819.249|<tuple|21.832|1730|Measure.tm>>
     <associate|eq 20.82.200|<tuple|21.56|1428|Measure.tm>>
-    <associate|eq 20.820.249|<tuple|21.829|1725|Measure.tm>>
-    <associate|eq 20.821.249|<tuple|21.830|1725|Measure.tm>>
-    <associate|eq 20.822.249|<tuple|21.831|1725|Measure.tm>>
+    <associate|eq 20.820.249|<tuple|21.833|1732|Measure.tm>>
+    <associate|eq 20.821.249|<tuple|21.834|1732|Measure.tm>>
+    <associate|eq 20.822.249|<tuple|21.835|1732|Measure.tm>>
     <associate|eq 20.83.200|<tuple|21.57|1428|Measure.tm>>
     <associate|eq 20.84.200|<tuple|21.58|1429|Measure.tm>>
     <associate|eq 20.85.200|<tuple|21.59|1429|Measure.tm>>
     <associate|eq 20.86.200|<tuple|21.60|1429|Measure.tm>>
     <associate|eq 20.87.200|<tuple|21.61|1429|Measure.tm>>
-    <associate|eq 20.870.265|<tuple|21.832|1726|Measure.tm>>
-    <associate|eq 20.871.265|<tuple|21.835|1726|Measure.tm>>
-    <associate|eq 20.871.266|<tuple|21.833|1726|Measure.tm>>
-    <associate|eq 20.872.266|<tuple|21.834|1726|Measure.tm>>
-    <associate|eq 20.874.265|<tuple|21.836|1727|Measure.tm>>
-    <associate|eq 20.875.265|<tuple|21.837|1727|Measure.tm>>
-    <associate|eq 20.876.265|<tuple|21.838|1728|Measure.tm>>
-    <associate|eq 20.877.265|<tuple|21.839|1728|Measure.tm>>
-    <associate|eq 20.878.265|<tuple|21.840|1728|Measure.tm>>
-    <associate|eq 20.879.265|<tuple|21.841|1728|Measure.tm>>
-    <associate|eq 20.880.265|<tuple|21.842|1728|Measure.tm>>
-    <associate|eq 20.880.266|<tuple|21.851|1730|Measure.tm>>
-    <associate|eq 20.881.265|<tuple|21.843|1729|Measure.tm>>
-    <associate|eq 20.882.265|<tuple|21.844|1729|Measure.tm>>
-    <associate|eq 20.884.265|<tuple|21.845|1729|Measure.tm>>
-    <associate|eq 20.885.266|<tuple|21.846|1729|Measure.tm>>
-    <associate|eq 20.886.265|<tuple|21.848|1730|Measure.tm>>
-    <associate|eq 20.886.266|<tuple|21.847|1729|Measure.tm>>
-    <associate|eq 20.888.266|<tuple|21.850|1730|Measure.tm>>
-    <associate|eq 20.888.268|<tuple|21.849|1730|Measure.tm>>
-    <associate|eq 20.890.266|<tuple|21.852|1730|Measure.tm>>
-    <associate|eq 20.891.269|<tuple|21.853|1730|Measure.tm>>
-    <associate|eq 20.892.266|<tuple|21.854|1730|Measure.tm>>
-    <associate|eq 20.893.266|<tuple|21.855|1730|Measure.tm>>
-    <associate|eq 20.894.266|<tuple|21.856|1731|Measure.tm>>
-    <associate|eq 20.896.267|<tuple|21.857|1731|Measure.tm>>
-    <associate|eq 20.897.268|<tuple|21.858|1731|Measure.tm>>
-    <associate|eq 20.898.268|<tuple|21.859|1731|Measure.tm>>
+    <associate|eq 20.870.265|<tuple|21.836|1733|Measure.tm>>
+    <associate|eq 20.871.265|<tuple|21.839|1733|Measure.tm>>
+    <associate|eq 20.871.266|<tuple|21.837|1733|Measure.tm>>
+    <associate|eq 20.872.266|<tuple|21.838|1733|Measure.tm>>
+    <associate|eq 20.874.265|<tuple|21.840|1734|Measure.tm>>
+    <associate|eq 20.875.265|<tuple|21.841|1734|Measure.tm>>
+    <associate|eq 20.876.265|<tuple|21.842|1735|Measure.tm>>
+    <associate|eq 20.877.265|<tuple|21.843|1735|Measure.tm>>
+    <associate|eq 20.878.265|<tuple|21.844|1735|Measure.tm>>
+    <associate|eq 20.879.265|<tuple|21.845|1735|Measure.tm>>
+    <associate|eq 20.880.265|<tuple|21.846|1735|Measure.tm>>
+    <associate|eq 20.880.266|<tuple|21.855|1737|Measure.tm>>
+    <associate|eq 20.881.265|<tuple|21.847|1736|Measure.tm>>
+    <associate|eq 20.882.265|<tuple|21.848|1736|Measure.tm>>
+    <associate|eq 20.884.265|<tuple|21.849|1736|Measure.tm>>
+    <associate|eq 20.885.266|<tuple|21.850|1736|Measure.tm>>
+    <associate|eq 20.886.265|<tuple|21.852|1737|Measure.tm>>
+    <associate|eq 20.886.266|<tuple|21.851|1736|Measure.tm>>
+    <associate|eq 20.888.266|<tuple|21.854|1737|Measure.tm>>
+    <associate|eq 20.888.268|<tuple|21.853|1737|Measure.tm>>
+    <associate|eq 20.890.266|<tuple|21.856|1737|Measure.tm>>
+    <associate|eq 20.891.269|<tuple|21.857|1737|Measure.tm>>
+    <associate|eq 20.892.266|<tuple|21.858|1737|Measure.tm>>
+    <associate|eq 20.893.266|<tuple|21.859|1737|Measure.tm>>
+    <associate|eq 20.894.266|<tuple|21.860|1738|Measure.tm>>
+    <associate|eq 20.896.267|<tuple|21.861|1738|Measure.tm>>
+    <associate|eq 20.897.268|<tuple|21.862|1738|Measure.tm>>
+    <associate|eq 20.898.268|<tuple|21.863|1738|Measure.tm>>
     <associate|eq 20.9.155|<tuple|20.9|1356|ExtendedRealNumbers.tm>>
-    <associate|eq 20.900.269|<tuple|21.860|1732|Measure.tm>>
-    <associate|eq 20.901.269|<tuple|21.861|1732|Measure.tm>>
-    <associate|eq 20.902.269|<tuple|21.862|1732|Measure.tm>>
-    <associate|eq 20.903.269|<tuple|21.865|1733|Measure.tm>>
-    <associate|eq 20.903.270|<tuple|21.863|1733|Measure.tm>>
-    <associate|eq 20.904.269|<tuple|21.866|1733|Measure.tm>>
-    <associate|eq 20.904.271|<tuple|21.864|1733|Measure.tm>>
-    <associate|eq 20.905.269|<tuple|21.867|1734|Measure.tm>>
-    <associate|eq 20.907.270|<tuple|21.868|1734|Measure.tm>>
-    <associate|eq 20.909.271|<tuple|21.869|1734|Measure.tm>>
-    <associate|eq 20.910.271|<tuple|21.870|1736|Measure.tm>>
-    <associate|eq 20.913.271|<tuple|21.873|1737|Measure.tm>>
-    <associate|eq 20.914.271|<tuple|21.874|1737|Measure.tm>>
-    <associate|eq 20.915.271|<tuple|21.875|1739|Measure.tm>>
-    <associate|eq 20.916.271|<tuple|21.876|1739|Measure.tm>>
-    <associate|eq 20.918.249|<tuple|21.878|1742|Measure.tm>>
-    <associate|eq 20.919.279|<tuple|21.879|1743|Measure.tm>>
-    <associate|eq 20.921.279|<tuple|21.881|1743|Measure.tm>>
-    <associate|eq 20.922.279|<tuple|21.882|1743|Measure.tm>>
-    <associate|eq 20.923.279|<tuple|21.883|1744|Measure.tm>>
-    <associate|eq 20.925.279|<tuple|21.885|1745|Measure.tm>>
-    <associate|eq 20.926.279|<tuple|21.886|1745|Measure.tm>>
-    <associate|eq 20.927.279|<tuple|21.887|1745|Measure.tm>>
-    <associate|eq 20.928.279|<tuple|21.888|1745|Measure.tm>>
-    <associate|eq 20.929.279|<tuple|21.889|1746|Measure.tm>>
+    <associate|eq 20.900.269|<tuple|21.864|1739|Measure.tm>>
+    <associate|eq 20.901.269|<tuple|21.865|1739|Measure.tm>>
+    <associate|eq 20.902.269|<tuple|21.866|1739|Measure.tm>>
+    <associate|eq 20.903.269|<tuple|21.869|1740|Measure.tm>>
+    <associate|eq 20.903.270|<tuple|21.867|1740|Measure.tm>>
+    <associate|eq 20.904.269|<tuple|21.870|1741|Measure.tm>>
+    <associate|eq 20.904.271|<tuple|21.868|1740|Measure.tm>>
+    <associate|eq 20.905.269|<tuple|21.871|1741|Measure.tm>>
+    <associate|eq 20.907.270|<tuple|21.872|1741|Measure.tm>>
+    <associate|eq 20.909.271|<tuple|21.873|1741|Measure.tm>>
+    <associate|eq 20.910.271|<tuple|21.874|1743|Measure.tm>>
+    <associate|eq 20.913.271|<tuple|21.877|1744|Measure.tm>>
+    <associate|eq 20.914.271|<tuple|21.878|1744|Measure.tm>>
+    <associate|eq 20.915.271|<tuple|21.879|1746|Measure.tm>>
+    <associate|eq 20.916.271|<tuple|21.880|1746|Measure.tm>>
+    <associate|eq 20.918.249|<tuple|21.882|1749|Measure.tm>>
+    <associate|eq 20.919.279|<tuple|21.883|1750|Measure.tm>>
+    <associate|eq 20.921.279|<tuple|21.885|1750|Measure.tm>>
+    <associate|eq 20.922.279|<tuple|21.886|1751|Measure.tm>>
+    <associate|eq 20.923.279|<tuple|21.887|1752|Measure.tm>>
+    <associate|eq 20.925.279|<tuple|21.889|1752|Measure.tm>>
+    <associate|eq 20.926.279|<tuple|21.890|1753|Measure.tm>>
+    <associate|eq 20.927.279|<tuple|21.891|1753|Measure.tm>>
+    <associate|eq 20.928.279|<tuple|21.892|1753|Measure.tm>>
+    <associate|eq 20.929.279|<tuple|21.893|1753|Measure.tm>>
     <associate|eq 20.93.200|<tuple|21.90|1441|Measure.tm>>
-    <associate|eq 20.930.279|<tuple|21.890|1746|Measure.tm>>
-    <associate|eq 20.931.279|<tuple|21.891|1746|Measure.tm>>
-    <associate|eq 20.932.279|<tuple|21.892|1749|Measure.tm>>
-    <associate|eq 20.933.279|<tuple|21.893|1749|Measure.tm>>
-    <associate|eq 20.934.279|<tuple|21.894|1749|Measure.tm>>
-    <associate|eq 20.935.279|<tuple|21.895|1749|Measure.tm>>
-    <associate|eq 20.936.279|<tuple|21.896|1750|Measure.tm>>
-    <associate|eq 20.937.279|<tuple|21.897|1750|Measure.tm>>
-    <associate|eq 20.938.279|<tuple|21.898|1750|Measure.tm>>
-    <associate|eq 20.939.279|<tuple|21.899|1750|Measure.tm>>
+    <associate|eq 20.930.279|<tuple|21.894|1753|Measure.tm>>
+    <associate|eq 20.931.279|<tuple|21.895|1753|Measure.tm>>
+    <associate|eq 20.932.279|<tuple|21.896|1757|Measure.tm>>
+    <associate|eq 20.933.279|<tuple|21.897|1757|Measure.tm>>
+    <associate|eq 20.934.279|<tuple|21.898|1757|Measure.tm>>
+    <associate|eq 20.935.279|<tuple|21.899|1757|Measure.tm>>
+    <associate|eq 20.936.279|<tuple|21.900|1757|Measure.tm>>
+    <associate|eq 20.937.279|<tuple|21.901|1757|Measure.tm>>
+    <associate|eq 20.938.279|<tuple|21.902|1757|Measure.tm>>
+    <associate|eq 20.939.279|<tuple|21.903|1757|Measure.tm>>
     <associate|eq 20.94.200|<tuple|21.91|1441|Measure.tm>>
-    <associate|eq 20.940.279|<tuple|21.900|1750|Measure.tm>>
-    <associate|eq 20.941.279|<tuple|21.901|1750|Measure.tm>>
-    <associate|eq 20.942.279|<tuple|21.902|1751|Measure.tm>>
-    <associate|eq 20.943.279|<tuple|21.903|1751|Measure.tm>>
-    <associate|eq 20.944.279|<tuple|21.904|1751|Measure.tm>>
-    <associate|eq 20.945.279|<tuple|21.905|1751|Measure.tm>>
-    <associate|eq 20.946.279|<tuple|21.906|1751|Measure.tm>>
-    <associate|eq 20.947.279|<tuple|21.907|1751|Measure.tm>>
-    <associate|eq 20.948.279|<tuple|21.908|1751|Measure.tm>>
-    <associate|eq 20.949.279|<tuple|21.909|1751|Measure.tm>>
+    <associate|eq 20.940.279|<tuple|21.904|1758|Measure.tm>>
+    <associate|eq 20.941.279|<tuple|21.905|1758|Measure.tm>>
+    <associate|eq 20.942.279|<tuple|21.906|1758|Measure.tm>>
+    <associate|eq 20.943.279|<tuple|21.907|1758|Measure.tm>>
+    <associate|eq 20.944.279|<tuple|21.908|1758|Measure.tm>>
+    <associate|eq 20.945.279|<tuple|21.909|1758|Measure.tm>>
+    <associate|eq 20.946.279|<tuple|21.910|1759|Measure.tm>>
+    <associate|eq 20.947.279|<tuple|21.911|1759|Measure.tm>>
+    <associate|eq 20.948.279|<tuple|21.912|1759|Measure.tm>>
+    <associate|eq 20.949.279|<tuple|21.913|1759|Measure.tm>>
     <associate|eq 20.95.200|<tuple|21.92|1441|Measure.tm>>
-    <associate|eq 20.950.279|<tuple|21.910|1752|Measure.tm>>
-    <associate|eq 20.951.279|<tuple|21.911|1752|Measure.tm>>
-    <associate|eq 20.952.279|<tuple|21.912|1752|Measure.tm>>
-    <associate|eq 20.953.279|<tuple|21.913|1752|Measure.tm>>
-    <associate|eq 20.954.279|<tuple|21.926|1754|Measure.tm>>
-    <associate|eq 20.954.280|<tuple|21.914|1752|Measure.tm>>
-    <associate|eq 20.955.279|<tuple|21.927|1755|Measure.tm>>
-    <associate|eq 20.955.280|<tuple|21.915|1752|Measure.tm>>
-    <associate|eq 20.956.279|<tuple|21.928|1755|Measure.tm>>
-    <associate|eq 20.956.280|<tuple|21.916|1753|Measure.tm>>
-    <associate|eq 20.957.279|<tuple|21.929|1755|Measure.tm>>
-    <associate|eq 20.957.280|<tuple|21.917|1753|Measure.tm>>
-    <associate|eq 20.958.280|<tuple|21.918|1753|Measure.tm>>
-    <associate|eq 20.959.280|<tuple|21.919|1753|Measure.tm>>
+    <associate|eq 20.950.279|<tuple|21.914|1759|Measure.tm>>
+    <associate|eq 20.951.279|<tuple|21.915|1759|Measure.tm>>
+    <associate|eq 20.952.279|<tuple|21.916|1760|Measure.tm>>
+    <associate|eq 20.953.279|<tuple|21.917|1760|Measure.tm>>
+    <associate|eq 20.954.279|<tuple|21.930|1762|Measure.tm>>
+    <associate|eq 20.954.280|<tuple|21.918|1760|Measure.tm>>
+    <associate|eq 20.955.279|<tuple|21.931|1762|Measure.tm>>
+    <associate|eq 20.955.280|<tuple|21.919|1760|Measure.tm>>
+    <associate|eq 20.956.279|<tuple|21.932|1762|Measure.tm>>
+    <associate|eq 20.956.280|<tuple|21.920|1760|Measure.tm>>
+    <associate|eq 20.957.279|<tuple|21.933|1762|Measure.tm>>
+    <associate|eq 20.957.280|<tuple|21.921|1760|Measure.tm>>
+    <associate|eq 20.958.280|<tuple|21.922|1760|Measure.tm>>
+    <associate|eq 20.959.280|<tuple|21.923|1761|Measure.tm>>
     <associate|eq 20.96.200|<tuple|21.93|1442|Measure.tm>>
-    <associate|eq 20.960.280|<tuple|21.920|1753|Measure.tm>>
-    <associate|eq 20.961.280|<tuple|21.921|1753|Measure.tm>>
-    <associate|eq 20.962.280|<tuple|21.922|1753|Measure.tm>>
-    <associate|eq 20.963.280|<tuple|21.923|1754|Measure.tm>>
-    <associate|eq 20.964.280|<tuple|21.924|1754|Measure.tm>>
-    <associate|eq 20.965.280|<tuple|21.925|1754|Measure.tm>>
+    <associate|eq 20.960.280|<tuple|21.924|1761|Measure.tm>>
+    <associate|eq 20.961.280|<tuple|21.925|1761|Measure.tm>>
+    <associate|eq 20.962.280|<tuple|21.926|1761|Measure.tm>>
+    <associate|eq 20.963.280|<tuple|21.927|1761|Measure.tm>>
+    <associate|eq 20.964.280|<tuple|21.928|1762|Measure.tm>>
+    <associate|eq 20.965.280|<tuple|21.929|1762|Measure.tm>>
     <associate|eq 20.97.200|<tuple|21.94|1442|Measure.tm>>
-    <associate|eq 20.970.280|<tuple|21.930|1755|Measure.tm>>
-    <associate|eq 20.971.280|<tuple|21.931|1755|Measure.tm>>
-    <associate|eq 20.972.280|<tuple|21.932|1755|Measure.tm>>
-    <associate|eq 20.973.280|<tuple|21.933|1755|Measure.tm>>
-    <associate|eq 20.974.280|<tuple|21.934|1757|Measure.tm>>
-    <associate|eq 20.975.280|<tuple|21.935|1757|Measure.tm>>
-    <associate|eq 20.976.280|<tuple|21.936|1757|Measure.tm>>
-    <associate|eq 20.977.280|<tuple|21.937|1757|Measure.tm>>
-    <associate|eq 20.978.280|<tuple|21.938|1757|Measure.tm>>
-    <associate|eq 20.979.280|<tuple|21.939|1758|Measure.tm>>
+    <associate|eq 20.970.280|<tuple|21.934|1763|Measure.tm>>
+    <associate|eq 20.971.280|<tuple|21.935|1763|Measure.tm>>
+    <associate|eq 20.972.280|<tuple|21.936|1763|Measure.tm>>
+    <associate|eq 20.973.280|<tuple|21.937|1763|Measure.tm>>
+    <associate|eq 20.974.280|<tuple|21.938|1765|Measure.tm>>
+    <associate|eq 20.975.280|<tuple|21.939|1765|Measure.tm>>
+    <associate|eq 20.976.280|<tuple|21.940|1765|Measure.tm>>
+    <associate|eq 20.977.280|<tuple|21.941|1765|Measure.tm>>
+    <associate|eq 20.978.280|<tuple|21.942|1765|Measure.tm>>
+    <associate|eq 20.979.280|<tuple|21.943|1766|Measure.tm>>
     <associate|eq 20.98.200|<tuple|21.95|1442|Measure.tm>>
-    <associate|eq 20.980.280|<tuple|21.940|1758|Measure.tm>>
-    <associate|eq 20.981.280|<tuple|21.941|1758|Measure.tm>>
-    <associate|eq 20.982.280|<tuple|21.942|1758|Measure.tm>>
-    <associate|eq 20.983.280|<tuple|21.943|1758|Measure.tm>>
-    <associate|eq 20.984.280|<tuple|21.944|1759|Measure.tm>>
-    <associate|eq 20.985.280|<tuple|21.945|1759|Measure.tm>>
-    <associate|eq 20.986.280|<tuple|21.946|1759|Measure.tm>>
-    <associate|eq 20.987.280|<tuple|21.947|1760|Measure.tm>>
-    <associate|eq 20.988.280|<tuple|21.949|1763|Measure.tm>>
-    <associate|eq 20.988.281|<tuple|21.948|1762|Measure.tm>>
-    <associate|eq 20.989.280|<tuple|21.950|1763|Measure.tm>>
+    <associate|eq 20.980.280|<tuple|21.944|1766|Measure.tm>>
+    <associate|eq 20.981.280|<tuple|21.945|1766|Measure.tm>>
+    <associate|eq 20.982.280|<tuple|21.946|1766|Measure.tm>>
+    <associate|eq 20.983.280|<tuple|21.947|1766|Measure.tm>>
+    <associate|eq 20.984.280|<tuple|21.948|1766|Measure.tm>>
+    <associate|eq 20.985.280|<tuple|21.949|1767|Measure.tm>>
+    <associate|eq 20.986.280|<tuple|21.950|1767|Measure.tm>>
+    <associate|eq 20.987.280|<tuple|21.951|1768|Measure.tm>>
+    <associate|eq 20.988.280|<tuple|21.953|1770|Measure.tm>>
+    <associate|eq 20.988.281|<tuple|21.952|1770|Measure.tm>>
+    <associate|eq 20.989.280|<tuple|21.954|1770|Measure.tm>>
     <associate|eq 20.99.200|<tuple|21.96|1442|Measure.tm>>
-    <associate|eq 20.990.280|<tuple|21.951|1763|Measure.tm>>
-    <associate|eq 20.991.280|<tuple|21.952|1763|Measure.tm>>
-    <associate|eq 20.992.280|<tuple|21.953|1763|Measure.tm>>
-    <associate|eq 20.993.280|<tuple|21.954|1763|Measure.tm>>
-    <associate|eq 20.994.280|<tuple|21.955|1763|Measure.tm>>
-    <associate|eq 20.995.280|<tuple|21.956|1763|Measure.tm>>
-    <associate|eq 20.996.280|<tuple|21.957|1763|Measure.tm>>
-    <associate|eq 20.997.280|<tuple|21.958|1763|Measure.tm>>
-    <associate|eq 20.999.280|<tuple|21.959|1764|Measure.tm>>
-    <associate|eq 21.1.171|<tuple|22.7|1817|AffineSpaces.tm>>
-    <associate|eq 21.1.172|<tuple|22.1|1814|AffineSpaces.tm>>
-    <associate|eq 21.10.271|<tuple|22.16|1818|AffineSpaces.tm>>
-    <associate|eq 21.1000.285|<tuple|21.1011|1773|Measure.tm>>
-    <associate|eq 21.1001.285|<tuple|21.1012|1773|Measure.tm>>
-    <associate|eq 21.1002.285|<tuple|21.1013|1773|Measure.tm>>
-    <associate|eq 21.1003.285|<tuple|21.1014|1773|Measure.tm>>
-    <associate|eq 21.1004.286|<tuple|21.1015|1777|Measure.tm>>
-    <associate|eq 21.1005.286|<tuple|21.1016|1778|Measure.tm>>
-    <associate|eq 21.1006.286|<tuple|21.1017|1778|Measure.tm>>
-    <associate|eq 21.1007.286|<tuple|21.1018|1779|Measure.tm>>
-    <associate|eq 21.1008.286|<tuple|21.1019|1779|Measure.tm>>
-    <associate|eq 21.1009.286|<tuple|21.1020|1779|Measure.tm>>
-    <associate|eq 21.1010.286|<tuple|21.1021|1779|Measure.tm>>
-    <associate|eq 21.1011.286|<tuple|21.1022|1779|Measure.tm>>
-    <associate|eq 21.1012.286|<tuple|21.1023|1779|Measure.tm>>
-    <associate|eq 21.1013.286|<tuple|21.1024|1780|Measure.tm>>
-    <associate|eq 21.1014.286|<tuple|21.1025|1780|Measure.tm>>
-    <associate|eq 21.1015.286|<tuple|21.1026|1780|Measure.tm>>
-    <associate|eq 21.1016.286|<tuple|21.1027|1780|Measure.tm>>
-    <associate|eq 21.1017.286|<tuple|21.1028|1780|Measure.tm>>
-    <associate|eq 21.1018.286|<tuple|21.1029|1781|Measure.tm>>
-    <associate|eq 21.1019.286|<tuple|21.1030|1781|Measure.tm>>
-    <associate|eq 21.1020.286|<tuple|21.1031|1781|Measure.tm>>
-    <associate|eq 21.1021.286|<tuple|21.1032|1782|Measure.tm>>
-    <associate|eq 21.1022.286|<tuple|21.1033|1782|Measure.tm>>
-    <associate|eq 21.1023.286|<tuple|21.1034|1782|Measure.tm>>
-    <associate|eq 21.1024.286|<tuple|21.1035|1782|Measure.tm>>
-    <associate|eq 21.1025.286|<tuple|21.1036|1782|Measure.tm>>
-    <associate|eq 21.1026.286|<tuple|21.1037|1783|Measure.tm>>
-    <associate|eq 21.1027.286|<tuple|21.1038|1783|Measure.tm>>
-    <associate|eq 21.1028.286|<tuple|21.1039|1783|Measure.tm>>
-    <associate|eq 21.1029.286|<tuple|21.1040|1783|Measure.tm>>
-    <associate|eq 21.1030.286|<tuple|21.1041|1783|Measure.tm>>
-    <associate|eq 21.1031.286|<tuple|21.1042|1783|Measure.tm>>
-    <associate|eq 21.1032.286|<tuple|21.1043|1785|Measure.tm>>
+    <associate|eq 20.990.280|<tuple|21.955|1770|Measure.tm>>
+    <associate|eq 20.991.280|<tuple|21.956|1771|Measure.tm>>
+    <associate|eq 20.992.280|<tuple|21.957|1771|Measure.tm>>
+    <associate|eq 20.993.280|<tuple|21.958|1771|Measure.tm>>
+    <associate|eq 20.994.280|<tuple|21.959|1771|Measure.tm>>
+    <associate|eq 20.995.280|<tuple|21.960|1771|Measure.tm>>
+    <associate|eq 20.996.280|<tuple|21.961|1771|Measure.tm>>
+    <associate|eq 20.997.280|<tuple|21.962|1771|Measure.tm>>
+    <associate|eq 20.999.280|<tuple|21.963|1772|Measure.tm>>
+    <associate|eq 21.1.171|<tuple|22.7|1825|AffineSpaces.tm>>
+    <associate|eq 21.1.172|<tuple|22.1|1822|AffineSpaces.tm>>
+    <associate|eq 21.10.271|<tuple|22.16|1826|AffineSpaces.tm>>
+    <associate|eq 21.1000.285|<tuple|21.1015|1781|Measure.tm>>
+    <associate|eq 21.1001.285|<tuple|21.1016|1781|Measure.tm>>
+    <associate|eq 21.1002.285|<tuple|21.1017|1781|Measure.tm>>
+    <associate|eq 21.1003.285|<tuple|21.1018|1781|Measure.tm>>
+    <associate|eq 21.1004.286|<tuple|21.1019|1785|Measure.tm>>
+    <associate|eq 21.1005.286|<tuple|21.1020|1785|Measure.tm>>
+    <associate|eq 21.1006.286|<tuple|21.1021|1786|Measure.tm>>
+    <associate|eq 21.1007.286|<tuple|21.1022|1786|Measure.tm>>
+    <associate|eq 21.1008.286|<tuple|21.1023|1787|Measure.tm>>
+    <associate|eq 21.1009.286|<tuple|21.1024|1787|Measure.tm>>
+    <associate|eq 21.1010.286|<tuple|21.1025|1787|Measure.tm>>
+    <associate|eq 21.1011.286|<tuple|21.1026|1787|Measure.tm>>
+    <associate|eq 21.1012.286|<tuple|21.1027|1787|Measure.tm>>
+    <associate|eq 21.1013.286|<tuple|21.1028|1787|Measure.tm>>
+    <associate|eq 21.1014.286|<tuple|21.1029|1788|Measure.tm>>
+    <associate|eq 21.1015.286|<tuple|21.1030|1788|Measure.tm>>
+    <associate|eq 21.1016.286|<tuple|21.1031|1788|Measure.tm>>
+    <associate|eq 21.1017.286|<tuple|21.1032|1788|Measure.tm>>
+    <associate|eq 21.1018.286|<tuple|21.1033|1789|Measure.tm>>
+    <associate|eq 21.1019.286|<tuple|21.1034|1789|Measure.tm>>
+    <associate|eq 21.1020.286|<tuple|21.1035|1789|Measure.tm>>
+    <associate|eq 21.1021.286|<tuple|21.1036|1790|Measure.tm>>
+    <associate|eq 21.1022.286|<tuple|21.1037|1790|Measure.tm>>
+    <associate|eq 21.1023.286|<tuple|21.1038|1790|Measure.tm>>
+    <associate|eq 21.1024.286|<tuple|21.1039|1790|Measure.tm>>
+    <associate|eq 21.1025.286|<tuple|21.1040|1790|Measure.tm>>
+    <associate|eq 21.1026.286|<tuple|21.1041|1791|Measure.tm>>
+    <associate|eq 21.1027.286|<tuple|21.1042|1791|Measure.tm>>
+    <associate|eq 21.1028.286|<tuple|21.1043|1791|Measure.tm>>
+    <associate|eq 21.1029.286|<tuple|21.1044|1791|Measure.tm>>
+    <associate|eq 21.1030.286|<tuple|21.1045|1791|Measure.tm>>
+    <associate|eq 21.1031.286|<tuple|21.1046|1791|Measure.tm>>
+    <associate|eq 21.1032.286|<tuple|21.1047|1793|Measure.tm>>
     <associate|eq 21.1032.286.1|<tuple|21.25|1421|Measure.tm>>
-    <associate|eq 21.1033.286|<tuple|21.1044|1785|Measure.tm>>
+    <associate|eq 21.1033.286|<tuple|21.1048|1793|Measure.tm>>
     <associate|eq 21.1033.286.1|<tuple|21.27|1421|Measure.tm>>
-    <associate|eq 21.1036.287|<tuple|21.1045|1786|Measure.tm>>
-    <associate|eq 21.1037.287|<tuple|21.1046|1786|Measure.tm>>
-    <associate|eq 21.1038.287|<tuple|21.1047|1786|Measure.tm>>
-    <associate|eq 21.1039.287|<tuple|21.1048|1787|Measure.tm>>
-    <associate|eq 21.1040.290|<tuple|21.1049|1787|Measure.tm>>
-    <associate|eq 21.1041.290|<tuple|21.1050|1787|Measure.tm>>
-    <associate|eq 21.1042.290|<tuple|21.1051|1787|Measure.tm>>
-    <associate|eq 21.1043.290|<tuple|21.1052|1788|Measure.tm>>
-    <associate|eq 21.1044.290|<tuple|21.1071|1792|Measure.tm>>
-    <associate|eq 21.1045.290|<tuple|21.1072|1792|Measure.tm>>
-    <associate|eq 21.1045.291|<tuple|21.1054|1789|Measure.tm>>
-    <associate|eq 21.1046.290|<tuple|21.1073|1792|Measure.tm>>
-    <associate|eq 21.1046.291|<tuple|21.1055|1789|Measure.tm>>
-    <associate|eq 21.1047.291|<tuple|21.1056|1789|Measure.tm>>
-    <associate|eq 21.1048.291|<tuple|21.1057|1790|Measure.tm>>
-    <associate|eq 21.1049.291|<tuple|21.1058|1790|Measure.tm>>
-    <associate|eq 21.1050.291|<tuple|21.1059|1790|Measure.tm>>
-    <associate|eq 21.1051.291|<tuple|21.1060|1790|Measure.tm>>
-    <associate|eq 21.1052.291|<tuple|21.1061|1790|Measure.tm>>
-    <associate|eq 21.1054.291|<tuple|21.1063|1791|Measure.tm>>
-    <associate|eq 21.1055.291|<tuple|21.1064|1791|Measure.tm>>
-    <associate|eq 21.1056.291|<tuple|21.1065|1791|Measure.tm>>
-    <associate|eq 21.1057.291|<tuple|21.1066|1791|Measure.tm>>
-    <associate|eq 21.1058.291|<tuple|21.1067|1791|Measure.tm>>
-    <associate|eq 21.1059.291|<tuple|21.1068|1792|Measure.tm>>
-    <associate|eq 21.1060.291|<tuple|21.1069|1792|Measure.tm>>
-    <associate|eq 21.1061.291|<tuple|21.1070|1792|Measure.tm>>
-    <associate|eq 21.1065.291|<tuple|21.1074|1793|Measure.tm>>
-    <associate|eq 21.1066.291|<tuple|21.1075|1794|Measure.tm>>
-    <associate|eq 21.1067.291|<tuple|21.1076|1794|Measure.tm>>
-    <associate|eq 21.1068.291|<tuple|21.1077|1795|Measure.tm>>
-    <associate|eq 21.1069.291|<tuple|21.1077|1795|Measure.tm>>
-    <associate|eq 21.1070.291|<tuple|21.1079|1795|Measure.tm>>
-    <associate|eq 21.1071.291|<tuple|21.1080|1795|Measure.tm>>
-    <associate|eq 21.1072.291|<tuple|21.1081|1796|Measure.tm>>
-    <associate|eq 21.1073.291|<tuple|21.1082|1796|Measure.tm>>
-    <associate|eq 21.1074.291|<tuple|21.1083|1797|Measure.tm>>
-    <associate|eq 21.1075.291|<tuple|21.1084|1797|Measure.tm>>
-    <associate|eq 21.1076.291|<tuple|21.1085|1797|Measure.tm>>
-    <associate|eq 21.1077.291|<tuple|21.1086|1797|Measure.tm>>
-    <associate|eq 21.1078.291|<tuple|21.1087|1797|Measure.tm>>
-    <associate|eq 21.1079.291|<tuple|21.1088|1798|Measure.tm>>
-    <associate|eq 21.1080.292|<tuple|21.1089|1800|Measure.tm>>
-    <associate|eq 21.1081.291|<tuple|21.1092|1801|Measure.tm>>
-    <associate|eq 21.1081.292|<tuple|21.1090|1800|Measure.tm>>
-    <associate|eq 21.1082.291|<tuple|21.1093|1801|Measure.tm>>
-    <associate|eq 21.1082.292|<tuple|21.1091|1800|Measure.tm>>
-    <associate|eq 21.1083.291|<tuple|21.1094|1801|Measure.tm>>
-    <associate|eq 21.1084.291|<tuple|21.1095|1801|Measure.tm>>
-    <associate|eq 21.1085.291|<tuple|21.1096|1801|Measure.tm>>
-    <associate|eq 21.1086.291|<tuple|21.1097|1802|Measure.tm>>
-    <associate|eq 21.1087.291|<tuple|21.1098|1802|Measure.tm>>
-    <associate|eq 21.1088.291|<tuple|21.1099|1802|Measure.tm>>
-    <associate|eq 21.1089.291|<tuple|21.1100|1802|Measure.tm>>
+    <associate|eq 21.1036.287|<tuple|21.1049|1794|Measure.tm>>
+    <associate|eq 21.1037.287|<tuple|21.1050|1794|Measure.tm>>
+    <associate|eq 21.1038.287|<tuple|21.1051|1794|Measure.tm>>
+    <associate|eq 21.1039.287|<tuple|21.1052|1795|Measure.tm>>
+    <associate|eq 21.1040.290|<tuple|21.1053|1795|Measure.tm>>
+    <associate|eq 21.1041.290|<tuple|21.1054|1795|Measure.tm>>
+    <associate|eq 21.1042.290|<tuple|21.1055|1795|Measure.tm>>
+    <associate|eq 21.1043.290|<tuple|21.1056|1796|Measure.tm>>
+    <associate|eq 21.1044.290|<tuple|21.1075|1800|Measure.tm>>
+    <associate|eq 21.1045.290|<tuple|21.1076|1800|Measure.tm>>
+    <associate|eq 21.1045.291|<tuple|21.1058|1797|Measure.tm>>
+    <associate|eq 21.1046.290|<tuple|21.1077|1801|Measure.tm>>
+    <associate|eq 21.1046.291|<tuple|21.1059|1797|Measure.tm>>
+    <associate|eq 21.1047.291|<tuple|21.1060|1797|Measure.tm>>
+    <associate|eq 21.1048.291|<tuple|21.1061|1798|Measure.tm>>
+    <associate|eq 21.1049.291|<tuple|21.1062|1798|Measure.tm>>
+    <associate|eq 21.1050.291|<tuple|21.1063|1799|Measure.tm>>
+    <associate|eq 21.1051.291|<tuple|21.1064|1799|Measure.tm>>
+    <associate|eq 21.1052.291|<tuple|21.1065|1799|Measure.tm>>
+    <associate|eq 21.1054.291|<tuple|21.1067|1799|Measure.tm>>
+    <associate|eq 21.1055.291|<tuple|21.1068|1799|Measure.tm>>
+    <associate|eq 21.1056.291|<tuple|21.1069|1799|Measure.tm>>
+    <associate|eq 21.1057.291|<tuple|21.1070|1799|Measure.tm>>
+    <associate|eq 21.1058.291|<tuple|21.1071|1800|Measure.tm>>
+    <associate|eq 21.1059.291|<tuple|21.1072|1800|Measure.tm>>
+    <associate|eq 21.1060.291|<tuple|21.1073|1800|Measure.tm>>
+    <associate|eq 21.1061.291|<tuple|21.1074|1800|Measure.tm>>
+    <associate|eq 21.1065.291|<tuple|21.1078|1801|Measure.tm>>
+    <associate|eq 21.1066.291|<tuple|21.1079|1802|Measure.tm>>
+    <associate|eq 21.1067.291|<tuple|21.1080|1803|Measure.tm>>
+    <associate|eq 21.1068.291|<tuple|21.1081|1803|Measure.tm>>
+    <associate|eq 21.1069.291|<tuple|21.1081|1803|Measure.tm>>
+    <associate|eq 21.1070.291|<tuple|21.1083|1803|Measure.tm>>
+    <associate|eq 21.1071.291|<tuple|21.1084|1804|Measure.tm>>
+    <associate|eq 21.1072.291|<tuple|21.1085|1804|Measure.tm>>
+    <associate|eq 21.1073.291|<tuple|21.1086|1804|Measure.tm>>
+    <associate|eq 21.1074.291|<tuple|21.1087|1805|Measure.tm>>
+    <associate|eq 21.1075.291|<tuple|21.1088|1805|Measure.tm>>
+    <associate|eq 21.1076.291|<tuple|21.1089|1805|Measure.tm>>
+    <associate|eq 21.1077.291|<tuple|21.1090|1805|Measure.tm>>
+    <associate|eq 21.1078.291|<tuple|21.1091|1805|Measure.tm>>
+    <associate|eq 21.1079.291|<tuple|21.1092|1806|Measure.tm>>
+    <associate|eq 21.1080.292|<tuple|21.1093|1808|Measure.tm>>
+    <associate|eq 21.1081.291|<tuple|21.1096|1809|Measure.tm>>
+    <associate|eq 21.1081.292|<tuple|21.1094|1808|Measure.tm>>
+    <associate|eq 21.1082.291|<tuple|21.1097|1809|Measure.tm>>
+    <associate|eq 21.1082.292|<tuple|21.1095|1808|Measure.tm>>
+    <associate|eq 21.1083.291|<tuple|21.1098|1809|Measure.tm>>
+    <associate|eq 21.1084.291|<tuple|21.1099|1809|Measure.tm>>
+    <associate|eq 21.1085.291|<tuple|21.1100|1809|Measure.tm>>
+    <associate|eq 21.1086.291|<tuple|21.1101|1810|Measure.tm>>
+    <associate|eq 21.1087.291|<tuple|21.1102|1810|Measure.tm>>
+    <associate|eq 21.1088.291|<tuple|21.1103|1810|Measure.tm>>
+    <associate|eq 21.1089.291|<tuple|21.1104|1810|Measure.tm>>
     <associate|eq 21.109.300|<tuple|21.109|1449|Measure.tm>>
-    <associate|eq 21.1090.291|<tuple|21.1101|1802|Measure.tm>>
-    <associate|eq 21.1091.291|<tuple|21.1102|1802|Measure.tm>>
-    <associate|eq 21.1092.291|<tuple|21.1103|1803|Measure.tm>>
-    <associate|eq 21.1093.291|<tuple|21.1104|1803|Measure.tm>>
-    <associate|eq 21.1094.291|<tuple|21.1105|1803|Measure.tm>>
-    <associate|eq 21.1095.291|<tuple|21.1106|1803|Measure.tm>>
-    <associate|eq 21.1096.291|<tuple|21.1107|1803|Measure.tm>>
-    <associate|eq 21.1097.291|<tuple|21.1108|1804|Measure.tm>>
-    <associate|eq 21.1098.291|<tuple|21.1109|1804|Measure.tm>>
-    <associate|eq 21.1099.291|<tuple|21.1110|1804|Measure.tm>>
-    <associate|eq 21.1100.291|<tuple|21.1111|1805|Measure.tm>>
-    <associate|eq 21.1101.291|<tuple|21.1112|1805|Measure.tm>>
-    <associate|eq 21.1102.291|<tuple|21.1113|1805|Measure.tm>>
-    <associate|eq 21.1103.291|<tuple|21.1114|1806|Measure.tm>>
-    <associate|eq 21.1104.291|<tuple|21.1115|1806|Measure.tm>>
-    <associate|eq 21.1105.291|<tuple|21.1116|1806|Measure.tm>>
-    <associate|eq 21.1106.291|<tuple|21.1117|1806|Measure.tm>>
-    <associate|eq 21.1107.291|<tuple|21.1118|1807|Measure.tm>>
-    <associate|eq 21.1108.291|<tuple|21.1119|1807|Measure.tm>>
-    <associate|eq 21.1109.291|<tuple|21.1120|1808|Measure.tm>>
-    <associate|eq 21.1110.291|<tuple|21.1121|1808|Measure.tm>>
-    <associate|eq 21.1111.291|<tuple|21.1122|1808|Measure.tm>>
-    <associate|eq 21.1112.291|<tuple|21.1123|1808|Measure.tm>>
-    <associate|eq 21.1113.291|<tuple|21.1124|1808|Measure.tm>>
-    <associate|eq 21.1114.291|<tuple|21.1125|1808|Measure.tm>>
-    <associate|eq 21.1115.291|<tuple|21.1126|1808|Measure.tm>>
-    <associate|eq 21.1116.291|<tuple|21.1127|1809|Measure.tm>>
-    <associate|eq 21.1117.291|<tuple|21.1128|1809|Measure.tm>>
-    <associate|eq 21.1118.291|<tuple|21.1129|1809|Measure.tm>>
-    <associate|eq 21.17.173|<tuple|22.17|1819|AffineSpaces.tm>>
-    <associate|eq 21.18.273|<tuple|22.18|1819|AffineSpaces.tm>>
-    <associate|eq 21.19.273|<tuple|22.19|1819|AffineSpaces.tm>>
-    <associate|eq 21.2.171|<tuple|22.8|1817|AffineSpaces.tm>>
-    <associate|eq 21.2.172|<tuple|22.2|1814|AffineSpaces.tm>>
-    <associate|eq 21.20.273|<tuple|22.20|1819|AffineSpaces.tm>>
-    <associate|eq 21.21.173|<tuple|22.21|1820|AffineSpaces.tm>>
-    <associate|eq 21.22.273|<tuple|22.22|1820|AffineSpaces.tm>>
-    <associate|eq 21.23.173|<tuple|22.23|1821|AffineSpaces.tm>>
-    <associate|eq 21.24.173|<tuple|22.24|1821|AffineSpaces.tm>>
-    <associate|eq 21.25.173|<tuple|22.25|1821|AffineSpaces.tm>>
-    <associate|eq 21.26.273|<tuple|22.26|1821|AffineSpaces.tm>>
+    <associate|eq 21.1090.291|<tuple|21.1105|1810|Measure.tm>>
+    <associate|eq 21.1091.291|<tuple|21.1106|1810|Measure.tm>>
+    <associate|eq 21.1092.291|<tuple|21.1107|1811|Measure.tm>>
+    <associate|eq 21.1093.291|<tuple|21.1108|1811|Measure.tm>>
+    <associate|eq 21.1094.291|<tuple|21.1109|1811|Measure.tm>>
+    <associate|eq 21.1095.291|<tuple|21.1110|1811|Measure.tm>>
+    <associate|eq 21.1096.291|<tuple|21.1111|1811|Measure.tm>>
+    <associate|eq 21.1097.291|<tuple|21.1112|1812|Measure.tm>>
+    <associate|eq 21.1098.291|<tuple|21.1113|1812|Measure.tm>>
+    <associate|eq 21.1099.291|<tuple|21.1114|1812|Measure.tm>>
+    <associate|eq 21.1100.291|<tuple|21.1115|1813|Measure.tm>>
+    <associate|eq 21.1101.291|<tuple|21.1116|1813|Measure.tm>>
+    <associate|eq 21.1102.291|<tuple|21.1117|1813|Measure.tm>>
+    <associate|eq 21.1103.291|<tuple|21.1118|1814|Measure.tm>>
+    <associate|eq 21.1104.291|<tuple|21.1119|1814|Measure.tm>>
+    <associate|eq 21.1105.291|<tuple|21.1120|1814|Measure.tm>>
+    <associate|eq 21.1106.291|<tuple|21.1121|1814|Measure.tm>>
+    <associate|eq 21.1107.291|<tuple|21.1122|1815|Measure.tm>>
+    <associate|eq 21.1108.291|<tuple|21.1123|1815|Measure.tm>>
+    <associate|eq 21.1109.291|<tuple|21.1124|1816|Measure.tm>>
+    <associate|eq 21.1110.291|<tuple|21.1125|1816|Measure.tm>>
+    <associate|eq 21.1111.291|<tuple|21.1126|1816|Measure.tm>>
+    <associate|eq 21.1112.291|<tuple|21.1127|1816|Measure.tm>>
+    <associate|eq 21.1113.291|<tuple|21.1128|1816|Measure.tm>>
+    <associate|eq 21.1114.291|<tuple|21.1129|1816|Measure.tm>>
+    <associate|eq 21.1115.291|<tuple|21.1130|1816|Measure.tm>>
+    <associate|eq 21.1116.291|<tuple|21.1131|1817|Measure.tm>>
+    <associate|eq 21.1117.291|<tuple|21.1132|1817|Measure.tm>>
+    <associate|eq 21.1118.291|<tuple|21.1133|1817|Measure.tm>>
+    <associate|eq 21.160.300|<tuple|21.160|1489|Measure.tm>>
+    <associate|eq 21.17.173|<tuple|22.17|1827|AffineSpaces.tm>>
+    <associate|eq 21.18.273|<tuple|22.18|1827|AffineSpaces.tm>>
+    <associate|eq 21.19.273|<tuple|22.19|1827|AffineSpaces.tm>>
+    <associate|eq 21.2.171|<tuple|22.8|1825|AffineSpaces.tm>>
+    <associate|eq 21.2.172|<tuple|22.2|1822|AffineSpaces.tm>>
+    <associate|eq 21.20.273|<tuple|22.20|1827|AffineSpaces.tm>>
+    <associate|eq 21.21.173|<tuple|22.21|1828|AffineSpaces.tm>>
+    <associate|eq 21.22.273|<tuple|22.22|1828|AffineSpaces.tm>>
+    <associate|eq 21.23.173|<tuple|22.23|1829|AffineSpaces.tm>>
+    <associate|eq 21.24.173|<tuple|22.24|1829|AffineSpaces.tm>>
+    <associate|eq 21.25.173|<tuple|22.25|1829|AffineSpaces.tm>>
+    <associate|eq 21.259.300|<tuple|21.259|1502|Measure.tm>>
+    <associate|eq 21.26.273|<tuple|22.26|1829|AffineSpaces.tm>>
     <associate|eq 21.26.300|<tuple|21.26|1421|Measure.tm>>
-    <associate|eq 21.27.275|<tuple|22.27|1821|AffineSpaces.tm>>
-    <associate|eq 21.28.273|<tuple|22.31|1822|AffineSpaces.tm>>
-    <associate|eq 21.28.275|<tuple|22.28|1821|AffineSpaces.tm>>
-    <associate|eq 21.29.273|<tuple|22.32|1822|AffineSpaces.tm>>
-    <associate|eq 21.29.274|<tuple|22.33|1822|AffineSpaces.tm>>
-    <associate|eq 21.29.275|<tuple|22.29|1821|AffineSpaces.tm>>
-    <associate|eq 21.3.172|<tuple|22.3|1815|AffineSpaces.tm>>
-    <associate|eq 21.3.271|<tuple|22.9|1817|AffineSpaces.tm>>
-    <associate|eq 21.30.274|<tuple|22.34|1822|AffineSpaces.tm>>
-    <associate|eq 21.30.275|<tuple|22.30|1822|AffineSpaces.tm>>
-    <associate|eq 21.35.275|<tuple|22.35|1823|AffineSpaces.tm>>
-    <associate|eq 21.350.293|<tuple|21.353|1531|Measure.tm>>
-    <associate|eq 21.351.293|<tuple|21.354|1531|Measure.tm>>
-    <associate|eq 21.352.293|<tuple|21.355|1532|Measure.tm>>
-    <associate|eq 21.353.293|<tuple|21.356|1532|Measure.tm>>
-    <associate|eq 21.354.296|<tuple|21.357|1532|Measure.tm>>
-    <associate|eq 21.355.296|<tuple|21.358|1532|Measure.tm>>
-    <associate|eq 21.36.275|<tuple|22.36|1823|AffineSpaces.tm>>
-    <associate|eq 21.37.275|<tuple|22.37|1824|AffineSpaces.tm>>
-    <associate|eq 21.38.275|<tuple|22.38|1824|AffineSpaces.tm>>
-    <associate|eq 21.39.275|<tuple|22.39|1824|AffineSpaces.tm>>
-    <associate|eq 21.4.171|<tuple|22.10|1817|AffineSpaces.tm>>
-    <associate|eq 21.4.272|<tuple|22.4|1815|AffineSpaces.tm>>
-    <associate|eq 21.40.275|<tuple|22.40|1824|AffineSpaces.tm>>
-    <associate|eq 21.41.275|<tuple|22.41|1824|AffineSpaces.tm>>
-    <associate|eq 21.42.275|<tuple|22.42|1824|AffineSpaces.tm>>
-    <associate|eq 21.43.275|<tuple|22.43|1824|AffineSpaces.tm>>
-    <associate|eq 21.44.275|<tuple|22.44|1824|AffineSpaces.tm>>
-    <associate|eq 21.45.275|<tuple|22.45|1824|AffineSpaces.tm>>
-    <associate|eq 21.46.275|<tuple|22.46|1824|AffineSpaces.tm>>
-    <associate|eq 21.47.275|<tuple|22.47|1825|AffineSpaces.tm>>
-    <associate|eq 21.48.275|<tuple|22.48|1825|AffineSpaces.tm>>
-    <associate|eq 21.49.275|<tuple|22.49|1825|AffineSpaces.tm>>
-    <associate|eq 21.5.171|<tuple|22.11|1817|AffineSpaces.tm>>
-    <associate|eq 21.5.272|<tuple|22.5|1815|AffineSpaces.tm>>
-    <associate|eq 21.6.171|<tuple|22.12|1817|AffineSpaces.tm>>
-    <associate|eq 21.6.172|<tuple|22.6|1815|AffineSpaces.tm>>
-    <associate|eq 21.7.171|<tuple|22.13|1817|AffineSpaces.tm>>
-    <associate|eq 21.8.271|<tuple|22.14|1818|AffineSpaces.tm>>
+    <associate|eq 21.27.275|<tuple|22.27|1829|AffineSpaces.tm>>
+    <associate|eq 21.28.273|<tuple|22.31|1830|AffineSpaces.tm>>
+    <associate|eq 21.28.275|<tuple|22.28|1829|AffineSpaces.tm>>
+    <associate|eq 21.29.273|<tuple|22.32|1830|AffineSpaces.tm>>
+    <associate|eq 21.29.274|<tuple|22.33|1830|AffineSpaces.tm>>
+    <associate|eq 21.29.275|<tuple|22.29|1829|AffineSpaces.tm>>
+    <associate|eq 21.3.172|<tuple|22.3|1823|AffineSpaces.tm>>
+    <associate|eq 21.3.271|<tuple|22.9|1825|AffineSpaces.tm>>
+    <associate|eq 21.30.274|<tuple|22.34|1830|AffineSpaces.tm>>
+    <associate|eq 21.30.275|<tuple|22.30|1830|AffineSpaces.tm>>
+    <associate|eq 21.35.275|<tuple|22.35|1831|AffineSpaces.tm>>
+    <associate|eq 21.350.293|<tuple|21.349|1530|Measure.tm>>
+    <associate|eq 21.351.293|<tuple|21.350|1530|Measure.tm>>
+    <associate|eq 21.352.293|<tuple|21.351|1531|Measure.tm>>
+    <associate|eq 21.353.293|<tuple|21.352|1531|Measure.tm>>
+    <associate|eq 21.354.296|<tuple|21.353|1531|Measure.tm>>
+    <associate|eq 21.355.296|<tuple|21.354|1531|Measure.tm>>
+    <associate|eq 21.36.275|<tuple|22.36|1831|AffineSpaces.tm>>
+    <associate|eq 21.37.275|<tuple|22.37|1832|AffineSpaces.tm>>
+    <associate|eq 21.372.300|<tuple|21.372|1538|Measure.tm>>
+    <associate|eq 21.373.300|<tuple|21.373|1539|Measure.tm>>
+    <associate|eq 21.374.300|<tuple|21.374|1539|Measure.tm>>
+    <associate|eq 21.38.275|<tuple|22.38|1832|AffineSpaces.tm>>
+    <associate|eq 21.382.300|<tuple|21.382|1546|Measure.tm>>
+    <associate|eq 21.385.300|<tuple|21.385|1550|Measure.tm>>
+    <associate|eq 21.386.301|<tuple|21.386|1550|Measure.tm>>
+    <associate|eq 21.387.300|<tuple|21.387|1550|Measure.tm>>
+    <associate|eq 21.388.300|<tuple|21.388|1550|Measure.tm>>
+    <associate|eq 21.389.300|<tuple|21.389|1550|Measure.tm>>
+    <associate|eq 21.39.275|<tuple|22.39|1832|AffineSpaces.tm>>
+    <associate|eq 21.398.301|<tuple|21.398|1558|Measure.tm>>
+    <associate|eq 21.4.171|<tuple|22.10|1825|AffineSpaces.tm>>
+    <associate|eq 21.4.272|<tuple|22.4|1823|AffineSpaces.tm>>
+    <associate|eq 21.40.275|<tuple|22.40|1832|AffineSpaces.tm>>
+    <associate|eq 21.401.301|<tuple|21.401|1559|Measure.tm>>
+    <associate|eq 21.402.301|<tuple|21.402|1560|Measure.tm>>
+    <associate|eq 21.403.301|<tuple|21.403|1560|Measure.tm>>
+    <associate|eq 21.404.301|<tuple|21.404|1560|Measure.tm>>
+    <associate|eq 21.405.301|<tuple|21.405|1560|Measure.tm>>
+    <associate|eq 21.406.301|<tuple|21.406|1561|Measure.tm>>
+    <associate|eq 21.407.301|<tuple|21.407|1561|Measure.tm>>
+    <associate|eq 21.408.301|<tuple|21.408|1561|Measure.tm>>
+    <associate|eq 21.409.301|<tuple|21.409|1561|Measure.tm>>
+    <associate|eq 21.41.275|<tuple|22.41|1832|AffineSpaces.tm>>
+    <associate|eq 21.412.301|<tuple|21.412|1565|Measure.tm>>
+    <associate|eq 21.413.301|<tuple|21.413|1565|Measure.tm>>
+    <associate|eq 21.414.301|<tuple|21.414|1565|Measure.tm>>
+    <associate|eq 21.415.301|<tuple|21.415|1565|Measure.tm>>
+    <associate|eq 21.42.275|<tuple|22.42|1832|AffineSpaces.tm>>
+    <associate|eq 21.422.301|<tuple|21.422|1572|Measure.tm>>
+    <associate|eq 21.43.275|<tuple|22.43|1832|AffineSpaces.tm>>
+    <associate|eq 21.44.275|<tuple|22.44|1832|AffineSpaces.tm>>
+    <associate|eq 21.45.275|<tuple|22.45|1832|AffineSpaces.tm>>
+    <associate|eq 21.46.275|<tuple|22.46|1832|AffineSpaces.tm>>
+    <associate|eq 21.47.275|<tuple|22.47|1833|AffineSpaces.tm>>
+    <associate|eq 21.48.275|<tuple|22.48|1833|AffineSpaces.tm>>
+    <associate|eq 21.49.275|<tuple|22.49|1833|AffineSpaces.tm>>
+    <associate|eq 21.5.171|<tuple|22.11|1825|AffineSpaces.tm>>
+    <associate|eq 21.5.272|<tuple|22.5|1823|AffineSpaces.tm>>
+    <associate|eq 21.6.171|<tuple|22.12|1825|AffineSpaces.tm>>
+    <associate|eq 21.6.172|<tuple|22.6|1823|AffineSpaces.tm>>
+    <associate|eq 21.7.171|<tuple|22.13|1825|AffineSpaces.tm>>
+    <associate|eq 21.8.271|<tuple|22.14|1826|AffineSpaces.tm>>
     <associate|eq 21.84.300|<tuple|21.84|1436|Measure.tm>>
-    <associate|eq 21.9.271|<tuple|22.15|1818|AffineSpaces.tm>>
-    <associate|eq 21.991.285|<tuple|21.1002|1771|Measure.tm>>
-    <associate|eq 21.992.285|<tuple|21.1003|1771|Measure.tm>>
-    <associate|eq 21.992.285.1|<tuple|21.1003|1771|Measure.tm>>
-    <associate|eq 21.993.285|<tuple|21.1004|1772|Measure.tm>>
-    <associate|eq 21.994.285|<tuple|21.1005|1772|Measure.tm>>
-    <associate|eq 21.995.285|<tuple|21.1006|1772|Measure.tm>>
-    <associate|eq 21.996.285|<tuple|21.1007|1772|Measure.tm>>
-    <associate|eq 21.997.285|<tuple|21.1008|1772|Measure.tm>>
-    <associate|eq 21.998.285|<tuple|21.1009|1772|Measure.tm>>
-    <associate|eq 21.999.285|<tuple|21.1010|1773|Measure.tm>>
+    <associate|eq 21.9.271|<tuple|22.15|1826|AffineSpaces.tm>>
+    <associate|eq 21.991.285|<tuple|21.1006|1778|Measure.tm>>
+    <associate|eq 21.992.285|<tuple|21.1007|1779|Measure.tm>>
+    <associate|eq 21.992.285.1|<tuple|21.1007|1779|Measure.tm>>
+    <associate|eq 21.993.285|<tuple|21.1008|1779|Measure.tm>>
+    <associate|eq 21.994.285|<tuple|21.1009|1779|Measure.tm>>
+    <associate|eq 21.995.285|<tuple|21.1010|1779|Measure.tm>>
+    <associate|eq 21.996.285|<tuple|21.1011|1779|Measure.tm>>
+    <associate|eq 21.997.285|<tuple|21.1012|1779|Measure.tm>>
+    <associate|eq 21.998.285|<tuple|21.1013|1780|Measure.tm>>
+    <associate|eq 21.999.285|<tuple|21.1014|1780|Measure.tm>>
     <associate|eq 3.1.009|<tuple|3.1|87|Sets.tm>>
     <associate|eq 3.10.012|<tuple|3.10|100|Sets.tm>>
     <associate|eq 3.11.012|<tuple|3.11|100|Sets.tm>>
@@ -7246,112 +7243,114 @@
     <associate|exp trigoniometric properties|<tuple|19.57|1307|Exponential.tm>>
     <associate|exp trigoniometric properties
     (1)|<tuple|19.64|1314|Exponential.tm>>
-    <associate|extended -(x.y)|<tuple|20.38|1340|ExtendedRealNumbers.tm>>
+    <associate|extended -(x.y)|<tuple|20.39|1341|ExtendedRealNumbers.tm>>
     <associate|extended 0\<less\>=x and 0\<less\>=y then
     x-y\<less\>=x|<tuple|20.27|1331|ExtendedRealNumbers.tm>>
     <associate|extended 0\<less\>=y and z=x+y then
-    x\<less\>=z|<tuple|20.34|1336|ExtendedRealNumbers.tm>>
+    x\<less\>=z|<tuple|20.35|1336|ExtendedRealNumbers.tm>>
     <associate|extended 0\<less\>x and 0\<less\>=y then
-    0\<less\>x+y|<tuple|20.33|1336|ExtendedRealNumbers.tm>>
+    0\<less\>x+y|<tuple|20.34|1336|ExtendedRealNumbers.tm>>
     <associate|extended 1/x|<tuple|20.21|1329|ExtendedRealNumbers.tm>>
     <associate|extended abelian semi group|<tuple|20.26|1330|ExtendedRealNumbers.tm>>
     <associate|extended abelian semi group
-    (1)|<tuple|20.37|1338|ExtendedRealNumbers.tm>>
-    <associate|extended absolute value|<tuple|20.43|1344|ExtendedRealNumbers.tm>>
-    <associate|extended basis for the topology|<tuple|20.47|1345|ExtendedRealNumbers.tm>>
+    (1)|<tuple|20.38|1338|ExtendedRealNumbers.tm>>
+    <associate|extended absolute value|<tuple|20.44|1344|ExtendedRealNumbers.tm>>
+    <associate|extended basis for the topology|<tuple|20.48|1345|ExtendedRealNumbers.tm>>
     <associate|extended canonical topologies on the real and extended real
-    space|<tuple|20.50|1346|ExtendedRealNumbers.tm>>
-    <associate|extended canonical topology|<tuple|20.49|1346|ExtendedRealNumbers.tm>>
-    <associate|extended closed sets|<tuple|20.51|1347|ExtendedRealNumbers.tm>>
-    <associate|extended constant sequence|<tuple|20.59|1353|ExtendedRealNumbers.tm>>
-    <associate|extended continuous functions|<tuple|20.53|1349|ExtendedRealNumbers.tm>>
+    space|<tuple|20.51|1346|ExtendedRealNumbers.tm>>
+    <associate|extended canonical topology|<tuple|20.50|1346|ExtendedRealNumbers.tm>>
+    <associate|extended closed sets|<tuple|20.52|1347|ExtendedRealNumbers.tm>>
+    <associate|extended constant sequence|<tuple|20.60|1353|ExtendedRealNumbers.tm>>
+    <associate|extended continuous functions|<tuple|20.54|1349|ExtendedRealNumbers.tm>>
     <associate|extended density|<tuple|20.12|1325|ExtendedRealNumbers.tm>>
     <associate|extended denumerable sum of denumerable
-    sums|<tuple|20.107|1396|ExtendedRealNumbers.tm>>
+    sums|<tuple|20.108|1395|ExtendedRealNumbers.tm>>
     <associate|extended denumerable sum of finite
-    sums|<tuple|20.106|1393|ExtendedRealNumbers.tm>>
-    <associate|extended distributitivy|<tuple|20.41|1342|ExtendedRealNumbers.tm>>
+    sums|<tuple|20.107|1393|ExtendedRealNumbers.tm>>
+    <associate|extended distributitivy|<tuple|20.42|1342|ExtendedRealNumbers.tm>>
     <associate|extended distributitivy finite
-    sum|<tuple|20.97|1386|ExtendedRealNumbers.tm>>
-    <associate|extended finite sums|<tuple|20.92|1384|ExtendedRealNumbers.tm>>
+    sum|<tuple|20.98|1386|ExtendedRealNumbers.tm>>
+    <associate|extended finite sums|<tuple|20.93|1383|ExtendedRealNumbers.tm>>
     <associate|extended fully order|<tuple|20.9|1324|ExtendedRealNumbers.tm>>
-    <associate|extended generating basis|<tuple|20.48|1345|ExtendedRealNumbers.tm>>
-    <associate|extended inf sup negate|<tuple|20.65|1357|ExtendedRealNumbers.tm>>
-    <associate|extended inf(sup) sup(inf)|<tuple|20.56|1352|ExtendedRealNumbers.tm>>
+    <associate|extended generating basis|<tuple|20.49|1345|ExtendedRealNumbers.tm>>
+    <associate|extended inf sup negate|<tuple|20.66|1357|ExtendedRealNumbers.tm>>
+    <associate|extended inf(sup) sup(inf)|<tuple|20.57|1352|ExtendedRealNumbers.tm>>
     <associate|extended infinite inf sup|<tuple|20.15|1328|ExtendedRealNumbers.tm>>
-    <associate|extended infinite sum|<tuple|20.94|1386|ExtendedRealNumbers.tm>>
+    <associate|extended infinite sum|<tuple|20.95|1386|ExtendedRealNumbers.tm>>
     <associate|extended infinite sum of zero
-    elements|<tuple|20.96|1386|ExtendedRealNumbers.tm>>
-    <associate|extended infinite sum properties|<tuple|20.98|1387|ExtendedRealNumbers.tm>>
-    <associate|extended lemma 20.62.155|<tuple|20.67|1358|ExtendedRealNumbers.tm>>
+    elements|<tuple|20.97|1386|ExtendedRealNumbers.tm>>
+    <associate|extended infinite sum properties|<tuple|20.99|1387|ExtendedRealNumbers.tm>>
+    <associate|extended lemma 20.62.155|<tuple|20.68|1358|ExtendedRealNumbers.tm>>
     <associate|extended lim inf \<less\>= lim
-    sup|<tuple|20.69|1361|ExtendedRealNumbers.tm>>
-    <associate|extended lim inf and lim sup|<tuple|20.57|1353|ExtendedRealNumbers.tm>>
+    sup|<tuple|20.70|1361|ExtendedRealNumbers.tm>>
+    <associate|extended lim inf and lim sup|<tuple|20.58|1353|ExtendedRealNumbers.tm>>
     <associate|extended lim inf and lim sup and
-    sum|<tuple|20.64|1356|ExtendedRealNumbers.tm>>
+    sum|<tuple|20.65|1356|ExtendedRealNumbers.tm>>
     <associate|extended lim inf lim sup and
-    negation|<tuple|20.66|1358|ExtendedRealNumbers.tm>>
+    negation|<tuple|20.67|1358|ExtendedRealNumbers.tm>>
     <associate|extended lim inf lim sup in the set of real
-    numbers|<tuple|20.70|1362|ExtendedRealNumbers.tm>>
+    numbers|<tuple|20.71|1362|ExtendedRealNumbers.tm>>
     <associate|extended lim inf lim sup in the set of real numbers
-    (1)|<tuple|20.76|1365|ExtendedRealNumbers.tm>>
+    (1)|<tuple|20.77|1365|ExtendedRealNumbers.tm>>
     <associate|extended lim inf lim sup ineqality
-    (1)|<tuple|20.61|1354|ExtendedRealNumbers.tm>>
+    (1)|<tuple|20.62|1354|ExtendedRealNumbers.tm>>
     <associate|extended lim inf lim sup ineqality
-    (2)|<tuple|20.62|1355|ExtendedRealNumbers.tm>>
-    <associate|extended lim inf lim sup properties|<tuple|20.68|1360|ExtendedRealNumbers.tm>>
-    <associate|extended lim inf x_i+n|<tuple|20.60|1354|ExtendedRealNumbers.tm>>
-    <associate|extended lim n to infinite|<tuple|20.81|1369|ExtendedRealNumbers.tm>>
-    <associate|extended limit|<tuple|20.71|1363|ExtendedRealNumbers.tm>>
-    <associate|extended limit (-@@)^n|<tuple|20.74|1363|ExtendedRealNumbers.tm>>
-    <associate|extended limit 1/(x_i)|<tuple|20.89|1381|ExtendedRealNumbers.tm>>
-    <associate|extended limit 1/n|<tuple|20.77|1365|ExtendedRealNumbers.tm>>
-    <associate|extended limit absolute value|<tuple|20.80|1368|ExtendedRealNumbers.tm>>
-    <associate|extended limit and finite sum|<tuple|20.87|1380|ExtendedRealNumbers.tm>>
-    <associate|extended limit and index translation|<tuple|20.83|1370|ExtendedRealNumbers.tm>>
+    (2)|<tuple|20.63|1355|ExtendedRealNumbers.tm>>
+    <associate|extended lim inf lim sup properties|<tuple|20.69|1360|ExtendedRealNumbers.tm>>
+    <associate|extended lim inf x_i+n|<tuple|20.61|1354|ExtendedRealNumbers.tm>>
+    <associate|extended lim n to infinite|<tuple|20.82|1369|ExtendedRealNumbers.tm>>
+    <associate|extended limit|<tuple|20.72|1363|ExtendedRealNumbers.tm>>
+    <associate|extended limit (-@@)^n|<tuple|20.75|1363|ExtendedRealNumbers.tm>>
+    <associate|extended limit 1/(x_i)|<tuple|20.90|1381|ExtendedRealNumbers.tm>>
+    <associate|extended limit 1/n|<tuple|20.78|1365|ExtendedRealNumbers.tm>>
+    <associate|extended limit absolute value|<tuple|20.81|1368|ExtendedRealNumbers.tm>>
+    <associate|extended limit and finite sum|<tuple|20.88|1379|ExtendedRealNumbers.tm>>
+    <associate|extended limit and index translation|<tuple|20.84|1370|ExtendedRealNumbers.tm>>
     <associate|extended limit based on supremum and
-    infinnum|<tuple|20.82|1369|ExtendedRealNumbers.tm>>
-    <associate|extended limit constant sequence|<tuple|20.73|1363|ExtendedRealNumbers.tm>>
-    <associate|extended limit equivalences|<tuple|20.78|1366|ExtendedRealNumbers.tm>>
+    infinnum|<tuple|20.83|1369|ExtendedRealNumbers.tm>>
+    <associate|extended limit constant sequence|<tuple|20.74|1363|ExtendedRealNumbers.tm>>
+    <associate|extended limit equivalences|<tuple|20.79|1366|ExtendedRealNumbers.tm>>
     <associate|extended limit in the (extended) real
-    numbers|<tuple|20.75|1363|ExtendedRealNumbers.tm>>
+    numbers|<tuple|20.76|1363|ExtendedRealNumbers.tm>>
     <associate|extended limit increasing / decreasing sequence
-    exist|<tuple|20.91|1383|ExtendedRealNumbers.tm>>
-    <associate|extended limit properties|<tuple|20.84|1370|ExtendedRealNumbers.tm>>
-    <associate|extended negate|<tuple|20.36|1338|ExtendedRealNumbers.tm>>
-    <associate|extended negate inequality|<tuple|20.40|1342|ExtendedRealNumbers.tm>>
+    exist|<tuple|20.92|1382|ExtendedRealNumbers.tm>>
+    <associate|extended limit properties|<tuple|20.85|1370|ExtendedRealNumbers.tm>>
+    <associate|extended negate|<tuple|20.37|1338|ExtendedRealNumbers.tm>>
+    <associate|extended negate inequality|<tuple|20.41|1342|ExtendedRealNumbers.tm>>
     <associate|extended neutral element|<tuple|20.18|1329|ExtendedRealNumbers.tm>>
-    <associate|extended open set properties|<tuple|20.52|1348|ExtendedRealNumbers.tm>>
+    <associate|extended open set properties|<tuple|20.53|1348|ExtendedRealNumbers.tm>>
     <associate|extended open set scaling and
-    translation|<tuple|20.54|1349|ExtendedRealNumbers.tm>>
+    translation|<tuple|20.55|1349|ExtendedRealNumbers.tm>>
     <associate|extended order relation|<tuple|20.4|1323|ExtendedRealNumbers.tm>>
-    <associate|extended partial sums converges|<tuple|20.93|1385|ExtendedRealNumbers.tm>>
+    <associate|extended partial sums converges|<tuple|20.94|1385|ExtendedRealNumbers.tm>>
     <associate|extended positive and non negative
     numbers|<tuple|20.25|1330|ExtendedRealNumbers.tm>>
     <associate|extended reals|<tuple|20.1|1323|ExtendedRealNumbers.tm>>
     <associate|extended reals existence|<tuple|10.98|345|Numbers.tm>>
     <associate|extended reals finite real
     number|<tuple|20.3|1323|ExtendedRealNumbers.tm>>
-    <associate|extended series and index translation|<tuple|20.99|1388|ExtendedRealNumbers.tm>>
-    <associate|extended series and permutations|<tuple|20.100|1388|ExtendedRealNumbers.tm>>
+    <associate|extended series and index translation|<tuple|20.100|1387|ExtendedRealNumbers.tm>>
+    <associate|extended series and permutations|<tuple|20.101|1388|ExtendedRealNumbers.tm>>
     <associate|extended series is finite then all the terms are
-    finite|<tuple|20.110|1398|ExtendedRealNumbers.tm>>
+    finite|<tuple|20.111|1398|ExtendedRealNumbers.tm>>
     <associate|extended sum|<tuple|20.16|1329|ExtendedRealNumbers.tm>>
-    <associate|extended sum of sums|<tuple|20.103|1390|ExtendedRealNumbers.tm>>
+    <associate|extended sum of sums|<tuple|20.104|1389|ExtendedRealNumbers.tm>>
     <associate|extended sup and inf exist|<tuple|20.13|1326|ExtendedRealNumbers.tm>>
     <associate|extended sup inf of real numbers|<tuple|20.14|1328|ExtendedRealNumbers.tm>>
-    <associate|extended sup of set and sum|<tuple|20.63|1355|ExtendedRealNumbers.tm>>
-    <associate|extended topology od Hsusdorff|<tuple|20.55|1351|ExtendedRealNumbers.tm>>
+    <associate|extended sup of set and sum|<tuple|20.64|1355|ExtendedRealNumbers.tm>>
+    <associate|extended topology od Hsusdorff|<tuple|20.56|1351|ExtendedRealNumbers.tm>>
     <associate|extended x+y\<less\>z=\<gtr\>x\<less\>z-y|<tuple|20.31|1335|ExtendedRealNumbers.tm>>
     <associate|extended x+z=y+z=\<gtr\>x-y|<tuple|20.28|1331|ExtendedRealNumbers.tm>>
-    <associate|extended x.y|<tuple|20.35|1337|ExtendedRealNumbers.tm>>
-    <associate|extended x\<less\>=x+e=\<gtr\>x\<less\>=e|<tuple|20.42|1343|ExtendedRealNumbers.tm>>
+    <associate|extended x.y|<tuple|20.36|1337|ExtendedRealNumbers.tm>>
+    <associate|extended x\<less\>=x+e=\<gtr\>x\<less\>=e|<tuple|20.43|1343|ExtendedRealNumbers.tm>>
     <associate|extended x\<less\>=y then for 0\<less\>=s we have
-    s.x\<less\>=s.y|<tuple|20.39|1341|ExtendedRealNumbers.tm>>
+    s.x\<less\>=s.y|<tuple|20.40|1341|ExtendedRealNumbers.tm>>
     <associate|extended x\<less\>=y then x+z\<less\>=y+z|<tuple|20.29|1334|ExtendedRealNumbers.tm>>
     <associate|extended x\<less\>y =\<gtr\> x\<less\>\<gtr\>@@ and
     y\<less\>\<gtr\>@@|<tuple|20.11|1325|ExtendedRealNumbers.tm>>
     <associate|extended x\<less\>y-z=\<gtr\>z\<less\>y-x|<tuple|20.32|1336|ExtendedRealNumbers.tm>>
+    <associate|extended x\<less\>y-z=\<gtr\>z\<less\>y-x
+    (1)|<tuple|20.33|1336|ExtendedRealNumbers.tm>>
     <associate|extract maximum element of a
     family|<tuple|6.52|200|NaturalNumbers.tm>>
     <associate|faculity|<tuple|11.220|456|LinearAlgebra.tm>>
@@ -7432,8 +7431,8 @@
     <associate|field {-1,1}xF|<tuple|11.282|500|LinearAlgebra.tm>>
     <associate|fig 4.311|<tuple|16.4|1126|Differentiation.tm>>
     <associate|fig 5.311|<tuple|16.5|1126|Differentiation.tm>>
-    <associate|figure 20.6.234|<tuple|21.6|1591|Measure.tm>>
-    <associate|figure 20.7.234|<tuple|21.7|1595|Measure.tm>>
+    <associate|figure 20.6.234|<tuple|21.6|1596|Measure.tm>>
+    <associate|figure 20.7.234|<tuple|21.7|1600|Measure.tm>>
     <associate|filter base|<tuple|14.268|792|Topology.tm>>
     <associate|filter base accumulating alternative|<tuple|14.277|795|Topology.tm>>
     <associate|filter base and compactness|<tuple|14.294|801|Topology.tm>>
@@ -7766,7 +7765,7 @@
     <associate|integers \|x.y\|=\|x\|.\|y\||<tuple|7.35|229|Numbers.tm>>
     <associate|integers \|x\|\<less\>=\<gtr\>x=0|<tuple|7.37|229|Numbers.tm>>
     <associate|integers ~([n,m])~([n+k,m+k)]|<tuple|7.3|218|Numbers.tm>>
-    <associate|integral convention|<tuple|21.530|1755|Measure.tm>>
+    <associate|integral convention|<tuple|21.537|1763|Measure.tm>>
     <associate|interval and inf or sup|<tuple|3.143|126|Sets.tm>>
     <associate|interval condition to be empty|<tuple|3.140|125|Sets.tm>>
     <associate|interval generalized condition (1)|<tuple|3.144|128|Sets.tm>>
@@ -7780,7 +7779,6 @@
     isomorphism|<tuple|4.69|153|NaturalNumbers.tm>>
     <associate|iteration final|<tuple|5.85|182|NaturalNumbers.tm>>
     <associate|label 20.147.200|<tuple|21.94|1446|Measure.tm>>
-    <associate|label 20.252.221|<tuple|21.187|1508|Measure.tm>>
     <associate|lemma 11.216.205|<tuple|11.233|465|LinearAlgebra.tm>>
     <associate|lemma 14.342.156|<tuple|14.403|848|Topology.tm>>
     <associate|lemma 14.344.156|<tuple|14.404|848|Topology.tm>>
@@ -7887,7 +7885,7 @@
     <associate|lemma 20.138.200|<tuple|21.84|1441|Measure.tm>>
     <associate|lemma 20.139.200|<tuple|21.85|1441|Measure.tm>>
     <associate|lemma 20.141.200|<tuple|21.86|1444|Measure.tm>>
-    <associate|lemma 20.150.227|<tuple|21.57|1429|Measure.tm>>
+    <associate|lemma 20.150.227|<tuple|21.57|1430|Measure.tm>>
     <associate|lemma 20.151.227|<tuple|21.58|1430|Measure.tm>>
     <associate|lemma 20.152.227|<tuple|21.59|1431|Measure.tm>>
     <associate|lemma 20.153.227 |<tuple|21.60|1432|Measure.tm>>
@@ -7900,66 +7898,68 @@
     <associate|lemma 20.225.220|<tuple|21.161|1489|Measure.tm>>
     <associate|lemma 20.226.220|<tuple|21.162|1490|Measure.tm>>
     <associate|lemma 20.228.220|<tuple|21.163|1491|Measure.tm>>
-    <associate|lemma 20.229.220|<tuple|21.164|1493|Measure.tm>>
-    <associate|lemma 20.246.220|<tuple|21.181|1505|Measure.tm>>
-    <associate|lemma 20.248.220|<tuple|21.182|1506|Measure.tm>>
-    <associate|lemma 20.256.220|<tuple|21.189|1512|Measure.tm>>
-    <associate|lemma 20.268.224|<tuple|21.199|1519|Measure.tm>>
-    <associate|lemma 20.269.224|<tuple|21.200|1522|Measure.tm>>
-    <associate|lemma 20.270.225|<tuple|21.201|1523|Measure.tm>>
-    <associate|lemma 20.271.225|<tuple|21.202|1524|Measure.tm>>
-    <associate|lemma 20.272.226|<tuple|21.204|1528|Measure.tm>>
-    <associate|lemma 20.286.226|<tuple|21.222|1536|Measure.tm>>
-    <associate|lemma 20.287.224|<tuple|21.198|1519|Measure.tm>>
-    <associate|lemma 20.298.246|<tuple|21.213|1533|Measure.tm>>
-    <associate|lemma 20.309.227|<tuple|21.251|1544|Measure.tm>>
-    <associate|lemma 20.349.249|<tuple|21.269|1558|Measure.tm>>
-    <associate|lemma 20.351.229|<tuple|21.301|1574|Measure.tm>>
-    <associate|lemma 20.371.262|<tuple|21.287|1567|Measure.tm>>
-    <associate|lemma 20.377.232|<tuple|21.326|1601|Measure.tm>>
-    <associate|lemma 20.447.245|<tuple|21.395|1645|Measure.tm>>
-    <associate|lemma 20.448.245|<tuple|21.396|1646|Measure.tm>>
-    <associate|lemma 20.449.245|<tuple|21.397|1647|Measure.tm>>
-    <associate|lemma 20.463.246|<tuple|21.410|1652|Measure.tm>>
-    <associate|lemma 20.476.246|<tuple|21.423|1663|Measure.tm>>
-    <associate|lemma 20.477.246|<tuple|21.426|1664|Measure.tm>>
-    <associate|lemma 20.479.246|<tuple|21.427|1665|Measure.tm>>
-    <associate|lemma 20.480.246|<tuple|21.429|1665|Measure.tm>>
-    <associate|lemma 20.482.247|<tuple|21.430|1667|Measure.tm>>
-    <associate|lemma 20.491.248|<tuple|21.433|1673|Measure.tm>>
-    <associate|lemma 20.505.265|<tuple|21.425|1664|Measure.tm>>
-    <associate|lemma 20.513.248|<tuple|21.456|1690|Measure.tm>>
-    <associate|lemma 20.514.248|<tuple|21.457|1691|Measure.tm>>
-    <associate|lemma 20.515.248|<tuple|21.458|1691|Measure.tm>>
-    <associate|lemma 20.516.248|<tuple|21.459|1694|Measure.tm>>
-    <associate|lemma 20.555.149|<tuple|21.496|1722|Measure.tm>>
-    <associate|lemma 20.557.249|<tuple|21.498|1724|Measure.tm>>
-    <associate|lemma 20.558.249|<tuple|21.499|1724|Measure.tm>>
-    <associate|lemma 20.559.249|<tuple|21.500|1725|Measure.tm>>
-    <associate|lemma 20.594.271|<tuple|21.505|1736|Measure.tm>>
-    <associate|lemma 20.595.271|<tuple|21.506|1736|Measure.tm>>
-    <associate|lemma 20.613.279|<tuple|21.524|1747|Measure.tm>>
-    <associate|lemma 20.614.279|<tuple|21.525|1749|Measure.tm>>
-    <associate|lemma 20.619.279|<tuple|21.527|1750|Measure.tm>>
-    <associate|lemma 20.621.280|<tuple|21.529|1754|Measure.tm>>
-    <associate|lemma 20.628.280|<tuple|21.535|1760|Measure.tm>>
-    <associate|lemma 20.629.280|<tuple|21.536|1760|Measure.tm>>
-    <associate|lemma 20.630.280|<tuple|21.538|1761|Measure.tm>>
-    <associate|lemma 20.635.281|<tuple|21.543|1765|Measure.tm>>
-    <associate|lemma 20.78.156|<tuple|20.88|1380|ExtendedRealNumbers.tm>>
-    <associate|lemma 20.80.156|<tuple|20.90|1382|ExtendedRealNumbers.tm>>
-    <associate|lemma 20.90.156|<tuple|20.104|1392|ExtendedRealNumbers.tm>>
-    <associate|lemma 20.95.156|<tuple|20.109|1398|ExtendedRealNumbers.tm>>
-    <associate|lemma 21.530.285|<tuple|21.546|1770|Measure.tm>>
-    <associate|lemma 21.532.285|<tuple|21.548|1771|Measure.tm>>
-    <associate|lemma 21.558.288|<tuple|21.569|1786|Measure.tm>>
-    <associate|lemma 21.562.291|<tuple|21.573|1788|Measure.tm>>
-    <associate|lemma 21.563.291|<tuple|21.574|1789|Measure.tm>>
-    <associate|lemma 21.578.291|<tuple|21.587|1801|Measure.tm>>
-    <associate|lemma 21.579.291|<tuple|21.588|1802|Measure.tm>>
-    <associate|lemma 21.582.291|<tuple|21.591|1803|Measure.tm>>
-    <associate|lemma 21.584.291|<tuple|21.593|1806|Measure.tm>>
-    <associate|lemma 21.585.291|<tuple|21.594|1807|Measure.tm>>
+    <associate|lemma 20.229.220|<tuple|21.164|1492|Measure.tm>>
+    <associate|lemma 20.246.220|<tuple|21.179|1504|Measure.tm>>
+    <associate|lemma 20.248.220|<tuple|21.180|1505|Measure.tm>>
+    <associate|lemma 20.256.220|<tuple|21.187|1511|Measure.tm>>
+    <associate|lemma 20.268.224|<tuple|21.197|1518|Measure.tm>>
+    <associate|lemma 20.269.224|<tuple|21.198|1521|Measure.tm>>
+    <associate|lemma 20.270.225|<tuple|21.199|1523|Measure.tm>>
+    <associate|lemma 20.271.225|<tuple|21.200|1523|Measure.tm>>
+    <associate|lemma 20.272.226|<tuple|21.202|1528|Measure.tm>>
+    <associate|lemma 20.286.226|<tuple|21.220|1535|Measure.tm>>
+    <associate|lemma 20.287.224|<tuple|21.196|1518|Measure.tm>>
+    <associate|lemma 20.298.246|<tuple|21.211|1532|Measure.tm>>
+    <associate|lemma 20.309.227|<tuple|21.250|1543|Measure.tm>>
+    <associate|lemma 20.349.249|<tuple|21.272|1558|Measure.tm>>
+    <associate|lemma 20.351.229|<tuple|21.305|1578|Measure.tm>>
+    <associate|lemma 20.371.262|<tuple|21.291|1570|Measure.tm>>
+    <associate|lemma 20.377.232|<tuple|21.331|1606|Measure.tm>>
+    <associate|lemma 20.447.245|<tuple|21.402|1652|Measure.tm>>
+    <associate|lemma 20.448.245|<tuple|21.403|1653|Measure.tm>>
+    <associate|lemma 20.449.245|<tuple|21.404|1654|Measure.tm>>
+    <associate|lemma 20.463.246|<tuple|21.417|1659|Measure.tm>>
+    <associate|lemma 20.476.246|<tuple|21.430|1670|Measure.tm>>
+    <associate|lemma 20.477.246|<tuple|21.433|1671|Measure.tm>>
+    <associate|lemma 20.479.246|<tuple|21.434|1672|Measure.tm>>
+    <associate|lemma 20.480.246|<tuple|21.436|1672|Measure.tm>>
+    <associate|lemma 20.482.247|<tuple|21.437|1674|Measure.tm>>
+    <associate|lemma 20.491.248|<tuple|21.440|1680|Measure.tm>>
+    <associate|lemma 20.505.265|<tuple|21.432|1671|Measure.tm>>
+    <associate|lemma 20.513.248|<tuple|21.463|1697|Measure.tm>>
+    <associate|lemma 20.514.248|<tuple|21.464|1698|Measure.tm>>
+    <associate|lemma 20.515.248|<tuple|21.465|1698|Measure.tm>>
+    <associate|lemma 20.516.248|<tuple|21.466|1701|Measure.tm>>
+    <associate|lemma 20.555.149|<tuple|21.503|1729|Measure.tm>>
+    <associate|lemma 20.557.249|<tuple|21.505|1731|Measure.tm>>
+    <associate|lemma 20.558.249|<tuple|21.506|1731|Measure.tm>>
+    <associate|lemma 20.559.249|<tuple|21.507|1732|Measure.tm>>
+    <associate|lemma 20.594.271|<tuple|21.512|1743|Measure.tm>>
+    <associate|lemma 20.595.271|<tuple|21.513|1743|Measure.tm>>
+    <associate|lemma 20.613.279|<tuple|21.531|1754|Measure.tm>>
+    <associate|lemma 20.614.279|<tuple|21.532|1757|Measure.tm>>
+    <associate|lemma 20.619.279|<tuple|21.534|1758|Measure.tm>>
+    <associate|lemma 20.621.280|<tuple|21.536|1762|Measure.tm>>
+    <associate|lemma 20.628.280|<tuple|21.542|1768|Measure.tm>>
+    <associate|lemma 20.629.280|<tuple|21.543|1768|Measure.tm>>
+    <associate|lemma 20.630.280|<tuple|21.545|1769|Measure.tm>>
+    <associate|lemma 20.635.281|<tuple|21.550|1773|Measure.tm>>
+    <associate|lemma 20.78.156|<tuple|20.89|1380|ExtendedRealNumbers.tm>>
+    <associate|lemma 20.80.156|<tuple|20.91|1382|ExtendedRealNumbers.tm>>
+    <associate|lemma 20.90.156|<tuple|20.105|1391|ExtendedRealNumbers.tm>>
+    <associate|lemma 20.95.156|<tuple|20.110|1397|ExtendedRealNumbers.tm>>
+    <associate|lemma 21.185.300|<tuple|21.185|1507|Measure.tm>>
+    <associate|lemma 21.347.301|<tuple|21.347|1615|Measure.tm>>
+    <associate|lemma 21.530.285|<tuple|21.553|1778|Measure.tm>>
+    <associate|lemma 21.532.285|<tuple|21.555|1779|Measure.tm>>
+    <associate|lemma 21.558.288|<tuple|21.576|1794|Measure.tm>>
+    <associate|lemma 21.562.291|<tuple|21.580|1796|Measure.tm>>
+    <associate|lemma 21.563.291|<tuple|21.581|1798|Measure.tm>>
+    <associate|lemma 21.578.291|<tuple|21.594|1809|Measure.tm>>
+    <associate|lemma 21.579.291|<tuple|21.595|1810|Measure.tm>>
+    <associate|lemma 21.582.291|<tuple|21.598|1811|Measure.tm>>
+    <associate|lemma 21.584.291|<tuple|21.600|1814|Measure.tm>>
+    <associate|lemma 21.585.291|<tuple|21.601|1815|Measure.tm>>
     <associate|limit (-1)^/i|<tuple|14.338|817|Topology.tm>>
     <associate|limit (a+n)/(b+n)|<tuple|14.322|812|Topology.tm>>
     <associate|limit 1/(a+i)|<tuple|14.321|812|Topology.tm>>
@@ -8175,63 +8175,59 @@
     unit|<tuple|11.374|583|LinearAlgebra.tm>>
     <associate|matrix[\<less\>m] and [\<gtr\>m]|<tuple|11.373|581|LinearAlgebra.tm>>
     <associate|measurability of image of a measurable set by a
-    homeomorphism|<tuple|21.578|1797|Measure.tm>>
-    <associate|measurable function|<tuple|21.225|1538|Measure.tm>>
-    <associate|measurable function (1)|<tuple|21.238|1540|Measure.tm>>
-    <associate|measurable function (4)|<tuple|21.242|1541|Measure.tm>>
-    <associate|measurable function (5)|<tuple|21.243|1541|Measure.tm>>
-    <associate|measurable function Borel|<tuple|21.235|1540|Measure.tm>>
+    homeomorphism|<tuple|21.585|1805|Measure.tm>>
+    <associate|measurable function|<tuple|21.223|1537|Measure.tm>>
+    <associate|measurable function (1)|<tuple|21.237|1540|Measure.tm>>
+    <associate|measurable function (4)|<tuple|21.241|1540|Measure.tm>>
+    <associate|measurable function (5)|<tuple|21.242|1540|Measure.tm>>
+    <associate|measurable function Borel|<tuple|21.234|1539|Measure.tm>>
     <associate|measurable function alternative
-    (1)|<tuple|21.252|1545|Measure.tm>>
-    <associate|measurable function and continuity|<tuple|21.253|1545|Measure.tm>>
+    (1)|<tuple|21.251|1544|Measure.tm>>
+    <associate|measurable function and continuity|<tuple|21.252|1545|Measure.tm>>
     <associate|measurable function and generated sigma
-    algebra|<tuple|21.249|1543|Measure.tm>>
-    <associate|measurable function charasteristic|<tuple|21.268|1557|Measure.tm>>
+    algebra|<tuple|21.248|1542|Measure.tm>>
+    <associate|measurable function charasteristic|<tuple|21.270|1558|Measure.tm>>
     <associate|measurable function charasteristic
-    product|<tuple|21.270|1558|Measure.tm>>
+    product|<tuple|21.273|1559|Measure.tm>>
     <associate|measurable function charasteristic
-    properties|<tuple|21.267|1557|Measure.tm>>
-    <associate|measurable function comparisation|<tuple|21.254|1546|Measure.tm>>
+    properties|<tuple|21.269|1557|Measure.tm>>
+    <associate|measurable function comparisation|<tuple|21.253|1545|Measure.tm>>
     <associate|measurable function comparisation
-    definition|<tuple|21.250|1543|Measure.tm>>
-    <associate|measurable function composition|<tuple|21.228|1538|Measure.tm>>
+    definition|<tuple|21.249|1543|Measure.tm>>
+    <associate|measurable function composition|<tuple|21.227|1537|Measure.tm>>
     <associate|measurable function constant
-    function|<tuple|21.227|1538|Measure.tm>>
-    <associate|measurable function extension|<tuple|21.248|1542|Measure.tm>>
+    function|<tuple|21.226|1537|Measure.tm>>
+    <associate|measurable function extension|<tuple|21.247|1542|Measure.tm>>
     <associate|measurable function extension
-    (1)|<tuple|21.231|1539|Measure.tm>>
+    (1)|<tuple|21.230|1538|Measure.tm>>
     <associate|measurable function extension
-    (2)|<tuple|21.234|1539|Measure.tm>>
+    (2)|<tuple|21.233|1538|Measure.tm>>
     <associate|measurable function extension
-    (3)|<tuple|21.246|1542|Measure.tm>>
+    (3)|<tuple|21.245|1541|Measure.tm>>
     <associate|measurable function extension
-    (4)|<tuple|21.247|1542|Measure.tm>>
+    (4)|<tuple|21.246|1542|Measure.tm>>
     <associate|measurable function extension
-    definition|<tuple|21.244|1541|Measure.tm>>
+    definition|<tuple|21.243|1541|Measure.tm>>
     <associate|measurable function in sub
-    space|<tuple|21.271|1559|Measure.tm>>
-    <associate|measurable function in sub space
-    (1)|<tuple|21.272|1560|Measure.tm>>
-    <associate|measurable function limit|<tuple|21.265|1556|Measure.tm>>
+    space|<tuple|21.274|1560|Measure.tm>>
+    <associate|measurable function limit|<tuple|21.267|1556|Measure.tm>>
     <associate|measurable function min and
-    max|<tuple|21.262|1551|Measure.tm>>
+    max|<tuple|21.264|1551|Measure.tm>>
     <associate|measurable function min and max
-    (1)|<tuple|21.263|1552|Measure.tm>>
+    (1)|<tuple|21.265|1552|Measure.tm>>
     <associate|measurable function product with
-    scalar|<tuple|21.259|1548|Measure.tm>>
+    scalar|<tuple|21.260|1548|Measure.tm>>
     <associate|measurable function properties
-    (1)|<tuple|21.261|1549|Measure.tm>>
+    (1)|<tuple|21.262|1548|Measure.tm>>
     <associate|measurable function real or
-    extended|<tuple|21.241|1541|Measure.tm>>
+    extended|<tuple|21.240|1540|Measure.tm>>
     <associate|measurable function restriction
-    (1)|<tuple|21.229|1539|Measure.tm>>
-    <associate|measurable function restriction
-    (2)|<tuple|21.230|1539|Measure.tm>>
-    <associate|measurable function sum (finite)|<tuple|21.255|1547|Measure.tm>>
-    <associate|measurable function sum finite|<tuple|21.258|1548|Measure.tm>>
+    (2)|<tuple|21.228|1538|Measure.tm>>
+    <associate|measurable function sum (finite)|<tuple|21.254|1546|Measure.tm>>
+    <associate|measurable function sum finite|<tuple|21.258|1547|Measure.tm>>
     <associate|measurable function sup inf
-    limit|<tuple|21.264|1553|Measure.tm>>
-    <associate|measurable locally finiteness|<tuple|21.556|1776|Measure.tm>>
+    limit|<tuple|21.266|1553|Measure.tm>>
+    <associate|measurable locally finiteness|<tuple|21.563|1784|Measure.tm>>
     <associate|measure A.B minus C.D|<tuple|21.2|1399|Measure.tm>>
     <associate|measure Borel algebra|<tuple|21.46|1419|Measure.tm>>
     <associate|measure Borel algebra and closure|<tuple|21.47|1420|Measure.tm>>
@@ -8239,7 +8235,7 @@
     <associate|measure Borel algebra on R|<tuple|21.55|1427|Measure.tm>>
     <associate|measure Borel algebra on R^n|<tuple|21.62|1434|Measure.tm>>
     <associate|measure Borel algebra on R^n (equivalences
-    1)|<tuple|21.195|1517|Measure.tm>>
+    1)|<tuple|21.193|1516|Measure.tm>>
     <associate|measure Borel algebra on R^n (equivalences
     2)|<tuple|21.91|1445|Measure.tm>>
     <associate|measure Borel algebra on R^n
@@ -8250,19 +8246,19 @@
     (1)|<tuple|21.61|1434|Measure.tm>>
     <associate|measure Borel algebras on R^n
     equivalences|<tuple|21.87|1444|Measure.tm>>
-    <associate|measure Borel measure of T(A)|<tuple|21.582|1799|Measure.tm>>
+    <associate|measure Borel measure of T(A)|<tuple|21.589|1807|Measure.tm>>
     <associate|measure Borel measure of T(A)
-    (1)|<tuple|21.585|1800|Measure.tm>>
+    (1)|<tuple|21.592|1808|Measure.tm>>
     <associate|measure Borel measure on R and linear
-    isomorphism|<tuple|21.584|1799|Measure.tm>>
+    isomorphism|<tuple|21.591|1807|Measure.tm>>
     <associate|measure Caratheodory|<tuple|21.121|1459|Measure.tm>>
     <associate|measure Caratheodory produces complete measure
-    space|<tuple|21.218|1535|Measure.tm>>
+    space|<tuple|21.216|1534|Measure.tm>>
     <associate|measure Dyadic cubes|<tuple|21.79|1439|Measure.tm>>
     <associate|measure Dyadic cubes properties|<tuple|21.83|1440|Measure.tm>>
-    <associate|measure Dyadic intervals|<tuple|21.572|1788|Measure.tm>>
+    <associate|measure Dyadic intervals|<tuple|21.579|1796|Measure.tm>>
     <associate|measure Dyadic intervals and open
-    sets|<tuple|21.575|1790|Measure.tm>>
+    sets|<tuple|21.582|1798|Measure.tm>>
     <associate|measure Dynkin system|<tuple|21.122|1463|Measure.tm>>
     <associate|measure Dynkin system P(X)|<tuple|21.125|1463|Measure.tm>>
     <associate|measure Dynkin system condition for sigma
@@ -8272,25 +8268,25 @@
     <associate|measure Dynkin system generated|<tuple|21.127|1464|Measure.tm>>
     <associate|measure Dynkin system properties|<tuple|21.124|1463|Measure.tm>>
     <associate|measure Lebesgue measure of half-open closed
-    rectangles|<tuple|21.208|1531|Measure.tm>>
+    rectangles|<tuple|21.206|1530|Measure.tm>>
     <associate|measure Lebesgue measure of half-open open
-    intervals|<tuple|21.210|1532|Measure.tm>>
+    intervals|<tuple|21.208|1531|Measure.tm>>
     <associate|measure Lebesgue measure space on
-    R|<tuple|21.183|1507|Measure.tm>>
+    R|<tuple|21.181|1506|Measure.tm>>
     <associate|measure Lebesgue measure space on
-    R^n|<tuple|21.206|1530|Measure.tm>>
+    R^n|<tuple|21.204|1529|Measure.tm>>
     <associate|measure Lebesgue measure spaces are
-    complete|<tuple|21.219|1535|Measure.tm>>
+    complete|<tuple|21.217|1534|Measure.tm>>
     <associate|measure P(X) is a algebra|<tuple|21.30|1411|Measure.tm>>
     <associate|measure P(X) is a ring|<tuple|21.26|1410|Measure.tm>>
     <associate|measure P(X) is a sigma algebra|<tuple|21.38|1416|Measure.tm>>
-    <associate|measure R^n alternative definition|<tuple|21.193|1516|Measure.tm>>
+    <associate|measure R^n alternative definition|<tuple|21.191|1515|Measure.tm>>
     <associate|measure Radon and Borel measure on
-    R|<tuple|21.576|1792|Measure.tm>>
+    R|<tuple|21.583|1800|Measure.tm>>
     <associate|measure Radon and Borel measure on
-    R^n|<tuple|21.577|1794|Measure.tm>>
-    <associate|measure Radon condition|<tuple|21.561|1777|Measure.tm>>
-    <associate|measure Radon condition (1)|<tuple|21.562|1780|Measure.tm>>
+    R^n|<tuple|21.584|1802|Measure.tm>>
+    <associate|measure Radon condition|<tuple|21.568|1785|Measure.tm>>
+    <associate|measure Radon condition (1)|<tuple|21.569|1788|Measure.tm>>
     <associate|measure [a,b[ in R^n|<tuple|21.67|1435|Measure.tm>>
     <associate|measure additive function monotone|<tuple|21.143|1474|Measure.tm>>
     <associate|measure additive set function|<tuple|21.15|1408|Measure.tm>>
@@ -8300,34 +8296,34 @@
     <associate|measure algebra properties|<tuple|21.31|1411|Measure.tm>>
     <associate|measure alternative definition for a
     content|<tuple|21.153|1481|Measure.tm>>
-    <associate|measure begin end|<tuple|21.77|1438|Measure.tm>>
-    <associate|measure begin end (R)|<tuple|21.173|1502|Measure.tm>>
+    <associate|measure begin end|<tuple|21.77|1439|Measure.tm>>
+    <associate|measure begin end (R)|<tuple|21.173|1501|Measure.tm>>
     <associate|measure borel algebrat on R|<tuple|21.50|1421|Measure.tm>>
     <associate|measure bounded intervals|<tuple|21.51|1421|Measure.tm>>
     <associate|measure compact class approximation|<tuple|21.157|1487|Measure.tm>>
     <associate|measure compact class approximation
     (1)|<tuple|21.158|1489|Measure.tm>>
     <associate|measure compact class approximation
-    (2)|<tuple|21.167|1496|Measure.tm>>
+    (2)|<tuple|21.167|1495|Measure.tm>>
     <associate|measure compact class approximation
-    (3)|<tuple|21.168|1498|Measure.tm>>
+    (3)|<tuple|21.168|1497|Measure.tm>>
     <associate|measure compact finite and
-    intervals|<tuple|21.558|1776|Measure.tm>>
+    intervals|<tuple|21.565|1784|Measure.tm>>
     <associate|measure compact finite and
-    rectangles|<tuple|21.559|1777|Measure.tm>>
+    rectangles|<tuple|21.566|1784|Measure.tm>>
     <associate|measure compact finite and scalar
-    product|<tuple|21.554|1775|Measure.tm>>
-    <associate|measure complete measure|<tuple|21.216|1535|Measure.tm>>
-    <associate|measure complete measure characterization|<tuple|21.217|1535|Measure.tm>>
+    product|<tuple|21.561|1783|Measure.tm>>
+    <associate|measure complete measure|<tuple|21.214|1534|Measure.tm>>
+    <associate|measure complete measure characterization|<tuple|21.215|1534|Measure.tm>>
     <associate|measure completing of a measure
-    space|<tuple|21.223|1536|Measure.tm>>
+    space|<tuple|21.221|1535|Measure.tm>>
     <associate|measure completion of a measure
-    space|<tuple|21.220|1536|Measure.tm>>
+    space|<tuple|21.218|1534|Measure.tm>>
     <associate|measure condition for a algebra to be a sigma
     algebra|<tuple|21.40|1417|Measure.tm>>
     <associate|measure content|<tuple|21.150|1481|Measure.tm>>
-    <associate|measure content extension|<tuple|21.166|1494|Measure.tm>>
-    <associate|measure content on R^n|<tuple|21.203|1527|Measure.tm>>
+    <associate|measure content extension|<tuple|21.166|1493|Measure.tm>>
+    <associate|measure content on R^n|<tuple|21.201|1526|Measure.tm>>
     <associate|measure content properties|<tuple|21.154|1482|Measure.tm>>
     <associate|measure countable additive set
     function|<tuple|21.17|1408|Measure.tm>>
@@ -8343,61 +8339,62 @@
     algebra|<tuple|21.39|1416|Measure.tm>>
     <associate|measure countable union pairwise|<tuple|21.100|1449|Measure.tm>>
     <associate|measure create a new measure based on a measure and a
-    homeomorphism|<tuple|21.579|1798|Measure.tm>>
+    homeomorphism|<tuple|21.586|1806|Measure.tm>>
     <associate|measure create a new measure based on a measure and a linear
-    isomorphism|<tuple|21.581|1798|Measure.tm>>
+    isomorphism|<tuple|21.588|1806|Measure.tm>>
     <associate|measure extending pre-measure to a
     measure|<tuple|21.147|1477|Measure.tm>>
     <associate|measure finite measure|<tuple|21.112|1453|Measure.tm>>
-    <associate|measure finite product of semi-rings|<tuple|21.191|1514|Measure.tm>>
+    <associate|measure finite product of semi-rings|<tuple|21.189|1513|Measure.tm>>
     <associate|measure finite product of semi-rings
-    (1)|<tuple|21.192|1515|Measure.tm>>
+    (1)|<tuple|21.190|1514|Measure.tm>>
     <associate|measure generated ring|<tuple|21.159|1489|Measure.tm>>
     <associate|measure generated sigma algebra|<tuple|21.42|1418|Measure.tm>>
     <associate|measure generated sigma algebra
     (1)|<tuple|21.43|1418|Measure.tm>>
     <associate|measure generated sigma algebra on
-    R|<tuple|21.172|1502|Measure.tm>>
+    R|<tuple|21.172|1501|Measure.tm>>
     <associate|measure half open intervals in
     R^n|<tuple|21.72|1437|Measure.tm>>
     <associate|measure halfo open spaces|<tuple|21.88|1444|Measure.tm>>
-    <associate|measure integral|<tuple|21.336|1608|Measure.tm>>
-    <associate|measure integral (1)|<tuple|21.343|1611|Measure.tm>>
-    <associate|measure integral alternative|<tuple|21.351|1619|Measure.tm>>
+    <associate|measure integral|<tuple|21.342|1614|Measure.tm>>
+    <associate|measure integral (1)|<tuple|21.350|1618|Measure.tm>>
+    <associate|measure integral alternative|<tuple|21.358|1626|Measure.tm>>
     <associate|measure integral alternative
-    (1)|<tuple|21.360|1624|Measure.tm>>
+    (1)|<tuple|21.367|1631|Measure.tm>>
     <associate|measure integral alternative
-    (2)|<tuple|21.340|1609|Measure.tm>>
-    <associate|measure integral and a.e. equalitiy|<tuple|21.352|1620|Measure.tm>>
-    <associate|measure integral difference|<tuple|21.348|1616|Measure.tm>>
+    (2)|<tuple|21.348|1616|Measure.tm>>
+    <associate|measure integral and a.e. equalitiy|<tuple|21.359|1627|Measure.tm>>
+    <associate|measure integral difference|<tuple|21.355|1623|Measure.tm>>
     <associate|measure integral domination
-    theorem|<tuple|21.353|1621|Measure.tm>>
-    <associate|measure integral extension|<tuple|21.342|1610|Measure.tm>>
-    <associate|measure integral f+ f-|<tuple|21.330|1602|Measure.tm>>
-    <associate|measure integral f+ f- alternative|<tuple|21.332|1603|Measure.tm>>
+    theorem|<tuple|21.360|1628|Measure.tm>>
+    <associate|measure integral example f+,f-|<tuple|21.336|1608|Measure.tm>>
+    <associate|measure integral extension|<tuple|21.349|1617|Measure.tm>>
+    <associate|measure integral f+ f-|<tuple|21.335|1608|Measure.tm>>
+    <associate|measure integral f+ f- alternative|<tuple|21.338|1608|Measure.tm>>
     <associate|measure integral f+ f- are
-    measurable|<tuple|21.333|1604|Measure.tm>>
-    <associate|measure integral f+ f- properties|<tuple|21.335|1604|Measure.tm>>
-    <associate|measure integral measure construction|<tuple|21.367|1629|Measure.tm>>
+    measurable|<tuple|21.339|1609|Measure.tm>>
+    <associate|measure integral f+ f- properties|<tuple|21.341|1610|Measure.tm>>
+    <associate|measure integral measure construction|<tuple|21.374|1636|Measure.tm>>
     <associate|measure integral of almost zero function is
-    zero|<tuple|21.347|1615|Measure.tm>>
+    zero|<tuple|21.354|1622|Measure.tm>>
     <associate|measure integral of zero function
-    (1)|<tuple|21.339|1608|Measure.tm>>
+    (1)|<tuple|21.346|1614|Measure.tm>>
     <associate|measure integral on sub measure
-    spaces|<tuple|21.346|1612|Measure.tm>>
-    <associate|measure integral properties|<tuple|21.349|1617|Measure.tm>>
+    spaces|<tuple|21.353|1619|Measure.tm>>
+    <associate|measure integral properties|<tuple|21.356|1624|Measure.tm>>
     <associate|measure integral properties
-    (1)|<tuple|21.357|1623|Measure.tm>>
+    (1)|<tuple|21.364|1630|Measure.tm>>
     <associate|measure integral properties
-    (2)|<tuple|21.359|1624|Measure.tm>>
-    <associate|measure integral sigma finite|<tuple|21.355|1622|Measure.tm>>
+    (2)|<tuple|21.366|1631|Measure.tm>>
+    <associate|measure integral sigma finite|<tuple|21.362|1629|Measure.tm>>
     <associate|measure integral to measure
-    over|<tuple|21.345|1612|Measure.tm>>
+    over|<tuple|21.352|1619|Measure.tm>>
     <associate|measure integral zero is a.e.
-    zero|<tuple|21.356|1623|Measure.tm>>
-    <associate|measure length definition|<tuple|21.178|1502|Measure.tm>>
+    zero|<tuple|21.363|1630|Measure.tm>>
+    <associate|measure length definition|<tuple|21.176|1501|Measure.tm>>
     <associate|measure length of union of pairwise half opem
-    intervals|<tuple|21.180|1503|Measure.tm>>
+    intervals|<tuple|21.178|1502|Measure.tm>>
     <associate|measure measurable set equivalences|<tuple|21.119|1458|Measure.tm>>
     <associate|measure measurable sets|<tuple|21.118|1458|Measure.tm>>
     <associate|measure measurable sets properties|<tuple|21.120|1459|Measure.tm>>
@@ -8416,13 +8413,13 @@
     <associate|measure measure space properties
     (4)|<tuple|21.102|1450|Measure.tm>>
     <associate|measure monotone|<tuple|21.14|1407|Measure.tm>>
-    <associate|measure null set|<tuple|21.212|1533|Measure.tm>>
-    <associate|measure null set properties|<tuple|21.215|1534|Measure.tm>>
+    <associate|measure null set|<tuple|21.210|1532|Measure.tm>>
+    <associate|measure null set properties|<tuple|21.213|1533|Measure.tm>>
     <associate|measure on sub sigma algebra|<tuple|21.109|1452|Measure.tm>>
     <associate|measure open closed rectangles|<tuple|21.74|1437|Measure.tm>>
     <associate|measure order on R^n|<tuple|21.63|1434|Measure.tm>>
     <associate|measure order on half open
-    intervals|<tuple|21.179|1503|Measure.tm>>
+    intervals|<tuple|21.177|1502|Measure.tm>>
     <associate|measure outer measure|<tuple|21.116|1458|Measure.tm>>
     <associate|measure outer measure construction|<tuple|21.133|1469|Measure.tm>>
     <associate|measure outer measure construction from
@@ -8439,24 +8436,24 @@
     <associate|measure pre-measure is countable
     sub-additive|<tuple|21.145|1475|Measure.tm>>
     <associate|measure pre-measure monotonity|<tuple|21.144|1475|Measure.tm>>
-    <associate|measure product of two semi-rings|<tuple|21.185|1508|Measure.tm>>
+    <associate|measure product of two semi-rings|<tuple|21.183|1507|Measure.tm>>
     <associate|measure proto-measure|<tuple|21.132|1468|Measure.tm>>
     <associate|measure proto-ring|<tuple|21.131|1468|Measure.tm>>
-    <associate|measure regularity|<tuple|21.550|1774|Measure.tm>>
+    <associate|measure regularity|<tuple|21.557|1782|Measure.tm>>
     <associate|measure regularity and scalar
-    product|<tuple|21.553|1774|Measure.tm>>
-    <associate|measure regularity and uniqueness|<tuple|21.555|1775|Measure.tm>>
+    product|<tuple|21.560|1782|Measure.tm>>
+    <associate|measure regularity and uniqueness|<tuple|21.562|1783|Measure.tm>>
     <associate|measure ring|<tuple|21.24|1410|Measure.tm>>
     <associate|measure ring is a semi-ring|<tuple|21.149|1480|Measure.tm>>
     <associate|measure ring properties|<tuple|21.27|1410|Measure.tm>>
     <associate|measure semi-ring|<tuple|21.136|1471|Measure.tm>>
-    <associate|measure semi-ring bijection|<tuple|21.188|1511|Measure.tm>>
-    <associate|measure semi-ring on R^n|<tuple|21.194|1517|Measure.tm>>
+    <associate|measure semi-ring bijection|<tuple|21.186|1510|Measure.tm>>
+    <associate|measure semi-ring on R^n|<tuple|21.192|1516|Measure.tm>>
     <associate|measure semi-ring on the set of real
-    numbers|<tuple|21.171|1499|Measure.tm>>
+    numbers|<tuple|21.171|1498|Measure.tm>>
     <associate|measure semi-ring on the set of real numbers
-    (1)|<tuple|21.170|1498|Measure.tm>>
-    <associate|measure semi-ring to ring|<tuple|21.165|1493|Measure.tm>>
+    (1)|<tuple|21.170|1497|Measure.tm>>
+    <associate|measure semi-ring to ring|<tuple|21.165|1492|Measure.tm>>
     <associate|measure sigma algebra|<tuple|21.33|1413|Measure.tm>>
     <associate|measure sigma algebra equivalences|<tuple|21.36|1413|Measure.tm>>
     <associate|measure sigma algebra intersection|<tuple|21.41|1418|Measure.tm>>
@@ -8469,20 +8466,20 @@
     <associate|measure sum and scalar product of
     measures|<tuple|21.107|1451|Measure.tm>>
     <associate|measure the Borel measure is translation invariant
-    (1)|<tuple|21.570|1786|Measure.tm>>
+    (1)|<tuple|21.577|1794|Measure.tm>>
     <associate|measure the Borel measure is translation invariant
-    (2)|<tuple|21.571|1787|Measure.tm>>
-    <associate|measure translation invariant|<tuple|21.567|1785|Measure.tm>>
+    (2)|<tuple|21.578|1795|Measure.tm>>
+    <associate|measure translation invariant|<tuple|21.574|1793|Measure.tm>>
     <associate|measure translation of a measurable
-    set|<tuple|21.566|1784|Measure.tm>>
+    set|<tuple|21.573|1792|Measure.tm>>
     <associate|measure translation of a measurable set
     (1)|<tuple|21.49|1420|Measure.tm>>
     <associate|measure union intersection
     stable|<tuple|21.9|1402|Measure.tm>>
     <associate|measure uniqueness of extension of a
     measure|<tuple|21.130|1467|Measure.tm>>
-    <associate|measure volume function|<tuple|21.196|1517|Measure.tm>>
-    <associate|measure volume is a pre-measure|<tuple|21.205|1529|Measure.tm>>
+    <associate|measure volume function|<tuple|21.194|1516|Measure.tm>>
+    <associate|measure volume is a pre-measure|<tuple|21.203|1528|Measure.tm>>
     <associate|measure {empty set} is a ring|<tuple|21.25|1410|Measure.tm>>
     <associate|measure {emptyset,set} is a
     measure|<tuple|21.29|1411|Measure.tm>>
@@ -8633,32 +8630,32 @@
     <associate|natural numbers x\<less\>=y or
     y\<less\>x|<tuple|5.53|175|NaturalNumbers.tm>>
     <associate|non negative function as limit of simple
-    functions|<tuple|21.317|1590|Measure.tm>>
-    <associate|non negative integral|<tuple|21.306|1584|Measure.tm>>
-    <associate|non negative integral (1)|<tuple|21.312|1586|Measure.tm>>
-    <associate|non negative integral alternative|<tuple|21.321|1597|Measure.tm>>
+    functions|<tuple|21.322|1595|Measure.tm>>
+    <associate|non negative integral|<tuple|21.310|1589|Measure.tm>>
+    <associate|non negative integral (1)|<tuple|21.317|1591|Measure.tm>>
+    <associate|non negative integral alternative|<tuple|21.326|1602|Measure.tm>>
     <associate|non negative integral and a.e.
-    equality|<tuple|21.325|1600|Measure.tm>>
-    <associate|non negative integral characteristics|<tuple|21.311|1585|Measure.tm>>
-    <associate|non negative integral constant|<tuple|21.310|1585|Measure.tm>>
+    equality|<tuple|21.330|1605|Measure.tm>>
+    <associate|non negative integral characteristics|<tuple|21.316|1590|Measure.tm>>
+    <associate|non negative integral constant|<tuple|21.315|1590|Measure.tm>>
     <associate|non negative integral finite
-    integral|<tuple|21.328|1602|Measure.tm>>
+    integral|<tuple|21.333|1607|Measure.tm>>
     <associate|non negative integral finite
-    sum|<tuple|21.324|1599|Measure.tm>>
+    sum|<tuple|21.329|1604|Measure.tm>>
     <associate|non negative integral is a
-    extension|<tuple|21.309|1585|Measure.tm>>
-    <associate|non negative integral limit|<tuple|21.319|1595|Measure.tm>>
+    extension|<tuple|21.314|1589|Measure.tm>>
+    <associate|non negative integral limit|<tuple|21.324|1600|Measure.tm>>
     <associate|non negative integral scalar product, sum
-    inequality|<tuple|21.323|1598|Measure.tm>>
+    inequality|<tuple|21.328|1603|Measure.tm>>
     <associate|non negative integral sub measure space
-    (1)|<tuple|21.314|1586|Measure.tm>>
+    (1)|<tuple|21.319|1591|Measure.tm>>
     <associate|non negative integral sub measure space
-    (2)|<tuple|21.316|1589|Measure.tm>>
+    (2)|<tuple|21.321|1594|Measure.tm>>
     <associate|non negative integral sub measure space
-    (3)|<tuple|21.315|1589|Measure.tm>>
+    (3)|<tuple|21.320|1594|Measure.tm>>
     <associate|non negative integral zero a.e.
-    function|<tuple|21.322|1597|Measure.tm>>
-    <associate|non negative measurable function|<tuple|21.239|1541|Measure.tm>>
+    function|<tuple|21.327|1602|Measure.tm>>
+    <associate|non negative measurable function|<tuple|21.238|1540|Measure.tm>>
     <associate|nonsingular elementary transformations|<tuple|11.393|604|LinearAlgebra.tm>>
     <associate|nonsingular transformation|<tuple|11.389|600|LinearAlgebra.tm>>
     <associate|nonsingular transformation
@@ -8746,7 +8743,8 @@
     <associate|note 16.89.200|<tuple|16.95|940|Differentiation.tm>>
     <associate|note 16.92.310|<tuple|16.93|940|Differentiation.tm>>
     <associate|note 20.198.210|<tuple|21.134|1469|Measure.tm>>
-    <associate|note 21.580.291|<tuple|21.589|1802|Measure.tm>>
+    <associate|note 21.231.300|<tuple|21.232|1538|Measure.tm>>
+    <associate|note 21.580.291|<tuple|21.596|1810|Measure.tm>>
     <associate|operator|<tuple|4.1|133|NaturalNumbers.tm>>
     <associate|order A isomorphism B|<tuple|3.50|93|Sets.tm>>
     <associate|order a\<less\>=b\<less\>=c|<tuple|3.30|88|Sets.tm>>
@@ -8844,7 +8842,7 @@
     (2)|<tuple|6.55|203|NaturalNumbers.tm>>
     <associate|pair equality of pairs|<tuple|1.50|24|Sets.tm>>
     <associate|pair of elements|<tuple|1.48|24|Sets.tm>>
-    <associate|part:AffineSpaces.tm|<tuple|21.1129|1811>>
+    <associate|part:AffineSpaces.tm|<tuple|21.1133|1819>>
     <associate|part:Differentiation.tm|<tuple|15.41|899>>
     <associate|part:DirectSum.tm|<tuple|11.403|623>>
     <associate|part:Exponential.tm|<tuple|18.42|1273>>
@@ -8853,8 +8851,8 @@
     <associate|part:InnerProductSpaces.tm|<tuple|17.84|1213>>
     <associate|part:IntegrationBanach.tm|<tuple|<with|mode|<quote|math>|f<around*|(|b|)>\<less\>y\<less\>f<around*|(|a|)>>|875>>
     <associate|part:LinearAlgebra.tm|<tuple|10.99|345>>
-    <associate|part:Manifold.tm|<tuple|22.24|1827>>
-    <associate|part:Measure.tm|<tuple|20.110|1399>>
+    <associate|part:Manifold.tm|<tuple|22.24|1835>>
+    <associate|part:Measure.tm|<tuple|20.111|1399>>
     <associate|part:NaturalNumbers.tm|<tuple|9|133>>
     <associate|part:Numbers.tm|<tuple|6.91|217>>
     <associate|part:Sets.tm|<tuple|?|11>>
@@ -8935,26 +8933,26 @@
     <associate|permutation {0,..,n and transposition|<tuple|11.30|359|LinearAlgebra.tm>>
     <associate|power set|<tuple|1.69|30|Sets.tm>>
     <associate|product|<tuple|2.137|73|Sets.tm>>
-    <associate|product |<tuple|21.511|1741|Measure.tm>>
-    <associate|product algebra|<tuple|21.514|1741|Measure.tm>>
-    <associate|product algebra equivalences|<tuple|21.517|1742|Measure.tm>>
+    <associate|product |<tuple|21.518|1748|Measure.tm>>
+    <associate|product algebra|<tuple|21.521|1749|Measure.tm>>
+    <associate|product algebra equivalences|<tuple|21.524|1749|Measure.tm>>
     <associate|product algebra equivalences
-    (1)|<tuple|21.518|1744|Measure.tm>>
-    <associate|product algebra measure|<tuple|21.520|1745|Measure.tm>>
-    <associate|product algebra measure (1)|<tuple|21.521|1746|Measure.tm>>
+    (1)|<tuple|21.525|1751|Measure.tm>>
+    <associate|product algebra measure|<tuple|21.527|1752|Measure.tm>>
+    <associate|product algebra measure (1)|<tuple|21.528|1753|Measure.tm>>
     <associate|product algebra on Borel algebras of
-    R|<tuple|21.519|1744|Measure.tm>>
-    <associate|product algebra properties (1)|<tuple|21.516|1742|Measure.tm>>
+    R|<tuple|21.526|1751|Measure.tm>>
+    <associate|product algebra properties (1)|<tuple|21.523|1749|Measure.tm>>
     <associate|product and intersection|<tuple|2.142|75|Sets.tm>>
     <associate|product and power|<tuple|2.144|77|Sets.tm>>
     <associate|product extension|<tuple|2.147|78|Sets.tm>>
     <associate|product finite product|<tuple|11.2|347|LinearAlgebra.tm>>
-    <associate|product generated sigma algebra|<tuple|21.512|1741|Measure.tm>>
+    <associate|product generated sigma algebra|<tuple|21.519|1748|Measure.tm>>
     <associate|product generated sigma algebra
-    (1)|<tuple|21.513|1741|Measure.tm>>
+    (1)|<tuple|21.520|1748|Measure.tm>>
     <associate|product inclusion|<tuple|2.141|75|Sets.tm>>
     <associate|product intersection of a product|<tuple|2.143|76|Sets.tm>>
-    <associate|product measure (1)|<tuple|21.531|1756|Measure.tm>>
+    <associate|product measure (1)|<tuple|21.538|1764|Measure.tm>>
     <associate|product of a empty set is empty|<tuple|2.138|73|Sets.tm>>
     <associate|product of a finite family of finite sets is is
     finite|<tuple|6.57|204|NaturalNumbers.tm>>
@@ -9240,71 +9238,71 @@
     <associate|set successor set|<tuple|1.58|28|Sets.tm>>
     <associate|set union of two sets is a set|<tuple|1.68|30|Sets.tm>>
     <associate|sign function|<tuple|8.15|240|Numbers.tm>>
-    <associate|signed measure|<tuple|21.445|1679|Measure.tm>>
-    <associate|signed measure Hahn Decomposition|<tuple|21.460|1694|Measure.tm>>
+    <associate|signed measure|<tuple|21.452|1686|Measure.tm>>
+    <associate|signed measure Hahn Decomposition|<tuple|21.467|1701|Measure.tm>>
     <associate|signed measure Hahn Decomposition
-    condition|<tuple|21.461|1694|Measure.tm>>
+    condition|<tuple|21.468|1701|Measure.tm>>
     <associate|signed measure as a difference of
-    measures|<tuple|21.448|1680|Measure.tm>>
-    <associate|signed measure conditions|<tuple|21.453|1688|Measure.tm>>
+    measures|<tuple|21.455|1687|Measure.tm>>
+    <associate|signed measure conditions|<tuple|21.460|1695|Measure.tm>>
     <associate|signed measure empty set is
-    positive/negatie|<tuple|21.455|1690|Measure.tm>>
-    <associate|signed measure finite addivity|<tuple|21.450|1683|Measure.tm>>
-    <associate|signed measure finite measure|<tuple|21.447|1680|Measure.tm>>
-    <associate|signed measure finite sum distributivity|<tuple|21.441|1679|Measure.tm>>
+    positive/negatie|<tuple|21.462|1697|Measure.tm>>
+    <associate|signed measure finite addivity|<tuple|21.457|1690|Measure.tm>>
+    <associate|signed measure finite measure|<tuple|21.454|1687|Measure.tm>>
+    <associate|signed measure finite sum distributivity|<tuple|21.448|1686|Measure.tm>>
     <associate|signed measure integral complex
-    function|<tuple|21.487|1721|Measure.tm>>
+    function|<tuple|21.494|1728|Measure.tm>>
     <associate|signed measure intgral real
-    function|<tuple|21.485|1721|Measure.tm>>
+    function|<tuple|21.492|1728|Measure.tm>>
     <associate|signed measure positive/negative
-    set|<tuple|21.454|1690|Measure.tm>>
+    set|<tuple|21.461|1697|Measure.tm>>
     <associate|signed measure product with
-    scalar|<tuple|21.449|1682|Measure.tm>>
-    <associate|signed measure properties (1)|<tuple|21.451|1684|Measure.tm>>
-    <associate|signed measure properties (2)|<tuple|21.452|1685|Measure.tm>>
-    <associate|signed semi groups|<tuple|21.440|1675|Measure.tm>>
-    <associate|simple function|<tuple|21.281|1563|Measure.tm>>
-    <associate|simple function 2 point measurability|<tuple|21.295|1571|Measure.tm>>
-    <associate|simple function alternative|<tuple|21.282|1563|Measure.tm>>
-    <associate|simple function constant|<tuple|21.293|1570|Measure.tm>>
-    <associate|simple function integral|<tuple|21.298|1574|Measure.tm>>
+    scalar|<tuple|21.456|1689|Measure.tm>>
+    <associate|signed measure properties (1)|<tuple|21.458|1691|Measure.tm>>
+    <associate|signed measure properties (2)|<tuple|21.459|1692|Measure.tm>>
+    <associate|signed semi groups|<tuple|21.447|1683|Measure.tm>>
+    <associate|simple function|<tuple|21.285|1566|Measure.tm>>
+    <associate|simple function 2 point measurability|<tuple|21.299|1575|Measure.tm>>
+    <associate|simple function alternative|<tuple|21.286|1566|Measure.tm>>
+    <associate|simple function constant|<tuple|21.297|1573|Measure.tm>>
+    <associate|simple function integral|<tuple|21.302|1578|Measure.tm>>
     <associate|simple function integral constant
-    function|<tuple|21.300|1574|Measure.tm>>
+    function|<tuple|21.304|1578|Measure.tm>>
     <associate|simple function integral monotone convergence
-    theorem|<tuple|21.304|1581|Measure.tm>>
-    <associate|simple function integral properties|<tuple|21.302|1577|Measure.tm>>
+    theorem|<tuple|21.308|1585|Measure.tm>>
+    <associate|simple function integral properties|<tuple|21.306|1580|Measure.tm>>
     <associate|simple function integral properties
-    (1)|<tuple|21.303|1580|Measure.tm>>
-    <associate|simple function measurable (0)|<tuple|21.288|1568|Measure.tm>>
-    <associate|simple function measurable (1)|<tuple|21.294|1570|Measure.tm>>
+    (1)|<tuple|21.307|1583|Measure.tm>>
+    <associate|simple function measurable (0)|<tuple|21.292|1571|Measure.tm>>
+    <associate|simple function measurable (1)|<tuple|21.298|1574|Measure.tm>>
     <associate|simple function measurable definition
-    (1)|<tuple|21.285|1567|Measure.tm>>
+    (1)|<tuple|21.289|1570|Measure.tm>>
     <associate|simple function measurable definition
-    (2)|<tuple|21.290|1570|Measure.tm>>
+    (2)|<tuple|21.294|1573|Measure.tm>>
     <associate|simple function measurable sum and scalar
-    product|<tuple|21.289|1569|Measure.tm>>
-    <associate|simple function property|<tuple|21.283|1565|Measure.tm>>
-    <associate|simple function representation|<tuple|21.296|1572|Measure.tm>>
+    product|<tuple|21.293|1573|Measure.tm>>
+    <associate|simple function property|<tuple|21.287|1568|Measure.tm>>
+    <associate|simple function representation|<tuple|21.300|1575|Measure.tm>>
     <associate|simple function sum scalar
-    product|<tuple|21.284|1565|Measure.tm>>
+    product|<tuple|21.288|1568|Measure.tm>>
     <associate|sorting of a finite set|<tuple|10.97|344|Numbers.tm>>
-    <associate|space of measures|<tuple|21.476|1710|Measure.tm>>
+    <associate|space of measures|<tuple|21.483|1717|Measure.tm>>
     <associate|space of measures bounded functions are
-    integrable|<tuple|21.484|1721|Measure.tm>>
+    integrable|<tuple|21.491|1728|Measure.tm>>
     <associate|space of measures bounded measurable
-    functions|<tuple|21.482|1719|Measure.tm>>
+    functions|<tuple|21.489|1726|Measure.tm>>
     <associate|space of measures bounded normed
-    space|<tuple|21.483|1719|Measure.tm>>
+    space|<tuple|21.490|1726|Measure.tm>>
     <associate|space of measures is a Banach
-    space|<tuple|21.481|1715|Measure.tm>>
+    space|<tuple|21.488|1722|Measure.tm>>
     <associate|space of measures is a vector
-    space|<tuple|21.478|1710|Measure.tm>>
+    space|<tuple|21.485|1717|Measure.tm>>
     <associate|space of measures normed space complex
-    case|<tuple|21.480|1714|Measure.tm>>
+    case|<tuple|21.487|1721|Measure.tm>>
     <associate|space of measures normed space real
-    case|<tuple|21.479|1712|Measure.tm>>
+    case|<tuple|21.486|1719|Measure.tm>>
     <associate|space of measures total variation is
-    finite|<tuple|21.477|1710|Measure.tm>>
+    finite|<tuple|21.484|1717|Measure.tm>>
     <associate|spectral L^n is linear|<tuple|18.57|1235|InnerProductSpaces.tm>>
     <associate|spectral L^n+m=L^noL^m|<tuple|18.56|1235|InnerProductSpaces.tm>>
     <associate|spectral P[L] is a abelian semi
@@ -10560,75 +10558,70 @@
 
       <tuple|<tuple|<with|mode|<quote|math>|<big|int><rsup|S>f>>|<pageref|auto-686>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|<big|int>f
-      d\<mu\>>>|<pageref|auto-696>>
-
-      <tuple|<tuple|measure integral>|<pageref|auto-697>>
-
       <tuple|<tuple|<with|mode|<quote|math>|<big|int><rsub|A>f
-      d\<mu\>>>|<pageref|auto-699>>
+      d\<mu\>>>|<pageref|auto-697>>
 
       <tuple|<tuple|<with|mode|<quote|math>|\<sigma\>>-algebra on
-      <with|mode|<quote|math>|\<bbb-C\>>>|<pageref|auto-704>>
+      <with|mode|<quote|math>|\<bbb-C\>>>|<pageref|auto-702>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|<around*|\<langle\>|\<bbb-C\>,B<around*|[|\<bbb-C\>|]>|\<rangle\>>>>|<pageref|auto-705>>
+      <tuple|<tuple|<with|mode|<quote|math>|<around*|\<langle\>|\<bbb-C\>,B<around*|[|\<bbb-C\>|]>|\<rangle\>>>>|<pageref|auto-703>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|Re<around*|(|f|)>>>|<pageref|auto-706>>
+      <tuple|<tuple|<with|mode|<quote|math>|Re<around*|(|f|)>>>|<pageref|auto-704>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|Img<around*|(|f|)>>>|<pageref|auto-707>>
+      <tuple|<tuple|<with|mode|<quote|math>|Img<around*|(|f|)>>>|<pageref|auto-705>>
 
-      <tuple|<tuple|complex integral>|<pageref|auto-709>>
+      <tuple|<tuple|complex integral>|<pageref|auto-707>>
 
       <tuple|<tuple|<with|mode|<quote|math>|<big|int><rsup|\<bbb-C\>>f
-      d\<mu\>>>|<pageref|auto-710>>
+      d\<mu\>>>|<pageref|auto-708>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|\<cal-L\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>>|<pageref|auto-713>>
+      <tuple|<tuple|<with|mode|<quote|math>|\<cal-L\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>>|<pageref|auto-711>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|\<cal-L\><rsup|\<infty\>><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>>|<pageref|auto-714>>
+      <tuple|<tuple|<with|mode|<quote|math>|\<cal-L\><rsup|\<infty\>><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>>|<pageref|auto-712>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|\<cal-N\><rsup|p>>>|<pageref|auto-715>>
+      <tuple|<tuple|<with|mode|<quote|math>|\<cal-N\><rsup|p>>>|<pageref|auto-713>>
 
-      <tuple|<tuple|Hahn Decomposition Theorem>|<pageref|auto-722>>
+      <tuple|<tuple|Hahn Decomposition Theorem>|<pageref|auto-720>>
 
-      <tuple|<tuple|Jordon Decomposition>|<pageref|auto-723>>
+      <tuple|<tuple|Jordon Decomposition>|<pageref|auto-721>>
 
-      <tuple|<tuple|complex measure>|<pageref|auto-726>>
+      <tuple|<tuple|complex measure>|<pageref|auto-724>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|M<around*|[|X,\<cal-A\>,\<bbb-R\>|]>>>|<pageref|auto-729>>
+      <tuple|<tuple|<with|mode|<quote|math>|M<around*|[|X,\<cal-A\>,\<bbb-R\>|]>>>|<pageref|auto-727>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|M<around*|(|X,\<cal-A\>,\<bbb-C\>|)>>>|<pageref|auto-730>>
+      <tuple|<tuple|<with|mode|<quote|math>|M<around*|(|X,\<cal-A\>,\<bbb-C\>|)>>>|<pageref|auto-728>>
 
-      <tuple|<tuple|bounded measurable function>|<pageref|auto-732>>
+      <tuple|<tuple|bounded measurable function>|<pageref|auto-730>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|B<around*|[|X,\<cal-A\>,\<bbb-K\>|]>>>|<pageref|auto-733>>
+      <tuple|<tuple|<with|mode|<quote|math>|B<around*|[|X,\<cal-A\>,\<bbb-K\>|]>>>|<pageref|auto-731>>
 
-      <tuple|<tuple|absolute continuity of measures>|<pageref|auto-735>>
+      <tuple|<tuple|absolute continuity of measures>|<pageref|auto-733>>
 
       <tuple|<tuple|absolute continuity of signed
-      measures>|<pageref|auto-736>>
+      measures>|<pageref|auto-734>>
 
       <tuple|<tuple|absolute continuity of complex
-      measures>|<pageref|auto-737>>
+      measures>|<pageref|auto-735>>
 
-      <tuple|<tuple|Tonelli's theorem>|<pageref|auto-741>>
+      <tuple|<tuple|Tonelli's theorem>|<pageref|auto-739>>
 
-      <tuple|<tuple|Dyadic interval>|<pageref|auto-747>>
+      <tuple|<tuple|Dyadic interval>|<pageref|auto-745>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|\<cal-D\><rsub|n>>>|<pageref|auto-748>>
+      <tuple|<tuple|<with|mode|<quote|math>|\<cal-D\><rsub|n>>>|<pageref|auto-746>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|\<cal-D\>>>|<pageref|auto-749>>
+      <tuple|<tuple|<with|mode|<quote|math>|\<cal-D\>>>|<pageref|auto-747>>
 
-      <tuple|<tuple|affine space>|<pageref|auto-753>>
+      <tuple|<tuple|affine space>|<pageref|auto-751>>
 
-      <tuple|<tuple|local coordinate system>|<pageref|auto-754>>
+      <tuple|<tuple|local coordinate system>|<pageref|auto-752>>
 
-      <tuple|<tuple|global coordinate system>|<pageref|auto-755>>
+      <tuple|<tuple|global coordinate system>|<pageref|auto-753>>
 
-      <tuple|<tuple|affine mapping>|<pageref|auto-756>>
+      <tuple|<tuple|affine mapping>|<pageref|auto-754>>
 
-      <tuple|<tuple|affine isomorphism>|<pageref|auto-757>>
+      <tuple|<tuple|affine isomorphism>|<pageref|auto-755>>
 
-      <tuple|<tuple|line>|<pageref|auto-758>>
+      <tuple|<tuple|line>|<pageref|auto-756>>
     </associate>
     <\associate|parts>
       <tuple|Sets.tm|chapter-nr|0|section-nr|0|subsection-nr|0>
@@ -11620,198 +11613,198 @@
 
       <with|par-left|<quote|2tab>|21.5.3.2<space|2spc>Integration on
       measurable subspaces <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-698>>
+      <no-break><pageref|auto-696>>
 
       <with|par-left|<quote|2tab>|21.5.3.3<space|2spc>Properties of the
       measure integral <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-700>>
+      <no-break><pageref|auto-698>>
 
       <with|par-left|<quote|1tab>|21.5.4<space|2spc>Limit theorems
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-701>>
+      <no-break><pageref|auto-699>>
 
       <with|par-left|<quote|1tab>|21.5.5<space|2spc>Complex integration
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-702>>
+      <no-break><pageref|auto-700>>
 
       <with|par-left|<quote|2tab>|21.5.5.1<space|2spc>Measurability of
       complex valued functions <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-703>>
+      <no-break><pageref|auto-701>>
 
       <with|par-left|<quote|2tab>|21.5.5.2<space|2spc>Complex Measure
       Integral <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-708>>
+      <no-break><pageref|auto-706>>
 
       <with|par-left|<quote|1tab>|21.5.6<space|2spc>The spaces
       <with|mode|<quote|math>|\<cal-L\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>
       and <with|mode|<quote|math>|L<rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-711>>
+      <no-break><pageref|auto-709>>
 
       <with|par-left|<quote|2tab>|21.5.6.1<space|2spc>Definition of
       <with|mode|<quote|math>|\<cal-L\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>
       and <with|mode|<quote|math>|L<rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-712>>
+      <no-break><pageref|auto-710>>
 
       <with|par-left|<quote|2tab>|21.5.6.2<space|2spc>The Banach space
       <with|mode|<quote|math>|<around*|\<langle\>|L<rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>,<around*|\<\|\|\>||\<\|\|\>><rsub|Lp>|\<rangle\>>>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-716>>
+      <no-break><pageref|auto-714>>
 
       <with|par-left|<quote|2tab>|21.5.6.3<space|2spc>Density
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-717>>
+      <no-break><pageref|auto-715>>
 
       21.6<space|2spc>Signed and complex measures
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-718>
+      <no-break><pageref|auto-716>
 
       <with|par-left|<quote|1tab>|21.6.1<space|2spc>Signed measures
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-719>>
+      <no-break><pageref|auto-717>>
 
       <with|par-left|<quote|2tab>|21.6.1.1<space|2spc>Definition and
       properities <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-720>>
+      <no-break><pageref|auto-718>>
 
       <with|par-left|<quote|2tab>|21.6.1.2<space|2spc>Hahn and Jordan
       decomposition <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-721>>
+      <no-break><pageref|auto-719>>
 
       <with|par-left|<quote|1tab>|21.6.2<space|2spc>Complex Measure
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-724>>
+      <no-break><pageref|auto-722>>
 
       <with|par-left|<quote|2tab>|21.6.2.1<space|2spc>Definition and
       properties <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-725>>
+      <no-break><pageref|auto-723>>
 
       <with|par-left|<quote|2tab>|21.6.2.2<space|2spc>Jordan decomposition of
       a complex measure <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-727>>
+      <no-break><pageref|auto-725>>
 
       <with|par-left|<quote|1tab>|21.6.3<space|2spc>Banach space of signed
       (complex) measures <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-728>>
+      <no-break><pageref|auto-726>>
 
       <with|par-left|<quote|2tab>|21.6.3.1<space|2spc>Integrals based on
       signed or complex measures. <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-731>>
+      <no-break><pageref|auto-729>>
 
       <with|par-left|<quote|2tab>|21.6.3.2<space|2spc>Radon-Nikodym Theorem
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-734>>
+      <no-break><pageref|auto-732>>
 
       21.7<space|2spc>Product measures <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-738>
+      <no-break><pageref|auto-736>
 
       <with|par-left|<quote|1tab>|21.7.1<space|2spc>Product of
       <with|mode|<quote|math>|\<sigma\>>-algebras
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-739>>
+      <no-break><pageref|auto-737>>
 
       <with|par-left|<quote|1tab>|21.7.2<space|2spc>Product measures
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-740>>
+      <no-break><pageref|auto-738>>
 
       21.8<space|2spc>Change of variables in
       <with|mode|<quote|math>|\<bbb-R\><rsup|n>>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-742>
+      <no-break><pageref|auto-740>
 
       <with|par-left|<quote|1tab>|21.8.1<space|2spc>Regularity and Radon
       measures <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-743>>
+      <no-break><pageref|auto-741>>
 
       <with|par-left|<quote|2tab>|21.8.1.1<space|2spc>Definition of regular
       and Radon measures <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-744>>
+      <no-break><pageref|auto-742>>
 
       <with|par-left|<quote|2tab>|21.8.1.2<space|2spc><with|mode|<quote|math>|\<lambda\>>
       and <with|mode|<quote|math>|\<lambda\><rsup|n>> are Radon measures
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-745>>
+      <no-break><pageref|auto-743>>
 
       <with|par-left|<quote|2tab>|21.8.1.3<space|2spc>Translation invariance
       and Radon Measures <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-746>>
+      <no-break><pageref|auto-744>>
 
       <with|par-left|<quote|1tab>|21.8.2<space|2spc>Borel measures and linear
       transformations <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-750>>
+      <no-break><pageref|auto-748>>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|22<space|2spc>Affine
       Spaces> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-751><vspace|0.5fn>
+      <no-break><pageref|auto-749><vspace|0.5fn>
 
       22.1<space|2spc>Definition and properties
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-752>
+      <no-break><pageref|auto-750>
 
       22.2<space|2spc>Eucledian space <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-759>
+      <no-break><pageref|auto-757>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|23<space|2spc>Differential
       Manifolds> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-760><vspace|0.5fn>
+      <no-break><pageref|auto-758><vspace|0.5fn>
 
       23.1<space|2spc> Topological Manifold
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-761>
+      <no-break><pageref|auto-759>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|24<space|2spc>TODO>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-762><vspace|0.5fn>
+      <no-break><pageref|auto-760><vspace|0.5fn>
 
       24.1<space|2spc>Sets.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-763>
+      <no-break><pageref|auto-761>
 
       24.2<space|2spc>NaturalNumbers.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-764>
+      <no-break><pageref|auto-762>
 
       24.3<space|2spc>Numbers.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-765>
+      <no-break><pageref|auto-763>
 
       24.4<space|2spc>LinearAlgebra.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-766>
+      <no-break><pageref|auto-764>
 
       24.5<space|2spc>DirectSum.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-767>
+      <no-break><pageref|auto-765>
 
       24.6<space|2spc>TensorProduct.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-768>
+      <no-break><pageref|auto-766>
 
       24.7<space|2spc>Topology.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-769>
+      <no-break><pageref|auto-767>
 
       24.8<space|2spc>IntegrationBanach.tm
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-770>
+      <no-break><pageref|auto-768>
 
       24.9<space|2spc>Differentiation.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-771>
+      <no-break><pageref|auto-769>
 
       24.10<space|2spc>FundamentalTheorem.OfAlgebra.tm
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-772>
+      <no-break><pageref|auto-770>
 
       24.11<space|2spc>InnerProductSpaces.tm
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-773>
+      <no-break><pageref|auto-771>
 
       24.12<space|2spc>Exponential.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-774>
+      <no-break><pageref|auto-772>
 
       24.13<space|2spc>Measure.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-775>
+      <no-break><pageref|auto-773>
 
       24.14<space|2spc>Manifold.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-776>
+      <no-break><pageref|auto-774>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|Index>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-777><vspace|0.5fn>
+      <no-break><pageref|auto-775><vspace|0.5fn>
     </associate>
   </collection>
 </auxiliary>
