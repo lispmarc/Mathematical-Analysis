@@ -27284,8 +27284,6 @@
     </equation*>
   </proof>
 
-  TODO recheck this
-
   <\theorem>
     <label|Lebesgue's Dominated Convergence Theorem><dueto|Lebesgue's
     Dominated Convergence Theorem>Let <math|<around*|\<langle\>|X,\<cal-A\>,\<mu\>|\<rangle\>>>
@@ -27349,7 +27347,8 @@
       <label|eq 21.604.302>N\<in\>\<cal-A\>\<wedge\>\<mu\><around*|(|N|)>\<leqslant\>\<mu\><around*|(|N<rsub|1>|)>+\<mu\><around*|(|N<rsub|2>|)>=0+0=0
     </equation>
 
-    Hence <math|\<forall\>x\<in\>X\\N> we have\ 
+    Hence <math|\<forall\>x\<in\>X\\N=<around*|(|X\\N<rsub|1>|)><big|cap><around*|(|X\\N<rsub|2>|)>>
+    we have \ 
 
     <\equation>
       <label|eq 21.605.302>g<around*|(|x|)>\<neq\>\<infty\><text|,
@@ -27378,7 +27377,7 @@
     <\equation>
       <label|eq 21.608.302><around*|\||\<cal-X\><rsub|X,X\\N>\<cdot\>f|\|>\<in\>\<cal-M\><rsup|+><around*|[|X,\<cal-A\>,<wide|\<bbb-R\>|\<wide-bar\>>|]><text|
       and >\<forall\>n\<in\>\<bbb-N\><text|
-      ><around*|\||\<cal-X\><rsub|X,X\\N>\<cdot\>f|\|>\<in\>\<cal-M\><rsup|+><around*|[|X,\<cal-A\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
+      ><around*|\||\<cal-X\><rsub|X,X\\N>\<cdot\>f<rsub|n>|\|>\<in\>\<cal-M\><rsup|+><around*|[|X,\<cal-A\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
     </equation>
 
     Further using \ [theorem: <reference|almost everywhere and
@@ -27393,7 +27392,8 @@
 
     <\equation>
       <label|eq 21.610.302>\<forall\>n\<in\>\<bbb-N\><text|
-      >f<rsub|n>=\<cal-X\><rsub|X,X\\N>\<cdot\>f<text| >\<mu\><text|-a.e.>
+      >f<rsub|n>=\<cal-X\><rsub|X,X\\N>\<cdot\>f<rsub|n><text|
+      >\<mu\><text|-a.e.>
     </equation>
 
     Let <math|x\<in\>X> then we have either:\ 
@@ -27404,7 +27404,7 @@
       hence\ 
 
       <\equation*>
-        0\<leqslant\><around*|(|\<b-X\><rsub|X,X\\N>\<cdot\>g|)><around*|(|z|)>\<less\>\<infty\>
+        0\<leqslant\><around*|(|\<b-X\><rsub|X,X\\N>\<cdot\>g|)><around*|(|x|)>\<less\>\<infty\>
       </equation*>
 
       Further <math|\<forall\>n\<in\>\<bbb-N\>>
@@ -27431,14 +27431,14 @@
       <reference|eq 21.605.302>]>>\<infty\>> so that
 
       <\equation*>
-        0\<leqslant\><around*|(|\<b-X\><rsub|X,X\\N>\<cdot\>g|)><around*|(|z|)>\<less\>\<infty\>
+        0\<leqslant\><around*|(|\<b-X\><rsub|X,X\\N>\<cdot\>g|)><around*|(|x|)>\<less\>\<infty\>
       </equation*>
 
       Further <math|\<forall\>n\<in\>\<bbb-N\>> we have
 
       <\equation*>
         <around*|\||\<cal-X\><rsub|X,X\\N>\<cdot\>f<rsub|n>|\|><around*|(|x|)>=<around*|\||\<cal-X\><rsub|X,X\\N><around*|(|x|)>\<cdot\>f<rsub|n><around*|(|x|)>|\|>=<around*|\||f<rsub|n><around*|(|x|)>|\|><below|\<leqslant\>|<text|[eq:
-        <reference|eq 21.605.302>]>>g<around*|(|x|)>=<around*|(|\<cal-X\><rsub|X,X\\N>\<cdot\>g|)><around*|(|x|)>\<less\>\<infty\>612
+        <reference|eq 21.605.302>]>>g<around*|(|x|)>=<around*|(|\<cal-X\><rsub|X,X\\N>\<cdot\>g|)><around*|(|x|)>\<less\>\<infty\>
       </equation*>
 
       As <math|\<forall\>n\<in\>\<bbb-N\>>
@@ -27452,7 +27452,7 @@
       </equation*>
     </description>
 
-    so we have that\ 
+    so we have that <math|\<forall\>x\<in\>X>
 
     <\equation>
       <label|eq 21.611.302>0\<leqslant\><around*|(|\<b-X\><rsub|X,X\\N>\<cdot\>g|)><around*|(|x|)>\<less\>\<infty\>
@@ -27460,7 +27460,7 @@
 
     <\equation>
       <label|eq 21.612.302>\<forall\>n\<in\>\<bbb-N\><text| we have
-      ><around*|\||\<cal-X\><rsub|X,X\\N>\<cdot\>f<rsub|n>|\|>\<leqslant\>\<cal-X\><rsub|X,X\\N><around*|(|x|)>\<cdot\>g<around*|(|x|)>\<less\>\<infty\>
+      ><around*|\||\<cal-X\><rsub|X,X\\N>\<cdot\>f<rsub|n>|\|><around*|(|x|)>\<leqslant\><around*|(|\<cal-X\><rsub|X,X\\N>\<cdot\>g|)><around*|(|x|)>\<less\>\<infty\>
     </equation>
 
     <\equation>
@@ -27478,16 +27478,14 @@
     </equation>
 
     As <math|g\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>,
-    <math|g=\<cal-X\><rsub|X\\N>\<cdot\>f> <math|\<mu\>>-a.e. [see eq:
+    <math|g=\<cal-X\><rsub|X\\N>\<cdot\>g> <math|\<mu\>>-a.e. [see eq:
     <reference|eq 21.609.302>] it follows from [theorem: <reference|measure
-    integral and a.e. equalitiy>] that <math|\<cal-X\><rsub|X,X\\N>\<cdot\>g\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
-    and <around*|(|\<cal-X\><rsub|X,X\\N>\<cdot\>g|)>d\<mu\>=<big|int>g
-    d\<mu\>, combining this with [eq: <reference|eq 21.611.302>] proves that\ 
+    integral and a.e. equalitiy>] that
 
     <\equation>
       <label|eq 21.615.302>\<cal-X\><rsub|X,X\\N>\<cdot\>g\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>,<wide|\<bbb-R\>|\<wide-bar\>>|]><text|
       and ><big|int><around*|(|\<cal-X\><rsub|X,X\\N>\<cdot\>g|)>d\<mu\>=<big|int>g
-      d\<mu\>\<less\>\<infty\>
+      d\<mu\><below|\<less\>|g\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>\<infty\>
     </equation>
 
     Next we prove that <math|\<forall\>n\<in\>\<bbb-N\>>
@@ -27496,9 +27494,10 @@
     Let <math|n\<in\>\<bbb-N\>>. As <math|\<forall\>x\<in\>X<text|
     ><around*|\||\<cal-X\><rsub|X,X\\N>\<cdot\>f<rsub|n>|\|>\<leqslant\>\<cal-X\><rsub|X,X\\N><around*|(|x|)>\<cdot\>g<around*|(|x|)>>
     and <math|> <math|<around*|\||\<cal-X\><rsub|X,X\\N>\<cdot\>f<rsub|n>|\|>\<in\>\<cal-M\><rsup|+><around*|[|X,\<cal-A\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>,
-    <math|\<cal-X\><rsub|X,X\\N>\<cdot\>g> [see eqs: <reference|eq
-    21.606.302>, <reference|eq 21.607.302>] \ it follows from [theorem:
-    <reference|non negative integral scalar product, sum inequality>]\ 
+    <math|\<cal-X\><rsub|X,X\\N>\<cdot\>g\<in\>\<cal-M\><rsup|+><around*|[|X,\<cal-A\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
+    [see eqs: <reference|eq 21.606.302>, <reference|eq 21.607.302>] \ it
+    follows from [theorem: <reference|non negative integral scalar product,
+    sum inequality>]\ 
 
     <\equation*>
       <big|int><rsup|+><around*|\||\<cal-X\><rsub|X,X\\N>\<cdot\>f<rsub|n>|\|>d\<mu\>\<leqslant\><big|int><rsup|+><around*|(|\<cal-X\><rsub|X,X\\N>\<cdot\>g|)>d\<mu\>\<equallim\><rsub|<text|[eq:
@@ -27508,7 +27507,7 @@
     </equation*>
 
     As <math|><math|\<cal-X\><rsub|X,X\\N>\<cdot\>f<rsub|n>\<in\>\<cal-M\><around*|[|X,\<cal-A\>,\<mu\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
-    [see: <reference|eq 21.605.302>] it follows from the above by [theorem:
+    [see: <reference|eq 21.608.302>] it follows from the above by [theorem:
     <reference|measure integral alternative>] that
 
     <\equation>
@@ -27517,7 +27516,7 @@
 
     As <math|f<rsub|n>=\<cal-X\><rsub|X,X\\N>\<cdot\>f<rsub|n>>
     <math|\<mu\>>-a.e. [see eq: <reference|eq 21.610.302>] and
-    <math|f\<in\>\<cal-M\><around*|[|X,\<cal-A\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
+    <math|f<rsub|n>\<in\>\<cal-M\><around*|[|X,\<cal-A\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
     it follows from \ [theorem: <reference|measure integral and a.e.
     equalitiy>] that <math|f<rsub|n>\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
     with <math|<big|int>f<rsub|n>d\<mu\>=<big|int><around*|(|\<cal-X\><rsub|X,X\\N>\<cdot\>f<rsub|n>|)>d\<mu\>>,
@@ -27534,7 +27533,7 @@
 
     <\eqnarray*>
       <tformat|<table|<row|<cell|<around*|\||\<cal-X\><rsub|X,X\\N>\<cdot\>f|\|><around*|(|x|)>>|<cell|<below|=|<text|[eq:
-      <reference|eq 21.613.302>]>>>|<cell|<below|lim|n\<rightarrow\>\<infty\>><around*|\||\<cal-X\><rsub|X,X\\N>\<cdot\>f<rsub|n>|\|><around*|(|x|)>>>|<row|<cell|>|<cell|<below|\<leqslant\>|<text|[theorem:
+      <reference|eq 21.614.32>]>>>|<cell|<below|lim|n\<rightarrow\>\<infty\>><around*|\||\<cal-X\><rsub|X,X\\N>\<cdot\>f<rsub|n>|\|><around*|(|x|)>>>|<row|<cell|>|<cell|<below|\<leqslant\>|<text|[theorem:
       <reference|extended limit properties>]>\<wedge\><text|[eq:
       <reference|eq 21.612.302>]>>>|<cell|<around*|(|\<cal-X\><rsub|X,X\\N>\<cdot\>g|)><around*|(|x|)>>>|<row|<cell|>|<cell|\<less\>>|<cell|\<infty\>>>>>
     </eqnarray*>
@@ -27624,7 +27623,7 @@
       <reference|eq 21.613.302>]>>>|<cell|<around*|(|\<cal-X\><rsub|X,X\\N>\<cdot\>g|)><around*|(|x|)>-<below|lim|n\<rightarrow\>\<infty\>><around*|(|\<cal-X\><rsub|X,X\\N>\<cdot\>f<rsub|n>|)><around*|(|x|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[example:
       <reference|extended limit constant sequence>]>><rsub|<text|>>>|<cell|<below|lim|n\<rightarrow\>\<infty\>><around*|(|\<cal-X\><rsub|X,X\\N>\<cdot\>g|)><around*|(|x|)>-<below|lim|n\<rightarrow\>\<infty\>><around*|(|\<cal-X\><rsub|X,X\\N>\<cdot\>f<rsub|n>|)><around*|(|x|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
       <reference|extended limit properties>]>><rsub|<text|>>>|<cell|<below|<below|lim|n\<rightarrow\>\<infty\>><around*|(|<around*|(|\<cal-X\><rsub|X,X\\N>\<cdot\>g|)><around*|(|x|)>-<around*|(|\<cal-X\><rsub|X,X\\N>\<cdot\>f<rsub|n>|)><around*|(|x|)>|)>|>>>|<row|<cell|>|<cell|=>|<cell|<below|lim|n\<rightarrow\>\<infty\>><around*|(|\<cal-X\><rsub|X,X\\N>\<cdot\>g-\<cal-X\><rsub|X,X\\N>\<cdot\>f<rsub|n>|)><around*|(|x|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|def
-      limit>>|<cell|<below|lim inf|n\<rightarrow\>\<infty\>><around*|(|\<cal-X\><rsub|X,X\\N>\<cdot\>g-\<cal-X\><rsub|X,X\\N>\<cdot\>f<rsub|n>|)><around*|(|x|)>>>|<row|<cell|<around*|(|\<cal-X\><rsub|X,X\\N>\<cdot\>g|)><around*|(|x|)>+<around*|(|\<cal-X\><rsub|X,X\\N>\<cdot\>f|)><around*|(|x|)>>|<cell|<below|=|<text|[eq:
+      \ limit>>|<cell|<below|lim inf|n\<rightarrow\>\<infty\>><around*|(|\<cal-X\><rsub|X,X\\N>\<cdot\>g-\<cal-X\><rsub|X,X\\N>\<cdot\>f<rsub|n>|)><around*|(|x|)>>>|<row|<cell|<around*|(|\<cal-X\><rsub|X,X\\N>\<cdot\>g|)><around*|(|x|)>+<around*|(|\<cal-X\><rsub|X,X\\N>\<cdot\>f|)><around*|(|x|)>>|<cell|<below|=|<text|[eq:
       <reference|eq 21.613.302>]>>>|<cell|<around*|(|\<cal-X\><rsub|X,X\\N>\<cdot\>g|)><around*|(|x|)>+<below|lim|n\<rightarrow\>\<infty\>><around*|(|\<cal-X\><rsub|X,X\\N>\<cdot\>f<rsub|n>|)><around*|(|x|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[example:
       <reference|extended limit constant sequence>]>><rsub|<text|>>>|<cell|<below|lim|n\<rightarrow\>\<infty\>><around*|(|\<cal-X\><rsub|X,X\\N>\<cdot\>g|)><around*|(|x|)>+<below|lim|n\<rightarrow\>\<infty\>><around*|(|\<cal-X\><rsub|X,X\\N>\<cdot\>f<rsub|n>|)><around*|(|x|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
       <reference|extended limit properties>]>><rsub|<text|>>>|<cell|<below|<below|lim|n\<rightarrow\>\<infty\>><around*|(|<around*|(|\<cal-X\><rsub|X,X\\N>\<cdot\>g|)><around*|(|x|)>+<around*|(|\<cal-X\><rsub|X,X\\N>\<cdot\>f<rsub|n>|)><around*|(|x|)>|)>|>>>|<row|<cell|>|<cell|=>|<cell|<below|lim|n\<rightarrow\>\<infty\>><around*|(|\<cal-X\><rsub|X,X\\N>\<cdot\>g+\<cal-X\><rsub|X,X\\N>\<cdot\>f<rsub|n>|)><around*|(|x|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|def
@@ -27675,7 +27674,7 @@
       -\<cal-X\><rsub|X,X\\N>\<cdot\>f<rsub|n>|)>d\<mu\>>|<cell|\<equallim\><rsub|<text|><text|[theorem:
       <reference|measure integral properties>]>\<wedge\><around*|[|eqs:<reference|eq
       21.626.302>,<reference|eq 21.627.302>|]>>>|<cell|>>|<row|<cell|<below|lim
-      inf|n\<rightarrow\>\<infty\>><around*|(|<big|int><around*|(|\<cal-X\><rsub|X,X\\N>\<cdot\>f
+      inf|n\<rightarrow\>\<infty\>><around*|(|<big|int><around*|(|\<cal-X\><rsub|X,X\\N>\<cdot\>g
       |)>d\<mu\>+<around*|(|-<big|int><around*|(|\<cal-X\><rsub|X,X\\N>\<cdot\>f<rsub|n>|)>d\<mu\>|)>|)>>|<cell|\<equallim\><rsub|<text|[theorem:
       <reference|extended lim inf and lim sup and
       sum>]>>>|<cell|>>|<row|<cell|<below|lim
@@ -27749,7 +27748,7 @@
       exist and ><below|lim|n\<rightarrow\>\<infty\>><big|int><around*|(|\<cal-X\><rsub|X,X\\N>\<cdot\>f|)>d\<mu\>=<big|int><around*|(|\<cal-X\><rsub|X,X\\N>\<cdot\>f|)>d\<mu\>
     </equation*>
 
-    Combinin this with [eqs: <reference|eq 21.617.203>, <reference|eq
+    Combining this with [eqs: <reference|eq 21.617.203>, <reference|eq
     21.620.302>] it follows that\ 
 
     <\equation*>
@@ -27785,7 +27784,7 @@
 
   that defines the canonical topology on <math|\<bbb-C\>> which we note as
   <math|\<cal-T\><rsub|\<bbb-C\>>>, hence
-  <math|\<cal-T\><rsub|\<bbb-C\>>=\<cal-T\><rsub|<around*|\|||\|>>=\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|\<bbb-C\>>>>
+  <math|\<cal-T\><rsub|\<bbb-C\>>=\<cal-T\><rsub|<around*|\|||\|>>=\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|\<bbb-C\>>>>.
 
   <\definition>
     <label|complex measurable space>The measurable space
@@ -27803,7 +27802,7 @@
   essence we must prove that\ 
 
   <\equation*>
-    \<cal-B\><around*|[|\<bbb-C\>|\<nobracket\>>=\<sigma\><around*|[|<around*|{|B<rsub|<around*|\|||\|>><around*|(|x,\<delta\>|)>+i\<cdot\>B<rsub|<around*|\|||\|>><around*|(|y,\<rho\>|)>\|x,y,\<delta\>,\<rho\>\<in\>\<bbb-R\>|}>|]>
+    \<cal-B\><around*|[|\<bbb-C\>|]>=\<sigma\><around*|[|<around*|{|B<rsub|<around*|\|||\|>><around*|(|x,\<delta\>|)>+i\<cdot\>B<rsub|<around*|\|||\|>><around*|(|y,\<rho\>|)>\|x,y,\<delta\>,\<rho\>\<in\>\<bbb-R\>|}>|]>
   </equation*>
 
   which will allows us to use [theorem: <reference|measurable function and
@@ -27813,6 +27812,16 @@
   <\definition>
     Let <math|A,B\<subseteq\>\<bbb-R\>> then
     <math|A+i\<cdot\>B=<around*|{|x+i\<cdot\>y\|x\<in\>A\<wedge\>y\<in\>B|}>>
+
+    <\note>
+      Using [theorem: <reference|complex notation (0)>] and [definition:
+      <reference|complex real imaginair>] it follows that\ 
+
+      <\equation*>
+        z\<in\>A+i\<cdot\>B<text| >\<Leftrightarrow\><text|
+        >Re<around*|(|z|)>\<in\>A<text| and >Img<around*|(|z|)>\<in\>B
+      </equation*>
+    </note>
   </definition>
 
   <\lemma>
@@ -27823,28 +27832,38 @@
   </lemma>
 
   <\proof>
-    Let <math|z\<in\>A+i\<cdot\>B> then there exists <math|x\<in\>U> and a
-    <math|y\<in\>V> such that <math|z=x+i\<cdot\>y>. As <math|U> and <math|V>
-    are open there exists a <math|\<delta\><rsub|x>>,
-    <math|\<delta\><rsub|y>\<in\>\<bbb-R\><rsup|+>> such that
-    <math|x\<in\>B<rsub|<around*|\|||\|>><around*|(|x,\<delta\><rsub|x>|)>\<subseteq\>U>
-    and <math|y\<in\>B<rsub|<around*|\|||\|>><around*|(|y,\<delta\><rsub|y>|)>\<subseteq\>V>.
+    Let <math|z\<in\>U+i\<cdot\>V> then <math|Re<around*|(|z|)>\<in\>U> and
+    <math|Img<around*|(|z|)>\<in\>V>. As <math|U> and <math|V> are open there
+    exists a <math|\<delta\><rsub|x>>, <math|\<delta\><rsub|y>\<in\>\<bbb-R\><rsup|+>>
+    such that <math|Re<around*|(|z|)>\<in\>B<rsub|<around*|\|||\|>><around*|(|Re<around*|(|z|)>,\<delta\><rsub|x>|)>\<subseteq\>U>
+    and <math|Img<around*|(|z|)>\<in\>B<rsub|<around*|\|||\|>><around*|(|Img<around*|(|z|)>,\<delta\><rsub|y>|)>\<subseteq\>V>.
     Let <math|\<delta\>=min<around*|(|\<delta\><rsub|x>,\<delta\><rsub|y>|)>>
     then for <math|w\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|\<bbb-C\>>><around*|(|z,\<delta\>|)>>
     we have <math|<around*|\<\|\|\>|z-w|\<\|\|\>><rsub|\<bbb-C\>>\<less\>\<delta\>>
     hence we have\ 
 
     <\equation*>
-      <around*|\||x-Re<around*|(|w|)>|\|>=<around*|\||Re<around*|(|z|)>-Re<around*|(|w|)>|\|>=<around*|\||Re<around*|(|z-w|)>|\|>\<leqslant\>max<around*|(|<around*|\||Re<around*|(|z-w|)>|\|>,<around*|\||Img<around*|(|z-w|)>|\|>|)>\<less\>\<delta\>\<leqslant\>\<delta\><rsub|1>
+      <around*|\||Re<around*|(|z|)>-Re<around*|(|w|)>|\|>=<around*|\||Re<around*|(|z-w|)>|\|>\<leqslant\>max<around*|(|<around*|\||Re<around*|(|z-w|)>|\|>,<around*|\||Img<around*|(|z-w|)>|\|>|)>\<less\>\<delta\>\<leqslant\>\<delta\><rsub|1>
     </equation*>
 
     <\equation*>
-      <around*|\||y-Img<around*|(|w|)>|\|>=<around*|\||Img<around*|(|z|)>-Img<around*|(|w|)>|\|>=<around*|\||Imf<around*|(|z-w|)>|\|>\<leqslant\>max<around*|(|<around*|\||Re<around*|(|z-w|)>|\|>,<around*|\||Img<around*|(|z-w|)>|\|>|)>\<less\>\<delta\>\<leqslant\>\<delta\><rsub|2>
+      <around*|\||Img<around*|(|z|)>-Img<around*|(|w|)>|\|>=<around*|\||Imf<around*|(|z-w|)>|\|>\<leqslant\>max<around*|(|<around*|\||Re<around*|(|z-w|)>|\|>,<around*|\||Img<around*|(|z-w|)>|\|>|)>\<less\>\<delta\>\<leqslant\>\<delta\><rsub|2>
     </equation*>
 
-    so that <math|Re<around*|(|w|)>\<in\>B<rsub|<around*|\|||\|>><around*|(|x,\<delta\><rsub|1>|)>\<subseteq\>U>
-    and <math|Img<around*|(|w|)>\<in\>B<rsub|<around*|\|||\|>><around*|(|y,\<delta\><rsub|2>|)>\<subseteq\>V>.
-    Hence <math|w=Re<around*|(|w|)>+i\<cdot\>Img<around*|(|w|)>\<in\>U+i\<cdot\>V>
+    so that <math|Re<around*|(|w|)>\<in\>B<rsub|<around*|\|||\|>><around*|(|Re<around*|(|z|)>,\<delta\><rsub|1>|)>\<subseteq\>U>
+    and <math|Img<around*|(|w|)>\<in\>B<rsub|<around*|\|||\|>><around*|(|Img<around*|(|z|)>,\<delta\><rsub|2>|)>\<subseteq\>V>,
+    hence
+
+    <\equation*>
+      w=Re<around*|(|w|)>+i\<cdot\>Img<around*|(|w|)>\<in\>U+i\<cdot\>V
+    </equation*>
+
+    From this it follows that\ 
+
+    <\equation*>
+      w\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|C>><around*|(|w,\<delta\>|)>\<subseteq\>U+i\<cdot\>V
+    </equation*>
+
     which proves that <math|U+i\<cdot\>V> is open.
   </proof>
 
@@ -27856,7 +27875,7 @@
     such that\ 
 
     <\equation*>
-      z\<in\>B<rsub|<around*|\|||\|>><around*|(|q<rsub|1>,\<delta\><rsub|1>|)>+B<rsub|<around*|\|||\|>><around*|(|q<rsub|2>,\<delta\><rsub|2>|)>\<subseteq\>U
+      z\<in\>B<rsub|<around*|\|||\|>><around*|(|q<rsub|1>,\<delta\><rsub|1>|)>+i\<cdot\>B<rsub|<around*|\|||\|>><around*|(|q<rsub|2>,\<delta\><rsub|2>|)>\<subseteq\>U
     </equation*>
   </lemma>
 
@@ -27883,27 +27902,27 @@
       <label|eq 21.631.302>Re<around*|(|z|)>-\<delta\>\<less\>q<rsub|1>\<less\>Re<around*|(|z|)>
     </equation>
 
-    hence we have <math|q<rsub|1>-<around*|(|Re<around*|(|z|)>-\<delta\>|)>\<less\>Re<around*|(|z|)>-<around*|(|Re<around*|(|z|)>-\<delta\>|)>=\<delta\>>
-    and using [theorem: <reference|complex densitiy theorem>] again we find a
+    hence we have <math|Re<around*|(|z|)>-q<rsub|1>\<less\>\<delta\>> and
+    using [theorem: <reference|complex densitiy theorem>] again we find a
     <math|\<delta\><rsub|1>\<in\>\<bbb-Q\>> such that\ 
 
     <\equation>
-      <label|eq 21.632.302>q<rsub|1>-<around*|(|Re<around*|(|z|)>-\<delta\>|)>\<less\>\<delta\><rsub|1>\<less\>\<delta\>
+      <label|eq 21.632.302>Re<around*|(|z|)>-q<rsub|1>\<less\>\<delta\><rsub|1>\<less\>\<delta\>
     </equation>
 
     As by [eq: <reference|eq 21.631.302>]
-    <math|0\<less\>q<rsub|1>-<around*|(|Re<around*|(|z|)>-\<delta\>|)>> it
-    follows from the above that\ 
+    <math|0\<less\>Re<around*|(|z|)>-q<rsub|1>> it follows from the above
+    that\ 
 
     <\equation*>
-      \<delta\><rsub|1>\<in\>\<bbb-Q\><rsup|+>
+      \<delta\><rsub|1>\<in\>\<bbb-Q\><rsup|+>\ 
     </equation*>
 
     Further we have <math|q<rsub|1>-Re<around*|(|z|)><below|\<less\>|<text|[eq:
     <reference|eq 21.631.302>]>>0\<less\>\<delta\><rsub|1>> and
-    <math|q<rsub|1>-Re<around*|(|z|)>\<less\>q<rsub|1>-<around*|(|Re<around*|(|z|)>-\<delta\>|)><below|\<less\>|<text|]eq:
-    <reference|eq 21.632.302>]>>\<delta\><rsub|1>> which proves that
-    <math|<around*|\||q<rsub|1>-Re<around*|(|z|)>|\|>\<less\>\<delta\><rsub|1>>
+    <math|Re<around*|(|z|)>-q<rsub|1><below|\<less\>|<text|[eq: <reference|eq
+    21.631.302>]>>\<delta\><rsub|1>> which proves that
+    <math|<rigid|<around*|\||q<rsub|1>-Re<around*|(|z|)>|\|>\<less\>\<delta\><rsub|1>>>
     or that\ 
 
     <\equation>
@@ -27919,37 +27938,36 @@
       <label|eq 21.634.302>Img<around*|(|z|)>-\<delta\>\<less\>q<rsub|2>\<less\>Img<around*|(|z|)>
     </equation>
 
-    hence we have <math|q<rsub|2>-<around*|(|Img<around*|(|z|)>-\<delta\>|)>\<less\>Img<around*|(|z|)>-<around*|(|Img<around*|(|z|)>-\<delta\>|)>=\<delta\>>
-    and using [theorem: <reference|complex densitiy theorem>] again we find a
+    hence we have <math|Img<around*|(|z|)>-q<rsub|2>\<less\>\<delta\>> and
+    using [theorem: <reference|complex densitiy theorem>] again we find a
     <math|\<delta\><rsub|2>\<in\>\<bbb-Q\>> such that\ 
 
     <\equation>
-      <label|eq 21.635.302>q<rsub|2>-<around*|(|Img<around*|(|z|)>-\<delta\>|)>\<less\>\<delta\><rsub|2>\<less\>\<delta\>
+      <label|eq 21.635.302>Img<around*|(|z|)>-q<rsub|2>\<less\>\<delta\><rsub|2>\<less\>\<delta\>
     </equation>
 
     As by [eq: <reference|eq 21.634.302>]
-    <math|0\<less\>q<rsub|2>-<around*|(|Img<around*|(|z|)>-\<delta\>|)>> it
-    follows from the above that\ 
+    <math|0\<less\>Img<around*|(|z|)>-q<rsub|2>> it follows from the above
+    that\ 
 
     <\equation*>
       \<delta\><rsub|2>\<in\>\<bbb-Q\><rsup|+>
     </equation*>
 
     Further we have <math|q<rsub|2>-Img<around*|(|z|)><below|\<less\>|<text|[eq:
-    <reference|eq 21.634.302>]>>0\<less\>\<delta\><rsub|1>> and
-    <math|q<rsub|2>-Img<around*|(|z|)>\<less\>q<rsub|2>-<around*|(|Img<around*|(|z|)>-\<delta\>|)><below|\<less\>|<text|]eq:
-    <reference|eq 21.632.302>]>>\<delta\><rsub|2>> which proves that
-    <math|<around*|\||q<rsub|2>-Img<around*|(|z|)>|\|>\<less\>\<delta\><rsub|2>>
+    <reference|eq 21.634.302>]>>0\<less\>\<delta\><rsub|2>> and
+    <math|Img<around*|(|z|)>-q<rsub|2><below|\<less\>|<text|[eq:
+    <reference|eq 21.635.302>]>>\<delta\><rsub|2>> which proves that
+    <math|<rigid|<around*|\||q<rsub|2>-Img<around*|(|z|)>|\|>\<less\>\<delta\><rsub|2>>>
     or that\ 
 
     <\equation>
       <label|eq 21.636.302>Img<around*|(|z|)>\<in\>B<rsub|<around*|\|||\|>><around*|(|q<rsub|2>,\<delta\><rsub|2>|)>
     </equation>
 
-    Now as <math|z=Re<around*|(|z|)>+i\<cdot\>Img<around*|(|z|)>> and
-    <math|Re<around*|(|z|)>\<in\>B<rsub|<around*|\|||\|>><around*|(|q<rsub|1>,\<delta\><rsub|1>|)>\<wedge\>Img<around*|(|z|)>\<in\>B<rsub|<around*|\|||\|>><around*|(|q<rsub|2>,\<delta\><rsub|2>|)>>
-    [ee eqs: <reference|eq 21.633.302>, <reference|eq 21.636.302>] it follows
-    that\ 
+    Now as <math|Re<around*|(|z|)>\<in\>B<rsub|<around*|\|||\|>><around*|(|q<rsub|1>,\<delta\><rsub|1>|)>\<wedge\>Img<around*|(|z|)>\<in\>B<rsub|<around*|\|||\|>><around*|(|q<rsub|2>,\<delta\><rsub|2>|)>>
+    [see eqs: <reference|eq 21.633.302>, <reference|eq 21.636.302>] it
+    follows that\ 
 
     <\equation*>
       z\<in\>B<rsub|<around*|\|||\|>><around*|(|q<rsub|1>,\<delta\><rsub|1>|)>+i\<cdot\>B<rsub|<around*|\|||\|>><around*|(|q<rsub|2>,\<delta\><rsub|2>|)>
@@ -27961,7 +27979,7 @@
     so that\ 
 
     <\equation*>
-      <around*|\||Re<around*|(|z|)>-Re<around*|(|w|)>|\|>\<leqslant\><around*|\||Re<around*|(|z|)>-Re<around*|(|q<rsub|1>|)>|\|>+<around*|\||Re<around*|(|q<rsub|1>|)>-Re<around*|(|w|)>|\|>\<less\>\<delta\><rsub|1>+\<delta\><rsub|1>=2\<cdot\>\<delta\><rsub|1><below|\<less\>|<text|[eq:
+      <around*|\||Re<around*|(|z|)>-Re<around*|(|w|)>|\|>\<leqslant\><around*|\||Re<around*|(|z|)>-q<rsub|1>|\|>+<around*|\||q<rsub|1>-Re<around*|(|w|)>|\|>\<less\>\<delta\><rsub|1>+\<delta\><rsub|1>=2\<cdot\>\<delta\><rsub|1><below|\<less\>|<text|[eq:
       <reference|eq 21.632.302>]>>2\<cdot\>\<delta\><below|=|<text|[eq:
       <reference|eq 21.631.303>]>>\<delta\><rprime|'>
     </equation*>
@@ -27969,7 +27987,7 @@
     and
 
     <\equation*>
-      <around*|\||Img<around*|(|z|)>-Img<around*|(|w|)>|\|>\<leqslant\><around*|\||Img<around*|(|z|)>-Img<around*|(|q<rsub|1>|)>|\|>+<around*|\||Img<around*|(|q<rsub|1>|)>-Img<around*|(|w|)>|\|>\<less\>\<delta\><rsub|1>+\<delta\><rsub|1>=2\<cdot\>\<delta\><rsub|1><below|\<less\>|<text|[eq:
+      <around*|\||Img<around*|(|z|)>-Img<around*|(|w|)>|\|>\<leqslant\><around*|\||Img<around*|(|z|)>-q<rsub|2>|\|>+<around*|\||q<rsub|2>-Img<around*|(|w|)>|\|>\<less\>\<delta\><rsub|1>+\<delta\><rsub|1>=2\<cdot\>\<delta\><rsub|1><below|\<less\>|<text|[eq:
       <reference|eq 21.632.302>]>>2\<cdot\>\<delta\><below|=|<text|[eq:
       <reference|eq 21.631.303>]>>\<delta\><rprime|'>
     </equation*>
@@ -27977,7 +27995,7 @@
     hence we have\ 
 
     <\equation*>
-      <around*|\<\|\|\>|z-w|\<\|\|\>><rsub|\<bbb-C\>>=max<around*|(|<around*|\||Re<around*|(|z-w|)>|\|>,<around*|\||ImgZ<around*|(|z-w|)>|\|>|)>=max<around*|(|<around*|\||Re<around*|(|z|)>-Re<around*|(|w|)>|\|>,<around*|\||Img<around*|(|z|)>-Img<around*|(|w|)>|\|>|)>\<less\>\<delta\><rprime|'>
+      <around*|\<\|\|\>|z-w|\<\|\|\>><rsub|\<bbb-C\>>=max<around*|(|<around*|\||Re<around*|(|z-w|)>|\|>,<around*|\||Img<around*|(|z-w|)>|\|>|)>=max<around*|(|<around*|\||Re<around*|(|z|)>-Re<around*|(|w|)>|\|>,<around*|\||Img<around*|(|z|)>-Img<around*|(|w|)>|\|>|)>\<less\>\<delta\><rprime|'>
     </equation*>
 
     which proves that <math|w\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|\<bbb-C\>>><around*|(|z,\<delta\><rprime|'>|)><below|\<subseteq\>|<text|[eq:
@@ -27997,10 +28015,11 @@
     </equation*>
 
     where <math|I> is countable such that <math|\<forall\>i\<in\>I>
-    <math|q<rsub|1>,q<rsub|2>\<in\>\<bbb-Q\><rsup|+>>
+    <math|q<rsub|1>,q<rsub|3>\<in\>\<bbb-Q\>>,
+    <math|q<rsub|2>,q<rsub|4>\<in\>\<bbb-Q\><rsup|+>> and
 
     <\equation*>
-      <big|cup><rsub|q\<in\>I>B<rsub|<around*|\|||\|>><around*|(|q<rsub|1>,q<rsub|2>|)>+i\<cdot\>B<rsub|<around*|\|||\|>><around*|(|q<rsub|3>,q<rsub|4>|)>=U
+      <big|cup><rsub|q\<in\>I><around*|(|B<rsub|<around*|\|||\|>><around*|(|q<rsub|1>,q<rsub|2>|)>+i\<cdot\>B<rsub|<around*|\|||\|>><around*|(|q<rsub|3>,q<rsub|4>|)>|)>=U
     </equation*>
   </lemma>
 
@@ -28008,16 +28027,15 @@
     Define\ 
 
     <\equation*>
-      I=<around*|{|q\<in\>\<bbb-Q\><rsup|4>\|B<rsub|<around*|\|||\|>><around*|(|q<rsub|1>,q<rsub|2>|)>+i\<cdot\>B<rsub|<around*|\|||\|>><around*|(|q<rsub|3>,q<rsub|4>|)>\<subseteq\>U\<wedge\>q<rsub|2>,q<rsub|4>\<in\>\<bbb-Q\><rsup|+>|}>\<subseteq\>\<bbb-Q\><rsup|4>
+      I=<around*|{|q\<in\>\<bbb-Q\><rsup|4>\|<around*|(|B<rsub|<around*|\|||\|>><around*|(|q<rsub|1>,q<rsub|2>|)>+i\<cdot\>B<rsub|<around*|\|||\|>><around*|(|q<rsub|3>,q<rsub|4>|)>|)>\<subseteq\>U\<wedge\>q<rsub|1>,q<rsub|3>\<in\>\<bbb-Q\>\<wedge\>q<rsub|2>,q<rsub|4>\<in\>\<bbb-Q\><rsup|+>|}>\<subseteq\>\<bbb-Q\><rsup|4>
     </equation*>
 
     As <math|\<bbb-Q\>> is denumerable [see theorem: <reference|complex
     embedding>(7)] it follows from [theorem: <reference|denumerable product
     of finite family of denumerable sets is denumerable (1)>] that
-    <math|\<bbb-Q\><rsup|4>> is countable and as
-    <math|I\<subseteq\>\<bbb-Q\><rsup|4>> we have by [theorem:
-    <reference|denumerable every subset is finite denumerable.>] it follows
-    that\ 
+    <math|\<bbb-Q\><rsup|4>> is denumerable and, as
+    <math|I\<subseteq\>\<bbb-Q\><rsup|4>>, we have by [theorem:
+    <reference|denumerable every subset is finite denumerable.>] that\ 
 
     <\equation*>
       I<text| is countable>
@@ -28028,23 +28046,23 @@
     it follows that\ 
 
     <\equation>
-      <label|eq 21.638.303><big|cup><rsub|q\<in\>I>B<rsub|<around*|\|||\|>><around*|(|q<rsub|1>,q<rsub|2>|)>+i\<cdot\>B<rsub|<around*|\|||\|>><around*|(|q<rsub|3>,q<rsub|2>|)>\<subseteq\>U
+      <label|eq 21.638.303><big|cup><rsub|q\<in\>I><around*|(|B<rsub|<around*|\|||\|>><around*|(|q<rsub|1>,q<rsub|2>|)>+i\<cdot\>B<rsub|<around*|\|||\|>><around*|(|q<rsub|3>,q<rsub|4>|)>|)>\<subseteq\>U
     </equation>
 
     Let <math|z\<in\>U> then by [lemma: <reference|lemma 21.384.303>] there
-    exists <math|q=<around*|(|q<rsub|1>,q<rsub|2>,q<rsub|2>,q<rsub|3>|)>\<in\>\<bbb-Q\><rsup|4>>
+    exists <math|q=<around*|(|q<rsub|1>,q<rsub|2>,q<rsub|2>,q<rsub|4>|)>\<in\>\<bbb-Q\><rsup|4>>
     such that \ 
 
     <\equation*>
-      z\<in\>B<rsub|<around*|\|||\|>><around*|(|q<rsub|1>,q<rsub|2>|)>+i\<cdot\>B<rsub|<around*|\|||\|>><around*|(|q<rsub|3>,q<rsub|2>|)>\<subseteq\>U
+      z\<in\>B<rsub|<around*|\|||\|>><around*|(|q<rsub|1>,q<rsub|2>|)>+i\<cdot\>B<rsub|<around*|\|||\|>><around*|(|q<rsub|3>,q<rsub|4>|)>\<subseteq\>U\<wedge\>q<rsub|2>,q<rsub|4>\<in\>\<bbb-Q\><rsup|+>
     </equation*>
 
-    Hence we have <math|x\<in\><big|cup><rsub|q\<in\>I>B<rsub|<around*|\|||\|>><around*|(|q<rsub|1>,q<rsub|2>|)>+i\<cdot\>B<rsub|<around*|\|||\|>><around*|(|q<rsub|3>,q<rsub|2>|)>>
-    or <math|U\<subseteq\><big|cup><rsub|q\<in\>I>B<rsub|<around*|\|||\|>><around*|(|q<rsub|1>,q<rsub|2>|)>+i\<cdot\>B<rsub|<around*|\|||\|>><around*|(|q<rsub|3>,q<rsub|2>|)>>
+    Hence we have <math|z\<in\><big|cup><rsub|q\<in\>I>B<rsub|<around*|\|||\|>><around*|(|q<rsub|1>,q<rsub|2>|)>+i\<cdot\>B<rsub|<around*|\|||\|>><around*|(|q<rsub|3>,q<rsub|4>|)>>
+    or <math|U\<subseteq\><big|cup><rsub|q\<in\>I>B<rsub|<around*|\|||\|>><around*|(|q<rsub|1>,q<rsub|2>|)>+i\<cdot\>B<rsub|<around*|\|||\|>><around*|(|q<rsub|3>,q<rsub|4>|)>>
     which combined with [eq: <reference|eq 21.638.303>] proves that\ 
 
     <\equation*>
-      <big|cup><rsub|q\<in\>I>B<rsub|<around*|\|||\|>><around*|(|q<rsub|1>,q<rsub|2>|)>+i\<cdot\>B<rsub|<around*|\|||\|>><around*|(|q<rsub|3>,q<rsub|2>|)>=U
+      <big|cup><rsub|q\<in\>I><around*|(|B<rsub|<around*|\|||\|>><around*|(|q<rsub|1>,q<rsub|2>|)>+i\<cdot\>B<rsub|<around*|\|||\|>><around*|(|q<rsub|3>,q<rsub|4>|)>|)>=U
     </equation*>
   </proof>
 
@@ -28107,8 +28125,13 @@
       \<cal-T\><rsub|\<bbb-C\>>\<subseteq\>\<sigma\><around*|[|<around*|{|B<rsub|<around*|\|||\|>><around*|(|x,\<delta\>|)>+i\<cdot\>B<rsub|<around*|\|||\|>><around*|(|y,\<rho\>|)>\|x,y,\<delta\>,\<rho\>\<in\>\<bbb-R\>|}>|]>
     </equation*>
 
-    Applying [theorem: <reference|measure countable union is in sigma
-    algebra>] again proves then that <math|\<sigma\><around*|[|\<cal-T\><rsub|\<bbb-C\>>|]>\<subseteq\>\<sigma\><around*|[|<around*|{|B<rsub|<around*|\|||\|>><around*|(|x,\<delta\>|)>+i\<cdot\>B<rsub|<around*|\|||\|>><around*|(|y,\<rho\>|)>\|x,y\<in\>\<bbb-R\>\<wedge\>\<delta\>,\<rho\>\<in\>\<bbb-R\><rsup|+>|}>|]>>
+    Applying [theorem: <reference|measure generated sigma algebra>] again
+    proves then that
+
+    <\equation*>
+      \<sigma\><around*|[|\<cal-T\><rsub|\<bbb-C\>>|]>\<subseteq\>\<sigma\><around*|[|<around*|{|B<rsub|<around*|\|||\|>><around*|(|x,\<delta\>|)>+i\<cdot\>B<rsub|<around*|\|||\|>><around*|(|y,\<rho\>|)>\|x,y\<in\>\<bbb-R\>\<wedge\>\<delta\>,\<rho\>\<in\>\<bbb-R\><rsup|+>|}>|]>
+    </equation*>
+
     which combined with [eq: <reference|eq 21.639.303>] proves that\ 
 
     <\equation*>
@@ -28136,14 +28159,25 @@
     <math|X> be a set and <math|f:X\<rightarrow\>\<bbb-C\>> then we define\ 
 
     <\equation*>
-      Re<around*|(|f|)>:X\<rightarrow\>\<bbb-R\><text| by
+      Re<around*|(|f|)>:X\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>><text| by
       >Re<around*|(|f|)><around*|(|x|)>=Re<around*|(|f<around*|(|x|)>|)><text|>
     </equation*>
 
     <\equation*>
-      Img<around*|(|f|)>:X\<rightarrow\>\<bbb-R\><text| by
-      >Img<around*|(|f|)><around*|(|x|)>=Img<around*|(|f<around*|(|x|)>|)>
+      Img<around*|(|f|)>:X\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>><text|
+      by >Img<around*|(|f|)><around*|(|x|)>=Img<around*|(|f<around*|(|x|)>|)>
     </equation*>
+
+    <\note>
+      As <math|\<forall\>x\<in\>X> <math|Re<around*|(|f|)><around*|(|x|)>=Re<around*|(|f<around*|(|x|)>|)>\<in\>\<bbb-R\>>
+      and <math|Img<around*|(|f|)><around*|(|x|)>=Img<around*|(|f<around*|(|x|)>|)>\<in\>\<bbb-R\>>
+      it follows thst\ 
+
+      <\equation*>
+        Re<around*|(|f|)><around*|(|X|)>\<subseteq\>\<bbb-R\><text| and
+        >Img<around*|(|f|)><around*|(|X|)>\<subseteq\>\<bbb-R\>
+      </equation*>
+    </note>
   </definition>
 
   As in the previous section many theorems are based on almost everywhere
@@ -28185,8 +28219,8 @@
 
     <\description>
       <item*|<math|\<Rightarrow\>>>As <math|f=g> <math|\<mu\>>-a.e. there
-      exists a <math|N\<in\>\<cal-A\>> such that
-      <math|\<mu\><around*|(|N|)>=0> and <math|<around*|{|x\<in\>A\|f<around*|(|x|)>\<neq\>g<around*|(|x|)>|}>\<subseteq\>N>.
+      exists a <math|N\<in\>\<cal-A\>> with <math|\<mu\><around*|(|N|)>=0>
+      such that <math|<around*|{|x\<in\>A\|f<around*|(|x|)>\<neq\>g<around*|(|x|)>|}>\<subseteq\>N>.
       Assume that <math|x\<in\><around*|{|x\<in\>A\|Re<around*|(|f|)><around*|(|x|)>\<neq\>Re<around*|(|g|)><around*|(|x|)>|}>>
       then <math|Re<around*|(|f<around*|(|x|)>|)>\<neq\>Re<around*|(|g<around*|(|x|)>|)>\<Rightarrow\>f<around*|(|x|)>\<neq\>g<around*|(|x|)>>
       proving that <math|<around*|{|x\<in\>A\|Re<around*|(|f|)><around*|(|x|)>\<neq\>Re<around*|(|g<around*|(|x|)>|)>|}>\<subseteq\><around*|{|x\<in\>A\|f<around*|(|x|)>\<neq\>g<around*|(|x|)>|}>\<subseteq\>N>.
@@ -28209,8 +28243,8 @@
       <math|\<mu\>>-a.e. and <math|Img<around*|(|f|)>=Img<around*|(|g|)>>
       <math|\<mu\>>-a.e. there exists <math|N<rsub|1>,N<rsub|2>\<in\>\<cal-A\>>
       such that <math|\<mu\><around*|(|N<rsub|1>|)>=0=\<mu\><around*|(|N<rsub|2>|)>>,
-      <math|<around*|{|x\<in\>a\|Re<around*|(|f|)><around*|(|x|)>\<neq\>Re<around*|(|g|)><around*|(|x|)>|}>\<subseteq\>N<rsub|1>>
-      and <math|<rigid|<around*|{|x\<in\>a\|Img<around*|(|f|)><around*|(|x|)>\<neq\>Img<around*|(|g|)><around*|(|x|)>|}>\<subseteq\>N<rsub|2>>>.
+      <math|<around*|{|x\<in\>A\|Re<around*|(|f|)><around*|(|x|)>\<neq\>Re<around*|(|g|)><around*|(|x|)>|}>\<subseteq\>N<rsub|1>>
+      and <math|<rigid|<around*|{|x\<in\>A\|Img<around*|(|f|)><around*|(|x|)>\<neq\>Img<around*|(|g|)><around*|(|x|)>|}>\<subseteq\>N<rsub|2>>>.
       Let <math|x\<in\><around*|{|x\<in\>A\|f<around*|(|x|)>\<neq\>g<around*|(|x|)>|}>>
       then <math|f<around*|(|x|)>\<neq\>g<around*|(|x|)>> so that either
       <math|Re<around*|(|f<around*|(|x|)>|)>\<neq\>Re<around*|(|g<around*|(|x|)>|)>>
@@ -28238,8 +28272,9 @@
     <label|complex measurable function>Let
     <math|<around*|\<langle\>|X,\<cal-A\>|\<rangle\>>> be a measurable space,
     <math|A\<in\>\<cal-A\>> then the set of all
-    <math|\<cal-A\>,\<cal-B\><around*|[|\<bbb-C\>|]>>-measurable functions is
-    noted as <math|\<cal-M\><around*|[|A,\<cal-A\>,\<bbb-C\>|]>> so\ 
+    <math|\<cal-A\>,\<cal-B\><around*|[|\<bbb-C\>|]>>-measurable functions
+    from <math|A> to <math|\<bbb-C\>> is noted as
+    <math|\<cal-M\><around*|[|A,\<cal-A\>,\<bbb-C\>|]>> so\ 
 
     <\equation*>
       \<cal-M\><around*|[|A,\<cal-A\>,\<bbb-C\>|]>=<around*|{|f\<in\>\<bbb-C\><rsup|A>\|f:A\<rightarrow\>\<bbb-C\><text|
@@ -28247,20 +28282,85 @@
     </equation*>
 
     <\note>
-      Sometimes we want to talk about <math|\<cal-M\><around*|[|A,\<cal-A\>,\<bbb-R\>|]>>
-      and <math|\<cal-M\><around*|[|A,\<cal-A\>,\<bbb-C\>|]>> at the same
-      time. In that case we use the notation
-      <math|\<cal-M\><around*|[|A,\<cal-A\>,\<bbb-K\>|]>> where
-      <math|\<cal-M\><around*|[|A,\<cal-A\>,\<bbb-K\>|]>> stands for either
-      <math|\<cal-M\><around*|[|A,\<cal-A\>,\<bbb-R\>|]>> or
-      <math|\<cal-M\><around*|[|A,\<cal-A\>,\<bbb-C\>|]>>. Just like
-      <math|\<bbb-K\>> stands for either <math|\<bbb-R\>> or
-      <math|\<bbb-C\>>.
+      Sometimes we want to state things that are true for
+      <math|\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-R\>|]>> and
+      <math|\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-C\>|]>>, in those cases we
+      use the notation <math|\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-K\>|]>>
+      that stands for either <math|\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-R\>|]>>
+      or <math|\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-C\>|]>>.\ 
     </note>
   </definition>
 
+  <\theorem>
+    <label|complex measurable function Re, Img and absolute value>We have
+    that\ 
+
+    <\equation*>
+      Re:\<bbb-C\>\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>><text| is
+      >\<cal-B\><around*|[|\<bbb-C\>|]>,\<cal-B\><around*|[|<wide|\<bbb-R\>|\<wide-bar\>>|]><text|-measurable>
+    </equation*>
+
+    <\equation*>
+      Img:\<bbb-C\>\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>><text| is
+      >\<cal-B\><around*|[|\<bbb-C\>|]>,\<cal-B\><around*|[|<wide|\<bbb-R\>|\<wide-bar\>>|]><text|-measurable>
+    </equation*>
+
+    <\equation*>
+      <around*|\|||\|>:\<bbb-C\>\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>><text|
+      is >\<cal-B\><around*|[|\<bbb-C\>|]>,\<cal-B\><around*|[|<wide|\<bbb-R\>|\<wide-bar\>>|]><text|-measurable>
+    </equation*>
+
+    or, as clearly <math|Re<around*|(|\<bbb-C\>|)>\<subseteq\>\<bbb-R\>>,
+    <math|Img<around*|(|\<bbb-C\>|)>\<subseteq\>\<bbb-R\>> and
+    <math|<around*|\|||\|><around*|(|\<bbb-C\>|)>\<subseteq\><around*|[|0,\<infty\>|[>\<subseteq\>\<bbb-R\>>,
+    we have that\ 
+
+    <\equation*>
+      Re,Img\<in\>\<cal-M\><around*|[|\<bbb-C\>,\<cal-B\><around*|[|\<bbb-C\>|]>,\<bbb-R\>|]><text|
+      and ><around*|\|||\|>\<in\>\<cal-M\><rsup|+><around*|[|\<bbb-C\>,\<cal-B\><around*|[|\<bbb-C\>|]>,\<bbb-R\>|]>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    Using [example: <reference|continuity Re, Img>] it follows that
+    <math|Re:\<bbb-C\>\<rightarrow\>\<bbb-R\>> and
+    <math|Img:\<bbb-C\>\<rightarrow\>\<bbb-R\>> are continuous, hence by
+    [theorem: <reference|measurable function and continuity>] it follows that
+    <math|Re:\<bbb-C\>\<rightarrow\>\<bbb-R\>> and
+    <math|Img:\<bbb-C\>\<rightarrow\>\<bbb-R\>> are
+    <math|\<cal-B\><around*|[|\<bbb-C\>|]>,\<cal-B\><around*|[|\<bbb-R\>|]>>-measurable.
+    Using further [theorem: <reference|measurable function real or extended>]
+    it follows that\ 
+
+    <\equation*>
+      Re:\<bbb-C\>\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>><text| is
+      >\<cal-B\><around*|[|\<bbb-C\>|]>,\<cal-B\><around*|[|<wide|\<bbb-R\>|\<wide-bar\>>|]><text|-measurable>
+    </equation*>
+
+    <\equation*>
+      Img:\<bbb-C\>\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>><text| is
+      >\<cal-B\><around*|[|\<bbb-C\>|]>,\<cal-B\><around*|[|<wide|\<bbb-R\>|\<wide-bar\>>|]><text|-measurable>
+    </equation*>
+
+    As <math|<around*|\|||\|>> is a norm on <math|\<bbb-C\>> it follows from
+    [theorem: <reference|continuity norm is uniform continuous>] that
+    <math|<around*|\|||\|>:\<bbb-C\>\<rightarrow\>\<bbb-R\>> is continuous,
+    hence by [theorem: <reference|measurable function and continuity>] it
+    follows that <math|<around*|\|||\|>:\<bbb-C\>\<rightarrow\>\<bbb-R\>> is
+    <math|\<cal-B\><around*|[|\<bbb-C\>|]>,\<cal-B\><around*|[|\<bbb-R\>|]>>-measurable.
+    Using further [theorem: <reference|measurable function real or extended>]
+    it follows that\ 
+
+    <\equation*>
+      <around*|\|||\|>:\<bbb-C\>\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>><text|
+      is >\<cal-B\><around*|[|\<bbb-C\>|]>,\<cal-B\><around*|[|<wide|\<bbb-R\>|\<wide-bar\>>|]><text|-measurable>
+    </equation*>
+  </proof>
+
   The following equivalent definition will be crucial in proving the
-  properties of complex valued measurable functions
+  properties of complex valued measurable functions because it allows us to
+  express measurability of <math|f> as the measurability of
+  <math|Re<around*|(|f|)>> and <math|Img<around*|(|f|)>>.
 
   <\theorem>
     <label|complex measurable function alternative>Let
@@ -28271,11 +28371,12 @@
     <\equation*>
       f<text| is >\<cal-A\>,\<cal-B\><around*|[|\<bbb-C\>|]><text|-measurable
       >\<Leftrightarrow\><text| >Re<around*|(|f|)><text| is
-      >\<cal-A\>,\<cal-B\><around*|[|\<bbb-R\>|]><text|-measurable and
-      >Img<around*|(|f|)><text| is >\<cal-A\>,\<cal-B\><around*|[|\<bbb-R\>|]><text|-measurable>
+      >\<cal-A\>,\<cal-B\><around*|[|<wide|\<bbb-R\>|\<wide-bar\>>|]><text|-measurable
+      and >Img<around*|(|f|)><text| is >\<cal-A\>,\<cal-B\><around*|[|<wide|\<bbb-R\>|\<wide-bar\>>|]><text|-measurable>
     </equation*>
 
-    or in other words
+    or in other words, as <math|Ref<around*|(|f|)><around*|(|X|)>\<subseteq\>\<bbb-R\>>,
+    <math|Img<around*|(|f|)><around*|(|X|)>\<subseteq\>\<bbb-R\>>,\ 
 
     <\equation*>
       f\<in\>\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-C\>|]>\<Leftrightarrow\><text|
@@ -28288,24 +28389,27 @@
     \ 
 
     <\description>
-      <item*|<math|\<Rightarrow\>>>Using [example: <reference|continuity Re,
-      Img>] then <math|Re:\<bbb-C\>\<rightarrow\>\<bbb-R\>> and
-      <math|Img:\<bbb-R\>\<rightarrow\>\<bbb-C\>> are continuous, hence by
-      \ [theorem: <reference|measurable function and continuity>] it follows
-      that <math|Re> and <math|Img> are <math|\<cal-B\><around*|[|\<bbb-C\>|]>,\<cal-B\><around*|[|\<bbb-R\>|]>>-measurable.
-      As <math|f> is <math|\<cal-A\>,\<cal-B\><around*|[|\<bbb-C\>|]>> it
-      follows from [theorem: <reference|measurable function composition>]
-      that <math|Re\<circ\>f> amd <math|Img\<circ\>f> are
-      <math|\<cal-A\>,\<cal-B\><around*|[|\<bbb-R\>|]>> measurable. Further
-      as <math|\<forall\>x\<in\>A> <math|<around*|(|Re<around*|(|f|)>|)><around*|(|x|)>=Re<around*|(|f<around*|(|x|)>|)>=<around*|(|Re\<circ\>f|)><around*|(|x|)>>
-      and <math|<around*|(|Img<around*|(|f|)>|)><around*|(|x|)>=Img<around*|(|f<around*|(|x|)>|)>=<around*|(|Img\<circ\>f|)><around*|(|x|)>>
-      it follows that <math|Re<around*|(|f|)>=Re\<circ\>f> and
-      <math|Img<around*|(|f|)>=<around*|(|Img\<circ\>f|)>> so that\ 
+      <item*|<math|\<Rightarrow\>>>Let <math|x\<in\>X> then we have
 
       <\equation*>
-        Re<around*|(|f|)><text| is >\<cal-A\>,\<cal-B\><around*|[|\<bbb-R\>|]><text|-measurable
-        and >Img<around*|(|f|)><text| is >\<cal-A\>,\<cal-B\><around*|[|\<bbb-R\>|]><text|-measurable>
+        Re<around*|(|f|)><around*|(|x|)>=Re<around*|(|f<around*|(|x|)>|)>=<around*|(|Re\<circ\>f|)><around*|(|x|)><text|
+        and >Img<around*|(|f|)><around*|(|x|)>=Img<around*|(|f<around*|(|x|)>|)>=<around*|(|Img\<circ\>f|)><around*|(|x|)>
       </equation*>
+
+      which proves that\ 
+
+      <\equation*>
+        Re<around*|(|f|)>=Re\<circ\>f<text| and
+        >Img<around*|(|f|)>=Img\<circ\>f
+      </equation*>
+
+      As <math|f> is <math|\<cal-A\>,\<cal-B\><around*|[|\<bbb-C\>|]>>-measurable
+      and by [theorem: <reference|complex measurable function Re, Img and
+      absolute value>] <math|Re>, <math|Img> are
+      <math|\<cal-B\><around*|[|\<bbb-C\>|]>,\<cal-B\><around*|[|<wide|\<bbb-R\>|\<wide-bar\>>|]>>-measurable
+      it follows from [theorem: <reference|measurable function composition>]
+      that <math|Re<around*|(|f|)>> and <math|Img<around*|(|f|)>> <math|>are
+      <math|\<cal-A\>,\<cal-B\><around*|[|<wide|\<bbb-R\>|\<wide-bar\>>|]>>-measurable.
 
       <item*|<math|\<Leftarrow\>>>Let <math|A\<in\><around*|{|\<cal-B\><rsub|<around*|\|||\|>><around*|(|x,\<delta\>|)>+i\<cdot\>B<rsub|<around*|\|||\|>><around*|(|y,\<rho\>|)>\|x,y\<in\>\<bbb-R\>\<wedge\>\<delta\>,\<rho\>\<in\>\<bbb-R\><rsup|+>|}>>
       then there exist <math|x,y\<in\>\<bbb-R\>> amd
@@ -28316,7 +28420,7 @@
       </equation*>
 
       Let <math|z\<in\>f<rsup|-1><around*|(|A|)>> then as
-      <math|f<around*|(|z|)>\<in\>A> and as
+      <math|f<around*|(|z|)>\<in\>A> and
 
       <\equation*>
         f<around*|(|z|)>=Re<around*|(|f<around*|(|z|)>|)>+i\<cdot\>Img<around*|(|f<around*|(|z|)>|)>=Re<around*|(|f|)><around*|(|z|)>+i\<cdot\>Img<around*|(|f|)><around*|(|z|)>
@@ -28360,11 +28464,18 @@
       </equation*>
 
       As <math|B<rsub|<around*|\|||\|>><around*|(|x,\<delta\>|)>>,
-      <math|B<rsub|<around*|\|||\|>><around*|(|y,\<rho\>|)>> are open set in
-      <math|\<bbb-R\>> it follows that <rigid|<math|B<rsub|<around*|\|||\|>><around*|(|x,\<delta\>|)>>,<math|B<rsub|<around*|\|||\|>><around*|(|y,\<rho\>|)>\<in\>\<cal-T\><rsub|<around*|\|||\|>>\<subseteq\>\<cal-B\><around*|[|\<bbb-R\>|]>>>
+      <math|B<rsub|<around*|\|||\|>><around*|(|y,\<rho\>|)>> are open sets in
+      <math|\<bbb-R\>> it follows that
+
+      <\equation*>
+        B<rsub|<around*|\|||\|>><around*|(|x,\<delta\>|)>,B<rsub|<around*|\|||\|>><around*|(|y,\<rho\>|)>\<in\>\<cal-T\><rsub|<around*|\|||\|>><below|\<subseteq\>|<text|[theorem:
+        <reference|extended canonical topologies on the real and extended
+        real space>]>>\<cal-R\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>>\<subseteq\>\<cal-B\><around*|[|<wide|\<bbb-R\>|\<wide-bar\>>|]>
+      </equation*>
+
       so that, as <math|Re<around*|(|f|)>>,<math|Img<around*|(|f|)>> are
-      <math|\<cal-A\>,\<cal-B\><around*|[|\<bbb-R\>|]>> measurable,
-      <math|<around*|(|Re<around*|(|f|)>|)><rsup|-1><around*|(|B<rsub|<around*|\|||\|>><around*|(|x,\<delta\>|)>|)>\<in\>\<cal-A\>>
+      <math|\<cal-A\>,\<cal-B\><around*|[|<wide|\<bbb-R\>|\<wide-bar\>>|]>>
+      measurable, <math|<around*|(|Re<around*|(|f|)>|)><rsup|-1><around*|(|B<rsub|<around*|\|||\|>><around*|(|x,\<delta\>|)>|)>\<in\>\<cal-A\>>
       and <math|<rigid|<around*|(|Img<around*|(|f|)>|)><rsup|-1><around*|(|B<rsub|<around*|\|||\|>><around*|(|y,\<rho\>|)>|)>\<in\>\<cal-A\>>>.
       Hence we have that <math|f<rsup|-1><around*|(|A|)>\<in\>\<cal-A\>>. To
       summarize we have proved that\ 
@@ -28381,16 +28492,14 @@
       sigma algebra>] that \ 
 
       <\equation*>
-        f<text| is >\<cal-A\>,\<b-B\><around*|[|\<bbb-C\>|]><text|-measurable>
+        f<text| is >\<cal-A\>,\<cal-B\><around*|[|\<bbb-C\>|]><text|-measurable>
       </equation*>
     </description>
   </proof>
 
-  TODO check the rest after checking the previous
-
   We have now similar properties for <math|\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-C\>|]>>
-  as for <math|\<cal-M\><around*|[|X,\<cal-A\>|]>>. First we define some
-  pointwise definitions:
+  as for <math|\<cal-M\><around*|[|X,\<cal-A\>|]>> that can be easely proved
+  using the previous theorem. First we define some pointwise definitions:
 
   <\definition>
     Let <math|X> be a set then we define\ 
@@ -28487,9 +28596,9 @@
 
       Using the above, [eq: <reference|eq 20.590.241>] and [theorem:
       <reference|measurable function sum (finite)>] we have that
-      <math|Re<around*|(|f+g|)>,Img<around*|(|f+g|)>\<in\>\<cal-M\><around*|[|A,\<cal-A\>|]>>
+      <math|Re<around*|(|f+g|)>,Img<around*|(|f+g|)>\<in\>\<cal-M\><around*|[|A,\<cal-A\>,\<bbb-R\>|]>>
       so that by the previous theorem [see theorem: <reference|complex
-      measurable function alternative>] we have that\ 
+      measurable function alternative>]\ 
 
       <\equation*>
         f+g\<in\>\<cal-M\><around*|[|A,\<cal-A\>,\<bbb-C\>|]>
@@ -28512,13 +28621,22 @@
         which proves that <math|1\<in\>\<cal-S\>>.
 
         <item*|<math|n\<in\>\<cal-S\>\<Rightarrow\>n+1\<in\>\<cal-S\>>>then
-        if <math|<around*|{|f<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>\<subseteq\>\<cal-M\><around*|[|A,\<cal-A\>,\<bbb-C\>|]>>
-        we have as <math|<big|sum><rsub|i=1><rsup|n+1>f<rsub|i>=f<rsub|n+1>+<big|sum><rsub|i=1><rsup|n>f<rsub|i>\<in\>\<cal-M\><around*|[|A,\<cal-A\>,\<bbb-C\>|]>>
-        [as <math|f<rsub|n+1>\<in\>\<cal-M\><around*|[|A,\<cal-A\>,\<bbb-C\>|]>>,
-        <math|n\<in\>\<cal-S\>> and (1)]. So <math|n+1\<in\>\<cal-S\>>
-      </description>
+        if <math|<around*|{|f<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>\<subseteq\>\<cal-M\><around*|[|A,\<cal-A\>,\<bbb-C\>|]>>.
+        As <math|n\<in\>S> we have
 
-      induction proves then (2).
+        <\equation*>
+          <big|sum><rsub|i=1><rsup|n>f<rsub|i>\<in\>\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-C\>|]>
+        </equation*>
+
+        which, as <math|f<rsub|n+1>\<in\>\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-C\>|]>>,
+        proves by (1) that\ 
+
+        <\equation*>
+          <big|sum><rsub|i=1><rsup|n+1>f<rsub|i>=f<rsub|n+1>+<big|sum><rsub|i=1><rsup|n>f<rsub|i>\<in\>\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-C\>|]>
+        </equation*>
+
+        from which it follows that <math|n+1\<in\>\<cal-S\>>.
+      </description>
 
       <item>As <math|f\<in\>\<cal-M\><around*|[|A,\<cal-A\>,\<bbb-C\>|]>> we
       have by the previous theorem [theorem: <reference|complex measurable
@@ -28626,32 +28744,53 @@
       have that <math|<below|lim|i\<rightarrow\>\<infty\>>f<rsub|i><around*|(|x|)>>
       exists if and only if <math|<below|lim|i\<rightarrow\>\<infty\>>Re<around*|(|f<rsub|i><around*|(|x|)>|)>>
       and <math|<below|lim|i\<rightarrow\>\<infty\>>Img<around*|(|f<rsub|i><around*|(|x|)>|)>>
-      exists. So if <math|D<rsub|1>=<around*|{|x\<in\>A\|<below|lim|i\<rightarrow\>\<infty\>>Re<around*|(|f<rsub|i><around*|(|x|)>|)>
-      exists|}>> and <rigid|<math|D<rsub|2>=<around*|{|x\<in\>A\|<below|lim|i\<rightarrow\>\<infty\>>Img<around*|(|f<rsub|i><around*|(|x|)>|)>
-      exists|}>>> then we have\ 
+      exists and are real. So if
+
+      <\equation*>
+        D<rsub|1>=<around*|{|x\<in\>A\|<below|lim|i\<rightarrow\>\<infty\>>Re<around*|(|f<rsub|i><around*|(|x|)>|)>
+        exists<infix-and>is real|}>
+      </equation*>
+
+      <\equation*>
+        D<rsub|2>=<around*|{|x\<in\>A\|<below|lim|i\<rightarrow\>\<infty\>>Img<around*|(|f<rsub|i><around*|(|x|)>|)>
+        exists<infix-and> is real|}>
+      </equation*>
+
+      then we have\ 
 
       <\equation*>
         D=<around*|{|x\<in\>A\|<below|lim|i\<rightarrow\>\<infty\>>f<rsub|i><around*|(|x|)><text|
         exists>|}>=D<rsub|1><big|cap>D<rsub|2>
       </equation*>
 
-      From [theorem: <reference|measurable function sup inf limit>] we have
-      that <math|D<rsub|1>\<in\>\<cal-A\>,D<rsub|2>\<in\>\<cal-A\>> proving
-      that\ 
+      From [theorem: <reference|measurable function sup inf limit>(6)] we
+      have that <math|D<rsub|1>\<in\>\<cal-A\>,D<rsub|2>\<in\>\<cal-A\>>
+      proving that\ 
 
       <\equation*>
         D=D<rsub|1><big|cap>D<rsub|2>\<in\>\<cal-A\>
       </equation*>
 
-      Further using [theorem: <reference|measurable function sup inf limit>]
-      again and <math|Re<around*|(|f<rsub|i>|)><around*|(|X|)>,Img<around*|(|f<rsub|i>|)><around*|(|X|)>\<subseteq\>\<bbb-R\>>
-      we have that <math|<below|lim|i\<rightarrow\>\<infty\>>Re<around*|(|f<rsub|i>|)>\<in\>\<cal-M\><around*|[|D<rsub|1>,\<cal-A\><rsub|\|D<rsub|1>>,\<bbb-R\>|]><text|
-      and ><below|lim|i\<rightarrow\>\<infty\>>Img<around*|(|f<rsub|i>|)>\<in\>\<cal-M\><around*|[|D<rsub|2>,\<cal-A\><rsub|\|D<rsub|2>>,\<bbb-R\>|]>>
-      which as <math|D\<subseteq\>D<rsub|1>,D<rsub|2>> proves by [theorem:
+      Further using [theorem: <reference|measurable function sup inf
+      limit>(6)] again we have for\ 
+
+      <\equation*>
+        <below|lim|i\<rightarrow\>\<infty\>>Re<around*|(|f<rsub|i>|)>:D<rsub|1>\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>><text|
+        and ><below|lim|i\<rightarrow\>\<infty\>>Img<around*|(|f<rsub|i>|)>:D<rsub|2>\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>>
+      </equation*>
+
+      that
+
+      <\equation*>
+        <below|lim|i\<rightarrow\>\<infty\>>Re<around*|(|f<rsub|i>|)>\<in\>\<cal-M\><around*|[|D<rsub|1>,\<cal-A\>,\<bbb-R\>|]><text|
+        and ><below|lim|i\<rightarrow\>\<infty\>>Img<around*|(|f<rsub|i>|)>\<in\>\<cal-M\><around*|[|D<rsub|2>,\<cal-A\>,\<bbb-R\>|]>
+      </equation*>
+
+      As <math|D\<subseteq\>D<rsub|1>,D<rsub|2>> we have by [theorem:
       <reference|measurable function restriction (2)>] that
 
       <\equation*>
-        <around*|(|<below|lim|i\<rightarrow\>\<infty\>>Re<around*|(|f<rsub|i>|)>|)><rsub|\|D>,<around*|(|<below|lim|i\<rightarrow\>\<infty\>>Img<around*|(|f<rsub|i>|)>|)><rsub|\|D>\<in\>\<cal-M\><around*|[|D,\<cal-A\><rsub|\|D>,\<bbb-C\>|]>.
+        <around*|(|<below|lim|i\<rightarrow\>\<infty\>>Re<around*|(|f<rsub|i>|)>|)><rsub|\|D>,<around*|(|<below|lim|i\<rightarrow\>\<infty\>>Img<around*|(|f<rsub|i>|)>|)><rsub|\|D>\<in\>\<cal-M\><around*|[|D,\<cal-A\>,\<bbb-R\>|]>.
       </equation*>
 
       Further <math|\<forall\>x\<in\>D> we have by [theorem: <reference|limit
@@ -28670,6 +28809,8 @@
         <below|lim|n\<rightarrow\>\<infty\>>f<rsub|n>\<in\>\<cal-M\><around*|[|D,\<cal-A\>,\<bbb-C\>|]>
       </equation*>
     </enumerate>
+
+    \;
   </proof>
 
   <\theorem>
@@ -28684,15 +28825,16 @@
   </theorem>
 
   <\proof>
-    As <math|<around*|\|||\|>:\<bbb-C\>\<rightarrow\>\<bbb-R\>> is continuous
-    [see theorem: <reference|continuity norm is uniform continuous>] we have
-    by [theorem: <reference|measurable function and continuity>] that the
-    function <math|<around*|\|||\|>> is <math|\<cal-B\><around*|[|\<bbb-C\>|]>,\<cal-B\><around*|[|\<bbb-R\>|]>>-measurable.
-    As <math|\<forall\>x\<in\>A> we have <math|<around*|(|<around*|\|||\|>\<circ\>f|)><around*|(|x=<around*|\|||\|><around*|(|f<around*|(|x|)>|)>|)>=<around*|\||f<around*|(|x|)>|\|>=<around*|\||f|\|><around*|(|x|)>>
-    it follows that <math|<around*|\||f|\|>=<around*|\|||\|>\<circ\>f>. So
-    using [theorem: <reference|measurable function composition>] it follows
-    that <math|<around*|\||f|\|>> is <math|\<cal-A\>,\<cal-B\><around*|[|\<bbb-R\>|]>>-measurable
-    or as <math|<around*|\||f|\|><around*|(|X|)>\<subseteq\>\<bbb-R\>> that
+    As <math|\<forall\>x\<in\>A> we have <math|<around*|(|<around*|\|||\|>\<circ\>f|)><around*|(|x|)>=<around*|\||f<around*|(|x|)>|\|>=<around*|\||f|\|><around*|(|x|)>>
+    it follows that <math|<around*|\||f|\|>=<around*|\|||\|>\<circ\>f>. By
+    [theorem: <reference|complex measurable function Re, Img and absolute
+    value>] <math|<around*|\|||\|>:\<bbb-C\>\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>>>
+    is <math|\<cal-B\><around*|[|\<bbb-C\>|]>,\<cal-B\><around*|[|<wide|\<bbb-R\>|\<wide-bar\>>|]>>-measurable.
+    So using [theorem: <reference|measurable function composition>] it
+    follows that <math|<around*|\||f|\|>> is
+    <math|\<cal-A\>,\<cal-B\><around*|[|<wide|\<bbb-R\>|\<wide-bar\>>|]>>-measurable
+    or as <math|<around*|\||f|\|><around*|(|X|)>\<subseteq\><around*|[|0,\<infty\>|[>>
+    that
 
     <\equation*>
       <around*|\||f|\|>\<in\>\<cal-M\><rsup|+><around*|[|X,\<cal-A\>,\<bbb-R\>|]>
@@ -28701,8 +28843,8 @@
 
   <subsubsection|Complex Measure Integral>
 
-  We can now define the integral of complex valued functions based on the
-  integrals of its real and imaginair components of these functions.
+  We can now define the integral of a complex valued function based on the
+  integrals of the real and imaginair components of this function.
 
   <\definition>
     <label|complex integral><index|complex
@@ -28735,14 +28877,24 @@
     <label|complex integral of zero function>Let
     <math|<around*|\<langle\>|X,\<cal-A\>,\<mu\>|\<rangle\>>> be a measure
     spacen then <math|C<rsub|0>\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-C\>|]>>
-    and <math|<big|int><rsup|C>C<rsub|0>d\<mu\>=0> where
+    and <math|<big|int><rsup|\<bbb-C\>>C<rsub|0>d\<mu\>=0> where
     <math|C<rsub|0>:X\<rightarrow\>\<bbb-C\>> is defined by
     <math|C<rsub|0><around*|(|x|)>>.
   </example>
 
   <\proof>
-    Let <math|x\<in\>X> then <math|Re<around*|(|C<rsub|0>|)><around*|(|x|)>=Re<around*|(|C<rsub|0><around*|(|x|)><rsub|>|)>=Re<around*|(|0|)>=0=C<rsub|0><around*|(|x|)>>
-    and <math|Img<around*|(|C<rsub|0>|)><around*|(|x|)>=Img<around*|(|C<rsub|0><around*|(|x|)>|)>=Img<around*|(|0|)>=0=C<rsub|0><around*|(|x|)>>.
+    Let <math|x\<in\>X> then
+
+    <\equation*>
+      Re<around*|(|C<rsub|0>|)><around*|(|x|)>=Re<around*|(|C<rsub|0><around*|(|x|)><rsub|>|)>=Re<around*|(|0|)>=0=C<rsub|0><around*|(|x|)>
+    </equation*>
+
+    and
+
+    <\equation*>
+      Img<around*|(|C<rsub|0>|)><around*|(|x|)>=Img<around*|(|C<rsub|0><around*|(|x|)>|)>=Img<around*|(|0|)>=0=C<rsub|0><around*|(|x|)>
+    </equation*>
+
     This proves that <math|Re<around*|(|C<rsub|0>|)>=C<rsub|0><below|\<in\>|<text|[note:
     <reference|measure integral of zero function
     (1)>]>>\<cal-L\><around*|(|X,\<cal-A\>,\<mu\>,\<bbb-R\>|)>> and
@@ -28780,24 +28932,32 @@
     If <math|f\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-C\>|]>> then
     <math|Re<around*|(|f|)>>, <math|Img<around*|(|f|)>\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-R\>|]>>
     so that by [theorem: <reference|measure integral to measure over>]
-    <math|\<cal-X\><rsub|X,A>\<cdot\>Re<around*|(|f|)>,\<cal-X\><rsub|X,A>\<cdot\>Img<around*|(|f|)>\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-R\>|]>>.
+
+    <\equation*>
+      \<cal-X\><rsub|X,A>\<cdot\>Re<around*|(|f|)>,\<cal-X\><rsub|X,A>\<cdot\>Img<around*|(|f|)>\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-R\>|]>.
+    </equation*>
+
     Let <math|x\<in\>X> then\ 
 
     <\eqnarray*>
-      <tformat|<table|<row|<cell|>|<cell|Re<around*|(|\<cal-X\><rsub|X,A>\<cdot\>f|)><around*|(|x|)>=Re<around*|(|\<cal-X\><rsub|X\\A><around*|(|x|)>\<cdot\>f<around*|(|x|)>|)>=\<cal-X\><rsub|X,A>\<cdot\>Re<around*|(|f|)><around*|(|x|)>=<around*|(|\<cal-X\><rsub|X,A>\<cdot\>Re<around*|(|f|)>|)><around*|(|x|)>>|<cell|>>|<row|<cell|>|<cell|Img<around*|(|\<cal-X\><rsub|X,A>\<cdot\>f|)><around*|(|x|)>=Img<around*|(|\<cal-X\><rsub|X\\A><around*|(|x|)>\<cdot\>f<around*|(|x|)>|)>=\<cal-X\><rsub|X,A>\<cdot\>Img<around*|(|f|)><around*|(|x|)>=<around*|(|\<cal-X\><rsub|X,A>\<cdot\>Img<around*|(|f|)>|)><around*|(|x|)>>|<cell|>>>>
+      <tformat|<table|<row|<cell|>|<cell|Re<around*|(|\<cal-X\><rsub|X,A>\<cdot\>f|)><around*|(|x|)>=Re<around*|(|\<cal-X\><rsub|X\\A><around*|(|x|)>\<cdot\>f<around*|(|x|)>|)>=\<cal-X\><rsub|X,A><around*|(|x|)>\<cdot\>Re<around*|(|f|)><around*|(|x|)>=<around*|(|\<cal-X\><rsub|X,A>\<cdot\>Re<around*|(|f|)>|)><around*|(|x|)>>|<cell|>>|<row|<cell|>|<cell|Img<around*|(|\<cal-X\><rsub|X,A>\<cdot\>f|)><around*|(|x|)>=Img<around*|(|\<cal-X\><rsub|X\\A><around*|(|x|)>\<cdot\>f<around*|(|x|)>|)>=\<cal-X\><rsub|X,A><around*|(|x|)>\<cdot\>Img<around*|(|f|)><around*|(|x|)>=<around*|(|\<cal-X\><rsub|X,A>\<cdot\>Img<around*|(|f|)>|)><around*|(|x|)>>|<cell|>>>>
     </eqnarray*>
 
-    which proves that <math|Re<around*|(|\<cal-X\><rsub|X,A>\<cdot\>f|)>=\<cal-X\><rsub|X,A>\<cdot\>Re<around*|(|f|)>>
-    and <math|Img<around*|(|\<b-X\><rsub|X,A>\<cdot\>f|)>=\<cal-X\><rsub|X,A>\<cdot\>Img<around*|(|f|)>>.
-    Hence\ 
+    which proves that
+
+    <\equation*>
+      Re<around*|(|\<cal-X\><rsub|X,A>\<cdot\>f|)>=\<cal-X\><rsub|X,A>\<cdot\>Re<around*|(|f|)>\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-R\>|]><text|
+      and >Img<around*|(|\<cal-X\><rsub|X,A>\<cdot\>f|)>=\<cal-X\><rsub|X,A>\<cdot\>Img<around*|(|f|)>\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-R\>|]>
+    </equation*>
+
+    Hence we have by definition that
 
     <\equation*>
       \<cal-X\><rsub|X,A>\<cdot\>f\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-C\>|]>
     </equation*>
   </proof>
 
-  The above theorem allows us tor define the integral over a measurable
-  function.
+  The above theorem allows us tor define the integral over a measurable set.
 
   <\definition>
     Let <math|<around*|\<langle\>|X,\<cal-A\>,\<mu\>|\<rangle\>>> be a
@@ -28814,7 +28974,7 @@
 
       <\eqnarray*>
         <tformat|<table|<row|<cell|<big|int><rsup|\<bbb-C\>><rsub|A>f
-        d\<mu\>>|<cell|=>|<cell|<big|int><rsup|\<bbb-C\>><around*|(|\<cal-X\><rsub|X,A>\<cdot\>f|)>d\<mu\>>>|<row|<cell|>|<cell|\<equallim\><rsub|def>>|<cell|<big|int>Re<around*|(|\<cal-X\><rsub|X,A>\<cdot\>f|)>d\<mu\>+i\<cdot\><big|int>Img<around*|(|\<cal-X\><rsub|X,A>\<cdot\>f|)>d\<mu\>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theoren:
+        d\<mu\>>|<cell|=>|<cell|<big|int><rsup|\<bbb-C\>><around*|(|\<cal-X\><rsub|X,A>\<cdot\>f|)>d\<mu\>>>|<row|<cell|>|<cell|\<equallim\><rsub|def>>|<cell|<big|int>Re<around*|(|\<cal-X\><rsub|X,A>\<cdot\>f|)>d\<mu\>+i\<cdot\><big|int>Img<around*|(|\<cal-X\><rsub|X,A>\<cdot\>f|)>d\<mu\>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
         <reference|complex integral characteristics
         multiplication>]>>>|<cell|<big|int><around*|(|\<cal-X\><rsub|X,A>\<cdot\>Re<around*|(|f|)>|)>d\<mu\>+i\<cdot\><big|int><around*|(|\<cal-X\><rsub|X,A>\<cdot\>Img<around*|(|f|)>|)>d\<mu\>>>|<row|<cell|>|<cell|=>|<cell|<big|int><rsub|A>Re<around*|(|f|)>d\<mu\>+i\<cdot\><big|int><rsub|A>Img<around*|(|f|)>d\<mu\>>>>>
       </eqnarray*>
@@ -28883,7 +29043,7 @@
 
   <\theorem>
     <label|complex integral property>Let <math|<around*|\<langle\>|X,\<cal-A\>,\<mu\>|\<rangle\>>>
-    be a measure space then we have\ 
+    be a measure space then we have:
 
     <\enumerate>
       <item><math|\<forall\>f,g\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-C\>|]>>
@@ -28921,11 +29081,11 @@
       Let <math|x\<in\>X> then\ 
 
       <\equation*>
-        Re<around*|(|f+g|)><around*|(|x|)>=Re<around*|(|f<around*|(|x|)>+g<around*|(|X|)>|)>=Re<around*|(|f<around*|(|x|)>|)>+Re<around*|(|g<around*|(|x|)>|)>=<around*|(|Re<around*|(|f|)>+Re<around*|(|g|)>|)><around*|(|x|)>
+        Re<around*|(|f+g|)><around*|(|x|)>=Re<around*|(|f<around*|(|x|)>+g<around*|(|x|)>|)>=Re<around*|(|f<around*|(|x|)>|)>+Re<around*|(|g<around*|(|x|)>|)>=<around*|(|Re<around*|(|f|)>+Re<around*|(|g|)>|)><around*|(|x|)>
       </equation*>
 
       <\equation*>
-        Img<around*|(|f+g|)><around*|(|x|)>=Img<around*|(|f<around*|(|x|)>+g<around*|(|X|)>|)>=Img<around*|(|f<around*|(|x|)>|)>+Img<around*|(|g<around*|(|x|)>|)>=<around*|(|Img<around*|(|f|)>+Img<around*|(|g|)>|)><around*|(|x|)>
+        Img<around*|(|f+g|)><around*|(|x|)>=Img<around*|(|f<around*|(|x|)>+g<around*|(|x|)>|)>=Img<around*|(|f<around*|(|x|)>|)>+Img<around*|(|g<around*|(|x|)>|)>=<around*|(|Img<around*|(|f|)>+Img<around*|(|g|)>|)><around*|(|x|)>
       </equation*>
 
       so that\ 
@@ -28935,7 +29095,7 @@
         >Img<around*|(|f+g|)>=Img<around*|(|f|)>+Img<around*|(|g|)>
       </equation*>
 
-      Hence using now [theorem: <reference|measure integral properties>] it
+      Hence using [theorem: <reference|measure integral properties>] it
       follows that
 
       <\equation*>
@@ -28967,7 +29127,7 @@
       Let <math|x\<in\>X> then\ 
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|<around*|(|\<alpha\>\<cdot\>f|)><around*|(|x|)>>|<cell|=>|<cell|>>|<row|<cell|\<alpha\>\<cdot\>f<around*|(|x|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|Re<around*|(|\<alpha\>|)>+i\<cdot\>Img<around*|(|\<alpha\>|)>|)>\<cdot\><around*|(|Re<around*|(|f<around*|(|x|)>|)>+Img<around*|(|f<around*|(|x|)>|)>|)>>|<cell|=>|<cell|>>|<row|<cell|Re<around*|(|\<alpha\>|)>\<cdot\>Img<around*|(|f<around*|(|x|)>|)>-Img<around*|(|\<alpha\>|)>\<cdot\>Re<around*|(|f<around*|(|x|)>|)>+i\<cdot\><around*|(|Re<around*|(|\<alpha\>|)>\<cdot\>Re<around*|(|f<around*|(|x|)>|)>+Img<around*|(|\<alpha\>|)>\<cdot\>Img<around*|(|f<around*|(|x|)>|)>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|<around*|(|Re<around*|(|\<alpha\>|)>\<cdot\>Re<around*|(|f|)>-Img<around*|(|\<alpha\>|)>\<cdot\>Img<around*|(|f|)>|)>+i\<cdot\><around*|(|Re<around*|(|\<alpha\>|)>\<cdot\>Img<around*|(|f|)>+Img<around*|(|\<alpha\>|)>\<cdot\>Re<around*|(|f|)>|)>|)><around*|(|x|)>>|<cell|>|<cell|>>>>
+        <tformat|<table|<row|<cell|<around*|(|\<alpha\>\<cdot\>f|)><around*|(|x|)>>|<cell|=>|<cell|>>|<row|<cell|\<alpha\>\<cdot\>f<around*|(|x|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|Re<around*|(|\<alpha\>|)>+i\<cdot\>Img<around*|(|\<alpha\>|)>|)>\<cdot\><around*|(|Re<around*|(|f<around*|(|x|)>|)>+i\<cdot\>Img<around*|(|f<around*|(|x|)>|)>|)>>|<cell|=>|<cell|>>|<row|<cell|Re<around*|(|\<alpha\>|)>\<cdot\>Re<around*|(|f<around*|(|x|)>|)>-Img<around*|(|\<alpha\>|)>\<cdot\>Img<around*|(|f<around*|(|x|)>|)>+i\<cdot\><around*|(|Re<around*|(|\<alpha\>|)>\<cdot\>Img<around*|(|f<around*|(|x|)>|)>+Img<around*|(|\<alpha\>|)>\<cdot\>Re<around*|(|f<around*|(|x|)>|)>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|<around*|(|Re<around*|(|\<alpha\>|)>\<cdot\>Re<around*|(|f|)>-Img<around*|(|\<alpha\>|)>\<cdot\>Img<around*|(|f|)>|)>+i\<cdot\><around*|(|Re<around*|(|\<alpha\>|)>\<cdot\>Img<around*|(|f|)>+Img<around*|(|\<alpha\>|)>\<cdot\>Re<around*|(|f|)>|)>|)><around*|(|x|)>>|<cell|>|<cell|>>>>
       </eqnarray*>
 
       which proves that\ 
@@ -29054,13 +29214,13 @@
       <\equation*>
         <big|int><rsup|+><around*|\||Re<around*|(|f|)>|\|>d\<mu\>\<equallim\><rsub|<text|[theorem:
         <reference|measure integral f+ f-
-        properties>]>><big|int><rsup|+><around*|\||Re<around*|(|f|)>|\|><rsup|+>d\<mu\>\<less\>\<infty\>
+        properties>(7)]>><big|int><rsup|+><around*|\||Re<around*|(|f|)>|\|><rsup|+>d\<mu\>\<less\>\<infty\>
       </equation*>
 
       <\equation*>
         <big|int><rsup|+><around*|\||Img<around*|(|f|)>|\|>d\<mu\>\<equallim\><rsub|<text|[theorem:
         <reference|measure integral f+ f-
-        properties>]>><big|int><rsup|+><around*|\||Img<around*|(|f|)>|\|><rsup|+>d\<mu\>\<less\>\<infty\>
+        properties>(7)]>><big|int><rsup|+><around*|\||Img<around*|(|f|)>|\|><rsup|+>d\<mu\>\<less\>\<infty\>
       </equation*>
 
       Let <math|x\<in\>X> then
@@ -29122,7 +29282,7 @@
       ><around*|\||<big|int><rsup|\<bbb-C\>>f
       d\<mu\>|\|>=0>>|<row|<cell|<frac|f <rsup|\<bbb-C\>>d\<mu\>|<around*|\||<big|int><rsup|\<bbb-C\>>f
       d\<mu\>|\|>><text| if ><around*|\||<big|int><rsup|\<bbb-C\>>f
-      d\<mu\>\<neq\>0|\<nobracket\>>>>>>><text| so that
+      d\<mu\>\<neq\>0|\<nobracket\>>>>>>>\<in\>\<bbb-C\><text| so that
       ><around*|\||w<around*|(|f|)>|\|>=1
     </equation*>
 
@@ -29131,14 +29291,14 @@
     <\description>
       <item*|<math|<big|int>f <rsup|\<bbb-C\>>d\<mu\>=0>>Then
       <math|<around*|\||<big|int>f d\<mu\>|\|>=0> and
-      <math|w<around*|(|f|)>=1> so that <math|w\<cdot\><around*|\||<big|int><rsup|\<bbb-C\>>f
-      d\<mu\>|\|>=<big|int><rsup|\<bbb-C\>>f d\<mu\>>
+      <math|w<around*|(|f|)>=1> so that <math|w<around*|(|f|)>\<cdot\><around*|\||<big|int><rsup|\<bbb-C\>>f
+      d\<mu\>|\|>=0=<big|int><rsup|\<bbb-C\>>f d\<mu\>>
 
       <item*|<math|<big|int>f<rsup|\<bbb-C\>> d\<mu\>\<neq\>0>>Then
       <math|<around*|\||<big|int><rsup|\<bbb-C\>>f d\<mu\>|\|>\<neq\>0> and
-      <math|w=<frac|<big|int><rsup|\<bbb-C\>>f
+      <math|w<around*|(|f|)>=<frac|<big|int><rsup|\<bbb-C\>>f
       d\<mu\>|<around*|\||<big|int><rsup|\<bbb-C\>>f d\<mu\>|\|>>> so that
-      <math|w\<cdot\><around*|\||<big|int><rsup|\<bbb-C\>>f
+      <math|w<around*|(|f|)>\<cdot\><around*|\||<big|int><rsup|\<bbb-C\>>f
       d\<mu\>|\|>=<big|int><rsup|\<bbb-C\>>f d\<mu\>>
     </description>
 
@@ -29190,17 +29350,19 @@
   real numbers>,<reference|normed complex numbers>], context will indicate
   which norm is used.
 
+  TODO
+
   <\definition>
     \ Let <math|p\<in\><around*|[|1,\<infty\>|[>> then we define
 
     <\equation*>
-      <around*|\|||\|><rsup|p>=<around*|(|\<ast\>|)><rsup|p>\<circ\><around*|\|||\|>:\<bbb-R\>\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>><text|
-      so that ><around*|(|<around*|\|||\|><rsup|p>|)><around*|(|x|)>=<around*|\||x|\<nobracket\>><rsup|>\|<rsup|p>
+      <around*|\|||\|><rsup|p>:\<bbb-R\>\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>><text|
+      by ><around*|(|<around*|\|||\|><rsup|p>|)><around*|(|x|)>=<around*|\||x|\<nobracket\>><rsup|>\|<rsup|p>
     </equation*>
 
     <\equation*>
-      <around*|\|||\|><rsup|p>=<around*|(|\<ast\>|)><rsup|p>\<circ\><around*|\|||\|>:\<bbb-C\>\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>><text|
-      so that ><around*|(|<around*|\|||\|><rsup|p>|)><around*|(|x|)>=<around*|\||x|\|><rsup|><rsup|p>
+      <around*|\|||\|><rsup|p>:\<bbb-C\>\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>><text|
+      by ><around*|(|<around*|\|||\|><rsup|p>|)><around*|(|x|)>=<around*|\||x|\|><rsup|><rsup|p>
     </equation*>
 
     If <math|X> is a set and <math|f:X\<rightarrow\>\<bbb-R\>> then we define
@@ -29218,8 +29380,8 @@
     </equation*>
 
     <\note>
-      Using \ [theorem: <reference|exp generalized power properties> (2)] we
-      have that <math|\<forall\>x\<in\><around*|[|0,\<infty\>|[>>
+      Using \ [theorem: <reference|exp generalized power properties> (2,3)]
+      we have that <math|\<forall\>x\<in\><around*|[|0,\<infty\>|[>>
       <math|x<rsup|p>\<in\><around*|[|0,\<infty\>|[>> so that\ 
 
       <\equation*>
@@ -29302,25 +29464,21 @@
       </equation*>
 
       <item>Let <math|f\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-C\>|]>>
-      then we have by definition that <math|Re<around*|(|f|)>,Img<around*|(|f|)>\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-R\>|]>>,
-      hence <math|Re<around*|(|f|)>,Img<around*|(|f|)>\<in\>\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-R\>|]>>.
-      Using [theorem: <reference|complex measurable function alternative>] it
-      follows then that <math|f\<in\>\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-C\>|]>>
-      and using [theorem: <reference|complex integral alternative>] it
-      follows that <math|<around*|\||f|\|><rsup|1>=<around*|\||f|\|>\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-R\>|]>>,
-      hence <math|f\<in\>\<cal-L\><rsup|1><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-C\>|]>>
-      which proves that\ 
+      then we have by [theorem: <reference|complex integral alternative>]
+      that <math|<around*|\||f|\|><rsup|1>=<around*|\||f|\|>\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-R\>|]>>
+      so that by definition <math|f\<in\>\<cal-L\><rsup|1><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-C\>|]>>.
+      Hence we have
 
       <\equation>
         <label|eq 20.598.245>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-C\>|]>\<subseteq\>\<cal-L\><rsup|1><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-C\>|]>
       </equation>
 
       If <math|f\<in\>\<cal-L\><rsup|1><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-C\>|]>>
-      then <math|f\<in\>\<cal-M\><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-C\>|]>>
+      then by definition <math|f\<in\>\<cal-M\><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-C\>|]>>
       and <math|<around*|\||f|\|>=<around*|\||f|\|><rsup|1>\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-R\>|]>>
       which by [theorem: <reference|complex integral alternative>] proves
       that <math|f\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-C\>|]>>,
-      hence <math|\<cal-L\><rsup|1><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-C\>|]>\<subseteq\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-C\>|]>>.
+      hence <math|<rigid|\<cal-L\><rsup|1><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-C\>|]>\<subseteq\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-C\>|]>>>.
       Combining this result with [eq: <reference|eq 20.598.245>] proves that\ 
 
       <\equation*>
@@ -29360,6 +29518,8 @@
     </equation*>
   </proof>
 
+  TODO to check
+
   Next we want to prove that \ <math|<around*|\<langle\>|\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-C\>|]>,+,\<cdot\>|\<rangle\>>>
   is a vector space over <math|\<bbb-R\>> and that
   <math|<rigid|<around*|\<langle\>|\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-R\>|]>,+,\<cdot\>|\<rangle\>>>>
@@ -29390,36 +29550,30 @@
       <item>Using [theorem: <reference|continuity norm is uniform
       continuous>] <math|<around*|\|||\|>:\<bbb-R\>\<rightarrow\>\<bbb-R\>>
       is a continuous function [using the canonical topologies on
-      <math|\<bbb-R\>>]. By [theorem: <reference|continuity and subspace
-      topology (4)>] it follows then that\ 
-
-      <\equation*>
-        <around*|\|||\|>:\<bbb-R\>\<rightarrow\><around*|[|0,\<infty\>|[><text|
-        is continuous using the topologies
-        >\<cal-T\><rsub|<around*|\|||\|>><text|,
-        ><around*|(|\<cal-T\><rsub|<around*|\|||\|>>|)><rsub|\|<around*|[|0,\<infty\>|\<nobracket\>><around*|[||\<nobracket\>>>
-      </equation*>
-
+      <math|\<bbb-R\>>] with <math|<around*|\|||\|><around*|(|\<bbb-R\>|)>\<subseteq\><around*|[|0,\<infty\>|[>>.
       Further using [theorem: <reference|exp (*)^x is continuous>] we have
       that
 
       <\equation*>
         <around*|(|\<ast\>|)><rsup|p>:<around*|[|0,\<infty\>|[>\<rightarrow\>\<bbb-R\><text|
-        is >continuous
+        defined by ><around*|(|\<star\>|)><rsup|p><around*|(|x|)>=x<rsup|p>
       </equation*>
 
-      Hence as <math|<around*|\|||\|><rsup|p>=<around*|(|\<ast\>|)><rsup|p>\<circ\><around*|\|||\|>>
-      we have by [theorem: <reference|continuity composition>] that
+      is continuous. As <math|\<forall\>x\<in\>\<bbb-R\>>
+      <math|<around*|\|||\|><rsup|p><around*|(|x|)>=<around*|\||x|\|><rsup|p>=<around*|(|\<ast\>|)><rsup|p><around*|(|<around*|\||x|\|>|)>=<around*|(|<around*|(|\<ast\>|)><rsup|p>\<circ\><around*|\|||\|>|)><around*|(|x|)>>
+      it follows that <math|<around*|\|||\|><rsup|p>=<around*|(|\<ast\>|)><rsup|p>\<circ\><around*|\|||\|>>.
+      Hence we have by [theorem: <reference|continuity composition>] that
 
       <\equation*>
         <around*|\|||\|><rsup|p>:\<bbb-R\>\<rightarrow\>\<bbb-R\><text| is
         continuous> using the topologies \<cal-T\><rsub|<around*|\|||\|>>,\<cal-T\><rsub|<around*|\|||\|>>
       </equation*>
 
-      By [theorem: <reference|measurable function and continuity>]
-      <math|<around*|\|||\|><rsup|p>> is <math|\<cal-B\><around*|[|\<bbb-R\>|]>,\<cal-B\><around*|[|\<bbb-R\>|]>>-measurable,
-      using then [theorem: <reference|measurable function real or extended>]
-      it follows that <math|<around*|\|||\|><rsup|p>:\<bbb-R\>\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>>>
+      By [theorem: <reference|measurable function and continuity>] we have
+      then that <math|<around*|\|||\|><rsup|p>> is
+      <math|\<cal-B\><around*|[|\<bbb-R\>|]>,\<cal-B\><around*|[|\<bbb-R\>|]>>-measurable,
+      further using [theorem: <reference|measurable function real or
+      extended>] it follows that <math|<around*|\|||\|><rsup|p>:\<bbb-R\>\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>>>
       is <math|\<cal-B\><around*|[|\<bbb-R\>|]>,\<cal-B\><around*|[|<wide|\<bbb-R\>|\<wide-bar\>>|]>>-measurable.
       Finally as <math|<around*|\|||\|><rsup|p><around*|(|X|)>\<subseteq\><around*|[|0,\<infty\>|[>>
       it follows that\ 
@@ -29429,9 +29583,13 @@
       </equation*>
 
       <item>Let <math|x\<in\>X> then <math|<around*|\||f|\|><rsup|p>=<around*|\|||\|><rsup|p>\<circ\>f>.
-      Hence using [theorem: <reference|measurable function composition>] (1)
-      and the fact that <math|f> is <math|\<cal-A\>,\<cal-B\><around*|[|\<bbb-R\>|]>>-measurable
-      it follows that <math|<around*|\||f|\|><rsup|p>> is
+      As <math|f\<in\>\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-R\>|]>> we have
+      that <math|f> is <math|\<cal-A\>,\<cal-B\><around*|[|<wide|\<bbb-R\>|\<wide-bar\>>|]>>-measurable
+      it follows from [theorem: <reference|measurable function real or
+      extended>] that <math|f:X\<rightarrow\>\<bbb-R\>> is
+      <math|\<cal-A\>,\<cal-B\><around*|[|\<bbb-R\>|]>> measurable. Hence
+      using [theorem: <reference|measurable function composition>] together
+      with (1) it follows that <math|<around*|\||f|\|><rsup|p>> is
       <math|\<cal-A\>,\<cal-B\><around*|[|<wide|\<bbb-R\>|\<wide-bar\>>|]>>-measurable.
       Finally as <math|<around*|\|||\|><rsup|p><around*|(|f<around*|(|X|)>|)>\<subseteq\><around*|[|0,\<infty\>|[>>
       we have that\ 
@@ -29443,18 +29601,8 @@
       <item>Using [theorem: <reference|continuity norm is uniform
       continuous>] <math|<around*|\|||\|>:\<bbb-C\>\<rightarrow\>\<bbb-R\>>
       is a continuous function [using the canonical topologies on
-      <math|\<bbb-C\>> and <math|\<bbb-R\>>. By [theorem:
-      <reference|continuity and subspace topology (4)>] it follows then that\ 
-
-      <\equation*>
-        <around*|\|||\|>:\<bbb-R\>\<rightarrow\><around*|[|0,\<infty\>|[><text|
-        is continuous using the topologies
-        >\<cal-T\><rsub|<around*|\|||\|>><text|,
-        ><around*|(|\<cal-T\><rsub|<around*|\|||\|>>|)><rsub|\|<around*|[|0,\<infty\>|\<nobracket\>><around*|[||\<nobracket\>>>
-      </equation*>
-
-      Further using [theorem: <reference|exp (*)^x is continuous>] we have
-      that
+      <math|\<bbb-C\>> and <math|\<bbb-R\>>. Further using [theorem:
+      <reference|exp (*)^x is continuous>] we have that
 
       <\equation*>
         <around*|(|\<ast\>|)><rsup|p>:<around*|[|0,\<infty\>|[>\<rightarrow\>\<bbb-R\><text|
@@ -29484,7 +29632,7 @@
 
       <item>Let <math|x\<in\>X> then <math|<around*|\||f|\|><rsup|p>=<around*|\|||\|><rsup|p>\<circ\>f>.
       Hence using [theorem: <reference|measurable function composition>] (3)
-      and the fact that <math|f> is <math|\<cal-A\>,\<cal-B\><around*|[|\<bbb-R\>|]>>-measurable
+      and the fact that <math|f> is <math|\<cal-A\>,\<cal-B\><around*|[|\<bbb-C\>|]>>-measurable
       it follows that <math|<around*|\||f|\|><rsup|p>> is
       <math|\<cal-A\>,\<cal-B\><around*|[|<wide|\<bbb-R\>|\<wide-bar\>>|]>>-measurable.
       Finally as <math|<around*|\|||\|><rsup|p><around*|(|f<around*|(|X|)>|)>\<subseteq\><around*|[|0,\<infty\>|[>>
@@ -29495,6 +29643,8 @@
       </equation*>
     </enumerate>
   </proof>
+
+  TODO
 
   <\lemma>
     <label|lemma 20.448.245>Let <math|<around*|\<langle\>|X,\<cal-A\>,\<mu\>|\<rangle\>>>
@@ -47740,69 +47890,69 @@
     <associate|21.1044.291|<tuple|21.1096|?>>
     <associate|Beppo Levi's Theorem|<tuple|21.373|?>>
     <associate|Borel measure on R and R^n are locally
-    finite|<tuple|21.578|?>>
+    finite|<tuple|21.581|?>>
     <associate|Constructing measures and sigma alegebra|<tuple|21.3.4|?>>
     <associate|Fatou's lemma|<tuple|21.377|?>>
-    <associate|Fubini's theorem|<tuple|21.559|?>>
-    <associate|Hahn Decomposition Theorem|<tuple|21.477|?>>
-    <associate|Holder's Inequality|<tuple|21.426|?>>
-    <associate|Jordon Decomposition|<tuple|21.479|?>>
-    <associate|Jordon Decomposition complex measures|<tuple|21.487|?>>
-    <associate|Jordon Decomposition theorem|<tuple|21.478|?>>
-    <associate|LP space density (1)|<tuple|21.447|?>>
-    <associate|LP space density (2)|<tuple|21.449|?>>
-    <associate|LP space power extension|<tuple|21.439|?>>
-    <associate|LP spaces|<tuple|21.406|?>>
-    <associate|LP spaces (@@)|<tuple|21.414|?>>
-    <associate|LP spaces LP norm is zero|<tuple|21.419|?>>
-    <associate|LP spaces Minkowski's Inequality|<tuple|21.427|?>>
-    <associate|LP spaces absolute value|<tuple|21.417|?>>
-    <associate|LP spaces are Banach spaces|<tuple|21.446|?>>
-    <associate|LP spaces are pseudo normed|<tuple|21.430|?>>
-    <associate|LP spaces canonical example|<tuple|21.407|?>>
-    <associate|LP spaces density|<tuple|21.452|?>>
-    <associate|LP spaces empty set is locally m-null|<tuple|21.421|?>>
-    <associate|LP spaces finite sum|<tuple|21.429|?>>
-    <associate|LP spaces locally m-null set properties|<tuple|21.422|?>>
-    <associate|LP spaces locally u-null sets|<tuple|21.420|?>>
-    <associate|LP spaces neutral element|<tuple|21.408|?>>
-    <associate|LP spaces normed space|<tuple|21.437|?>>
-    <associate|LP spaces null sets is a subspace|<tuple|21.435|?>>
-    <associate|LP spaces p-norm (1)|<tuple|21.418|?>>
-    <associate|LP spaces p-norm (2)|<tuple|21.423|?>>
-    <associate|LP spaces p-null set|<tuple|21.433|?>>
-    <associate|LP spaces p-null set (1)|<tuple|21.434|?>>
-    <associate|LP spaces sum scalar product|<tuple|21.412|?>>
-    <associate|LP spaces sum scalar product (1)|<tuple|21.415|?>>
-    <associate|LP vector space|<tuple|21.416|?>>
+    <associate|Fubini's theorem|<tuple|21.562|?>>
+    <associate|Hahn Decomposition Theorem|<tuple|21.480|?>>
+    <associate|Holder's Inequality|<tuple|21.429|?>>
+    <associate|Jordon Decomposition|<tuple|21.482|?>>
+    <associate|Jordon Decomposition complex measures|<tuple|21.490|?>>
+    <associate|Jordon Decomposition theorem|<tuple|21.481|?>>
+    <associate|LP space density (1)|<tuple|21.450|?>>
+    <associate|LP space density (2)|<tuple|21.452|?>>
+    <associate|LP space power extension|<tuple|21.442|?>>
+    <associate|LP spaces|<tuple|21.409|?>>
+    <associate|LP spaces (@@)|<tuple|21.417|?>>
+    <associate|LP spaces LP norm is zero|<tuple|21.422|?>>
+    <associate|LP spaces Minkowski's Inequality|<tuple|21.430|?>>
+    <associate|LP spaces absolute value|<tuple|21.420|?>>
+    <associate|LP spaces are Banach spaces|<tuple|21.449|?>>
+    <associate|LP spaces are pseudo normed|<tuple|21.433|?>>
+    <associate|LP spaces canonical example|<tuple|21.410|?>>
+    <associate|LP spaces density|<tuple|21.455|?>>
+    <associate|LP spaces empty set is locally m-null|<tuple|21.424|?>>
+    <associate|LP spaces finite sum|<tuple|21.432|?>>
+    <associate|LP spaces locally m-null set properties|<tuple|21.425|?>>
+    <associate|LP spaces locally u-null sets|<tuple|21.423|?>>
+    <associate|LP spaces neutral element|<tuple|21.411|?>>
+    <associate|LP spaces normed space|<tuple|21.440|?>>
+    <associate|LP spaces null sets is a subspace|<tuple|21.438|?>>
+    <associate|LP spaces p-norm (1)|<tuple|21.421|?>>
+    <associate|LP spaces p-norm (2)|<tuple|21.426|?>>
+    <associate|LP spaces p-null set|<tuple|21.436|?>>
+    <associate|LP spaces p-null set (1)|<tuple|21.437|?>>
+    <associate|LP spaces sum scalar product|<tuple|21.415|?>>
+    <associate|LP spaces sum scalar product (1)|<tuple|21.418|?>>
+    <associate|LP vector space|<tuple|21.419|?>>
     <associate|Lebesgue borel measure and linear
-    isomorphism|<tuple|21.607|?>>
+    isomorphism|<tuple|21.610|?>>
     <associate|Lebesgue borel measure and linear isomorphism
-    (n)|<tuple|21.610|?>>
-    <associate|Lebesgue borel measures are Radon measures|<tuple|21.580|?>>
-    <associate|Lebesgue measure and unitary transformation|<tuple|21.605|?>>
+    (n)|<tuple|21.613|?>>
+    <associate|Lebesgue borel measures are Radon measures|<tuple|21.583|?>>
+    <associate|Lebesgue measure and unitary transformation|<tuple|21.608|?>>
     <associate|Lebesgue's Dominated Convergence Theorem|<tuple|21.380|?>>
     <associate|Monotone Convergence Theorem (1)|<tuple|21.368|?>>
     <associate|Monotone Convergence Theorem (2)|<tuple|21.371|?>>
     <associate|R^n is the union of ]-i,i[|<tuple|21.70|?>>
-    <associate|Radon measure definition|<tuple|21.566|?>>
-    <associate|Radon-Nikodym (finite case)|<tuple|21.516|?>>
-    <associate|Radon-Nikodym Theorem|<tuple|21.517|?>>
-    <associate|Radon-Nikodym absolute continuity|<tuple|21.508|?>>
+    <associate|Radon measure definition|<tuple|21.569|?>>
+    <associate|Radon-Nikodym (finite case)|<tuple|21.519|?>>
+    <associate|Radon-Nikodym Theorem|<tuple|21.520|?>>
+    <associate|Radon-Nikodym absolute continuity|<tuple|21.511|?>>
     <associate|Radon-Nikodym absolute continuity
-    alternative|<tuple|21.512|?>>
+    alternative|<tuple|21.515|?>>
     <associate|Radon-Nikodym absolute continuity
-    equivalence|<tuple|21.519|?>>
+    equivalence|<tuple|21.522|?>>
     <associate|Radon-Nikodym absolute continuity trivial
-    example|<tuple|21.509|?>>
-    <associate|Radon-Nikodym derivative|<tuple|21.523|?>>
-    <associate|Radon-Nikodym integral example|<tuple|21.510|?>>
-    <associate|Radon-Nikodym signed/complex|<tuple|21.522|?>>
-    <associate|Tonelli theorem (1)|<tuple|21.554|?>>
+    example|<tuple|21.512|?>>
+    <associate|Radon-Nikodym derivative|<tuple|21.526|?>>
+    <associate|Radon-Nikodym integral example|<tuple|21.513|?>>
+    <associate|Radon-Nikodym signed/complex|<tuple|21.525|?>>
+    <associate|Tonelli theorem (1)|<tuple|21.557|?>>
     <associate|almost everywhere|<tuple|21.276|?>>
     <associate|almost everywhere and characteristic|<tuple|21.278|?>>
-    <associate|almost everywhere complex functions|<tuple|21.389|?>>
-    <associate|almost everywhere equality complex|<tuple|21.388|?>>
+    <associate|almost everywhere complex functions|<tuple|21.391|?>>
+    <associate|almost everywhere equality complex|<tuple|21.390|?>>
     <associate|almost everywhere f=g \<less\>=\<gtr\> f-g=0|<tuple|21.280|?>>
     <associate|almost everywhere functions|<tuple|21.277|?>>
     <associate|almost everywhere limit is measurable|<tuple|21.284|?>>
@@ -47959,33 +48109,34 @@
     <associate|auto-99|<tuple|21.5.5.1|?>>
     <associate|cardinality of a product of sets|<tuple|21.1|?>>
     <associate|charasteristic function|<tuple|21.269|?>>
-    <associate|compact finite measure|<tuple|21.566|?>>
-    <associate|complex integral|<tuple|21.396|?>>
-    <associate|complex integral alternative|<tuple|21.403|?>>
+    <associate|compact finite measure|<tuple|21.569|?>>
+    <associate|complex integral|<tuple|21.399|?>>
+    <associate|complex integral alternative|<tuple|21.406|?>>
     <associate|complex integral characteristics
-    multiplication|<tuple|21.398|?>>
-    <associate|complex integral of zero function|<tuple|21.397|?>>
-    <associate|complex integral property|<tuple|21.402|?>>
+    multiplication|<tuple|21.401|?>>
+    <associate|complex integral of zero function|<tuple|21.400|?>>
+    <associate|complex integral property|<tuple|21.405|?>>
     <associate|complex integral real integrable functions are complex
-    integrable|<tuple|21.401|?>>
-    <associate|complex measurable function|<tuple|21.390|?>>
-    <associate|complex measurable function absolute value|<tuple|21.395|?>>
-    <associate|complex measurable function alternative|<tuple|21.392|?>>
-    <associate|complex measurable function condition|<tuple|21.392|?>>
-    <associate|complex measurable function properties|<tuple|21.394|?>>
+    integrable|<tuple|21.404|?>>
+    <associate|complex measurable function|<tuple|21.392|?>>
+    <associate|complex measurable function Re, Img and absolute
+    value|<tuple|21.394|?>>
+    <associate|complex measurable function absolute value|<tuple|21.398|?>>
+    <associate|complex measurable function alternative|<tuple|21.395|?>>
+    <associate|complex measurable function properties|<tuple|21.397|?>>
     <associate|complex measurable space|<tuple|21.381|?>>
-    <associate|complex measurable space (1)|<tuple|21.386|?>>
-    <associate|complex measure|<tuple|21.480|?>>
-    <associate|complex measure condition|<tuple|21.486|?>>
-    <associate|complex measure finite addivity|<tuple|21.484|?>>
-    <associate|complex measure integral complex function|<tuple|21.506|?>>
-    <associate|complex measure integral real function|<tuple|21.504|?>>
-    <associate|complex measure properties|<tuple|21.485|?>>
-    <associate|complex measure real/imaginare part|<tuple|21.482|?>>
-    <associate|complex measure variation|<tuple|21.488|?>>
-    <associate|complex measure variation is a measure|<tuple|21.490|?>>
+    <associate|complex measurable space (1)|<tuple|21.387|?>>
+    <associate|complex measure|<tuple|21.483|?>>
+    <associate|complex measure condition|<tuple|21.489|?>>
+    <associate|complex measure finite addivity|<tuple|21.487|?>>
+    <associate|complex measure integral complex function|<tuple|21.509|?>>
+    <associate|complex measure integral real function|<tuple|21.507|?>>
+    <associate|complex measure properties|<tuple|21.488|?>>
+    <associate|complex measure real/imaginare part|<tuple|21.485|?>>
+    <associate|complex measure variation|<tuple|21.491|?>>
+    <associate|complex measure variation is a measure|<tuple|21.493|?>>
     <associate|corollary 20.111.218|<tuple|21.12|?>>
-    <associate|corollary 21.533.285|<tuple|21.564|?>>
+    <associate|corollary 21.533.285|<tuple|21.567|?>>
     <associate|denumerable union properties|<tuple|21.13|?>>
     <associate|eq 15.81.439|<tuple|21.344|?>>
     <associate|eq 18.10.021|<tuple|21.37|?>>
@@ -48344,10 +48495,10 @@
     <associate|eq 20.388.226|<tuple|21.369|?>>
     <associate|eq 20.389.226|<tuple|21.370|?>>
     <associate|eq 20.390.226|<tuple|21.371|?>>
-    <associate|eq 20.413.227|<tuple|21.379|?>>
-    <associate|eq 20.414.227|<tuple|21.380|?>>
-    <associate|eq 20.415.227|<tuple|21.381|?>>
-    <associate|eq 20.416.227|<tuple|21.382|?>>
+    <associate|eq 20.413.227|<tuple|21.372|?>>
+    <associate|eq 20.414.227|<tuple|21.373|?>>
+    <associate|eq 20.415.227|<tuple|21.374|?>>
+    <associate|eq 20.416.227|<tuple|21.375|?>>
     <associate|eq 20.417.227|<tuple|21.379|?>>
     <associate|eq 20.418.227|<tuple|21.380|?>>
     <associate|eq 20.419.227|<tuple|21.381|?>>
@@ -49051,8 +49202,6 @@
     <associate|eq 21.373.300|<tuple|21.377|?>>
     <associate|eq 21.374.300|<tuple|21.378|?>>
     <associate|eq 21.382.300|<tuple|21.382|?>>
-    <associate|eq 21.382.302|<tuple|21.384|?>>
-    <associate|eq 21.383.303|<tuple|21.383|?>>
     <associate|eq 21.385.300|<tuple|21.385|?>>
     <associate|eq 21.386.301|<tuple|21.386|?>>
     <associate|eq 21.387.300|<tuple|21.387|?>>
@@ -49156,7 +49305,7 @@
     <associate|eq 21.999.285|<tuple|21.1053|?>>
     <associate|figure 20.6.234|<tuple|21.6|?>>
     <associate|figure 20.7.234|<tuple|21.7|?>>
-    <associate|integral convention|<tuple|21.545|?>>
+    <associate|integral convention|<tuple|21.548|?>>
     <associate|interval power|<tuple|21.68|?>>
     <associate|label 20.147.200|<tuple|21.94|?>>
     <associate|lemma 20.102.202|<tuple|21.7|?>>
@@ -49200,52 +49349,52 @@
     <associate|lemma 20.351.229|<tuple|21.306|?>>
     <associate|lemma 20.371.262|<tuple|21.292|?>>
     <associate|lemma 20.377.232|<tuple|21.332|?>>
-    <associate|lemma 20.447.245|<tuple|21.409|?>>
-    <associate|lemma 20.448.245|<tuple|21.410|?>>
-    <associate|lemma 20.449.245|<tuple|21.411|?>>
-    <associate|lemma 20.463.246|<tuple|21.424|?>>
-    <associate|lemma 20.476.246|<tuple|21.438|?>>
-    <associate|lemma 20.477.246|<tuple|21.441|?>>
-    <associate|lemma 20.479.246|<tuple|21.442|?>>
-    <associate|lemma 20.480.246|<tuple|21.444|?>>
-    <associate|lemma 20.482.247|<tuple|21.445|?>>
-    <associate|lemma 20.491.248|<tuple|21.448|?>>
-    <associate|lemma 20.505.265|<tuple|21.440|?>>
-    <associate|lemma 20.513.248|<tuple|21.471|?>>
-    <associate|lemma 20.514.248|<tuple|21.472|?>>
-    <associate|lemma 20.515.248|<tuple|21.473|?>>
-    <associate|lemma 20.516.248|<tuple|21.474|?>>
-    <associate|lemma 20.555.149|<tuple|21.511|?>>
-    <associate|lemma 20.557.249|<tuple|21.513|?>>
-    <associate|lemma 20.558.249|<tuple|21.514|?>>
-    <associate|lemma 20.559.249|<tuple|21.515|?>>
-    <associate|lemma 20.594.271|<tuple|21.520|?>>
-    <associate|lemma 20.595.271|<tuple|21.521|?>>
-    <associate|lemma 20.613.279|<tuple|21.539|?>>
-    <associate|lemma 20.614.279|<tuple|21.540|?>>
-    <associate|lemma 20.619.279|<tuple|21.542|?>>
-    <associate|lemma 20.621.280|<tuple|21.544|?>>
-    <associate|lemma 20.628.280|<tuple|21.550|?>>
-    <associate|lemma 20.629.280|<tuple|21.551|?>>
-    <associate|lemma 20.630.280|<tuple|21.553|?>>
-    <associate|lemma 20.635.281|<tuple|21.558|?>>
+    <associate|lemma 20.447.245|<tuple|21.412|?>>
+    <associate|lemma 20.448.245|<tuple|21.413|?>>
+    <associate|lemma 20.449.245|<tuple|21.414|?>>
+    <associate|lemma 20.463.246|<tuple|21.427|?>>
+    <associate|lemma 20.476.246|<tuple|21.441|?>>
+    <associate|lemma 20.477.246|<tuple|21.444|?>>
+    <associate|lemma 20.479.246|<tuple|21.445|?>>
+    <associate|lemma 20.480.246|<tuple|21.447|?>>
+    <associate|lemma 20.482.247|<tuple|21.448|?>>
+    <associate|lemma 20.491.248|<tuple|21.451|?>>
+    <associate|lemma 20.505.265|<tuple|21.443|?>>
+    <associate|lemma 20.513.248|<tuple|21.474|?>>
+    <associate|lemma 20.514.248|<tuple|21.475|?>>
+    <associate|lemma 20.515.248|<tuple|21.476|?>>
+    <associate|lemma 20.516.248|<tuple|21.477|?>>
+    <associate|lemma 20.555.149|<tuple|21.514|?>>
+    <associate|lemma 20.557.249|<tuple|21.516|?>>
+    <associate|lemma 20.558.249|<tuple|21.517|?>>
+    <associate|lemma 20.559.249|<tuple|21.518|?>>
+    <associate|lemma 20.594.271|<tuple|21.523|?>>
+    <associate|lemma 20.595.271|<tuple|21.524|?>>
+    <associate|lemma 20.613.279|<tuple|21.542|?>>
+    <associate|lemma 20.614.279|<tuple|21.543|?>>
+    <associate|lemma 20.619.279|<tuple|21.545|?>>
+    <associate|lemma 20.621.280|<tuple|21.547|?>>
+    <associate|lemma 20.628.280|<tuple|21.553|?>>
+    <associate|lemma 20.629.280|<tuple|21.554|?>>
+    <associate|lemma 20.630.280|<tuple|21.556|?>>
+    <associate|lemma 20.635.281|<tuple|21.561|?>>
     <associate|lemma 21.185.300|<tuple|21.185|?>>
     <associate|lemma 21.347.301|<tuple|21.348|?>>
-    <associate|lemma 21.383.303|<tuple|21.383|?>>
-    <associate|lemma 21.384.303|<tuple|21.384|?>>
-    <associate|lemma 21.385.303|<tuple|21.385|?>>
-    <associate|lemma 21.530.285|<tuple|21.561|?>>
-    <associate|lemma 21.532.285|<tuple|21.563|?>>
-    <associate|lemma 21.558.288|<tuple|21.584|?>>
-    <associate|lemma 21.562.291|<tuple|21.588|?>>
-    <associate|lemma 21.563.291|<tuple|21.589|?>>
-    <associate|lemma 21.578.291|<tuple|21.602|?>>
-    <associate|lemma 21.579.291|<tuple|21.603|?>>
-    <associate|lemma 21.582.291|<tuple|21.606|?>>
-    <associate|lemma 21.584.291|<tuple|21.608|?>>
-    <associate|lemma 21.585.291|<tuple|21.609|?>>
+    <associate|lemma 21.383.303|<tuple|21.384|?>>
+    <associate|lemma 21.384.303|<tuple|21.385|?>>
+    <associate|lemma 21.385.303|<tuple|21.386|?>>
+    <associate|lemma 21.530.285|<tuple|21.564|?>>
+    <associate|lemma 21.532.285|<tuple|21.566|?>>
+    <associate|lemma 21.558.288|<tuple|21.587|?>>
+    <associate|lemma 21.562.291|<tuple|21.591|?>>
+    <associate|lemma 21.563.291|<tuple|21.592|?>>
+    <associate|lemma 21.578.291|<tuple|21.605|?>>
+    <associate|lemma 21.579.291|<tuple|21.606|?>>
+    <associate|lemma 21.582.291|<tuple|21.609|?>>
+    <associate|lemma 21.584.291|<tuple|21.611|?>>
+    <associate|lemma 21.585.291|<tuple|21.612|?>>
     <associate|measurability of image of a measurable set by a
-    homeomorphism|<tuple|21.593|?>>
+    homeomorphism|<tuple|21.596|?>>
     <associate|measurable function|<tuple|21.223|?>>
     <associate|measurable function (1)|<tuple|21.238|?>>
     <associate|measurable function (4)|<tuple|21.242|?>>
@@ -49254,7 +49403,7 @@
     <associate|measurable function alternative (1)|<tuple|21.252|?>>
     <associate|measurable function and continuity|<tuple|21.253|?>>
     <associate|measurable function and generated sigma
-    algebra|<tuple|21.250|?>>
+    algebra|<tuple|21.227|?>>
     <associate|measurable function charasteristic|<tuple|21.271|?>>
     <associate|measurable function charasteristic product|<tuple|21.274|?>>
     <associate|measurable function charasteristic
@@ -49280,7 +49429,7 @@
     <associate|measurable function sum (finite)|<tuple|21.255|?>>
     <associate|measurable function sum finite|<tuple|21.259|?>>
     <associate|measurable function sup inf limit|<tuple|21.267|?>>
-    <associate|measurable locally finiteness|<tuple|21.571|?>>
+    <associate|measurable locally finiteness|<tuple|21.574|?>>
     <associate|measure A.B minus C.D|<tuple|21.2|?>>
     <associate|measure Borel algebra|<tuple|21.46|?>>
     <associate|measure Borel algebra and closure|<tuple|21.47|?>>
@@ -49296,17 +49445,17 @@
     <associate|measure Borel algebra on the extended real numbers
     (1)|<tuple|21.61|?>>
     <associate|measure Borel algebras on R^n equivalences|<tuple|21.87|?>>
-    <associate|measure Borel measure of T(A)|<tuple|21.597|?>>
-    <associate|measure Borel measure of T(A) (1)|<tuple|21.600|?>>
+    <associate|measure Borel measure of T(A)|<tuple|21.600|?>>
+    <associate|measure Borel measure of T(A) (1)|<tuple|21.603|?>>
     <associate|measure Borel measure on R and linear
-    isomorphism|<tuple|21.599|?>>
+    isomorphism|<tuple|21.602|?>>
     <associate|measure Caratheodory|<tuple|21.121|?>>
     <associate|measure Caratheodory produces complete measure
     space|<tuple|21.216|?>>
     <associate|measure Dyadic cubes|<tuple|21.79|?>>
     <associate|measure Dyadic cubes properties|<tuple|21.83|?>>
-    <associate|measure Dyadic intervals|<tuple|21.587|?>>
-    <associate|measure Dyadic intervals and open sets|<tuple|21.590|?>>
+    <associate|measure Dyadic intervals|<tuple|21.590|?>>
+    <associate|measure Dyadic intervals and open sets|<tuple|21.593|?>>
     <associate|measure Dynkin system|<tuple|21.122|?>>
     <associate|measure Dynkin system P(X)|<tuple|21.125|?>>
     <associate|measure Dynkin system condition for sigma
@@ -49326,10 +49475,10 @@
     <associate|measure P(X) is a ring|<tuple|21.26|?>>
     <associate|measure P(X) is a sigma algebra|<tuple|21.38|?>>
     <associate|measure R^n alternative definition|<tuple|21.191|?>>
-    <associate|measure Radon and Borel measure on R|<tuple|21.591|?>>
-    <associate|measure Radon and Borel measure on R^n|<tuple|21.592|?>>
-    <associate|measure Radon condition|<tuple|21.576|?>>
-    <associate|measure Radon condition (1)|<tuple|21.577|?>>
+    <associate|measure Radon and Borel measure on R|<tuple|21.594|?>>
+    <associate|measure Radon and Borel measure on R^n|<tuple|21.595|?>>
+    <associate|measure Radon condition|<tuple|21.579|?>>
+    <associate|measure Radon condition (1)|<tuple|21.580|?>>
     <associate|measure [a,b[ in R^n|<tuple|21.67|?>>
     <associate|measure additive function monotone|<tuple|21.143|?>>
     <associate|measure additive set function|<tuple|21.15|?>>
@@ -49345,9 +49494,9 @@
     <associate|measure compact class approximation (1)|<tuple|21.158|?>>
     <associate|measure compact class approximation (2)|<tuple|21.167|?>>
     <associate|measure compact class approximation (3)|<tuple|21.168|?>>
-    <associate|measure compact finite and intervals|<tuple|21.573|?>>
-    <associate|measure compact finite and rectangles|<tuple|21.574|?>>
-    <associate|measure compact finite and scalar product|<tuple|21.569|?>>
+    <associate|measure compact finite and intervals|<tuple|21.576|?>>
+    <associate|measure compact finite and rectangles|<tuple|21.577|?>>
+    <associate|measure compact finite and scalar product|<tuple|21.572|?>>
     <associate|measure complete measure|<tuple|21.214|?>>
     <associate|measure complete measure characterization|<tuple|21.215|?>>
     <associate|measure completing of a measure space|<tuple|21.221|?>>
@@ -49369,9 +49518,9 @@
     <associate|measure countable union is in sigma algebra|<tuple|21.39|?>>
     <associate|measure countable union pairwise|<tuple|21.100|?>>
     <associate|measure create a new measure based on a measure and a
-    homeomorphism|<tuple|21.594|?>>
+    homeomorphism|<tuple|21.597|?>>
     <associate|measure create a new measure based on a measure and a linear
-    isomorphism|<tuple|21.596|?>>
+    isomorphism|<tuple|21.599|?>>
     <associate|measure extending pre-measure to a measure|<tuple|21.147|?>>
     <associate|measure finite measure|<tuple|21.112|?>>
     <associate|measure finite product of semi-rings|<tuple|21.189|?>>
@@ -49404,7 +49553,7 @@
     <associate|measure integral properties|<tuple|21.357|?>>
     <associate|measure integral properties (1)|<tuple|21.364|?>>
     <associate|measure integral properties (2)|<tuple|21.366|?>>
-    <associate|measure integral sigma finite|<tuple|21.425|?>>
+    <associate|measure integral sigma finite|<tuple|21.428|?>>
     <associate|measure integral to measure over|<tuple|21.353|?>>
     <associate|measure integral zero is a.e. zero|<tuple|21.362|?>>
     <associate|measure length definition|<tuple|21.176|?>>
@@ -49447,9 +49596,9 @@
     <associate|measure product of two semi-rings|<tuple|21.183|?>>
     <associate|measure proto-measure|<tuple|21.132|?>>
     <associate|measure proto-ring|<tuple|21.131|?>>
-    <associate|measure regularity|<tuple|21.565|?>>
-    <associate|measure regularity and scalar product|<tuple|21.568|?>>
-    <associate|measure regularity and uniqueness|<tuple|21.570|?>>
+    <associate|measure regularity|<tuple|21.568|?>>
+    <associate|measure regularity and scalar product|<tuple|21.571|?>>
+    <associate|measure regularity and uniqueness|<tuple|21.573|?>>
     <associate|measure ring|<tuple|21.24|?>>
     <associate|measure ring is a semi-ring|<tuple|21.149|?>>
     <associate|measure ring properties|<tuple|21.27|?>>
@@ -49471,11 +49620,11 @@
     <associate|measure sub-additive set function|<tuple|21.16|?>>
     <associate|measure sum and scalar product of measures|<tuple|21.107|?>>
     <associate|measure the Borel measure is translation invariant
-    (1)|<tuple|21.585|?>>
+    (1)|<tuple|21.588|?>>
     <associate|measure the Borel measure is translation invariant
-    (2)|<tuple|21.586|?>>
-    <associate|measure translation invariant|<tuple|21.582|?>>
-    <associate|measure translation of a measurable set|<tuple|21.581|?>>
+    (2)|<tuple|21.589|?>>
+    <associate|measure translation invariant|<tuple|21.585|?>>
+    <associate|measure translation of a measurable set|<tuple|21.584|?>>
     <associate|measure translation of a measurable set (1)|<tuple|21.49|?>>
     <associate|measure union intersection stable|<tuple|21.9|?>>
     <associate|measure uniqueness of extension of a measure|<tuple|21.130|?>>
@@ -49504,34 +49653,34 @@
     <associate|non negative measurable function|<tuple|21.239|?>>
     <associate|note 20.198.210|<tuple|21.134|?>>
     <associate|note 21.231.300|<tuple|21.233|?>>
-    <associate|note 21.580.291|<tuple|21.604|?>>
-    <associate|product |<tuple|21.526|?>>
-    <associate|product algebra|<tuple|21.529|?>>
-    <associate|product algebra equivalences|<tuple|21.532|?>>
-    <associate|product algebra equivalences (1)|<tuple|21.533|?>>
-    <associate|product algebra measure|<tuple|21.535|?>>
-    <associate|product algebra measure (1)|<tuple|21.536|?>>
-    <associate|product algebra on Borel algebras of R|<tuple|21.534|?>>
-    <associate|product algebra properties (1)|<tuple|21.531|?>>
-    <associate|product generated sigma algebra|<tuple|21.527|?>>
-    <associate|product generated sigma algebra (1)|<tuple|21.528|?>>
-    <associate|product measure (1)|<tuple|21.546|?>>
-    <associate|signed measure|<tuple|21.460|?>>
-    <associate|signed measure Hahn Decomposition|<tuple|21.475|?>>
-    <associate|signed measure Hahn Decomposition condition|<tuple|21.476|?>>
-    <associate|signed measure as a difference of measures|<tuple|21.463|?>>
-    <associate|signed measure conditions|<tuple|21.468|?>>
-    <associate|signed measure empty set is positive/negatie|<tuple|21.470|?>>
-    <associate|signed measure finite addivity|<tuple|21.465|?>>
-    <associate|signed measure finite measure|<tuple|21.462|?>>
-    <associate|signed measure finite sum distributivity|<tuple|21.456|?>>
-    <associate|signed measure integral complex function|<tuple|21.502|?>>
-    <associate|signed measure intgral real function|<tuple|21.500|?>>
-    <associate|signed measure positive/negative set|<tuple|21.469|?>>
-    <associate|signed measure product with scalar|<tuple|21.464|?>>
-    <associate|signed measure properties (1)|<tuple|21.466|?>>
-    <associate|signed measure properties (2)|<tuple|21.467|?>>
-    <associate|signed semi groups|<tuple|21.455|?>>
+    <associate|note 21.580.291|<tuple|21.607|?>>
+    <associate|product |<tuple|21.529|?>>
+    <associate|product algebra|<tuple|21.532|?>>
+    <associate|product algebra equivalences|<tuple|21.535|?>>
+    <associate|product algebra equivalences (1)|<tuple|21.536|?>>
+    <associate|product algebra measure|<tuple|21.538|?>>
+    <associate|product algebra measure (1)|<tuple|21.539|?>>
+    <associate|product algebra on Borel algebras of R|<tuple|21.537|?>>
+    <associate|product algebra properties (1)|<tuple|21.534|?>>
+    <associate|product generated sigma algebra|<tuple|21.530|?>>
+    <associate|product generated sigma algebra (1)|<tuple|21.531|?>>
+    <associate|product measure (1)|<tuple|21.549|?>>
+    <associate|signed measure|<tuple|21.463|?>>
+    <associate|signed measure Hahn Decomposition|<tuple|21.478|?>>
+    <associate|signed measure Hahn Decomposition condition|<tuple|21.479|?>>
+    <associate|signed measure as a difference of measures|<tuple|21.466|?>>
+    <associate|signed measure conditions|<tuple|21.471|?>>
+    <associate|signed measure empty set is positive/negatie|<tuple|21.473|?>>
+    <associate|signed measure finite addivity|<tuple|21.468|?>>
+    <associate|signed measure finite measure|<tuple|21.465|?>>
+    <associate|signed measure finite sum distributivity|<tuple|21.459|?>>
+    <associate|signed measure integral complex function|<tuple|21.505|?>>
+    <associate|signed measure intgral real function|<tuple|21.503|?>>
+    <associate|signed measure positive/negative set|<tuple|21.472|?>>
+    <associate|signed measure product with scalar|<tuple|21.467|?>>
+    <associate|signed measure properties (1)|<tuple|21.469|?>>
+    <associate|signed measure properties (2)|<tuple|21.470|?>>
+    <associate|signed semi groups|<tuple|21.458|?>>
     <associate|simple function|<tuple|21.286|?>>
     <associate|simple function 2 point measurability|<tuple|21.300|?>>
     <associate|simple function alternative|<tuple|21.287|?>>
@@ -49551,17 +49700,17 @@
     <associate|simple function property|<tuple|21.288|?>>
     <associate|simple function representation|<tuple|21.301|?>>
     <associate|simple function sum scalar product|<tuple|21.289|?>>
-    <associate|space of measures|<tuple|21.491|?>>
+    <associate|space of measures|<tuple|21.494|?>>
     <associate|space of measures bounded functions are
-    integrable|<tuple|21.499|?>>
+    integrable|<tuple|21.502|?>>
     <associate|space of measures bounded measurable
-    functions|<tuple|21.497|?>>
-    <associate|space of measures bounded normed space|<tuple|21.498|?>>
-    <associate|space of measures is a Banach space|<tuple|21.496|?>>
-    <associate|space of measures is a vector space|<tuple|21.493|?>>
-    <associate|space of measures normed space complex case|<tuple|21.495|?>>
-    <associate|space of measures normed space real case|<tuple|21.494|?>>
-    <associate|space of measures total variation is finite|<tuple|21.492|?>>
+    functions|<tuple|21.500|?>>
+    <associate|space of measures bounded normed space|<tuple|21.501|?>>
+    <associate|space of measures is a Banach space|<tuple|21.499|?>>
+    <associate|space of measures is a vector space|<tuple|21.496|?>>
+    <associate|space of measures normed space complex case|<tuple|21.498|?>>
+    <associate|space of measures normed space real case|<tuple|21.497|?>>
+    <associate|space of measures total variation is finite|<tuple|21.495|?>>
   </collection>
 </references>
 

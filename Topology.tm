@@ -6734,37 +6734,62 @@
     <label|continuity and subspace topology (4)>Let
     <math|<around*|\<langle\>|X,\<cal-T\><rsub|X>|\<rangle\>>> and
     <math|<around*|\<langle\>|Y,\<cal-T\><rsub|Y>|\<rangle\>>> be topological
-    spaces, <math|B\<subseteq\>Y> and <math|f:X\<rightarrow\>Y> a continuous
-    function such that <math|f<around*|(|X|)>\<subseteq\>B> then
-    <math|f:X\<rightarrow\>B> is continuous using the topology
-    <math|\<cal-T\><rsub|X>> on <math|X> and the subspace topology
-    <math|<around*|(|\<cal-T\><rsub|Y>|)><rsub|\|B>> on <math|B> [see
-    theorem: <reference|topology subspace topology>].
+    spaces, <math|B\<subseteq\>Y> and <math|f:X\<rightarrow\>Y> a function
+    such that <math|f<around*|(|X|)>\<subseteq\>B> then we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|>|<cell|f:X\<rightarrow\>Y<text| is
+      continous using the topologies >\<cal-T\><rsub|X><text| on >X<text| and
+      >\<cal-T\><rsub|Y><text| on >Y>|<cell|>>|<row|<cell|>|<cell|\<Updownarrow\>>|<cell|>>|<row|<cell|>|<cell|f:X\<rightarrow\>B<text|
+      is continuous using the topologies >\<cal-T\><rsub|X><text| on >X<text|
+      and ><around*|(|\<cal-T\><rsub|Y>|)><rsub|\|B><text| on >B>|<cell|>>>>
+    </eqnarray*>
   </theorem>
 
   <\proof>
-    Let <math|V\<in\><around*|(|\<cal-T\><rsub|Y>|)><rsub|\|B>> then there
-    exist a open set <math|V<rprime|'>\<in\>\<cal-T\><rsub|Y>> such that
-    <math|V=V<rprime|'><big|cap>B>. As <math|f:X\<rightarrow\>Y> is
-    continuous we have by [theorem: <reference|topology subspace topology>]
-    that\ 
+    \ 
 
-    <\equation*>
-      f<rsup|-1><around*|(|V<rprime|'>|)>\<in\>\<cal-T\><rsub|Y>
-    </equation*>
+    <\description>
+      <item*|<math|\<Rightarrow\>>>Let <math|V\<in\><around*|(|\<cal-T\><rsub|Y>|)><rsub|\|B>>
+      then there exist a open set <math|V<rprime|'>\<in\>\<cal-T\><rsub|Y>>
+      such that <math|V=V<rprime|'><big|cap>B>. As <math|f:X\<rightarrow\>Y>
+      is continuous we have by [theorem: <reference|topology subspace
+      topology>] that\ 
 
-    \ Next we have\ 
+      <\equation*>
+        f<rsup|-1><around*|(|V<rprime|'>|)>\<in\>\<cal-T\><rsub|Y>
+      </equation*>
 
-    <\equation*>
-      f<rsup|-1><around*|(|V<rprime|'><big|cap>B|)>\<equallim\><rsub|<text|[theorem:
-      <reference|function function and intersection and
-      union>]>>f<rsup|-1><around*|(|V<rprime|'>|)><big|cap>f<rsup|-1><around*|(|B|)>\<equallim\><rsub|f<around*|(|X|)>\<subseteq\>B\<Rightarrow\>f<rsup|-1><around*|(|B|)>=X>f<rsup|-1><around*|(|V<rprime|'>|)><big|cap>X=f<rsup|-1><around*|(|V<rprime|'>|)>\<in\>\<cal-T\><rsub|Y>
-    </equation*>
+      As <math|f<around*|(|X|)>\<subseteq\>B> we have that
+      <math|f<rsup|-1><around*|(|B|)>=X> so that
 
-    So using [theorem: <reference|topology subspace topology>] again it
-    follows that <math|f:X\<rightarrow\>B> is continous using the topology
-    <math|\<cal-T\><rsub|X>> on <math|X> and the subspace topology
-    <math|<around*|(|\<cal-T\><rsub|Y>|)><rsub|\|B>> on <math|B>.
+      <\equation*>
+        f<rsup|-1><around*|(|V<rprime|'><big|cap>B|)>\<equallim\><rsub|<text|[theorem:
+        <reference|function function and intersection and
+        union>]>>f<rsup|-1><around*|(|V<rprime|'>|)><big|cap>f<rsup|-1><around*|(|B|)>=f<rsup|-1><around*|(|V<rprime|'>|)><big|cap>X=f<rsup|-1><around*|(|V<rprime|'>|)>\<in\>\<cal-T\><rsub|Y>
+      </equation*>
+
+      So using [theorem: <reference|topology subspace topology>] again it
+      follows that <math|f:X\<rightarrow\>B> is continous using the topology
+      <math|\<cal-T\><rsub|X>> on <math|X> and the subspace topology
+      <math|<around*|(|\<cal-T\><rsub|Y>|)><rsub|\|B>> on <math|B>.
+
+      <item*|<math|\<Leftarrow\>>>Assume that <math|f:X\<rightarrow\>B> is
+      continuous [using the topology <math|\<cal-T\><rsub|X>> on <math|X> and
+      <math|<around*|(|\<cal-T\><rsub|Y>|)><rsub|\|B>> on <math|B>. Let
+      <math|V\<in\>\<cal-T\><rsub|Y>> then
+      <math|V<big|cap>Y\<in\>\<cal-T\><rsub|Y>> so that
+      <math|f<rsup|-1><around*|(|V<big|cap>Y|)>\<in\>\<cal-T\><rsub|X>>. As
+
+      <\equation*>
+        f<rsup|-1><around*|(|V<big|cap>Y|)>\<equallim\><rsub|<text|[theorem:
+        <reference|function function and intersection and
+        union>]>>f<rsup|-1><around*|(|V|)><big|cap>f<rsup|-1><around*|(|Y|)>=f<rsup|-1><around*|(|V|)><big|cap>X=f<rsup|-1><around*|(|V|)>
+      </equation*>
+
+      so that <math|f<rsup|-1><around*|(|V|)>\<in\>\<cal-T\><rsub|X>> which
+      proves that <math|f:X\<rightarrow\>Y> is continuous.
+    </description>
   </proof>
 
   <\theorem>
@@ -7037,6 +7062,13 @@
       continuous functions then <math|g\<circ\>f:X\<rightarrow\>Z> is
       continuous.
 
+      <item>If <math|A\<subseteq\>Y> and <math|f:X\<rightarrow\>Y> is a
+      continuous function such that <math|f<around*|(|X|)>\<subseteq\>A> and
+      <math|g:A\<rightarrow\>Z> a continuous function [using the topologies
+      <math|<around*|(|\<cal-T\><rsub|Y>|)><rsub|\|A>> on <math|A> and
+      <math|\<cal-T\><rsub|Z>> on <math|Z>] then
+      <math|g\<circ\>f:X\<rightarrow\>Z> is continuous.
+
       <item>If <math|f:X\<rightarrow\>Y> and <math|g:Y\<rightarrow\>Z> are
       open functions then <math|g\<circ\>f:X\<rightarrow\>Z> is open
     </enumerate>
@@ -7081,6 +7113,13 @@
 
       we have by \ [theorem: <reference|continuity continuous function (1)>]
       that <math|g\<circ\>f> is continuous.
+
+      <item>As <math|f:X\<rightarrow\>Y> is continuous we have by [theorem:
+      <reference|continuity and subspace topology (4)>] that
+      <math|f:X\<rightarrow\>A> is continuous using the topologies
+      <math|\<cal-T\><rsub|X>> on <math|X> and
+      <math|<around*|(|\<cal-T\><rsub|Y>|)><rsub|\|A>>. Hence we have by (2)
+      that <math|g\<circ\>f:X\<rightarrow\>Z> is continuous.
 
       <item>Let <math|U\<in\>\<cal-T\><rsub|Z>> then, as <math|f> is open,
       <math|f<around*|(|U|)>\<in\>\<cal-T\><rsub|Y>>, hence as <math|g> is
