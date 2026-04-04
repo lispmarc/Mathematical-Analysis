@@ -34476,8 +34476,6 @@
     </enumerate>
   </proof>
 
-  TODO
-
   For the opposite of the previous theorem we have:
 
   <\theorem>
@@ -34506,7 +34504,7 @@
       exists and
 
       <\equation*>
-        \<mu\><around*|(|<big|cup><rsub|i\<in\>\<bbb-N\><rsub|0>>A<rsub|i>|)>=<below|lim|n\<rightarrow\>\<infty\>>\<mu\><around*|(|A<rsub|n>|)>
+        \<mu\><around*|(|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>=<below|lim|n\<rightarrow\>\<infty\>>\<mu\><around*|(|A<rsub|n>|)>
       </equation*>
 
       then <math|\<mu\>> is a signed measure on <math|\<cal-A\>>.
@@ -34571,7 +34569,7 @@
       then <math|x\<in\>B<rsub|1>=<big|cup><rsub|j\<in\>\<bbb-N\>>A<rsub|j>>
       so that there exist a <math|j\<in\>\<bbb-N\>> such that
       <math|x\<in\>A<rsub|j>>. Now <math|\<forall\>k\<in\><around*|{|j+1,\<ldots\>,\<infty\>|}>>
-      we have as <math|j\<neq\>k> that <math|A<rsub|j><big|cap>A<rsub|k>\<neq\>\<varnothing\>>
+      we have as <math|j\<neq\>k> that <math|A<rsub|j><big|cap>A<rsub|k>=\<varnothing\>>
       so that it follows that <math|x\<nin\>A<rsub|k>> so that
       <math|x\<nin\><big|cup><rsub|j\<in\><around*|{|j+1,\<ldots\>,\<infty\>|}>>A<rsub|j>=B<rsub|j+1>>
       which contradicts <math|x\<in\><big|cap><rsub|i\<in\>\<bbb-N\>>B<rsub|i>>.
@@ -34591,7 +34589,7 @@
         exist and ><below|lim|i\<rightarrow\>\<infty\>>\<mu\><around*|(|B<rsub|i+1>|)>=0
       </equation>
 
-      Let <math|k\<in\>\<bbb-N\>>. If <math|x\<in\><around*|(|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>A<rsub|i>|)><big|cap><around*|(|<big|cup><rsub|i\<in\><around*|{|k+1,\<ldots\>,\<infty\>|}>>A<rsub|i>|)>>
+      Let <math|k\<in\>\<bbb-N\>>. If <math|x\<in\><around*|(|<big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>A<rsub|i>|)><big|cap><around*|(|<big|sqcup><rsub|i\<in\><around*|{|k+1,\<ldots\>,\<infty\>|}>>A<rsub|i>|)>>
       then there exist a <math|i\<in\><around*|{|1,\<ldots\>,k|}>> and a
       <math|j\<in\><around*|{|k+1,\<ldots\>,\<infty\>|}>> such that
       <math|x\<in\>A<rsub|i>\<wedge\>x\<in\>A<rsub|j>\<Rightarrow\>x\<in\>A<rsub|i><big|cap>A<rsub|j>>.
@@ -34601,27 +34599,27 @@
       a contradiction. Hence we have\ 
 
       <\equation*>
-        \<forall\>k\<in\>\<bbb-N\><text| \ ><around*|(|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>A<rsub|i>|)><big|cap><around*|(|<big|cup><rsub|i\<in\><around*|{|k+1,\<ldots\>,\<infty\>|}>>A<rsub|i>|)>=\<varnothing\>
+        \<forall\>k\<in\>\<bbb-N\><text| \ ><around*|(|<big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>A<rsub|i>|)><big|cap><around*|(|<big|sqcup><rsub|i\<in\><around*|{|k+1,\<ldots\>,\<infty\>|}>>A<rsub|i>|)>=\<varnothing\>
       </equation*>
 
       and using [theorem: <reference|family properties (2)>]\ 
 
       <\equation*>
-        <big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>=<text|
-        \ ><around*|(|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>A<rsub|i>|)><big|cup><around*|(|<big|cup><rsub|i\<in\><around*|{|k+1,\<ldots\>,\<infty\>|}>>A<rsub|i>|)>
+        <big|sqcup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>=<text|
+        \ ><around*|(|<big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>A<rsub|i>|)><big|cup><around*|(|<big|sqcup><rsub|i\<in\><around*|{|k+1,\<ldots\>,\<infty\>|}>>A<rsub|i>|)>
       </equation*>
 
       By <math|<around*|(|c|)>> [finite additivity] we have\ 
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|\<mu\><around*|(|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>>|<cell|=>|<cell|\<mu\><around*|(|<around*|(|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>A<rsub|i>|)><big|cup><around*|(|<big|cup><rsub|i\<in\><around*|{|k+1,\<ldots\>,\<infty\>|}>>A<rsub|i>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<mu\><around*|(|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>A<rsub|i>|)>+\<mu\><around*|(|<big|cup><rsub|i\<in\><around*|{|k+1,\<ldots\>,\<infty\>|}>>A<rsub|i>|)>>>|<row|<cell|>|<cell|=>|<cell|\<mu\><around*|(|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>A<rsub|i>|)>+\<mu\><around*|(|B<rsub|k+1>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<around*|(|c|)>>>|<cell|\<mu\><around*|(|<big|sum><rsub|i=1><rsup|k>\<mu\><around*|(|A<rsub|i>|)>|)>+\<mu\><around*|(|B<rsub|k+1>|)>>>>>
+        <tformat|<table|<row|<cell|\<mu\><around*|(|<big|sqcup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>>|<cell|=>|<cell|\<mu\><around*|(|<around*|(|<big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>A<rsub|i>|)><big|cup><around*|(|<big|sqcup><rsub|i\<in\><around*|{|k+1,\<ldots\>,\<infty\>|}>>A<rsub|i>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<mu\><around*|(|<big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>A<rsub|i>|)>+\<mu\><around*|(|<big|sqcup><rsub|i\<in\><around*|{|k+1,\<ldots\>,\<infty\>|}>>A<rsub|i>|)>>>|<row|<cell|>|<cell|=>|<cell|\<mu\><around*|(|<big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>A<rsub|i>|)>+\<mu\><around*|(|B<rsub|k+1>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<around*|(|c|)>>>|<cell|<big|sum><rsub|i=1><rsup|k>\<mu\><around*|(|A<rsub|i>|)>+\<mu\><around*|(|B<rsub|k+1>|)>>>>>
       </eqnarray*>
 
       which proves that\ 
 
       <\equation>
         <label|eq 20.720.248>\<forall\>k\<in\>\<bbb-N\><text| we have
-        >\<mu\><around*|(|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>=\<mu\><around*|(|<big|sum><rsub|i=1><rsup|k>\<mu\><around*|(|A<rsub|i>|)>|)>+\<mu\><around*|(|B<rsub|k+1>|)>
+        >\<mu\><around*|(|<big|sqcup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>=<big|sum><rsub|i=1><rsup|k>\<mu\><around*|(|A<rsub|i>|)>+\<mu\><around*|(|B<rsub|k+1>|)>
       </equation>
 
       For <math|\<mu\>> we have now either:\ 
@@ -34797,10 +34795,10 @@
     [see theorem: <reference|signed measure product with scalar>]
 
     <\enumerate>
-      <item>If <math|A> is a positive set for <math|\<mu\>>
+      <item> <math|A> is a positive set for <math|\<mu\>>
       <math|\<Leftrightarrow\>> <math|A> is a negative set for <math|-\<mu\>>
 
-      <item>If <math|A> is a negative set for <math|\<mu\>>
+      <item> <math|A> is a negative set for <math|\<mu\>>
       <math|\<Leftrightarrow\>> <math|A> is positive set for <math|-\<mu\>>\ 
     </enumerate>
   </lemma>
@@ -34813,15 +34811,17 @@
 
       <\description>
         <item*|<math|\<Rightarrow\>>>If <math|A> is a positive set for
-        <math|\<mu\>> then we have for <math|B\<in\>\<cal-A\>> with
-        <math|B\<subseteq\>A> that <math|0\<leqslant\>\<mu\><around*|(|B|)>>
-        hence <math|<around*|(|-\<mu\>|)><around*|(|B|)>=-\<mu\><around*|(|B|)>\<leqslant\>0>
+        <math|\<mu\>> then we have <math|A\<in\>\<cal-A\>> and for
+        <math|B\<in\>\<cal-A\>> with <math|B\<subseteq\>A> that
+        <math|0\<leqslant\>\<mu\><around*|(|B|)>>, hence
+        <math|<around*|(|-\<mu\>|)><around*|(|B|)>=-\<mu\><around*|(|B|)>\<leqslant\>0>
         which proves that <math|A> is a negative set for <math|-\<mu\>>.
 
         <item*|<math|\<Leftarrow\>>>If <math|A> is a negative set for
-        <math|-\<mu\>> then we have for <math|B\<in\>\<cal-A\>> with
-        <math|B\<subseteq\>A> that <math|<around*|(|-\<mu\>|)><around*|(|B|)>\<leqslant\>0>
-        hence <math|-\<mu\><around*|(|B|)>\<leqslant\>0> so that
+        <math|-\<mu\>> then we have <math|A\<in\>\<cal-A\>> and for
+        <math|B\<in\>\<cal-A\>> with <math|B\<subseteq\>A> that
+        <math|<around*|(|-\<mu\>|)><around*|(|B|)>\<leqslant\>0>, hence
+        <math|-\<mu\><around*|(|B|)>\<leqslant\>0> so that
         <math|0\<leqslant\>\<mu\><around*|(|B|)>> which proves that
         <math|\<mu\>> is a positive set for <math|\<mu\>>.
       </description>
@@ -34830,15 +34830,17 @@
 
       <\description>
         <item*|<math|\<Rightarrow\>>>If <math|A> is a negative set for
-        <math|\<mu\>> then we have for <math|B\<in\>\<cal-A\>> with
-        <math|B\<subseteq\>A> that <math|\<mu\><around*|(|B|)>\<leqslant\>0>
-        hence <math|<around*|(|-\<mu\>|)><around*|(|B|)>=-\<mu\><around*|(|B|)>\<geqslant\>0>
+        <math|\<mu\>> then we have <math|A\<in\>\<cal-A\>> and for
+        <math|B\<in\>\<cal-A\>> with <math|B\<subseteq\>A> that
+        <math|\<mu\><around*|(|B|)>\<leqslant\>0>, hence
+        <math|<around*|(|-\<mu\>|)><around*|(|B|)>=-\<mu\><around*|(|B|)>\<geqslant\>0>
         which proves that <math|A> is a positive set for <math|-\<mu\>>.
 
         <item*|<math|\<Leftarrow\>>>If <math|A> is a positive set for
-        <math|-\<mu\>> then we have for <math|B\<in\>\<cal-A\>> with
-        <math|B\<subseteq\>A> that <math|0\<leqslant\><around*|(|-\<mu\>|)><around*|(|B|)>>
-        hence <math|0\<leqslant\>-\<mu\><around*|(|B|)>> so that
+        <math|-\<mu\>> then we have <math|A\<in\>\<cal-A\>> and for
+        <math|B\<in\>\<cal-A\>> with <math|B\<subseteq\>A> that
+        <math|0\<leqslant\><around*|(|-\<mu\>|)><around*|(|B|)>>, hence
+        <math|0\<leqslant\>-\<mu\><around*|(|B|)>> so that
         <math|\<mu\><around*|(|B|)>\<leqslant\>0> which proves that
         <math|\<mu\>> is a negative set for <math|\<mu\>>.
       </description>
@@ -34912,7 +34914,7 @@
         \<mu\><around*|(|A|)>=\<mu\><around*|(|A\\B|)>+\<mu\><around*|(|B|)>
       </equation*>
 
-      For <math|\<mu\><around*|(|A|)>\<leqslant\>0 we have now as
+      For <math|\<mu\><around*|(|A|)> we have now as
       \<mu\><around*|(|A|)>\<leqslant\>0> either\ 
 
       <\description>
@@ -34935,8 +34937,8 @@
     <label|lemma 20.515.248>Let <math|<around*|\<langle\>|X,\<cal-A\>|\<rangle\>>>
     be a measurable space and <math|\<mu\>:\<cal-A\>\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>>>
     be a signed measure on <math|\<cal-A\>>. Let <math|A\<in\>\<cal-A\>> be
-    such that <math|-\<infty\>\<less\>\<mu\><around*|(|A|)>\<less\>0> then
-    there exist a <with|font-series|bold|negative set ><math|B> such that
+    such that <math|\<mu\><around*|(|A|)>\<in\>\<bbb-R\>> then there exist a
+    <with|font-series|bold|negative set ><math|B> such that
     <math|B\<subseteq\>A> and <math|\<mu\><around*|(|B|)>\<leqslant\>\<mu\><around*|(|A|)>>.
   </lemma>
 
@@ -34969,7 +34971,7 @@
       0\<leqslant\>min<around*|(|<frac|\<delta\><rsub|1>|2>,1|)>\<less\>\<delta\><rsub|1>
     </equation*>
 
-    so that there exist <math|A<rsub|1>\<in\><around*|{|B\<in\>\<cal-B\>\|B\<subseteq\>A|}>>
+    so that there exist <math|A<rsub|1>\<in\><around*|{|B\<in\>\<cal-A\>\|B\<subseteq\>A|}>>
     with <math|min<around*|(|<frac|\<delta\><rsub|1>|2>,1|)>\<less\>\<mu\><around*|(|A<rsub|1>|)>\<leqslant\>\<delta\><rsub|1>>.
     Define now
 
@@ -35021,7 +35023,7 @@
       </equation*>
 
       Hence there exist a <math|B<rsub|n>\<in\><around*|{|B\<in\>\<cal-A\>\|B\<subseteq\>A\\<around*|(|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n-1|}>>B<rsub|i>|)>|}>>
-      such that <math|<rigid|min<around*|(|<frac|\<rho\><rsub|n>|2>,1|)>\<less\>\<mu\><around*|(|B<rsub|n>|)>\<leqslant\>\<rho\><rsub|n>>>
+      such that <math|<rigid|0\<leqslant\>min<around*|(|<frac|\<rho\><rsub|n>|2>,1|)>\<less\>\<mu\><around*|(|B<rsub|n>|)>\<leqslant\>\<rho\><rsub|n>>>
       so that\ 
 
       <\equation*>
@@ -35040,7 +35042,7 @@
     </equation>
 
     <\equation>
-      <label|eq 20.776.265>B<rsub|n>=<choice|<tformat|<table|<row|<cell|<around*|{|B\<in\>\<cal-A\>\|B\<subseteq\>A|}><text|
+      <label|eq 20.776.265>B<rsub|n>\<in\><choice|<tformat|<table|<row|<cell|<around*|{|B\<in\>\<cal-A\>\|B\<subseteq\>A|}><text|
       if >n=1>>|<row|<cell|<around*|{|B\<in\>\<cal-A\>\|B\<subseteq\>A\\<around*|(|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n-1|}>>B<rsub|i>|)>|}><text|
       if >i\<in\><around*|{|2,\<ldots\>,n|}>>>>>>
     </equation>
@@ -35052,7 +35054,7 @@
     Let <math|i,j\<in\>\<bbb-N\>> with <math|i\<neq\>j> then we may always
     assume that <math|i\<less\>j> [otherwise exchange <math|i> and <math|j>].
     Then as <math|i\<leqslant\>j-1> we have that
-    <math|B<rsub|j>\<subseteq\>A\\<around*|(|<big|cup><rsub|k\<in\><around*|{|1,\<ldots\>,j-1|}>>B<rsub|k>|)>\<subseteq\>A\<subseteq\>A\\B<rsub|i>>
+    <math|B<rsub|j>\<subseteq\>A\\<around*|(|<big|cup><rsub|k\<in\><around*|{|1,\<ldots\>,j-1|}>>B<rsub|k>|)>\<subseteq\>A\\B<rsub|i>>
     so that <math|B<rsub|j><big|cap>B<rsub|i>\<subseteq\><around*|(|A\\B<rsub|i>|)><big|cap>B<rsub|i>=\<varnothing\>>
     which proves that\ 
 
@@ -35119,7 +35121,8 @@
     <math|B<rsub|\<infty\>>=<big|cup><rsub|n\<in\>\<bbb-N\>>B<rsub|n>\<subseteq\>A>,
     further by the hypothesis <math|\<mu\><around*|(|A|)>\<in\>\<bbb-R\>>, so
     using [theorem: <reference|signed measure properties (1)>] we have
-    <math|<big|sum><rsub|i=1><rsup|\<infty\>>\<mu\><around*|(|B<rsub|i>|)>=\<mu\><around*|(|B<rsub|\<infty\>>|)>\<in\>\<bbb-R\>>,
+    <math|\<mu\><around*|(|B<rsub|\<infty\>>|)>\<in\>\<bbb-R\>> so that by
+    [eq: <reference|eq 20.725.248>] <math|<big|sum><rsub|i=1><rsup|\<infty\>>\<mu\><around*|(|B<rsub|i>|)>\<in\>\<bbb-R\>>,
     applying then [theorem: <reference|series terms converges to zero>]
     proves that
 
@@ -35133,16 +35136,16 @@
 
     <\equation*>
       \<mu\><around*|(|B<rsub|n>|)>\<equallim\><rsub|<text|[<reference|eq
-      20.777.265>]>><around*|\||\<mu\><around*|(|B<rsub|n>|)>-0|\|>\<less\>min<around*|(|<frac|\<varepsilon\>|2>,<frac|1|2>|)>.
+      20.777.265>]>><around*|\||\<mu\><around*|(|B<rsub|n>|)>-0|\|>\<less\>min<around*|(|<frac|\<varepsilon\>|2>,<frac|1|2>|)>
     </equation*>
 
     Using [eq: <reference|eq 20.777.265>]
-    <math|min<around*|(|<frac|\<rho\><rsub|n>|2>,1|)>\<leqslant\>\<mu\><around*|(|B<rsub|n>|)>>
-    so that <math|min<around*|(|<frac|\<rho\><rsub|n>|2>,1|)>\<leqslant\>min<around*|(|<frac|\<varepsilon\>|2>,<frac|1|2>|)>>.
+    <math|min<around*|(|<frac|\<rho\><rsub|n>|2>,1|)>\<less\>\<mu\><around*|(|B<rsub|n>|)>>
+    so that <math|min<around*|(|<frac|\<rho\><rsub|n>|2>,1|)>\<less\>min<around*|(|<frac|\<varepsilon\>|2>,<frac|1|2>|)>>.
     Assume that <math|1\<less\><frac|\<rho\><rsub|n>|2>> then
     <math|min<around*|(|<frac|\<rho\><rsub|n>|2>,1|)>=1\<less\>min<around*|(|<frac|\<varepsilon\>|2>,<frac|1|2>|)>\<leqslant\><frac|1|2>>
-    giving the contradiction <math|1\<leqslant\><frac|1|2>>. Hence must have
-    <math|<frac|\<rho\><rsub|n>|2>\<leqslant\>1> so that
+    giving the contradiction <math|1\<leqslant\><frac|1|2>>. Hence we must
+    have <math|<frac|\<rho\><rsub|n>|2>\<leqslant\>1> so that
     <math|<frac|\<rho\><rsub|n>|2>=min<around*|(|<frac|\<rho\><rsub|n>|2>,1|)>\<less\>min<around*|(|<frac|\<varepsilon\>|2>,<frac|1|2>|)>\<leqslant\><frac|\<varepsilon\>|2>>
     from which it follows that <math|<around*|\||\<rho\><rsub|n>-0|\|>=\<rho\><rsub|n>\<less\>\<varepsilon\>>.
     This proves that\ 
@@ -35155,9 +35158,8 @@
     <math|n\<in\>\<bbb-N\>> we have either:\ 
 
     <\description>
-      <item*|<math|n=1>>Then as <math|B<rsub|1>\<subseteq\><big|cup><rsub|i\<in\>\<bbb-N\>>B<rsub|i>=B<rsub|\<infty\>>>
-      we have that <math|B=A\\B<rsub|\<infty\>>\<subseteq\>A\\B<rsub|1>\<subseteq\>A>
-      so that <math|E\<subseteq\>A> which proves that
+      <item*|<math|n=1>>Then, as <math|B=A\\B<rsub|\<infty\>>\<subseteq\>A>,
+      we have that <math|E\<subseteq\>A>, which proves that
       <math|E\<in\><around*|{|B\<in\>\<cal-A\>\|B\<subseteq\>A|}>>. From this
       it follows that
 
@@ -35428,9 +35430,10 @@
       <math|\<mu\><around*|(|C|)>\<less\>0>. As
       <math|<rigid|\<mu\><around*|(|C|)>\<in\><around*|{|\<mu\><around*|(|A|)>\|A\<in\>\<cal-A\>|}>\<subseteq\>\<bbb-R\><rsub|\<infty\>>>>
       we have <math|\<mu\><around*|(|C|)>\<neq\>-\<infty\>> so that
-      <math|-\<infty\>\<less\>\<mu\><around*|(|C|)>\<less\>0>. Using then
-      [lemma: <reference|lemma 20.515.248>] it follows that there exist a
-      negative set <math|B> for <math|\<mu\>> such that\ 
+      <math|-\<infty\>\<less\>\<mu\><around*|(|C|)>\<less\>0>, hence
+      <math|<rigid|\<mu\><around*|(|C|)>\<in\>\<bbb-R\>>>. Using then [lemma:
+      <reference|lemma 20.515.248>] it follows that there exist a negative
+      set <math|B> for <math|\<mu\>> such that\ 
 
       <\equation>
         <label|eq 20.739.248>B\<subseteq\>C<text| and
@@ -35459,15 +35462,16 @@
       So
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|\<mu\><around*|(|N<big|cup>B|)>>|<cell|\<equallim\><rsub|N<big|cap>B=\<varnothing\>>>|<cell|\<mu\><around*|(|N|)>+\<mu\><around*|(|B|)>>>|<row|<cell|>|<cell|\<less\>>|<cell|L>>|<row|<cell|>|<cell|=>|<cell|inf<around*|(|<around*|{|\<mu\><around*|(|A|)>\|A<text|
+        <tformat|<table|<row|<cell|\<mu\><around*|(|N<big|cup>B|)>>|<cell|\<equallim\><rsub|N<big|cap>B=\<varnothing\>>>|<cell|\<mu\><around*|(|N|)>+\<mu\><around*|(|B|)>>>|<row|<cell|>|<cell|\<less\>>|<cell|L>>|<row|<cell|>|<cell|<below|=|<text|[eq:
+        <reference|eq 20.736.248>]>>>|<cell|inf<around*|(|<around*|{|\<mu\><around*|(|A|)>\|A<text|
         is a negative set for >\<mu\>|}>|)>>>|<row|<cell|>|<cell|<below|\<leqslant\>|<text|[eq:
-        <reference|eq 20.741.248>>>>|<cell|\<mu\><around*|(|N<big|cup>B|)>>>>>
+        <reference|eq 20.741.248>]>>>|<cell|\<mu\><around*|(|N<big|cup>B|)>>>>>
       </eqnarray*>
 
       leading to the contradiction <math|\<mu\><around*|(|N<big|cup>B|)>\<less\>\<mu\><around*|(|N<big|cup>B|)>>.
       So the assumption is wrong and we must have that
       <math|\<forall\>C\<in\>\<cal-A\>> with <math|C\<subseteq\>P> we have
-      <math|0\<leqslant\>C> which proves that\ 
+      <math|0\<leqslant\>\<mu\><around*|(|C|)>> which proves that\ 
 
       <\equation>
         <label|eq 20.742.248>P<text| is a positive set for <math|\<mu\>>>
@@ -35487,10 +35491,10 @@
       is a signed measure on <math|\<cal-A\>>. Further if
       <math|x\<in\><around*|{|\<nu\><around*|(|A|)>\|A\<in\>\<cal-A\>|}>>
       then there exist a <math|A\<in\>\<cal-A\>> such that
-      <math|x=\<nu\><around*|(|A|)>=-\<mu\><around*|(|A|)>>. As we have
-      either <math|\<mu\><around*|(|A|)>\<in\>\<bbb-R\>\<Rightarrow\>-\<mu\><around*|(|A|)>\<in\>\<bbb-R\>>
+      <math|<rigid|x=\<nu\><around*|(|A|)>=-\<mu\><around*|(|A|)>>>. As we
+      have either <math|\<mu\><around*|(|A|)>\<in\>\<bbb-R\>\<Rightarrow\>-\<mu\><around*|(|A|)>\<in\>\<bbb-R\>>
       or <math|\<mu\><around*|(|A|)>=-\<infty\>\<Rightarrow\>-\<mu\><around*|(|A|)>=\<infty\>>
-      it follows that <math|<around*|{|\<nu\><around*|(|A|)>\|A\<in\>\<cal-A\>|}>>.
+      it follows that <math|<around*|{|\<nu\><around*|(|A|)>\|A\<in\>\<cal-A\>|}>\<subseteq\>\<bbb-R\><rsub|\<infty\>>>.
       \ Using then the previous case [see eq: <reference|eq 20.742.248>] for
       <math|\<nu\>> there exist a positive set <math|N> for <math|\<nu\>> and
       a negative set <math|P> for <math|\<nu\>> such that
@@ -35596,10 +35600,10 @@
       <item*|<math|<around*|{|\<mu\><around*|(|A|)>\|A\<in\>\<cal-A\>|}>\<subseteq\>\<bbb-R\><rsub|-\<infty\>>>>Suppose
       that there exist a <math|A\<in\>\<cal-A\>> such that
       <math|\<mu\><rsup|+><around*|(|A|)>=\<infty\>> then
-      <math|\<mu\><around*|(|A<big|cap>N|)>=\<infty\>> contradicting
+      <math|<rigid|\<mu\><around*|(|A<big|cap>N|)>=\<infty\>>> contradicting
       <math|<around*|{|\<mu\><around*|(|A|)>\|A\<in\>\<cal-A\>|}>\<subseteq\>\<bbb-R\><rsub|-\<infty\>>>.
       Hence we have that <math|\<forall\>A\<in\>\<cal-A\>>
-      <math|\<mu\><rsup|+><around*|(|A|)>\<subset\><around*|[|0,\<infty\>|[>>,
+      <math|<rigid|\<mu\><rsup|+><around*|(|A|)>\<subseteq\><around*|[|0,\<infty\>|[>>>,
       in other words <math|\<mu\><rsup|+>> is finite.
     </description>
 
@@ -35617,7 +35621,7 @@
       <tformat|<table|<row|<cell|\<mu\><around*|(|A|)>>|<cell|=>|<cell|\<mu\><around*|(|A<big|cap>X|)>>>|<row|<cell|>|<cell|=>|<cell|\<mu\><around*|(|A<around*|(|<big|cap><around*|(|P<big|sqcup>N|)>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<mu\><around*|(|<around*|(|A<big|cap>P|)><big|cup><around*|(|A<big|cap>N|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|P<big|cap>N=\<varnothing\>>>|<cell|\<mu\><around*|(|A<big|cap>P|)>+\<mu\><around*|(|A<big|cap>N|)>>>|<row|<cell|>|<cell|=>|<cell|\<mu\><rsup|+><around*|(|A|)>-\<mu\><rsup|-><around*|(|A|)>>>>>
     </eqnarray*>
 
-    Hence we have\ 
+    Hence
 
     <\equation>
       <label|eq 20.746.248>\<forall\>A\<in\>\<cal-A\><text| we have
@@ -35756,8 +35760,8 @@
     <math|\<forall\>A\<in\>\<cal-A\>> <math|<around*|\||\<mu\><around*|(|A|)>|\|>\<leqslant\>\<nu\><around*|(|A|)>>
     then <math|\<forall\>A\<in\>\<cal-A\>> we have that
     <math|<around*|\||\<mu\>|\|><around*|(|A|)>\<leqslant\>\<nu\><around*|(|A|)>>.
-    In other words <math|<around*|\||\<mu\>|\|>> is the smallest positive
-    measure such that <math|\<forall\>A\<in\>\<cal-A\>>
+    In other words <math|<around*|\||\<mu\>|\|>> is the smallest measure such
+    that <math|\<forall\>A\<in\>\<cal-A\>>
     <math|<around*|\||\<mu\><around*|(|A|)>|\|>\<less\>\<nu\><around*|(|A|)>>.
     The pair <math|<around*|(|\<mu\><rsup|+>,\<mu\><rsup|->|)>> is called a
     <with|font-series|bold|Jordon Decomposition> of <math|\<mu\>>.
@@ -35846,10 +35850,10 @@
 
     As <math|\<mu\><rsup|+>>, <math|\<mu\><rsup|->> are measures on
     <math|\<cal-A\>> we have by [theorem: <reference|measure sum and scalar
-    product of measures>] that\ 
+    product of measures>] that
 
     <\equation*>
-      <around*|\||\<mu\>|\|>=\<mu\><rsup|+>+\<mu\><rsup|->:\<cal-A\>\<rightarrow\><around*|[|0,\<infty\>|]><text|
+      <around*|\||\<mu\>|\|><below|=|def>\<mu\><rsup|+>+\<mu\><rsup|->:\<cal-A\>\<rightarrow\><around*|[|0,\<infty\>|]><text|
       is a measure on >\<cal-A\>
     </equation*>
 
@@ -35900,12 +35904,10 @@
       <reference|eq 20.751.248>]>>>|<cell|<around*|\||\<mu\><around*|(|A<big|cap>N|)>|\|>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|\<nu\><around*|(|A<big|cap>N|)>>>>>
     </eqnarray*>
 
-    So
+    So that
 
     <\eqnarray*>
-      <tformat|<table|<row|<cell|<around*|\||\<mu\>|\|><around*|(|A|)>>|<cell|=>|<cell|\<mu\><rsup|+><around*|(|A|)>+\<mu\><rsup|-><around*|(|A|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eqs:
-      <reference|eq 20.752.248>, <reference|eq
-      20.753.248>]>>>|<cell|\<mu\><around*|(|A<big|cap>P|)>+\<mu\><around*|(|A<big|cap>N|)>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|\<nu\><around*|(|A<big|cap>P|)>+\<nu\><around*|(|A<big|cap>N|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<around*|(|A<big|cap>P|)><big|cap><around*|(|A<big|cap>N|)>=\<varnothing\>>>|<cell|\<nu\><around*|(|<around*|(|A<big|cap>P|)><big|sqcup><around*|(|A<big|cap>N|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<nu\><around*|(|A<big|cap><around*|(|P<big|sqcup>N|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<nu\><around*|(|A<big|cap>X|)>>>|<row|<cell|>|<cell|=>|<cell|\<nu\><around*|(|A|)>>>>>
+      <tformat|<table|<row|<cell|<around*|\||\<mu\>|\|><around*|(|A|)>>|<cell|=>|<cell|\<mu\><rsup|+><around*|(|A|)>+\<mu\><rsup|-><around*|(|A|)>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|\<nu\><around*|(|A<big|cap>P|)>+\<nu\><around*|(|A<big|cap>N|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<around*|(|A<big|cap>P|)><big|cap><around*|(|A<big|cap>N|)>=\<varnothing\>>>|<cell|\<nu\><around*|(|<around*|(|A<big|cap>P|)><big|sqcup><around*|(|A<big|cap>N|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<nu\><around*|(|A<big|cap><around*|(|P<big|sqcup>N|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<nu\><around*|(|A<big|cap>X|)>>>|<row|<cell|>|<cell|=>|<cell|\<nu\><around*|(|A|)>>>>>
     </eqnarray*>
 
     which proves that\ 
@@ -35937,7 +35939,7 @@
 
       <\equation*>
         <big|sum><rsub|i=1><rsup|\<infty\>>\<mu\><around*|(|A<rsub|i>|)>=<below|lim|n\<rightarrow\>\<infty\>><big|sum><rsub|i=1><rsup|n>\<mu\><around*|(|A<rsub|i>|)><text|
-        exists >
+        exists [using the norm ><around*|\||z|\|>=<sqrt|Re<around*|(|z|)><rsup|2>+Img<around*|(|z|)><rsup|2>><text|]>
       </equation*>
 
       and
@@ -35956,6 +35958,8 @@
       or the real and imaginary parts are finite.
     </note>
   </definition>
+
+  We can express a complex measure as the sum of two signed measures.
 
   <\theorem>
     <label|complex measure real/imaginare part>Let
@@ -35993,8 +35997,8 @@
     First we have that\ 
 
     <\equation>
-      <label|eq 20.757.248>Re<around*|(|\<mu\>|)><around*|(|\<varnothing\>|)>=Re<around*|(|\<mu\><around*|(|\<varnothing\>|)>|)>=Re<around*|(|\<varnothing\>|)>=0<text|
-      and >Img<around*|(|\<mu\>|)><around*|(|\<varnothing\>|)>=Img<around*|(|\<mu\><around*|(|\<varnothing\>|)>|)>=Img<around*|(|\<varnothing\>|)>=0
+      <label|eq 20.757.248>Re<around*|(|\<mu\>|)><around*|(|\<varnothing\>|)>=Re<around*|(|\<mu\><around*|(|\<varnothing\>|)>|)>=Re<around*|(|0|)>=0<text|
+      and >Img<around*|(|\<mu\>|)><around*|(|\<varnothing\>|)>=Img<around*|(|\<mu\><around*|(|\<varnothing\>|)>|)>=Img<around*|(|0|)>=0
     </equation>
 
     <\equation>
@@ -36141,9 +36145,9 @@
 
     <\enumerate>
       <item>As <math|Re<around*|(|\<mu\>|)>>, <math|Img<around*|(|\<mu\>|)>>
-      are finite signed measures [see theorem: <reference|complex measure
-      real/imaginare part>] it follows from [theorem: <reference|signed
-      measure properties (2)>] that
+      are <with|font-series|bold|finite signed> measures [see theorem:
+      <reference|complex measure real/imaginare part>] it follows from
+      [theorem: <reference|signed measure properties (2)>] that
 
       <\equation*>
         <below|lim|i\<rightarrow\>\<infty\>>Re<around*|(|\<mu\>|)><around*|(|A<rsub|i>|)><text|
@@ -36447,7 +36451,7 @@
     <math|Img<around*|(|\<mu\>|)>> are finite signed measures such that
 
     <\equation*>
-      \<mu\>=Re<around*|(|\<mu\>|)>+Img<around*|(|\<mu\>|)>
+      \<mu\>=Re<around*|(|\<mu\>|)>+i\<cdot\>Img<around*|(|\<mu\>|)>
     </equation*>
 
     Using [theorem: <reference|Jordon Decomposition>] we have that\ 
@@ -36578,9 +36582,8 @@
       <around*|{|<big|sum><rsub|i=1><rsup|n><around*|\||\<mu\><around*|(|A<rsub|i>|)>|\|>\|n\<in\>\<bbb-N\>\<wedge\><around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<cal-A\><rsup|>\<wedge\>A=<big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>|}>
     </equation*>
 
-    So that by [theorems: <reference|complex RC is conditional complete>,
-    <reference|extended sup and inf exist>] we have that
-    <math|\<forall\>A\<in\>\<Alpha\>>
+    So that by [theorems: <reference|complex RC is conditional complete>] we
+    have that <math|\<forall\>A\<in\>\<cal-A\>>
 
     <\eqnarray*>
       <tformat|<table|<row|<cell|<around*|\||\<mu\>|\|><around*|(|A|)>>|<cell|=>|<cell|sup<around*|(|<around*|{|<big|sum><rsub|i=1><rsup|n><around*|\||\<mu\><around*|(|A<rsub|i>|)>|\|>\|n\<in\>\<bbb-N\>\<wedge\><around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<cal-A\><rsup|>\<wedge\>A=<big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>|}>|)>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|\<mu\><rsup|+><rsub|r><around*|(|A|)>+\<mu\><rsup|-><rsub|r><around*|(|A|)>+\<mu\><rsup|+><rsub|c><around*|(|A|)>+\<mu\><rsup|-><rsub|c><around*|(|A|)>\<in\>\<bbb-R\>>>>>
@@ -36646,7 +36649,7 @@
       <tformat|<table|<row|<cell|<big|sum><rsub|i=1><rsup|n><around*|\||\<mu\><around*|(|A<rsub|i><big|cap>A|)>|\|>>|<cell|\<leqslant\>>|<cell|sup<around*|(|<around*|{|<big|sum><rsub|i=1><rsup|n><around*|\||\<mu\><around*|(|B<rsub|i>|)>|\|>\|n\<in\>\<bbb-N\>\<wedge\><around*|{|B<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<cal-A\>\<wedge\>A=<big|sqcup><rsub|i=1><rsup|n>B<rsub|i>|}>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|\||\<mu\>|\|><around*|(|A|)>>>|<row|<cell|<big|sum><rsub|i=1><rsup|n><around*|\||\<mu\><around*|(|A<rsub|i><big|cap>A|)>|\|>>|<cell|\<leqslant\>>|<cell|sup<around*|(|<around*|{|<big|sum><rsub|i=1><rsup|n><around*|\||\<mu\><around*|(|B<rsub|i>|)>|\|>\|n\<in\>\<bbb-N\>\<wedge\><around*|{|B<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<cal-A\>\<wedge\>B=<big|sqcup><rsub|i=1><rsup|n>B<rsub|i>|}>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|\||\<mu\>|\|><around*|(|B|)>>>>>
     </eqnarray*>
 
-    which combined by [eq: <reference|eq 20.773.248>] proves that\ 
+    which combined with [eq: <reference|eq 20.773.248>] proves that\ 
 
     <\equation*>
       <big|sum><rsub|i=1><rsup|n><around*|\||\<mu\><around*|(|A<rsub|i>|)>|\|>\<leqslant\><around*|\||\<mu\>|\|><around*|(|A|)>+<around*|\||\<mu\>|\|><around*|(|B|)>
@@ -36709,7 +36712,7 @@
       <item*|<math|i\<in\><around*|{|1,\<ldots\>,n|}>\<wedge\>j\<in\><around*|{|1,\<ldots\>,n|}>>>Then
       <math|C<rsub|i><big|cap>C<rsub|j>=A<rsub|i><big|cap>A<rsub|j>=\<emptyset\>>
 
-      <item*|<math|i,j\<in\><around*|{|1,\<ldots\>,n|}>\<wedge\>j\<in\><around*|{|n+1,\<ldots\>,n+m|}>>>Then
+      <item*|<math|i\<in\><around*|{|1,\<ldots\>,n|}>\<wedge\>j\<in\><around*|{|n+1,\<ldots\>,n+m|}>>>Then
       <math|C<rsub|i><big|cap>C<rsub|j>=A<rsub|i><big|cap>B<rsub|j-n>\<subseteq\>A<big|cap>B=\<emptyset\>>
 
       <item*|<math|i\<in\><around*|{|n+1,\<ldots\>n+m|}>\<wedge\>j\<in\><around*|{|1,\<ldots\>,n|}>>>Then
@@ -36829,8 +36832,7 @@
     </equation*>
 
     Take <math|N=max<around*|(|N<rsup|+><rsub|r>,N<rsup|-><rsub|r>,N<rsup|+><rsub|c>,N<rsup|-><rsub|c>|)>>
-    then we have <math|\<forall\>i\<in\><around*|{|N,\<ldots\>,\<infty\>|}>>
-    we have\ 
+    then we have <math|\<forall\>i\<in\><around*|{|N,\<ldots\>,\<infty\>|}>>\ 
 
     <\equation*>
       <around*|\||<around*|\||\<mu\>|\|><around*|(|A<rsub|i>|)>-0|\|>=<around*|\||\<mu\>|\|><around*|(|A<rsub|i>|)><below|\<leqslant\>|<text|[eq:
@@ -36867,7 +36869,7 @@
     </equation*>
 
     then we have that <math|<around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1|}>>\<subseteq\>\<cal-A\>>
-    is pairwise disjoint and <math|A=<big|cup><rsub|i\<in\><around*|{|1|}>>A<rsub|i>>
+    is pairwise disjoint and <math|A=<big|sqcup><rsub|i\<in\><around*|{|1|}>>A<rsub|i>>
     so that\ 
 
     <\equation*>
@@ -36960,7 +36962,7 @@
   </proof>
 
   We construct now on <math|M<around*|[|X,\<cal-A\>,\<bbb-K\>|]>> a addition
-  <math|+> and scalar product <math|\<cdot\>> operation making
+  operator <math|+> and a scalar product operator <math|\<cdot\>> making
   <math|<rigid|<around*|\<langle\>|M<around*|[|X,\<cal-A\>,\<bbb-K\>|]>|\<rangle\>>>>
   a vector space.\ 
 
@@ -36995,7 +36997,7 @@
       be pairwise disjoint then
 
       <\equation*>
-        C<rsub|0><around*|(|<big|sqcup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>=0=<big|sum><rsub|i=1><rsup|\<infty\>>0=<big|sum><rsub|i=1><rsup|\<infty\>>\<mu\><around*|(|A<rsub|i>|)>,
+        C<rsub|0><around*|(|<big|sqcup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>=0=<big|sum><rsub|i=1><rsup|\<infty\>>0=<big|sum><rsub|i=1><rsup|\<infty\>>C<rsub|0><around*|(|A<rsub|i>|)>
       </equation*>
 
       <\equation*>
@@ -37025,16 +37027,31 @@
       </equation*>
 
       Let <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\>>
-      pairwise disjoint then <math|<big|sum><rsub|i=1><rsup|\<infty\>>\<mu\><around*|(|A<rsub|i>|)>>,<math|<big|sum><rsub|i=1><rsup|\<infty\>>\<nu\><around*|(|A<rsub|i>|)>>
-      exists and <math|<rigid|<big|sum><rsub|i=1><rsup|\<infty\>>\<mu\><around*|(|A<rsub|i>|)>=\<mu\><around*|(|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>>>,
-      <math|<big|sum><rsub|i=1><rsup|\<infty\>>\<nu\><around*|(|A<rsub|i>|)>=\<nu\><around*|(|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>>.
-      \ By [theorem: <reference|extended infinite sum properties>] we have
-      that <math|<big|sum><rsub|i=1><rsup|\<infty\>><around*|(|\<mu\><around*|(|A<rsub|i>|)>+\<nu\><around*|(|A<rsub|i>|)>|)>>
-      exist and\ 
+      be pairwise disjoint then we have that\ 
 
       <\equation*>
-        <big|sum><rsub|i=1><rsup|\<infty\>><around*|(|\<mu\>+\<nu\>|)><around*|(|A<rsub|i>|)>=<big|sum><rsub|i=1><rsup|\<infty\>><around*|(|\<mu\><around*|(|A<rsub|i>|)>+\<nu\><around*|(|A<rsub|i>|)>|)>=<big|sum><rsub|i=1><rsup|\<infty\>>\<mu\><around*|(|A<rsub|i>|)>+<big|sum><rsub|i=1><rsup|\<infty\>>\<nu\><around*|(|A<rsub|i>|)>=\<mu\><around*|(|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>+\<nu\><around*|(|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>=<around*|(|\<mu\>+\<nu\>|)><around*|(|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>
+        <big|sum><rsub|i=1><rsup|\<infty\>>\<mu\><around*|(|A<rsub|i>|)>=<below|lim|n\<rightarrow\>\<infty\>><big|sum><rsub|i=1><rsup|n>\<mu\><around*|(|A|)><rsub|i><text|
+        exist and ><big|sum><rsub|i=1><rsup|\<infty\>>\<mu\><around*|(|A<rsub|i>|)>=\<mu\><around*|(|<big|sqcup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>\<in\>\<bbb-R\>
       </equation*>
+
+      <\equation*>
+        <big|sum><rsub|i=1><rsup|\<infty\>>\<nu\><around*|(|A<rsub|i>|)>=<below|lim|n\<rightarrow\>\<infty\>><big|sum><rsub|i=1><rsup|n>\<nu\><around*|(|A|)><rsub|i><text|
+        exist and ><big|sum><rsub|i=1><rsup|\<infty\>>\<nu\><around*|(|A<rsub|i>|)>=\<nu\><around*|(|<big|sqcup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>\<in\>\<bbb-R\>
+      </equation*>
+
+      Using then the fact that <math|\<mu\>>, <math|\<nu\>> are finite
+      measures it follows from [theorem: <reference|serie sum and scalar
+      product>] that
+
+      <\equation*>
+        <big|sum><rsub|i=1><rsup|\<infty\>><around*|(|\<mu\><around*|(|A<rsub|i>|)>+\<nu\><around*|(|A<rsub|i>|)>|)>
+      </equation*>
+
+      exist and\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<big|sum><rsub|i=1><rsup|\<infty\>><around*|(|\<mu\>+\<nu\>|)><around*|(|A<rsub|i>|)>>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|\<infty\>><around*|(|\<mu\><around*|(|A<rsub|i>|)>+\<nu\><around*|(|A<rsub|i>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|\<infty\>>\<mu\><around*|(|A<rsub|i>|)>+<big|sum><rsub|i=1><rsup|\<infty\>>\<nu\><around*|(|A<rsub|i>|)>>>|<row|<cell|>|<cell|=>|<cell|\<mu\><around*|(|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>+\<nu\><around*|(|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|\<mu\>+\<nu\>|)><around*|(|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>>>>>
+      </eqnarray*>
 
       which proves that <math|\<mu\>+\<nu\>> is a finite signed measure.
       Hence\ 
@@ -37072,7 +37089,7 @@
       be pairwise disjoint then\ 
 
       <\equation*>
-        C<rsub|0><around*|(|<big|sqcup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>=0=<big|sum><rsub|i=1><rsup|\<infty\>>0=<big|sum><rsub|i=1><rsup|\<infty\>>\<mu\><around*|(|A<rsub|i>|)>,
+        C<rsub|0><around*|(|<big|sqcup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>=0=<big|sum><rsub|i=1><rsup|\<infty\>>0=<big|sum><rsub|i=1><rsup|\<infty\>>C<rsub|0><around*|(|A<rsub|i>|)>
       </equation*>
 
       <\equation*>
@@ -37100,11 +37117,11 @@
       <math|<big|sum><rsub|i=1><rsup|\<infty\>>\<nu\><around*|(|A<rsub|I>|)>=\<nu\><around*|(|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>>.
       By [theorem: <reference|serie sum and scalar product>] we have that
       <math|<big|sum><rsub|i=1><rsup|\<infty\>><around*|(|\<mu\><around*|(|A<rsub|i>|)>+\<nu\><around*|(|A<rsub|i>|)>|)>>
-      exist and
+      exist and\ 
 
-      <\equation*>
-        <big|sum><rsub|i=1><rsup|\<infty\>><around*|(|\<mu\>+\<nu\>|)><around*|(|A<rsub|i>|)>=<big|sum><rsub|i=1><rsup|\<infty\>><around*|(|\<mu\><around*|(|A<rsub|i>|)>+\<nu\><around*|(|A<rsub|i>|)>|)>=<big|sum><rsub|i=1><rsup|\<infty\>>\<mu\><around*|(|A<rsub|i>|)>+<big|sum><rsub|i=1><rsup|\<infty\>>\<nu\><around*|(|A<rsub|i>|)>=\<mu\><around*|(|<big|sqcup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>+\<nu\><around*|(|<big|sqcup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>=<around*|(|\<mu\>+\<nu\>|)><around*|(|<big|sqcup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>
-      </equation*>
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<big|sum><rsub|i=1><rsup|\<infty\>><around*|(|\<mu\>+\<nu\>|)><around*|(|A<rsub|i>|)>>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|\<infty\>><around*|(|\<mu\><around*|(|A<rsub|i>|)>+\<nu\><around*|(|A<rsub|i>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|\<infty\>>\<mu\><around*|(|A<rsub|i>|)>+<big|sum><rsub|i=1><rsup|\<infty\>>\<nu\><around*|(|A<rsub|i>|)>>>|<row|<cell|>|<cell|=>|<cell|\<mu\><around*|(|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>+\<nu\><around*|(|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|\<mu\>+\<nu\>|)><around*|(|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>>>>>
+      </eqnarray*>
 
       which proves that <math|\<mu\>+\<nu\>> is a complex measure. Hence\ 
 
@@ -37159,7 +37176,9 @@
     <label|space of measures normed space real case>Let
     <math|<around*|\<langle\>|X,\<cal-A\>|\<rangle\>> be a measurable space
     then <around*|\<langle\>|M<around*|[|X,\<cal-A\>,\<bbb-R\>|]>,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
-    is a normed space
+    is a normed space. Here <math|<around*|\<\|\|\>||\<\|\|\>>> is defined
+    [see definition: <reference|Jordon Decomposition>] to be
+    <math|<around*|\<\|\|\>|\<mu\>|\<\|\|\>>=<around*|\||\<mu\>|\|><around*|(|X|)>>.
   </theorem>
 
   <\proof>
@@ -37194,7 +37213,7 @@
       Then we have\ 
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|<around*|\<\|\|\>|\<alpha\>\<cdot\>\<mu\>|\<\|\|\>>>|<cell|=>|<cell|<around*|\||\<alpha\>\<cdot\>\<mu\>|\|><around*|(|X|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|\<alpha\>\<cdot\>\<mu\>|)><rsup|+><around*|(|X|)>+<around*|(|\<alpha\>\<cdot\>\<mu\>|)><rsup|-><around*|(|X|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <tformat|<table|<row|<cell|<around*|\<\|\|\>|\<alpha\>\<cdot\>\<mu\>|\<\|\|\>>>|<cell|=>|<cell|<around*|\||\<alpha\>\<cdot\>\<mu\>|\|><around*|(|X|)>>>|<row|<cell|>|<cell|<below|=|def>>|<cell|<around*|(|\<alpha\>\<cdot\>\<mu\>|)><rsup|+><around*|(|X|)>+<around*|(|\<alpha\>\<cdot\>\<mu\>|)><rsup|-><around*|(|X|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
         <reference|Jordon Decomposition>]>>>|<cell|<around*|(|\<alpha\>\<cdot\>\<mu\>|)><around*|(|X<big|cap>P|)>-<around*|(|\<alpha\>\<cdot\>\<mu\>|)><around*|(|X<big|cap>N|)>>>|<row|<cell|>|<cell|=>|<cell|\<alpha\>\<cdot\>\<mu\><around*|(|X<big|cap>P|)>-\<alpha\>\<cdot\>\<mu\><around*|(|X<big|cap>N|)>>>|<row|<cell|>|<cell|=>|<cell|\<alpha\>\<cdot\><around*|(|\<mu\><around*|(|X<big|cap>P|)>-\<mu\><around*|(|X<big|cap>N|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<alpha\>\<cdot\><around*|(|\<mu\><rsup|+><around*|(|X|)>+\<mu\><rsup|-><around*|(|X|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<alpha\>\<cdot\><around*|\||\<mu\>|\|><around*|(|X|)>>>|<row|<cell|>|<cell|=>|<cell|\<alpha\>\<cdot\><around*|\<\|\|\>|\<mu\>|\<\|\|\>>>>|<row|<cell|>|<cell|<below|=|0\<leqslant\>\<alpha\>>>|<cell|<around*|\||\<alpha\>|\|>\<cdot\><around*|\<\|\|\>|\<mu\>|\<\|\|\>>>>>>
       </eqnarray*>
 
@@ -37218,7 +37237,8 @@
       Then we have\ 
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|<around*|\<\|\|\>|\<alpha\>\<cdot\>\<mu\>|\<\|\|\>>>|<cell|=>|<cell|<around*|\||\<alpha\>\<cdot\>\<mu\>|\|><around*|(|X|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|\<alpha\>\<cdot\>\<mu\>|)><rsup|+><around*|(|X|)>+<around*|(|\<alpha\>\<cdot\>\<mu\>|)><rsup|-><around*|(|X|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|\<alpha\>\<cdot\>\<mu\>|)><around*|(|X<big|cap>N|)>-<around*|(|\<alpha\>\<cdot\>\<mu\>|)><around*|(|X<big|cap>P|)>>>|<row|<cell|>|<cell|=>|<cell|\<alpha\>\<cdot\>\<mu\><around*|(|X<big|cap>N|)>-\<alpha\>\<cdot\>\<mu\><around*|(|X<big|cap>P|)>>>|<row|<cell|>|<cell|=>|<cell|-\<alpha\>\<cdot\><around*|(|\<mu\><around*|(|X<big|cap>P|)>-\<mu\><around*|(|X<big|cap>N|)>|)>>>|<row|<cell|>|<cell|<below|=|\<alpha\>\<leqslant\>0>>|<cell|<around*|\||\<alpha\>|\|>\<cdot\><around*|(|\<mu\><around*|(|X<big|cap>P|)>-\<mu\><around*|(|X<big|cap>N|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|\||\<alpha\>|\|>\<cdot\><around*|(|\<mu\><rsup|+><around*|(|X|)>+\<mu\><rsup|-><around*|(|X|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|\||\<alpha\>|\|>\<cdot\><around*|\<\|\|\>|\<mu\>|\<\|\|\>>>>>>
+        <tformat|<table|<row|<cell|<around*|\<\|\|\>|\<alpha\>\<cdot\>\<mu\>|\<\|\|\>>>|<cell|=>|<cell|<around*|\||\<alpha\>\<cdot\>\<mu\>|\|><around*|(|X|)>>>|<row|<cell|>|<cell|<below|=|def>>|<cell|<around*|(|\<alpha\>\<cdot\>\<mu\>|)><rsup|+><around*|(|X|)>+<around*|(|\<alpha\>\<cdot\>\<mu\>|)><rsup|-><around*|(|X|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|Jordon Decomposition>]>>>|<cell|<around*|(|\<alpha\>\<cdot\>\<mu\>|)><around*|(|X<big|cap>N|)>-<around*|(|\<alpha\>\<cdot\>\<mu\>|)><around*|(|X<big|cap>P|)>>>|<row|<cell|>|<cell|=>|<cell|\<alpha\>\<cdot\>\<mu\><around*|(|X<big|cap>N|)>-\<alpha\>\<cdot\>\<mu\><around*|(|X<big|cap>P|)>>>|<row|<cell|>|<cell|=>|<cell|-\<alpha\>\<cdot\><around*|(|\<mu\><around*|(|X<big|cap>P|)>-\<mu\><around*|(|X<big|cap>N|)>|)>>>|<row|<cell|>|<cell|<below|=|\<alpha\>\<leqslant\>0>>|<cell|<around*|\||\<alpha\>|\|>\<cdot\><around*|(|\<mu\><around*|(|X<big|cap>P|)>-\<mu\><around*|(|X<big|cap>N|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|\||\<alpha\>|\|>\<cdot\><around*|(|\<mu\><rsup|+><around*|(|X|)>+\<mu\><rsup|-><around*|(|X|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|\||\<alpha\>|\|>\<cdot\><around*|\<\|\|\>|\<mu\>|\<\|\|\>>>>>>
       </eqnarray*>
     </description>
 
@@ -37286,10 +37306,11 @@
       <reference|Jordon Decomposition>]>><around*|\||\<mu\>|\|><around*|(|A|)><below|\<leqslant\>|<text|[theorem:
       <reference|measure measure space properties
       (1)>]>\<wedge\><around*|\||\<mu\>|\|><text| is a
-      measure>><around*|\||\<mu\>|\|><around*|(|X|)>=<around*|\<\|\|\>|\<mu\>|\<\|\|\>>=0=C<rsub|0><around*|(|A|)>
+      measure>><around*|\||\<mu\>|\|><around*|(|X|)>=<around*|\<\|\|\>|\<mu\>|\<\|\|\>>=0
     </equation*>
 
-    So that\ 
+    so that <math|\<forall\>A\<in\>\<cal-A\>>
+    <math|\<mu\><around*|(|A|)>=0=C<rsub|0><around*|(|A|)>> which proves that
 
     <\equation>
       <label|eq 20.793.248><text|If ><around*|\<\|\|\>|\<mu\>|\<\|\|\>>=0<text|
@@ -37312,6 +37333,8 @@
 
   Next we prove the same for the vector space
   <math|<around*|\<langle\>|M<around*|[|X,\<cal-A\>,\<bbb-C\>|]>,+,\<cdot\>|\<rangle\>>>
+
+  TODO
 
   <\theorem>
     <label|space of measures normed space complex case>Let
