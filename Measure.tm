@@ -41001,8 +41001,6 @@
 
   <subsection|Product measures>
 
-  TODO
-
   <\theorem>
     <label|product algebra measure>Let <math|n\<in\><around*|{|2,\<ldots\>,\<infty\>|}>>,
     <math|<around*|{|<around*|\<langle\>|X<rsub|i>,\<cal-A\><rsub|i>,\<mu\><rsub|i>|\<rangle\>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
@@ -41021,7 +41019,7 @@
       <item><math|\<exists\><around*|{|E<rsub|i,k>|}><rsub|k\<in\>\<bbb-N\>>\<subseteq\>\<cal-E\><rsub|i>>
       such that <math|\<forall\>k\<in\>\<bbb-N\>> we have
       <math|E<rsub|i,k>\<subseteq\>E<rsub|i,k+1>>,
-      <math|\<mu\><rsub|i><around*|(|A<rsub|i,k>|)>\<less\>\<infty\>> and
+      <math|\<mu\><rsub|i><around*|(|E<rsub|i,k>|)>\<less\>\<infty\>> and
       <math|X<rsub|i>=<big|cup><rsub|k\<in\>\<bbb-N\>>E<rsub|i,k>>
     </enumerate>
 
@@ -41059,7 +41057,7 @@
     Let <math|E,F\<in\>\<cal-E\>> then <math|E=<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>E<rsub|i>>
     and <math|F=<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>F<rsub|i>>
     where <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
-    <math|E<rsub|i>,F<rsub|i>\<in\>\<cal-E\><rsub|i>> then we have that
+    <math|E<rsub|i>,F<rsub|i>\<in\>\<cal-E\><rsub|i>> so that
 
     <\equation*>
       E<big|cap>F=<around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>E<rsub|i>|)><big|cap><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>F<rsub|i>|)>\<equallim\><rsub|<text|[theorem:
@@ -41068,7 +41066,7 @@
 
     As <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
     <math|\<cal-E\><rsub|i>> is <math|\<cap\>>-stable
-    <math|E<rsub|i><big|cap>F\<in\>\<cal-E\><rsub|i>> it follows that
+    <math|E<rsub|i><big|cap>F<rsub|i>\<in\>\<cal-E\><rsub|i>> it follows that
     <math|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|(|E<rsub|i><big|cap>F<rsub|i>|)>\<in\>\<cal-E\>>
     hence <math|E<big|cap>F\<in\>\<cal-E\>>. In other word\ 
 
@@ -41112,14 +41110,24 @@
 
     Further we have\ 
 
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|\<mu\><around*|(|F<rsub|k>|)>>|<cell|<below|=|<text|[eq:
+      <reference|eq 20.927.279>]>>>|<cell|\<mu\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>E<rsub|i,k>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 20.925.279>]>>>|<cell|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<mu\><rsub|i><around*|(|E<rsub|i,k>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 20.925.279>]>>>|<cell|\<nu\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>E<rsub|i,k>|)>>>|<row|<cell|>|<cell|<below|=|<text|[eq:
+      <reference|eq 20.927.279>]>>>|<cell|\<nu\><around*|(|F<rsub|k>|)>>>>>
+    </eqnarray*>
+
+    in other words
+
     <\equation>
       <label|eq 20.930.279>\<forall\>k\<in\>\<bbb-N\><text|
-      >\<mu\><around*|(|F<rsub|k>|)>=\<mu\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>E<rsub|i,k>|)>=<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<mu\><rsub|i><around*|(|E<rsub|i,k>|)>=\<nu\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>E<rsub|i,k>|)>=\<mu\><around*|(|F<rsub|k>|)>
+      >\<mu\><around*|(|F<rsub|k>|)>=<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<mu\><rsub|i><around*|(|E<rsub|i,k>|)>=\<nu\><around*|(|F<rsub|k>|)>
     </equation>
 
     As <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>> we have
     <math|\<forall\>k\<in\>\<bbb-N\>> that
-    <math|\<mu\><rsub|i><around*|(|A<rsub|i,k>|)>> is finite we have from the
+    <math|\<mu\><rsub|i><around*|(|E<rsub|i,k>|)>> is finite we have from the
     above that\ 
 
     <\equation>
@@ -41194,7 +41202,7 @@
       >E<rsub|i>\<in\>\<cal-A\><rsub|i>=\<cal-E\><rsub|i>|}>
     </equation*>
 
-    we have\ 
+    that
 
     <\equation*>
       \<mu\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>E<rsub|i>|)>=<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<mu\><rsub|i><around*|(|E<rsub|i>|)>=\<nu\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>E<rsub|i>|)>
@@ -41254,11 +41262,11 @@
       <math|\<varnothing\><rsub|<around*|[|2,y|]>>=\<varnothing\>>>>
 
       <item><math|\<forall\>x\<in\>X<rsub|1>,>
-      <math|\<forall\>A,B\<subseteq\>X<rsub|1>\<cdot\>X<rsub|2>>
+      <math|\<forall\>A,B\<subseteq\>X<rsub|1>\<cdot\>X<rsub|2>> we have
       <math|<around*|(|A\\B|)><rsub|<around*|[|1,x|]>>=A<rsub|<around*|[|1,x|]>>\\B<rsub|<around*|[|1,x|]>>>
 
       <item><math|\<forall\>y\<in\>X<rsub|2>,>
-      <math|\<forall\>A,B\<subseteq\>X<rsub|1>\<cdot\>X<rsub|2>>
+      <math|\<forall\>A,B\<subseteq\>X<rsub|1>\<cdot\>X<rsub|2>> we have
       <math|<around*|(|A\\B|)><rsub|<around*|[|2,y|]>>=A<rsub|<around*|[|2,y|]>>\\B<rsub|<around*|[|2,y|]>>>
 
       <item>If <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-P\><around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)>>,
@@ -41324,7 +41332,7 @@
       <math|A,B\<subseteq\>X<rsub|1>\<cdot\>X<rsub|2>>. Then we have\ 
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|y\<in\><around*|(|A\\B|)><rsub|<around*|[|1,x|]>>>|<cell|\<Leftrightarrow\>>|<cell|y\<in\><around*|{|y\<in\>X<rsub|2>\|<around*|(|x,y|)>\<in\>A\\B|)>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|y\<in\>X<rsub|2>\<wedge\><around*|(|x,y|)>\<in\>A\\B>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|y\<in\>X<rsub|2>\<wedge\><around*|(|x,y|)>\<in\>A\<wedge\><around*|(|x,y|)>\<nin\>B>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|y\<in\><around*|{|y\<in\>X<rsub|2>\|<around*|(|x,y|)>\<in\>A|}>\<wedge\>y\<nin\><around*|{|y\<in\>X<rsub|2>\|<around*|(|x,y|)>\<in\>B|}>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|y\<in\>A<rsub|<around*|[|1,x|]>>\<wedge\>y\<nin\>B<rsub|<around*|[|1,x|]>>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|y\<in\>A<rsub|<around*|[|1,x|]>>/B<rsub|<around*|[|1,x|]>>>>>>
+        <tformat|<table|<row|<cell|y\<in\><around*|(|A\\B|)><rsub|<around*|[|1,x|]>>>|<cell|\<Leftrightarrow\>>|<cell|y\<in\><around*|{|y\<in\>X<rsub|2>\|<around*|(|x,y|)>\<in\>A\\B|)>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|y\<in\>X<rsub|2>\<wedge\><around*|(|x,y|)>\<in\>A\\B>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|y\<in\>X<rsub|2>\<wedge\><around*|(|x,y|)>\<in\>A\<wedge\><around*|(|x,y|)>\<nin\>B>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|y\<in\><around*|{|y\<in\>X<rsub|2>\|<around*|(|x,y|)>\<in\>A|}>\<wedge\>y\<nin\><around*|{|y\<in\>X<rsub|2>\|<around*|(|x,y|)>\<in\>B|}>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|y\<in\>A<rsub|<around*|[|1,x|]>>\<wedge\>y\<nin\>B<rsub|<around*|[|1,x|]>>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|y\<in\>A<rsub|<around*|[|1,x|]>>\\B<rsub|<around*|[|1,x|]>>>>>>
       </eqnarray*>
 
       so that\ 
@@ -41337,7 +41345,7 @@
       <math|B\<subseteq\>X<rsub|1>\<cdot\>X<rsub|2>>. Then we have\ 
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|x\<in\><around*|(|A\\B|)><rsub|<around*|[|2,y|]>>>|<cell|\<Leftrightarrow\>>|<cell|x\<in\><around*|{|x\<in\>X<rsub|1>\|<around*|(|x,y|)>\<in\>A\\B|)>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\>X<rsub|1>\<wedge\><around*|(|x,y|)>\<in\>A\\B>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\>X<rsub|1>\<wedge\><around*|(|x,y|)>\<in\>A\<wedge\><around*|(|x,y|)>\<nin\>B>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\><around*|{|x\<in\>X<rsub|1>\|<around*|(|x,y|)>\<in\>A|}>\<wedge\>x\<nin\><around*|{|x\<in\>X<rsub|1>\|<around*|(|x,y|)>\<in\>B|}>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\>A<rsub|<around*|[|2,y|]>>\<wedge\>x\<nin\>B<rsub|<around*|[|2,y|]>>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\>A<rsub|<around*|[|2,y|]>>/B<rsub|<around*|[|2,y|]>>>>>>
+        <tformat|<table|<row|<cell|x\<in\><around*|(|A\\B|)><rsub|<around*|[|2,y|]>>>|<cell|\<Leftrightarrow\>>|<cell|x\<in\><around*|{|x\<in\>X<rsub|1>\|<around*|(|x,y|)>\<in\>A\\B|)>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\>X<rsub|1>\<wedge\><around*|(|x,y|)>\<in\>A\\B>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\>X<rsub|1>\<wedge\><around*|(|x,y|)>\<in\>A\<wedge\><around*|(|x,y|)>\<nin\>B>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\><around*|{|x\<in\>X<rsub|1>\|<around*|(|x,y|)>\<in\>A|}>\<wedge\>x\<nin\><around*|{|x\<in\>X<rsub|1>\|<around*|(|x,y|)>\<in\>B|}>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\>A<rsub|<around*|[|2,y|]>>\<wedge\>x\<nin\>B<rsub|<around*|[|2,y|]>>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\>A<rsub|<around*|[|2,y|]>>\\B<rsub|<around*|[|2,y|]>>>>>>
       </eqnarray*>
 
       so that\ 
@@ -41439,7 +41447,7 @@
       then we have\ 
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|y\<in\><around*|(|A<big|cap>B|)><rsub|<around*|[|1,x|]>>>|<cell|\<Leftrightarrow\>>|<cell|y\<in\><around*|{|y\<in\>X<rsub|2>\|<around*|(|x,y|)>\<in\>A<big|cap>B|}>>>|<row|<cell|>|<cell|<below|\<Leftrightarrow\>|x\<in\>X<rsub|1>>>|<cell|<around*|(|x,y|)>\<in\>A<big|cap>B>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|<around*|(|x,y|)>\<in\>A\<wedge\><around*|(|x,y|)>\<in\>B>>|<row|<cell|>|<cell|<below|\<Leftrightarrow\>|x\<in\>X<rsub|1>>>|<cell|y\<in\><around*|{|y\<in\>X<rsub|2>\|<around*|(|x,y|)>\<in\>A|}>\<wedge\>y\<in\><around*|{|y\<in\>X<rsub|2>\|<around*|(|x,y|)>\<in\>B|}>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|y\<in\>A<rsub|<around*|[|1,x|]>>\<wedge\>y\<in\>B<rsub|<around*|[|1,x|]>>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|y\<in\>A<rsub|<around*|[|1,x|]>><big|cap>B<rsub|<around*|[|1,x|]>>>>>>
+        <tformat|<table|<row|<cell|y\<in\><around*|(|A<big|cap>B|)><rsub|<around*|[|1,x|]>>>|<cell|\<Leftrightarrow\>>|<cell|y\<in\><around*|{|y\<in\>X<rsub|2>\|<around*|(|x,y|)>\<in\>A<big|cap>B|}>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|y\<in\>X<rsub|2>\<wedge\><around*|(|x,y|)>\<in\>A<big|cap>B>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|y\<in\>X<rsub|2>\<wedge\><around*|(|x,y|)>\<in\>A\<wedge\><around*|(|x,y|)>\<in\>B>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|y\<in\><around*|{|y\<in\>X<rsub|2>\|<around*|(|x,y|)>\<in\>A|}>\<wedge\>y\<in\><around*|{|y\<in\>X<rsub|2>\|<around*|(|x,y|)>\<in\>B|}>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|y\<in\>A<rsub|<around*|[|1,x|]>>\<wedge\>y\<in\>B<rsub|<around*|[|1,x|]>>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|y\<in\>A<rsub|<around*|[|1,x|]>><big|cap>B<rsub|<around*|[|1,x|]>>>>>>
       </eqnarray*>
 
       which proves that\ 
@@ -41452,7 +41460,7 @@
       then we have\ 
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|x\<in\><around*|(|A<big|cap>B|)><rsub|<around*|[|2,y|]>>>|<cell|\<Leftrightarrow\>>|<cell|x\<in\><around*|{|x\<in\>X<rsub|1>\|<around*|(|x,y|)>\<in\>A<big|cap>B|}>>>|<row|<cell|>|<cell|<below|\<Leftrightarrow\>|y\<in\>X<rsub|2>>>|<cell|<around*|(|x,y|)>\<in\>A<big|cap>B>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|<around*|(|x,y|)>\<in\>A\<wedge\><around*|(|x,y|)>\<in\>B>>|<row|<cell|>|<cell|<below|\<Leftrightarrow\>|y\<in\>X<rsub|2>>>|<cell|x\<in\><around*|{|x\<in\>X<rsub|1>\|<around*|(|x,y|)>\<in\>A|}>\<wedge\>x\<in\><around*|{|x\<in\>X<rsub|1>\|<around*|(|x,y|)>\<in\>B|}>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\>A<rsub|<around*|[|2,y|]>>\<wedge\>x\<in\>B<rsub|<around*|[|2,y|]>>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\>A<rsub|<around*|[|2,y|]>><big|cap>B<rsub|<around*|[|2,y|]>>>>>>
+        <tformat|<table|<row|<cell|x\<in\><around*|(|A<big|cap>B|)><rsub|<around*|[|2,y|]>>>|<cell|\<Leftrightarrow\>>|<cell|x\<in\><around*|{|x\<in\>X<rsub|1>\|<around*|(|x,y|)>\<in\>A<big|cap>B|}>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\>X<rsub|1>\<wedge\><around*|(|x,y|)>\<in\>A<big|cap>B>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\>X<rsub|1>\<wedge\><around*|(|x,y|)>\<in\>A\<wedge\><around*|(|x,y|)>\<in\>B>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\><around*|{|x\<in\>X<rsub|1>\|<around*|(|x,y|)>\<in\>A|}>\<wedge\>x\<in\><around*|{|x\<in\>X<rsub|1>\|<around*|(|x,y|)>\<in\>B|}>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\>A<rsub|<around*|[|2,y|]>>\<wedge\>x\<in\>B<rsub|<around*|[|2,y|]>>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\>A<rsub|<around*|[|2,y|]>><big|cap>B<rsub|<around*|[|2,y|]>>>>>>
       </eqnarray*>
 
       which proves that\ 
@@ -41461,8 +41469,6 @@
         <around*|(|A<big|cap>B|)><rsub|<around*|[|2,y|]>>=A<rsub|<around*|[|2,y|]>><big|cap>B<rsub|<around*|[|2,y|]>>
       </equation*>
     </enumerate>
-
-    \;
   </proof>
 
   <\lemma>
@@ -41482,8 +41488,8 @@
     <\note>
       As <math|\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>> is a
       <math|\<sigma\>>-algebra on <math|X<rsub|1>\<cdot\>X<rsub|2>=<big|prod><rsub|i\<in\><around*|{|1,2|}>>X<rsub|i>>
-      so that <math|A\<subseteq\>X<rsub|1>\<cdot\>X<rsub|2>> as is required
-      for this lemma to make sense. \ 
+      we have that <math|A\<subseteq\>X<rsub|1>\<cdot\>X<rsub|2>> as is
+      required for this lemma to make sense. \ 
     </note>
   </lemma>
 
@@ -41506,9 +41512,15 @@
       </equation>
 
       Further if <math|B\<in\>\<cal-B\>> then
-      <math|B<rsub|<around*|[|1,x|]>>\<in\>\<cal-A\><rsub|2>> and by [lemma:
-      <reference|lemma 20.613.279>] <math|<around*|(|<around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)>\\B|)><rsub|<around*|[|1,x|]>>=X<rsub|2>\\B<rsub|<around*|[|1,x|]>>\<in\>\<cal-A\><rsub|2>>
-      so \ that <math|<around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)>\\B\<in\>\<cal-B\>>.
+      <math|B<rsub|<around*|[|1,x|]>>\<in\>\<cal-A\><rsub|2>> and using
+      [lemma: <reference|lemma 20.613.279>] we have
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|<around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)>\\B|)><rsub|<around*|[|1,x|]>>>|<cell|<below|=|<text|[lemma:
+        <reference|lemma 20.613.279>(4)]>>>|<cell|<around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)><rsub|<around*|[|1,x|]>>\\B<rsub|<around*|[|1,x|]>>>>|<row|<cell|>|<cell|<below|=|<text|[lemma:
+        <reference|lemma 20.613.279>(1)]>>>|<cell|X<rsub|2>\\B<rsub|<around*|[|1,x|]>>>>|<row|<cell|>|<cell|<below|\<in\>|B<rsub|<around*|[|1,x|]>>\<in\>\<cal-A\><rsub|2>>>|<cell|\<cal-A\><rsub|2>>>>>
+      </eqnarray*>
+
       Hence\ 
 
       <\equation>
@@ -41542,7 +41554,7 @@
       >E<rsub|i>\<in\>\<cal-A\><rsub|i>|}>> then
       <math|E<rsub|1>\<in\>\<cal-A\><rsub|1>\<wedge\>E<rsub|2>\<in\>\<cal-A\><rsub|2>>.
       Using \ [lemma: <reference|lemma 20.613.279>] we have then that
-      <math|<around*|(|A<rsub|1>\<cdot\>A<rsub|2>|)><rsub|<around*|[|1,x|]>>=<choice|<tformat|<table|<row|<cell|E<rsub|2>\<in\>\<cal-A\><rsub|2><text|
+      <math|<around*|(|E<rsub|1>\<cdot\>E<rsub|2>|)><rsub|<around*|[|1,x|]>>=<choice|<tformat|<table|<row|<cell|E<rsub|2>\<in\>\<cal-A\><rsub|2><text|
       if >x\<in\>E<rsub|1>>>|<row|<cell|\<varnothing\>\<in\>\<cal-A\><rsub|2><text|
       if >x\<in\>X<rsub|1>\\E<rsub|1>>>>>>\<in\>\<cal-A\><rsub|2>> so that
       <math|E<rsub|1>\<cdot\>E<rsub|2>\<in\>\<cal-B\>>. So we have proved
@@ -41585,10 +41597,16 @@
       </equation>
 
       Further if <math|B\<in\>\<cal-B\>> then
-      <math|B<rsub|<around*|[|2,y|]>>\<in\>\<cal-A\><rsub|1>> and by [lemma:
-      <reference|lemma 20.613.279>] <math|<around*|(|<around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)>\\B|)><rsub|<around*|[|2,y|]>>=X<rsub|1>\\B<rsub|<around*|[|2,y|]>>\<in\>\<cal-A\><rsub|1>>
-      so \ that <math|<around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)>\\B\<in\>\<cal-B\>>.
-      Hence\ 
+      <math|B<rsub|<around*|[|2,y|]>>\<in\>\<cal-A\><rsub|1>> and using
+      [lemma: <reference|lemma 20.613.279>] we have
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|<around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)>\\B|)><rsub|<around*|[|2,y|]>>>|<cell|<below|=|<text|[lemma:
+        <reference|lemma 20.613.279>(5)]>>>|<cell|<around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)><rsub|<around*|[|2,y|]>>\\B<rsub|<around*|[|2,y|]>>>>|<row|<cell|>|<cell|<below|=|<text|[lemma:
+        <reference|lemma 20.613.279>(2)]>>>|<cell|X<rsub|1>\\B<rsub|<around*|[|2,y|]>>>>|<row|<cell|>|<cell|<below|\<in\>|B<rsub|<around*|[|2,y|]>>\<in\>\<cal-A\><rsub|1>>>|<cell|\<cal-A\><rsub|1>>>>>
+      </eqnarray*>
+
+      Hence
 
       <\equation>
         <label|eq 20.939.279>\<forall\>B\<in\>\<cal-B\><text| we have that
@@ -41621,7 +41639,7 @@
       >E<rsub|i>\<in\>\<cal-A\><rsub|i>|}>> then
       <math|E<rsub|1>\<in\>\<cal-A\><rsub|1>\<wedge\>E<rsub|2>\<in\>\<cal-A\><rsub|2>>.
       Using \ [lemma: <reference|lemma 20.613.279>] we have then that
-      <math|<around*|(|A<rsub|1>\<cdot\>A<rsub|2>|)><rsub|<around*|[|2,y|]>>=<choice|<tformat|<table|<row|<cell|E<rsub|1>\<in\>\<cal-A\><rsub|1><text|
+      <math|<around*|(|E<rsub|1>\<cdot\>E<rsub|2>|)><rsub|<around*|[|2,y|]>>=<choice|<tformat|<table|<row|<cell|E<rsub|1>\<in\>\<cal-A\><rsub|1><text|
       if >x\<in\>E<rsub|2>>>|<row|<cell|\<varnothing\>\<in\>\<cal-A\><rsub|1><text|
       if >x\<in\>X<rsub|1>\\E<rsub|2>>>>>>\<in\>\<cal-A\><rsub|1>> so that
       <math|E<rsub|1>\<cdot\>E<rsub|2>\<in\>\<cal-B\>>. So we have proved
@@ -41659,11 +41677,11 @@
     that\ 
 
     <\enumerate>
-      <item><math|f<rsub|1,Q>:X<rsub|1>\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>>>
+      <item>For <math|f<rsub|1,Q>:X<rsub|1>\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>>>
       defined by <math|f<rsub|1,Q><around*|(|x|)>=\<mu\><rsub|2><around*|(|Q<rsub|<around*|[|1,x|]>>|)>>
       we have that <math|f<rsub|1,Q>\<in\>\<cal-M\><rsup|><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
 
-      <item><math|f<rsub|2,Q>:X<rsub|2>\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>>>
+      <item>For <math|f<rsub|2,Q>:X<rsub|2>\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>>>
       defined by <math|f<rsub|2,Q><around*|(|x|)>=\<mu\><rsub|1><around*|(|Q<rsub|<around*|[|2,x|]>>|)>>
       we have that \ <math|f<rsub|2,Q>\<in\>\<cal-M\><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
     </enumerate>
@@ -41680,8 +41698,8 @@
     <\enumerate>
       <item>Let <math|x\<in\>X<rsub|1>> then we have
       <math|f<rsub|1,X<rsub|1>\<cdot\>X<rsub|2>><around*|(|x|)>=\<mu\><rsub|2><around*|(|<around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)><rsub|<around*|[|1,x|]>>|)>\<equallim\><rsub|<text|[lemma:
-      <reference|lemma 20.613.279>]>>\<mu\><rsub|2><around*|(|X<rsub|2>|)>\<in\>\<bbb-R\>>
-      so that
+      <reference|lemma 20.613.279>(1)]>>\<mu\><rsub|2><around*|(|X<rsub|2>|)><below|\<in\>|\<mu\><rsub|2<text|
+      is finite>>>\<bbb-R\>> so that
 
       <\equation>
         <label|eq 20.942.279>f<rsub|1,X<rsub|1>\<cdot\>X<rsub|2>>=C<rsub|\<mu\><rsub|2><around*|(|X<rsub|2>|)>>
@@ -41691,7 +41709,7 @@
       proves that\ 
 
       <\equation>
-        <label|eq 20.943.279>f<rsub|1,X<rsub|1>\<cdot\>X<rsub|2>>\<in\>\<cal-M\><rsup|+><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,\<bbb-R\>|]>
+        <label|eq 20.943.279>f<rsub|1,X<rsub|1>\<cdot\>X<rsub|2>>\<in\>\<cal-M\><rsup|><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,\<bbb-R\>|]>
       </equation>
 
       Let <math|A,B\<in\>\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>> then
@@ -41699,7 +41717,7 @@
 
       <\eqnarray*>
         <tformat|<table|<row|<cell|f<rsub|1,A\\B><around*|(|x|)>>|<cell|=>|<cell|\<mu\><rsub|2><around*|(|<around*|(|A\\B|)><rsub|<around*|[|1,x|]>>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[lemma:
-        <reference|lemma 20.613.279>]>><rsub|<text|>>>|<cell|\<mu\><rsub|2><around*|(|A<rsub|<around*|[|1,x|]>>\\B<rsub|<around*|[|1,x|]>>|)>>>|<row|<cell|>|<cell|<below|\<equallim\>|<text|[theorem:
+        <reference|lemma 20.613.279>(4)]>><rsub|<text|>>>|<cell|\<mu\><rsub|2><around*|(|A<rsub|<around*|[|1,x|]>>\\B<rsub|<around*|[|1,x|]>>|)>>>|<row|<cell|>|<cell|<below|\<equallim\>|<text|[theorem:
         <reference|measure measure space properties
         (1)>]>\<wedge\>\<mu\><rsub|2><text| is
         finite>>>|<cell|\<mu\><rsub|2><around*|(|A<rsub|<around*|[|1,x|]>>|)>-\<mu\><rsub|2><around*|(|B<rsub|<around*|[|1,x|]>>|)>>>|<row|<cell|>|<cell|=>|<cell|f<rsub|1,A><around*|(|x|)>-f<rsub|1,B><around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|f<rsub|1,A>-f<rsub|1,B>|)><around*|(|x|)>>>>>
@@ -41724,8 +41742,8 @@
       be pairwise disjoint. Let <math|x\<in\>X<rsub|1>> and
       <math|i,j\<in\>\<bbb-N\>> with <math|i\<neq\>j> then we have
       \ <math|<around*|(|A<rsub|i>|)><rsub|<around*|[|1,x|]>><big|cap><around*|(|A<rsub|j>|)><rsub|<around*|[|1,x|]>>\<equallim\><rsub|<text|[lemma:
-      <reference|lemma 20.613.279>]>><rsub|<text|>><around*|(|A<rsub|i><big|cap>A<rsub|j>|)><rsub|<around*|[|1,x|]>>=\<varnothing\><rsub|<around*|[|1,x|]>>\<equallim\><rsub|<text|[lemma:
-      <reference|lemma 20.613.279>]>><rsub|<text|>>\<varnothing\>>. Hence
+      <reference|lemma 20.613.279>(9)]>><rsub|<text|>><around*|(|A<rsub|i><big|cap>A<rsub|j>|)><rsub|<around*|[|1,x|]>>=\<varnothing\><rsub|<around*|[|1,x|]>>\<equallim\><rsub|<text|[lemma:
+      <reference|lemma 20.613.279>(3)]>><rsub|<text|>>\<varnothing\>>. Hence
 
       <\equation>
         <label|eq 20.946.279>\<forall\>x\<in\>X<rsub|1><text| we have
@@ -41765,8 +41783,8 @@
       further by [eq: <reference|eq 20.943.279>]
       <math|f<rsub|1,X<rsub|1>\<cdot\>X<rsub|2>>\<in\>\<cal-M\><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
       so that by [theorem: <reference|measurable function properties (1)>]
-      <math|f<rsub|1,<around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)>\\Q>\<equallim\><rsub|<text|[eq:
-      <reference|eq 20.945.279>]>>f<rsub|1,X<rsub|1>\<cdot\>X<rsub|2>>-f<rsub|1,A>\<in\><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>.
+      <math|f<rsub|1,<around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)>\\A>\<equallim\><rsub|<text|[eq:
+      <reference|eq 20.945.279>]>>f<rsub|1,X<rsub|1>\<cdot\>X<rsub|2>>-f<rsub|1,A>\<in\>\<cal-M\><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>.
       Hence\ 
 
       <\equation>
@@ -41780,8 +41798,8 @@
       as <math|\<forall\>x\<in\>X<rsub|1>>
       <math|f<rsub|1,A<rsub|i>><around*|(|x|)>=\<mu\><rsub|2><around*|(|A<rsub|<around*|[|1,x|]>>|)>\<in\><around*|[|0,\<infty\>|[>>
       it follows that <math|f<rsub|1,A<rsub|i>>\<in\>\<cal-M\><rsup|+><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>.
-      Using Beppo's \ [theorem: <reference|Beppo Levi's Theorem>] it follows
-      that <math|<big|sum><rsub|i=1><rsup|\<infty\>>f<rsub|1,A<rsub|i>>\<in\>\<cal-M\><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>,
+      Using Beppo's Theorem [see theorem: <reference|Beppo Levi's Theorem>]
+      it follows that <math|<big|sum><rsub|i=1><rsup|\<infty\>>f<rsub|1,A<rsub|i>>\<in\>\<cal-M\><rsup|+><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|]>\<subseteq\>\<cal-M\><around*|[|X,\<cal-A\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>,
       hence, as <math|f<rsub|1,<big|sqcup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>>\<equallim\><rsub|<text|[eq:
       <reference|eq 20.947.279>]>><big|sum><rsub|i=1><rsup|\<infty\>>f<rsub|1,A<rsub|i>>>,
       it follows that <math|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>\<in\>\<cal-D\>>.
@@ -41820,13 +41838,13 @@
           f<rsub|1,E<rsub|1>\<cdot\>E<rsub|2>><around*|(|x|)>=\<mu\><rsub|2><around*|(|<around*|(|E<rsub|1>\<cdot\>E<rsub|2>|)><rsub|<around*|[|1,x|]>>|)>=\<mu\><rsub|2><around*|(|E<rsub|2>|)>=\<mu\><rsub|2><around*|(|E<rsub|2>|)>\<cdot\>\<cal-X\><rsub|X<rsub|1,>E<rsub|1>><around*|(|x|)>
         </equation*>
 
-        <item*|<math|x\<in\>X<rsub|1>\\E<rsub|1>>>Then [lemma:
+        <item*|<math|x\<in\>X<rsub|1>\\E<rsub|1>>>Then by [lemma:
         <reference|lemma 20.613.279>] we have that
         <math|<around*|(|E<rsub|1>\<cdot\>E<rsub|2>|)><rsub|<around*|[|1,x|]>>=\<varnothing\>>
         so that\ 
 
         <\equation*>
-          f<rsub|1,E<rsub|1>\<cdot\>E<rsub|2>><around*|(|x|)>=\<mu\><rsub|2><around*|(|<around*|(|E<rsub|1>\<cdot\>E<rsub|2>|)><rsub|<around*|[|1,x|]>>|)>=\<mu\><rsub|2><around*|(|0|)>=\<mu\><rsub|2><around*|(|E<rsub|2>|)>\<cdot\>\<cal-X\><rsub|X<rsub|1>,E<rsub|1>><around*|(|x|)>
+          f<rsub|1,E<rsub|1>\<cdot\>E<rsub|2>><around*|(|x|)>=\<mu\><rsub|2><around*|(|<around*|(|E<rsub|1>\<cdot\>E<rsub|2>|)><rsub|<around*|[|1,x|]>>|)>=\<mu\><rsub|2><around*|(|\<varnothing\>|)>=0=\<mu\><rsub|2><around*|(|E<rsub|2>|)>\<cdot\>\<cal-X\><rsub|X<rsub|1>,E<rsub|1>><around*|(|x|)>
         </equation*>
       </description>
 
@@ -41860,7 +41878,7 @@
         intersection>]>><around*|(|E<rsub|1><big|cap>F<rsub|1>|)>\<cdot\><around*|(|E<rsub|2><big|cap>F<rsub|2>|)>
       </equation*>
 
-      which, as <math|E<rsub|1><big|cap>F<rsub|1>\<in\>\<cal-A\><rsub|i>>,
+      which, as <math|E<rsub|1><big|cap>F<rsub|1>\<in\>\<cal-A\><rsub|1>>,
       <math|E<rsub|2><big|cap>F<rsub|2>\<in\>\<cal-A\><rsub|2>>, proves that
       <math|E<big|cap>F\<in\>\<cal-E\>>. Hence we have\ 
 
@@ -41870,19 +41888,18 @@
       </equation>
 
       Using then [theorem: <reference|measure Dynkin system condition for
-      sigma algebra (1)>] on [eq: <reference|eq 20.952.279>, <reference|eq
-      20.953.279>] gives
+      sigma algebra (1)>] on [eq: <reference|eq 20.953.279>] gives
 
       <\equation*>
         \<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>=\<sigma\><around*|[|<big|prod><rsub|i\<in\><around*|{|1,2|}>>E<rsub|i>\|\<forall\>i\<in\><around*|{|1,2|}><text|
         >E<rsub|i>\<in\>\<cal-A\><rsub|i>|]>=\<sigma\><around*|[|\<cal-E\>|]>=\<delta\><around*|[|\<cal-E\>|]>
       </equation*>
 
-      As <math|\<cal-E\>\<subseteq\>\<cal-D\>> and <math|\<cal-D\>> is a
-      Dynkin system [see eq: <reference|eq 20.951.279>] we have by [theorem:
-      <reference|measure Dynkin system generated>[ that
-      <math|\<delta\><around*|[|\<cal-E\>|]>\<subseteq\>\<cal-D\>> so that
-      <math|\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>\<subseteq\>\<cal-D\>>.
+      As <math|\<cal-E\>\<subseteq\>\<cal-D\>> [see eq: <reference|eq
+      20.952.279>] and <math|\<cal-D\>> is a Dynkin system [see eq:
+      <reference|eq 20.951.279>] we have by [theorem: <reference|measure
+      Dynkin system generated>(2)[ that <math|\<delta\><around*|[|\<cal-E\>|]>\<subseteq\>\<cal-D\>>
+      so that <math|\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>\<subseteq\>\<cal-D\>>.
       Hence we have that\ 
 
       <\equation*>
@@ -41893,7 +41910,7 @@
 
       <item>Let <math|x\<in\>X<rsub|2>> then we have
       <math|f<rsub|2,X<rsub|1>\<cdot\>X<rsub|2>><around*|(|x|)>=\<mu\><rsub|1><around*|(|<around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)><rsub|<around*|[|2,x|]>>|)>\<equallim\><rsub|<text|[lemma:
-      <reference|lemma 20.613.279>]>>\<mu\><rsub|1><around*|(|X<rsub|1>|)>\<in\>\<bbb-R\>>
+      <reference|lemma 20.613.279>(1)]>>\<mu\><rsub|1><around*|(|X<rsub|1>|)>\<in\>\<bbb-R\>>
       so that
 
       <\equation>
@@ -41904,18 +41921,18 @@
       proves that\ 
 
       <\equation>
-        <label|eq 20.955.280>f<rsub|2,X<rsub|1>\<cdot\>X<rsub|2>>\<in\>\<cal-M\><rsup|+><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,\<bbb-R\>|]>
+        <label|eq 20.955.280>f<rsub|2,X<rsub|1>\<cdot\>X<rsub|2>>\<in\>\<cal-M\><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,\<bbb-R\>|]>
       </equation>
 
       Let <math|A,B\<in\>\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>> then
       for <math|x\<in\>X<rsub|2>> we have
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|f<rsub|2,A\\B><around*|(|x|)>>|<cell|=>|<cell|\<mu\><rsub|2><around*|(|<around*|(|A\\B|)><rsub|<around*|[|2,x|]>>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[lemma:
-        <reference|lemma 20.613.279>]>><rsub|<text|>>>|<cell|\<mu\><rsub|2><around*|(|A<rsub|<around*|[|2,x|]>>\\B<rsub|<around*|[|2,x|]>>|)>>>|<row|<cell|>|<cell|<below|\<equallim\>|<text|[theorem:
+        <tformat|<table|<row|<cell|f<rsub|2,A\\B><around*|(|x|)>>|<cell|=>|<cell|\<mu\><rsub|1><around*|(|<around*|(|A\\B|)><rsub|<around*|[|2,x|]>>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[lemma:
+        <reference|lemma 20.613.279>(5)]>><rsub|<text|>>>|<cell|\<mu\><rsub|1><around*|(|A<rsub|<around*|[|2,x|]>>\\B<rsub|<around*|[|2,x|]>>|)>>>|<row|<cell|>|<cell|<below|\<equallim\>|<text|[theorem:
         <reference|measure measure space properties
-        (1)>]>\<wedge\>\<mu\><rsub|1><text| is
-        finite>>>|<cell|\<mu\><rsub|2><around*|(|A<rsub|<around*|[|2,x|]>>|)>-\<mu\><rsub|2><around*|(|B<rsub|<around*|[|2,x|]>>|)>>>|<row|<cell|>|<cell|=>|<cell|f<rsub|2,A><around*|(|x|)>-f<rsub|2,B><around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|f<rsub|2,A>-f<rsub|2,B>|)><around*|(|x|)>>>>>
+        (1)>]>\<wedge\>\<mu\><rsub|2><text| is
+        finite>>>|<cell|\<mu\><rsub|1><around*|(|A<rsub|<around*|[|2,x|]>>|)>-\<mu\><rsub|1><around*|(|B<rsub|<around*|[|2,x|]>>|)>>>|<row|<cell|>|<cell|=>|<cell|f<rsub|2,A><around*|(|x|)>-f<rsub|2,B><around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|f<rsub|2,A>-f<rsub|2,B>|)><around*|(|x|)>>>>>
       </eqnarray*>
 
       which proves that\ 
@@ -41937,12 +41954,12 @@
       be pairwise disjoint. Let <math|x\<in\>X<rsub|2>> and
       <math|i,j\<in\>\<bbb-N\>> with <math|i\<neq\>j> then we have
       \ <math|<around*|(|A<rsub|i>|)><rsub|<around*|[|2,x|]>><big|cap><around*|(|A<rsub|j>|)><rsub|<around*|[|2,x|]>>\<equallim\><rsub|<text|[lemma:
-      <reference|lemma 20.613.279>]>><rsub|<text|>><around*|(|A<rsub|i><big|cap>A<rsub|j>|)><rsub|<around*|[|2,x|]>>=\<varnothing\><rsub|<around*|[|2,x|]>>\<equallim\><rsub|<text|[lemma:
+      <reference|lemma 20.613.279>(10)]>><rsub|<text|>><around*|(|A<rsub|i><big|cap>A<rsub|j>|)><rsub|<around*|[|2,x|]>>=\<varnothing\><rsub|<around*|[|2,x|]>>\<equallim\><rsub|<text|[lemma:
       <reference|lemma 20.613.279>]>><rsub|<text|>>\<varnothing\>>. Hence
 
       <\equation>
         <label|eq 20.958.280>\<forall\>x\<in\>X<rsub|2><text| we have
-        ><around*|{|<around*|(|A<rsub|2>|)><rsub|<around*|[|1,x|]>>|}><rsub|i\<in\>\<bbb-N\>><text|
+        ><around*|{|<around*|(|A<rsub|i>|)><rsub|<around*|[|2,x|]>>|}><rsub|i\<in\>\<bbb-N\>><text|
         is pairwise disjoint>
       </equation>
 
@@ -41950,9 +41967,9 @@
 
       <\eqnarray*>
         <tformat|<table|<row|<cell|f<rsub|2,<big|sqcup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>><around*|(|x|)>>|<cell|=>|<cell|\<mu\><rsub|1><around*|(|<around*|(|<big|sqcup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)><rsub|<around*|[|2,x|]>>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[lemma:
-        <reference|lemma 20.613.279>]>><rsub|<text|>>>|<cell|\<mu\><rsub|1><around*|(|<big|sqcup><rsub|i\<in\>\<bbb-N\>><around*|(|A<rsub|i>|)><rsub|<around*|[|2,x|]>>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+        <reference|lemma 20.613.279>(7)]>><rsub|<text|>>>|<cell|\<mu\><rsub|1><around*|(|<big|sqcup><rsub|i\<in\>\<bbb-N\>><around*|(|A<rsub|i>|)><rsub|<around*|[|2,x|]>>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
         <reference|eq 20.958.280>]>\<wedge\>\<mu\><rsub|1><text| is a
-        measure>>>|<cell|<big|sum><rsub|i=1><rsup|\<infty\>>\<mu\><rsub|1><around*|(|<around*|(|A<rsub|i>|)><rsub|<around*|[|1,x|]>>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|\<infty\>>f<rsub|2,A<rsub|i>><around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<big|sum><rsub|i=1><rsup|\<infty\>>f<rsub|2,A<rsub|i>>|)><around*|(|x|)>>>>>
+        measure>>>|<cell|<big|sum><rsub|i=1><rsup|\<infty\>>\<mu\><rsub|1><around*|(|<around*|(|A<rsub|i>|)><rsub|<around*|[|2,x|]>>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|\<infty\>>f<rsub|2,A<rsub|i>><around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<big|sum><rsub|i=1><rsup|\<infty\>>f<rsub|2,A<rsub|i>>|)><around*|(|x|)>>>>>
       </eqnarray*>
 
       which proves that\ 
@@ -41978,8 +41995,8 @@
       further by [eq: <reference|eq 20.955.280>]
       <math|f<rsub|2,X<rsub|1>\<cdot\>X<rsub|2>>\<in\>\<cal-M\><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
       so that by [theorem: <reference|measurable function properties (1)>]
-      <math|f<rsub|2,<around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)>\\Q>\<equallim\><rsub|<text|[eq:
-      <reference|eq 20.957.280>]>>f<rsub|2,X<rsub|1>\<cdot\>X<rsub|2>>-f<rsub|2,A>\<in\><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>.
+      <math|f<rsub|2,<around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)>\\A>\<equallim\><rsub|<text|[eq:
+      <reference|eq 20.957.280>]>>f<rsub|2,X<rsub|1>\<cdot\>X<rsub|2>>-f<rsub|2,A>\<in\>\<cal-M\><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>.
       Hence\ 
 
       <\equation>
@@ -41993,10 +42010,10 @@
       as <math|\<forall\>x\<in\>X<rsub|2>>
       <math|f<rsub|2,A<rsub|i>><around*|(|x|)>=\<mu\><rsub|1><around*|(|A<rsub|<around*|[|2,x|]>>|)>\<in\><around*|[|0,\<infty\>|[>>
       it follows that <math|f<rsub|2,A<rsub|i>>\<in\>\<cal-M\><rsup|+><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>.
-      Using Beppo's \ [theorem: <reference|Beppo Levi's Theorem>] it follows
-      that <math|<big|sum><rsub|i=1><rsup|\<infty\>>f<rsub|2,A<rsub|i>>\<in\>\<cal-M\><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>,
+      Using Beppo's Theorem [theorem: <reference|Beppo Levi's Theorem>] it
+      follows that <math|<big|sum><rsub|i=1><rsup|\<infty\>>f<rsub|2,A<rsub|i>>\<in\>\<cal-M\><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>,
       hence, as <math|f<rsub|2,<big|sqcup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>>\<equallim\><rsub|<text|[eq:
-      <reference|eq 20.961.280>]>><big|sum><rsub|i=1><rsup|\<infty\>>f<rsub|2,A<rsub|i>>>,
+      <reference|eq 20.959.280>]>><big|sum><rsub|i=1><rsup|\<infty\>>f<rsub|2,A<rsub|i>>>,
       it follows that <math|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>\<in\>\<cal-D\>>.
       To summarize
 
@@ -42026,7 +42043,7 @@
 
       <\description>
         <item*|<math|x\<in\>E<rsub|2>>>Then by [lemma: <reference|lemma
-        20.613.279>] we have that <math|<around*|(|E<rsub|1>\<cdot\>E<rsub|2>|)><rsub|<around*|[|2,x|]>>=E<rsub|1>>
+        20.613.279>(8)] we have that <math|<around*|(|E<rsub|1>\<cdot\>E<rsub|2>|)><rsub|<around*|[|2,x|]>>=E<rsub|1>>
         so that\ 
 
         <\equation*>
@@ -42034,12 +42051,12 @@
         </equation*>
 
         <item*|<math|x\<in\>X<rsub|2>\\E<rsub|2>>>Then [lemma:
-        <reference|lemma 20.613.279>] we have that
+        <reference|lemma 20.613.279>(8)] we have that
         <math|<around*|(|E<rsub|1>\<cdot\>E<rsub|2>|)><rsub|<around*|[|2,x|]>>=\<varnothing\>>
         so that\ 
 
         <\equation*>
-          f<rsub|2,E<rsub|1>\<cdot\>E<rsub|2>><around*|(|x|)>=\<mu\><rsub|1><around*|(|<around*|(|E<rsub|1>\<cdot\>E<rsub|2>|)><rsub|<around*|[|2,x|]>>|)>=\<mu\><rsub|1><around*|(|\<varnothing\>|)>=\<mu\><rsub|1><around*|(|E<rsub|1>|)>\<cdot\>\<cal-X\><rsub|X<rsub|2>,E<rsub|2>><around*|(|x|)>
+          f<rsub|2,E<rsub|1>\<cdot\>E<rsub|2>><around*|(|x|)>=\<mu\><rsub|1><around*|(|<around*|(|E<rsub|1>\<cdot\>E<rsub|2>|)><rsub|<around*|[|2,x|]>>|)>=\<mu\><rsub|1><around*|(|\<varnothing\>|)>=0=\<mu\><rsub|1><around*|(|E<rsub|1>|)>\<cdot\>\<cal-X\><rsub|X<rsub|2>,E<rsub|2>><around*|(|x|)>
         </equation*>
       </description>
 
@@ -42073,9 +42090,9 @@
         intersection>]>><around*|(|E<rsub|1><big|cap>F<rsub|1>|)>\<cdot\><around*|(|E<rsub|2><big|cap>F<rsub|2>|)>
       </equation*>
 
-      which, as <math|E<rsub|1><big|cap>F<rsub|1>\<in\>\<cal-A\><rsub|i>>,
+      which, as <math|E<rsub|1><big|cap>F<rsub|1>\<in\>\<cal-A\><rsub|1>>,
       <math|E<rsub|2><big|cap>F<rsub|2>\<in\>\<cal-A\><rsub|2>>, proves that
-      <math|E<big|cap>F\<in\>\<cal-E\>>. Hence we have\ 
+      <math|E<big|cap>F\<in\>\<cal-E\>>. Hence\ 
 
       <\equation>
         <label|eq 20.965.280>\<forall\>E,F\<in\>\<cal-E\><text| we have
@@ -42083,19 +42100,18 @@
       </equation>
 
       Using then [theorem: <reference|measure Dynkin system condition for
-      sigma algebra (1)>] on [eq: <reference|eq 20.964.280>, <reference|eq
-      20.965.280>] gives
+      sigma algebra (1)>] on [eq: <reference|eq 20.965.280>] gives
 
       <\equation*>
         \<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>=\<sigma\><around*|[|<big|prod><rsub|i\<in\><around*|{|1,2|}>>E<rsub|i>\|\<forall\>i\<in\><around*|{|1,2|}><text|
         >E<rsub|i>\<in\>\<cal-A\><rsub|i>|]>=\<sigma\><around*|[|\<cal-E\>|]>=\<delta\><around*|[|\<cal-E\>|]>
       </equation*>
 
-      As <math|\<cal-E\>\<subseteq\>\<cal-D\>> and <math|\<cal-D\>> is a
-      Dynkin system [see eq: <reference|eq 20.963.280>] we have by [theorem:
-      <reference|measure Dynkin system generated>[ that
-      <math|\<delta\><around*|[|\<cal-E\>|]>\<subseteq\>\<cal-D\>> so that
-      <math|\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>\<subseteq\>\<cal-D\>>.
+      As <math|\<cal-E\>\<subseteq\>\<cal-D\>> [see eq: <reference|eq
+      20.964.280>] and <math|\<cal-D\>> is a Dynkin system [see eq:
+      <reference|eq 20.963.280>] we have by [theorem: <reference|measure
+      Dynkin system generated>(2)[ that <math|\<delta\><around*|[|\<cal-E\>|]>\<subseteq\>\<cal-D\>>
+      so that <math|\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>\<subseteq\>\<cal-D\>>.
       Hence we have that\ 
 
       <\equation*>
@@ -42113,16 +42129,15 @@
     <label|lemma 20.621.280>Let <math|<around*|\<langle\>|X<rsub|1>,\<cal-A\><rsub|1>,\<mu\><rsub|1>|\<rangle\>>>,
     <math|<around*|\<langle\>|X<rsub|2>,\<cal-A\><rsub|2>,\<mu\><rsub|2>|\<rangle\>>>
     be two measure spaces where <math|\<mu\><rsub|1>>, <math|\<mu\><rsub|2>>
-    are <math|\<sigma\>>-finite measures [see definition: \ measures then we
-    have <math|\<forall\>Q\<in\>\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>>
-    that\ 
+    are <math|\<sigma\>>-finite measures then we have
+    <math|\<forall\>Q\<in\>\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>> that\ 
 
     <\enumerate>
-      <item><math|f<rsub|1,Q>:X<rsub|1>\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>>>
+      <item>For <math|f<rsub|1,Q>:X<rsub|1>\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>>>
       defined by <math|f<rsub|1,Q><around*|(|x|)>=\<mu\><rsub|2><around*|(|Q<rsub|<around*|[|1,x|]>>|)>>
       we have that <math|f<rsub|1,Q>\<in\>\<cal-M\><rsup|><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
 
-      <item><math|f<rsub|2,Q>:X<rsub|2>\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>>>
+      <item>For <math|f<rsub|2,Q>:X<rsub|2>\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>>>
       defined by <math|f<rsub|2,Q><around*|(|x|)>=\<mu\><rsub|1><around*|(|Q<rsub|<around*|[|2,x|]>>|)>>
       we have that \ <math|f<rsub|2,Q>\<in\>\<cal-M\><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
     </enumerate>
@@ -42141,21 +42156,21 @@
       <math|\<mu\><rsub|2><around*|(|A<rsub|i>|)>\<less\>\<infty\>> and
       <math|X<rsub|2>=<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>>. Let
       <math|i\<in\>\<bbb-N\>> and define the measure [see theorem:
-      <reference|measure sum and scalar product of measures>(2)]
+      <reference|measure sum and scalar product of measures>(3)]
 
       <\equation>
         <label|eq 20.954.279>\<mu\><rsub|i,2>:\<cal-A\><rsub|2>\<rightarrow\><around*|[|0,\<infty\>|]><text|
         by >\<mu\><rsub|i,2><around*|(|A|)>=\<mu\><rsub|2><around*|(|A<rsub|i><big|cap>A|)>\<leqslant\>\<mu\><rsub|2><around*|(|A<rsub|i>|)>\<less\>\<infty\>
       </equation>
 
-      then <math|\<mu\><rsub|2>> is a finite measure and we can apply the
+      then <math|\<mu\><rsub|i,2>> is a finite measure and we can apply the
       previous lemma [lemma: <reference|lemma 20.619.279>] which proves that
       <math|\<forall\>Q\<in\>\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>> we
       have for the function
 
       <\equation>
         <label|eq 20.955.279>f<rsub|i,1,Q>:X<rsub|1>\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>><text|
-        defined by >f<rsub|i,1,Q><around*|(|x|)>=\<mu\><rsub|2,i><around*|(|Q<rsub|<around*|[|1,x|]>>|)>\<equallim\><rsub|<text|[eq:
+        defined by >f<rsub|i,1,Q><around*|(|x|)>=\<mu\><rsub|i,2><around*|(|Q<rsub|<around*|[|1,x|]>>|)>\<equallim\><rsub|<text|[eq:
         <reference|eq 20.954.279>]>>\<mu\><rsub|2><around*|(|A<rsub|i><big|cap>Q<rsub|<around*|[|1,x|]>>|)>
       </equation>
 
@@ -42196,8 +42211,8 @@
 
       As <math|\<forall\>i\<in\>\<bbb-N\>>
       <math|f<rsub|i,1,Q>\<in\>\<cal-M\><around*|[|X<rsub|1>.\<cal-A\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
-      it follows using [theorem: <reference|measurable function sup inf
-      limit>] that\ 
+      [see eq; <reference|eq 20.956.279>] it follows, using [theorem:
+      <reference|measurable function sup inf limit>], that\ 
 
       <\equation*>
         f<rsub|1,Q>\<in\>\<cal-M\><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
@@ -42225,9 +42240,9 @@
       have for the function
 
       <\equation>
-        <label|eq 20.971.280>f<rsub|i,2,Q>:X<rsub|1>\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>><text|
-        defined by >f<rsub|i,2,Q><around*|(|x|)>=\<mu\><rsub|2,i><around*|(|Q<rsub|<around*|[|2,x|]>>|)>\<equallim\><rsub|<text|[eq:
-        <reference|eq 20.970.280>]>>\<mu\><rsub|2><around*|(|A<rsub|i><big|cap>Q<rsub|<around*|[|2,x|]>>|)>
+        <label|eq 20.971.280>f<rsub|i,2,Q>:X<rsub|2>\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>><text|
+        defined by >f<rsub|i,2,Q><around*|(|x|)>=\<mu\><rsub|i,1><around*|(|Q<rsub|<around*|[|2,x|]>>|)>\<equallim\><rsub|<text|[eq:
+        <reference|eq 20.970.280>]>>\<mu\><rsub|1><around*|(|A<rsub|i><big|cap>Q<rsub|<around*|[|2,x|]>>|)>
       </equation>
 
       that\ 
@@ -42267,8 +42282,8 @@
 
       As <math|\<forall\>i\<in\>\<bbb-N\>>
       <math|f<rsub|i,2,Q>\<in\>\<cal-M\><around*|[|X<rsub|2>.\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
-      it follows using [theorem: <reference|measurable function sup inf
-      limit>] that\ 
+      [see eq: <reference|eq 20.972.280>] it follows using [theorem:
+      <reference|measurable function sup inf limit>] that\ 
 
       <\equation*>
         f<rsub|2,Q>\<in\>\<cal-M\><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
@@ -42276,7 +42291,9 @@
     </enumerate>
   </proof>
 
-  In the following we use the following convention to simplify notation
+  We introduce now a notation that will simplify and clarify the rest of this
+  section, by using the expression defining a function in the integral
+  notation.
 
   <\convention>
     \ <label|integral convention>Let <math|<around*|\<langle\>|X,\<cal-A\>,\<mu\>|\<rangle\>>>
@@ -42366,7 +42383,7 @@
     <label|product measure (1)>Let <math|<around*|\<langle\>|X<rsub|1>,\<cal-A\><rsub|1>,\<mu\><rsub|1>|\<rangle\>>>,
     <math|<around*|\<langle\>|X<rsub|2>,\<cal-A\><rsub|2>,\<mu\><rsub|2>|\<rangle\>>>
     be two measure spaces where <math|\<mu\><rsub|1>>, <math|\<mu\><rsub|2>>
-    are <with|font-series|bold|<math|\<sigma\>>-finite> then\ 
+    are <with|font-series|bold|<math|\<sigma\>>-finite> then we have for
 
     <\equation*>
       \<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>:\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>\<rightarrow\><around*|[|0,\<infty\>|]><text|
@@ -42374,14 +42391,15 @@
       x|)>
     </equation*>
 
-    is a
+    that
 
     <\equation*>
       \<mu\><rsub|1>\<otimes\>\<mu\><rsub|2><text| is
-      >\<sigma\><text|-finite> measure
+      >\<sigma\><text|-finite> measure on
+      \<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>
     </equation*>
 
-    such that
+    and
 
     <\equation*>
       \<forall\>A<rsub|1>\<in\>\<cal-A\><rsub|1><text|,
@@ -42474,12 +42492,12 @@
 
     <\equation*>
       f<rsub|1,Q>:X<rsub|1>\<rightarrow\><op|<wide|\<bbb-R\>|\<wide-bar\>>>
-      defined by f<rsub|1,Q><around*|(|x|)>=\<mu\><rsub|2><around*|(|Q<rsub|<around*|[|1,x|]>>|)>
+      <text| by> f<rsub|1,Q><around*|(|x|)>=\<mu\><rsub|2><around*|(|Q<rsub|<around*|[|1,x|]>>|)>
     </equation*>
 
     <\equation*>
       f<rsub|2,Q>:X<rsub|2>\<rightarrow\><op|<wide|\<bbb-R\>|\<wide-bar\>>>
-      defined by f<rsub|2,Q><around*|(|x|)>=\<mu\><rsub|1><around*|(|Q<rsub|<around*|[|2,x|]>>|)>
+      <text| by >f<rsub|2,Q><around*|(|x|)>=\<mu\><rsub|1><around*|(|Q<rsub|<around*|[|2,x|]>>|)>
     </equation*>
 
     \ then by [lemma: <reference|lemma 20.621.280>] we have that\ 
@@ -42494,7 +42512,7 @@
     it follows from the above that\ 
 
     <\equation>
-      <label|eq 20.975.280>f<rsub|1,Q>\<in\>\<cal-M\><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|]>\<wedge\>f<rsub|2,Q>\<in\>\<cal-M\><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
+      <label|eq 20.975.280>f<rsub|1,Q>\<in\>\<cal-M\><rsup|+><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|]>\<wedge\>f<rsub|2,Q>\<in\>\<cal-M\><rsup|+><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
     </equation>
 
     So we can define the function\ 
@@ -42522,8 +42540,8 @@
 
     <\equation*>
       <around*|(|A<rsub|i>|)><rsub|<around*|[|1,x|]>><big|cap><around*|(|A<rsub|j>|)><rsub|<around*|[|1,x|]>>\<equallim\><rsub|<text|[theorem:
-      <reference|lemma 20.613.279>]>><around*|(|A<rsub|i><big|cap>A<rsub|j>|)><rsub|<around*|[|1,x|]>>=\<varnothing\><rsub|<around*|[|1,x|]>>\<equallim\><rsub|<text|[theorem:
-      <reference|lemma 20.613.279>]>>\<varnothing\>
+      <reference|lemma 20.613.279>(9)]>><around*|(|A<rsub|i><big|cap>A<rsub|j>|)><rsub|<around*|[|1,x|]>>=\<varnothing\><rsub|<around*|[|1,x|]>>\<equallim\><rsub|<text|[theorem:
+      <reference|lemma 20.613.279>(3)]>>\<varnothing\>
     </equation*>
 
     which proves that\ 
@@ -42535,7 +42553,7 @@
 
     <\eqnarray*>
       <tformat|<table|<row|<cell|f<rsub|1,<big|sqcup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>><around*|(|x|)>>|<cell|=>|<cell|\<mu\><rsub|2><around*|(|<around*|(|<big|sqcup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)><rsub|<around*|[|1,x|]>>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
-      <reference|lemma 20.613.279>]>>>|<cell|\<mu\><rsub|2><around*|(|<big|sqcup><rsub|i\<in\>\<bbb-N\>><around*|(|A<rsub|i>|)><rsub|<around*|[|1,x|]>>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|lemma 20.613.279>(6)]>>>|<cell|\<mu\><rsub|2><around*|(|<big|sqcup><rsub|i\<in\>\<bbb-N\>><around*|(|A<rsub|i>|)><rsub|<around*|[|1,x|]>>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
       <reference|eq 20.978.280>]>>>|<cell|<big|sum><rsub|i=1><rsup|\<infty\>>\<mu\><rsub|2><around*|(|<around*|(|A<rsub|i>|)><rsub|<around*|[|1,x|]>>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|\<infty\>>f<rsub|1,A<rsub|i>><around*|(|x|)>>>>>
     </eqnarray*>
 
@@ -42582,11 +42600,11 @@
     <\description>
       <item*|<math|x\<in\>A<rsub|1>>>Then
       <math|f<rsub|1,A<rsub|1>\<cdot\>A<rsub|2>><around*|(|x|)>=\<mu\><rsub|2><around*|(|<around*|[|A<rsub|1>\<cdot\>A<rsub|2>|]><rsub|<around*|[|1,x|]>>|)>\<equallim\><rsub|<text|[theorem:
-      <reference|lemma 20.613.279>]>>\<mu\><rsub|2><around*|(|A<rsub|2>|)>=\<mu\><rsub|2><around*|(|A<rsub|2>|)>\<cdot\>\<cal-X\><rsub|X<rsub|1>,A<rsub|1>><around*|(|x|)>>
+      <reference|lemma 20.613.279>(8)]>>\<mu\><rsub|2><around*|(|A<rsub|2>|)>=\<mu\><rsub|2><around*|(|A<rsub|2>|)>\<cdot\>\<cal-X\><rsub|X<rsub|1>,A<rsub|1>><around*|(|x|)>>
 
       <item*|<math|x\<in\>X<rsub|1>\\A<rsub|1>>>Then
       <math|f<rsub|1,A<rsub|1>\<cdot\>A<rsub|2>><around*|(|x|)>=\<mu\><rsub|2><around*|(|<around*|[|A<rsub|1>\<cdot\>A<rsub|2>|]><rsub|<around*|[|1,x|]>>|)>\<equallim\><rsub|<text|[theorem:
-      <reference|lemma 20.613.279>]>>\<mu\><rsub|2><around*|(|\<varnothing\>|)>=\<mu\><rsub|2><around*|(|A<rsub|2>|)>\<cdot\>\<cal-X\><rsub|X<rsub|1>,A<rsub|1>><around*|(|x|)>>
+      <reference|lemma 20.613.279>(8)]>>\<mu\><rsub|2><around*|(|\<varnothing\>|)>=\<mu\><rsub|2><around*|(|A<rsub|2>|)>\<cdot\>\<cal-X\><rsub|X<rsub|1>,A<rsub|1>><around*|(|x|)>>
     </description>
 
     which proves that
@@ -42599,14 +42617,14 @@
 
     <\eqnarray*>
       <tformat|<table|<row|<cell|<around*|(|\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>|)><around*|(|A<rsub|1>\<cdot\>A<rsub|2>|)>>|<cell|=>|<cell|<big|int><rsup|+>f<rsub|1,A<rsub|1>\<cdot\>A<rsub|2>>d\<mu\><rsub|1>>>|<row|<cell|>|<cell|=>|<cell|<big|int><rsup|+><around*|(|\<mu\><rsub|2><around*|(|A<rsub|2>|)>\<cdot\>\<cal-X\><rsub|X<rsub|1>,A<rsub|1>>|)>d\<mu\><rsub|1>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[example:
-      <reference|non negative integral characteristics>]>>>|<cell|\<mu\><rsub|2><around*|(|A<rsub|2>|)>\<cdot\>\<mu\><rsub|1><around*|(|A<rsub|1>|)>>>>>
+      <reference|non negative integral characteristics>]>>>|<cell|\<mu\><rsub|2><around*|(|A<rsub|2>|)>\<cdot\>\<mu\><rsub|1><around*|(|A<rsub|1>|)>>>|<row|<cell|>|<cell|=>|<cell|\<mu\><rsub|1><around*|(|A<rsub|1>|)>\<cdot\>\<mu\><rsub|2><around*|(|A<rsub|2>|)>>>>>
     </eqnarray*>
 
     To summarize we have\ 
 
     <\equation>
       <label|eq 20.980.280>\<forall\>A<rsub|1>\<in\>\<cal-A\><rsub|1>,\<forall\>A<rsub|2>\<in\>\<cal-A\><rsub|2><text|
-      we have ><around*|(|\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>|)><around*|(|A<rsub|1>\<cdot\>A<rsub|2>|)>=\<mu\><rsub|1><around*|(|A<rsub|1>|)>\<cdot\>\<mu\><rsub|12><around*|(|A<rsub|2>|)>
+      we have ><around*|(|\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>|)><around*|(|A<rsub|1>\<cdot\>A<rsub|2>|)>=\<mu\><rsub|1><around*|(|A<rsub|1>|)>\<cdot\>\<mu\><rsub|2><around*|(|A<rsub|2>|)>
     </equation>
 
     Now if <math|\<pi\>> is another measure on
@@ -42631,10 +42649,10 @@
     </equation>
 
     Let <math|x=<around*|(|x<rsub|1>,x<rsub|2>|)>\<in\>X<rsub|1>\<cdot\>X<rsub|2>>
-    then <math|x<rsub|1>\<in\>X<rsub|1>\<wedge\>x<rsub|2>\<in\>X<rsub|2>>
-    then by the above there exist <math|k,l\<in\>\<bbb-N\>> such that
-    <math|x<rsub|1>\<in\>E<rsub|1,k>\<wedge\>x<rsub|2>\<in\>E<rsub|2,k>> so
-    that <math|x=<around*|(|x<rsub|1>,x<rsub|2>|)>\<in\>E<rsub|1,max<around*|(|k,l|)>>\<cdot\>E<rsub|2,max<around*|(|k,l|)>>\<subseteq\><big|cup><rsub|k\<in\>\<bbb-N\>><around*|(|E<rsub|1,k>\<cdot\>E<rsub|2,k>|)>>.
+    then <math|x<rsub|1>\<in\>X<rsub|1>\<wedge\>x<rsub|2>\<in\>X<rsub|2>> so
+    that by the above there exist <math|k,l\<in\>\<bbb-N\>> such that
+    <math|x<rsub|1>\<in\>E<rsub|1,k>\<wedge\>x<rsub|2>\<in\>E<rsub|2,k>>
+    hence <math|x=<around*|(|x<rsub|1>,x<rsub|2>|)>\<in\>E<rsub|1,max<around*|(|k,l|)>>\<cdot\>E<rsub|2,max<around*|(|k,l|)>>\<subseteq\><big|cup><rsub|k\<in\>\<bbb-N\>><around*|(|E<rsub|1,k>\<cdot\>E<rsub|2,k>|)>>.
     As also <math|\<forall\>k\<in\>\<bbb-N\>>
     <math|E<rsub|1,k>\<cdot\>E<rsub|2,k>\<subseteq\>X<rsub|1>\<cdot\>X<rsub|2>>
     it follows that\ 
@@ -42657,7 +42675,9 @@
 
     Finally the only thing left to prove is that
     <math|><math|<around*|(|\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>|)><around*|(|Q|)>=<big|int><rsup|+>\<mu\><rsub|1><around*|(|Q<rsub|<around*|[|2,x|]>>|)>\<mu\><rsub|2><around*|(|d
-    x|)>>. Define now\ 
+    x|)>>. As <math|\<forall\>Q\<in\>\<cal-A\>>
+    <math|<rigid|f<rsub|2,Q>\<in\>\<cal-M\><rsup|+><around*|[|X,\<cal-A\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>>
+    [see eq: <reference|eq 20.975.280>] we can define\ 
 
     <\equation*>
       \<pi\>:\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>\<rightarrow\><around*|[|0,\<infty\>|]><text|
@@ -42666,7 +42686,7 @@
     </equation*>
 
     Let <math|x\<in\>X<rsub|2>> then <math|f<rsub|2,\<varnothing\>><around*|(|x|)>=\<mu\><rsub|1><around*|(|\<varnothing\><rsub|<around*|[|2,x|]>>|)>\<equallim\><rsub|<text|[theorem:
-    <reference|lemma 20.613.279>]>>\<mu\><rsub|1><around*|(|\<varnothing\>|)>=0>
+    <reference|lemma 20.613.279>(3)]>>\<mu\><rsub|1><around*|(|\<varnothing\>|)>=0>
     which proves that <math|f<rsub|2,\<varnothing\>>=C<rsub|0>>. Applying
     then [theorem: <reference|non negative integral constant>] we have that
     <math|<big|int><rsup|+>f<rsub|2,\<varnothing\>>d\<mu\><rsub|2>=<big|int><rsup|+>C<rsub|0>d\<mu\><rsub|2>=0\<cdot\>\<mu\><rsub|2><around*|(|X<rsub|2>|)>=0>
@@ -42682,8 +42702,8 @@
 
     <\equation*>
       <around*|(|A<rsub|i>|)><rsub|<around*|[|2,x|]>><big|cap><around*|(|A<rsub|j>|)><rsub|<around*|[|2,x|]>>\<equallim\><rsub|<text|[theorem:
-      <reference|lemma 20.613.279>]>><around*|(|A<rsub|i><big|cap>A<rsub|j>|)><rsub|<around*|[|2,x|]>>=\<varnothing\><rsub|<around*|[|2,x|]>>\<equallim\><rsub|<text|[theorem:
-      <reference|lemma 20.613.279>]>>\<varnothing\>
+      <reference|lemma 20.613.279>(10)]>><around*|(|A<rsub|i><big|cap>A<rsub|j>|)><rsub|<around*|[|2,x|]>>=\<varnothing\><rsub|<around*|[|2,x|]>>\<equallim\><rsub|<text|[theorem:
+      <reference|lemma 20.613.279>(3)]>>\<varnothing\>
     </equation*>
 
     which proves that\ 
@@ -42693,9 +42713,11 @@
       is pairwise disjoint>
     </equation>
 
+    Hence
+
     <\eqnarray*>
       <tformat|<table|<row|<cell|f<rsub|2,<big|sqcup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>><around*|(|x|)>>|<cell|=>|<cell|\<mu\><rsub|1><around*|(|<around*|(|<big|sqcup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)><rsub|<around*|[|2,x|]>>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
-      <reference|lemma 20.613.279>]>>>|<cell|\<mu\><rsub|1><around*|(|<big|sqcup><rsub|i\<in\>\<bbb-N\>><around*|(|A<rsub|i>|)><rsub|<around*|[|2,x|]>>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|lemma 20.613.279>(7)]>>>|<cell|\<mu\><rsub|1><around*|(|<big|sqcup><rsub|i\<in\>\<bbb-N\>><around*|(|A<rsub|i>|)><rsub|<around*|[|2,x|]>>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
       <reference|eq 20.985.280>]>>>|<cell|<big|sum><rsub|i=1><rsup|\<infty\>>\<mu\><rsub|2><around*|(|<around*|(|A<rsub|i>|)><rsub|<around*|[|2,x|]>>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|\<infty\>>f<rsub|2,A<rsub|i>><around*|(|x|)>>>>>
     </eqnarray*>
 
@@ -42742,11 +42764,11 @@
     <\description>
       <item*|<math|x\<in\>A<rsub|2>>>Then
       <math|f<rsub|2,A<rsub|1>\<cdot\>A<rsub|2>><around*|(|x|)>=\<mu\><rsub|1><around*|(|<around*|[|A<rsub|1>\<cdot\>A<rsub|2>|]><rsub|<around*|[|2,x|]>>|)>\<equallim\><rsub|<text|[theorem:
-      <reference|lemma 20.613.279>]>>\<mu\><rsub|1><around*|(|A<rsub|1>|)>=\<mu\><rsub|1><around*|(|A<rsub|1>|)>\<cdot\>\<cal-X\><rsub|X<rsub|2>,A<rsub|2>><around*|(|x|)>>
+      <reference|lemma 20.613.279>(8)]>>\<mu\><rsub|1><around*|(|A<rsub|1>|)>=\<mu\><rsub|1><around*|(|A<rsub|1>|)>\<cdot\>\<cal-X\><rsub|X<rsub|2>,A<rsub|2>><around*|(|x|)>>
 
       <item*|<math|x\<in\>X<rsub|2>\\A<rsub|2>>>Then
       <math|f<rsub|2,A<rsub|1>\<cdot\>A<rsub|2>><around*|(|x|)>=\<mu\><rsub|1><around*|(|<around*|[|A<rsub|1>\<cdot\>A<rsub|2>|]><rsub|<around*|[|2,x|]>>|)>\<equallim\><rsub|<text|[theorem:
-      <reference|lemma 20.613.279>]>>\<mu\><rsub|1><around*|(|\<varnothing\>|)>=\<mu\><rsub|1><around*|(|A<rsub|1>|)>\<cdot\>\<cal-X\><rsub|X<rsub|2>,A<rsub|2>><around*|(|x|)>>
+      <reference|lemma 20.613.279>(8)]>>\<mu\><rsub|1><around*|(|\<varnothing\>|)>=\<mu\><rsub|1><around*|(|A<rsub|1>|)>\<cdot\>\<cal-X\><rsub|X<rsub|2>,A<rsub|2>><around*|(|x|)>>
     </description>
 
     which proves that
@@ -42781,12 +42803,16 @@
     </equation*>
   </proof>
 
-  Having defined product measures it is time to define the integral of
-  product measures. First we define sections of functions.
+  Having defined the product of measures it is time to consider integrals
+  using this product measure. We don this in steps, starting with the
+  integral of simple functions, using then the fact that non negative
+  functions can be written as the limit of simple functions to condider the
+  integral of non negative measurable functions to finish at integrable
+  functions. First we define sections of functions.
 
   <\definition>
     Let <math|X<rsub|1>,X<rsub|2>,Y> be sets and
-    <math|f:X<rsub|1>\<circ\>X<rsub|2>\<rightarrow\>Y> a function then we
+    <math|f:X<rsub|1>\<cdot\>X<rsub|2>\<rightarrow\>Y> a function then we
     define:
 
     <\enumerate>
@@ -42899,22 +42925,14 @@
 
     <\note>
       In particular if <math|<around*|\<langle\>|Y,\<cal-B\>|\<rangle\>>=<around*|\<langle\>|<wide|\<bbb-R\>|\<wide-bar\>>,\<cal-B\><around*|[|<wide|\<bbb-R\>|\<wide-bar\>>|]>|\<rangle\>>>
-      then we have\ 
+      then we have for <math|f\<in\>\<cal-M\><around*|[|X,\<cal-A\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
+      that
 
       <\equation*>
-        If f\<in\>\<cal-M\><around*|[|X,\<cal-A\>,<wide|\<bbb-R\>|\<wide-bar\>>|]><text|
-        we have >\<forall\>x\<in\>X<rsub|1><text|
-        >f<around*|(|x,.|)>\<in\>\<cal-M\><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]><text|
-        and >\<forall\>x\<in\>X<rsub|2><text|
-        >f<around*|(|.,x|)>\<in\>\<cal-M\><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
-      </equation*>
-
-      <\equation*>
-        If f\<in\>\<cal-M\><rsup|+><around*|[|X,\<cal-A\>,<wide|\<bbb-R\>|\<wide-bar\>>|]><text|
-        we have >\<forall\>x\<in\>X<rsub|1><text|
-        >f<around*|(|x,.|)>\<in\>\<cal-M\><rsup|+><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]><text|
-        and >\<forall\>x\<in\>X<rsub|2><text|
-        >f<around*|(|.,x|)>\<in\>\<cal-M\><rsup|+><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
+        \<forall\>x\<in\>X<rsub|1><text| we have
+        >f<around*|(|x,\<cdot\>|)>\<in\>\<cal-M\><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,\<bbb-R\>|]><text|
+        and >\<forall\>y\<in\>X<rsub|2><text| we have
+        >f<around*|(|\<cdot\>,y|)>\<in\>\<cal-M\><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
       </equation*>
     </note>
   </lemma>
@@ -42927,7 +42945,7 @@
       have\ 
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|y\<in\><around*|(|f<around*|(|x,.|)>|)><rsup|-1><around*|(|B|)>>|<cell|\<Leftrightarrow\>>|<cell|f<around*|(|x,.|)><around*|(|y|)>\<in\>B>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|f<around*|(|x,y|)>\<in\>B>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|<around*|(|x,y|)>\<in\>f<rsup|-1><around*|(|B|)>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|y\<in\><around*|{|y\<in\>X<rsub|2>\|<around*|(|x,y|)>\<in\>f<rsup|-1><around*|(|B|)>|}>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|y\<in\><around*|(|f<rsup|-1><around*|(|B|)>|)><rsub|<around*|[|1,x|]>>>>>>
+        <tformat|<table|<row|<cell|y\<in\><around*|(|f<around*|(|x,.|)>|)><rsup|-1><around*|(|B|)>>|<cell|\<Leftrightarrow\>>|<cell|y\<in\>X<rsub|2>\<wedge\>f<around*|(|x,.|)><around*|(|y|)>\<in\>B>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|y\<in\>X<rsub|2>\<wedge\>f<around*|(|x,y|)>\<in\>B>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|y\<in\>X<rsub|2>\<wedge\><around*|(|x,y|)>\<in\>f<rsup|-1><around*|(|B|)>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|y\<in\><around*|{|y\<in\>X<rsub|2>\|<around*|(|x,y|)>\<in\>f<rsup|-1><around*|(|B|)>|}>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|y\<in\><around*|(|f<rsup|-1><around*|(|B|)>|)><rsub|<around*|[|1,x|]>>>>>>
       </eqnarray*>
 
       which proves that\ 
@@ -42950,7 +42968,7 @@
       have\ 
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|x\<in\><around*|(|f<around*|(|.,y|)>|)><rsup|-1><around*|(|B|)>>|<cell|\<Leftrightarrow\>>|<cell|f<around*|(|.,y|)><around*|(|x|)>\<in\>B>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|f<around*|(|x,y|)>\<in\>B>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|<around*|(|x,y|)>\<in\>f<rsup|-1><around*|(|B|)>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\><around*|{|x\<in\>X<rsub|1>\|<around*|(|x,y|)>\<in\>f<rsup|-1><around*|(|B|)>|}>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\><around*|(|f<rsup|-1><around*|(|B|)>|)><rsub|<around*|[|2,y|]>>>>>>
+        <tformat|<table|<row|<cell|x\<in\><around*|(|f<around*|(|.,y|)>|)><rsup|-1><around*|(|B|)>>|<cell|\<Leftrightarrow\>>|<cell|x\<in\>X<rsub|1>\<wedge\>f<around*|(|.,y|)><around*|(|x|)>\<in\>B>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\>X<rsub|1>\<wedge\>f<around*|(|x,y|)>\<in\>B>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\>X<rsub|1>\<wedge\><around*|(|x,y|)>\<in\>f<rsup|-1><around*|(|B|)>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\><around*|{|x\<in\>X<rsub|1>\|<around*|(|x,y|)>\<in\>f<rsup|-1><around*|(|B|)>|}>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\><around*|(|f<rsup|-1><around*|(|B|)>|)><rsub|<around*|[|2,y|]>>>>>>
       </eqnarray*>
 
       which proves that\ 
@@ -42983,13 +43001,31 @@
       >
     </equation*>
 
+    so that by [theorem: <reference|non negative integral is a extension>]\ 
+
+    <\equation*>
+      f\<in\>\<cal-M\><rsup|+><around*|[|X<rsub|1>\<cdot\>X<rsub|2>,\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
+    </equation*>
+
     then\ 
 
     <\equation*>
       \<forall\>x\<in\>X<rsub|1><text| we have
       >f<around*|(|x,.|)>\<in\>\<cal-S\><rsup|+><around*|[|X<rsub|2>,\<cal-A\><rsub|2>|]><text|
-      and >\<forall\>x\<in\>X<rsub|2><text| we have
-      >f<around*|(|.,x|)>\<in\>\<cal-S\><rsup|+><around*|[|X<rsub|1>,\<cal-A\><rsub|1>|]>
+      and >\<forall\>y\<in\>X<rsub|2><text| we have
+      >f<around*|(|.,y|)>\<in\>\<cal-S\><rsup|+><around*|[|X<rsub|1>,\<cal-A\><rsub|1>|]>
+    </equation*>
+
+    where\ 
+
+    <\equation*>
+      f<around*|(|\<cdot\>,y|)>:X<rsub|1>\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>>
+      <text|is defined by> f<around*|(|\<cdot\>,y|)><around*|(|x|)>=f<around*|(|x,y|)>
+    </equation*>
+
+    <\equation*>
+      f<around*|(|x,\<cdot\>|)>:X<rsub|2>\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>>
+      <text|is defined by> f<around*|(|x,\<cdot\>|)><around*|(|y|)>=f<around*|(|x,y|)>
     </equation*>
 
     and for the functions
@@ -43017,13 +43053,22 @@
     and\ 
 
     <\equation*>
-      f\<in\>\<cal-M\><rsup|+><around*|[|X<rsub|1>\<cdot\>X<rsub|2>,\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
-    </equation*>
-
-    <\equation*>
       <big|int><rsup|+>f d<around*|(|\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>|)>=<big|int><rsup|+>I<rsub|f,1>d\<mu\><rsub|1>=<big|int><rsup|+>I<rsub|f,2>d\<mu\><rsub|2>
     </equation*>
+
+    \;
   </lemma>
+
+  <\note>
+    If we use our convention [see convention: <reference|integral
+    convention>] this becomes
+
+    <\equation*>
+      <big|int><rsup|+>f d<around*|(|\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>|)>=<big|int><rsup|+><around*|(|<big|int><rsup|+>f<around*|(|x,y|)>\<mu\><around*|(|d
+      y|)>|)>\<mu\><around*|(|d x|)>=<big|int><rsup|+><around*|(|<big|int><rsup|+>f<around*|(|x,y|)>\<mu\><around*|(|d
+      x|)>|)>\<mu\><around*|(|d y|)>
+    </equation*>
+  </note>
 
   <\proof>
     As <math|f\<in\>\<cal-S\><rsup|+><around*|[|X<rsub|1>\<cdot\>X<rsub|2>,\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>|]>>
@@ -43047,16 +43092,16 @@
     <math|\<forall\>y\<in\>X<rsub|2>> that
 
     <\eqnarray*>
-      <tformat|<table|<row|<cell|f<around*|(|x,.|)><around*|(|y|)>>|<cell|=>|<cell|<around*|(|<big|sum><rsub|i=1><rsup|n>f<rsub|i>\<cdot\>\<cal-X\><rsub|X<rsub|1>\<cdot\>X<rsub|2>,A<rsub|i>>|)><around*|(|x,.|)><around*|(|y|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<big|sum><rsub|i=1><rsup|n>f<rsub|i>\<cdot\>\<cal-X\><rsub|X<rsub|1>\<cdot\>X<rsub|2>,A<rsub|i>>|)><around*|(|x,y|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|n>f<rsub|i>\<cdot\>\<cal-X\><rsub|X<rsub|1>\<cdot\>X<rsub|2>,A<rsub|i>><around*|(|x,y|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|n>f<rsub|i>\<cdot\><around*|(|\<cal-X\><rsub|X<rsub|1>\<cdot\>X<rsub|2>,A<rsub|i>>|)><around*|(|x,.|)><around*|(|y|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[lemma:
+      <tformat|<table|<row|<cell|f<around*|(|x,.|)><around*|(|y|)>>|<cell|=>|<cell|f<around*|(|x,y|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<big|sum><rsub|i=1><rsup|n>f<rsub|i>\<cdot\>\<cal-X\><rsub|X<rsub|1>\<cdot\>X<rsub|2>,A<rsub|i>>|)><around*|(|x,y|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|n>f<rsub|i>\<cdot\>\<cal-X\><rsub|X<rsub|1>\<cdot\>X<rsub|2>,A<rsub|i>><around*|(|x,y|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|n>f<rsub|i>\<cdot\><around*|(|\<cal-X\><rsub|X<rsub|1>\<cdot\>X<rsub|2>,A<rsub|i>>|)><around*|(|x,.|)><around*|(|y|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[lemma:
       <reference|lemma 20.628.280>]>>>|<cell|<big|sum><rsub|i=1><rsup|n>f<rsub|i>\<cdot\>\<cal-X\><rsub|X<rsub|2>,<around*|(|A<rsub|i>|)><rsub|<around*|[|1,x|]>>><around*|(|y|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<big|sum><rsub|i=1><rsup|n>f<rsub|i>\<cdot\>\<cal-X\><rsub|X<rsub|2>,<around*|(|A<rsub|i>|)><rsub|<around*|[|1,x|]>>>|)><around*|(|y|)>>>>>
     </eqnarray*>
 
-    Likewise if <math|x\<in\>X<rsub|2>> then we have
-    <math|\<forall\>y\<in\>X<rsub|1>> that\ 
+    Likewise if <math|y\<in\>X<rsub|2>> then we have
+    <math|\<forall\>x\<in\>X<rsub|1>> that\ 
 
     <\eqnarray*>
-      <tformat|<table|<row|<cell|f<around*|(|.,x|)><around*|(|y|)>>|<cell|=>|<cell|<around*|(|<big|sum><rsub|i=1><rsup|n>f<rsub|i>\<cdot\>\<cal-X\><rsub|X<rsub|1>\<cdot\>X<rsub|2>,A<rsub|i>>|)><around*|(|.,x|)><around*|(|y|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<big|sum><rsub|i=1><rsup|n>f<rsub|i>\<cdot\>\<cal-X\><rsub|X<rsub|1>\<cdot\>X<rsub|2>,A<rsub|i>>|)><around*|(|y,x|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|n>f<rsub|i>\<cdot\>\<cal-X\><rsub|X<rsub|1>\<cdot\>X<rsub|2>,A<rsub|i>><around*|(|y,x|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|n>f<rsub|i>\<cdot\><around*|(|\<cal-X\><rsub|X<rsub|1>\<cdot\>X<rsub|2>,A<rsub|i>>|)><around*|(|.,x|)><around*|(|y|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[lemma:
-      <reference|lemma 20.628.280>]>>>|<cell|<big|sum><rsub|i=1><rsup|n>f<rsub|i>\<cdot\>\<cal-X\><rsub|X<rsub|1>,<around*|(|A<rsub|i>|)><rsub|<around*|[|2,x|]>>><around*|(|y|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<big|sum><rsub|i=1><rsup|n>f<rsub|i>\<cdot\>\<cal-X\><rsub|X<rsub|1>,<around*|(|A<rsub|i>|)><rsub|<around*|[|2,x|]>>>|)><around*|(|y|)>>>>>
+      <tformat|<table|<row|<cell|f<around*|(|.,y|)><around*|(|x|)>>|<cell|=>|<cell|f<around*|(|x,y|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<big|sum><rsub|i=1><rsup|n>f<rsub|i>\<cdot\>\<cal-X\><rsub|X<rsub|1>\<cdot\>X<rsub|2>,A<rsub|i>>|)><around*|(|x,y|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|n>f<rsub|i>\<cdot\>\<cal-X\><rsub|X<rsub|1>\<cdot\>X<rsub|2>,A<rsub|i>><around*|(|x,y|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|n>f<rsub|i>\<cdot\><around*|(|\<cal-X\><rsub|X<rsub|1>\<cdot\>X<rsub|2>,A<rsub|i>>|)><around*|(|.,y|)><around*|(|x|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[lemma:
+      <reference|lemma 20.628.280>]>>>|<cell|<big|sum><rsub|i=1><rsup|n>f<rsub|i>\<cdot\>\<cal-X\><rsub|X<rsub|1>,<around*|(|A<rsub|i>|)><rsub|<around*|[|2,y|]>>><around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<big|sum><rsub|i=1><rsup|n>f<rsub|i>\<cdot\>\<cal-X\><rsub|X<rsub|1>,<around*|(|A<rsub|i>|)><rsub|<around*|[|2,y|]>>>|)><around*|(|x|)>>>>>
     </eqnarray*>
 
     Hence we have that\ 
@@ -43067,25 +43112,27 @@
     </equation>
 
     <\equation>
-      <label|eq 20.989.280>\<forall\>x\<in\>X<rsub|2><text| we have that
-      >f<around*|(|.,x|)>=<big|sum><rsub|i=1><rsup|n>f<rsub|i>\<cdot\>\<cal-X\><rsub|X<rsub|1>,<around*|(|A<rsub|i>|)><rsub|<around*|[|2,x|]>>>
+      <label|eq 20.989.280>\<forall\>y\<in\>X<rsub|2><text| we have that
+      >f<around*|(|.,y|)>=<big|sum><rsub|i=1><rsup|n>f<rsub|i>\<cdot\>\<cal-X\><rsub|X<rsub|1>,<around*|(|A<rsub|i>|)><rsub|<around*|[|2,y|]>>>
     </equation>
 
     Using [lemma: <reference|lemma 20.614.279>] we have
     <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>> that
     <math|\<forall\>x\<in\>X<rsub|1>> <math|<around*|(|A<rsub|i>|)><rsub|<around*|[|1,z|]>>\<in\>\<cal-A\><rsub|2>>
-    and <math|\<forall\>x\<in\>X<rsub|2>>
-    <math|<around*|(|A<rsub|i>|)><rsub|<around*|[|2,x|]>>\<in\>\<cal-A\><rsub|1>>
+    and <math|\<forall\>y\<in\>X<rsub|2>>
+    <math|<around*|(|A<rsub|i>|)><rsub|<around*|[|2,y|]>>\<in\>\<cal-A\><rsub|1>>
     which proves by [theorem: <reference|simple function measurable (1)>]
     that\ 
 
     <\equation>
-      <label|eq 20.990.280>f<around*|(|x,.|)>\<in\>\<cal-S\><rsup|+><around*|[|X<rsub|2>,\<cal-A\><rsub|2>|]><text|
-      and >f<around*|(|.,x|)>\<in\>\<cal-S\><rsup|+><around*|[|X<rsub|1>,\<cal-A\><rsub|1>|]>
+      <label|eq 20.990.280>\<forall\>x\<in\>X<rsub|1><text| we have
+      >f<around*|(|x,.|)>\<in\>\<cal-S\><rsup|+><around*|[|X<rsub|2>,\<cal-A\><rsub|2>|]><text|
+      and >\<forall\>y\<in\>X<rsub|2><text| we have
+      >f<around*|(|.,y|)>\<in\>\<cal-S\><rsup|+><around*|[|X<rsub|1>,\<cal-A\><rsub|1>|]>
     </equation>
 
-    Using the definition of the integral of simple functions we have then
-    that\ 
+    Using the definition of the integral of simple functions [see definition:
+    <reference|simple function integral>] we have then that\ 
 
     <\equation>
       <label|eq 20.991.280>\<forall\>x\<in\>X<rsub|1><text| we have that
@@ -43093,8 +43140,8 @@
     </equation>
 
     <\equation>
-      <label|eq 20.992.280>\<forall\>x\<in\>X<rsub|2><text| we have that
-      >I<rsub|f,2><around*|(|x|)>=<big|int><rsup|S>f<around*|(|.,x|)>d\<mu\><rsub|1>=<big|sum><rsub|i=1><rsup|n>f<rsub|i>\<cdot\>\<mu\><rsub|1><around*|(|<around*|(|A<rsub|i>|)><rsub|<around*|[|2,x|]>>|)>
+      <label|eq 20.992.280>\<forall\>y\<in\>X<rsub|2><text| we have that
+      >I<rsub|f,2><around*|(|y|)>=<big|int><rsup|S>f<around*|(|.,y|)>d\<mu\><rsub|1>=<big|sum><rsub|i=1><rsup|n>f<rsub|i>\<cdot\>\<mu\><rsub|1><around*|(|<around*|(|A<rsub|i>|)><rsub|<around*|[|2,y|]>>|)>
     </equation>
 
     Define\ 
@@ -43106,7 +43153,7 @@
 
     <\equation>
       <label|eq 20.994.280>f<rsub|2,A<rsub|i>>:X<rsub|2>\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>><text|
-      where <math|f<rsub|2,A<rsub|i>><around*|(|x|)>=\<mu\><rsub|1><around*|(|<around*|(|A<rsub|i>|)><rsub|<around*|[|2,x|]>>|)><text|>>>
+      where <math|f<rsub|2,A<rsub|i>><around*|(|y|)>=\<mu\><rsub|1><around*|(|<around*|(|A<rsub|i>|)><rsub|<around*|[|2,y|]>>|)><text|>>>
     </equation>
 
     then we have
@@ -43141,7 +43188,8 @@
     and\ 
 
     <\equation*>
-      <big|int><rsup|+>I<rsub|f,1>d\<mu\><rsub|1>=<big|sum><rsub|i=1><rsup|n>f<rsub|i>\<cdot\><big|int><rsup|+>f<rsub|1,A<rsub|i>>d\<mu\><rsub|1>=<big|sum><rsub|i=1><rsup|n>f<rsub|i>\<cdot\><around*|(|\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>|)><around*|(|A<rsub|i>|)>
+      <big|int><rsup|+>I<rsub|f,1>d\<mu\><rsub|1>=<big|sum><rsub|i=1><rsup|n>f<rsub|i>\<cdot\><big|int><rsup|+>f<rsub|1,A<rsub|i>>d\<mu\><rsub|1><below|=|<text|[eq:
+      <reference|eq 20.997.280>]>><big|sum><rsub|i=1><rsup|n>f<rsub|i>\<cdot\><around*|(|\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>|)><around*|(|A<rsub|i>|)>
     </equation*>
 
     <\equation*>
@@ -43149,7 +43197,8 @@
     </equation*>
 
     <\equation*>
-      <big|int><rsup|+>I<rsub|f,2>d\<mu\><rsub|1>=<big|sum><rsub|i=1><rsup|n><big|int><rsup|+>f<rsub|2,A<rsub|i>>d\<mu\><rsub|2>=<big|sum><rsub|i=1><rsup|n>f<rsub|i>\<cdot\><around*|(|\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>|)><around*|(|A<rsub|i>|)>
+      <big|int><rsup|+>I<rsub|f,2>d\<mu\><rsub|1>=<big|sum><rsub|i=1><rsup|n><big|int><rsup|+>f<rsub|2,A<rsub|i>>d\<mu\><rsub|2><below|=|<text|[eq:
+      <reference|eq 20.997.280>]>><big|sum><rsub|i=1><rsup|n>f<rsub|i>\<cdot\><around*|(|\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>|)><around*|(|A<rsub|i>|)>
     </equation*>
 
     Combining the above with [eq: <reference|eq 20.988.281>] we have that\ 
@@ -43166,6 +43215,11 @@
       and ><big|int><rsup|+>f d<around*|(|\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>|)>=<big|int><rsup|+>I<rsub|f,1>d\<mu\><rsub|1>=<big|int><rsup|+>I<rsub|f,2>d\<mu\><rsub|2>
     </equation*>
   </proof>
+
+  Extending the above lemma to non negative measurable functions leads to
+  Tonelli's Theorem.
+
+  TODO
 
   <\theorem>
     <label|Tonelli theorem (1)><dueto|Tonelli><index|Tonelli's theorem>Let
@@ -43191,6 +43245,18 @@
       defined by >I<rsub|f,2><around*|(|x|)>=<big|int><rsup|+>f<around*|(|.,x|)>d\<mu\><rsub|1>
     </equation*>
 
+    where\ 
+
+    <\equation*>
+      f<around*|(|\<cdot\>,y|)>:X<rsub|1>\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>>
+      <text|is defined by> f<around*|(|\<cdot\>,y|)><around*|(|x|)>=f<around*|(|x,y|)>
+    </equation*>
+
+    <\equation*>
+      f<around*|(|x,\<cdot\>|)>:X<rsub|2>\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>>
+      <text|is defined by> f<around*|(|x,\<cdot\>|)><around*|(|y|)>=f<around*|(|x,y|)>
+    </equation*>
+
     that\ 
 
     <\equation*>
@@ -43208,18 +43274,12 @@
       above is equivalent with saying that
 
       <\equation*>
-        <big|int><rsup|+>f d<around*|(|\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>|)>=<big|int><rsup|+><around*|(|<big|int><rsup|+>f<around*|(|x,.|)>d\<mu\><rsub|2>|)>\<mu\><rsub|1><around*|(|d
-        x|)>=<big|int><rsup|+><around*|(|<big|int><rsup|+>f<around*|(|x,y|)>\<mu\><around*|(|d
-        y|)>|)>\<mu\><around*|(|d x|)>
+        <big|int><rsup|+>f d<around*|(|\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>|)>=<big|int><rsup|+><around*|(|<big|int><rsup|+>f<around*|(|x,y|)>\<mu\><around*|(|d
+        y|)>|)>\<mu\><around*|(|d x|)>=<big|int><rsup|+><around*|(|<big|int><rsup|+>f<around*|(|x,y|)>\<mu\><around*|(|d
+        x|)>|)>\<mu\><around*|(|d y|)>
       </equation*>
 
       \ 
-
-      <\equation*>
-        <big|int><rsup|+>f d<around*|(|\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>|)>=<big|int><rsup|+><around*|(|<big|int><rsup|+>f<around*|(|.,y|)>d\<mu\><rsub|1>|)>\<mu\><rsub|2><around*|(|d
-        y|)>=<big|int><rsup|+><around*|(|<big|int><rsup|+>f<around*|(|x,y|)>\<mu\><around*|(|d
-        x|)>|)>\<mu\><around*|(|d y|)>
-      </equation*>
     </note>
 
     <\note>
@@ -43232,15 +43292,188 @@
 
     <\note>
       By [lemma: <reference|lemma 20.629.280>] we have that
-      <math|\<forall\>x\<in\>X<rsub|1>> that
-      <math|f<around*|(|x,.|)>\<in\>\<cal-M\><rsup|+><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
-      and <math|\<forall\>x\<in\>X<rsub|2><text| that
-      >f<around*|(|.,x|)>\<in\>\<cal-M\><rsup|+><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
+      <math|\<forall\>x\<in\>X<rsub|1>> \ <math|f<around*|(|x,.|)>\<in\>\<cal-M\><rsup|+><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
+      and <math|\<forall\>y\<in\>X<rsub|2><text| that
+      >f<around*|(|.,y|)>\<in\>\<cal-M\><rsup|+><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
       so that <math|<big|int><rsup|+>f<around*|(|x,.|)>d\<mu\><rsub|2>> and
-      <math|<big|int><rsup|+>f<around*|(|.,x|)>d\<mu\><rsub|1>> are well
+      <math|<big|int><rsup|+>f<around*|(|.,y|)>d\<mu\><rsub|1>> are well
       defined.
     </note>
   </theorem>
+
+  <\proof>
+    As <math|f\<in\>\<cal-M\><rsup|+><around*|[|X<rsub|1>\<cdot\>X<rsub|2>,\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
+    there exist by \ [theorem: <reference|non negative integral alternative>]
+    a sequence\ 
+
+    <\equation>
+      <label|eq 21.1004.307><around*|{|f<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-S\><rsup|+><around*|[|X<rsub|1>\<cdot\>X<rsub|2>,\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>|]>
+    </equation>
+
+    such that\ 
+
+    <\equation>
+      <label|eq 21.1005.307>\<forall\><around*|(|x,y|)>\<in\>X<rsub|1>\<cdot\>X<rsub|2><text|
+      we have >\<forall\>i\<in\>\<bbb-N\><text| that
+      >f<rsub|i><around*|(|x,y|)>\<leqslant\>f<rsub|i+1><around*|(|x,y|)>
+    </equation>
+
+    <\equation>
+      <label|eq 21.1006.307>\<forall\><around*|(|x,y|)>\<in\>X<rsub|1>\<cdot\>X<rsub|2><text|
+      we have ><below|lim|i\<rightarrow\>\<infty\>>f<rsub|i><around*|(|x,y|)><text|
+      exist and >f<around*|(|x,y|)>=<below|lim|i\<rightarrow\>\<infty\>>f<rsub|i><around*|(|x,y|)>
+    </equation>
+
+    <\equation>
+      <label|eq 21.1007.307><below|lim|n\<rightarrow\>\<infty\>><big|int><rsup|S>f<rsub|i>d<around*|(|\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>|)><text|
+      exist and ><big|int><rsup|+>f d<around*|(|\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>|)>=<below|lim|i\<rightarrow\>\<infty\>><big|int><rsup|S>f<rsub|i>d<around*|(|\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>|)>
+    </equation>
+
+    As <math|<big|int><rsup|+>> is a extension of <math|<big|int><rsup|S>>
+    [see theorem: <reference|non negative integral is a extension>] we have
+    that\ 
+
+    <\equation>
+      <label|eq 21.1008.307><around*|{|f<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-M\><rsup|+><around*|[|X<rsub|1>\<cdot\>X<rsub|2>,\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
+    </equation>
+
+    and\ 
+
+    <\equation>
+      <label|eq 21.1009.307><below|lim|n\<rightarrow\>\<infty\>><big|int><rsup|+>f<rsub|i>d<around*|(|\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>|)><text|
+      exist and ><big|int><rsup|+>f d<around*|(|\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>|)>=<below|lim|i\<rightarrow\>\<infty\>><big|int><rsup|+>f<rsub|i>d<around*|(|\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>|)>
+    </equation>
+
+    Let <math|i\<in\>\<bbb-N\>> then by the previous lemma [see lemma:
+    <reference|lemma 20.630.280>] we have that
+    <math|\<forall\>x\<in\>X<rsub|1>> and <math|\<forall\>y\<in\>X<rsub|2>>\ 
+
+    <\equation>
+      <label|eq 21.1010.307>f<rsub|i><around*|(|x,\<cdot\>|)>\<in\>\<cal-S\><rsup|+><around*|[|X<rsub|1>,\<cal-A\><rsub|1>|]>\<subseteq\>\<cal-M\><rsup|+><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|]><text|
+      and >f<rsub|i><around*|(|\<cdot\>,y|)>\<in\>\<cal-S\><rsup|+><around*|[|X<rsub|2>,\<cal-A\><rsub|2>|]>\<subseteq\>\<cal-M\><rsup|+><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
+    </equation>
+
+    and for the functions
+
+    <\equation>
+      <label|eq 21.1011.308>I<rsub|i,1>:X<rsub|1>\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>><text|
+      defined by >I<rsub|i,1><around*|(|x|)>=<big|int><rsup|+>f<rsub|i><around*|(|x,\<cdot\>|)>d\<mu\><rsub|2><text|>
+    </equation>
+
+    <\equation>
+      <label|eq 21.1012.308>I<rsub|i,2>:X<rsub|2>\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>><text|
+      defined by >I<rsub|i,2><around*|(|y|)>=<big|int><rsup|+>f<rsub|i><around*|(|\<cdot\>,y|)>d\<mu\><rsub|1><text|>
+    </equation>
+
+    that\ 
+
+    <\equation>
+      <label|eq 21.1011.307>\<forall\>i\<in\>\<bbb-N\><text|
+      >I<rsub|i,1>\<in\>\<cal-M\><rsup|+><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|]><text|
+      and >I<rsub|i,2>\<in\>\<cal-M\><rsup|+><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
+    </equation>
+
+    and\ 
+
+    <\equation>
+      <label|eq 21.1012.307>\<forall\>i\<in\>\<bbb-N\><text|
+      ><big|int><rsup|+>f<rsub|i>d<around*|(|\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>|)>=<big|int><rsup|+>I<rsub|i,1>d\<mu\><rsub|1>=<big|int><rsup|+>I<rsub|i,2>d\<mu\><rsub|2>
+    </equation>
+
+    Further
+
+    <\equation>
+      <label|eq 21.1013.307>\<forall\>x\<in\>X<rsub|1>,\<forall\>y\<in\>X<rsub|2><text|
+      that >\<forall\>i\<in\>\<bbb-N\><text| we have
+      >f<rsub|i><around*|(|x,\<cdot\>|)><around*|(|y|)>=f<rsub|i><around*|(|x,y|)>\<leqslant\>f<rsub|i+1><around*|(|x,y|)>=f<rsub|i+1><around*|(|x,\<cdot\>|)><around*|(|y|)>
+    </equation>
+
+    <\equation>
+      <label|eq 21.1014.307>\<forall\>y\<in\>X<rsub|2>,\<forall\>x\<in\>X<rsub|1><text|
+      that >\<forall\>i\<in\>\<bbb-N\><text| we have
+      >f<rsub|i><around*|(|\<cdot\>,y|)><around*|(|x|)>=f<rsub|i><around*|(|x,y|)>\<leqslant\>f<rsub|i+1><around*|(|x,y|)>=f<rsub|i+1><around*|(|\<cdot\>,y|)><around*|(|x|)>
+    </equation>
+
+    Using now [theorem: <reference|non negative integral scalar product, sum
+    inequality>] on the above proves that <math|\<forall\>i\<in\>\<bbb-N\>>
+
+    <\equation*>
+      \<forall\>x\<in\>X<rsub|1><text| \ ><big|int><rsup|+>f<rsub|i><around*|(|x,\<cdot\>|)>d\<mu\><rsub|2>\<leqslant\><big|int><rsup|+>f<rsub|i+1><around*|(|x,\<cdot\>|)>d\<mu\><rsub|2><text|
+      and >\<forall\>y\<in\>X<rsub|2><text|
+      \ ><big|int><rsup|+>f<rsub|i><around*|(|\<cdot\>,y|)>d\<mu\><rsub|1>\<leqslant\><big|int><rsup|+>f<rsub|i+1><around*|(|\<cdot\>,y|)>d\<mu\><rsub|1>
+    </equation*>
+
+    from which it follows that\ 
+
+    <\equation>
+      <label|eq 21.1015.307>\<forall\>x\<in\>X<rsub|1>,\<forall\>i\<in\>\<bbb-N\><text|
+      \ >I<rsub|i,1><around*|(|x|)>\<leqslant\>I<rsub|i+1,1><around*|(|x|)><text|
+      and >\<forall\>y\<in\>X<rsub|2>,\<forall\>i\<in\>\<bbb-N\><text|
+      \ >I<rsub|i,2><around*|(|y|)>\<leqslant\>I<rsub|i+1,2><around*|(|y|)>
+    </equation>
+
+    Thanks to [eqs: <reference|eq 21.1010.307>, <reference|eq 21.1013.307>,
+    <reference|eq 21.1014.307>] we can apply the Monotone Convergence Theorem
+    [see theorem: <reference|Monotone Convergence Theorem (1)>] to prove that
+    <math|\<forall\>x\<in\>X<rsub|1>> and <math|\<forall\>y\<in\>X<rsub|2>>
+    the following functions are well defined
+
+    <\equation*>
+      \<forall\>x\<in\>X<rsub|1><text| ><below|lim|i\<rightarrow\>\<infty\>>f<rsub|i><around*|(|x,\<cdot\>|)><text|
+      and that >\<forall\>y\<in\>X<rsub|2><text|
+      ><below|lim|i\<rightarrow\>\<infty\>>f<rsub|i><around*|(|\<cdot\>,y|)>
+    </equation*>
+
+    and\ 
+
+    <\equation>
+      <label|eq 21.1016.307><below|lim|i\<rightarrow\>\<infty\>><big|int><rsup|+>f<rsub|i><around*|(|x,\<cdot\>|)>d\<mu\><rsub|2>=<big|int><rsup|+><below|lim|i\<rightarrow\>\<infty\>>f<rsub|i><around*|(|x,\<cdot\>|)>d\<mu\><rsub|2><text|
+      and ><below|lim|i\<rightarrow\>\<infty\>><big|int><rsup|+>f<rsub|i><around*|(|\<cdot\>,y|)>d\<mu\><rsub|2>=<big|int><rsup|+><below|lim|i\<rightarrow\>\<infty\>>f<rsub|i><around*|(|\<cdot\>,y|)>d\<mu\><rsub|2>
+    </equation>
+
+    As we have that
+
+    <\equation*>
+      <around*|(|<below|lim|i\<rightarrow\>\<infty\>>f<rsub|i><around*|(|x,\<cdot\>|)>|)><around*|(|y|)><below|=|def><below|lim|i\<rightarrow\>\<infty\>><around*|(|f<rsub|i><around*|(|x,\<cdot\>|)><around*|(|y|)>|)>=<below|lim|i\<rightarrow\>\<infty\>>f<rsub|i><around*|(|x,y|)><below|=|<text|[eq:
+      <reference|eq 21.1006.307>]>>f<around*|(|x,y|)>=f<around*|(|x,\<cdot\>|)><around*|(|y|)>
+    </equation*>
+
+    <\equation*>
+      <around*|(|<below|lim|i\<rightarrow\>\<infty\>>f<rsub|i><around*|(|\<cdot\>,y|)>|)><around*|(|x|)><below|=|def><below|lim|i\<rightarrow\>\<infty\>><around*|(|f<rsub|i><around*|(|\<cdot\>,y|)><around*|(|x|)>|)>=<below|lim|i\<rightarrow\>\<infty\>>f<rsub|i><around*|(|x,y|)><below|=|<text|[eq:
+      <reference|eq 21.1006.307>]>>f<around*|(|x,y|)>=f<around*|(|\<cdot\>,y|)><around*|(|x|)>
+    </equation*>
+
+    proving that\ 
+
+    <\equation>
+      <label|eq 21.1017.307>\<forall\>x\<in\>X<rsub|1><text| we have
+      >f<around*|(|x,\<cdot\>|)>=<below|lim|i\<rightarrow\>\<infty\>>f<rsub|i><around*|(|x,\<cdot\>|)><text|
+      and >\<forall\>y\<in\>X<rsub|2><text| we have
+      >f<around*|(|\<cdot\>,y|)>=<below|lim|i\<rightarrow\>\<infty\>>f<rsub|i><around*|(|\<cdot\>,y|)>
+    </equation>
+
+    which combined with [eq: <reference|eq 21.1016.307>] proves that\ 
+
+    <\equation>
+      <label|eq 21.1018.307>\<forall\>x\<in\>X<rsub|1><text|
+      ><big|int><rsup|+>f<around*|(|x,\<cdot\>|)>d\<mu\><rsub|2>=<below|lim|i\<rightarrow\>\<infty\>><big|int><rsup|+>f<rsub|i><around*|(|x,\<cdot\>|)>d\<mu\><rsub|2><text|
+      >\<wedge\><text| >\<forall\>y\<in\>X<rsub|2><text|
+      ><big|int><rsup|+>f<around*|(|\<cdot\>,y|)>d\<mu\><rsub|1>=<below|lim|i\<rightarrow\>\<infty\>><big|int><rsup|+>f<around*|(|\<cdot\>,y|)>d\<mu\><rsub|1>
+    </equation>
+
+    Substituting [eqs: <reference|eq 21.1011.308>, <reference|eq
+    21.1012.308>] in the above gives\ 
+
+    <\equation>
+      \<forall\>x\<in\>X<rsub|1> <big|int><rsup|+>f<around*|(|x,\<cdot\>|)>d\<mu\><rsub|2>=<below|lim|i\<rightarrow\>\<infty\>>I<rsub|i,1><around*|(|x|)><text|
+      and >\<forall\>y\<in\>X<rsub|2><text|
+      ><big|int><rsup|+>f<around*|(|\<cdot\>,y|)>d\<mu\><rsub|1>=<below|lim|i\<rightarrow\>\<infty\>>I<rsub|i,2><around*|(|y|)>
+    </equation>
+
+    TODO\ 
+  </proof>
+
+  TODO remove this as the above proof is finished
 
   <\proof>
     As <math|f\<in\>\<cal-M\><rsup|+><around*|[|X<rsub|1>\<cdot\>X<rsub|2>,\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
@@ -43248,7 +43481,7 @@
     <reference|non negative integral is a extension>] a sequence
 
     <\equation>
-      <label|eq 20.999.280><around*|{|f<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-S\><rsup|+><around*|[|X<rsub|1>\<cdot\>X<rsub|2>,\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
+      <label|eq 20.999.280><around*|{|f<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-S\><rsup|+><around*|[|X<rsub|1>\<cdot\>X<rsub|2>,\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]>\<subseteq\>\<cal-M\><rsup|+><around*|[|X<rsub|1>\<cdot\>X<rsub|2>,\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
     </equation>
 
     such that
@@ -43281,7 +43514,7 @@
     <\equation>
       <label|eq 20.1004.280>I<rsub|f,i,2>\<in\>\<cal-M\><rsup|+><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]><text|
       where >I<rsub|f,i,2>:X<rsub|2>\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>><text|
-      is defined by >I<rsub|f,i,2><around*|(|x|)>=<big|int><rsup|+>f<rsub|i><around*|(|.,x|)>d\<mu\><rsub|1><text|>
+      is defined by >I<rsub|f,i,2><around*|(|y|)>=<big|int><rsup|+>f<rsub|i><around*|(|.,y|)>d\<mu\><rsub|1><text|>
     </equation>
 
     <\equation>
@@ -43293,43 +43526,44 @@
 
     <\equation>
       <label|eq 20.1006.280>\<forall\>x\<in\>X<rsub|1><text|
-      >\<forall\>y\<in\>X<rsub|2><text| we have
+      >\<forall\>y\<in\>X<rsub|2><text| that
       >\<forall\>i\<in\>\<bbb-N\><text| >f<rsub|i><around*|(|x,.|)><around*|(|y|)>=f<rsub|i><around*|(|x,y|)>\<leqslant\>f<rsub|i+1><around*|(|x,y|)>=f<rsub|i+1><around*|(|x,.|)><around*|(|y|)>
     </equation>
 
     <\equation>
-      <label|eq 20.1007.280>\<forall\>x\<in\>X<rsub|2><text|
-      >\<forall\>y\<in\>X<rsub|1><text| we have
-      >\<forall\>i\<in\>\<bbb-N\><text| >f<rsub|i><around*|(|.,x|)><around*|(|y|)>=f<rsub|i><around*|(|y,x|)>\<leqslant\>f<rsub|i+1><around*|(|y,x|)>=f<rsub|i+1><around*|(|.,x|)><around*|(|y|)>
+      <label|eq 20.1007.280>\<forall\>x\<in\>X<rsub|1><text|
+      >\<forall\>y\<in\>X<rsub|2><text| that
+      >\<forall\>i\<in\>\<bbb-N\><text| >f<rsub|i><around*|(|.,y|)><around*|(|x|)>=f<rsub|i><around*|(|x,y|)>\<leqslant\>f<rsub|i+1><around*|(|x,y|)>=f<rsub|i+1><around*|(|.,y|)><around*|(|x|)>
     </equation>
 
     Let <math|x\<in\>X<rsub|1>> then <math|\<forall\>y\<in\>X<rsub|2>> we
     have <math|f<around*|(|x,.|)><around*|(|y|)>=f<around*|(|x,y|)>\<equallim\><rsub|<text|]eq:
     <reference|eq 20.1000.280>]>><below|lim|i\<rightarrow\>\<infty\>>f<rsub|i><around*|(|x,y|)>=<below|lim|i\<rightarrow\>\<infty\>>f<rsub|i><around*|(|x,.|)><around*|(|y|)>>.
-    Also for <math|x\<in\>X<rsub|2>> we have
-    <math|\<forall\>y\<in\>X<rsub|1>> we have
-    <math|f<around*|(|.,x|)><around*|(|y|)>=f<around*|(|y,x|)>\<equallim\><rsub|<text|]eq:
-    <reference|eq 20.1000.280>]>><below|lim|i\<rightarrow\>\<infty\>>f<rsub|i><around*|(|y,x|)>=<below|lim|i\<rightarrow\>\<infty\>>f<rsub|i><around*|(|.,x|)><around*|(|y|)>>
-    which proves that\ 
+    Also for <math|y\<in\>X<rsub|2>> we have
+    <math|\<forall\>x\<in\>X<rsub|1>> we have
+    <math|f<around*|(|.,y|)><around*|(|x|)>=f<around*|(|x,y|)>\<equallim\><rsub|<text|]eq:
+    <reference|eq 20.1000.280>]>><below|lim|i\<rightarrow\>\<infty\>>f<rsub|i><around*|(|x,xy|)>=<below|lim|i\<rightarrow\>\<infty\>>f<rsub|i><around*|(|.,y|)><around*|(|x|)>>
+    which proves that:\ 
 
     <\equation>
       <label|eq 20.1008.280>\<forall\>x\<in\>X<rsub|1><text| we have
       >f<around*|(|x,.|)>=<below|lim|i\<rightarrow\>\<infty\>>f<rsub|i><around*|(|x,.|)><text|
-      and >\<forall\>x\<in\>X<rsub|2><text| we have
-      >f<around*|(|.,x|)>=<below|lim|i\<rightarrow\>\<infty\>>f<rsub|i><around*|(|.,x|)>
+      and >\<forall\>y\<in\>X<rsub|2><text| we have
+      >f<around*|(|.,y|)>=<below|lim|i\<rightarrow\>\<infty\>>f<rsub|i><around*|(|.,y|)>
     </equation>
 
     Further as <math|f\<in\>\<cal-M\><rsup|+><around*|[|X<rsub|1>\<cdot\>X<rsub|2>,\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
-    it follows from [lemma: <reference|lemma 20.629.280>] that\ 
+    [see eq: <reference|eq 20.999.280>] it follows from [lemma:
+    <reference|lemma 20.629.280>] that\ 
 
     <\equation>
       <label|eq 20.1009.280>\<forall\>x\<in\>X<rsub|1><text|
       >f<around*|(|x,.|)>\<in\>\<cal-M\><rsup|+><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]><text|
-      and >\<forall\>x\<in\>X<rsub|2><text|
-      >f<around*|(|.,x|)>\<in\>\<cal-M\><rsup|+><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
+      and >\<forall\>y\<in\>X<rsub|2><text|
+      >f<around*|(|.,y|)>\<in\>\<cal-M\><rsup|+><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
     </equation>
 
-    The above [see eqs: <reference|eq 20.106.200>, <reference|eq
+    The above [see eqs: <reference|eq 20.1006.280>, <reference|eq
     20.1007.280>, <reference|eq 20.1008.280> and <reference|eq 20.1009.280>]
     allows us to use the Monotone Convergence Theorem [see theorem:
     <reference|Monotone Convergence Theorem (1)>] to prove that \ 
@@ -43346,15 +43580,15 @@
     <\equation>
       <label|eq 20.1011.280>\<forall\>x\<in\>X<rsub|1><text|
       ><big|int><rsup|+>f<around*|(|x,.|)>d\<mu\><rsub|2>=<below|lim|i\<rightarrow\>\<infty\>>I<rsub|f,i,1><around*|(|x|)><text|
-      and >\<forall\>x\<in\>X<rsub|2><text|
-      ><big|int><rsup|+>f<around*|(|.,x|)>d\<mu\><rsub|1>=<below|lim|i\<rightarrow\>\<infty\>>I<rsub|f,i,2>
+      and >\<forall\>y\<in\>X<rsub|2><text|
+      ><big|int><rsup|+>f<around*|(|.,y|)>d\<mu\><rsub|1>=<below|lim|i\<rightarrow\>\<infty\>>I<rsub|f,i,2>
     </equation>
 
     Define the functions\ 
 
     <\equation*>
       I<rsub|f,1>:X<rsub|1>\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>><text|
-      \ by >I<rsub|f,1><around*|(|x|)>=<big|int><rsup|+>f<around*|(|x,.|)>d\<mu\><rsub|1><text|
+      \ by >I<rsub|f,1><around*|(|x|)>=<big|int><rsup|+>f<around*|(|x,.|)>d\<mu\><rsub|2><text|
       and >I<rsub|f,2>:X<rsub|2>\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>><text|
       defined by >I<rsub|f,2><around*|(|x|)>=<big|int><rsup|+>f<around*|(|.,x|)>d\<mu\><rsub|1>
     </equation*>
@@ -48257,13 +48491,13 @@
 <\references>
   <\collection>
     <associate|20.809.248|<tuple|21.865|?>>
-    <associate|21.1044.291|<tuple|21.1098|?>>
+    <associate|21.1044.291|<tuple|21.1116|?>>
     <associate|Beppo Levi's Theorem|<tuple|21.377|?>>
     <associate|Borel measure on R and R^n are locally
-    finite|<tuple|21.588|?>>
+    finite|<tuple|21.589|?>>
     <associate|Constructing measures and sigma alegebra|<tuple|21.3.4|?>>
     <associate|Fatou's lemma|<tuple|21.381|?>>
-    <associate|Fubini's theorem|<tuple|21.569|?>>
+    <associate|Fubini's theorem|<tuple|21.570|?>>
     <associate|Hahn Decomposition Theorem|<tuple|21.487|?>>
     <associate|Holder's Inequality|<tuple|21.435|?>>
     <associate|Jordon Decomposition|<tuple|21.489|?>>
@@ -48296,16 +48530,16 @@
     <associate|LP spaces sum scalar product (1)|<tuple|21.422|?>>
     <associate|LP vector space|<tuple|21.423|?>>
     <associate|Lebesgue borel measure and linear
-    isomorphism|<tuple|21.617|?>>
+    isomorphism|<tuple|21.618|?>>
     <associate|Lebesgue borel measure and linear isomorphism
-    (n)|<tuple|21.620|?>>
-    <associate|Lebesgue borel measures are Radon measures|<tuple|21.590|?>>
-    <associate|Lebesgue measure and unitary transformation|<tuple|21.615|?>>
+    (n)|<tuple|21.621|?>>
+    <associate|Lebesgue borel measures are Radon measures|<tuple|21.591|?>>
+    <associate|Lebesgue measure and unitary transformation|<tuple|21.616|?>>
     <associate|Lebesgue's Dominated Convergence Theorem|<tuple|21.384|?>>
     <associate|Monotone Convergence Theorem (1)|<tuple|21.372|?>>
     <associate|Monotone Convergence Theorem (2)|<tuple|21.375|?>>
     <associate|R^n is the union of ]-i,i[|<tuple|21.70|?>>
-    <associate|Radon measure definition|<tuple|21.576|?>>
+    <associate|Radon measure definition|<tuple|21.577|?>>
     <associate|Radon-Nikodym (finite case)|<tuple|21.526|?>>
     <associate|Radon-Nikodym Theorem|<tuple|21.527|?>>
     <associate|Radon-Nikodym absolute continuity|<tuple|21.518|?>>
@@ -48318,7 +48552,7 @@
     <associate|Radon-Nikodym derivative|<tuple|21.533|?>>
     <associate|Radon-Nikodym integral example|<tuple|21.520|?>>
     <associate|Radon-Nikodym signed/complex|<tuple|21.532|?>>
-    <associate|Tonelli theorem (1)|<tuple|21.564|?>>
+    <associate|Tonelli theorem (1)|<tuple|21.565|?>>
     <associate|almost everywhere|<tuple|21.278|?>>
     <associate|almost everywhere and characteristic|<tuple|21.280|?>>
     <associate|almost everywhere complex functions|<tuple|21.395|?>>
@@ -48479,7 +48713,7 @@
     <associate|auto-99|<tuple|21.5.5.1|?>>
     <associate|cardinality of a product of sets|<tuple|21.1|?>>
     <associate|charasteristic function|<tuple|21.271|?>>
-    <associate|compact finite measure|<tuple|21.576|?>>
+    <associate|compact finite measure|<tuple|21.577|?>>
     <associate|complex integral|<tuple|21.403|?>>
     <associate|complex integral alternative|<tuple|21.410|?>>
     <associate|complex integral characteristics
@@ -48506,7 +48740,7 @@
     <associate|complex measure variation|<tuple|21.498|?>>
     <associate|complex measure variation is a measure|<tuple|21.500|?>>
     <associate|corollary 20.111.218|<tuple|21.12|?>>
-    <associate|corollary 21.533.285|<tuple|21.574|?>>
+    <associate|corollary 21.533.285|<tuple|21.575|?>>
     <associate|denumerable union properties|<tuple|21.13|?>>
     <associate|eq 15.81.439|<tuple|21.344|?>>
     <associate|eq 18.10.021|<tuple|21.37|?>>
@@ -48522,7 +48756,7 @@
     <associate|eq 18.20.021|<tuple|21.47|?>>
     <associate|eq 18.21.021|<tuple|21.48|?>>
     <associate|eq 18.22.021|<tuple|21.49|?>>
-    <associate|eq 18.240.291|<tuple|21.1155|?>>
+    <associate|eq 18.240.291|<tuple|21.1173|?>>
     <associate|eq 18.39.022|<tuple|21.85|?>>
     <associate|eq 18.40.022|<tuple|21.86|?>>
     <associate|eq 18.41.022|<tuple|21.87|?>>
@@ -48534,51 +48768,51 @@
     <associate|eq 19.11.039|<tuple|21.13|?>>
     <associate|eq 19.759.043|<tuple|21.916|?>>
     <associate|eq 20.100.200|<tuple|21.97|?>>
-    <associate|eq 20.1000.280|<tuple|21.1005|?>>
-    <associate|eq 20.1001.280|<tuple|21.1006|?>>
-    <associate|eq 20.1002.280|<tuple|21.1007|?>>
-    <associate|eq 20.1003.280|<tuple|21.1008|?>>
-    <associate|eq 20.1004.280|<tuple|21.1009|?>>
-    <associate|eq 20.1005.280|<tuple|21.1010|?>>
-    <associate|eq 20.1006.280|<tuple|21.1011|?>>
-    <associate|eq 20.1007.280|<tuple|21.1012|?>>
-    <associate|eq 20.1008.280|<tuple|21.1013|?>>
-    <associate|eq 20.1009.280|<tuple|21.1014|?>>
+    <associate|eq 20.1000.280|<tuple|21.1023|?>>
+    <associate|eq 20.1001.280|<tuple|21.1024|?>>
+    <associate|eq 20.1002.280|<tuple|21.1025|?>>
+    <associate|eq 20.1003.280|<tuple|21.1026|?>>
+    <associate|eq 20.1004.280|<tuple|21.1027|?>>
+    <associate|eq 20.1005.280|<tuple|21.1028|?>>
+    <associate|eq 20.1006.280|<tuple|21.1029|?>>
+    <associate|eq 20.1007.280|<tuple|21.1030|?>>
+    <associate|eq 20.1008.280|<tuple|21.1031|?>>
+    <associate|eq 20.1009.280|<tuple|21.1032|?>>
     <associate|eq 20.101.200|<tuple|21.98|?>>
-    <associate|eq 20.1010.2080|<tuple|21.1015|?>>
-    <associate|eq 20.1010.281|<tuple|21.1017|?>>
-    <associate|eq 20.1011.280|<tuple|21.1016|?>>
-    <associate|eq 20.1011.281|<tuple|21.1018|?>>
-    <associate|eq 20.1014.281|<tuple|21.1021|?>>
-    <associate|eq 20.1015.281|<tuple|21.1022|?>>
-    <associate|eq 20.1015.285|<tuple|21.1019|?>>
-    <associate|eq 20.1016.281|<tuple|21.1023|?>>
-    <associate|eq 20.1017.281|<tuple|21.1024|?>>
-    <associate|eq 20.1018.281|<tuple|21.1025|?>>
-    <associate|eq 20.1019.281|<tuple|21.1026|?>>
+    <associate|eq 20.1010.2080|<tuple|21.1033|?>>
+    <associate|eq 20.1010.281|<tuple|21.1035|?>>
+    <associate|eq 20.1011.280|<tuple|21.1034|?>>
+    <associate|eq 20.1011.281|<tuple|21.1036|?>>
+    <associate|eq 20.1014.281|<tuple|21.1039|?>>
+    <associate|eq 20.1015.281|<tuple|21.1040|?>>
+    <associate|eq 20.1015.285|<tuple|21.1037|?>>
+    <associate|eq 20.1016.281|<tuple|21.1041|?>>
+    <associate|eq 20.1017.281|<tuple|21.1042|?>>
+    <associate|eq 20.1018.281|<tuple|21.1043|?>>
+    <associate|eq 20.1019.281|<tuple|21.1044|?>>
     <associate|eq 20.102.200|<tuple|21.99|?>>
-    <associate|eq 20.1020.281|<tuple|21.1027|?>>
-    <associate|eq 20.1021.281|<tuple|21.1028|?>>
-    <associate|eq 20.1022.281|<tuple|21.1029|?>>
-    <associate|eq 20.1023.281|<tuple|21.1030|?>>
-    <associate|eq 20.1024.281|<tuple|21.1031|?>>
-    <associate|eq 20.1025.281|<tuple|21.1032|?>>
-    <associate|eq 20.1026.281|<tuple|21.1033|?>>
-    <associate|eq 20.1027.281|<tuple|21.1034|?>>
-    <associate|eq 20.1028.281|<tuple|21.1035|?>>
-    <associate|eq 20.1029.281|<tuple|21.1036|?>>
+    <associate|eq 20.1020.281|<tuple|21.1045|?>>
+    <associate|eq 20.1021.281|<tuple|21.1046|?>>
+    <associate|eq 20.1022.281|<tuple|21.1047|?>>
+    <associate|eq 20.1023.281|<tuple|21.1048|?>>
+    <associate|eq 20.1024.281|<tuple|21.1049|?>>
+    <associate|eq 20.1025.281|<tuple|21.1050|?>>
+    <associate|eq 20.1026.281|<tuple|21.1051|?>>
+    <associate|eq 20.1027.281|<tuple|21.1052|?>>
+    <associate|eq 20.1028.281|<tuple|21.1053|?>>
+    <associate|eq 20.1029.281|<tuple|21.1054|?>>
     <associate|eq 20.103.200|<tuple|21.100|?>>
-    <associate|eq 20.1033.283|<tuple|21.1037|?>>
-    <associate|eq 20.1034.284|<tuple|21.1038|?>>
-    <associate|eq 20.1035.284|<tuple|21.1039|?>>
-    <associate|eq 20.1036.284|<tuple|21.1040|?>>
-    <associate|eq 20.1037.284|<tuple|21.1041|?>>
-    <associate|eq 20.1038.284|<tuple|21.1042|?>>
-    <associate|eq 20.1039.284|<tuple|21.1043|?>>
+    <associate|eq 20.1033.283|<tuple|21.1055|?>>
+    <associate|eq 20.1034.284|<tuple|21.1056|?>>
+    <associate|eq 20.1035.284|<tuple|21.1057|?>>
+    <associate|eq 20.1036.284|<tuple|21.1058|?>>
+    <associate|eq 20.1037.284|<tuple|21.1059|?>>
+    <associate|eq 20.1038.284|<tuple|21.1060|?>>
+    <associate|eq 20.1039.284|<tuple|21.1061|?>>
     <associate|eq 20.104.200|<tuple|21.101|?>>
-    <associate|eq 20.1040.284|<tuple|21.1044|?>>
-    <associate|eq 20.1041.285|<tuple|21.1045|?>>
-    <associate|eq 20.1042.285|<tuple|21.1046|?>>
+    <associate|eq 20.1040.284|<tuple|21.1062|?>>
+    <associate|eq 20.1041.285|<tuple|21.1063|?>>
+    <associate|eq 20.1042.285|<tuple|21.1064|?>>
     <associate|eq 20.105.200|<tuple|21.102|?>>
     <associate|eq 20.106.200|<tuple|21.103|?>>
     <associate|eq 20.107.200|<tuple|21.104|?>>
@@ -49405,127 +49639,145 @@
     <associate|eq 20.995.280|<tuple|21.1001|?>>
     <associate|eq 20.996.280|<tuple|21.1002|?>>
     <associate|eq 20.997.280|<tuple|21.1003|?>>
-    <associate|eq 20.999.280|<tuple|21.1004|?>>
-    <associate|eq 21.1000.285|<tuple|21.1056|?>>
-    <associate|eq 21.1001.285|<tuple|21.1057|?>>
-    <associate|eq 21.1002.285|<tuple|21.1058|?>>
-    <associate|eq 21.1003.285|<tuple|21.1059|?>>
-    <associate|eq 21.1004.286|<tuple|21.1060|?>>
-    <associate|eq 21.1005.286|<tuple|21.1061|?>>
-    <associate|eq 21.1006.286|<tuple|21.1062|?>>
-    <associate|eq 21.1007.286|<tuple|21.1063|?>>
-    <associate|eq 21.1008.286|<tuple|21.1064|?>>
-    <associate|eq 21.1009.286|<tuple|21.1065|?>>
-    <associate|eq 21.1010.286|<tuple|21.1066|?>>
-    <associate|eq 21.1011.286|<tuple|21.1067|?>>
-    <associate|eq 21.1012.286|<tuple|21.1068|?>>
-    <associate|eq 21.1013.286|<tuple|21.1069|?>>
-    <associate|eq 21.1014.286|<tuple|21.1070|?>>
-    <associate|eq 21.1015.286|<tuple|21.1071|?>>
-    <associate|eq 21.1016.286|<tuple|21.1072|?>>
-    <associate|eq 21.1017.286|<tuple|21.1073|?>>
-    <associate|eq 21.1018.286|<tuple|21.1074|?>>
-    <associate|eq 21.1019.286|<tuple|21.1075|?>>
-    <associate|eq 21.1020.286|<tuple|21.1076|?>>
-    <associate|eq 21.1021.286|<tuple|21.1077|?>>
-    <associate|eq 21.1022.286|<tuple|21.1078|?>>
-    <associate|eq 21.1023.286|<tuple|21.1079|?>>
-    <associate|eq 21.1024.286|<tuple|21.1080|?>>
-    <associate|eq 21.1025.286|<tuple|21.1081|?>>
-    <associate|eq 21.1026.286|<tuple|21.1082|?>>
-    <associate|eq 21.1027.286|<tuple|21.1083|?>>
-    <associate|eq 21.1028.286|<tuple|21.1084|?>>
-    <associate|eq 21.1029.286|<tuple|21.1085|?>>
-    <associate|eq 21.1030.286|<tuple|21.1086|?>>
-    <associate|eq 21.1031.286|<tuple|21.1087|?>>
-    <associate|eq 21.1032.286|<tuple|21.1088|?>>
+    <associate|eq 20.999.280|<tuple|21.1022|?>>
+    <associate|eq 21.1000.285|<tuple|21.1074|?>>
+    <associate|eq 21.1001.285|<tuple|21.1075|?>>
+    <associate|eq 21.1002.285|<tuple|21.1076|?>>
+    <associate|eq 21.1003.285|<tuple|21.1077|?>>
+    <associate|eq 21.1004.286|<tuple|21.1078|?>>
+    <associate|eq 21.1004.307|<tuple|21.1004|?>>
+    <associate|eq 21.1005.286|<tuple|21.1079|?>>
+    <associate|eq 21.1005.307|<tuple|21.1005|?>>
+    <associate|eq 21.1006.286|<tuple|21.1080|?>>
+    <associate|eq 21.1006.307|<tuple|21.1006|?>>
+    <associate|eq 21.1007.286|<tuple|21.1081|?>>
+    <associate|eq 21.1007.307|<tuple|21.1007|?>>
+    <associate|eq 21.1008.286|<tuple|21.1082|?>>
+    <associate|eq 21.1008.307|<tuple|21.1008|?>>
+    <associate|eq 21.1009.286|<tuple|21.1083|?>>
+    <associate|eq 21.1009.307|<tuple|21.1009|?>>
+    <associate|eq 21.1010.286|<tuple|21.1084|?>>
+    <associate|eq 21.1010.307|<tuple|21.1010|?>>
+    <associate|eq 21.1011.286|<tuple|21.1085|?>>
+    <associate|eq 21.1011.307|<tuple|21.1013|?>>
+    <associate|eq 21.1011.308|<tuple|21.1011|?>>
+    <associate|eq 21.1012.286|<tuple|21.1086|?>>
+    <associate|eq 21.1012.307|<tuple|21.1014|?>>
+    <associate|eq 21.1012.308|<tuple|21.1012|?>>
+    <associate|eq 21.1013.286|<tuple|21.1087|?>>
+    <associate|eq 21.1013.307|<tuple|21.1015|?>>
+    <associate|eq 21.1014.286|<tuple|21.1088|?>>
+    <associate|eq 21.1014.307|<tuple|21.1016|?>>
+    <associate|eq 21.1015.286|<tuple|21.1089|?>>
+    <associate|eq 21.1015.307|<tuple|21.1017|?>>
+    <associate|eq 21.1016.286|<tuple|21.1090|?>>
+    <associate|eq 21.1016.307|<tuple|21.1018|?>>
+    <associate|eq 21.1017|<tuple|21.1017|?>>
+    <associate|eq 21.1017.286|<tuple|21.1091|?>>
+    <associate|eq 21.1017.307|<tuple|21.1019|?>>
+    <associate|eq 21.1018.286|<tuple|21.1092|?>>
+    <associate|eq 21.1018.307|<tuple|21.1020|?>>
+    <associate|eq 21.1019.286|<tuple|21.1093|?>>
+    <associate|eq 21.1020.286|<tuple|21.1094|?>>
+    <associate|eq 21.1021.286|<tuple|21.1095|?>>
+    <associate|eq 21.1022.286|<tuple|21.1096|?>>
+    <associate|eq 21.1023.286|<tuple|21.1097|?>>
+    <associate|eq 21.1024.286|<tuple|21.1098|?>>
+    <associate|eq 21.1025.286|<tuple|21.1099|?>>
+    <associate|eq 21.1026.286|<tuple|21.1100|?>>
+    <associate|eq 21.1027.286|<tuple|21.1101|?>>
+    <associate|eq 21.1028.286|<tuple|21.1102|?>>
+    <associate|eq 21.1029.286|<tuple|21.1103|?>>
+    <associate|eq 21.1030.286|<tuple|21.1104|?>>
+    <associate|eq 21.1031.286|<tuple|21.1105|?>>
+    <associate|eq 21.1032.286|<tuple|21.1106|?>>
     <associate|eq 21.1032.286.1|<tuple|21.25|?>>
-    <associate|eq 21.1033.286|<tuple|21.1089|?>>
+    <associate|eq 21.1033.286|<tuple|21.1107|?>>
     <associate|eq 21.1033.286.1|<tuple|21.27|?>>
-    <associate|eq 21.1036.287|<tuple|21.1090|?>>
-    <associate|eq 21.1037.287|<tuple|21.1091|?>>
-    <associate|eq 21.1038.287|<tuple|21.1092|?>>
-    <associate|eq 21.1039.287|<tuple|21.1093|?>>
-    <associate|eq 21.1040.290|<tuple|21.1094|?>>
-    <associate|eq 21.1041.290|<tuple|21.1095|?>>
-    <associate|eq 21.1042.290|<tuple|21.1096|?>>
-    <associate|eq 21.1043.290|<tuple|21.1097|?>>
-    <associate|eq 21.1044.290|<tuple|21.1116|?>>
-    <associate|eq 21.1045.290|<tuple|21.1117|?>>
-    <associate|eq 21.1045.291|<tuple|21.1099|?>>
-    <associate|eq 21.1046.290|<tuple|21.1118|?>>
-    <associate|eq 21.1046.291|<tuple|21.1100|?>>
-    <associate|eq 21.1047.291|<tuple|21.1101|?>>
-    <associate|eq 21.1048.291|<tuple|21.1102|?>>
-    <associate|eq 21.1049.291|<tuple|21.1103|?>>
-    <associate|eq 21.1050.291|<tuple|21.1104|?>>
-    <associate|eq 21.1051.291|<tuple|21.1105|?>>
-    <associate|eq 21.1052.291|<tuple|21.1106|?>>
-    <associate|eq 21.1054.291|<tuple|21.1108|?>>
-    <associate|eq 21.1055.291|<tuple|21.1109|?>>
-    <associate|eq 21.1056.291|<tuple|21.1110|?>>
-    <associate|eq 21.1057.291|<tuple|21.1111|?>>
-    <associate|eq 21.1058.291|<tuple|21.1112|?>>
-    <associate|eq 21.1059.291|<tuple|21.1113|?>>
-    <associate|eq 21.1060.291|<tuple|21.1114|?>>
-    <associate|eq 21.1061.291|<tuple|21.1115|?>>
-    <associate|eq 21.1065.291|<tuple|21.1119|?>>
-    <associate|eq 21.1066.291|<tuple|21.1120|?>>
-    <associate|eq 21.1067.291|<tuple|21.1121|?>>
-    <associate|eq 21.1068.291|<tuple|21.1122|?>>
-    <associate|eq 21.1069.291|<tuple|21.1122|?>>
-    <associate|eq 21.1070.291|<tuple|21.1124|?>>
-    <associate|eq 21.1071.291|<tuple|21.1125|?>>
-    <associate|eq 21.1072.291|<tuple|21.1126|?>>
-    <associate|eq 21.1073.291|<tuple|21.1127|?>>
-    <associate|eq 21.1074.291|<tuple|21.1128|?>>
-    <associate|eq 21.1075.291|<tuple|21.1129|?>>
-    <associate|eq 21.1076.291|<tuple|21.1130|?>>
-    <associate|eq 21.1077.291|<tuple|21.1131|?>>
-    <associate|eq 21.1078.291|<tuple|21.1132|?>>
-    <associate|eq 21.1079.291|<tuple|21.1133|?>>
-    <associate|eq 21.1080.292|<tuple|21.1134|?>>
-    <associate|eq 21.1081.291|<tuple|21.1137|?>>
-    <associate|eq 21.1081.292|<tuple|21.1135|?>>
-    <associate|eq 21.1082.291|<tuple|21.1138|?>>
-    <associate|eq 21.1082.292|<tuple|21.1136|?>>
-    <associate|eq 21.1083.291|<tuple|21.1139|?>>
-    <associate|eq 21.1084.291|<tuple|21.1140|?>>
-    <associate|eq 21.1085.291|<tuple|21.1141|?>>
-    <associate|eq 21.1086.291|<tuple|21.1142|?>>
-    <associate|eq 21.1087.291|<tuple|21.1143|?>>
-    <associate|eq 21.1088.291|<tuple|21.1144|?>>
-    <associate|eq 21.1089.291|<tuple|21.1145|?>>
+    <associate|eq 21.1036.287|<tuple|21.1108|?>>
+    <associate|eq 21.1037.287|<tuple|21.1109|?>>
+    <associate|eq 21.1038.287|<tuple|21.1110|?>>
+    <associate|eq 21.1039.287|<tuple|21.1111|?>>
+    <associate|eq 21.1040.290|<tuple|21.1112|?>>
+    <associate|eq 21.1041.290|<tuple|21.1113|?>>
+    <associate|eq 21.1042.290|<tuple|21.1114|?>>
+    <associate|eq 21.1043.290|<tuple|21.1115|?>>
+    <associate|eq 21.1044.290|<tuple|21.1134|?>>
+    <associate|eq 21.1045.290|<tuple|21.1135|?>>
+    <associate|eq 21.1045.291|<tuple|21.1117|?>>
+    <associate|eq 21.1046.290|<tuple|21.1136|?>>
+    <associate|eq 21.1046.291|<tuple|21.1118|?>>
+    <associate|eq 21.1047.291|<tuple|21.1119|?>>
+    <associate|eq 21.1048.291|<tuple|21.1120|?>>
+    <associate|eq 21.1049.291|<tuple|21.1121|?>>
+    <associate|eq 21.1050.291|<tuple|21.1122|?>>
+    <associate|eq 21.1051.291|<tuple|21.1123|?>>
+    <associate|eq 21.1052.291|<tuple|21.1124|?>>
+    <associate|eq 21.1054.291|<tuple|21.1126|?>>
+    <associate|eq 21.1055.291|<tuple|21.1127|?>>
+    <associate|eq 21.1056.291|<tuple|21.1128|?>>
+    <associate|eq 21.1057.291|<tuple|21.1129|?>>
+    <associate|eq 21.1058.291|<tuple|21.1130|?>>
+    <associate|eq 21.1059.291|<tuple|21.1131|?>>
+    <associate|eq 21.1060.291|<tuple|21.1132|?>>
+    <associate|eq 21.1061.291|<tuple|21.1133|?>>
+    <associate|eq 21.1065.291|<tuple|21.1137|?>>
+    <associate|eq 21.1066.291|<tuple|21.1138|?>>
+    <associate|eq 21.1067.291|<tuple|21.1139|?>>
+    <associate|eq 21.1068.291|<tuple|21.1140|?>>
+    <associate|eq 21.1069.291|<tuple|21.1140|?>>
+    <associate|eq 21.1070.291|<tuple|21.1142|?>>
+    <associate|eq 21.1071.291|<tuple|21.1143|?>>
+    <associate|eq 21.1072.291|<tuple|21.1144|?>>
+    <associate|eq 21.1073.291|<tuple|21.1145|?>>
+    <associate|eq 21.1074.291|<tuple|21.1146|?>>
+    <associate|eq 21.1075.291|<tuple|21.1147|?>>
+    <associate|eq 21.1076.291|<tuple|21.1148|?>>
+    <associate|eq 21.1077.291|<tuple|21.1149|?>>
+    <associate|eq 21.1078.291|<tuple|21.1150|?>>
+    <associate|eq 21.1079.291|<tuple|21.1151|?>>
+    <associate|eq 21.1080.292|<tuple|21.1152|?>>
+    <associate|eq 21.1081.291|<tuple|21.1155|?>>
+    <associate|eq 21.1081.292|<tuple|21.1153|?>>
+    <associate|eq 21.1082.291|<tuple|21.1156|?>>
+    <associate|eq 21.1082.292|<tuple|21.1154|?>>
+    <associate|eq 21.1083.291|<tuple|21.1157|?>>
+    <associate|eq 21.1084.291|<tuple|21.1158|?>>
+    <associate|eq 21.1085.291|<tuple|21.1159|?>>
+    <associate|eq 21.1086.291|<tuple|21.1160|?>>
+    <associate|eq 21.1087.291|<tuple|21.1161|?>>
+    <associate|eq 21.1088.291|<tuple|21.1162|?>>
+    <associate|eq 21.1089.291|<tuple|21.1163|?>>
     <associate|eq 21.109.300|<tuple|21.109|?>>
-    <associate|eq 21.1090.291|<tuple|21.1146|?>>
-    <associate|eq 21.1091.291|<tuple|21.1147|?>>
-    <associate|eq 21.1092.291|<tuple|21.1148|?>>
-    <associate|eq 21.1093.291|<tuple|21.1149|?>>
-    <associate|eq 21.1094.291|<tuple|21.1150|?>>
-    <associate|eq 21.1095.291|<tuple|21.1151|?>>
-    <associate|eq 21.1096.291|<tuple|21.1152|?>>
-    <associate|eq 21.1097.291|<tuple|21.1153|?>>
-    <associate|eq 21.1098.291|<tuple|21.1154|?>>
-    <associate|eq 21.1099.291|<tuple|21.1155|?>>
-    <associate|eq 21.1100.291|<tuple|21.1156|?>>
-    <associate|eq 21.1101.291|<tuple|21.1157|?>>
-    <associate|eq 21.1102.291|<tuple|21.1158|?>>
-    <associate|eq 21.1103.291|<tuple|21.1159|?>>
-    <associate|eq 21.1104.291|<tuple|21.1160|?>>
-    <associate|eq 21.1105.291|<tuple|21.1161|?>>
-    <associate|eq 21.1106.291|<tuple|21.1162|?>>
-    <associate|eq 21.1107.291|<tuple|21.1163|?>>
-    <associate|eq 21.1108.291|<tuple|21.1164|?>>
-    <associate|eq 21.1109.291|<tuple|21.1165|?>>
-    <associate|eq 21.1110.291|<tuple|21.1166|?>>
-    <associate|eq 21.1111.291|<tuple|21.1167|?>>
-    <associate|eq 21.1112.291|<tuple|21.1168|?>>
-    <associate|eq 21.1113.291|<tuple|21.1169|?>>
-    <associate|eq 21.1114.291|<tuple|21.1170|?>>
-    <associate|eq 21.1115.291|<tuple|21.1171|?>>
-    <associate|eq 21.1116.291|<tuple|21.1172|?>>
-    <associate|eq 21.1117.291|<tuple|21.1173|?>>
-    <associate|eq 21.1118.291|<tuple|21.1174|?>>
+    <associate|eq 21.1090.291|<tuple|21.1164|?>>
+    <associate|eq 21.1091.291|<tuple|21.1165|?>>
+    <associate|eq 21.1092.291|<tuple|21.1166|?>>
+    <associate|eq 21.1093.291|<tuple|21.1167|?>>
+    <associate|eq 21.1094.291|<tuple|21.1168|?>>
+    <associate|eq 21.1095.291|<tuple|21.1169|?>>
+    <associate|eq 21.1096.291|<tuple|21.1170|?>>
+    <associate|eq 21.1097.291|<tuple|21.1171|?>>
+    <associate|eq 21.1098.291|<tuple|21.1172|?>>
+    <associate|eq 21.1099.291|<tuple|21.1173|?>>
+    <associate|eq 21.1100.291|<tuple|21.1174|?>>
+    <associate|eq 21.1101.291|<tuple|21.1175|?>>
+    <associate|eq 21.1102.291|<tuple|21.1176|?>>
+    <associate|eq 21.1103.291|<tuple|21.1177|?>>
+    <associate|eq 21.1104.291|<tuple|21.1178|?>>
+    <associate|eq 21.1105.291|<tuple|21.1179|?>>
+    <associate|eq 21.1106.291|<tuple|21.1180|?>>
+    <associate|eq 21.1107.291|<tuple|21.1181|?>>
+    <associate|eq 21.1108.291|<tuple|21.1182|?>>
+    <associate|eq 21.1109.291|<tuple|21.1183|?>>
+    <associate|eq 21.1110.291|<tuple|21.1184|?>>
+    <associate|eq 21.1111.291|<tuple|21.1185|?>>
+    <associate|eq 21.1112.291|<tuple|21.1186|?>>
+    <associate|eq 21.1113.291|<tuple|21.1187|?>>
+    <associate|eq 21.1114.291|<tuple|21.1188|?>>
+    <associate|eq 21.1115.291|<tuple|21.1189|?>>
+    <associate|eq 21.1116.291|<tuple|21.1190|?>>
+    <associate|eq 21.1117.291|<tuple|21.1191|?>>
+    <associate|eq 21.1118.291|<tuple|21.1192|?>>
     <associate|eq 21.160.300|<tuple|21.161|?>>
     <associate|eq 21.259.300|<tuple|21.259|?>>
     <associate|eq 21.26.300|<tuple|21.26|?>>
@@ -49664,16 +49916,16 @@
     <associate|eq 21.739.306|<tuple|21.737|?>>
     <associate|eq 21.740.306|<tuple|21.738|?>>
     <associate|eq 21.84.300|<tuple|21.84|?>>
-    <associate|eq 21.991.285|<tuple|21.1047|?>>
-    <associate|eq 21.992.285|<tuple|21.1048|?>>
-    <associate|eq 21.992.285.1|<tuple|21.1048|?>>
-    <associate|eq 21.993.285|<tuple|21.1049|?>>
-    <associate|eq 21.994.285|<tuple|21.1050|?>>
-    <associate|eq 21.995.285|<tuple|21.1051|?>>
-    <associate|eq 21.996.285|<tuple|21.1052|?>>
-    <associate|eq 21.997.285|<tuple|21.1053|?>>
-    <associate|eq 21.998.285|<tuple|21.1054|?>>
-    <associate|eq 21.999.285|<tuple|21.1055|?>>
+    <associate|eq 21.991.285|<tuple|21.1065|?>>
+    <associate|eq 21.992.285|<tuple|21.1066|?>>
+    <associate|eq 21.992.285.1|<tuple|21.1066|?>>
+    <associate|eq 21.993.285|<tuple|21.1067|?>>
+    <associate|eq 21.994.285|<tuple|21.1068|?>>
+    <associate|eq 21.995.285|<tuple|21.1069|?>>
+    <associate|eq 21.996.285|<tuple|21.1070|?>>
+    <associate|eq 21.997.285|<tuple|21.1071|?>>
+    <associate|eq 21.998.285|<tuple|21.1072|?>>
+    <associate|eq 21.999.285|<tuple|21.1073|?>>
     <associate|figure 20.6.234|<tuple|21.6|?>>
     <associate|figure 20.7.234|<tuple|21.7|?>>
     <associate|integral convention|<tuple|21.555|?>>
@@ -49746,24 +49998,24 @@
     <associate|lemma 20.628.280|<tuple|21.560|?>>
     <associate|lemma 20.629.280|<tuple|21.561|?>>
     <associate|lemma 20.630.280|<tuple|21.563|?>>
-    <associate|lemma 20.635.281|<tuple|21.568|?>>
+    <associate|lemma 20.635.281|<tuple|21.569|?>>
     <associate|lemma 21.185.300|<tuple|21.186|?>>
     <associate|lemma 21.347.301|<tuple|21.350|?>>
     <associate|lemma 21.383.303|<tuple|21.388|?>>
     <associate|lemma 21.384.303|<tuple|21.389|?>>
     <associate|lemma 21.385.303|<tuple|21.390|?>>
-    <associate|lemma 21.530.285|<tuple|21.571|?>>
-    <associate|lemma 21.532.285|<tuple|21.573|?>>
-    <associate|lemma 21.558.288|<tuple|21.594|?>>
-    <associate|lemma 21.562.291|<tuple|21.598|?>>
-    <associate|lemma 21.563.291|<tuple|21.599|?>>
-    <associate|lemma 21.578.291|<tuple|21.612|?>>
-    <associate|lemma 21.579.291|<tuple|21.613|?>>
-    <associate|lemma 21.582.291|<tuple|21.616|?>>
-    <associate|lemma 21.584.291|<tuple|21.618|?>>
-    <associate|lemma 21.585.291|<tuple|21.619|?>>
+    <associate|lemma 21.530.285|<tuple|21.572|?>>
+    <associate|lemma 21.532.285|<tuple|21.574|?>>
+    <associate|lemma 21.558.288|<tuple|21.595|?>>
+    <associate|lemma 21.562.291|<tuple|21.599|?>>
+    <associate|lemma 21.563.291|<tuple|21.600|?>>
+    <associate|lemma 21.578.291|<tuple|21.613|?>>
+    <associate|lemma 21.579.291|<tuple|21.614|?>>
+    <associate|lemma 21.582.291|<tuple|21.617|?>>
+    <associate|lemma 21.584.291|<tuple|21.619|?>>
+    <associate|lemma 21.585.291|<tuple|21.620|?>>
     <associate|measurability of image of a measurable set by a
-    homeomorphism|<tuple|21.603|?>>
+    homeomorphism|<tuple|21.604|?>>
     <associate|measurable function|<tuple|21.224|?>>
     <associate|measurable function (1)|<tuple|21.240|?>>
     <associate|measurable function (4)|<tuple|21.244|?>>
@@ -49799,7 +50051,7 @@
     <associate|measurable function sum (finite)|<tuple|21.257|?>>
     <associate|measurable function sum finite|<tuple|21.261|?>>
     <associate|measurable function sup inf limit|<tuple|21.269|?>>
-    <associate|measurable locally finiteness|<tuple|21.581|?>>
+    <associate|measurable locally finiteness|<tuple|21.582|?>>
     <associate|measure A.B minus C.D|<tuple|21.2|?>>
     <associate|measure Borel algebra|<tuple|21.46|?>>
     <associate|measure Borel algebra and closure|<tuple|21.47|?>>
@@ -49815,17 +50067,17 @@
     <associate|measure Borel algebra on the extended real numbers
     (1)|<tuple|21.61|?>>
     <associate|measure Borel algebras on R^n equivalences|<tuple|21.87|?>>
-    <associate|measure Borel measure of T(A)|<tuple|21.607|?>>
-    <associate|measure Borel measure of T(A) (1)|<tuple|21.610|?>>
+    <associate|measure Borel measure of T(A)|<tuple|21.608|?>>
+    <associate|measure Borel measure of T(A) (1)|<tuple|21.611|?>>
     <associate|measure Borel measure on R and linear
-    isomorphism|<tuple|21.609|?>>
+    isomorphism|<tuple|21.610|?>>
     <associate|measure Caratheodory|<tuple|21.122|?>>
     <associate|measure Caratheodory produces complete measure
     space|<tuple|21.217|?>>
     <associate|measure Dyadic cubes|<tuple|21.79|?>>
     <associate|measure Dyadic cubes properties|<tuple|21.83|?>>
-    <associate|measure Dyadic intervals|<tuple|21.597|?>>
-    <associate|measure Dyadic intervals and open sets|<tuple|21.600|?>>
+    <associate|measure Dyadic intervals|<tuple|21.598|?>>
+    <associate|measure Dyadic intervals and open sets|<tuple|21.601|?>>
     <associate|measure Dynkin system|<tuple|21.123|?>>
     <associate|measure Dynkin system P(X)|<tuple|21.126|?>>
     <associate|measure Dynkin system condition for sigma
@@ -49845,10 +50097,10 @@
     <associate|measure P(X) is a ring|<tuple|21.26|?>>
     <associate|measure P(X) is a sigma algebra|<tuple|21.38|?>>
     <associate|measure R^n alternative definition|<tuple|21.192|?>>
-    <associate|measure Radon and Borel measure on R|<tuple|21.601|?>>
-    <associate|measure Radon and Borel measure on R^n|<tuple|21.602|?>>
-    <associate|measure Radon condition|<tuple|21.586|?>>
-    <associate|measure Radon condition (1)|<tuple|21.587|?>>
+    <associate|measure Radon and Borel measure on R|<tuple|21.602|?>>
+    <associate|measure Radon and Borel measure on R^n|<tuple|21.603|?>>
+    <associate|measure Radon condition|<tuple|21.587|?>>
+    <associate|measure Radon condition (1)|<tuple|21.588|?>>
     <associate|measure [a,b[ in R^n|<tuple|21.67|?>>
     <associate|measure additive function monotone|<tuple|21.144|?>>
     <associate|measure additive set function|<tuple|21.15|?>>
@@ -49864,9 +50116,9 @@
     <associate|measure compact class approximation (1)|<tuple|21.159|?>>
     <associate|measure compact class approximation (2)|<tuple|21.168|?>>
     <associate|measure compact class approximation (3)|<tuple|21.169|?>>
-    <associate|measure compact finite and intervals|<tuple|21.583|?>>
-    <associate|measure compact finite and rectangles|<tuple|21.584|?>>
-    <associate|measure compact finite and scalar product|<tuple|21.579|?>>
+    <associate|measure compact finite and intervals|<tuple|21.584|?>>
+    <associate|measure compact finite and rectangles|<tuple|21.585|?>>
+    <associate|measure compact finite and scalar product|<tuple|21.580|?>>
     <associate|measure complete measure|<tuple|21.215|?>>
     <associate|measure complete measure characterization|<tuple|21.216|?>>
     <associate|measure completing of a measure space|<tuple|21.222|?>>
@@ -49888,9 +50140,9 @@
     <associate|measure countable union is in sigma algebra|<tuple|21.39|?>>
     <associate|measure countable union pairwise|<tuple|21.100|?>>
     <associate|measure create a new measure based on a measure and a
-    homeomorphism|<tuple|21.604|?>>
+    homeomorphism|<tuple|21.605|?>>
     <associate|measure create a new measure based on a measure and a linear
-    isomorphism|<tuple|21.606|?>>
+    isomorphism|<tuple|21.607|?>>
     <associate|measure extending pre-measure to a measure|<tuple|21.148|?>>
     <associate|measure finite measure|<tuple|21.113|?>>
     <associate|measure finite product of semi-rings|<tuple|21.190|?>>
@@ -49966,9 +50218,9 @@
     <associate|measure product of two semi-rings|<tuple|21.184|?>>
     <associate|measure proto-measure|<tuple|21.133|?>>
     <associate|measure proto-ring|<tuple|21.132|?>>
-    <associate|measure regularity|<tuple|21.575|?>>
-    <associate|measure regularity and scalar product|<tuple|21.578|?>>
-    <associate|measure regularity and uniqueness|<tuple|21.580|?>>
+    <associate|measure regularity|<tuple|21.576|?>>
+    <associate|measure regularity and scalar product|<tuple|21.579|?>>
+    <associate|measure regularity and uniqueness|<tuple|21.581|?>>
     <associate|measure ring|<tuple|21.24|?>>
     <associate|measure ring is a semi-ring|<tuple|21.150|?>>
     <associate|measure ring properties|<tuple|21.27|?>>
@@ -49990,11 +50242,11 @@
     <associate|measure sub-additive set function|<tuple|21.16|?>>
     <associate|measure sum and scalar product of measures|<tuple|21.108|?>>
     <associate|measure the Borel measure is translation invariant
-    (1)|<tuple|21.595|?>>
+    (1)|<tuple|21.596|?>>
     <associate|measure the Borel measure is translation invariant
-    (2)|<tuple|21.596|?>>
-    <associate|measure translation invariant|<tuple|21.592|?>>
-    <associate|measure translation of a measurable set|<tuple|21.591|?>>
+    (2)|<tuple|21.597|?>>
+    <associate|measure translation invariant|<tuple|21.593|?>>
+    <associate|measure translation of a measurable set|<tuple|21.592|?>>
     <associate|measure translation of a measurable set (1)|<tuple|21.49|?>>
     <associate|measure union intersection stable|<tuple|21.9|?>>
     <associate|measure uniqueness of extension of a measure|<tuple|21.131|?>>
@@ -50023,7 +50275,7 @@
     <associate|non negative measurable function|<tuple|21.241|?>>
     <associate|note 20.198.210|<tuple|21.135|?>>
     <associate|note 21.231.300|<tuple|21.235|?>>
-    <associate|note 21.580.291|<tuple|21.614|?>>
+    <associate|note 21.580.291|<tuple|21.615|?>>
     <associate|product |<tuple|21.536|?>>
     <associate|product algebra|<tuple|21.539|?>>
     <associate|product algebra equivalences|<tuple|21.542|?>>
@@ -50106,10 +50358,10 @@
       <tuple|normal|<surround|<hidden-binding|<tuple>|21.5>||>|<pageref|auto-83>>
 
       <tuple|normal|<surround|<hidden-binding|<tuple>|21.6>||<with|mode|<quote|math>|f>
-      apprimated by <with|mode|<quote|math>|f<rsub|2>>>|<pageref|auto-90>>
+      approximated by <with|mode|<quote|math>|f<rsub|2>>>|<pageref|auto-90>>
 
       <tuple|normal|<surround|<hidden-binding|<tuple>|21.7>||<with|mode|<quote|math>|f>
-      apprimated by <with|mode|<quote|math>|f<rsub|2>>>|<pageref|auto-91>>
+      approximated by <with|mode|<quote|math>|f<rsub|2>>>|<pageref|auto-91>>
     </associate>
     <\associate|idx>
       <tuple|<tuple|pairwise disjoint family>|<pageref|auto-3>>
@@ -50411,7 +50663,7 @@
       <no-break><pageref|auto-94>>
 
       <with|par-left|<quote|2tab>|21.5.3.2<space|2spc>Integration on
-      measurable subspaces <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      measurable sub-spaces <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-95>>
 
       <with|par-left|<quote|2tab>|21.5.3.3<space|2spc>Properties of the
@@ -50464,7 +50716,7 @@
       <no-break><pageref|auto-113>>
 
       <with|par-left|<quote|2tab>|21.6.1.1<space|2spc>Definition and
-      properities <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      properties <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-114>>
 
       <with|par-left|<quote|2tab>|21.6.1.2<space|2spc>Hahn and Jordan
