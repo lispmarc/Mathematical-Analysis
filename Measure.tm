@@ -43219,7 +43219,7 @@
   Extending the above lemma to non negative measurable functions leads to
   Tonelli's Theorem.
 
-  TODO
+  TODO recheck this
 
   <\theorem>
     <label|Tonelli theorem (1)><dueto|Tonelli><index|Tonelli's theorem>Let
@@ -43424,7 +43424,16 @@
       ><below|lim|i\<rightarrow\>\<infty\>>f<rsub|i><around*|(|\<cdot\>,y|)>
     </equation*>
 
-    and\ 
+    and
+
+    <\equation*>
+      <below|lim|i\<rightarrow\>\<infty\>>f<rsub|i><around*|(|x,\<cdot\>|)>\<in\>\<cal-M\><rsup|+><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]><text|
+      >\<wedge\><text| ><below|lim|i\<rightarrow\>\<infty\>>f<rsub|i><around*|(|\<cdot\>,y|)>\<in\>\<cal-M\><rsup|+><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
+    </equation*>
+
+    and <math|<below|lim|i\<rightarrow\>\<infty\>><big|int><rsup|+>f<rsub|i><around*|(|x,\<cdot\>|)>d\<mu\><rsub|2>>,
+    <math|<below|lim|i\<rightarrow\>\<infty\>><big|int><rsup|+>f<rsub|i><around*|(|\<cdot\>,y|)>d\<mu\><rsub|2>>
+    exist with
 
     <\equation>
       <label|eq 21.1016.307><below|lim|i\<rightarrow\>\<infty\>><big|int><rsup|+>f<rsub|i><around*|(|x,\<cdot\>|)>d\<mu\><rsub|2>=<big|int><rsup|+><below|lim|i\<rightarrow\>\<infty\>>f<rsub|i><around*|(|x,\<cdot\>|)>d\<mu\><rsub|2><text|
@@ -43465,174 +43474,94 @@
     21.1012.308>] in the above gives\ 
 
     <\equation>
-      \<forall\>x\<in\>X<rsub|1> <big|int><rsup|+>f<around*|(|x,\<cdot\>|)>d\<mu\><rsub|2>=<below|lim|i\<rightarrow\>\<infty\>>I<rsub|i,1><around*|(|x|)><text|
+      <label|eq 21.1021.308>\<forall\>x\<in\>X<rsub|1>
+      <big|int><rsup|+>f<around*|(|x,\<cdot\>|)>d\<mu\><rsub|2>=<below|lim|i\<rightarrow\>\<infty\>>I<rsub|i,1><around*|(|x|)><text|
       and >\<forall\>y\<in\>X<rsub|2><text|
       ><big|int><rsup|+>f<around*|(|\<cdot\>,y|)>d\<mu\><rsub|1>=<below|lim|i\<rightarrow\>\<infty\>>I<rsub|i,2><around*|(|y|)>
     </equation>
 
-    TODO\ 
-  </proof>
-
-  TODO remove this as the above proof is finished
-
-  <\proof>
-    As <math|f\<in\>\<cal-M\><rsup|+><around*|[|X<rsub|1>\<cdot\>X<rsub|2>,\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
-    there exist by [theorems: <reference|non negative integral alternative>,
-    <reference|non negative integral is a extension>] a sequence
+    Using [eqs: <reference|eq 21.1011.307>, <reference|eq 21.1015.307>] we
+    can use the Monone Convergence Theorem [see theorem: <reference|Monotone
+    Convergence Theorem (1)>] again to get that
 
     <\equation>
-      <label|eq 20.999.280><around*|{|f<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-S\><rsup|+><around*|[|X<rsub|1>\<cdot\>X<rsub|2>,\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]>\<subseteq\>\<cal-M\><rsup|+><around*|[|X<rsub|1>\<cdot\>X<rsub|2>,\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
+      <label|eq 21.1022.308><below|lim|i\<rightarrow\>\<infty\>>I<rsub|i,1>\<in\>\<cal-M\><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|]><text|
+      and ><below|lim|i\<rightarrow\>\<infty\>>I<rsub|i,2>\<in\>\<cal-M\><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
     </equation>
-
-    such that
-
-    <\equation>
-      <label|eq 20.1000.280>\<forall\><around*|(|x,y|)>\<in\>X<rsub|1>\<cdot\>X<rsub|2><text|
-      we have <math|<below|lim|i\<rightarrow\>\<infty\>>f<rsub|i><around*|(|x,y|)><text|
-      exist and >f<around*|(|x,y|)>=<below|lim|i\<rightarrow\>\<infty\>>f<rsub|i><around*|(|x,y|)>>>
-    </equation>
-
-    <\equation>
-      <label|eq 20.1001.280>\<forall\><around*|(|x,y|)>\<in\>X<rsub|1>\<cdot\>X<rsub|2><text|
-      >\<forall\>i\<in\>\<bbb-N\><text| >f<rsub|i><around*|(|x,y|)>\<leqslant\>f<rsub|i+1><around*|(|x,y|)>
-    </equation>
-
-    <\equation>
-      <label|eq 20.1002.280><below|lim|i\<rightarrow\>\<infty\>><big|int><rsup|+>f<rsub|i>d<around*|(|\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>|)><text|
-      exist>\<wedge\><big|int><rsup|+>f d<around*|(|\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>|)>=<below|lim|i\<rightarrow\>\<infty\>><big|int><rsup|+>f<rsub|i>d<around*|(|\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>|)>
-    </equation>
-
-    Let <math|i\<in\>\<bbb-N\>> then by the previous lemma [see lemma:
-    <reference|lemma 20.630.280>] we have that
-
-    <\equation>
-      <label|eq 20.1003.280>I<rsub|f,i,1>\<in\>\<cal-M\><rsup|+><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|]><text|
-      where >I<rsub|f,i,1>:X<rsub|1>\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>><text|
-      is defined by >I<rsub|f,i,1><around*|(|x|)>=<big|int><rsup|+>f<rsub|i><around*|(|x,.|)>d\<mu\><rsub|2><text|>
-    </equation>
-
-    <\equation>
-      <label|eq 20.1004.280>I<rsub|f,i,2>\<in\>\<cal-M\><rsup|+><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]><text|
-      where >I<rsub|f,i,2>:X<rsub|2>\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>><text|
-      is defined by >I<rsub|f,i,2><around*|(|y|)>=<big|int><rsup|+>f<rsub|i><around*|(|.,y|)>d\<mu\><rsub|1><text|>
-    </equation>
-
-    <\equation>
-      <label|eq 20.1005.280><big|int><rsup|+>f<rsub|i>
-      d<around*|(|\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>|)>=<big|int><rsup|+>I<rsub|f,i,1>d\<mu\><rsub|1>=<big|int><rsup|+>I<rsub|f,i,2>d\<mu\><rsub|2>
-    </equation>
-
-    Further we have\ 
-
-    <\equation>
-      <label|eq 20.1006.280>\<forall\>x\<in\>X<rsub|1><text|
-      >\<forall\>y\<in\>X<rsub|2><text| that
-      >\<forall\>i\<in\>\<bbb-N\><text| >f<rsub|i><around*|(|x,.|)><around*|(|y|)>=f<rsub|i><around*|(|x,y|)>\<leqslant\>f<rsub|i+1><around*|(|x,y|)>=f<rsub|i+1><around*|(|x,.|)><around*|(|y|)>
-    </equation>
-
-    <\equation>
-      <label|eq 20.1007.280>\<forall\>x\<in\>X<rsub|1><text|
-      >\<forall\>y\<in\>X<rsub|2><text| that
-      >\<forall\>i\<in\>\<bbb-N\><text| >f<rsub|i><around*|(|.,y|)><around*|(|x|)>=f<rsub|i><around*|(|x,y|)>\<leqslant\>f<rsub|i+1><around*|(|x,y|)>=f<rsub|i+1><around*|(|.,y|)><around*|(|x|)>
-    </equation>
-
-    Let <math|x\<in\>X<rsub|1>> then <math|\<forall\>y\<in\>X<rsub|2>> we
-    have <math|f<around*|(|x,.|)><around*|(|y|)>=f<around*|(|x,y|)>\<equallim\><rsub|<text|]eq:
-    <reference|eq 20.1000.280>]>><below|lim|i\<rightarrow\>\<infty\>>f<rsub|i><around*|(|x,y|)>=<below|lim|i\<rightarrow\>\<infty\>>f<rsub|i><around*|(|x,.|)><around*|(|y|)>>.
-    Also for <math|y\<in\>X<rsub|2>> we have
-    <math|\<forall\>x\<in\>X<rsub|1>> we have
-    <math|f<around*|(|.,y|)><around*|(|x|)>=f<around*|(|x,y|)>\<equallim\><rsub|<text|]eq:
-    <reference|eq 20.1000.280>]>><below|lim|i\<rightarrow\>\<infty\>>f<rsub|i><around*|(|x,xy|)>=<below|lim|i\<rightarrow\>\<infty\>>f<rsub|i><around*|(|.,y|)><around*|(|x|)>>
-    which proves that:\ 
-
-    <\equation>
-      <label|eq 20.1008.280>\<forall\>x\<in\>X<rsub|1><text| we have
-      >f<around*|(|x,.|)>=<below|lim|i\<rightarrow\>\<infty\>>f<rsub|i><around*|(|x,.|)><text|
-      and >\<forall\>y\<in\>X<rsub|2><text| we have
-      >f<around*|(|.,y|)>=<below|lim|i\<rightarrow\>\<infty\>>f<rsub|i><around*|(|.,y|)>
-    </equation>
-
-    Further as <math|f\<in\>\<cal-M\><rsup|+><around*|[|X<rsub|1>\<cdot\>X<rsub|2>,\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
-    [see eq: <reference|eq 20.999.280>] it follows from [lemma:
-    <reference|lemma 20.629.280>] that\ 
-
-    <\equation>
-      <label|eq 20.1009.280>\<forall\>x\<in\>X<rsub|1><text|
-      >f<around*|(|x,.|)>\<in\>\<cal-M\><rsup|+><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]><text|
-      and >\<forall\>y\<in\>X<rsub|2><text|
-      >f<around*|(|.,y|)>\<in\>\<cal-M\><rsup|+><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
-    </equation>
-
-    The above [see eqs: <reference|eq 20.1006.280>, <reference|eq
-    20.1007.280>, <reference|eq 20.1008.280> and <reference|eq 20.1009.280>]
-    allows us to use the Monotone Convergence Theorem [see theorem:
-    <reference|Monotone Convergence Theorem (1)>] to prove that \ 
-
-    <\equation>
-      <label|eq 20.1010.2080>\<forall\>x\<in\>X<rsub|1><text|
-      ><big|int><rsup|+>f<around*|(|x,.|)>d\<mu\><rsub|2>=<below|lim|i\<rightarrow\>\<infty\>><big|int><rsup|+>f<rsub|i><around*|(|x,.|)>d\<mu\><rsub|2>\<exterior\><text|>\<forall\>x\<in\>X<rsub|2><text|
-      ><big|int><rsup|+>f<around*|(|.,x|)>d\<mu\><rsub|1>=<below|lim|i\<rightarrow\>\<infty\>><big|int><rsup|+>f<rsub|i><around*|(|.,x|)>d\<mu\><rsub|1>
-    </equation>
-
-    Substituting [eqs: <reference|eq 20.1003.280>, <reference|eq
-    20.1004.280>] in the above gives\ 
-
-    <\equation>
-      <label|eq 20.1011.280>\<forall\>x\<in\>X<rsub|1><text|
-      ><big|int><rsup|+>f<around*|(|x,.|)>d\<mu\><rsub|2>=<below|lim|i\<rightarrow\>\<infty\>>I<rsub|f,i,1><around*|(|x|)><text|
-      and >\<forall\>y\<in\>X<rsub|2><text|
-      ><big|int><rsup|+>f<around*|(|.,y|)>d\<mu\><rsub|1>=<below|lim|i\<rightarrow\>\<infty\>>I<rsub|f,i,2>
-    </equation>
-
-    Define the functions\ 
 
     <\equation*>
-      I<rsub|f,1>:X<rsub|1>\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>><text|
-      \ by >I<rsub|f,1><around*|(|x|)>=<big|int><rsup|+>f<around*|(|x,.|)>d\<mu\><rsub|2><text|
-      and >I<rsub|f,2>:X<rsub|2>\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>><text|
-      defined by >I<rsub|f,2><around*|(|x|)>=<big|int><rsup|+>f<around*|(|.,x|)>d\<mu\><rsub|1>
+      <below|lim|i\<rightarrow\>\<infty\>><big|int><rsup|+>I<rsub|i,1>d\<mu\><rsub|1><text|,
+      ><below|lim|i\<rightarrow\>\<infty\>><big|int><rsup|+>I<rsub|i,2>d\<mu\><rsub|2><text|
+      exist>
     </equation*>
 
-    then we have by [eq: <reference|eq 20.1011.280>] that\ 
+    with\ 
+
+    <\equation>
+      <label|eq 21.1023.308><big|int><rsup|+><around*|(|<below|lim|i\<rightarrow\>\<infty\>>I<rsub|i,1>|)>d\<mu\><rsub|1>=<below|lim|i\<rightarrow\>\<infty\>><big|int><rsup|+>I<rsub|i,1>d\<mu\><rsub|1><text|
+      and ><big|int><rsup|+><around*|(|<below|lim|i\<rightarrow\>\<infty\>>I<rsub|i,2>|)>d\<mu\><rsub|2>=<below|lim|i\<rightarrow\>\<infty\>><big|int><rsup|+>I<rsub|i,2>d\<mu\><rsub|2>
+    </equation>
+
+    Define now\ 
 
     <\equation*>
-      I<rsub|f,1>=<below|lim|i\<rightarrow\>\<infty\>>I<rsub|f,i,1><text| and
-      >I<rsub|f,2>=<below|lim|i\<rightarrow\>\<infty\>>I<rsub|f,i,2>
+      I<rsub|f,1>:X<rsub|1>\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>> by
+      I<rsub|f,1><around*|(|x|)>=<big|int><rsup|+>f<around*|(|x,.|)>d\<mu\><rsub|2>
     </equation*>
 
-    As by [eqs: <reference|eq 20.1003.280>, <reference|eq 20.1004.280>]
-    <math|I<rsub|f,i,1>\<in\>\<cal-M\><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|]>\<wedge\>I<rsub|f,i,2>\<in\>\<cal-M\><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
-    it follows from the Monotone Convergence theorem [see theorem:
-    <reference|Monotone Convergence Theorem (1)>] and the above that\ 
+    <\equation*>
+      I<rsub|f,2>:X<rsub|1>\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>> by
+      I<rsub|f,2><around*|(|y|)>=<big|int><rsup|+>f<around*|(|.,y|)>d\<mu\><rsub|1>
+    </equation*>
+
+    then we have by [eq: <reference|eq 21.1021.308>] that
+    <math|\<forall\>x\<in\>X<rsub|1>> <math|I<rsub|f,1><around*|(|x|)>=<below|lim|i\<rightarrow\>\<infty\>>I<rsub|i,1><around*|(|x|)>>
+    and <math|\<forall\>y\<in\>X<rsub|2>>
+    <math|I<rsub|f,2><around*|(|y|)>=<below|lim|i\<rightarrow\>\<infty\>>I<rsub|i,2><around*|(|y|)>>
+    from which it follows that\ 
 
     <\equation*>
-      I<rsub|f,1>\<in\>\<cal-M\><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|]>\<wedge\>I<rsub|f,2>\<in\>\<cal-M\><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
+      I<rsub|f,1>=<below|lim|i\<rightarrow\>\<infty\>>I<rsub|i,1><text| and
+      >I<rsub|f,2>=<below|lim|i\<rightarrow\>\<infty\>>I<rsub|i,2>
+    </equation*>
+
+    Substituting the above in [eqs: <reference|eq 21.1022.308>] proves that\ 
+
+    <\equation*>
+      I<rsub|f,1>\<in\>\<cal-M\><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|]><text|
+      and >I<rsub|f,2>\<in\>\<cal-M\><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
     </equation*>
 
     and\ 
 
     <\eqnarray*>
-      <tformat|<table|<row|<cell|<big|int><rsup|+>I<rsub|f,1>d\<mu\><rsub|1>>|<cell|\<equallim\><rsub|<text|[theorem:
-      <reference|Monotone Convergence Theorem
-      (1)>]>>>|<cell|<below|lim|i\<rightarrow\>\<infty\>><big|int><rsup|+>I<rsub|f,i,1>d\<mu\><rsub|1>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
-      <reference|eq 20.1005.280>]>>>|<cell|<below|lim|i\<rightarrow\>\<infty\>><big|int><rsup|+>f<rsub|i>
-      d<around*|(|\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
-      <reference|eq 20.1002.280>]>>>|<cell|<big|int><rsup|+>f
-      d\<mu\><around*|(|\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>|)>>>|<row|<cell|<big|int><rsup|+>I<rsub|f,2>d\<mu\><rsub|2>>|<cell|\<equallim\><rsub|<text|[theorem:
-      <reference|Monotone Convergence Theorem
-      (1)>]>>>|<cell|<below|lim|i\<rightarrow\>\<infty\>><big|int><rsup|+>I<rsub|f,i,2>d\<mu\><rsub|2>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
-      <reference|eq 20.1005.280>]>>>|<cell|<below|lim|i\<rightarrow\>\<infty\>><big|int><rsup|+>f<rsub|i>
-      d<around*|(|\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
-      <reference|eq 20.1002.280>]>>>|<cell|<big|int><rsup|+>f
-      d\<mu\><around*|(|\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>|)>>>>>
+      <tformat|<table|<row|<cell|<big|int><rsup|+>I<rsub|f,1>d\<mu\><rsub|1>>|<cell|<below|=|<text|[eq:
+      <reference|eq 21.1023.308>]>>>|<cell|<below|lim|i\<rightarrow\>\<infty\>><big|int><rsup|+>I<rsub|i,1>d\<mu\>>>|<row|<cell|>|<cell|<below|=|<text|[eq:
+      <reference|eq 21.1012.307>]>>>|<cell|<below|lim|i\<rightarrow\>\<infty\>><big|int><rsup|+>f<rsub|i>d<around*|(|\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>|)>>>|<row|<cell|>|<cell|<below|=|<text|[eq:
+      <reference|eq 21.1009.307>]>>>|<cell|<big|int><rsup|+>f
+      d<around*|(|\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>|)>>>|<row|<cell|<big|int><rsup|+>I<rsub|f,2>d\<mu\><rsub|2>>|<cell|<below|=|<text|[eq:
+      <reference|eq 21.1023.308>]>>>|<cell|<below|lim|i\<rightarrow\>\<infty\>><big|int><rsup|+>I<rsub|i,2>d\<mu\>>>|<row|<cell|>|<cell|<below|=|<text|[eq:
+      <reference|eq 21.1012.307>]>>>|<cell|<below|lim|i\<rightarrow\>\<infty\>><big|int><rsup|+>f<rsub|i>d<around*|(|\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>|)>>>|<row|<cell|>|<cell|<below|=|<text|[eq:
+      <reference|eq 21.1009.307>]>>>|<cell|<big|int><rsup|+>f
+      d<around*|(|\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>|)>>>>>
     </eqnarray*>
 
-    hence\ 
+    which proves finally that\ 
 
     <\equation*>
-      <big|int><rsup|+>f d\<mu\><around*|(|\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>|)>=<big|int><rsup|+>I<rsub|f,1>d\<mu\><rsub|1>=<big|int><rsup|+>I<rsub|f,2>d\<mu\><rsub|2>
+      <big|int><rsup|+>f d<around*|(|\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>|)>=<big|int><rsup|+>I<rsub|f,1>d\<mu\><rsub|1>=<big|int><rsup|+>I<rsub|f,2>d\<mu\><rsub|2>
     </equation*>
+
+    \;
   </proof>
+
+  Next we extend Tonelli's theorem to integrable functions. As <math|f> is
+  integrable if <rigid|<math|f<rsup|+>>, <math|f<rsup|->\<in\>\<cal-M\><rsup|+><around*|[|X,\<cal-A\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>>
+  and <math|<big|int><rsup|+>f<rsup|+>d\<mu\>\<less\>\<infty\>>,
+  <math|<big|int><rsup|+>f<rsup|->d\<mu\>\<less\>\<infty\>> it makes sense to
+  examing \ <math|<around*|(|f<around*|(|x,*\<cdot\>|)>|)><rsup|+>,<around*|(|f<around*|(|\<cdot\>,y|)>|)><rsup|+>,<around*|(|f<around*|(|x,*\<cdot\>|)>|)><rsup|-><text|
+  and ><around*|(|f<around*|(|\<cdot\>,y|)>|)><rsup|->> which we do in the
+  next lemma.
 
   <\lemma>
     <label|lemma 20.635.281>Let <math|X<rsub|1>,Y<rsub|1>> be sets and
@@ -43645,8 +43574,8 @@
     </equation*>
 
     <\equation*>
-      \<forall\>x\<in\>X<rsub|2><text| ><around*|(|f<rsup|+>|)><around*|(|.,x|)>=<around*|(|f<around*|(|.,x|)>|)><rsup|+><text|
-      and ><around*|(|f<rsup|->|)><around*|(|.,x|)>=<around*|(|f<around*|(|.,x|)>|)><rsup|->
+      \<forall\>y\<in\>X<rsub|2><text| ><around*|(|f<rsup|+>|)><around*|(|.,y|)>=<around*|(|f<around*|(|.,y|)>|)><rsup|+><text|
+      and ><around*|(|f<rsup|->|)><around*|(|.,y|)>=<around*|(|f<around*|(|.,y|)>|)><rsup|->
     </equation*>
   </lemma>
 
@@ -43669,42 +43598,42 @@
       and ><around*|(|f<rsup|->|)><around*|(|x,.|)>=<around*|(|f<around*|(|x,.|)>|)><rsup|->
     </equation*>
 
-    Likewise, let <math|x\<in\>X<rsub|2>> then we have
-    <math|\<forall\>y\<in\>X<rsub|1>> that\ 
+    Likewise, let <math|y\<in\>X<rsub|2>> then we have
+    <math|\<forall\>x\<in\>X<rsub|1>> that\ 
 
     <\equation*>
-      <around*|(|f<rsup|+>|)><around*|(|.,x|)><around*|(|y|)>=f<rsup|+><around*|(|y,x|)>=max<around*|(|f<around*|(|y,x|)>,0|)>=max<around*|(|f<around*|(|.,x|)><around*|(|y|)>,0|)>=<around*|(|f<around*|(|.,x|)>|)><rsup|+><around*|(|y|)>
+      <around*|(|f<rsup|+>|)><around*|(|.,y|)><around*|(|x|)>=f<rsup|+><around*|(|x,y|)>=max<around*|(|f<around*|(|x,y|)>,0|)>=max<around*|(|f<around*|(|.,y|)><around*|(|x|)>,0|)>=<around*|(|f<around*|(|.,y|)>|)><rsup|+><around*|(|x|)>
     </equation*>
 
     <\equation*>
-      <around*|(|f<rsup|->|)><around*|(|.,x|)><around*|(|y|)>=f<rsup|-><around*|(|y,x|)>=-min<around*|(|f<around*|(|y,x|)>,0|)>=-min<around*|(|f<around*|(|.,x|)><around*|(|y|)>,0|)>=<around*|(|f<around*|(|.,x|)>|)><rsup|-><around*|(|y|)>
+      <around*|(|f<rsup|->|)><around*|(|.,y|)><around*|(|x|)>=f<rsup|-><around*|(|x,y|)>=-min<around*|(|f<around*|(|x,y|)>,0|)>=-min<around*|(|f<around*|(|.,y|)><around*|(|x|)>,0|)>=<around*|(|f<around*|(|.,y|)>|)><rsup|-><around*|(|x|)>
     </equation*>
 
     hence we have\ 
 
     <\equation*>
-      \<forall\>x\<in\>X<rsub|2><text| ><around*|(|f<rsup|+>|)><around*|(|.,x|)>=<around*|(|f<around*|(|.,x|)>|)><rsup|+><text|
-      and ><around*|(|f<rsup|->|)><around*|(|.,x|)>=<around*|(|f<around*|(|.,x|)>|)><rsup|->
+      \<forall\>y\<in\>X<rsub|2><text| ><around*|(|f<rsup|+>|)><around*|(|.,y|)>=<around*|(|f<around*|(|.,y|)>|)><rsup|+><text|
+      and ><around*|(|f<rsup|->|)><around*|(|.,y|)>=<around*|(|f<around*|(|.,y|)>|)><rsup|->
     </equation*>
   </proof>
 
-  The extension of the Tonelli's theorem to integrable functions instead of
-  non negative measurable functions is Fubini's theorem.\ 
+  We are now ready to prove the extension of Tonalli's theorem to the general
+  cases.
 
   <\theorem>
     <label|Fubini's theorem><dueto|Fubini's Theorem>Let
     <math|<around*|\<langle\>|X<rsub|1>,\<cal-A\><rsub|1>,\<mu\><rsub|1>|\<rangle\>>>,
     <math|<around*|\<langle\>|X<rsub|2>,\<cal-A\><rsub|2>,\<mu\><rsub|2>|\<rangle\>>>
-    be measurable spaces whee <math|\<mu\><rsub|1>,\<mu\><rsub|2>> is
+    be measurable spaces where <math|\<mu\><rsub|1>,\<mu\><rsub|2>> are
     <math|\<sigma\>>-finite and <math|f\<in\>\<cal-L\><around*|[|X<rsub|1>\<cdot\>X<rsub|2>,\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>,\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>|]>>
     then we have \ 
 
     <\equation*>
-      D<rsub|1>=<around*|{|x\<in\>X<rsub|1>\|f<around*|(|x,.|)>\<in\>\<cal-L\><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,\<mu\><rsub|2>|]>|}>\<wedge\>\<mu\><rsub|1><around*|(|X<rsub|1>\\D<rsub|1>|)>=0
+      D<rsub|1>=<around*|{|x\<in\>X<rsub|1>\|f<around*|(|x,.|)>\<in\>\<cal-L\><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,\<mu\><rsub|2>|]>|}>\<in\>\<cal-A\><rsub|1>\<wedge\>\<mu\><rsub|1><around*|(|X<rsub|1>\\D<rsub|1>|)>=0
     </equation*>
 
     <\equation*>
-      D<rsub|2>=<around*|{|x\<in\>X<rsub|2>\|f<around*|(|.,x|)>\<in\>\<cal-L\><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,\<mu\><rsub|1>|]>|}>\<wedge\>\<mu\><rsub|2><around*|(|X<rsub|2>\\D<rsub|2>|)>=0
+      D<rsub|2>=<around*|{|x\<in\>X<rsub|2>\|f<around*|(|.,x|)>\<in\>\<cal-L\><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,\<mu\><rsub|1>|]>|}>\<in\>\<cal-A\><rsub|2>\<wedge\>\<mu\><rsub|2><around*|(|X<rsub|2>\\D<rsub|2>|)>=0
     </equation*>
 
     <\equation*>
@@ -43731,7 +43660,7 @@
     <\note>
       As <math|\<forall\>x\<in\>X<rsub|1>\\D<rsub|1>> we have
       <math|x\<nin\>D<rsub|1>\<Rightarrow\>f<around*|(|x,.|)>\<nin\>\<cal-L\><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,\<mu\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
-      and <math|\<mu\><rsub|1><around*|(|X<rsub|1>\\D<rsub|1>|)>> we have
+      and <math|\<mu\><rsub|1><around*|(|X<rsub|1>\\D<rsub|1>|)>=0> we have
       that\ 
 
       <\equation*>
@@ -43741,7 +43670,7 @@
 
       Likewise, as <math|\<forall\>x\<in\>X<rsub|2>\\D<rsub|2>> we have
       <math|x\<nin\>D<rsub|2>\<Rightarrow\>f<around*|(|.,x|)>\<nin\>\<cal-L\><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,\<mu\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
-      and <math|\<mu\><rsub|2><around*|(|X<rsub|2>\\D<rsub|2>|)>> we have
+      and <math|\<mu\><rsub|2><around*|(|X<rsub|2>\\D<rsub|2>|)>=0> we have
       that\ 
 
       <\equation*>
@@ -43753,7 +43682,7 @@
 
   <\proof>
     As <math|f\<in\>\<cal-L\><around*|[|X<rsub|1>\<cdot\>X<rsub|2>,\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>,\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>|]>>
-    we have by definition [theorem: <reference|measure integral>] that\ 
+    we have by [definition: <reference|measure integral>] that\ 
 
     <\equation>
       <label|eq 20.1010.281>f\<in\>\<cal-M\><around*|[|X<rsub|1>\<cdot\>X<rsub|2>,\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]>\<wedge\>f<rsup|+>,f<rsup|->\<in\>\<cal-M\><rsup|+><around*|[|X<rsub|1>\<cdot\>X<rsub|2>,\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
@@ -43765,8 +43694,8 @@
     </equation>
 
     <\equation>
-      <label|eq 20.1015.285><big|int>f d<around*|(|\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>|)>=<big|int>f
-      <rsup|+>d<around*|(|\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>|)>-<big|int>f<rsup|->
+      <label|eq 20.1015.285><big|int>f d<around*|(|\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>|)>=<big|int><rsup|+>f
+      <rsup|+>d<around*|(|\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>|)>-<big|int><rsup|+>f<rsup|->
       d<around*|(|\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>|)>
     </equation>
 
@@ -43873,20 +43802,26 @@
       20.1023.281>]>>>|<cell|>>|<row|<cell|>|<cell|x\<in\>N<rsup|+><rsub|f,2><big|cap>N<rsup|-><rsub|f,2>>|<cell|>>>>
     </eqnarray*>
 
-    Using the above if follows that\ 
+    To summarize the above we have\ 
 
     <\equation>
       <label|eq 20.1025.281>D<rsub|1>=N<rsup|+><rsub|f,1><big|cap>N<rsup|-><rsub|f,1><text|
       and >D<rsub|2>=N<rsup|+><rsub|f,2><big|cap>N<rsup|-><rsub|f,2>
     </equation>
 
-    Now <math|><math|X<rsub|1>\\<around*|(|N<rsup|+><rsub|f,1><big|cap>N<rsup|-><rsub|f,1>|)>\<in\>\<cal-A\><rsub|1>>,
-    <math|X<rsub|2>\\<around*|(|N<rsup|+><rsub|f,2><big|cap>N<rsup|-><rsub|f,2>|)>\<in\>\<cal-A\><rsub|2>>
-    and\ 
+    Using [eqs: <reference|eq 20.1020.281>, <reference|eq 20.1021.281>,
+    <reference|eq 20.1022.281>, <reference|eq 20.1023.281>] it follows that
+    <math|>
 
     <\equation*>
-      \<mu\><rsub|1><around*|(|X<rsub|1>\\<around*|(|N<rsup|+><rsub|f,1><big|cap>N<rsup|-><rsub|f,1>|)>|)>=\<mu\><rsub|1><around*|(|<around*|(|X<rsub|1>\\N<rsup|+><rsub|f,1>|)><big|cup><around*|(|X<rsub|1>\\N<rsup|-><rsub|f,1>|)>|)>\<leqslant\>\<mu\><rsub|1><around*|(|X<rsub|1>\\N<rsup|+><rsub|f,1>|)>+\<mu\><rsub|1><around*|(|X<rsub|1>\\N<rsup|-><rsub|f,1>|)>=0<text|
-      and>
+      X<rsub|1>\\<around*|(|N<rsup|+><rsub|f,1><big|cap>N<rsup|-><rsub|f,1>|)>\<in\>\<cal-A\><rsub|1><text|
+      and >X<rsub|2>\\<around*|(|N<rsup|+><rsub|f,2><big|cap>N<rsup|-><rsub|f,2>|)>\<in\>\<cal-A\><rsub|2>
+    </equation*>
+
+    Further
+
+    <\equation*>
+      \<mu\><rsub|1><around*|(|X<rsub|1>\\<around*|(|N<rsup|+><rsub|f,1><big|cap>N<rsup|-><rsub|f,1>|)>|)>=\<mu\><rsub|1><around*|(|<around*|(|X<rsub|1>\\N<rsup|+><rsub|f,1>|)><big|cup><around*|(|X<rsub|1>\\N<rsup|-><rsub|f,1>|)>|)>\<leqslant\>\<mu\><rsub|1><around*|(|X<rsub|1>\\N<rsup|+><rsub|f,1>|)>+\<mu\><rsub|1><around*|(|X<rsub|1>\\N<rsup|-><rsub|f,1>|)>=0<text|>
     </equation*>
 
     <\equation*>
@@ -43910,19 +43845,21 @@
     <\equation>
       <label|eq 20.1028.281>I<rsub|f,1>:X<rsub|1>\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>><text|
       by >I<rsub|f,1><around*|(|x|)>=<choice|<tformat|<table|<row|<cell|<big|int>f<around*|(|x,.|)>d\<mu\><rsub|2><text|
-      if >x\<in\>D<rsub|1>>>|<row|<cell|0>>>>>
+      if >x\<in\>D<rsub|1>>>|<row|<cell|0<text| if
+      >x\<in\>X<rsub|1>\\D<rsub|1>>>>>>
     </equation>
 
     <\equation>
       <label|eq 20.1029.281>I<rsub|f,2>:X<rsub|2>\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>><text|
       by >I<rsub|f,2><around*|(|x|)>=<choice|<tformat|<table|<row|<cell|<big|int>f<around*|(|.,x|)>d\<mu\><rsub|1><text|
-      if >x\<in\>D<rsub|2>>>|<row|<cell|0>>>>>
+      if >x\<in\>D<rsub|2>>>|<row|<cell|0<text| if
+      >x\<in\>X<rsub|2>\\D<rsub|2>>>>>>
     </equation>
 
     Take\ 
 
     <\equation>
-      <label|eq 20.1033.283>N<rsub|1>=X<rsub|1>\\D<rsub|1>\<in\>\<cal-A\><rsub|1>\<wedge\>N<rsub|2>=X<rsub|2>\\D<rsub|2>\<in\>\<b-A\><rsub|2><text|
+      <label|eq 20.1033.283>N<rsub|1>=X<rsub|1>\\D<rsub|1>\<in\>\<cal-A\><rsub|1>\<wedge\>N<rsub|2>=X<rsub|2>\\D<rsub|2>\<in\>\<cal-A\><rsub|2><text|
       so that <math|X<rsub|1>\\N<rsub|1>=D<rsub|1>\<wedge\>X<rsub|2>\\N<rsub|2>=D<rsub|2>>>
     </equation>
 
@@ -43935,7 +43872,7 @@
     product>] that\ 
 
     <\equation>
-      <label|eq 20.1034.284>\<cal-X\><rsub|X<rsub|1>,X<rsub|1>\\N<rsub|1>>\<cdot\>I<rsup|+><rsub|f,1>,\<cal-X\><rsub|X<rsub|1,>X<rsub|1>\\N<rsub|1>>\<exterior\>f<rsup|-><rsub|f,1>\<in\>\<cal-M\><rsup|+><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
+      <label|eq 20.1034.284>\<cal-X\><rsub|X<rsub|1>,X<rsub|1>\\N<rsub|1>>\<cdot\>I<rsup|+><rsub|f,1>,\<cal-X\><rsub|X<rsub|1,>X<rsub|1>\\N<rsub|1>>\<cdot\>f<rsup|-><rsub|f,1>\<in\>\<cal-M\><rsup|+><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
     </equation>
 
     <\equation>
@@ -44023,7 +43960,7 @@
     20.1035.284>, <reference|eq 20.1036.284>, <reference|eq 20.1037.284>,
     <reference|eq 20.1038.284>, <reference|eq 20.1039.284> and <reference|eq
     20.1040.284>] we can use [theorem: <reference|measure integral
-    alternative (2)>] it follows that\ 
+    alternative (2)>] to get
 
     <\equation>
       <label|eq 20.1041.285>I<rsub|f,1>\<in\>\<cal-L\><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,\<mu\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|]><text|
@@ -48491,7 +48428,7 @@
 <\references>
   <\collection>
     <associate|20.809.248|<tuple|21.865|?>>
-    <associate|21.1044.291|<tuple|21.1116|?>>
+    <associate|21.1044.291|<tuple|21.1105|?>>
     <associate|Beppo Levi's Theorem|<tuple|21.377|?>>
     <associate|Borel measure on R and R^n are locally
     finite|<tuple|21.589|?>>
@@ -48756,7 +48693,7 @@
     <associate|eq 18.20.021|<tuple|21.47|?>>
     <associate|eq 18.21.021|<tuple|21.48|?>>
     <associate|eq 18.22.021|<tuple|21.49|?>>
-    <associate|eq 18.240.291|<tuple|21.1173|?>>
+    <associate|eq 18.240.291|<tuple|21.1162|?>>
     <associate|eq 18.39.022|<tuple|21.85|?>>
     <associate|eq 18.40.022|<tuple|21.86|?>>
     <associate|eq 18.41.022|<tuple|21.87|?>>
@@ -48768,51 +48705,51 @@
     <associate|eq 19.11.039|<tuple|21.13|?>>
     <associate|eq 19.759.043|<tuple|21.916|?>>
     <associate|eq 20.100.200|<tuple|21.97|?>>
-    <associate|eq 20.1000.280|<tuple|21.1023|?>>
-    <associate|eq 20.1001.280|<tuple|21.1024|?>>
-    <associate|eq 20.1002.280|<tuple|21.1025|?>>
-    <associate|eq 20.1003.280|<tuple|21.1026|?>>
-    <associate|eq 20.1004.280|<tuple|21.1027|?>>
-    <associate|eq 20.1005.280|<tuple|21.1028|?>>
-    <associate|eq 20.1006.280|<tuple|21.1029|?>>
-    <associate|eq 20.1007.280|<tuple|21.1030|?>>
-    <associate|eq 20.1008.280|<tuple|21.1031|?>>
-    <associate|eq 20.1009.280|<tuple|21.1032|?>>
+    <associate|eq 20.1000.280|<tuple|21.1025|?>>
+    <associate|eq 20.1001.280|<tuple|21.1026|?>>
+    <associate|eq 20.1002.280|<tuple|21.1027|?>>
+    <associate|eq 20.1003.280|<tuple|21.1028|?>>
+    <associate|eq 20.1004.280|<tuple|21.1029|?>>
+    <associate|eq 20.1005.280|<tuple|21.1030|?>>
+    <associate|eq 20.1006.280|<tuple|21.1031|?>>
+    <associate|eq 20.1007.280|<tuple|21.1032|?>>
+    <associate|eq 20.1008.280|<tuple|21.1033|?>>
+    <associate|eq 20.1009.280|<tuple|21.1034|?>>
     <associate|eq 20.101.200|<tuple|21.98|?>>
-    <associate|eq 20.1010.2080|<tuple|21.1033|?>>
-    <associate|eq 20.1010.281|<tuple|21.1035|?>>
-    <associate|eq 20.1011.280|<tuple|21.1034|?>>
-    <associate|eq 20.1011.281|<tuple|21.1036|?>>
-    <associate|eq 20.1014.281|<tuple|21.1039|?>>
-    <associate|eq 20.1015.281|<tuple|21.1040|?>>
-    <associate|eq 20.1015.285|<tuple|21.1037|?>>
-    <associate|eq 20.1016.281|<tuple|21.1041|?>>
-    <associate|eq 20.1017.281|<tuple|21.1042|?>>
-    <associate|eq 20.1018.281|<tuple|21.1043|?>>
-    <associate|eq 20.1019.281|<tuple|21.1044|?>>
+    <associate|eq 20.1010.2080|<tuple|21.1035|?>>
+    <associate|eq 20.1010.281|<tuple|21.1024|?>>
+    <associate|eq 20.1011.280|<tuple|21.1036|?>>
+    <associate|eq 20.1011.281|<tuple|21.1025|?>>
+    <associate|eq 20.1014.281|<tuple|21.1028|?>>
+    <associate|eq 20.1015.281|<tuple|21.1029|?>>
+    <associate|eq 20.1015.285|<tuple|21.1026|?>>
+    <associate|eq 20.1016.281|<tuple|21.1030|?>>
+    <associate|eq 20.1017.281|<tuple|21.1031|?>>
+    <associate|eq 20.1018.281|<tuple|21.1032|?>>
+    <associate|eq 20.1019.281|<tuple|21.1033|?>>
     <associate|eq 20.102.200|<tuple|21.99|?>>
-    <associate|eq 20.1020.281|<tuple|21.1045|?>>
-    <associate|eq 20.1021.281|<tuple|21.1046|?>>
-    <associate|eq 20.1022.281|<tuple|21.1047|?>>
-    <associate|eq 20.1023.281|<tuple|21.1048|?>>
-    <associate|eq 20.1024.281|<tuple|21.1049|?>>
-    <associate|eq 20.1025.281|<tuple|21.1050|?>>
-    <associate|eq 20.1026.281|<tuple|21.1051|?>>
-    <associate|eq 20.1027.281|<tuple|21.1052|?>>
-    <associate|eq 20.1028.281|<tuple|21.1053|?>>
-    <associate|eq 20.1029.281|<tuple|21.1054|?>>
+    <associate|eq 20.1020.281|<tuple|21.1034|?>>
+    <associate|eq 20.1021.281|<tuple|21.1035|?>>
+    <associate|eq 20.1022.281|<tuple|21.1036|?>>
+    <associate|eq 20.1023.281|<tuple|21.1037|?>>
+    <associate|eq 20.1024.281|<tuple|21.1038|?>>
+    <associate|eq 20.1025.281|<tuple|21.1039|?>>
+    <associate|eq 20.1026.281|<tuple|21.1040|?>>
+    <associate|eq 20.1027.281|<tuple|21.1041|?>>
+    <associate|eq 20.1028.281|<tuple|21.1042|?>>
+    <associate|eq 20.1029.281|<tuple|21.1043|?>>
     <associate|eq 20.103.200|<tuple|21.100|?>>
-    <associate|eq 20.1033.283|<tuple|21.1055|?>>
-    <associate|eq 20.1034.284|<tuple|21.1056|?>>
-    <associate|eq 20.1035.284|<tuple|21.1057|?>>
-    <associate|eq 20.1036.284|<tuple|21.1058|?>>
-    <associate|eq 20.1037.284|<tuple|21.1059|?>>
-    <associate|eq 20.1038.284|<tuple|21.1060|?>>
-    <associate|eq 20.1039.284|<tuple|21.1061|?>>
+    <associate|eq 20.1033.283|<tuple|21.1044|?>>
+    <associate|eq 20.1034.284|<tuple|21.1045|?>>
+    <associate|eq 20.1035.284|<tuple|21.1046|?>>
+    <associate|eq 20.1036.284|<tuple|21.1047|?>>
+    <associate|eq 20.1037.284|<tuple|21.1048|?>>
+    <associate|eq 20.1038.284|<tuple|21.1049|?>>
+    <associate|eq 20.1039.284|<tuple|21.1050|?>>
     <associate|eq 20.104.200|<tuple|21.101|?>>
-    <associate|eq 20.1040.284|<tuple|21.1062|?>>
-    <associate|eq 20.1041.285|<tuple|21.1063|?>>
-    <associate|eq 20.1042.285|<tuple|21.1064|?>>
+    <associate|eq 20.1040.284|<tuple|21.1051|?>>
+    <associate|eq 20.1041.285|<tuple|21.1052|?>>
+    <associate|eq 20.1042.285|<tuple|21.1053|?>>
     <associate|eq 20.105.200|<tuple|21.102|?>>
     <associate|eq 20.106.200|<tuple|21.103|?>>
     <associate|eq 20.107.200|<tuple|21.104|?>>
@@ -49639,145 +49576,147 @@
     <associate|eq 20.995.280|<tuple|21.1001|?>>
     <associate|eq 20.996.280|<tuple|21.1002|?>>
     <associate|eq 20.997.280|<tuple|21.1003|?>>
-    <associate|eq 20.999.280|<tuple|21.1022|?>>
-    <associate|eq 21.1000.285|<tuple|21.1074|?>>
-    <associate|eq 21.1001.285|<tuple|21.1075|?>>
-    <associate|eq 21.1002.285|<tuple|21.1076|?>>
-    <associate|eq 21.1003.285|<tuple|21.1077|?>>
-    <associate|eq 21.1004.286|<tuple|21.1078|?>>
+    <associate|eq 20.999.280|<tuple|21.1024|?>>
+    <associate|eq 21.1000.285|<tuple|21.1063|?>>
+    <associate|eq 21.1001.285|<tuple|21.1064|?>>
+    <associate|eq 21.1002.285|<tuple|21.1065|?>>
+    <associate|eq 21.1003.285|<tuple|21.1066|?>>
+    <associate|eq 21.1004.286|<tuple|21.1067|?>>
     <associate|eq 21.1004.307|<tuple|21.1004|?>>
-    <associate|eq 21.1005.286|<tuple|21.1079|?>>
+    <associate|eq 21.1005.286|<tuple|21.1068|?>>
     <associate|eq 21.1005.307|<tuple|21.1005|?>>
-    <associate|eq 21.1006.286|<tuple|21.1080|?>>
+    <associate|eq 21.1006.286|<tuple|21.1069|?>>
     <associate|eq 21.1006.307|<tuple|21.1006|?>>
-    <associate|eq 21.1007.286|<tuple|21.1081|?>>
+    <associate|eq 21.1007.286|<tuple|21.1070|?>>
     <associate|eq 21.1007.307|<tuple|21.1007|?>>
-    <associate|eq 21.1008.286|<tuple|21.1082|?>>
+    <associate|eq 21.1008.286|<tuple|21.1071|?>>
     <associate|eq 21.1008.307|<tuple|21.1008|?>>
-    <associate|eq 21.1009.286|<tuple|21.1083|?>>
+    <associate|eq 21.1009.286|<tuple|21.1072|?>>
     <associate|eq 21.1009.307|<tuple|21.1009|?>>
-    <associate|eq 21.1010.286|<tuple|21.1084|?>>
+    <associate|eq 21.1010.286|<tuple|21.1073|?>>
     <associate|eq 21.1010.307|<tuple|21.1010|?>>
-    <associate|eq 21.1011.286|<tuple|21.1085|?>>
+    <associate|eq 21.1011.286|<tuple|21.1074|?>>
     <associate|eq 21.1011.307|<tuple|21.1013|?>>
     <associate|eq 21.1011.308|<tuple|21.1011|?>>
-    <associate|eq 21.1012.286|<tuple|21.1086|?>>
+    <associate|eq 21.1012.286|<tuple|21.1075|?>>
     <associate|eq 21.1012.307|<tuple|21.1014|?>>
     <associate|eq 21.1012.308|<tuple|21.1012|?>>
-    <associate|eq 21.1013.286|<tuple|21.1087|?>>
+    <associate|eq 21.1013.286|<tuple|21.1076|?>>
     <associate|eq 21.1013.307|<tuple|21.1015|?>>
-    <associate|eq 21.1014.286|<tuple|21.1088|?>>
+    <associate|eq 21.1014.286|<tuple|21.1077|?>>
     <associate|eq 21.1014.307|<tuple|21.1016|?>>
-    <associate|eq 21.1015.286|<tuple|21.1089|?>>
+    <associate|eq 21.1015.286|<tuple|21.1078|?>>
     <associate|eq 21.1015.307|<tuple|21.1017|?>>
-    <associate|eq 21.1016.286|<tuple|21.1090|?>>
+    <associate|eq 21.1016.286|<tuple|21.1079|?>>
     <associate|eq 21.1016.307|<tuple|21.1018|?>>
-    <associate|eq 21.1017|<tuple|21.1017|?>>
-    <associate|eq 21.1017.286|<tuple|21.1091|?>>
+    <associate|eq 21.1017.286|<tuple|21.1080|?>>
     <associate|eq 21.1017.307|<tuple|21.1019|?>>
-    <associate|eq 21.1018.286|<tuple|21.1092|?>>
+    <associate|eq 21.1018.286|<tuple|21.1081|?>>
     <associate|eq 21.1018.307|<tuple|21.1020|?>>
-    <associate|eq 21.1019.286|<tuple|21.1093|?>>
-    <associate|eq 21.1020.286|<tuple|21.1094|?>>
-    <associate|eq 21.1021.286|<tuple|21.1095|?>>
-    <associate|eq 21.1022.286|<tuple|21.1096|?>>
-    <associate|eq 21.1023.286|<tuple|21.1097|?>>
-    <associate|eq 21.1024.286|<tuple|21.1098|?>>
-    <associate|eq 21.1025.286|<tuple|21.1099|?>>
-    <associate|eq 21.1026.286|<tuple|21.1100|?>>
-    <associate|eq 21.1027.286|<tuple|21.1101|?>>
-    <associate|eq 21.1028.286|<tuple|21.1102|?>>
-    <associate|eq 21.1029.286|<tuple|21.1103|?>>
-    <associate|eq 21.1030.286|<tuple|21.1104|?>>
-    <associate|eq 21.1031.286|<tuple|21.1105|?>>
-    <associate|eq 21.1032.286|<tuple|21.1106|?>>
+    <associate|eq 21.1019.286|<tuple|21.1082|?>>
+    <associate|eq 21.1020.286|<tuple|21.1083|?>>
+    <associate|eq 21.1021.286|<tuple|21.1084|?>>
+    <associate|eq 21.1021.308|<tuple|21.1021|?>>
+    <associate|eq 21.1022.286|<tuple|21.1085|?>>
+    <associate|eq 21.1022.308|<tuple|21.1022|?>>
+    <associate|eq 21.1023.286|<tuple|21.1086|?>>
+    <associate|eq 21.1023.308|<tuple|21.1023|?>>
+    <associate|eq 21.1024.286|<tuple|21.1087|?>>
+    <associate|eq 21.1025.286|<tuple|21.1088|?>>
+    <associate|eq 21.1026.286|<tuple|21.1089|?>>
+    <associate|eq 21.1027.286|<tuple|21.1090|?>>
+    <associate|eq 21.1028.286|<tuple|21.1091|?>>
+    <associate|eq 21.1029.286|<tuple|21.1092|?>>
+    <associate|eq 21.1030.286|<tuple|21.1093|?>>
+    <associate|eq 21.1031.286|<tuple|21.1094|?>>
+    <associate|eq 21.1032.286|<tuple|21.1095|?>>
     <associate|eq 21.1032.286.1|<tuple|21.25|?>>
-    <associate|eq 21.1033.286|<tuple|21.1107|?>>
+    <associate|eq 21.1033.286|<tuple|21.1096|?>>
     <associate|eq 21.1033.286.1|<tuple|21.27|?>>
-    <associate|eq 21.1036.287|<tuple|21.1108|?>>
-    <associate|eq 21.1037.287|<tuple|21.1109|?>>
-    <associate|eq 21.1038.287|<tuple|21.1110|?>>
-    <associate|eq 21.1039.287|<tuple|21.1111|?>>
-    <associate|eq 21.1040.290|<tuple|21.1112|?>>
-    <associate|eq 21.1041.290|<tuple|21.1113|?>>
-    <associate|eq 21.1042.290|<tuple|21.1114|?>>
-    <associate|eq 21.1043.290|<tuple|21.1115|?>>
-    <associate|eq 21.1044.290|<tuple|21.1134|?>>
-    <associate|eq 21.1045.290|<tuple|21.1135|?>>
-    <associate|eq 21.1045.291|<tuple|21.1117|?>>
-    <associate|eq 21.1046.290|<tuple|21.1136|?>>
-    <associate|eq 21.1046.291|<tuple|21.1118|?>>
-    <associate|eq 21.1047.291|<tuple|21.1119|?>>
-    <associate|eq 21.1048.291|<tuple|21.1120|?>>
-    <associate|eq 21.1049.291|<tuple|21.1121|?>>
-    <associate|eq 21.1050.291|<tuple|21.1122|?>>
-    <associate|eq 21.1051.291|<tuple|21.1123|?>>
-    <associate|eq 21.1052.291|<tuple|21.1124|?>>
-    <associate|eq 21.1054.291|<tuple|21.1126|?>>
-    <associate|eq 21.1055.291|<tuple|21.1127|?>>
-    <associate|eq 21.1056.291|<tuple|21.1128|?>>
-    <associate|eq 21.1057.291|<tuple|21.1129|?>>
-    <associate|eq 21.1058.291|<tuple|21.1130|?>>
-    <associate|eq 21.1059.291|<tuple|21.1131|?>>
-    <associate|eq 21.1060.291|<tuple|21.1132|?>>
-    <associate|eq 21.1061.291|<tuple|21.1133|?>>
-    <associate|eq 21.1065.291|<tuple|21.1137|?>>
-    <associate|eq 21.1066.291|<tuple|21.1138|?>>
-    <associate|eq 21.1067.291|<tuple|21.1139|?>>
-    <associate|eq 21.1068.291|<tuple|21.1140|?>>
-    <associate|eq 21.1069.291|<tuple|21.1140|?>>
-    <associate|eq 21.1070.291|<tuple|21.1142|?>>
-    <associate|eq 21.1071.291|<tuple|21.1143|?>>
-    <associate|eq 21.1072.291|<tuple|21.1144|?>>
-    <associate|eq 21.1073.291|<tuple|21.1145|?>>
-    <associate|eq 21.1074.291|<tuple|21.1146|?>>
-    <associate|eq 21.1075.291|<tuple|21.1147|?>>
-    <associate|eq 21.1076.291|<tuple|21.1148|?>>
-    <associate|eq 21.1077.291|<tuple|21.1149|?>>
-    <associate|eq 21.1078.291|<tuple|21.1150|?>>
-    <associate|eq 21.1079.291|<tuple|21.1151|?>>
-    <associate|eq 21.1080.292|<tuple|21.1152|?>>
-    <associate|eq 21.1081.291|<tuple|21.1155|?>>
-    <associate|eq 21.1081.292|<tuple|21.1153|?>>
-    <associate|eq 21.1082.291|<tuple|21.1156|?>>
-    <associate|eq 21.1082.292|<tuple|21.1154|?>>
-    <associate|eq 21.1083.291|<tuple|21.1157|?>>
-    <associate|eq 21.1084.291|<tuple|21.1158|?>>
-    <associate|eq 21.1085.291|<tuple|21.1159|?>>
-    <associate|eq 21.1086.291|<tuple|21.1160|?>>
-    <associate|eq 21.1087.291|<tuple|21.1161|?>>
-    <associate|eq 21.1088.291|<tuple|21.1162|?>>
-    <associate|eq 21.1089.291|<tuple|21.1163|?>>
+    <associate|eq 21.1036.287|<tuple|21.1097|?>>
+    <associate|eq 21.1037.287|<tuple|21.1098|?>>
+    <associate|eq 21.1038.287|<tuple|21.1099|?>>
+    <associate|eq 21.1039.287|<tuple|21.1100|?>>
+    <associate|eq 21.1040.290|<tuple|21.1101|?>>
+    <associate|eq 21.1041.290|<tuple|21.1102|?>>
+    <associate|eq 21.1042.290|<tuple|21.1103|?>>
+    <associate|eq 21.1043.290|<tuple|21.1104|?>>
+    <associate|eq 21.1044.290|<tuple|21.1123|?>>
+    <associate|eq 21.1045.290|<tuple|21.1124|?>>
+    <associate|eq 21.1045.291|<tuple|21.1106|?>>
+    <associate|eq 21.1046.290|<tuple|21.1125|?>>
+    <associate|eq 21.1046.291|<tuple|21.1107|?>>
+    <associate|eq 21.1047.291|<tuple|21.1108|?>>
+    <associate|eq 21.1048.291|<tuple|21.1109|?>>
+    <associate|eq 21.1049.291|<tuple|21.1110|?>>
+    <associate|eq 21.1050.291|<tuple|21.1111|?>>
+    <associate|eq 21.1051.291|<tuple|21.1112|?>>
+    <associate|eq 21.1052.291|<tuple|21.1113|?>>
+    <associate|eq 21.1054.291|<tuple|21.1115|?>>
+    <associate|eq 21.1055.291|<tuple|21.1116|?>>
+    <associate|eq 21.1056.291|<tuple|21.1117|?>>
+    <associate|eq 21.1057.291|<tuple|21.1118|?>>
+    <associate|eq 21.1058.291|<tuple|21.1119|?>>
+    <associate|eq 21.1059.291|<tuple|21.1120|?>>
+    <associate|eq 21.1060.291|<tuple|21.1121|?>>
+    <associate|eq 21.1061.291|<tuple|21.1122|?>>
+    <associate|eq 21.1065.291|<tuple|21.1126|?>>
+    <associate|eq 21.1066.291|<tuple|21.1127|?>>
+    <associate|eq 21.1067.291|<tuple|21.1128|?>>
+    <associate|eq 21.1068.291|<tuple|21.1129|?>>
+    <associate|eq 21.1069.291|<tuple|21.1129|?>>
+    <associate|eq 21.1070.291|<tuple|21.1131|?>>
+    <associate|eq 21.1071.291|<tuple|21.1132|?>>
+    <associate|eq 21.1072.291|<tuple|21.1133|?>>
+    <associate|eq 21.1073.291|<tuple|21.1134|?>>
+    <associate|eq 21.1074.291|<tuple|21.1135|?>>
+    <associate|eq 21.1075.291|<tuple|21.1136|?>>
+    <associate|eq 21.1076.291|<tuple|21.1137|?>>
+    <associate|eq 21.1077.291|<tuple|21.1138|?>>
+    <associate|eq 21.1078.291|<tuple|21.1139|?>>
+    <associate|eq 21.1079.291|<tuple|21.1140|?>>
+    <associate|eq 21.1080.292|<tuple|21.1141|?>>
+    <associate|eq 21.1081.291|<tuple|21.1144|?>>
+    <associate|eq 21.1081.292|<tuple|21.1142|?>>
+    <associate|eq 21.1082.291|<tuple|21.1145|?>>
+    <associate|eq 21.1082.292|<tuple|21.1143|?>>
+    <associate|eq 21.1083.291|<tuple|21.1146|?>>
+    <associate|eq 21.1084.291|<tuple|21.1147|?>>
+    <associate|eq 21.1085.291|<tuple|21.1148|?>>
+    <associate|eq 21.1086.291|<tuple|21.1149|?>>
+    <associate|eq 21.1087.291|<tuple|21.1150|?>>
+    <associate|eq 21.1088.291|<tuple|21.1151|?>>
+    <associate|eq 21.1089.291|<tuple|21.1152|?>>
     <associate|eq 21.109.300|<tuple|21.109|?>>
-    <associate|eq 21.1090.291|<tuple|21.1164|?>>
-    <associate|eq 21.1091.291|<tuple|21.1165|?>>
-    <associate|eq 21.1092.291|<tuple|21.1166|?>>
-    <associate|eq 21.1093.291|<tuple|21.1167|?>>
-    <associate|eq 21.1094.291|<tuple|21.1168|?>>
-    <associate|eq 21.1095.291|<tuple|21.1169|?>>
-    <associate|eq 21.1096.291|<tuple|21.1170|?>>
-    <associate|eq 21.1097.291|<tuple|21.1171|?>>
-    <associate|eq 21.1098.291|<tuple|21.1172|?>>
-    <associate|eq 21.1099.291|<tuple|21.1173|?>>
-    <associate|eq 21.1100.291|<tuple|21.1174|?>>
-    <associate|eq 21.1101.291|<tuple|21.1175|?>>
-    <associate|eq 21.1102.291|<tuple|21.1176|?>>
-    <associate|eq 21.1103.291|<tuple|21.1177|?>>
-    <associate|eq 21.1104.291|<tuple|21.1178|?>>
-    <associate|eq 21.1105.291|<tuple|21.1179|?>>
-    <associate|eq 21.1106.291|<tuple|21.1180|?>>
-    <associate|eq 21.1107.291|<tuple|21.1181|?>>
-    <associate|eq 21.1108.291|<tuple|21.1182|?>>
-    <associate|eq 21.1109.291|<tuple|21.1183|?>>
-    <associate|eq 21.1110.291|<tuple|21.1184|?>>
-    <associate|eq 21.1111.291|<tuple|21.1185|?>>
-    <associate|eq 21.1112.291|<tuple|21.1186|?>>
-    <associate|eq 21.1113.291|<tuple|21.1187|?>>
-    <associate|eq 21.1114.291|<tuple|21.1188|?>>
-    <associate|eq 21.1115.291|<tuple|21.1189|?>>
-    <associate|eq 21.1116.291|<tuple|21.1190|?>>
-    <associate|eq 21.1117.291|<tuple|21.1191|?>>
-    <associate|eq 21.1118.291|<tuple|21.1192|?>>
+    <associate|eq 21.1090.291|<tuple|21.1153|?>>
+    <associate|eq 21.1091.291|<tuple|21.1154|?>>
+    <associate|eq 21.1092.291|<tuple|21.1155|?>>
+    <associate|eq 21.1093.291|<tuple|21.1156|?>>
+    <associate|eq 21.1094.291|<tuple|21.1157|?>>
+    <associate|eq 21.1095.291|<tuple|21.1158|?>>
+    <associate|eq 21.1096.291|<tuple|21.1159|?>>
+    <associate|eq 21.1097.291|<tuple|21.1160|?>>
+    <associate|eq 21.1098.291|<tuple|21.1161|?>>
+    <associate|eq 21.1099.291|<tuple|21.1162|?>>
+    <associate|eq 21.1100.291|<tuple|21.1163|?>>
+    <associate|eq 21.1101.291|<tuple|21.1164|?>>
+    <associate|eq 21.1102.291|<tuple|21.1165|?>>
+    <associate|eq 21.1103.291|<tuple|21.1166|?>>
+    <associate|eq 21.1104.291|<tuple|21.1167|?>>
+    <associate|eq 21.1105.291|<tuple|21.1168|?>>
+    <associate|eq 21.1106.291|<tuple|21.1169|?>>
+    <associate|eq 21.1107.291|<tuple|21.1170|?>>
+    <associate|eq 21.1108.291|<tuple|21.1171|?>>
+    <associate|eq 21.1109.291|<tuple|21.1172|?>>
+    <associate|eq 21.1110.291|<tuple|21.1173|?>>
+    <associate|eq 21.1111.291|<tuple|21.1174|?>>
+    <associate|eq 21.1112.291|<tuple|21.1175|?>>
+    <associate|eq 21.1113.291|<tuple|21.1176|?>>
+    <associate|eq 21.1114.291|<tuple|21.1177|?>>
+    <associate|eq 21.1115.291|<tuple|21.1178|?>>
+    <associate|eq 21.1116.291|<tuple|21.1179|?>>
+    <associate|eq 21.1117.291|<tuple|21.1180|?>>
+    <associate|eq 21.1118.291|<tuple|21.1181|?>>
     <associate|eq 21.160.300|<tuple|21.161|?>>
     <associate|eq 21.259.300|<tuple|21.259|?>>
     <associate|eq 21.26.300|<tuple|21.26|?>>
@@ -49916,16 +49855,16 @@
     <associate|eq 21.739.306|<tuple|21.737|?>>
     <associate|eq 21.740.306|<tuple|21.738|?>>
     <associate|eq 21.84.300|<tuple|21.84|?>>
-    <associate|eq 21.991.285|<tuple|21.1065|?>>
-    <associate|eq 21.992.285|<tuple|21.1066|?>>
-    <associate|eq 21.992.285.1|<tuple|21.1066|?>>
-    <associate|eq 21.993.285|<tuple|21.1067|?>>
-    <associate|eq 21.994.285|<tuple|21.1068|?>>
-    <associate|eq 21.995.285|<tuple|21.1069|?>>
-    <associate|eq 21.996.285|<tuple|21.1070|?>>
-    <associate|eq 21.997.285|<tuple|21.1071|?>>
-    <associate|eq 21.998.285|<tuple|21.1072|?>>
-    <associate|eq 21.999.285|<tuple|21.1073|?>>
+    <associate|eq 21.991.285|<tuple|21.1054|?>>
+    <associate|eq 21.992.285|<tuple|21.1055|?>>
+    <associate|eq 21.992.285.1|<tuple|21.1055|?>>
+    <associate|eq 21.993.285|<tuple|21.1056|?>>
+    <associate|eq 21.994.285|<tuple|21.1057|?>>
+    <associate|eq 21.995.285|<tuple|21.1058|?>>
+    <associate|eq 21.996.285|<tuple|21.1059|?>>
+    <associate|eq 21.997.285|<tuple|21.1060|?>>
+    <associate|eq 21.998.285|<tuple|21.1061|?>>
+    <associate|eq 21.999.285|<tuple|21.1062|?>>
     <associate|figure 20.6.234|<tuple|21.6|?>>
     <associate|figure 20.7.234|<tuple|21.7|?>>
     <associate|integral convention|<tuple|21.555|?>>
