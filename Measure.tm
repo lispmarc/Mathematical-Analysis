@@ -44558,8 +44558,6 @@
 
   The above two lemmas can be summarized in the following theorem.
 
-  TODO
-
   <\theorem>
     <label|corollary 21.533.285>Let <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
     be a normed space with topology <math|\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>>>>
@@ -44607,6 +44605,21 @@
       <math|\<mu\><around*|(|A|)>=sup<around*|(|<around*|{|\<mu\><around*|(|F|)>\|F\<subseteq\>A\<wedge\>F<text|
       is closed>|}>|)>>
     </enumerate>
+
+    <\note>
+      As <math|X,\<varnothing\>> are open and closed and
+      <math|\<forall\>A\<in\>\<cal-A\>> we have
+      <math|\<varnothing\>\<subseteq\>A\<subseteq\>X> we have that
+      <math|\<varnothing\>\<in\><around*|{|\<mu\><around*|(|F|)>\|F\<subseteq\>A\<wedge\>F<text|
+      is closed>|}>> and <math|X\<in\>inf<around*|(|<around*|{|\<mu\><around*|(|U|)>\|A\<subseteq\>U\<wedge\>U<text|
+      is open>|}>|)>> it follows that\ 
+
+      <\equation*>
+        inf<around*|(|<around*|{|\<mu\><around*|(|U|)>\|A\<subseteq\>U\<wedge\>U<text|
+        is open>|}>|)><text| exist and >sup<around*|(|<around*|{|\<mu\><around*|(|F|)>\|F\<subseteq\>A\<wedge\>F<text|
+        is closed>|}>|)><text| exist>
+      </equation*>
+    </note>
   </definition>
 
   <\definition>
@@ -44626,12 +44639,13 @@
       >if <math|\<forall\>A\<in\>\<cal-A\>> we have
 
       <\equation*>
-        \<mu\><around*|(|A|)>=sup<around*|(|<around*|{|\<mu\><around*|(|K|)>\|K\<subseteq\>A\<wedge\>K<text|
-        is compact >|}>|)>
+        \<mu\><around*|(|A|)>=sup<around*|(|<around*|{|\<mu\><around*|(|F|)>\|F\<subseteq\>A\<wedge\>F<text|
+        is closed>|}>|)>
       </equation*>
 
       <item><math|\<mu\>> is <with|font-series|bold|regular >if <math|\<mu\>>
-      is <with|font-series|bold|external and compact internal regular>.
+      is <with|font-series|bold|external regular and compact internal
+      regular>.
 
       <item><math|\<mu\>> is a <with|font-series|bold|Radon measure >if
       <math|\<mu\>> is <with|font-series|bold|locally finite> and
@@ -44642,7 +44656,13 @@
       The Hausdorff condition is essential as it ensures by [theorem:
       <reference|compact set is closed in a Hausdorff space>] that a compact
       set <math|K> is closed, hence a element of <math|\<cal-A\>> so that
-      <math|\<mu\><around*|(|K|)>> makes sense.
+      <math|\<mu\><around*|(|K|)>> makes sense. Further as
+      <math|\<varnothing\>> is compact [see example: <reference|compact empty
+      set>] and <math|\<forall\>A\<in\>\<cal-A\>>
+      <math|\<varnothing\>\<subseteq\>A> we have that
+      <math|\<varnothing\>\<in\><around*|{|\<mu\><around*|(|F|)>\|F\<subseteq\>A\<wedge\>F<text|
+      is closed>|}>> so that <math|sup<around*|(|<around*|{|\<mu\><around*|(|F|)>\|F\<subseteq\>A\<wedge\>F<text|
+      is closed>|}>|)>> is well defined.
     </note>
   </definition>
 
@@ -44657,6 +44677,14 @@
     sum and scalar product of measures>] that:\ 
 
     <\enumerate>
+      <item>If <math|\<cal-T\>> is <with|font-series|bold|Hausdorff> and
+      <math|\<mu\>> is compact finite then <math|\<alpha\>\<cdot\>\<mu\>> is
+      compact finite.
+
+      <item>If <math|\<cal-T\>> is <with|font-series|bold|Hausdorff> and
+      <math|\<mu\>> is compact internal regular then
+      <math|\<alpha\>\<cdot\>\<mu\>> is compact internal regular.
+
       <item>If <math|\<mu\>> is locally finite then
       <math|\<alpha\>\<cdot\>\<mu\>> is locally finite.
 
@@ -44664,10 +44692,15 @@
       <math|\<alpha\>\<cdot\>\<mu\>> is external regular.
 
       <item>If <math|\<mu\>> is internal regular then
-      <math|\<alpha\>\<cdot\>,\<mu\>> is internal regular.
+      <math|\<alpha\>\<cdot\>\<mu\>> is internal regular.
 
-      <item>If <math|\<mu\>> is a Radon measure then
-      <math|\<alpha\>\<cdot\>\<mu\>> is a Radon measure.
+      <item>If <math|\<cal-T\>> is <with|font-series|bold|Hausdorff> and
+      <math|\<mu\>> is regular then <math|\<alpha\>\<cdot\>\<mu\>> is
+      regular.
+
+      <item>If <math|\<cal-T\>> is <with|font-series|bold|Hausdorf> and
+      <math|\<mu\>> is a Radon measure then <math|\<alpha\>\<cdot\>\<mu\>> is
+      a Radon measure.
     </enumerate>
   </theorem>
 
@@ -44675,6 +44708,30 @@
     \ 
 
     <\enumerate>
+      <item>As <math|\<mu\>> is compact finite we have for every compact set
+      <math|K> that <math|\<mu\><around*|(|K|)>\<less\>\<infty\>> so that
+      <math|<around*|(|\<alpha\>\<cdot\>\<mu\>|)><around*|(|K|)>=\<alpha\>\<cdot\>\<mu\><around*|(|K|)>\<less\>\<infty\>>
+      from which it follows that <math|\<alpha\>\<cdot\>\<mu\>> is compact
+      finite.
+
+      <item>Let <math|A\<in\>\<cal-A\>> then as <math|\<mu\>> is compact
+      internal regular we have that
+
+      <\equation*>
+        \<mu\><around*|(|A|)>=sup<around*|(|<around*|{|\<mu\><around*|(|K|)>\|C\<subseteq\>A\<wedge\>K<text|
+        is compact>|}>|)>.
+      </equation*>
+
+      Hence we have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|\<alpha\>\<cdot\>\<mu\>|)><around*|(|A|)>>|<cell|=>|<cell|\<alpha\>\<cdot\>sup<around*|(|<around*|{|\<mu\><around*|(|K|)>\|K\<subseteq\>A\<wedge\>K<text|
+        is compact>|}>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|complex sup(a.x) inf(a.x)>]>>>|<cell|sup<around*|(|<around*|{|\<alpha\>\<cdot\>\<mu\><around*|(|K|)>\|K\<subseteq\>A\<wedge\>K<text|
+        is compact>|}>|)>>>|<row|<cell|>|<cell|=>|<cell|sup<around*|(|<around*|{|<around*|(|\<alpha\>\<cdot\>\<mu\>|)><around*|(|K|)>\|C\<subseteq\>A\<wedge\>K<text|
+        is compact>|}>|)>>>>>
+      </eqnarray*>
+
       <item>If <math|x\<in\>X> then as <math|\<mu\>> is locally finite there
       exist a open set <math|U> such that <math|x\<in\>U> and
       <math|\<mu\><around*|(|U|)>\<less\>\<infty\>> so that
@@ -44705,56 +44762,9 @@
         is closed>|}>|)>>>>>
       </eqnarray*>
 
-      <item>This follows from (2) and (3).
-    </enumerate>
-  </proof>
+      <item>This follows from (2) and (4).
 
-  <\theorem>
-    <label|measure compact finite and scalar product>Let
-    <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> be a topological
-    space, <math|\<cal-A\>> a <math|\<sigma\>>-algebra on <math|X> with
-    <math|\<cal-B\><around*|[|X,\<cal-T\>|]>\<subseteq\>\<cal-A\>> and
-    <math|\<mu\>:\<cal-A\>\<rightarrow\><around*|[|0,\<infty\>|]>> a measure,
-    <math|\<alpha\>\<in\><around*|[|0,\<infty\>|[>> then we have for the
-    measure <math|\<alpha\>\<cdot\>\<mu\>> [see theorem: <reference|measure
-    sum and scalar product of measures>] that:
-
-    <\enumerate>
-      <item>If <math|\<mu\>> is compact finite then
-      <math|\<alpha\>\<cdot\>\<mu\>> is compact finite.
-
-      <item>If <math|\<mu\>> is compact internal regular then
-      <math|\<alpha\>\<cdot\>\<mu\>> is compact internal regular
-    </enumerate>
-  </theorem>
-
-  <\proof>
-    \ 
-
-    <\enumerate>
-      <item>As <math|\<mu\>> is compact finite we have for every compact set
-      <math|K> that <math|\<mu\><around*|(|K|)>\<less\>\<infty\>> so that
-      <math|<around*|(|\<alpha\>\<cdot\>\<mu\>|)><around*|(|K|)>=\<alpha\>\<cdot\>\<mu\><around*|(|K|)>\<less\>\<infty\>>
-      from which it follows that <math|\<alpha\>\<cdot\>\<mu\>> is compact
-      finite
-
-      <item>Let <math|A\<in\>\<cal-A\>> then as <math|\<mu\>> is compact
-      internal regular we have that
-
-      <\equation*>
-        \<mu\><around*|(|A|)>=sup<around*|(|<around*|{|\<mu\><around*|(|K|)>\|C\<subseteq\>A\<wedge\>K<text|
-        is compact>|}>|)>.
-      </equation*>
-
-      Hence we have\ 
-
-      <\eqnarray*>
-        <tformat|<table|<row|<cell|<around*|(|\<alpha\>\<cdot\>\<mu\>|)><around*|(|A|)>>|<cell|=>|<cell|\<alpha\>\<cdot\>sup<around*|(|<around*|{|\<mu\><around*|(|K|)>\|K\<subseteq\>A\<wedge\>K<text|
-        is compact>|}>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
-        <reference|complex sup(a.x) inf(a.x)>]>>>|<cell|sup<around*|(|<around*|{|\<alpha\>\<cdot\>\<mu\><around*|(|K|)>\|K\<subseteq\>A\<wedge\>K<text|
-        is compact>|}>|)>>>|<row|<cell|>|<cell|=>|<cell|sup<around*|(|<around*|{|<around*|(|\<alpha\>\<cdot\>\<mu\>|)><around*|(|K|)>\|C\<subseteq\>A\<wedge\>K<text|
-        is compact>|}>|)>>>>>
-      </eqnarray*>
+      <item>This follows from (3) and (6).
     </enumerate>
   </proof>
 
@@ -44782,7 +44792,8 @@
       have <math|\<mu\><around*|(|F|)>=\<nu\><around*|(|F|)>> then
       <math|\<mu\>=\<nu\>>.
 
-      <item>If additional <math|\<cal-T\>> is Hausdorff then we have: If
+      <item>If additional <math|\<cal-T\>> is
+      <with|font-series|bold|Hausdorff> then we have: If
       <math|\<mu\>:\<cal-A\>\<rightarrow\><around*|[|0,\<infty\>|]>> and
       <math|\<nu\>:\<cal-A\>\<rightarrow\><around*|[|0,\<infty\>|]>> are
       compact internal regular measures such that for every compact set
@@ -44857,7 +44868,7 @@
     Hence
 
     <\equation*>
-      \<mu\><around*|(|K|)>=\<mu\><around*|(|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>U<rsub|x<rsub|i>>|)><below|\<leqslant\>|<text|[theorem:
+      \<mu\><around*|(|K|)>\<leqslant\>\<mu\><around*|(|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>U<rsub|x<rsub|i>>|)><below|\<leqslant\>|<text|[theorem:
       <reference|measure measure space properties
       (4)>]>><big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<mu\><around*|(|U<rsub|x<rsub|i>>|)>\<less\>\<infty\>
     </equation*>
@@ -44902,8 +44913,8 @@
     Let <math|I\<in\>\<cal-I\><rsub|<around*|[||[>><big|cup>\<cal-I\><rsub|<around*|]||]>><big|cup>\<cal-I\><rsub|<around*|]||[>><big|cup><around*|{|\<varnothing\>|}>>
     then either <math|I=\<varnothing\>\<Rightarrow\>\<mu\><around*|(|I|)>=0\<less\>\<infty\>>
     or there exist a <math|a,b\<in\>\<bbb-R\>> with <math|a\<less\>b> such
-    that <math|I=<around*|[|a,b|[>\<vee\><around*|]|a,b|]>\<vee\><around*|]|a,b|[>\<subseteq\><around*|[|a,b|]>>
-    so that <math|\<mu\><around*|(|I|)>\<subseteq\>\<mu\><around*|(|<around*|[|a,b|]>|)>\<less\>\<infty\>>.
+    that <math|I=<around*|[|a,b|[>\<subseteq\><around*|[|a,b|]>\<vee\>I=<around*|]|a,b|]>\<subseteq\><around*|[|a,b|]>\<vee\>I=<around*|]|a,b|[>\<subseteq\><around*|[|a,b|]>\<subseteq\><around*|[|a,b|]>>
+    so that <math|\<mu\><around*|(|I|)>\<leqslant\>\<mu\><around*|(|<around*|[|a,b|]>|)>\<less\>\<infty\>>.
     Hence we have\ 
 
     <\equation*>
@@ -44912,30 +44923,16 @@
     </equation*>
 
     Let <math|I\<in\>\<cal-I\><rsub|<around*|[||]>><big|cup>\<cal-I\><rsub|<around*|[||[>><big|cup>\<cal-I\><rsub|<around*|]||]>><big|cup>\<cal-I\><rsub|<around*|]||[>><big|cup><around*|{|\<varnothing\>|}>>
-    then we have\ 
-
-    <\equation*>
-      \<mu\><rsub|<around*|[|I|]>><around*|(|\<varnothing\>|)>=0
-    </equation*>
-
-    and <math|\<forall\><around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\>>
-    pairwise disjoint that\ 
-
-    <\equation*>
-      \<mu\><rsub|<around*|[|I|]>><around*|(|<big|sqcup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>=\<mu\><around*|(|<around*|(|<big|sqcup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)><big|cap>I|)>=\<mu\><around*|(|<big|sqcup><rsub|i\<in\>\<bbb-N\>><around*|(|A<rsub|i><big|cap>I|)>|)>=<big|sum><rsub|i=1><rsup|\<infty\>>\<mu\><around*|(|A<rsub|i><big|cap>I|)>=<big|sum><rsub|i=1><rsup|\<infty\>>\<mu\><rsub|<around*|[|I|]>><around*|(|A<rsub|i>|)>
-    </equation*>
-
-    which proves that <math|\<mu\><rsub|<around*|[|I|]>>> is a measure on
-    <math|\<cal-A\>>. Finally as <math|\<forall\>A\<in\>\<cal-A\>> we have
+    then we have then by [theorem: <reference|measure sum and scalar product
+    of measures>(3)] that \ <math|\<mu\><rsub|<around*|[|I|]>>> is a measure
+    on <math|\<cal-A\>>. Finally as <math|\<forall\>A\<in\>\<cal-A\>> we have
     <math|\<mu\><rsub|<around*|[|I|]>><around*|(|A|)>=\<mu\><around*|(|A<big|cap>I|)>\<leqslant\>\<mu\><around*|(|I|)>\<less\>\<infty\>>
     it follows that\ 
 
     <\equation*>
-      \<mu\><rsub|\|I><text| is a finite measure on >\<cal-A\>
+      \<mu\><rsub|<around*|[|I|]>><text| is a finite measure on >\<cal-A\>
     </equation*>
   </proof>
-
-  \;
 
   <\theorem>
     <label|measure compact finite and rectangles>Let <math|\<cal-A\>> be a
@@ -44956,12 +44953,6 @@
       defined by >\<mu\><rsub|<around*|[|R|]>><around*|(|A|)>=\<mu\><around*|(|A<big|cap>R|)><text|
       is a finite measure>
     </equation*>
-
-    <\note>
-      Using [theorem: <reference|measure Borel algebra on R^n rectangles>] we
-      have that <math|\<cal-R\><rsup|n><rsub|<around*|[||]>><big|cup>\<cal-R\><rsup|n><rsub|<around*|[||[>><big|cup>\<cal-R\><rsup|n><rsub|<around*|]||]>><big|cup>\<cal-R\><rsup|n><rsub|<around*|]||[>><big|cup><around*|{|\<varnothing\>|}>\<subseteq\>\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>>
-      so that <math|\<mu\><around*|(|R|)>> is well defined.
-    </note>
   </theorem>
 
   <\proof>
@@ -44978,8 +44969,8 @@
     Let <math|R\<in\>\<cal-R\><rsup|n><rsub|<around*|[||[>><big|cup>\<cal-R\><rsup|n><rsub|<around*|]||]>><big|cup>\<cal-R\><rsup|n><rsub|<around*|]||[>><big|cup><around*|{|\<varnothing\>|}>>
     then either <math|R=\<varnothing\>\<Rightarrow\>\<mu\><around*|(|R|)>=0\<less\>\<infty\>>
     or there exist a <math|a,b\<in\>\<bbb-R\><rsup|n>> with <math|a\<less\>b>
-    such that <math|R=<around*|[|a,b|[>\<vee\><around*|]|a,b|]>\<vee\><around*|]|a,b|[>\<subseteq\><around*|[|a,b|]>>
-    so that <math|\<mu\><around*|(|R|)>\<subseteq\>\<mu\><around*|(|<around*|[|a,b|]>|)>\<less\>\<infty\>>.
+    such that <math|R=<around*|[|a,b|[>\<subseteq\><around*|[|a,b|]>\<vee\><around*|]|a,b|]>\<subseteq\><around*|[|a,b|]>\<vee\><around*|]|a,b|[>\<subseteq\><around*|[|a,b|]>>
+    so that <math|\<mu\><around*|(|R|)>\<leqslant\>\<mu\><around*|(|<around*|[|a,b|]>|)>\<less\>\<infty\>>.
     Hence we have\ 
 
     <\equation*>
@@ -45011,13 +45002,14 @@
 
   We set out now to prove that the Borel measures <math|\<lambda\>> and
   <math|\<lambda\><rsup|n>> on <math|\<bbb-R\>> and <math|\<bbb-R\><rsup|n>>
-  are Radon measures, for this we need the following two theorems that state
+  are Radon measures, for this we need the following two lemma's that state
   that compact finite measures on <math|\<cal-B\><around*|[|\<bbb-R\>|]>> and
   <math|\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>> are regular.
 
   <\lemma>
     <label|measure Radon condition>Let <math|\<mu\>:\<cal-B\><around*|[|\<bbb-R\>|]>=\<cal-B\><around*|[|\<bbb-R\>,\<cal-T\><rsub|<around*|\|||\|>>|]>\<rightarrow\><around*|[|0,\<infty\>|]>>
-    a compact finite measure then <math|\<mu\>> is regular.
+    a <with|font-series|bold|compact finite measure> then <math|\<mu\>> is
+    regular.
   </lemma>
 
   <\proof>
@@ -45026,18 +45018,18 @@
     possible cases to consider:\ 
 
     <\description>
-      <item*|<math|\<mu\><around*|(|A|)>=\<infty\>>>If <math|U> is a open set
-      with <math|A\<subseteq\>U> then by the monotonicity of <math|\<mu\>>
-      [see theorem: <reference|measure measure space properties (1)>] it
-      follows that <math|\<infty\>=\<mu\><around*|(|A|)>\<leqslant\>\<mu\><around*|(|U|)>\<leqslant\>\<infty\>\<Rightarrow\>\<mu\><around*|(|U|)>=\<infty\>>.
-      Hence <math|\<infty\>\<in\><around*|{|\<mu\><around*|(|U|)>\|A\<subseteq\>U\<wedge\>U<text|
-      is open>|}>> so that <math|\<infty\>\<leqslant\>inf<around*|(|<around*|{|\<mu\><around*|(|U|)>\|A\<subseteq\>U\<wedge\>U<text|
-      is open>|}>|)>\<leqslant\>\<infty\>> proving that
-      <math|inf<around*|(|<around*|{|\<mu\><around*|(|U|)>\|A\<subseteq\>U\<wedge\>U<text|
-      is open>|}>|)>=\<infty\>>. Hence\ 
+      <item*|<math|\<mu\><around*|(|A|)>=\<infty\>>>Let
+      <math|x\<in\><around*|{|\<mu\><around*|(|U|)>\|A\<subseteq\>U\<wedge\>U<text|
+      is open>|}>> then <math|x=\<mu\><around*|(|U|)>> where <math|U> is open
+      and <math|A\<subseteq\>U>. Using the monotonicity of <math|\<mu\>> we
+      have <math|\<mu\><around*|(|A|)>\<leqslant\>\<mu\><around*|(|U|)>=x>
+      from which it follows that <math|\<mu\><around*|(|A|)>> is a lower
+      bound of <math|<rigid|<around*|{|\<mu\><around*|(|U|)>\|A\<subseteq\>U\<wedge\>U<text|
+      is open>|}>>>. Hence <math|\<infty\>=\<mu\><around*|(|A|)>\<leqslant\>inf<around*|(|<around*|{|\<mu\><around*|(|U|)>\|A\<subseteq\>U\<wedge\>U<text|
+      is open>|}>|)>\<leqslant\>\<infty\>> so that\ 
 
       <\equation*>
-        \<mu\><around*|(|A|)>=sup<around*|(|<around*|{|\<mu\><around*|(|U|)>\|A\<subseteq\>U\<wedge\>U<text|
+        \<mu\><around*|(|A|)>=\<infty\>=inf<around*|(|<around*|{|\<mu\><around*|(|U|)>\|A\<subseteq\>U\<wedge\>U<text|
         is open>|}>|)>
       </equation*>
 
@@ -45069,19 +45061,18 @@
         is a finite measure><rsub|>
       </equation*>
 
-      Hence using [lemma: <reference|lemma 21.532.285>] we have that there
+      Hence using [theorem: <reference|lemma 21.532.285>] we have that there
       exists a open <math|U<rsub|i>> and a closed set <math|F<rsub|i>> such
       that\ 
 
       <\equation*>
         F<rsub|i>\<subseteq\>A\<subseteq\>U<rsub|i><text| and
-        >\<mu\><rsub|<around*|[|Q<rsub|i>|]>><around*|(|U<rsub|i>\\F<rsub|i>|)>\<less\><frac|\<varepsilon\>|2<rsup|i>>
+        >\<mu\><rsub|<around*|[|Q<rsub|i>|]>><around*|(|U<rsub|i>\\F<rsub|i>|)>\<less\><frac|\<varepsilon\>|2<rsup|i+1>>
       </equation*>
 
       As <math|F<rsub|i>\<subseteq\>A> we have
-      <math|U<rsub|i>\\A\<subseteq\>U<rsub|i>\\F<rsub|i>> it follows from the
-      monotonicity of <math|\<mu\>> [see theorem: <reference|measure measure
-      space properties (1)>] that <rigid|<math|\<mu\><rsub|<around*|[|Q<rsub|i>|]>><around*|(|U<rsub|i>\\A|)>\<leqslant\>\<mu\><rsub|<around*|[|Q<rsub|i>|]>><around*|(|U<rsub|i>\\F<rsub|i>|)>\<less\><frac|\<varepsilon\>|2<rsup|i>>>>.
+      <math|U<rsub|i>\\A\<subseteq\>U<rsub|i>\\F<rsub|i>> so that
+      <rigid|<math|\<mu\><rsub|<around*|[|Q<rsub|i>|]>><around*|(|U<rsub|i>\\A|)>\<leqslant\>\<mu\><rsub|<around*|[|Q<rsub|i>|]>><around*|(|U<rsub|i>\\F<rsub|i>|)>\<less\><frac|\<varepsilon\>|2<rsup|i+1>>>>.
       To summarize we have\ 
 
       <\equation>
@@ -45091,8 +45082,9 @@
       </equation>
 
       Define now <math|U=<big|cup><rsub|i\<in\>\<bbb-N\>><around*|(|U<rsub|i><big|cap>Q<rsub|i>|)>>
-      which is open as <math|U<rsub|i>,Q<rsub|i>=<around*|]|-i,i|[>> is open.
-      Let <math|x\<in\>A> then as <math|<big|cup><rsub|i\<in\>\<bbb-N\>>Q<rsub|i>=<big|cup><rsub|i\<in\>\<bbb-N\>><around*|]|-i,i|[>\<equallim\><rsub|<text|[corollary:
+      which is open [as <math|U<rsub|i>,Q<rsub|i>=<around*|]|-i,i|[>> are
+      open]. Let <math|x\<in\>A\<subseteq\>X> then as
+      <math|<big|cup><rsub|i\<in\>\<bbb-N\>>Q<rsub|i>=<big|cup><rsub|i\<in\>\<bbb-N\>><around*|]|-i,i|[>\<equallim\><rsub|<text|[corollary:
       <reference|complex Archimedean property consequence (1)>]>>\<bbb-R\>>
       there exist a <math|i\<in\>\<bbb-N\>> such that
       <math|x\<in\>Q<rsub|i>>, as further <math|A\<subseteq\>U<rsub|i>> by
@@ -45175,7 +45167,7 @@
       <label|eq 21.1007.286>\<mu\><text| is external regular>
     </equation>
 
-    Next we have to prove external regularity. Let
+    Next we have to prove compact internal regularity. Let
     <math|A\<in\>\<cal-B\><around*|[|\<bbb-R\>|]>> then we have two possible
     cases:
 
@@ -45200,9 +45192,8 @@
         and >\<mu\><rsub|<around*|[|C<rsub|i>|]>><around*|(|A\\F<rsub|i>|)>\<less\><frac|\<varepsilon\>|2>
       </equation>
 
-      As for <math|<around*|{|C<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>> we have
-      that <math|\<forall\>i\<in\>\<bbb-N\>>
-      <math|C<rsub|i>=<around*|[|-i,i|]>\<subseteq\><around*|[|-<around*|(|i+1|)>,i+1|]>=C<rsub|i+1>>
+      For <math|<around*|{|C<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>> we have that
+      <math|\<forall\>i\<in\>\<bbb-N\>> <math|C<rsub|i>=<around*|[|-i,i|]>\<subseteq\><around*|[|-<around*|(|i+1|)>,i+1|]>=C<rsub|i+1>>
       and <math|<rigid|\<bbb-R\>=<big|cup><rsub|i\<in\>\<bbb-N\>><around*|]|-i,i|[>\<subseteq\><big|cup><rsub|i\<in\>\<bbb-N\>><around*|[|-i,i|]>\<subseteq\>\<bbb-R\>>>
       so that <math|\<bbb-R\>=<big|cup><rsub|i\<in\>\<bbb-N\>>C<rsub|i>>.
       Hence for <math|<around*|{|A<big|cap>C<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-B\><around*|[|\<bbb-R\>|]>>
@@ -45221,14 +45212,15 @@
 
       <\equation>
         <label|eq 21.1009.286>\<exists\>N<rsub|\<varepsilon\>>\<in\>\<bbb-N\><text|
-        such that >\<mu\><around*|(|A|)>-\<mu\><around*|(|A<big|cap>C<rsub|N<rsub|\<varepsilon\>>>|)>\<equallim\><rsub|A<big|cap>C<rsub|N<rsub|\<varepsilon\>>>\<subseteq\>A><around*|\||\<mu\><around*|(|A|)>-\<mu\><around*|(|A<big|cap>C<rsub|n<rsub|\<varepsilon\>>>|)>|\|>\<less\><frac|\<varepsilon\>|2>
+        such that >\<mu\><around*|(|A|)>-\<mu\><around*|(|A<big|cap>C<rsub|N<rsub|\<varepsilon\>>>|)>\<equallim\><rsub|A<big|cap>C<rsub|N<rsub|\<varepsilon\>>>\<subseteq\>A><around*|\||\<mu\><around*|(|A|)>-\<mu\><around*|(|A<big|cap>C<rsub|N<rsub|\<varepsilon\>>>|)>|\|>\<less\><frac|\<varepsilon\>|2>
       </equation>
 
       Now\ 
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|\<mu\><around*|(|A|)>-\<mu\><around*|(|F<rsub|N<rsub|\<varepsilon\>>><big|cap>C<rsub|N<rsub|\<varepsilon\>>>|)>>|<cell|<below|\<less\>|<text|[eq:
-        <reference|eq 21.1009.286>]>>>|<cell|\<mu\><around*|(|A<big|cap>C<rsub|N<rsub|\<varepsilon\>>>|)>+<tfrac|\<varepsilon\>|2>-\<mu\><around*|(|F<rsub|N<rsub|\<varepsilon\>>><big|cap>C<rsub|N<rsub|\<varepsilon\>>>|)>>>|<row|<cell|>|<cell|=>|<cell|\<mu\><rsub|<around*|[|C<rsub|N<rsub|\<varepsilon\>>>|]>><around*|(|A|)>-\<mu\><rsub|<around*|[|C<rsub|N<rsub|\<varepsilon\>>>|]>><around*|(|F<rsub|N<rsub|\<varepsilon\>>>|)>+<frac|\<varepsilon\>|2>>>|<row|<cell|>|<cell|\<equallim\><rsub|\<mu\><rsub|<around*|[|C<rsub|N<rsub|\<varepsilon\>>>|]><text|
+        <tformat|<table|<row|<cell|\<mu\><around*|(|A|)>-\<mu\><around*|(|F<rsub|N<rsub|\<varepsilon\>>><big|cap>C<rsub|N<rsub|\<varepsilon\>>>|)>>|<cell|<below|\<less\>|\<mu\><rsub|<around*|[|C<rsub|N<rsub|\<varepsilon\>>>|]><text|
+        is finite>>\<wedge\><text|[eq: <reference|eq
+        21.1009.286>]>>>|<cell|\<mu\><around*|(|A<big|cap>C<rsub|N<rsub|\<varepsilon\>>>|)>+<tfrac|\<varepsilon\>|2>-\<mu\><around*|(|F<rsub|N<rsub|\<varepsilon\>>><big|cap>C<rsub|N<rsub|\<varepsilon\>>>|)>>>|<row|<cell|>|<cell|=>|<cell|\<mu\><rsub|<around*|[|C<rsub|N<rsub|\<varepsilon\>>>|]>><around*|(|A|)>-\<mu\><rsub|<around*|[|C<rsub|N<rsub|\<varepsilon\>>>|]>><around*|(|F<rsub|N<rsub|\<varepsilon\>>>|)>+<frac|\<varepsilon\>|2>>>|<row|<cell|>|<cell|\<equallim\><rsub|\<mu\><rsub|<around*|[|C<rsub|N<rsub|\<varepsilon\>>>|]><text|
         is finite>>>>|<cell|\<mu\><rsub|<around*|[|C<rsub|N<rsub|\<varepsilon\>>>|]>><around*|(|A\\F<rsub|N<rsub|\<varepsilon\>>>|)>+<frac|\<varepsilon\>|2>>>|<row|<cell|>|<cell|<below|\<less\>|<text|[eq:
         <reference|eq 21.1008.286>]>>>|<cell|<frac|\<varepsilon\>|2>+<frac|\<varepsilon\>|2>>>|<row|<cell|>|<cell|=>|<cell|\<varepsilon\>>>>>
       </eqnarray*>
@@ -45307,7 +45299,7 @@
       </equation>
 
       <item*|<math|\<mu\><around*|(|A|)>=\<infty\>>>Define
-      \ <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>> by
+      <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>> by
       <math|A<rsub|i>=A<big|cap><around*|]|-i,i|[>> then we have that
 
       <\equation*>
@@ -45325,7 +45317,7 @@
       </equation>
 
       As <math|\<forall\>i\<in\>\<bbb-N\>> we have
-      <math|\<mu\><around*|(|A<rsub|i>|)><below|\<leqslant\>|A<rsub|i>=A<big|cap><around*|[|-i,i|[>\<subseteq\><around*|[|-i,i|]>>\<mu\><around*|(|<around*|]|-i,i|[>|)><below|\<less\>|<text|[theorem:
+      <math|\<mu\><around*|(|A<rsub|i>|)><below|\<leqslant\>|A<rsub|i>=A<big|cap><around*|]|-i,i|[>\<subseteq\><around*|]|-i,i|[>>\<mu\><around*|(|<around*|]|-i,i|[>|)><below|\<less\>|<text|[theorem:
       <reference|measure compact finite and intervals>]>>\<infty\>> we can
       use [eq: <reference|eq 21.1013.286>] to get\ 
 
@@ -45347,9 +45339,9 @@
       </equation>
 
       Assume now that <math|sup<around*|(|<around*|{|\<mu\><around*|(|K|)>\|K\<subseteq\>A\<wedge\>K<text|
-      is compact>|}>|)>\<less\>\<infty\>> then as
+      is compact>|}>|)>\<less\>\<infty\>>. As
       <math|<below|lim|i\<rightarrow\>\<infty\>>\<mu\><around*|(|A<rsub|i>|)>\<equallim\><rsub|<text|[eq:
-      <reference|eq 21.1014.286>]>>\<infty\>> <math|> we have by [theorem:
+      <reference|eq 21.1014.286>]>>\<infty\>> <math|>we have by [theorem:
       <reference|extended limit equivalences>] that there exist a
       <math|N\<in\>\<bbb-N\>> such that <math|<rigid|sup<around*|(|<around*|{|\<mu\><around*|(|K|)>\|K\<subseteq\>A\<wedge\>K<text|
       is compact>|}>|)>+1\<less\>\<mu\><around*|(|A<rsub|N>|)>>>, as also
@@ -45360,10 +45352,10 @@
         is compact>|}>|)>\<less\>\<mu\><around*|(|A<rsub|N>|)>-1
       </equation*>
 
-      Using [eq: <reference|eq 21.1016.286>] there exist a <math|K<rsub|N>>
-      such that <math|K<rsub|N>\<subseteq\>A<rsub|N>> and
+      Using [eq: <reference|eq 21.1016.286>] there exist a compact
+      <math|K<rsub|N>> such that <math|K<rsub|N>\<subseteq\>A<rsub|N>> and
       <math|\<mu\><around*|(|A<rsub|N>|)>-1\<less\>\<mu\><around*|(|K<rsub|N>|)>>
-      then we have\ 
+      so that\ 
 
       <\equation*>
         \<mu\><around*|(|K<rsub|N>|)><below|\<leqslant\>|K<rsub|N>\<subseteq\>A\<wedge\>K<rsub|n><text|
@@ -45403,6 +45395,8 @@
     </equation*>
   </proof>
 
+  TODO
+
   We have a similar theorem for <math|\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>>.
 
   <\lemma>
@@ -45412,20 +45406,21 @@
   </lemma>
 
   <\proof>
-    First we prove external regularity. Let
+    The proof is similar to the proof of [lemma: <reference|measure Radon
+    condition>]. First we prove external regularity. Let
     <math|A\<in\>\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>> then we have the
     following possible cases to consider:\ 
 
     <\description>
-      <item*|<math|\<mu\><around*|(|A|)>=\<infty\>>>If <math|U> is a open set
-      with <math|A\<subseteq\>U> then by the monotonicity of <math|\<mu\>>
-      [see theorem: <reference|measure measure space properties (1)>] it
-      follows that <math|\<infty\>=\<mu\><around*|(|A|)>\<leqslant\>\<mu\><around*|(|U|)>\<leqslant\>\<infty\>\<Rightarrow\>\<mu\><around*|(|U|)>=\<infty\>>.
-      Hence <math|\<infty\>\<in\><around*|{|\<mu\><around*|(|U|)>\|A\<subseteq\>U\<wedge\>U<text|
-      is open>|}>> so that <math|\<infty\>\<leqslant\>inf<around*|(|<around*|{|\<mu\><around*|(|U|)>\|A\<subseteq\>U\<wedge\>U<text|
-      is open>|}>|)>\<leqslant\>\<infty\>> proving that
-      <math|inf<around*|(|<around*|{|\<mu\><around*|(|U|)>\|A\<subseteq\>U\<wedge\>U<text|
-      is open>|}>|)>=\<infty\>>. Hence\ 
+      <item*|<math|\<mu\><around*|(|A|)>=\<infty\>>>If
+      <math|x\<in\><around*|{|\<mu\><around*|(|U|)>\|A\<subseteq\>U\<wedge\>U<text|
+      is open>|}>> then <math|x=\<mu\><around*|(|A|)>> where
+      <math|A\<subseteq\>U>, hence <math|<rigid|\<mu\><around*|(|A|)>\<leqslant\>\<mu\><around*|(|A|)>=x>>.
+      So it follows that <math|\<mu\><around*|(|A|)>> is a lower bound of
+      <math|<around*|{|\<mu\><around*|(|U|)>\|A\<subseteq\>U\<wedge\>U<text|
+      is open>|}>> from which it follows that
+      <math|\<infty\>=\<mu\><around*|(|A|)>\<leqslant\>inf<around*|(|<around*|{|\<mu\><around*|(|U|)>\|A\<subseteq\>U\<wedge\>U<text|
+      is open>|}>|)>\<leqslant\>\<infty\>>, hence
 
       <\equation*>
         \<mu\><around*|(|A|)>=sup<around*|(|<around*|{|\<mu\><around*|(|U|)>\|A\<subseteq\>U\<wedge\>U<text|
@@ -45435,10 +45430,9 @@
       <item*|<math|\<mu\><around*|(|A|)>\<less\>\<infty\>>>If
       <math|x\<in\><around*|{|\<mu\><around*|(|U|)>\|A\<subset\>U\<wedge\>U<text|
       is open>|}>> then <math|x=\<mu\><around*|(|U|)>> where <math|U> is a
-      open set with <math|A\<subseteq\>U>. By the monotonicity of
-      <math|\<mu\>> [see theorem: <reference|measure measure space properties
-      (1)>] it follows that <math|\<mu\><around*|(|A|)>\<leqslant\>\<mu\><around*|(|U|)>=x>
-      so that <math|\<mu\><around*|(|A|)>> is a lower bound of
+      open set with <math|A\<subseteq\>U>. So it follows that
+      <math|\<mu\><around*|(|A|)>\<leqslant\>\<mu\><around*|(|U|)>=x> which
+      proves that <math|\<mu\><around*|(|A|)>> is a lower bound of
       <math|<around*|{|\<mu\><around*|(|U|)>\|A\<subseteq\>U\<wedge\>U<text|
       is open>|}>>. Hence we have that\ 
 
@@ -45466,13 +45460,12 @@
 
       <\equation*>
         F<rsub|i>\<subseteq\>A\<subseteq\>U<rsub|i><text| and
-        >\<mu\><rsub|<around*|[|Q<rsub|i>|]>><around*|(|U<rsub|i>\\F<rsub|i>|)>\<less\><frac|\<varepsilon\>|2<rsup|i>>
+        >\<mu\><rsub|<around*|[|Q<rsub|i>|]>><around*|(|U<rsub|i>\\F<rsub|i>|)>\<less\><frac|\<varepsilon\>|2<rsup|i+1>>
       </equation*>
 
       As <math|F<rsub|i>\<subseteq\>A> we have
       <math|U<rsub|i>\\A\<subseteq\>U<rsub|i>\\F<rsub|i>> it follows from the
-      monotonicity of <math|\<mu\>> [see theorem: <reference|measure measure
-      space properties (1)>] that <rigid|<math|\<mu\><rsub|<around*|[|Q<rsub|i>|]>><around*|(|U<rsub|i>\\A|)>\<leqslant\>\<mu\><rsub|<around*|[|Q<rsub|i>|]>><around*|(|U<rsub|i>\\F<rsub|i>|)>\<less\><frac|\<varepsilon\>|2<rsup|i>>>>.
+      monotonicity of <math|\<mu\>> that <rigid|<math|\<mu\><rsub|<around*|[|Q<rsub|i>|]>><around*|(|U<rsub|i>\\A|)>\<leqslant\>\<mu\><rsub|<around*|[|Q<rsub|i>|]>><around*|(|U<rsub|i>\\F<rsub|i>|)>\<less\><frac|\<varepsilon\>|2<rsup|i>>>>.
       To summarize we have\ 
 
       <\equation>
@@ -45483,8 +45476,9 @@
 
       Define now <math|U=<big|cup><rsub|i\<in\>\<bbb-N\>><around*|(|U<rsub|i><big|cap>Q<rsub|i>|)>>
       which is open as <math|U<rsub|i>,Q<rsub|i>=<around*|]|-i,i|[><rsup|n>>
-      is open [see theorem: <reference|measure open closed rectangles>] Let
-      <math|x\<in\>A> then as <math|<big|cup><rsub|i\<in\>\<bbb-N\>>Q<rsub|i>=<big|cup><rsub|i\<in\>\<bbb-N\>><around*|]|-i,i|[><rsup|n>\<equallim\><rsub|<text|[proposition:
+      are open [see theorem: <reference|measure open closed rectangles>]. Let
+      <math|x\<in\>A\<subseteq\>\<bbb-R\><rsup|n>> then as
+      <math|<big|cup><rsub|i\<in\>\<bbb-N\>>Q<rsub|i>=<big|cup><rsub|i\<in\>\<bbb-N\>><around*|]|-i,i|[><rsup|n>\<equallim\><rsub|<text|[proposition:
       <reference|R^n is the union of ]-i,i[>]>>\<bbb-R\><rsup|n>> there exist
       a <math|i\<in\>\<bbb-N\>> such that <math|x\<in\>Q<rsub|i>>, as further
       <math|A\<subseteq\>U<rsub|i>> by [eq: <reference|eq 21.1019.286>], it
@@ -45525,8 +45519,8 @@
 
       which proves that <math|inf<around*|(|<around*|{|\<mu\><around*|(|U|)>\|A\<subseteq\>U\<wedge\>U<text|
       is open>|}>|)>> is finite. As we have assumed that
-      <math|\<mu\><around*|(|A|)>\<less\>inf<around*|(|<around*|{|\<mu\><around*|(|U|)>\|A\<subseteq\>U\<wedge\>U<text|
-      is open>|}>|)>> it follows that\ 
+      <math|<rigid|\<mu\><around*|(|A|)>\<less\>inf<around*|(|<around*|{|\<mu\><around*|(|U|)>\|A\<subseteq\>U\<wedge\>U<text|
+      is open>|}>|)>>> it follows that\ 
 
       <\equation*>
         \<varepsilon\>=inf<around*|(|<around*|{|\<mu\><around*|(|U|)>\|A\<subseteq\>U\<wedge\>U<text|
@@ -45536,7 +45530,7 @@
       So using [eq: <reference|eq 21.1020.286>] there exist a open set
       <math|U> with <math|A\<subseteq\>U> such that
       <math|\<mu\><around*|(|U\\A|)>\<less\>\<varepsilon\>>. As
-      <math|U<below|=|A\<subseteq\>U><around*|(|U\\A|)><big|cup>A>, we have
+      <math|U<below|=|A\<subseteq\>U><around*|(|U\\A|)><big|sqcup>A>, we have
 
       <\eqnarray*>
         <tformat|<table|<row|<cell|\<mu\><around*|(|U|)>>|<cell|=>|<cell|\<mu\><around*|(|U\\A|)>+\<mu\><around*|(|A|)>>>|<row|<cell|>|<cell|\<less\>>|<cell|\<varepsilon\>+\<mu\><around*|(|A|)>>>|<row|<cell|>|<cell|=>|<cell|inf<around*|(|<around*|{|\<mu\><around*|(|U|)>\|A\<subseteq\>U\<wedge\>U<text|
@@ -45558,7 +45552,7 @@
       </equation*>
     </description>
 
-    Hence we have proved that <math|\<forall\>A\<in\>\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>>
+    So we have proved that <math|\<forall\>A\<in\>\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>>
     <math|\<mu\><around*|(|A|)>=inf<around*|(|<around*|{|\<mu\><around*|(|U|)>\|A\<subseteq\>U\<wedge\>U<text|
     is open>|}>|)>> which by definition means that\ 
 
@@ -45566,7 +45560,7 @@
       <label|eq 21.1021.286>\<mu\><text| is external regular>
     </equation>
 
-    Next we have to prove external regularity. Let
+    Next we have to prove compact internal regularity. Let
     <math|A\<in\>\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>> then we have two
     possible cases:
 
@@ -45633,9 +45627,9 @@
 
       As <math|F<rsub|N<rsub|\<varepsilon\>>><big|cap>C<rsub|N<rsub|\<varepsilon\>>>=F<rsub|N<rsub|\<varepsilon\>>><big|cap><around*|[|-N<rsub|\<varepsilon\>>,N<rsub|\<varepsilon\>>|]><rsup|n><rsub|>>
       is a closed set and <math|><math|F<rsub|N<rsub|\<varepsilon\>>><big|cap>C<rsub|N<rsub|\<varepsilon\>>>\<subseteq\><around*|[|-N<rsub|\<varepsilon\>>,N<rsub|\<varepsilon\>>|]><rsup|n>>,
-      which is compact by Heine Borell [see theorem: <reference|compact Heine
-      Borel (1)>], it follows from [theorem: <reference|compact every closed
-      subset of a compact set is compact>] that
+      which is compact by Heine Borell [see theorem: <reference|compact
+      Heine-Borel (1)>], it follows from [theorem: <reference|compact every
+      closed subset of a compact set is compact>] that
       <math|><math|F<rsub|N<rsub|\<varepsilon\>>><big|cap>C<rsub|N<rsub|\<varepsilon\>>>>
       is compact. So if we take <math|K<rsub|\<varepsilon\>>=F<rsub|N<rsub|\<varepsilon\>>><big|cap>C<rsub|N<rsub|\<varepsilon\>>>\<subseteq\>F<rsub|N<rsub|\<varepsilon\>>><below|\<subseteq\>|<text|[eq:
       <reference|eq 21.1022.286>]>>A> then we have that\ 
@@ -45646,6 +45640,8 @@
         that >K<rsub|\<varepsilon\>>\<subseteq\>A<text| and
         >\<mu\><around*|(|A|)>-\<mu\><around*|(|K<rsub|\<varepsilon\>>|)>\<less\>\<varepsilon\>
       </equation>
+
+      \ TODO
 
       Assume now that <math|sup<around*|(|<around*|{|\<mu\><around*|(|K|)>\|K\<subseteq\>A\<wedge\>K<text|
       is compact>|}>|)>\<less\>\<mu\><around*|(|A|)>> then
@@ -48499,7 +48495,7 @@
     <associate|Beppo Levi's Theorem|<tuple|21.377|?>>
     <associate|Borel measure examples|<tuple|21.573|?>>
     <associate|Borel measure on R and R^n are locally
-    finite|<tuple|21.591|?>>
+    finite|<tuple|21.590|?>>
     <associate|Constructing measures and sigma alegebra|<tuple|21.3.4|?>>
     <associate|Fatou's lemma|<tuple|21.381|?>>
     <associate|Fubini's theorem|<tuple|21.570|?>>
@@ -48535,16 +48531,16 @@
     <associate|LP spaces sum scalar product (1)|<tuple|21.422|?>>
     <associate|LP vector space|<tuple|21.423|?>>
     <associate|Lebesgue borel measure and linear
-    isomorphism|<tuple|21.620|?>>
+    isomorphism|<tuple|21.619|?>>
     <associate|Lebesgue borel measure and linear isomorphism
-    (n)|<tuple|21.623|?>>
-    <associate|Lebesgue borel measures are Radon measures|<tuple|21.593|?>>
-    <associate|Lebesgue measure and unitary transformation|<tuple|21.618|?>>
+    (n)|<tuple|21.622|?>>
+    <associate|Lebesgue borel measures are Radon measures|<tuple|21.592|?>>
+    <associate|Lebesgue measure and unitary transformation|<tuple|21.617|?>>
     <associate|Lebesgue's Dominated Convergence Theorem|<tuple|21.384|?>>
     <associate|Monotone Convergence Theorem (1)|<tuple|21.372|?>>
     <associate|Monotone Convergence Theorem (2)|<tuple|21.375|?>>
     <associate|R^n is the union of ]-i,i[|<tuple|21.70|?>>
-    <associate|Radon measure definition|<tuple|21.579|?>>
+    <associate|Radon measure definition|<tuple|21.580|?>>
     <associate|Radon-Nikodym (finite case)|<tuple|21.526|?>>
     <associate|Radon-Nikodym Theorem|<tuple|21.527|?>>
     <associate|Radon-Nikodym absolute continuity|<tuple|21.518|?>>
@@ -48718,7 +48714,7 @@
     <associate|auto-99|<tuple|21.5.5.1|?>>
     <associate|cardinality of a product of sets|<tuple|21.1|?>>
     <associate|charasteristic function|<tuple|21.271|?>>
-    <associate|compact finite measure|<tuple|21.579|?>>
+    <associate|compact finite measure|<tuple|21.580|?>>
     <associate|complex integral|<tuple|21.403|?>>
     <associate|complex integral alternative|<tuple|21.410|?>>
     <associate|complex integral characteristics
@@ -50001,16 +49997,16 @@
     <associate|lemma 21.385.303|<tuple|21.390|?>>
     <associate|lemma 21.530.285|<tuple|21.574|?>>
     <associate|lemma 21.532.285|<tuple|21.576|?>>
-    <associate|lemma 21.558.288|<tuple|21.597|?>>
-    <associate|lemma 21.562.291|<tuple|21.601|?>>
-    <associate|lemma 21.563.291|<tuple|21.602|?>>
-    <associate|lemma 21.578.291|<tuple|21.615|?>>
-    <associate|lemma 21.579.291|<tuple|21.616|?>>
-    <associate|lemma 21.582.291|<tuple|21.619|?>>
-    <associate|lemma 21.584.291|<tuple|21.621|?>>
-    <associate|lemma 21.585.291|<tuple|21.622|?>>
+    <associate|lemma 21.558.288|<tuple|21.596|?>>
+    <associate|lemma 21.562.291|<tuple|21.600|?>>
+    <associate|lemma 21.563.291|<tuple|21.601|?>>
+    <associate|lemma 21.578.291|<tuple|21.614|?>>
+    <associate|lemma 21.579.291|<tuple|21.615|?>>
+    <associate|lemma 21.582.291|<tuple|21.618|?>>
+    <associate|lemma 21.584.291|<tuple|21.620|?>>
+    <associate|lemma 21.585.291|<tuple|21.621|?>>
     <associate|measurability of image of a measurable set by a
-    homeomorphism|<tuple|21.606|?>>
+    homeomorphism|<tuple|21.605|?>>
     <associate|measurable function|<tuple|21.224|?>>
     <associate|measurable function (1)|<tuple|21.240|?>>
     <associate|measurable function (4)|<tuple|21.244|?>>
@@ -50062,17 +50058,17 @@
     <associate|measure Borel algebra on the extended real numbers
     (1)|<tuple|21.61|?>>
     <associate|measure Borel algebras on R^n equivalences|<tuple|21.87|?>>
-    <associate|measure Borel measure of T(A)|<tuple|21.610|?>>
-    <associate|measure Borel measure of T(A) (1)|<tuple|21.613|?>>
+    <associate|measure Borel measure of T(A)|<tuple|21.609|?>>
+    <associate|measure Borel measure of T(A) (1)|<tuple|21.612|?>>
     <associate|measure Borel measure on R and linear
-    isomorphism|<tuple|21.612|?>>
+    isomorphism|<tuple|21.611|?>>
     <associate|measure Caratheodory|<tuple|21.122|?>>
     <associate|measure Caratheodory produces complete measure
     space|<tuple|21.217|?>>
     <associate|measure Dyadic cubes|<tuple|21.79|?>>
     <associate|measure Dyadic cubes properties|<tuple|21.83|?>>
-    <associate|measure Dyadic intervals|<tuple|21.600|?>>
-    <associate|measure Dyadic intervals and open sets|<tuple|21.603|?>>
+    <associate|measure Dyadic intervals|<tuple|21.599|?>>
+    <associate|measure Dyadic intervals and open sets|<tuple|21.602|?>>
     <associate|measure Dynkin system|<tuple|21.123|?>>
     <associate|measure Dynkin system P(X)|<tuple|21.126|?>>
     <associate|measure Dynkin system condition for sigma
@@ -50092,10 +50088,10 @@
     <associate|measure P(X) is a ring|<tuple|21.26|?>>
     <associate|measure P(X) is a sigma algebra|<tuple|21.38|?>>
     <associate|measure R^n alternative definition|<tuple|21.192|?>>
-    <associate|measure Radon and Borel measure on R|<tuple|21.604|?>>
-    <associate|measure Radon and Borel measure on R^n|<tuple|21.605|?>>
-    <associate|measure Radon condition|<tuple|21.589|?>>
-    <associate|measure Radon condition (1)|<tuple|21.590|?>>
+    <associate|measure Radon and Borel measure on R|<tuple|21.603|?>>
+    <associate|measure Radon and Borel measure on R^n|<tuple|21.604|?>>
+    <associate|measure Radon condition|<tuple|21.588|?>>
+    <associate|measure Radon condition (1)|<tuple|21.589|?>>
     <associate|measure [a,b[ in R^n|<tuple|21.67|?>>
     <associate|measure additive function monotone|<tuple|21.144|?>>
     <associate|measure additive set function|<tuple|21.15|?>>
@@ -50113,7 +50109,7 @@
     <associate|measure compact class approximation (3)|<tuple|21.169|?>>
     <associate|measure compact finite and intervals|<tuple|21.586|?>>
     <associate|measure compact finite and rectangles|<tuple|21.587|?>>
-    <associate|measure compact finite and scalar product|<tuple|21.582|?>>
+    <associate|measure compact finite and scalar product|<tuple|21.583|?>>
     <associate|measure complete measure|<tuple|21.215|?>>
     <associate|measure complete measure characterization|<tuple|21.216|?>>
     <associate|measure completing of a measure space|<tuple|21.222|?>>
@@ -50135,9 +50131,9 @@
     <associate|measure countable union is in sigma algebra|<tuple|21.39|?>>
     <associate|measure countable union pairwise|<tuple|21.100|?>>
     <associate|measure create a new measure based on a measure and a
-    homeomorphism|<tuple|21.607|?>>
+    homeomorphism|<tuple|21.606|?>>
     <associate|measure create a new measure based on a measure and a linear
-    isomorphism|<tuple|21.609|?>>
+    isomorphism|<tuple|21.608|?>>
     <associate|measure extending pre-measure to a measure|<tuple|21.148|?>>
     <associate|measure finite measure|<tuple|21.113|?>>
     <associate|measure finite product of semi-rings|<tuple|21.190|?>>
@@ -50214,7 +50210,7 @@
     <associate|measure proto-measure|<tuple|21.133|?>>
     <associate|measure proto-ring|<tuple|21.132|?>>
     <associate|measure regularity|<tuple|21.578|?>>
-    <associate|measure regularity and scalar product|<tuple|21.581|?>>
+    <associate|measure regularity and scalar product|<tuple|21.582|?>>
     <associate|measure regularity and uniqueness|<tuple|21.583|?>>
     <associate|measure ring|<tuple|21.24|?>>
     <associate|measure ring is a semi-ring|<tuple|21.150|?>>
@@ -50237,11 +50233,11 @@
     <associate|measure sub-additive set function|<tuple|21.16|?>>
     <associate|measure sum and scalar product of measures|<tuple|21.108|?>>
     <associate|measure the Borel measure is translation invariant
-    (1)|<tuple|21.598|?>>
+    (1)|<tuple|21.597|?>>
     <associate|measure the Borel measure is translation invariant
-    (2)|<tuple|21.599|?>>
-    <associate|measure translation invariant|<tuple|21.595|?>>
-    <associate|measure translation of a measurable set|<tuple|21.594|?>>
+    (2)|<tuple|21.598|?>>
+    <associate|measure translation invariant|<tuple|21.594|?>>
+    <associate|measure translation of a measurable set|<tuple|21.593|?>>
     <associate|measure translation of a measurable set (1)|<tuple|21.49|?>>
     <associate|measure union intersection stable|<tuple|21.9|?>>
     <associate|measure uniqueness of extension of a measure|<tuple|21.131|?>>
@@ -50270,7 +50266,7 @@
     <associate|non negative measurable function|<tuple|21.241|?>>
     <associate|note 20.198.210|<tuple|21.135|?>>
     <associate|note 21.231.300|<tuple|21.235|?>>
-    <associate|note 21.580.291|<tuple|21.617|?>>
+    <associate|note 21.580.291|<tuple|21.616|?>>
     <associate|product |<tuple|21.536|?>>
     <associate|product algebra|<tuple|21.539|?>>
     <associate|product algebra equivalences|<tuple|21.542|?>>
@@ -50754,16 +50750,14 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-134>>
 
-      21.8<space|2spc>Change of variables in
-      <with|mode|<quote|math>|\<bbb-R\><rsup|n>>
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      21.8<space|2spc>Borel Measures <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-136>
 
       <with|par-left|<quote|1tab>|21.8.1<space|2spc>Regularity and Radon
       measures <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-137>>
 
-      <with|par-left|<quote|2tab>|21.8.1.1<space|2spc>Definition of regular
+      <with|par-left|<quote|2tab>|21.8.1.1<space|2spc>Definition of Regular
       and Radon measures <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-138>>
 
