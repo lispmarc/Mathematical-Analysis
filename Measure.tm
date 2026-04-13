@@ -43219,8 +43219,6 @@
   Extending the above lemma to non negative measurable functions leads to
   Tonelli's Theorem.
 
-  TODO recheck this
-
   <\theorem>
     <label|Tonelli theorem (1)><dueto|Tonelli><index|Tonelli's theorem>Let
     <math|<around*|\<langle\>|X<rsub|1>,\<cal-A\><rsub|1>,\<mu\><rsub|1>|\<rangle\>>>,
@@ -43383,14 +43381,14 @@
     Further
 
     <\equation>
-      <label|eq 21.1013.307>\<forall\>x\<in\>X<rsub|1>,\<forall\>y\<in\>X<rsub|2><text|
-      that >\<forall\>i\<in\>\<bbb-N\><text| we have
+      <label|eq 21.1013.307>\<forall\>x\<in\>X<rsub|1>,\<forall\>y\<in\>X<rsub|2><text|,
+      >\<forall\>i\<in\>\<bbb-N\><text| we have
       >f<rsub|i><around*|(|x,\<cdot\>|)><around*|(|y|)>=f<rsub|i><around*|(|x,y|)>\<leqslant\>f<rsub|i+1><around*|(|x,y|)>=f<rsub|i+1><around*|(|x,\<cdot\>|)><around*|(|y|)>
     </equation>
 
     <\equation>
-      <label|eq 21.1014.307>\<forall\>y\<in\>X<rsub|2>,\<forall\>x\<in\>X<rsub|1><text|
-      that >\<forall\>i\<in\>\<bbb-N\><text| we have
+      <label|eq 21.1014.307>\<forall\>y\<in\>X<rsub|2>,\<forall\>x\<in\>X<rsub|1><text|,
+      >\<forall\>i\<in\>\<bbb-N\><text| we have
       >f<rsub|i><around*|(|\<cdot\>,y|)><around*|(|x|)>=f<rsub|i><around*|(|x,y|)>\<leqslant\>f<rsub|i+1><around*|(|x,y|)>=f<rsub|i+1><around*|(|\<cdot\>,y|)><around*|(|x|)>
     </equation>
 
@@ -43467,7 +43465,7 @@
       <label|eq 21.1018.307>\<forall\>x\<in\>X<rsub|1><text|
       ><big|int><rsup|+>f<around*|(|x,\<cdot\>|)>d\<mu\><rsub|2>=<below|lim|i\<rightarrow\>\<infty\>><big|int><rsup|+>f<rsub|i><around*|(|x,\<cdot\>|)>d\<mu\><rsub|2><text|
       >\<wedge\><text| >\<forall\>y\<in\>X<rsub|2><text|
-      ><big|int><rsup|+>f<around*|(|\<cdot\>,y|)>d\<mu\><rsub|1>=<below|lim|i\<rightarrow\>\<infty\>><big|int><rsup|+>f<around*|(|\<cdot\>,y|)>d\<mu\><rsub|1>
+      ><big|int><rsup|+>f<around*|(|\<cdot\>,y|)>d\<mu\><rsub|1>=<below|lim|i\<rightarrow\>\<infty\>><big|int><rsup|+>f<rsub|i><around*|(|\<cdot\>,y|)>d\<mu\><rsub|1>
     </equation>
 
     Substituting [eqs: <reference|eq 21.1011.308>, <reference|eq
@@ -43485,8 +43483,8 @@
     Convergence Theorem (1)>] again to get that
 
     <\equation>
-      <label|eq 21.1022.308><below|lim|i\<rightarrow\>\<infty\>>I<rsub|i,1>\<in\>\<cal-M\><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|]><text|
-      and ><below|lim|i\<rightarrow\>\<infty\>>I<rsub|i,2>\<in\>\<cal-M\><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
+      <label|eq 21.1022.308><below|lim|i\<rightarrow\>\<infty\>>I<rsub|i,1>\<in\>\<cal-M\><rsup|+><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|]>\<subseteq\>\<cal-M\><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|]><text|
+      and ><below|lim|i\<rightarrow\>\<infty\>>I<rsub|i,2>\<in\>\<cal-M\><rsup|+><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]>\<subseteq\>\<cal-M\><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
     </equation>
 
     <\equation*>
@@ -43525,7 +43523,8 @@
       >I<rsub|f,2>=<below|lim|i\<rightarrow\>\<infty\>>I<rsub|i,2>
     </equation*>
 
-    Substituting the above in [eqs: <reference|eq 21.1022.308>] proves that\ 
+    Substituting the above in [eqs: <reference|eq 21.1022.308>,<reference|eq
+    21.1023.308>] proves that\ 
 
     <\equation*>
       I<rsub|f,1>\<in\>\<cal-M\><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|]><text|
@@ -43629,11 +43628,13 @@
     then we have \ 
 
     <\equation*>
-      D<rsub|1>=<around*|{|x\<in\>X<rsub|1>\|f<around*|(|x,.|)>\<in\>\<cal-L\><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,\<mu\><rsub|2>|]>|}>\<in\>\<cal-A\><rsub|1>\<wedge\>\<mu\><rsub|1><around*|(|X<rsub|1>\\D<rsub|1>|)>=0
+      D<rsub|1>=<around*|{|x\<in\>X<rsub|1>\|f<around*|(|x,.|)>\<in\>\<cal-L\><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,\<mu\><rsub|2>|]>|}>\<in\>\<cal-A\><rsub|1><text|
+      and >\<mu\><rsub|1><around*|(|X<rsub|1>\\D<rsub|1>|)>=0
     </equation*>
 
     <\equation*>
-      D<rsub|2>=<around*|{|x\<in\>X<rsub|2>\|f<around*|(|.,x|)>\<in\>\<cal-L\><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,\<mu\><rsub|1>|]>|}>\<in\>\<cal-A\><rsub|2>\<wedge\>\<mu\><rsub|2><around*|(|X<rsub|2>\\D<rsub|2>|)>=0
+      D<rsub|2>=<around*|{|x\<in\>X<rsub|2>\|f<around*|(|.,x|)>\<in\>\<cal-L\><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,\<mu\><rsub|1>|]>|}>\<in\>\<cal-A\><rsub|2><text|
+      and >\<mu\><rsub|2><around*|(|X<rsub|2>\\D<rsub|2>|)>=0
     </equation*>
 
     <\equation*>
@@ -43872,11 +43873,13 @@
     product>] that\ 
 
     <\equation>
-      <label|eq 20.1034.284>\<cal-X\><rsub|X<rsub|1>,X<rsub|1>\\N<rsub|1>>\<cdot\>I<rsup|+><rsub|f,1>,\<cal-X\><rsub|X<rsub|1,>X<rsub|1>\\N<rsub|1>>\<cdot\>f<rsup|-><rsub|f,1>\<in\>\<cal-M\><rsup|+><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
+      <label|eq 20.1034.284>\<cal-X\><rsub|X<rsub|1>,X<rsub|1>\\N<rsub|1>>\<cdot\>I<rsup|+><rsub|f,1>,<text|
+      >\<cal-X\><rsub|X<rsub|1,>X<rsub|1>\\N<rsub|1>>\<cdot\>f<rsup|-><rsub|f,1>\<in\>\<cal-M\><rsup|+><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
     </equation>
 
     <\equation>
-      <label|eq 20.1035.284>\<cal-X\><rsub|X<rsub|2>,X<rsub|2>\\N<rsub|2>>\<cdot\>I<rsup|+><rsub|f,2>,\<cal-X\><rsub|X<rsub|2>,X<rsub|2>\\N<rsub|2>>\<cdot\>f<rsup|-><rsub|f,2>\<in\>\<cal-M\><rsup|+><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
+      <label|eq 20.1035.284>\<cal-X\><rsub|X<rsub|2>,X<rsub|2>\\N<rsub|2>>\<cdot\>I<rsup|+><rsub|f,2>,<text|
+      >\<cal-X\><rsub|X<rsub|2>,X<rsub|2>\\N<rsub|2>>\<cdot\>f<rsup|-><rsub|f,2>\<in\>\<cal-M\><rsup|+><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
     </equation>
 
     Further we have as <math|\<mu\><rsub|1><around*|(|N<rsub|1>|)>,=0=\<mu\><rsub|2><around*|(|N<rsub|2>|)>>
@@ -43960,7 +43963,7 @@
     20.1035.284>, <reference|eq 20.1036.284>, <reference|eq 20.1037.284>,
     <reference|eq 20.1038.284>, <reference|eq 20.1039.284> and <reference|eq
     20.1040.284>] we can use [theorem: <reference|measure integral
-    alternative (2)>] to get
+    alternative (2)>(2)] to get
 
     <\equation>
       <label|eq 20.1041.285>I<rsub|f,1>\<in\>\<cal-L\><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,\<mu\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|]><text|
@@ -43981,9 +43984,9 @@
       <reference|eq 20.1018.281>, <reference|eq
       20.1019.281>]>>>|<cell|>>|<row|<cell|<big|int><rsup|+>f<rsup|+>d<around*|(|\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>|)>-<big|int><rsup|+>f<rsup|->d<around*|(|\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>|)>>|<cell|\<equallim\><rsub|<text|[eq:
       <reference|eq 20.1015.285>]>>>|<cell|>>|<row|<cell|<big|int><rsup|>f
-      d<around*|(|\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>|)>>|<cell|>|<cell|>>|<row|<cell|<big|int><rsup|+><around*|(|\<cal-X\><rsub|X<rsub|2>,X<rsub|2>\\N<rsub|2>>*\<cdot\>I<rsup|+><rsub|f,2>|)>d\<mu\><rsub|1>-<big|int><rsup|+><around*|(|\<cal-X\><rsub|X<rsub|2>,X<rsub|2>\\N<rsub|2>>*\<cdot\>I<rsup|-><rsub|f,2>|)>d\<mu\><rsub|2>>|<cell|<below|=|<text|[eq:
+      d<around*|(|\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>|)>>|<cell|>|<cell|>>|<row|<cell|<big|int><rsup|+><around*|(|\<cal-X\><rsub|X<rsub|2>,X<rsub|2>\\N<rsub|2>>*\<cdot\>I<rsup|+><rsub|f,2>|)>d\<mu\><rsub|2>-<big|int><rsup|+><around*|(|\<cal-X\><rsub|X<rsub|2>,X<rsub|2>\\N<rsub|2>>*\<cdot\>I<rsup|-><rsub|f,2>|)>d\<mu\><rsub|2>>|<cell|<below|=|<text|[eq:
       <reference|eq 20.1038.284>, <reference|eq
-      20.1039.284>]>>>|<cell|>>|<row|<cell|<big|int><rsup|+>I<rsup|+><rsub|f,1>d\<mu\><rsub|1>-<big|int><rsup|+>I<rsup|-><rsub|f,1>d\<mu\><rsub|1>>|<cell|\<equallim\><rsub|<text|[eq:
+      20.1039.284>]>>>|<cell|>>|<row|<cell|<big|int><rsup|+>I<rsup|+><rsub|f,2>d\<mu\><rsub|2>-<big|int><rsup|+>I<rsup|-><rsub|f,2>d\<mu\><rsub|2>>|<cell|\<equallim\><rsub|<text|[eq:
       <reference|eq 20.1018.281>, <reference|eq
       20.1019.281>]>>>|<cell|>>|<row|<cell|<big|int><rsup|+>f<rsup|+>d<around*|(|\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>|)>-<big|int><rsup|+>f<rsup|->d<around*|(|\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>|)>>|<cell|\<equallim\><rsub|<text|[eq:
       <reference|eq 20.1015.285>]>>>|<cell|>>|<row|<cell|<big|int><rsup|>f
@@ -44997,13 +45000,13 @@
     </equation*>
   </proof>
 
-  <subsubsection|<math|\<lambda\>> and <math|\<lambda\><rsup|n>> are Radon
-  measures>
+  <subsubsection|<math|\<lambda\>,<wide|\<lambda\>|\<wide-bar\>>,<wide|\<lambda\><rsup|n>|\<wide-bar\>>>
+  and <math|\<lambda\><rsup|n>> are Radon measures>
 
-  We set out now to prove that the Borel measures <math|\<lambda\>> and
-  <math|\<lambda\><rsup|n>> on <math|\<bbb-R\>> and <math|\<bbb-R\><rsup|n>>
-  are Radon measures, for this we need the following two lemma's that state
-  that compact finite measures on <math|\<cal-B\><around*|[|\<bbb-R\>|]>> and
+  We set out now to prove that the Borel and Lebesgue measures on
+  <math|\<bbb-R\>> and <math|\<bbb-R\><rsup|n>> are Radon measures, for this
+  we need the following two lemma's that state that compact finite measures
+  on <math|\<cal-B\><around*|[|\<bbb-R\>|]>> and
   <math|\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>> are regular.
 
   <\lemma>
@@ -45272,7 +45275,7 @@
         is compact>|}>|)>
       </equation*>
 
-      which is a a contradiction. Hence the assumption is wrong and we must
+      which is a contradiction. Hence the assumption is wrong and we must
       have\ 
 
       <\equation>
@@ -45394,8 +45397,6 @@
       \<mu\><text| is regular>
     </equation*>
   </proof>
-
-  TODO
 
   We have a similar theorem for <math|\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>>.
 
@@ -45641,8 +45642,6 @@
         >\<mu\><around*|(|A|)>-\<mu\><around*|(|K<rsub|\<varepsilon\>>|)>\<less\>\<varepsilon\>
       </equation>
 
-      \ TODO
-
       Assume now that <math|sup<around*|(|<around*|{|\<mu\><around*|(|K|)>\|K\<subseteq\>A\<wedge\>K<text|
       is compact>|}>|)>\<less\>\<mu\><around*|(|A|)>> then
 
@@ -45668,7 +45667,7 @@
         is compact>|}>|)>
       </equation*>
 
-      which is a a contradiction. Hence the assumption is wrong and we must
+      which is a contradiction. Hence the assumption is wrong and we must
       have\ 
 
       <\equation>
@@ -45750,7 +45749,7 @@
       Using [eq: <reference|eq 21.1030.286>] there exist a <math|K<rsub|N>>
       such that <math|K<rsub|N>\<subseteq\>A<rsub|N>> and
       <math|\<mu\><around*|(|A<rsub|N>|)>-1\<less\>\<mu\><around*|(|K<rsub|N>|)>>
-      then we have\ 
+      so that\ 
 
       <\equation*>
         \<mu\><around*|(|K<rsub|N>|)><below|\<leqslant\>|K<rsub|N>\<subseteq\>A\<wedge\>K<rsub|n><text|
@@ -45790,16 +45789,30 @@
     </equation*>
   </proof>
 
+  We show now that the Borel measures <math|\<lambda\>>,
+  <math|\<lambda\><rsup|n>> are locally finite and thus compact finite.
+
   <\lemma>
     <label|Borel measure on R and R^n are locally finite>
 
     <\enumerate>
-      <item>The Lebesgue measure <math|\<lambda\>> in
+      <item>The Lebesgue measure <math|<wide|\<lambda\>|\<wide-bar\>>> in
+      <math|<around*|\<langle\>|\<bbb-R\>,\<cal-L\><around*|[|\<bbb-R\>|]>,<wide|\<lambda\>|\<wide-bar\>>|\<rangle\>>>
+      [see theorem: <reference|measure Lebesgue measure space on R>] is
+      locally finite.
+
+      <item>The Borel measure <math|\<lambda\>> in
       <math|<around*|\<langle\>|\<bbb-R\>,\<cal-B\><around*|[|\<bbb-R\>|]>,\<lambda\>|\<rangle\>>>
       [see theorem: <reference|measure Lebesgue measure space on R>] is
       locally finite.
 
       <item>For <math|n\<in\>\<bbb-N\>> the Lebesgue measure
+      <math|<wide|\<lambda\><rsup|n>|\<wide-bar\>>> in
+      <math|<around*|\<langle\>|\<bbb-R\><rsup|n>,\<cal-L\><around*|[|\<bbb-R\><rsup|n>|]>,<wide|\<lambda\><rsup|n>|\<wide-bar\>>|\<rangle\>>>
+      [see theorem: <reference|measure Lebesgue measure space on R^n>] is
+      locally finite.
+
+      <item>For <math|n\<in\>\<bbb-N\>> the Borel measure
       <math|\<lambda\><rsup|n>> in <math|<around*|\<langle\>|\<bbb-R\><rsup|n>,\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>,\<lambda\><rsup|n>|\<rangle\>>>
       [see theorem: <reference|measure Lebesgue measure space on R^n>] is
       locally finite.
@@ -45807,11 +45820,24 @@
 
     <\note>
       As by [theorem: <reference|measurable locally finiteness>] locally
-      finite Borel measures are compact finite it follows that\ 
+      finite Borel measures are compact finite and
+      <math|\<cal-T\><rsub|<around*|\|||\|>>>,
+      <math|\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsup|n>>> are
+      Hausdorff [see theorem: <reference|separation metric spaces are
+      Hausdorff>] it follows that\ 
 
       <\enumerate>
+        <item>The Lebesgue measures <math|<wide|\<lambda\>|\<wide-bar\>>> in
+        <math|<around*|\<langle\>|\<bbb-R\>,\<cal-L\><around*|[|\<bbb-R\>|]>,<wide|\<lambda\>|\<wide-bar\>>|\<rangle\>>>
+        is compact finite.
+
         <item>The Borel measure <math|\<lambda\>> in
         <math|<around*|\<langle\>|\<bbb-R\>,\<cal-L\><around*|[|\<bbb-R\>|]>,\<lambda\>|\<rangle\>>>
+        is compact finite.
+
+        <item>For <math|n\<in\>\<bbb-N\>> the Lebesgue measure
+        <math|<wide|\<lambda\><rsup|n>|\<wide-bar\>>> in
+        <math|<around*|\<langle\>|\<bbb-R\><rsup|n>,\<cal-L\><around*|[|\<bbb-R\><rsup|n>|]>,<wide|\<lambda\><rsup|n>|\<wide-bar\>>|\<rangle\>>>
         is compact finite.
 
         <item>For <math|n\<in\>\<bbb-N\>> the Borel measure
@@ -45825,40 +45851,110 @@
     \ 
 
     <\enumerate>
-      <item>If <math|x\<in\>\<bbb-R\>> then
-      <math|x\<in\><around*|]|x-1,x+1|[>\<in\>\<cal-B\><around*|[|\<bbb-R\>|]>\<subseteq\>\<cal-L\><around*|[|\<bbb-R\>|]>>
-      so that
+      <item>Using heorem: <reference|measure Lebesgue measure space on R>] we
+      have that\ 
+
+      <\equation*>
+        \<cal-B\><around*|[|\<bbb-R\>,\<cal-T\><rsub|<around*|\|||\|>>|]>=\<cal-B\><around*|[|\<bbb-R\>|]>\<subseteq\>\<cal-L\><around*|[|\<bbb-R\>|]>
+      </equation*>
+
+      Let <math|x\<in\>\<bbb-R\>> then <math|x\<in\><around*|]|x-1,x+1|[>>
+      where <math|<around*|]|x-1,x+1|[>> is open. Further\ 
 
       <\eqnarray*>
-        <tformat|<cwith|1|1|3|3|cell-block|no>|<table|<row|<cell|\<lambda\><around*|(|<around*|]|x-1,x+1|[>|)>>|<cell|<below|\<leqslant\>|<text|[theorem:
+        <tformat|<table|<row|<cell|<wide|\<lambda\>|\<wide-bar\>><around*|(|<around*|]|x-1,x+1|[>|)>>|<cell|<below|\<leqslant\>|<text|[theorem:
         <reference|measure measure space properties
-        (1)>]>>>|<cell|<with|font-series|bold|>\<lambda\><around*|(|<around*|[|x-1,x+1|[>|)>>>|<row|<cell|>|<cell|<below|=|<text|[theorem:
+        (1)>]>>>|<cell|<wide|\<lambda\>|\<wide-bar\>><around*|(|<around*|[|x-1,x+1|[>|)>>>|<row|<cell|>|<cell|<below|=|<text|[theorem:
         <reference|measure Lebesgue measure space on
         R>]>>>|<cell|len<around*|(|<around*|[|x-1,x+1|[>|)>>>|<row|<cell|>|<cell|=>|<cell|2>>|<row|<cell|>|<cell|\<less\>>|<cell|\<infty\>>>>>
       </eqnarray*>
 
-      Hence <math|<wide|\<lambda\>|\<wide-bar\>><around*|(|<around*|]|x-1,x+1|[>|)>\<less\>\<infty\>>
-      which as <math|x\<in\><around*|]|x-1,x+1|[>> is open proves that
-      <math|\<lambda\>> is locally finite.
+      so that by [defintion: <reference|measure regularity>]
 
-      <item>If <math|x=<around*|(|x<rsub|1,>,\<ldots\>,x<rsub|n>|)>\<in\>\<bbb-R\><rsup|n>>
-      then <math|x\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|]|x<rsub|i>-1,x<rsub|i>+1|[>>
-      a open set and
+      <\equation*>
+        <wide|\<lambda\>|\<wide-bar\>><text| is locally finite>
+      </equation*>
+
+      <item>First we have\ 
+
+      <\equation*>
+        \<cal-B\><around*|[|\<bbb-R\>,\<cal-T\><rsub|<around*|\|||\|>>|]>=\<cal-B\><around*|[|\<bbb-R\>|]>\<Rightarrow\>\<cal-B\><around*|[|\<bbb-R\>,\<cal-T\><rsub|<around*|\|||\|>>|]>\<subseteq\>\<cal-B\><around*|[|\<bbb-R\>|]>
+      </equation*>
+
+      Let <math|x\<in\>\<bbb-R\>> then <math|x\<in\><around*|]|x-1,x+1|[>>
+      where <math|<around*|]|x-1,x+1|[>> is open. Further\ 
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|\<lambda\><rsup|n><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|]|x<rsub|i>-1,x<rsub|i>+1|[>|)>>|<cell|<below|\<leqslant\>|<text|[theorem:
+        <tformat|<table|<row|<cell|\<lambda\><around*|(|<around*|]|x-1,x+1|[>|)>>|<cell|<below|=|<text|[theorem:
+        <reference|measure Lebesgue measure space on
+        R>]>>>|<cell|<wide|\<lambda\>|\<wide-bar\>><around*|(|<around*|]|x-1,x+1|[>|)>>>|<row|<cell|>|<cell|<below|\<leqslant\>|<text|[theorem:
         <reference|measure measure space properties
-        (1)>]>>>|<cell|\<lambda\><rsup|n><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|[|x<rsub|i>-1,x<rsub|i>+1|[>|)>>>|<row|<cell|>|<cell|<below|=|<text|[theorem:
+        (1)>]>>>|<cell|<wide|\<lambda\>|\<wide-bar\>><around*|(|<around*|[|x-1,x+1|[>|)>>>|<row|<cell|>|<cell|<below|=|<text|[theorem:
+        <reference|measure Lebesgue measure space on
+        R>]>>>|<cell|len<around*|(|<around*|[|x-1,x+1|[>|)>>>|<row|<cell|>|<cell|=>|<cell|2>>|<row|<cell|>|<cell|\<less\>>|<cell|\<infty\>>>>>
+      </eqnarray*>
+
+      so that by [defintion: <reference|measure regularity>]
+
+      <\equation*>
+        \<lambda\><text| is locally finite>
+      </equation*>
+
+      <item>First we have [see theorem: <reference|measure Lebesgue measure
+      space on R^n>] that\ 
+
+      <\equation*>
+        \<cal-B\><around*|[|\<bbb-R\><rsup|n>,\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n>>|]>=\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>\<subseteq\>\<cal-L\><around*|[|\<bbb-R\><rsup|n>|]>
+      </equation*>
+
+      Let <math|x=<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\>\<bbb-R\><rsup|n>>
+      then <math|x\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|]|x<rsub|i>-1,x<rsub|i>+1|[>>
+      a open set. Further\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<wide|\<lambda\><rsup|n>|\<wide-bar\>><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|]|x<rsub|i>-1,x<rsub|i>+1|[>|)>>|<cell|<below|\<leqslant\>|<text|[theorem:
+        <reference|measure measure space properties
+        (1)>]>>>|<cell|<wide|\<lambda\><rsup|n>|\<wide-bar\>><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|[|x<rsub|i>-1,x<rsub|i>+1|[>|)>>>|<row|<cell|>|<cell|<below|=|<text|[theorem:
         <reference|measure Lebesgue measure space on
         R^n>]>>>|<cell|vol<rsup|n><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|[|x<rsub|i>-1,x<rsub|i>+1|[>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|prod><rsub|i=1><rsup|n>2>>|<row|<cell|>|<cell|=>|<cell|2<rsup|n>>>|<row|<cell|>|<cell|\<less\>>|<cell|\<infty\>>>>>
       </eqnarray*>
 
-      which proves that <math|\<lambda\><rsup|n>> is locally finite.
+      so that by [defintion: <reference|measure regularity>]
+
+      <\equation*>
+        \<lambda\><text| is locally finite>
+      </equation*>
+
+      <item>First we have\ 
+
+      <\equation*>
+        \<cal-B\><around*|[|\<bbb-R\><rsup|n>,\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n>>|]>=\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>\<Rightarrow\>\<cal-B\><around*|[|\<bbb-R\><rsup|n>,\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n>>|]>\<subseteq\>\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>
+      </equation*>
+
+      Let <math|x=<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\>\<bbb-R\><rsup|n>>
+      then <math|x\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|]|x<rsub|i>-1,x<rsub|i>+1|[>>
+      a open set. Further\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|\<lambda\><rsup|n><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|]|x<rsub|i>-1,x<rsub|i>+1|[>|)>>|<cell|<below|=|<text|[theorem:
+        <reference|measure Lebesgue measure space on
+        R^n>]>>>|<cell|<wide|\<lambda\><rsup|n>|\<wide-bar\>><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|]|x<rsub|i>-1,x<rsub|i>+1|[>|)>>>|<row|<cell|>|<cell|<below|\<leqslant\>|<text|[theorem:
+        <reference|measure measure space properties
+        (1)>]>>>|<cell|<wide|\<lambda\><rsup|n>|\<wide-bar\>><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|[|x<rsub|i>-1,x<rsub|i>+1|[>|)>>>|<row|<cell|>|<cell|<below|=|<text|[theorem:
+        <reference|measure Lebesgue measure space on
+        R^n>]>>>|<cell|vol<rsup|n><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|[|x<rsub|i>-1,x<rsub|i>+1|[>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|prod><rsub|i=1><rsup|n>2>>|<row|<cell|>|<cell|=>|<cell|2<rsup|n>>>|<row|<cell|>|<cell|\<less\>>|<cell|\<infty\>>>>>
+      </eqnarray*>
+
+      so that by [defintion: <reference|measure regularity>]
+
+      <\equation*>
+        \<lambda\><text| is locally finite>
+      </equation*>
     </enumerate>
   </proof>
 
-  Now we are ready to prove that <math|\<lambda\>> and
-  <math|\<lambda\><rsup|n>> are Radon measures.
+  Now we are ready to prove that <math|\<lambda\>,<wide|\<lambda\>|\<wide-bar\>>>
+  and <math|\<lambda\><rsup|n>> are Radon measures.
 
   <\theorem>
     <label|Lebesgue borel measures are Radon measures>
@@ -45875,24 +45971,23 @@
   </theorem>
 
   <\proof>
-    \ First to that <math|\<cal-T\><rsub|<around*|\|||\|>>> and
+    \ First note that <math|\<cal-T\><rsub|<around*|\|||\|>>> and
     <math|\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n>>> are Hausdorff
     [see theorem: <reference|separation conditions>]
 
     <\enumerate>
       <item>Using [lemma: <reference|Borel measure on R and R^n are locally
-      finite>] \ <math|\<lambda\>> is locally finite and locally compact,
-      hence by [lemma: <reference|measure Radon condition>] <math|\<lambda\>>
-      is regular. As <math|\<lambda\>> is locally finite we have by
-      [definition: <reference|Radon measure definition>] that
+      finite>] <math|\<lambda\>> is locally finite and compact finite, hence
+      by [lemma: <reference|measure Radon condition>] <math|\<lambda\>> is
+      regular. So by [definition: <reference|Radon measure definition>] that
       <math|\<lambda\>> is a Radon measure.
 
       <item>Using [lemma: <reference|Borel measure on R and R^n are locally
       finite>] <math|\<lambda\><rsup|n>> is locally finite and locally
       compact, hence by [lemma: <reference|measure Radon condition (1)>]
-      <math|\<lambda\><rsup|n>> is regular. As <math|\<lambda\><rsup|n>> is
-      locally finite we have by [definition: <reference|Radon measure
-      definition>] that <math|\<lambda\><rsup|n>> is a Radon measure.
+      <math|\<lambda\><rsup|n>> is regular. So by [definition:
+      <reference|Radon measure definition>] that <math|\<lambda\><rsup|n>> is
+      a Radon measure.
     </enumerate>
   </proof>
 
@@ -45967,7 +46062,7 @@
 
         <\description>
           <item*|<math|A=\<varnothing\>>>Then
-          <math|\<alpha\>\<cdot\>A=\<varnothing\>\<in\>\<cal-B\><around*|[|X,\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>>>|]>>
+          <math|\<alpha\>\<cdot\>A=\<varnothing\>\<in\>\<cal-B\><around*|[|X,\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>>>|]>>.
 
           <item*|<math|A\<neq\>\<varnothing\>>>Then
           <math|\<alpha\>\<cdot\>A=<around*|{|0|}>> which is closed [see
@@ -46020,8 +46115,8 @@
     a normed space with the normed topology
     <math|\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>>>> then a measure
     <math|\<mu\>:\<cal-B\><around*|[|X,\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>>>|]>\<rightarrow\><around*|[|0,\<infty\>|]>>
-    is translation invariant if <math|\<forall\>x\<in\>X> and
-    <math|\<forall\>A\<in\>\<cal-B\><around*|[|X,\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>>>|]>>
+    is <with|font-series|bold|translation invariant> if
+    <math|\<forall\>x\<in\>X> and <math|\<forall\>A\<in\>\<cal-B\><around*|[|X,\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>>>|]>>
     we have that\ 
 
     <\equation*>
@@ -46066,7 +46161,7 @@
       and <math|a<rsub|j>\<in\>A<rsub|j>> such that
       <math|a<rsub|i>+x=y=a<rsub|j>+x>, hence <math|a<rsub|i>=a<rsub|j>>
       which leads to the contradiction <math|a<rsub|i>\<in\>A<rsub|i><big|cap>A<rsub|j>=\<varnothing\>>.
-      Hence the assumption is false and we must conclude that
+      So that the assumption is false and we must conclude that
       <math|<around*|(|A<rsub|i>+x|)><big|cap><around*|(|A<rsub|j>+x|)>=\<varnothing\>>.
 
       <item>We have\ 
@@ -46103,8 +46198,9 @@
     </equation*>
 
     where <math|\<lambda\>> is the Borel measure on
-    <math|\<sigma\><around*|[|S<rsub|<around*|[||[>>|]>> [see theorem:
-    <reference|measure Lebesgue measure space on R>]. Then we have that\ 
+    <math|\<sigma\><around*|[|S<rsub|<around*|[||[>>|]>=\<cal-B\><around*|[|\<bbb-R\>|]>>
+    [see theorem: <reference|measure Lebesgue measure space on R>]. Then we
+    have that\ 
 
     <\equation>
       <label|eq 21.1036.287>\<lambda\><rsub|x><around*|(|\<varnothing\>|)>=\<lambda\><around*|(|\<varnothing\>+x|)>=\<lambda\><around*|(|\<varnothing\>|)>=0
@@ -46175,7 +46271,7 @@
       so that <math|\<lambda\><rsub|x><around*|(|A|)>=len<around*|(|A|)>>.
     </description>
 
-    So we have proves that <math|\<lambda\><rsub|x\|\<cal-S\><rsub|<around*|[||[>>>=len>
+    So we have proved that <math|\<lambda\><rsub|x\|\<cal-S\><rsub|<around*|[||[>>>=len>
     which by [theorem: <reference|measure Lebesgue measure space on R>]
     proves that <math|\<lambda\><rsub|x>=\<lambda\>> or in other words we
     have\ 
@@ -46208,7 +46304,7 @@
       <label|eq 21.1040.290>\<lambda\><rsup|n><rsub|x><around*|(|\<varnothing\>|)>=\<lambda\><rsup|n><around*|(|\<varnothing\>+x|)>=\<lambda\><rsup|n><around*|(|\<varnothing\>|)>=0
     </equation>
 
-    Let <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-R\><rsup|n><rsub|<around*|[||[>><big|cup><around*|{|\<varnothing\>|}>=\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>>
+    Let <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<sigma\><around*|[|\<cal-R\><rsup|n><rsub|<around*|[||[>><big|cup><around*|{|\<varnothing\>|}>|]>=\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>>
     pairwise disjoint then by [lemma: <reference|lemma 21.558.288>]\ 
 
     <\equation>
@@ -46293,7 +46389,7 @@
   we introduce Dyadic intervals [similar to Dyadic cubes in [definition
   <reference|measure Dyadic cubes>] and prove that every open set in
   <math|\<cal-T\><rsub|<around*|\|||\|>>><space|0.6spc>can be written as the
-  union of disjoint Dyadic intervals.
+  countable disjoint union of Dyadic intervals.
 
   <\definition>
     <label|measure Dyadic intervals><index|Dyadic
@@ -46346,7 +46442,7 @@
       <label|21.1044.291>J=<around*|[|<frac|z\<cdot\>2<rsup|l>|2<rsup|n>>,<frac|z\<cdot\>2<rsup|l>+2<rsup|l>|2<rsup|n>>|[>
     </equation>
 
-    Let <math|I<big|cap>J=\<varnothing\>>. Then if
+    Let <math|I<big|cap>J\<neq\>\<varnothing\>>. If
     <math|><math|<frac|v+1|2<rsup|n>>\<leqslant\><frac|z\<cdot\>2<rsup|l>|2<rsup|n>>>
     then <math|I<big|cap>J=\<varnothing\>> and if
     <math|><math|<frac|z\<cdot\>2<rsup|l>+2<rsup|l>|2<rsup|n>>\<leqslant\><frac|v|2<rsup|n>>>
@@ -46400,7 +46496,7 @@
 
     which lead to the contradiction <math|<frac|v|2<rsup|n>>\<in\>\<varnothing\>>,
     hence we must have that <math|<around*|[|<frac|v|2<rsup|n><rsup|>>,<frac|v+1|2<rsup|n>>|[>\<nsubseteq\><around*|[|<frac|z|2<rsup|k>>,<frac|z+1|2<rsup|k>>|[>>.
-    Hence we have\ 
+    So we have\ 
 
     <\equation*>
       <around*|[|<frac|v|2<rsup|n><rsup|>>,<frac|v+1|2<rsup|n>>|[><big|cap><around*|[|<frac|z|2<rsup|k>>,<frac|z+1|2<rsup|k>>|[>=\<varnothing\>\<Rightarrow\><around*|[|<frac|v|2<rsup|n><rsup|>>,<frac|v+1|2<rsup|n>>|[>\<nsubseteq\><around*|[|<frac|z|2<rsup|k>>,<frac|z+1|2<rsup|k>>|[>
@@ -46445,7 +46541,7 @@
     <\enumerate>
       <item>This follows directly form [lemma: <reference|lemma 21.562.291>].
 
-      <item>Take <math|I\<neq\>J> and assume that <math|I<big|cap>J\<neq\>0>
+      <item>Let <math|I\<neq\>J> and assume that <math|I<big|cap>J\<neq\>0>
       as <math|n\<leqslant\>n> it follows from (1) that that
       <math|I\<subseteq\>J\<wedge\>J\<subseteq\>I> leading to the
       contradiction <math|I=J\<wedge\>I\<neq\>J> hence the assumption is
@@ -46453,13 +46549,13 @@
 
       <item>Let <math|x\<in\>\<bbb-R\>> then for <math|x\<cdot\>2<rsup|n>> we
       have by [theorem: <reference|complex Archimedean property consequence
-      (1)>] there exist a <math|z\<in\>\<bbb-Z\>> such that
+      (1)>] that there exist a <math|z\<in\>\<bbb-Z\>> such that
       <math|<rigid|z\<leqslant\>x\<cdot\>2<rsup|n>\<less\>z+1>> from which it
       follows that <math|<frac|z|2<rsup|n>>\<leqslant\>x\<less\><frac|z+1|2<rsup|n>>>.
       Hence <math|x\<in\><around*|[|<frac|z|2<rsup|n>>,<frac|z+1|2<rsup|n>>|[>\<in\>\<cal-D\><rsub|n>>
       which proves that <math|\<bbb-R\>\<subseteq\><big|cup><rsub|I\<in\>\<cal-D\><rsub|n>>I>.
       As trivially <math|<big|cup><rsub|I\<in\>\<cal-D\><rsub|n>>I\<subseteq\>\<bbb-R\>>
-      we must conclude that\ 
+      we conclude that\ 
 
       <\equation*>
         \<bbb-R\>=<big|cup><rsub|I\<in\>\<cal-D\><rsub|n>>I
@@ -46503,6 +46599,8 @@
   Next we prove that every non empty open set can be written as a disjoint
   countable union of Dyadic intervals.
 
+  TODO check the denumerable argument again
+
   <\theorem>
     <label|measure Dyadic intervals and open sets>Let
     <math|<around*|\<langle\>|\<bbb-R\>,\<cal-T\><rsub|<around*|\|||\|>>|\<rangle\>>>
@@ -46545,14 +46643,14 @@
     <math|\<varepsilon\><rsub|x>\<in\>\<bbb-R\><rsup|+>> such that
 
     <\equation>
-      <label|eq 21.1051.291>x\<in\><around*|]|x-\<varepsilon\><rsub|x>,x+\<varepsilon\><rsub|x>|[>\<subseteq\>U.
+      <label|eq 21.1051.291>x\<in\><around*|]|x-\<varepsilon\><rsub|x>,x+\<varepsilon\><rsub|x>|[>\<subseteq\>U
     </equation>
 
     Using [theorem: <reference|complex Archimedean property consequence (1)>]
     there exist a <math|n<rsub|x>\<in\>\<bbb-N\>> such that
 
     <\equation>
-      <label|eq 21.1052.291><frac|1|n<rsub|x>>\<less\>\<varepsilon\><rsub|x>
+      <label|eq 21.1052.291>0\<less\><frac|1|n<rsub|x>>\<less\>\<varepsilon\><rsub|x>
     </equation>
 
     using [lemma: <reference|lemma 21.563.291>(3)] there exist a
@@ -46564,7 +46662,7 @@
       x\<in\>I<rsub|x>=<around*|[|<frac|z|2<rsup|n<rsub|x>>>,<frac|z+1|2<rsup|n<rsub|x>>>|[>\<Rightarrow\><frac|z|2<rsup|n<rsub|x>>>\<leqslant\>x\<less\><frac|z+1|2<rsup|n<rsub|x>>>
     </equation>
 
-    If <math|t\<in\><around*|[|<frac|z|2<rsup|n<rsub|x>>>,<frac|z+1|2<rsup|n<rsub|x>>>|[>>
+    If <math|t\<in\><around*|[|<frac|z|2<rsup|n<rsub|x>>>,<frac|z+1|2<rsup|n<rsub|x>>>|[>=I<rsub|x>>
     then <math|<frac|z|2<rsup|n<rsub|x>>>\<leqslant\>t\<less\><frac|z+1|2<rsup|n<rsub|x>>>>
     so that <math|x-t\<less\><frac|z+1|2<rsup|n<rsub|x>>>-<frac|z|2<rsup|n<rsub|x>>>=<frac|1|2<rsup|n<rsub|x>>><below|\<less\>|<text|[eq:
     <reference|eq 21.1052.291>]>>\<varepsilon\><rsub|x>> so that
@@ -46589,10 +46687,10 @@
 
     <\equation*>
       \<cal-K\><rsub|x>=<around*|{|i\<in\><around*|{|0,\<ldots\>,n<rsub|x>|}>\|\<exists\>I\<in\>S<rsub|i><text|
-      such that >x\<in\>I\<subseteq\>U|}>
+      such that >x\<in\>I\<subseteq\>U|}><text| a finite set>
     </equation*>
 
-    then by [eqs: <reference|eq 21.1051.291>, <reference|eq 21.1055.291>] it
+    then by [eqs: <reference|eq 21.1054.291>, <reference|eq 21.1055.291>] it
     follows <math|n<rsub|x>\<in\>\<cal-K\><rsub|x>> which proves that
     <math|\<cal-K\><rsub|x>\<neq\>\<varnothing\>>. Hence\ 
 
@@ -46622,7 +46720,7 @@
     </description>
 
     so in all cases we have <math|x\<in\><big|cup><rsub|I\<in\>\<cal-I\>>I>.
-    So we have chosen <math|x\<in\>U> arbitrary it follows that\ 
+    As we have chosen <math|x\<in\>U> arbitrary it follows that\ 
 
     <\equation>
       <label|eq 21.1056.291>U\<subseteq\><big|cup><rsub|I\<in\>\<cal-I\>>I
@@ -46643,7 +46741,7 @@
     </equation>
 
     Next we prove that the above union is pairwise disjoint. Let
-    <math|I,J\<in\>\<cal-I\>> with <math|I\<neq\>j> then as
+    <math|I,J\<in\>\<cal-I\>> with <math|I\<neq\>J> then as
     <math|\<cal-I\>=<big|cup><rsub|i\<in\>\<bbb-N\><rsub|0>>\<cal-I\><rsub|i>>
     there exists a <math|n,m\<in\>\<bbb-N\><rsub|0>> such that
     <math|I\<in\>\<cal-I\><rsub|n>> and <math|J\<in\>\<cal-I\><rsub|m>>. For
@@ -46651,7 +46749,7 @@
 
     <\description>
       <item*|<math|n=m>>Then <math|I,J\<in\>\<cal-I\><rsub|n>\<subseteq\>\<cal-D\><rsub|n>>
-      then by [lemma: <reference|lemma 21.563.291>]
+      so that by [lemma: <reference|lemma 21.563.291>]
       <math|I<big|cap>J=\<varnothing\>>
 
       <item*|<math|n\<less\>m>>Then <math|n\<in\><around*|{|0,\<ldots\>,m-1|}>>
@@ -46684,7 +46782,7 @@
     every subset is finite denumerable.>] that <math|\<cal-I\>> is either
     finite or denumerable. Assume that <math|\<cal-I\>> is finite. As
     <math|U\<neq\>\<varnothing\>> we have that
-    <math|<big|sqcup><rsub|I\<in\>\<cal-I\>>I\<neq\>\<varnothing\>> it
+    <math|<big|sqcup><rsub|I\<in\>\<cal-I\>>I\<neq\>\<varnothing\>> and it
     follows that <math|\<cal-I\>\<neq\>\<varnothing\>>. Use [theorem:
     <reference|generalized intervals and boundaries>] to define the function\ 
 
@@ -46751,6 +46849,8 @@
   We are ready now to prove that every translation invariant Radon measure
   <math|\<mu\>> is essential equal to the Borel measure <math|\<lambda\>>
   multiplied by a constant.
+
+  TODO
 
   <\theorem>
     <label|measure Radon and Borel measure on R>Let
@@ -50109,7 +50209,6 @@
     <associate|measure compact class approximation (3)|<tuple|21.169|?>>
     <associate|measure compact finite and intervals|<tuple|21.586|?>>
     <associate|measure compact finite and rectangles|<tuple|21.587|?>>
-    <associate|measure compact finite and scalar product|<tuple|21.583|?>>
     <associate|measure complete measure|<tuple|21.215|?>>
     <associate|measure complete measure characterization|<tuple|21.216|?>>
     <associate|measure completing of a measure space|<tuple|21.222|?>>
@@ -50761,7 +50860,7 @@
       and Radon measures <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-138>>
 
-      <with|par-left|<quote|2tab>|21.8.1.2<space|2spc><with|mode|<quote|math>|\<lambda\>>
+      <with|par-left|<quote|2tab>|21.8.1.2<space|2spc><with|mode|<quote|math>|\<lambda\>,<wide|\<lambda\>|\<wide-bar\>>,<wide|\<lambda\><rsup|n>|\<wide-bar\>>>
       and <with|mode|<quote|math>|\<lambda\><rsup|n>> are Radon measures
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-139>>
