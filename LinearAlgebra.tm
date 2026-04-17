@@ -1,4 +1,4 @@
-<TeXmacs|2.1.4>
+<TeXmacs|2.1.5>
 
 <project|FullBook.tm>
 
@@ -21381,7 +21381,7 @@
   </example>
 
   <\definition>
-    <index|disgonal matrix><label|matrix diagonal><dueto|diagonal matrix>Let
+    <label|matrix diagonal><index|disgonal matrix><dueto|diagonal matrix>Let
     <math|n,m\<in\>\<bbb-N\>> and <math|F> a field then
     <math|M\<in\>\<cal-M\><rsub|n,m>> is a <with|font-series|bold|diagonal
     matrix> if <math|\<forall\><around*|(|i,j|)>\<in\><around*|{|1,\<ldots\>,n|}>\<cdot\><around*|{|1,\<ldots\>,m|}>>
@@ -25358,7 +25358,7 @@
   <\collection>
     <associate|chapter-nr|10>
     <associate|item-nr|4>
-    <associate|page-first|343>
+    <associate|page-first|345>
     <associate|page-medium|papyrus>
     <associate|par-first|0tab>
     <associate|section-nr|5>
@@ -25946,7 +25946,7 @@
     <associate|matrix determinant permutation rows or
     columns|<tuple|11.364|?>>
     <associate|matrix determinant propertie|<tuple|11.361|?>>
-    <associate|matrix diagonal|<tuple|disgonal matrix|?>>
+    <associate|matrix diagonal|<tuple|11.356|?>>
     <associate|matrix dterminant is zero|<tuple|11.365|?>>
     <associate|matrix dterminant shortcut|<tuple|11.387|?>>
     <associate|matrix identity|<tuple|11.325|?>>
