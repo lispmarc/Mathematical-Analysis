@@ -47499,7 +47499,7 @@
 
   Next we calculate the value of <math|\<lambda\><around*|(|T<rsup|-1><around*|(|<around*|[|0,1|[>|)>|)>>
 
-  <\corollary>
+  <\theorem>
     <label|measure pushforward Borel measures in R(1)>Let
     <math|T:\<bbb-R\>\<rightarrow\>\<bbb-R\>> be a linear isomorphism then we
     have <math|\<forall\>A\<in\>\<cal-B\><around*|[|\<bbb-R\>|]>> that\ 
@@ -47507,7 +47507,7 @@
     <\equation*>
       T<around*|(|1|)>\<neq\>0<text| and >\<lambda\><around*|[|T<rsup|-1>|]><around*|(|A|)>=\<lambda\><around*|(|T<rsup|-1><around*|(|A|)>|)>=<frac|1|<around*|\||T<around*|(|1|)>|\|>>\<cdot\>\<lambda\><around*|(|A|)>
     </equation*>
-  </corollary>
+  </theorem>
 
   <\proof>
     By [example: <reference|linear mapping on a field>] \ it follows that\ 
@@ -48299,7 +48299,8 @@
       d<around*|(|\<mu\><around*|[|T<rsup|-1>|]>|)>
     </equation*>
 
-    <item>Next we use \ the Monotone Convergence theorem [see theorem:
+    <item>Next we use [theorem: <reference|non negative integral
+    alternative>] and the Monotone Convergence theorem [see theorem:
     <reference|Monotone Convergence Theorem (1)>] to prove that for
     <math|f\<in\>\<cal-M\><rsup|+><around*|[|X,\<cal-A\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
     we have\ 
@@ -48347,7 +48348,7 @@
   <\lemma>
     <label|lemma 21.619.309>Let <math|<around*|\<langle\>|X,\<cal-A\>|\<rangle\>>>,
     <math|<around*|\<langle\>|Y,\<cal-B\>|\<rangle\>>> be two measurable
-    spaces, <math|\<mu\>> a measure on <math|\<mu\>>,
+    spaces, <math|\<mu\>> a measure on <math|\<cal-B\>>,
     <math|T:X\<rightarrow\>Y> a <rigid|<math|\<cal-A\>,\<cal-B\>>-measurable>
     function and <math|f\<in\>\<cal-S\><rsup|+><around*|[|Y,\<cal-B\>|]>>
     then we have that\ 
@@ -48457,8 +48458,8 @@
       exists and ><big|int><rsup|+>f d\<mu\><around*|[|T<rsup|-1>|]>=<below|lim|n\<rightarrow\>\<infty\>><big|int><rsup|S>f<rsub|n>d\<mu\><around*|[|T<rsup|-1>|]>
     </equation*>
 
-    Using [theorem: <reference|non negative integral is a extension>] on the
-    above we have
+    Using [theorem: <reference|non negative integral is a extension>] the
+    above becomes
 
     <\equation>
       <label|eq 21.1168.309><below|lim|n\<rightarrow\>\<infty\>><big|int><rsup|+>f<rsub|n>d\<mu\><around*|[|T<rsup|-1>|]><text|
@@ -48467,7 +48468,7 @@
 
     \;
 
-    Using [lemma:<reference|lemma 21.619.309>] on [eq: <reference|eq
+    Further using [lemma:<reference|lemma 21.619.309>] on [eq: <reference|eq
     21.1166\<point\>309>] we have that\ 
 
     <\equation>
@@ -48493,7 +48494,7 @@
       <reference|eq 21.1167.309>]>>f<rsub|n+1><around*|(|T<around*|(|x|)>|)>=<around*|(|f<rsub|n+1>\<circ\>T|)><around*|(|x|)>
     </equation>
 
-    and, as <math|\<forall\>x\<in\>X> <math|T<around*|(|x|)>\<in\>Y> that by
+    and, as <math|\<forall\>x\<in\>X> <math|T<around*|(|x|)>\<in\>Y>, that by
     [eq: <reference|eq 21.1167.309>],
 
     <\equation>
@@ -48553,8 +48554,8 @@
   </proof>
 
   <\theorem>
-    <label|measure integral change of variables>Let
-    <math|<around*|\<langle\>|X,\<cal-A\>|\<rangle\>>>,
+    <label|measure integral change of variables><dueto|Change of Variables
+    (1)>Let <math|<around*|\<langle\>|X,\<cal-A\>|\<rangle\>>>,
     <math|<around*|\<langle\>|Y,\<cal-B\>|\<rangle\>>> be measurable spaces,
     <math|\<mu\>> a measure on <math|\<cal-B\>>, <math|T:X\<rightarrow\>Y> a
     <rigid|<math|\<cal-A\>,\<b-B\>>-measurable> function and
@@ -48571,86 +48572,463 @@
       <big|int><around*|(|f\<circ\>T|)>d\<mu\>=<big|int>f
       d\<mu\><around*|[|T<rsup|-1>|]>
     </equation*>
+  </theorem>
+
+  <\proof>
+    As <math|f\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\><around*|[|T<rsup|-1>|]>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
+    we have by [definition: <reference|measure integral>] that
+
+    <\equation>
+      <label|eq 21.1173.309>f\<in\>\<cal-M\><rsup|><around*|[|X,\<cal-A\>,<wide|\<bbb-R\>|\<wide-bar\>>|]><below|\<Rightarrow\>|<text|[theorem:
+      <reference|measure integral f+ f- are
+      measurable>]>>f<rsup|+>,f<rsup|-1>\<in\>\<cal-M\><rsup|+><around*|[|X,\<cal-A\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
+    </equation>
+
+    and
+
+    <\equation>
+      <label|eq 21.1174.309><big|int><rsup|+>f<rsup|+>d\<mu\><around*|[|T<rsup|-1>|]>\<less\>\<infty\><text|
+      and ><big|int><rsup|+>f<rsup|->d\<mu\><around*|[|T<rsup|-1>|]>\<less\>\<infty\>
+    </equation>
+
+    As <math|T> is <math|\<cal-A\>,\<cal-B\>>-measurabole and <math|f> is
+    <math|\<cal-B\>,\<cal-B\><around*|[|<wide|\<bbb-R\>|\<wide-bar\>>|]>>-measurable
+    [because <math|f\<in\>\<cal-M\><around*|[|X,\<cal-A\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>]
+    it follows from [theorem: <reference|measurable function composition>]
+    that <math|f\<circ\>T> is <math|\<cal-A\>,\<cal-B\><around*|[|<wide|\<bbb-R\>|\<wide-bar\>>|]>>-measurable.
+    Hence we have that
+
+    <\equation*>
+      f\<circ\>T\<in\>\<cal-M\><around*|[|X,\<cal-A\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
+    </equation*>
+
+    As <math|f<rsup|+>.f<rsup|->\<in\>\<cal-M\><rsup|+><around*|[|X,\<cal-A\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
+    [see eq: <reference|eq 21.1173.309>] it follows from [lemma:
+    <reference|lemma 21.620.309>] that\ 
+
+    <\equation*>
+      f<rsup|+>\<circ\>T,f<rsup|+>\<circ\>T\<in\>\<cal-M\><rsup|+><around*|[|X,\<cal-A\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
+    </equation*>
+
+    and\ 
+
+    <\equation*>
+      <big|int><rsup|+><around*|(|f<rsup|+>\<circ\>T|)>d\<mu\>=<big|int><rsup|+>f<rsup|+>d\<mu\><around*|[|T<rsup|-1>|]><below|\<less\>|<text|[eq:
+      <reference|eq 21.1174.309>]>>\<infty\><text| and
+      ><big|int><rsup|+><around*|(|f<rsup|->\<circ\>T|)>d\<mu\>=<big|int><rsup|+>f<rsup|->d\<mu\><around*|[|T<rsup|-1>|]><below|\<less\>|<text|[eq:
+      <reference|eq 21.1174.309>]>>\<infty\>
+    </equation*>
+
+    As by [lemma: <reference|lemma 21.621.309>]
+    <math|<around*|(|f\<circ\>T|)><rsup|+>=f<rsup|+>\<circ\>T> and
+    <math|<around*|(|f\<circ\>T|)><rsup|->=f<rsup|->\<circ\>T> it follows
+    from the above that\ 
+
+    <\equation*>
+      <around*|(|f\<circ\>T|)><rsup|+>,<around*|(|f\<circ\>T|)><rsup|->\<in\>\<cal-M\><rsup|+><around*|[|X,\<cal-A\>,<wide|\<bbb-R\>|\<wide-bar\>>|]><text|
+      and ><big|int><rsup|+><around*|(|f\<circ\>T|)><rsup|+>d\<mu\>\<less\>\<infty\>\<wedge\><big|int><rsup|+><around*|(|f\<circ\>T|)><rsup|->d\<mu\>\<less\>\<infty\>
+    </equation*>
+
+    \;
+
+    which by definition means that\ 
+
+    <\equation*>
+      f\<circ\>T\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
+    </equation*>
+
+    and
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<big|int><around*|(|f\<circ\>T|)>d\<mu\>>|<cell|<below|=|def>>|<cell|<big|int><rsup|+><around*|(|f\<circ\>T|)><rsup|+>d\<mu\>-<big|int><rsup|+><around*|(|f\<circ\>T|)><rsup|->d\<mu\>>>|<row|<cell|>|<cell|=>|<cell|<big|int><rsup|+><around*|(|f<rsup|+>\<circ\>T|)>d\<mu\>-<big|int><rsup|+><around*|(|f<rsup|-1>\<circ\>T|)>d\<mu\>>>|<row|<cell|>|<cell|=>|<cell|<big|int><rsup|+>f<rsup|+>d\<mu\><around*|[|T<rsup|-1>|]>-<big|int><rsup|+>f<rsup|->d\<mu\><around*|[|T<rsup|-1>|]>>>|<row|<cell|>|<cell|<below|=|def>>|<cell|<big|int>f
+      d\<mu\><around*|[|T<rsup|-1>|]>>>>>
+    </eqnarray*>
+
+    Hence
+
+    <\equation*>
+      <big|int><around*|(|f\<circ\>T|)>d\<mu\>=<big|int>f
+      d\<mu\><around*|[|T<rsup|-1>|]>
+    </equation*>
+  </proof>
+
+  Integrating over a measurable set gives the following variation of the
+  above theorem.
+
+  <\theorem>
+    <dueto|Change of Variables (2)>Let <math|<around*|\<langle\>|X,A|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,\<cal-B\>|\<rangle\>>> be measurable spaces,
+    <math|B\<in\>\<cal-B\>>, <math|T:X\<rightarrow\>Y> a
+    <math|\<cal-A\>,\<cal-B\>>-measurable and
+    <math|f\<in\>\<cal-L\><rsub|B><around*|[|Y,\<cal-B\>,\<mu\><around*|[|T<rsup|-1>|]>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
+    then we have
+
+    <\equation*>
+      T<rsup|-1><around*|(|B|)>\<in\>\<cal-A\>
+    </equation*>
+
+    <\equation*>
+      f\<circ\>T\<in\>\<cal-L\><rsub|T<rsup|-1><around*|(|B|)>><around*|[|X,\<cal-A\>,\<mu\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
+    </equation*>
+
+    <\equation*>
+      <big|int><rsub|T<rsup|-1><around*|(|B|)>><around*|(|f\<circ\>T|)>d\<mu\>=<big|int><rsub|B>f
+      d\<mu\><around*|[|T<rsup|-1>|]>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    As <math|T> is <math|\<cal-A\>,\<cal-B\>>-measurable we have that\ 
+
+    <\equation*>
+      T<rsup|-1><around*|(|B|)>\<in\>\<cal-A\>
+    </equation*>
+
+    Further as <math|f\<in\>\<cal-L\><rsub|B><around*|[|Y,\<cal-B\>,\<mu\><around*|[|T<rsup|-1>|]>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
+    we have by [definition: <reference|measure integral (1)>] that
+
+    <\equation>
+      <label|eq 21.1175.309>\<cal-X\><rsub|Y,B>\<cdot\>f\<in\>\<cal-L\><around*|[|Y,\<cal-B\>,\<mu\><around*|[|T<rsup|-1>|]>,<wide|\<bbb-R\>|\<wide-bar\>>|]><text|
+      and ><big|int><rsub|B>f d\<mu\><around*|[|T<rsup|-1>|]>=<big|int><around*|(|\<cal-X\><rsub|Y,B>\<cdot\>f|)>d\<mu\>
+    </equation>
+
+    Using now [theorem: <reference|measure integral change of variables>] we
+    have that\ 
+
+    <\equation>
+      <label|eq 21.1176.309><around*|(|\<cal-X\><rsub|Y,B>\<cdot\>f|)>\<circ\>T\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>,<wide|\<bbb-R\>|\<wide-bar\>>|]><text|
+      and ><big|int><around*|(|<around*|(|\<cal-X\><rsub|Y,B>\<cdot\>f|)>\<circ\>T|)>d\<mu\>=<big|int><around*|(|\<cal-X\><rsub|Y,B>\<cdot\>f|)>d\<mu\><around*|[|T<rsup|-1>|]>
+    </equation>
+
+    Now we have <math|\<forall\>x\<in\>X> that\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|(|<around*|(|\<cal-X\><rsub|Y,B>\<cdot\>f|)>\<circ\>T|)><around*|(|x|)>>|<cell|=>|<cell|<around*|(|\<cal-X\><rsub|Y,B>\<cdot\>f|)><around*|(|T<around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<cal-X\><rsub|Y,B><around*|(|T<around*|(|x|)>|)>\<cdot\>f<around*|(|T<around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|\<cal-X\><rsub|Y,B>\<circ\>T|)><around*|(|x|)>\<cdot\><around*|(|f\<circ\>T|)><around*|(|x|)>>>|<row|<cell|>|<cell|<below|=|<text|[lemma:
+      <reference|lemma 21.618.309>]>>>|<cell|\<cal-X\><rsub|X,T<rsup|-1><around*|(|B|)>>**<around*|(|x|)>\<cdot\><around*|(|f\<circ\>T|)><around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|\<cal-X\><rsub|X,T<rsup|-1><around*|(|B|)>>\<cdot\><around*|(|f\<circ\>T|)>|)><around*|(|x|)>>>>>
+    </eqnarray*>
+
+    so that\ 
+
+    <\equation*>
+      <around*|(|\<cal-X\><rsub|Y,B>\<cdot\>f|)>\<circ\>T=\<cal-X\><rsub|X,T<rsup|-1><around*|(|B|)>>\<cdot\><around*|(|f\<circ\>T|)>
+    </equation*>
+
+    Substituting the above in [eq: <reference|eq 21.1176.309>] proves that\ 
+
+    <\equation*>
+      \<cal-X\><rsub|X,T<rsup|-1><around*|(|B|)>>\<cdot\><around*|(|f\<circ\>T|)>\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>,<wide|\<bbb-R\>|\<wide-bar\>>|]><text|
+      and ><big|int><around*|(|\<cal-X\><rsub|X,T<rsup|-1><around*|(|B|)>>\<cdot\><around*|(|f\<circ\>T|)>|)>d\<mu\>=<big|int><around*|(|\<cal-X\><rsub|Y,B>\<cdot\>f|)>d\<mu\><around*|[|T<rsup|-1>|]>
+    </equation*>
+
+    so that by [definition: <reference|measure integral (1)>]\ 
+
+    <\equation*>
+      f\<circ\>T\<in\>\<cal-L\><rsub|T<rsup|-1><around*|(|B|)>><around*|[|X,\<cal-A\>,\<mu\>,<wide|\<bbb-R\>|\<wide-bar\>>|]><text|
+      and ><big|int><rsub|T<rsup|-1><around*|(|B|)>><around*|(|f\<circ\>T|)>d\<mu\>=<big|int><rsub|B>f
+      d\<mu\><around*|[|T<rsup|-1>|]>
+    </equation*>
+  </proof>
+
+  In the special case where <math|T> is a linear isomorphism and the measures
+  <math|\<lambda\>>, <math|\<lambda\><rsup|n>> we have the following
+  relations [see theorems: <reference|measure pushforward Borel measures in
+  R(1)>, <reference|measure pushforward Borel measures in R^n (1)>] \ 
+
+  <\equation*>
+    \<forall\>A\<in\>\<cal-B\><around*|[|\<bbb-R\>|]><text| we have
+    >\<lambda\><around*|[|T<rsup|-1>|]><around*|(|A|)>=<frac|1|<around*|\||T<around*|(|1|)>|\|>>\<cdot\>\<lambda\><around*|(|A|)>
+  </equation*>
+
+  <\equation*>
+    \<forall\>A\<in\>\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]><text| we have
+    >\<lambda\><rsup|n><around*|[|T<rsup|-1>|]><around*|(|A|)>=<frac|1|<around*|\||det<around*|(|L|)>|\|>>\<cdot\>\<lambda\><rsup|n><around*|(|A|)>
+  </equation*>
+
+  so that\ 
+
+  <\equation*>
+    \<lambda\><around*|[|T<rsup|-1>|]>=<frac|1|<around*|\||T<around*|(|1|)>|\|>>\<cdot\>\<lambda\><text|
+    and >\<lambda\><rsup|n><around*|[|T<rsup|-1>|]>=<frac|1|<around*|\||det<around*|(|L|)>|\|>>\<cdot\>\<lambda\><rsup|n>
+  </equation*>
+
+  This suggests that we examine how the integral behaves when we multiply a
+  measure by a non negative scalar/ In essence we prove that for
+  <math|\<alpha\>\<in\><around*|[|0,\<infty\>|[>>
+
+  <\equation*>
+    <big|int>f d<around*|(|\<alpha\>\<cdot\>\<mu\>|)>=\<alpha\>\<cdot\><big|int>f
+    d\<mu\>
+  </equation*>
+
+  Again we do this in three stages\ 
+
+  <\enumerate>
+    <item>First we prove that for <math|f\<in\>\<cal-S\><rsup|+><around*|[|X,\<cal-A\>|]>>\ 
+
+    <\equation*>
+      <big|int><rsup|S>f d<around*|(|\<alpha\>\<cdot\>\<mu\>|)>=\<alpha\>\<cdot\><big|int><rsup|S>f
+      d\<mu\>
+    </equation*>
+
+    <item>Next we use [theorem: <reference|non negative integral
+    alternative>] and the Monotone Convergence theorem [see theorem:
+    <reference|Monotone Convergence Theorem (1)>] to prove that for
+    <math|f\<in\>\<cal-M\><rsup|+><around*|[|X,\<cal-A\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
+    we have\ 
+
+    <\equation*>
+      <big|int><rsup|+>f d<around*|(|\<alpha\>\<cdot\>\<mu\>|)>=\<alpha\>\<cdot\><big|int><rsup|+>f
+      d\<mu\>
+    </equation*>
+
+    <item>Finally we prove the result for
+    <math|f\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
+
+    <\equation*>
+      <big|int>f d<around*|(|\<alpha\>\<cdot\>\<mu\>|)>=\<alpha\>\<cdot\><big|int>f
+      d\<mu\>
+    </equation*>
+  </enumerate>
+
+  <\lemma>
+    <label|lemma 21.624.309>Let <math|<around*|\<langle\>|X,\<cal-A\>,\<mu\>|\<rangle\>>>
+    be a measure space, <math|\<alpha\>\<in\><around*|[|0,\<infty\>|[>> and
+    <math|f\<in\>\<cal-S\><rsup|+><around*|[|X,\<cal-A\>|]>> then we have\ 
+
+    <\equation*>
+      <big|int><rsup|S>f d<around*|(|\<alpha\>\<cdot\>\<mu\>|)>=\<alpha\>\<cdot\><big|int><rsup|S>f
+      d\<mu\>
+    </equation*>
+
+    <\note>
+      Using [theorem: <reference|measure sum and scalar product of measures>]
+      <math|\<alpha\>\<cdot\>\<mu\>:\<cal-A\>\<rightarrow\><around*|[|0,\<infty\>|[>>
+      defined by <math|<around*|(|\<alpha\>\<cdot\>\<mu\>|)><around*|(|A|)>=\<alpha\>\<cdot\>\<mu\><around*|(|A|)>>
+      is a measure on <math|\<cal-A\>>.
+    </note>
+  </lemma>
+
+  <\proof>
+    As <math|f\<in\>\<cal-S\><rsup|+><around*|[|Y,\<cal-A\>|]>> we have by
+    \ [theorem: <reference|simple function measurable (1)>] that there exists
+    a <math|n\<in\>\<bbb-N\>>, <math|<around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<cal-A\>>
+    and <math|<around*|{|f<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\><around*|[|0,\<infty\>|[>>
+    so that\ 
+
+    <\equation*>
+      f=<big|sum><rsub|i=1><rsup|n>f<rsub|i>\<cdot\>\<cal-X\><rsub|Y,A<rsub|i>>
+    </equation*>
+
+    Hence we have
+
+    \;
+
+    <\equation*>
+      <big|int><rsup|S>f d<around*|(|\<alpha\>\<cdot\>\<mu\>|)>=<big|sum><rsub|i=1><rsup|n>f<rsub|i>\<cdot\><around*|(|\<alpha\>\<cdot\>\<mu\>|)><around*|(|A<rsub|i>|)>=<big|sum><rsub|i=1><rsup|n>f<rsub|i>\<cdot\>\<alpha\>\<cdot\>\<mu\><around*|(|A<rsub|i>|)>=\<alpha\>\<cdot\><big|sum><rsub|i=1><rsup|n>f<rsub|i>\<cdot\>\<mu\><around*|(|A<rsub|i>|)>=\<alpha\>\<cdot\><big|int><rsup|S>f
+      d\<mu\>
+    </equation*>
+  </proof>
+
+  <\lemma>
+    <label|lemma 21.626.309>Let <math|<around*|\<langle\>|X,\<cal-A\>,\<mu\>|\<rangle\>>>
+    be a measure space, <math|\<alpha\>\<in\><around*|[|0,\<infty\>|[>> and
+    <math|f\<in\>\<cal-M\><rsup|+><around*|[|X,\<cal-A\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
+    then\ 
+
+    <\equation*>
+      <big|int><rsup|+>f d<around*|(|\<alpha\>\<cdot\>\<mu\>|)>=\<alpha\>\<cdot\><big|int><rsup|+>f
+      d\<mu\>
+    </equation*>
+  </lemma>
+
+  <\proof>
+    As <math|f\<in\>\<cal-M\><rsup|+><around*|[|X,\<cal-A\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
+    it follows from [theorem: <reference|non negative integral alternative>]
+    that there exist a sequence\ 
+
+    <\equation*>
+      <around*|{|f<rsub|n>|}><rsub|n\<in\>\<bbb-N\>>\<subseteq\>\<cal-S\><rsup|+><around*|[|X,\<cal-A\>|]>
+    </equation*>
+
+    such that\ 
+
+    <\equation*>
+      \<forall\>y\<in\>Y<text| we have >\<forall\>n\<in\>\<bbb-N\><text|
+      >f<rsub|n><around*|(|y|)>\<leqslant\>f<rsub|n+1><around*|(|y|)><text|
+      and ><below|lim|n\<rightarrow\>\<infty\>>f<rsub|n><around*|(|y|)><text|
+      exist with >f<around*|(|y|)>=<below|lim|n\<rightarrow\>\<infty\>>f<rsub|n><around*|(|y|)>
+    </equation*>
+
+    and for the measure <math|\<alpha\>\<cdot\>\<mu\>>
+
+    <\equation>
+      <label|eq 21.1177.309><below|lim|n\<rightarrow\>\<infty\>><big|int><rsup|S>f<rsub|n>d<around*|(|\<alpha\>\<cdot\>\<mu\>|)><text|
+      exists and ><big|int><rsup|+>f d<around*|(|\<alpha\>\<cdot\>\<mu\>|)>=<below|lim|n\<rightarrow\>\<infty\>><big|int><rsup|S>f<rsub|n>d<around*|(|\<alpha\>\<cdot\>\<mu\>|)>
+    </equation>
+
+    and for the measure <math|\<mu\>>
+
+    <\equation>
+      <label|eq 21.1178.309><below|lim|n\<rightarrow\>\<infty\>><big|int><rsup|S>f<rsub|n>d\<mu\><text|
+      exists and ><big|int><rsup|+>f d\<mu\>=<below|lim|n\<rightarrow\>\<infty\>><big|int><rsup|S>f<rsub|n>d\<mu\>
+    </equation>
+
+    Let <math|n\<in\>\<bbb-N\>> then by [lemma: <reference|lemma 21.624.309>]
+    we have
+
+    <\equation>
+      <label|eq 21.1179.309><big|int><rsup|S>f<rsub|n>d<around*|(|\<alpha\>\<cdot\>\<mu\>|)>=\<alpha\>\<cdot\><big|int><rsup|S>f<rsub|n>d\<mu\>
+    </equation>
+
+    hence we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<big|int><rsup|+>f
+      d<around*|(|\<alpha\>\<cdot\>\<mu\>|)>>|<cell|<below|=|<text|[eq:
+      <reference|eq 21.1177.309>]>>>|<cell|<below|lim|n\<rightarrow\>\<infty\>><big|int><rsup|S>f<rsub|n>d<around*|(|\<alpha\>\<cdot\>\<mu\>|)>>>|<row|<cell|>|<cell|<below|=|<text|[eq:
+      <reference|eq 21.1179.309>]>>>|<cell|<below|lim|n\<rightarrow\>\<infty\>><around*|(|\<alpha\>\<cdot\><big|int><rsup|S>f<rsub|n>d\<mu\>|)>>>|<row|<cell|>|<cell|<below|=|<text|[theorem:
+      <reference|extended limit properties>]>>>|<cell|\<alpha\>\<cdot\><below|lim|n\<rightarrow\>\<infty\>><big|int><rsup|S>f<rsub|n>d\<mu\>>>|<row|<cell|>|<cell|<below|=|<text|[eq:
+      <reference|eq 21.1178.309>]>>>|<cell|\<alpha\>\<cdot\><big|int><rsup|+>f
+      d\<mu\>>>>>
+    </eqnarray*>
+
+    Summarized we have\ 
+
+    <\equation*>
+      <big|int><rsup|+>f d<around*|(|\<alpha\>\<cdot\>\<mu\>|)>=\<alpha\>\<cdot\><big|int><rsup|+>f
+      d\<mu\>
+    </equation*>
+  </proof>
+
+  <\theorem>
+    <label|measure integral of scalar product with a measure>Let
+    <math|<around*|\<langle\>|X,\<cal-A\>,\<mu\>|\<rangle\>>> be a measure
+    space, <math|\<alpha\>\<in\><around*|[|0,\<infty\>|[>> and
+    <math|f\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
+    then <math|f\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<alpha\>\<cdot\>\<mu\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
+    and\ 
+
+    <\equation*>
+      <big|int><rsup|+>f d<around*|(|\<alpha\>\<cdot\>\<mu\>|)>=\<alpha\>\<cdot\><big|int><rsup|+>f
+      d\<mu\>
+    </equation*>
 
     <\proof>
-      As <math|f\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\><around*|[|T<rsup|-1>|]>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
-      we have by [definition: <reference|measure integral>] that
+      As <math|f\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
+      we have by [definition: <reference|measure integral>] that\ 
 
       <\equation*>
-        f\<in\>\<cal-M\><rsup|><around*|[|X,\<cal-A\>,<wide|\<bbb-R\>|\<wide-bar\>>|]><below|\<Rightarrow\>|<text|[theorem:
-        <reference|measure integral f+ f- are
-        measurable>]>>f<rsup|+>,f<rsup|-1>\<in\>\<cal-M\><rsup|+><around*|[|X,\<cal-A\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
+        f\<in\>\<cal-M\><around*|[|X,\<cal-A\>,\<mu\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
       </equation*>
 
-      and
-
-      <\equation>
-        <label|eq 21.1173.309><big|int><rsup|+>f<rsup|+>d\<mu\><around*|[|T<rsup|-1>|]>\<less\>\<infty\><text|
-        and ><big|int><rsup|+>f<rsup|->d\<mu\><around*|[|T<rsup|-1>|]>\<less\>\<infty\>
-      </equation>
-
-      As <math|T> is <math|\<cal-A\>,\<cal-B\>>-measurabole and <math|f> is
-      <math|\<cal-B\>,\<cal-B\><around*|[|<wide|\<bbb-R\>|\<wide-bar\>>|]>>-measurable
-      [because <math|f\<in\>\<cal-M\><around*|[|X,\<cal-A\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>]
-      it follows from [theorem: <reference|measurable function composition>]
-      that <math|f\<circ\>T> is <math|\<cal-A\>,\<cal-B\><around*|[|<wide|\<bbb-R\>|\<wide-bar\>>|]>>
-      measurable. Hence we have that
-
       <\equation*>
-        f\<circ\>T\<in\>\<cal-M\><around*|[|X,\<cal-A\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
+        <big|int><rsup|+>f<rsup|+>d\<mu\>\<less\>\<infty\><text| and
+        ><big|int><rsup|+>f<rsup|->d\<mu\>\<less\>\<infty\>
       </equation*>
 
-      As <math|f<rsup|+>.f<rsup|->\<in\>\<cal-M\><rsup|+><around*|[|X,\<cal-A\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
-      it follows from [lemma: <reference|lemma 21.620.309>] that\ 
-
       <\equation*>
-        f<rsup|+>\<circ\>T,f<rsup|+>\<circ\>T\<in\>\<cal-M\><rsup|+><around*|[|X,\<cal-A\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
+        <big|int>f d\<mu\>=<big|int><rsup|+>f<rsup|+>d\<mu\>-<big|int><rsup|+>f<rsup|->d\<mu\>\<less\>\<infty\>
       </equation*>
 
-      and\ 
+      Using [lemma: <reference|lemma 21.626.309>] we have
 
       <\equation*>
-        <big|int><rsup|+><around*|(|f<rsup|+>\<circ\>T|)>d\<mu\>=<big|int><rsup|+>f<rsup|+>d\<mu\><around*|[|T<rsup|-1>|]><below|\<less\>|<text|[eq:
-        <reference|eq 21.1173.309>]>>\<infty\><text| and
-        ><big|int><rsup|+><around*|(|f<rsup|->\<circ\>T|)>d\<mu\>=<big|int><rsup|+>f<rsup|->d\<mu\><around*|[|T<rsup|-1><below|\<less\>|<text|[eq:
-        <reference|eq 21.1173.309>]>>\<infty\>|]>
+        <big|int><rsup|+>f <rsup|+>d<around*|(|\<alpha\>\<cdot\>\<mu\>|)>=\<alpha\>\<cdot\><big|int><rsup|+>f<rsup|+>
+        d\<mu\><text| and ><big|int><rsup|+>f
+        <rsup|->d<around*|(|\<alpha\>\<cdot\>\<mu\>|)>=\<alpha\>\<cdot\><big|int><rsup|+>f<rsup|->
+        d\<mu\>
       </equation*>
 
-      As by [lemma: <reference|lemma 21.621.309>]
-      <math|<around*|(|f\<circ\>T|)><rsup|+>=f<rsup|+>\<circ\>T> and
-      <math|<around*|(|f\<circ\>T|)><rsup|->=f<rsup|->\<circ\>T> it follows
-      from the above that\ 
+      so that as <math|\<alpha\>\<in\><around*|[|0,\<infty\>|[>>
 
       <\equation*>
-        <around*|(|f\<circ\>T|)><rsup|+>,<around*|(|f\<circ\>T|)><rsup|->\<in\>\<cal-M\><rsup|+><around*|[|X,\<cal-A\>,<wide|\<bbb-R\>|\<wide-bar\>>|]><text|
-        and ><big|int><rsup|+><around*|(|f\<circ\>T|)><rsup|+>d\<mu\>\<less\>\<infty\>\<wedge\><big|int><rsup|+><around*|(|f\<circ\>T|)><rsup|->d\<mu\>\<less\>\<infty\>
+        <big|int><rsup|+>f <rsup|+>d<around*|(|\<alpha\>\<cdot\>\<mu\>|)>\<less\>\<infty\><text|
+        and ><big|int><rsup|+>f <rsup|->d<around*|(|\<alpha\>\<cdot\>\<mu\>|)>\<less\>\<infty\>
       </equation*>
 
-      \;
-
-      which by definition means that\ 
+      which proves that\ 
 
       <\equation*>
-        f\<circ\>T\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
+        f\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
       </equation*>
 
-      and
-
-      <\eqnarray*>
-        <tformat|<table|<row|<cell|<big|int><around*|(|f\<circ\>T|)>d\<mu\>>|<cell|=>|<cell|<big|int><rsup|+><around*|(|f\<circ\>T|)><rsup|+>d\<mu\>-<big|int><rsup|+><around*|(|f\<circ\>T|)><rsup|->d\<mu\>>>|<row|<cell|>|<cell|=>|<cell|<big|int><rsup|+><around*|(|f<rsup|+>\<circ\>T|)>d\<mu\>-<big|int><around*|(|f<rsup|-1>\<circ\>T|)>d\<mu\>>>|<row|<cell|>|<cell|=>|<cell|<big|int><rsup|+>f<rsup|+>d\<mu\><around*|[|T<rsup|-1>|]>-<big|int><rsup|+>f<rsup|->d\<mu\><around*|[|T<rsup|-1>|]>>>|<row|<cell|>|<cell|=>|<cell|<big|int>f
-        d\<mu\><around*|[|T<rsup|-1>|]>>>>>
-      </eqnarray*>
-
-      Hence
+      Further we have\ 
 
       <\equation*>
-        <big|int><around*|(|f\<circ\>T|)>d\<mu\>=<big|int>f
-        d\<mu\><around*|[|T<rsup|-1>|]>
+        \<alpha\>\<cdot\><big|int>f d\<mu\>=\<alpha\>\<cdot\><big|int><rsup|+>f<rsup|+>d\<mu\>-\<alpha\>\<cdot\><big|int><rsup|+>f<rsup|->d\<mu\>=<big|int><rsup|+>f<rsup|+>d<around*|(|\<alpha\>\<cdot\>\<mu\>|)>-<big|int><rsup|+>f<rsup|->d<around*|(|\<alpha\>\<cdot\>\<mu\>|)>=<big|int>f
+        d<around*|(|\<alpha\>\<cdot\>\<mu\>|)>
+      </equation*>
+
+      so that\ 
+
+      <\equation*>
+        <big|int>f d<around*|(|\<alpha\>\<cdot\>\<mu\>|)>=\<alpha\>\<cdot\><big|int>f
+        d\<mu\>
       </equation*>
     </proof>
   </theorem>
 
-  TODO
+  <\theorem>
+    We have\ 
+
+    <\enumerate>
+      <item>Let <math|T:\<bbb-R\>\<rightarrow\>\<bbb-R\>> be a linear
+      isomorphism and <math|f\<in\>\<cal-L\><around*|[|\<bbb-R\>,\<cal-B\><around*|[|\<bbb-R\>|]>,\<lambda\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
+      then <math|f\<circ\>T\<in\>\<cal-L\><around*|[|\<bbb-R\>,\<cal-B\><around*|[|\<bbb-R\>|]>,\<lambda\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
+      and\ 
+
+      <\equation*>
+        <big|int><around*|(|f\<circ\>T|)>d\<lambda\>=<frac|1|<around*|\||L<around*|(|1|)>|\|>>\<cdot\><big|int>f
+        d\<lambda\>
+      </equation*>
+
+      <item>Let <math|n\<in\>\<bbb-N\>>, <math|T:\<bbb-R\><rsup|n>\<rightarrow\>\<bbb-R\><rsup|n>>
+      be a linear isomorphism and <math|f\<in\>\<cal-L\><around*|[|\<bbb-R\><rsup|n>,\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>,\<lambda\><rsup|n>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
+      then <rigid|<math|f\<circ\>T\<in\>\<cal-L\><around*|[|\<bbb-R\><rsup|n>,\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>,\<lambda\><rsup|n>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>>
+      and\ 
+
+      <\equation*>
+        <big|int><around*|(|f\<circ\>T|)>d\<lambda\>=<frac|1|<around*|\||L<around*|(|1|)>|\|>>\<cdot\><big|int>f
+        d\<lambda\><rsup|n>
+      </equation*>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>Using [theorem: <reference|measure pushforward Borel measures in
+      R(1)>] we have that\ 
+
+      <\equation*>
+        \<forall\>A\<in\>\<cal-B\><around*|[|\<bbb-R\>|]><text|
+        >\<lambda\><around*|[|T<rsup|-1>|]><around*|(|A|)>=<frac|1|<around*|\||T<around*|(|1|)>|\|>>\<cdot\>\<lambda\><around*|(|A|)>
+      </equation*>
+
+      As <math|T:\<bbb-R\>\<rightarrow\>\<bbb-R\>> is a linear isomorphism it
+      follows from [theorem: <reference|continuity homemorphism between K>]
+      that <math|T> is a homeomorphism. Hence\ 
+
+      <\equation*>
+        T<text| ia open and continuous>
+      </equation*>
+
+      so that by [theorem: <reference|measurable function and continuity>]
+      <math|T> is <math|\<cal-B\><around*|[|\<bbb-R\>,\<cal-T\><rsub|<around*|\|||\|>>|]>,\<cal-B\><around*|[|\<bbb-R\>,\<cal-T\><rsub|<around*|\|||\|>>|]>>-measurable.
+      By [theorem: <reference|measure integral change of variables>]\ 
+
+      <\equation*>
+        f\<circ\>T\<in\>\<cal-L\><around*|[|\<bbb-R\>,\<cal-B\><around*|[|\<bbb-R\>|]>,\<lambda\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
+      </equation*>
+
+      <item>
+    </enumerate>
+
+    \;
+  </proof>
+
+  OK
 
   <subsection|Borel measures and linear transformations>
 
@@ -50119,11 +50497,11 @@
     <associate|LP spaces sum scalar product (1)|<tuple|21.422|?>>
     <associate|LP vector space|<tuple|21.423|?>>
     <associate|Lebesgue borel measure and linear
-    isomorphism|<tuple|21.637|?>>
+    isomorphism|<tuple|21.643|?>>
     <associate|Lebesgue borel measure and linear isomorphism
-    (n)|<tuple|21.640|?>>
+    (n)|<tuple|21.646|?>>
     <associate|Lebesgue borel measures are Radon measures|<tuple|21.592|?>>
-    <associate|Lebesgue measure and unitary transformation|<tuple|21.635|?>>
+    <associate|Lebesgue measure and unitary transformation|<tuple|21.641|?>>
     <associate|Lebesgue's Dominated Convergence Theorem|<tuple|21.384|?>>
     <associate|Monotone Convergence Theorem (1)|<tuple|21.372|?>>
     <associate|Monotone Convergence Theorem (2)|<tuple|21.375|?>>
@@ -50347,7 +50725,7 @@
     <associate|eq 18.20.021|<tuple|21.47|?>>
     <associate|eq 18.21.021|<tuple|21.48|?>>
     <associate|eq 18.22.021|<tuple|21.49|?>>
-    <associate|eq 18.240.291|<tuple|21.1201|?>>
+    <associate|eq 18.240.291|<tuple|21.1207|?>>
     <associate|eq 18.39.022|<tuple|21.85|?>>
     <associate|eq 18.40.022|<tuple|21.86|?>>
     <associate|eq 18.41.022|<tuple|21.87|?>>
@@ -51311,54 +51689,54 @@
     <associate|eq 21.1071.291|<tuple|21.1133|?>>
     <associate|eq 21.1072.291|<tuple|21.1134|?>>
     <associate|eq 21.1073.291|<tuple|21.1135|?>>
-    <associate|eq 21.1074.291|<tuple|21.1174|?>>
-    <associate|eq 21.1075.291|<tuple|21.1175|?>>
-    <associate|eq 21.1076.291|<tuple|21.1176|?>>
-    <associate|eq 21.1077.291|<tuple|21.1177|?>>
-    <associate|eq 21.1078.291|<tuple|21.1178|?>>
-    <associate|eq 21.1079.291|<tuple|21.1179|?>>
-    <associate|eq 21.1080.292|<tuple|21.1180|?>>
-    <associate|eq 21.1081.291|<tuple|21.1183|?>>
-    <associate|eq 21.1081.292|<tuple|21.1181|?>>
-    <associate|eq 21.1082.291|<tuple|21.1184|?>>
-    <associate|eq 21.1082.292|<tuple|21.1182|?>>
-    <associate|eq 21.1083.291|<tuple|21.1185|?>>
-    <associate|eq 21.1084.291|<tuple|21.1186|?>>
-    <associate|eq 21.1085.291|<tuple|21.1187|?>>
-    <associate|eq 21.1086.291|<tuple|21.1188|?>>
-    <associate|eq 21.1087.291|<tuple|21.1189|?>>
-    <associate|eq 21.1088.291|<tuple|21.1190|?>>
-    <associate|eq 21.1089.291|<tuple|21.1191|?>>
+    <associate|eq 21.1074.291|<tuple|21.1180|?>>
+    <associate|eq 21.1075.291|<tuple|21.1181|?>>
+    <associate|eq 21.1076.291|<tuple|21.1182|?>>
+    <associate|eq 21.1077.291|<tuple|21.1183|?>>
+    <associate|eq 21.1078.291|<tuple|21.1184|?>>
+    <associate|eq 21.1079.291|<tuple|21.1185|?>>
+    <associate|eq 21.1080.292|<tuple|21.1186|?>>
+    <associate|eq 21.1081.291|<tuple|21.1189|?>>
+    <associate|eq 21.1081.292|<tuple|21.1187|?>>
+    <associate|eq 21.1082.291|<tuple|21.1190|?>>
+    <associate|eq 21.1082.292|<tuple|21.1188|?>>
+    <associate|eq 21.1083.291|<tuple|21.1191|?>>
+    <associate|eq 21.1084.291|<tuple|21.1192|?>>
+    <associate|eq 21.1085.291|<tuple|21.1193|?>>
+    <associate|eq 21.1086.291|<tuple|21.1194|?>>
+    <associate|eq 21.1087.291|<tuple|21.1195|?>>
+    <associate|eq 21.1088.291|<tuple|21.1196|?>>
+    <associate|eq 21.1089.291|<tuple|21.1197|?>>
     <associate|eq 21.109.300|<tuple|21.109|?>>
-    <associate|eq 21.1090.291|<tuple|21.1192|?>>
-    <associate|eq 21.1091.291|<tuple|21.1193|?>>
-    <associate|eq 21.1092.291|<tuple|21.1194|?>>
-    <associate|eq 21.1093.291|<tuple|21.1195|?>>
-    <associate|eq 21.1094.291|<tuple|21.1196|?>>
-    <associate|eq 21.1095.291|<tuple|21.1197|?>>
-    <associate|eq 21.1096.291|<tuple|21.1198|?>>
-    <associate|eq 21.1097.291|<tuple|21.1199|?>>
-    <associate|eq 21.1098.291|<tuple|21.1200|?>>
-    <associate|eq 21.1099.291|<tuple|21.1201|?>>
-    <associate|eq 21.1100.291|<tuple|21.1202|?>>
-    <associate|eq 21.1101.291|<tuple|21.1203|?>>
-    <associate|eq 21.1102.291|<tuple|21.1204|?>>
-    <associate|eq 21.1103.291|<tuple|21.1205|?>>
-    <associate|eq 21.1104.291|<tuple|21.1206|?>>
-    <associate|eq 21.1105.291|<tuple|21.1207|?>>
-    <associate|eq 21.1106.291|<tuple|21.1208|?>>
-    <associate|eq 21.1107.291|<tuple|21.1209|?>>
-    <associate|eq 21.1108.291|<tuple|21.1210|?>>
-    <associate|eq 21.1109.291|<tuple|21.1211|?>>
-    <associate|eq 21.1110.291|<tuple|21.1212|?>>
-    <associate|eq 21.1111.291|<tuple|21.1213|?>>
-    <associate|eq 21.1112.291|<tuple|21.1214|?>>
-    <associate|eq 21.1113.291|<tuple|21.1215|?>>
-    <associate|eq 21.1114.291|<tuple|21.1216|?>>
-    <associate|eq 21.1115.291|<tuple|21.1217|?>>
-    <associate|eq 21.1116.291|<tuple|21.1218|?>>
-    <associate|eq 21.1117.291|<tuple|21.1219|?>>
-    <associate|eq 21.1118.291|<tuple|21.1220|?>>
+    <associate|eq 21.1090.291|<tuple|21.1198|?>>
+    <associate|eq 21.1091.291|<tuple|21.1199|?>>
+    <associate|eq 21.1092.291|<tuple|21.1200|?>>
+    <associate|eq 21.1093.291|<tuple|21.1201|?>>
+    <associate|eq 21.1094.291|<tuple|21.1202|?>>
+    <associate|eq 21.1095.291|<tuple|21.1203|?>>
+    <associate|eq 21.1096.291|<tuple|21.1204|?>>
+    <associate|eq 21.1097.291|<tuple|21.1205|?>>
+    <associate|eq 21.1098.291|<tuple|21.1206|?>>
+    <associate|eq 21.1099.291|<tuple|21.1207|?>>
+    <associate|eq 21.1100.291|<tuple|21.1208|?>>
+    <associate|eq 21.1101.291|<tuple|21.1209|?>>
+    <associate|eq 21.1102.291|<tuple|21.1210|?>>
+    <associate|eq 21.1103.291|<tuple|21.1211|?>>
+    <associate|eq 21.1104.291|<tuple|21.1212|?>>
+    <associate|eq 21.1105.291|<tuple|21.1213|?>>
+    <associate|eq 21.1106.291|<tuple|21.1214|?>>
+    <associate|eq 21.1107.291|<tuple|21.1215|?>>
+    <associate|eq 21.1108.291|<tuple|21.1216|?>>
+    <associate|eq 21.1109.291|<tuple|21.1217|?>>
+    <associate|eq 21.1110.291|<tuple|21.1218|?>>
+    <associate|eq 21.1111.291|<tuple|21.1219|?>>
+    <associate|eq 21.1112.291|<tuple|21.1220|?>>
+    <associate|eq 21.1113.291|<tuple|21.1221|?>>
+    <associate|eq 21.1114.291|<tuple|21.1222|?>>
+    <associate|eq 21.1115.291|<tuple|21.1223|?>>
+    <associate|eq 21.1116.291|<tuple|21.1224|?>>
+    <associate|eq 21.1117.291|<tuple|21.1225|?>>
+    <associate|eq 21.1118.291|<tuple|21.1226|?>>
     <associate|eq 21.1136.308|<tuple|21.1136|?>>
     <associate|eq 21.1137.308|<tuple|21.1137|?>>
     <associate|eq 21.1138.308|<tuple|21.1138|?>>
@@ -51397,6 +51775,12 @@
     <associate|eq 21.1171.309|<tuple|21.1171|?>>
     <associate|eq 21.1172.309|<tuple|21.1172|?>>
     <associate|eq 21.1173.309|<tuple|21.1173|?>>
+    <associate|eq 21.1174.309|<tuple|21.1174|?>>
+    <associate|eq 21.1175.309|<tuple|21.1175|?>>
+    <associate|eq 21.1176.309|<tuple|21.1176|?>>
+    <associate|eq 21.1177.309|<tuple|21.1177|?>>
+    <associate|eq 21.1178.309|<tuple|21.1178|?>>
+    <associate|eq 21.1179.309|<tuple|21.1179|?>>
     <associate|eq 21.160.300|<tuple|21.161|?>>
     <associate|eq 21.259.300|<tuple|21.259|?>>
     <associate|eq 21.26.300|<tuple|21.26|?>>
@@ -51628,11 +52012,11 @@
     <associate|lemma 21.558.288|<tuple|21.596|?>>
     <associate|lemma 21.562.291|<tuple|21.600|?>>
     <associate|lemma 21.563.291|<tuple|21.601|?>>
-    <associate|lemma 21.578.291|<tuple|21.632|?>>
-    <associate|lemma 21.579.291|<tuple|21.633|?>>
-    <associate|lemma 21.582.291|<tuple|21.636|?>>
-    <associate|lemma 21.584.291|<tuple|21.638|?>>
-    <associate|lemma 21.585.291|<tuple|21.639|?>>
+    <associate|lemma 21.578.291|<tuple|21.638|?>>
+    <associate|lemma 21.579.291|<tuple|21.639|?>>
+    <associate|lemma 21.582.291|<tuple|21.642|?>>
+    <associate|lemma 21.584.291|<tuple|21.644|?>>
+    <associate|lemma 21.585.291|<tuple|21.645|?>>
     <associate|lemma 21.612.308|<tuple|21.612|?>>
     <associate|lemma 21.614.308|<tuple|21.614|?>>
     <associate|lemma 21.616.308|<tuple|21.616|?>>
@@ -51640,8 +52024,10 @@
     <associate|lemma 21.619.309|<tuple|21.619|?>>
     <associate|lemma 21.620.309|<tuple|21.620|?>>
     <associate|lemma 21.621.309|<tuple|21.621|?>>
+    <associate|lemma 21.624.309|<tuple|21.624|?>>
+    <associate|lemma 21.626.309|<tuple|21.626|?>>
     <associate|measurability of image of a measurable set by a
-    homeomorphism|<tuple|21.623|?>>
+    homeomorphism|<tuple|21.629|?>>
     <associate|measurable function|<tuple|21.224|?>>
     <associate|measurable function (1)|<tuple|21.240|?>>
     <associate|measurable function (4)|<tuple|21.244|?>>
@@ -51693,10 +52079,10 @@
     <associate|measure Borel algebra on the extended real numbers
     (1)|<tuple|21.61|?>>
     <associate|measure Borel algebras on R^n equivalences|<tuple|21.87|?>>
-    <associate|measure Borel measure of T(A)|<tuple|21.627|?>>
-    <associate|measure Borel measure of T(A) (1)|<tuple|21.630|?>>
+    <associate|measure Borel measure of T(A)|<tuple|21.633|?>>
+    <associate|measure Borel measure of T(A) (1)|<tuple|21.636|?>>
     <associate|measure Borel measure on R and linear
-    isomorphism|<tuple|21.629|?>>
+    isomorphism|<tuple|21.635|?>>
     <associate|measure Caratheodory|<tuple|21.122|?>>
     <associate|measure Caratheodory produces complete measure
     space|<tuple|21.217|?>>
@@ -51765,9 +52151,9 @@
     <associate|measure countable union is in sigma algebra|<tuple|21.39|?>>
     <associate|measure countable union pairwise|<tuple|21.100|?>>
     <associate|measure create a new measure based on a measure and a
-    homeomorphism|<tuple|21.624|?>>
+    homeomorphism|<tuple|21.630|?>>
     <associate|measure create a new measure based on a measure and a linear
-    isomorphism|<tuple|21.626|?>>
+    isomorphism|<tuple|21.632|?>>
     <associate|measure extending pre-measure to a measure|<tuple|21.148|?>>
     <associate|measure finite measure|<tuple|21.113|?>>
     <associate|measure finite product of semi-rings|<tuple|21.190|?>>
@@ -51796,6 +52182,8 @@
     <associate|measure integral measure construction|<tuple|21.380|?>>
     <associate|measure integral of almost zero function is
     zero|<tuple|21.358|?>>
+    <associate|measure integral of scalar product with a
+    measure|<tuple|21.627|?>>
     <associate|measure integral of zero function (1)|<tuple|21.349|?>>
     <associate|measure integral on sub measure spaces|<tuple|21.357|?>>
     <associate|measure integral properties|<tuple|21.360|?>>
@@ -51909,7 +52297,7 @@
     <associate|non negative measurable function|<tuple|21.241|?>>
     <associate|note 20.198.210|<tuple|21.135|?>>
     <associate|note 21.231.300|<tuple|21.235|?>>
-    <associate|note 21.580.291|<tuple|21.634|?>>
+    <associate|note 21.580.291|<tuple|21.640|?>>
     <associate|product |<tuple|21.536|?>>
     <associate|product algebra|<tuple|21.539|?>>
     <associate|product algebra equivalences|<tuple|21.542|?>>
