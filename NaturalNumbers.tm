@@ -1,4 +1,4 @@
-<TeXmacs|2.1.4>
+<TeXmacs|2.1.5>
 
 <project|FullBook.tm>
 
@@ -7781,7 +7781,7 @@
 
   <\proof>
     If <math|B=\<varnothing\>> then <math|B> is finite and
-    <math|#B=0\<leqslant\>#A> proving the theorem in this case. If
+    <math|#B=0\<leqslant\>#A> proving the corollary in this case. If
     <math|B\<neq\>\<varnothing\>> then by [theorem: <reference|function
     injection and inverse surjection>] there exist as injection
     <math|g:B\<rightarrow\>A>, leading by [theorem: <reference|function
@@ -7795,8 +7795,6 @@
     <math|B\<approx\>g<around*|(|B|)>> it follows that
     <math|#B=#g<around*|(|B|)>\<leqslant\>#<around*|(|A|)>>.
   </proof>
-
-  corollary
 
   <\corollary>
     <label|image of a finite set>If <math|A,B> are sets, <math|A> finite and
@@ -7824,10 +7822,10 @@
     <math|i\<in\>I> such that <math|y=x<rsub|i>>, hence
     <math|y=f<around*|(|i|)>>. This proves that
     <math|f:I\<rightarrow\><around*|{|x<rsub|i>\|i\<in\>I|}>> is a
-    surjection, so by the previous corollary [corollary:
-    <reference|surjection f:A-\<gtr\>B if A is finite then B is finite>] we
-    have as <math|I> is finite that <math|<around*|{|x<rsub|i>\|i\<in\>I|}>>
-    is finite and <math|#<around*|(|<around*|{|x<rsub|i>\|i\<in\>I|}>|)>\<leqslant\>#I>.
+    surjection, hence using [corollary: <reference|surjection f:A-\<gtr\>B if
+    A is finite then B is finite>] we have as <math|I> is finite that
+    <math|<around*|{|x<rsub|i>\|i\<in\>I|}>> is finite and
+    <math|#<around*|(|<around*|{|x<rsub|i>\|i\<in\>I|}>|)>\<leqslant\>#I>.
   </proof>
 
   <\theorem>
@@ -9277,6 +9275,69 @@
     set is countable>] every subset of <math|A> is countable.
   </proof>
 
+  <\corollary>
+    <label|surjection f:A-\<gtr\>B if A is countable then B is countable>If
+    <math|A> is a countable set, <math|B> a set and <math|f:A\<rightarrow\>B>
+    a surjection then <math|B> is countable.
+  </corollary>
+
+  <\proof>
+    As <math|A> is countable we have either:
+
+    <\description>
+      <item*|<math|A<text| is finite>>>Then using [theorem:
+      <reference|surjection f:A-\<gtr\>B if A is finite then B is finite>]
+      <math|B> is finite hence countable.
+
+      <item*|<math|A<text| is denumerable>>>If <math|B=\<varnothing\>> then
+      <math|B> is finite hence countable proving the corollary in this case.
+      If <math|B\<neq\>\<varnothing\>> then by \ [theorem:
+      <reference|function injection and inverse surjection>] there exist as
+      injection <math|g:B\<rightarrow\>A>, leading by [theorem:
+      <reference|function injectivity to bijection>] to a bijection
+      <math|g:B\<rightarrow\>g<around*|(|B|)>>, hence
+      <math|B\<approx\>g<around*|(|B|)>>. As
+      <math|g<around*|(|B|)>\<subseteq\>A> it follows from [theorem:
+      <reference|countable subset of countable set is countable>] that
+      <math|g<around*|(|B|)>> is countable. Finally as
+      <math|g<around*|(|B|)>\<approx\>B> it follows from [theorem:
+      <reference|equipotence finite, denumerable , countable>] that <math|B>
+      is countable.
+    </description>
+  </proof>
+
+  <\corollary>
+    <label|image of a countable set>If <math|A>, <math|B> are sets, <math|A>
+    countable and <math|f:A\<rightarrow\>B> a function then
+    <math|f<around*|(|A|)>> is countable.
+  </corollary>
+
+  <\proof>
+    As <math|f:A\<rightarrow\>f<around*|(|A|)>> is a surjection it follows
+    from the previous corollary [corollary: <reference|surjection
+    f:A-\<gtr\>B if A is countable then B is countable>] that
+    <math|f<around*|(|A|)>> is countable.\ 
+  </proof>
+
+  <\corollary>
+    <label|set of countable family is countable>Let <math|I> be a countable
+    set and <math|<around*|{|x<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>X> a
+    countable family of elements in <math|X> then
+    <math|<around*|{|x<rsub|i>\|i\<in\>I|}>> is countable.
+  </corollary>
+
+  <\proof>
+    Define the function <math|f:I\<rightarrow\><around*|{|x<rsub|i>\|i\<in\>I|}>>
+    by <math|f<around*|(|i|)>=x<rsub|i>> then if
+    <math|y\<in\><around*|{|x<rsub|i>\|i\<in\>I|}>> there exist a
+    <math|i\<in\>I> such that <math|y=x<rsub|i>>, hence
+    <math|y=f<around*|(|i|)>>. This proves that
+    <math|f:I\<rightarrow\><around*|{|x<rsub|i>\|i\<in\>I|}>> is a
+    surjection, hence using [corollary: <reference|surjection f:A-\<gtr\>B if
+    A is countable then B is countable>] we have as <math|I> is finite that
+    <math|<around*|{|x<rsub|i>\|i\<in\>I|}>> is finite
+  </proof>
+
   <\theorem>
     <label|countable set conditions (1)>Let <math|A> be a non empty set then
     the following are equivalent:
@@ -10102,7 +10163,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|3>
-    <associate|page-first|131>
+    <associate|page-first|133>
     <associate|page-medium|papyrus>
     <associate|par-first|0tab>
     <associate|project-flag|false>
@@ -10178,19 +10239,19 @@
     <associate|cardinality of the empty set is 0|<tuple|6.40|190>>
     <associate|cardinality of union of two disjoint finite
     sets|<tuple|6.42|191>>
-    <associate|countable AUB and AxB|<tuple|6.76|204>>
+    <associate|countable AUB and AxB|<tuple|6.79|204>>
     <associate|countable product of a finite family of countable sets is
-    countable (2)|<tuple|6.78|205>>
+    countable (2)|<tuple|6.81|205>>
     <associate|countable product of finite family of countable sets is
-    countable|<tuple|6.77|205>>
+    countable|<tuple|6.80|205>>
     <associate|countable set|<tuple|6.25|186>>
-    <associate|countable set conditions (1)|<tuple|6.72|203>>
+    <associate|countable set conditions (1)|<tuple|6.75|203>>
     <associate|countable subset of countable set is
     countable|<tuple|6.71|203>>
     <associate|countable subset of denumerable set is
     countable|<tuple|6.70|203>>
     <associate|countable union of a denumerable family of countable sets is
-    denumerable|<tuple|6.73|204>>
+    denumerable|<tuple|6.76|204>>
     <associate|definition by recursion (1)|<tuple|5.89|178>>
     <associate|definition by recursion (2)|<tuple|5.90|179>>
     <associate|denumerable every subset is finite
@@ -10216,7 +10277,7 @@
     <associate|denumerable union of a finite family of denumerable sets is
     denumerable|<tuple|6.68|202>>
     <associate|denumerable union of pairwise disjoint non empty countable
-    sets if denumerable|<tuple|6.74|204>>
+    sets if denumerable|<tuple|6.77|204>>
     <associate|denumerable with one less element|<tuple|6.27|186>>
     <associate|empty set is finite|<tuple|6.20|185>>
     <associate|eq 5.1.019|<tuple|5.1|157>>
@@ -10305,16 +10366,16 @@
     <associate|field x^-1=y^-1=\<gtr\>x=y|<tuple|4.54|143>>
     <associate|finite ordered sets have a maximum and
     minimum|<tuple|6.49|193>>
-    <associate|finite power notation|<tuple|6.80|206>>
-    <associate|finite product of sets|<tuple|6.79|205>>
-    <associate|finite product of sets bijection|<tuple|6.86|207>>
-    <associate|finite product of sets power|<tuple|6.87|207>>
-    <associate|finite product of sets power equivalence|<tuple|6.88|207>>
-    <associate|finite product of sets projection operator|<tuple|6.81|206>>
-    <associate|finite product of sets single set|<tuple|6.89|208>>
-    <associate|finite product of two sets|<tuple|6.83|206>>
-    <associate|finite product properties|<tuple|6.84|206>>
-    <associate|finite product properties (1)|<tuple|6.85|?>>
+    <associate|finite power notation|<tuple|6.83|206>>
+    <associate|finite product of sets|<tuple|6.82|205>>
+    <associate|finite product of sets bijection|<tuple|6.89|207>>
+    <associate|finite product of sets power|<tuple|6.90|207>>
+    <associate|finite product of sets power equivalence|<tuple|6.91|207>>
+    <associate|finite product of sets projection operator|<tuple|6.84|206>>
+    <associate|finite product of sets single set|<tuple|6.92|208>>
+    <associate|finite product of two sets|<tuple|6.86|206>>
+    <associate|finite product properties|<tuple|6.87|206>>
+    <associate|finite product properties (1)|<tuple|6.88|?>>
     <associate|finite set|<tuple|6.19|185>>
     <associate|finite set alternate definition lemma|<tuple|6.21|185>>
     <associate|finite set alternative definition|<tuple|6.22|185>>
@@ -10332,7 +10393,7 @@
     <associate|group example set of functions|<tuple|4.4|127>>
     <associate|group faithful, transitive action (1)|<tuple|4.30|134>>
     <associate|group faithful, transitive action (2)|<tuple|4.31|135>>
-    <associate|group finite power|<tuple|6.90|208>>
+    <associate|group finite power|<tuple|6.93|208>>
     <associate|group group|<tuple|4.5|128>>
     <associate|group group inheritance|<tuple|4.16|130>>
     <associate|group group inverse of inverse|<tuple|4.9|128>>
@@ -10351,6 +10412,7 @@
     <associate|group sub sub group|<tuple|4.17|130>>
     <associate|group sub sub semi-group|<tuple|4.15|129>>
     <associate|group sub-group|<tuple|4.13|129>>
+    <associate|image of a countable set|<tuple|6.73|?>>
     <associate|image of a finite set|<tuple|6.45|192>>
     <associate|infinite condition (1)|<tuple|6.37|189>>
     <associate|infinite family of pairwise disjoint non empty sets is
@@ -10486,14 +10548,17 @@
     <associate|set containing a denumerable set is infinite|<tuple|6.29|187>>
     <associate|set is infinitie if it contains a infinite
     subset|<tuple|6.32|187>>
+    <associate|set of countable family is countable|<tuple|6.74|?>>
     <associate|set of finite family is finite|<tuple|6.46|193>>
     <associate|sub-semi-group|<tuple|4.12|129>>
     <associate|subring|<tuple|4.35|135>>
     <associate|subset of finite sets|<tuple|6.43|192>>
+    <associate|surjection f:A-\<gtr\>B if A is countable then B is
+    countable|<tuple|6.72|?>>
     <associate|surjection f:A-\<gtr\>B if A is finite then B is
     finite|<tuple|6.44|192>>
     <associate|union of two finite sets is finite|<tuple|6.34|187>>
-    <associate|union of {i}x{1,..,ni}|<tuple|6.75|?>>
+    <associate|union of {i}x{1,..,ni}|<tuple|6.78|?>>
     <associate|{n,..,m} is bijective to S_(m-n)+1|<tuple|6.18|184>>
   </collection>
 </references>

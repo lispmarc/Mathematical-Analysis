@@ -1,4 +1,4 @@
-<TeXmacs|2.1.4>
+<TeXmacs|2.1.5>
 
 <style|generic>
 
@@ -15066,6 +15066,272 @@
     </equation*>
   </proof>
 
+  <\proof>
+    Let <math|i\<in\><around*|{|1,\<ldots\>,2\<cdot\>n+2|}>> then we have
+    either:\ 
+
+    <\description>
+      <item*|<math|i\<in\><around*|{|1,\<ldots\>,n+1|}>>>Then\ 
+
+      <\equation*>
+        V<rsub|i>=<around*|{|x\<in\>\<bbb-R\><rsup|n+1>\|x<rsub|i>\<gtr\>0|}>
+      </equation*>
+
+      Let <math|x\<in\>V<rsub|i>> then <math|0\<less\>x<rsub|i>> take
+      <math|\<delta\>=<frac|x<rsub|i>|2>\<in\>\<bbb-R\><rsup|+>>. If
+      <math|y\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n+1>><around*|(|x,\<delta\>|)>>
+      then we have
+
+      <\equation*>
+        x<rsub|i>-y<rsub|i>\<leqslant\><around*|\||x<rsub|i>-y<rsub|i>|\|>\<leqslant\>max<around*|(|<around*|{|<around*|\||x<rsub|j>-y<rsub|j><rsub|>|\|>\|j\<in\><around*|{|1,\<ldots\>,n+1|}>|}>|)>=<around*|\<\|\|\>|x-y|\<\|\|\>><rsub|n>\<less\>\<delta\>=<frac|x<rsub|i>|2>
+      </equation*>
+
+      so that <math|x<rsub|i>-y<rsub|i>\<less\><frac|x<rsub|i>|2>\<Rightarrow\>0\<less\><frac|x<rsub|i>|2>=x<rsub|i>-<frac|x<rsub|i>|2>\<less\>y<rsub|i>>
+      which proves that <math|y\<in\>V<rsub|i>>. Hence
+      <math|x\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n+1>><around*|(|x,\<delta\>|)>\<subseteq\>V<rsub|i>>
+      from which it follows that\ 
+
+      <\equation*>
+        V<rsub|i>\<in\>\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n>>
+      </equation*>
+
+      <item*|<math|i\<in\><around*|{|n+2,\<ldots\>,2\<cdot\>n+2|}>>>Then\ 
+
+      <\equation*>
+        V<rsub|i>=<around*|{|x\<in\>\<bbb-R\><rsup|n+1>\|x<rsub|i>\<less\>0|}>
+      </equation*>
+
+      Let <math|x\<in\>V<rsub|i>> then <math|0\<less\>-x<rsub|i>> take
+      <math|\<delta\>=<frac|-x<rsub|i>|2>\<in\>\<bbb-R\><rsup|+>>. If
+      <math|y\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n+1>><around*|(|x,\<delta\>|)>>
+      then we have
+
+      <\equation*>
+        y<rsub|i>-x<rsub|i>\<leqslant\><around*|\||x<rsub|i>-y<rsub|i>|\|>\<leqslant\>max<around*|(|<around*|{|<around*|\||x<rsub|j>-y<rsub|j><rsub|>|\|>\|j\<in\><around*|{|1,\<ldots\>,n+1|}>|}>|)>=<around*|\<\|\|\>|x-y|\<\|\|\>><rsub|n>\<less\>\<delta\>=<frac|-x<rsub|i>|2>
+      </equation*>
+
+      so that <math|y<rsub|i>-x<rsub|i>\<less\><frac|-x<rsub|i>|2>\<Rightarrow\>y<rsub|i>\<less\><frac|x<rsub|i>|2>-x<rsub|i>=<frac|x<rsub|i>|2>\<less\>0>
+      which proves that <math|y\<in\>V<rsub|i>>. Hence
+      <math|<rigid|<rigid|>x\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n+1>><around*|(|x,\<delta\>|)>\<subseteq\>V<rsub|i>>>
+      from which it follows that\ 
+
+      <\equation*>
+        V<rsub|i>\<in\>\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n>>
+      </equation*>
+    </description>
+
+    So in all cases we have that <math|V<rsub|i>\<in\>\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n>>>
+    which proves [eq: <reference|eq 23.1.1>].
+  </proof>
+
+  <\proof>
+    By \ [example: <reference|separation R^n is second countable>] and
+    [theorem: <reference|separation a metric space is first countable>] we
+    have that\ 
+
+    <\equation*>
+      <around*|\<langle\>|\<bbb-R\><rsup|n+1>,\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n+1>>|\<rangle\>><text|
+      is second countable><infix-and>Hausdorff
+    </equation*>
+
+    Applying now [theorem: <reference|separation and subspaces>] it follows
+    that
+
+    <\equation*>
+      <around*|\<langle\>|S<rsup|n>,<around*|(|\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n+1>>|)><rsub|\|S<rsup|n>>|\<rangle\>><text|
+      is second countable and Hausdorff>
+    </equation*>
+
+    Define now\ 
+
+    <\equation*>
+      <around*|{|V<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,2\<cdot\>n+2|}>><text|
+      where >U<rsub|i>=<choice|<tformat|<table|<row|<cell|<around*|{|x\<in\>\<bbb-R\><rsup|n+1>\|x<rsub|i>\<gtr\>0|}><text|
+      if >i\<in\><around*|{|1,\<ldots\>,n+1|}>>>|<row|<cell|<around*|{|x\<in\>\<bbb-R\><rsup|n+1>\|x<rsub|i>\<less\>0|}><text|
+      if >i\<in\><around*|{|n+2,\<ldots\>,2\<cdot\>n+2|}>>>>>>
+    </equation*>
+
+    We prove now that\ 
+
+    <\equation>
+      <label|eq 23.1.1>\<forall\>i\<in\><around*|{|1,\<ldots\>,2\<cdot\>n+2|}><text|
+      >V<rsub|i><text| is a open set in >\<bbb-R\><rsup|n+1><text| [using the
+      canonical topology >\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n>><text|]>
+    </equation>
+
+    <\proof>
+      Let <math|i\<in\><around*|{|1,\<ldots\>,2\<cdot\>n+2|}>> then we have
+      either:\ 
+
+      <\description>
+        <item*|<math|i\<in\><around*|{|1,\<ldots\>,n+1|}>>>Then\ 
+
+        <\equation*>
+          V<rsub|i>=<around*|{|x\<in\>\<bbb-R\><rsup|n+1>\|x<rsub|i>\<gtr\>0|}>
+        </equation*>
+
+        Let <math|x\<in\>V<rsub|i>> then <math|0\<less\>x<rsub|i>> take
+        <math|\<delta\>=<frac|x<rsub|i>|2>\<in\>\<bbb-R\><rsup|+>>. If
+        <math|y\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n+1>><around*|(|x,\<delta\>|)>>
+        then we have
+
+        <\equation*>
+          x<rsub|i>-y<rsub|i>\<leqslant\><around*|\||x<rsub|i>-y<rsub|i>|\|>\<leqslant\>max<around*|(|<around*|{|<around*|\||x<rsub|j>-y<rsub|j><rsub|>|\|>\|j\<in\><around*|{|1,\<ldots\>,n+1|}>|}>|)>=<around*|\<\|\|\>|x-y|\<\|\|\>><rsub|n>\<less\>\<delta\>=<frac|x<rsub|i>|2>
+        </equation*>
+
+        so that <math|x<rsub|i>-y<rsub|i>\<less\><frac|x<rsub|i>|2>\<Rightarrow\>0\<less\><frac|x<rsub|i>|2>=x<rsub|i>-<frac|x<rsub|i>|2>\<less\>y<rsub|i>>
+        which proves that <math|y\<in\>V<rsub|i>>. Hence
+        <math|x\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n+1>><around*|(|x,\<delta\>|)>\<subseteq\>V<rsub|i>>
+        from which it follows that\ 
+
+        <\equation*>
+          V<rsub|i>\<in\>\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n>>
+        </equation*>
+
+        <item*|<math|i\<in\><around*|{|n+2,\<ldots\>,2\<cdot\>n+2|}>>>Then\ 
+
+        <\equation*>
+          V<rsub|i>=<around*|{|x\<in\>\<bbb-R\><rsup|n+1>\|x<rsub|i>\<less\>0|}>
+        </equation*>
+
+        Let <math|x\<in\>V<rsub|i>> then <math|0\<less\>-x<rsub|i>> take
+        <math|\<delta\>=<frac|-x<rsub|i>|2>\<in\>\<bbb-R\><rsup|+>>. If
+        <math|y\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n+1>><around*|(|x,\<delta\>|)>>
+        then we have
+
+        <\equation*>
+          y<rsub|i>-x<rsub|i>\<leqslant\><around*|\||x<rsub|i>-y<rsub|i>|\|>\<leqslant\>max<around*|(|<around*|{|<around*|\||x<rsub|j>-y<rsub|j><rsub|>|\|>\|j\<in\><around*|{|1,\<ldots\>,n+1|}>|}>|)>=<around*|\<\|\|\>|x-y|\<\|\|\>><rsub|n>\<less\>\<delta\>=<frac|-x<rsub|i>|2>
+        </equation*>
+
+        so that <math|y<rsub|i>-x<rsub|i>\<less\><frac|-x<rsub|i>|2>\<Rightarrow\>y<rsub|i>\<less\><frac|x<rsub|i>|2>-x<rsub|i>=<frac|x<rsub|i>|2>\<less\>0>
+        which proves that <math|y\<in\>V<rsub|i>>. Hence
+        <math|<rigid|<rigid|>x\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n+1>><around*|(|x,\<delta\>|)>\<subseteq\>V<rsub|i>>>
+        from which it follows that\ 
+
+        <\equation*>
+          V<rsub|i>\<in\>\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n>>
+        </equation*>
+      </description>
+
+      So in all cases we have that <math|V<rsub|i>\<in\>\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n>>>
+      which proves [eq: <reference|eq 23.1.1>].
+    </proof>
+
+    Define now\ 
+
+    <\equation*>
+      <around*|{|U<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,2\<cdot\>n+2|}>><text|
+      by >U<rsub|i>=S<rsup|n><big|cap>V<rsub|i>
+    </equation*>
+
+    then we have by the definition of the subspace topology and [eq:
+    <reference|eq 23.1.1>] that\ 
+
+    <\equation*>
+      <around*|{|U<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,2\<cdot\>n+2|}>>\<subseteq\><around*|(|\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n+1>>|)><rsub|\|S<rsup|n>>
+    </equation*>
+
+    Let <math|i\<in\><around*|{|1,\<ldots\>,n+1|}>> and define\ 
+
+    <\equation*>
+      \<gamma\><rsub|i>:\<bbb-R\><rsup|n+1>\<rightarrow\>\<bbb-R\><rsup|n><text|
+      by >\<gamma\><rsub|i><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n+1>|)>=<around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,x<rsub|i+1>,\<ldots\>,x<rsub|n+1>|)>
+    </equation*>
+
+    then we have that <math|\<forall\>x,y\<in\>\<bbb-R\><rsup|n+1>>,
+    <math|\<alpha\>\<in\>\<bbb-R\>> that\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|\<gamma\><rsub|i><around*|(|x+\<alpha\>\<cdot\>y|)>>|<cell|=>|<cell|\<gamma\><rsub|i><around*|(|x<rsub|1>+\<alpha\>\<cdot\>y<rsub|1>,\<ldots\>,x<rsub|n+1>+\<alpha\>\<cdot\>y<rsub|n+1>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|x<rsub|1>+\<alpha\>\<cdot\>y<rsub|1>,\<ldots\>,x<rsub|i-1>+\<alpha\>\<cdot\>y<rsub|i-1>,x<rsub|i+1>+\<alpha\>\<cdot\>y<rsub|n+1>,\<ldots\>,x<rsub|n+1>+\<alpha\>\<cdot\>y<rsub|n+1>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,x<rsub|i+1>,\<ldots\>,x<rsub|n+1>|)>+\<alpha\>\<cdot\><around*|(|y<rsub|1>,\<ldots\>,y<rsub|i-1>,y<rsub|i+1>,\<ldots\>,y<rsub|n+1>|)>>>|<row|<cell|>|<cell|=>|<cell|\<gamma\><rsub|i><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n+1>|)>+\<alpha\>\<cdot\>\<gamma\><rsub|i><around*|(|y<rsub|1>,\<ldots\>,y<rsub|n+1>|)>>>>>
+    </eqnarray*>
+
+    so that\ 
+
+    <\equation*>
+      \<gamma\><rsub|i>\<in\>Hom<around*|(|\<bbb-R\><rsup|n+1>,\<bbb-R\><rsup|n>|)>
+    </equation*>
+
+    Further we have <math|\<forall\>x\<in\>\<bbb-R\><rsup|n+1>> that\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|\<\|\|\>|\<gamma\><rsub|i><around*|(|x|)>|\<\|\|\>><rsub|n>>|<cell|=>|<cell|<around*|\<\|\|\>|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,x<rsub|i+1>,\<ldots\>,x<rsub|n+1>|)>|\<\|\|\>><rsub|n>>>|<row|<cell|>|<cell|=>|<cell|sup<around*|(|<around*|{|<around*|\||x<rsub|i>|\|>\|i\<in\><around*|{|1,\<ldots\>,n+1|}>\\<around*|{|i|}>|}>|)>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|sup<around*|(|<around*|{|<around*|\||x<rsub|i>|\|>\|i\<in\><around*|{|1,\<ldots\>,n+1|}>|}>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|x|\<\|\|\>><rsub|n+1>>>>>
+    </eqnarray*>
+
+    so that by [theorem: <reference|continuity linear mapping (1)>]\ 
+
+    <\equation>
+      <label|eq 23.2.1>\<gamma\><rsub|i><text| is a continuous mapping>
+    </equation>
+
+    Define now
+
+    <\equation*>
+      \<forall\>i\<in\><around*|{|1,\<ldots\>,2\<cdot\>n+2|}><text|
+      >\<psi\><rsub|i>=<choice|<tformat|<table|<row|<cell|\<gamma\><rsub|i><text|
+      if >i\<in\><around*|{|1,\<ldots\>,n+1|}>>>|<row|<cell|\<gamma\><rsub|i-<around*|(|n+1|)>><text|
+      if >i\<in\><around*|{|n+2,\<ldots\>,2\<cdot\>n+2|}>>>>>>\ 
+    </equation*>
+
+    then by [eq: <reference|eq 23.2.1>] we have that\ 
+
+    <\equation>
+      <label|eq 23.3.1>\<forall\>i\<in\><around*|{|1,\<ldots\>,2\<cdot\>n+2|}><text|
+      >\<psi\><rsub|i>:\<bbb-R\><rsup|n+1>\<rightarrow\>\<bbb-R\><rsup|n><text|
+      is continuous>
+    </equation>
+
+    Let <math|i\<in\><around*|{|1,\<ldots\>,2\<cdot\>n+2|}>> and take
+    <math|x\<in\>S<rsup|n><big|cap>U<rsub|i>> then we have either:\ 
+
+    <\description>
+      <item*|<math|i\<in\><around*|{|1,\<ldots\>,n+1|}>>>Then
+      <math|0\<less\>x<rsub|i>\<Rightarrow\>0\<less\><around*|\||x<rsub|i>|\|><rsup|2>>
+      so that
+
+      <\equation*>
+        <big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,n+1|}>\\<around*|{|i|}>><rsup|><around*|\||x<rsub|j><rsub|>|\|><rsup|2>\<less\><big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,n+1|}>><around*|\||x<rsub|j>|\|><rsup|2>
+      </equation*>
+
+      which, as <math|<sqrt|>> is monotone [see theorem: <reference|complex
+      root is strictly increasing>] we have that\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<sqrt|<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>><around*|\||\<psi\><rsub|i><around*|(|x|)><rsub|j>|\|>>>|<cell|=>|<cell|<sqrt|<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>><around*|\||\<gamma\><rsub|i><around*|(|x|)><rsub|j>|\|><rsup|2>>>>|<row|<cell|>|<cell|=>|<cell|<sqrt|<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|i|}>><around*|\||x<rsub|j>|\|><rsup|2>>>>|<row|<cell|>|<cell|\<less\>>|<cell|<sqrt|<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,n+1|}>><around*|\||x<rsub|j>|\|><rsup|2>>>>|<row|<cell|>|<cell|=>|<cell|1>>>>
+      </eqnarray*>
+
+      <item*|<math|i\<in\><around*|{|n+2,\<ldots\>,2\<cdot\>n+2|}>>>Then
+      <math|x<rsub|i>\<less\>0\<Rightarrow\>0\<less\><around*|\||x<rsub|i>|\|><rsup|2>>
+      so that
+
+      <\equation*>
+        <big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,n+1|}>\\<around*|{|i|}>><rsup|><around*|\||x<rsub|j><rsub|>|\|><rsup|2>\<less\><big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,n+1|}>><around*|\||x<rsub|j>|\|><rsup|2>
+      </equation*>
+
+      which, as <math|<sqrt|>> is monotone [see theorem: <reference|complex
+      root is strictly increasing>] we have that\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<sqrt|<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>><around*|\||\<psi\><rsub|i><around*|(|x|)><rsub|j>|\|>>>|<cell|=>|<cell|<sqrt|<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>><around*|\||\<gamma\><rsub|i-<around*|(|n+1|)>><around*|(|x|)><rsub|j>|\|><rsup|2>>>>|<row|<cell|>|<cell|=>|<cell|<sqrt|<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|i|}>><around*|\||x<rsub|j>|\|><rsup|2>>>>|<row|<cell|>|<cell|\<less\>>|<cell|<sqrt|<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,n+1|}>><around*|\||x<rsub|j>|\|><rsup|2>>>>|<row|<cell|>|<cell|=>|<cell|1>>>>
+      </eqnarray*>
+    </description>
+
+    Hence we have\ 
+
+    <\equation*>
+      \<forall\>i\<in\><around*|{|1,\<ldots\>,2\<cdot\>n+2|}><text| that
+      >\<forall\>x\<in\>S<rsup|n><big|cap>U<rsub|i><text|
+      >\<psi\><rsub|i><around*|(|x|)>\<in\><around*|{|y\<in\>\<bbb-R\><rsup|n>\|<sqrt|<big|sum><rsub|j=1><around*|\||y<rsub|j><rsub|>|\|><rsup|2>>|}>
+    </equation*>
+
+    \;
+  </proof>
+
+  \;
+
+  \;
+
+  \;
+
   \;
 
   \;
@@ -15085,574 +15351,588 @@
 
 <\references>
   <\collection>
-    <associate|Fubini's Theorem|<tuple|61|80>>
-    <associate|Fubini's theorem|<tuple|63|83>>
-    <associate|Holder continuity|<tuple|72|92>>
-    <associate|Holder continuity implies continuity|<tuple|73|92>>
-    <associate|almost everywhere measurability|<tuple|116|?>>
-    <associate|auto-1|<tuple|open mapping theorem|5>>
-    <associate|auto-10|<tuple|higher order differentiation chain rule|?>>
-    <associate|auto-11|<tuple|4|?>>
-    <associate|auto-12|<tuple|5|?>>
-    <associate|auto-2|<tuple|sum over a countable set|8>>
-    <associate|auto-3|<tuple|<with|mode|<quote|math>|<around*|(|i\<rightarrow\>x|)>>|18>>
-    <associate|auto-4|<tuple|<with|mode|<quote|math>|\<Delta\><rsub|i,j>>|19>>
-    <associate|auto-5|<tuple|1|23>>
-    <associate|auto-6|<tuple|1|67>>
-    <associate|auto-7|<tuple|2|71>>
-    <associate|auto-8|<tuple|3|72>>
-    <associate|auto-9|<tuple|chain rule higher order differentiation|?>>
-    <associate|complete open mapping theorem|<tuple|5|5>>
-    <associate|conjecture 16.245.134|<tuple|32|38>>
-    <associate|conjecture 16.246.135|<tuple|33|39>>
+    <associate|Fubini's Theorem|<tuple|61|80|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|Fubini's theorem|<tuple|63|83|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|Holder continuity|<tuple|72|92|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|Holder continuity implies continuity|<tuple|73|92|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|almost everywhere measurability|<tuple|116|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|auto-1|<tuple|open mapping
+    theorem|5|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|auto-10|<tuple|higher order differentiation chain
+    rule|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|auto-11|<tuple|4|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|auto-12|<tuple|5|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|auto-2|<tuple|sum over a countable
+    set|8|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|auto-3|<tuple|<with|mode|<quote|math>|<around*|(|i\<rightarrow\>x|)>>|18|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|auto-4|<tuple|<with|mode|<quote|math>|\<Delta\><rsub|i,j>>|19|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|auto-5|<tuple|1|23|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|auto-6|<tuple|1|67|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|auto-7|<tuple|2|71|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|auto-8|<tuple|3|72|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|auto-9|<tuple|chain rule higher order
+    differentiation|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|complete open mapping theorem|<tuple|5|5|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|conjecture 16.245.134|<tuple|32|38|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|conjecture 16.246.135|<tuple|33|39|../Mathematical-Analysis.53/scrapbook.tm>>
     <associate|continuity L(X,L(Y,Z)) is isometric with
-    L(X,Y;Z)|<tuple|21|19>>
+    L(X,Y;Z)|<tuple|21|19|../Mathematical-Analysis.53/scrapbook.tm>>
     <associate|countable union of a finite family of countable sets is
-    countable|<tuple|4|4>>
-    <associate|diff (i-\<gtr\>x)|<tuple|17|18>>
-    <associate|diff C^(n+m)|<tuple|94|?>>
-    <associate|diff Taylor II|<tuple|106|?>>
-    <associate|diff chain rule higher order|<tuple|99|?>>
-    <associate|diff delta function|<tuple|20|19>>
-    <associate|diff derivate and local minimum and maximum|<tuple|81|104>>
+    countable|<tuple|4|4|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|diff (i-\<gtr\>x)|<tuple|17|18|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|diff C^(n+m)|<tuple|94|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|diff Taylor II|<tuple|106|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|diff chain rule higher order|<tuple|99|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|diff delta function|<tuple|20|19|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|diff derivate and local minimum and
+    maximum|<tuple|81|104|../Mathematical-Analysis.53/scrapbook.tm>>
     <associate|diff f is of class C^n if D^1f u=is of class
-    C^n-1|<tuple|85|108>>
+    C^n-1|<tuple|85|108|../Mathematical-Analysis.53/scrapbook.tm>>
     <associate|diff f is of class C^n if D^1f u=is of class C^n-1
-    (1)|<tuple|86|108>>
-    <associate|diff higher order derivates|<tuple|101|?>>
+    (1)|<tuple|86|108|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|diff higher order derivates|<tuple|101|?|../Mathematical-Analysis.53/scrapbook.tm>>
     <associate|diff higher order differentiation and vector
-    functions|<tuple|97|?>>
-    <associate|diff higher order differentiation classes|<tuple|98|111>>
-    <associate|diff mean value theorem (3)|<tuple|109|119>>
-    <associate|diff mean value theorem (5)|<tuple|36|45>>
-    <associate|diff mean value theorem (6)|<tuple|38|50>>
-    <associate|diff mean value theorem (7)|<tuple|39|50>>
-    <associate|diff mean value theorem (8)|<tuple|37|50>>
+    functions|<tuple|97|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|diff higher order differentiation
+    classes|<tuple|98|111|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|diff mean value theorem (3)|<tuple|109|119|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|diff mean value theorem (5)|<tuple|36|45|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|diff mean value theorem (6)|<tuple|38|50|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|diff mean value theorem (7)|<tuple|39|50|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|diff mean value theorem (8)|<tuple|37|50|../Mathematical-Analysis.53/scrapbook.tm>>
     <associate|diff partial derivate and partial differential of higher
-    order|<tuple|105|?>>
-    <associate|eq 12.10.131|<tuple|1|1>>
-    <associate|eq 12.11.131|<tuple|2|1>>
-    <associate|eq 12.12.131|<tuple|3|1>>
-    <associate|eq 12.13.131|<tuple|4|2>>
-    <associate|eq 12.14.131|<tuple|5|2>>
-    <associate|eq 12.15.131|<tuple|6|2>>
-    <associate|eq 12.281.126|<tuple|97|35>>
-    <associate|eq 14.110.151|<tuple|7|2>>
-    <associate|eq 14.111.151|<tuple|8|2>>
-    <associate|eq 14.112.151|<tuple|9|3>>
-    <associate|eq 14.113.151|<tuple|10|3>>
-    <associate|eq 14.211.159|<tuple|23|13>>
-    <associate|eq 14.212.159|<tuple|24|14>>
-    <associate|eq 14.213.159|<tuple|25|14>>
-    <associate|eq 14.214.159|<tuple|26|14>>
-    <associate|eq 14.215.159|<tuple|27|14>>
-    <associate|eq 14.216.159|<tuple|28|15>>
-    <associate|eq 14.217.159|<tuple|29|15>>
-    <associate|eq 14.218.159|<tuple|30|15>>
-    <associate|eq 14.219.160|<tuple|32|15>>
-    <associate|eq 14.219.161|<tuple|31|15>>
-    <associate|eq 14.220.159|<tuple|33|15>>
-    <associate|eq 14.221.519|<tuple|34|15>>
-    <associate|eq 14.222.159|<tuple|36|16>>
-    <associate|eq 14.223.159.1|<tuple|35|15>>
-    <associate|eq 14.225.161|<tuple|37|16>>
-    <associate|eq 14.226.161|<tuple|38|16>>
-    <associate|eq 14.227\<point\>161|<tuple|39|17>>
-    <associate|eq 14.228.161|<tuple|40|17>>
-    <associate|eq 14.229.161|<tuple|41|17>>
-    <associate|eq 14.230.161|<tuple|42|18>>
-    <associate|eq 14.241.164|<tuple|11|5>>
-    <associate|eq 14.242.164|<tuple|12|5>>
-    <associate|eq 14.243.164|<tuple|13|6>>
-    <associate|eq 14.246.165|<tuple|14|6>>
-    <associate|eq 14.247.165|<tuple|15|6>>
-    <associate|eq 14.248.165|<tuple|16|6>>
-    <associate|eq 14.249.165|<tuple|17|6>>
-    <associate|eq 14.250.165|<tuple|18|6>>
-    <associate|eq 14.251.165|<tuple|19|7>>
-    <associate|eq 14.252.165|<tuple|20|7>>
-    <associate|eq 14.253.165|<tuple|21|7>>
-    <associate|eq 14.254.165|<tuple|22|7>>
-    <associate|eq 14.290.294|<tuple|303|95>>
-    <associate|eq 14.291.294|<tuple|304|95>>
-    <associate|eq 14.292.294|<tuple|305|95>>
-    <associate|eq 14.293.291|<tuple|306|96>>
-    <associate|eq 14.294.294|<tuple|307|96>>
-    <associate|eq 14.295.294|<tuple|308|96>>
-    <associate|eq 14.296.294|<tuple|309|96>>
-    <associate|eq 14.75.149|<tuple|43|19>>
-    <associate|eq 14.76.149|<tuple|44|20>>
-    <associate|eq 14.77.149|<tuple|45|20>>
-    <associate|eq 14.78.149|<tuple|46|20>>
-    <associate|eq 14.79.149|<tuple|47|20>>
-    <associate|eq 14.80.149|<tuple|48|20>>
-    <associate|eq 14.81.150|<tuple|49|20>>
-    <associate|eq 14.82.149|<tuple|50|21>>
-    <associate|eq 14.83.150|<tuple|51|21>>
-    <associate|eq 14.84.149|<tuple|52|21>>
-    <associate|eq 14.85.150|<tuple|53|21>>
-    <associate|eq 14.86.150|<tuple|54|21>>
-    <associate|eq 14.87.150|<tuple|55|21>>
-    <associate|eq 14.88.150|<tuple|56|22>>
-    <associate|eq 14.89.150|<tuple|57|22>>
-    <associate|eq 14.90.150|<tuple|58|22>>
-    <associate|eq 16.101.194|<tuple|441|?>>
-    <associate|eq 16.102.194|<tuple|442|?>>
-    <associate|eq 16.103.194|<tuple|443|?>>
-    <associate|eq 16.104.194|<tuple|444|?>>
-    <associate|eq 16.105.194|<tuple|445|?>>
-    <associate|eq 16.122.194|<tuple|386|120>>
-    <associate|eq 16.123.194|<tuple|387|120>>
-    <associate|eq 16.124.194|<tuple|388|121>>
-    <associate|eq 16.125.194|<tuple|389|121>>
-    <associate|eq 16.126.194|<tuple|69|26>>
-    <associate|eq 16.127.194|<tuple|70|26>>
-    <associate|eq 16.128.181|<tuple|355|111>>
-    <associate|eq 16.128.194|<tuple|71|26>>
-    <associate|eq 16.129.181|<tuple|356|112>>
-    <associate|eq 16.129.194|<tuple|72|26>>
-    <associate|eq 16.130.181|<tuple|357|112>>
-    <associate|eq 16.130.194|<tuple|73|27>>
-    <associate|eq 16.131.181|<tuple|358|112>>
-    <associate|eq 16.132.181|<tuple|359|112>>
-    <associate|eq 16.133.181|<tuple|360|113>>
-    <associate|eq 16.133.6|<tuple|314|98>>
-    <associate|eq 16.134.181|<tuple|361|113>>
-    <associate|eq 16.134.6|<tuple|315|99>>
-    <associate|eq 16.135.181|<tuple|362|113>>
-    <associate|eq 16.135.195|<tuple|473|?>>
-    <associate|eq 16.135.6|<tuple|316|99>>
-    <associate|eq 16.136.181|<tuple|363|114>>
-    <associate|eq 16.136.195|<tuple|474|?>>
-    <associate|eq 16.136.6|<tuple|317|99>>
-    <associate|eq 16.137.195|<tuple|332|105>>
-    <associate|eq 16.137.6|<tuple|318|99>>
-    <associate|eq 16.138.195|<tuple|333|105>>
-    <associate|eq 16.138.6|<tuple|319|99>>
-    <associate|eq 16.139.195|<tuple|334|105>>
-    <associate|eq 16.139.6|<tuple|320|100>>
-    <associate|eq 16.140.195|<tuple|335|106>>
-    <associate|eq 16.140.6|<tuple|321|100>>
-    <associate|eq 16.141.195|<tuple|336|106>>
-    <associate|eq 16.142.181|<tuple|364|114>>
-    <associate|eq 16.142.195|<tuple|337|106>>
-    <associate|eq 16.143.181|<tuple|365|114>>
-    <associate|eq 16.143.195|<tuple|338|106>>
-    <associate|eq 16.143.200|<tuple|472|?>>
-    <associate|eq 16.144.181|<tuple|367|114>>
-    <associate|eq 16.144.181.1|<tuple|366|114>>
-    <associate|eq 16.144.195|<tuple|339|107>>
-    <associate|eq 16.145.181|<tuple|368|114>>
-    <associate|eq 16.145.195|<tuple|340|107>>
-    <associate|eq 16.146.195|<tuple|341|107>>
-    <associate|eq 16.147.181|<tuple|369|115>>
-    <associate|eq 16.147.195|<tuple|342|107>>
-    <associate|eq 16.148.181|<tuple|370|115>>
-    <associate|eq 16.148.195|<tuple|343|107>>
-    <associate|eq 16.149.181|<tuple|371|116>>
-    <associate|eq 16.149.195|<tuple|344|107>>
-    <associate|eq 16.150.181|<tuple|372|116>>
-    <associate|eq 16.150.195|<tuple|345|107>>
-    <associate|eq 16.151.181|<tuple|373|116>>
-    <associate|eq 16.152.181|<tuple|374|116>>
-    <associate|eq 16.154.141|<tuple|331|104>>
-    <associate|eq 16.154.181|<tuple|376|117>>
-    <associate|eq 16.172.10|<tuple|412|?>>
-    <associate|eq 16.175.10|<tuple|415|?>>
-    <associate|eq 16.178.11|<tuple|418|?>>
-    <associate|eq 16.179.10|<tuple|421|?>>
-    <associate|eq 16.180.10|<tuple|422|?>>
-    <associate|eq 16.183.200|<tuple|420|43>>
-    <associate|eq 16.184.200|<tuple|118|43>>
-    <associate|eq 16.185.200|<tuple|119|43>>
-    <associate|eq 16.186.200|<tuple|120|43>>
-    <associate|eq 16.196.201|<tuple|121|44>>
-    <associate|eq 16.197.201|<tuple|122|44>>
-    <associate|eq 16.198.201|<tuple|123|45>>
-    <associate|eq 16.199.201|<tuple|124|45>>
-    <associate|eq 16.200.124|<tuple|86|32>>
-    <associate|eq 16.200.201|<tuple|125|45>>
-    <associate|eq 16.201.201|<tuple|126|45>>
-    <associate|eq 16.202.201|<tuple|127|46>>
-    <associate|eq 16.203.201|<tuple|128|46>>
-    <associate|eq 16.204.201|<tuple|129|46>>
-    <associate|eq 16.205.201|<tuple|130|46>>
-    <associate|eq 16.206.202|<tuple|131|47>>
-    <associate|eq 16.207.201|<tuple|133|47>>
-    <associate|eq 16.207.201.1|<tuple|132|47>>
-    <associate|eq 16.207.310|<tuple|446|?>>
-    <associate|eq 16.208.201|<tuple|134|47>>
-    <associate|eq 16.208.310|<tuple|447|?>>
-    <associate|eq 16.209.201|<tuple|135|48>>
-    <associate|eq 16.209.304|<tuple|391|?>>
-    <associate|eq 16.209.304.1|<tuple|390|?>>
-    <associate|eq 16.209.310|<tuple|448|?>>
-    <associate|eq 16.210.304|<tuple|392|?>>
-    <associate|eq 16.210.310|<tuple|449|?>>
-    <associate|eq 16.211.202|<tuple|136|49>>
-    <associate|eq 16.211.304|<tuple|393|?>>
-    <associate|eq 16.211.310|<tuple|450|?>>
-    <associate|eq 16.212.304|<tuple|394|?>>
-    <associate|eq 16.212.310|<tuple|451|?>>
-    <associate|eq 16.213.304|<tuple|395|?>>
-    <associate|eq 16.213.310|<tuple|452|?>>
-    <associate|eq 16.214.304|<tuple|396|?>>
-    <associate|eq 16.214.310|<tuple|453|?>>
-    <associate|eq 16.215.304|<tuple|397|?>>
-    <associate|eq 16.216.304|<tuple|398|?>>
-    <associate|eq 16.221.300|<tuple|423|?>>
-    <associate|eq 16.222.300|<tuple|424|?>>
-    <associate|eq 16.223.300|<tuple|425|?>>
-    <associate|eq 16.224.300|<tuple|426|?>>
-    <associate|eq 16.225.300|<tuple|427|?>>
-    <associate|eq 16.226.141|<tuple|385|120>>
-    <associate|eq 16.226.300|<tuple|428|?>>
-    <associate|eq 16.230.206|<tuple|475|?>>
-    <associate|eq 16.230.300|<tuple|432|?>>
-    <associate|eq 16.231.300|<tuple|433|?>>
-    <associate|eq 16.232.300|<tuple|434|?>>
-    <associate|eq 16.233.300|<tuple|435|?>>
-    <associate|eq 16.234.300|<tuple|436|?>>
-    <associate|eq 16.235.300|<tuple|437|?>>
-    <associate|eq 16.236.300|<tuple|438|?>>
-    <associate|eq 16.237.300|<tuple|439|?>>
-    <associate|eq 16.238.300|<tuple|440|?>>
-    <associate|eq 16.242.310|<tuple|467|?>>
-    <associate|eq 16.243.310|<tuple|468|?>>
-    <associate|eq 16.244.300|<tuple|454|?>>
-    <associate|eq 16.244.310|<tuple|469|?>>
-    <associate|eq 16.245.300|<tuple|455|?>>
-    <associate|eq 16.245.310|<tuple|470|?>>
-    <associate|eq 16.246.300|<tuple|456|?>>
-    <associate|eq 16.246.310|<tuple|471|?>>
-    <associate|eq 16.247.300|<tuple|457|?>>
-    <associate|eq 16.248.300|<tuple|458|?>>
-    <associate|eq 16.249.300|<tuple|459|?>>
-    <associate|eq 16.250.300|<tuple|460|?>>
-    <associate|eq 16.251.300|<tuple|461|?>>
-    <associate|eq 16.252.300|<tuple|462|?>>
-    <associate|eq 16.253.300|<tuple|463|?>>
-    <associate|eq 16.254.300|<tuple|464|?>>
-    <associate|eq 16.255.300|<tuple|465|?>>
-    <associate|eq 16.256.300|<tuple|466|?>>
-    <associate|eq 16.261.222|<tuple|74|29>>
-    <associate|eq 16.270.142|<tuple|487|?>>
-    <associate|eq 16.271.142|<tuple|488|?>>
-    <associate|eq 16.272.142|<tuple|491|?>>
-    <associate|eq 16.272.143|<tuple|490|?>>
-    <associate|eq 16.273.142|<tuple|492|?>>
-    <associate|eq 16.277.12|<tuple|377|117>>
-    <associate|eq 16.280.125.1|<tuple|75|30>>
-    <associate|eq 16.280.126|<tuple|100|36>>
-    <associate|eq 16.280.127|<tuple|137|51>>
-    <associate|eq 16.281.125|<tuple|76|30>>
-    <associate|eq 16.281.126|<tuple|101|36>>
-    <associate|eq 16.281.127|<tuple|138|51>>
-    <associate|eq 16.282.125|<tuple|77|31>>
-    <associate|eq 16.282.126|<tuple|102|36>>
-    <associate|eq 16.282.127|<tuple|139|52>>
-    <associate|eq 16.283.126|<tuple|103|36>>
-    <associate|eq 16.284.12|<tuple|378|118>>
-    <associate|eq 16.284.124|<tuple|82|31>>
-    <associate|eq 16.285.12|<tuple|379|118>>
-    <associate|eq 16.285.124|<tuple|80|31>>
-    <associate|eq 16.286.12|<tuple|380|118>>
-    <associate|eq 16.286.124|<tuple|81|31>>
-    <associate|eq 16.287.12|<tuple|381|118>>
-    <associate|eq 16.287.124|<tuple|476|?>>
-    <associate|eq 16.288.12|<tuple|382|118>>
-    <associate|eq 16.288.124|<tuple|477|?>>
-    <associate|eq 16.288.125|<tuple|83|31>>
-    <associate|eq 16.289.12|<tuple|383|118>>
-    <associate|eq 16.289.124|<tuple|478|32>>
-    <associate|eq 16.290.124|<tuple|479|?>>
-    <associate|eq 16.290.126|<tuple|85|32>>
-    <associate|eq 16.291.124|<tuple|481|33>>
-    <associate|eq 16.291.125|<tuple|480|?>>
-    <associate|eq 16.292.124|<tuple|482|?>>
-    <associate|eq 16.292.125|<tuple|88|33>>
-    <associate|eq 16.293.124|<tuple|483|?>>
-    <associate|eq 16.293.125|<tuple|89|33>>
-    <associate|eq 16.294.124|<tuple|484|?>>
-    <associate|eq 16.294.125|<tuple|90|33>>
-    <associate|eq 16.295.125|<tuple|91|33>>
-    <associate|eq 16.296.125|<tuple|485|33>>
-    <associate|eq 16.297.125|<tuple|93|33>>
-    <associate|eq 16.298.125|<tuple|94|33>>
-    <associate|eq 16.300.126|<tuple|95|34>>
-    <associate|eq 16.302.127|<tuple|495|?>>
-    <associate|eq 16.303.127|<tuple|496|?>>
-    <associate|eq 16.304.127|<tuple|498|?>>
-    <associate|eq 16.305.127|<tuple|499|?>>
-    <associate|eq 16.306.127|<tuple|500|?>>
-    <associate|eq 16.307.127|<tuple|501|?>>
-    <associate|eq 16.353.135|<tuple|104|39>>
-    <associate|eq 16.354.135|<tuple|105|39>>
-    <associate|eq 16.355.135|<tuple|106|40>>
-    <associate|eq 16.359.136|<tuple|107|40>>
-    <associate|eq 16.360.136|<tuple|108|40>>
-    <associate|eq 16.361.136|<tuple|109|41>>
-    <associate|eq 16.362.136|<tuple|110|41>>
-    <associate|eq 16.366.300|<tuple|486|?>>
-    <associate|eq 16.369.300|<tuple|489|?>>
-    <associate|eq 16.382.139|<tuple|114|42>>
-    <associate|eq 16.383.139|<tuple|115|42>>
-    <associate|eq 16.384.139|<tuple|113|42>>
-    <associate|eq 16.387.138|<tuple|116|42>>
-    <associate|eq 16.394.300|<tuple|493|?>>
-    <associate|eq 16.395.300|<tuple|494|?>>
-    <associate|eq 16.398.300|<tuple|497|?>>
-    <associate|eq 16.45.185|<tuple|59|23>>
-    <associate|eq 16.46.185|<tuple|60|23>>
-    <associate|eq 16.47.185|<tuple|61|23>>
-    <associate|eq 16.52.189|<tuple|322|101>>
-    <associate|eq 16.53.189|<tuple|323|101>>
-    <associate|eq 16.54.189|<tuple|324|101>>
-    <associate|eq 16.55.189|<tuple|325|102>>
-    <associate|eq 16.56.189|<tuple|326|102>>
-    <associate|eq 16.570.311|<tuple|502|?>>
-    <associate|eq 16.571.311|<tuple|503|?>>
-    <associate|eq 16.572.311|<tuple|504|?>>
-    <associate|eq 16.573.311|<tuple|505|?>>
-    <associate|eq 16.574.311|<tuple|506|?>>
-    <associate|eq 16.575.311|<tuple|507|?>>
-    <associate|eq 16.576.311|<tuple|508|?>>
-    <associate|eq 16.577.311|<tuple|509|?>>
-    <associate|eq 16.58.189|<tuple|327|103>>
-    <associate|eq 16.59.189|<tuple|328|103>>
-    <associate|eq 16.60.189|<tuple|329|103>>
-    <associate|eq 16.61.189|<tuple|330|103>>
-    <associate|eq 16.85.181|<tuple|411|?>>
-    <associate|eq 16.86.181|<tuple|413|?>>
-    <associate|eq 16.87.181|<tuple|414|?>>
-    <associate|eq 16.88.181|<tuple|416|?>>
-    <associate|eq 16.89.181|<tuple|417|?>>
-    <associate|eq 16.90.181|<tuple|419|?>>
-    <associate|eq 16.90.194|<tuple|429|?>>
-    <associate|eq 16.91.194|<tuple|430|?>>
-    <associate|eq 16.92.194|<tuple|431|?>>
-    <associate|eq 18.283.124|<tuple|78|31>>
-    <associate|eq 19.536.038|<tuple|186|63>>
-    <associate|eq 20.1010.281|<tuple|251|83>>
-    <associate|eq 20.1011.281|<tuple|252|83>>
-    <associate|eq 20.1012.280|<tuple|233|81>>
-    <associate|eq 20.1013.280|<tuple|234|81>>
-    <associate|eq 20.1014.280|<tuple|235|81>>
-    <associate|eq 20.1014.281|<tuple|255|83>>
-    <associate|eq 20.1015.280|<tuple|225|78>>
-    <associate|eq 20.1015.281|<tuple|256|83>>
-    <associate|eq 20.1016.280|<tuple|226|78>>
-    <associate|eq 20.1016.281|<tuple|257|83>>
-    <associate|eq 20.1017.280|<tuple|238|81>>
-    <associate|eq 20.1017.281|<tuple|258|83>>
-    <associate|eq 20.1018.280|<tuple|239|81>>
-    <associate|eq 20.1018.281|<tuple|259|83>>
-    <associate|eq 20.1019.280|<tuple|240|81>>
-    <associate|eq 20.1019.281|<tuple|260|83>>
-    <associate|eq 20.1020.280|<tuple|241|81>>
-    <associate|eq 20.1020.281|<tuple|261|84>>
-    <associate|eq 20.1021.280|<tuple|242|81>>
-    <associate|eq 20.1021.281|<tuple|262|84>>
-    <associate|eq 20.1022.280|<tuple|243|81>>
-    <associate|eq 20.1022.281|<tuple|263|84>>
-    <associate|eq 20.1023.280|<tuple|244|81>>
-    <associate|eq 20.1023.281|<tuple|264|84>>
-    <associate|eq 20.1024.280|<tuple|245|81>>
-    <associate|eq 20.1024.281|<tuple|265|84>>
-    <associate|eq 20.1025.280|<tuple|246|81>>
-    <associate|eq 20.1025.281|<tuple|266|85>>
-    <associate|eq 20.1026.280|<tuple|247|81>>
-    <associate|eq 20.1026.281|<tuple|267|85>>
-    <associate|eq 20.1027.280|<tuple|248|81>>
-    <associate|eq 20.1027.281|<tuple|268|85>>
-    <associate|eq 20.1028.280|<tuple|249|82>>
-    <associate|eq 20.1028.281|<tuple|269|85>>
-    <associate|eq 20.1029.280|<tuple|250|82>>
-    <associate|eq 20.1029.281|<tuple|270|85>>
-    <associate|eq 20.1030.281|<tuple|271|85>>
-    <associate|eq 20.1031.281|<tuple|272|85>>
-    <associate|eq 20.1032.281|<tuple|273|85>>
-    <associate|eq 20.1033.281|<tuple|274|86>>
-    <associate|eq 20.1034.281|<tuple|275|86>>
-    <associate|eq 20.1035.281|<tuple|276|86>>
-    <associate|eq 20.201.217|<tuple|156|58>>
-    <associate|eq 20.2017.280|<tuple|227|78>>
-    <associate|eq 20.208.204|<tuple|140|52>>
-    <associate|eq 20.209.204|<tuple|141|52>>
-    <associate|eq 20.210.204|<tuple|142|53>>
-    <associate|eq 20.211.204|<tuple|143|53>>
-    <associate|eq 20.212.204|<tuple|144|53>>
-    <associate|eq 20.213.204|<tuple|145|53>>
-    <associate|eq 20.214.204|<tuple|146|54>>
-    <associate|eq 20.215.204|<tuple|147|54>>
-    <associate|eq 20.216.204|<tuple|148|54>>
-    <associate|eq 20.217.204|<tuple|149|55>>
-    <associate|eq 20.218.204|<tuple|150|55>>
-    <associate|eq 20.219.204|<tuple|151|55>>
-    <associate|eq 20.220.204|<tuple|152|55>>
-    <associate|eq 20.324.224|<tuple|157|58>>
-    <associate|eq 20.325.224|<tuple|158|59>>
-    <associate|eq 20.326\<point\>224|<tuple|159|59>>
-    <associate|eq 20.421.227|<tuple|510|79>>
-    <associate|eq 20.422.227|<tuple|231|79>>
-    <associate|eq 20.436.228|<tuple|517|?>>
-    <associate|eq 20.437.228|<tuple|518|?>>
-    <associate|eq 20.442.249|<tuple|511|?>>
-    <associate|eq 20.443.229|<tuple|161|60>>
-    <associate|eq 20.443.249|<tuple|512|?>>
-    <associate|eq 20.444.229|<tuple|162|60>>
-    <associate|eq 20.444.249|<tuple|513|?>>
-    <associate|eq 20.445.229|<tuple|163|60>>
-    <associate|eq 20.490.249|<tuple|201|67>>
-    <associate|eq 20.500.231|<tuple|202|67>>
-    <associate|eq 20.500.232|<tuple|216|70>>
-    <associate|eq 20.501.231|<tuple|203|68>>
-    <associate|eq 20.501.232|<tuple|217|71>>
-    <associate|eq 20.502.231|<tuple|204|68>>
-    <associate|eq 20.502.232|<tuple|218|71>>
-    <associate|eq 20.503.231|<tuple|205|68>>
-    <associate|eq 20.503.261|<tuple|208|68>>
-    <associate|eq 20.504.231|<tuple|206|68>>
-    <associate|eq 20.504.261|<tuple|209|68>>
-    <associate|eq 20.505.231|<tuple|207|68>>
-    <associate|eq 20.506.231|<tuple|211|69>>
-    <associate|eq 20.507.231|<tuple|210|69>>
-    <associate|eq 20.508.231|<tuple|212|69>>
-    <associate|eq 20.509.231|<tuple|213|70>>
-    <associate|eq 20.510.231|<tuple|214|70>>
-    <associate|eq 20.511.231|<tuple|215|70>>
-    <associate|eq 20.548.282|<tuple|519|?>>
-    <associate|eq 20.549.282|<tuple|520|?>>
-    <associate|eq 20.550.282|<tuple|521|?>>
-    <associate|eq 20.568.240|<tuple|164|61>>
-    <associate|eq 20.569.240|<tuple|165|61>>
-    <associate|eq 20.570.240|<tuple|166|61>>
-    <associate|eq 20.571.240|<tuple|167|61>>
-    <associate|eq 20.572.240|<tuple|168|61>>
-    <associate|eq 20.573.240|<tuple|169|61>>
-    <associate|eq 20.574.240|<tuple|170|61>>
-    <associate|eq 20.575.240|<tuple|171|61>>
-    <associate|eq 20.576.240|<tuple|172|62>>
-    <associate|eq 20.577.240|<tuple|173|62>>
-    <associate|eq 20.578.240|<tuple|174|62>>
-    <associate|eq 20.579.240|<tuple|175|62>>
-    <associate|eq 20.580.240|<tuple|176|62>>
-    <associate|eq 20.581.240|<tuple|177|62>>
-    <associate|eq 20.582.240|<tuple|178|62>>
-    <associate|eq 20.583.240|<tuple|179|62>>
-    <associate|eq 20.637.246|<tuple|219|73>>
-    <associate|eq 20.650.246|<tuple|180|63>>
-    <associate|eq 20.651.246|<tuple|181|63>>
-    <associate|eq 20.652.246|<tuple|182|63>>
-    <associate|eq 20.653.246|<tuple|183|63>>
-    <associate|eq 20.654.246|<tuple|184|63>>
-    <associate|eq 20.655.246|<tuple|185|63>>
-    <associate|eq 20.656.246|<tuple|186|63>>
-    <associate|eq 20.657.246|<tuple|187|63>>
-    <associate|eq 20.658.246|<tuple|188|64>>
-    <associate|eq 20.659.246|<tuple|189|64>>
-    <associate|eq 20.660.246|<tuple|190|64>>
-    <associate|eq 20.661.246|<tuple|191|64>>
-    <associate|eq 20.662.246|<tuple|192|64>>
-    <associate|eq 20.663.246|<tuple|193|65>>
-    <associate|eq 20.664.246|<tuple|194|65>>
-    <associate|eq 20.665.246|<tuple|195|65>>
-    <associate|eq 20.666.246|<tuple|196|65>>
-    <associate|eq 20.667.246|<tuple|197|65>>
-    <associate|eq 20.669.247|<tuple|198|65>>
-    <associate|eq 20.670.247|<tuple|199|66>>
-    <associate|eq 21.1079.291|<tuple|277|87>>
-    <associate|eq 21.1080.291|<tuple|278|88>>
-    <associate|eq 21.1081.291|<tuple|279|90>>
-    <associate|eq 21.1082.291|<tuple|280|90>>
-    <associate|eq 21.1083.291|<tuple|281|90>>
-    <associate|eq 21.1084.291|<tuple|282|90>>
-    <associate|eq 21.1085.291|<tuple|283|90>>
-    <associate|eq 21.1086.291|<tuple|285|91>>
-    <associate|eq 21.1087.291|<tuple|286|91>>
-    <associate|eq 21.1088.291|<tuple|287|91>>
-    <associate|eq 21.1089.291|<tuple|288|91>>
-    <associate|eq 21.1090.291|<tuple|289|91>>
-    <associate|eq 21.1091.291|<tuple|290|91>>
-    <associate|eq 21.1092.291|<tuple|291|91>>
-    <associate|eq 21.1121.292|<tuple|292|92>>
-    <associate|eq 21.1122.292|<tuple|293|93>>
-    <associate|eq 21.1123.292|<tuple|294|93>>
-    <associate|eq 21.1124.292|<tuple|295|93>>
-    <associate|eq 21.1125.292|<tuple|296|94>>
-    <associate|eq 21.1126.292|<tuple|297|94>>
-    <associate|eq 21.1127.292|<tuple|298|94>>
-    <associate|eq 21.1127\<point\>300|<tuple|310|97>>
-    <associate|eq 21.1128.292|<tuple|299|94>>
-    <associate|eq 21.1128\<point\>300|<tuple|311|97>>
-    <associate|eq 21.1129.292|<tuple|300|94>>
-    <associate|eq 21.1130.292|<tuple|301|94>>
-    <associate|eq 21.1130.300|<tuple|313|98>>
-    <associate|eq 21.1131.292|<tuple|302|95>>
-    <associate|eq 21.1229.300|<tuple|312|97>>
-    <associate|eq 21.27.273|<tuple|220|74>>
-    <associate|eq 21.30.273|<tuple|221|74>>
-    <associate|fig 4.311|<tuple|4|?>>
-    <associate|fig 5.311|<tuple|5|?>>
-    <associate|figure 20.6.234|<tuple|3|72>>
-    <associate|lemma 14.360.158|<tuple|10|10>>
-    <associate|lemma 14.364.159|<tuple|14|13>>
-    <associate|lemma 16.104.194|<tuple|23|23>>
-    <associate|lemma 16.105.194|<tuple|91|120>>
-    <associate|lemma 16.106.194|<tuple|25|26>>
-    <associate|lemma 16.107.194|<tuple|26|27>>
-    <associate|lemma 16.108.194|<tuple|27|28>>
-    <associate|lemma 16.135.200|<tuple|89|117>>
-    <associate|lemma 16.148.201|<tuple|35|44>>
-    <associate|lemma 16.190.122|<tuple|28|29>>
-    <associate|lemma 16.201.126|<tuple|30|35>>
-    <associate|lemma 16.202.127|<tuple|100|50>>
-    <associate|lemma 16.24.178|<tuple|18|18>>
-    <associate|lemma 16.25.178|<tuple|19|18>>
-    <associate|lemma 16.97.193|<tuple|96|?>>
-    <associate|lemma 20.206.204|<tuple|41|52>>
-    <associate|lemma 20.207.204|<tuple|42|53>>
-    <associate|lemma 20.208.204|<tuple|43|54>>
-    <associate|lemma 20.209.204|<tuple|44|54>>
-    <associate|lemma 20.211.204|<tuple|46|56>>
-    <associate|lemma 20.470.246|<tuple|50|63>>
-    <associate|lemma 20.477.246|<tuple|53|72>>
-    <associate|lemma 20.613.279|<tuple|56|74>>
-    <associate|lemma 21.578.291|<tuple|69|89>>
-    <associate|lemma 21.579.291|<tuple|70|90>>
-    <associate|lemma 21.587.292|<tuple|74|92>>
-    <associate|lemma 21.589.295|<tuple|77|96>>
-    <associate|lemma 21.590.292|<tuple|75|94>>
-    <associate|lemma 21.591.|<tuple|76|95>>
+    order|<tuple|105|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 12.10.131|<tuple|1|1|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 12.11.131|<tuple|2|1|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 12.12.131|<tuple|3|1|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 12.13.131|<tuple|4|2|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 12.14.131|<tuple|5|2|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 12.15.131|<tuple|6|2|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 12.281.126|<tuple|97|35|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 14.110.151|<tuple|7|2|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 14.111.151|<tuple|8|2|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 14.112.151|<tuple|9|3|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 14.113.151|<tuple|10|3|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 14.211.159|<tuple|23|13|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 14.212.159|<tuple|24|14|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 14.213.159|<tuple|25|14|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 14.214.159|<tuple|26|14|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 14.215.159|<tuple|27|14|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 14.216.159|<tuple|28|15|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 14.217.159|<tuple|29|15|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 14.218.159|<tuple|30|15|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 14.219.160|<tuple|32|15|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 14.219.161|<tuple|31|15|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 14.220.159|<tuple|33|15|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 14.221.519|<tuple|34|15|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 14.222.159|<tuple|36|16|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 14.223.159.1|<tuple|35|15|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 14.225.161|<tuple|37|16|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 14.226.161|<tuple|38|16|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 14.227\<point\>161|<tuple|39|17|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 14.228.161|<tuple|40|17|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 14.229.161|<tuple|41|17|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 14.230.161|<tuple|42|18|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 14.241.164|<tuple|11|5|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 14.242.164|<tuple|12|5|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 14.243.164|<tuple|13|6|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 14.246.165|<tuple|14|6|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 14.247.165|<tuple|15|6|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 14.248.165|<tuple|16|6|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 14.249.165|<tuple|17|6|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 14.250.165|<tuple|18|6|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 14.251.165|<tuple|19|7|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 14.252.165|<tuple|20|7|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 14.253.165|<tuple|21|7|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 14.254.165|<tuple|22|7|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 14.290.294|<tuple|303|95|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 14.291.294|<tuple|304|95|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 14.292.294|<tuple|305|95|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 14.293.291|<tuple|306|96|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 14.294.294|<tuple|307|96|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 14.295.294|<tuple|308|96|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 14.296.294|<tuple|309|96|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 14.75.149|<tuple|43|19|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 14.76.149|<tuple|44|20|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 14.77.149|<tuple|45|20|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 14.78.149|<tuple|46|20|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 14.79.149|<tuple|47|20|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 14.80.149|<tuple|48|20|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 14.81.150|<tuple|49|20|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 14.82.149|<tuple|50|21|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 14.83.150|<tuple|51|21|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 14.84.149|<tuple|52|21|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 14.85.150|<tuple|53|21|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 14.86.150|<tuple|54|21|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 14.87.150|<tuple|55|21|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 14.88.150|<tuple|56|22|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 14.89.150|<tuple|57|22|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 14.90.150|<tuple|58|22|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.101.194|<tuple|441|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.102.194|<tuple|442|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.103.194|<tuple|443|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.104.194|<tuple|444|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.105.194|<tuple|445|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.122.194|<tuple|386|120|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.123.194|<tuple|387|120|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.124.194|<tuple|388|121|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.125.194|<tuple|389|121|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.126.194|<tuple|69|26|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.127.194|<tuple|70|26|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.128.181|<tuple|355|111|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.128.194|<tuple|71|26|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.129.181|<tuple|356|112|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.129.194|<tuple|72|26|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.130.181|<tuple|357|112|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.130.194|<tuple|73|27|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.131.181|<tuple|358|112|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.132.181|<tuple|359|112|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.133.181|<tuple|360|113|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.133.6|<tuple|314|98|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.134.181|<tuple|361|113|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.134.6|<tuple|315|99|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.135.181|<tuple|362|113|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.135.195|<tuple|473|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.135.6|<tuple|316|99|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.136.181|<tuple|363|114|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.136.195|<tuple|474|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.136.6|<tuple|317|99|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.137.195|<tuple|332|105|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.137.6|<tuple|318|99|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.138.195|<tuple|333|105|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.138.6|<tuple|319|99|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.139.195|<tuple|334|105|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.139.6|<tuple|320|100|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.140.195|<tuple|335|106|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.140.6|<tuple|321|100|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.141.195|<tuple|336|106|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.142.181|<tuple|364|114|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.142.195|<tuple|337|106|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.143.181|<tuple|365|114|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.143.195|<tuple|338|106|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.143.200|<tuple|472|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.144.181|<tuple|367|114|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.144.181.1|<tuple|366|114|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.144.195|<tuple|339|107|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.145.181|<tuple|368|114|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.145.195|<tuple|340|107|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.146.195|<tuple|341|107|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.147.181|<tuple|369|115|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.147.195|<tuple|342|107|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.148.181|<tuple|370|115|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.148.195|<tuple|343|107|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.149.181|<tuple|371|116|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.149.195|<tuple|344|107|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.150.181|<tuple|372|116|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.150.195|<tuple|345|107|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.151.181|<tuple|373|116|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.152.181|<tuple|374|116|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.154.141|<tuple|331|104|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.154.181|<tuple|376|117|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.172.10|<tuple|412|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.175.10|<tuple|415|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.178.11|<tuple|418|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.179.10|<tuple|421|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.180.10|<tuple|422|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.183.200|<tuple|420|43|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.184.200|<tuple|118|43|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.185.200|<tuple|119|43|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.186.200|<tuple|120|43|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.196.201|<tuple|121|44|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.197.201|<tuple|122|44|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.198.201|<tuple|123|45|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.199.201|<tuple|124|45|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.200.124|<tuple|86|32|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.200.201|<tuple|125|45|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.201.201|<tuple|126|45|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.202.201|<tuple|127|46|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.203.201|<tuple|128|46|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.204.201|<tuple|129|46|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.205.201|<tuple|130|46|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.206.202|<tuple|131|47|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.207.201|<tuple|133|47|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.207.201.1|<tuple|132|47|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.207.310|<tuple|446|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.208.201|<tuple|134|47|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.208.310|<tuple|447|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.209.201|<tuple|135|48|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.209.304|<tuple|391|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.209.304.1|<tuple|390|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.209.310|<tuple|448|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.210.304|<tuple|392|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.210.310|<tuple|449|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.211.202|<tuple|136|49|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.211.304|<tuple|393|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.211.310|<tuple|450|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.212.304|<tuple|394|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.212.310|<tuple|451|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.213.304|<tuple|395|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.213.310|<tuple|452|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.214.304|<tuple|396|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.214.310|<tuple|453|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.215.304|<tuple|397|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.216.304|<tuple|398|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.221.300|<tuple|423|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.222.300|<tuple|424|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.223.300|<tuple|425|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.224.300|<tuple|426|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.225.300|<tuple|427|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.226.141|<tuple|385|120|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.226.300|<tuple|428|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.230.206|<tuple|475|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.230.300|<tuple|432|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.231.300|<tuple|433|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.232.300|<tuple|434|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.233.300|<tuple|435|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.234.300|<tuple|436|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.235.300|<tuple|437|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.236.300|<tuple|438|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.237.300|<tuple|439|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.238.300|<tuple|440|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.242.310|<tuple|467|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.243.310|<tuple|468|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.244.300|<tuple|454|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.244.310|<tuple|469|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.245.300|<tuple|455|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.245.310|<tuple|470|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.246.300|<tuple|456|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.246.310|<tuple|471|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.247.300|<tuple|457|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.248.300|<tuple|458|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.249.300|<tuple|459|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.250.300|<tuple|460|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.251.300|<tuple|461|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.252.300|<tuple|462|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.253.300|<tuple|463|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.254.300|<tuple|464|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.255.300|<tuple|465|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.256.300|<tuple|466|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.261.222|<tuple|74|29|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.270.142|<tuple|487|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.271.142|<tuple|488|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.272.142|<tuple|491|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.272.143|<tuple|490|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.273.142|<tuple|492|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.277.12|<tuple|377|117|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.280.125.1|<tuple|75|30|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.280.126|<tuple|100|36|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.280.127|<tuple|137|51|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.281.125|<tuple|76|30|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.281.126|<tuple|101|36|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.281.127|<tuple|138|51|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.282.125|<tuple|77|31|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.282.126|<tuple|102|36|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.282.127|<tuple|139|52|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.283.126|<tuple|103|36|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.284.12|<tuple|378|118|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.284.124|<tuple|82|31|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.285.12|<tuple|379|118|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.285.124|<tuple|80|31|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.286.12|<tuple|380|118|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.286.124|<tuple|81|31|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.287.12|<tuple|381|118|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.287.124|<tuple|476|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.288.12|<tuple|382|118|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.288.124|<tuple|477|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.288.125|<tuple|83|31|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.289.12|<tuple|383|118|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.289.124|<tuple|478|32|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.290.124|<tuple|479|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.290.126|<tuple|85|32|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.291.124|<tuple|481|33|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.291.125|<tuple|480|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.292.124|<tuple|482|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.292.125|<tuple|88|33|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.293.124|<tuple|483|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.293.125|<tuple|89|33|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.294.124|<tuple|484|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.294.125|<tuple|90|33|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.295.125|<tuple|91|33|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.296.125|<tuple|485|33|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.297.125|<tuple|93|33|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.298.125|<tuple|94|33|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.300.126|<tuple|95|34|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.302.127|<tuple|495|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.303.127|<tuple|496|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.304.127|<tuple|498|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.305.127|<tuple|499|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.306.127|<tuple|500|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.307.127|<tuple|501|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.353.135|<tuple|104|39|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.354.135|<tuple|105|39|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.355.135|<tuple|106|40|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.359.136|<tuple|107|40|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.360.136|<tuple|108|40|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.361.136|<tuple|109|41|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.362.136|<tuple|110|41|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.366.300|<tuple|486|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.369.300|<tuple|489|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.382.139|<tuple|114|42|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.383.139|<tuple|115|42|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.384.139|<tuple|113|42|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.387.138|<tuple|116|42|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.394.300|<tuple|493|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.395.300|<tuple|494|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.398.300|<tuple|497|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.45.185|<tuple|59|23|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.46.185|<tuple|60|23|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.47.185|<tuple|61|23|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.52.189|<tuple|322|101|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.53.189|<tuple|323|101|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.54.189|<tuple|324|101|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.55.189|<tuple|325|102|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.56.189|<tuple|326|102|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.570.311|<tuple|502|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.571.311|<tuple|503|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.572.311|<tuple|504|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.573.311|<tuple|505|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.574.311|<tuple|506|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.575.311|<tuple|507|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.576.311|<tuple|508|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.577.311|<tuple|509|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.58.189|<tuple|327|103|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.59.189|<tuple|328|103|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.60.189|<tuple|329|103|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.61.189|<tuple|330|103|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.85.181|<tuple|411|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.86.181|<tuple|413|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.87.181|<tuple|414|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.88.181|<tuple|416|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.89.181|<tuple|417|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.90.181|<tuple|419|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.90.194|<tuple|429|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.91.194|<tuple|430|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 16.92.194|<tuple|431|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 18.283.124|<tuple|78|31|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 19.536.038|<tuple|186|63|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.1010.281|<tuple|251|83|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.1011.281|<tuple|252|83|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.1012.280|<tuple|233|81|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.1013.280|<tuple|234|81|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.1014.280|<tuple|235|81|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.1014.281|<tuple|255|83|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.1015.280|<tuple|225|78|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.1015.281|<tuple|256|83|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.1016.280|<tuple|226|78|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.1016.281|<tuple|257|83|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.1017.280|<tuple|238|81|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.1017.281|<tuple|258|83|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.1018.280|<tuple|239|81|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.1018.281|<tuple|259|83|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.1019.280|<tuple|240|81|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.1019.281|<tuple|260|83|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.1020.280|<tuple|241|81|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.1020.281|<tuple|261|84|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.1021.280|<tuple|242|81|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.1021.281|<tuple|262|84|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.1022.280|<tuple|243|81|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.1022.281|<tuple|263|84|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.1023.280|<tuple|244|81|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.1023.281|<tuple|264|84|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.1024.280|<tuple|245|81|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.1024.281|<tuple|265|84|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.1025.280|<tuple|246|81|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.1025.281|<tuple|266|85|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.1026.280|<tuple|247|81|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.1026.281|<tuple|267|85|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.1027.280|<tuple|248|81|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.1027.281|<tuple|268|85|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.1028.280|<tuple|249|82|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.1028.281|<tuple|269|85|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.1029.280|<tuple|250|82|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.1029.281|<tuple|270|85|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.1030.281|<tuple|271|85|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.1031.281|<tuple|272|85|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.1032.281|<tuple|273|85|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.1033.281|<tuple|274|86|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.1034.281|<tuple|275|86|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.1035.281|<tuple|276|86|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.201.217|<tuple|156|58|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.2017.280|<tuple|227|78|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.208.204|<tuple|140|52|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.209.204|<tuple|141|52|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.210.204|<tuple|142|53|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.211.204|<tuple|143|53|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.212.204|<tuple|144|53|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.213.204|<tuple|145|53|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.214.204|<tuple|146|54|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.215.204|<tuple|147|54|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.216.204|<tuple|148|54|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.217.204|<tuple|149|55|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.218.204|<tuple|150|55|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.219.204|<tuple|151|55|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.220.204|<tuple|152|55|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.324.224|<tuple|157|58|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.325.224|<tuple|158|59|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.326\<point\>224|<tuple|159|59|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.421.227|<tuple|510|79|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.422.227|<tuple|231|79|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.436.228|<tuple|517|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.437.228|<tuple|518|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.442.249|<tuple|511|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.443.229|<tuple|161|60|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.443.249|<tuple|512|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.444.229|<tuple|162|60|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.444.249|<tuple|513|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.445.229|<tuple|163|60|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.490.249|<tuple|201|67|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.500.231|<tuple|202|67|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.500.232|<tuple|216|70|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.501.231|<tuple|203|68|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.501.232|<tuple|217|71|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.502.231|<tuple|204|68|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.502.232|<tuple|218|71|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.503.231|<tuple|205|68|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.503.261|<tuple|208|68|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.504.231|<tuple|206|68|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.504.261|<tuple|209|68|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.505.231|<tuple|207|68|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.506.231|<tuple|211|69|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.507.231|<tuple|210|69|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.508.231|<tuple|212|69|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.509.231|<tuple|213|70|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.510.231|<tuple|214|70|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.511.231|<tuple|215|70|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.548.282|<tuple|519|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.549.282|<tuple|520|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.550.282|<tuple|521|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.568.240|<tuple|164|61|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.569.240|<tuple|165|61|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.570.240|<tuple|166|61|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.571.240|<tuple|167|61|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.572.240|<tuple|168|61|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.573.240|<tuple|169|61|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.574.240|<tuple|170|61|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.575.240|<tuple|171|61|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.576.240|<tuple|172|62|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.577.240|<tuple|173|62|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.578.240|<tuple|174|62|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.579.240|<tuple|175|62|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.580.240|<tuple|176|62|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.581.240|<tuple|177|62|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.582.240|<tuple|178|62|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.583.240|<tuple|179|62|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.637.246|<tuple|219|73|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.650.246|<tuple|180|63|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.651.246|<tuple|181|63|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.652.246|<tuple|182|63|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.653.246|<tuple|183|63|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.654.246|<tuple|184|63|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.655.246|<tuple|185|63|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.656.246|<tuple|186|63|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.657.246|<tuple|187|63|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.658.246|<tuple|188|64|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.659.246|<tuple|189|64|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.660.246|<tuple|190|64|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.661.246|<tuple|191|64|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.662.246|<tuple|192|64|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.663.246|<tuple|193|65|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.664.246|<tuple|194|65|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.665.246|<tuple|195|65|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.666.246|<tuple|196|65|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.667.246|<tuple|197|65|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.669.247|<tuple|198|65|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 20.670.247|<tuple|199|66|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 21.1079.291|<tuple|277|87|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 21.1080.291|<tuple|278|88|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 21.1081.291|<tuple|279|90|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 21.1082.291|<tuple|280|90|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 21.1083.291|<tuple|281|90|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 21.1084.291|<tuple|282|90|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 21.1085.291|<tuple|283|90|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 21.1086.291|<tuple|285|91|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 21.1087.291|<tuple|286|91|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 21.1088.291|<tuple|287|91|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 21.1089.291|<tuple|288|91|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 21.1090.291|<tuple|289|91|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 21.1091.291|<tuple|290|91|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 21.1092.291|<tuple|291|91|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 21.1121.292|<tuple|292|92|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 21.1122.292|<tuple|293|93|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 21.1123.292|<tuple|294|93|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 21.1124.292|<tuple|295|93|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 21.1125.292|<tuple|296|94|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 21.1126.292|<tuple|297|94|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 21.1127.292|<tuple|298|94|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 21.1127\<point\>300|<tuple|310|97|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 21.1128.292|<tuple|299|94|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 21.1128\<point\>300|<tuple|311|97|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 21.1129.292|<tuple|300|94|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 21.1130.292|<tuple|301|94|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 21.1130.300|<tuple|313|98|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 21.1131.292|<tuple|302|95|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 21.1229.300|<tuple|312|97|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 21.27.273|<tuple|220|74|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 21.30.273|<tuple|221|74|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 23.1.1|<tuple|522|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 23.2.1|<tuple|523|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|eq 23.3.1|<tuple|524|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|fig 4.311|<tuple|4|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|fig 5.311|<tuple|5|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|figure 20.6.234|<tuple|3|72|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|lemma 14.360.158|<tuple|10|10|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|lemma 14.364.159|<tuple|14|13|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|lemma 16.104.194|<tuple|23|23|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|lemma 16.105.194|<tuple|91|120|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|lemma 16.106.194|<tuple|25|26|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|lemma 16.107.194|<tuple|26|27|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|lemma 16.108.194|<tuple|27|28|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|lemma 16.135.200|<tuple|89|117|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|lemma 16.148.201|<tuple|35|44|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|lemma 16.190.122|<tuple|28|29|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|lemma 16.201.126|<tuple|30|35|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|lemma 16.202.127|<tuple|100|50|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|lemma 16.24.178|<tuple|18|18|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|lemma 16.25.178|<tuple|19|18|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|lemma 16.97.193|<tuple|96|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|lemma 20.206.204|<tuple|41|52|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|lemma 20.207.204|<tuple|42|53|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|lemma 20.208.204|<tuple|43|54|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|lemma 20.209.204|<tuple|44|54|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|lemma 20.211.204|<tuple|46|56|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|lemma 20.470.246|<tuple|50|63|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|lemma 20.477.246|<tuple|53|72|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|lemma 20.613.279|<tuple|56|74|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|lemma 21.578.291|<tuple|69|89|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|lemma 21.579.291|<tuple|70|90|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|lemma 21.587.292|<tuple|74|92|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|lemma 21.589.295|<tuple|77|96|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|lemma 21.590.292|<tuple|75|94|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|lemma 21.591.|<tuple|76|95|../Mathematical-Analysis.53/scrapbook.tm>>
     <associate|measurability of image of a measurable set by a
-    isomorphism|<tuple|64|87>>
-    <associate|measurable function in sub space|<tuple|114|?>>
-    <associate|measurable function sum|<tuple|57|78>>
-    <associate|measurable function sum (finite)|<tuple|111|79>>
-    <associate|measure Borel measure of T(A)|<tuple|65|87>>
-    <associate|measure Borel measure of T(A)(1)|<tuple|67|88>>
-    <associate|measure integral alternative (2)|<tuple|117|?>>
-    <associate|measure length function is a pre-measure|<tuple|47|56>>
+    isomorphism|<tuple|64|87|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|measurable function in sub
+    space|<tuple|114|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|measurable function sum|<tuple|57|78|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|measurable function sum (finite)|<tuple|111|79|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|measure Borel measure of T(A)|<tuple|65|87|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|measure Borel measure of T(A)(1)|<tuple|67|88|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|measure integral alternative
+    (2)|<tuple|117|?|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|measure length function is a
+    pre-measure|<tuple|47|56|../Mathematical-Analysis.53/scrapbook.tm>>
     <associate|non negative function as limit of simple
-    functions|<tuple|51|66>>
-    <associate|note 21.580.291|<tuple|71|91>>
+    functions|<tuple|51|66|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|note 21.580.291|<tuple|71|91|../Mathematical-Analysis.53/scrapbook.tm>>
     <associate|series absolute convergence alternative
-    definition|<tuple|11|11>>
+    definition|<tuple|11|11|../Mathematical-Analysis.53/scrapbook.tm>>
     <associate|series absolute convergence commutativity countable
-    sums|<tuple|8|8>>
-    <associate|series absolute convergence countable family|<tuple|7|8>>
+    sums|<tuple|8|8|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|series absolute convergence countable
+    family|<tuple|7|8|../Mathematical-Analysis.53/scrapbook.tm>>
     <associate|series absolute convergence dominant
-    convergence|<tuple|13|13>>
+    convergence|<tuple|13|13|../Mathematical-Analysis.53/scrapbook.tm>>
     <associate|series absolute convergence of countable families
-    condition|<tuple|12|12>>
+    condition|<tuple|12|12|../Mathematical-Analysis.53/scrapbook.tm>>
     <associate|series absolute convergence sum and scalar
-    product|<tuple|9|9>>
+    product|<tuple|9|9|../Mathematical-Analysis.53/scrapbook.tm>>
     <associate|series absolute convergent countable
-    associativity|<tuple|15|14>>
-    <associate|series absolute sum over a countable set|<tuple|6|8>>
-    <associate|series distributivity|<tuple|16|17>>
-    <associate|series lemma 14.342|<tuple|3|3>>
-    <associate|simple measurable (1)|<tuple|49|60>>
+    associativity|<tuple|15|14|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|series absolute sum over a countable
+    set|<tuple|6|8|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|series distributivity|<tuple|16|17|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|series lemma 14.342|<tuple|3|3|../Mathematical-Analysis.53/scrapbook.tm>>
+    <associate|simple measurable (1)|<tuple|49|60|../Mathematical-Analysis.53/scrapbook.tm>>
   </collection>
 </references>
 

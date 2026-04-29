@@ -1,4 +1,4 @@
-<TeXmacs|2.1.4>
+<TeXmacs|2.1.5>
 
 <project|FullBook.tm>
 
@@ -9,12 +9,26 @@
 
   <section|Definition and properties>
 
+  René Descartes showed that classical euclidean space [which is a collection
+  of points, lines, planes and concepts like parallel lines and
+  orthogonality] can be identified with <math|\<bbb-R\><rsup|3>> using a
+  coordinate system. However identification does not mean that they are the
+  same, for example in geometric space there is no concept of adding points
+  and there is no special point why <math|\<bbb-R\><rsup|3>> has a canonical
+  vector space structure and has a special point <math|<around*|(|0,0,0|)>>.
+  Further the identification is dependent on the coordinate axes and origin
+  that has been choosen. Affine spaces turns out to be a better model for the
+  eucledian space by separating the space of points from the vector space
+  structure.
+
   <\definition>
     <label|affine space><index|affine space>Let <math|n\<in\>\<bbb-N\>> then
-    a <with|font-series|bold|real affine space of dimension ><math|n> is a
-    pair <math|<around*|\<langle\>|\<bbb-A\><rsup|n>,V|\<rangle\>>> where
-    <math|\<bbb-A\>> is a set called the <with|font-series|bold|set of
-    points> and <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>> is a
+    a <with|font-series|bold|real affine space of dimension
+    ><math|<with|font-series|bold|n>> is a triple
+    <math|<around*|\<langle\>|\<bbb-A\><rsup|n>,V,\<ominus\>|\<rangle\>>>
+    where <math|\<bbb-A\><rsup|n>> is a non empty set called the
+    <with|font-series|bold|set of points> and
+    <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>> is a
     <math|n>-dimensional vector space over the field <math|\<bbb-R\>> called
     the <with|font-series|bold|space of displacements> or the
     <with|font-series|bold|space of free vactors> together with a operator\ 
@@ -41,9 +55,15 @@
       We use the follloing notation conventions:\ 
 
       <\enumerate>
+        <item>The notation <math|\<bbb-A\><rsup|n>> does
+        <with|font-series|bold|not> mean that <math|\<bbb-A\><rsup|n>> is the
+        <math|n>-times product of a set <math|\<bbb-A\>> but is a notation to
+        indicate that the dimension of the space of displacements is
+        <math|n>.\ 
+
         <item>Elements of <math|\<bbb-A\><rsup|n>> are called points and are
         noted as upper case symbols. Examples are
-        <math|P,R,R,P<rsub|1>,P<rsub|2>>, etc.
+        <math|P,Q,R,P<rsub|1>,P<rsub|2>>, etc.
 
         <item>Elements of <math|V> are called vectors and are noted with a
         lower case letter beneath a arrow. Examples are
@@ -55,9 +75,20 @@
         <math|Q\<in\>\<bbb-A\><rsup|n>> such that
         <math|<wide|v|\<vect\>>=Q\<ominus\>P> is noted as
         <math|P\<oplus\><wide|v|\<vect\>>>. Using this notation we have that
-        <math|Q=P\<oplus\><wide|v|\<vect\>>\<in\>\<bbb-A\><rsup|n>> and
-        <math|<around*|(|P\<oplus\><wide|v|\<vect\>>|)>\<ominus\>P=<wide|v|\<vect\>>>
-        \ <math|\<forall\><around*|(|P,<wide|v|\<vect\>>|)>\<in\>\<bbb-A\><rsup|n>\<times\>V>
+        for <math|<around*|(|P,<wide|v|\<wide-varrightarrow\>>|)>\<in\>\<bbb-A\><rsup|n>\<times\>V>\ 
+
+        <\equation*>
+          P\<oplus\><wide|v|\<wide-varrightarrow\>>\<in\>\<bbb-A\><rsup|n><text|
+          and ><around*|(|P\<oplus\><wide|v|\<wide-varrightarrow\>>|)>\<ominus\>P=<wide|v|\<wide-varrightarrow\>>
+        </equation*>
+
+        and
+
+        <\equation*>
+          <text|If >Q\<in\>\<bbb-A\><rsup|n><text| such that
+          <math|<wide|v|\<wide-varrightarrow\>>=Q\<ominus\>P<text| then
+          >Q=P\<oplus\><wide|v|\<wide-varrightarrow\>>>>
+        </equation*>
 
         <item>The operators <math|+,\<cdot\>,-> are always the traditional
         operators in the vector space <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>>
@@ -66,13 +97,47 @@
     </notation>
   </definition>
 
+  The following figure illustates the defintion of a affine space
+  <math|<around*|\<langle\>|\<bbb-A\><rsup|2>,V|\<rangle\>>>
+
+  <\eqnarray*>
+    <tformat|<table|<row|<cell|P,Q,R,P<rprime|'>,Q<rprime|'>,R<rprime|'>>|<cell|<text|are
+    points in >\<bbb-A\><rsup|2>>|<cell|>>|<row|<cell|<wide|v|\<wide-varrightarrow\>>,<wide|w|\<wide-varrightarrow\>>,<wide|v|\<wide-varrightarrow\>>+<wide|w|\<wide-varrightarrow\>>>|<cell|are
+    vectors in V>|<cell|>>|<row|<cell|>|<cell|where>|<cell|>>|<row|<cell|>|<cell|<wide|v|\<wide-varrightarrow\>>=Q\<ominus\>P=Q<rprime|'>\<ominus\>P<rprime|'>>|<cell|>>|<row|<cell|>|<cell|<wide|w|\<wide-varrightarrow\>>=R\<ominus\>Q=R<rprime|'>\<ominus\>Q<rprime|'>>|<cell|>>|<row|<cell|>|<cell|<wide|v|\<wide-varrightarrow\>>+<wide|w|\<wide-varrightarrow\>>=<around*|(|Q\<ominus\>P|)>+<around*|(|R\<ominus\>Q|)>=<around*|(|R\<ominus\>Q|)>+<around*|(|Q\<ominus\>P|)>=R\<ominus\>P>|<cell|>>>>
+  </eqnarray*>
+
+  <\big-figure|<with|gr-mode|<tuple|group-edit|move>|gr-frame|<tuple|scale|1cm|<tuple|0.400009gw|0.5gh>>|gr-geometry|<tuple|geometry|1par|0.6par>|gr-color|dark
+  green|gr-line-width|2ln|gr-arrow-end|\<gtr\>\<gtr\>|gr-grid|<tuple|empty>|gr-grid-old|<tuple|cartesian|<point|0|0>|2>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|empty>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|2>|<graphics||<with|color|blue|arrow-end|\<gtr\>\<gtr\>|line-width|2ln|<with|font-series|bold|><line|<point|-2|-4>|<point|2.0|-2.0>><with|font-series|bold|>>|<with|color|red|arrow-end|\<gtr\>\<gtr\>|line-width|2ln|<line|<point|2|-2>|<point|0.0|0.0>>>|<with|color|dark
+  green|arrow-end|\<gtr\>\<gtr\>|line-width|2ln|<line|<point|0|0>|<point|-2.0|-4.0>>>|<with|color|blue|arrow-end|\<gtr\>\<gtr\>|line-width|2ln|<line|<point|2|0>|<point|6.0|2.0>>>|<with|color|red|arrow-end|\<gtr\>\<gtr\>|line-width|2ln|<line|<point|6|2>|<point|4.0|4.0>>>|<with|color|dark
+  green|arrow-end|\<gtr\>\<gtr\>|line-width|2ln|<line|<point|4|4>|<point|2.0|0.0>>>|<with|color|dark
+  green|<text-at|<with|font-series|bold|P>|<point|-2|-4.4>>>|<with|color|dark
+  green|<text-at|<with|font-series|bold|Q>|<point|2|-2.4>>>|<with|color|dark
+  green|<text-at|<with|font-series|bold|R>|<point|0|0.4>>>|<with|color|dark
+  green|<text-at|<with|font-series|bold|P'>|<point|2|-0.4>>>|<with|color|dark
+  green|<text-at|<with|font-series|bold|Q'>|<point|6|1.6>>>|<with|color|dark
+  green|<text-at|<with|font-series|bold|R'>|<point|4|4.2>>>|<with|color|blue|<text-at|<with|font-series|bold|<math|<wide|u|\<wide-varrightarrow\>>=Q\<ominus\>P=Q<rprime|'>\<ominus\>P<rprime|'>>>|<point|0.2|-3.6>>>|<with|color|red|<text-at|<with|font-series|bold|<math|<wide|w|\<wide-varrightarrow\>>=R\<ominus\>Q=R<rprime|'>\<ominus\>Q<rprime|'>>>|<point|1.4|-1>>>|<with|color|dark
+  green|<text-at|<with|font-series|bold|<math|<wide|v|\<wide-varrightarrow\>>+<wide|w|\<wide-varrightarrow\>>=R\<ominus\>P=R<rprime|'>\<ominus\>P<rprime|'>>>|<point|-5.6|-2.0>>>|<with|color|blue|<text-at|<with|font-series|bold|<math|<wide|v|\<wide-varrightarrow\>>=Q\<ominus\>P=Q\<ominus\>P<rprime|'>>>|<point|4.4|0.6>>>|<with|color|red|<text-at|<with|font-series|bold|<math|<wide|v|\<wide-varrightarrow\>>=R\<ominus\>Q=R<rprime|'>\<ominus\>Q<rprime|'>>>|<point|5.4|3.2>>>|<with|color|dark
+  green|<text-at|<with|font-series|bold|<math|<wide|v|\<wide-varrightarrow\>>+<wide|w|\<wide-varrightarrow\>>=R\<ominus\>P=R<rprime|'>\<ominus\>P<rprime|'>>>|<point|-1.6|2.0>>>>>>
+    <label|figure 22.1.1>
+  </big-figure>
+
+  \;
+
   A trival example of a affine space is the following
 
   <\example>
-    Let <math|n\<in\>\<bbb-N\>> then <math|<around*|\<langle\>|\<bbb-A\><rsup|n>,V|\<rangle\>>>
-    where <math|\<bbb-A\><rsup|n><rsub|1>=\<bbb-R\><rsup|n>> the set of
-    points and <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>=<around*|\<langle\>|\<bbb-R\><rsup|n>,+,\<cdot\>|\<rangle\>>>
-    and <math|\<ominus\>=-> is a real affine space of dimension <math|n>.
+    Let <math|n\<in\>\<bbb-N\>> and take <math|\<bbb-A\><rsup|n>=\<bbb-R\><rsup|n>>,
+    <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>=<around*|\<langle\>|\<bbb-R\><rsup|n>,+,\<cdot\>|\<rangle\>>>
+    and\ 
+
+    <\equation*>
+      \<ominus\>:\<bbb-A\><rsup|n>\<times\>\<bbb-A\><rsup|n>=\<bbb-R\><rsup|n>\<times\>\<bbb-R\><rsup|n>\<rightarrow\>V=\<bbb-R\><rsup|n><text|
+      where >Q\<ominus\>P=Q-P
+    </equation*>
+
+    \ then <math|<around*|\<langle\>|\<bbb-A\><rsup|n>,V,\<ominus\>|\<rangle\>>>
+    is a affine space. In other words <math|<around*|\<langle\>|\<bbb-R\><rsup|n>,\<bbb-R\><rsup|n>,-|\<rangle\>>>
+    is a affine space which is the canonical example of a affine space.
   </example>
 
   <\proof>
@@ -111,11 +176,22 @@
       >Q\<in\>\<bbb-R\><rsup|n><text| such that
       >Q\<ominus\>P=<wide|v|\<vect\>>
     </equation*>
+
+    Further if <math|Q<rprime|'>=<around*|(|q<rprime|'><rsub|1>,\<ldots\>,q<rprime|'><rsub|n>|)>\<in\>\<bbb-R\><rsup|n>>
+    such that <math|Q<rprime|'>\<ominus\>P=<wide|v|\<wide-varrightarrow\>>>
+    then we have that\ 
+
+    <\equation*>
+      \<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><text|
+      >v<rsub|i>=q<rprime|'><rsub|i>-p<rsub|i>\<Rightarrow\>q<rprime|'><rsub|i>=p<rsub|i>+v<rsub|i>=q<rsub|i>
+    </equation*>
+
+    so that <math|Q<rprime|'>=Q>.
   </proof>
 
   <\theorem>
     <label|affine space Q+(P-Q)=P>Let <math|n\<in\>\<bbb-N\>> and
-    <math|n\<in\>\<bbb-N\><infix-and><around*|\<langle\>|\<bbb-A\><rsup|n>,V|\<rangle\>>>
+    <math|n\<in\>\<bbb-N\><infix-and><around*|\<langle\>|\<bbb-A\><rsup|n>,V,\<ominus\>|\<rangle\>>>
     a real affine space of dimension <math|n> then <math|\<forall\>P,Q> we
     have\ 
 
@@ -135,27 +211,35 @@
     so that by uniqueness we have <math|P=Q\<oplus\><wide|v|\<vect\>>=Q\<oplus\><around*|(|P\<ominus\>Q|)>>.
   </proof>
 
+  The following theorem shows that <math|P\<ominus\>Q=P<rprime|'>\<ominus\>Q<rprime|'>>
+  implies that <math|P<rprime|'>\<ominus\>P=Q<rprime|'>\<ominus\>Q> as is
+  illustrated in the followin figure.
+
+  <\big-figure|<with|gr-mode|<tuple|edit|point>|gr-frame|<tuple|scale|1cm|<tuple|0.5gw|0.140001gh>>|gr-geometry|<tuple|geometry|1par|0.6par>|gr-grid|<tuple|empty>|gr-grid-old|<tuple|cartesian|<point|0|0>|2>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|empty>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|2>|gr-arrow-end|\<gtr\>\<gtr\>|gr-line-width|2ln|gr-color|red|<graphics||<with|color|blue|arrow-end|\<gtr\>\<gtr\>|line-width|2ln|<line|<point|-4|0>|<point|2.0|2.0>>>|<with|color|blue|arrow-end|\<gtr\>\<gtr\>|line-width|2ln|<line|<point|-2|4>|<point|4.0|6.0>>>|<text-at|<with|font-series|bold|Q>|<point|-4|-0.6>>|<text-at|<with|font-series|bold|P>|<point|2|1.4>>|<text-at|<with|font-series|bold|Q'>|<point|-2|3.4>>|<text-at|<with|font-series|bold|P'>|<point|4|5.4>>|<with|color|red|arrow-end|\<gtr\>\<gtr\>|line-width|2ln|<line|<point|4|6>|<point|2.0|2.0>>>|<with|color|red|arrow-end|\<gtr\>\<gtr\>|line-width|2ln|<line|<point|-2|4>|<point|-4.0|0.0>>>|<with|color|red|<text-at|<with|font-series|bold|<math|P<rprime|'>\<ominus\>P<rprime|'>=Q\<ominus\>Q<rprime|'>>>|<point|3.34514|3.8>>>|<with|color|red|<text-at|<with|font-series|bold|<math|>><math|<with|font-series|bold|>><with|font-series|bold|<math|Q<rprime|'>\<ominus\>Q=P<rprime|'>\<ominus\>P>>|<point|-6.0|2.0>>>>>>
+    \;
+  </big-figure>
+
+  \;
+
   <\theorem>
-    <label|affine P-Q=P'-Q'=\<gtr\>P-P'=Q=Q'>Let <math|n\<in\>\<bbb-N\>> and
-    <math|n\<in\>\<bbb-N\><infix-and><around*|\<langle\>|\<bbb-A\><rsup|n>,V|\<rangle\>>>
+    <label|affine P-Q=P'-Q'=\<gtr\>P-P'=Q=Q'>Let
+    <math|n\<in\>\<bbb-N\>><math|<infix-and><around*|\<langle\>|\<bbb-A\><rsup|n>,V,\<ominus\>|\<rangle\>>>
     a real affine space of dimension <math|n> then
-    <math|<rigid|\<forall\>P,P<rprime|'>,Q,Q\<in\>\<bbb-A\><rsup|n>>> such
-    that <math|P\<ominus\>Q=P<rprime|'>\<ominus\>Q<rprime|'>> we have
-    <math|P\<ominus\>P<rprime|'>=Q\<ominus\>Q<rprime|'>>
+    <math|<rigid|\<forall\>P,P<rprime|'>,Q,Q<rprime|'>\<in\>\<bbb-A\><rsup|n>>>
+    such that <math|P\<ominus\>Q=P<rprime|'>\<ominus\>Q<rprime|'>> then we
+    have <math|P\<ominus\>P<rprime|'>=Q\<ominus\>Q<rprime|'>>.
   </theorem>
 
   <\proof>
     As <math|P\<ominus\>Q=P<rprime|'>\<ominus\>Q<rprime|'>> we have\ 
 
     <\eqnarray*>
-      <tformat|<table|<row|<cell|<around*|(|P\<ominus\>Q|)>+<around*|(|Q\<ominus\>P<rprime|'>|)>=<around*|(|P<rprime|'>\<ominus\>Q<rprime|'>|)>+<around*|(|Q\<ominus\>P<rprime|'>|)>>|<cell|\<Rightarrow\>>|<cell|<around*|(|P\<ominus\>P<rprime|'>|)>=<around*|(|P<rprime|'>\<ominus\>Q<rprime|'>|)>+<around*|(|Q\<ominus\>P<rprime|'>|)>>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|<around*|(|P\<ominus\>P<rprime|'>|)>=<around*|(|Q\<ominus\>P<rprime|'>|)>+<around*|(|P<rprime|'>\<ominus\>Q<rprime|'>|)>>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|P\<ominus\>P<rprime|'>=Q\<ominus\>Q<rprime|'>>>>>
+      <tformat|<table|<row|<cell|<around*|(|P\<ominus\>Q|)>+<around*|(|Q\<ominus\>P<rprime|'>|)>=<around*|(|P<rprime|'>\<ominus\>Q<rprime|'>|)>+<around*|(|Q\<ominus\>P<rprime|'>|)>>|<cell|<below|\<Rightarrow\>|def>>|<cell|<around*|(|P\<ominus\>P<rprime|'>|)>=<around*|(|P<rprime|'>\<ominus\>Q<rprime|'>|)>+<around*|(|Q\<ominus\>P<rprime|'>|)>>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|<around*|(|P\<ominus\>P<rprime|'>|)>=<around*|(|Q\<ominus\>P<rprime|'>|)>+<around*|(|P<rprime|'>\<ominus\>Q<rprime|'>|)>>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|P\<ominus\>P<rprime|'>=Q\<ominus\>Q<rprime|'>>>>>
     </eqnarray*>
-
-    \;
   </proof>
 
   <\theorem>
-    <label|affine space zero vector>Let <math|n\<in\>\<bbb-N\><infix-and><around*|\<langle\>|\<bbb-A\><rsup|n>,V|\<rangle\>>>
+    <label|affine space zero vector>Let <math|n\<in\>\<bbb-N\><infix-and><around*|\<langle\>|\<bbb-A\><rsup|n>,V,\<ominus\>|\<rangle\>>>
     a real affine space of dimension <math|n> then
     <math|\<forall\>P\<in\>\<bbb-A\><rsup|n>> we have that
     <math|P\<ominus\>P=<wide|0|\<vect\>>> where <math|<wide|0|\<vect\>>> is
@@ -164,7 +248,14 @@
 
   <\proof>
     Let <math|P\<in\>\<bbb-A\><rsup|n>> then
-    <math|\<forall\><wide|v|\<vect\>>\<in\>V> we have
+    <math|\<forall\><wide|v|\<vect\>>\<in\>V> we have by [definition:
+    <reference|affine space>, notation (4)] that\ 
+
+    <\equation*>
+      <around*|(|P\<oplus\><wide|v|\<wide-varrightarrow\>>|)>\<ominus\>P=<wide|v|\<wide-varrightarrow\>>
+    </equation*>
+
+    so that
 
     <\equation*>
       <around*|(|P\<ominus\>P|)>+<wide|v|\<vect\>>=<around*|(|P\<ominus\>P|)>+<around*|(|<around*|(|P\<oplus\><wide|v|\<vect\>>|)>\<ominus\>P|)>=<around*|(|<around*|(|P\<oplus\><wide|v|\<vect\>>|)>\<ominus\>P|)>+<around*|(|P\<ominus\>P|)>=<around*|(|P\<oplus\><wide|v|\<vect\>>|)>\<ominus\>P=<wide|v|\<vect\>>
@@ -174,7 +265,7 @@
   </proof>
 
   <\theorem>
-    <label|affine space P-Q=-(Q-P)>Let <math|n\<in\>\<bbb-N\>,<around*|\<langle\>|\<bbb-A\><rsup|n>,V|\<rangle\>>>
+    <label|affine space P-Q=-(Q-P)>Let <math|n\<in\>\<bbb-N\>,<around*|\<langle\>|\<bbb-A\><rsup|n>,V,\<ominus\>|\<rangle\>>>
     a real affine space of dimension <math|n> and
     <math|P,Q\<in\>\<cal-A\><rsup|n>> then
     <math|<rigid|<around*|(|P\<ominus\>Q|)>=-<around*|(|Q\<ominus\>P|)>>>
@@ -190,7 +281,7 @@
 
   <\theorem>
     <label|affine space associativity>Let
-    <math|n\<in\>\<bbb-N\>,<around*|\<langle\>|\<bbb-A\><rsup|n>,V|\<rangle\>>>
+    <math|n\<in\>\<bbb-N\>,<around*|\<langle\>|\<bbb-A\><rsup|n>,V,\<ominus\>|\<rangle\>>>
     a real affine space of dimension <math|n>,
     <math|P\<in\>\<bbb-A\><rsup|n>> and <math|<wide|v|\<vect\>>,<wide|u|\<vect\>>\<in\>V>
     then we have\ 
@@ -219,7 +310,7 @@
 
   <\theorem>
     <label|affine space P-Q=(P+u)-(Q+u)>Let
-    <math|n\<in\>\<bbb-N\>,<around*|\<langle\>|\<bbb-A\><rsup|n>,V|\<rangle\>>>
+    <math|n\<in\>\<bbb-N\>,<around*|\<langle\>|\<bbb-A\><rsup|n>,V,\<ominus\>|\<rangle\>>>
     a real affine space of dimension <math|n>,
     <math|P,Q\<in\>\<cal-A\><rsup|n>> and <math|<wide|v|\<vect\>>\<in\>V>
     then\ 
@@ -233,7 +324,7 @@
     We have\ 
 
     <\eqnarray*>
-      <tformat|<table|<row|<cell|<around*|(|P\<ominus\>Q|)>>|<cell|=>|<cell|<around*|(|P\<ominus\>Q|)>+<wide|0|\<vect\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|P\<ominus\>Q|)>+<around*|(|-<wide|v|\<vect\>>+<wide|v|\<vect\>>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|P\<ominus\>Q|)>+<around*|(|-<around*|(|<around*|(|Q\<oplus\><wide|v|\<vect\>>|)>\<ominus\>Q|)>+<around*|(|<around*|(|P\<oplus\><wide|v|\<vect\>>|)>\<ominus\>P|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <tformat|<table|<row|<cell|P\<ominus\>Q>|<cell|=>|<cell|<around*|(|P\<ominus\>Q|)>+<wide|0|\<vect\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|P\<ominus\>Q|)>+<around*|(|-<wide|v|\<vect\>>+<wide|v|\<vect\>>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|P\<ominus\>Q|)>+<around*|(|-<around*|(|<around*|(|Q\<oplus\><wide|v|\<vect\>>|)>\<ominus\>Q|)>+<around*|(|<around*|(|P\<oplus\><wide|v|\<vect\>>|)>\<ominus\>P|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
       <reference|affine space P-Q=-(Q-P)>]>>>|<cell|<around*|(|P\<ominus\>Q|)>+<around*|(|<around*|(|Q\<ominus\><around*|(|Q\<oplus\><wide|v|\<vect\>>|)>|)>+<around*|(|<around*|(|P\<oplus\><wide|v|\<vect\>>|)>\<ominus\>P|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|V<text|
       is a vector space>>>|<cell|<around*|(|<around*|(|P\<ominus\>Q|)>+<around*|(|Q\<ominus\><around*|(|Q\<oplus\><wide|v|\<vect\>>|)>|)>|)>+<around*|(|<around*|(|P\<oplus\><wide|v|\<vect\>>|)>\<ominus\>P|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|affine
       space definition>>>|<cell|<around*|(|P\<ominus\><around*|(|Q\<oplus\><wide|v|\<vect\>>|)>|)>+<around*|(|<around*|(|P\<oplus\><wide|v|\<vect\>>|)>\<ominus\>P|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|V<text|
@@ -242,20 +333,24 @@
     </eqnarray*>
   </proof>
 
+  We define now the concept of a Coordinate System which esssential associate
+  with points in <math|\<bbb-A\><rsup|n>> a tuple of coordinates.
+
   <\definition>
     <label|affine space local coordinate system><index|local coordinate
     system><index|global coordinate system><dueto|Local Coordinate System>Let
-    <math|<around*|\<langle\>|\<bbb-A\><rsup|n>,V|\<rangle\>>> be a real
-    affine space of dimension <math|n> then a <with|font-series|bold|local
-    coordinate system> on <math|<around*|\<langle\>|\<bbb-A\><rsup|n>,V|\<rangle\>>>is
-    a mapping\ 
+    <math|<around*|\<langle\>|\<bbb-A\><rsup|n>,V,\<ominus\>|\<rangle\>>> be
+    a real affine space of dimension <math|n> then a
+    <with|font-series|bold|local coordinate system> on
+    <math|<around*|\<langle\>|\<bbb-A\><rsup|n>,V,\<ominus\>|\<rangle\>>>is a
+    mapping\ 
 
     <\equation*>
       f:U\<rightarrow\>\<bbb-R\><rsup|n>
     </equation*>
 
-    where <math|U\<subseteq\>\<bbb-A\><rsup|n>> and <math|f<around*|(|U|)>>
-    is a open set in <math|<around*|\<langle\>|\<bbb-R\><rsup|n>,\<\|\|\><rsub|n>|\<rangle\>>>
+    where <math|U\<subseteq\>\<bbb-A\><rsup|n>>, <math|f<around*|(|U|)>> is a
+    open set in <math|<around*|\<langle\>|\<bbb-R\><rsup|n>,\<\|\|\><rsub|n>|\<rangle\>>>
     and <math|f> is injective. Let <math|P\<in\>\<bbb-A\>> then
     <math|f<around*|(|P|)>> is of the form
     <math|f<around*|(|P|)>=<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>> we
@@ -263,7 +358,7 @@
     of <math|P> using the coordinate system <math|f>. If
     <math|U=\<bbb-A\><rsup|n>> then <math|f> is called a
     <with|font-series|bold|global coordinate system> on
-    <math|<around*|\<langle\>|\<bbb-A\><rsup|n>,V|\<rangle\>>>.
+    <math|<around*|\<langle\>|\<bbb-A\><rsup|n>,V,\<ominus\>|\<rangle\>>>.
   </definition>
 
   We prove now that every real affine space of dimension <math|n> has a
@@ -271,10 +366,11 @@
 
   <\theorem>
     <label|affine cartesian cooddinate system>Let <math|n\<in\>\<bbb-N\>>,
-    <math|<around*|\<langle\>|\<bbb-A\><rsup|n>,V|\<rangle\>>> be a \ a real
-    affine space of dimension <math|n>, <math|O\<in\>\<bbb-A\><rsup|n>> the
-    set of points and <math|E=<around*|{|<wide|e<rsub|1>|\<vect\>>,\<ldots\>,<wide|e<rsub|n>|\<vect\>>|}>>
-    a basis for <math|V> the set of displacements then\ 
+    <math|<around*|\<langle\>|\<bbb-A\><rsup|n>,V,\<ominus\>|\<rangle\>>> be
+    a \ a real affine space of dimension <math|n>,
+    <math|O\<in\>\<bbb-A\><rsup|n>> the set of points and
+    <math|E=<around*|{|<wide|e<rsub|1>|\<vect\>>,\<ldots\>,<wide|e<rsub|n>|\<vect\>>|}>>
+    a basis for <math|V> the set of displacements then the function
 
     <\equation*>
       f:\<bbb-A\><rsup|n>\<rightarrow\>\<bbb-R\><rsup|n><text| defined by
@@ -284,19 +380,19 @@
 
     is a <with|font-series|bold|bijection> that is a
     <with|font-series|bold|global coordinate system> on
-    <math|<around*|\<langle\>|\<bbb-A\><rsup|n>,V|\<rangle\>>>. We call this
-    <with|font-series|bold|global coordinate system >a
+    <math|<around*|\<langle\>|\<bbb-A\><rsup|n>,V,\<ominus\>|\<rangle\>>>. We
+    call this <with|font-series|bold|global coordinate system >a
     <with|font-series|bold|Cartesion coordinate system>
     <with|font-series|bold|with origin <math|O> and axes
-    <math|e<rsub|1>,\<ldots\>,e<rsub|n>>>.\ 
+    <math|<around*|{|e<rsub|1>,\<ldots\>,e<rsub|n>|}>>>.\ 
   </theorem>
 
   <\note>
     Although this theorem ensures that every real affine space of dimension
-    <math|n> has at least one global coordinate system not every local
-    coordinate system should be a Cartesion coordinate system. These local
-    coordinate systems that are not Cartesion are called
-    <with|font-series|bold|curvilinear coordinate systems>.
+    <math|n> has at least one global coordinate system not every coordinate
+    system should be a Cartesion coordinate system. These coordinate systems
+    that are not Cartesion are called <with|font-series|bold|curvilinear
+    coordinate systems>.
   </note>
 
   <\proof>
@@ -347,17 +443,15 @@
     <math|<around*|\<langle\>|\<bbb-R\><rsup|n>,\<shortmid\>\<\|\|\><rsub|n>|\<rangle\>>>.
     So by [definition: <reference|affine space local coordinate system>]
     <math|f> is a global coordinate system on
-    <math|<around*|\<langle\>|\<bbb-A\><rsup|n>,V|\<rangle\>>>.
+    <math|<around*|\<langle\>|\<bbb-A\><rsup|n>,V,\<ominus\>|\<rangle\>>>.
   </proof>
 
   We examine now how Cartesian coordinate system transforms under a change of
-  basis
-
-  TODO
+  basis.
 
   <\theorem>
     <label|affine cartesion coodinate system transform>Let
-    <math|n\<in\>\<bbb-N\>>, <math|<around*|\<langle\>|\<bbb-A\><rsup|n>,V|\<rangle\>>>
+    <math|n\<in\>\<bbb-N\>>, <math|<around*|\<langle\>|\<bbb-A\><rsup|n>,V,\<ominus\>|\<rangle\>>>
     be a real affine space of dimension <math|n> and
     <math|E=<around*|{|<wide|e<rsub|1>|\<vect\>>,\<ldots\>,<wide|e<rsub|n>|\<vect\>>|}>>,
     <math|E<rprime|'>=<around*|{|<wide|e<rsub|1>|\<vect\>><rprime|'>,\<ldots\>,<wide|e<rsub|n>|\<vect\>><rprime|'>|}>>
@@ -390,7 +484,7 @@
     <\enumerate>
       <item>For <math|g\<circ\>f<rsup|-1>:\<bbb-R\><rsup|n>\<rightarrow\>\<bbb-R\><rsup|n>>
       and <math|f\<circ\>g<rsup|-1>:\<bbb-R\><rsup|n>\<rightarrow\>\<bbb-R\><rsup|n>>
-      we have\ 
+      we have <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
 
       <\equation*>
         \<forall\><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)><text|
@@ -399,7 +493,7 @@
 
       <\equation*>
         \<forall\><around*|(|x<rsub|1><rprime|'>,\<ldots\>,x<rprime|'><rsub|n>|)><text|
-        ><around*|(|<around*|(|f\<circ\>g<rsup|-1>|)><around*|(|x<rprime|'><rsub|1>,\<ldots\>,x<rprime|'><rsub|n>|)>|)><rsub|i>=-b<rsub|i>+<big|sum><rsub|j=1><around*|(|M<rsup|-1>|)><rsub|i,j>\<cdot\>x<rprime|'><rsub|j>
+        ><around*|(|<around*|(|f\<circ\>g<rsup|-1>|)><around*|(|x<rprime|'><rsub|1>,\<ldots\>,x<rprime|'><rsub|n>|)>|)><rsub|i>=-b<rsub|i>+<big|sum><rsup|n><rsub|j=1><around*|(|M<rsup|-1>|)><rsub|i,j>\<cdot\>x<rprime|'><rsub|j>
       </equation*>
 
       where <math|<around*|(|O\<ominus\>Q<rprime|'>|)>=<big|sum><rsub|i=1><rsup|n>b<rsub|i>\<cdot\><wide|e<rsub|i>|\<vect\>>>.
@@ -459,14 +553,14 @@
       <\eqnarray*>
         <tformat|<table|<row|<cell|P\<ominus\>O<rprime|'>>|<cell|=>|<cell|<around*|(|P\<ominus\>O|)>+<around*|(|O\<ominus\>O<rprime|'>|)>>>|<row|<cell|>|<cell|<below|=|<text|[eq:
         <reference|eq 21.1.172>]>>>|<cell|<big|sum><rsub|i=1><rsup|n>x<rsub|i>\<cdot\><wide|e<rsub|i>|\<vect\>>+<big|sum><rsub|i=1><rsup|n>b<rsub|i>\<cdot\><wide|e<rsub|i>|\<vect\>>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|n><around*|(|x<rsub|i>+b<rsub|i>|)>\<cdot\><wide|e<rsub|i>|\<vect\>>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|n><around*|(|x<rsub|i>+b<rsub|i>|)>\<cdot\><around*|(|<big|sum><rsub|j=1><rsup|n>M<rsub|j,i>\<cdot\><wide|e<rsub|j>|\<vect\>><rprime|'>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|n><around*|(|<big|sum><rsub|j=1><rsup|n><around*|(|<around*|(|x<rsub|i>+b<rsub|i>|)>\<cdot\>M<rsub|j,i>\<cdot\><wide|e<rsub|j>|\<vect\>><rprime|'>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
-        <reference|sum index is a product>]>>>|<cell|<big|sum><rsub|j=1><rsup|n><around*|(|<big|sum><rsub|i=1><rsup|n><around*|(|<around*|(|x<rsub|i>+b<rsub|i>|)>\<cdot\>M<rsub|j,i>\<cdot\><wide|e<rsub|j>|\<vect\>><rprime|'>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|j=1><rsup|n><around*|(|<big|sum><rsub|i=1><rsup|n><around*|(|<around*|(|x<rsub|i>+b<rsub|i>|)>\<cdot\>M<rsub|j,i>|)>|)>\<cdot\><wide|e<rsub|j>|\<vect\>><rprime|'>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|j=1><rsup|n><around*|(|<big|sum><rsub|i=1><rsup|n>M<rsub|j,i>\<cdot\><around*|(|x<rsub|i>+b<rsub|i>|)>|)>\<cdot\><wide|e<rsub|j>|\<vect\>><rprime|'>>>>>
+        <reference|sum index is a product>]>>>|<cell|<big|sum><rsub|j=1><rsup|n><around*|(|<big|sum><rsub|i=1><rsup|n><around*|(|<around*|(|x<rsub|i>+b<rsub|i>|)>\<cdot\>M<rsub|j,i>\<cdot\><wide|e<rsub|j>|\<vect\>><rprime|'>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|j=1><rsup|n><around*|(|<big|sum><rsub|i=1><rsup|n><around*|(|<around*|(|x<rsub|i>+b<rsub|i>|)>\<cdot\>M<rsub|j,i>|)>|)>\<cdot\><wide|e<rsub|j>|\<vect\>><rprime|'>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|n><around*|(|<big|sum><rsub|j=1><rsup|n>M<rsub|i,j>\<cdot\><around*|(|x<rsub|j>+b<rsub|j>|)>|)>\<cdot\><wide|e<rsub|i>|\<vect\>><rprime|'>>>>>
       </eqnarray*>
 
       hence we have that\ 
 
       <\eqnarray*>
         <tformat|<table|<row|<cell|<around*|(|g\<circ\>f<rsup|-1>|)><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>>|<cell|=>|<cell|<around*|(|g<around*|(|f<rsup|-1><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
-        <reference|eq 21.2.172>]>>>|<cell|g<around*|(|P|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<big|sum><rsub|i=1><rsup|n>M<rsub|1,i>\<cdot\><around*|(|x<rsub|i>+b<rsub|i>|)>,\<ldots\>,<big|sum><rsub|i=1><rsup|n>M<rsub|n,i>\<cdot\><around*|(|x<rsub|i>+b<rsub|i>|)>|)>>>>>
+        <reference|eq 21.2.172>]>>>|<cell|g<around*|(|P|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<big|sum><rsub|j=1><rsup|n>M<rsub|1,j>\<cdot\><around*|(|x<rsub|j>+b<rsub|j>|)>,\<ldots\>,<big|sum><rsub|j=1><rsup|n>M<rsub|n,j>\<cdot\><around*|(|x<rsub|j>+b<rsub|j>|)>|)>>>>>
       </eqnarray*>
 
       so that\ 
@@ -497,15 +591,15 @@
       <\eqnarray*>
         <tformat|<table|<row|<cell|P\<ominus\>O>|<cell|=>|<cell|<around*|(|P\<ominus\>O<rprime|'>|)>+<around*|(|O<rprime|'>\<ominus\>O|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
         <reference|affine space P-Q=-(Q-P)>]>>>|<cell|<around*|(|P\<ominus\>O<rprime|'>|)>-<around*|(|O\<ominus\>O<rprime|'>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
-        <reference|eq 21.4.171>]>>>|<cell|<big|sum><rsub|i=1><rsup|n>x<rprime|'><rsub|i>\<cdot\><wide|e<rsub|i>|\<vect\>><rprime|'>-<big|sum><rsub|i=1><rsup|n>b<rsub|i>\<cdot\><wide|e<rsub|i>|\<vect\>>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|n>x<rprime|'><rsub|i>\<cdot\><around*|(|<big|sum><rsub|j=1><rsup|n><around*|(|M<rsup|-1>|)><rsub|j,i>\<cdot\><wide|e<rsub|j>|\<vect\>>|)>-<big|sum><rsub|i=1><rsup|n>b<rsub|i>\<cdot\><wide|e<rsub|i>|\<vect\>>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|n><around*|(|<big|sum><rsub|j=1><rsup|n>x<rprime|'><rsub|i>\<cdot\><around*|(|<around*|(|M<rsup|-1>|)><rsub|j,i>\<cdot\><wide|e<rsub|j>|\<vect\>>|)>|)>-<big|sum><rsub|i=1><rsup|n>b<rsub|i>\<cdot\><wide|e<rsub|i>|\<vect\>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
-        <reference|sum index is a product>]>>>|<cell|<big|sum><rsub|j=1><rsup|n><around*|(|<big|sum><rsub|i=1><rsup|n>x<rprime|'><rsub|i>\<cdot\><around*|(|<around*|(|M<rsup|-1>|)><rsub|j,i>\<cdot\><wide|e<rsub|j>|\<vect\>>|)>|)>-<big|sum><rsub|i=1><rsup|n>b<rsub|i>\<cdot\><wide|e<rsub|i>|\<vect\>>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|j=1><rsup|n><around*|(|<big|sum><rsub|i=1><rsup|n>x<rprime|'><rsub|i>\<cdot\><around*|(|<around*|(|M<rsup|-1>|)><rsub|j,i>\<cdot\><wide|e<rsub|j>|\<vect\>>|)>|)>-<big|sum><rsub|j=1><rsup|n>b<rsub|j>\<cdot\><wide|e<rsub|j>|\<vect\>>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|j=1><rsup|n><around*|(|<big|sum><rsub|i=1><rsup|n>x<rprime|'><rsub|i>\<cdot\><around*|(|M<rsup|-1>|)><rsub|j,i>|)>\<cdot\><wide|e<rsub|j>|\<vect\>>-<big|sum><rsub|j=1><rsup|n>b<rsub|j>\<cdot\><wide|e<rsub|j>|\<vect\>>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|j=1><rsup|n><around*|(|-b<rsub|j>+<big|sum><rsub|i=1><rsup|n>x<rprime|'><rsub|i>\<cdot\><around*|(|M<rsup|-1>|)><rsub|j,i>|)>\<cdot\><wide|e<rsub|j>|\<vect\>>>>>>
+        <reference|eq 21.4.272>]>>>|<cell|<big|sum><rsub|i=1><rsup|n>x<rprime|'><rsub|i>\<cdot\><wide|e<rsub|i>|\<vect\>><rprime|'>-<big|sum><rsub|i=1><rsup|n>b<rsub|i>\<cdot\><wide|e<rsub|i>|\<vect\>>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|n>x<rprime|'><rsub|i>\<cdot\><around*|(|<big|sum><rsub|j=1><rsup|n><around*|(|M<rsup|-1>|)><rsub|j,i>\<cdot\><wide|e<rsub|j>|\<vect\>>|)>-<big|sum><rsub|i=1><rsup|n>b<rsub|i>\<cdot\><wide|e<rsub|i>|\<vect\>>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|n><around*|(|<big|sum><rsub|j=1><rsup|n>x<rprime|'><rsub|i>\<cdot\><around*|(|<around*|(|M<rsup|-1>|)><rsub|j,i>\<cdot\><wide|e<rsub|j>|\<vect\>>|)>|)>-<big|sum><rsub|i=1><rsup|n>b<rsub|i>\<cdot\><wide|e<rsub|i>|\<vect\>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|sum index is a product>]>>>|<cell|<big|sum><rsub|j=1><rsup|n><around*|(|<big|sum><rsub|i=1><rsup|n>x<rprime|'><rsub|i>\<cdot\><around*|(|<around*|(|M<rsup|-1>|)><rsub|j,i>\<cdot\><wide|e<rsub|j>|\<vect\>>|)>|)>-<big|sum><rsub|i=1><rsup|n>b<rsub|i>\<cdot\><wide|e<rsub|i>|\<vect\>>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|j=1><rsup|n><around*|(|<big|sum><rsub|i=1><rsup|n>x<rprime|'><rsub|i>\<cdot\><around*|(|<around*|(|M<rsup|-1>|)><rsub|j,i>\<cdot\><wide|e<rsub|j>|\<vect\>>|)>|)>-<big|sum><rsub|j=1><rsup|n>b<rsub|j>\<cdot\><wide|e<rsub|j>|\<vect\>>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|j=1><rsup|n><around*|(|<big|sum><rsub|i=1><rsup|n>x<rprime|'><rsub|i>\<cdot\><around*|(|M<rsup|-1>|)><rsub|j,i>|)>\<cdot\><wide|e<rsub|j>|\<vect\>>-<big|sum><rsub|j=1><rsup|n>b<rsub|j>\<cdot\><wide|e<rsub|j>|\<vect\>>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|j=1><rsup|n><around*|(|-b<rsub|j>+<big|sum><rsub|i=1><rsup|n>x<rprime|'><rsub|i>\<cdot\><around*|(|M<rsup|-1>|)><rsub|j,i>|)>\<cdot\><wide|e<rsub|j>|\<vect\>>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|n><around*|(|-b<rsub|i>+<big|sum><rsub|j=1><rsup|n>x<rprime|'><rsub|j>\<cdot\><around*|(|M<rsup|-1>|)><rsub|i,j>|)>\<cdot\><wide|e<rsub|i>|\<vect\>>>>>>
       </eqnarray*>
 
       hence we have\ 
 
       <\eqnarray*>
         <tformat|<table|<row|<cell|<around*|(|f\<circ\>g<rsup|-1>|)><around*|(|x<rsub|1><rprime|'>,\<ldots\>,x<rprime|'><rsub|n>|)>>|<cell|=>|<cell|f<around*|(|g<rsup|-1><around*|(|x<rprime|'><rsub|1>,\<ldots\>,x<rprime|'><rsub|n>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
-        <reference|eq 21.5.272>>>>|<cell|f<around*|(|P|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|-b<rsub|1>+<big|sum><rsub|i=1><rsup|n>x<rprime|'><rsub|i>\<cdot\><around*|(|M<rsup|-1>|)><rsub|1,i>,\<ldots\>,-b<rsub|n>+<big|sum><rsub|i=1><rsup|n>x<rprime|'><rsub|i>\<cdot\><around*|(|M<rsup|-1>|)><rsub|n,i>|)>>>>>
+        <reference|eq 21.5.272>>>>|<cell|f<around*|(|P|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|-b<rsub|1>+<big|sum><rsub|j=1><rsup|n>x<rprime|'><rsub|j>\<cdot\><around*|(|M<rsup|-1>|)><rsub|1,j>,\<ldots\>,-b<rsub|n>+<big|sum><rsub|j=1><rsup|n>x<rprime|'><rsub|j>\<cdot\><around*|(|M<rsup|-1>|)><rsub|n,j>|)>>>>>
       </eqnarray*>
 
       from which it follows that\ 
@@ -545,13 +639,61 @@
   </proof>
 
   Next we introduce the concept of transformations that preserves the affine
-  structure of affine spaces.\ 
+  structure of affine spaces. First we need a little lemma.
+
+  <\lemma>
+    <label|lemma 22.15.1>Let <math|n<rsub|1>,n<rsub|2>\<in\>\<bbb-N\>>,
+    <math|<around*|\<langle\>|\<bbb-A\><rsub|1><rsup|n<rsub|1>>,V<rsub|1>,\<ominus\><rsub|1>|\<rangle\>>>,
+    <math|<around*|\<langle\>|\<bbb-A\><rsub|1><rsup|n<rsub|2>>,V<rsub|2>,\<ominus\><rsub|2>|\<rangle\>>>
+    be two real affine spaces and <math|<rigid|\<psi\>:\<bbb-A\><rsup|n<rsub|1>>\<rightarrow\>\<bbb-A\><rsup|n<rsub|2>>>>
+    a function such that <math|\<forall\>P,Q\<in\>\<bbb-A\><rsup|n<rsub|1>>>
+    and <math|\<forall\><wide|v|\<wide-varrightarrow\>>\<in\>V<rsub|1>> we
+    have that
+
+    <\equation*>
+      \<psi\><around*|(|P\<oplus\><rsub|1><wide|v|\<wide-varrightarrow\>>|)>\<ominus\><rsub|2>\<psi\>*<around*|(|Q\<oplus\><rsub|1><wide|v|\<vect\>>|)>=\<psi\><around*|(|P|)>\<ominus\><rsub|2>\<psi\><around*|(|Q|)>
+    </equation*>
+
+    [in other words <math|\<psi\>> is invariant under displacement by a
+    vector] then the function\ 
+
+    <\equation*>
+      d\<psi\>:V<rsub|1>\<rightarrow\>V<rsub|2><text| defined by
+      >d\<psi\><around*|(|<wide|v|\<wide-varrightarrow\>>|)>=\<psi\><around*|(|P|)>\<ominus\><rsub|2>\<psi\><around*|(|Q|)><text|
+      where ><wide|v|\<wide-varrightarrow\>>=P\<ominus\><rsub|1>Q
+    </equation*>
+
+    is a well defined function.
+  </lemma>
+
+  <\proof>
+    First we prove existance. As <math|\<bbb-A\><rsup|n<rsub|1>><rsub|1>\<neq\>\<varnothing\>>
+    there exist a <math|Q\<in\>\<bbb-A\><rsup|n<rsub|1>><rsub|1>> then by
+    [definition: <reference|affine space>] there exist a unique <math|P> such
+    that <math|<wide|v|\<vect\>>=P\<ominus\><rsub|1>Q>. Next we have to prove
+    that <math|d\<psi\><around*|(|<wide|v|\<wide-varrightarrow\>>|)>> is
+    independent of the choice of <math|P> and <math|Q>. Assume that there
+    exist also a <math|P<rprime|'>,Q<rprime|'>\<in\>\<bbb-A\><rsup|n<rsub|1>><rsub|1>>
+    such that <math|<wide|v|\<vect\>>=P<rprime|'>\<ominus\><rsub|1>Q<rprime|'>>.
+    Then <math|>we have <math|P\<ominus\><rsub|1>Q=<wide|v|\<vect\>>=P<rprime|'>\<ominus\>Q<rprime|'>>
+    so that <math|P=Q\<oplus\><rsub|1><wide|v|\<vect\>>> and
+    <math|P<rprime|'>=Q<rprime|'>\<oplus\><rsub|1><wide|v|\<vect\>>> and
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|\<psi\><around*|(|P|)>\<ominus\><rsub|2>\<psi\><around*|(|Q|)>>|<cell|\<equallim\><rsub|<text|[definition:
+      <reference|affine space>]>>>|<cell|<around*|(|\<psi\><around*|(|P|)>\<ominus\><rsub|2>\<psi\><around*|(|P<rprime|'>|)>|)>+<around*|(|\<psi\><around*|(|P<rprime|'>|)>\<ominus\><rsub|2>\<psi\><around*|(|Q|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|\<psi\><around*|(|Q\<oplus\><rsub|1><wide|v|\<vect\>>|)>\<ominus\><rsub|2>\<psi\><around*|(|Q<rprime|'>\<oplus\><rsub|1><wide|v|\<vect\>>|)>|)>+<around*|(|\<psi\><around*|(|P<rprime|'>|)>\<ominus\><rsub|2>\<psi\><around*|(|Q|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<around*|(|1|)>>>|<cell|<around*|(|\<psi\><around*|(|Q|)>\<ominus\><rsub|2>\<psi\><around*|(|Q<rprime|'>|)>|)>+<around*|(|\<psi\><around*|(|P<rprime|'>|)>\<ominus\><rsub|2>\<psi\><around*|(|Q|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|\<psi\><around*|(|P<rprime|'>|)>\<ominus\><rsub|2>\<psi\><around*|(|Q|)>|)>+<around*|(|\<psi\><around*|(|Q|)>\<ominus\><rsub|2>\<psi\><around*|(|Q<rprime|'>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[definition:
+      <reference|affine space>]>>>|<cell|\<psi\><around*|(|P<rprime|'>|)>\<ominus\><rsub|2>\<psi\><around*|(|Q<rprime|'>|)>>>>>
+    </eqnarray*>
+
+    which proves <math|\<psi\><around*|(|P|)>\<ominus\><rsub|2>\<psi\><around*|(|Q|)>=\<psi\><around*|(|P<rprime|'>|)>\<ominus\><rsub|2>\<psi\><around*|(|Q<rprime|'>|)>>
+    so that <math|d\<psi\>> is well defined.
+  </proof>
 
   <\definition>
     <label|affine mapping><index|affine mapping>Let
     <math|n<rsub|1>,n<rsub|2>\<in\>\<bbb-N\>>,
-    <math|<around*|\<langle\>|\<bbb-A\><rsub|1><rsup|n<rsub|1>>,V<rsub|1>|\<rangle\>>>,
-    <math|<around*|\<langle\>|\<bbb-A\><rsub|1><rsup|n<rsub|2>>,V<rsub|2>|\<rangle\>>>
+    <math|<around*|\<langle\>|\<bbb-A\><rsub|1><rsup|n<rsub|1>>,V<rsub|1>,\<ominus\><rsub|1>|\<rangle\>>>,
+    <math|<around*|\<langle\>|\<bbb-A\><rsub|1><rsup|n<rsub|2>>,V<rsub|2>,\<ominus\><rsub|2>|\<rangle\>>>
     be two real affine spaces then a map\ 
 
     <\equation*>
@@ -561,9 +703,11 @@
     is called a <with|font-series|bold|affine transformation> if\ 
 
     <\enumerate>
-      <item><math|\<forall\>P,Q\<in\>\<bbb-A\><rsup|n<rsub|1>><rsub|1><rsup|>>,
-      <math|<wide|v|\<vect\>>\<in\>V<rsub|1>>
-      <math|\<psi\><around*|(|P\<oplus\><rsub|1><wide|v|\<vect\>>|)>\<ominus\><rsub|2>\<psi\>*<around*|(|Q\<oplus\><rsub|1><wide|v|\<vect\>>|)>=\<psi\><around*|(|P|)>\<ominus\><rsub|2>\<psi\><around*|(|Q|)>>
+      <item><math|\<forall\>P,Q\<in\>\<bbb-A\><rsup|n<rsub|1>><rsub|1><rsup|>>
+      and <math|\<forall\><wide|v|\<vect\>>\<in\>V<rsub|1>>
+      <math|\<psi\><around*|(|P\<oplus\><rsub|1><wide|v|\<vect\>>|)>\<ominus\><rsub|2>\<psi\>*<around*|(|Q\<oplus\><rsub|1><wide|v|\<vect\>>|)>=\<psi\><around*|(|P|)>\<ominus\><rsub|2>\<psi\><around*|(|Q|)>>.
+      In other words <math|\<psi\>> is invariant under displacements byy a
+      vector.
 
       <item>The map <math|d\<psi\>> defined by\ 
 
@@ -577,29 +721,12 @@
     </enumerate>
 
     <\note>
-      Of course we must prove that <math|d\<psi\>> is actual a function which
-      will be proved now.
-
-      <\proof>
-        First as <math|\<bbb-A\><rsup|n<rsub|1>><rsub|1>\<neq\>\<varnothing\>>
-        there exist a <math|Q\<in\>\<bbb-A\><rsup|n<rsub|1>><rsub|1>> then
-        there exist by [definition: <reference|affine space>] there exist a
-        unique <math|P> such that <math|<wide|v|\<vect\>>=P\<ominus\><rsub|1>Q>.
-        Assume that there exist also a <math|P<rprime|'>,Q<rprime|'>\<in\>\<bbb-A\><rsup|n<rsub|1>><rsub|1>>
-        such that <math|<wide|v|\<vect\>>=P<rprime|'>\<ominus\><rsub|1>Q<rprime|'>>.
-        Then <math|>we have <math|P\<ominus\><rsub|1>Q=<wide|v|\<vect\>>=P<rprime|'>\<ominus\>Q<rprime|'>>
-        so that <math|P=Q\<oplus\><rsub|1><wide|v|\<vect\>>> and
-        <math|P<rprime|'>=Q<rprime|'>\<oplus\><rsub|1><wide|v|\<vect\>>> and
-
-        <\eqnarray*>
-          <tformat|<table|<row|<cell|\<psi\><around*|(|P|)>\<ominus\><rsub|2>\<psi\><around*|(|Q|)>>|<cell|\<equallim\><rsub|<text|[definition:
-          <reference|affine space>]>>>|<cell|<around*|(|\<psi\><around*|(|P|)>\<ominus\><rsub|2>\<psi\><around*|(|P<rprime|'>|)>|)>+<around*|(|\<psi\><around*|(|P<rprime|'>|)>\<ominus\><rsub|2>\<psi\><around*|(|Q|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|\<psi\><around*|(|Q\<oplus\><rsub|1><wide|v|\<vect\>>|)>\<ominus\><rsub|2>\<psi\><around*|(|Q<rprime|'>\<oplus\><rsub|1><wide|v|\<vect\>>|)>|)>+<around*|(|\<psi\><around*|(|P<rprime|'>|)>\<ominus\><rsub|2>\<psi\><around*|(|Q|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<around*|(|1|)>>>|<cell|<around*|(|\<psi\><around*|(|Q|)>\<ominus\><rsub|2>\<psi\><around*|(|Q<rprime|'>|)>|)>+<around*|(|\<psi\><around*|(|P<rprime|'>|)>\<ominus\><rsub|2>\<psi\><around*|(|Q|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|\<psi\><around*|(|P<rprime|'>|)>\<ominus\><rsub|2>\<psi\><around*|(|Q|)>|)>+<around*|(|\<psi\><around*|(|Q|)>\<ominus\><rsub|2>\<psi\><around*|(|Q<rprime|'>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[definition:
-          <reference|affine space>]>>>|<cell|\<psi\><around*|(|P<rprime|'>|)>\<ominus\><rsub|2>\<psi\><around*|(|Q<rprime|'>|)>>>>>
-        </eqnarray*>
-
-        which proves <math|\<psi\><around*|(|P|)>\<ominus\><rsub|2>\<psi\><around*|(|Q|)>=\<psi\><around*|(|P<rprime|'>|)>\<ominus\><rsub|2>\<psi\><around*|(|Q<rprime|'>|)>>
-        so that <math|d\<psi\>> is well defined.
-      </proof>
+      As in principle there could be another two points
+      <math|P<rprime|'>,Q<rprime|'>> such that
+      <math|P<rprime|'>\<ominus\>Q<rprime|'>=P\<ominus\>Q> we must prove that
+      <math|d\<psi\><around*|(|<wide|v|\<wide-varrightarrow\>>|)>> is
+      independent of the choice of these two points <math|P,Q>. This is done
+      in the previous lemma [see lemma: <reference|lemma 22.15.1>].
     </note>
   </definition>
 
@@ -608,8 +735,8 @@
 
   <\definition>
     <label|affine isomorphism><index|affine isomorphism>Let
-    <math|n\<in\>\<bbb-N\>>, <math|<around*|\<langle\>|\<bbb-A\><rsup|n><rsub|1>,V<rsub|1>|\<rangle\>>>,
-    <math|<around*|\<langle\>|\<bbb-A\><rsup|n><rsub|2>,V<rsub|2>|\<rangle\>>>
+    <math|n\<in\>\<bbb-N\>>, <math|<around*|\<langle\>|\<bbb-A\><rsup|n><rsub|1>,V<rsub|1>,\<ominus\><rsub|1>|\<rangle\>>>,
+    <math|<around*|\<langle\>|\<bbb-A\><rsup|n><rsub|2>,V<rsub|2>,\<ominus\><rsub|2>|\<rangle\>>>
     be two real affine spaces of dimension <math|n> then a function\ 
 
     <\equation*>
@@ -622,13 +749,13 @@
 
   <\theorem>
     <label|affine inverse of affine isomorphism is a affine isomorphism>Let
-    <math|n\<in\>\<bbb-N\>>, <math|<around*|\<langle\>|\<bbb-A\><rsup|n><rsub|1>,V<rsub|1>|\<rangle\>>>,
-    <math|<around*|\<langle\>|\<bbb-A\><rsup|n><rsub|2>,V<rsub|2>|\<rangle\>>>
+    <math|n\<in\>\<bbb-N\>>, <math|<around*|\<langle\>|\<bbb-A\><rsup|n><rsub|1>,V<rsub|1>,\<ominus\><rsub|1>|\<rangle\>>>,
+    <math|<around*|\<langle\>|\<bbb-A\><rsup|n><rsub|2>,V<rsub|2>,\<ominus\><rsub|2>|\<rangle\>>>
     be two real affine spaces of dimension <math|n> and
-    <math|\<psi\>:V<rsub|1>\<rightarrow\>V<rsub|2>> a affine isomorphism then
-    <math|\<psi\><rsup|-1>:V<rsub|2>\<rightarrow\>V<rsub|1>> is a affine
-    isomorphism and <math|d\<psi\>:V<rsub|1>\<rightarrow\>V<rsub|2>> is a
-    linear isomorphism.
+    <math|<rigid|\<psi\>:V<rsub|1>\<rightarrow\>V<rsub|2>>> a affine
+    isomorphism then <math|\<psi\><rsup|-1>:V<rsub|2>\<rightarrow\>V<rsub|1>>
+    is a affine isomorphism and <math|d\<psi\>:V<rsub|1>\<rightarrow\>V<rsub|2>>
+    is a linear isomorphism.
   </theorem>
 
   <\proof>
@@ -647,7 +774,7 @@
       </equation>
 
       Let <math|<wide|v|\<vect\>>\<in\>ker<around*|(|d\<psi\>|)>> then
-      <math|d\<psi\><around*|(|<wide|v|\<vect\>>|)>=<wide|0|\<vect\>>> by
+      <math|d\<psi\><around*|(|<wide|v|\<vect\>>|)>=<wide|0|\<vect\>>>, by
       definition of <math|d\<psi\>> there exist a <math|P,Q\<in\>V<rsub|1>>
       such that <math|<wide|v|\<vect\>>=P\<ominus\><rsub|1>Q> and
       <math|\<psi\><around*|(|P|)>\<ominus\><rsub|2>\<psi\><around*|(|Q|)>\<equallim\><rsub|def>d\<psi\>*<around*|(|<wide|v|\<vect\>>|)>=<wide|0|\<vect\>>>.
@@ -665,7 +792,7 @@
       </equation*>
 
       Finally using the linearity of <math|d\<psi\>>, the above and [theorem:
-      <reference|linear mapping injectivity and kernel>] proves that
+      <reference|linear mapping injectivity and kernel>] it follows that
       <math|d\<psi\>> is injective.
     </proof>
 
@@ -717,7 +844,7 @@
     so that by [theorem: <reference|affine P-Q=P'-Q'=\<gtr\>P-P'=Q=Q'>]
 
     <\equation*>
-      \<psi\><rsup|-1><around*|(|P\<oplus\><rsub|2><wide|v|\<vect\>>|)>\<ominus\><rsub|1>\<psi\><rsup|-1><around*|(|Q\<oplus\><rsub|2><wide|v|\<vect\>>|)>=P<rprime|'>\<ominus\><rsub|2>Q<rprime|'>=\<psi\><rsup|-1><around*|(|P|)>\<ominus\><rsub|1>\<psi\><rsup|-1><around*|(|Q|)>
+      \<psi\><rsup|-1><around*|(|P\<oplus\><rsub|2><wide|v|\<vect\>>|)>\<ominus\><rsub|1>\<psi\><rsup|-1><around*|(|Q\<oplus\><rsub|2><wide|v|\<vect\>>|)>=P<rprime|'>\<ominus\><rsub|1>Q<rprime|'>=\<psi\><rsup|-1><around*|(|P|)>\<ominus\><rsub|1>\<psi\><rsup|-1><around*|(|Q|)>
     </equation*>
 
     To summarize we have\ 
@@ -728,11 +855,20 @@
       >\<psi\><rsup|-1><around*|(|P\<oplus\><rsub|2><wide|v|\<vect\>>|)>\<ominus\><rsub|1>\<psi\><rsup|-1><around*|(|Q\<oplus\><rsub|2><wide|v|\<vect\>>|)>=\<psi\><rsup|-1><around*|(|P|)>\<ominus\><rsub|1>\<psi\><rsup|-1><around*|(|Q|)>
     </equation>
 
-    Next we prove that <math|d\<psi\><rsup|-1>> is a bijection. Let
-    <math|<wide|v|\<vect\>>\<in\>V<rsub|1>> then
+    The above allows us to use [lemma: <reference|lemma 22.15.1>] to define
+    the function\ 
+
+    <\equation>
+      <label|eq 22.14.1>d\<psi\><rsup|-1>:V<rsub|2>\<rightarrow\>V<rsub|1><text|
+      where >d\<psi\><rsup|-1><around*|(|<wide|v|\<wide-varrightarrow\>>|)>=\<psi\><rsup|-1><around*|(|P|)>\<ominus\><rsub|1>\<psi\><rsup|-1><around*|(|Q|)><text|
+      where ><wide|v|\<wide-varrightarrow\>>=P\<ominus\><rsub|2>Q
+    </equation>
+
+    Next we prove that <math|d\<psi\><rsup|-1>> is the inverse of
+    <math|d\<psi\>>. Let <math|<wide|v|\<vect\>>\<in\>V<rsub|1>> then
     <math|d\<psi\><around*|(|<wide|v|\<vect\>>|)>=\<psi\><around*|(|P|)>\<ominus\><rsub|2>\<psi\><around*|(|Q|)>>
-    where <math|<wide|v|\<vect\>>=P\<ominus\><rsub|1>Q> so that by definition
-    <math|d\<psi\><rsup|-1><around*|(|d\<psi\><around*|(|<wide|v|\<vect\>>|)>|)>=\<psi\><rsup|-1><around*|(|\<psi\><around*|(|P|)>|)>\<ominus\><rsub|1>\<psi\><rsup|-1><around*|(|\<psi\><around*|(|Q|)>|)>=P\<ominus\><rsub|1>Q=<wide|v|\<vect\>>.>
+    where <math|<wide|v|\<vect\>>=P\<ominus\><rsub|1>Q> so that by [eq:
+    <reference|eq 22.14.1>] <math|d\<psi\><rsup|-1><around*|(|d\<psi\><around*|(|<wide|v|\<vect\>>|)>|)>=\<psi\><rsup|-1><around*|(|\<psi\><around*|(|P|)>|)>\<ominus\><rsub|1>\<psi\><rsup|-1><around*|(|\<psi\><around*|(|Q|)>|)>=P\<ominus\><rsub|1>Q=<wide|v|\<vect\>>.>
     Hence\ 
 
     <\equation*>
@@ -777,8 +913,8 @@
 
   <\theorem>
     <label|affine space isomorphism condition>Let <math|n\<in\>\<bbb-N\>>,
-    <math|<around*|\<langle\>|\<bbb-A\><rsup|n><rsub|1>,V<rsub|1>|\<rangle\>>>,
-    <math|<around*|\<langle\>|\<bbb-A\><rsup|n><rsub|2>,V<rsub|2>|\<rangle\>>>
+    <math|<around*|\<langle\>|\<bbb-A\><rsup|n><rsub|1>,V<rsub|1>,\<ominus\><rsub|1>|\<rangle\>>>,
+    <math|<around*|\<langle\>|\<bbb-A\><rsup|n><rsub|2>,V<rsub|2>,\<ominus\><rsub|2>|\<rangle\>>>
     be two real affine spaces of dimension <math|n>,
     <math|<rigid|\<psi\>:\<bbb-A\><rsup|n><rsub|1>\<rightarrow\>\<bbb-A\><rsup|n><rsub|2>>>
     a affine mapping and <math|O\<in\>\<bbb-A\><rsup|n><rsub|1>> then we have
@@ -802,7 +938,7 @@
   <\proof>
     Let <math|O\<in\>\<bbb-A\><rsup|n<rsub|>><rsub|1>> then for every
     <math|P\<in\>\<bbb-A\><rsup|n><rsub|1>> we have for
-    <math|<wide|v|\<vect\>>=P\<ominus\><rsub|1>O\<in\>V<rsub|1>> by
+    <math|<wide|v|\<vect\>>=P\<ominus\><rsub|1>O\<in\>V<rsub|1>> by the
     definition of <math|d\<psi\>> that <math|d\<psi\><around*|(|<wide|v|\<vect\>>|)>=d\<psi\><around*|(|P\<ominus\><rsub|1>O|)>=\<psi\><around*|(|P|)>\<ominus\><rsub|2>\<psi\><around*|(|O|)>>.
     Hence we have by [definition: <reference|affine space>] that
 
@@ -838,13 +974,17 @@
         have
 
         <\equation*>
-          \<psi\><around*|(|P<rsub|1>|)>\<ominus\><rsub|2>\<psi\><around*|(|0|)>=d\<psi\><around*|(|<wide|v<rsub|1>|\<vect\>>|)>=d\<psi\><around*|(|<wide|v<rsub|2>|\<vect\>>|)>=\<psi\><around*|(|P<rsub|2>|)>\<ominus\><rsub|2>\<psi\><around*|(|O|)>
+          \<psi\><around*|(|P<rsub|1>|)>\<ominus\><rsub|2>\<psi\><around*|(|O|)>=d\<psi\><around*|(|<wide|v<rsub|1>|\<vect\>>|)>=d\<psi\><around*|(|<wide|v<rsub|2>|\<vect\>>|)>=\<psi\><around*|(|P<rsub|2>|)>\<ominus\><rsub|2>\<psi\><around*|(|O|)>
         </equation*>
 
         so that by [theorem: <reference|affine P-Q=P'-Q'=\<gtr\>P-P'=Q=Q'>]
-        <math|\<psi\><around*|(|P<rsub|1>|)>-\<psi\><around*|(|P<rsub|2>|)>=\<psi\><around*|(|O|)>-\<psi\><around*|(|O|)>\<equallim\><rsub|<text|[theorem:
-        <reference|affine space zero vector>]>><wide|0|\<vect\>>\<equallim\><rsub|<text|[theorem:
-        <reference|affine space zero vector>]>>\<psi\><around*|(|P<rsub|2>\<ominus\><rsub|1>P<rsub|2>|)>>
+
+        <\equation*>
+          \<psi\><around*|(|P<rsub|1>|)>\<ominus\><rsub|2>\<psi\><around*|(|P<rsub|2>|)>=\<psi\><around*|(|O|)>\<ominus\><rsub|2>\<psi\><around*|(|O|)>\<equallim\><rsub|<text|[theorem:
+          <reference|affine space zero vector>]>><wide|0|\<vect\>>\<equallim\><rsub|<text|[theorem:
+          <reference|affine space zero vector>]>>\<psi\><around*|(|P<rsub|2>|)>\<ominus\><rsub|2>\<psi\><around*|(|P<rsub|2>|)><rigid|>
+        </equation*>
+
         which by uniqueness in [definition: <reference|affine space>] proves
         that <math|\<psi\><around*|(|P<rsub|1>|)>=\<psi\><around*|(|P<rsub|2>|)>>.
         As <math|\<psi\>> is injective we have that
@@ -854,19 +994,22 @@
         Hence <math|d\<psi\>> is injective.
 
         \ <item*|<math|\<Leftarrow\>>>Let
-        <math|P<rsub|1>,P<rsub|2>\<in\>\<bbb-A\><rsup|n><rsub|1>> such that
-        <math|\<psi\><around*|(|P<rsub|1>|)>=\<psi\><around*|(|P<rsub|2>|)>>
+        <math|P<rsub|1>,P<rsub|2>\<in\>\<bbb-A\><rsup|n><rsub|1>> be such
+        that <math|\<psi\><around*|(|P<rsub|1>|)>=\<psi\><around*|(|P<rsub|2>|)>>
         then we have by [eq: <reference|eq 21.8.271>] that\ 
 
-        <\equation*>
-          \<psi\><around*|(|O|)>\<oplus\><rsub|2>d\<psi\><around*|(|P<rsub|1>\<ominus\><rsub|1>O|)>=\<psi\><around*|(|P<rsub|1>|)>=\<psi\><around*|(|P<rsub|2>|)>=\<psi\><around*|(|O|)>\<oplus\><rsub|2>d\<psi\><around*|(|P<rsub|2>\<ominus\><rsub|1>O|)>
-        </equation*>
+        <\equation>
+          <label|eq 22.17.1>\<psi\><around*|(|O|)>\<oplus\><rsub|2>d\<psi\><around*|(|P<rsub|1>\<ominus\><rsub|1>O|)>=\<psi\><around*|(|P<rsub|1>|)>=\<psi\><around*|(|P<rsub|2>|)>=\<psi\><around*|(|O|)>\<oplus\><rsub|2>d\<psi\><around*|(|P<rsub|2>\<ominus\><rsub|1>O|)>
+        </equation>
 
         so that by [theorem: <reference|affine space>] we have
 
-        <\equation*>
-          d\<psi\><around*|(|P<rsub|1>\<ominus\><rsub|1>O|)>=<around*|(|\<psi\><around*|(|O|)>\<oplus\><rsub|2>d\<psi\><around*|(|P<rsub|1>\<ominus\><rsub|1>O|)>|)>\<ominus\><rsub|12>\<psi\><around*|(|O|)>=<around*|(|\<psi\><around*|(|O|)>\<oplus\><rsub|2>d\<psi\><around*|(|P<rsub|2>\<ominus\><rsub|2>\<psi\><around*|(|O|)>|)>|)>=d\<psi\><around*|(|P<rsub|2>\<ominus\><rsub|1>O|)>
-        </equation*>
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|d\<psi\><around*|(|P<rsub|1>\<ominus\><rsub|1>O|)>>|<cell|<below|=|<text|[theorem:
+          <reference|affine space>]>>>|<cell|<around*|(|\<psi\><around*|(|O|)>\<oplus\><rsub|2>d\<psi\><around*|(|P<rsub|1>\<ominus\><rsub|1>O|)>|)>\<ominus\><rsub|2>\<psi\><around*|(|O|)>>>|<row|<cell|>|<cell|<below|=|<text|[eq:
+          <reference|eq 22.17.1>]>>>|<cell|<around*|(|\<psi\><around*|(|O|)>\<oplus\><rsub|2>d\<psi\><around*|(|P<rsub|2>\<ominus\><rsub|1>O|)>|)>\<ominus\><rsub|2><around*|(|O|)>>>|<row|<cell|>|<cell|<below|=|<text|[theorem:
+          <reference|affine space>]>>>|<cell|d\<psi\><around*|(|P<rsub|2>\<ominus\><rsub|1>O|)>>>>>
+        </eqnarray*>
 
         which as <math|d\<psi\>> is injective proved that
         <math|P<rsub|1>\<ominus\><rsub|1>O=P<rsub|2>\<ominus\><rsub|1>O>.
@@ -886,7 +1029,7 @@
     <\proof>
       \ As <math|\<bbb-A\><rsup|n><rsub|1>\<neq\>\<varnothing\>> there exist
       a <math|O<rprime|'>\<in\>\<bbb-A\><rsup|n><rsub|1>>. Take
-      <math|O=\<psi\><around*|(|O<rprime|'>|)>\<in\>\<bbb-A\><rsup|n><rsub|1>>
+      <math|O=\<psi\><around*|(|O<rprime|'>|)>\<in\>\<bbb-A\><rsup|n><rsub|2>>
 
       <\description>
         <item*|<math|\<Rightarrow\>>>Let <math|<wide|v|\<vect\>>\<in\>V<rsub|2>>
@@ -904,19 +1047,21 @@
         <math|d\<psi\>> is surjective there exist a
         <math|<wide|\<mu\>|\<vect\>>\<in\>V<rsub|1>> such that\ 
 
-        <\equation*>
-          <wide|v|\<bar\>>=d\<psi\><around*|(|<wide|\<mu\>|\<vect\>>|)>
-        </equation*>
+        <\equation>
+          <label|eq 22.19.1><wide|v|\<bar\>>=d\<psi\><around*|(|<wide|\<mu\>|\<vect\>>|)>
+        </equation>
 
         Using [definition: <reference|affine space>] there exist a
         <math|P<rprime|'>\<in\>\<bbb-A\><rsup|n><rsub|1>> such that
         <math|<wide|u|\<vect\>>=P<rprime|'>\<ominus\><rsub|1>O<rprime|'>>
         then we have by [eq: <reference|eq 21.8.271>] that\ 
 
-        <\equation*>
-          \<psi\><around*|(|P<rprime|'>|)>=\<psi\><around*|(|O<rprime|'>|)>\<oplus\><rsub|2>d\<psi\><around*|(|P<rprime|'>\<ominus\><rsub|1>O<rprime|'>|)>=\<psi\><around*|(|O<rprime|'>|)>\<oplus\><rsub|2>d\<psi\><around*|(|<wide|u|\<vect\>>|)>=O\<oplus\><rsub|2><wide|v|\<vect\>>=O\<oplus\><rsub|2><around*|(|P\<ominus\><rsub|2>O|)><below|=|<text|[theorem:
-          <reference|affine space Q+(P-Q)=P>]>>P<rsub|>
-        </equation*>
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|\<psi\><around*|(|P<rprime|'>|)>>|<cell|<below|=|<text|[eq:
+          <reference|eq 21.8.271>]>>>|<cell|\<psi\><around*|(|O<rprime|'>|)>\<oplus\><rsub|2>d\<psi\><around*|(|P<rprime|'>\<ominus\><rsub|1>O<rprime|'>|)>>>|<row|<cell|>|<cell|=>|<cell|\<psi\><around*|(|O<rprime|'>|)>\<oplus\><rsub|2>d\<psi\><around*|(|<wide|u|\<vect\>>|)>>>|<row|<cell|>|<cell|<below|=|<text|[eq:
+          <reference|eq 22.19.1>]>>>|<cell|O\<oplus\><rsub|2><wide|v|\<vect\>>>>|<row|<cell|>|<cell|=>|<cell|O\<oplus\><rsub|2><around*|(|P\<ominus\><rsub|2>O|)>>>|<row|<cell|>|<cell|<below|=|<text|[theorem:
+          <reference|affine space Q+(P-Q)=P>]>>>|<cell|P>>>>
+        </eqnarray*>
 
         which proves surjectivity of <math|\<psi\>>
       </description>
@@ -939,7 +1084,7 @@
         also <math|dim<around*|(|V<rsub|1>|)>=dim<around*|(|V<rsub|2>|)>=n>
         it follows from [theorem: <reference|linear mapping injectivity and
         surjectivity>] that <math|d\<psi\>> is surjective. Hence by [eq:
-        <reference|eq 21.10.271>] that <math|\<psi\>> is surjective.
+        <reference|eq 21.10.271>] we hsve that <math|\<psi\>> is surjective.
 
         <item*|<math|\<Leftarrow\>>>As <math|\<psi\>> is surjective it
         follows from [eq: <reference|eq 21.10.271>] that
@@ -956,8 +1101,8 @@
   follows.
 
   <\theorem>
-    Let <math|n,m\<in\>\<bbb-N\>>, <math|<around*|\<langle\>|\<bbb-A\><rsup|n><rsub|1>,V<rsub|1>|\<rangle\>>>,
-    <math|<around*|\<langle\>|\<bbb-A\><rsup|m><rsub|2>,V<rsub|2>|\<rangle\>>>
+    Let <math|n,m\<in\>\<bbb-N\>>, <math|<around*|\<langle\>|\<bbb-A\><rsup|n><rsub|1>,V<rsub|1>,\<ominus\><rsub|1>|\<rangle\>>>,
+    <math|<around*|\<langle\>|\<bbb-A\><rsup|m><rsub|2>,V<rsub|2>,\<ominus\><rsub|2>|\<rangle\>>>
     be two real affine spaces then we have:\ 
 
     <\enumerate>
@@ -980,7 +1125,7 @@
 
       <\enumerate>
         <item>For <math|f<rsub|2>\<circ\>\<psi\>\<circ\>f<rsub|1><rsup|-1>:\<bbb-R\><rsup|n>\<rightarrow\>\<bbb-R\><rsup|m>>
-        there exist a <math|L\<in\>\<cal-M\><rsub|m,n><around*|(|\<bbb-R\>|)>>
+        there exist a <math|M\<in\>\<cal-M\><rsub|m,n><around*|(|\<bbb-R\>|)>>
         and a <math|<around*|{|c<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>>\<subseteq\>\<bbb-R\>>
         such that\ 
 
@@ -994,7 +1139,7 @@
         coordinate system <math|f<rsub|1>> and
         <math|\<psi\><around*|(|P|)>\<in\>\<bbb-A\><rsup|m><rsub|2>> has
         coodinates <math|<around*|(|y<rsub|1>,\<ldots\>,y<rsub|m>|)> using
-        the coordinate system >f then we have\ 
+        the coordinate system f<rsub|2>> then
 
         <\equation*>
           \<forall\>i\<in\><around*|{|1,\<ldots\>,m|}><text| we have
@@ -1004,7 +1149,7 @@
 
       <item>Let <math|\<psi\>:\<bbb-A\><rsup|n><rsub|1>\<rightarrow\>\<bbb-A\><rsup|m><rsub|2>>
       be a mapping such that there exist a
-      <math|L\<in\>\<cal-M\><rsub|m,n><around*|(|\<bbb-R\>|)>>, a
+      <math|M\<in\>\<cal-M\><rsub|m,n><around*|(|\<bbb-R\>|)>>, a
       <math|<around*|{|c<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>>\<subseteq\>\<bbb-R\>>
       and 2 coordinate systems\ 
 
@@ -1038,14 +1183,16 @@
       <item>We have:
 
       <\enumerate>
-        <item>As <math|\<psi\>:\<bbb-A\><rsup|n><rsub|1>\<rightarrow\>\<bbb-A\><rsup|m><rsub|1><text|>>
-        is a affne mapping we have that\ 
+        <item>As <math|\<psi\>:\<bbb-A\><rsup|n><rsub|1>\<rightarrow\>\<bbb-A\><rsup|m><rsub|2><text|>>
+        is a affne mapping we have that
 
         <\equation>
           <label|eq 21.17.173>\<forall\>P,Q\<in\>\<bbb-A\><rsup|n><rsub|1><text|
-          and >\<forall\><wide|v|\<vect\>>\<in\>V<rsub|1><text| we have
-          >\<varphi\><around*|(|P\<oplus\><rsub|1><wide|v|\<vect\>>|)>\<ominus\><rsub|2>\<psi\><around*|(|Q\<oplus\><rsub|1><wide|v|\<vect\>>|)>=\<psi\><around*|(|P|)>\<ominus\><rsub|2>\<psi\><around*|(|Q|)>
+          and >\<forall\><wide|v|\<vect\>>\<in\>V<rsub|1><text|
+          \ >\<varphi\><around*|(|P\<oplus\><rsub|1><wide|v|\<vect\>>|)>\<ominus\><rsub|2>\<psi\><around*|(|Q\<oplus\><rsub|1><wide|v|\<vect\>>|)>=\<psi\><around*|(|P|)>\<ominus\><rsub|2>\<psi\><around*|(|Q|)>
         </equation>
+
+        and
 
         <\equation>
           <label|eq 21.18.273>d\<psi\>:V<rsub|1>\<rightarrow\>V<rsub|2><text|
@@ -1066,17 +1213,17 @@
         </equation>
 
         Let <math|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\>\<bbb-R\><rsup|n>>
-        then for <math|P=f<rsup|-1><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>>
-        we have as <math|f<around*|(|P|)>=<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>>
-        and <math|f<rsub|1>> a Cartesian coordinate system with origin
-        <math|O<rsub|1>> and axes <math|E> we have that
+        then for <math|P=f<rsup|-1><rsub|1><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>>
+        we have, as <math|f<rsub|1><around*|(|P|)>=<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>>
+        and <math|f<rsub|1>> is a Cartesian coordinate system with origin
+        <math|O<rsub|1>> and axes <math|E>, that
 
         <\equation>
           <label|eq 21.20.273>P\<ominus\><rsub|1>O<rsub|1>=<big|sum><rsub|i=1><rsup|n>x<rsub|i>\<cdot\><wide|e<rsub|i>|\<vect\>>
         </equation>
 
         As <math|\<psi\><around*|(|O<rsub|1>|)>\<ominus\><rsub|2>O<rsub|2>\<in\>V<rsub|2>>
-        and <math|F> a basis for <math|V<rsub|2>> there exist a
+        and <math|F> is a basis for <math|V<rsub|2>> there exist a
         <math|<around*|{|c<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>>\<subseteq\>\<bbb-R\>>
         such that\ 
 
@@ -1084,41 +1231,44 @@
           <label|eq 21.21.173>\<psi\><around*|(|O<rsub|1>|)>\<ominus\><rsub|2>O<rsub|2>=<big|sum><rsub|j=1><rsup|m>c<rsub|j>\<cdot\><wide|f<rsub|j>|\<vect\>>
         </equation>
 
+        Hence
+
         <\eqnarray*>
-          <tformat|<table|<row|<cell|\<psi\><around*|(|P|)>\<ominus\><rsub|2>O<rsub|2>>|<cell|=>|<cell|<around*|(|\<psi\><around*|(|P|)>\<ominus\>\<psi\><around*|(|O<rsub|1>|)>|)>+<around*|(|\<psi\><around*|(|O<rsub|1>|)>\<ominus\><rsub|2>O<rsub|2>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
-          <reference|eq 21.20.273>]>>>|<cell|<around*|(|\<psi\><around*|(|P|)>\<ominus\>\<psi\><around*|(|O<rsub|1>|)>|)>+<big|sum><rsub|j=1><rsup|m>c<rsub|j>\<cdot\><wide|f<rsub|j>|\<vect\>>>>|<row|<cell|>|<cell|=>|<cell|d\<psi\><around*|(|<big|sum><rsub|i=1><rsup|n>x<rsub|i>\<cdot\><wide|e<rsub|i>|\<vect\>>|)>+<big|sum><rsub|j=1><rsup|m>c<rsub|j>\<cdot\><wide|f<rsub|j>|\<vect\>>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|n>x<rsub|i>\<cdot\>d\<psi\><around*|(|<wide|e<rsub|i>|\<vect\>>|)>+<big|sum><rsub|j=1><rsup|m>c<rsub|j>\<cdot\><wide|f<rsub|j>|\<vect\>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+          <tformat|<table|<row|<cell|\<psi\><around*|(|P|)>\<ominus\><rsub|2>O<rsub|2>>|<cell|=>|<cell|<around*|(|\<psi\><around*|(|P|)>\<ominus\><rsub|2>\<psi\><around*|(|O<rsub|1>|)>|)>+<around*|(|\<psi\><around*|(|O<rsub|1>|)>\<ominus\><rsub|2>O<rsub|2>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+          <reference|eq 21.21.173>]>>>|<cell|<around*|(|\<psi\><around*|(|P|)>\<ominus\><rsub|2>\<psi\><around*|(|O<rsub|1>|)>|)>+<big|sum><rsub|j=1><rsup|m>c<rsub|j>\<cdot\><wide|f<rsub|j>|\<vect\>>>>|<row|<cell|>|<cell|=>|<cell|d\<psi\><around*|(|P\<ominus\><rsub|1>O<rsub|1>|)>+<big|sum><rsub|j=1><rsup|m>c<rsub|j>\<cdot\><wide|f<rsub|j>|\<vect\>>>>|<row|<cell|>|<cell|<below|=|<text|[eq:
+          <reference|eq 21.20.273>[>>>|<cell|d\<psi\><around*|(|<big|sum><rsub|i=1><rsup|n>x<rsub|i>\<cdot\><wide|e<rsub|i>|\<vect\>>|)>+<big|sum><rsub|j=1><rsup|m>c<rsub|j>\<cdot\><wide|f<rsub|j>|\<vect\>>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|n>x<rsub|i>\<cdot\>d\<psi\><around*|(|<wide|e<rsub|i>|\<vect\>>|)>+<big|sum><rsub|j=1><rsup|m>c<rsub|j>\<cdot\><wide|f<rsub|j>|\<vect\>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
           <reference|eq 21.19.273>]>>>|<cell|<big|sum><rsub|i=1><rsup|n>x<rsub|i>\<cdot\><around*|(|<big|sum><rsub|j=1><rsup|m>M<rsub|j,i><rsup|>\<cdot\><wide|f<rsub|j>|\<vect\>>|)>+<big|sum><rsub|j=1><rsup|m>c<rsub|j>\<cdot\><wide|f<rsub|j>|\<vect\>>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|n><around*|(|<big|sum><rsub|j=1><rsup|m>x<rsub|i>\<cdot\><around*|(|M<rsub|j,i><rsup|>\<cdot\><wide|f<rsub|j>|\<vect\>>|)>|)>+<big|sum><rsub|j=1><rsup|m>c<rsub|j>\<cdot\><wide|f<rsub|j>|\<vect\>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
           <reference|sum index is a product>]>>>|<cell|<big|sum><rsub|j=1><rsup|m><around*|(|<big|sum><rsub|i=1><rsup|n>x<rsub|i>\<cdot\><around*|(|M<rsub|j,i><rsup|>\<cdot\><wide|f<rsub|j>|\<vect\>>|)>|)>+<big|sum><rsub|j=1><rsup|m>c<rsub|j>\<cdot\><wide|f<rsub|j>|\<vect\>>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|j=1><rsup|m><around*|(|<big|sum><rsub|i=1><rsup|n>x<rsub|i>\<cdot\><around*|(|M<rsub|j,i><rsup|>|)>|)>\<cdot\><wide|f<rsub|j>|\<vect\>>+<big|sum><rsub|j=1><rsup|m>c<rsub|j>\<cdot\><wide|f<rsub|j>|\<vect\>>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|j=1><rsup|m><around*|(|<big|sum><rsub|i=1><rsup|n>M<rsub|j,i><rsup|>\<cdot\>x<rsub|i>|)>\<cdot\><wide|f<rsub|j>|\<vect\>>+<big|sum><rsub|j=1><rsup|m>c<rsub|j>\<cdot\><wide|f<rsub|j>|\<vect\>>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|j=1><rsup|m><around*|(|c<rsub|j>+<big|sum><rsub|i=1><rsup|n>M<rsub|j,i><rsup|>\<cdot\>x<rsub|i>|)>\<cdot\><wide|f<rsub|j>|\<vect\>>>>>>
         </eqnarray*>
 
         As <math|f<rsub|2>> is a Cartesion coordinate system with origin
-        <math|\<psi\><around*|(|O|)>> and axes <math|F> it follows that\ 
+        <math|O<rsub|2>> and axes <math|F> it follows that \ 
 
         <\equation*>
           f<rsub|2><around*|(|\<psi\><around*|(|P|)>|)>=<around*|(|c<rsub|1>+<big|sum><rsub|j=1><rsup|n>M<rsub|1,j><rsup|>\<cdot\>x<rsub|j>,\<ldots\>,c<rsub|m>+<big|sum><rsub|j=1><rsup|n>M<rsub|m,j><rsup|>\<cdot\>x<rsub|j>|)>
         </equation*>
 
-        which as <math|<around*|(|f<rsub|2>\<circ\>\<psi\>\<circ\>f<rsup|-1>|)><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>=f<rsub|2><around*|(|\<psi\><around*|(|f<rsup|-1><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>|)>|)>=f<rsub|2><around*|(|\<psi\><around*|(|P|)>|)>>
+        which as <math|<around*|(|f<rsub|2>\<circ\>\<psi\>\<circ\>f<rsub|1><rsup|-1>|)><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>=f<rsub|2><around*|(|\<psi\><around*|(|f<rsub|1><rsup|-1><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>|)>|)>=f<rsub|2><around*|(|\<psi\><around*|(|P|)>|)>>
         proves that\ 
 
         <\equation>
           <label|eq 21.22.273>\<forall\>i\<in\><around*|{|1,\<ldots\>,m|}><text|
-          we have ><around*|(|<around*|(|f<rsub|2>\<circ\>\<psi\>\<circ\>f<rsup|-1>|)><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>|)><rsub|i>=c<rsub|i>+<big|sum><rsub|j=1><rsup|n>M<rsub|i,j><rsup|>\<cdot\>x<rsub|j>
+          we have ><around*|(|<around*|(|f<rsub|2>\<circ\>\<psi\>\<circ\>f<rsub|1><rsup|-1>|)><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>|)><rsub|i>=c<rsub|i>+<big|sum><rsub|j=1><rsup|n>M<rsub|i,j><rsup|>\<cdot\>x<rsub|j>
         </equation>
 
         <item>If <math|P> has coordinates
         <math|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>> using
         <math|f<rsub|1>> and <math|\<psi\><around*|(|P|)>> has coordinates
-        <math|<around*|(|y<rsub|1>,\<ldots\>,y<rsub|m>|)>> then we have
-        <math|P=f<rsub|2><rsup|-1><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>>
+        <math|<around*|(|y<rsub|1>,\<ldots\>,y<rsub|m>|)>> using
+        <math|f<rsub|2>> then we have <math|P=f<rsub|1><rsup|-1><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>>
         and <math|f<rsub|2><around*|(|\<psi\><around*|(|P|)>|)>=<around*|(|y<rsub|1>,\<ldots\>,y<rsub|m>|)>>
         so that\ 
 
         <\equation*>
-          <around*|(|f<rsub|2>\<circ\>\<psi\>\<circ\>f<rsup|-1>|)><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>=f<rsub|2><around*|(|\<psi\><around*|(|f<rsup|-1><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>|)>|)>=f<rsub|2><around*|(|\<psi\><around*|(|P|)>|)>=<around*|(|y<rsub|1>,\<ldots\>,y<rsub|m>|)>
+          <around*|(|f<rsub|2>\<circ\>\<psi\>\<circ\>f<rsub|1><rsup|-1>|)><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>=f<rsub|2><around*|(|\<psi\><around*|(|f<rsub|1><rsup|-1><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>|)>|)>=f<rsub|2><around*|(|\<psi\><around*|(|P|)>|)>=<around*|(|y<rsub|1>,\<ldots\>,y<rsub|m>|)>
         </equation*>
 
-        so that by [theorem: <reference|eq 21.22.273>] we have\ 
+        Using now [eq: <reference|eq 21.22.273>] on the above we have\ 
 
         <\equation*>
           \<forall\>i\<in\><around*|{|1,\<ldots\>,m|}><text| we have
@@ -1128,7 +1278,7 @@
 
       <item>Let <math|\<psi\>:\<bbb-A\><rsup|n><rsub|1>\<rightarrow\>\<bbb-A\><rsup|m><rsub|2>>
       be a mapping such that there exist a
-      <math|L\<in\>\<cal-M\><rsub|m,n><around*|(|\<bbb-R\>|)>>, a
+      <math|M\<in\>\<cal-M\><rsub|m,n><around*|(|\<bbb-R\>|)>>, a
       <math|<around*|{|c<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>>\<subseteq\>\<bbb-R\>>
       and 2 coordinate systems\ 
 
@@ -1166,7 +1316,7 @@
       such that
 
       <\equation>
-        <label|eq 21.25.173>P\<ominus\><rsub|1>O<rsub|1>=<big|sum><rsub|i=1><rsup|n>p<rsub|i>\<cdot\><wide|e<rsub|i>|\<vect\>>\<wedge\>\<ominus\><rsub|1>O<rsub|1>=<big|sum><rsub|i=1><rsup|n>q<rsub|i>\<cdot\><wide|e<rsub|i>|\<vect\>>
+        <label|eq 21.25.173>P\<ominus\><rsub|1>O<rsub|1>=<big|sum><rsub|i=1><rsup|n>p<rsub|i>\<cdot\><wide|e<rsub|i>|\<vect\>>\<wedge\>Q\<ominus\><rsub|1>O<rsub|1>=<big|sum><rsub|i=1><rsup|n>q<rsub|i>\<cdot\><wide|e<rsub|i>|\<vect\>>
       </equation>
 
       so that\ 
@@ -1207,13 +1357,15 @@
       <\eqnarray*>
         <tformat|<table|<row|<cell|\<psi\><around*|(|P|)>\<ominus\><rsub|2>\<psi\><around*|(|Q|)>>|<cell|\<equallim\><rsub|<text|[definition:
         <reference|affine space>]>>>|<cell|<around*|(|\<psi\><around*|(|P|)>\<ominus\><rsub|2>O<rsub|2>|)>+<around*|(|O<rsub|2>\<ominus\><rsub|2>\<psi\><around*|(|Q|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
-        <reference|affine space P-Q=-(Q-P)>]>>>|<cell|<around*|(|\<psi\><around*|(|P|)>\<ominus\><rsub|2>O<rsub|2>|)>-<around*|(|\<psi\><around*|(|Q|)>\<ominus\><rsub|2>O<rsub|2>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|m><around*|(|c<rsub|i>+<big|sum><rsub|j=1><rsup|n>M<rsub|i,j>\<cdot\>p<rsub|j>|)>\<cdot\><wide|f<rsub|i>|\<vect\>>-<big|sum><rsub|i=1><rsup|m><around*|(|c<rsub|i>+<big|sum><rsub|j=1><rsup|n>M<rsub|i,j>\<cdot\>q<rsub|j>|)>\<cdot\><wide|f<rsub|i>|\<vect\>>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|m><around*|(|c<rsub|i>+<big|sum><rsub|j=1><rsup|n>M<rsub|i,j>\<cdot\>p<rsub|j>-<around*|(|c<rsub|i>+<big|sum><rsub|j=1><rsup|n>M<rsub|i,j>\<cdot\>q<rsub|j>|)>|)>\<cdot\><wide|f<rsub|i>|\<vect\>>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|m><around*|(|<big|sum><rsub|j=1><rsup|n>M<rsub|i,j>\<cdot\>p<rsub|j>-<big|sum><rsub|j=1><rsup|n>M<rsub|i,j>\<cdot\>q<rsub|j>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|m><around*|(|<big|sum><rsub|j=1><rsup|n>M<rsub|i,j>\<cdot\><around*|(|p<rsub|i>-q<rsub|i>|)>|)>\<cdot\><wide|f<rsub|i>|\<vect\>>>>>>
+        <reference|affine space P-Q=-(Q-P)>]>>>|<cell|<around*|(|\<psi\><around*|(|P|)>\<ominus\><rsub|2>O<rsub|2>|)>-<around*|(|\<psi\><around*|(|Q|)>\<ominus\><rsub|2>O<rsub|2>|)>>>|<row|<cell|>|<cell|<below|=|<text|[eq:<reference|eq
+        21.28.275>, <reference|eq 21.29.275>]
+        >>>|<cell|<big|sum><rsub|i=1><rsup|m><around*|(|c<rsub|i>+<big|sum><rsub|j=1><rsup|n>M<rsub|i,j>\<cdot\>p<rsub|j>|)>\<cdot\><wide|f<rsub|i>|\<vect\>>-<big|sum><rsub|i=1><rsup|m><around*|(|c<rsub|i>+<big|sum><rsub|j=1><rsup|n>M<rsub|i,j>\<cdot\>q<rsub|j>|)>\<cdot\><wide|f<rsub|i>|\<vect\>>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|m><around*|(|c<rsub|i>+<big|sum><rsub|j=1><rsup|n>M<rsub|i,j>\<cdot\>p<rsub|j>-<around*|(|c<rsub|i>+<big|sum><rsub|j=1><rsup|n>M<rsub|i,j>\<cdot\>q<rsub|j>|)>|)>\<cdot\><wide|f<rsub|i>|\<vect\>>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|m><around*|(|<big|sum><rsub|j=1><rsup|n>M<rsub|i,j>\<cdot\>p<rsub|j>-<big|sum><rsub|j=1><rsup|n>M<rsub|i,j>\<cdot\>q<rsub|j>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|m><around*|(|<big|sum><rsub|j=1><rsup|n>M<rsub|i,j>\<cdot\><around*|(|p<rsub|j>-q<rsub|j>|)>|)>\<cdot\><wide|f<rsub|i>|\<vect\>>>>>>
       </eqnarray*>
 
       which proves that\ 
 
       <\equation>
-        <label|eq 21.30.275>\<psi\><around*|(|P|)>\<ominus\><rsub|2>\<psi\><around*|(|Q|)>=<big|sum><rsub|i=1><rsup|m><around*|(|<big|sum><rsub|j=1><rsup|n>M<rsub|i,j>\<cdot\><around*|(|p<rsub|i>-q<rsub|i>|)>|)>\<cdot\><wide|f<rsub|i>|\<vect\>>
+        <label|eq 21.30.275>\<psi\><around*|(|P|)>\<ominus\><rsub|2>\<psi\><around*|(|Q|)>=<big|sum><rsub|i=1><rsup|m><around*|(|<big|sum><rsub|j=1><rsup|n>M<rsub|i,j>\<cdot\><around*|(|p<rsub|j>-q<rsub|j>|)>|)>\<cdot\><wide|f<rsub|i>|\<vect\>>
       </equation>
 
       Now
@@ -1244,34 +1396,35 @@
         and >Q\<oplus\><wide|v|\<vect\>>=f<rsub|1><rsup|-1><around*|(|v<rsub|1>+q<rsub|1>,\<ldots\>,v<rsub|n>+q<rsub|n>|)>
       </equation>
 
-      So we have <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,m|}>>
+      Next we have <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,m|}>>
 
       <\eqnarray*>
         <tformat|<table|<row|<cell|<around*|(|f<rsub|2><around*|(|\<psi\><around*|(|P\<oplus\><rsub|1><wide|v|\<vect\>>|)>|)>|)><rsub|i>>|<cell|\<equallim\><rsub|<text|[eq:
         <reference|eq 21.29.273>]>>>|<cell|<around*|(|f<rsub|2><around*|(|\<psi\><around*|(|f<rsub|1><rsup|-1><around*|(|v<rsub|1>+p<rsub|1>,\<ldots\>,v<rsub|n>+p<rsub|n>|)>|)>|)>|)><rsub|i>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<around*|(|f<rsub|2>\<circ\>\<psi\>\<circ\>f<rsup|-1><rsub|1>|)><around*|(|v<rsub|1>+p<rsub|1>,\<ldots\>,v<rsub|n>+p<rsub|n>|)>|)><rsub|i>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq
-        <reference|eq 21.23.173>]>>>|<cell|c<rsub|i>+<big|sum><rsub|j=1><rsup|n>M<rsub|i,j>\<cdot\><around*|(|v<rsub|i>+p<rsub|i>|)>>>|<row|<cell|<around*|(|f<rsub|2><around*|(|\<psi\><around*|(|Q\<oplus\><rsub|1><wide|v|\<vect\>>|)>|)>|)><rsub|i>>|<cell|\<equallim\><rsub|<text|[eq:
+        <reference|eq 21.23.173>]>>>|<cell|c<rsub|i>+<big|sum><rsub|j=1><rsup|n>M<rsub|i,j>\<cdot\><around*|(|v<rsub|j>+p<rsub|j>|)>>>|<row|<cell|<around*|(|f<rsub|2><around*|(|\<psi\><around*|(|Q\<oplus\><rsub|1><wide|v|\<vect\>>|)>|)>|)><rsub|i>>|<cell|\<equallim\><rsub|<text|[eq:
         <reference|eq 21.29.273>]>>>|<cell|<around*|(|f<rsub|2><around*|(|\<psi\><around*|(|f<rsub|1><rsup|-1><around*|(|v<rsub|1>+q<rsub|1>,\<ldots\>,v<rsub|n>+q<rsub|n>|)>|)>|)>|)><rsub|i>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<around*|(|f<rsub|2>\<circ\>\<psi\>\<circ\>f<rsup|-1><rsub|1>|)><around*|(|v<rsub|1>+q<rsub|1>,\<ldots\>,v<rsub|n>+q<rsub|n>|)>|)><rsub|i>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq
-        <reference|eq 21.23.173>]>>>|<cell|c<rsub|i>+<big|sum><rsub|j=1><rsup|n>M<rsub|i,j>\<cdot\><around*|(|v<rsub|i>+q<rsub|i>|)>>>>>
+        <reference|eq 21.23.173>]>>>|<cell|c<rsub|i>+<big|sum><rsub|j=1><rsup|n>M<rsub|i,j>\<cdot\><around*|(|v<rsub|j>+q<rsub|j>|)>>>>>
       </eqnarray*>
 
       As <math|f<rsub|2>> is a Cartesian system with origin <math|O<rsub|2>>
-      and axes <math|F> it follows that\ 
+      and axes <math|F> it follows from the above that\ 
 
       <\equation>
-        <label|eq 21.29.274>\<psi\><around*|(|P\<oplus\><wide|v|\<vect\>>|)>\<ominus\><rsub|2>O<rsub|2><text|>=<big|sum><rsub|i=1><rsup|m><around*|(|c<rsub|i>+<big|sum><rsub|j=1><rsup|n>M<rsub|i,j>\<cdot\><around*|(|v<rsub|i>+p<rsub|i>|)>|)>\<cdot\><wide|f<rsub|i>|\<vect\>>
+        <label|eq 21.29.274>\<psi\><around*|(|P\<oplus\><wide|v|\<vect\>>|)>\<ominus\><rsub|2>O<rsub|2><text|>=<big|sum><rsub|i=1><rsup|m><around*|(|c<rsub|i>+<big|sum><rsub|j=1><rsup|n>M<rsub|i,j>\<cdot\><around*|(|v<rsub|j>+p<rsub|j>|)>|)>\<cdot\><wide|f<rsub|i>|\<vect\>>
       </equation>
 
       <\equation>
-        <label|eq 21.30.274>\<psi\><around*|(|Q\<oplus\><wide|v|\<vect\>>|)>\<ominus\><rsub|2>O<rsub|2>=<big|sum><rsub|i=1><rsup|m><around*|(|c<rsub|i>+<big|sum><rsub|j=1><rsup|n>M<rsub|i,j>\<cdot\><around*|(|v<rsub|i>+q<rsub|i>|)>|)>\<cdot\><wide|f<rsub|i>|\<vect\>>
+        <label|eq 21.30.274>\<psi\><around*|(|Q\<oplus\><wide|v|\<vect\>>|)>\<ominus\><rsub|2>O<rsub|2>=<big|sum><rsub|i=1><rsup|m><around*|(|c<rsub|i>+<big|sum><rsub|j=1><rsup|n>M<rsub|i,j>\<cdot\><around*|(|v<rsub|j>+q<rsub|j>|)>|)>\<cdot\><wide|f<rsub|i>|\<vect\>>
       </equation>
 
       so that\ 
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|\<psi\><around*|(|P\<oplus\><rsub|1><wide|v|\<vect\>>|)>\<ominus\><rsub|2>\<psi\><around*|(|Q\<oplus\><rsub|1><wide|v|\<vect\>>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|\<psi\><around*|(|P\<oplus\><rsub|1><wide|v|\<vect\>>|)>\<ominus\><rsub|2>O<rsub|2>|)>+<around*|(|O<rsub|2>\<ominus\><rsub|2>\<psi\><around*|(|Q\<oplus\><rsub|1><wide|v|\<vect\>>|)>|)>>|<cell|<below|=|<text|[theorem:
+        <tformat|<table|<row|<cell|\<psi\><around*|(|P\<oplus\><rsub|1><wide|v|\<vect\>>|)>\<ominus\><rsub|2>\<psi\><around*|(|Q\<oplus\><rsub|1><wide|v|\<vect\>>|)>>|<cell|<below|=|<text|[definition:
+        <reference|affine space>>>>|<cell|>>|<row|<cell|<around*|(|\<psi\><around*|(|P\<oplus\><rsub|1><wide|v|\<vect\>>|)>\<ominus\><rsub|2>O<rsub|2>|)>+<around*|(|O<rsub|2>\<ominus\><rsub|2>\<psi\><around*|(|Q\<oplus\><rsub|1><wide|v|\<vect\>>|)>|)>>|<cell|<below|=|<text|[theorem:
         <reference|affine space P-Q=-(Q-P)>]>>>|<cell|>>|<row|<cell|<around*|(|\<psi\><around*|(|P\<oplus\><rsub|1><wide|v|\<vect\>>|)>\<ominus\><rsub|2>O<rsub|2>|)>-<around*|(|\<psi\><around*|(|Q\<oplus\><rsub|1><wide|v|\<vect\>>|)>\<ominus\><rsub|2>O<rsub|2>|)>>|<cell|\<equallim\><rsub|<text|[eqs:
         <reference|eq 21.29.274>,<reference|eq
-        21.30.274>]>>>|<cell|>>|<row|<cell|<big|sum><rsub|i=1><rsup|m><around*|(|c<rsub|i>+<big|sum><rsub|j=1><rsup|n>M<rsub|i,j>\<cdot\><around*|(|v<rsub|i>+p<rsub|i>|)>|)>\<cdot\><wide|f<rsub|i>|\<vect\>>-<big|sum><rsub|i=1><rsup|m><around*|(|c<rsub|i>+<big|sum><rsub|j=1><rsup|n>M<rsub|i,j>\<cdot\><around*|(|v<rsub|i>+q<rsub|i>|)>|)>\<cdot\><wide|f<rsub|i>|\<vect\>>>|<cell|=>|<cell|>>|<row|<cell|<big|sum><rsub|i=1><rsup|m><around*|(|c<rsub|i>+<big|sum><rsub|j=1><rsup|n>M<rsub|i,j>\<cdot\><around*|(|v<rsub|i>+p<rsub|i>|)>-<around*|(|c<rsub|i>+<big|sum><rsub|j=1><rsup|n>M<rsub|i,j>\<cdot\><around*|(|v<rsub|i>+q<rsub|i>|)>|)>|)>\<cdot\><wide|f<rsub|i>|\<vect\>>>|<cell|=>|<cell|>>|<row|<cell|<big|sum><rsub|i=1><rsup|m><around*|(|<big|sum><rsub|j=1><rsup|n>M<rsub|i,j>\<cdot\><around*|(|v<rsub|i>+p<rsub|i>|)>-<big|sum><rsub|j=1><rsup|n>M<rsub|i,j>\<cdot\><around*|(|v<rsub|i>+q<rsub|i>|)>|)>\<cdot\><wide|f<rsub|i>|\<vect\>>>|<cell|=>|<cell|>>|<row|<cell|<big|sum><rsub|i=1><rsup|m><around*|(|<big|sum><rsub|j=1><rsup|n>M<rsub|i,j>\<cdot\><around*|(|v<rsub|i>+p<rsub|i>-<around*|(|v<rsub|i>+q<rsub|i>|)>|)>|)>\<cdot\><wide|f<rsub|i>|\<vect\>>>|<cell|=>|<cell|>>|<row|<cell|<big|sum><rsub|i=1><rsup|m><around*|(|<big|sum><rsub|j=1><rsup|n>M<rsub|i,j>\<cdot\><around*|(|p<rsub|i>-q<rsub|i>|)>|)>\<cdot\><wide|f<rsub|i>|\<vect\>>>|<cell|\<equallim\><rsub|<text|[eq:
+        21.30.274>]>>>|<cell|>>|<row|<cell|<big|sum><rsub|i=1><rsup|m><around*|(|c<rsub|i>+<big|sum><rsub|j=1><rsup|n>M<rsub|i,j>\<cdot\><around*|(|v<rsub|j>+p<rsub|j>|)>|)>\<cdot\><wide|f<rsub|i>|\<vect\>>-<big|sum><rsub|i=1><rsup|m><around*|(|c<rsub|i>+<big|sum><rsub|j=1><rsup|n>M<rsub|i,j>\<cdot\><around*|(|v<rsub|j>+q<rsub|j>|)>|)>\<cdot\><wide|f<rsub|i>|\<vect\>>>|<cell|=>|<cell|>>|<row|<cell|<big|sum><rsub|i=1><rsup|m><around*|(|c<rsub|i>+<big|sum><rsub|j=1><rsup|n>M<rsub|i,j>\<cdot\><around*|(|v<rsub|j>+p<rsub|j>|)>-<around*|(|c<rsub|i>+<big|sum><rsub|j=1><rsup|n>M<rsub|i,j>\<cdot\><around*|(|v<rsub|j>+q<rsub|j>|)>|)>|)>\<cdot\><wide|f<rsub|i>|\<vect\>>>|<cell|=>|<cell|>>|<row|<cell|<big|sum><rsub|i=1><rsup|m><around*|(|<big|sum><rsub|j=1><rsup|n>M<rsub|i,j>\<cdot\><around*|(|v<rsub|j>+p<rsub|j>|)>-<big|sum><rsub|j=1><rsup|n>M<rsub|i,j>\<cdot\><around*|(|v<rsub|j>+q<rsub|j>|)>|)>\<cdot\><wide|f<rsub|i>|\<vect\>>>|<cell|=>|<cell|>>|<row|<cell|<big|sum><rsub|i=1><rsup|m><around*|(|<big|sum><rsub|j=1><rsup|n>M<rsub|i,j>\<cdot\><around*|(|v<rsub|j>+p<rsub|j>-<around*|(|v<rsub|j>+q<rsub|j>|)>|)>|)>\<cdot\><wide|f<rsub|i>|\<vect\>>>|<cell|=>|<cell|>>|<row|<cell|<big|sum><rsub|i=1><rsup|m><around*|(|<big|sum><rsub|j=1><rsup|n>M<rsub|i,j>\<cdot\><around*|(|p<rsub|j>-q<rsub|j>|)>|)>\<cdot\><wide|f<rsub|i>|\<vect\>>>|<cell|\<equallim\><rsub|<text|[eq:
         <reference|eq 21.30.275>]>>>|<cell|>>|<row|<cell|\<psi\><around*|(|P|)>\<ominus\><rsub|2>\<psi\><around*|(|Q|)>>|<cell|>|<cell|>>>>
       </eqnarray*>
 
@@ -1303,7 +1456,7 @@
       so that
 
       <\equation*>
-        S\<ominus\><rsub|1>O<rsub|1>=<wide|u|\<vect\>>+\<alpha\>\<cdot\><wide|v|\<vect\>>=<big|sum><rsub|i=1><rsup|n>p<rsub|i>\<cdot\><wide|e<rsub|i>|\<vect\>>+<big|sum><rsub|i=1><rsup|n><around*|(|\<alpha\>\<cdot\>q<rsub|i>|)>\<cdot\><wide|e<rsub|i>|\<vect\>>=<big|sum><rsub|i=1><rsup|n><around*|(|p<rsub|i>+\<alpha\>\<cdot\>q<rsub|i>|)>
+        S\<ominus\><rsub|1>O<rsub|1>=<wide|u|\<vect\>>+\<alpha\>\<cdot\><wide|v|\<vect\>>=<big|sum><rsub|i=1><rsup|n>p<rsub|i>\<cdot\><wide|e<rsub|i>|\<vect\>>+<big|sum><rsub|i=1><rsup|n><around*|(|\<alpha\>\<cdot\>q<rsub|i>|)>\<cdot\><wide|e<rsub|i>|\<vect\>>=<big|sum><rsub|i=1><rsup|n><around*|(|p<rsub|i>+\<alpha\>\<cdot\>q<rsub|i>|)>\<cdot\><wide|e<rsub|i>|\<wide-varrightarrow\>>
       </equation*>
 
       Further\ 
@@ -1326,7 +1479,7 @@
         <tformat|<table|<row|<cell|>|<cell|P=f<rsup|-1><rsub|1><around*|(|p<rsub|1>,\<ldots\>,p<rsub|n>|)>>|<cell|>>|<row|<cell|>|<cell|Q=f<rsup|-1><rsub|1><around*|(|q<rsub|1>,\<ldots\>,q<rsub|n>|)>>|<cell|>>|<row|<cell|>|<cell|R=f<rsup|-1><rsub|1><around*|(|\<alpha\>\<cdot\>q<rsub|1>,\<ldots\>,\<alpha\>\<cdot\>q<rsub|n>|)>>|<cell|>>|<row|<cell|>|<cell|S=f<rsup|-1><rsub|1><around*|(|p<rsub|1>+\<alpha\>\<cdot\>q<rsub|1>,\<ldots\>,p<rsub|n>+\<alpha\>\<cdot\>q<rsub|n>|)>>|<cell|>>|<row|<cell|>|<cell|O<rsub|1>=f<rsup|-1><rsub|1><around*|(|<wide*|0,\<ldots\>,0|\<wide-underbrace\>><rsub|n>|)>>|<cell|>>>>
       </eqnarray*>
 
-      So for all
+      Hence
 
       <\eqnarray*>
         <tformat|<table|<row|<cell|<around*|(|f<rsub|2><around*|(|\<psi\><around*|(|P|)>|)>|)><rsub|i>>|<cell|=>|<cell|<around*|(|f<rsub|2>*<around*|(|\<psi\><around*|(|f<rsup|-1><rsub|1><around*|(|p<rsub|1>,\<ldots\>,p<rsub|n>|)>|)>|)>|)><rsub|i>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<around*|(|f<rsub|2>\<circ\>\<psi\>\<circ\>f<rsup|-1><rsub|1>|)><around*|(|p<rsub|1>,\<ldots\>,p<rsub|n>|)>|)><rsub|i>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
@@ -1378,19 +1531,19 @@
 
       <\eqnarray*>
         <tformat|<table|<row|<cell|d\<psi\><around*|(|<wide|u|\<vect\>>+\<alpha\>\<cdot\><wide|v|\<vect\>>|)>>|<cell|\<equallim\><rsub|<text|[eq:
-        <reference|eq 21.36.275>]>>>|<cell|\<psi\><around*|(|S|)>\<ominus\><rsub|2>\<psi\><around*|(|O<rsub|1>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[definition:
+        <reference|eq 21.36.275>]>>>|<cell|d\<psi\><around*|(|S\<ominus\><rsub|1>O<rsub|1>|)>>>|<row|<cell|>|<cell|=>|<cell|\<psi\><around*|(|S|)>\<ominus\><rsub|2>\<psi\><around*|(|O<rsub|1>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[definition:
         <reference|affine space>]>>>|<cell|<around*|(|\<psi\><around*|(|S|)>\<ominus\><rsub|2>O<rsub|2>|)>+<around*|(|O<rsub|2>\<ominus\><rsub|2>\<psi\><around*|(|O<rsub|1>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
         <reference|affine space P-Q=-(Q-P)>]>>>|<cell|<around*|(|\<psi\><around*|(|S|)>\<ominus\><rsub|2>O<rsub|2>|)>-<around*|(|\<psi\><around*|(|O<rsub|1>|)>\<ominus\><rsub|2>O<rsub|2>|)>>>|<row|<cell|>|<cell|<below|=|<text|[eqs:
         <reference|eq 21.45.275>, <reference|eq
         21.46.275>]>>>|<cell|<big|sum><rsub|i=1><rsup|m><around*|(|c<rsub|i>+<big|sum><rsub|j=1><rsup|n>M<rsub|i,j><rsup|>\<cdot\><around*|(|p<rsub|j>+\<alpha\>\<cdot\>q<rsub|j>|)>|)>\<cdot\><wide|f<rsub|i>|\<vect\>>-<big|sum><rsub|i=1><rsup|m>c<rsub|i>\<cdot\><wide|f<rsub|i>|\<vect\>>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i-1><rsup|m><around*|(|<big|sum><rsub|j=1><rsup|n>M<rsub|i,j><rsup|>\<cdot\>p<rsub|j>|)>\<cdot\><wide|f<rsub|i>|\<vect\>>+\<alpha\>\<cdot\><big|sum><rsub|i-1><rsup|m><around*|(|<big|sum><rsub|j=1><rsup|n>M<rsub|i,j><rsup|>\<cdot\>q<rsub|j>|)>\<cdot\><wide|f<rsub|i>|\<vect\>><eq-number><label|eq
         21.47.275>>>|<row|<cell|d\<psi\><around*|(|<wide|u|\<vect\>>|)>>|<cell|\<equallim\><rsub|<text|[eq:
-        <reference|eq 21.36.275>]>>>|<cell|\<psi\><around*|(|P|)>\<ominus\><rsub|2>\<psi\><around*|(|O<rsub|1>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[definition:
+        <reference|eq 21.36.275>]>>>|<cell|d\<psi\><around*|(|P\<ominus\><rsub|1>O<rsub|1>|)>>>|<row|<cell|>|<cell|=>|<cell|\<psi\><around*|(|P|)>\<ominus\><rsub|2>\<psi\><around*|(|O<rsub|1>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[definition:
         <reference|affine space>]>>>|<cell|<around*|(|\<psi\><around*|(|P|)>\<ominus\><rsub|2>O<rsub|2>|)>+<around*|(|O<rsub|2>\<ominus\><rsub|2>\<psi\><around*|(|O<rsub|1>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
         <reference|affine space P-Q=-(Q-P)>]>>>|<cell|<around*|(|\<psi\><around*|(|P|)>\<ominus\><rsub|2>O<rsub|2>|)>-<around*|(|\<psi\><around*|(|O<rsub|1>|)>\<ominus\><rsub|2>O<rsub|2>|)>>>|<row|<cell|>|<cell|<below|=|<text|[eqs:
         <reference|eq 21.42.275>, <reference|eq
         21.46.275>]>>>|<cell|<big|sum><rsub|i=1><rsup|m><around*|(|c<rsub|i>+<big|sum><rsub|j=1><rsup|n>M<rsub|i,j><rsup|>\<cdot\>p<rsub|j>|)>\<cdot\><wide|f<rsub|i>|\<vect\>>-<big|sum><rsub|i=1><rsup|m>c<rsub|i>\<cdot\><wide|f<rsub|i>|\<vect\>>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i-1><rsup|m><around*|(|<big|sum><rsub|j=1><rsup|n>M<rsub|i,j><rsup|>\<cdot\>p<rsub|j>|)>\<cdot\><wide|f<rsub|i>|\<vect\>><eq-number><label|eq
         21.48.275>>>|<row|<cell|d\<psi\><around*|(|\<alpha\>\<cdot\><wide|v|\<vect\>>|)>>|<cell|\<equallim\><rsub|<text|[eq:
-        <reference|eq 21.36.275>]>>>|<cell|\<psi\><around*|(|R|)>\<ominus\><rsub|2>\<psi\><around*|(|O<rsub|1>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[definition:
+        <reference|eq 21.36.275>]>>>|<cell|\<psi\><around*|(|R\<ominus\><rsub|1>O<rsub|1>|)>>>|<row|<cell|>|<cell|=>|<cell|\<psi\><around*|(|R|)>\<ominus\><rsub|2>\<psi\><around*|(|O<rsub|1>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[definition:
         <reference|affine space>]>>>|<cell|<around*|(|\<psi\><around*|(|R|)>\<ominus\><rsub|2>O<rsub|2>|)>+<around*|(|O<rsub|2>\<ominus\><rsub|2>\<psi\><around*|(|O<rsub|1>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
         <reference|affine space P-Q=-(Q-P)>]>>>|<cell|<around*|(|\<psi\><around*|(|R|)>\<ominus\><rsub|2>O<rsub|2>|)>-<around*|(|\<psi\><around*|(|O<rsub|1>|)>\<ominus\><rsub|2>O<rsub|2>|)>>>|<row|<cell|>|<cell|<below|=|<text|[eqs:
         <reference|eq 21.44.275>, <reference|eq
@@ -1420,7 +1573,7 @@
 
   <\definition>
     <label|affine space line and segment><index|line>Let
-    <math|n\<in\>\<bbb-N\>>, <math|<around*|\<langle\>|\<bbb-A\><rsup|n>,V|\<rangle\>>>
+    <math|n\<in\>\<bbb-N\>>, <math|<around*|\<langle\>|\<bbb-A\><rsup|n>,V,\<ominus\>|\<rangle\>>>
     be a real affine space of dimension <math|n>,
     <math|O\<in\>\<bbb-A\><rsup|n>>, <math|<wide|v|\<vect\>>\<in\>V> then a
     <with|font-series|bold|line <math|l> with origin O and tangent vector
@@ -1434,19 +1587,21 @@
     If <math|a,b\<in\>\<bbb-R\>> with <math|a\<less\>b> then the maps
 
     <\eqnarray*>
-      <tformat|<table|<row|<cell|>|<cell|l<rsub|\|<around*|[|a,b|]>>:<around*|[|a,b|]>\<rightarrow\>\<bbb-A\><rsup|n>>|<cell|>>|<row|<cell|>|<cell|l<rsub|\|<around*|[|a,b|]>>:<around*|]|a,b|]>\<rightarrow\>\<bbb-A\><rsup|n>>|<cell|>>|<row|<cell|>|<cell|l<rsub|\|<around*|[|a,b|]>>:<around*|[|a,b|[>\<rightarrow\>\<bbb-A\><rsup|n>>|<cell|>>|<row|<cell|>|<cell|l<rsub|\|<around*|[|a,b|]>>:<around*|]|a,b|[>\<rightarrow\>\<bbb-A\><rsup|n>>|<cell|>>>>
+      <tformat|<table|<row|<cell|>|<cell|l<rsub|\|<around*|[|a,b|]>>:<around*|[|a,b|]>\<rightarrow\>\<bbb-A\><rsup|n>>|<cell|>>|<row|<cell|>|<cell|l<rsub|\|<around*|]|a,b|]>>:<around*|]|a,b|]>\<rightarrow\>\<bbb-A\><rsup|n>>|<cell|>>|<row|<cell|>|<cell|l<rsub|\|<around*|[|a,b|[>>:<around*|[|a,b|[>\<rightarrow\>\<bbb-A\><rsup|n>>|<cell|>>|<row|<cell|>|<cell|l<rsub|\|<around*|]|a,b|[>>:<around*|]|a,b|[>\<rightarrow\>\<bbb-A\><rsup|n>>|<cell|>>>>
     </eqnarray*>
 
     are called segments of the line <math|l>.
   </definition>
 
-  What is special of affine mappings is that they maps lines to lines.
+  The importance of affine mappings is that they map lines to lines.
+
+  TODO
 
   <\theorem>
     <label|affine mapping of a line>Let <math|n,m\<in\>\<bbb-N\>>,
-    <math|<around*|\<langle\>|\<bbb-A\><rsup|n><rsub|1>,V<rsub|1>|\<rangle\>>,<around*|\<langle\>|\<bbb-A\><rsup|m><rsub|2>,V<rsub|2>|\<rangle\>>>
+    <math|<around*|\<langle\>|\<bbb-A\><rsup|n><rsub|1>,V<rsub|1>,\<ominus\><rsub|1>|\<rangle\>>,<around*|\<langle\>|\<bbb-A\><rsup|m><rsub|2>,V<rsub|2>,\<ominus\><rsub|2>|\<rangle\>>>
     be a real affine spaces and <math|\<psi\>:\<bbb-A\><rsup|n><rsub|1>\<rightarrow\>\<bbb-A\><rsup|m><rsub|2>>
-    is a affine mapping then if <math|l> is a line with origin <math|O> and
+    a affine mapping then if <math|l> is a line with origin <math|O> and
     tangent vector <math|<wide|v|\<vect\>>> then <math|\<psi\>\<circ\>l> is a
     line with origin <math|\<psi\><around*|(|O|)>> and tangent vector
     <math|d\<psi\><around*|(|<wide|v|\<vect\>>|)>>.
@@ -1489,21 +1644,21 @@
     <math|d\<psi\><around*|(|<wide|v|\<vect\>>|)>.>
   </proof>
 
-  <section|Eucledian space>
+  <section|Euclidean space>
 
   To be able to define distances, angles, areas , areas we need the
   additional structure of a inner product on the set of displacements of a
-  affine space. This leads to the definition of a Eucledian space.
+  affine space. This leads to the definition of a Euclidean space.
 
   <\definition>
-    <label|affine Eucledean space><dueto|Eucledian Space>Let
+    <label|affine Eucledean space><dueto|Euclidean Space>Let
     <math|n\<in\>\<bbb-N\>> then <math|<around*|\<langle\>|\<bbb-E\><rsup|n>,V,<around*|\<langle\>||\<rangle\>>|\<rangle\>>>
     is a <with|font-series|bold|real Eucledean Space of dimension <math|n>>
     if <math|<around*|\<langle\>|\<bbb-E\><rsup|n>,V|\<rangle\>>> is a real
     affine space of dimension <math|n> and
     <math|<around*|\<langle\>|V,<around*|\<langle\>||\<rangle\>>|\<rangle\>>>
-    is a inner product space [see definition: <reference|inner real inner
-    product space>]\ 
+    is a real inner product space [see definition: <reference|inner real
+    inner product space>]\ 
   </definition>
 
   <\definition>
@@ -1529,122 +1684,139 @@
 
 <\initial>
   <\collection>
-    <associate|chapter-nr|20>
-    <associate|page-first|1619>
+    <associate|chapter-nr|21>
+    <associate|page-first|1847>
     <associate|page-medium|papyrus>
-    <associate|section-nr|7>
+    <associate|par-first|0>
+    <associate|section-nr|8>
     <associate|subsection-nr|3>
   </collection>
 </initial>
 
 <\references>
   <\collection>
-    <associate|affine Eucledean space|<tuple|21.23|?>>
-    <associate|affine P-Q=P'-Q'=\<gtr\>P-P'=Q=Q'|<tuple|21.5|?>>
-    <associate|affine cartesian cooddinate system|<tuple|21.11|?>>
-    <associate|affine cartesion coodinate system transform|<tuple|21.13|?>>
+    <associate|affine Eucledean space|<tuple|22.24|?>>
+    <associate|affine P-Q=P'-Q'=\<gtr\>P-P'=Q=Q'|<tuple|22.5|?>>
+    <associate|affine cartesian cooddinate system|<tuple|22.11|?>>
+    <associate|affine cartesion coodinate system transform|<tuple|22.13|?>>
     <associate|affine inverse of affine isomorphism is a affine
-    isomorphism|<tuple|21.18|?>>
-    <associate|affine isomorphism|<tuple|21.17|?>>
-    <associate|affine mapping|<tuple|21.15|?>>
-    <associate|affine mapping of a line|<tuple|21.22|?>>
-    <associate|affine orthonormal coordinate system|<tuple|21.24|?>>
-    <associate|affine space|<tuple|21.1|?>>
-    <associate|affine space P-Q=(P+u)-(Q+u)|<tuple|21.9|?>>
-    <associate|affine space P-Q=-(Q-P)|<tuple|21.7|?>>
-    <associate|affine space Q+(P-Q)=P|<tuple|21.4|?>>
-    <associate|affine space associativity|<tuple|21.8|?>>
-    <associate|affine space isomorphism condition|<tuple|21.19|?>>
-    <associate|affine space line and segment|<tuple|21.21|?>>
-    <associate|affine space local coordinate system|<tuple|21.10|?>>
-    <associate|affine space zero vector|<tuple|21.6|?>>
-    <associate|auto-1|<tuple|21|?>>
-    <associate|auto-2|<tuple|21.1|?>>
+    isomorphism|<tuple|22.19|?>>
+    <associate|affine isomorphism|<tuple|22.18|?>>
+    <associate|affine mapping|<tuple|22.16|?>>
+    <associate|affine mapping of a line|<tuple|22.23|?>>
+    <associate|affine orthonormal coordinate system|<tuple|22.25|?>>
+    <associate|affine space|<tuple|22.1|?>>
+    <associate|affine space P-Q=(P+u)-(Q+u)|<tuple|22.9|?>>
+    <associate|affine space P-Q=-(Q-P)|<tuple|22.7|?>>
+    <associate|affine space Q+(P-Q)=P|<tuple|22.4|?>>
+    <associate|affine space associativity|<tuple|22.8|?>>
+    <associate|affine space isomorphism condition|<tuple|22.20|?>>
+    <associate|affine space line and segment|<tuple|22.22|?>>
+    <associate|affine space local coordinate system|<tuple|22.10|?>>
+    <associate|affine space zero vector|<tuple|22.6|?>>
+    <associate|auto-1|<tuple|22|?>>
+    <associate|auto-10|<tuple|line|?>>
+    <associate|auto-11|<tuple|22.2|?>>
+    <associate|auto-2|<tuple|22.1|?>>
     <associate|auto-3|<tuple|affine space|?>>
-    <associate|auto-4|<tuple|local coordinate system|?>>
-    <associate|auto-5|<tuple|global coordinate system|?>>
-    <associate|auto-6|<tuple|affine mapping|?>>
-    <associate|auto-7|<tuple|affine isomorphism|?>>
-    <associate|auto-8|<tuple|line|?>>
-    <associate|auto-9|<tuple|21.2|?>>
-    <associate|eq 21.1.171|<tuple|21.7|?>>
-    <associate|eq 21.1.172|<tuple|21.1|?>>
-    <associate|eq 21.10.271|<tuple|21.16|?>>
-    <associate|eq 21.17.173|<tuple|21.17|?>>
-    <associate|eq 21.18.273|<tuple|21.18|?>>
-    <associate|eq 21.19.273|<tuple|21.19|?>>
-    <associate|eq 21.2.171|<tuple|21.8|?>>
-    <associate|eq 21.2.172|<tuple|21.2|?>>
-    <associate|eq 21.20.273|<tuple|21.20|?>>
-    <associate|eq 21.21.173|<tuple|21.21|?>>
-    <associate|eq 21.22.273|<tuple|21.22|?>>
-    <associate|eq 21.23.173|<tuple|21.23|?>>
-    <associate|eq 21.24.173|<tuple|21.24|?>>
-    <associate|eq 21.25.173|<tuple|21.25|?>>
-    <associate|eq 21.26.273|<tuple|21.26|?>>
-    <associate|eq 21.27.275|<tuple|21.27|?>>
-    <associate|eq 21.28.273|<tuple|21.31|?>>
-    <associate|eq 21.28.275|<tuple|21.28|?>>
-    <associate|eq 21.29.273|<tuple|21.32|?>>
-    <associate|eq 21.29.274|<tuple|21.33|?>>
-    <associate|eq 21.29.275|<tuple|21.29|?>>
-    <associate|eq 21.3.172|<tuple|21.3|?>>
-    <associate|eq 21.3.271|<tuple|21.9|?>>
-    <associate|eq 21.30.274|<tuple|21.34|?>>
-    <associate|eq 21.30.275|<tuple|21.30|?>>
-    <associate|eq 21.35.275|<tuple|21.35|?>>
-    <associate|eq 21.36.275|<tuple|21.36|?>>
-    <associate|eq 21.37.275|<tuple|21.37|?>>
-    <associate|eq 21.38.275|<tuple|21.38|?>>
-    <associate|eq 21.39.275|<tuple|21.39|?>>
-    <associate|eq 21.4.171|<tuple|21.10|?>>
-    <associate|eq 21.4.272|<tuple|21.4|?>>
-    <associate|eq 21.40.275|<tuple|21.40|?>>
-    <associate|eq 21.41.275|<tuple|21.41|?>>
-    <associate|eq 21.42.275|<tuple|21.42|?>>
-    <associate|eq 21.43.275|<tuple|21.43|?>>
-    <associate|eq 21.44.275|<tuple|21.44|?>>
-    <associate|eq 21.45.275|<tuple|21.45|?>>
-    <associate|eq 21.46.275|<tuple|21.46|?>>
-    <associate|eq 21.47.275|<tuple|21.47|?>>
-    <associate|eq 21.48.275|<tuple|21.48|?>>
-    <associate|eq 21.49.275|<tuple|21.49|?>>
-    <associate|eq 21.5.171|<tuple|21.11|?>>
-    <associate|eq 21.5.272|<tuple|21.5|?>>
-    <associate|eq 21.6.171|<tuple|21.12|?>>
-    <associate|eq 21.6.172|<tuple|21.6|?>>
-    <associate|eq 21.7.171|<tuple|21.13|?>>
-    <associate|eq 21.8.271|<tuple|21.14|?>>
-    <associate|eq 21.9.271|<tuple|21.15|?>>
+    <associate|auto-4|<tuple|22.1|?>>
+    <associate|auto-5|<tuple|22.2|?>>
+    <associate|auto-6|<tuple|local coordinate system|?>>
+    <associate|auto-7|<tuple|global coordinate system|?>>
+    <associate|auto-8|<tuple|affine mapping|?>>
+    <associate|auto-9|<tuple|affine isomorphism|?>>
+    <associate|eq 21.1.171|<tuple|22.7|?>>
+    <associate|eq 21.1.172|<tuple|22.1|?>>
+    <associate|eq 21.10.271|<tuple|22.18|?>>
+    <associate|eq 21.17.173|<tuple|22.20|?>>
+    <associate|eq 21.18.273|<tuple|22.21|?>>
+    <associate|eq 21.19.273|<tuple|22.22|?>>
+    <associate|eq 21.2.171|<tuple|22.8|?>>
+    <associate|eq 21.2.172|<tuple|22.2|?>>
+    <associate|eq 21.20.273|<tuple|22.23|?>>
+    <associate|eq 21.21.173|<tuple|22.24|?>>
+    <associate|eq 21.22.273|<tuple|22.25|?>>
+    <associate|eq 21.23.173|<tuple|22.26|?>>
+    <associate|eq 21.24.173|<tuple|22.27|?>>
+    <associate|eq 21.25.173|<tuple|22.28|?>>
+    <associate|eq 21.26.273|<tuple|22.29|?>>
+    <associate|eq 21.27.275|<tuple|22.30|?>>
+    <associate|eq 21.28.273|<tuple|22.34|?>>
+    <associate|eq 21.28.275|<tuple|22.31|?>>
+    <associate|eq 21.29.273|<tuple|22.35|?>>
+    <associate|eq 21.29.274|<tuple|22.36|?>>
+    <associate|eq 21.29.275|<tuple|22.32|?>>
+    <associate|eq 21.3.172|<tuple|22.3|?>>
+    <associate|eq 21.3.271|<tuple|22.9|?>>
+    <associate|eq 21.30.274|<tuple|22.37|?>>
+    <associate|eq 21.30.275|<tuple|22.33|?>>
+    <associate|eq 21.35.275|<tuple|22.38|?>>
+    <associate|eq 21.36.275|<tuple|22.39|?>>
+    <associate|eq 21.37.275|<tuple|22.40|?>>
+    <associate|eq 21.38.275|<tuple|22.41|?>>
+    <associate|eq 21.39.275|<tuple|22.42|?>>
+    <associate|eq 21.4.171|<tuple|22.10|?>>
+    <associate|eq 21.4.272|<tuple|22.4|?>>
+    <associate|eq 21.40.275|<tuple|22.43|?>>
+    <associate|eq 21.41.275|<tuple|22.44|?>>
+    <associate|eq 21.42.275|<tuple|22.45|?>>
+    <associate|eq 21.43.275|<tuple|22.46|?>>
+    <associate|eq 21.44.275|<tuple|22.47|?>>
+    <associate|eq 21.45.275|<tuple|22.48|?>>
+    <associate|eq 21.46.275|<tuple|22.49|?>>
+    <associate|eq 21.47.275|<tuple|22.50|?>>
+    <associate|eq 21.48.275|<tuple|22.51|?>>
+    <associate|eq 21.49.275|<tuple|22.52|?>>
+    <associate|eq 21.5.171|<tuple|22.11|?>>
+    <associate|eq 21.5.272|<tuple|22.5|?>>
+    <associate|eq 21.6.171|<tuple|22.12|?>>
+    <associate|eq 21.6.172|<tuple|22.6|?>>
+    <associate|eq 21.7.171|<tuple|22.13|?>>
+    <associate|eq 21.8.271|<tuple|22.15|?>>
+    <associate|eq 21.9.271|<tuple|22.16|?>>
+    <associate|eq 22.14.1|<tuple|22.14|?>>
+    <associate|eq 22.17.1|<tuple|22.17|?>>
+    <associate|eq 22.19.1|<tuple|22.19|?>>
+    <associate|figure 22.1.1|<tuple|22.1|?>>
+    <associate|lemma 22.15.1|<tuple|22.15|?>>
   </collection>
 </references>
 
 <\auxiliary>
   <\collection>
+    <\associate|figure>
+      <tuple|normal|<\surround|<hidden-binding|<tuple>|22.1>|>
+        \;
+      </surround>|<pageref|auto-4>>
+
+      <tuple|normal|<\surround|<hidden-binding|<tuple>|22.2>|>
+        \;
+      </surround>|<pageref|auto-5>>
+    </associate>
     <\associate|idx>
       <tuple|<tuple|affine space>|<pageref|auto-3>>
 
-      <tuple|<tuple|local coordinate system>|<pageref|auto-4>>
+      <tuple|<tuple|local coordinate system>|<pageref|auto-6>>
 
-      <tuple|<tuple|global coordinate system>|<pageref|auto-5>>
+      <tuple|<tuple|global coordinate system>|<pageref|auto-7>>
 
-      <tuple|<tuple|affine mapping>|<pageref|auto-6>>
+      <tuple|<tuple|affine mapping>|<pageref|auto-8>>
 
-      <tuple|<tuple|affine isomorphism>|<pageref|auto-7>>
+      <tuple|<tuple|affine isomorphism>|<pageref|auto-9>>
 
-      <tuple|<tuple|line>|<pageref|auto-8>>
+      <tuple|<tuple|line>|<pageref|auto-10>>
     </associate>
     <\associate|toc>
-      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|21<space|2spc>Affine
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|22<space|2spc>Affine
       Spaces> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-1><vspace|0.5fn>
 
-      21.1<space|2spc>Definition and properties
+      22.1<space|2spc>Definition and properties
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-2>
 
-      21.2<space|2spc>Eucledian space <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-9>
+      22.2<space|2spc>Eucledian space <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-11>
     </associate>
   </collection>
 </auxiliary>

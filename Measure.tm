@@ -48752,7 +48752,7 @@
   </equation*>
 
   This suggests that we examine how the integral behaves when we multiply a
-  measure by a non negative scalar/ In essence we prove that for
+  measure by a non negative scalar. In essence we prove that for
   <math|\<alpha\>\<in\><around*|[|0,\<infty\>|[>>
 
   <\equation*>
@@ -48903,31 +48903,41 @@
   <\theorem>
     <label|measure integral of scalar product with a measure>Let
     <math|<around*|\<langle\>|X,\<cal-A\>,\<mu\>|\<rangle\>>> be a measure
-    space, <math|\<alpha\>\<in\><around*|[|0,\<infty\>|[>> and
-    <math|f\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
-    then <math|f\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<alpha\>\<cdot\>\<mu\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
-    and\ 
+    space, <math|\<alpha\>\<in\><around*|[|0,\<infty\>|[>> then
+
+    <\equation*>
+      f\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<alpha\>\<cdot\>\<mu\>,<wide|\<bbb-R\>|\<wide-bar\>>|]><text|
+      >\<Leftrightarrow\><text| >f\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
+    </equation*>
+
+    Further we have if <math|\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
+    or <math|<text| >f\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<alpha\>\<cdot\>\<mu\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
+    then
 
     <\equation*>
       <big|int><rsup|+>f d<around*|(|\<alpha\>\<cdot\>\<mu\>|)>=\<alpha\>\<cdot\><big|int><rsup|+>f
       d\<mu\>
     </equation*>
+  </theorem>
 
-    <\proof>
-      As <math|f\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>> As <math|f\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<alpha\>\<cdot\>\<mu\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
       we have by [definition: <reference|measure integral>] that\ 
 
       <\equation*>
-        f\<in\>\<cal-M\><around*|[|X,\<cal-A\>,\<mu\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
+        f\<in\>\<cal-M\><around*|[|X,\<cal-A\>,\<alpha\>\<cdot\>\<mu\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
       </equation*>
 
       <\equation*>
-        <big|int><rsup|+>f<rsup|+>d\<mu\>\<less\>\<infty\><text| and
-        ><big|int><rsup|+>f<rsup|->d\<mu\>\<less\>\<infty\>
+        <big|int><rsup|+>f<rsup|+>d<around*|(|\<alpha\>\<cdot\>\<mu\>|)>\<less\>\<infty\><text|
+        and ><big|int><rsup|+>f<rsup|->d<around*|(|\<alpha\>\<cdot\>\<mu\>|)>\<less\>\<infty\>
       </equation*>
 
       <\equation*>
-        <big|int>f d\<mu\>=<big|int><rsup|+>f<rsup|+>d\<mu\>-<big|int><rsup|+>f<rsup|->d\<mu\>\<less\>\<infty\>
+        <big|int>f d<around*|(|\<alpha\>\<cdot\>\<mu\>|)>=<big|int><rsup|+>f<rsup|+>d<around*|(|\<alpha\>\<cdot\>\<mu\>|)>-<big|int><rsup|+>f<rsup|->d<around*|(|\<alpha\>\<cdot\>\<mu\>|)>\<less\>\<infty\>
       </equation*>
 
       Using [lemma: <reference|lemma 21.626.309>] we have
@@ -48942,8 +48952,8 @@
       so that as <math|\<alpha\>\<in\><around*|[|0,\<infty\>|[>>
 
       <\equation*>
-        <big|int><rsup|+>f <rsup|+>d<around*|(|\<alpha\>\<cdot\>\<mu\>|)>\<less\>\<infty\><text|
-        and ><big|int><rsup|+>f <rsup|->d<around*|(|\<alpha\>\<cdot\>\<mu\>|)>\<less\>\<infty\>
+        <big|int><rsup|+>f <rsup|+>d\<mu\>\<less\>\<infty\><text| and
+        ><big|int><rsup|+>f <rsup|->d\<mu\>\<less\>\<infty\>
       </equation*>
 
       which proves that\ 
@@ -48965,8 +48975,54 @@
         <big|int>f d<around*|(|\<alpha\>\<cdot\>\<mu\>|)>=\<alpha\>\<cdot\><big|int>f
         d\<mu\>
       </equation*>
-    </proof>
-  </theorem>
+
+      <item*|<math|\<Leftarrow\>>>As <math|f\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
+      we have by [definition: <reference|measure integral>] that\ 
+
+      <\equation*>
+        f\<in\>\<cal-M\><around*|[|X,\<cal-A\>,\<alpha\>\<cdot\>\<mu\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
+      </equation*>
+
+      <\equation*>
+        <big|int><rsup|+>f<rsup|+>d\<mu\>\<less\>\<infty\><text| and
+        ><big|int><rsup|+>f<rsup|->d\<mu\>\<less\>\<infty\><text|>
+      </equation*>
+
+      <\equation*>
+        <big|int>f d\<mu\>=<big|int><rsup|+>f
+        <rsup|+>d\<mu\>-<big|int><rsup|+>f<rsup|->d\<mu\>
+      </equation*>
+
+      Using [lemma: <reference|lemma 21.626.309>] we have
+
+      <\equation*>
+        <big|int><rsup|+>f <rsup|+>d<around*|(|\<alpha\>\<cdot\>\<mu\>|)>=\<alpha\>\<cdot\><big|int><rsup|+>f<rsup|+>
+        d\<mu\><text| and ><big|int><rsup|+>f
+        <rsup|->d<around*|(|\<alpha\>\<cdot\>\<mu\>|)>=\<alpha\>\<cdot\><big|int><rsup|+>f<rsup|->
+        d\<mu\>
+      </equation*>
+
+      so that as <math|\<alpha\>\<in\><around*|[|0,\<infty\>|[>>
+
+      <\equation*>
+        <big|int><rsup|+>f <rsup|+>d<around*|(|\<alpha\>\<cdot\>\<mu\>|)>\<less\>\<infty\><text|
+        and ><big|int><rsup|+>f <rsup|->d<around*|(|\<alpha\>\<cdot\>\<mu\>|)>\<less\>\<infty\>
+      </equation*>
+
+      which proves that\ 
+
+      <\equation*>
+        f\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<alpha\>\<cdot\>\<mu\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
+      </equation*>
+
+      Further we have\ 
+
+      <\equation*>
+        \<alpha\>\<cdot\><big|int>f d\<mu\>=\<alpha\>\<cdot\><big|int><rsup|+>f<rsup|+>d\<mu\>-\<alpha\>\<cdot\><big|int><rsup|+>f<rsup|->d\<mu\>=<big|int><rsup|+>f<rsup|+>d<around*|(|\<alpha\>\<cdot\>\<mu\>|)>-<big|int><rsup|+>f<rsup|->d<around*|(|\<alpha\>\<cdot\>\<mu\>|)>=<big|int>f
+        d<around*|(|\<alpha\>\<cdot\>\<mu\>|)>
+      </equation*>
+    </description>
+  </proof>
 
   <\theorem>
     We have\ 
@@ -48999,1439 +49055,96 @@
 
     <\enumerate>
       <item>Using [theorem: <reference|measure pushforward Borel measures in
-      R(1)>] we have that\ 
-
-      <\equation*>
-        \<forall\>A\<in\>\<cal-B\><around*|[|\<bbb-R\>|]><text|
-        >\<lambda\><around*|[|T<rsup|-1>|]><around*|(|A|)>=<frac|1|<around*|\||T<around*|(|1|)>|\|>>\<cdot\>\<lambda\><around*|(|A|)>
-      </equation*>
-
-      As <math|T:\<bbb-R\>\<rightarrow\>\<bbb-R\>> is a linear isomorphism it
-      follows from [theorem: <reference|continuity homemorphism between K>]
-      that <math|T> is a homeomorphism. Hence\ 
-
-      <\equation*>
-        T<text| ia open and continuous>
-      </equation*>
-
-      so that by [theorem: <reference|measurable function and continuity>]
-      <math|T> is <math|\<cal-B\><around*|[|\<bbb-R\>,\<cal-T\><rsub|<around*|\|||\|>>|]>,\<cal-B\><around*|[|\<bbb-R\>,\<cal-T\><rsub|<around*|\|||\|>>|]>>-measurable.
-      By [theorem: <reference|measure integral change of variables>]\ 
-
-      <\equation*>
-        f\<circ\>T\<in\>\<cal-L\><around*|[|\<bbb-R\>,\<cal-B\><around*|[|\<bbb-R\>|]>,\<lambda\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
-      </equation*>
-
-      <item>
-    </enumerate>
-
-    \;
-  </proof>
-
-  OK
-
-  <subsection|Borel measures and linear transformations>
-
-  We want to examine how <math|\<lambda\>> and <math|\<lambda\><rsup|n>>
-  behaves under a linear isomorphism. For this we must ensure that for a
-  linear isomorphism <math|T> and <math|A\<in\>\<cal-B\><around*|[|\<bbb-R\>|]>>
-  [or <math|A\<in\>\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>> that
-  <math|\<lambda\><around*|(|T<around*|(|A|)>|)>> [or
-  <math|\<lambda\><rsup|n><around*|(|T<around*|(|A|)>|)>>] is well defined,
-  in other words we require that <math|T<around*|(|A|)>\<in\>\<cal-B\><around*|[|\<bbb-R\>|]>>
-  [or <math|T<around*|(|A|)>\<in\>\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>>].
-  As by [corollaries: <reference|continuity homemorphism between K>,
-  <reference|continuity homemorphism between powers of R>] linear
-  isomorphisms are homeomorphisms it is enough to prove the result for
-  homeomorphisms instead of linear isomorphisms. This is done in the next
-  theorem.
-
-  TODO
-
-  <\theorem>
-    <label|measurability of image of a measurable set by a homeomorphism>Let
-    <math|<around*|\<langle\>|X,\<cal-T\><rsub|X>|\<rangle\>>> and
-    <math|<around*|\<langle\>|Y,\<cal-T\><rsub|Y>|\<rangle\>>> be two
-    topological spaces, <math|T:X\<rightarrow\>Y> a homeomorphism [see
-    definition: <reference|continuity homeomorphism>] then
-    <math|\<forall\>A\<in\>\<cal-B\><around*|[|X,\<cal-T\><rsub|X>|]>> we
-    have <math|T<around*|(|A|)>\<in\>\<cal-B\><around*|[|Y,\<cal-T\><rsub|Y>|]>>.
-  </theorem>
-
-  <\proof>
-    Let
-
-    <\equation*>
-      \<cal-A\>=<around*|{|A\<in\>\<cal-B\><around*|[|X,\<cal-T\><rsub|X>|]>\|T<around*|(|A|)>\<in\>\<cal-B\><around*|[|Y,\<cal-T\><rsub|Y>|]>|}>
-    </equation*>
-
-    then we have, as <math|\<varnothing\>\<in\>\<cal-B\><around*|[|X,\<cal-T\><rsub|X>|]>>
-    and <math|T<around*|(|\<varnothing\>|)>=\<varnothing\>\<in\>\<cal-B\><around*|[|Y,\<cal-T\><rsub|Y>|]>>,
-    that
-
-    <\equation>
-      <label|eq 21.1074.291>\<varnothing\>\<in\>\<cal-A\>
-    </equation>
-
-    Let <math|A\<in\>\<cal-A\>> then <math|A\<in\>\<cal-B\><around*|[|X,\<cal-T\><rsub|X>|]>\<Rightarrow\>X\\A\<in\>\<cal-B\><around*|[|X,\<cal-T\><rsub|X>|]>>
-    and <math|T<around*|(|A|)>\<in\>\<cal-B\><around*|[|Y,\<cal-T\><rsub|Y>|]>>.
-    As <math|T> is a bijective hence injective we have that
-    <math|T<around*|(|X\\A|)>\<equallim\><rsub|<text|[theorem:
-    <reference|function properties (1)>]>>T<around*|(|X|)>\\T<around*|(|Y|)><below|=|T<text|
-    is surjective>>Y\\T<around*|(|A|)><below|\<in\>|T<around*|(|A|)>\<in\>\<cal-B\><around*|[|Y,\<cal-T\><rsub|Y>|]>>\<cal-B\><around*|[|Y,\<cal-T\><rsub|Y>|]>>.
-    This proves that <math|X\\A\<in\>A> hence we have\ 
-
-    <\equation>
-      <label|eq 21.1075.291>\<forall\>A\<in\>\<cal-A\><text| we have
-      >X\\A\<in\>\<cal-A\>
-    </equation>
-
-    Let <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\>>
-    then <math|\<forall\>i\<in\>\<bbb-N\>> we have
-    <math|A<rsub|i>\<in\>\<cal-A\>> so that
-    <math|A<rsub|i>\<in\>\<cal-B\><around*|[|X,\<cal-T\><rsub|X>|]>> and
-    <math|T<around*|(|A<rsub|i>|)>\<in\>\<cal-B\><around*|(|Y,\<cal-T\><rsub|Y>|)>>.
-    Hence we have that <math|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>\<in\>\<cal-B\><around*|[|X,\<cal-T\><rsub|X>|]>>
-    and <math|T<around*|(|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>\<equallim\><rsub|<text|[theorem:
-    <reference|family image and preimage>]>><big|cup><rsub|i\<in\>\<bbb-N\>>T<around*|(|A<rsub|i>|)>\<in\>\<cal-B\><around*|[|Y,\<cal-T\><rsub|Y>|]>>
-    which proves that <math|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>\<in\>\<cal-A\>>.
-    In other words we have\ 
-
-    <\equation>
-      <label|eq 21.1076.291>\<forall\><around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\><text|
-      we have ><big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>\<in\>\<cal-A\>
-    </equation>
-
-    From [eqs: <reference|eq 21.1074.291>, <reference|eq 21.1075.291>,
-    <reference|eq 21.1076.291>] it follows by definition that
-
-    <\equation>
-      <label|eq 21.1077.291>\<cal-A\><text| is a >\<sigma\><text|-algebra on
-      >X
-    </equation>
-
-    Let <math|A\<in\>\<cal-T\><rsub|X>\<Rightarrow\>A\<in\>\<cal-B\><around*|[|X,\<cal-T\><rsub|X>|]>>
-    then as <math|T> is a homeomorphism, hence open, we have that
-    <math|<rigid|T<around*|(|A|)>\<in\>\<cal-T\><rsub|Y>\<subseteq\>\<cal-B\><around*|[|Y,\<cal-T\><rsub|Y>|]>>>
-    which proves that <math|A\<in\>\<cal-A\>>. Hence we have\ 
-
-    <\equation>
-      <label|eq 21.1078.291>\<cal-T\><rsub|X>\<subseteq\>\<cal-A\>
-    </equation>
-
-    Using [theorem: <reference|measure generated sigma algebra>] on [eqs:
-    <reference|eq 21.1077.291>, <reference|eq 21.1078.291>] proves that\ 
-
-    <\equation*>
-      \<cal-B\><around*|[|X,\<cal-T\><rsub|X>|]>=\<sigma\><around*|[|\<cal-T\><rsub|X>|]>\<subseteq\>\<cal-A\>
-    </equation*>
-
-    Hence
-
-    <\equation*>
-      \<forall\>A\<in\>\<cal-B\><around*|[|X,\<cal-T\><rsub|X>|]><text| we
-      have >A\<in\>\<cal-A\><text| so that
-      >T<around*|(|A|)>\<in\>\<cal-B\><around*|[|Y,\<cal-T\><rsub|Y>|]>
-    </equation*>
-  </proof>
-
-  <\theorem>
-    <label|measure create a new measure based on a measure and a
-    homeomorphism>Let <math|<around*|\<langle\>|X,\<cal-T\><rsub|X>|\<rangle\>>>,
-    <math|<around*|\<langle\>|Y,\<cal-T\><rsub|Y>|\<rangle\>>> be topological
-    spaces, <math|T:X\<rightarrow\>Y> a homeomorphism and
-    <math|\<mu\>:\<cal-B\><around*|[|Y,\<cal-T\><rsub|Y>|]>\<rightarrow\><around*|[|0,\<infty\>|]>>
-    a measure then\ 
-
-    <\equation*>
-      \<mu\><around*|[|T|]>:\<cal-B\><around*|[|X,\<cal-A\>|]>\<rightarrow\><around*|[|0,\<infty\>|]><text|
-      defined by >\<mu\><around*|[|T|]><around*|(|A|)>=\<mu\><around*|(|T<around*|(|A|)>|)>
-    </equation*>
-
-    is a measure. Further if <math|\<mu\>> is locally finite then
-    <math|\<mu\><around*|[|T|]>> is also locally finite.\ 
-
-    <\note>
-      Using the previous theorem [theorem: <reference|measurability of image
-      of a measurable set by a homeomorphism>]
-      <math|T<around*|(|A|)>\<in\>\<cal-B\><around*|[|Y,\<cal-T\><rsub|Y>|]>>
-      so that <math|\<mu\><around*|(|T<around*|(|A|)>|)>> is well defined.\ 
-    </note>
-  </theorem>
-
-  <\proof>
-    First we have\ 
-
-    <\equation>
-      <label|eq 21.1079.291>\<mu\><around*|[|T|]><around*|(|\<varnothing\>|)>=\<mu\><around*|(|T<around*|(|\<varnothing\>|)>|)>=\<mu\><around*|(|\<varnothing\>|)>=0
-    </equation>
-
-    Let <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-B\><around*|[|X,\<cal-T\><rsub|X>|]>>
-    be pairwise disjoint. Given <math|i,j\<in\>\<bbb-N\>> with
-    <math|i\<neq\>j> and assume that <math|<rigid|T<around*|(|A<rsub|i>|)><big|cap>T<around*|(|A<rsub|j>|)>\<neq\>\<varnothing\>>>,
-    then there exist a <math|x\<in\>T<around*|(|A<rsub|i>|)><big|cap>T<around*|(|A<rsub|j>|)>>,
-    so there exist <math|a\<in\>A<rsub|i>> and <math|b\<in\>A<rsub|j>> such
-    that <math|T<around*|(|a|)>=x=T<around*|(|b|)>>, as <math|T> is a
-    bijection it follows that <math|a=b> so that
-    <math|a\<in\>A<rsub|i><big|cap>A<rsub|j>=\<varnothing\>> a contradiction,
-    hence we must have that <math|<rigid|T<around*|(|A<rsub|i>|)><big|cap>T<around*|(|A<rsub|j>|)>=\<varnothing\>>>.
-    Hence we have that\ 
-
-    <\equation*>
-      <around*|{|T<around*|(|A<rsub|i>|)>|}><rsub|i\<in\>\<bbb-N\>><below|\<subseteq\>|<text|[theorem:
-      <reference|measurability of image of a measurable set by a
-      homeomorphism>]>>\<cal-B\><around*|[|Y,\<cal-T\><rsub|Y>|]><text| is
-      pairwise disjoint>
-    </equation*>
-
-    So we have\ 
-
-    <\equation*>
-      \<mu\><around*|[|T|]><around*|(|<big|sqcup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>=\<mu\><around*|(|T<around*|(|<big|sqcup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>|)>\<equallim\><rsub|<text|[theorem:
-      <reference|family image and preimage>]>>\<mu\>*<around*|(|<big|sqcup><rsub|i\<in\>\<bbb-N\>>T<around*|(|A<rsub|i>|)>|)>=<big|sum><rsub|i=1><rsup|\<infty\>>\<mu\><around*|(|T<around*|(|A<rsub|i>|)>|)>=<big|sum><rsub|i=1><rsup|\<infty\>>\<mu\><around*|[|T|]><around*|(|A<rsub|i>|)>
-    </equation*>
-
-    which together with [eq: <reference|eq 21.1079.291>] proves that\ 
-
-    <\equation*>
-      \<mu\><around*|[|T|]><text| is a measure on
-      >\<cal-B\><around*|[|X,\<cal-T\><rsub|X>|]>
-    </equation*>
-
-    Assume now that <math|\<mu\>> is locally finite. Let <math|x\<in\>X> then
-    as <math|\<mu\>> is locally finite there exist a open set <math|V> such
-    that <math|T<around*|(|x|)>\<in\>V> and
-    <math|\<mu\><around*|(|V|)>\<less\>\<infty\>>, take
-    <math|U=T<rsup|-1><around*|(|V|)>> then <math|U> is open [as <math|T> is
-    continuous] and <math|x\<in\>U>, further
-    <math|\<mu\><around*|[|T|[><around*|(|U|)>=\<mu\><around*|(|T<around*|(|U|)>|)>=\<mu\><around*|(|T<around*|(|T<rsup|-1><around*|(|V|)>|)>|)>\<equallim\><rsub|<text|[theorem:
-    <reference|function preimage of image>]>>\<mu\><around*|(|V|)>\<less\>\<infty\>>.
-    In other words given <math|x\<in\>X> we found a open set <math|U> with
-    <math|x\<in\>U> and <math|\<mu\><around*|[|T|]><around*|(|U|)>\<less\>\<infty\>>
-    which proves by definition that <math|\<mu\><around*|[|T|]>> is locally
-    finite.
-  </proof>
-
-  <\theorem>
-    <label|measure create a new measure based on a measure and a linear
-    isomorphism>We have\ 
-
-    <\enumerate>
-      <item>If <math|T:\<bbb-R\>\<rightarrow\>\<bbb-R\>> is a linear
-      isomorphism and <math|\<mu\>:\<cal-B\><around*|[|\<bbb-R\>|]>=\<cal-B\><around*|[|\<bbb-R\>,\<cal-T\><rsub|<around*|\|||\|>>|]>\<rightarrow\><around*|[|0.\<infty\>|]>>
-      is a Radon measure then
-
-      <\equation*>
-        \<mu\><around*|[|T|]>:\<cal-B\><around*|[|\<bbb-R\>|]>=\<cal-B\><around*|[|\<bbb-R\>,\<cal-T\><rsub|<around*|\|||\|>>|]>\<rightarrow\><around*|[|0,\<infty\>|]><text|
-        defined by >\<mu\><around*|[|T|]>*<around*|(|A|)>=\<mu\><around*|(|T<around*|(|A|)>|)><text|
-        is a Radon measure>
-      </equation*>
-
-      <item>Let <math|n\<in\>\<bbb-N\>> then if
-      <math|T:\<bbb-R\><rsup|n>\<rightarrow\>\<bbb-R\><rsup|n>> is a linear
-      isomorphism and <math|\<mu\>:\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>=\<cal-B\><around*|[|\<bbb-R\><rsup|n>,\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>>n>|]>\<rightarrow\><around*|[|0,\<infty\>|]>>
-      is a Radon measure then\ 
-
-      <\equation*>
-        \<mu\><around*|[|T|]>:\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>=\<cal-B\><around*|[|\<bbb-R\><rsup|n>,\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n>>|]>\<rightarrow\>\<bbb-R\><rsup|n><text|
-        defined by >\<mu\><around*|[|T|]><around*|(|A|)>=\<mu\><around*|(|T<around*|(|A|)>|)><text|
-        is a Radon measure>
-      </equation*>
-    </enumerate>
-  </theorem>
-
-  <\proof>
-    \ 
-
-    <\enumerate>
-      <item>As <math|\<mu\>> is a Radon measure it follows from [definition:
-      <reference|Radon measure definition>] that <math|\<mu\>> is locally
-      finite, further as <math|T:\<bbb-R\>\<rightarrow\>\<bbb-R\>> is a
-      linear isomorphism it follows from [theorem: <reference|continuity
-      homemorphism between K>] that <math|T> is a homeomorphism Applying then
-      [theorem: <reference|measure create a new measure based on a measure
-      and a homeomorphism>] it follows that\ 
-
-      <\equation*>
-        \<mu\><around*|[|T|]>:\<cal-B\><around*|[|\<bbb-R\>|]>=\<cal-B\><around*|[|\<bbb-R\>,\<cal-T\><rsub|<around*|\|||\|>>|]>\<rightarrow\><around*|[|0,\<infty\>|]><text|
-        defined by >\<mu\><around*|[|T|]>*<around*|(|A|)>=\<mu\><around*|(|T<around*|(|A|)>|)>
-      </equation*>
-
-      is a locally finite measure. Using [theorem: <reference|measurable
-      locally finiteness>] it follows then that <math|\<mu\><around*|[|T|]>>
-      is compact finite and finally by [theorem: <reference|measure Radon
-      condition>] that <math|\<mu\><around*|[|T|]>> is a Radon measure.
-
-      <item>As <math|\<mu\>> is a Radon measure it follows from [definition:
-      <reference|Radon measure definition>] that <math|\<mu\>> is locally
-      finite, further as <math|T:\<bbb-R\><rsup|n>\<rightarrow\>\<bbb-R\><rsup|n>>
-      is a linear isomorphism it follows from [theorem: <reference|continuity
-      homemorphism between powers of R>] that <math|T> is a homeomorphism
-      Applying then [theorem: <reference|measure create a new measure based
-      on a measure and a homeomorphism>] it follows that\ 
-
-      <\equation*>
-        \<mu\><around*|[|T|]>:\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>=\<cal-B\><around*|[|\<bbb-R\><rsup|n>,\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n>>|]>\<rightarrow\><around*|[|0,\<infty\>|]><text|
-        defined by >\<mu\><around*|[|T|]>*<around*|(|A|)>=\<mu\><around*|(|T<around*|(|A|)>|)>
-      </equation*>
-
-      is a locally finite measure. Using [theorem: <reference|measurable
-      locally finiteness>] it follows then that <math|\<mu\><around*|[|T|]>>
-      is compact finite and finally by [theorem: <reference|measure Radon
-      condition (1)>] that <math|\<mu\><around*|[|T|]>> is a Radon measure.
-    </enumerate>
-  </proof>
-
-  We examine now how the measures behaves under a linear isomorphism.
-
-  <\theorem>
-    <label|measure Borel measure of T(A)>Let
-    <math|T:\<bbb-R\>\<rightarrow\>\<bbb-R\>> be a linear isomorphism then we
-    have <math|\<forall\>A\<in\>\<cal-B\><around*|[|\<bbb-R\>|]>> that
-
-    <\equation*>
-      \<lambda\><around*|(|T<around*|(|A|)>|)>=\<lambda\><around*|(|T<around*|(|<around*|[|0,1|[>|)>|)>\<cdot\>\<lambda\><around*|(|A|)>
-    </equation*>
-
-    <\note>
-      By [theorem: <reference|continuity homemorphism between K>] <math|T> is
-      a homeomorphism so that by [theorem: <reference|measurability of image
-      of a measurable set by a homeomorphism>]
-      <math|<rigid|T<around*|(|A|)>\<in\>\<cal-B\><around*|[|\<bbb-R\>|]>>>
-      from which it follows that <math|\<lambda\><around*|(|T<around*|(|A|)>|)>>
-      is well defined.
-    </note>
-  </theorem>
-
-  <\proof>
-    Define\ 
-
-    <\equation*>
-      \<lambda\><around*|[|T|]>:\<cal-B\><around*|[|\<bbb-R\>|]>\<rightarrow\><around*|[|0,\<infty\>|]><text|
-      by >\<lambda\><around*|[|T|]><around*|(|A|)>=\<lambda\><around*|(|T<around*|(|A|)>|)>
-    </equation*>
-
-    then by [theorem: <reference|measure create a new measure based on a
-    measure and a linear isomorphism>] we have that\ 
-
-    <\equation*>
-      \<lambda\><around*|[|T|]><text| is a >Radon measure
-    </equation*>
-
-    Next let <math|x\<in\>\<bbb-R\>> and <math|A\<in\>\<cal-B\><around*|[|\<bbb-R\>|]>>
-    then we have
-
-    <\eqnarray*>
-      <tformat|<table|<row|<cell|y\<in\>T<around*|(|A+x|)>>|<cell|\<Leftrightarrow\>>|<cell|y=T<around*|(|a+x|)><text|
-      where >a\<in\>A>>|<row|<cell|>|<cell|<below|\<Leftrightarrow\>|T<text|
-      is linear>>>|<cell|y=T<around*|(|a|)>+T<around*|(|x|)><text| where
-      >a\<in\>A>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|y=b+T<around*|(|x|)>
-      where \ b\<in\>T<around*|(|A|)>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|y\<in\>T<around*|(|A|)>+T<around*|(|x|)>>>>>
-    </eqnarray*>
-
-    which proves that <math|T<around*|(|A+x|)>=T<around*|(|A|)>+T<around*|(|x|)>>.
-    Hence we have
-
-    <\equation*>
-      \<lambda\><around*|[|T|]><around*|(|A+x|)>=\<lambda\><around*|(|T<around*|(|A+x|)>|)>=\<lambda\><around*|(|T<around*|(|A|)>+T<around*|(|x|)>|)>\<equallim\><rsub|<text|[theorem:
-      <reference|measure the Borel measure is translation invariant
-      (1)>]>>\<lambda\><around*|(|T<around*|(|A|)>|)>=\<mu\><around*|(|A|)>
-    </equation*>
-
-    which proves that\ 
-
-    <\equation*>
-      \<lambda\><around*|[|T|]><text| is translation invariant>
-    </equation*>
-
-    Finally using [theorem: <reference|measure Radon and Borel measure on R>]
-    we have that
-
-    <\equation*>
-      \<lambda\><around*|(|T<around*|(|A|)>|)>=\<lambda\><around*|[|T|]><around*|(|A|)>=\<lambda\><around*|[|T|]><around*|(|<around*|[|0,1|[>|)>\<cdot\>\<lambda\><around*|(|A|)>=\<lambda\><around*|(|T<around*|(|<around*|[|0,1|[>|)>|)>\<cdot\>\<lambda\><around*|(|A|)>
-    </equation*>
-
-    which proves that\ 
-
-    <\equation*>
-      \<forall\>A\<in\>\<cal-B\><around*|[|\<bbb-R\>|]><text| we have
-      >\<lambda\><around*|(|T<around*|(|A|)>|)>=\<mu\><around*|(|T<around*|(|<around*|[|0,1|[>|)>|)>\<cdot\>\<lambda\><around*|(|A|)>
-    </equation*>
-  </proof>
-
-  <\corollary>
-    <label|measure Borel measure on R and linear isomorphism>Let
-    <math|T:\<bbb-R\>\<rightarrow\>\<bbb-R\>> be a linear isomorphism then we
-    have <math|\<forall\>A\<in\>\<cal-B\><around*|[|\<bbb-R\>|]>> that
-
-    <\equation*>
-      \<lambda\><around*|(|T<around*|(|A|)>|)>=<around*|\||T<around*|(|1|)>|\|>\<cdot\>\<lambda\><around*|(|A|)><text|
-      and >T<around*|(|1|)>\<neq\>0
-    </equation*>
-  </corollary>
-
-  <\proof>
-    By [example: <reference|linear mapping on a field>] \ it follows that\ 
-
-    <\equation*>
-      T<around*|(|1|)>\<neq\>0<text| and >T=T<around*|(|1|)>\<cdot\>Id<rsub|\<bbb-R\>>
-    </equation*>
-
-    For <math|T<around*|(|1|)>> we have either:\ 
-
-    <\description>
-      <item*|<math|0\<less\>T<around*|(|1|)>>>We have\ 
-
-      <\eqnarray*>
-        <tformat|<table|<row|<cell|y\<in\>T<around*|(|<around*|[|0,1|[>|)>>|<cell|\<Leftrightarrow\>>|<cell|\<exists\>x\<in\><around*|[|0,1|[><text|
-        such that >y=T<around*|(|x|)>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|\<exists\>x\<in\><around*|[|0,1|[><text|
-        such that >y=T<around*|(|1|)>\<cdot\>x>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|\<exists\>x\<in\>\<bbb-R\><text|
-        such that >0\<leqslant\>x\<less\>1\<wedge\>y=T<around*|(|1|)>\<cdot\>x>>|<row|<cell|>|<cell|<below|\<Leftrightarrow\>|0\<less\>T<around*|(|1|)>>>|<cell|\<exists\>y\<in\>\<bbb-R\><text|
-        such that >0\<leqslant\><frac|y|T<around*|(|1|)>>\<less\>1>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|\<exists\>y\<in\>\<bbb-R\><text|
-        such that >0\<leqslant\>y\<less\>T<around*|(|1|)>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|y\<in\><around*|[|0,T<around*|(|1|)>|[>>>>>
-      </eqnarray*>
-
-      so that
-
-      <\equation*>
-        \<lambda\><around*|(|T<around*|(|<around*|[|0,1|[>|)>|)>=\<lambda\><around*|(|<around*|[|0,T<around*|(|1|)>|[>|)>\<equallim\><rsub|<text|[theorem:
-        <reference|measure Lebesgue measure space on
-        R>]>>len<around*|(|<around*|[|0,T<around*|(|1|)>|[>|)>=T<around*|(|1|)>=<around*|\||T<around*|(|1|)>|\|>
-      </equation*>
-
-      in other words\ 
+      R(1)>] we have that <math|\<forall\>A\<in\>\<cal-B\><around*|[|\<bbb-R\>|]><text|
+      >\<lambda\><around*|[|T<rsup|-1>|]><around*|(|A|)>=<frac|1|<around*|\||T<around*|(|1|)>|\|>>\<cdot\>\<lambda\><around*|(|A|)>>
+      so that\ 
 
       <\equation>
-        <label|eq 21.1080.292><text|If >L<text| is a linear isomorphism with
-        <math|0\<less\>L<around*|(|1|)><text| then
-        >\<lambda\><around*|(|T<around*|(|<around*|[|0,1|[>|)>|)>=<around*|\||T<around*|(|1|)>|\|>>>
+        <label|eq 21.1180.309>\<lambda\><around*|[|T<rsup|-1>|]>=<frac|1|<around*|\||T<around*|(|1|)>|\|>>\<cdot\>\<lambda\>
       </equation>
 
-      <item*|<math|T<around*|(|1|)>\<less\>0>>First not that <math|-Id> is a
-      linear isomorphism and <math|<around*|(|-Id|)>\<circ\><around*|(|-Id|)>=Id>
-      so that using [eq: <reference|measure Borel measure of T(A)>] we have\ 
+      As <math|f\<in\>\<cal-L\><around*|[|\<bbb-R\>,\<cal-B\><around*|[|\<bbb-R\>|]>,\<lambda\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
+      we have by [theorem: <reference|measure integral of scalar product with
+      a measure>]
 
-      <\eqnarray*>
-        <tformat|<table|<row|<cell|1>|<cell|=>|<cell|len<around*|(|<around*|[|0,1|[>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
-        <reference|measure Borel measure of
-        T(A)>]>>>|<cell|\<lambda\><around*|(|<around*|[|0,1|[>|)>>>|<row|<cell|>|<cell|=>|<cell|\<lambda\><around*|(|<around*|(|<around*|(|-Id|)>\<circ\><around*|(|-Id|)>|)><around*|(|<around*|[|0,1|[>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<lambda\><around*|(|<around*|(|-Id|)><around*|(|<around*|(|-Id|)><around*|(|<around*|[|0,1|[>|)>|)>|)>>>|<row|<cell|>|<cell|<below|=|<text|[eq:
-        <reference|measure Borel measure of
-        T(A)>]>>>|<cell|\<lambda\><around*|(|<around*|(|-Id|)><around*|(|<around*|[|0,1|[>|)>|)>\<cdot\>\<lambda\><around*|(|<around*|(|-Id|)><around*|(|0,1|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<lambda\><around*|(|<around*|(|-Id|)><around*|(|<around*|[|0,1|]>|)>|)><rsup|2>>>>>
-      </eqnarray*>
+      <\equation*>
+        f\<in\>\<cal-L\><around*|[|\<bbb-R\>,\<cal-B\><around*|[|\<bbb-R\>|]>,<frac|1|<around*|\||T<around*|(|1|)>|\|>>\<cdot\>\<lambda\>,<wide|\<bbb-R\>|\<wide-bar\>>|]><below|=|<text|[eq:
+        <reference|eq 21.1180.309>]>>\<cal-L\><around*|[|\<bbb-R\>,\<cal-B\><around*|[|\<bbb-R\>|]>,\<lambda\><around*|[|T<rsup|-1>|]>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
+      </equation*>
 
-      which as <math|0<below|\<leqslant\>|\<lambda\><text| is a
-      measure>>\<lambda\><around*|(|<around*|(|-Id|)><around*|(|<around*|[|0,1|[>|)>|)>>
-      proves that\ 
+      and\ 
+
+      <\equation*>
+        <big|int>f d\<lambda\><around*|[|L<rsup|-1>|]><below|=|<text|[eq:
+        <reference|eq 21.1180.309>]>><big|int>f
+        d<around*|(|<frac|1|<around*|\||T<around*|(|1|)>|\|>>\<cdot\>\<lambda\>|)><below|=|<text|[theorem:
+        <reference|measure integral of scalar product with a
+        measure>]>><frac|1|<around*|\||T<around*|(|1|)>|\|>>\<cdot\><big|int>f
+        d\<lambda\>
+      </equation*>
+
+      Using now [theorem: <reference|measure integral change of variables>]
+      on the above we have that\ 
+
+      <\equation*>
+        f\<in\>\<cal-L\><around*|[|\<bbb-R\>,\<cal-B\><around*|[|\<bbb-R\>|]>,\<lambda\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
+      </equation*>
+
+      and\ 
+
+      <\equation*>
+        <big|int><around*|(|f\<circ\>T|)>d\<lambda\>=<frac|1|<around*|\||T<around*|(|1|)>|\|>>\<cdot\><big|int>f
+        d\<lambda\>
+      </equation*>
+
+      <\equation*>
+        \;
+      </equation*>
+
+      <item>Using [theorem: <reference|measure pushforward Borel measures in
+      R^n (1)>] we have that <math|\<forall\>A\<in\>\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]><text|
+      >\<lambda\><rsup|n><around*|[|T<rsup|-1>|]><around*|(|A|)>=<frac|1|<around*|\||det<around*|(|T|)>|\|>>\<cdot\>\<lambda\><rsup|n><around*|(|A|)>>
+      so that\ 
 
       <\equation>
-        <label|eq 21.1081.292>\<lambda\><around*|(|<around*|(|-Id|)><around*|(|<around*|[|0,1|[>|)>|)>=1
+        <label|eq 21.1181.309>\<lambda\><rsup|n><around*|[|T<rsup|-1>|]>=<frac|1|<around*|\||det<around*|(|T|)>|\|>>\<cdot\>\<lambda\><rsup|n>
       </equation>
 
-      Take <math|T<rprime|'>=<around*|(|-Id|)>\<circ\>T> then
-      <math|T<rprime|'>> is a linear isomorphism and
-      <math|T<rprime|'><around*|(|1|)>=<around*|(|-Id|)><around*|(|T<around*|(|1|)>|)>=-T<around*|(|1|)>\<gtr\>0>,
-      hence using [eq: <reference|eq 21.1080.292>] we have that\ 
+      As <math|f\<in\>\<cal-L\><around*|[|\<bbb-R\><rsup|n>,\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>,\<lambda\><rsup|n>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
+      we have by [theorem: <reference|measure integral of scalar product with
+      a measure>]
 
       <\equation*>
-        \<lambda\><around*|(|T<rprime|'><around*|(|<around*|[|0,1|[>|)>|)>=<around*|\||T<rprime|'><around*|(|1|)>|\|>=<around*|\||-T<around*|(|1|)>|\|>=<around*|\||T<around*|(|1|)>|\|>
+        f\<in\>\<cal-L\><rsup|n><around*|[|\<bbb-R\><rsup|n>,\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>,<frac|1|<around*|\||det<around*|(|T|)>|\|>>\<cdot\>\<lambda\><rsup|n>,<wide|\<bbb-R\>|\<wide-bar\>>|]><below|=|<text|[eq:
+        <reference|eq 21.1181.309>]>>\<cal-L\><around*|[|\<bbb-R\><rsup|n>,\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>,\<lambda\><rsup|n><around*|[|T<rsup|-1>|]>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
       </equation*>
 
-      Further\ 
+      and\ 
 
       <\equation*>
-        \<lambda\><around*|(|T<rprime|'><around*|(|<around*|[|0,1|[>|)>|)>=\<lambda\><around*|(|<around*|(|-Id|)><around*|(|T<around*|(|<around*|[|0,1|[>|)>|)>|)><below|=|<text|[eq:
-        <reference|measure Borel measure of
-        T(A)>]>>\<lambda\><around*|(|<around*|(|-Id|)><around*|(|<around*|[|0,1|[>|)>|)>\<cdot\>\<lambda\><around*|(|T<around*|(|<around*|[|0,1|[>|)>|)>\<equallim\><rsub|<text|[eq:
-        <reference|eq 21.1081.292>]>>\<lambda\><around*|(|T<around*|(|<around*|[|0,1|[>|)>|)>
+        <big|int>f d\<lambda\><rsup|n><around*|[|L<rsup|-1>|]><below|=|<text|[eq:
+        <reference|eq 21.1181.309>]>><big|int>f
+        d<around*|(|<frac|1|<around*|\||det<around*|(|T|)>|\|>>\<cdot\>\<lambda\><rsup|n>|)><below|=|<text|[theorem:
+        <reference|measure integral of scalar product with a
+        measure>]>><frac|1|<around*|\||det<around*|(|T|)>|\|>>\<cdot\><big|int>f
+        d\<lambda\>
       </equation*>
 
-      hence we have that\ 
+      Using now [theorem: <reference|measure integral change of variables>]
+      on the above we have that\ 
 
       <\equation*>
-        \<lambda\><around*|(|T<around*|(|<around*|[|0,1|[>|)>|)>=<around*|\||T<around*|(|1|)>|\|>
+        f\<in\>\<cal-L\><around*|[|\<bbb-R\><rsup|n>,\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>,\<lambda\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
       </equation*>
-    </description>
 
-    So in all cases we have
+      and\ 
 
-    <\equation>
-      <label|eq 21.1082.292>\<lambda\><around*|(|T<around*|(|<around*|[|0,1|[>|)>|)>=<around*|\||T<around*|(|1|)>|\|>
-    </equation>
-
-    Hence we have\ 
-
-    <\equation*>
-      \<forall\>A\<in\>\<cal-B\><around*|[|\<bbb-R\>|]><text| that
-      >\<lambda\><around*|(|T<around*|(|A|)>|)>\<equallim\><rsub|<text|[theorem:
-      <reference|measure Borel measure of
-      T(A)>]>>\<lambda\><around*|(|T<around*|(|<around*|[|0,1|[>|)>|)>\<cdot\>\<lambda\><around*|(|A|)><below|=|<text|[eq:
-      <reference|eq 21.1082.292>]>>T<around*|(|1|)>\<cdot\>\<lambda\><around*|(|A|)>
-    </equation*>
+      <\equation*>
+        <big|int><around*|(|f\<circ\>T|)>d\<lambda\>=<frac|1|<around*|\||det<around*|(|T|)>|\|>>\<cdot\><big|int>f
+        d\<lambda\>
+      </equation*>
+    </enumerate>
   </proof>
-
-  <\theorem>
-    <label|measure Borel measure of T(A) (1)>Let
-    <math|T:\<bbb-R\><rsup|n>\<rightarrow\>\<bbb-R\><rsup|n>> be a linear
-    isomorphism then we have <math|\<forall\>A\<in\>\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>>
-    that
-
-    <\equation*>
-      \<lambda\><rsup|n><around*|(|T<around*|(|A|)>|)>=\<lambda\><rsup|n><around*|(|T<around*|(|<around*|[|0,1|[><rsup|n>|)>|)>\<cdot\>\<lambda\><rsup|n><around*|(|A|)>
-    </equation*>
-
-    <\note>
-      By [theorem: <reference|continuity homemorphism between powers of R>]
-      <math|T> is a homeomorphism so that by [theorem:
-      <reference|measurability of image of a measurable set by a
-      homeomorphism>] <math|<rigid|T<around*|(|A|)>\<in\>\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>>>
-      from which it follows that <math|\<lambda\><rsup|n><around*|(|T<around*|(|A|)>|)>>
-      is well defined.
-    </note>
-  </theorem>
-
-  <\proof>
-    Define\ 
-
-    <\equation*>
-      \<lambda\><rsup|n><around*|[|T|]>:\<cal-B\><around*|[|\<bbb-R\>|]>\<rightarrow\><around*|[|0,\<infty\>|]><text|
-      by >\<lambda\><rsup|n><around*|[|T|]><around*|(|A|)>=\<lambda\><rsup|n><around*|(|T<around*|(|A|)>|)>
-    </equation*>
-
-    then by [theorem: <reference|Lebesgue borel measures are Radon
-    measures>,<reference|measure create a new measure based on a measure and
-    a linear isomorphism>] we have that\ 
-
-    <\equation*>
-      \<lambda\><rsup|n><around*|[|T|]><text| is a >Radon measure
-    </equation*>
-
-    Next let <math|x\<in\>\<bbb-R\><rsup|n>> and
-    <math|A\<in\>\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>> then we have
-
-    <\eqnarray*>
-      <tformat|<table|<row|<cell|y\<in\>T<around*|(|A+x|)>>|<cell|\<Leftrightarrow\>>|<cell|y=T<around*|(|a+x|)><text|
-      where >a\<in\>A>>|<row|<cell|>|<cell|<below|\<Leftrightarrow\>|T<text|
-      is linear>>>|<cell|y=T<around*|(|a|)>+T<around*|(|x|)><text| where
-      >a\<in\>A>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|y=b+T<around*|(|x|)>
-      where \ b\<in\>T<around*|(|A|)>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|y\<in\>T<around*|(|A|)>+T<around*|(|x|)>>>>>
-    </eqnarray*>
-
-    which proves that <math|T<around*|(|A+x|)>=T<around*|(|A|)>+T<around*|(|x|)>>.
-    Hence we have
-
-    <\equation*>
-      \<lambda\><rsup|n><around*|[|T|]><around*|(|A+x|)>=\<lambda\><rsup|n><around*|(|T<around*|(|A+x|)>|)>=\<lambda\><rsup|n><around*|(|T<around*|(|A|)>+T<around*|(|x|)>|)>\<equallim\><rsub|<text|[theorem:
-      <reference|measure the Borel measure is translation invariant
-      (2)>]>>\<lambda\><rsup|n><around*|(|T<around*|(|A|)>|)>=\<lambda\><rsup|n><around*|[|T|]><around*|(|A|)>
-    </equation*>
-
-    which proves that\ 
-
-    <\equation*>
-      \<lambda\><rsup|n><around*|[|T|]><text| is translation invariant>
-    </equation*>
-
-    Finally using [theorem: <reference|measure Radon and Borel measure on
-    R^n>] we have that
-
-    <\equation*>
-      \<lambda\><rsup|n><around*|(|T<around*|(|A|)>|)>=\<lambda\><rsup|n><around*|[|T|]><around*|(|A|)>=\<lambda\><rsup|n><around*|[|T|]><around*|(|<around*|[|0,1|[><rsup|n>|)>\<cdot\>\<lambda\><rsup|n><around*|(|A|)>=\<lambda\><rsup|n><around*|(|T<around*|(|<around*|[|0,1|[><rsup|n>|)>|)>\<cdot\>\<lambda\><rsup|n><around*|(|A|)>
-    </equation*>
-
-    which proves that\ 
-
-    <\equation*>
-      \<forall\>A\<in\>\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]><text| we have
-      >\<lambda\><rsup|n><around*|(|T<around*|(|A|)>|)>=\<lambda\><rsup|n><around*|(|T<around*|(|<around*|[|0,1|[>|)>|)>\<cdot\>\<lambda\><rsup|n><around*|(|A|)>
-    </equation*>
-  </proof>
-
-  Note that in [corollary: <reference|measure Borel measure on R and linear
-  isomorphism>] we have proved that <math|\<lambda\><around*|(|T<around*|(|A|)>|)>=T<around*|(|1|)>\<cdot\>\<lambda\><around*|(|A|)>>,
-  in fact for <math|\<lambda\><rsup|n>> we have a similar result namely
-  <math|\<lambda\><rsup|n><around*|(|T<around*|(|A|)>|)>=det<around*|(|T|)>\<cdot\>\<lambda\><around*|(|A|)>>.
-  To prove this we work in different steps:
-
-  <\lemma>
-    <label|lemma 21.578.291>Let <math|n\<in\>\<bbb-N\>>,
-    <math|E=<around*|{|e<rsub|1>,\<ldots\>,e<rsub|n>|}>> the canonical basis
-    in <math|\<bbb-R\><rsup|n>> [see example: <reference|basis F^n>],
-    <math|<rigid|T:\<bbb-R\><rsup|n>\<rightarrow\>\<bbb-R\><rsup|n>>> a
-    linear isomorphism such that <math|\<forall\>i,j\<in\><around*|{|1,\<ldots\>,n|}>>
-    we have <math|\<cal-M\><around*|(|T;E,E|)><rsub|i,j>=\<delta\><rsub|i,j>\<cdot\>M<rsub|i,i>>
-    where <math|0\<leqslant\>M<rsub|i,i>> then we have\ 
-
-    <\equation*>
-      \<forall\>A\<in\>\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]><text| we have
-      >\<lambda\><rsup|n><around*|(|T<around*|(|A|)>|)>=det<around*|(|T|)>\<cdot\>\<lambda\><rsup|n><around*|(|A|)>
-    </equation*>
-  </lemma>
-
-  <\proof>
-    Using the previous [theorem: <reference|measure Borel measure of T(A)
-    (1)>] we have that\ 
-
-    <\equation>
-      <label|eq 21.1081.291>\<lambda\><rsup|n><around*|(|T<around*|(|A|)>|)>=\<lambda\><rsup|n><around*|(|T<around*|(|<around*|[|0,1|[><rsup|n>|)>|)>\<cdot\>\<lambda\><rsup|n><around*|(|A|)>
-    </equation>
-
-    As <math|T:\<bbb-R\><rsup|n>\<rightarrow\>\<bbb-R\><rsup|n>> is a linear
-    isomorphism we have\ 
-
-    <\equation>
-      <label|eq 21.1082.291>0<below|\<neq\>|<text|[theorem:
-      <reference|determinant det(L) properties>]>>det<around*|(|T|)>\<equallim\><rsub|<text|[theorem:
-      <reference|determinant of matrix and linear
-      transformation>]>>det<around*|(|\<cal-M\><around*|(|T;E,E|)>|)>\<equallim\><rsub|<text|[theorem:
-      <reference|matrix determinant of a diagonal
-      matrix>]>><big|prod><rsub|i=1><rsup|n>M<rsub|i,i>
-    </equation>
-
-    From the above it follows that\ 
-
-    <\equation>
-      <label|eq 21.1083.291>\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><text|
-      >0\<less\>M<rsub|i,i>
-    </equation>
-
-    Define\ 
-
-    <\equation*>
-      M\<in\>\<bbb-R\><rsup|n><text| by >M=<around*|(|M<rsub|1,1>,\<ldots\>,M<rsub|n,n>|)><text|
-      in other words >\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><text| we
-      have >M<rsub|i>=M<rsub|i,i>
-    </equation*>
-
-    Using the relation between a linear transformation and its matrix we have\ 
-
-    <\equation>
-      <label|eq 21.1084.291>\<forall\>x\<in\>\<bbb-R\><rsup|n><text| we have
-      >T<around*|(|x|)>=\<equallim\><rsub|<text|[example: <reference|matrix
-      linear map application (1)>]>><big|sum><rsub|j=1><rsup|n>\<cal-M\><around*|(|T;E,E|)>=<big|sum><rsub|j=1><rsup|n>\<delta\><rsub|j,i>\<cdot\>M<rsub|i,i>\<cdot\>x<rsub|j>=M<rsub|i,i>\<cdot\>x<rsub|i>
-    </equation>
-
-    Now we have\ 
-
-    <\eqnarray*>
-      <tformat|<table|<row|<cell|y\<in\>T<around*|(|<around*|[|0,1|[><rsup|n>|)>>|<cell|\<Leftrightarrow\>>|<cell|\<exists\>x\<in\><around*|[|0,1|[><rsup|n><text|
-      such that >y=T<around*|(|x|)>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|\<exists\>x\<in\>\<bbb-R\><rsup|n><text|
-      such that <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
-      <math|0\<leqslant\>x<rsub|i>\<less\>1<text| and
-      >y=T<around*|(|x|)>>>>>|<row|<cell|>|<cell|<below|\<Leftrightarrow\>|<text|[eq:
-      <reference|eq 21.1084.291>]>>>|<cell|\<exists\>x\<in\>\<bbb-R\><rsup|n><text|
-      such that <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
-      <math|0\<leqslant\>x<rsub|i>\<less\>1<text| and
-      >y<rsub|i>=M<rsub|i,i>\<cdot\>x<rsub|i>>>>>|<row|<cell|>|<cell|<below|\<Leftrightarrow\>|0\<neq\>M<rsub|i,i>>>|<cell|<text|<math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
-      <math|0\<leqslant\><frac|y<rsub|i>|M<rsub|i,i>>\<less\>1>>>>|<row|<cell|>|<cell|\<Leftrightarrowlim\><rsub|0\<less\>M<rsub|i,i>>>|<cell|<text|<math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
-      <math|0\<leqslant\>y<rsub|i>\<less\>M<rsub|i,i>>>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|y\<in\><around*|[|0,M|[>>>>>
-    </eqnarray*>
-
-    which proves that\ 
-
-    <\equation>
-      <label|eq 21.1085.291>T<around*|(|<around*|[|0,1|[><rsup|n>|)>=<around*|[|0,M|[>
-    </equation>
-
-    Hence we have\ 
-
-    <\equation*>
-      \<lambda\><rsup|n><around*|(|t<around*|(|<around*|[|0,1<rsup|n>|[>|)>|)>=\<lambda\><rsup|n><around*|(|<around*|[|0,M|[>|)>=vol<rsup|n><around*|(|<around*|[|0,M|[>|)>=<big|prod><rsub|i=1><rsup|n><around*|(|M<rsub|i>-0|)>\<equallim\><rsub|<text|[eq:
-      <reference|eq 21.1082.291>]>><big|prod><rsub|i=1><rsup|n>M<rsub|i,i><below||><below|=|<text|[eq:
-      <reference|eq 21.1082.291>>>det<around*|(|T|)>
-    </equation*>
-
-    <\equation*>
-      \;
-    </equation*>
-
-    Substituting this result in [eq: <reference|eq 21.1081.291>] it follows
-    that\ 
-
-    <\equation*>
-      \<forall\>A\<in\>\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]><text| we have
-      >\<lambda\><rsup|n><around*|(|T<around*|(|A|)>|)>=det<around*|(|L|)>\<cdot\>\<lambda\><rsup|n><around*|(|A|)>
-    </equation*>
-  </proof>
-
-  Now to calculate the general case we first have to examine the behavior of
-  <math|\<lambda\><rsup|n>> under a unitary operator.
-
-  <\lemma>
-    <label|lemma 21.579.291>Let <math|n\<in\>\<bbb-N\>>,
-    <math|U:\<bbb-R\><rsup|n>\<rightarrow\>\<bbb-R\><rsup|n>> be a unitary
-    transformation [using the canonical inner product defined in [example:
-    <reference|inner product on R^n>]] then we have that\ 
-
-    <\equation*>
-      \<forall\>A\<in\>\<cal-B\><around*|[|\<bbb-R\>|]><text| we have
-      >\<lambda\><rsup|n><around*|(|<around*|(|U<rsup|-1>|)><around*|(|A|)>|)>=\<lambda\><rsup|n><around*|(|A|)>
-    </equation*>
-
-    <\note>
-      <label|note 21.580.291>Using [theorem: <reference|spectral unitary
-      operator properties>] <math|U<rsup|-1>> is a linear isomorphism, hence
-      by [theorem: <reference|continuity homemorphism between K>]
-      <math|U<rsup|-1>> is a homeomorphism so that by [theorem:
-      <reference|measurability of image of a measurable set by a
-      homeomorphism>] <math|<rigid|U<rsup|-1><around*|(|A|)>\<in\>\<cal-B\><around*|[|\<bbb-R\>|]>>>
-      from which it follows that <math|\<lambda\><around*|(|U<rsup|-1><around*|(|A|)>|)>>
-      is well defined.
-    </note>
-  </lemma>
-
-  <\proof>
-    First note that by [theorem: <reference|normed norm on finite dimensional
-    spaces are equivalent>] all norms on <math|\<bbb-R\><rsup|n>> are
-    equivalent, so if <math|<around*|\<\|\|\>||\<\|\|\>><rsub|n>> is the
-    canonical norm on <math|\<bbb-R\>> [see example: <reference|normed
-    maximum norm R^n>] and <math|<around*|\<\|\|\>||\<\|\|\>><rsub|e>> is the
-    Euclidean norm on <math|\<bbb-R\>> \ [definition: <reference|inner
-    euclidean norm real numbers>] then\ 
-
-    <\equation>
-      <label|eq 21.1086.291>\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n>>=\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>>
-    </equation>
-
-    As by [theorem: <reference|spectral unitary operator properties>]
-    <math|U<rsup|-1>> is a isomorphism we have by [theorem:
-    <reference|measure Borel measure of T(A) (1)>] that
-
-    <\equation>
-      <label|eq 21.1087.291>\<forall\>A\<in\>\<cal-B\><around*|[|\<bbb-R\>|]><text|
-      we have >\<lambda\><rsup|n><around*|(|<around*|(|U<rsup|-1>|)><around*|(|A|)>|)>=\<kappa\>\<cdot\>\<lambda\><rsup|n><around*|(|A|)><text|
-      where >\<kappa\>=\<lambda\><rsup|n><around*|(|<around*|(|U<rsup|-1>|)><around*|(|<around*|[|0,1|[><rsup|n>|)>|)>
-    </equation>
-
-    Take the open ball <math|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,1|)>=<around*|{|x\<in\>\<bbb-R\><rsup|n>\|<around*|\<\|\|\>|x|\<\|\|\>><rsub|e>\<less\>1|}>\<in\>\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>>=\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n>>\<subseteq\>\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>>
-    then by the above we have\ 
-
-    <\equation>
-      <label|eq 21.1088.291>\<lambda\><rsup|n><around*|(|<around*|(|U<rsup|-1>|)><around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,1|)>|)>|)>=\<kappa\>\<cdot\>\<lambda\><rsup|n><around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,1|)>|)>
-    </equation>
-
-    Further we have by [theorem: <reference|spectral unitary operator
-    properties>] that
-
-    <\equation>
-      <label|eq 21.1089.291>U<text| is a >linear isometry
-    </equation>
-
-    <\eqnarray*>
-      <tformat|<table|<row|<cell|x\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,1|)>>|<cell|\<Leftrightarrow\>>|<cell|<around*|\<\|\|\>|x|\<\|\|\>><rsub|e>\<less\>1>>|<row|<cell|>|<cell|<below|\<Leftrightarrow\>|<text|[eq:
-      <reference|eq 21.1089.291>]>>>|<cell|<around*|\<\|\|\>|U<around*|(|x|)>|\<\|\|\>><rsub|e>\<less\>1>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|U<around*|(|x|)>\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,1|)>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|<around*|(|U<rsup|-1>|)><around*|(|U<around*|(|x|)>|)>\<in\>U<rsup|-1><around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,1|)>|)>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\>U<rsup|-1><around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,1|)>|)>>>>>
-    </eqnarray*>
-
-    which proves that <math|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,1|)>=U<rsup|-1><around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,1|)>|)>>.
-    Substituting this in [eq: <reference|eq 21.1088.291>] gives\ 
-
-    <\equation>
-      <label|eq 21.1090.291>\<lambda\><rsup|n><around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,1|)>|)>=\<kappa\>\<cdot\>\<lambda\><rsup|n><around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,1|)>|)>
-    </equation>
-
-    Let <math|x\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,1|)>>
-    then we have <math|<around*|\<\|\|\>|x|\<\|\|\>><rsub|e>\<less\>1>. Let
-    <math|i\<in\><around*|{|1,\<ldots\>,n|}>> then we have
-
-    <\equation*>
-      -x<rsub|i>,x<rsub|i><below|\<leqslant\>|<text|[theorem:
-      <reference|complex sqrt x\<less\>sqrt
-      x^2>]>><around*|\||x<rsub|i>|\|>=<sqrt|x<rsub|i><rsup|2>><below|\<leqslant\>|<text|[theorem:
-      <reference|complex root is strictly
-      increasing>]>><sqrt|<big|sum><rsub|i=1><rsup|n>x<rsub|i><rsup|2>>=<around*|\<\|\|\>|x|\<\|\|\>><rsub|e>\<less\>1
-    </equation*>
-
-    so that <math|-1\<less\>x<rsub|i>\<less\>1> or
-    <math|x<rsub|i>\<in\><around*|[|-1,1|[>>. Hence we have proved that
-    <math|x\<in\><around*|[|-1,1|[><rsup|n>> so that
-    \ <math|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,1|)>\<subseteq\><around*|[|-1,1|[><rsup|n>>
-    from which it follows that <math|\<lambda\><rsup|n><around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,1|)>|)>\<leqslant\>\<lambda\><rsup|n><around*|(|<around*|[|-1,1|[><rsup|n>|)><below|=|<text|[theorem:
-    <reference|measure Lebesgue measure space on
-    R^n>]>>vol<rsup|n><around*|(|<around*|[|-1,1|[>|)>=2<rsup|n>\<less\>\<infty\>>.
-    In other words <math|>
-
-    <\equation>
-      <label|eq 21.1091.291>\<lambda\><rsup|n><around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,1|)>|)>\<less\>\<infty\>
-    </equation>
-
-    Further if <math|x\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|[|0,<frac|1|<sqrt|n>>|[>>
-    then <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>we have
-    <math|0\<less\>x<rsub|i>\<less\><frac|1|<sqrt|n>>> so that
-
-    <\equation*>
-      <around*|\<\|\|\>|x|\<\|\|\>><rsub|e>=<sqrt|<big|sum><rsub|i=1><rsup|n>x<rsub|i><rsup|2>><below|\<leqslant\>|<text|[theorem:
-      <reference|complex root is strictly
-      increasing>]>><sqrt|<big|sum><rsub|i=1><rsup|n><frac|1|n>>=<sqrt|n\<cdot\><frac|1|n>>=1
-    </equation*>
-
-    which prove that <math|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|[|0,<frac|1|<sqrt|n>>|[>\<subseteq\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,1|)>>
-    so that\ 
-
-    <\equation*>
-      0\<less\>n\<cdot\><frac|1|<sqrt|n>>=vol<rsup|n><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|[|0,<frac|1|<sqrt|n>>|[>|)>=\<lambda\><rsup|n><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|[|0,<frac|1|<sqrt|n>>|[>|)>\<leqslant\>\<lambda\><rsup|n><around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,1|)>|)>
-    </equation*>
-
-    Hence\ 
-
-    <\equation>
-      <label|eq 21.1092.291>0\<less\>\<lambda\><rsup|n><around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,1|)>|)>
-    </equation>
-
-    the above together with [eq: <reference|eq 21.1091.291>] allows us to
-    multiply both sides of [eq: <reference|eq 21.1090.291>] by
-    <math|<frac|1|\<lambda\><rsup|n><around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,1|)>|)>>>
-    to get <math|\<kappa\>=1>. Substituting this in [eq: <reference|eq
-    21.1087.291>] gives\ 
-
-    <\equation*>
-      \<forall\>A\<in\>\<cal-B\><around*|[|\<bbb-R\>|]><text| we have
-      >\<lambda\><rsup|n><around*|(|<around*|(|U<rsup|-1>|)><around*|(|A|)>|)>=\<lambda\><rsup|n><around*|(|A|)>
-    </equation*>
-  </proof>
-
-  <\theorem>
-    <label|Lebesgue measure and unitary transformation>Let
-    <math|n\<in\>\<bbb-N\>>, <math|><math|U:\<bbb-R\><rsup|n>\<rightarrow\>\<bbb-R\><rsup|n>>
-    be a unitary transformation [using \ the Euclidean norm on
-    <math|\<bbb-R\>> [see definition: <reference|inner euclidean norm real
-    numbers>]] then we have that
-
-    <\equation*>
-      \<forall\>A\<in\>\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]><text| we have
-      that >\<lambda\><rsup|n><around*|(|U<around*|(|A|)>|)>=\<lambda\><rsup|n><around*|(|A|)>
-    </equation*>
-  </theorem>
-
-  <\proof>
-    Using \ [theorem: <reference|spectral unitary operator properties>]
-    <math|U<rsup|-1>> is a unitary operator, applying then [lemma:
-    <reference|lemma 21.579.291>] proves that\ 
-
-    <\equation*>
-      \<forall\>A\<in\>\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]><text| we have
-      >\<lambda\><rsup|n><around*|(|U<around*|(|A|)>|)>=\<lambda\><rsup|n><around*|(|<around*|(|<around*|(|U<rsup|-1>|)><rsup|-1>|)><around*|(|A|)>|)>=\<lambda\><rsup|n><around*|(|A|)>
-    </equation*>
-  </proof>
-
-  <\lemma>
-    <label|lemma 21.582.291>Let <math|n\<in\>\<bbb-N\>>,
-    <math|E=<around*|{|e<rsub|1>,\<ldots\>,e<rsub|n>|}>> the canonical basis
-    for <math|\<bbb-R\><rsup|n>> [see example: <reference|basis F^n>] and
-    <math|L:\<bbb-R\><rsup|n>\<rightarrow\>\<bbb-R\><rsup|n>> be a linear
-    isomorphism then there exists two unitary operators
-    <math|S,T:\<bbb-R\><rsup|n>\<rightarrow\>\<bbb-R\><rsup|n>> and a linear
-    isomorphism <math|D:\<bbb-R\><rsup|n>\<rightarrow\>\<bbb-R\><rsup|n>>
-    with <math|\<forall\>i,j> <math|\<cal-M\><around*|(|D;E,E|)><rsub|i,j>=\<delta\><rsub|i,j>\<cdot\>M<rsub|i,i>\<geqslant\>0>
-    such that\ 
-
-    <\equation*>
-      L=S\<circ\>D\<circ\>T
-    </equation*>
-  </lemma>
-
-  <\proof>
-    Consider the adjoint <math|L<rsup|\<ast\>>> of <math|L> [see theorem:
-    then we have
-
-    <\equation*>
-      <around*|(|L<rsup|\<ast\>>\<circ\>L|)><rsup|\<ast\>>\<equallim\><rsub|<text|[theorem:
-      <reference|inner adjoint and composition>]>>L<rsup|\<ast\>>\<circ\><around*|(|L<rsup|\<star\>>|)><rsup|\<ast\>>\<equallim\><rsub|<text|[theorem:
-      <reference|inner adjoint of adjoint>]>>L<rsup|\<ast\>>\<circ\>L
-    </equation*>
-
-    which proves that <math|L<rsup|\<ast\>>\<circ\>L> is self adjoint. Using
-    [theorem: <reference|spectral diagonalization of a self-adjoint operator
-    (real)>] there exist unitary operator <math|U> such that\ 
-
-    <\equation*>
-      \<cal-M\><around*|(|U<rsup|\<ast\>>\<circ\><around*|(|L<rsup|\<ast\>>\<circ\>L|)>\<circ\>U;E,E|)><text|
-      is diagonal>
-    </equation*>
-
-    Take\ 
-
-    <\equation>
-      <label|eq 21.1093.291>D<rprime|'>=U<rsup|\<ast\>>\<circ\><around*|(|L<rsup|\<ast\>>\<circ\>L|)>\<circ\>U
-    </equation>
-
-    then we have\ 
-
-    <\equation>
-      <label|eq 21.1094.291>\<forall\>i,j\<in\><around*|{|1,\<ldots\>,n|}><text|
-      we have >\<cal-M\><around*|(|D<rprime|'>;E,E|)><rsub|i,j>=\<lambda\><rprime|'><rsub|i>\<cdot\>\<delta\><rsub|i,j>
-    </equation>
-
-    so that <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>> we have\ 
-
-    <\equation*>
-      D<rprime|'><around*|(|e<rsub|i>|)>=<big|sum><rsub|j=1><rsup|n>\<cal-M\><around*|(|D<rprime|'>;E,E|)><rsub|j,i>\<cdot\>e<rsub|j>=<big|sum><rsub|j=1><rsup|n>\<lambda\><rprime|'><rsub|j>\<cdot\>\<delta\><rsub|j,i>\<cdot\>e<rsub|j>=\<lambda\><rprime|'><rsub|i>\<cdot\>e<rsub|i>
-    </equation*>
-
-    hence we have\ 
-
-    <\equation>
-      <label|eq 21.1095.291>\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><text|
-      >D<rprime|'><around*|(|e<rsub|i>|)>=\<lambda\><rprime|'><rsub|i>\<cdot\>e<rsub|i>
-    </equation>
-
-    As <math|L> is a linear isomorphism and <math|U> is a linear isomorphism
-    [see theorem: <reference|spectral unitary operator properties>] we have
-    that <math|L\<circ\>U> is a linear isomorphism [see theorem:
-    <reference|linear mapping composition isomorphism>] so that by [theorem:
-    <reference|linear mapping injectivity and kernel>]
-    <math|ker<around*|(|L\<circ\>U|)>=<around*|{|0|}>> so that\ 
-
-    <\equation>
-      <label|eq 21.1096.291>\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><text|
-      we have that >L<around*|(|U<around*|(|e<rsub|i>|)>|)>=<around*|(|L\<circ\>U|)><around*|(|e<rsub|i>|)>\<neq\>0
-    </equation>
-
-    Next we have <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>> that\ 
-
-    <\eqnarray*>
-      <tformat|<table|<row|<cell|\<lambda\><rprime|'><rsub|i>>|<cell|\<equallim\><rsub|<text|[eq:
-      <reference|eq 21.1094.291>]>>>|<cell|\<cal-M\><around*|(|D<rprime|'>;E,E|)><rsub|i,i>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
-      <reference|inner matrix of linear mapping>]>>>|<cell|<around*|\<langle\>|D<rprime|'><around*|(|e<rsub|i>|)>,e<rsub|i>|\<rangle\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<langle\>|<around*|(|U<rsup|\<ast\>>\<circ\><around*|(|L<rsup|\<ast\>>\<circ\>L|)>\<circ\>U|)><around*|(|e<rsub|i>|)>,e<rsub|i>|\<rangle\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<langle\>|U<rsup|\<ast\>><around*|(|L<rsup|\<ast\>><around*|(|L<around*|(|U<around*|(|e<rsub|i>|)>|)>|)>|)>,e<rsub|i>|\<rangle\>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorems:
-      \ <reference|inner adjoint operator>]>>>|<cell|<around*|\<langle\>|L<rsup|\<ast\>><around*|(|L<around*|(|U<around*|(|e<rsub|i>|)>|)>|)>,U<around*|(|e<rsub|i>|)>|\<rangle\>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorems:
-      \ <reference|inner adjoint operator>]>>>|<cell|<around*|\<langle\>|L<around*|(|U<around*|(|e<rsub|i>|)>|)>,L<around*|(|U<around*|(|e<rsub|i>|)>|)>|\<rangle\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|L<around*|(|U<around*|(|e<rsub|i>|)>|)>|\<\|\|\>><rsub|e>>>|<row|<cell|>|<cell|\<gtr\>>|<cell|0
-      <around*|(|strict bigger because of <around*|[|<text|eq: <reference|eq
-      21.1096.291>>|]>|)>>>>>
-    </eqnarray*>
-
-    hence we have\ 
-
-    <\equation>
-      <label|eq 21.1097.291>\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><text|
-      we have >\<lambda\><rprime|'><rsub|i>\<gtr\>0
-    </equation>
-
-    Define now <math|D,D<rprime|''>\<in\>Hom<around*|(|\<bbb-R\><rsup|n>,\<bbb-R\><rsup|n>|)>>
-    by <math|D<around*|(|e<rsub|i>|)>=<sqrt|\<lambda\><rprime|'><rsub|i>>\<cdot\>e<rsub|i>>
-    and <math|D<rprime|''><around*|(|e<rsub|i>|)>=<frac|1|<sqrt|\<lambda\><rprime|'><rsub|i>>>\<cdot\>e<rsub|i>>
-    \ [see theorem: <reference|linear mapping definition by its values for
-    the basis vectors>] then we have <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>\ 
-
-    <\eqnarray*>
-      <tformat|<table|<row|<cell|<around*|(|D\<circ\>D<rprime|''>|)><around*|(|e<rsub|i>|)>>|<cell|=>|<cell|D<around*|(|D<rprime|''><around*|(|e<rsub|i>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|D<around*|(|<frac|1|<sqrt|\<lambda\><rprime|'><rsub|i>>>\<cdot\>e<rsub|i>|)>>>|<row|<cell|>|<cell|=>|<cell|<frac|1|<sqrt|\<lambda\><rprime|'><rsub|i>>>\<cdot\>D<around*|(|e<rsub|i>|)>>>|<row|<cell|>|<cell|=>|<cell|<frac|<sqrt|\<lambda\><rprime|'><rsub|i>>|<sqrt|\<lambda\><rprime|'><rsub|i>>>\<cdot\>e<rsub|i>>>|<row|<cell|>|<cell|=>|<cell|Id<rsub|\<bbb-R\><rsup|n>><around*|(|e<rsub|i>|)>>>|<row|<cell|>|<cell|=>|<cell|<frac|<sqrt|\<lambda\><rprime|'><rsub|i>>|<sqrt|\<lambda\><rprime|'><rsub|i>>>\<cdot\>e<rsub|i>>>|<row|<cell|>|<cell|=>|<cell|<sqrt|\<lambda\><rprime|'><rsub|i>>\<cdot\>D<rprime|''><around*|(|e<rsub|i>|)>>>|<row|<cell|>|<cell|=>|<cell|D<rprime|''><around*|(|<sqrt|\<lambda\><rprime|'><rsub|i>>\<cdot\>e<rsub|i>|)>>>|<row|<cell|>|<cell|=>|<cell|D<rprime|''><around*|(|D<around*|(|e<rsub|i>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|D<rprime|''>\<circ\>D|)><around*|(|e<rsub|i>|)>>>>>
-    </eqnarray*>
-
-    so that by [theorem: <reference|linear mapping and basis vectors>] we
-    have\ 
-
-    <\equation*>
-      D\<circ\>D<rprime|''>=Id<rsub|\<bbb-R\><rsup|n>>=D<rprime|''>\<circ\>D
-    </equation*>
-
-    which proves that\ 
-
-    <\equation>
-      <label|eq 21.1098.291>D,D<rsup|-1><text| are linear isomorphisms and
-      >D<rsup|-1>=D<rprime|''>
-    </equation>
-
-    Further we have <math|\<forall\>i,j\<in\><around*|{|1,\<ldots\>,n|}>>
-    that
-
-    <\eqnarray*>
-      <tformat|<table|<row|<cell|\<cal-M\><around*|(|D<rsup|-1>;E,E|)><rsub|i,j>>|<cell|\<equallim\><rsub|<text|[theorem:
-      <reference|inner matrix of linear mapping>]>>>|<cell|<around*|\<langle\>|D<rsup|-1><around*|(|e<rsub|j>|)>,e<rsub|i>|\<rangle\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<langle\>|1/<sqrt|\<lambda\><rprime|'><rsub|j>>\<cdot\>e<rsub|j>,e<rsub|i>|\<rangle\>>>>|<row|<cell|>|<cell|=>|<cell|1/<sqrt|\<lambda\><rprime|'><rsub|j>>\<cdot\>\<delta\><rsub|i,j>>>>>
-    </eqnarray*>
-
-    so that\ 
-
-    <\equation>
-      <label|eq 21.1099.291>\<forall\>i,j\<in\><around*|{|1,\<ldots\>,n|}><text|
-      we have >\<cal-M\><around*|(|D<rsup|-1>;E,E|)><rsub|i,j>=<frac|1|<sqrt|\<lambda\><rprime|'><rsub|j>>>\<cdot\>\<delta\><rsub|i,j>
-    </equation>
-
-    Now <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>> we have\ 
-
-    <\eqnarray*>
-      <tformat|<table|<row|<cell|<around*|(|<around*|(|L\<circ\>U\<circ\>D<rsup|-1>|)><rsup|\<ast\>>\<circ\><around*|(|L\<circ\>U\<circ\>D<rsup|-1>|)>|)><around*|(|e<rsub|i>|)>>|<cell|\<equallim\><rsub|<text|[theorem:
-      <reference|inner adjoint and composition>]>>>|<cell|<around*|(|<around*|(|D<rsup|-1>|)><rsup|\<star\>>\<circ\>U<rsup|\<ast\>>\<circ\>L<rsup|\<ast\>>\<circ\>L\<circ\>U\<circ\>D<rsup|-1>|)><around*|(|e<rsub|i>|)>>>|<row|<cell|>|<cell|<below|=|<text|[theorem:
-      <reference|spectral diagnolizing operator is
-      self-adjoint>]>>>|<cell|<around*|(|D<rsup|-1>\<circ\><around*|(|U<rsup|\<ast\>>\<circ\>L<rsup|\<ast\>>\<circ\>L\<circ\>U|)>\<circ\>D<rsup|-1>|)><around*|(|e<rsub|i>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
-      <reference|eq 21.1093.291>]>>>|<cell|<around*|(|D<rsup|-1>\<circ\>D<rprime|'>\<circ\>D<rsup|-1>|)><around*|(|e<rsub|i>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|D<rsup|-1><around*|(|D<rprime|'><around*|(|D<rsup|-1><around*|(|e<rsub|i>|)>|)>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<frac|1|<sqrt|\<lambda\><rprime|'><rsub|i>>>\<cdot\><around*|(|D<rsup|-1><around*|(|D<rprime|'><around*|(|e<rsub|i>|)>|)>|)>>>|<row|<cell|>|<cell|<below|=|<text|[eq:
-      <reference|eq 21.1095.291>]>>>|<cell|<frac|\<lambda\><rprime|'><rsub|i>|<sqrt|\<lambda\><rprime|'><rsub|i>>>\<cdot\><around*|(|D<rsup|-1><around*|(|e<rsub|i>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<frac|\<lambda\><rprime|'><rsub|i>|\<lambda\><rprime|'><rsub|i>>\<cdot\>e<rsub|i>>>|<row|<cell|>|<cell|=>|<cell|e<rsub|i><rsub|>>>|<row|<cell|>|<cell|=>|<cell|Id<rsub|\<bbb-R\><rsup|n>><around*|(|e<rsub|i>|)>>>>>
-    </eqnarray*>
-
-    which proves by [theorem: <reference|linear mapping and basis vectors>]
-    that\ 
-
-    <\equation*>
-      <text|<label|eq 18.240.291>><around*|(|L\<circ\>U\<circ\>D<rsup|-1>|)><rsup|\<ast\>>\<circ\><around*|(|L\<circ\>U\<circ\>D<rsup|-1>|)>=Id<rsub|\<bbb-R\><rsup|n>>
-    </equation*>
-
-    Using then [theorem: <reference|spectral unitary operator (1)>] it
-    follows that <math|L\<circ\>U\<circ\>D<rsup|-1>> is unitary, further as
-    <math|U> is unitary we have by [theorem: <reference|spectral unitary
-    operator properties>] that <math|U<rsup|-1>> is unitary. Hence if we take
-    <math|S=L\<circ\>U\<circ\>D<rsup|-1>> and <math|T=U<rsup|-1>> then we
-    have\ 
-
-    <\equation>
-      <label|eq 21.1100.291>S,T<text| are unitary operators>
-    </equation>
-
-    Now
-
-    <\eqnarray*>
-      <tformat|<table|<row|<cell|S\<circ\>D\<circ\>T>|<cell|=>|<cell|<around*|(|L\<circ\>U\<circ\>D<rsup|-1>|)>\<circ\>D\<circ\>U<rsup|-1>>>|<row|<cell|>|<cell|=>|<cell|L\<circ\>U\<circ\><around*|(|D<rsup|-1>\<circ\>D|)>\<circ\>U<rsup|-1>>>|<row|<cell|>|<cell|=>|<cell|L\<circ\>U\<circ\>U<rsup|-1>>>|<row|<cell|>|<cell|=>|<cell|L>>>>
-    </eqnarray*>
-
-    hence\ 
-
-    <\equation>
-      <label|eq 21.1101.291>S\<circ\>D\<circ\>T=L
-    </equation>
-
-    Further we have
-
-    <\equation*>
-      \<forall\>i,j\<in\><around*|{|1,\<ldots\>,n|}><text| that
-      >\<cal-M\><around*|(|D;E,E|)><rsub|i,j>\<equallim\><rsub|<text|[theorem:
-      <reference|inner matrix of linear mapping>]>><around*|\<langle\>|D<around*|(|e<rsub|j>|)>,e<rsub|i>|\<rangle\>>=<around*|\<langle\>|<sqrt|\<lambda\><rprime|'><rsub|i>>\<cdot\>e<rsub|j>,e<rsub|i>|\<rangle\>>=<sqrt|\<lambda\><rprime|'><rsub|j>>\<cdot\>\<delta\><rsub|j,i>
-    </equation*>
-
-    which together with [eqs: <reference|eq 21.1098.291>, <reference|eq
-    21.1100.291>, <reference|eq 21.1101.291>] proves the lemma.
-  </proof>
-
-  We are now ready to prove that <math|\<lambda\><rsup|n><around*|(|T<around*|(|A|)>|)>=det<around*|(|T|)>\<cdot\>\<lambda\><rsup|n><around*|(|A|)>>.
-
-  <\theorem>
-    <label|Lebesgue borel measure and linear isomorphism>Let
-    <math|n\<in\>\<bbb-N\>>, <math|L:\<bbb-R\><rsup|n>\<rightarrow\>\<bbb-R\><rsup|n>>
-    a linear transformation then <math|\<forall\>A\<in\>\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>>
-    we have\ 
-
-    <\equation*>
-      \<lambda\><rsup|n><around*|(|L<around*|(|A|)>|)>=<around*|\||det<around*|(|L|)>|\|>\<cdot\>\<lambda\><rsup|n><around*|(|A|)>
-    </equation*>
-  </theorem>
-
-  <\proof>
-    Take the canonical basis <math|E=<around*|(|e<rsub|1>,\<ldots\>,e<rsub|n>|)>>
-    then then by the previous lemma [lemma: <reference|lemma 21.582.291>]
-    there exist a linear isomorphism <math|D> with
-    <math|\<forall\>i,j\<in\><around*|{|1,\<ldots\>,n|}>>
-    <math|\<cal-M\><around*|(|D;E,E|)><rsub|i,j>=\<cal-M\><around*|(|D;E,E|)><rsub|i,i>\<cdot\>\<delta\><rsub|i,j>\<gtr\>0>
-    and two unitary operators <math|S,T> such that\ 
-
-    <\equation*>
-      L=S\<circ\>D\<circ\>T
-    </equation*>
-
-    Hence we have\ 
-
-    <\eqnarray*>
-      <tformat|<table|<row|<cell|\<lambda\><rsup|n><around*|(|L<around*|(|<around*|[|0,1|[><rsup|n>|)>|)>>|<cell|=>|<cell|\<lambda\><rsup|n><around*|(|<around*|(|S\<circ\>D\<circ\>T|)><around*|(|<around*|[|0,1|[><rsup|n>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<lambda\><rsup|n><around*|(|S<around*|(|D<around*|(|T<around*|(|<around*|[|0,1|[><rsup|n>|)>|)>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
-      <reference|Lebesgue measure and unitary
-      transformation>]>>>|<cell|\<lambda\><rsup|n><around*|(|D<around*|(|T<around*|(|<around*|[|0,1|[><rsup|n>|)>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[Lemma:
-      <reference|lemma 21.578.291>]>>>|<cell|det<around*|(|D|)>\<cdot\>\<lambda\><rsup|n><around*|(|T<around*|(|<around*|[|0,1|[><rsup|n>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
-      <reference|Lebesgue measure and unitary
-      transformation>]>>>|<cell|det<around*|(|D|)>\<cdot\>\<lambda\><rsup|n><around*|(|<around*|[|0,1|[><rsup|n>|)>>>|<row|<cell|>|<cell|=>|<cell|det<around*|(|D|)>\<cdot\>vol<rsup|n><around*|(|<around*|[|0,1|[><rsup|n>|)>>>|<row|<cell|>|<cell|=>|<cell|det<around*|(|D|)>\<cdot\><big|prod><rsub|i=1><rsup|n><around*|(|1-0|)>>>|<row|<cell|>|<cell|=>|<cell|det<around*|(|D|)>>>>>
-    </eqnarray*>
-
-    Hence we have proved that\ 
-
-    <\equation>
-      <label|eq 21.1102.291>\<lambda\><rsup|n><around*|(|L<around*|(|<around*|[|0,1|[><rsup|n>|)>|)>=det<around*|(|D|)>
-    </equation>
-
-    Now\ 
-
-    <\eqnarray*>
-      <tformat|<table|<row|<cell|det<around*|(|L|)>>|<cell|=>|<cell|det<around*|(|S\<circ\>D\<circ\>T|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
-      <reference|determinant det(L) properties>]>>>|<cell|det<around*|(|S|)>\<cdot\>det<around*|(|D|)>\<cdot\>det<around*|(|T|)>>>|<row|<cell|>|<cell|<below|\<equallim\>|<text|[theorem:
-      <reference|spectral determinant unitary
-      transfrom>]>>>|<cell|<around*|(|\<pm\>1|)>\<cdot\>det<around*|(|D|)>\<cdot\><around*|(|\<pm\>1|)>>>|<row|<cell|>|<cell|=>|<cell|\<pm\>det<around*|(|D|)>>>>>
-    </eqnarray*>
-
-    further\ 
-
-    <\equation*>
-      det<around*|(|D|)>=\<equallim\><rsub|<text|[theorem:
-      <reference|determinant of matrix and linear
-      transformation>]>>det<around*|(|\<cal-M\><around*|(|D;E,E|)>|)>\<equallim\><rsub|<text|[theorem:
-      <reference|matrix determinant of a diagonal
-      matrix>]>><big|prod><rsub|i=1><rsup|n>\<cal-M\><around*|(|D;E,E|)><rsub|i,i>\<gtr\>0
-    </equation*>
-
-    so that <math|det<around*|(|D|)>=<around*|\||det<around*|(|L|)>|\|>>
-    which combined with [eq: <reference|eq 21.1102.291>] gives\ 
-
-    <\equation*>
-      \<lambda\><rsup|n><around*|(|L<around*|(|<around*|[|0,1|[><rsup|n>|)>|)>=<around*|\||det<around*|(|L|)>|\|>
-    </equation*>
-
-    Finally we have\ 
-
-    <\equation*>
-      \<lambda\><rsup|n><around*|(|L<around*|(|A|)>|)>\<equallim\><rsub|<text|[theorem:
-      <reference|measure Borel measure of T(A)
-      (1)>]>>\<lambda\><rsup|n><around*|(|T<around*|(|<around*|[|0,1|[><rsup|n>|)>|)>\<cdot\>\<lambda\><rsup|n><around*|(|A|)>=<around*|\||det<around*|(|L|)>|\|>\<cdot\>\<lambda\><rsup|n><around*|(|A|)>
-    </equation*>
-  </proof>
-
-  We use the above theorem to prove that for a linear isomorphism we have\ 
-
-  <\equation*>
-    <around*|\||det<around*|(|T|)>|\|>\<cdot\><big|int><around*|(|f\<circ\>T|)>d\<lambda\><rsup|n>=<big|int>f
-    d\<lambda\><rsup|n>
-  </equation*>
-
-  we prove this result in different steps
-
-  <\enumerate>
-    <item>For <math|f\<in\>> we have <math|<around*|\||det<around*|(|T|)>|\|>\<cdot\><big|int><rsup|S><around*|(|f\<circ\>T|)>d\<lambda\><rsup|n>=<big|int><rsup|S>f
-    d\<lambda\><rsup|n>>
-
-    <item>For non negative measurable functions we have
-    <math|<around*|\||det<around*|(|T|)>|\|>\<cdot\><big|int><rsup|+><around*|(|f\<circ\>T|)>d\<lambda\><rsup|n>=<big|int><rsup|+>f
-    d\<lambda\><rsup|n>>
-
-    <item>For <math|f\<in\>\<cal-L\><around*|[|\<bbb-R\><rsup|n>,\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>,\<mu\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
-    we have that <math|f\<circ\>T\<in\>\<cal-L\><around*|[|\<bbb-R\><rsup|n>,\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>,\<mu\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
-    and
-
-    <\equation*>
-      <around*|\||det<around*|(|T|)>|\|>\<cdot\><big|int><around*|(|f\<circ\>T|)>d\<lambda\><rsup|n>=<big|int><rsup|>f
-      d\<lambda\><rsup|n>.
-    </equation*>
-  </enumerate>
-
-  <\lemma>
-    <label|lemma 21.584.291>Let <math|f\<in\>\<cal-S\><rsup|+><around*|[|\<bbb-R\><rsup|n>,\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>|]>>
-    and <math|T:\<bbb-R\><rsup|n>\<rightarrow\>\<bbb-R\><rsup|n>> a linear
-    isomorphism then
-
-    <\equation*>
-      f\<circ\>T\<in\>\<cal-S\><rsup|+><around*|[|\<bbb-R\><rsup|n>,\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>|]>
-    </equation*>
-
-    and\ 
-
-    <\equation*>
-      <around*|\||det<around*|(|T|)>|\|>\<cdot\><big|int><rsup|S><around*|(|f\<circ\>T|)>d\<lambda\><rsup|n>=<big|int><rsup|S>f
-      d\<lambda\><rsup|n>
-    </equation*>
-  </lemma>
-
-  <\proof>
-    As <math|T> is a linear isomorphism we have by [theorem:
-    <reference|continuity homemorphism between K>] then\ 
-
-    <\equation>
-      <label|eq 21.1103.291>T<text| is a homeomorphism so that by [theorem:
-      <reference|measurable function and continuity>] <math|T<text| is
-      >\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>,\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]><text|-measurable>>>
-    </equation>
-
-    further we have by [theorem: <reference|determinant det(L) properties>]
-    that\ 
-
-    <\equation>
-      <label|eq 21.1104.291>det<around*|(|T|)>\<neq\>0<infix-and>det<around*|(|L<rsup|-1>|)>=<frac|1|det<around*|(|L|)>>
-    </equation>
-
-    Let <math|A\<subseteq\>\<bbb-R\><rsup|n>> and take
-    <math|x\<in\>\<bbb-R\><rsup|n>> then we have for
-    <math|x\<in\>\<bbb-R\><rsup|n>> either:\ 
-
-    <\description>
-      <item*|<math|T<around*|(|x|)>\<in\>A>>Then
-      <math|x\<in\><around*|(|T<rsup|-1>|)><around*|(|A|)>\<equallim\><rsub|<text|[theorem:
-      <reference|function inverse image preimage>]>>T<rsup|-1><around*|(|A|)>>
-      so that <math|<around*|(|\<cal-X\><rsub|A>\<circ\>T|)><around*|(|x|)>=1=\<cal-X\><rsub|T<rsup|-1><around*|(|A|)>><around*|(|x|)>>
-
-      <item*|<math|T<around*|(|x|)>\<in\>\<bbb-R\><rsup|n>\\A>>Then
-
-      <\eqnarray*>
-        <tformat|<table|<row|<cell|x\<in\><around*|(|T<rsup|-1>|)><around*|(|\<bbb-R\><rsup|n>\\A|)>>|<cell|\<equallim\><rsub|<text|[theorem:
-        <reference|function properties (1)>]>>>|<cell|<around*|(|T<rsup|-1>|)><around*|(|\<bbb-R\><rsup|n>|)>\\<around*|(|T<rsup|-1>|)><around*|(|A|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|T<rsup|-1><text|
-        is bijective>>>|<cell|\<bbb-R\><rsup|n>\\<around*|(|T<rsup|-1>|)><around*|(|A|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
-        <reference|function inverse image
-        preimage>]>>>|<cell|\<bbb-R\><rsup|n>\\T<rsup|-1><around*|(|A|)>>>>>
-      </eqnarray*>
-
-      so that <math|<around*|(|\<cal-X\><rsub|A>\<circ\>T|)><around*|(|x|)>=\<cal-X\><rsub|A><around*|(|T<around*|(|x|)>|)>=0=\<cal-X\><rsub|T<rsup|-1><around*|(|A|)>><around*|(|x|)>>
-    </description>
-
-    hence we have\ 
-
-    <\equation>
-      <label|eq 21.1105.291>\<forall\>A\<subseteq\>\<bbb-R\><rsup|n><text| we
-      have >\<cal-X\><rsub|A>\<circ\>T=\<cal-X\><rsub|T<rsup|-1><around*|(|A|)>>
-    </equation>
-
-    As <math|f\<in\>\<cal-S\><rsup|+><around*|[|\<bbb-R\><rsup|n>,\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>|]>>
-    we have by [theorem: <reference|simple function measurable (1)>]
-    <space|1em>that there exist a pairwise disjoint
-    <math|<around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>m|}>>\<subseteq\>\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>>
-    and <math|<around*|{|f<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>>\<subseteq\><around*|[|0,\<infty\>|[>>
-    such that\ 
-
-    <\equation>
-      <label|eq 21.1106.291>f=<big|sum><rsub|i=1><rsup|m>f<rsub|i>\<cdot\>\<cal-X\><rsub|A<rsub|i>>
-    </equation>
-
-    As <math|T> is <math|\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>,\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>>-measurable
-    we have that <math|<around*|{|T<rsup|-1><around*|(|A<rsub|i>|)>|}><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>>\<subseteq\>\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>>.
-    Further if <math|i,j\<in\><around*|{|1,\<ldots\>,m|}>> with
-    <math|i\<neq\>j> then <math|T<rsup|-1><around*|(|A<rsub|i>|)><big|cap>T<rsup|-1><around*|(|A<rsub|j>|)>\<equallim\><rsub|<text|[theorem:
-    <reference|function function and intersection and
-    union>[>>T<rsup|-1><around*|(|A<rsub|i><big|cap>A<rsub|i>|)>=T<rsup|-1><around*|(|\<varnothing\>|)>=\<varnothing\>>.
-    Hence we have\ 
-
-    <\equation>
-      <label|eq 21.1107.291><around*|{|T<rsup|-1><around*|(|A<rsub|i>|)>|}><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>>\<subseteq\>\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]><text|
-      is pairwise disjoint>
-    </equation>
-
-    Let <math|x\<in\>\<bbb-R\><rsup|n>> then\ 
-
-    <\eqnarray*>
-      <tformat|<table|<row|<cell|<around*|(|f\<circ\>T|)><around*|(|x|)>>|<cell|=>|<cell|f<around*|(|T<around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<big|sum><rsub|i=1><rsup|m>f<rsub|i>\<cdot\>\<cal-X\><rsub|A<rsub|i>>|)><around*|(|T<around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|m>f<rsub|i>\<cdot\>\<cal-X\><rsub|A<rsub|i>><around*|(|T<around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|m>f<rsub|i>\<cdot\><around*|(|\<cal-X\><rsub|A<rsub|i>>\<circ\>T|)><around*|(|x|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
-      <reference|eq 21.1105.291>]>>>|<cell|<big|sum><rsub|i=1><rsup|m>f<rsub|i>\<cdot\>\<cal-X\><rsub|T<rsup|-1><around*|(|A<rsub|i>|)>><around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<big|sum><rsub|i=1><rsup|m>f<rsub|i>\<cdot\>\<cal-X\><rsub|T<rsup|-1><around*|(|A<rsub|i>|)>>|)><around*|(|x|)>>>>>
-    </eqnarray*>
-
-    which proves that\ 
-
-    <\equation>
-      <label|eq 21.1108.291>f\<circ\>T=<big|sum><rsub|i=1><rsup|m>f<rsub|i>\<cdot\>\<cal-X\><rsub|T<rsup|-1><around*|(|A<rsub|i>|)>>
-    </equation>
-
-    Using then [theorem: <reference|simple function measurable (1)>] on [eqs:
-    <reference|eq 21.1107.291>, <reference|eq 21.1108.291>] it follows that
-
-    <\equation*>
-      f\<circ\>T\<in\>\<cal-S\><rsup|+><around*|[|\<bbb-R\><rsup|n>,\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>|]>
-    </equation*>
-
-    Next\ 
-
-    <\eqnarray*>
-      <tformat|<table|<row|<cell|<big|int><rsup|S><around*|(|f\<circ\>T|)>d\<lambda\><rsup|n>>|<cell|\<equallim\><rsub|<text|[definition:
-      <reference|simple function integral>]>>>|<cell|<big|sum><rsub|i=1><rsup|m>f<rsub|i>\<cdot\>\<lambda\><rsup|n><around*|(|T<rsup|-1><around*|(|A<rsub|i>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
-      <reference|function inverse image preimage>]>>>|<cell|<big|sum><rsub|i=1><rsup|m>f<rsub|i>\<cdot\>\<lambda\><rsup|n><around*|(|<around*|(|T<rsup|-1>|)><around*|(|A<rsub|i>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
-      <reference|Lebesgue borel measure and linear
-      isomorphism>]>>>|<cell|<big|sum><rsub|i=1><rsup|m>f<rsub|i>\<cdot\>det<around*|(|T<rsup|-1>|)>\<cdot\>\<lambda\><rsup|n><around*|(|A<rsub|i>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
-      <reference|eq 21.1104.291>]>>>|<cell|<frac|1|<around*|\||det<around*|(|T|)>|\|>>\<cdot\><big|sum><rsub|i=1><rsup|m>f<rsub|i>\<cdot\>\<lambda\><rsup|n><around*|(|A<rsub|i>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[definition:
-      <reference|simple function integral>]>>>|<cell|<frac|1|<around*|\||det<around*|(|T|)>|\|>>\<cdot\><big|int><rsup|S>f
-      d\<lambda\><rsup|n>>>>>
-    </eqnarray*>
-
-    which proves that\ 
-
-    <\equation*>
-      <around*|\||det<around*|(|T|)>|\|>\<cdot\><big|int><rsup|S><around*|(|f\<circ\>T|)>d\<lambda\><rsup|n>=<big|int><rsup|S>f
-      d\<lambda\><rsup|n>
-    </equation*>
-  </proof>
-
-  <\lemma>
-    <label|lemma 21.585.291>Let <math|f\<in\>\<cal-M\><rsup|+><around*|[|\<bbb-R\><rsup|n>,\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
-    and <math|T:\<bbb-R\><rsup|n>\<rightarrow\>\<bbb-R\><rsup|n>> a linear
-    isomorphism then
-
-    <\equation*>
-      <rigid|f\<circ\>T\<in\>\<cal-M\><rsup|+><around*|[|\<bbb-R\><rsup|n>,\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
-    </equation*>
-
-    and\ 
-
-    <\equation*>
-      <around*|\||det<around*|(|T|)>|\|>\<cdot\><big|int><rsup|+><around*|(|f\<circ\>T|)>d\<lambda\><rsup|n>=<big|int><rsup|+>f
-      d\<lambda\><rsup|n>
-    </equation*>
-  </lemma>
-
-  <\proof>
-    As <math|f\<in\>\<cal-M\><rsup|+><around*|[|\<bbb-R\><rsup|n>,\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
-    it follows from [theorem: <reference|non negative integral alternative>]
-    that there exist a <math|<around*|{|f<rsub|n>|}><rsub|n\<in\>\<bbb-N\>>\<subseteq\>\<cal-S\><rsup|+><around*|[|\<bbb-R\><rsup|n>,\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
-    such that\ 
-
-    <\equation>
-      <label|eq 21.1109.291>\<forall\>x\<in\>\<bbb-R\><rsup|n><text| we have
-      >\<forall\>n\<in\>\<bbb-N\><text| that
-      >f<rsub|n><around*|(|x|)>\<leqslant\>f<rsub|n+1><around*|(|x|)>\<Rightarrow\>\<forall\>x\<in\>\<bbb-R\><rsup|n><text|>
-    </equation>
-
-    <\equation>
-      <label|eq 21.1110.291>\<forall\>x\<in\>\<bbb-R\><rsup|n><text|
-      >f<around*|(|x|)>=<below|lim|n\<rightarrow\>\<infty\>>f<rsub|n><around*|(|x|)><text|
-      (where the limit exist)>
-    </equation>
-
-    <\equation>
-      <label|eq 21.1111.291><big|int><rsup|+>f
-      d\<lambda\><rsup|n>=<below|lim|n\<rightarrow\>><big|int><rsup|S>f
-      <rsub|n>d\<lambda\><rsup|n>
-    </equation>
-
-    So we have\ 
-
-    <\equation*>
-      \<forall\>x\<in\>\<bbb-R\><rsup|n><text| we have
-      >\<forall\>n\<in\>\<bbb-N\><text| that
-      ><around*|(|f<rsub|n>\<circ\>T|)><around*|(|x|)>=f<rsub|n><around*|(|T<around*|(|x|)>|)>\<leqslant\>f<rsub|n+1><around*|(|T<around*|(|x|)>|)>=<around*|(|f<rsub|n+1>\<circ\>T|)><around*|(|x|)>
-    </equation*>
-
-    <\equation*>
-      \<forall\>x\<in\>\<bbb-R\><rsup|n><text|
-      ><around*|(|f\<circ\>T|)><around*|(|x|)>=f<around*|(|T<around*|(|x|)>|)><below|=|<text|[eq:
-      <reference|eq 21.1110.291>]>><below|lim|n\<rightarrow\>\<infty\>>f<rsub|n><around*|(|T<around*|(|x|)>|)>=<below|lim|n\<rightarrow\>\<infty\>><around*|(|f<rsub|n>\<circ\>T|)><around*|(|x|)>
-    </equation*>
-
-    Hence using the Monotone Convergence theorem [see theorem:
-    <reference|Monotone Convergence Theorem (1)>] it follows that\ 
-
-    <\equation>
-      <label|eq 21.1112.291>f\<circ\>T\<in\>\<cal-M\><rsup|+><around*|[|\<bbb-R\><rsup|n>,\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>,<wide|\<bbb-R\>|\<wide-bar\>>|]><text|
-      and ><big|int><rsup|+><around*|(|f\<circ\>T|)>d\<lambda\><rsup|n>=<below|lim|n\<rightarrow\>\<infty\>><big|int><rsup|+><around*|(|f<rsub|n>\<circ\>T|)>d\<lambda\><rsup|n>
-    </equation>
-
-    Using [lemma: <reference|lemma 21.584.291>] we have\ 
-
-    <\equation>
-      <label|eq 21.1113.291>\<forall\>n\<in\>\<bbb-N\><text| that
-      >f<rsub|n>\<circ\>T\<in\>\<cal-S\><rsup|+><around*|[|\<bbb-R\><rsup|n>,\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>|]><text|
-      and ><around*|\||det<around*|(|T|)>|\|>\<cdot\><big|int><rsup|S><around*|(|f<rsub|n>\<circ\>T|)>d\<lambda\><rsup|n>=<big|int><rsup|S>f<rsub|n>
-      d\<lambda\><rsup|n>
-    </equation>
-
-    Next\ 
-
-    <\eqnarray*>
-      <tformat|<table|<row|<cell|<big|int><rsup|+>f
-      d\<lambda\><rsup|n>>|<cell|<below|=|<text|[eq: <reference|eq
-      21.1111.291>]>>>|<cell|<below|lim|n\<rightarrow\>\<infty\>><big|int><rsup|S>f
-      d\<lambda\><rsup|n>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
-      <reference|eq 21.1113.291>]>>>|<cell|<below|lim|n\<rightarrow\>\<infty\>><around*|(|<around*|\||det<around*|(|T|)>|\|>\<cdot\><big|int><rsup|S><around*|(|f<rsub|n>\<circ\>T|)>d\<lambda\><rsup|n>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
-      <reference|extended limit properties>]>>>|<cell|<around*|\||det<around*|(|T|)>|\|>\<cdot\><below|lim|n\<rightarrow\>\<infty\>><big|int><rsup|S><around*|(|f<rsub|n>\<circ\>T|)>d\<lambda\><rsup|n>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
-      <reference|non negative integral is a
-      extension>]>>>|<cell|<around*|\||det<around*|(|T|)>|\|>\<cdot\><below|lim|n\<rightarrow\>\<infty\>><big|int><rsup|+><around*|(|f<rsub|n>\<circ\>T|)>d\<lambda\><rsup|n>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
-      <reference|eq 21.1112.291>]>>>|<cell|<around*|\||det<around*|(|T|)>|\|>\<cdot\><big|int><rsup|+><around*|(|f\<circ\>T|)>d\<lambda\><rsup|n>>>>>
-    </eqnarray*>
-
-    which proves that
-
-    <\equation*>
-      <around*|\||det<around*|(|T|)>|\|>\<cdot\><big|int><rsup|+><around*|(|f\<circ\>T|)>d\<lambda\><rsup|n>=<big|int><rsup|+>f
-      d\<lambda\><rsup|n>
-    </equation*>
-  </proof>
-
-  <\theorem>
-    <label|Lebesgue borel measure and linear isomorphism (n)>Let
-    <math|f\<in\>\<cal-L\><around*|[|\<bbb-R\><rsup|n>,\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>,\<lambda\><rsup|n>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
-    and <math|T:\<bbb-R\><rsup|n>\<rightarrow\>\<bbb-R\><rsup|n>> a linear
-    isomorphism then
-
-    <\equation*>
-      f\<circ\>T\<in\>\<cal-L\><around*|[|\<bbb-R\><rsup|n>,\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>,\<lambda\><rsup|n>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
-    </equation*>
-
-    and\ 
-
-    <\equation*>
-      <around*|\||det<around*|(|T|)>|\|>\<cdot\><big|int><rsup|><around*|(|f\<circ\>T|)>d\<lambda\><rsup|n>=<big|int>f
-      d\<lambda\><rsup|n>
-    </equation*>
-  </theorem>
-
-  <\proof>
-    As <math|T> is a linear isomorphism it follows from [theorems:
-    <reference|continuity homemorphism between K>,<reference|measurable
-    function and continuity>] that <math|T> is
-    <rigid|<math|\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>,\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>>-measurable>,
-    further, as <math|f\<in\>\<cal-L\><around*|[|\<bbb-R\><rsup|n>,\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>,\<lambda\><rsup|n>,<wide|\<bbb-R\>|\<wide-bar\>>|]>\<subseteq\>\<cal-M\><around*|[|\<bbb-R\><rsup|n>,\<cal-B\><around*|[|\<bbb-R\><rsup|n>,<wide|\<bbb-R\>|\<wide-bar\>>|]>,|\<nobracket\>>>
-    <math|f> is <math|\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>,\<cal-B\><around*|[|<wide|\<bbb-R\>|\<wide-bar\>>|]>>-measurable
-    so that by [theorem: <reference|measurable function composition>] we have
-    that <math|f\<circ\>T> is <math|\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>,\<cal-B\><around*|[|<wide|\<bbb-R\>|\<wide-bar\>>|]>>-measurable.
-    Hence we have that\ 
-
-    <\equation>
-      <label|eq 21.1114.291>f\<circ\>T\<in\>\<cal-M\><around*|[|\<bbb-R\><rsup|n>,\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
-    </equation>
-
-    As <math|f\<in\>\<cal-L\><around*|[|\<bbb-R\><rsup|n>,\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>,\<lambda\><rsup|n>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
-    we have that\ 
-
-    <\equation>
-      <label|eq 21.1115.291><big|int><rsup|+>f<rsup|+>d\<lambda\><rsup|n>\<in\><around*|[|0,\<infty\>|[><text|
-      and ><big|int><rsup|+>f<rsup|->d\<lambda\><rsup|n>\<in\><around*|[|0,\<infty\>|[>
-    </equation>
-
-    Now we have for <math|x\<in\>\<bbb-R\><rsup|n>> that\ 
-
-    <\equation*>
-      <around*|(|f\<circ\>T|)><rsup|+><around*|(|x|)>=max<around*|(|<around*|(|f\<circ\>T|)><around*|(|x|)>,0|)>=max<around*|(|f<around*|(|T<around*|(|x|)>|)>,0|)>=f<rsup|+><around*|(|T<around*|(|x|)>|)>=<around*|(|f<rsup|+>\<circ\>T|)><around*|(|x|)>
-    </equation*>
-
-    <\equation*>
-      <around*|(|f\<circ\>T|)><rsup|-><around*|(|x|)>=-min<around*|(|<around*|(|f\<circ\>T|)><around*|(|x|)>,0|)>=-min<around*|(|f<around*|(|T<around*|(|x|)>|)>,0|)>=f<rsup|-><around*|(|T<around*|(|x|)>|)>=<around*|(|f<rsup|->\<circ\>T|)><around*|(|x|)>
-    </equation*>
-
-    which proves that\ 
-
-    <\equation>
-      <label|eq 21.1116.291><around*|(|f\<circ\>T|)><rsup|+>=f<rsup|+>\<circ\>T<text|
-      and ><around*|(|f\<circ\>T|)><rsup|->=f<rsup|->\<circ\>T
-    </equation>
-
-    As by [definition: <reference|measure integral>]
-    <math|f<rsup|+>,f<rsup|->\<in\>\<cal-M\><rsup|+><around*|[|\<bbb-R\><rsup|n>,\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
-    it follows from [lemma: <reference|lemma 21.585.291>]\ 
-
-    <\equation*>
-      f<rsup|+>\<circ\>T\<in\>\<cal-M\><rsup|+><around*|[|\<bbb-R\><rsup|n>,\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>,<wide|\<bbb-R\>|\<wide-bar\>>|]><text|
-      and >f<rsup|->\<circ\>T\<in\>\<cal-M\><rsup|+><around*|[|\<bbb-R\><rsup|n>,\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
-    </equation*>
-
-    <\equation>
-      <label|eq 21.1117.291><around*|\||det<around*|(|T|)>|\|>\<cdot\><big|int><rsup|+><rsup|><around*|(|f<rsup|+>\<circ\>T|)>d\<lambda\><rsup|n>=<big|int><rsup|+>f<rsup|+>
-      d\<lambda\><rsup|n>\<in\><around*|[|0,\<infty\>|[>
-    </equation>
-
-    <\equation>
-      <label|eq 21.1118.291><around*|\||det<around*|(|T|)>|\|>\<cdot\><big|int><rsup|+><rsup|><around*|(|f<rsup|->\<circ\>T|)>d\<lambda\><rsup|n>=<big|int><rsup|+>f<rsup|->
-      d\<lambda\><rsup|n>\<in\><around*|[|0,\<infty\>|[>
-    </equation>
-
-    so that we have\ 
-
-    <\equation*>
-      <big|int><rsup|+><rsup|><around*|(|f<rsup|+>\<circ\>T|)>d\<lambda\><rsup|n>\<in\><around*|[|0,\<infty\>|[><text|
-      and ><big|int><rsup|+><rsup|><around*|(|f<rsup|->\<circ\>T|)>d\<lambda\><rsup|n>\<in\><around*|[|0,\<infty\>|[>
-    </equation*>
-
-    which together with [eq: <reference|eq 21.1114.291>] proves that\ 
-
-    <\equation*>
-      f\<circ\>T\<in\>\<cal-L\><around*|[|\<bbb-R\><rsup|n>,\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>,\<lambda\><rsup|n>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
-    </equation*>
-
-    Finally\ 
-
-    <\eqnarray*>
-      <tformat|<table|<row|<cell|<big|int>f
-      d\<lambda\><rsup|n>>|<cell|=>|<cell|<big|int><rsup|+>f<rsup|+>d\<lambda\><rsup|n>-<big|int><rsup|+>f<rsup|->d\<lambda\><rsup|n>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
-      <reference|eq 21.1117.291>, <reference|eq
-      21.1118.291>]>>>|<cell|<around*|\||det<around*|(|T|)>|\|>\<cdot\><big|int><rsup|+><rsup|><around*|(|f<rsup|+>\<circ\>T|)>d\<lambda\><rsup|n>-<around*|\||det<around*|(|T|)>|\|>\<cdot\><big|int><rsup|+><rsup|><around*|(|f<rsup|->\<circ\>T|)>d\<lambda\><rsup|n>>>|<row|<cell|>|<cell|=>|<cell|<around*|\||det<around*|(|T|)>|\|>\<cdot\><around*|(|<big|int><rsup|+><rsup|><around*|(|f<rsup|+>\<circ\>T|)>d\<lambda\><rsup|n>-<big|int><rsup|+><rsup|><around*|(|f<rsup|->\<circ\>T|)>d\<lambda\><rsup|n>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
-      <reference|eq 21.1116.291>]>>>|<cell|<around*|\||det<around*|(|T|)>|\|>\<cdot\><around*|(|<big|int><rsup|+><rsup|><around*|(|f\<circ\>T|)><rsup|+>d\<lambda\><rsup|n>-<big|int><rsup|+><rsup|><around*|(|f\<circ\>T|)><rsup|->d\<lambda\><rsup|n>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|definition>>|<cell|<around*|\||det<around*|(|T|)>|\|>\<cdot\><big|int><around*|(|f\<circ\>T|)>d\<lambda\><rsup|n>>>>>
-    </eqnarray*>
-
-    which proves that\ 
-
-    <\equation*>
-      <around*|\||det<around*|(|T|)>|\|>\<cdot\><big|int><rsup|><around*|(|f\<circ\>T|)>d\<lambda\><rsup|n>=<big|int>f
-      d\<lambda\><rsup|n>
-    </equation*>
-  </proof>
-
-  \;
 
   \;
 
@@ -50497,11 +49210,11 @@
     <associate|LP spaces sum scalar product (1)|<tuple|21.422|?>>
     <associate|LP vector space|<tuple|21.423|?>>
     <associate|Lebesgue borel measure and linear
-    isomorphism|<tuple|21.643|?>>
+    isomorphism|<tuple|21.629|?>>
     <associate|Lebesgue borel measure and linear isomorphism
-    (n)|<tuple|21.646|?>>
+    (n)|<tuple|21.629|?>>
     <associate|Lebesgue borel measures are Radon measures|<tuple|21.592|?>>
-    <associate|Lebesgue measure and unitary transformation|<tuple|21.641|?>>
+    <associate|Lebesgue measure and unitary transformation|<tuple|21.629|?>>
     <associate|Lebesgue's Dominated Convergence Theorem|<tuple|21.384|?>>
     <associate|Monotone Convergence Theorem (1)|<tuple|21.372|?>>
     <associate|Monotone Convergence Theorem (2)|<tuple|21.375|?>>
@@ -50725,7 +49438,7 @@
     <associate|eq 18.20.021|<tuple|21.47|?>>
     <associate|eq 18.21.021|<tuple|21.48|?>>
     <associate|eq 18.22.021|<tuple|21.49|?>>
-    <associate|eq 18.240.291|<tuple|21.1207|?>>
+    <associate|eq 18.240.291|<tuple|21.1188|?>>
     <associate|eq 18.39.022|<tuple|21.85|?>>
     <associate|eq 18.40.022|<tuple|21.86|?>>
     <associate|eq 18.41.022|<tuple|21.87|?>>
@@ -51689,54 +50402,54 @@
     <associate|eq 21.1071.291|<tuple|21.1133|?>>
     <associate|eq 21.1072.291|<tuple|21.1134|?>>
     <associate|eq 21.1073.291|<tuple|21.1135|?>>
-    <associate|eq 21.1074.291|<tuple|21.1180|?>>
-    <associate|eq 21.1075.291|<tuple|21.1181|?>>
-    <associate|eq 21.1076.291|<tuple|21.1182|?>>
-    <associate|eq 21.1077.291|<tuple|21.1183|?>>
-    <associate|eq 21.1078.291|<tuple|21.1184|?>>
-    <associate|eq 21.1079.291|<tuple|21.1185|?>>
-    <associate|eq 21.1080.292|<tuple|21.1186|?>>
-    <associate|eq 21.1081.291|<tuple|21.1189|?>>
-    <associate|eq 21.1081.292|<tuple|21.1187|?>>
-    <associate|eq 21.1082.291|<tuple|21.1190|?>>
-    <associate|eq 21.1082.292|<tuple|21.1188|?>>
-    <associate|eq 21.1083.291|<tuple|21.1191|?>>
-    <associate|eq 21.1084.291|<tuple|21.1192|?>>
-    <associate|eq 21.1085.291|<tuple|21.1193|?>>
-    <associate|eq 21.1086.291|<tuple|21.1194|?>>
-    <associate|eq 21.1087.291|<tuple|21.1195|?>>
-    <associate|eq 21.1088.291|<tuple|21.1196|?>>
-    <associate|eq 21.1089.291|<tuple|21.1197|?>>
+    <associate|eq 21.1074.291|<tuple|21.1182|?>>
+    <associate|eq 21.1075.291|<tuple|21.1183|?>>
+    <associate|eq 21.1076.291|<tuple|21.1184|?>>
+    <associate|eq 21.1077.291|<tuple|21.1185|?>>
+    <associate|eq 21.1078.291|<tuple|21.1186|?>>
+    <associate|eq 21.1079.291|<tuple|21.1187|?>>
+    <associate|eq 21.1080.292|<tuple|21.1182|?>>
+    <associate|eq 21.1081.291|<tuple|21.1182|?>>
+    <associate|eq 21.1081.292|<tuple|21.1183|?>>
+    <associate|eq 21.1082.291|<tuple|21.1183|?>>
+    <associate|eq 21.1082.292|<tuple|21.1184|?>>
+    <associate|eq 21.1083.291|<tuple|21.1184|?>>
+    <associate|eq 21.1084.291|<tuple|21.1185|?>>
+    <associate|eq 21.1085.291|<tuple|21.1186|?>>
+    <associate|eq 21.1086.291|<tuple|21.1182|?>>
+    <associate|eq 21.1087.291|<tuple|21.1183|?>>
+    <associate|eq 21.1088.291|<tuple|21.1184|?>>
+    <associate|eq 21.1089.291|<tuple|21.1185|?>>
     <associate|eq 21.109.300|<tuple|21.109|?>>
-    <associate|eq 21.1090.291|<tuple|21.1198|?>>
-    <associate|eq 21.1091.291|<tuple|21.1199|?>>
-    <associate|eq 21.1092.291|<tuple|21.1200|?>>
-    <associate|eq 21.1093.291|<tuple|21.1201|?>>
-    <associate|eq 21.1094.291|<tuple|21.1202|?>>
-    <associate|eq 21.1095.291|<tuple|21.1203|?>>
-    <associate|eq 21.1096.291|<tuple|21.1204|?>>
-    <associate|eq 21.1097.291|<tuple|21.1205|?>>
-    <associate|eq 21.1098.291|<tuple|21.1206|?>>
-    <associate|eq 21.1099.291|<tuple|21.1207|?>>
-    <associate|eq 21.1100.291|<tuple|21.1208|?>>
-    <associate|eq 21.1101.291|<tuple|21.1209|?>>
-    <associate|eq 21.1102.291|<tuple|21.1210|?>>
-    <associate|eq 21.1103.291|<tuple|21.1211|?>>
-    <associate|eq 21.1104.291|<tuple|21.1212|?>>
-    <associate|eq 21.1105.291|<tuple|21.1213|?>>
-    <associate|eq 21.1106.291|<tuple|21.1214|?>>
-    <associate|eq 21.1107.291|<tuple|21.1215|?>>
-    <associate|eq 21.1108.291|<tuple|21.1216|?>>
-    <associate|eq 21.1109.291|<tuple|21.1217|?>>
-    <associate|eq 21.1110.291|<tuple|21.1218|?>>
-    <associate|eq 21.1111.291|<tuple|21.1219|?>>
-    <associate|eq 21.1112.291|<tuple|21.1220|?>>
-    <associate|eq 21.1113.291|<tuple|21.1221|?>>
-    <associate|eq 21.1114.291|<tuple|21.1222|?>>
-    <associate|eq 21.1115.291|<tuple|21.1223|?>>
-    <associate|eq 21.1116.291|<tuple|21.1224|?>>
-    <associate|eq 21.1117.291|<tuple|21.1225|?>>
-    <associate|eq 21.1118.291|<tuple|21.1226|?>>
+    <associate|eq 21.1090.291|<tuple|21.1186|?>>
+    <associate|eq 21.1091.291|<tuple|21.1187|?>>
+    <associate|eq 21.1092.291|<tuple|21.1188|?>>
+    <associate|eq 21.1093.291|<tuple|21.1182|?>>
+    <associate|eq 21.1094.291|<tuple|21.1183|?>>
+    <associate|eq 21.1095.291|<tuple|21.1184|?>>
+    <associate|eq 21.1096.291|<tuple|21.1185|?>>
+    <associate|eq 21.1097.291|<tuple|21.1186|?>>
+    <associate|eq 21.1098.291|<tuple|21.1187|?>>
+    <associate|eq 21.1099.291|<tuple|21.1188|?>>
+    <associate|eq 21.1100.291|<tuple|21.1189|?>>
+    <associate|eq 21.1101.291|<tuple|21.1190|?>>
+    <associate|eq 21.1102.291|<tuple|21.1182|?>>
+    <associate|eq 21.1103.291|<tuple|21.1182|?>>
+    <associate|eq 21.1104.291|<tuple|21.1183|?>>
+    <associate|eq 21.1105.291|<tuple|21.1184|?>>
+    <associate|eq 21.1106.291|<tuple|21.1185|?>>
+    <associate|eq 21.1107.291|<tuple|21.1186|?>>
+    <associate|eq 21.1108.291|<tuple|21.1187|?>>
+    <associate|eq 21.1109.291|<tuple|21.1182|?>>
+    <associate|eq 21.1110.291|<tuple|21.1183|?>>
+    <associate|eq 21.1111.291|<tuple|21.1184|?>>
+    <associate|eq 21.1112.291|<tuple|21.1185|?>>
+    <associate|eq 21.1113.291|<tuple|21.1186|?>>
+    <associate|eq 21.1114.291|<tuple|21.1182|?>>
+    <associate|eq 21.1115.291|<tuple|21.1183|?>>
+    <associate|eq 21.1116.291|<tuple|21.1184|?>>
+    <associate|eq 21.1117.291|<tuple|21.1185|?>>
+    <associate|eq 21.1118.291|<tuple|21.1186|?>>
     <associate|eq 21.1136.308|<tuple|21.1136|?>>
     <associate|eq 21.1137.308|<tuple|21.1137|?>>
     <associate|eq 21.1138.308|<tuple|21.1138|?>>
@@ -51781,6 +50494,10 @@
     <associate|eq 21.1177.309|<tuple|21.1177|?>>
     <associate|eq 21.1178.309|<tuple|21.1178|?>>
     <associate|eq 21.1179.309|<tuple|21.1179|?>>
+    <associate|eq 21.1180.309|<tuple|21.1180|?>>
+    <associate|eq 21.1181.309|<tuple|21.1181|?>>
+    <associate|eq 21.1182.309|<tuple|21.1183|?>>
+    <associate|eq 21.1183|<tuple|21.1183|?>>
     <associate|eq 21.160.300|<tuple|21.161|?>>
     <associate|eq 21.259.300|<tuple|21.259|?>>
     <associate|eq 21.26.300|<tuple|21.26|?>>
@@ -52012,11 +50729,11 @@
     <associate|lemma 21.558.288|<tuple|21.596|?>>
     <associate|lemma 21.562.291|<tuple|21.600|?>>
     <associate|lemma 21.563.291|<tuple|21.601|?>>
-    <associate|lemma 21.578.291|<tuple|21.638|?>>
-    <associate|lemma 21.579.291|<tuple|21.639|?>>
-    <associate|lemma 21.582.291|<tuple|21.642|?>>
-    <associate|lemma 21.584.291|<tuple|21.644|?>>
-    <associate|lemma 21.585.291|<tuple|21.645|?>>
+    <associate|lemma 21.578.291|<tuple|21.629|?>>
+    <associate|lemma 21.579.291|<tuple|21.629|?>>
+    <associate|lemma 21.582.291|<tuple|21.630|?>>
+    <associate|lemma 21.584.291|<tuple|21.629|?>>
+    <associate|lemma 21.585.291|<tuple|21.629|?>>
     <associate|lemma 21.612.308|<tuple|21.612|?>>
     <associate|lemma 21.614.308|<tuple|21.614|?>>
     <associate|lemma 21.616.308|<tuple|21.616|?>>
@@ -52079,10 +50796,10 @@
     <associate|measure Borel algebra on the extended real numbers
     (1)|<tuple|21.61|?>>
     <associate|measure Borel algebras on R^n equivalences|<tuple|21.87|?>>
-    <associate|measure Borel measure of T(A)|<tuple|21.633|?>>
-    <associate|measure Borel measure of T(A) (1)|<tuple|21.636|?>>
+    <associate|measure Borel measure of T(A)|<tuple|21.630|?>>
+    <associate|measure Borel measure of T(A) (1)|<tuple|21.629|?>>
     <associate|measure Borel measure on R and linear
-    isomorphism|<tuple|21.635|?>>
+    isomorphism|<tuple|21.629|?>>
     <associate|measure Caratheodory|<tuple|21.122|?>>
     <associate|measure Caratheodory produces complete measure
     space|<tuple|21.217|?>>
@@ -52153,7 +50870,7 @@
     <associate|measure create a new measure based on a measure and a
     homeomorphism|<tuple|21.630|?>>
     <associate|measure create a new measure based on a measure and a linear
-    isomorphism|<tuple|21.632|?>>
+    isomorphism|<tuple|21.629|?>>
     <associate|measure extending pre-measure to a measure|<tuple|21.148|?>>
     <associate|measure finite measure|<tuple|21.113|?>>
     <associate|measure finite product of semi-rings|<tuple|21.190|?>>
@@ -52297,7 +51014,7 @@
     <associate|non negative measurable function|<tuple|21.241|?>>
     <associate|note 20.198.210|<tuple|21.135|?>>
     <associate|note 21.231.300|<tuple|21.235|?>>
-    <associate|note 21.580.291|<tuple|21.640|?>>
+    <associate|note 21.580.291|<tuple|21.630|?>>
     <associate|product |<tuple|21.536|?>>
     <associate|product algebra|<tuple|21.539|?>>
     <associate|product algebra equivalences|<tuple|21.542|?>>
