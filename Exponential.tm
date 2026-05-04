@@ -1,4 +1,4 @@
-<TeXmacs|2.1.4>
+<TeXmacs|2.1.5>
 
 <project|FullBook.tm>
 
@@ -2235,7 +2235,7 @@
 
       <item><math|\<forall\>a\<in\><around*|[|0,\<infty\>|[>> and
       <math|\<forall\>n\<in\>\<bbb-N\><rsub|0>> we have
-      <math|a<rsup|n>=<choice|<tformat|<table|<row|<cell|1<text| if
+      <math|a<rsup|n>=<choice|<tformat|<table|<row|<cell|a<text| if
       >n=1>>|<row|<cell|a\<cdot\>a<rsup|n-1><text| if
       >n\<in\>\<bbb-N\>>>>>>=<wide*|a\<ldots\>a|\<wide-underbrace\>><rsub|n>>
       [see definition: <reference|complex power>].
@@ -2254,7 +2254,8 @@
         undefined so the condition <math|0\<less\>a> is required.
       </note>
 
-      <item><math|\<forall\>a\<in\><around*|]|0,\<infty\>|[>> we have
+      <item><math|\<forall\>a\<in\><around*|]|0,\<infty\>|[>>,
+      <math|\<forall\>x\<in\>\<bbb-R\>> we have
       <math|<frac|a<rsup|x>|a>=a<rsup|x-1>>.
 
       <\note>
@@ -2538,6 +2539,54 @@
     </enumerate>
   </proof>
 
+  The above theorem can be used to prove that
+  <math|<sqrt|x>=x<rsup|<frac|1|2>>>.
+
+  <\theorem>
+    <label|exp square root>Let <math|<sqrt|\<ast\>>:<around*|[|0,\<infty\>|[>\<rightarrow\><around*|[|0,\<infty\>|[>>
+    be defined by <math|<sqrt|\<ast\>><around*|(|x|)>=<sqrt|x>> and
+    <math|<around*|(|\<star\>|)><rsup|<frac|1|2>>:<around*|[|0,\<infty\>|[>\<rightarrow\><around*|[|0,\<infty\>|[>>
+    be defined by <math|<around*|(|\<ast\>|)><rsup|<frac|1|2>><around*|(|x|)>=x<rsup|<frac|1|2>>>
+    then <math|<sqrt|\<ast\>>=<around*|(|\<ast\>|)><rsup|<frac|1|2>>>. In
+    other words we have <math|\<forall\>x\<in\><around*|[|0,\<infty\>|[>>
+    that <math|<sqrt|x>=x<rsup|<frac|1|2>>>.
+  </theorem>
+
+  <\proof>
+    Using [definition: <reference|complex square root>] we have that
+    <math|<around*|(|\<ast\>|)><rsup|2>:<around*|[|0,\<infty\>|[>\<rightarrow\><around*|[|0,\<infty\>|[>>
+    is a bijection with inverse function <math|<sqrt|\<ast\>>=<around*|(|<around*|(|\<ast\>|)><rsup|2>|)><rsup|-1>>.
+    Define now\ 
+
+    <\equation*>
+      <around*|(|\<ast\>|)><rsup|<frac|1|2>>:<around*|[|0,\<infty\>|[>\<rightarrow\><around*|[|0,\<infty\>|[><text|
+      by ><around*|(|\<ast\>|)><rsup|<frac|1|2>><around*|(|x|)>=x<rsup|<frac|1|2>>
+    </equation*>
+
+    Let <math|x\<in\><around*|[|0,\<infty\>|[>> then we have
+
+    <\equation*>
+      <around*|(|<around*|(|\<ast\>|)><rsup|2>\<circ\><around*|(|\<ast\>|)><rsup|<frac|1|2>>|)><around*|(|x|)>=<around*|(|\<ast\>|)><rsup|2><around*|(|<around*|(|\<ast\>|)><rsup|<frac|1|2>><around*|(|x|)>|)>=<around*|(|x<rsup|<frac|1|2>>|)><rsup|2><below|=|<text|[theorem:
+      <reference|exp generalized power properties>(10)[>>x<rsup|<frac|1|2>\<cdot\>2>=x<rsup|1>=<below|=|<text|[theorem:
+      <reference|exp generalized power properties>(4)[>>x=Id<rsub|<around*|[|0,\<infty\>|[>><around*|(|x|)>
+    </equation*>
+
+    further we have\ 
+
+    <\equation*>
+      <around*|(|<around*|(|\<ast\>|)><rsup|<frac|1|2>>\<circ\><around*|(|\<ast\>|)><rsup|2>|)><around*|(|x|)>=<around*|(|\<ast\>|)><rsup|<frac|1|2>><around*|(|<around*|(|\<ast\>|)><rsup|2><around*|(|x|)>|)>=<around*|(|x<rsup|2>|)><rsup|<frac|1|2>><below|=|<text|[theorem:
+      <reference|exp generalized power properties>(10)[>>x<rsup|2\<cdot\><frac|1|2>>=x<rsup|1>=<below|=|<text|[theorem:
+      <reference|exp generalized power properties>(4)[>>x=Id<rsub|<around*|[|0,\<infty\>|[>><around*|(|x|)>
+    </equation*>
+
+    which proves that <math|<around*|(|\<ast\>|)><rsup|2>\<circ\><around*|(|\<ast\>|)><rsup|<frac|1|2>>=Id<rsub|<around*|[|0,\<infty\>|[>>=<around*|(|\<ast\>|)><rsup|<frac|1|2>>\<circ\><around*|(|\<ast\>|)><rsup|2>>.
+    Hence we have\ 
+
+    <\equation*>
+      *<sqrt|\<ast\>>=<around*|(|<around*|(|\<ast\>|)><rsup|2>|)><rsup|-1>=<around*|(|\<ast\>|)><rsup|<frac|1|2>>
+    </equation*>
+  </proof>
+
   <\theorem>
     <label|exp derivative of (*)^x>Let <math|x\<in\>\<bbb-R\>> then the
     function\ 
@@ -2594,6 +2643,123 @@
       <reference|exp generalized power properties>
       (8)]>>>|<cell|x\<cdot\>y<rsup|x-1>>>>>
     </eqnarray*>
+  </proof>
+
+  <\corollary>
+    <label|exp derivative of (*)^x higher order>Let <math|x\<in\>\<bbb-R\>>
+    then we have <math|\<forall\>n\<in\>\<bbb-N\>> that the function\ 
+
+    <\equation*>
+      <around*|(|\<star\>|)><rsup|x>:<around*|]|0,\<infty\>|[>=\<bbb-R\><rsup|+>\<rightarrow\>\<bbb-R\><text|
+      defined by ><around*|(|\<ast\>|)><rsup|x><around*|(|y|)>=y<rsup|x>
+    </equation*>
+
+    has a <math|n>-times derivative <math|<around*|(|<around*|(|\<star\>|)><rsup|x>|)><rsup|<around*|(|n|)>><rsub|y>>
+    at every <math|y\<in\><around*|]|0,\<infty\>|[>> with
+    <math|<around*|(|<around*|(|\<ast\>|)><rsup|x>|)><rsup|n><rsub|y>=<around*|(|\<Pi\><rsub|i=0><rsup|n-1><around*|(|x-i|)>|)>\<cdot\>y<rsup|x-n>>.\ 
+
+    <\note>
+      Using [theorem: <reference|diff higher order derivate and
+      differential>] it follows that <math|\<forall\>n\<in\>\<bbb-N\>> and
+      <math|\<forall\>y\<in\><around*|]|0,\<infty\>|[>> that
+      <math|<around*|(|\<ast\>|)><rsup|x>> is <math|n>-times differentiable
+      at <math|y>. Hence using [theorem: <reference|diff C-infinity
+      condition>] <math|<around*|(|\<ast\>|)><rsup|x>> is of class
+      <math|C<rsup|\<infty\>>>.
+    </note>
+  </corollary>
+
+  <\proof>
+    Let <math|y\<in\><around*|]|0,\<infty\>|[>> and define\ 
+
+    <\equation*>
+      S=<around*|{|n\<in\>\<bbb-N\>\|\<forall\>y\<in\><around*|]|0,\<infty\>|[><text|
+      ><around*|(|\<ast\>|)><rsup|x><text| has a >n<text|-times derivative
+      ><around*|(|<around*|(|\<ast\>|)><rsup|x>|)><rsup|<around*|(|n|)>><rsub|y>=<around*|(|<big|prod><rsub|i=0><rsup|n-1><around*|(|x-i|)>|)>\<cdot\>y<rsup|x-n><text|
+      at >y|}>
+    </equation*>
+
+    then we have:\ 
+
+    <\description>
+      <item*|<math|1\<in\>S>>Using [theorem: <reference|exp derivative of
+      (*)^x>] we have that <math|\<forall\>y\<in\><around*|]|0,\<infty\>|[>>
+      <math|<around*|(|\<ast\>|)><rsup|x>> has a derivative
+      <math|<around*|(|<around*|(|\<ast\>|)><rsup|x>|)><rprime|'><rsub|y>=x\<cdot\><around*|(|\<ast\>|)><rsup|x-1>>
+      at <math|y>. Hence we have by defintion that
+      <math|<around*|(|\<ast\>|)><rsup|x>> has a <math|1>-times derivative at
+      <math|y> with
+
+      <\equation*>
+        <around*|(|<around*|(|\<star\>|)><rsup|x>|)><rsup|<around*|(|1|)>><rsub|y>=x\<cdot\><around*|(|\<ast\>|)><rsup|x-1>=<around*|(|<big|prod><rsub|i=0><rsup|1-1>x|)>\<cdot\><around*|(|\<ast\>|)><rsup|x-1>
+      </equation*>
+
+      which proves that <math|1\<in\>S>
+
+      <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>As <math|n\<in\>S> we
+      have that <math|\<forall\>y\<in\><around*|]|0,\<infty\>|[>>
+      <math|<around*|(|<around*|(|\<ast\>|)><rsup|x>|)><rsup|<around*|(|n|)>><rsub|y>>
+      exists with <math|>
+
+      <\equation*>
+        <around*|(|<around*|(|\<ast\>|)><rsup|x>|)><rsup|<around*|(|n|)>><rsub|y>=<around*|(|<big|prod><rsub|i=0><rsup|n-1><around*|(|x-i|)>|)>\<cdot\>y<rsup|x-n>
+      </equation*>
+
+      So we can define\ 
+
+      <\equation*>
+        <around*|(|<around*|(|\<ast\>|)><rsup|x>|)><rsup|<around*|(|n|)>>:<around*|]|0,\<infty\>|[>\<rightarrow\>\<bbb-R\><text|
+        by> <around*|(|<around*|(|\<ast\>|)><rsup|x>|)><rsup|<around*|(|n|)>><around*|(|y|)>=<around*|(|<around*|(|\<ast\>|)><rsup|x>|)><rsup|<around*|(|n|)>><rsub|y>=<around*|(|<big|prod><rsub|i=0><rsup|n-1><around*|(|x-i|)>|)>\<cdot\>y<rsup|x-n>
+      </equation*>
+
+      Using [theorems: <reference|exp derivative of (*)^x>, <reference|diff
+      (f+g)'=f'+g'>] on the above function it follows that
+      <math|><math|<around*|(|<around*|(|<around*|(|\<ast\>|)><rsup|x>|)><rsup|<around*|(|n|)>>|)><rprime|'><rsub|y>>
+      exist and\ 
+
+      <\equation*>
+        <around*|(|<around*|(|<around*|(|\<ast\>|)><rsup|x>|)><rsup|<around*|(|n|)>>|)><rprime|'><rsub|y>=<around*|(|x-n|)>\<cdot\><around*|(|<big|prod><rsub|i=0><rsup|n-1><around*|(|x-i|)>|)>\<cdot\>y<rsup|x-n-1>=<around*|(|<big|prod><rsup|<around*|(|n+1|)>-1><rsub|i=0><around*|(|x-i|)>|)>\<cdot\>y<rsup|<around*|(|x-<around*|(|n+1|)>|)>>
+      </equation*>
+
+      so that by definitioon <math|<around*|(|<around*|(|<around*|(|\<ast\>|)><rsup|x>|)><rsup|<around*|(|n|)>>|)><rsup|<around*|(|n+1|)>><rsub|y>>
+      exist and <math|<around*|(|<around*|(|<around*|(|\<ast\>|)><rsup|x>|)><rsup|<around*|(|n|)>>|)><rsup|<around*|(|n+1|)>><rsub|y>>=
+
+      <\equation*>
+        <around*|(|<around*|(|<around*|(|\<ast\>|)><rsup|x>|)><rsup|<around*|(|n|)>>|)><rsup|<around*|(|n+1|)>><rsub|y>=<around*|(|<around*|(|<around*|(|\<ast\>|)><rsup|x>|)><rsup|<around*|(|n|)>>|)><rprime|'><rsub|y>=<around*|(|<big|prod><rsup|<around*|(|n+1|)>-1><rsub|i=0><around*|(|x-i|)>|)>\<cdot\>y<rsup|<around*|(|x-<around*|(|n+1|)>|)>>
+      </equation*>
+
+      which proves that <math|n+1\<in\>S>.
+    </description>
+  </proof>
+
+  <\corollary>
+    <label|exp square root derivates>We have
+    <math|\<forall\>n\<in\>\<bbb-N\>> that <math|\<forall\>n\<in\>\<bbb-N\>>
+    we have that the function\ 
+
+    <\equation*>
+      <sqrt|\<ast\>>:<around*|]|0,\<infty\>|[>\<rightarrow\>\<bbb-R\><text|
+      defined by ><sqrt|\<ast\>><around*|(|x|)>=<sqrt|x>
+    </equation*>
+
+    has a <math|n>-times derivative where\ 
+
+    <\equation*>
+      <around*|(|<sqrt|\<ast\>>|)><rsup|n><rsub|y>=<around*|(|<big|prod><rsup|n-1><rsub|i=0><around*|(|<frac|1|2>-1|)>|)>\<cdot\><around*|(|\<ast\>|)><rsup|<frac|1|2>-n>
+    </equation*>
+
+    Using [theorem: <reference|diff higher order derivate and differential>]
+    it follows that <math|\<forall\>n\<in\>\<bbb-N\>> and
+    <math|\<forall\>y\<in\><around*|]|0,\<infty\>|[>> that
+    <math|<around*|(|\<ast\>|)><rsup|x>> is <math|n>-times differentiable at
+    <math|y>. Hence using [theorem: <reference|diff C-infinity condition>]
+    <math|<around*|(|\<ast\>|)><rsup|x>> is of class
+    <math|C<rsup|\<infty\>>>.
+  </corollary>
+
+  <\proof>
+    This follows directly from [theorems: <reference|exp square root>,
+    <reference|exp derivative of (*)^x higher order>]
   </proof>
 
   <\theorem>
@@ -2749,7 +2915,21 @@
     </description>
   </proof>
 
-  The above theorem is needed to prove a important inequality using
+  <\corollary>
+    <label|exp square root is continuous>The function
+    <math|<sqrt|\<ast\>>:<around*|[|0,\<infty\>|[>\<rightarrow\>\<bbb-R\>>
+    defined by <math|<sqrt|\<ast\>><around*|(|x|)>=<sqrt|x>> is continuous on
+    <math|<around*|[|0,\<infty\>|[>> [where we use the sub-space topology of
+    <math|<around*|\<langle\>|\<bbb-R\>,\<\|\|\>|\<rangle\>>> on the
+    <math|<around*|[|0,\<infty\>|[>>
+  </corollary>
+
+  <\proof>
+    This follows from [theorems: <reference|exp square root>, <reference|exp
+    (*)^x is continuous>].
+  </proof>
+
+  The previous theorem is needed to prove a important inequality using
   generalized powers, first we have to prove a little lemma.
 
   <\lemma>
@@ -4653,7 +4833,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|18>
-    <associate|page-first|1229>
+    <associate|page-first|1275>
     <associate|page-medium|papyrus>
     <associate|section-nr|4>
     <associate|subsection-nr|4>
@@ -4749,42 +4929,43 @@
     <associate|eq 19.53.153|<tuple|19.53|?>>
     <associate|eq 19.6.150|<tuple|19.8|?>>
     <associate|eq 19.6.151|<tuple|19.6|?>>
-    <associate|eq 19.60.152|<tuple|19.60|?>>
+    <associate|eq 19.60.152|<tuple|19.65|?>>
     <associate|eq 19.7.150|<tuple|19.9|?>>
     <associate|eq 19.7.151|<tuple|19.7|?>>
     <associate|eq 19.8.150|<tuple|19.10|?>>
     <associate|eq 19.9.150|<tuple|19.11|?>>
     <associate|exp|<tuple|19.22|?>>
-    <associate|exp (*)^x is continuous|<tuple|19.51|?>>
+    <associate|exp (*)^x is continuous|<tuple|19.55|?>>
     <associate|exp 0 is in convergence domain|<tuple|19.4|?>>
     <associate|exp Abel Dirichlet|<tuple|19.18|?>>
-    <associate|exp Euler's equation|<tuple|19.65|?>>
+    <associate|exp Euler's equation|<tuple|19.70|?>>
     <associate|exp Euler's number|<tuple|19.33|?>>
     <associate|exp Mertens theorem|<tuple|19.29|?>>
-    <associate|exp Young's inequality|<tuple|19.53|?>>
-    <associate|exp arccosine arcsine|<tuple|19.67|?>>
-    <associate|exp arccosine arcsine properties|<tuple|19.68|?>>
-    <associate|exp arctan|<tuple|19.72|?>>
+    <associate|exp Young's inequality|<tuple|19.58|?>>
+    <associate|exp arccosine arcsine|<tuple|19.72|?>>
+    <associate|exp arccosine arcsine properties|<tuple|19.73|?>>
+    <associate|exp arctan|<tuple|19.77|?>>
     <associate|exp ball extensions|<tuple|19.11|?>>
     <associate|exp ball of convergence|<tuple|19.7|?>>
     <associate|exp balls inclucsion|<tuple|19.14|?>>
     <associate|exp bijection|<tuple|19.36|?>>
-    <associate|exp complement and absolute norm|<tuple|19.55|?>>
+    <associate|exp complement and absolute norm|<tuple|19.60|?>>
     <associate|exp convergence domain|<tuple|19.3|?>>
     <associate|exp convergence domain (1)|<tuple|19.6|?>>
     <associate|exp convergence domains and balls (1)|<tuple|19.10|?>>
     <associate|exp convergence domains and balls (2)|<tuple|19.13|?>>
     <associate|exp convergence domains property|<tuple|19.5|?>>
     <associate|exp convergion radius|<tuple|19.8|?>>
-    <associate|exp cos , sin bijection|<tuple|19.66|?>>
-    <associate|exp cos has a zero element|<tuple|19.59|?>>
-    <associate|exp cos/sin in range 0 to pi/2|<tuple|19.63|?>>
+    <associate|exp cos , sin bijection|<tuple|19.71|?>>
+    <associate|exp cos has a zero element|<tuple|19.64|?>>
+    <associate|exp cos/sin in range 0 to pi/2|<tuple|19.68|?>>
     <associate|exp d'Alembert|<tuple|19.20|?>>
     <associate|exp derivative|<tuple|19.27|?>>
-    <associate|exp derivative of (*)^x|<tuple|19.49|?>>
+    <associate|exp derivative of (*)^x|<tuple|19.50|?>>
+    <associate|exp derivative of (*)^x higher order|<tuple|19.51|?>>
     <associate|exp derivative of a power series|<tuple|19.26|?>>
-    <associate|exp derivative of cos(x) and sin(x)|<tuple|19.58|?>>
-    <associate|exp derivative of x^(*)|<tuple|19.50|?>>
+    <associate|exp derivative of cos(x) and sin(x)|<tuple|19.63|?>>
+    <associate|exp derivative of x^(*)|<tuple|19.54|?>>
     <associate|exp derived power series|<tuple|19.24|?>>
     <associate|exp derived power service properties|<tuple|19.25|?>>
     <associate|exp exp series|<tuple|19.21|?>>
@@ -4797,19 +4978,22 @@
     <associate|exp logarithm properties|<tuple|19.38|?>>
     <associate|exp natural logarithm|<tuple|19.37|?>>
     <associate|exp of natural numbers|<tuple|19.34|?>>
-    <associate|exp pi|<tuple|19.61|?>>
+    <associate|exp pi|<tuple|19.66|?>>
     <associate|exp power function|<tuple|19.15|?>>
     <associate|exp power series|<tuple|19.1|?>>
     <associate|exp product of power series|<tuple|19.30|?>>
     <associate|exp properties|<tuple|19.32|?>>
-    <associate|exp tangent|<tuple|19.69|?>>
-    <associate|exp tangent properties|<tuple|19.71|?>>
-    <associate|exp triginiometric function|<tuple|19.56|?>>
-    <associate|exp trigoniometric properties|<tuple|19.57|?>>
-    <associate|exp trigoniometric properties (1)|<tuple|19.64|?>>
+    <associate|exp square root|<tuple|19.49|?>>
+    <associate|exp square root derivates|<tuple|19.53|?>>
+    <associate|exp square root is continuous|<tuple|19.56|?>>
+    <associate|exp tangent|<tuple|19.74|?>>
+    <associate|exp tangent properties|<tuple|19.76|?>>
+    <associate|exp triginiometric function|<tuple|19.61|?>>
+    <associate|exp trigoniometric properties|<tuple|19.62|?>>
+    <associate|exp trigoniometric properties (1)|<tuple|19.69|?>>
     <associate|lemma 19.15.150|<tuple|19.16|?>>
     <associate|lemma 19.18.150|<tuple|19.19|?>>
-    <associate|lemma 19.51.151|<tuple|19.52|?>>
+    <associate|lemma 19.51.151|<tuple|19.57|?>>
   </collection>
 </references>
 

@@ -254,7 +254,7 @@
     so that by [theorem: <reference|continuity linear mapping (1)>]\ 
 
     <\equation>
-      <label|eq 23.2.1>\<psi\><rsub|i><text| is a continuous mapping>
+      <label|eq 23.5.1>\<psi\><rsub|i><text| is a continuous mapping>
     </equation>
 
     Next we examine the images of <math|S<rsup|n><big|cap>V<rsup|+><rsub|i>,S<rsup|n><big|cap>V<rsup|-><rsub|i>>
@@ -475,8 +475,16 @@
       and ><around*|(|\<psi\><rsup|-><rsub|i>|)><rsup|-1>=\<varphi\><rsup|-><rsub|i>
     </equation>
 
-    Next we prove that <math|\<varphi\><rsup|+>>and <math|\<varphi\><rsup|->>
-    are continuous.\ 
+    Next we prove that <math|\<varphi\><rsub|i><rsup|+<rsub|>>>and
+    <math|\<varphi\><rsub|i><rsup|->> are continuous. Let
+    <math|k\<in\><around*|{|1,\<ldots\>,n+1|}>> then we have for <math|k>
+    either
+
+    <\description>
+      <item*|<math|k=i>>
+
+      <item*|<math|k\<in\><around*|{|1,\<ldots\>,n+1|}>\\<around*|{|i|}>>>
+    </description>
 
     \;
   </proof>
@@ -501,9 +509,10 @@
     <associate|auto-1|<tuple|23|?>>
     <associate|auto-2|<tuple|23.1|?>>
     <associate|eq 23.1.1|<tuple|23.1|?>>
-    <associate|eq 23.2.1|<tuple|23.5|?>>
+    <associate|eq 23.2.1|<tuple|23.2|?>>
     <associate|eq 23.3.1|<tuple|23.3|?>>
     <associate|eq 23.4.1|<tuple|23.4|?>>
+    <associate|eq 23.5.1|<tuple|23.5|?>>
     <associate|eq 23.6.1|<tuple|23.6|?>>
     <associate|eq 23.7.1|<tuple|23.7|?>>
     <associate|eq 23.8.1|<tuple|23.8|?>>
