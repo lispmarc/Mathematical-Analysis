@@ -1,4 +1,4 @@
-<TeXmacs|2.1.4>
+<TeXmacs|2.1.5>
 
 <project|FullBook.tm>
 
@@ -3629,8 +3629,8 @@
 
   <\example>
     <label|function characteristics function><dueto|Characteristics
-    Function>Let <math|A,B> be classes then
-    <math|\<cal-X\><rsub|A,B>:A\<rightarrow\><around*|{|0,1|}>> defined by
+    Function>Let <math|A> be a class and <math|B\<subseteq\>A> then
+    <math|\<cal-X\><rsub|A,B>:A\<rightarrow\><around*|{|0,1|}>> is defined by
     <math|\<cal-X\><rsub|A,B>=<around*|(|B\<times\><around*|{|1|}>|)><big|cup><around*|(|<around*|(|A\\B|)>\<times\><around*|{|0|}>|)>>
     [so that <math|\<cal-X\><rsub|A,B><around*|(|x|)>=<choice|<tformat|<table|<row|<cell|1
     <text|if >x\<in\>B>>|<row|<cell|0<text| if >x\<in\>A\\B>>>>>>
@@ -4122,7 +4122,7 @@
 
   <\definition>
     <label|bijection><index|bijection>A function <math|f:A\<rightarrow\>B> is
-    a <with|font-series|bold|bijection> iff the function is
+    a <inactive|<with|font-series|bold|bijection>> iff the function is
     <with|font-series|bold|injective> and <with|font-series|bold|surjective>.
   </definition>
 
