@@ -913,8 +913,8 @@
     <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> then there exist a
     countable basis <math|\<cal-B\>\<subseteq\>\<cal-T\><rsub|\|U>> of
     <math|\<cal-T\><rsub|\|U>> such that <math|\<forall\>B\<in\>\<cal-B\>>
-    <math|B> is a precompact [using the topology <math|\<cal-T\><rsub|\|U>>]
-    coordinate ball.
+    <math|B> is a precompact [using the topology <math|\<cal-T\>>] coordinate
+    ball.
   </lemma>
 
   <\proof>
@@ -975,11 +975,14 @@
       \<varphi\><rsup|-1><around*|(|<wide|B|\<wide-bar\>>|)>=<wide|\<varphi\><rsup|-1><around*|(|B|)>|\<wide-bar\>>
     </equation*>
 
-    Hence we have by [definition: <reference|compact precompact set>] that\ 
+    Hence we have by [definition: <reference|compact precompact set>] that
+    <math|\<varphi\><rsup|-1><around*|(|B|)>> is precompact using the
+    topology <math|\<cal-T\><rsub|\|U>>. Using now [theorem:
+    <reference|topology precompact and subspace topology>] it follows that
 
     <\equation*>
       \<varphi\><rsup|-1><around*|(|B|)><text| is precompact using the
-      topology >\<cal-T\><rsub|\|U>
+      topology >\<cal-T\>
     </equation*>
 
     Using [theorems: <reference|topology subsubspace
@@ -1014,7 +1017,8 @@
 
     <\equation*>
       \<cal-B\>=<around*|{|\<varphi\><rsup|-1><around*|(|B|)>\|B\<in\>\<cal-B\>|}><text|
-      is a countable set of precompact coordinate balls>
+      is a countable set of precompact [using the topology <math|\<cal-T\>>]
+      coordinate balls>
     </equation*>
 
     It remains to prove that <math|\<cal-B\>> is a basis for
