@@ -23967,6 +23967,8 @@
 
   <section|Connected Sets>
 
+  <subsection|Connected Sets and Connected Components>
+
   <\definition>
     <label|connected space><index|connected space>A topological space
     <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> is
@@ -23975,7 +23977,7 @@
     <math|X=U<rsub|1><big|cup>U<rsub|2>> we have that either
     <math|U<rsub|1>=\<varnothing\>> or <math|U<rsub|2>=\<varnothing\>>. In
     other words a topological space is connected if it is not the union of
-    two disconnected non empty sets.
+    two disjoint non empty sets.
   </definition>
 
   <\definition>
@@ -23988,6 +23990,124 @@
     <math|U<rsub|1><big|cap>U<rsub|2>=\<varnothing\>> and
     <math|X=U<rsub|1><big|cup>U<rsub|2>>.\ 
   </definition>
+
+  <\definition>
+    <label|connected set>Let <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>>
+    be a topological space and <math|A\<subseteq\>X> then <math|A> is a
+    connected subset if <math|<around*|\<langle\>|A,\<cal-T\><rsub|\|A>|\<rangle\>>>
+    is connected where <math|\<cal-T\><rsub|\|A>=<around*|{|U<big|cap>A\|U\<in\>\<cal-T\>|}>>
+    is the subspace topology on <math|A>.
+  </definition>
+
+  We have the following equivalent definition of connected subsets
+
+  <\theorem>
+    <label|connected set>Let <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>>
+    be a topological space and <math|A\<subseteq\>X> then we have that\ 
+
+    <\equation*>
+      A<text| is a connected subset>
+    </equation*>
+
+    <\equation*>
+      \<Updownarrow\>
+    </equation*>
+
+    <\equation*>
+      <text| >\<forall\>U<rsub|1>,U<rsub|2>\<in\>\<cal-T\><text| with
+      ><around*|(|U<rsub|1><big|cap>U<rsub|2>|)><big|cap>A=\<varnothing\><text|
+      and >A\<subseteq\>U<rsub|1><big|cup>U<rsub|2><text| we have
+      >U<rsub|1><big|cap>A=\<varnothing\><text| or
+      >U<rsub|2><big|cap>A=\<varnothing\>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>Let <math|U<rsub|1>,U<rsub|2>\<in\>\<cal-T\>>
+      with <math|<around*|(|U<rsub|1><big|cap>U<rsub|2>|)><big|cap>A=\<varnothing\><text|
+      and >A\<subseteq\>U<rsub|1><big|cup>U<rsub|2>> then we have\ 
+
+      <\equation*>
+        U<rsub|1><big|cap>A\<in\>\<cal-T\><rsub|\|A><text| and
+        >U<rsub|2><big|cap>A\<in\>\<cal-T\><rsub|\|A>
+      </equation*>
+
+      <\equation*>
+        <around*|(|U<rsub|1><big|cap>A|)><big|cap><around*|(|U<rsub|2><big|cap>A|)>=<around*|(|U<rsub|1><big|cap>U<rsub|2>|)><big|cap>A=\<varnothing\>
+      </equation*>
+
+      <\equation*>
+        A<below|=|A\<subseteq\>U<rsub|1><big|cup>U<rsub|2>>A<big|cap><around*|(|U<rsub|1><big|cup>U<rsub|2>|)>=<around*|(|U<rsub|1><big|cap>A|)><big|cup><around*|(|U<rsub|2><big|cap>A|)>
+      </equation*>
+
+      As <math|A> is a connected subset<math|>
+      <math|<around*|\<langle\>|A,\<cal-T\><rsub|\|A>|\<rangle\>>> is
+      connected and it follows from the above that
+      <math|<rigid|U<rsub|1><big|cap>A=\<varnothing\>>> or
+      <math|U<rsub|2><big|cap>A=\<varnothing\>>.
+
+      <item*|<math|\<Leftarrow\>>>Let <math|U<rsub|1>,U<rsub|2>\<in\>\<cal-T\><rsub|\|A>>
+      such that <math|U<rsub|1><big|cap>U<rsub|2>=\<varnothing\>> and
+      <math|A=U<rsub|1><big|cup>U<rsub|2>>. Then there exists
+      <math|U<rprime|'><rsub|1>,U<rprime|'><rsub|2>\<in\>\<cal-T\>> such that
+      <math|U<rsub|1>=U<rprime|'><rsub|1><big|cap>A> and
+      <math|U<rsub|2>=U<rprime|'><rsub|2><big|cap>A>. Hence we have that\ 
+
+      <\equation*>
+        <around*|(|U<rprime|'><rsub|1><big|cap>U<rprime|'><rsub|2>|)><big|cap>A=<around*|(|U<rprime|'><rsub|1><big|cap>A|)><big|cap><around*|(|U<rprime|'><rsub|2><big|cap>A|)>=U<rsub|1><big|cap>U<rsub|2>=\<varnothing\>
+      </equation*>
+
+      <\equation*>
+        A=U<rsub|1><big|cup>U<rsub|2>=<around*|(|U<rprime|'><rsub|1><big|cap>A|)><big|cup><around*|(|U<rprime|'><rsub|2><big|cap>A|)>\<subseteq\>U<rprime|'><rsub|1><big|cup>U<rsub|2><rprime|'>
+      </equation*>
+
+      so that by the hypothesis <math|U<rsub|1>=U<rprime|'><rsub|1><big|cap>A=\<varnothing\>>
+      or <math|U<rsub|2>=U<rprime|'><rsub|2><big|cap>A=\<varnothing\>>. Hence
+      we have by definition that <math|<around*|\<langle\>|A,\<cal-T\><rsub|\|A>|\<rangle\>>>
+      is connected proving that <math|A> is a connected subset.\ 
+    </description>
+  </proof>
+
+  <\example>
+    <label|connected singleton is connected>Let
+    <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> be a topological space
+    and <math|x\<in\>X> then <math|<around*|{|x|}>> is a connected subset
+  </example>
+
+  <\proof>
+    Let <math|U<rsub|1>,U<rsub|2>\<in\>\<cal-T\>> such that
+    <math|<around*|(|U<rsub|1><big|cap>U<rsub|2>|)><big|cap><around*|{|x|}>=\<varnothing\>>
+    and <math|<around*|{|x|}>\<subseteq\>U<rsub|1><big|cup>U<rsub|2>>. As
+    <math|<around*|{|x|}>\<in\>U<rsub|1><big|cup>U<rsub|2>> we have
+    <math|x\<in\>U<rsub|1><big|cup>U<rsub|2>> so that we have either:
+
+    <\description>
+      <item*|<math|x\<in\>U<rsub|1>>>Assume that
+      <math|U<rsub|2><big|cap><around*|{|x|}>\<neq\>\<varnothing\>> then
+      there exist a <math|y\<in\>U<rsub|2><big|cap><around*|{|x|}>> so that
+      <math|y\<in\>U<rsub|2>\<wedge\>y\<in\><around*|{|x|}>> hence
+      <math|x=y\<in\>U<rsub|2>>. Hence <math|x\<in\><around*|(|U<rsub|1><big|cap>U<rsub|2>|)><big|cap><around*|{|x|}>=\<varnothing\>>
+      leading to the contradiction <math|x\<in\>\<varnothing\>>. Hence the
+      assumption is false and we must have that
+      <math|U<rsub|2><big|cap><around*|{|x|}>=\<varnothing\>>.
+
+      <item*|<math|x\<in\>U<rsub|2>>>Assume that
+      <math|U<rsub|1><big|cap><around*|{|x|}>\<neq\>\<varnothing\>> then
+      there exist a <math|y\<in\>U<rsub|1><big|cap><around*|{|x|}>> so that
+      <math|y\<in\>U<rsub|1>\<wedge\>y\<in\><around*|{|x|}>> hence
+      <math|x=y\<in\>U<rsub|1>>. Hence <math|x\<in\><around*|(|U<rsub|1><big|cap>U<rsub|2>|)><big|cap><around*|{|x|}>=\<varnothing\>>
+      leading to the contradiction <math|x\<in\>\<varnothing\>>. Hence the
+      assumption is false and we must have that
+      <math|U<rsub|1><big|cap><around*|{|x|}>=\<varnothing\>>.
+    </description>
+
+    so we have <math|U<rsub|1><big|cap><around*|{|x|}>=\<varnothing\>> or
+    <math|U<rsub|2><big|cap><around*|{|x|}>=\<varnothing\>> which proves that
+    <math|<around*|{|x|}>> is a connected subset.
+  </proof>
 
   <\lemma>
     <label|lemma 14.387.166>Let <math|A,B,C> be classes such that
@@ -24083,14 +24203,6 @@
       <math|A=\<emptyset\>> or <math|X\\A=\<emptyset\>\<Rightarrow\>A=X>.
     </description>
   </proof>
-
-  <\definition>
-    <label|connected set>Let <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>>
-    be a topological space and <math|A\<subseteq\>X> then <math|A> is
-    connected if <math|<around*|\<langle\>|A,\<cal-T\><rsub|\|A>|\<rangle\>>>
-    is connected where <math|\<cal-T\><rsub|\|A>=<around*|{|U<big|cap>A\|U\<in\>\<cal-T\>|}>>
-    is the subspace topology on <math|A>.
-  </definition>
 
   <\theorem>
     <label|connected image of a connected set by a continuous function is
@@ -24543,6 +24655,52 @@
     </description>
   </proof>
 
+  Next we show that a topological space can be devided in maximal connected
+  subsets called components.\ 
+
+  TODO
+
+  <\definition>
+    <label|connected component><dueto|Component>Let
+    <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> be a topological space
+    then the relation \ <math|\<sim\>\<in\>X\<times\>X> defined by
+    <math|x\<sim\>y> iff there exist a connected subset <math|A> such that
+    <math|x\<in\>A\<wedge\>y\<in\>A> is a equivalence relation. Given
+    <math|x\<in\>X> the equivalence class [see definition:
+    <reference|equivalence relation class>]
+    <math|\<sim\><around*|[|x|]>=<around*|{|y\<in\>X\|y\<sim\>x|}>> is called
+    a <with|font-series|bold|component>.
+  </definition>
+
+  <\proof>
+    Of course we have to prove that <math|\<sim\>> is indeed a equivalence
+    relation.\ 
+
+    <\description>
+      <item*|reflexivity>Let <math|x\<in\>X> then as by [example:
+      <reference|connected singleton is connected>] <math|<around*|{|x|}>> is
+      connected and we have <math|x,x\<in\><around*|{|x|}>> it follows that
+      <math|x\<sim\>x>.
+
+      <item*|symmetry>Let <math|x\<sim\>y> then there exist a connected set
+      <math|A> such that <math|x,y\<in\>A\<Rightarrow\>y,x\<in\>A> proving
+      that <math|y\<sim\>x>.
+
+      <item*|transitivity>
+    </description>
+  </proof>
+
+  \;
+
+  <\definition>
+    <label|connected path connected><dueto|Path Connected Space>Let
+    <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> be a topological space
+    then <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> is path connected
+    if <math|\<forall\>x,y\<in\>X> there exist a continuous function
+    <math|f:<around*|[|0,1|]>\<rightarrow\>X> such that
+    <math|f<around*|(|0|)>=x> and <math|f<around*|(|1|)>=y>.\ 
+  </definition>
+
   \;
 
   \;
@@ -24583,9 +24741,10 @@
     <associate|auto-11|<tuple|14.1.2|?>>
     <associate|auto-110|<tuple|open mapping theorem|?>>
     <associate|auto-111|<tuple|14.11|?>>
-    <associate|auto-112|<tuple|connected space|?>>
-    <associate|auto-113|<tuple|disconnected space|?>>
-    <associate|auto-114|<tuple|intermediate value theorem|?>>
+    <associate|auto-112|<tuple|14.11.1|?>>
+    <associate|auto-113|<tuple|connected space|?>>
+    <associate|auto-114|<tuple|disconnected space|?>>
+    <associate|auto-115|<tuple|intermediate value theorem|?>>
     <associate|auto-12|<tuple|box topology|?>>
     <associate|auto-13|<tuple|14.1.3|?>>
     <associate|auto-14|<tuple|dense set|?>>
@@ -24757,16 +24916,21 @@
     <associate|complete space|<tuple|14.372|?>>
     <associate|complete the complex numbers are complete|<tuple|14.381|?>>
     <associate|complete uniform convergion|<tuple|14.388|?>>
-    <associate|connected alternative definition|<tuple|14.441|?>>
-    <associate|connected closed interval is connected|<tuple|14.444|?>>
+    <associate|connectd connected subset|<tuple|14.448|?>>
+    <associate|connectd connected subset alternate|<tuple|14.449|?>>
+    <associate|connected alternative definition|<tuple|14.444|?>>
+    <associate|connected closed interval is connected|<tuple|14.446|?>>
+    <associate|connected component|<tuple|14.450|?>>
     <associate|connected disconnected space|<tuple|14.439|?>>
-    <associate|connected generalized intervals|<tuple|14.445|?>>
+    <associate|connected generalized intervals|<tuple|14.447|?>>
     <associate|connected image by a real continuous function of a closed
-    interval is a closed interval|<tuple|14.446|?>>
+    interval is a closed interval|<tuple|14.448|?>>
     <associate|connected image of a connected set by a continuous function is
-    connected|<tuple|14.443|?>>
-    <associate|connected intermediate value theorem|<tuple|14.447|?>>
-    <associate|connected set|<tuple|14.442|?>>
+    connected|<tuple|14.445|?>>
+    <associate|connected intermediate value theorem|<tuple|14.449|?>>
+    <associate|connected path connected|<tuple|14.451|?>>
+    <associate|connected set|<tuple|14.441|?>>
+    <associate|connected singleton is connected|<tuple|14.442|?>>
     <associate|connected space|<tuple|14.438|?>>
     <associate|continuity 1/f is continuous|<tuple|14.162|?>>
     <associate|continuity 1/f^2 is continuous|<tuple|14.163|?>>
@@ -25217,7 +25381,7 @@
     <associate|lemma 14.376|<tuple|14.432|?>>
     <associate|lemma 14.381.166|<tuple|14.434|?>>
     <associate|lemma 14.382.166|<tuple|14.435|?>>
-    <associate|lemma 14.387.166|<tuple|14.440|?>>
+    <associate|lemma 14.387.166|<tuple|14.443|?>>
     <associate|lemma 14.413.294|<tuple|14.211|?>>
     <associate|lemma 14.416.294|<tuple|14.214|?>>
     <associate|lemma 14.417.294|<tuple|14.215|?>>
@@ -25420,9 +25584,8 @@
     <associate|topology closed set|<tuple|14.17|?>>
     <associate|topology closed set and a basis|<tuple|14.40|?>>
     <associate|topology closed set and closure|<tuple|14.26|?>>
-    <associate|topology closed set and subspace topology|<tuple|14.34|?>>
     <associate|topology closed set condition|<tuple|14.31|?>>
-    <associate|topology closed set subspace topology|<tuple|14.34|?>>
+    <associate|topology closed set subspace topology|<tuple|14.18|?>>
     <associate|topology closure alterantive definition|<tuple|14.30|?>>
     <associate|topology closure inclusion|<tuple|14.32|?>>
     <associate|topology closure is union of a set and its limit

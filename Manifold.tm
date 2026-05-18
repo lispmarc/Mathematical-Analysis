@@ -907,12 +907,12 @@
   </proof>
 
   <\lemma>
-    Let <math|n\<in\>\<bbb-N\>> and <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>>
-    a <math|n>-dimensional topological manifold and
-    <math|<around*|(|U,\<varphi\>|)>> a coordinate chart on
-    <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> then there exist a
-    countable basis <math|\<cal-B\>\<subseteq\>\<cal-T\><rsub|\|U>> of
-    <math|\<cal-T\><rsub|\|U>> such that <math|\<forall\>B\<in\>\<cal-B\>>
+    <label|lemma 23.13.2>Let <math|n\<in\>\<bbb-N\>> and
+    <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> a <math|n>-dimensional
+    topological manifold and <math|<around*|(|U,\<varphi\>|)>> a coordinate
+    chart on <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> then there
+    exist a countable basis <math|\<cal-B\>\<subseteq\>\<cal-T\><rsub|\|U>>
+    of <math|\<cal-T\><rsub|\|U>> such that <math|\<forall\>B\<in\>\<cal-B\>>
     <math|B> is a precompact [using the topology <math|\<cal-T\>>] coordinate
     ball.
   </lemma>
@@ -1044,6 +1044,85 @@
     </equation*>
   </proof>
 
+  <\theorem>
+    Let <math|n\<in\>\<bbb-N\>> and <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>>
+    a <math|n>-dimensional topological manifold then <math|\<cal-T\>> has a
+    countable basis of precompact coordinate balls.
+  </theorem>
+
+  <\proof>
+    As <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> is a topological
+    manifold <math|\<cal-T\>> is a Hausdorff second countable toplogy and
+    there exist <math|\<forall\>x\<in\>M> a coordinate chart
+    <math|<around*|\<langle\>|\<varphi\><rsub|x>,U<rsub|x>|\<rangle\>>> with
+    <math|x\<in\>U<rsub|x>\<in\>\<cal-T\>>. Hence we have that\ 
+
+    <\equation*>
+      M=<big|cup><rsub|x\<in\>M>U<rsub|x>
+    </equation*>
+
+    As <math|\<cal-T\>> is second countable it follows from [theorem:
+    <reference|separation second countable and covering>] and the above that
+    there exist a countable <math|\<cal-C\>\<subseteq\>M> such that\ 
+
+    <\equation*>
+      M=<big|cup><rsub|x\<in\>\<cal-C\>>U<rsub|x>
+    </equation*>
+
+    By the previous lemma we have <math|\<forall\>x\<in\>\<cal-C\>> a
+    countable basis <math|\<cal-B\><rsub|x>> [in the topology
+    <math|\<cal-T\><rsub|\|U<rsub|x>>>] of precompact [using the topology
+    <math|\<cal-T\>>] coordinate balls. Take\ 
+
+    <\equation*>
+      \<cal-B\>=<big|cup><rsub|x\<in\>\<cal-C\>>\<cal-B\><rsub|x>
+    </equation*>
+
+    Then using [theorem: <reference|countable union of a countable family of
+    countable sets is countable>] it follows that\ 
+
+    <\equation*>
+      \<cal-B\><text| is countable>
+    </equation*>
+
+    Further <math|\<forall\>B\<in\>\<cal-B\>> we have that
+    <math|\<exists\>x\<in\>\<cal-C\>> such that
+    <math|B\<in\>\<cal-B\><rsub|x>>. As <math|\<cal-B\><rsub|x>> is a basis
+    for <math|\<cal-T\><rsub|\|U<rsub|x>>> we have
+    <math|\<cal-B\><rsub|x>\<subseteq\>\<cal-T\><rsub|\|U<rsub|x>>> whuch as
+    <math|\<cal-T\><rsub|\|U<rsub|x>>\<subseteq\>\<cal-T\>> [because
+    <math|U<rsub|x>\<in\>\<cal-T\>> and [theorem: <reference|topology
+    subspace topology open subset>] prove that <math|B\<in\>\<cal-T\>>. Hence
+    we have\ 
+
+    <\equation*>
+      \<cal-B\>\<subseteq\>\<cal-T\>
+    </equation*>
+
+    Finally let <math|V\<in\>\<cal-T\>> be a open set then if <math|y\<in\>V>
+    there exist a <math|x\<in\>\<cal-C\>> such that <math|y\<in\>U<rsub|x>>.
+    As <math|y\<in\>V<big|cap>U<rsub|x>> a open set in the subspace topology
+    <math|\<cal-T\><rsub|\|U<rsub|x>>> and <math|\<cal-B\><rsub|x>> is a
+    basis for <math|\<cal-T\><rsub|\|U<rsub|x>>> there exist a
+    <math|B\<in\>\<cal-B\><rsub|x>\<subseteq\><big|cup><rsub|x\<in\>\<cal-C\>>\<cal-B\><rsub|x>>
+    such that <math|y\<in\>B\<subseteq\>V<big|cap>U<rsub|x>\<subseteq\>V>. To
+    summarize <math|\<forall\>V\<in\>\<cal-T\>>, <math|\<forall\>y\<in\>V>
+    there exist a <math|B\<in\>\<cal-B\>\<subseteq\>T> such that
+    <math|y\<in\>B\<subseteq\>V> which using [theorem: <reference|topology
+    basis alternative definition>] proves that\ 
+
+    <\equation*>
+      \<cal-B\><text| is a basis for >\<cal-T\>
+    </equation*>
+  </proof>
+
+  We use the above theorem to prove the connection properties of a
+  topological manifold.\ 
+
+  <samp|>
+
+  \;
+
   \;
 
   \;
@@ -1090,6 +1169,7 @@
     <associate|eq 23.9.1|<tuple|23.12|?>>
     <associate|lemma 23.10.2|<tuple|23.11|?>>
     <associate|lemma 23.11.2|<tuple|23.12|?>>
+    <associate|lemma 23.13.2|<tuple|23.13|?>>
     <associate|manifold atlas|<tuple|23.7|?>>
     <associate|manifold canonical example|<tuple|23.9|?>>
     <associate|manifold coordinate ball and cube|<tuple|23.5|?>>
