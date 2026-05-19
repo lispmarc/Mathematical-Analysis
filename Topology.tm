@@ -24002,7 +24002,7 @@
   We have the following equivalent definition of connected subsets
 
   <\theorem>
-    <label|connected set>Let <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>>
+    <label|connected set alternative>Let <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>>
     be a topological space and <math|A\<subseteq\>X> then we have that\ 
 
     <\equation*>
@@ -24109,6 +24109,8 @@
     <math|<around*|{|x|}>> is a connected subset.
   </proof>
 
+  The following set relations will be usefull in the next theorem.
+
   <\lemma>
     <label|lemma 14.387.166>Let <math|A,B,C> be classes such that
     <math|A<big|cap>B=\<varnothing\>> and <math|C=A<big|cup>B> then we have:
@@ -24194,14 +24196,150 @@
       <math|A<rsub|2>\<equallim\><rsub|<text|[lemma: <reference|lemma
       14.387.166>]>>X\\A<rsub|1>> is open, so, as <math|X> is connected, we
       must have either <math|A<rsub|1>=\<emptyset\>> or
-      <math|A<rsub|2>=\<emptyset\>>.
-
-      <item*|<math|3\<Rightarrow\>1>>Let <math|A\<subseteq\>X> and <math|A>
-      is open and closed then <math|X\\A> is closed,
-      <math|A<big|cap><around*|(|X\\A|)>=\<emptyset\>> and
-      <math|X=A<big|cup><around*|(|X\\A|)>>. By (3) we must have either
+      <math|A<rsub|2>=\<emptyset\>>. <math|A> is open and closed then
+      <math|X\\A> is closed, <math|A<big|cap><around*|(|X\\A|)>=\<emptyset\>>
+      and <math|X=A<big|cup><around*|(|X\\A|)>>. By (3) we must have either
       <math|A=\<emptyset\>> or <math|X\\A=\<emptyset\>\<Rightarrow\>A=X>.
     </description>
+  </proof>
+
+  <\theorem>
+    <label|connected subset of disconnected set>Let
+    <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> be a topological
+    space, <math|U,V\<in\>\<cal-T\>> non empty open sets such that
+    <math|U<big|cap>V=\<varnothing\>> and <math|X=U<big|cup>V> and
+    <math|Y\<subseteq\>X> is a connected subset of <math|X> then we have
+    <math|Y\<subseteq\>U> or <math|Y\<subseteq\>V>.
+  </theorem>
+
+  <\proof>
+    As <math|U,V\<in\>\<cal-T\>> we have that
+    <math|U<big|cap>Y,V<big|cap>Y\<in\>\<cal-T\><rsub|\|Y>>, further
+    <math|<around*|(|U<big|cap>Y|)><big|cap><around*|(|V<big|cap>Y|)>\<subseteq\>U<big|cap>V=\<varnothing\>>.
+    As <math|Y> is a connected subset we have by definition that
+    <math|<around*|\<langle\>|Y,\<cal-T\><rsub|\|Y>|\<rangle\>>> is a
+    connected space so that we have by [definition: <reference|connected
+    space>] either:\ 
+
+    <\description>
+      <item*|<math|U<big|cap>Y=\<varnothing\>>>Then
+      <math|Y<below|=|Y\<subseteq\>X>X<big|cap>Y=<around*|(|U<big|cup>V|)><big|cap>Y=<around*|(|U<big|cap>Y|)><big|cup><around*|(|V<big|cap>Y|)>=\<varnothing\><big|cup>V<big|cap>Y=V<big|cap>Y\<subseteq\>V>
+      so that\ 
+
+      <\equation*>
+        Y\<subseteq\>V
+      </equation*>
+
+      <item*|<math|V<big|cap>Y=\<varnothing\>>>Then
+      <rigid|<math|Y<below|=|Y\<subseteq\>X>X<big|cap>Y=<around*|(|U<big|cup>V|)><big|cap>Y=<around*|(|U<big|cap>Y|)><big|cup><around*|(|V<big|cap>Y|)>=<around*|(|U<big|cap>Y|)><big|cup>\<varnothing\>=U<big|cap>Y\<subseteq\>U>>
+      so that\ 
+
+      <\equation*>
+        Y\<subseteq\>U
+      </equation*>
+    </description>
+
+    hence we conclude that either <math|Y\<subseteq\>U> or
+    <math|Y\<subseteq\>V.>
+  </proof>
+
+  We use the above theorem to prove that the union of connected subsets that
+  has a common element are connected.
+
+  <\theorem>
+    <label|connected union of connected subsets>Let
+    <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> be a topological
+    space, <math|<around*|{|Y<rsub|i>|}><rsub|i\<in\>I>> be a family of
+    connected subsets of <math|X> such that
+    <math|<big|cap><rsub|i\<in\>I>A<rsub|i>\<neq\>\<varnothing\>> then
+    <math|<big|cup><rsub|i\<in\>I>Y<rsub|i>> is a connected subset of
+    <math|X>.
+  </theorem>
+
+  <\proof>
+    As <math|<big|cap><rsub|i\<in\>I>Y<rsub|i>\<neq\>\<varnothing\>> there
+    exist a <math|p\<in\><big|cap><rsub|i\<in\>I>Y<rsub|i>> hence\ 
+
+    <\equation>
+      <label|eq 14.299.401>\<forall\>i\<in\>I<text| we have >p\<in\>Y<rsub|i>
+    </equation>
+
+    Assume that <math|<big|cup><rsub|i\<in\>I>Y<rsub|i>> is not a connected
+    subset then <math|<around*|\<langle\>|<big|cup><rsub|i\<in\>I>Y<rsub|i>,\<cal-T\><rsub|\|<big|cup><rsub|i\<in\>I>U<rsub|i>>|\<rangle\>>>
+    is not connected. Hence there exist <math|U,V\<in\>\<cal-T\><rsub|\|<big|cup><rsub|i\<in\>I>U<rsub|i>>>
+    such that\ 
+
+    <\equation*>
+      U<big|cap>V=\<varnothing\>\<wedge\><big|cup><rsub|i\<in\>I>Y<rsub|i>=U<big|cup>V\<wedge\>U\<neq\>\<varnothing\>\<neq\>V
+    </equation*>
+
+    Let <math|i\<in\>I> then, as <math|Y<rsub|i>> is a connected subset of
+    <math|X> <math|<around*|\<langle\>|Y<rsub|i>,\<cal-T\><rsub|\|Y<rsub|i>>|\<rangle\>>>
+    is a connected space, as <math|Y<rsub|i>\<subseteq\><big|cup><rsub|i\<in\>I>Y<rsub|i>\<subseteq\>X>
+    it follows from [theorem: <reference|topology subsubspace topology>] that
+    <math|\<cal-T\><rsub|\|Y<rsub|i>>=<around*|(|\<cal-T\><rsub|\|<big|cup><rsub|i\<in\>I>Y<rsub|i>>|)><rsub|\|Y<rsub|i>>>
+    so that <math|<around*|\<langle\>|Y<rsub|i>,<around*|(|\<cal-T\><rsub|\|<big|cup><rsub|i\<in\>I>Y<rsub|i>>|)><rsub|\|Y<rsub|i>>|\<rangle\>>>
+    is a connected space hence a connected subset of
+    <math|<big|cup><rsub|i\<in\>I>Y<rsub|i>>. Hence using [theorem:
+    <reference|connected subset of disconnected set>] we have either
+    <math|Y<rsub|i>\<in\>U> or <math|Y<rsub|i>\<in\>V>. To summarize we have\ 
+
+    <\equation>
+      <label|eq 14.300.401>\<forall\>i\<in\>I<text| we have
+      >Y<rsub|i>\<subseteq\>U<text| or >Y<rsub|i>\<subseteq\>V
+    </equation>
+
+    As <math|p\<in\><big|cap><rsub|i\<in\>I>Y<rsub|i>\<subseteq\><big|cup><rsub|i\<in\>I>Y<rsub|i>=U<big|cup>V>
+    we have either:\ 
+
+    <\description>
+      <item*|<math|p\<in\>U>>Assume that there exist a <math|i\<in\>I> such
+      that <math|Y<rsub|i>\<subseteq\>V> then by [eq: <reference|eq
+      14.299.401>] <math|p\<in\>Y<rsub|i>\<subseteq\>V> so that
+      <math|p\<in\><big|cup><big|cap>V=\<varnothing\>> a contradiction. Hence
+      <math|\<forall\>i\<in\>I> we have <math|Y<rsub|i>\<nsubseteq\>V> so
+      that by [eq: <reference|eq 14.300.401>] <math|Y<rsub|i>\<subseteq\>U>.
+      Hence we have
+
+      <\equation*>
+        <big|cup><rsub|i\<in\>I>Y<rsub|i>\<subseteq\>U
+      </equation*>
+
+      So we have\ 
+
+      <\equation*>
+        V=<around*|(|U<big|cup>V|)><big|cap>V=<around*|(|<big|cup><rsub|i\<in\>I>Y<rsub|i>|)><big|cap>V\<subseteq\>U<big|cap>V=\<varnothing\>
+      </equation*>
+
+      which contradicts <math|V\<neq\>\<varnothing\>>.
+
+      <item*|<math|p\<in\>V>>Assume that there exist a <math|i\<in\>I> such
+      that <math|Y<rsub|i>\<subseteq\>U> then by [eq: <reference|eq
+      14.299.401>] <math|p\<in\>Y<rsub|i>\<subseteq\>U> so that
+      <math|p\<in\><big|cup><big|cap>V=\<varnothing\>> a contradiction. Hence
+      <math|\<forall\>i\<in\>I> we have <math|Y<rsub|i>\<nsubseteq\>U> so
+      that by [eq: <reference|eq 14.300.401>] <math|Y<rsub|i>\<subseteq\>V>.
+      Hence we have
+
+      <\equation*>
+        <big|cup><rsub|i\<in\>I>Y<rsub|i>\<subseteq\>U
+      </equation*>
+
+      So we have\ 
+
+      <\equation*>
+        U=<around*|(|U<big|cup>V|)><big|cap>U=<around*|(|<big|cup><rsub|i\<in\>I>Y<rsub|i>|)><big|cap>U\<subseteq\>V<big|cap>U=\<varnothing\>
+      </equation*>
+
+      which contradicts <math|V\<neq\>\<varnothing\>>.
+    </description>
+
+    As we have a contradiction in all possible case the assumption is false
+    and we must have that\ 
+
+    <\equation*>
+      <big|cup><rsub|i\<in\>I>Y<rsub|i><text| is a connected subset>
+    </equation*>
   </proof>
 
   <\theorem>
@@ -24292,7 +24430,8 @@
     <label|connected closed interval is connected>Let
     <math|<around*|\<langle\>|\<bbb-R\>,\<\|\|\>|\<rangle\>>> be the normed
     space of real numbers then <math|\<forall\>a,b\<in\>\<bbb-R\>> with
-    <math|a\<leqslant\>b> we have that <math|<around*|[|a,b|]>> is connected.
+    <math|a\<leqslant\>b> we have that <math|<around*|[|a,b|]>> is connected
+    [using the topology <math|<around*|(|\<cal-T\><rsub|<around*|\|||\|>>|)><rsub|\|<around*|[|a,b|]>>>
   </lemma>
 
   <\proof>
@@ -24669,7 +24808,15 @@
     <math|x\<in\>X> the equivalence class [see definition:
     <reference|equivalence relation class>]
     <math|\<sim\><around*|[|x|]>=<around*|{|y\<in\>X\|y\<sim\>x|}>> is called
-    a <with|font-series|bold|component>.
+    a <with|font-series|bold|component>. Using [definition:
+    <reference|equivalence relation A/R>[ and [theorem:
+    <reference|equivalence relation defines a partition>] it follows that the
+    set of alle classes <math|X/\<sim\>> partitions <math|X> in a disjoint
+    union of partition classes hence we have that
+
+    <\equation*>
+      X=<big|sqcup><rsub|C\<in\>X/\<sim\>>C
+    </equation*>
   </definition>
 
   <\proof>
@@ -24679,18 +24826,85 @@
     <\description>
       <item*|reflexivity>Let <math|x\<in\>X> then as by [example:
       <reference|connected singleton is connected>] <math|<around*|{|x|}>> is
-      connected and we have <math|x,x\<in\><around*|{|x|}>> it follows that
-      <math|x\<sim\>x>.
+      a connected subset and we have <math|x,x\<in\><around*|{|x|}>> it
+      follows that <math|x\<sim\>x>.
 
-      <item*|symmetry>Let <math|x\<sim\>y> then there exist a connected set
-      <math|A> such that <math|x,y\<in\>A\<Rightarrow\>y,x\<in\>A> proving
-      that <math|y\<sim\>x>.
+      <item*|symmetry>Let <math|x\<sim\>y> then there exist a connected
+      subset <math|A> such that <math|x,y\<in\>A\<Rightarrow\>y,x\<in\>A>
+      proving that <math|y\<sim\>x>.
 
-      <item*|transitivity>
+      <item*|transitivity>Let <math|x\<sim\>y> and <math|y\<sim\>z> then
+      there exists connected subsets <math|A,B> such that <math|x,y\<in\>A>
+      and <math|y,z\<in\>B>. Hence <math|y\<in\>A<big|cap>B> so that by
+      [theorem: <reference|connected union of connected subsets>]
+      <math|A<big|cup>B> is a connected. As also <math|x,z\<in\>A<big|cup>B>
+      it follows that <math|x\<sim\>z>.
     </description>
   </proof>
 
-  \;
+  We show now that a component of a topological space a maximal connected
+  subset is.
+
+  <\theorem>
+    <label|connected component is maximal>Let
+    <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> be a topological space
+    and <math|C> .a component of <math|X> then we have
+
+    <\enumerate>
+      <item>If <math|A> is a connected subset such that <math|C\<subseteq\>A>
+      then <math|C=A>.
+
+      <item>If <math|A> is a connected subset such that
+      <math|C<big|cap>A\<neq\>\<varnothing\>> then <math|A\<subseteq\>C>
+
+      <item><math|C> is a connected subset
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ If <math|C> is a component then there exist a <math|x\<in\>X> such that
+    <math|C=\<sim\><around*|[|x|]>=<around*|{|y\<in\>X\|y\<sim\>x|}>>.
+
+    <\enumerate>
+      <item>Let <math|A> be a connected set such that <math|C\<subseteq\>A>.
+      Let <math|y\<in\>A> then as <math|x<below|\<in\>|x\<sim\>x>C\<subseteq\>A\<Rightarrow\>x\<in\>A>
+      we have <math|x,y\<in\>A> so that by the definition of <math|\<sim\>>
+      that <math|y\<sim\>x> so that <math|y\<in\>C>. Hence
+      <math|A\<subseteq\>C\<subseteq\>A> which proves that\ 
+
+      <\equation*>
+        C=A
+      </equation*>
+
+      <item>As <math|C<big|cap>A\<neq\>\<varnothing\>> there exist a
+      <math|z\<in\>A<big|cap>C>. As <math|z\<in\>C> we have <math|z\<sim\>x>.
+      Let <math|y\<in\>A> then, as <math|z\<in\>A> we have that
+      <math|y\<sim\>z> hence by transitivity of <math|\<sim\>> we have
+      <math|y\<sim\>x> so that <math|y\<in\>\<sim\><around*|[|x|]>> which
+      proves that\ 
+
+      <\equation*>
+        A\<subseteq\>C
+      </equation*>
+
+      <item>Let <math|y\<in\>C> then <math|y\<sim\>x> so that there exist a
+      connected subset <math|A<rsub|y>> such that <math|y,x\<in\>A<rsub|y>>
+      hence by (2) we have that <math|A<rsub|y>\<subseteq\>C>. Take
+      <math|<around*|{|A<rsub|y>|}><rsub|y\<in\>C>> then we have
+      <math|\<forall\>y\<in\>C> that <math|x,y\<in\>A<rsub|y>\<subseteq\>C>
+      so that <math|C=<big|cup><rsub|y\<in\>C>A<rsub|y>> and
+      <math|x\<in\><big|cap><rsub|y\<in\>C>A<rsub|y>>. Using [theorem:
+      <reference|connected union of connected subsets>] it follows that
+      <math|<big|cup><rsub|y\<in\>C>A<rsub|y>> is a connected subset proving
+      that\ 
+
+      <\equation*>
+        C<text| is a connected subset>
+      </equation*>
+    </enumerate>
+  </proof>
+
+  <subsection|Path Connected Space>
 
   <\definition>
     <label|connected path connected><dueto|Path Connected Space>Let
@@ -24700,6 +24914,49 @@
     <math|f:<around*|[|0,1|]>\<rightarrow\>X> such that
     <math|f<around*|(|0|)>=x> and <math|f<around*|(|1|)>=y>.\ 
   </definition>
+
+  Every path connected space is a connected space so path connectness is a
+  stronger condition then connectness.
+
+  <\theorem>
+    <label|connected path connected spaces are connected spaces>Let
+    <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> be a path connected
+    space then <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> is a
+    connected space.
+  </theorem>
+
+  <\proof>
+    Let <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> be a path connect
+    space. Assume that <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> is
+    not connected then there exist open sets <math|U,V> with
+    <math|U<big|cap>V=\<varnothing\>> and <math|X=U<big|cup>V> such that
+    <math|U\<neq\>\<varnothing\>\<neq\>V>. So there exists a <math|x\<in\>U>
+    and a <math|y\<in\>V> then there exist a continuous function
+    <math|f:<around*|[|0,1|]>\<rightarrow\>X> such that
+    <math|f<around*|(|0|)>=x> and <math|f<around*|(|1|)>>. As
+    <math|<around*|[|0,1|]>> is connected [see theorem: <reference|connected
+    closed interval is connected>] it follows from [theorem:
+    <reference|connected image of a connected set by a continuous function is
+    connected>] <math|f<around*|(|<around*|[|0,1|]>|)>> is a connected subset
+    of <math|X>. Using [theorem: <reference|connected subset of disconnected
+    set>] it follows that
+
+    <\equation*>
+      f<around*|(|<around*|[|0,1|]>|)>\<subseteq\>U<text| or
+      >f<around*|(|<around*|[|0,1|]>|)>\<subseteq\>V
+    </equation*>
+
+    If <math|f<around*|(|<around*|[|0,1|]>|)>\<subseteq\>U> then
+    <math|x=f<around*|(|0|)>\<in\>U> and <math|y=f<around*|(|1|)>\<in\>U>
+    which as <math|y\<in\>V> means that <math|y\<in\>U<big|cap>V=\<varnothing\>>
+    which is a contradiction. Likewise if
+    <math|f<around*|(|<around*|[|0,1|]>|)>\<subseteq\>V> then
+    <math|x=f<around*|(|0|)>\<in\>V> and <math|y=f<around*|(|1|)>\<in\>V>
+    which as <math|x\<in\>U> means that <math|x\<in\>U<big|cap>V=\<varnothing\>>
+    again a contradiction. As in all possible cases we reach a contradiction
+    the assumption is false and we must have that
+    <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> is a connected space.
+  </proof>
 
   \;
 
@@ -24715,7 +24972,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|13>
-    <associate|page-first|683>
+    <associate|page-first|685>
     <associate|page-medium|papyrus>
     <associate|par-first|0tab>
     <associate|section-nr|0>
@@ -24745,6 +25002,7 @@
     <associate|auto-113|<tuple|connected space|?>>
     <associate|auto-114|<tuple|disconnected space|?>>
     <associate|auto-115|<tuple|intermediate value theorem|?>>
+    <associate|auto-116|<tuple|14.11.2|?>>
     <associate|auto-12|<tuple|box topology|?>>
     <associate|auto-13|<tuple|14.1.3|?>>
     <associate|auto-14|<tuple|dense set|?>>
@@ -24916,22 +25174,26 @@
     <associate|complete space|<tuple|14.372|?>>
     <associate|complete the complex numbers are complete|<tuple|14.381|?>>
     <associate|complete uniform convergion|<tuple|14.388|?>>
-    <associate|connectd connected subset|<tuple|14.448|?>>
-    <associate|connectd connected subset alternate|<tuple|14.449|?>>
     <associate|connected alternative definition|<tuple|14.444|?>>
-    <associate|connected closed interval is connected|<tuple|14.446|?>>
-    <associate|connected component|<tuple|14.450|?>>
+    <associate|connected closed interval is connected|<tuple|14.448|?>>
+    <associate|connected component|<tuple|14.452|?>>
+    <associate|connected component is maximal|<tuple|14.453|?>>
     <associate|connected disconnected space|<tuple|14.439|?>>
-    <associate|connected generalized intervals|<tuple|14.447|?>>
+    <associate|connected generalized intervals|<tuple|14.449|?>>
     <associate|connected image by a real continuous function of a closed
-    interval is a closed interval|<tuple|14.448|?>>
+    interval is a closed interval|<tuple|14.450|?>>
     <associate|connected image of a connected set by a continuous function is
-    connected|<tuple|14.445|?>>
-    <associate|connected intermediate value theorem|<tuple|14.449|?>>
-    <associate|connected path connected|<tuple|14.451|?>>
-    <associate|connected set|<tuple|14.441|?>>
+    connected|<tuple|14.447|?>>
+    <associate|connected intermediate value theorem|<tuple|14.451|?>>
+    <associate|connected path connected|<tuple|14.454|?>>
+    <associate|connected path connected spaces are connected
+    spaces|<tuple|14.455|?>>
+    <associate|connected set|<tuple|14.440|?>>
+    <associate|connected set alternative|<tuple|14.441|?>>
     <associate|connected singleton is connected|<tuple|14.442|?>>
     <associate|connected space|<tuple|14.438|?>>
+    <associate|connected subset of disconnected set|<tuple|14.445|?>>
+    <associate|connected union of connected subsets|<tuple|14.446|?>>
     <associate|continuity 1/f is continuous|<tuple|14.162|?>>
     <associate|continuity 1/f^2 is continuous|<tuple|14.163|?>>
     <associate|continuity Id is a homeomorphism|<tuple|14.179|?>>
@@ -25204,26 +25466,26 @@
     <associate|eq 14.25.146|<tuple|14.36|?>>
     <associate|eq 14.250.166|<tuple|14.295|?>>
     <associate|eq 14.251.166|<tuple|14.296|?>>
-    <associate|eq 14.251.173|<tuple|14.306|?>>
+    <associate|eq 14.251.173|<tuple|14.308|?>>
     <associate|eq 14.252.166|<tuple|14.297|?>>
     <associate|eq 14.253.166|<tuple|14.298|?>>
-    <associate|eq 14.254.166|<tuple|14.299|?>>
-    <associate|eq 14.255.166|<tuple|14.300|?>>
-    <associate|eq 14.256.166|<tuple|14.301|?>>
-    <associate|eq 14.257.166|<tuple|14.302|?>>
-    <associate|eq 14.259.167|<tuple|14.303|?>>
+    <associate|eq 14.254.166|<tuple|14.301|?>>
+    <associate|eq 14.255.166|<tuple|14.302|?>>
+    <associate|eq 14.256.166|<tuple|14.303|?>>
+    <associate|eq 14.257.166|<tuple|14.304|?>>
+    <associate|eq 14.259.167|<tuple|14.305|?>>
     <associate|eq 14.26.146|<tuple|14.37|?>>
     <associate|eq 14.26.246|<tuple|14.29|?>>
-    <associate|eq 14.260.167|<tuple|14.304|?>>
-    <associate|eq 14.261.167|<tuple|14.305|?>>
-    <associate|eq 14.262.167|<tuple|14.307|?>>
-    <associate|eq 14.263.167|<tuple|14.308|?>>
-    <associate|eq 14.264.167|<tuple|14.309|?>>
-    <associate|eq 14.265.167|<tuple|14.310|?>>
-    <associate|eq 14.266.167|<tuple|14.311|?>>
-    <associate|eq 14.267.167|<tuple|14.312|?>>
-    <associate|eq 14.268.167|<tuple|14.313|?>>
-    <associate|eq 14.269.167|<tuple|14.314|?>>
+    <associate|eq 14.260.167|<tuple|14.306|?>>
+    <associate|eq 14.261.167|<tuple|14.307|?>>
+    <associate|eq 14.262.167|<tuple|14.309|?>>
+    <associate|eq 14.263.167|<tuple|14.310|?>>
+    <associate|eq 14.264.167|<tuple|14.311|?>>
+    <associate|eq 14.265.167|<tuple|14.312|?>>
+    <associate|eq 14.266.167|<tuple|14.313|?>>
+    <associate|eq 14.267.167|<tuple|14.314|?>>
+    <associate|eq 14.268.167|<tuple|14.315|?>>
+    <associate|eq 14.269.167|<tuple|14.316|?>>
     <associate|eq 14.27.146|<tuple|14.38|?>>
     <associate|eq 14.27.246|<tuple|14.30|?>>
     <associate|eq 14.277.294|<tuple|14.80|?>>
@@ -25253,9 +25515,11 @@
     <associate|eq 14.297.294|<tuple|14.99|?>>
     <associate|eq 14.298.294|<tuple|14.100|?>>
     <associate|eq 14.299.294|<tuple|14.101|?>>
+    <associate|eq 14.299.401|<tuple|14.299|?>>
     <associate|eq 14.3.146|<tuple|14.8|?>>
     <associate|eq 14.30.146|<tuple|14.42|?>>
     <associate|eq 14.300.294|<tuple|14.102|?>>
+    <associate|eq 14.300.401|<tuple|14.300|?>>
     <associate|eq 14.301.294|<tuple|14.103|?>>
     <associate|eq 14.302.294|<tuple|14.104|?>>
     <associate|eq 14.31.146|<tuple|14.43|?>>
@@ -25790,11 +26054,11 @@
 
       <tuple|<tuple|open mapping theorem>|<pageref|auto-110>>
 
-      <tuple|<tuple|connected space>|<pageref|auto-112>>
+      <tuple|<tuple|connected space>|<pageref|auto-113>>
 
-      <tuple|<tuple|disconnected space>|<pageref|auto-113>>
+      <tuple|<tuple|disconnected space>|<pageref|auto-114>>
 
-      <tuple|<tuple|intermediate value theorem>|<pageref|auto-114>>
+      <tuple|<tuple|intermediate value theorem>|<pageref|auto-115>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|14<space|2spc>Topology>
@@ -25916,6 +26180,10 @@
 
       14.11<space|2spc>Connected Sets <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-111>
+
+      <with|par-left|<quote|1tab>|14.11.1<space|2spc>Connected Sets and
+      Connected Components <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-112>>
     </associate>
   </collection>
 </auxiliary>
