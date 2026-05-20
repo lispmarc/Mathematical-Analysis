@@ -1,4 +1,4 @@
-<TeXmacs|2.1.4>
+<TeXmacs|2.1.5>
 
 <project|FullBook.tm>
 
@@ -4937,6 +4937,19 @@
       functions then <math|f<big|cup>g:A<big|cup>B\<rightarrow\>C> are
       functions
     </enumerate>
+
+    <\note>
+      A other notation that we will use for
+      <math|h=f<big|cup>g:A<big|cup>B\<rightarrow\>C> is\ 
+
+      <\equation*>
+        h:A<big|cup>B\<rightarrow\>C<text| is defined by
+        >h<around*|(|x|)>=<choice|<tformat|<table|<row|<cell|f<around*|(|x|)><text|
+        if >x\<in\>A>>|<row|<cell|g<around*|(|x|)><text| if >x\<in\>B>>>>>
+      </equation*>
+
+      \ 
+    </note>
   </theorem>
 
   <\proof>
@@ -5163,6 +5176,138 @@
       h:A<big|cup><around*|{|a|}>\<rightarrow\>B<big|cup><around*|{|b|}><text|
       where >h=<around*|{|<around*|(|a,b|)>|}><big|cup>f<text| is a function>
     </equation*>
+  </proof>
+
+  TODO check this
+
+  <\theorem>
+    <label|function stitching of functions>Let <math|f:A\<rightarrow\>C> and
+    <math|g:B\<rightarrow\>C> functions such that
+    <math|\<forall\>x\<in\>A<big|cap>B> we have
+    <rigid|<math|<around*|(|x,y|)>\<in\>f\<wedge\><around*|(|x,y<rprime|'>|)>\<in\>g>>
+    implies <math|y=y<rprime|'>> then we have that:\ 
+
+    <\enumerate>
+      <item><math|f<big|cup>g:A<big|cup>B\<rightarrow\>C> is a function.
+
+      <item>If <math|D\<subseteq\>C> then
+      <math|<around*|(|f<big|cup>g|)><rsup|-1><around*|(|D|)>=f<rsup|-1><around*|(|D|)><big|cup>g<rsup|-1><around*|(|D|)>>.
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>First as <math|f\<subseteq\>A\<times\>C> and
+      <math|g\<subseteq\>B\<times\>C> then we have that\ 
+
+      <\equation*>
+        f<big|cup>g\<subseteq\><around*|(|A\<times\>C|)><big|cup><around*|(|B\<times\>C|)>\<equallim\><rsub|<text|[theorem:
+        <reference|cartesian product properties
+        (1)>]>><around*|(|A<big|cup>B|)>\<times\>C
+      </equation*>
+
+      Second if <math|<around*|(|x,y|)>,<around*|(|x,y<rprime|'>|)>\<in\>f<big|cup>g>
+      then we have either:\ 
+
+      <\description>
+        <item*|<math|x\<in\>A\\B>>Then <math|<around*|(|x,y|)>,<around*|(|x,y<rprime|'>|)>\<nin\>B\<times\>C\<Rightarrow\><around*|(|x,y|)>,<around*|(|x,y<rprime|'>|)>\<nin\>g>
+        so that <math|<around*|(|x,y|)>,<around*|(|x,y<rprime|'>|)>\<in\>f>
+        which as <math|f> is a function proves that <math|y=y<rprime|'>>.
+
+        <item*|<math|x\<in\>B\\A>>Then <math|<around*|(|x,y|)>,<around*|(|x,y<rprime|'>|)>\<nin\>A\<times\>C\<Rightarrow\><around*|(|x,y|)>,<around*|(|x,y<rprime|'>|)>\<nin\>f>
+        so that <math|<around*|(|x,y|)>,<around*|(|x,y<rprime|'>|)>\<in\>g>
+        which as <math|g> is a function proves that <math|y=y<rprime|'>>.
+
+        <item*|<math|x\<in\>B\\A>>As <math|<around*|(|x,y|)>,<around*|(|x,y<rprime|'>|)>\<in\>f<big|cup>g>
+        we have either:\ 
+
+        <\description>
+          <item*|<math|<around*|(|x,y|)>\<in\>f>>Then we have either:
+
+          <\description>
+            <item*|<math|<around*|(|x,y<rprime|'>|)>\<in\>f>>As <math|f> is a
+            function we have that <math|y=y<rprime|'>>
+
+            <item*|<math|<around*|(|x,y<rprime|'>|)>\<in\>g>>Then we have by
+            the extra condition on <math|x\<in\>A<big|cap>B> that
+            <math|y=y<rprime|'>>.
+          </description>
+
+          <item*|<math|<around*|(|x,y|)>\<in\>g>>Then we have either:
+
+          <\description>
+            <item*|<math|<around*|(|x,y<rprime|'>|)>\<in\>f>>Then we have by
+            the extra condition on <math|x\<in\>A<big|cap>B> that
+            <math|y=y<rprime|'>>.
+
+            <item*|<math|<around*|(|x,y<rprime|'>|)>\<in\>g>>As <math|g> is a
+            function we have that <math|y=y<rprime|'>>
+          </description>
+        </description>
+      </description>
+
+      So in all cases qw have that <math|y=y<rprime|'>> which proves that\ 
+
+      <\equation*>
+        f<big|cup>g<text| is a partial function>
+      </equation*>
+
+      Let <math|x\<in\>A<big|cup>B> then we have either:\ 
+
+      <\description>
+        <item*|<math|x\<in\>A>>As <math|f> is a function there exist a
+        <math|y\<in\>C> such that <math|<around*|(|x,y|)>\<in\>f\<subseteq\>f<big|cup>g>.
+
+        <item*|<math|x\<in\>B>>As <math|g> is a function there exist a
+        <math|y\<in\>C> such that <math|<around*|(|x,y|)>\<in\>g\<subseteq\>f<big|cup>g>.
+      </description>
+
+      So in all cases we found a <math|y\<in\>C> such that
+      <math|<around*|(|x,y|)>\<in\>f<big|cup>g> which proves that\ 
+
+      <\equation*>
+        f<big|cup>g<text| is a function>
+      </equation*>
+
+      <item>Let <math|x\<in\><around*|(|f<big|cup>g|)><rsup|-1><around*|(|D|)>>
+      then there exist a <math|y\<in\>D> such that
+      <math|<around*|(|x,y|)>\<in\>f<big|cup>g>. Hence we have either
+      <math|<around*|(|x,y|)>\<in\>f\<Rightarrow\>x\<in\>f<rsup|-1><around*|(|D|)>>
+      or <math|<around*|(|x,y|)>\<in\>g\<Rightarrow\>x\<in\>g<rsup|-1><around*|(|D|)>>
+      so that <math|x\<in\>f<rsup|-1><around*|(|D|)>> or
+      <math|x\<in\>g<rsup|-1><around*|(|D|)>>. Hence we have proved that\ 
+
+      <\equation>
+        <label|eq 2.28.401><around*|(|f<big|cup>g|)><rsup|-1><around*|(|D|)>\<subseteq\>f<rsup|-1><around*|(|D|)><big|cup>g<rsup|-1><around*|(|D|)>
+      </equation>
+
+      On the other hand if <math|x\<in\>f<rsup|-1><around*|(|D|)><big|cup>g<rsup|-1><around*|(|D|)>>
+      then we have either:\ 
+
+      <\description>
+        <item*|<math|x\<in\>f<rsup|-1><around*|(|D|)>>>Then there exist a
+        <math|y\<in\>D> such that <math|<around*|(|x,y|)>\<in\>f\<subseteq\>f<big|cup>g\<Rightarrow\>x\<in\><around*|(|f<big|cup>g|)><rsup|-1><around*|(|D|)>>
+
+        <item*|<math|x\<in\>g<rsup|-1><around*|(|D|)>>>Then there exist a
+        <math|y\<in\>D> such that <math|<around*|(|x,y|)>\<in\>g\<subseteq\>f<big|cup>g\<Rightarrow\>x\<in\><around*|(|f<big|cup>g|)><rsup|-1><around*|(|D|)>>
+      </description>
+
+      hence in all possible cases we have
+      <math|x\<in\><around*|(|f<big|cup>g|)><rsup|-1><around*|(|D|)>> which
+      proves that
+
+      <\equation*>
+        f<rsup|-1><around*|(|D|)><big|cup>g<rsup|-1><around*|(|D|)>\<subseteq\><around*|(|f<big|cup>g|)><rsup|-1><around*|(|D|)>
+      </equation*>
+
+      which combined with [eq: <reference|eq 2.28.401>] proves that
+
+      <\equation*>
+        <around*|(|f<big|cup>g|)><rsup|-1><around*|(|D|)>=f<rsup|-1><around*|(|D|)><big|cup>g<rsup|-1><around*|(|D|)>
+      </equation*>
+    </enumerate>
   </proof>
 
   <\theorem>
@@ -15167,73 +15312,74 @@
     <associate|eq 2.12.002|<tuple|2.12|?>>
     <associate|eq 2.13.001|<tuple|2.21|?>>
     <associate|eq 2.13.002|<tuple|2.13|?>>
-    <associate|eq 2.14.001|<tuple|2.28|?>>
+    <associate|eq 2.14.001|<tuple|2.29|?>>
     <associate|eq 2.14.009|<tuple|2.18|?>>
     <associate|eq 2.14.141|<tuple|2.14|?>>
     <associate|eq 2.15.013|<tuple|2.19|?>>
     <associate|eq 2.15.141|<tuple|2.15|?>>
-    <associate|eq 2.16.003|<tuple|2.32|?>>
+    <associate|eq 2.16.003|<tuple|2.33|?>>
     <associate|eq 2.16.005|<tuple|2.22|?>>
     <associate|eq 2.16.141|<tuple|2.16|?>>
-    <associate|eq 2.17.002|<tuple|2.33|?>>
-    <associate|eq 2.17.003|<tuple|2.30|?>>
-    <associate|eq 2.17.004|<tuple|2.29|?>>
+    <associate|eq 2.17.002|<tuple|2.34|?>>
+    <associate|eq 2.17.003|<tuple|2.31|?>>
+    <associate|eq 2.17.004|<tuple|2.30|?>>
     <associate|eq 2.17.006|<tuple|2.23|?>>
     <associate|eq 2.17.141|<tuple|2.17|?>>
-    <associate|eq 2.18.002|<tuple|2.34|?>>
+    <associate|eq 2.18.002|<tuple|2.35|?>>
     <associate|eq 2.18.006|<tuple|2.24|?>>
-    <associate|eq 2.19.002|<tuple|2.35|?>>
+    <associate|eq 2.19.002|<tuple|2.36|?>>
     <associate|eq 2.2.001|<tuple|2.4|?>>
-    <associate|eq 2.20.002|<tuple|2.36|?>>
+    <associate|eq 2.20.002|<tuple|2.37|?>>
     <associate|eq 2.20.053|<tuple|3.75|?>>
-    <associate|eq 2.21.002|<tuple|2.37|?>>
+    <associate|eq 2.21.002|<tuple|2.38|?>>
     <associate|eq 2.21.017|<tuple|2.26|?>>
     <associate|eq 2.21.053|<tuple|3.76|?>>
     <associate|eq 2.22.017|<tuple|2.27|?>>
     <associate|eq 2.22.053|<tuple|3.77|?>>
     <associate|eq 2.23.053|<tuple|3.78|?>>
     <associate|eq 2.24.053|<tuple|3.79|?>>
-    <associate|eq 2.25.004|<tuple|2.39|?>>
+    <associate|eq 2.25.004|<tuple|2.40|?>>
     <associate|eq 2.25.053|<tuple|3.80|?>>
     <associate|eq 2.25.141|<tuple|2.25|?>>
-    <associate|eq 2.26.004|<tuple|2.40|?>>
+    <associate|eq 2.26.004|<tuple|2.41|?>>
     <associate|eq 2.26.053|<tuple|3.81|?>>
-    <associate|eq 2.27.004|<tuple|2.41|?>>
+    <associate|eq 2.27.004|<tuple|2.42|?>>
     <associate|eq 2.27.053|<tuple|3.82|?>>
-    <associate|eq 2.27.133|<tuple|2.31|?>>
-    <associate|eq 2.28.004|<tuple|2.42|?>>
-    <associate|eq 2.29.004|<tuple|2.44|?>>
-    <associate|eq 2.29.012|<tuple|2.38|?>>
+    <associate|eq 2.27.133|<tuple|2.32|?>>
+    <associate|eq 2.28.004|<tuple|2.43|?>>
+    <associate|eq 2.28.401|<tuple|2.28|?>>
+    <associate|eq 2.29.004|<tuple|2.45|?>>
+    <associate|eq 2.29.012|<tuple|2.39|?>>
     <associate|eq 2.3.001.2|<tuple|2.3|?>>
-    <associate|eq 2.30.004|<tuple|2.45|?>>
-    <associate|eq 2.31.004|<tuple|2.46|?>>
-    <associate|eq 2.31.010|<tuple|2.43|?>>
-    <associate|eq 2.32.004|<tuple|2.47|?>>
-    <associate|eq 2.34.005|<tuple|2.48|?>>
-    <associate|eq 2.35.005|<tuple|2.49|?>>
-    <associate|eq 2.38.006|<tuple|2.50|?>>
-    <associate|eq 2.39.006|<tuple|2.51|?>>
-    <associate|eq 2.40.006|<tuple|2.53|?>>
-    <associate|eq 2.40.007|<tuple|2.52|?>>
-    <associate|eq 2.41.006|<tuple|2.54|?>>
-    <associate|eq 2.42.006|<tuple|2.55|?>>
-    <associate|eq 2.43.006|<tuple|2.57|?>>
-    <associate|eq 2.44.006|<tuple|2.58|?>>
-    <associate|eq 2.44.007|<tuple|2.56|?>>
-    <associate|eq 2.45.006|<tuple|2.59|?>>
-    <associate|eq 2.48.007|<tuple|2.63|?>>
-    <associate|eq 2.48.008|<tuple|2.60|?>>
-    <associate|eq 2.49.007|<tuple|2.64|?>>
+    <associate|eq 2.30.004|<tuple|2.46|?>>
+    <associate|eq 2.31.004|<tuple|2.47|?>>
+    <associate|eq 2.31.010|<tuple|2.44|?>>
+    <associate|eq 2.32.004|<tuple|2.48|?>>
+    <associate|eq 2.34.005|<tuple|2.49|?>>
+    <associate|eq 2.35.005|<tuple|2.50|?>>
+    <associate|eq 2.38.006|<tuple|2.51|?>>
+    <associate|eq 2.39.006|<tuple|2.52|?>>
+    <associate|eq 2.40.006|<tuple|2.54|?>>
+    <associate|eq 2.40.007|<tuple|2.53|?>>
+    <associate|eq 2.41.006|<tuple|2.55|?>>
+    <associate|eq 2.42.006|<tuple|2.56|?>>
+    <associate|eq 2.43.006|<tuple|2.58|?>>
+    <associate|eq 2.44.006|<tuple|2.59|?>>
+    <associate|eq 2.44.007|<tuple|2.57|?>>
+    <associate|eq 2.45.006|<tuple|2.60|?>>
+    <associate|eq 2.48.007|<tuple|2.64|?>>
+    <associate|eq 2.48.008|<tuple|2.61|?>>
+    <associate|eq 2.49.007|<tuple|2.65|?>>
     <associate|eq 2.5.001.2|<tuple|2.5|?>>
-    <associate|eq 2.50.007|<tuple|2.65|?>>
-    <associate|eq 2.51.007|<tuple|2.70|?>>
-    <associate|eq 2.51.010|<tuple|2.61|?>>
-    <associate|eq 2.57.146|<tuple|2.62|?>>
-    <associate|eq 2.59.018|<tuple|2.68|?>>
-    <associate|eq 2.59.022|<tuple|2.66|?>>
+    <associate|eq 2.50.007|<tuple|2.66|?>>
+    <associate|eq 2.51.007|<tuple|2.71|?>>
+    <associate|eq 2.51.010|<tuple|2.62|?>>
+    <associate|eq 2.57.146|<tuple|2.63|?>>
+    <associate|eq 2.59.018|<tuple|2.69|?>>
+    <associate|eq 2.59.022|<tuple|2.67|?>>
     <associate|eq 2.6.001|<tuple|2.6|?>>
-    <associate|eq 2.60.018|<tuple|2.69|?>>
-    <associate|eq 2.60.022|<tuple|2.67|?>>
+    <associate|eq 2.60.018|<tuple|2.70|?>>
+    <associate|eq 2.60.022|<tuple|2.68|?>>
     <associate|eq 2.7.001|<tuple|2.7|?>>
     <associate|eq 2.8.001|<tuple|2.8|?>>
     <associate|eq 2.9.001|<tuple|2.9|?>>
@@ -15329,38 +15475,38 @@
     <associate|equivalence relation partition|<tuple|3.6|?>>
     <associate|equivalence relation partition alternative|<tuple|3.8|?>>
     <associate|equivalence relation subsets|<tuple|3.20|?>>
-    <associate|family|<tuple|2.102|?>>
-    <associate|family and function composition|<tuple|2.111|?>>
-    <associate|family de Morgan|<tuple|2.132|?>>
-    <associate|family definition (2)|<tuple|2.108|?>>
-    <associate|family definition (3)|<tuple|2.109|?>>
-    <associate|family distributivity|<tuple|2.130|?>>
-    <associate|family empty family|<tuple|2.105|?>>
-    <associate|family empty family condition|<tuple|2.106|?>>
-    <associate|family image and preimage|<tuple|2.136|?>>
-    <associate|family index set is a product|<tuple|2.110|?>>
-    <associate|family intersection (2)|<tuple|2.123|?>>
-    <associate|family intersection is a set|<tuple|2.124|?>>
-    <associate|family intersection(1)|<tuple|2.122|?>>
-    <associate|family product and index transformation|<tuple|2.145|?>>
-    <associate|family properties (1)|<tuple|2.127|?>>
-    <associate|family properties (2)|<tuple|2.128|?>>
-    <associate|family properties (3)|<tuple|2.133|?>>
-    <associate|family range|<tuple|2.112|?>>
-    <associate|family range (1)|<tuple|2.113|?>>
-    <associate|family set|<tuple|2.114|?>>
-    <associate|family trivial|<tuple|2.125|?>>
-    <associate|family union (1)|<tuple|2.115|?>>
-    <associate|family union (2)|<tuple|2.118|?>>
-    <associate|family union condition set|<tuple|2.120|?>>
-    <associate|family union intersection and empty set|<tuple|2.134|?>>
-    <associate|family union intersection and inclusion|<tuple|2.129|?>>
-    <associate|family union of a empty set|<tuple|2.121|?>>
-    <associate|family union of family of families|<tuple|2.135|?>>
-    <associate|family union of family set and surjections|<tuple|2.119|?>>
-    <associate|family union of union of two families|<tuple|2.131|?>>
-    <associate|family union{A,B}|<tuple|2.126|?>>
-    <associate|family {x}xeA|<tuple|2.107|?>>
+    <associate|family|<tuple|2.104|?>>
+    <associate|family and function composition|<tuple|2.113|?>>
+    <associate|family de Morgan|<tuple|2.134|?>>
+    <associate|family definition (2)|<tuple|2.110|?>>
+    <associate|family definition (3)|<tuple|2.111|?>>
+    <associate|family distributivity|<tuple|2.132|?>>
+    <associate|family empty family|<tuple|2.107|?>>
+    <associate|family empty family condition|<tuple|2.108|?>>
+    <associate|family image and preimage|<tuple|2.138|?>>
+    <associate|family index set is a product|<tuple|2.112|?>>
+    <associate|family intersection (2)|<tuple|2.125|?>>
+    <associate|family intersection is a set|<tuple|2.126|?>>
+    <associate|family intersection(1)|<tuple|2.124|?>>
+    <associate|family product and index transformation|<tuple|2.147|?>>
+    <associate|family properties (1)|<tuple|2.129|?>>
+    <associate|family properties (2)|<tuple|2.130|?>>
+    <associate|family properties (3)|<tuple|2.135|?>>
+    <associate|family range|<tuple|2.114|?>>
+    <associate|family range (1)|<tuple|2.115|?>>
+    <associate|family set|<tuple|2.116|?>>
+    <associate|family trivial|<tuple|2.127|?>>
+    <associate|family union (1)|<tuple|2.117|?>>
+    <associate|family union (2)|<tuple|2.120|?>>
+    <associate|family union condition set|<tuple|2.122|?>>
+    <associate|family union intersection and empty set|<tuple|2.136|?>>
+    <associate|family union intersection and inclusion|<tuple|2.131|?>>
+    <associate|family union of a empty set|<tuple|2.123|?>>
+    <associate|family union of family of families|<tuple|2.137|?>>
+    <associate|family union of family set and surjections|<tuple|2.121|?>>
+    <associate|family union of union of two families|<tuple|2.133|?>>
+    <associate|family union{A,B}|<tuple|2.128|?>>
+    <associate|family {x}xeA|<tuple|2.109|?>>
     <associate|function|<tuple|2.24|?>>
     <associate|function A^empty is empty|<tuple|2.33|?>>
     <associate|function B^A|<tuple|2.31|?>>
@@ -15373,12 +15519,12 @@
     <associate|function bijection condition (2)|<tuple|2.72|?>>
     <associate|function bijection f,f-1|<tuple|2.70|?>>
     <associate|function bijection has a inverse|<tuple|2.68|?>>
-    <associate|function bijection removing element|<tuple|2.91|?>>
+    <associate|function bijection removing element|<tuple|2.93|?>>
     <associate|function characteristics function|<tuple|2.47|?>>
-    <associate|function combining bijections|<tuple|2.83|?>>
+    <associate|function combining bijections|<tuple|2.84|?>>
     <associate|function combining functions (1)|<tuple|2.81|?>>
-    <associate|function combining functions (2)|<tuple|2.82|?>>
-    <associate|function composition and restriction|<tuple|2.89|?>>
+    <associate|function combining functions (2)|<tuple|2.83|?>>
+    <associate|function composition and restriction|<tuple|2.91|?>>
     <associate|function composition injectivity, surjectivity and
     bijectivity|<tuple|2.75|?>>
     <associate|function composition injectivity, surjectivity and bijectivity
@@ -15395,38 +15541,39 @@
     <associate|function equality (1)|<tuple|2.39|?>>
     <associate|function equality (2)|<tuple|2.42|?>>
     <associate|function extend target|<tuple|2.34|?>>
-    <associate|function extending funtion domain|<tuple|2.84|?>>
+    <associate|function extending funtion domain|<tuple|2.85|?>>
     <associate|function f(x)|<tuple|2.40|?>>
-    <associate|function function and intersection and union|<tuple|2.95|?>>
+    <associate|function function and intersection and union|<tuple|2.97|?>>
     <associate|function identity function|<tuple|2.48|?>>
     <associate|function identity map is a bijection|<tuple|2.65|?>>
     <associate|function image preimage|<tuple|2.50|?>>
     <associate|function image preimage alternative|<tuple|2.44|?>>
     <associate|function inclusion function|<tuple|2.54|?>>
-    <associate|function indexed set|<tuple|2.99|?>>
-    <associate|function indexed set example|<tuple|2.101|?>>
-    <associate|function indexed set unique|<tuple|2.100|?>>
+    <associate|function indexed set|<tuple|2.101|?>>
+    <associate|function indexed set example|<tuple|2.103|?>>
+    <associate|function indexed set unique|<tuple|2.102|?>>
     <associate|function injection condition|<tuple|2.61|?>>
     <associate|function injective inverse is a function|<tuple|2.60|?>>
     <associate|function injectivity to bijection|<tuple|2.67|?>>
     <associate|function injectivity, surjectivity|<tuple|2.53|?>>
-    <associate|function inverse and restriction|<tuple|2.88|?>>
-    <associate|function inverse function and bijection|<tuple|2.92|?>>
+    <associate|function inverse and restriction|<tuple|2.90|?>>
+    <associate|function inverse function and bijection|<tuple|2.94|?>>
     <associate|function inverse function and f(x)|<tuple|2.71|?>>
     <associate|function inverse image preimage|<tuple|2.69|?>>
     <associate|function inverse of a bijection is unique|<tuple|2.74|?>>
     <associate|function power of intersection|<tuple|2.37|?>>
     <associate|function preimage of image|<tuple|2.56|?>>
     <associate|function preimage of image (1)|<tuple|2.25|?>>
-    <associate|function properties (1)|<tuple|2.94|?>>
+    <associate|function properties (1)|<tuple|2.96|?>>
     <associate|function range restriction|<tuple|2.38|?>>
-    <associate|function restricted function properties|<tuple|2.86|?>>
+    <associate|function restricted function properties|<tuple|2.88|?>>
     <associate|function restriction and composition|<tuple|2.80|?>>
-    <associate|function restriction and domain|<tuple|2.87|?>>
-    <associate|function restriction of a function|<tuple|2.90|?>>
+    <associate|function restriction and domain|<tuple|2.89|?>>
+    <associate|function restriction of a function|<tuple|2.92|?>>
     <associate|function restriction of a graph|<tuple|2.79|?>>
-    <associate|function simple definition|<tuple|2.96|?>>
-    <associate|function simple definition notation|<tuple|2.97|?>>
+    <associate|function simple definition|<tuple|2.98|?>>
+    <associate|function simple definition notation|<tuple|2.99|?>>
+    <associate|function stitching of functions|<tuple|2.87|?>>
     <associate|function surjection and construction of inverse
     function|<tuple|3.105|?>>
     <associate|function surjection condition|<tuple|2.52|?>>
@@ -15532,19 +15679,19 @@
     <associate|partial functions image/preimage properties|<tuple|2.17|?>>
     <associate|parttial function graph|<tuple|2.6|?>>
     <associate|power set|<tuple|1.69|?>>
-    <associate|product|<tuple|2.137|?>>
-    <associate|product and intersection|<tuple|2.142|?>>
-    <associate|product and power|<tuple|2.144|?>>
-    <associate|product extension|<tuple|2.147|?>>
-    <associate|product inclusion|<tuple|2.141|?>>
-    <associate|product intersection of a product|<tuple|2.143|?>>
-    <associate|product of a empty set is empty|<tuple|2.138|?>>
-    <associate|product of family with one element|<tuple|2.139|?>>
-    <associate|product of family with two classes|<tuple|2.140|?>>
+    <associate|product|<tuple|2.139|?>>
+    <associate|product and intersection|<tuple|2.144|?>>
+    <associate|product and power|<tuple|2.146|?>>
+    <associate|product extension|<tuple|2.149|?>>
+    <associate|product inclusion|<tuple|2.143|?>>
+    <associate|product intersection of a product|<tuple|2.145|?>>
+    <associate|product of a empty set is empty|<tuple|2.140|?>>
+    <associate|product of family with one element|<tuple|2.141|?>>
+    <associate|product of family with two classes|<tuple|2.142|?>>
     <associate|product product is not empty|<tuple|3.110|?>>
-    <associate|product projection function|<tuple|2.148|?>>
+    <associate|product projection function|<tuple|2.150|?>>
     <associate|product projection is surjective|<tuple|3.109|?>>
-    <associate|product sub-product|<tuple|2.146|?>>
+    <associate|product sub-product|<tuple|2.148|?>>
     <associate|relation|<tuple|3.1|?>>
     <associate|relation properties|<tuple|3.4|?>>
     <associate|relation trivial|<tuple|3.3|?>>
