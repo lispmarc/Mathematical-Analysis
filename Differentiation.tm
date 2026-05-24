@@ -15327,7 +15327,9 @@
 
   We generalize now the the above Mean Value Theorem to functions where the
   codomain of the function is a arbitrary normed space. To do this we need
-  the concept of convex sets.
+  the concept of convex sets. Recap the definition of a convex set defined in
+  the section about connected sets [see definition: <reference|connected
+  convex set>]
 
   <\definition>
     <label|diff convex set><dueto|Convex Sets>Let <math|X> be a vector space
@@ -18983,7 +18985,7 @@
       <math|<around*|(|i<rsub|1>,\<ldots\>,i<rsub|m>|)>=<around*|(|j<rsub|m>,\<ldots\>,j<rsub|1>|)>>
       hence we have then that <math|D<rsup|<around*|[|m|]>><rsub|x,i<rsub|1>,\<ldots\>,i<rsub|m>>f\<in\>L<around*|(|X<rsub|i<rsub|1>>\<ldots\>X<rsub|i<rsub|m>>;Y|)>>
       and <math|D<rsup|<around*|[|m|]>><rsub|x,i<rsub|1>\<ldots\>i<rsub|m>>f=D<rsup|<around*|[|m-1|]>><rsub|x,i<rsub|1>><around*|(|D<rsup|<around*|[|m-1|]>><rsub|x,i<rsub|2>\<ldots\>i<rsub|m>>f|)>>.
-      </note>
+    </note>
   </definition>
 
   Just as \ Fréchet differentiability implies partial differentiability,
@@ -29683,13 +29685,13 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|15>
-    <associate|page-first|901>
+    <associate|page-first|909>
     <associate|par-first|0tab>
     <associate|par-mode|justify>
     <associate|preamble|false>
     <associate|project-flag|false>
     <associate|section-nr|0>
-    <associate|subsection-nr|0>
+    <associate|subsection-nr|2>
   </collection>
 </initial>
 
@@ -30431,7 +30433,6 @@
     <associate|eq 16.398.142|<tuple|16.509|?>>
     <associate|eq 16.398.300|<tuple|16.412|?>>
     <associate|eq 16.398.310|<tuple|16.406|?>>
-    <associate|eq 16.398.322|<tuple|16.396|?>>
     <associate|eq 16.399.142|<tuple|16.510|?>>
     <associate|eq 16.399.321|<tuple|16.402|?>>
     <associate|eq 16.399\<point\>310|<tuple|16.407|?>>
@@ -30527,7 +30528,6 @@
     <associate|eq 16.49.189|<tuple|16.134|?>>
     <associate|eq 16.49.3|<tuple|16.60|?>>
     <associate|eq 16.49.3.1|<tuple|16.59|?>>
-    <associate|eq 16.491.322|<tuple|16.401|?>>
     <associate|eq 16.5.1|<tuple|16.5|?>>
     <associate|eq 16.5.178|<tuple|16.62|?>>
     <associate|eq 16.50.189|<tuple|16.135|?>>

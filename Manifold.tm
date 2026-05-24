@@ -143,6 +143,81 @@
     is a atlas on <math|M>. <math|>
   </proof>
 
+  <\example>
+    <label|manifold open set is a sub manifold>Let <math|n\<in\>\<bbb-N\>>,
+    <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> be a
+    <math|n>-dimensional topological manifold and <math|U\<in\>\<cal-T\>> a
+    open subset of <math|M> then <math|<around*|\<langle\>|U,\<cal-T\><rsub|\|U>|\<rangle\>>>
+    is a toplogical manifold.
+  </example>
+
+  <\proof>
+    Using [theorem: <reference|separation and subspaces>] it follows that
+
+    <\equation>
+      <label|eq 23.1.4><around*|\<langle\>|U,\<cal-T\><rsub|\|U>|\<rangle\>><text|
+      is Hausdorff and Second Countable>
+    </equation>
+
+    Further if <math|v\<in\>U> then, as <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>>
+    is a topological manifold there exists open sets <math|V\<in\>\<cal-T\>>
+    with <math|v\<in\>V>, <math|W\<in\>\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsup|n>><rsub|<rsup|>>>
+    and a homeomorphism [using the topologies <math|\<cal-T\><rsub|\|V>> and
+    <math|<around*|(|\<cal-T\><rsub|\<bbb-R\><rsup|n>>|)><rsub|\|W>>]
+    <math|\<varphi\>:V\<rightarrow\>W>. As <math|v\<in\>U> and
+    <math|v\<in\>V> it follows\ 
+
+    <\equation>
+      <label|eq 23.1.3>v\<in\>V<big|cap>U\<in\>\<cal-T\><rsub|\|U>
+    </equation>
+
+    As <math|V<big|cap>U\<in\>\<cal-T\><rsub|\|U>> and <math|\<varphi\>> is a
+    homeomorphism hence a open funtion, it follows that
+
+    <\equation*>
+      \<varphi\><around*|(|V<big|cap>U|)>\<in\><around*|(|\<cal-T\><rsub|\<bbb-R\><rsup|n>>|)><rsub|\|W>
+    </equation*>
+
+    As <math|W\<in\>\<cal-T\><rsub|\<bbb-R\><rsup|n>>> it follows from
+    [theorem: <reference|topology subspace topology open subset>] that\ 
+
+    <\equation>
+      <label|eq 23.2.3>\<varphi\><around*|(|V<big|cap>U|)>\<in\>\<cal-T\><rsub|\<bbb-R\><rsup|n>>
+    </equation>
+
+    \ Further by [theorem: <reference|continuity homeomorphism and
+    restriction>] we have that\ 
+
+    <\equation*>
+      \<varphi\><rsub|\|V<big|cap>U>:V<big|cap>U\<rightarrow\>\<varphi\><around*|(|U<big|cap>V|)><text|
+      is a homeomorphism using the topologies
+      ><around*|(|\<cal-T\><rsub|\|U>|)><rsub|\|V<big|cap>U><text|,
+      ><around*|(|<around*|(|\<cal-T\><rsub|\<bbb-R\><rsup|n>>|)><rsub|\|W>|)><rsub|\|\<varphi\><around*|(|V<big|cap>U|)>>
+    </equation*>
+
+    As <math|V<big|cap>U\<subseteq\>U> and
+    <math|\<varphi\><around*|(|V<big|cap>U|)>\<subseteq\>\<varphi\><around*|(|V|)>\<subseteq\>W>
+    it follows from [theorem: <reference|topology subsubspace topology>] that
+    <math|><math|<around*|(|\<cal-T\><rsub|\|U>|)><rsub|\|V<big|cap>U>=\<cal-T\><rsub|\|V<big|cap>U>>
+    and <math|<around*|(|<around*|(|\<cal-T\><rsub|\<bbb-R\><rsup|n>>|)><rsub|\|W>|)><rsub|\|\<varphi\><around*|(|V<big|cap>U|)>>=<around*|(|\<cal-T\><rsub|\<bbb-R\><rsup|n>>|)><rsub|\|\<varphi\><around*|(|V<big|cap>U|)>>>.
+    Hence\ 
+
+    <\equation>
+      <label|eq 23.3.3>\<varphi\><rsub|\|V<big|cap>U>:V<big|cap>U\<rightarrow\>\<varphi\><around*|(|V<big|cap>U|)><text|
+      is a homeomorphism using \ >\<cal-T\><rsub|\|V<big|cap>U>,<around*|(|\<cal-T\><rsub|\<bbb-R\><rsup|n>>|)><rsub|\|\<varphi\><around*|(|U<big|cap>V|)>>
+    </equation>
+
+    Using the fact that <math|v\<in\>U> has been chosen arbitrary together
+    with [eqs: <reference|eq 23.1.4>,<reference|eq 23.1.3>, <reference|eq
+    23.2.3>, <reference|eq 23.3.3>] proves by [definition:
+    <reference|manifold topological>] that\ 
+
+    <\equation*>
+      <around*|\<langle\>|U,\<cal-T\><rsub|\|U>|\<rangle\>><text| is a
+      topological manifold>s
+    </equation*>
+  </proof>
+
   We have the following trivial example of a <math|n>-dimensional topological
   manifold.
 
@@ -1119,13 +1194,114 @@
   We use the above theorem to prove the connection properties of a
   topological manifold.\ 
 
-  <samp|>
+  <\theorem>
+    <label|manifold connectivity properties>Let <math|n\<in\>\<bbb-N\>> and
+    <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> be a non empty
+    <math|n>-dimesional topological manifold then we have that
 
-  \;
+    <\enumerate>
+      <item><math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> is locally
+      path connected [see definition: <reference|connected local path
+      connected>].
 
-  \;
+      <item><math|M> is connected <math|\<Leftrightarrow\><text| >M> is
+      locally contacted.
 
-  \;
+      <item>The components of <math|M> are the same as its path components.
+      More specifically <math|\<forall\>x\<in\>X> we have that
+      <math|\<sim\><around*|[|x|]>=\<sim\><rsub|p><around*|[|x|]>>. See
+      [definitions: <reference|connected component>, <reference|connected
+      path connected component>].
+
+      <item>Every component of <math|M> is open.
+
+      <item>If <math|C> is a component of <math|M> then
+      <math|<around*|\<langle\>|C,\<cal-T\><rsub|\|C>|\<rangle\>>> is a
+      topological manifold.
+
+      <item>The collection <math|X/\<sim\>> of components of <math|X> is
+      countable.
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>Using [theorem: <reference|lemma 23.13.2>] there exist a basis
+      <math|\<cal-B\>\<subseteq\>\<cal-T\>> such that
+      <math|\<forall\>B\<in\>\<cal-B\>> <math|\<cal-B\>> is a coordinate
+      ball. Hence if <math|B\<in\>\<cal-B\>> we have by [definition:
+      <reference|manifold coordinate ball and cube>] that there exist a
+      <math|\<delta\>\<in\>\<bbb-R\><rsup|+>,x\<in\>\<bbb-R\><rsup|n>> and a
+      homeomorphism <math|\<varphi\>:B\<rightarrow\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|x,\<delta\>|)>>.
+      As <math|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|x,y|)>>
+      is convex [see theorem: <reference|diff balls are convex>] it follows
+      from [theorem: <reference|connected convex set are path connected>]
+      that <math|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|x,\<delta\>|)>>
+      is path connected. As <math|\<varphi\><rsup|-1>:B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|x,\<delta\>|)>\<rightarrow\>B>
+      is continuous it follows from [theorem: <reference|connected image of a
+      path connected set by a continuous function is path connected>] that
+      <math|B> is path connected. So we have proved that <math|\<cal-T\>> has
+      a basis of path connected sets wich by [definition:
+      <reference|connected local path connected>] proves that\ 
+
+      <\equation*>
+        <around*|\<langle\>|M,\<cal-T\>|\<rangle\>><text| is locally path
+        connected>
+      </equation*>
+
+      <item>As <math|M> is non empty and by (1) locally path connected this
+      follows from [theorem: <reference|connected properties of locally
+      connected spaces>(4)].\ 
+
+      <item>As <math|M> is locally path connected this follows from [theorem:
+      <reference|connected properties of locally connected spaces>(2)].
+
+      <item>As <math|M> is locally path connected this follows from [theorem:
+      <reference|connected properties of locally connected spaces>(3)].
+
+      <item>If <math|C> is a component then by (4)
+      <math|<around*|\<langle\>|C,\<cal-T\><rsub|\|C>|\<rangle\>>> is a
+      topological manifold.\ 
+
+      <item>Using [definition: <reference|connected component>]
+
+      <\equation*>
+        M=<big|sqcup><rsub|C\<in\>M/\<sim\>>C<text| [union of pairwise
+        disjoint set]>
+      </equation*>
+
+      where <math|M/\<sim\>> is the set of components. As by (4)
+      <math|\<forall\>\<in\>C\<in\>M/\<sim\>> <math|C> is open and
+      <math|<around*|\<langle\>|M,\<b-cal-T\>|\<rangle\>>> is second
+      countable [see definition: <reference|manifold topological>] it follows
+      from [theorem: <reference|separation second countable and covering>]
+      there exist a countable <math|\<cal-A\>\<subseteq\>M/\<sim\>> such that\ 
+
+      <\equation*>
+        M=<big|sqcup><rsub|B\<in\>\<cal-A\>>B<rsub|>
+      </equation*>
+
+      Let <math|C\<in\>M/\<sim\>> then by [definition: <reference|connected
+      component>] there exist a <math|x\<in\>M> such that
+      <math|C=\<sim\><around*|[|x|]>> from which it follows that
+      <math|x\<in\>C>. Assume that <math|C\<nin\>\<cal-A\>> then
+      <math|\<forall\>B\<in\>\<cal-A\>> we have that <math|B\<neq\>C> which
+      as <math|M/\<sim\>> is pairwise disjoint means that
+      <math|B<big|cap>C=\<varnothing\>> so that <math|x\<nin\>B>. Hence
+      <math|x\<nin\><big|cup><rsub|B\<in\>\<cal-A\>><rsub|>B=M> contradicting
+      <math|x\<in\>M>. So the assumption <math|C\<nin\>\<cal-A\>> is false
+      and we must have that <math|C\<in\>\<cal-A\>>. Hence we have
+      <math|M/\<sim\>\<subseteq\>\<cal-A\>\<subseteq\>M/\<sim\>> so that
+      <math|M/\<cong\>\<cal-A\>> which as <math|\<cal-A\>> is countable
+      proves that\ 
+
+      <\equation*>
+        M/\<sim\><text| is countable>
+      </equation*>
+    </enumerate>
+  </proof>
 
   \;
 
@@ -1137,7 +1313,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|22>
-    <associate|page-first|1881>
+    <associate|page-first|1889>
     <associate|par-first|0>
     <associate|section-nr|2>
     <associate|subsection-nr|0>
@@ -1150,32 +1326,39 @@
     <associate|auto-2|<tuple|23.1|?>>
     <associate|auto-3|<tuple|23.1.1|?>>
     <associate|auto-4|<tuple|23.1.2|?>>
-    <associate|eq 23.1.1|<tuple|23.1|?>>
-    <associate|eq 23.13.3|<tuple|23.13|?>>
-    <associate|eq 23.14.3|<tuple|23.14|?>>
-    <associate|eq 23.15.2|<tuple|23.15|?>>
-    <associate|eq 23.16.2|<tuple|23.16|?>>
-    <associate|eq 23.17.2|<tuple|23.17|?>>
-    <associate|eq 23.2.1|<tuple|23.2|?>>
-    <associate|eq 23.3.1|<tuple|23.3|?>>
-    <associate|eq 23.4.1|<tuple|23.4|?>>
-    <associate|eq 23.5.1|<tuple|23.5|?>>
-    <associate|eq 23.6.1|<tuple|23.7|?>>
-    <associate|eq 23.6.3|<tuple|23.6|?>>
-    <associate|eq 23.7.1|<tuple|23.10|?>>
-    <associate|eq 23.7.2|<tuple|23.8|?>>
-    <associate|eq 23.8.1|<tuple|23.11|?>>
-    <associate|eq 23.8.2|<tuple|23.9|?>>
-    <associate|eq 23.9.1|<tuple|23.12|?>>
-    <associate|lemma 23.10.2|<tuple|23.11|?>>
-    <associate|lemma 23.11.2|<tuple|23.12|?>>
-    <associate|lemma 23.13.2|<tuple|23.13|?>>
+    <associate|eq 23.1.1|<tuple|23.5|?>>
+    <associate|eq 23.1.2|<tuple|23.1|?>>
+    <associate|eq 23.1.3|<tuple|23.2|?>>
+    <associate|eq 23.1.4|<tuple|23.1|?>>
+    <associate|eq 23.13.3|<tuple|23.17|?>>
+    <associate|eq 23.14.3|<tuple|23.18|?>>
+    <associate|eq 23.15.2|<tuple|23.19|?>>
+    <associate|eq 23.16.2|<tuple|23.20|?>>
+    <associate|eq 23.17.2|<tuple|23.21|?>>
+    <associate|eq 23.2.1|<tuple|23.6|?>>
+    <associate|eq 23.2.3|<tuple|23.3|?>>
+    <associate|eq 23.3.1|<tuple|23.7|?>>
+    <associate|eq 23.3.3|<tuple|23.4|?>>
+    <associate|eq 23.4.1|<tuple|23.8|?>>
+    <associate|eq 23.5.1|<tuple|23.9|?>>
+    <associate|eq 23.6.1|<tuple|23.11|?>>
+    <associate|eq 23.6.3|<tuple|23.10|?>>
+    <associate|eq 23.7.1|<tuple|23.14|?>>
+    <associate|eq 23.7.2|<tuple|23.12|?>>
+    <associate|eq 23.8.1|<tuple|23.15|?>>
+    <associate|eq 23.8.2|<tuple|23.13|?>>
+    <associate|eq 23.9.1|<tuple|23.16|?>>
+    <associate|lemma 23.10.2|<tuple|23.12|?>>
+    <associate|lemma 23.11.2|<tuple|23.13|?>>
+    <associate|lemma 23.13.2|<tuple|23.14|?>>
     <associate|manifold atlas|<tuple|23.7|?>>
-    <associate|manifold canonical example|<tuple|23.9|?>>
+    <associate|manifold canonical example|<tuple|23.10|?>>
+    <associate|manifold connectivity properties|<tuple|23.16|?>>
     <associate|manifold coordinate ball and cube|<tuple|23.5|?>>
     <associate|manifold coordinate domain|<tuple|23.4|?>>
     <associate|manifold cooridinate chart|<tuple|23.3|?>>
     <associate|manifold cooridinate chart existence|<tuple|23.6|?>>
+    <associate|manifold open set is a sub manifold|<tuple|23.9|?>>
     <associate|manifold topological|<tuple|23.2|?>>
     <associate|manifold topological (1)|<tuple|23.8|?>>
   </collection>

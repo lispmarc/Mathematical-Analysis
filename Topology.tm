@@ -7133,13 +7133,11 @@
     </description>
   </proof>
 
-  TODO
-
   The following lemma shows how we can stitch togethere two continuous
   functions to a continuous function.
 
   <\lemma>
-    <label|continuity stitching lemma>Let
+    <label|continuity pasting lemma><dueto|Pasting Lemma>Let
     <math|<around*|\<langle\>|X,\<cal-T\><rsub|X>|\<rangle\>>>,
     <math|<around*|\<langle\>|Y,\<cal-T\><rsub|Y>|\<rangle\>>> be two
     topological spaces, <math|A,B> two closed sets in <math|X> such that
@@ -7159,27 +7157,103 @@
       <math|f<around*|(|x|)>=g<around*|(|x|)>>
     </enumerate>
 
-    then we have that
+    then we have that [see theorem: <reference|function stitching of
+    functions>]
 
     <\equation*>
-      h:A<big|cup>B\<rightarrow\>C<text| defined by >h=f<big|cup>g
+      h:A<big|cup>B\<rightarrow\>Y<text| defined by >h=f<big|cup>g
     </equation*>
 
     is a well defined continuous function [using the topologies
-    <math|<around*|(|\<cal-T\><rsub|X>|)><rsub|\|A<big|cup>B>>
+    <math|<around*|(|\<cal-T\><rsub|X>|)><rsub|\|A<big|cup>B>>,
+    <math|\<cal-T\><rsub|Y>>
   </lemma>
 
+  <\note>
+    By the note in [theorem: <reference|function stitching of functions>] we
+    can define <math|h> also by <math|h<around*|(|x|)>=<choice|<tformat|<table|<row|<cell|f<around*|(|x|)><text|
+    if >x\<in\>A>>|<row|<cell|g<around*|(|x|)><text| if >x\<in\>B>>>>>>which
+    is a less abstract definition of <math|h>.
+  </note>
+
   <\proof>
-    First using [theorem: <reference|function stitching of functions>] it
+    First using [theorem: <reference|function stitching of functions>(1)] it
     follows that\ 
 
     <\equation*>
-      h:A<big|cup>B\<rightarrow\>C
+      h:A<big|cup>B\<rightarrow\>Y
     </equation*>
 
-    is indeed a function. TODO
+    is indeed a function. Let <math|C> be a closed set in <math|Y> then, as
+    <math|f> and <math|g> are ontinuous, we have that
+    <math|f<rsup|-1><around*|(|C|)>> is a closed set in
+    <math|<around*|(|\<cal-T\><rsub|X>|)><rsub|\|A>> and
+    <math|g<rsup|-1><around*|(|C|)>> is a closed set in
+    <math|<around*|(|\<cal-T\><rsub|X>|)><rsub|\|B>>. Hence, using [theorem:
+    <reference|topology closed set subspace topology>] there exist closed
+    sets <math|C<rsub|f>>, <math|C<rsub|g>> in <math|\<cal-T\><rsub|X>> such
+    that <math|f<rsup|-1><around*|(|C|)>=C<rsub|f><big|cap>A> and
+    <math|g<rsup|-1><around*|(|C|)>=C<rsub|g><big|cap>B>. As <math|A,B> are
+    closed sets in <math|\<cal-T\><rsub|X>> it follows that
+    <math|C<rsub|f><big|cap>A> and <math|C<rsub|g>> are closed sets in
+    <math|\<cal-T\><rsub|X>>. Hence we have that
+    <math|f<rsup|-1><around*|(|C|)>>, <math|g<rsup|-1><around*|(|C|)>>
 
-    \;
+    are closed sets in <math|\<cal-T\><rsub|X>> so that\ 
+
+    <\equation*>
+      f<rsup|-1><around*|(|C|)><big|cup>g<rsup|-1><around*|(|C|)><text| is
+      closed in >\<cal-T\><rsub|X>
+    </equation*>
+
+    Using then [theorem: <reference|topology closed set subspace topology>]
+    it follows that\ 
+
+    <\equation*>
+      <around*|(|f<rsup|-1><around*|(|C|)><big|cup>g<rsup|-1><around*|(|C|)>|)><big|cap><around*|(|A<big|cup>B|)><text|
+      is closed in ><around*|(|\<cal-T\><rsub|\|X>|)><rsub|\|A<big|cup>B>
+    </equation*>
+
+    Now, as <math|f<rsup|-1><around*|(|C|)>\<subseteq\>A>,
+    <math|g<rsup|-1><around*|(|C|)>\<subseteq\>B>, it follows that
+    <math|f<rsup|-1><around*|(|C|)><big|cup>g<rsup|-1><around*|(|C|)>\<subseteq\>A<big|cup>B>
+    so that\ 
+
+    <\equation*>
+      <around*|(|f<rsup|-1><around*|(|C|)><big|cup>g<rsup|-1><around*|(|C|)>|)><big|cap><around*|(|A<big|cup>B|)>=f<rsup|-1><around*|(|C|)><big|cup>g<rsup|-1><around*|(|C|)>
+    </equation*>
+
+    which proves that\ 
+
+    <\equation*>
+      f<rsup|-1><around*|(|C|)><big|cup>g<rsup|-1><around*|(|C|)><text| is
+      closed in ><around*|(|\<cal-T\><rsub|\|X>|)><rsub|\|A<big|cup>B>
+    </equation*>
+
+    Now using \ [theorem: <reference|function stitching of functions>(2)] it
+    follows that <math|h<rsup|-1><around*|(|C|)>=f<rsup|-1><around*|(|C|)><big|cup>g<rsup|-1><around*|(|C|)>>
+    so that\ 
+
+    <\equation*>
+      h<rsup|-1><around*|(|C|)><text| is closed in
+      ><around*|(|\<cal-T\><rsub|X>|)><rsub|\|A<big|cup>B>
+    </equation*>
+
+    To summarize we have proves that\ 
+
+    <\equation*>
+      \<forall\>C<text| closed in >\<cal-T\><rsub|Y><text| we have that
+      >h<rsup|-1><around*|(|C|)><text| is closed in
+      ><around*|(|\<cal-T\><rsub|X>|)><rsub|\|A<big|cup>B>
+    </equation*>
+
+    Applying then [theorem: <reference|continuity equivalences>] that\ 
+
+    <\equation*>
+      h<text| is continuous using the topologies
+      ><around*|(|\<cal-T\><rsub|X>|)><rsub|\|A<big|cup>B><text| and
+      >\<cal-T\>Y
+    </equation*>
   </proof>
 
   If a function is continuous then the preimage of a open set is open, we can
@@ -14277,6 +14351,114 @@
 
     proving uniform continuity.
   </proof>
+
+  <subsection|Locally Compact and Paracompact spaces>
+
+  <\definition>
+    <label|compact locally compact>A topological space
+    <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> is locally compact iff
+    <math|\<forall\>x\<in\>X> there exist a <math|U\<in\>\<cal-T\>> and a
+    compact subset <math|C> such that <math|x\<in\>U\<subseteq\>C>.
+  </definition>
+
+  <\theorem>
+    Let <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> bssis a Hausdorff
+    topological space then we have the following equivalences:
+
+    <\enumerate>
+      <item><math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> is locally
+      compact.
+
+      <item><math|\<forall\>x\<in\>X> there exist a precompact set
+      <math|U\<in\>\<cal-T\>> such that <math|x\<in\>U>.
+
+      <item><math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> has a basis
+      <math|\<cal-B\>\<subseteq\>\<cal-T\>> such that
+      <math|\<forall\>B\<in\>\<cal-B\>> we have that <math|B> is precompact.
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|1\<Rightarrow\>2>>Let <math|x\<in\>X> then by the local
+      connectness there exist a open set <math|U\<in\>\<cal-T\>> and a
+      compact set <math|C> such that <math|x\<in\>U\<subseteq\>C>. As
+      <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> is Hausdorff it
+      follows from [theorem: <reference|compact set is closed in a Hausdorff
+      space>] that <math|C> is closed. Hence we have that
+      <math|x\<in\>U\<subseteq\><wide|U|\<wide-bar\>><below|\<subseteq\>|<text|[theorem:
+      <reference|topology closure inclusion>]>><wide|C|\<wide-bar\>><below|=|<text|C
+      is closed and [theorem: <reference|topology closed set and
+      closure>]>>C>. As <math|<wide|U|\<wide-bar\>>> is closed and
+      <math|<wide|U|\<wide-bar\>>\<subseteq\>C> it follows from [theorem:
+      <reference|compact every closed subset of a compact set is compact>]
+      that <math|<wide|U|\<wide-bar\>>> is compact. Hence <math|U> is a
+      precompact set [see definition: <reference|compact precompact set>]
+      with <math|x\<in\>U\<in\>\<cal-T\>>.
+
+      <item*|<math|2\<Rightarrow\>3>>Define
+      <math|\<cal-B\>=<around*|{|V\<in\>\<cal-T\>\|V<text| is
+      precompact>|}>\<subseteq\>\<cal-T\>>. Let <math|U\<in\>\<cal-T\>> and
+      take <math|x\<in\>U> then by (2) there exist a
+      <with|font-series|bold|precompact> <math|V\<in\>\<cal-T\>> such that
+      <math|x\<in\>V>. Take <math|W=U<big|cap>V> then <math|x\<in\>W>,
+      <math|W\<in\>\<cal-T\>> and <math|W\<subseteq\>V>,
+      <math|W\<subseteq\>U>. Hence by [theorem: <reference|topology closure
+      inclusion>] <math|<wide|W|\<wide-bar\>>\<subseteq\><wide|V|\<wide-bar\>>>
+      which, as <math|<wide|V|\<wide-bar\>>> is compact [because it is
+      precompact], proves by [theorem: <reference|compact every closed subset
+      of a compact set is compact>] that <math|<wide|W|\<wide-bar\>>> is
+      compact. Hence <math|W> is precompact so that <math|W\<in\>\<cal-B\>>.
+      To summarize we have <math|\<forall\>U\<in\>\<cal-T\>>,
+      <math|\<forall\>x\<in\>U> that there exist a <math|B\<in\>\<cal-B\>>
+      such that <math|x\<in\>B\<subseteq\>U>. Using [theorem:
+      <reference|topology basis alternative definition>] it follows then that
+      <math|\<cal-B\>> is a basis for <math|\<cal-T\>>.
+
+      <item*|<math|3\<Rightarrow\>1>>Let <math|\<cal-B\>> be a basis of
+      precompact sets of <math|\<cal-T\>> [so that
+      <math|\<cal-B\>\<subseteq\>\<cal-T\>>]. Take <math|x\<in\>X> then as
+      <math|X\<in\>\<cal-T\>> there exist a precompact set
+      <math|U\<in\>\<cal-B\>\<subseteq\>\<cal-T\>> such that <math|x\<in\>U>.
+      By the definition of precompact sets <math|<wide|U|\<wide-bar\>>> is
+      compact. Hence <math|\<forall\>x\<in\>X> we found a
+      <math|U\<in\>\<cal-T\>> such that <math|x\<in\>U\<subseteq\><wide|U|\<wide-bar\>>>
+      where <math|<wide|U|\<wide-bar\>>> is compact which proves that
+      <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> is locally compact.
+    </description>
+  </proof>
+
+  TODO
+
+  <\definition>
+    <label|compact refinement><dueto|refinement>Let <math|\<cal-U\>> be a
+    collection of sets then a collection of sets <math|\<cal-V\>> is a
+    <with|font-series|bold|refinement> of <math|\<cal-U\>> if
+    <math|\<forall\>V\<in\>\<cal-V\>> there exist a <math|U\<in\>\<cal-U\>>
+    such that <math|V\<subseteq\>U>.
+  </definition>
+
+  <\definition>
+    <label|compact locally finite><dueto|locally finite>Let
+    <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> be a topological space
+    then a collection <math|\<cal-U\>\<subseteq\>\<cal-P\><around*|(|X|)>> of
+    subsets of <math|X> is called <with|font-series|bold|locally finite> if
+    <math|\<forall\>x\<in\>X> there exist a <math|V\<in\>\<cal-T\>> with
+    <math|x\<in\>V> such that <math|<around*|{|U\<in\>\<cal-U\>\|U<big|cap>V\<neq\>\<varnothing\>|}>>
+    is finite.
+  </definition>
+
+  <\definition>
+    <label|compact paracompactness><dueto|Paracompact Spaces>A topological
+    space <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> is paracompact
+    if <math|\<forall\>\<cal-U\>\<subseteq\>\<cal-T\>> with
+    <math|X=<big|cup><rsub|U\<in\>\<cal-U\>>U> there exist a locally finite
+    refinement <math|\<cal-V\>\<subseteq\>\<cal-T\>> such that
+    <math|X=<big|cup><rsub|V\<in\>\<cal-V\>>V>. In other words every open
+    cover of <math|X> admits a open locally finite refinement.
+  </definition>
 
   <subsection|Product of Compact sets>
 
@@ -24889,8 +25071,6 @@
   Next we show that a topological space can be devided in maximal connected
   subsets called components.\ 
 
-  TODO
-
   <\definition>
     <label|connected component><dueto|Component>Let
     <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> be a topological space
@@ -24903,7 +25083,7 @@
     a <with|font-series|bold|component>. Using [definition:
     <reference|equivalence relation A/R>[ and [theorem:
     <reference|equivalence relation defines a partition>] it follows that the
-    set of alle classes <math|X/\<sim\>> partitions <math|X> in a disjoint
+    set of alle classes <math|X/\<sim\>> partitions <math|X> is a disjoint
     union of partition classes hence we have that
 
     <\equation*>
@@ -24921,7 +25101,7 @@
       a connected subset and we have <math|x,x\<in\><around*|{|x|}>> it
       follows that <math|x\<sim\>x>.
 
-      <item*|symmetry>Let <math|x\<sim\>y> then there exist a connected
+      <item*|symetricity>Let <math|x\<sim\>y> then there exist a connected
       subset <math|A> such that <math|x,y\<in\>A\<Rightarrow\>y,x\<in\>A>
       proving that <math|y\<sim\>x>.
 
@@ -24934,8 +25114,8 @@
     </description>
   </proof>
 
-  We show now that a component of a topological space a maximal connected
-  subset is.
+  We show now that a component of a topological space is a maximal connected
+  subset of <math|X>.
 
   <\theorem>
     <label|connected component is maximal>Let
@@ -24999,12 +25179,21 @@
   <subsection|Path Connected Space>
 
   <\definition>
+    <label|connected path connection>Let <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>>
+    be a topological space and <math|x,y\<in\>X> then <math|x> is path
+    connected to <math|y> if there exist a continuous [using the topologies
+    <math|\<cal-T\><rsub|\|<around*|[|0,1|]>>> and <math|\<cal-T\>>]
+    <math|f:<around*|[|0,1|]>\<rightarrow\>X> such that
+    <math|f<around*|(|0|)>=x\<wedge\>f<around*|(|1|)>=y>.
+  </definition>
+
+  <\definition>
     <label|connected path connected><dueto|Path Connected Space>Let
     <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> be a topological space
-    then <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> is path connected
-    if <math|\<forall\>x,y\<in\>X> there exist a continuous function
-    <math|f:<around*|[|0,1|]>\<rightarrow\>X> such that
-    <math|f<around*|(|0|)>=x> and <math|f<around*|(|1|)>=y>.\ 
+    and <math|A\<subseteq\>X> then <math|A> is path connected if
+    <math|\<forall\>x,y\<in\>A> <math|x> is path connected to <math|x>. If
+    <math|X> is path connected then <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>>
+    is a path connected space.
   </definition>
 
   Every path connected space is a connected space so path connectness is a
@@ -25050,6 +25239,111 @@
     <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> is a connected space.
   </proof>
 
+  A import example of path connected sets are the convex sets.
+
+  <\definition>
+    <label|connected convex set>Let <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
+    be a normed space then <math|C\<subseteq\>X> is
+    <with|font-series|bold|convex> if <math|\<forall\>x,y\<in\>C> we have
+    <math|\<forall\>t\<in\><around*|[|0,1|]>> that
+    <math|x+t\<cdot\><around*|(|y-x|)>=<around*|(|1-t|)>\<cdot\>x+t<around*|\<nobracket\>|\<cdot\>y|\<nobracket\>>\<in\>C>
+  </definition>
+
+  <\example>
+    <label|connected convex set are path connected>Let
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> be
+    a normed space and <math|C> a convex subset of <math|X> then <math|C> is
+    a connected set [hence by <reference|connected path connected spaces are
+    connected spaces>]\ 
+  </example>
+
+  <\proof>
+    Let <math|x,y\<in\>C> and define\ 
+
+    <\equation*>
+      f:<around*|[|0,1|]>\<rightarrow\>X<text| where
+      >f<around*|(|t|)>=x+t\<cdot\><around*|(|y-x|)>
+    </equation*>
+
+    Let <math|t\<in\><around*|[|0,1|]>> then for
+    <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> take
+    <math|\<delta\>=<frac|\<varepsilon\>|1+<around*|\<\|\|\>|y-x|\<\|\|\>>>>
+    then for <math|s\<in\><around*|[|0,1|]>> such that
+    <math|<around*|\||t-s|\|>\<less\>\<delta\>> then we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|\<\|\|\>|f<around*|(|t|)>-f<around*|(|s|)>|\<\|\|\>>>|<cell|=>|<cell|<around*|\<\|\|\>|x+t\<cdot\><around*|(|y-x|)>-x-s\<cdot\><around*|(|y-x|)>|\<\|\|\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|<around*|(|t-s|)>\<cdot\><around*|(|y-x|)>|\<\|\|\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\||t-s|\|>\<cdot\><around*|\<\|\|\>|y-x|\<\|\|\>>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<frac|\<varepsilon\>|1+<around*|\<\|\|\>|y-x|\<\|\|\>>>\<cdot\><around*|\<\|\|\>|y-x|\<\|\|\>>>>|<row|<cell|>|<cell|\<less\>>|<cell|\<varepsilon\>>>>>
+    </eqnarray*>
+
+    which by [theorem: <reference|continuity in normed subspace>] proves that\ 
+
+    <\equation*>
+      f<text| is continuous using ><around*|(|\<cal-T\><rsub|<around*|\|||\|>>|)><rsub|<around*|[|0,1|]>>,\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>>>
+    </equation*>
+
+    Further we have that\ 
+
+    <\equation*>
+      f<around*|(|0|)>=x+0\<cdot\><around*|(|y-x|)>=x<text| and
+      >f<around*|(|1|)>=x+1\<cdot\><around*|(|y-x|)>=y
+    </equation*>
+
+    Hence we have that <math|x> is path connected to <math|y>. As
+    <math|x,y\<in\>C> was choosen arbitrary it follows that <math|C> is path
+    connected.
+  </proof>
+
+  Just as the image of a connected set by a continuous function is connected
+  [see theorem: <reference|connected image of a connected set by a continuous
+  function is connected>] the image of a path connected space by a continuous
+  function is path connected.
+
+  <\theorem>
+    <label|connected image of a path connected set by a continuous function
+    is path connected>Let <math|<around*|\<langle\>|X,\<cal-T\><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,\<cal-T\><rsub|Y>|\<rangle\>>> be topological
+    spaces, <math|A> a path connected set in <math|X> and
+    <math|f:A\<rightarrow\>Y> a continuous function [using the topologies
+    <math|<around*|(|\<cal-T\><rsub|X>|)><rsub|\|A>> and
+    <math|\<cal-T\><rsub|Y>>] then <math|f<around*|(|A|)>> is path connected.
+  </theorem>
+
+  <\proof>
+    Let <math|x,y\<in\>f<around*|(|A|)>> then there exists
+    <math|x<rprime|'>,y<rprime|'>\<in\>A> such that\ 
+
+    <\equation*>
+      f<around*|(|x<rprime|'>|)>=x\<wedge\>f<around*|(|y<rprime|'>|)>=y
+    </equation*>
+
+    As <math|A> is path connected there exist a continuous [using the
+    topologies <math|<around*|(|\<cal-T\><rsub|<around*|\|||\|>>|)><rsub|\|<around*|[|0,1|]>>>,
+    <math|\<cal-T\><rsub|X>>] function
+
+    <\equation*>
+      g:A\<rightarrow\>X<text|>
+    </equation*>
+
+    such that
+
+    <\equation*>
+      g<around*|(|0|)>=x<rprime|'>\<wedge\>g<around*|(|1|)>=y<rprime|'>
+    </equation*>
+
+    Using [theorem: <reference|continuity composition (1)>] it follows that
+    <math|f\<circ\>g:<around*|[|0,1|]>\<rightarrow\>Y> is a continuous [using
+    the topologies <math|<around*|(|\<cal-T\><rsub|<around*|\|||\|>>|)><rsub|<around*|[|0,1|]>>>,
+    <math|\<cal-T\><rsub|Y>>] \ function. Further we have\ 
+
+    <\equation*>
+      <around*|(|f\<circ\>g|)><around*|(|0|)>=f<around*|(|g<around*|(|0|)>|)>=f<around*|(|x<rprime|'>|)>=x\<wedge\><around*|(|f\<circ\>g|)><around*|(|1|)>=f<around*|(|g<around*|(|1|)>|)>=f<around*|(|y<rprime|'>|)>=f
+    </equation*>
+
+    which proves that <math|x> is path connected to <math|y>. As
+    <math|x,y\<in\>f<around*|(|A|)>> has been choosen arbitrary it follows
+    that <math|f<around*|(|A|)>> is path connected.
+  </proof>
+
   To introduce pathwise components using a equivalence relation we need the
   following lemmas.
 
@@ -25063,7 +25357,7 @@
     </equation*>
 
     [using the topologies <math|<around*|(|\<cal-T\><rsub|<around*|\|||\|>>|)><rsub|\|<around*|[|a,b|]>>>
-    and <math|<around*|(|\<cal-T\><rsub|<around*|\|||\|>>|)><rsub|\|<around*|[|a,b|]>>>
+    and <math|<around*|(|\<cal-T\><rsub|<around*|\|||\|>>|)><rsub|\|<around*|[|a,d|]>>>
     such that <math|h<around*|(|a|)>=c> and <math|h<around*|(|b|)>=d>
   </lemma>
 
@@ -25219,17 +25513,18 @@
   </proof>
 
   <\lemma>
-    <label|lemma 14.459.401>The function <math|f:<around*|[|0,1|]>\<rightarrow\>\<bbb-R\>>
-    defined by <math|f<around*|(|x|)>=-x+1> has the following properties:
+    <label|lemma 14.462.401>The function <math|f:<around*|[|0,1|]>\<rightarrow\>\<bbb-R\>>
+    defined by <math|\<sigma\><around*|(|x|)>=-x+1> has the following
+    properties:
 
     <\enumerate>
-      <item><math|f> is continuous using the topologies
+      <item><math|\<sigma\>> is continuous using the topologies
       <math|<around*|(|\<cal-T\><rsub|<around*|\|||\|>>|)><rsub|\|<around*|[|0,1|]>>>,
       <math|\<cal-T\><rsub|<around*|\|||\|>>>
 
-      <item><math|f<around*|(|0|)>=1\<wedge\>f<around*|(|1|)>=0>
+      <item><math|\<sigma\><around*|(|0|)>=1\<wedge\>\<sigma\><around*|(|1|)>=0>
 
-      <item><math|f<around*|(|<around*|[|0,1|]>|)>\<subseteq\><around*|[|0,1|]>>
+      <item><math|\<sigma\><around*|(|<around*|[|0,1|]>|)>\<subseteq\><around*|[|0,1|]>>
     </enumerate>
   </lemma>
 
@@ -25239,20 +25534,478 @@
     <\enumerate>
       <item>This follows from [example: <reference|continuity f(x)=a.x+b>].
 
-      <item><math|f<around*|(|0|)>=-0+1=1> and <math|f<around*|(|1|)>=-1+1=0>
+      <item><math|\<sigma\><around*|(|0|)>=-0+1=1> and
+      <math|\<sigma\><around*|(|1|)>=-1+1=0>
 
       <item>Let <math|x\<in\><around*|[|0,1|]> then
       0\<leqslant\>x\<leqslant\>1> so that
       <math|-1\<leqslant\>-x\<leqslant\>0> hence we have
       <math|0=-1+1\<leqslant\>-x+1\<leqslant\>0+1=1> so that
-      <math|0\<leqslant\>f<around*|(|x|)>\<leqslant\>1> from which it follows
-      that <math|f<around*|(|x|)>\<in\><around*|[|0,1|]>>. Hence we have that\ 
+      <math|0\<leqslant\>\<sigma\><around*|(|x|)>\<leqslant\>1> from which it
+      follows that <math|\<sigma\><around*|(|x|)>\<in\><around*|[|0,1|]>>.
+      Hence we have that\ 
 
       <\equation*>
-        f<around*|(|<around*|[|0,1|]>|)>\<subseteq\><around*|[|0,1|]>
+        \<sigma\><around*|(|<around*|[|0,1|]>|)>\<subseteq\><around*|[|0,1|]>
       </equation*>
     </enumerate>
   </proof>
+
+  We are now ready to define path connected components.
+
+  <\definition>
+    <label|connected path connected component>Let
+    <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> be a topological space
+    then the relation <math|\<sim\><rsub|p>\<subseteq\>X\<times\>X> defined
+    by <math|x\<sim\><rsub|p>y> iff <math|x> is path connected to <math|y> is
+    a equivalence relation. Given <math|x\<in\>X> the equivalence class [see
+    definition: <reference|equivalence relation class>]
+    <math|\<sim\><rsub|p><around*|[|x|]>=<around*|{|y\<in\>X\|y\<sim\><rsub|p>x|}>>
+    is called a <with|font-series|bold|path connected component>. Using
+    [definition: <reference|equivalence relation A/R>[ and [theorem:
+    <reference|equivalence relation defines a partition>] it follows that the
+    set of alle classes <math|X/\<sim\><rsub|p>> partitions <math|X> is a
+    disjoint union of partition classes hence we have that
+
+    <\equation*>
+      X=<big|sqcup><rsub|C\<in\>X/\<sim\><rsub|p>>C
+    </equation*>
+  </definition>
+
+  <\proof>
+    Of course we must prove that <math|\<sim\><rsub|p>> is a equivalence
+    relation.\ 
+
+    <\description>
+      <item*|reflexivity>Let <math|x\<in\>X> then the constant function
+      <math|C<rsub|x>:<around*|[|0,1|]>\<rightarrow\>X> defined by
+      <math|C<rsub|x><around*|(|t|)>=x> is continuous by [theorem:
+      <reference|continuity constant function>], further
+      <math|C<rsub|x><around*|(|0|)>=x=C<rsub|x><around*|(|1|)>>. Hence
+      <math|x\<sim\><rsub|p>x>.
+
+      <item*|symetricity>If <math|x\<sim\><rsub|p>y> then there exist a
+      continuous [using <math|\<cal-T\><rsub|\|<around*|[|0,1|]>>> and
+      <math|\<cal-T\>>] <math|f:<around*|[|0,1|]>\<rightarrow\>X> such that
+      <math|f<around*|(|0|)>=x\<wedge\>f<around*|(|1|)>=y>. Take
+      <math|\<sigma\>:<around*|[|0,1|]>\<rightarrow\><around*|[|0,1|]>> the
+      function defined in [lemma: <reference|lemma 14.462.401>] then\ 
+
+      <\equation*>
+        \<sigma\><text| is continuous [using
+        ><around*|(|\<cal-T\><rsub|<around*|\|||\|>>|)><rsub|\|<around*|[|0,1|]>><text|,
+        >\<cal-T\><text|] >\<wedge\><text|
+        >\<sigma\><around*|(|<around*|[|0,1|]>|)>\<subseteq\><around*|[|0,1|]><text|
+        >\<wedge\><text| >f<around*|(|0|)>=1<text| >\<wedge\><text|
+        >f<around*|(|1|)>=0
+      </equation*>
+
+      Hence using [theorem: <reference|continuity composition (1)>] we have\ 
+
+      <\equation*>
+        f\<circ\>\<sigma\>:<around*|[|0,1|]>\<rightarrow\>X<text| is
+        continuous [using ><around*|(|\<cal-T\><rsub|<around*|\|||\|>>|)><rsub|<around*|[|0,1|]>>,\<cal-T\><text|]>
+      </equation*>
+
+      Further <math|<around*|(|f\<circ\>\<sigma\>|)><around*|(|0|)>=f<around*|(|\<sigma\><around*|(|0|)>|)>=f<around*|(|1|)>=y>
+      and <math|<around*|(|f\<circ\>\<sigma\>|)><around*|(|1|)>=f<around*|(|\<sigma\><around*|(|1|)>|)>=f<around*|(|0|)>=x>.
+      Hence we have that\ 
+
+      <\equation*>
+        y\<sim\><rsub|p>x
+      </equation*>
+
+      <item*|transitive>If <math|x\<sim\><rsub|p>y> and
+      <math|y\<sim\><rsub|p>z> then there exist two continuous [using
+      <math|<around*|(|\<cal-T\><rsub|<around*|\|||\|>>|)><rsub|\|<around*|[|0,1|]>>>,
+      <math|\<cal-T\>>] <math|f:<around*|[|0,1|]>\<rightarrow\>X> and
+      <math|g:<around*|[|0,1|]>\<rightarrow\>X> such that
+      <math|f<around*|(|0|)>=x\<wedge\>f<around*|(|1|)>=y=g<around*|(|0|)>\<wedge\>g<around*|(|1|)>=z>.
+      Using [lemma: <reference|continuity [a,b] is homeomorph with [c,d]>]
+      there exists two homeomorphic functions
+      <math|\<varphi\>:<around*|[|0,<frac|1|2>|]>\<rightarrow\><around*|[|0,1|]>>
+      and <math|\<psi\>:<around*|[|<frac|1|2>,1|]>\<rightarrow\><around*|[|0,1|]>>
+      such that\ 
+
+      <\equation*>
+        \<varphi\><around*|(|0|)>=0\<wedge\>\<varphi\><around*|(|<frac|1|2>|)>=1\<wedge\>\<psi\><around*|(|<frac|1|2>|)>=0\<wedge\>\<psi\><around*|(|1|)>=1
+      </equation*>
+
+      Using then [theorem: <reference|continuity composition
+      (1)>,<reference|continuity and subspace topology (4)>] we have that\ 
+
+      <\equation*>
+        f\<circ\>\<varphi\>:<around*|[|0,<frac|1|2>|]>\<rightarrow\>X<text|
+        is continuous [using ><around*|(|\<cal-T\><rsub|<around*|\|||\|>>|)><rsub|\|<around*|[|0,<frac|1|2>|]>>,\<cal-T\><text|]>
+      </equation*>
+
+      <\equation*>
+        g\<circ\>\<psi\>:<around*|[|0,<frac|1|2>|]>\<rightarrow\>X<text| is
+        continuous [using ><around*|(|\<cal-T\><rsub|<around*|\|||\|>>|)><rsub|\|<around*|[|<frac|1|2>,1|]>>,\<cal-T\><text|]>
+      </equation*>
+
+      As <math|<around*|[|0,<frac|1|2>|]><big|cap><around*|[|<frac|1|2>,1|]>=<around*|{|<frac|1|2>|}>>
+      and
+
+      <\equation*>
+        <around*|(|f\<circ\>\<varphi\>|)><around*|(|<frac|1|2>|)>=f<around*|(|\<varphi\><around*|(|<frac|1|2>|)>|)>=f<around*|(|1|)>=y=g<around*|(|0|)>=g<around*|(|\<psi\><around*|(|<frac|1|2>|)>|)>=<around*|(|g\<circ\>\<psi\>|)><around*|(|<frac|1|3>|)>
+      </equation*>
+
+      we can use the pasting lemma [see lemma: <reference|continuity pasting
+      lemma>] so that the function\ 
+
+      <\equation*>
+        h=<around*|(|f\<circ\>\<varphi\>|)><big|cup><around*|(|g\<circ\>\<psi\>|)>:<around*|[|0,1|]>\<rightarrow\>X<text|
+        defined by >h<around*|(|x|)>=<choice|<tformat|<table|<row|<cell|<around*|(|f\<circ\>\<varphi\>|)><around*|(|x|)><text|
+        if >x\<in\><around*|[|0,<frac|1|2>|]>>>|<row|<cell|<around*|(|g\<circ\>\<psi\>|)><around*|(|x|)><text|
+        if >x\<in\><around*|[|<frac|1|2>,1|]>>>>>>
+      </equation*>
+
+      is continuous using the topologies <math|<around*|(|\<cal-T\><rsub|<around*|\|||\|>>|)><rsub|<around*|[|0,1|]>>>,
+      <math|\<cal-T\>>. Further we have that\ 
+
+      <\equation*>
+        h<around*|(|0|)>\<equallim\><rsub|0\<in\><around*|[|0,<frac|1|2>|]>><around*|(|f\<circ\>\<varphi\>|)><around*|(|1|)>=f<around*|(|\<varphi\><around*|(|0|)>|)>=f<around*|(|0|)>=x
+      </equation*>
+
+      <\equation*>
+        h<around*|(|1|)><below|=|1\<in\><around*|[|<frac|1|2>,1|]>><around*|(|g\<circ\>\<psi\>|)><around*|(|1|)>=g<around*|(|\<psi\><around*|(|1|)>|)>=g<around*|(|1|)>=z
+      </equation*>
+
+      which proves that\ 
+
+      <\equation*>
+        x\<sim\><rsub|p>z
+      </equation*>
+    </description>
+  </proof>
+
+  We prove now that a path connected component is a maximal component subset
+  of <math|X>.
+
+  <\theorem>
+    <label|connected path connected component is maximal>Let
+    <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> be a topological space
+    and <math|C> a path connected component then we have:\ 
+
+    <\enumerate>
+      <item><math|C> is path connected.
+
+      <item>If <math|A> is a path connected subset such that
+      <math|C\<subseteq\>A> then <math|C=A>
+
+      <item>If <math|A> is a path connected subset such that
+      <math|C<big|cap>A\<neq\>\<varnothing\>> then <math|A\<subseteq\>C>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    If <math|C> is a path connected component of <math|X> then there exist a
+    <math|x\<in\>X> such that
+
+    <\equation*>
+      C=\<sim\><rsub|p><around*|[|x|]>=<around*|{|y\<in\>X\|y\<sim\><rsub|p>x|}>
+    </equation*>
+
+    <\enumerate>
+      <item>Let <math|y,z\<in\>C> then <math|y\<sim\><rsub|p>x\<wedge\>z\<sim\><rsub|p>x>
+      so that by transitiviy and symmetry <math|y\<sim\><rsub|p>z> which
+      proves that <math|C> is path connected.
+
+      <item>Let <math|A> be a path connected set such that
+      <math|C\<subseteq\>A>. As <math|x\<sim\><rsub|p>x>
+      <math|x\<in\>C\<Rightarrow\>x\<in\>A>. Let <math|y\<in\>A> then as
+      <math|A> is path connected we have that <math|y\<sim\><rsub|p>x> which
+      proves that <math|y\<in\>C>. Hence we have tht
+      <math|A\<subseteq\>C\<subseteq\>A> so that\ 
+
+      <\equation*>
+        C=A
+      </equation*>
+
+      <item>Let <math|A> be a path connected set such that
+      <math|A<big|cap>C\<neq\>\<varnothing\>> then there exist a <math|z>
+      such that <math|z\<in\>A\<wedge\>z\<in\>C> so that
+      <math|z\<sim\><rsub|p>x>. Let <math|y\<in\>A> then as <math|A> is path
+      connected <math|y\<sim\><rsub|p>z> so that by transitivity
+      <math|y\<sim\><rsub|p>x> which proves that <math|y\<in\>C>. Hence we
+      have that\ 
+
+      <\equation*>
+        A\<subseteq\>C
+      </equation*>
+    </enumerate>
+  </proof>
+
+  Next we introduce the concept of local connectivy.
+
+  <\definition>
+    <label|connected local connected>Let <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>>
+    be a topological space then <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>>
+    is locally connected if there exist a basis
+    <math|\<cal-B\>\<subseteq\>\<cal-T\>> for <math|\<cal-T\>> such that
+    <math|\<forall\>B\<in\>\<cal-B\>> <math|B> is connected. In other words a
+    locally connected space is a space whose topology has a basis of
+    connected sets.<math|>
+  </definition>
+
+  Likewise we have the concept of a locally path connected space.
+
+  <\definition>
+    <label|connected local path connected>Let
+    <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> be a topological space
+    then <math|X> is locally path connected if there exist a basis
+    <math|\<cal-B\>\<subseteq\>\<cal-T\>> for <math|\<cal-T\>> such that
+    <math|\<forall\>B\<in\>\<cal-B\>> <math|B> is path connected. In other
+    words a locally path connected space is a space whose topology has a
+    basis of path connected sets.
+  </definition>
+
+  <\theorem>
+    <label|connected properties of locally connected spaces>Let
+    <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> be locally path
+    connected space then we have:
+
+    <\enumerate>
+      <item>Every path connected component of <math|X> is open in <math|X>.
+      In other words <math|\<forall\>x\<in\>X>
+      <math|\<sim\><rsub|p><around*|[|x|]>\<in\>\<cal-T\>>.
+
+      <item><math|\<forall\>x\<in\>X> <math|\<sim\><rsub|p><around*|[|x|]>=\<sim\><around*|[|x|]>>.
+      In loose terms the path connected components and components are equal.
+
+      <item>Every component of <math|X> is open in <math|X>. In other words
+      <math|\<forall\>x\<in\>X> <math|\<forall\>x\<in\>X>
+      <math|\<sim\><around*|[|x|]>\<in\>\<cal-T\>>.
+
+      <item>If <math|X\<neq\>\<varnothing\>> then we have that\ 
+
+      <\equation*>
+        X<text| is connected >\<Leftrightarrow\><text| >X<text| is path
+        connected>
+      </equation*>
+
+      <item><math|\<forall\>U\<in\>\<cal-T\>> we have that <math|U> is
+      locally path connected.
+    </enumerate>
+
+    \;
+  </theorem>
+
+  <\proof>
+    \ As <math|X> is locally path connected there exist a basis
+    <math|\<cal-B\>\<subseteq\>\<cal-T\>> such that
+    <math|\<forall\>B\<in\>\<cal-B\>> <math|B> is path connected.
+
+    <\enumerate>
+      <item>Let <math|C> be a path connected component then there exist a
+      <math|x\<in\>X> such that <rigid|<math|C\<equallim\>\<sim\><rsub|p><around*|[|x|]>=<around*|{|y\<in\>X\|y\<sim\><rsub|p>x|}>>>.
+      Let <math|y\<in\>C> then as <math|X> is open, <math|y\<in\>X> and
+      <math|\<cal-B\>> is a basis for <math|\<cal-T\>> there exist a open
+      path connected set <math|U\<in\>\<cal-B\>> such that <math|y\<in\>U>.
+      Hence <math|<rigid|y\<in\>U<big|cap>C\<Rightarrow\>U<big|cap>C\<neq\>\<varnothing\>>>,
+      using then [theorem: <reference|connected path connected component is
+      maximal>] it follows that <math|U\<subseteq\>C>. Hence
+      <math|\<forall\>y\<in\>C> we found a open set <math|U> with
+      <math|x\<in\>U\<subseteq\>C> which proves by [theorem:
+      <reference|topology open set condition>] that <math|U> is open in
+      <math|X>. \ \ 
+
+      <item>Let <math|x\<in\>X> then <math|\<sim\><rsub|p><around*|[|x|]>> is
+      path connected by [theorem: <reference|connected path connected
+      component is maximal>], further by [theorem: <reference|connected path
+      connected spaces are connected spaces>]
+      <math|\<sim\><rsub|p><around*|[|x|]>> is connected. By [theorem:
+      <reference|connected component is maximal>]
+      <math|\<sim\><around*|[|x|]>> is also connected. As
+      <math|x\<in\>\<sim\><around*|[|x|]><big|cap>\<sim\><rsub|p><around*|[|x|]>>
+      it follows that <math|\<sim\><around*|[|x|]><big|cap>\<sim\><rsub|p><around*|[|x|]>\<neq\>\<varnothing\>>
+      so that by [theorem: <reference|connected component is maximal>]\ 
+
+      <\equation>
+        <label|eq 14.323.401>\<sim\><rsub|p><around*|[|x|]>\<subseteq\>\<sim\><around*|[|x|]>
+      </equation>
+
+      Now for the opposite in inclusion. Consider the subspace topology
+      <math|\<cal-T\><rsub|\|\<sim\><around*|[|x|]>>=<around*|{|U<big|cap>\<sim\><around*|[|x|]>\|U\<in\>\<cal-T\>|}>>.
+      As by (1) <math|\<sim\><rsub|p><around*|[|x|]>\<in\>\<cal-T\>> and
+      <math|\<sim\>p<around*|[|x|]><below|=|<text|[eq: <reference|eq
+      14.323.401>]>>\<sim\><rsub|p><around*|[|x|]><big|cap>\<sim\><around*|[|x|]>\<in\>\<cal-T\><rsub|\|\<sim\><around*|[|x|]>>>
+      it follows that\ 
+
+      <\equation>
+        <label|eq 14.324.401>\<sim\><rsub|p><around*|[|x|]>\<in\>\<cal-T\><rsub|\|\<sim\><around*|[|x|]>>
+      </equation>
+
+      Let <math|y\<in\>\<sim\><around*|[|x|]>\\\<sim\><rsub|p><around*|[|x|]>>
+      then as <math|y\<in\>X> and <math|X> is locally path connected there
+      exist a path connected open set <math|W\<in\>\<cal-B\>\<subseteq\>\<cal-T\>>
+      such that <math|y\<in\>W>. If <math|W<big|cap>\<sim\><rsub|p><around*|[|x|]>\<neq\>\<varnothing\>>
+      then by [theorem: <reference|connected path connected component is
+      maximal>] we have that <math|W\<subseteq\>\<sim\><rsub|p><around*|[|x|]>>
+      from which it follows that <math|y\<in\>\<sim\><rsub|p><around*|[|x|]>>
+      contradicting <math|y\<in\>\<sim\><around*|[|x|]>\\\<sim\><rsub|p><around*|[|x|]>>.
+      Hence we must have that <math|W<big|cap>\<sim\><rsub|p><around*|[|x|]>=\<varnothing\>>
+      hence <math|<around*|(|W<big|cap>\<sim\><around*|[|x|]>|)><big|cap>\<sim\><rsub|p><around*|[|x|]>=\<varnothing\>>
+      which proves that\ 
+
+      <\equation*>
+        y\<in\><around*|(|W<big|cap>\<sim\><around*|[|x|]>|)>\<subseteq\>\<sim\><around*|[|x|]>\\\<sim\><rsub|p><around*|[|x|]><text|
+        where ><around*|(|W<big|cap>\<sim\><around*|[|x|]>|)><below|\<in\>|W\<in\>\<cal-T\>>\<cal-T\><rsub|\|\<sim\><around*|[|x|]>>
+      </equation*>
+
+      As <math|y\<in\>\<sim\><around*|[|x|]>\\\<sim\><rsub|p><around*|[|x|]>>
+      has ben choosen arbitray it follows from [theorem: <reference|topology
+      open set condition>] that <math|><math|\<sim\><around*|[|x|]>\\\<sim\><rsub|p><around*|[|x|]>>
+      is open from which it follows that <math|\<sim\><rsub|p><around*|[|x|]>>
+      is closed. Combining this with [eq: <reference|eq 14.324.401>] gives\ 
+
+      <\equation*>
+        \<sim\><rsub|p><around*|[|x|]><text| is open and closed in
+        >\<cal-T\><rsub|\|\<sim\><around*|[|x|]>>
+      </equation*>
+
+      As <math|\<sim\><around*|[|x|]>> is connected it follows from [theorem:
+      <reference|connected alternative definition>] that
+      <math|\<sim\><rsub|p><around*|[|x|]>=\<varnothing\>> or
+      <math|\<sim\><rsub|p><around*|[|x|]>>. As
+      <math|x\<in\>\<sim\><rsub|p><around*|[|x|]>> it follows that we must
+      have that\ 
+
+      <\equation*>
+        \<sim\><rsub|p><around*|[|x|]>=\<sim\><around*|[|x|]>
+      </equation*>
+
+      <item>If <math|C> is a component then there exist a <math|x\<in\>X> so
+      that <math|C=\<sim\><around*|[|x|]>>, using (2) we have that
+      <math|\<sim\><around*|[|x|]>=\<sim\><rsub|p><around*|[|x|]>> and by (1)
+      that <math|\<sim\><rsub|p><around*|[|x|]>> is open in <math|X>. Hence
+      <math|C> is open in <math|X>.
+
+      <item>\ 
+
+      <\description>
+        <item*|<math|\<Rightarrow\>>>As <math|X\<neq\>\<varnothing\>> there
+        exist a <math|x<rsub|0>\<in\>X>.\ 
+
+        <\equation>
+          <label|eq 14.325.401>U=\<sim\><rsub|p><around*|[|x<rsub|0>|]><below|=|def><around*|{|z\<in\>X\|z\<sim\><rsub|p>x<rsub|0>|}>
+        </equation>
+
+        and\ 
+
+        <\equation>
+          <label|eq 14.326.401>V=<around*|{|z\<in\>X\|\<neg\><around*|(|z\<sim\><rsub|p>x<rsub|0>|)>|}>
+        </equation>
+
+        Then we have that\ 
+
+        <\equation>
+          <label|eq 14.327.401>X=U<big|cup>V<text| and
+          >U<big|cap>V=\<varnothing\>
+        </equation>
+
+        Further by (1) we have that\ 
+
+        <\equation>
+          <label|eq 14.328.401>U=\<sim\><rsub|p><around*|[|x<rsub|0>|]>\<in\>\<cal-T\>
+        </equation>
+
+        Let <math|z\<in\>V> then as <math|z\<in\>X> is a open set and
+        <math|X> is locally path connected there exist a path connected set
+        <math|W\<in\>\<cal-T\>> such that <math|z\<in\>W>. Assume that
+        <math|U<big|cap>W\<neq\>\<varnothing\>> then there exist a <math|u>
+        such that <math|u\<in\>U> and <math|u\<in\>W>. As
+        <math|U<below|=|<text|[eq: <reference|eq
+        14.325.401>>>\<sim\><rsub|p><around*|[|x<rsub|0>|]>> we have
+        <math|u\<sim\><rsub|p>x<rsub|0>> and. as <math|W> is path connected,
+        we have <math|z\<sim\><rsub|p>u>, hence using transitiviy it follows
+        that <math|z\<sim\><rsub|p>x<rsub|0>> so that <math|z\<in\>U> or
+        <math|z\<in\>V<big|cap>U<below|=|<text|[eq: <reference|eq
+        14.327.401>]>>\<varnothing\>> a contradiction. Hence the assumption
+        is false and we must have that <math|U<big|cap>W=\<varnothing\>>. As
+
+        <\equation*>
+          W=W<big|cap>X=W<big|cap><around*|(|U<big|cup>V|)>=<around*|(|W<big|cap>U|)><big|cup><around*|(|W<big|cap>V|)>=\<varnothing\><big|cup><around*|(|W<big|cap>V|)>\<subseteq\>V
+        </equation*>
+
+        we have that <math|\<forall\>z\<in\>V> there exist a
+        <math|W\<in\>\<cal-T\>> such that <math|z\<in\>W\<subseteq\>V>. Using
+        [theorem: <reference|topology open set condition>] it follows that\ 
+
+        <\equation>
+          <label|eq 14.329.401>V\<in\>\<cal-T\>
+        </equation>
+
+        As <math|X> is connected, <math|U,V\<in\>\<cal-T\>> [see eqs:
+        <reference|eq 14.328.401>, <reference|eq 14.329.401>] and
+        <math|X=U<big|cup>V\<wedge\>U<big|cap>V> [see eq: <reference|eq
+        14.327.401>] it follows from [definition: <reference|connected
+        space>] that <math|U=\<varnothing\>\<vee\>V=\<varnothing\>>. Given
+        that <rigid|<math|x<rsub|0>\<in\>\<sim\><rsub|p><around*|[|x<rsub|0>|]>=U>>
+        it follows that <math|V=\<varnothing\>>. So that <math|X=U> which, as
+        <math|U=\<sim\><rsub|p><around*|[|x<rsub|0>|]>> is path connected by
+        [theorem: <reference|connected path connected component is maximal>],
+        proves that\ 
+
+        <\equation*>
+          X<text| is path connected>
+        </equation*>
+
+        <item*|<math|\<Leftarrow\>>>This follows from [theorem:
+        <reference|connected path connected spaces are connected spaces>].
+      </description>
+
+      <item>Let <math|U\<in\>\<cal-T\>> and define
+      <math|\<cal-C\>=<around*|{|B\<in\>\<cal-B\>\|B\<subseteq\>U|}>\<subseteq\>\<cal-B\>\<subseteq\>\<cal-T\>>
+      then for <math|B\<in\>\<cal-C\>> we have that
+      <math|<rigid|B<below|=|B\<subseteq\>U>B<big|cap>U<below|\<in\>|B\<in\>\<cal-T\>>\<cal-T\><rsub|\|U>>>
+      so that\ 
+
+      <\equation>
+        <label|eq 14.330.401>\<cal-C\>\<subseteq\>\<cal-T\><rsub|\|U>
+      </equation>
+
+      Further as every set in <math|\<cal-B\>> is path connected we have that\ 
+
+      <\equation>
+        <label|eq 14.331.401>\<forall\>C\<in\>\<cal-C\><text| >C<text| is
+        path connected>
+      </equation>
+
+      Let <math|V\<in\>\<cal-T\><rsub|\|U>> then there exist a
+      <math|V<rprime|'>\<in\>\<cal-T\>> such that
+
+      <\equation*>
+        V=V<rprime|'><big|cap>U<text| and as
+        >V<rprime|'>,U\<in\>\<cal-T\><text| we have also >V\<in\>\<cal-T\>
+      </equation*>
+
+      Let <math|x\<in\>V> then as <math|V\<in\>\<cal-T\>> and
+      <math|\<cal-B\>> is a basis for <math|\<cal-T\>> there exist a
+      <math|W\<in\>\<cal-B\>> such that <math|x\<in\>W\<subseteq\>V>. As
+      <math|V\<subseteq\>U> we have also <math|W\<subseteq\>U> so that
+      <math|W\<in\>\<cal-C\>>. Hence\ 
+
+      <\equation>
+        <label|eq 14.332.401>\<cal-C\><text| is a basis for >T<rsub|\|U>
+      </equation>
+
+      From ]eqs: <reference|eq 14.330.401>, <reference|eq 14.331.401> and
+      <reference|eq 14.332.401>] it follows that
+
+      <\equation*>
+        <around*|\<langle\>|U,\<cal-T\><rsub|\|U>|\<rangle\>><text| is
+        locally path connected>
+      </equation*>
+    </enumerate>
+  </proof>
+
+  \;
+
+  \;
+
+  \;
 
   \;
 
@@ -25270,7 +26023,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|13>
-    <associate|page-first|685>
+    <associate|page-first|683>
     <associate|page-medium|papyrus>
     <associate|par-first|0tab>
     <associate|section-nr|0>
@@ -25280,27 +26033,29 @@
 
 <\references>
   <\collection>
-    <associate|Hahn-Banach theorem|<tuple|14.219|?>>
+    <associate|Hahn-Banach theorem|<tuple|14.220|?>>
     <associate|auto-1|<tuple|14|?>>
     <associate|auto-10|<tuple|<with|mode|<quote|math>|A<rprime|'>>|?>>
-    <associate|auto-100|<tuple|14.10.2|?>>
-    <associate|auto-101|<tuple|bounded uniform convergence|?>>
-    <associate|auto-102|<tuple|14.10.3|?>>
-    <associate|auto-103|<tuple|series|?>>
-    <associate|auto-104|<tuple|14.10.3.1|?>>
-    <associate|auto-105|<tuple|14.10.3.2|?>>
-    <associate|auto-106|<tuple|absolute convergence|?>>
-    <associate|auto-107|<tuple|dominant convergence|?>>
-    <associate|auto-108|<tuple|14.10.4|?>>
-    <associate|auto-109|<tuple|Baire Category theorem|?>>
+    <associate|auto-100|<tuple|14.10.1|?>>
+    <associate|auto-101|<tuple|14.10.2|?>>
+    <associate|auto-102|<tuple|bounded uniform convergence|?>>
+    <associate|auto-103|<tuple|14.10.3|?>>
+    <associate|auto-104|<tuple|series|?>>
+    <associate|auto-105|<tuple|14.10.3.1|?>>
+    <associate|auto-106|<tuple|14.10.3.2|?>>
+    <associate|auto-107|<tuple|absolute convergence|?>>
+    <associate|auto-108|<tuple|dominant convergence|?>>
+    <associate|auto-109|<tuple|14.10.4|?>>
     <associate|auto-11|<tuple|14.1.2|?>>
-    <associate|auto-110|<tuple|open mapping theorem|?>>
-    <associate|auto-111|<tuple|14.11|?>>
-    <associate|auto-112|<tuple|14.11.1|?>>
-    <associate|auto-113|<tuple|connected space|?>>
-    <associate|auto-114|<tuple|disconnected space|?>>
-    <associate|auto-115|<tuple|intermediate value theorem|?>>
-    <associate|auto-116|<tuple|14.11.2|?>>
+    <associate|auto-110|<tuple|Baire Category theorem|?>>
+    <associate|auto-111|<tuple|open mapping theorem|?>>
+    <associate|auto-112|<tuple|14.11|?>>
+    <associate|auto-113|<tuple|14.11.1|?>>
+    <associate|auto-114|<tuple|connected space|?>>
+    <associate|auto-115|<tuple|disconnected space|?>>
+    <associate|auto-116|<tuple|intermediate value theorem|?>>
+    <associate|auto-117|<tuple|14.11.2|?>>
+    <associate|auto-118|<tuple|14.11.2|?>>
     <associate|auto-12|<tuple|box topology|?>>
     <associate|auto-13|<tuple|14.1.3|?>>
     <associate|auto-14|<tuple|dense set|?>>
@@ -25367,148 +26122,164 @@
     <associate|auto-7|<tuple|<with|mode|<quote|math>|\<cal-T\><rsup|\<cal-C\>>>|?>>
     <associate|auto-70|<tuple|compact class|?>>
     <associate|auto-71|<tuple|14.8.1|?>>
-    <associate|auto-72|<tuple|14.8.1.1|?>>
-    <associate|auto-73|<tuple|filter base|?>>
-    <associate|auto-74|<tuple|neighborhood filter base|?>>
-    <associate|auto-75|<tuple|converging to a point|?>>
-    <associate|auto-76|<tuple|accumaling at a point|?>>
-    <associate|auto-77|<tuple|<with|mode|<quote|math>|\<frak-U\>\<rightarrow\>x>|?>>
-    <associate|auto-78|<tuple|<with|mode|<quote|math>|\<frak-U\>\<succ\>x>|?>>
-    <associate|auto-79|<tuple|subordinate filter bases|?>>
+    <associate|auto-72|<tuple|14.8.2|?>>
+    <associate|auto-73|<tuple|14.8.2.1|?>>
+    <associate|auto-74|<tuple|filter base|?>>
+    <associate|auto-75|<tuple|neighborhood filter base|?>>
+    <associate|auto-76|<tuple|converging to a point|?>>
+    <associate|auto-77|<tuple|accumaling at a point|?>>
+    <associate|auto-78|<tuple|<with|mode|<quote|math>|\<frak-U\>\<rightarrow\>x>|?>>
+    <associate|auto-79|<tuple|<with|mode|<quote|math>|\<frak-U\>\<succ\>x>|?>>
     <associate|auto-8|<tuple|limit point|?>>
-    <associate|auto-80|<tuple|<with|mode|<quote|math>|\<frak-W\>\<geqslant\>\<frak-U\>>|?>>
-    <associate|auto-81|<tuple|<with|mode|<quote|math>|\<frak-U\>\<ll\>\<frak-W\>>|?>>
-    <associate|auto-82|<tuple|<with|mode|<quote|math>|\<frak-U\>\<sqsubseteq\>\<frak-W\>>|?>>
-    <associate|auto-83|<tuple|ultra filter|?>>
-    <associate|auto-84|<tuple|maximum filter base|?>>
-    <associate|auto-85|<tuple|14.8.1.2|?>>
-    <associate|auto-86|<tuple|Tychonoff's theorem|?>>
-    <associate|auto-87|<tuple|14.8.1.3|?>>
-    <associate|auto-88|<tuple|14.9|?>>
-    <associate|auto-89|<tuple|14.9.1|?>>
+    <associate|auto-80|<tuple|subordinate filter bases|?>>
+    <associate|auto-81|<tuple|<with|mode|<quote|math>|\<frak-W\>\<geqslant\>\<frak-U\>>|?>>
+    <associate|auto-82|<tuple|<with|mode|<quote|math>|\<frak-U\>\<ll\>\<frak-W\>>|?>>
+    <associate|auto-83|<tuple|<with|mode|<quote|math>|\<frak-U\>\<sqsubseteq\>\<frak-W\>>|?>>
+    <associate|auto-84|<tuple|ultra filter|?>>
+    <associate|auto-85|<tuple|maximum filter base|?>>
+    <associate|auto-86|<tuple|14.8.2.2|?>>
+    <associate|auto-87|<tuple|Tychonoff's theorem|?>>
+    <associate|auto-88|<tuple|14.8.2.3|?>>
+    <associate|auto-89|<tuple|14.9|?>>
     <associate|auto-9|<tuple|accumulation point|?>>
-    <associate|auto-90|<tuple|14.9.2|?>>
-    <associate|auto-91|<tuple|14.9.3|?>>
-    <associate|auto-92|<tuple|<with|mode|<quote|math>|<below|lim
-    sup|n\<rightarrow\>\<infty\>> x<rsub|n>>|?>>
+    <associate|auto-90|<tuple|14.9.1|?>>
+    <associate|auto-91|<tuple|14.9.2|?>>
+    <associate|auto-92|<tuple|14.9.3|?>>
     <associate|auto-93|<tuple|<with|mode|<quote|math>|<below|lim
+    sup|n\<rightarrow\>\<infty\>> x<rsub|n>>|?>>
+    <associate|auto-94|<tuple|<with|mode|<quote|math>|<below|lim
     inf|n\<rightarrow\>\<infty\>> x<rsub|n>>|?>>
-    <associate|auto-94|<tuple|14.10|?>>
-    <associate|auto-95|<tuple|Cauchy sequence|?>>
+    <associate|auto-95|<tuple|14.10|?>>
     <associate|auto-96|<tuple|Cauchy sequence|?>>
-    <associate|auto-97|<tuple|complete space|?>>
-    <associate|auto-98|<tuple|Banach space|?>>
-    <associate|auto-99|<tuple|14.10.1|?>>
-    <associate|bounded B(X,Y) is a normed space|<tuple|14.390|?>>
-    <associate|bounded function|<tuple|14.388|?>>
-    <associate|bounded function B(X,Y) is a vector space|<tuple|14.389|?>>
-    <associate|bounded uniform convergence and continuity|<tuple|14.393|?>>
+    <associate|auto-97|<tuple|Cauchy sequence|?>>
+    <associate|auto-98|<tuple|complete space|?>>
+    <associate|auto-99|<tuple|Banach space|?>>
+    <associate|bounded B(X,Y) is a normed space|<tuple|14.396|?>>
+    <associate|bounded function|<tuple|14.394|?>>
+    <associate|bounded function B(X,Y) is a vector space|<tuple|14.395|?>>
+    <associate|bounded uniform convergence and continuity|<tuple|14.399|?>>
     <associate|bounded uniform convergence is convergence in supremum
-    nrom|<tuple|14.394|?>>
+    nrom|<tuple|14.400|?>>
     <associate|closed set properties|<tuple|14.22|?>>
     <associate|compact Hausdorff space is regular and
-    compact|<tuple|14.275|?>>
-    <associate|compact Heine Borel (1)|<tuple|14.271|?>>
-    <associate|compact Heine Borel (2)|<tuple|14.320|?>>
-    <associate|compact Heine-Borel (1)|<tuple|14.312|?>>
-    <associate|compact Heine-Borel complex|<tuple|14.319|?>>
-    <associate|compact Heine-Borel general form|<tuple|14.321|?>>
-    <associate|compact Tychonoff's|<tuple|14.308|?>>
-    <associate|compact Tychonoff's (1)|<tuple|14.309|?>>
-    <associate|compact and basis|<tuple|14.260|?>>
-    <associate|compact and bounded|<tuple|14.265|?>>
-    <associate|compact and bounded (1)|<tuple|14.266|?>>
-    <associate|compact and continuous functions|<tuple|14.267|?>>
-    <associate|compact ball in R^n|<tuple|14.315|?>>
-    <associate|compact class|<tuple|14.278|?>>
-    <associate|compact class and sets of compact sets|<tuple|14.279|?>>
-    <associate|compact closed bounded sets in R are compact|<tuple|14.272|?>>
+    compact|<tuple|14.276|?>>
+    <associate|compact Heine Borel (1)|<tuple|14.272|?>>
+    <associate|compact Heine Borel (2)|<tuple|14.326|?>>
+    <associate|compact Heine-Borel (1)|<tuple|14.318|?>>
+    <associate|compact Heine-Borel complex|<tuple|14.325|?>>
+    <associate|compact Heine-Borel general form|<tuple|14.327|?>>
+    <associate|compact Tychonoff's|<tuple|14.314|?>>
+    <associate|compact Tychonoff's (1)|<tuple|14.315|?>>
+    <associate|compact and basis|<tuple|14.261|?>>
+    <associate|compact and bounded|<tuple|14.266|?>>
+    <associate|compact and bounded (1)|<tuple|14.267|?>>
+    <associate|compact and continuous functions|<tuple|14.268|?>>
+    <associate|compact ball in R^n|<tuple|14.321|?>>
+    <associate|compact class|<tuple|14.279|?>>
+    <associate|compact class and sets of compact sets|<tuple|14.280|?>>
+    <associate|compact closed bounded sets in R are compact|<tuple|14.273|?>>
     <associate|compact compact implies limit point
-    compactness|<tuple|14.277|?>>
+    compactness|<tuple|14.278|?>>
     <associate|compact continuous function on a compact is uniform
-    continuous|<tuple|14.280|?>>
-    <associate|compact empty set|<tuple|14.261|?>>
+    continuous|<tuple|14.281|?>>
+    <associate|compact empty set|<tuple|14.262|?>>
     <associate|compact every closed subset of a compact set is
-    compact|<tuple|14.269|?>>
-    <associate|compact extreme value theorem|<tuple|14.274|?>>
-    <associate|compact finite union of compact sets|<tuple|14.263|?>>
+    compact|<tuple|14.270|?>>
+    <associate|compact extreme value theorem|<tuple|14.275|?>>
+    <associate|compact finite union of compact sets|<tuple|14.264|?>>
     <associate|compact image of a cmpact set by a continuous
-    function|<tuple|14.273|?>>
-    <associate|compact isometric isomorphism|<tuple|14.318|?>>
-    <associate|compact limit point compact|<tuple|14.276|?>>
-    <associate|compact precompact set|<tuple|14.257|?>>
-    <associate|compact rectangles are compact|<tuple|14.311|?>>
-    <associate|compact set|<tuple|14.256|?>>
-    <associate|compact set alternative definition|<tuple|14.259|?>>
-    <associate|compact set is closed in a Hausdorff space|<tuple|14.268|?>>
-    <associate|compact singleton|<tuple|14.262|?>>
-    <associate|compact space|<tuple|14.255|?>>
-    <associate|compact space is compact subset|<tuple|14.258|?>>
-    <associate|compact subspace equivalences|<tuple|14.264|?>>
-    <associate|complete Baire Category|<tuple|14.436|?>>
-    <associate|complete Cauchy metric|<tuple|14.369|?>>
-    <associate|complete Cauchy normed|<tuple|14.370|?>>
-    <associate|complete Cauchy sequence is bounded (2)|<tuple|14.372|?>>
-    <associate|complete L(X,Y) is Banach|<tuple|14.385|?>>
-    <associate|complete L(X1,..,Xn;Y) is Banach|<tuple|14.386|?>>
-    <associate|complete L^n(X;Y) is Banach|<tuple|14.387|?>>
-    <associate|complete R^n is complete|<tuple|14.382|?>>
+    function|<tuple|14.274|?>>
+    <associate|compact isometric isomorphism|<tuple|14.324|?>>
+    <associate|compact limit point compact|<tuple|14.277|?>>
+    <associate|compact locally compact|<tuple|14.282|?>>
+    <associate|compact locally finite|<tuple|14.285|?>>
+    <associate|compact paracompactness|<tuple|14.286|?>>
+    <associate|compact precompact set|<tuple|14.258|?>>
+    <associate|compact rectangles are compact|<tuple|14.317|?>>
+    <associate|compact refinement|<tuple|14.284|?>>
+    <associate|compact set|<tuple|14.257|?>>
+    <associate|compact set alternative definition|<tuple|14.260|?>>
+    <associate|compact set is closed in a Hausdorff space|<tuple|14.269|?>>
+    <associate|compact singleton|<tuple|14.263|?>>
+    <associate|compact space|<tuple|14.256|?>>
+    <associate|compact space is compact subset|<tuple|14.259|?>>
+    <associate|compact subspace equivalences|<tuple|14.265|?>>
+    <associate|complete Baire Category|<tuple|14.442|?>>
+    <associate|complete Cauchy metric|<tuple|14.375|?>>
+    <associate|complete Cauchy normed|<tuple|14.376|?>>
+    <associate|complete Cauchy sequence is bounded (2)|<tuple|14.378|?>>
+    <associate|complete L(X,Y) is Banach|<tuple|14.391|?>>
+    <associate|complete L(X1,..,Xn;Y) is Banach|<tuple|14.392|?>>
+    <associate|complete L^n(X;Y) is Banach|<tuple|14.393|?>>
+    <associate|complete R^n is complete|<tuple|14.388|?>>
     <associate|complete bounded functions to a complete space are
-    complete|<tuple|14.395|?>>
+    complete|<tuple|14.401|?>>
     <associate|complete closed subset of a complete space is
-    complete|<tuple|14.380|?>>
-    <associate|complete compact spaces are complete|<tuple|14.379|?>>
+    complete|<tuple|14.386|?>>
+    <associate|complete compact spaces are complete|<tuple|14.385|?>>
     <associate|complete continuous linear isomorphism is a
-    homeomorphism|<tuple|14.440|?>>
-    <associate|complete convergence implies Cauchy|<tuple|14.373|?>>
+    homeomorphism|<tuple|14.446|?>>
+    <associate|complete convergence implies Cauchy|<tuple|14.379|?>>
     <associate|complete every finite dimensional normed space is a Banach
-    space|<tuple|14.383|?>>
+    space|<tuple|14.389|?>>
     <associate|complete limit point of a Cauchy sequence is unique in a
-    metric space|<tuple|14.378|?>>
-    <associate|complete open mapping theorem|<tuple|14.439|?>>
-    <associate|complete product of Banach spaces|<tuple|14.376|?>>
-    <associate|complete sequence and limit point|<tuple|14.377|?>>
-    <associate|complete set of real numbers|<tuple|14.381|?>>
-    <associate|complete space|<tuple|14.375|?>>
-    <associate|complete the complex numbers are complete|<tuple|14.384|?>>
-    <associate|complete uniform convergion|<tuple|14.391|?>>
-    <associate|connected alternative definition|<tuple|14.447|?>>
-    <associate|connected closed interval is connected|<tuple|14.451|?>>
-    <associate|connected component|<tuple|14.455|?>>
-    <associate|connected component is maximal|<tuple|14.456|?>>
-    <associate|connected disconnected space|<tuple|14.442|?>>
-    <associate|connected generalized intervals|<tuple|14.452|?>>
+    metric space|<tuple|14.384|?>>
+    <associate|complete open mapping theorem|<tuple|14.445|?>>
+    <associate|complete product of Banach spaces|<tuple|14.382|?>>
+    <associate|complete sequence and limit point|<tuple|14.383|?>>
+    <associate|complete set of real numbers|<tuple|14.387|?>>
+    <associate|complete space|<tuple|14.381|?>>
+    <associate|complete the complex numbers are complete|<tuple|14.390|?>>
+    <associate|complete uniform convergion|<tuple|14.397|?>>
+    <associate|connected alternative definition|<tuple|14.453|?>>
+    <associate|connected closed interval is connected|<tuple|14.457|?>>
+    <associate|connected component|<tuple|14.461|?>>
+    <associate|connected component is maximal|<tuple|14.462|?>>
+    <associate|connected convex set|<tuple|14.466|?>>
+    <associate|connected convex set are path connected|<tuple|14.467|?>>
+    <associate|connected disconnected space|<tuple|14.448|?>>
+    <associate|connected generalized intervals|<tuple|14.458|?>>
     <associate|connected image by a real continuous function of a closed
-    interval is a closed interval|<tuple|14.453|?>>
+    interval is a closed interval|<tuple|14.459|?>>
     <associate|connected image of a connected set by a continuous function is
-    connected|<tuple|14.450|?>>
-    <associate|connected intermediate value theorem|<tuple|14.454|?>>
-    <associate|connected path connected|<tuple|14.457|?>>
+    connected|<tuple|14.456|?>>
+    <associate|connected image of a path connected set by a continuous
+    function is path connected|<tuple|14.468|?>>
+    <associate|connected intermediate value theorem|<tuple|14.460|?>>
+    <associate|connected local connected|<tuple|14.473|?>>
+    <associate|connected local path connected|<tuple|14.474|?>>
+    <associate|connected path connected|<tuple|14.464|?>>
+    <associate|connected path connected component|<tuple|14.471|?>>
+    <associate|connected path connected component is
+    maximal|<tuple|14.472|?>>
     <associate|connected path connected spaces are connected
-    spaces|<tuple|14.458|?>>
-    <associate|connected set|<tuple|14.443|?>>
-    <associate|connected set alternative|<tuple|14.444|?>>
-    <associate|connected singleton is connected|<tuple|14.445|?>>
-    <associate|connected space|<tuple|14.441|?>>
-    <associate|connected subset of disconnected set|<tuple|14.448|?>>
-    <associate|connected union of connected subsets|<tuple|14.449|?>>
-    <associate|continuity 1/f is continuous|<tuple|14.165|?>>
-    <associate|continuity 1/f^2 is continuous|<tuple|14.166|?>>
-    <associate|continuity Id is a homeomorphism|<tuple|14.182|?>>
-    <associate|continuity K^n|<tuple|14.222|?>>
-    <associate|continuity K^n norm|<tuple|14.229|?>>
+    spaces|<tuple|14.465|?>>
+    <associate|connected path connection|<tuple|14.463|?>>
+    <associate|connected properties of locally connected
+    spaces|<tuple|14.475|?>>
+    <associate|connected set|<tuple|14.449|?>>
+    <associate|connected set alternative|<tuple|14.450|?>>
+    <associate|connected singleton is connected|<tuple|14.451|?>>
+    <associate|connected space|<tuple|14.447|?>>
+    <associate|connected subset of disconnected set|<tuple|14.454|?>>
+    <associate|connected union of connected subsets|<tuple|14.455|?>>
+    <associate|continuity 1/f is continuous|<tuple|14.166|?>>
+    <associate|continuity 1/f^2 is continuous|<tuple|14.167|?>>
+    <associate|continuity Id is a homeomorphism|<tuple|14.183|?>>
+    <associate|continuity K^n|<tuple|14.223|?>>
+    <associate|continuity K^n norm|<tuple|14.230|?>>
     <associate|continuity L(X,L(Y,Z)) is isometric with
-    L(X,Y;Z)|<tuple|14.232|?>>
-    <associate|continuity L(X,Y) and sub space|<tuple|14.212|?>>
-    <associate|continuity L(X,Y) is a subspace of Hom(X,Y)|<tuple|14.193|?>>
-    <associate|continuity L^n(X;Y)|<tuple|14.228|?>>
+    L(X,Y;Z)|<tuple|14.233|?>>
+    <associate|continuity L(X,Y) and sub space|<tuple|14.213|?>>
+    <associate|continuity L(X,Y) is a subspace of Hom(X,Y)|<tuple|14.194|?>>
+    <associate|continuity L^n(X;Y)|<tuple|14.229|?>>
     <associate|continuity L^n+1(X;Y) is isomorph with
-    L(X,L^n(X;Y))|<tuple|14.233|?>>
-    <associate|continuity Lispschitz condition|<tuple|14.174|?>>
+    L(X,L^n(X;Y))|<tuple|14.234|?>>
+    <associate|continuity Lispschitz condition|<tuple|14.175|?>>
     <associate|continuity Lispschitz implies uniform
-    continuity|<tuple|14.175|?>>
+    continuity|<tuple|14.176|?>>
     <associate|continuity Re, Img|<tuple|14.137|?>>
-    <associate|continuity [a,b] is homeomorph with [c,d]|<tuple|14.459|?>>
+    <associate|continuity [a,b] is homeomorph with [c,d]|<tuple|14.469|?>>
     <associate|continuity and basis|<tuple|14.131|?>>
     <associate|continuity and subspace topology (1)|<tuple|14.144|?>>
     <associate|continuity and subspace topology (2)|<tuple|14.148|?>>
@@ -25517,83 +26288,83 @@
     <associate|continuity and subspace topology (5)|<tuple|14.145|?>>
     <associate|continuity and subspace topology (6)|<tuple|14.147|?>>
     <associate|continuity at a point|<tuple|14.129|?>>
-    <associate|continuity composition|<tuple|14.152|?>>
-    <associate|continuity composition (1)|<tuple|14.153|?>>
-    <associate|continuity composition is multilinear|<tuple|14.231|?>>
+    <associate|continuity composition|<tuple|14.153|?>>
+    <associate|continuity composition (1)|<tuple|14.154|?>>
+    <associate|continuity composition is multilinear|<tuple|14.232|?>>
     <associate|continuity composition of continuous linear
-    mapping|<tuple|14.211|?>>
+    mapping|<tuple|14.212|?>>
     <associate|continuity composition of multilinear and linear
-    mapping|<tuple|14.230|?>>
+    mapping|<tuple|14.231|?>>
     <associate|continuity constant function|<tuple|14.140|?>>
     <associate|continuity continuous function|<tuple|14.138|?>>
     <associate|continuity continuous function (1)|<tuple|14.139|?>>
-    <associate|continuity distance function is Lipschitz|<tuple|14.179|?>>
+    <associate|continuity distance function is Lipschitz|<tuple|14.180|?>>
     <associate|continuity equivalences|<tuple|14.149|?>>
     <associate|continuity f(x)=a.x+b|<tuple|14.135|?>>
-    <associate|continuity function partial application|<tuple|14.156|?>>
-    <associate|continuity homemorphism between K|<tuple|14.198|?>>
-    <associate|continuity homemorphism between powers of R|<tuple|14.200|?>>
-    <associate|continuity homeomorphism|<tuple|14.180|?>>
-    <associate|continuity homeomorphism (1)|<tuple|14.181|?>>
-    <associate|continuity homeomorphism and closure|<tuple|14.184|?>>
-    <associate|continuity homeomorphism and restriction|<tuple|14.186|?>>
+    <associate|continuity function partial application|<tuple|14.157|?>>
+    <associate|continuity homemorphism between K|<tuple|14.199|?>>
+    <associate|continuity homemorphism between powers of R|<tuple|14.201|?>>
+    <associate|continuity homeomorphism|<tuple|14.181|?>>
+    <associate|continuity homeomorphism (1)|<tuple|14.182|?>>
+    <associate|continuity homeomorphism and closure|<tuple|14.185|?>>
+    <associate|continuity homeomorphism and restriction|<tuple|14.187|?>>
     <associate|continuity homeomorphism between K^n and finite dimensional
-    space|<tuple|14.190|?>>
-    <associate|continuity homeomorphism composition|<tuple|14.185|?>>
+    space|<tuple|14.191|?>>
+    <associate|continuity homeomorphism composition|<tuple|14.186|?>>
     <associate|continuity identity function|<tuple|14.141|?>>
-    <associate|continuity identity function norm|<tuple|14.208|?>>
+    <associate|continuity identity function norm|<tuple|14.209|?>>
     <associate|continuity identity map is linear and
-    continuous|<tuple|14.192|?>>
+    continuous|<tuple|14.193|?>>
     <associate|continuity in a metric space|<tuple|14.132|?>>
     <associate|continuity in a normed space|<tuple|14.133|?>>
     <associate|continuity in normed subspace|<tuple|14.134|?>>
-    <associate|continuity induced topology|<tuple|14.188|?>>
-    <associate|continuity inverse induced topology|<tuple|14.189|?>>
-    <associate|continuity inverse of a homeomorphism|<tuple|14.183|?>>
-    <associate|continuity isometry is a homeomorphism|<tuple|14.187|?>>
-    <associate|continuity linear mapping (1)|<tuple|14.194|?>>
-    <associate|continuity linear mapping between K|<tuple|14.197|?>>
-    <associate|continuity linear mapping between R^n|<tuple|14.199|?>>
-    <associate|continuity multilinear mapping (1)|<tuple|14.221|?>>
-    <associate|continuity multilinear mapping (2) norm|<tuple|14.225|?>>
-    <associate|continuity multilinear mappings vector space|<tuple|14.224|?>>
-    <associate|continuity norm L(x)=a.x|<tuple|14.209|?>>
-    <associate|continuity norm is continuous|<tuple|14.167|?>>
-    <associate|continuity norm is uniform continuous|<tuple|14.171|?>>
+    <associate|continuity induced topology|<tuple|14.189|?>>
+    <associate|continuity inverse induced topology|<tuple|14.190|?>>
+    <associate|continuity inverse of a homeomorphism|<tuple|14.184|?>>
+    <associate|continuity isometry is a homeomorphism|<tuple|14.188|?>>
+    <associate|continuity linear mapping (1)|<tuple|14.195|?>>
+    <associate|continuity linear mapping between K|<tuple|14.198|?>>
+    <associate|continuity linear mapping between R^n|<tuple|14.200|?>>
+    <associate|continuity multilinear mapping (1)|<tuple|14.222|?>>
+    <associate|continuity multilinear mapping (2) norm|<tuple|14.226|?>>
+    <associate|continuity multilinear mappings vector space|<tuple|14.225|?>>
+    <associate|continuity norm L(x)=a.x|<tuple|14.210|?>>
+    <associate|continuity norm is continuous|<tuple|14.168|?>>
+    <associate|continuity norm is uniform continuous|<tuple|14.172|?>>
     <associate|continuity norm of continuous linear mapping
-    (1)|<tuple|14.201|?>>
-    <associate|continuity norm of projection operator|<tuple|14.210|?>>
-    <associate|continuity norm on L(X,Y)|<tuple|14.205|?>>
+    (1)|<tuple|14.202|?>>
+    <associate|continuity norm of projection operator|<tuple|14.211|?>>
+    <associate|continuity norm on L(X,Y)|<tuple|14.206|?>>
     <associate|continuity of finite sum of continuous
-    functions|<tuple|14.160|?>>
-    <associate|continuity of power function|<tuple|14.164|?>>
-    <associate|continuity of sum|<tuple|14.173|?>>
-    <associate|continuity of sum (1)|<tuple|14.176|?>>
-    <associate|continuity of sum of continuous functions|<tuple|14.159|?>>
-    <associate|continuity open function|<tuple|14.151|?>>
-    <associate|continuity open linear mapping|<tuple|14.213|?>>
-    <associate|continuity operator norm|<tuple|14.202|?>>
-    <associate|continuity operator norm (1)|<tuple|14.203|?>>
-    <associate|continuity operator norm (2)|<tuple|14.204|?>>
+    functions|<tuple|14.161|?>>
+    <associate|continuity of power function|<tuple|14.165|?>>
+    <associate|continuity of sum|<tuple|14.174|?>>
+    <associate|continuity of sum (1)|<tuple|14.177|?>>
+    <associate|continuity of sum of continuous functions|<tuple|14.160|?>>
+    <associate|continuity open function|<tuple|14.152|?>>
+    <associate|continuity open linear mapping|<tuple|14.214|?>>
+    <associate|continuity operator norm|<tuple|14.203|?>>
+    <associate|continuity operator norm (1)|<tuple|14.204|?>>
+    <associate|continuity operator norm (2)|<tuple|14.205|?>>
     <associate|continuity operator norm of multilinear
-    mappings|<tuple|14.226|?>>
+    mappings|<tuple|14.227|?>>
     <associate|continuity operator norm of multilinear mappings
-    (1)|<tuple|14.227|?>>
-    <associate|continuity power of continuous functions|<tuple|14.163|?>>
-    <associate|continuity product and continuous functions|<tuple|14.155|?>>
-    <associate|continuity product of continuous functions|<tuple|14.161|?>>
+    (1)|<tuple|14.228|?>>
+    <associate|continuity pasting lemma|<tuple|14.150|?>>
+    <associate|continuity power of continuous functions|<tuple|14.164|?>>
+    <associate|continuity product and continuous functions|<tuple|14.156|?>>
+    <associate|continuity product of continuous functions|<tuple|14.162|?>>
     <associate|continuity projection map is open and
-    continuous|<tuple|14.154|?>>
-    <associate|continuity real and complex part|<tuple|14.172|?>>
-    <associate|continuity scalar product|<tuple|14.157|?>>
-    <associate|continuity scalar product (1)|<tuple|14.158|?>>
-    <associate|continuity stitching lemma|<tuple|14.150|?>>
+    continuous|<tuple|14.155|?>>
+    <associate|continuity real and complex part|<tuple|14.173|?>>
+    <associate|continuity scalar product|<tuple|14.158|?>>
+    <associate|continuity scalar product (1)|<tuple|14.159|?>>
     <associate|continuity translation function|<tuple|14.142|?>>
-    <associate|continuity uniform continuity|<tuple|14.168|?>>
-    <associate|continuity uniform continuity (1)|<tuple|14.169|?>>
+    <associate|continuity uniform continuity|<tuple|14.169|?>>
+    <associate|continuity uniform continuity (1)|<tuple|14.170|?>>
     <associate|continuity universal continuity implies
-    continuity|<tuple|14.170|?>>
-    <associate|definition 14.414.294|<tuple|14.215|?>>
+    continuity|<tuple|14.171|?>>
+    <associate|definition 14.414.294|<tuple|14.216|?>>
     <associate|eq 14.1.145|<tuple|14.3|?>>
     <associate|eq 14.1.162|<tuple|14.2|?>>
     <associate|eq 14.1.167|<tuple|14.1|?>>
@@ -25830,7 +26601,17 @@
     <associate|eq 14.320.401|<tuple|14.320|?>>
     <associate|eq 14.321.401|<tuple|14.321|?>>
     <associate|eq 14.322.401|<tuple|14.322|?>>
+    <associate|eq 14.323.401|<tuple|14.323|?>>
+    <associate|eq 14.324.401|<tuple|14.324|?>>
+    <associate|eq 14.325.401|<tuple|14.325|?>>
+    <associate|eq 14.326.401|<tuple|14.326|?>>
+    <associate|eq 14.327.401|<tuple|14.327|?>>
+    <associate|eq 14.328.401|<tuple|14.328|?>>
+    <associate|eq 14.329.401|<tuple|14.329|?>>
     <associate|eq 14.33.146|<tuple|14.45|?>>
+    <associate|eq 14.330.401|<tuple|14.330|?>>
+    <associate|eq 14.331.401|<tuple|14.331|?>>
+    <associate|eq 14.332.401|<tuple|14.332|?>>
     <associate|eq 14.35.147|<tuple|14.46|?>>
     <associate|eq 14.36.147|<tuple|14.47|?>>
     <associate|eq 14.37.147|<tuple|14.48|?>>
@@ -25913,85 +26694,85 @@
     <associate|eq 14.99.150|<tuple|14.141|?>>
     <associate|eq 16.62.400|<tuple|14.65|?>>
     <associate|eq: 14.124.176.1|<tuple|14.166|?>>
-    <associate|filter base|<tuple|14.281|?>>
-    <associate|filter base accumulating alternative|<tuple|14.290|?>>
-    <associate|filter base and compactness|<tuple|14.307|?>>
-    <associate|filter base and continuity|<tuple|14.300|?>>
-    <associate|filter base and continuity at a point|<tuple|14.299|?>>
+    <associate|filter base|<tuple|14.287|?>>
+    <associate|filter base accumulating alternative|<tuple|14.296|?>>
+    <associate|filter base and compactness|<tuple|14.313|?>>
+    <associate|filter base and continuity|<tuple|14.306|?>>
+    <associate|filter base and continuity at a point|<tuple|14.305|?>>
     <associate|filter base and properties of subordinate and
-    inclusion|<tuple|14.294|?>>
-    <associate|filter base closure and on relation|<tuple|14.297|?>>
-    <associate|filter base convergence and Hausdorf|<tuple|14.289|?>>
-    <associate|filter base convergence properties|<tuple|14.295|?>>
-    <associate|filter base converging and acummulating|<tuple|14.288|?>>
-    <associate|filter base finite intersection|<tuple|14.282|?>>
-    <associate|filter base finite intersection property|<tuple|14.287|?>>
-    <associate|filter base function preserves maximality|<tuple|14.306|?>>
-    <associate|filter base inclusion|<tuple|14.293|?>>
-    <associate|filter base mapping|<tuple|14.298|?>>
-    <associate|filter base maximal condition|<tuple|14.303|?>>
-    <associate|filter base maximal existence|<tuple|14.304|?>>
+    inclusion|<tuple|14.300|?>>
+    <associate|filter base closure and on relation|<tuple|14.303|?>>
+    <associate|filter base convergence and Hausdorf|<tuple|14.295|?>>
+    <associate|filter base convergence properties|<tuple|14.301|?>>
+    <associate|filter base converging and acummulating|<tuple|14.294|?>>
+    <associate|filter base finite intersection|<tuple|14.288|?>>
+    <associate|filter base finite intersection property|<tuple|14.293|?>>
+    <associate|filter base function preserves maximality|<tuple|14.312|?>>
+    <associate|filter base inclusion|<tuple|14.299|?>>
+    <associate|filter base mapping|<tuple|14.304|?>>
+    <associate|filter base maximal condition|<tuple|14.309|?>>
+    <associate|filter base maximal existence|<tuple|14.310|?>>
     <associate|filter base maximal filter base and
-    convergence|<tuple|14.305|?>>
-    <associate|filter base maximum filter base|<tuple|14.302|?>>
+    convergence|<tuple|14.311|?>>
+    <associate|filter base maximum filter base|<tuple|14.308|?>>
     <associate|filter base neighborhood filter and
-    converging|<tuple|14.291|?>>
-    <associate|filter base neighborhood filter base|<tuple|14.284|?>>
+    converging|<tuple|14.297|?>>
+    <associate|filter base neighborhood filter base|<tuple|14.290|?>>
     <associate|filter base neighborhood filter base is a filter
-    base|<tuple|14.285|?>>
-    <associate|filter base on a subset|<tuple|14.296|?>>
-    <associate|filter base projection operator|<tuple|14.301|?>>
-    <associate|filter base subordinate|<tuple|14.292|?>>
-    <associate|filter base trivial|<tuple|14.283|?>>
-    <associate|filter base union and intersection|<tuple|14.286|?>>
-    <associate|lemma 14.342.156|<tuple|14.419|?>>
-    <associate|lemma 14.344.156|<tuple|14.420|?>>
-    <associate|lemma 14.345.156|<tuple|14.421|?>>
-    <associate|lemma 14.356.158|<tuple|14.430|?>>
-    <associate|lemma 14.376|<tuple|14.435|?>>
-    <associate|lemma 14.381.166|<tuple|14.437|?>>
-    <associate|lemma 14.382.166|<tuple|14.438|?>>
-    <associate|lemma 14.387.166|<tuple|14.446|?>>
-    <associate|lemma 14.413.294|<tuple|14.214|?>>
-    <associate|lemma 14.416.294|<tuple|14.217|?>>
-    <associate|lemma 14.417.294|<tuple|14.218|?>>
-    <associate|lemma 14.459.401|<tuple|14.460|?>>
-    <associate|limit (-1)^/i|<tuple|14.354|?>>
-    <associate|limit (a+n)/(b+n)|<tuple|14.338|?>>
-    <associate|limit 1/(a+i)|<tuple|14.337|?>>
-    <associate|limit a.x_n|<tuple|14.346|?>>
-    <associate|limit and closure in a metric space|<tuple|14.339|?>>
-    <associate|limit and continuity|<tuple|14.358|?>>
-    <associate|limit and continuity in metric space|<tuple|14.359|?>>
-    <associate|limit and equivalent norms|<tuple|14.371|?>>
-    <associate|limit and lower or upper bound|<tuple|14.351|?>>
-    <associate|limit b^n|<tuple|14.336|?>>
-    <associate|limit complex conjugate|<tuple|14.350|?>>
-    <associate|limit complex numbers condition|<tuple|14.349|?>>
-    <associate|limit constant sequence|<tuple|14.335|?>>
-    <associate|limit convergence implies bounded|<tuple|14.352|?>>
-    <associate|limit increasing decreasing (1)|<tuple|14.363|?>>
-    <associate|limit increasing descending sequences|<tuple|14.362|?>>
-    <associate|limit is independent of the norm|<tuple|14.333|?>>
+    base|<tuple|14.291|?>>
+    <associate|filter base on a subset|<tuple|14.302|?>>
+    <associate|filter base projection operator|<tuple|14.307|?>>
+    <associate|filter base subordinate|<tuple|14.298|?>>
+    <associate|filter base trivial|<tuple|14.289|?>>
+    <associate|filter base union and intersection|<tuple|14.292|?>>
+    <associate|lemma 14.342.156|<tuple|14.425|?>>
+    <associate|lemma 14.344.156|<tuple|14.426|?>>
+    <associate|lemma 14.345.156|<tuple|14.427|?>>
+    <associate|lemma 14.356.158|<tuple|14.436|?>>
+    <associate|lemma 14.376|<tuple|14.441|?>>
+    <associate|lemma 14.381.166|<tuple|14.443|?>>
+    <associate|lemma 14.382.166|<tuple|14.444|?>>
+    <associate|lemma 14.387.166|<tuple|14.452|?>>
+    <associate|lemma 14.413.294|<tuple|14.215|?>>
+    <associate|lemma 14.416.294|<tuple|14.218|?>>
+    <associate|lemma 14.417.294|<tuple|14.219|?>>
+    <associate|lemma 14.462.401|<tuple|14.470|?>>
+    <associate|limit (-1)^/i|<tuple|14.360|?>>
+    <associate|limit (a+n)/(b+n)|<tuple|14.344|?>>
+    <associate|limit 1/(a+i)|<tuple|14.343|?>>
+    <associate|limit a.x_n|<tuple|14.352|?>>
+    <associate|limit and closure in a metric space|<tuple|14.345|?>>
+    <associate|limit and continuity|<tuple|14.364|?>>
+    <associate|limit and continuity in metric space|<tuple|14.365|?>>
+    <associate|limit and equivalent norms|<tuple|14.377|?>>
+    <associate|limit and lower or upper bound|<tuple|14.357|?>>
+    <associate|limit b^n|<tuple|14.342|?>>
+    <associate|limit complex conjugate|<tuple|14.356|?>>
+    <associate|limit complex numbers condition|<tuple|14.355|?>>
+    <associate|limit constant sequence|<tuple|14.341|?>>
+    <associate|limit convergence implies bounded|<tuple|14.358|?>>
+    <associate|limit increasing decreasing (1)|<tuple|14.369|?>>
+    <associate|limit increasing descending sequences|<tuple|14.368|?>>
+    <associate|limit is independent of the norm|<tuple|14.339|?>>
     <associate|limit limit of sequence limited by another
-    sequence|<tuple|14.355|?>>
-    <associate|limit limsup liminf|<tuple|14.364|?>>
-    <associate|limit limsup liminf (equivalent definition)|<tuple|14.366|?>>
-    <associate|limit limsup liminf and limit|<tuple|14.367|?>>
-    <associate|limit limsup liminf inequality|<tuple|14.365|?>>
-    <associate|limit limsup liminf properties|<tuple|14.368|?>>
-    <associate|limit of a finite product of sequences|<tuple|14.348|?>>
-    <associate|limit of a product of sequences|<tuple|14.347|?>>
-    <associate|limit of norm is norm of limit|<tuple|14.361|?>>
+    sequence|<tuple|14.361|?>>
+    <associate|limit limsup liminf|<tuple|14.370|?>>
+    <associate|limit limsup liminf (equivalent definition)|<tuple|14.372|?>>
+    <associate|limit limsup liminf and limit|<tuple|14.373|?>>
+    <associate|limit limsup liminf inequality|<tuple|14.371|?>>
+    <associate|limit limsup liminf properties|<tuple|14.374|?>>
+    <associate|limit of a finite product of sequences|<tuple|14.354|?>>
+    <associate|limit of a product of sequences|<tuple|14.353|?>>
+    <associate|limit of norm is norm of limit|<tuple|14.367|?>>
     <associate|limit of sequence of non negatieve real numbers is
-    positive|<tuple|14.356|?>>
+    positive|<tuple|14.362|?>>
     <associate|limit sequence dominated by a sequence converting to
-    0|<tuple|14.343|?>>
+    0|<tuple|14.349|?>>
     <associate|limit sequence limited by a convergent real
-    sequence|<tuple|14.353|?>>
-    <associate|limit x_n+a|<tuple|14.344|?>>
-    <associate|limit x_n+y_n|<tuple|14.345|?>>
-    <associate|metric Banach fixed point theorem|<tuple|14.434|?>>
+    sequence|<tuple|14.359|?>>
+    <associate|limit x_n+a|<tuple|14.350|?>>
+    <associate|limit x_n+y_n|<tuple|14.351|?>>
+    <associate|metric Banach fixed point theorem|<tuple|14.440|?>>
     <associate|metric ball image preimage|<tuple|14.76|?>>
     <associate|metric bounded set|<tuple|14.78|?>>
     <associate|metric bounded set inclusion|<tuple|14.80|?>>
@@ -25999,8 +26780,8 @@
     <associate|metric closed balls are closed|<tuple|14.68|?>>
     <associate|metric closed open balls are bounded|<tuple|14.81|?>>
     <associate|metric composition of isometries|<tuple|14.75|?>>
-    <associate|metric contraction|<tuple|14.432|?>>
-    <associate|metric contractions are continuous|<tuple|14.433|?>>
+    <associate|metric contraction|<tuple|14.438|?>>
+    <associate|metric contractions are continuous|<tuple|14.439|?>>
     <associate|metric dense set|<tuple|14.84|?>>
     <associate|metric empty set is bounded|<tuple|14.79|?>>
     <associate|metric equivalent metrics|<tuple|14.70|?>>
@@ -26019,7 +26800,7 @@
     <associate|metric subtopology|<tuple|14.69|?>>
     <associate|metric topology|<tuple|14.66|?>>
     <associate|metric topology (1)|<tuple|14.67|?>>
-    <associate|multilinear continuous mapping space|<tuple|14.223|?>>
+    <associate|multilinear continuous mapping space|<tuple|14.224|?>>
     <associate|normed absolute value norm differences|<tuple|14.90|?>>
     <associate|normed all norms in the set of complex numbers are
     equivalent|<tuple|14.122|?>>
@@ -26034,9 +26815,9 @@
     <associate|normed complex numbers|<tuple|14.101|?>>
     <associate|normed complex plane|<tuple|14.102|?>>
     <associate|normed dense set|<tuple|14.116|?>>
-    <associate|normed distinct function|<tuple|14.177|?>>
+    <associate|normed distinct function|<tuple|14.178|?>>
     <associate|normed equivalent norms|<tuple|14.118|?>>
-    <associate|normed equivalent norms in R^n|<tuple|14.313|?>>
+    <associate|normed equivalent norms in R^n|<tuple|14.319|?>>
     <associate|normed finer topologies|<tuple|14.117|?>>
     <associate|normed generalized intervals that are open|<tuple|14.104|?>>
     <associate|normed isometry|<tuple|14.127|?>>
@@ -26046,7 +26827,7 @@
     <associate|normed isometry is injective|<tuple|14.124|?>>
     <associate|normed linear isometry|<tuple|14.123|?>>
     <associate|normed linear mappings between finite dimensional spaces are
-    continuous|<tuple|14.322|?>>
+    continuous|<tuple|14.328|?>>
     <associate|normed maximum norm|<tuple|14.97|?>>
     <associate|normed maximum norm R^n|<tuple|14.100|?>>
     <associate|normed norm|<tuple|14.88|?>>
@@ -26054,7 +26835,7 @@
     <associate|normed norm equivalence condition|<tuple|14.120|?>>
     <associate|normed norm of zero|<tuple|14.87|?>>
     <associate|normed norm on finite dimensional spaces are
-    equivalent|<tuple|14.317|?>>
+    equivalent|<tuple|14.323|?>>
     <associate|normed open generalized intervals|<tuple|14.105|?>>
     <associate|normed open set as union of intervals|<tuple|14.108|?>>
     <associate|normed open set as union of intervals (1)|<tuple|14.109|?>>
@@ -26068,75 +26849,75 @@
     <associate|normed sup(S) and inf(S)|<tuple|14.110|?>>
     <associate|normed topology|<tuple|14.95|?>>
     <associate|normed triangle inequality|<tuple|14.89|?>>
-    <associate|separation Hausdorff|<tuple|14.234|?>>
+    <associate|separation Hausdorff|<tuple|14.235|?>>
     <associate|separation Hausdorff every finite set is
-    closed|<tuple|14.237|?>>
-    <associate|separation R^n is second countable|<tuple|14.251|?>>
-    <associate|separation a metric space is first countable|<tuple|14.248|?>>
-    <associate|separation and subspaces|<tuple|14.253|?>>
-    <associate|separation conditions|<tuple|14.244|?>>
-    <associate|separation first countable topological space|<tuple|14.247|?>>
+    closed|<tuple|14.238|?>>
+    <associate|separation R^n is second countable|<tuple|14.252|?>>
+    <associate|separation a metric space is first countable|<tuple|14.249|?>>
+    <associate|separation and subspaces|<tuple|14.254|?>>
+    <associate|separation conditions|<tuple|14.245|?>>
+    <associate|separation first countable topological space|<tuple|14.248|?>>
     <associate|separation fundamental system of neighborhoods of
-    x|<tuple|14.246|?>>
-    <associate|separation metric spaces are Hausdorff|<tuple|14.235|?>>
-    <associate|separation metric spaces are regular|<tuple|14.239|?>>
-    <associate|separation neighbors|<tuple|14.245|?>>
-    <associate|separation normal topological space|<tuple|14.243|?>>
-    <associate|separation regular topological space|<tuple|14.238|?>>
+    x|<tuple|14.247|?>>
+    <associate|separation metric spaces are Hausdorff|<tuple|14.236|?>>
+    <associate|separation metric spaces are regular|<tuple|14.240|?>>
+    <associate|separation neighbors|<tuple|14.246|?>>
+    <associate|separation normal topological space|<tuple|14.244|?>>
+    <associate|separation regular topological space|<tuple|14.239|?>>
     <associate|separation regularity and non empty open
-    sets|<tuple|14.241|?>>
+    sets|<tuple|14.242|?>>
     <associate|separation regularity and non empty open sets
-    (1)|<tuple|14.242|?>>
+    (1)|<tuple|14.243|?>>
     <associate|separation second countability implies first
-    countability|<tuple|14.252|?>>
-    <associate|separation second countable and covering|<tuple|14.254|?>>
+    countability|<tuple|14.253|?>>
+    <associate|separation second countable and covering|<tuple|14.255|?>>
     <associate|separation second countable topological
-    space|<tuple|14.250|?>>
-    <associate|sequence|<tuple|14.324|?>>
-    <associate|sequence convergence|<tuple|14.328|?>>
-    <associate|sequence convergence equivalences|<tuple|14.334|?>>
-    <associate|sequence convergence in metric space|<tuple|14.332|?>>
-    <associate|sequence increasing decreasing|<tuple|14.325|?>>
-    <associate|sequence increasing decreasing consequence|<tuple|14.326|?>>
-    <associate|sequence increasing decreasing sets|<tuple|14.327|?>>
-    <associate|sequence limit|<tuple|14.330|?>>
-    <associate|sequence limit definition|<tuple|14.331|?>>
-    <associate|sequence limit start value|<tuple|14.329|?>>
-    <associate|serie sum and scalar product|<tuple|14.405|?>>
-    <associate|series|<tuple|14.396|?>>
-    <associate|series absolute convergence|<tuple|14.423|?>>
-    <associate|series absolute convergence commutativity|<tuple|14.431|?>>
+    space|<tuple|14.251|?>>
+    <associate|sequence|<tuple|14.330|?>>
+    <associate|sequence convergence|<tuple|14.334|?>>
+    <associate|sequence convergence equivalences|<tuple|14.340|?>>
+    <associate|sequence convergence in metric space|<tuple|14.338|?>>
+    <associate|sequence increasing decreasing|<tuple|14.331|?>>
+    <associate|sequence increasing decreasing consequence|<tuple|14.332|?>>
+    <associate|sequence increasing decreasing sets|<tuple|14.333|?>>
+    <associate|sequence limit|<tuple|14.336|?>>
+    <associate|sequence limit definition|<tuple|14.337|?>>
+    <associate|sequence limit start value|<tuple|14.335|?>>
+    <associate|serie sum and scalar product|<tuple|14.411|?>>
+    <associate|series|<tuple|14.402|?>>
+    <associate|series absolute convergence|<tuple|14.429|?>>
+    <associate|series absolute convergence commutativity|<tuple|14.437|?>>
     <associate|series absolute convergence equals convergence only in Banach
-    space|<tuple|14.428|?>>
-    <associate|series absolute convergence equivalences|<tuple|14.429|?>>
+    space|<tuple|14.434|?>>
+    <associate|series absolute convergence equivalences|<tuple|14.435|?>>
     <associate|series absolute convergence implies
-    convergence|<tuple|14.426|?>>
-    <associate|series absolute dominant convergence|<tuple|14.424|?>>
-    <associate|series absolute dominant convergence (1)|<tuple|14.425|?>>
+    convergence|<tuple|14.432|?>>
+    <associate|series absolute dominant convergence|<tuple|14.430|?>>
+    <associate|series absolute dominant convergence (1)|<tuple|14.431|?>>
     <associate|series convergence condition in a Banach
-    space|<tuple|14.401|?>>
-    <associate|series converging of upper series|<tuple|14.404|?>>
-    <associate|series dominant convergence|<tuple|14.427|?>>
-    <associate|series non negative numbers associativity|<tuple|14.422|?>>
-    <associate|series non negative numbers commutativity|<tuple|14.410|?>>
+    space|<tuple|14.407|?>>
+    <associate|series converging of upper series|<tuple|14.410|?>>
+    <associate|series dominant convergence|<tuple|14.433|?>>
+    <associate|series non negative numbers associativity|<tuple|14.428|?>>
+    <associate|series non negative numbers commutativity|<tuple|14.416|?>>
     <associate|series non negative numbers countable sum equivalent
-    definition|<tuple|14.417|?>>
-    <associate|series non negative numbers countable sums|<tuple|14.413|?>>
+    definition|<tuple|14.423|?>>
+    <associate|series non negative numbers countable sums|<tuple|14.419|?>>
     <associate|series non negative numbers countable sums
-    inclusion|<tuple|14.416|?>>
-    <associate|series non negative numbers denumerable sum|<tuple|14.411|?>>
-    <associate|series non negative numbers equivalences|<tuple|14.407|?>>
-    <associate|series non negative numbers is non negative|<tuple|14.408|?>>
+    inclusion|<tuple|14.422|?>>
+    <associate|series non negative numbers denumerable sum|<tuple|14.417|?>>
+    <associate|series non negative numbers equivalences|<tuple|14.413|?>>
+    <associate|series non negative numbers is non negative|<tuple|14.414|?>>
     <associate|series non negative numbers strict positive
-    term|<tuple|14.409|?>>
-    <associate|series of all zeroes|<tuple|14.418|?>>
-    <associate|series of complex numbers|<tuple|14.406|?>>
-    <associate|series partition series|<tuple|14.403|?>>
-    <associate|series power series in R|<tuple|14.399|?>>
-    <associate|series terms converges to zero|<tuple|14.400|?>>
-    <associate|series translation start|<tuple|14.402|?>>
-    <associate|sum of a countable set|<tuple|14.412|?>>
-    <associate|sum of powers lemma|<tuple|14.398|?>>
+    term|<tuple|14.415|?>>
+    <associate|series of all zeroes|<tuple|14.424|?>>
+    <associate|series of complex numbers|<tuple|14.412|?>>
+    <associate|series partition series|<tuple|14.409|?>>
+    <associate|series power series in R|<tuple|14.405|?>>
+    <associate|series terms converges to zero|<tuple|14.406|?>>
+    <associate|series translation start|<tuple|14.408|?>>
+    <associate|sum of a countable set|<tuple|14.418|?>>
+    <associate|sum of powers lemma|<tuple|14.404|?>>
     <associate|topology Baire space|<tuple|14.56|?>>
     <associate|topology Baire space alternative definition|<tuple|14.58|?>>
     <associate|topology Baire space empty set|<tuple|14.57|?>>
@@ -26163,7 +26944,7 @@
     points|<tuple|14.29|?>>
     <associate|topology closure of a set|<tuple|14.23|?>>
     <associate|topology closure of a set alternative|<tuple|14.25|?>>
-    <associate|topology closure of a sub-space|<tuple|14.341|?>>
+    <associate|topology closure of a sub-space|<tuple|14.347|?>>
     <associate|topology closure subspace topology|<tuple|14.33|?>>
     <associate|topology coarse|<tuple|14.3|?>>
     <associate|topology dense set|<tuple|14.52|?>>
@@ -26179,10 +26960,10 @@
     <associate|topology interior of a set and inclusion|<tuple|14.14|?>>
     <associate|topology limit point|<tuple|14.27|?>>
     <associate|topology limit points and subsets|<tuple|14.28|?>>
-    <associate|topology on R^n|<tuple|14.314|?>>
+    <associate|topology on R^n|<tuple|14.320|?>>
     <associate|topology open set and interior|<tuple|14.16|?>>
     <associate|topology open set condition|<tuple|14.7|?>>
-    <associate|topology precompact and subspace topology|<tuple|14.270|?>>
+    <associate|topology precompact and subspace topology|<tuple|14.271|?>>
     <associate|topology product|<tuple|14.46|?>>
     <associate|topology product alternative definition|<tuple|14.48|?>>
     <associate|topology product topology and box topology are the same in the
@@ -26194,7 +26975,7 @@
     <associate|topology subspace topology|<tuple|14.8|?>>
     <associate|topology subspace topology open subset|<tuple|14.11|?>>
     <associate|topology subsubspace topology|<tuple|14.10|?>>
-    <associate|xn\<less\>yn=\<gtr\>limxn\<less\>limyn|<tuple|14.357|?>>
+    <associate|xn\<less\>yn=\<gtr\>limxn\<less\>limyn|<tuple|14.363|?>>
   </collection>
 </references>
 
