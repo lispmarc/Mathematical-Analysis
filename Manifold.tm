@@ -832,8 +832,13 @@
   <math|<around*|\<langle\>|\<bbb-R\><rsup|n>,\<cal-T\><rsub|\<bbb-R\><rsup|n>>|\<rangle\>>>
   it follows that some of the topological properties of
   <math|\<bbb-R\><rsup|n>> are translated in the topological properties of
-  the topological manifold. First remember that <math|\<bbb-Q\><rsup|n>> is
-  dense in <math|\<bbb-R\><rsup|n>> using the norm
+  the topological manifold. In proving these properties it will turn out that
+  the requirements for a topological space
+  <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> to be Hausdorff and
+  second countability are necessary. In this section we will cover
+  topological properties like compactness, connectness, paracompactness.
+  First remember that <math|\<bbb-Q\><rsup|n>> is dense in
+  <math|\<bbb-R\><rsup|n>> using the norm
   <math|<around*|\<\|\|\>||\<\|\|\>><rsub|e>> as the next lemma shows.
 
   <\lemma>
@@ -1303,6 +1308,372 @@
     </enumerate>
   </proof>
 
+  <\theorem>
+    <label|manifold a topological manifold is locally compact>Every
+    topological manifold <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>>
+    is locally compact [see definition: <reference|compact locally compact>]
+  </theorem>
+
+  <\proof>
+    As <math|\<cal-T\>> is Hausdorf and by [theorem: <reference|lemma
+    23.13.2>] <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> has
+    precompact base, it follows from [theorem: <reference|compact locally
+    compact (1)>] that <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> is
+    locally compact.
+  </proof>
+
+  <\definition>
+    <label|compact refinement><dueto|refinement>Let <math|\<cal-U\>> be a
+    collection of sets then a collection of sets <math|\<cal-V\>> is a
+    <with|font-series|bold|refinement> of <math|\<cal-U\>> if
+    <math|\<forall\>V\<in\>\<cal-V\>> there exist a <math|U\<in\>\<cal-U\>>
+    such that <math|V\<subseteq\>U>.
+  </definition>
+
+  <\definition>
+    <label|compact locally finite><dueto|locally finite>Let
+    <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> be a topological space
+    then a collection <math|<rigid|\<cal-U\>\<subseteq\>\<cal-P\><around*|(|X|)>>>
+    of subsets of <math|X> is called <with|font-series|bold|locally finite>
+    if <math|\<forall\>x\<in\>X> there exist a <math|V\<in\>\<cal-T\>> with
+    <math|x\<in\>V> such that <math|<rigid|<around*|{|U\<in\>\<cal-U\>\|U<big|cap>V\<neq\>\<varnothing\>|}>>>
+    is finite.
+  </definition>
+
+  <\definition>
+    <label|compact paracompactness><dueto|Paracompact Spaces>A topological
+    space <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> is paracompact
+    if <math|\<forall\>\<cal-U\>\<subseteq\>\<cal-T\>> with
+    <math|X=<big|cup><rsub|U\<in\>\<cal-U\>>U> there exist a locally finite
+    refinement <math|\<cal-V\>\<subseteq\>\<cal-T\>> such that
+    <math|X=<big|cup><rsub|V\<in\>\<cal-V\>>V>. In other words every open
+    cover of <math|X> admits a open locally finite refinement.
+  </definition>
+
+  <\theorem>
+    <label|manifold topological manifold is paracompact><dueto|Topological
+    Manifolds are Paracompact>Let <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>>
+    be a topological manifold, let <math|\<cal-U\>\<subseteq\>\<cal-T\>> be
+    such that <math|M=<big|cup><rsub|U\<in\>\<cal-U\>>U> and <math|\<cal-B\>>
+    a basis for <math|\<cal-T\>> then there exist a countable locally finite
+    open refinement <math|\<cal-V\>> of <math|\<cal-U\>> with
+    <math|\<cal-U\>\<subseteq\>\<cal-B\>>. Hence using the previous
+    definition <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> is
+    paracompact.
+  </theorem>
+
+  <\proof>
+    <dueto|>As <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> is second
+    countable and locally compact [see theorem: <reference|manifold a
+    topological manifold is locally compact>] it follows from [theorem:
+    <reference|compact a second countable locally compact Hausdorff space has
+    a exhausting>] there exist a exhasting of <math|X> by compact sets
+    <math|<around*|{|C<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>>. So using the
+    definition of exhausting [see definition: <reference|compact exhausting
+    by compact sets>] we have that\ 
+
+    <\equation>
+      <label|eq 23.22.3>M=<big|cup><rsub|i\<in\>\<bbb-N\>>C<rsub|i><text| and
+      >\<forall\>i\<in\>\<bbb-N\><text| >C<rsub|i><text| is compact and
+      >C<rsub|i>\<subseteq\><around*|(|C<rsub|i+1>|)><rsup|\<circ\>>
+    </equation>
+
+    As <math|\<forall\>i\<in\>\<bbb-N\>> <math|C<rsub|i>\<subseteq\><around*|(|C<rsub|i+1>|)><rsup|\<circ\>>\<subseteq\>C<rsub|i+1>>
+    from which it follows by [theorem: <reference|topology interior of a set
+    and inclusion>] <math|<around*|(|C<rsub|i>|)><rsup|\<circ\>>\<subseteq\><around*|(|C<rsub|i+1>|)><rsup|0>>.
+    Hence we have that\ 
+
+    <\equation>
+      <label|eq 23.23.4>\<forall\>i,j\<in\>\<bbb-N\><text| with
+      >i\<leqslant\>j<text| we have >C<rsub|i>\<subseteq\>C<rsub|j><text| and
+      ><around*|(|C<rsub|i>|)><rsup|\<circ\>>\<subseteq\><around*|(|C<rsub|j>|)><rsup|\<circ\>>
+    </equation>
+
+    Define now\ 
+
+    <\equation*>
+      <around*|{|V<rsub|i>|}><rsub|i\<in\>\<bbb-N\><rsub|0>><text| by
+      >V<rsub|i>=<choice|<tformat|<table|<row|<cell|C<rsub|1><text| if
+      >i=0>>|<row|<cell|C<rsub|i+1>\\<around*|(|C<rsub|i>|)><rsup|\<circ\>>>>>>>
+    </equation*>
+
+    Let <math|i\<in\>\<bbb-N\><rsub|0>> then we have either:\ 
+
+    <\description>
+      <item*|<math|i=0>>Then <math|V<rsub|i>=C<rsub|1>> a compact set.
+
+      <item*|<math|i\<in\>\<bbb-N\>>>Then as
+      <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> is Hausdorff and
+      <math|C<rsub|i>> is compact it follows from [theorem:
+      <reference|compact set is closed in a Hausdorff space>] that
+      <math|C<rsub|i>> is closed. As <math|<around*|(|C<rsub|i>|)><rsup|\<circ\>>>
+      is open it follows from [theorem: <reference|closed set properties>]
+      that <math|C<rsub|i+1>\\<around*|(|C<rsub|i>|)><rsup|\<circ\>>> is
+      closed, hence by [theorem: <reference|compact every closed subset of a
+      compact set is compact>] <math|V<rsub|i>=C<rsub|i+1>\\<around*|(|C<rsub|i>|)><rsup|\<circ\>>>
+      is compact.
+    </description>
+
+    Hence\ 
+
+    <\equation>
+      <label|eq 23.23.402>\<forall\>i\<in\>\<bbb-N\><rsub|0><text|
+      >V<rsub|i><text| is compact>
+    </equation>
+
+    Let <math|x\<in\>M> then, as <math|M=<big|cup><rsub|i\<in\>\<bbb-N\>>C<rsub|i>>,
+    there exist a <math|n\<in\>\<bbb-N\>> such that <math|x\<in\>C<rsub|n>>.
+    Hence <math|<rigid|<around*|{|i\<in\><around*|{|1,\<ldots\>,n|}>\|x\<in\>C<rsub|i>|}>\<neq\>\<varnothing\>>>
+    so that by [theorem: <reference|finite ordered sets have a maximum and
+    minimum>] <math|m=min<around*|(|<around*|{|i\<in\><around*|{|0,\<ldots\>,n|}>\|x\<in\>C<rsub|i>|}>|)>>
+    exist. For <math|m\<in\><around*|{|1,\<ldots\>,n|}>> we have either:\ 
+
+    <\description>
+      <item*|<math|m=1>>Then <math|x\<in\>C<rsub|1>=V<rsub|0>\<subseteq\><big|cup><rsub|i\<in\>\<bbb-N\><rsub|0>>V<rsub|i>>
+
+      <item*|<math|i\<in\><around*|{|2,\<ldots\>,n|}>>>Then
+      <math|x\<nin\>C<rsub|m-1>\<Rightarrow\>x\<nin\><around*|(|C<rsub|m-1>|)><rsup|\<circ\>>>
+      and <math|x\<in\>C<rsub|m>> so that
+
+      <\equation*>
+        x\<in\>C<rsub|m>\\<around*|(|C<rsub|m-1>|)><rsup|\<circ\>>=V<rsub|m-1>\<subseteq\><big|cup><rsub|i\<in\>\<bbb-N\><rsub|0>>V<rsub|i>
+      </equation*>
+    </description>
+
+    so in all cases we have <math|x\<in\><big|cup><rsub|i\<in\>\<bbb-N\><rsub|0>>V<rsub|i>>.
+    Hence
+
+    <\equation>
+      <label|eq 23.24.402>M=<big|cup><rsub|i\<in\>\<bbb-N\><rsub|0>>V<rsub|i>
+    </equation>
+
+    Define now\ 
+
+    <\equation*>
+      <around*|{|W<rsub|i>|}><rsub|i\<in\>\<bbb-N\><rsub|0>><text| by
+      >W<rsub|i>=<choice|<tformat|<table|<row|<cell|<around*|(|C<rsub|2>|)><rsup|\<circ\>><text|
+      if >i=0>>|<row|<cell|<around*|(|C<rsub|3>|)><rsup|\<circ\>><text| if
+      >i=1>>|<row|<cell|<around*|(|C<rsub|i+2>|)><rsup|\<circ\>>\\C<rsub|i-1><text|
+      if >i\<in\><around*|{|2,\<ldots\>,\<infty\>|}>>>>>>
+    </equation*>
+
+    Let <math|i\<in\>\<bbb-N\><rsub|0>> then we have either:\ 
+
+    <\description>
+      <item*|<math|i=0>>Then <math|W<rsub|i>=<around*|(|C<rsub|2>|)><rsup|\<circ\>>\<in\>\<cal-T\>>
+      and <math|V<rsub|i>=C<rsub|1><below|\<subseteq\>|<text|[eq:
+      <reference|eq 23.22.3>]>><around*|(|C<rsub|2>|)><rsup|\<circ\>>=W<rsub|i>.>
+
+      <item*|<math|i=1>>Then <math|W<rsub|i>=<around*|(|C<rsub|3>|)><rsup|\<circ\>>\<in\>T>
+      and <math|V<rsub|i>=V<rsub|1>=C<rsub|2>\\<around*|(|C<rsub|1>|)><rsup|\<circ\>>\<subseteq\>C<rsub|2><below|\<subseteq\>|<text|[eq:
+      <reference|eq 23.22.3>]>><around*|(|C<rsub|3>|)><rsup|\<circ\>>>
+
+      <item*|<math|i\<in\><around*|{|2,\<ldots\>,\<infty\>|}>>>As
+      <math|\<cal-T\>> is Hausdorff and <math|C<rsub|i-1>> is compact it
+      follows from \ [theorem: <reference|compact set is closed in a
+      Hausdorff space>] that <math|C<rsub|i-1>> is closed so that by
+      [theorem: <reference|closed set properties>] that
+      <math|W<rsub|i>=<around*|(|C<rsub|i+2>|)><rsup|\<circ\>>\\C<rsub|i-1>\<in\>\<cal-T\>>.
+      Further we have\ 
+
+      <\equation*>
+        V<rsub|i>=C<rsub|i+1>\\<around*|(|C<rsub|i>|)><rsup|\<circ\>><below|\<subseteq\>|<text|[eq:
+        <reference|eq 23.22.3>]>>C<rsub|i+1>\\C<rsub|i-1><below|\<subseteq\>|<text|[eq:
+        <reference|eq 23.22.3>]>><around*|(|C<rsub|i+2>|)><rsup|\<circ\>>\\C<rsub|i-1>=W<rsub|i>
+      </equation*>
+    </description>
+
+    To summarize the above we have\ 
+
+    <\equation>
+      <label|eq 23.25.3>\<forall\>i\<in\>\<bbb-N\><rsub|0><text|
+      >W<rsub|i>\<in\>\<cal-T\><text| and >V<rsub|i>\<subseteq\>W<rsub|i>
+    </equation>
+
+    Let <math|i,j\<in\>\<bbb-N\><rsub|0>> and consider the following two
+    special cases for <math|j\<in\>\<bbb-N\><rsub|0>>\ 
+
+    <\description>
+      <item*|0\<less\><math|j\<less\>i-2>>Now for <math|j> we have either:
+
+      <\description>
+        <item*|<math|j=0>>Then <math|2\<less\>i\<Rightarrow\>2\<leqslant\>i-1>
+        so that <math|W<rsub|j>=W<rsub|0>=<around*|(|C<rsub|2>|)><rsup|\<circ\>>\<subseteq\>C<rsub|2><below|\<subseteq\>|<text|[eq:
+        <reference|eq 23.23.4>]>>C<rsub|i-1>> and
+        <math|<rigid|W<rsub|i>=<around*|(|C<rsub|i+2>|)><rsup|\<circ\>>\\C<rsub|i-1>>>
+        so that <math|W<rsub|i><big|cap>W<rsub|i>=\<varnothing\>>.
+
+        <item*|<math|j=1>>Then <math|3\<less\>i\<Rightarrow\>3\<leqslant\>i-1>
+        so that <math|W<rsub|j>=W<rsub|3>=<around*|(|C<rsub|3>|)><rsup|\<circ\>>\<subseteq\>C<rsub|3><below|\<subseteq\>|<text|[eq:
+        <reference|eq 23.23.4>]>>C<rsub|i-1>> and
+        <math|<rigid|W<rsub|i>=<around*|(|C<rsub|i+2>|)><rsup|\<circ\>>\\C<rsub|i-1>>>
+        so that <math|W<rsub|j><big|cap>W<rsub|i>=\<varnothing\>>.
+
+        <item*|<math|j\<in\><around*|{|2,\<ldots\>,\<infty\>|}>>>Then
+        <math|j\<less\>i-2\<Rightarrow\>j+2\<less\>i-1> so that
+
+        <\equation*>
+          W<rsub|j>=<around*|(|C<rsub|j+2>|)><rsup|\<circ\>>\\C<rsub|j-1><below|\<subseteq\>|<text|[eq:
+          <reference|eq 23.23.4>]>>C<rsub|j+2><below|\<subseteq\>|<text|[eq:
+          <reference|eq 23.23.4>]>>C<rsub|i-1>
+        </equation*>
+
+        and <math|W<rsub|i>=<around*|(|C<rsub|i+2>|)><rsup|\<circ\>>\\C<rsub|i-1>>
+        from which it follows that <math|W<rsub|j><big|cap>W<rsub|i>=\<varnothing\>>.
+      </description>
+
+      <item*|<math|i+2\<less\>j>>Then for <math|i> we have either:
+
+      <\description>
+        <item*|<math|i=0>>Then <math|2\<less\>j\<Rightarrow\>2\<leqslant\>j-1>
+        so that <math|W<rsub|i>=W<rsub|0>=<around*|(|C<rsub|2>|)><rsup|\<circ\>>\<subseteq\>C<rsub|2><below|\<subseteq\>|<text|[eq:
+        <reference|eq 23.23.4>]>>C<rsub|j-1>> and
+        <rigid|<math|W<rsub|j>=<around*|(|C<rsub|j+2>|)><rsup|\<circ\>>\\C<rsub|j-1>>>
+        so that <math|W<rsub|j><big|cap>W<rsub|i>=\<varnothing\>>.
+
+        <item*|<math|i=1>>Then <math|3\<less\>j\<Rightarrow\>3\<leqslant\>j-1>
+        so that <math|W<rsub|i>=<around*|(|C<rsub|3>|)><rsup|\<circ\>>\<subseteq\>C<rsub|3><below|\<subseteq\>|<text|[eq:
+        <reference|eq 23.23.4>]>>C<rsub|j-1>> and
+        <math|<rigid|W<rsub|j>=<around*|(|C<rsub|j+2>|)><rsup|\<circ\>>\\C<rsub|j-1>>>
+        so that <math|W<rsub|j><big|cap>W<rsub|i>=\<varnothing\>>.
+
+        <item*|<math|i\<in\><around*|{|2,\<ldots\>\<infty\>|}>>>Then
+        <math|i\<less\>j-2\<Rightarrow\>i+2\<leqslant\>j-1> so that
+
+        <\equation*>
+          W<rsub|i>=<around*|(|C<rsub|i+2>|)><rsup|\<circ\>>\\C<rsub|i=1>\<subseteq\>C<rsub|i+2><below|\<subseteq\>|<text|[eq:
+          <reference|eq 23.23.4>]>>C<rsub|j-1>
+        </equation*>
+
+        and <math|W<rsub|j>=<around*|(|C<rsub|j+2>|)><rsup|\<circ\>>\\C<rsub|j-1>>
+        so that <math|W<rsub|j><big|cap>W<rsub|i>=\<varnothing\>>.
+      </description>
+    </description>
+
+    Hence we have that\ 
+
+    <\equation>
+      <label|eq 23.27.4>\<forall\>i,j\<in\>\<bbb-N\><rsub|0><text| we have
+      >W<rsub|i><big|cap>W<rsub|j>=\<varnothing\><text| except maybe for
+      <math|j\<in\><around*|{|i-2,\<ldots\>,i+2|}>> a finite set>
+    </equation>
+
+    Let <math|i\<in\>\<bbb-N\><rsub|0>> and
+    <math|x\<in\>V<rsub|i><below|\<subseteq\>|<text|[eq: <reference|eq
+    23.25.3>]>>W<rsub|i>\<in\>\<cal-T\>> then as by the hypothesis
+    <math|M=<big|cup><rsub|U\<in\>\<cal-U\>>U> there exist a
+    <math|U<rsub|x>\<in\>\<cal-U\>\<subseteq\>\<cal-T\>> such that
+    <math|x\<in\>U<rsub|x>> hence <math|x\<in\>U<rsub|x><big|cap>W<rsub|i>\<in\>\<cal-T\>>
+    As <math|\<cal-B\>> is a basis for <math|\<cal-T\>> there exist a
+    <math|B<rsub|x,i>\<in\>\<cal-B\>> such that
+    <math|x\<in\>B<rsub|x,i>\<subseteq\>U<rsub|x><big|cap>W<rsub|i>>. Define
+
+    <\equation>
+      <label|eq 23.28.5>\<cal-B\><rsub|i>=<around*|{|B<rsub|x,i>\|x\<in\>V<rsub|i>|}>\<subseteq\>\<cal-B\>
+    </equation>
+
+    Let <math|x\<in\>V<rsub|i>> then as <math|x\<in\>B<rsub|x,i>\<in\>\<cal-B\><rsub|i>>
+    it follows that <math|V<rsub|i>\<subseteq\><big|cup><rsub|B\<in\>\<cal-B\><rsub|i>>B>
+    which as <math|V<rsub|i>> is compact means that there exist a finite
+    <math|\<cal-V\><rsub|i>\<subseteq\>\<cal-B\><rsub|i>> such that
+
+    <\equation>
+      <label|eq 23.26.3>V<rsub|i>\<subseteq\><big|cup><rsub|B\<in\>\<cal-V\><rsub|i>>B<text|
+      where >\<cal-V\><rsub|i>\<subseteq\>\<cal-B\><rsub|i>\<subseteq\>\<cal-B\>
+    </equation>
+
+    By [theorem: <reference|countable union of a countable family of
+    countable sets is countable>] it follows that\ 
+
+    <\equation>
+      <label|eq 23.27.3>\<cal-V\>=<big|cup><rsub|i\<in\>\<bbb-N\><rsub|0>>\<cal-V\><rsub|i><text|
+      is countable >and \<cal-V\>\<subseteq\>\<cal-B\>
+    </equation>
+
+    Let <math|x\<in\>M> then by [eq: <reference|eq 23.24.402>] there exist a
+    <math|i\<in\>\<bbb-N\><rsub|0>> such that <math|x\<in\>V<rsub|i>>, hence
+    by [eq: <reference|eq 23.26.3>] there exist a
+    <math|B\<in\>\<cal-V\><rsub|i>\<subseteq\><big|cup><rsub|i\<in\>\<bbb-N\><rsub|0>>\<cal-V\><rsub|i>=\<cal-V\>>
+    such that <math|x\<in\>B>. Hence <math|x\<in\><big|cup><rsub|B\<in\>\<cal-V\>>B<rsub|>
+    >which proves that <math|M\<subseteq\><big|cup><rsub|B\<in\>\<cal-V\>>B>.
+    As <math|\<cal-V\>\<subseteq\>\<cal-B\>\<subseteq\>\<cal-T\>\<subseteq\>\<cal-P\><around*|(|M|)>>
+    we have also <math|<big|cup><rsub|B\<in\>\<cal-V\>>B\<subseteq\>M>. So we
+    have\ 
+
+    <\equation>
+      <label|eq 23.28.3>M=<big|cup><rsub|B\<in\>\<cal-V\>>B
+    </equation>
+
+    Let <math|B\<in\>\<cal-V\>> then there exist a
+    <math|i\<in\>\<bbb-N\><rsub|0>> such that
+    <math|B\<in\>\<cal-V\><rsub|i>\<subseteq\>\<cal-B\><rsub|i>> hence there
+    exist by [eq: <reference|eq 23.28.5>] a <math|x\<in\>V<rsub|i>> such that
+
+    <\equation*>
+      B=B<rsub|x,i>\<subseteq\>U<rsub|x><big|cap>W<rsub|i>\<subseteq\>U<rsub|x>\<in\>\<cal-U\>
+    </equation*>
+
+    which by [definition: <reference|compact refinement>] proves that\ 
+
+    <\equation>
+      <label|eq 23.31.4>\<cal-V\><text| is a refinement of >\<cal-U\>
+    </equation>
+
+    Let <math|x\<in\>M> then by [eq: <reference|eq 23.28.3>] there exist a
+    <math|B\<in\>\<cal-V\>> such that <math|x\<in\>B>. As
+    <math|B\<in\>\<cal-V\>> there exist by [eq: <reference|eq 23.27.3>] a
+    <math|i\<in\>\<bbb-N\><rsub|0>> so that <math|B\<in\>\<cal-V\><rsub|i>>.
+    By [eq: <reference|eq 23.28.5>] it follows then that
+    <math|B=B<rsub|x,i>\<subseteq\>U<rsub|x><big|cap>W<rsub|i>\<subseteq\>W<rsub|i>>.
+    Hence we have that\ 
+
+    <\equation*>
+      x\<in\>W<rsub|i>\<in\>\<cal-T\>
+    </equation*>
+
+    Let <math|B\<in\><around*|{|B\<in\>\<cal-V\>\|B<big|cap>W<rsub|i>\<neq\>\<varnothing\>|}>>
+    then by [eq: <reference|eq 23.27.3>] there exist a
+    <math|j\<in\>\<bbb-N\><rsub|0>> such that
+    <math|B\<in\>\<cal-V\><rsub|j>\<subseteq\>\<cal-B\><rsub|j>>. Hence by
+    [eq: <reference|eq 23.28.5>] there exist a <math|y\<in\>V<rsub|j>> such
+    that <math|B=B<rsub|y,j>\<subseteq\>U<rsub|y><big|cap>W<rsub|j>\<subseteq\>W<rsub|j>>.
+    As <math|B<big|cap>W<rsub|i>\<neq\>\<varnothing\>> we have that
+    <math|W<rsub|i><big|cap>W<rsub|j>\<neq\>\<varnothing\>>. Using [eq:
+    <reference|eq 23.27.4>] it follows then that
+    <math|B\<in\><around*|{|B<rsub|j>\|j\<in\><around*|{|i-2,\<ldots\>,i+2|}>|}>>,
+    Hence <math|<around*|{|B\<in\>\<cal-V\>\|B<big|cap>W<rsub|i>\<neq\>\<varnothing\>|}>\<subseteq\><around*|{|B<rsub|j>\|j\<in\><around*|{|i-2,\<ldots\>,i+2|}>|}>>
+    which is finite so that
+
+    <\equation*>
+      <around*|{|B\<in\>\<cal-V\>\|B<big|cap>W<rsub|i>\<neq\>\<varnothing\>|}><text|
+      is finite>
+    </equation*>
+
+    Using [definition: <reference|compact locally finite>] and the fact that
+    <math|x\<in\>M> has been chosen arbitrary it follows that
+
+    <\equation>
+      <label|eq 23.33.5>\<cal-V\><text| is locally finite.>
+    </equation>
+
+    To summarize [eqs: <reference|eq 23.27.3>, <reference|eq 23.31.4> and
+    <reference|eq 23.33.5>] we have constructed a countable locally finite
+    refinement <math|\<cal-V\>\<subseteq\>\<cal-B\>> of <math|\<cal-U\>>.
+  </proof>
+
+  <subsection|Differential structure on a topological manifold>
+
+  Next we use the fact that a topological manifold is locally homeomorph with
+  a open set of <math|\<bbb-R\><rsup|n>> to use the concept of
+  differentiability on <math|\<bbb-R\><rsup|n>> to define differentiability
+  on the manifold.
+
+  <\definition>
+    <label|manifold transition map>Let <math|n\<in\>\<bbb-N\>> and
+    <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> a topological manifold
+    if\ 
+  </definition>
+
   \;
 
   \;
@@ -1313,7 +1684,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|22>
-    <associate|page-first|1889>
+    <associate|page-first|1895>
     <associate|par-first|0>
     <associate|section-nr|2>
     <associate|subsection-nr|0>
@@ -1326,8 +1697,11 @@
     <associate|auto-2|<tuple|23.1|?>>
     <associate|auto-3|<tuple|23.1.1|?>>
     <associate|auto-4|<tuple|23.1.2|?>>
+    <associate|auto-5|<tuple|23.1.3|?>>
+    <associate|compact locally finite|<tuple|23.19|?>>
+    <associate|compact paracompactness|<tuple|23.20|?>>
+    <associate|compact refinement|<tuple|23.18|?>>
     <associate|eq 23.1.1|<tuple|23.5|?>>
-    <associate|eq 23.1.2|<tuple|23.1|?>>
     <associate|eq 23.1.3|<tuple|23.2|?>>
     <associate|eq 23.1.4|<tuple|23.1|?>>
     <associate|eq 23.13.3|<tuple|23.17|?>>
@@ -1337,8 +1711,20 @@
     <associate|eq 23.17.2|<tuple|23.21|?>>
     <associate|eq 23.2.1|<tuple|23.6|?>>
     <associate|eq 23.2.3|<tuple|23.3|?>>
+    <associate|eq 23.22.3|<tuple|23.22|?>>
+    <associate|eq 23.23.4|<tuple|23.23|?>>
+    <associate|eq 23.23.402|<tuple|23.24|?>>
+    <associate|eq 23.24.402|<tuple|23.25|?>>
+    <associate|eq 23.25.3|<tuple|23.26|?>>
+    <associate|eq 23.26.3|<tuple|23.29|?>>
+    <associate|eq 23.27.3|<tuple|23.30|?>>
+    <associate|eq 23.27.4|<tuple|23.27|?>>
+    <associate|eq 23.28.3|<tuple|23.31|?>>
+    <associate|eq 23.28.5|<tuple|23.28|?>>
     <associate|eq 23.3.1|<tuple|23.7|?>>
     <associate|eq 23.3.3|<tuple|23.4|?>>
+    <associate|eq 23.31.4|<tuple|23.32|?>>
+    <associate|eq 23.33.5|<tuple|23.33|?>>
     <associate|eq 23.4.1|<tuple|23.8|?>>
     <associate|eq 23.5.1|<tuple|23.9|?>>
     <associate|eq 23.6.1|<tuple|23.11|?>>
@@ -1351,6 +1737,8 @@
     <associate|lemma 23.10.2|<tuple|23.12|?>>
     <associate|lemma 23.11.2|<tuple|23.13|?>>
     <associate|lemma 23.13.2|<tuple|23.14|?>>
+    <associate|manifold a topological manifold is locally
+    compact|<tuple|23.17|?>>
     <associate|manifold atlas|<tuple|23.7|?>>
     <associate|manifold canonical example|<tuple|23.10|?>>
     <associate|manifold connectivity properties|<tuple|23.16|?>>
@@ -1361,6 +1749,8 @@
     <associate|manifold open set is a sub manifold|<tuple|23.9|?>>
     <associate|manifold topological|<tuple|23.2|?>>
     <associate|manifold topological (1)|<tuple|23.8|?>>
+    <associate|manifold topological manifold is paracompact|<tuple|23.21|?>>
+    <associate|manifold transition map|<tuple|23.22|?>>
   </collection>
 </references>
 
