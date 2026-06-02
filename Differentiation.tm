@@ -101,9 +101,10 @@
   <\lemma>
     <label|lemma 16.11.500>Let <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
     <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
-    be normed spaces, <math|A\<subseteq\>X>, <math|x\<in\>X> a
-    <with|font-series|bold|limit point of A> and <math|f:A\<rightarrow\>Y> a
-    function such that\ 
+    be normed spaces, <math|A\<subseteq\>X>,
+    <math|x\<in\>A<big|cap>A<rprime|'>> where <math|A<rprime|'>> is the set
+    of limit points of <math|A> [see definition: <reference|topology limit
+    point>] and <math|f:A\<rightarrow\>Y> a function such that\ 
 
     <\equation*>
       f<text| converges to >y<rsub|1><text| at >x<text| by >A<text| and
@@ -169,7 +170,7 @@
     point>Let <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
     be a normed space and <math|U\<in\>\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>>>>
     a open set in <math|X> then every element of <math|U> is a limit point of
-    <math|U>
+    <math|U>. In other words <math|U\<subseteq\>U<rprime|'>>.
   </theorem>
 
   <\proof>
@@ -204,7 +205,7 @@
     a normed space <math|A\<subseteq\>X>. If <math|x\<in\>A<rsup|\<circ\>>>
     [see definition: <reference|topology interior of a set>] then <math|x> is
     a limit point of <math|A>. In other words every interior point of a set
-    is a limit point.
+    is a limit point or <math|A<rsup|\<circ\>>\<subseteq\>A<rprime|'>>.
   </corollary>
 
   <\proof>
@@ -312,35 +313,43 @@
     <\enumerate>
       <item><math|\<forall\>x\<in\><around*|[|a,\<infty\>|[>> where
       <math|a\<in\>\<bbb-R\>> <math|x> is a limit point of
-      <math|<around*|[|a,\<infty\>|[>>.
+      <math|<around*|[|a,\<infty\>|[>> in other words
+      <math|<around*|[|a,\<infty\>|[>\<subseteq\><around*|(|<around*|[|a,\<infty\>|[>|)><rprime|'>>.
 
       <item><math|\<forall\>x\<in\><around*|]|a,\<infty\>|[>> where
       <math|a\<in\>\<bbb-R\>> <math|x> is a limit point of
-      <math|<around*|]|a,\<infty\>|[>>.
+      <math|<around*|]|a,\<infty\>|[>> in other words
+      <math|<around*|]|a,\<infty\>|[>\<subseteq\><around*|(|<around*|]|a,\<infty\>|[>|)><rprime|'>>.
 
       <item><math|\<forall\>x\<in\><around*|]|-\<infty\>,a|]> where>
       <math|a\<in\>\<bbb-R\>> <math|x> is a limit point of
-      <math|<around*|]|-\<infty\>,a|]>>.
+      <math|<around*|]|-\<infty\>,a|]>> in other words
+      <math|<around*|]|-\<infty\>,a|]>\<subseteq\><around*|(|<around*|]|-\<infty\>,a|]>|)><rprime|'>>.
 
       <item><math|\<forall\>x\<in\><around*|]|-\<infty\>,a|[> where>
       <math|a\<in\>\<bbb-R\>> <math|x> is a limit point of
-      <math|<around*|]|-\<infty\>,a|[>>.
+      <math|<around*|]|-\<infty\>,a|[>> in other words
+      <math|<around*|]|-\<infty\>,a|[>\<subseteq\><around*|(|<around*|]|-\<infty\>,a|[>|)><rprime|'>>.
 
       <item><math|\<forall\>x\<in\><around*|[|a,b|]>> where
       <math|a,b\<in\>\<bbb-R\>> where <math|a\<less\>b> <math|x> is a limit
-      point of <math|<around*|[|a,b|]>>.
+      point of <math|<around*|[|a,b|]>> in other words
+      <math|<around*|[|a,b|]>\<subseteq\><around*|(|<around*|[|a,b|]>|)><rprime|'>.>
 
       <item><math|\<forall\>x\<in\><around*|[|a,b|[>> where
       <math|a,b\<in\>\<bbb-R\>> where <math|a\<less\>b> <math|x> is a limit
-      point of <math|<around*|[|a,b|[>>.
+      point of <math|<around*|[|a,b|[>> in other words
+      <math|<around*|[|a,b|[>\<subseteq\><around*|(|<around*|[|a,b|[>|)><rprime|'>.>
 
       <item><math|\<forall\>x\<in\><around*|]|a,b|]>> where
       <math|a,b\<in\>\<bbb-R\>> where <math|a\<less\>b> <math|x> is a limit
-      point of <math|<around*|]|a,b|]>>.
+      point of <math|<around*|]|a,b|]>> in other words
+      <math|<around*|]|a,b|]>\<subseteq\><around*|(|<around*|]|a,b|]>|)><rprime|'>.>
 
       <item><math|\<forall\>x\<in\><around*|]|a,b|[>> where
       <math|a,b\<in\>\<bbb-R\>> where <math|a\<less\>b> <math|x> is a limit
-      point of <math|<around*|]|a,b|[>>.
+      point of <math|<around*|]|a,b|[>> in other words
+      <math|<around*|]|a,b|[>\<subseteq\><around*|(|<around*|]|a,b|[>|)><rprime|'>.>
     </enumerate>
   </corollary>
 
@@ -429,8 +438,10 @@
 
   <\definition>
     <label|diff limit of a function>Let <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>,<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
-    be normed spaces, <math|A\<subseteq\>X>, <math|x\<in\>A> a limit point of
-    <math|A> and <math|f:A\<rightarrow\>Y> a function that converges to
+    be normed spaces, <math|A\<subseteq\>X>,
+    <math|x\<in\>A<big|cap>A<rprime|'>> where <math|A<rprime|'>> is the set
+    of limit points of <math|A> [see definition: <reference|topology limit
+    point>] and <math|f:A\<rightarrow\>Y> a function that converges to
     <math|y> at <math|x> by <math|A> then this <with|font-series|bold|unique>
     <math|y> [by lemma: <reference|lemma 16.11.500>] is noted as\ 
 
@@ -582,8 +593,10 @@
 
   <\lemma>
     <label|lemma 16.18.2>Let <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>>
-    be a topological space, <math|A\<subseteq\>X> and <math|x> a limit point
-    of <math|A> then <math|x> is a limit point of <math|A\\<around*|{|x|}>>.
+    be a topological space, <math|A\<subseteq\>X> and
+    <math|x\<in\>A<rprime|'>> a limit point of <math|A> then <math|x> is a
+    limit point of <math|A\\<around*|{|x|}>>. In other words we have
+    <math|A<rprime|'>\<subseteq\><around*|(|A\\<around*|{|x|}>|)><rprime|'>>.
   </lemma>
 
   <\proof>
@@ -604,7 +617,8 @@
     be a normed space and <math|A\<subseteq\>X> then if <math|x\<in\>A> is a
     limit point of <math|A> then <math|0\<in\>A<rsub|x>> is a limit point of
     <math|A<rsub|x>> so that by the previous lemma [lemma: <reference|lemma
-    16.18.2>].
+    16.18.2>] <math|0> is a limit point of
+    <math|A<rsub|x>\<setminus\><around*|{|0|}>>.
   </lemma>
 
   <\proof>
@@ -627,8 +641,10 @@
     <math|<around*|\<langle\>|\<bbb-K\>,\<\|\|\>|\<rangle\>>> be the normed
     space of the real [or complex] numbers with the canonical norm
     <math|<around*|\|||\|>>, <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
-    a normed space, <math|A\<subseteq\>\<bbb-K\>>, <math|x\<in\>A> a limit
-    point of <math|A> and <math|f:A\<rightarrow\>Y> a function then
+    a normed space, <math|A\<subseteq\>\<bbb-K\>>,
+    <math|x\<in\>A<big|cap>A<rprime|'>> where <math|A<rprime|'>> is the set
+    of limit points of <math|A> [see definition: <reference|topology limit
+    point>] and <rigid|<math|f:A\<rightarrow\>Y>> a function then
     <with|font-series|bold|<math|f> has a derivative at <math|x> noted as
     <math|f<rprime|'><rsub|x>>> if we have for the function\ 
 
@@ -700,7 +716,9 @@
     space of real or complex numbers, <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
     a normed space, <math|A\<subseteq\>\<bbb-K\>>,
     <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> a
-    normed space, <math|x\<in\>A> a limit point of <math|A> and
+    normed space, <math|x\<in\>A<big|cap>A<rprime|'>> where
+    <math|A<rprime|'>> is the set of limit points of <math|A> [see
+    definition: <reference|topology limit point>] and
     <math|f:A\<rightarrow\>Y> a function. Then <math|f> has a derivative
     <math|f<rprime|'><rsub|z>> if and only if
 
@@ -771,7 +789,9 @@
     space of real or complex numbers, <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
     a normed space, <math|A\<subseteq\>\<bbb-K\>>,
     <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> a
-    normed space, <math|x\<in\>A> a limit point of <math|A> and
+    normed space, <math|x\<in\>A<big|cap>A<rprime|'>> where
+    <math|A<rprime|'>> is the set of limit points of <math|A> [see
+    definition: <reference|topology limit point>] and
     <math|f:A\<rightarrow\>Y> a function. Then we have\ 
 
     <\eqnarray*>
@@ -847,22 +867,81 @@
     </description>
   </proof>
 
+  Up to know we have looked at the derivative <math|f<rprime|'><rsub|x>> at a
+  single limit point in the domain of a function which is a element of the
+  co-domain of <math|f>. Now we define the derivative function
+  <math|f<rprime|'>>.
+
+  <\definition>
+    <label|diff derivative function><dueto|Derivative>Let
+    <math|<around*|\<langle\>|\<bbb-K\>,\<\|\|\>|\<rangle\>>> be the normed
+    space of real [or complex numbers], <math|A\<subseteq\>\<bbb-K\>>,
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> a
+    normed space and <math|f:A\<rightarrow\>X> a function. The set of all
+    limit points of <math|A> for which <math|f> has a derivative at <math|x>
+    is noted as <math|\<cal-D\><rsub|f>> in other words\ 
+
+    <\equation*>
+      \<cal-D\><rsub|f>=<around*|{|x\<in\>A<big|cap>A<rprime|'>\|f<text| has
+      a derivative <math|f<rprime|'><rsub|x>>>|}>\<subseteq\>A.A<rprime|'>
+    </equation*>
+
+    The derivative <math|f<rprime|'>> of <math|f> is then defined by\ 
+
+    <\equation*>
+      f<rprime|'>:\<cal-D\><rsub|f>\<rightarrow\>Y<text| where
+      >f<rprime|'><around*|(|x|)>=f<rprime|'><rsub|x>
+    </equation*>
+
+    <\note>
+      If <math|\<cal-D\><rsub|f>=\<varnothing\>> then
+      <math|f<rprime|'>\<subseteq\>\<cal-D\><rsub|f>\<times\>Y=\<varnothing\>>
+      and <math|f<rprime|'>:\<cal-D\><rsub|f>\<rightarrow\>Y> is the empty
+      function <math|\<varnothing\>:\<varnothing\>\<rightarrow\>Y> [see
+      example: <reference|function empty function>]
+    </note>
+  </definition>
+
+  <\example>
+    <label|diff derivative of the empty function>Let Let
+    <math|<around*|\<langle\>|\<bbb-K\>,\<\|\|\>|\<rangle\>>> be the normed
+    space of real [or complex numbers] and
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> a
+    normed space then for <math|f:\<varnothing\>\<rightarrow\>Y> we have that
+    <math|\<cal-D\><rsub|f>=\<varnothing\>> so that
+    <math|f<rprime|'>:\<cal-D\><rsub|f>\<rightarrow\>Y> is again the empty
+    function.
+  </example>
+
   <\example>
     <label|diff derivative of constant>Let
     <math|<around*|\<langle\>|\<bbb-K\>,\<\|\|\>|\<rangle\>>> be the normed
     space of real [or complex] numbers, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
-    a normed space, \ <math|y\<in\>X> then
-    <math|C<rsub|y>:<around*|[|a,b|]>\<rightarrow\>X> defined by
-    <math|C<rsub|y><around*|(|t|)>=y> has a derivative
-    <math|<around*|(|C<rsub|y>|)><rprime|'><rsub|x>> at <math|x> with
-    <math|<around*|(|C<rsub|y>|)><rprime|'><rsub|x>=0>. Hence if we define\ 
+    a normed space, \ <math|y\<in\>X> and <math|A\<subset\>X> either a open
+    set or of the form <math|<around*|[|a,\<infty\>|[>>,
+    <math|<around*|]|a,\<infty\>|[>>, <math|<around*|]|-\<infty\>,a|]>>,
+    <math|<around*|]|-\<infty\>,a|[>>, <math|<around*|[|a,b|]>>,
+    <math|<around*|[|a,b|[>>, <math|<around*|]|a,b|]>>,
+    <math|<around*|]|a,b|[>>. Let
 
     <\equation*>
-      <around*|(|C<rsub|y>|)><rprime|'>:A\<rightarrow\>X<text| by
-      ><around*|(|C<rsub|y>|)><rprime|'><around*|(|x|)>=<around*|(|C<rsub|y>|)><rprime|'><rsub|x>
+      C<rsub|y>:A\<rightarrow\>X<text| defined by >C<rsub|y><around*|(|x|)>=y
     </equation*>
 
     then\ 
+
+    <\equation*>
+      \<cal-D\><rsub|C<rsub|y>>=A
+    </equation*>
+
+    and for\ 
+
+    <\equation*>
+      <around*|(|C<rsub|y>|)><rprime|'>:A\<rightarrow\>X<text| defined by
+      ><around*|(|C<rsub|y>|)><rprime|'><around*|(|x|)>=<around*|(|C<rsub|y>|)><rprime|'><rsub|x>
+    </equation*>
+
+    we have that\ 
 
     <\equation*>
       <around*|(|C<rsub|y>|)><rprime|'>=C<rsub|0>
@@ -870,102 +949,172 @@
   </example>
 
   <\proof>
-    Let <math|x\<in\><around*|[|a,b|]>> then by [theorem: <reference|topology
-    every element of a generalized interval is a limit point>]\ 
-
-    <\equation*>
-      x<text| is a limit point of ><around*|[|a,b|]>
-    </equation*>
-
-    Further if <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> then for
-    <math|h\<in\><around*|[|a,b|]><rsub|x>> with
-    <math|0\<less\><around*|\||h|\|>\<less\>1> we have\ 
+    Using [theorems: <reference|topology every element of a open set in a
+    normed space is a limit point>, <reference|topology every element of a
+    generalized interval is a limit point>] it follows that
+    <math|A\<subseteq\>A<rprime|'>>. Let <math|x\<in\>A> then
+    <math|x\<in\>A<rprime|'>>, further if
+    <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> then for
+    <math|h\<in\>A<rsub|x>> with <math|0\<less\><around*|\||h|\|>\<less\>1>
+    we have\ 
 
     <\equation*>
       <around*|\<\|\|\>|<frac|C<rsub|y><around*|(|x+h|)>-C<rsub|y><around*|(|x|)>|h>-0|\<\|\|\>>=<around*|\<\|\|\>|<frac|y-y|h>-0|\<\|\|\>>=<around*|\<\|\|\>|0|\<\|\|\>>=0\<less\>\<varepsilon\>
     </equation*>
 
-    Hence using [theorem: <reference|diff calculus derivate>]
-    <math|C<rsub|y>> has a derivative at <math|x> with
-    <math|<around*|(|C<rsub|y>|)><rprime|'><rsub|x>=0>.
+    so that by [theorem: <reference|diff calculus derivate>] <math|C<rsub|y>>
+    has a derivative at <math|x> with <math|<around*|(|C<rsub|y>|)><rprime|'><rsub|x>=0>.
+    Hence <math|x\<in\>\<cal-D\><rsub|C<rsub|y>>> which proves that
+    <math|A\<subseteq\>\<cal-D\><rsub|C<rsub|y>>\<subseteq\>A> or\ 
+
+    <\equation*>
+      \<cal-D\><rsub|C<rsub|y>>=A
+    </equation*>
+
+    Further we have <math|\<forall\>x\<in\>A> that
+    <math|<around*|(|C<rsub|y>|)><rprime|'><around*|(|x|)>=<around*|(|C<rsub|y>|)><rprime|'><rsub|x>=0=C<rsub|0><around*|(|x|)>>
+    which proves that\ 
+
+    <\equation*>
+      <around*|(|C<rsub|y>|)><rprime|'>=C<rsub|0>
+    </equation*>
   </proof>
 
   <\example>
     <label|diff derivative of identity function>Let
     <math|<around*|\<langle\>|\<bbb-K\>,\<\|\|\>|\<rangle\>>> the \ normed
-    space of real [or complex] numbers, <math|A\<subseteq\>K> and
-    <math|x\<in\>A> a limit point of <math|A> then <math|Id<rsub|A>> has a
-    derivative <math|<around*|(|Id<rsub|A>|)><rprime|'><rsub|x>> at <math|x>
-    with <math|<around*|(|Id<rsub|A>|)><rprime|'><rsub|x>=1>.
+    space of real [or complex] numbers and <math|A\<subset\>X> either a open
+    set or of the form <math|<around*|[|a,\<infty\>|[>>,
+    <math|<around*|]|a,\<infty\>|[>>, <math|<around*|]|-\<infty\>,a|]>>,
+    <math|<around*|]|-\<infty\>,a|[>>, <math|<around*|[|a,b|]>>,
+    <math|<around*|[|a,b|[>>, <math|<around*|]|a,b|]>>,
+    <math|<around*|]|a,b|[>>. Let\ 
+
+    <\equation*>
+      Id<rsub|A>:A\<rightarrow\>\<bbb-K\><text| defined by
+      >Id<rsub|A><around*|(|x|)>=x
+    </equation*>
+
+    then we have\ 
+
+    <\equation*>
+      \<cal-D\><rsub|Id<rsub|A>>=A
+    </equation*>
+
+    and for\ 
+
+    <\equation*>
+      <around*|(|Id<rsub|A>|)><rprime|'>:\<cal-D\><rsub|Id<rsub|A>>\<rightarrow\>Y<text|
+      defined by ><around*|(|Id<rsub|A>|)><rprime|'><rsub|><around*|(|x|)>=<around*|(|Id<rsub|A>|)><rprime|'><rsub|x>
+    </equation*>
+
+    we have\ 
+
+    <\equation*>
+      <around*|(|Id<rsub|A>|)><rprime|'>=C<rsub|1>
+    </equation*>
   </example>
 
   <\proof>
-    Let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> then for
-    <math|h\<in\>A<rsub|y>> with <math|0\<less\><around*|\||h|\|>\<less\>1>
-    we have that\ 
+    Using [theorems: <reference|topology every element of a open set in a
+    normed space is a limit point>, <reference|topology every element of a
+    generalized interval is a limit point>] it follows that
+    <math|A\<subseteq\>A<rprime|'>>. Let <math|x\<in\>A> then
+    <math|x\<in\>A<rprime|'>>, further if
+    <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> then for
+    <math|h\<in\>A<rsub|x>> with <math|0\<less\><around*|\||h|\|>\<less\>1>
+    we have
 
     <\equation*>
       <around*|\||<frac|Id<rsub|A><around*|(|x+h|)>-Id<rsub|A><around*|(|x|)>|h>-1|\|>=<around*|\||<frac|x+h-x|h>-1|\|>=<around*|\||0|\|>=0\<less\>\<varepsilon\>
     </equation*>
 
-    Hence using [theorem: <reference|diff calculus derivate>]
+    So that by [theorem: <reference|diff calculus derivate>]
     <math|Id<rsub|A>> has a derivative \ <math|<around*|(|Id<rsub|A>|)><rprime|'><rsub|x>>
     at <math|x> with <math|<around*|(|Id<rsub|A>|)><rprime|'><rsub|x>=1>.
+    Hence <math|x\<in\>\<cal-D\><rsub|C<rsub|y>>> which proves that
+    <math|A\<subseteq\>\<cal-D\><rsub|C<rsub|y>>\<subseteq\>A> or\ 
+
+    <\equation*>
+      \<cal-D\><rsub|C<rsub|y>>=A
+    </equation*>
+
+    Further we have <math|\<forall\>x\<in\>A> that
+    <math|<around*|(|C<rsub|y>|)><rprime|'><around*|(|x|)>=<around*|(|C<rsub|y>|)><rprime|'><rsub|x>=1=C<rsub|1><around*|(|x|)>>
+    which proves that\ 
+
+    <\equation*>
+      <around*|(|C<rsub|y>|)><rprime|'>=C<rsub|1>
+    </equation*>
   </proof>
 
   <\example>
     <label|diff scalar product function has a derivate>Let
-    <math|<around*|\<langle\>|\<bbb-K\>,\<\|\|\>|\<rangle\>>> be the normed
-    space of real or complex numbers, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
-    a normed space, <math|x\<in\>X> then\ 
+    <math|<around*|\<langle\>|\<bbb-K\>,\<\|\|\>|\<rangle\>>> the \ normed
+    space of real [or complex] numbers and <math|A\<subset\>X> either a open
+    set or of the form <math|<around*|[|a,\<infty\>|[>>,
+    <math|<around*|]|a,\<infty\>|[>>, <math|<around*|]|-\<infty\>,a|]>>,
+    <math|<around*|]|-\<infty\>,a|[>>, <math|<around*|[|a,b|]>>,
+    <math|<around*|[|a,b|[>>, <math|<around*|]|a,b|]>>,
+    <math|<around*|]|a,b|[>>. <math|A\<subseteq\>K>. Let <math|x\<in\>X> and
+    define\ 
 
     <\equation*>
-      <around*|(|\<ast\>\<cdot\>x|)>:\<bbb-K\>\<rightarrow\>X<text| defined
-      by ><around*|(|\<ast\>*\<cdot\>x|)><around*|(|t|)>=t\<cdot\>x
+      f:A\<rightarrow\>\<bbb-K\><text| defined by
+      >f<around*|(|t|)>=t\<cdot\>x
     </equation*>
 
-    has a derivative at every <math|t\<in\>\<bbb-R\>> with
-    <math|<around*|(|\<ast\>\<cdot\>x|)><rprime|'><rsub|x>=x>
+    then we have\ 
+
+    <\equation*>
+      \<cal-D\><rsub|f>=A
+    </equation*>
+
+    and for\ 
+
+    <\equation*>
+      f<rprime|'>:\<cal-D\><rsub|Id<rsub|A>>\<rightarrow\>Y<text| defined by
+      >f<rprime|'><around*|(|x|)>=f<rprime|'><rsub|x>
+    </equation*>
+
+    we have\ 
+
+    <\equation*>
+      f<rprime|'>=C<rsub|x>
+    </equation*>
   </example>
 
-  <\note>
-    As <math|t\<in\>\<bbb-K\>> a open set <math|t> is a limit point of
-    <math|\<bbb-K\>> [see <reference|topology every element of a open set in
-    a normed space is a limit point>] so having a derivative makes sense.
-  </note>
-
   <\proof>
-    As \ Let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> then for
-    <math|0\<less\><around*|\||h|\|>\<less\>1> we have\ 
+    Using [theorems: <reference|topology every element of a open set in a
+    normed space is a limit point>, <reference|topology every element of a
+    generalized interval is a limit point>] it follows that
+    <math|A\<subseteq\>A<rprime|'>>. Let <math|t\<in\>A> then
+    <math|t\<in\>A<rprime|'>>, further if
+    <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> then for
+    <math|h\<in\>A<rsub|x>> with <math|0\<less\><around*|\||h|\|>\<less\>1>
+    we have
 
     <\equation*>
-      <around*|\<\|\|\>|<frac|<around*|(|\<ast\>,\<cdot\>x|)><around*|(|t+h|)>-<around*|(|\<ast\>,\<cdot\>x|)><around*|(|t|)>|h>-x|\<\|\|\>>=<around*|\<\|\|\>|<frac|<around*|(|t+h|)>\<cdot\>x-t\<cdot\>x|h>-x|\<\|\|\>>=<around*|\<\|\|\>|<frac|h\<cdot\>x|h>-x|\<\|\|\>>=0\<less\>\<varepsilon\>
+      <around*|\||<frac|f<around*|(|t+h|)>-f<around*|(|t|)>|h>-x|\|>=<around*|\||<frac|<around*|(|t+h|)>\<cdot\>x-t\<cdot\>x|h>-x|\|>=<around*|\||<frac|h\<cdot\>x|h>-x|\|>=0\<less\>\<varepsilon\>
     </equation*>
 
-    so that <math|<around*|(|\<ast\>\<cdot\>x|)>> has <math|x> as its
-    derivative at <math|t>.
+    So that by [theorem: <reference|diff calculus derivate>] <math|f> has a
+    derivative \ <math|f<rprime|'><rsub|t>> at <math|t> with
+    <math|f<rprime|'><rsub|t>=x>. Hence <math|t\<in\>\<cal-D\><rsub|f>> which
+    proves that <math|A\<subseteq\>\<cal-D\><rsub|f>\<subseteq\>A> or\ 
+
+    <\equation*>
+      \<cal-D\><rsub|f>=A
+    </equation*>
+
+    Further we have <math|\<forall\>x\<in\>A> that
+    <math|f<rprime|'><around*|(|t|)>=f<rprime|'><rsub|t>=x=C<rsub|x><around*|(|t|)>>
+    which proves that\ 
+
+    <\equation*>
+      f<rprime|'>=C<rsub|x>
+    </equation*>
   </proof>
-
-  We use <math|f<rprime|'><rsub|x>> to note the derivative of <math|f> at
-  <math|x>. Many books use instead the notation <math|f<rprime|'><rsub|\|x>>
-  or <math|f<rprime|'><around*|(|x|)>>. The problem with
-  <math|f<rprime|'><rsub|\|x>> is that it can be confused with the
-  restriction of a function <math|f<rprime|'>> to <math|x> and
-  <math|f<rprime|'><around*|(|x|)>> can also be confused with the value of a
-  function <math|f<rprime|'>> at <math|x>. The derivative is however not a
-  function but a value of <math|Y>. If <math|f> has a derivative at every
-  <math|x> in <math|U> then we can define a function\ 
-
-  <\equation*>
-    f<rprime|'>:U\<rightarrow\>Y<text| by
-    >f<rprime|'><around*|(|x|)>=f<rprime|'><rsub|x>
-  </equation*>
-
-  The notation convention of this book allows us to \ make a distinction
-  between the derivative at a point, which is a value of <math|Y>, and the
-  derivative <with|font-series|bold|function> which only exist if a
-  derivative exist at every point in <math|U>. If the derivative function
-  exist then by its definition <math|f<rprime|'><around*|(|x|)>=f<rprime|'><rsub|x>>.
 
   <subsection|Properties of the derivative>
 
@@ -1095,7 +1244,7 @@
   <\note>
     Using [theorem: <reference|topology every element of a open set in a
     normed space is a limit point>] we have as <math|U,V> are open and
-    <math|x\<in\>V\<subseteq\>U> that <math|x> is a limit poing of <math|U>
+    <math|x\<in\>V\<subseteq\>U> that <math|x> is a limit point of <math|U>
     and <math|V> which is needed for the definition of the derivative.
   </note>
 
@@ -1270,8 +1419,8 @@
     <label|diff (f+g)'=f'+g'>Let <math|<around*|\<langle\>|\<bbb-K\>,\<\|\|\>|\<rangle\>>>
     be the normed space of real or complex numbers,
     <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> a
-    normed space, <math|A\<subseteq\>\<bbb-K\>>, <math|x\<in\>A> a limit
-    point of <math|A> then we have:\ 
+    normed space, <math|A\<subseteq\>\<bbb-K\>>,
+    <math|x\<in\>A<big|cap>A<rprime|'>> then we have:\ 
 
     <\enumerate>
       <item>If <math|f:A\<rightarrow\>X> and <math|g:A\<rightarrow\>X> are
@@ -1581,20 +1730,18 @@
   where the Fréchet approximations are the same and define then the
   differential to be the restriction of a Fréchet approximation to this set.
   In the above example we have that <math|<around*|(|L<rsub|1>|)><rsub|\|A>=<around*|(|L<rsub|2>|)><rsub|\|A>>.
-  The problem with this approach is that this extremely complex and is not
-  easy to extend to higher order differentiation. So the approach that is
-  used in this book like almost every book about differentiation is to
-  restrict ourself to functions whose domain is open. The following lemma
-  will then be essential.
+  The problem with this approach is that it is extremely complex and is not
+  easy to extend to higher order differentiation. So the approach used in
+  this book is to limit differentiability to interior points [see definition:
+  <reference|topology interior of a set>] of the domain of a function.
 
   <\lemma>
     <label|lemma 16.37.4>Let <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
     <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
-    be normed spaces, <math|U\<in\>\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>>>
-    a open set in <math|X>, <math|x\<in\>U> and <math|f:U\<rightarrow\>Y> a
-    function then if <math|L<rsub|1>,L<rsub|2>\<in\>\<cal-L\><around*|[|X;Y|]>>
-    two Fréchet approximations of <math|f> at <math|x> then
-    <math|L<rsub|1>=L<rsub|2>>.
+    be normed spaces, <math|A\<subseteq\>X>, <math|x\<in\>A<rsup|\<circ\>>>
+    and <math|f:A\<rightarrow\>Y> a function then if
+    <math|L<rsub|1>,L<rsub|2>\<in\>\<cal-L\><around*|[|X;Y|]>> two Fréchet
+    approximations of <math|f> at <math|x> then <math|L<rsub|1>=L<rsub|2>>.
   </lemma>
 
   <\proof>
@@ -1624,11 +1771,20 @@
       we have ><around*|\<\|\|\>|f<around*|(|x+k|)>-f<around*|(|x|)>-L<rsub|2><around*|(|k|)>|\<\|\|\>><rsub|Y>\<leqslant\><frac|\<varepsilon\>|2\<cdot\><around*|(|<around*|\<\|\|\>|h<rsub|0>|\<\|\|\>><rsub|X>+1|)>>\<cdot\><around*|\<\|\|\>|k|\<\|\|\>>
     </equation>
 
-    As <math|U<rsub|x>\<equallim\><rsub|<text|[eq: <reference|diff
-    Ux=-x+U=U-x>]>><around*|(|-x|)>+U> is open [see theorem:
-    <reference|normed space set operations>] and <math|0\<in\>U<rsub|x>>
-    there exist a <math|\<delta\><rsub|3>\<in\>\<bbb-R\><rsup|+>> such that
-    <math|0\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,\<delta\><rsub|3>|)>\<subseteq\>U<rsub|x>>.
+    As <math|x\<in\>A<rsup|\<circ\>>> there exist by [definition:
+    <reference|topology interior of a set>] there exist a open set <math|U>
+    such that <math|x\<in\>U\<subseteq\>A> hence there exist a
+    <math|\<delta\><rsub|3>\<in\>\<bbb-R\><rsup|+>> so that
+    <math|x\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|x,\<delta\><rsub|3>|)>\<subseteq\>U\<subseteq\>A>.
+    Let <math|k\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,\<delta\><rsub|3>|)>>
+    then <math|<around*|\<\|\|\>|<around*|(|x+k|)>-x|\<\|\|\>><rsub|X>=<around*|\<\|\|\>|k|\<\|\|\>><rsub|X>\<less\>\<delta\><rsub|3>>
+    so that <math|x+k\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|x,\<delta\><rsub|3>|)>\<subseteq\>A>
+    which proves that\ 
+
+    <\equation*>
+      0\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,\<delta\><rsub|3>|)>\<subseteq\>A<rsub|x>
+    </equation*>
+
     Take <math|\<delta\>=min<around*|(|\<delta\><rsub|1>,\<delta\><rsub|2>,\<delta\><rsub|3>|)>>
     and define <math|h<rsub|1>=<frac|\<delta\>|<around*|(|<around*|\<\|\|\>|h<rsub|0>|\<\|\|\>><rsub|X>+1|)>>\<cdot\>h<rsub|0>>
     then\ 
@@ -1637,7 +1793,7 @@
       <label|eq 16.10.4><around*|\<\|\|\>|h<rsub|1>|\<\|\|\>><rsub|X>=<around*|\<\|\|\>|<frac|\<delta\>|<around*|(|<around*|\<\|\|\>|h<rsub|0>|\<\|\|\>><rsub|X>+1|)>>\<cdot\>h<rsub|0>|\<\|\|\>><rsub|X>=\<delta\>\<cdot\><frac|<around*|\<\|\|\>|h<rsub|0>|\<\|\|\>><rsub|X>|<around*|\<\|\|\>|h<rsub|0>|\<\|\|\>><rsub|X>+1>\<less\>\<delta\>\<leqslant\>\<delta\><rsub|1>,\<delta\><rsub|2>,\<delta\><rsub|3>
     </equation>
 
-    so that <math|h<rsub|1>\<in\>U<rsub|x>> and\ 
+    so that <math|h<rsub|1>\<in\>A<rsub|x>> and\ 
 
     <\eqnarray*>
       <tformat|<table|<row|<cell|<frac|\<delta\>|<around*|\<\|\|\>|h<rsub|0>|\<\|\|\>><rsub|X>+1>\<cdot\><around*|\<\|\|\>|L<rsub|1><around*|(|h<rsub|0>|)>-L<rsub|2><around*|(|h<rsub|0>|)>|\<\|\|\>><rsub|Y>>|<cell|=>|<cell|>>|<row|<cell|<around*|\<\|\|\>|<frac|\<delta\>|<around*|\<\|\|\>|h<rsub|0>|\<\|\|\>><rsub|X>+1>\<cdot\>L<rsub|1><around*|(|h<rsub|0>|)>-<frac|\<delta\>|<around*|\<\|\|\>|h<rsub|0>|\<\|\|\>><rsub|X>+1>\<cdot\>L<rsub|2><around*|(|h<rsub|0>|)>|\<\|\|\>><rsub|Y>>|<cell|=>|<cell|>>|<row|<cell|<around*|\<\|\|\>|L<rsub|1><around*|(|<frac|\<delta\>|<around*|\<\|\|\>|h<rsub|0>|\<\|\|\>><rsub|X>+1>\<cdot\>h<rsub|0>|)>|\<\|\|\>><rsub|Y>+<around*|\<\|\|\>|L<rsub|2><around*|(|<frac|\<delta\>|<around*|\<\|\|\>|h<rsub|0>|\<\|\|\>><rsub|X>+1>\<cdot\>h<rsub|0>|)>|\<\|\|\>><rsub|Y>>|<cell|=>|<cell|>>|<row|<cell|<around*|\<\|\|\>|L<rsub|1><around*|(|h<rsub|1>|)>-L<rsub|2><around*|(|h<rsub|1>|)>|\<\|\|\>><rsub|Y>>|<cell|=>|<cell|>>|<row|<cell|<around*|\<\|\|\>|f<around*|(|x+h<rsub|1>|)>-f<around*|(|x|)>-L<rsub|2><around*|(|h<rsub|1>|)>-<around*|(|f<around*|(|x+h<rsub|1>|)>-f<around*|(|x|)>-L<rsub|1><around*|(|h<rsub|1>|)>|)>|\<\|\|\>><rsub|Y>>|<cell|\<leqslant\>>|<cell|>>|<row|<cell|<around*|\<\|\|\>|f<around*|(|x+h<rsub|1>|)>-f<around*|(|x|)>-L<rsub|2><around*|(|h<rsub|1>|)>|\<\|\|\>><rsub|Y>+<around*|\<\|\|\>|f<around*|(|x+h<rsub|1>|)>-f<around*|(|x|)>-L<rsub|1><around*|(|h<rsub|1>|)>|\<\|\|\>><rsub|Y>>|<cell|<below|\<leqslant\>|<text|[eqs:
@@ -1664,23 +1820,17 @@
     <label|diff differentiability><index|differentiability><dueto|Fréchet
     differentiability>Let <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
     <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
-    be normed spaces, a open set in <math|X>
-    <math|U\<in\>\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|x>>> and
-    <math|x\<in\>U> then a function
+    be normed spaces, <math|A\<subseteq\>X> and
+    <math|x\<in\>A<rsup|\<circ\>>> then a function
 
     <\equation*>
-      f:U\<rightarrow\>Y
+      f:A\<rightarrow\>Y
     </equation*>
 
     is Fréchet differentiable at <math|x> if there exist a
     <math|L\<in\>L<around*|(|X,Y|)>> such that <math|L> is a Fréchet
     approximation of <math|f> at <math|x>. Using [definition: <reference|diff
-    Frechet approximation>] this equivalent with
-
-    \ <math|\<forall\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> there exist a
-    <math|\<delta\>\<in\>\<bbb-R\><rsup|+>> such that
-    <math|\<forall\>h\<in\>U<rsub|x>> with
-    <math|<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>\<less\>\<delta\>> we have\ 
+    Frechet approximation>] this is equivalent with\ 
 
     <\equation*>
       \<forall\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+><text|
@@ -1690,96 +1840,221 @@
       ><around*|\<\|\|\>|f<around*|(|x+h|)>-f<around*|(|x|)>-L<around*|(|x|)>|\<\|\|\>><rsub|Y>\<leqslant\>\<varepsilon\>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>><rsub|X>
     </equation*>
 
-    The unique <math|L> [seee lemma: <reference|lemma 16.37.4>] in
+    The unique <math|L> [seee lemma: <reference|lemma 16.37.4>] is called the
     \ <with|font-series|bold|Fréchet differential of f at <math|x>> and noted
-    as <math|D<rsub|x> f>. In other words <math|f> is Fréchet differentiable
-    at <math|x> if there exist a\ 
-
-    <\equation*>
-      D <rsub|x>f\<in\>L<around*|(|X,Y|)><text|>
-    </equation*>
-
-    such that\ 
-
-    <\equation*>
-      \<forall\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+><text|
-      >\<exists\>\<delta\>\<in\>\<bbb-R\><rsup|+><text| such that
-      >\<forall\>h\<in\>U<rsub|x><text| with
-      ><around*|\<\|\|\>|h|\<\|\|\>><rsub|X><text| we have
-      ><around*|\<\|\|\>|f<around*|(|x+h|)>-f<around*|(|x|)>-D
-      <rsub|x>f<around*|(|h|)>|\<\|\|\>><rsub|Y>\<leqslant\>\<varepsilon\>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>><rsub|X>
-    </equation*>
+    as <math|D<rsub|x> f>.\ 
   </definition>
+
+  Note that the Fréchet differential <math|D<rsub|x>f> at
+  <math|x\<in\>A<rsup|0>> is a element of <math|L<around*|(|X,Y|)>> hence
+  <math|D<rsub|x>f> is a continuous linear function. However we can also look
+  at a different function who maps <math|x> to <math|D<rsub|x>f> which is the
+  differentia; of <math|f>.
 
   <\definition>
-    <label|diff differentiability on a set>Let
-    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
-    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
-    be normed spaces, <math|U\<subseteq\>X> a open set, <math|A\<subseteq\>U>
-    then a function <math|f:U\<rightarrow\>Y> is
-    <with|font-series|bold|Fréchet differentiable on <math|A>> if
-    <math|\<forall\>x\<in\>A> we have that <math|f> is Fréchet differentiable
-    at <math|x>.
+    <label|diff differential><label|diff differential><dueto|Differential>Let
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>
+    and <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    be normed spaces, <math|A\<subseteq\>X> and <math|f:A\<rightarrow\>Y> a
+    function. Then we define
+
+    <\equation*>
+      \<frak-D\><rsub|f>=<around*|{|x\<in\>A<rsup|\<circ\>>\|f<text| is
+      Fréchet differentiable at >x|}>\<subseteq\>A<rsup|\<circ\>>
+    </equation*>
+
+    and\ 
+
+    <\equation*>
+      D f:\<frak-D\><rsub|f>\<rightarrow\>L<around*|(|X,Y|)><text| where >D
+      f<around*|(|x|)>=D<rsub|x>f
+    </equation*>
+
+    <math|D f> is called the differential of <math|f>.
   </definition>
-
-  First note that <math|D<rsub|x>f> is a element of <math|L<around*|(|X,Y|)>>
-  hence a continuous linear function from <math|X> to <math|Y> so that for
-  <math|h\<in\>X> we have that <math|D<rsub|x>f<around*|(|h|)>\<in\>Y>. In
-  many texts about differentiation the notation <math|D f<around*|(|x|)>> is
-  used for the Fréchet differential at <math|x>. This suggest that the
-  differential at <math|x> is the value of a function <math|D f> that is not
-  yet defined. If however <math|f> is differentiable on a subset <math|A> of
-  <math|U> then we can define the function\ 
-
-  <\equation*>
-    D f:A\<rightarrow\>L<around*|(|X,Y|)><text| by >D
-    f<around*|(|x|)>=D<rsub|x>f
-  </equation*>
-
-  that maps every point of <math|A> to a continuous linear mapping between
-  <math|X> and <math|Y>. In this book we want to keep these two things
-  separate by notation. Hence we use <math|D f<around*|(|x|)>> only if
-  <math|f> is Fréchet differentiable on a set and not if <math|f> is Fréchet
-  Differentiable at a single point. If <math|D f> is defined on <math|A> and
-  <math|x\<in\>A> then <math|D f<around*|(|x|)>\<in\>L<around*|(|X,Y|)>> so
-  that given a <math|h\<in\>X> we have that <math|<around*|(|D
-  f<around*|(|x|)>|)><around*|(|h|)>\<in\>Y>, to simplify notation we note
-  this as <math|D f<around*|(|x|)><around*|(|h|)>>. This is part of a more
-  general notation convention used where the function application associates
-  to the left for example <math|<around*|(|<around*|(|f<around*|(|x|)>|)><around*|(|y|)>|)><around*|(|z|)>>
-  is noted as <math|f<around*|(|x|)><around*|(|y|)><around*|(|z|)>>.
 
   <\example>
     <label|diff identity function is differentiable>Let
     <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> be
-    a normed space, <math|U> a open set then <math|\<forall\>x\<in\>U> we
-    have that <math|Id<rsub|U>:U\<rightarrow\>X> is Fréchet differentiable at
-    <math|x> and <math|D<rsub|x> Id<rsub|U>=Id<rsub|X>>. So if we define\ 
+    a normed space, <math|U> a open set in <math|X> and\ 
 
     <\equation*>
-      D Id<rsub|X>:X\<rightarrow\>L<around*|(|X,X|)><text| by >D
-      Id<rsub|U><around*|(|x|)>=D <rsub|x>Id<rsub|U>
+      Id<rsub|U>:U\<rightarrow\>X<text| defined by
+      >Id<rsub|U><around*|(|x|)>=x
     </equation*>
 
-    then\ 
+    then
 
     <\equation*>
-      D Id<rsub|U>=C<rsub|Id<rsub|x>>
+      \<frak-D\><rsub|Id<rsub|U>>=U
+    </equation*>
+
+    and for\ 
+
+    <\equation*>
+      D Id<rsub|U>:\<frak-D\><rsub|Id<rsub|U>>\<rightarrow\>L<around*|(|X,Y|)><text|
+      where >D Id<rsub|U><around*|(|x|)>=D<rsub|x>Id<rsub|\|U><rsub|>
+    </equation*>
+
+    we have\ 
+
+    <\equation*>
+      D Id<rsub|U>=C<rsub|Id<rsub|X>>
     </equation*>
   </example>
 
   <\proof>
-    Let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> then we have for
-    <math|h\<in\>U<rsub|x>> that\ 
+    Using [example: <reference|continuity identity function norm>] it follows
+    that\ 
 
     <\equation*>
-      <around*|\<\|\|\>|Id<rsub|U><around*|(|x+h|)>-Id<rsub|U><around*|(|x|)>-Id<rsub|X><around*|(|h|)>|\<\|\|\>>=<around*|\<\|\|\>|x+h-x-h|\<\|\|\>>=<around*|\<\|\|\>|0|\<\|\|\>>=0\<less\>\<varepsilon\>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>>
+      Id<rsub|X>\<in\>L<around*|(|X,Y|)>
+    </equation*>
+
+    As <math|U> is open we have by [theorem: <reference|topology open set and
+    interior>] that <math|U=U<rsup|\<circ\>>>. Let <math|x\<in\>U> and take
+    <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> then for
+    <math|h\<in\>U<rsub|x>> with <math|<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>\<less\>1>
+    we have\ 
+
+    <\equation*>
+      <around*|\<\|\|\>|Id<rsub|U><around*|(|x+h|)>-Id<rsub|U><around*|(|x|)>-Id<rsub|X><around*|(|h|)>|\<\|\|\>><rsub|Y>=<around*|\<\|\|\>|x=h-x-h|\<\|\|\>><rsub|Y>=0\<leqslant\>\<varepsilon\>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>><rsub|x>
+    </equation*>
+
+    so that <math|D<rsub|x>Id<rsub|U>=Id<rsub|X>>. Hence\ 
+
+    <\equation*>
+      \<frak-D\><rsub|Id<rsub|U>>=U
+    </equation*>
+
+    and <math|\<forall\>x\<in\>U> we have
+    <math|D<around*|(|Id<rsub|U>|)><around*|(|x|)>=D<rsub|x>Id<rsub|U>=Id<rsub|X>=C<rsub|Id<rsub|x>><around*|(|x|)>>
+    which proves that\ 
+
+    <\equation*>
+      D<around*|(|Id<rsub|U>|)>=C<rsub|Id<rsub|X>>
     </equation*>
   </proof>
 
+  <\example>
+    <label|diff constant function is differentiable>Let
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    be a normed space, <math|U> a open set in <math|X>, <math|y\<in\>Y>\ 
+
+    <\equation*>
+      C<rsub|y>:U\<rightarrow\>X<text| defined by >C<rsub|y><around*|(|x|)>=y
+    </equation*>
+
+    then
+
+    <\equation*>
+      \<frak-D\><rsub|C<rsub|y>>=U
+    </equation*>
+
+    and for\ 
+
+    <\equation*>
+      D C<rsub|y>:\<frak-D\><rsub|Id<rsub|U>>\<rightarrow\>L<around*|(|X,Y|)><text|
+      where >D<around*|(| C<rsub|y>|)><around*|(|x|)>=D<rsub|x>C<rsub|y>
+    </equation*>
+
+    we have\ 
+
+    <\equation*>
+      D C<rsub|y>=C<rsub|0>
+    </equation*>
+  </example>
+
+  <\proof>
+    Using [example: <reference|continuity L(X,Y) is a subspace of Hom(X,Y)>]
+    it follows that\ 
+
+    <\equation*>
+      C<rsub|0>\<in\>L<around*|(|X,Y|)>
+    </equation*>
+
+    As <math|U> is open we have by [theorem: <reference|topology open set and
+    interior>] that <math|U=U<rsup|\<circ\>>>. Let <math|x\<in\>U> and take
+    <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> then for
+    <math|h\<in\>U<rsub|x>> with <math|<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>\<less\>1>
+    we have\ 
+
+    <\equation*>
+      <around*|\<\|\|\>|C<rsub|y><around*|(|x+h|)>-C<rsub|y><around*|(|x|)>-C<rsub|0><around*|(|h|)>|\<\|\|\>><rsub|Y>=<around*|\<\|\|\>|y-y-0|\<\|\|\>><rsub|Y>=0\<leqslant\>\<varepsilon\>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>><rsub|x>
+    </equation*>
+
+    so that <math|D<rsub|x>C<rsub|y>=C<rsub|0>>. Hence\ 
+
+    <\equation*>
+      \<frak-D\><rsub|C<rsub|y>>=U
+    </equation*>
+
+    and <math|\<forall\>x\<in\>U> we have
+    <math|D<around*|(|C<rsub|y>|)><around*|(|x|)>=D<rsub|x>C<rsub|y>=C<rsub|0>=C<rsub|C<rsub|0>><around*|(|x|)>>
+    which proves that\ 
+
+    <\equation*>
+      D<around*|(|C<rsub|y>|)>=C<rsub|C<rsub|0>>
+    </equation*>
+  </proof>
+
+  <\example>
+    <label|diff linear mappings are differentiable>Let
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>,
+    <math|L\<in\>L<around*|(|X,Y|)>> then we have\ 
+
+    <\equation*>
+      \<frak-D\><rsub|L>=X
+    </equation*>
+
+    and for
+
+    <\equation*>
+      D L:X\<rightarrow\>X<text| defined by >D L<around*|(|x|)>=D<rsub|x>L
+    </equation*>
+
+    that\ 
+
+    <\equation*>
+      D L=C<rsub|L>
+    </equation*>
+  </example>
+
+  <\proof>
+    As <math|X> is open we have by [theorem: <reference|topology open set and
+    interior>] that <math|X=X<rsup|\<circ\>>>. Let <math|x\<in\>X> and take
+    <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> then for
+    <math|h\<in\>X<rsub|x>> with <math|<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>\<less\>1>
+    we have\ 
+
+    <\equation*>
+      <around*|\<\|\|\>|L<around*|(|x+h|)>-L<around*|(|x|)>-L<around*|(|h|)>|\<\|\|\>><rsub|Y>=<around*|\<\|\|\>|L<around*|(|x|)>+L<around*|(|h|)>-L<around*|(|x|)>-L<around*|(|h|)>|\<\|\|\>><rsub|Y>=0\<leqslant\>\<varepsilon\>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>><rsub|x>
+    </equation*>
+
+    so that <math|D<rsub|x>L=C<rsub|0>>. Hence\ 
+
+    <\equation*>
+      \<frak-D\><rsub|C<rsub|y>>=X
+    </equation*>
+
+    and <math|\<forall\>x\<in\>X> we have <math|D
+    L<around*|(|x|)>=D<rsub|x>L=L=C<rsub|L><around*|(|x|)>> which proves that\ 
+
+    <\equation*>
+      D L=C<rsub|L>
+    </equation*>
+  </proof>
+
+  \;
+
   Although Fréchet differentiability and the differential is defined using
   norms, the definition is actually dependent on the topology generated by
-  the norms. This is expressed in the following theorem.
+  the norms. So if two norms generate the same topology Fréchet
+  differentiability is independent of the choosen norm.
+
+  TODO check this again on mistakes
 
   <\theorem>
     <label|diff equivalent norms>Let <math|X,Y> be vector spaces over
@@ -1787,14 +2062,14 @@
     <math|<around*|\<\|\|\>||\<\|\|\>><rsub|X<rsub|1>>,<around*|\<\|\|\>||\<\|\|\>><rsub|X<rsub|2>>>
     on <math|X> and <math|<around*|\<\|\|\>||\<\|\|\>><rsub|Y<rsub|1>>>,
     <math|<around*|\<\|\|\>||\<\|\|\>><rsub|Y<rsub|2>>> on <math|Y>,
-    <math|U\<subseteq\>X> a open set [using the topology
+    <math|A\<subseteq\>X>, <math|x\<in\>A<rsup|\<circ\>>> [using the topology
     <math|\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X<rsub|1>>>\<equallim\><rsub|<text|norms
-    are equivalent >>\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X<rsub|2>>>>],
-    <math|x\<in\>U> and
+    are equivalent >>\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X<rsub|2>>>>]
+    and <math|f:A\<rightarrow\>X> a function then we have that if
 
     <\equation*>
-      f:X\<rightarrow\>Y<text| is Fréchet differentiable function at <math|x>
-      with differential >D<rsub|x>f<text| using
+      f<text| is Fréchet differentiable function at <math|x> with
+      differential >D<rsub|x>f<text| using
       ><around*|\<\|\|\>||\<\|\|\>><rsub|X<rsub|1>><text| and
       ><around*|\<\|\|\>||\<\|\|\>><rsub|Y<rsub|1>>
     </equation*>
@@ -1802,8 +2077,8 @@
     then\ 
 
     <\equation*>
-      f:X\<rightarrow\>Y<text| is Fréchet differentiable function at <math|x>
-      with differential >D<rsub|x>f<text| using
+      f<text| is Fréchet differentiable function at <math|x> with
+      differential >D<rsub|x>f<text| using
       ><around*|\<\|\|\>||\<\|\|\>><rsub|X<rsub|2>><text| and
       ><around*|\<\|\|\>||\<\|\|\>><rsub|Y<rsub|2>>
     </equation*>
@@ -1863,6 +2138,90 @@
   depends on the function \ values for a arbitrary open neighborhood of this
   point not on the domain of the function.
 
+  <\theorem>
+    <label|diff differentiability is a local property>Let
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    be normed spaces, <math|x\<in\>V\<subseteq\>U> where
+    <math|U,V\<in\>\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>>> and
+    <rigid|<math|f:U\<rightarrow\>Y>> is a function then we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|>|<cell|f<text| is Fréchet differentiable at
+      >x>|<cell|>>|<row|<cell|>|<cell|\<Updownarrow\>>|<cell|>>|<row|<cell|>|<cell|f<rsub|\|V><text|
+      is Fréchet differentiable at >x>|<cell|>>>>
+    </eqnarray*>
+
+    Further if <math|f> or <math|f<rsub|\|V>> is Fréchet differentiable at
+    <math|x> then <math|D<rsub|x>f=D<rsub|x>f<rsub|\|V>>.
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>Let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>.
+      Then, as <math|f> is Fréchet differentiable at <math|x> with
+      differential <math|D<rsub|x>f\<in\>L<around*|(|X,Y|)>> then exist a
+      <math|\<delta\>\<in\>\<bbb-R\><rsup|+>> such that
+      <math|\<forall\>y\<in\>U<rsub|x>> with
+      <math|<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>\<less\>\<delta\>> we have\ 
+
+      <\equation*>
+        <around*|\<\|\|\>|f<around*|(|x+h|)>-f<around*|(|x|)>-D<rsub|x>f<around*|(|h|)>|\<\|\|\>><rsub|Y>\<leqslant\>\<varepsilon\>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>><rsub|X>
+      </equation*>
+
+      Let <math|h\<in\>V<rsub|x>\<Rightarrow\>x+h\<in\>V\<subseteq\>U\<Rightarrow\>h\<in\>U<rsub|x>>
+      so if <math|<around*|\<\|\|\>|h|\<\|\|\>><rsub|x>\<less\>\<delta\>> we
+      have\ 
+
+      <\equation*>
+        <around*|\<\|\|\>|f<rsub|\|V><around*|(|x+h|)>-f<rsub|\|V><around*|(|x|)>-D<rsub|x>f<around*|(|h|)>|\<\|\|\>><rsub|Y><below|=|x,x+h\<in\>V><around*|\<\|\|\>|f<around*|(|x+h|)>-f<around*|(|x|)>-D<rsub|x>f<around*|(|h|)>|\<\|\|\>>\<leqslant\>\<varepsilon\>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>><rsub|X>
+      </equation*>
+
+      which proves that <math|f<rsub|\|V>> is Fréchet differentiable at
+      <math|x> with <math|D<rsub|x>f<rsub|\|V>=D<rsub|x>f>.
+
+      <item*|<math|\<Leftarrow\>>>As <math|x\<in\>V> a open set there exist a
+      <math|\<delta\><rsub|1>\<in\>\<bbb-R\><rsup|+>> such that
+
+      <\equation*>
+        x\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|x>><around*|(|x,\<delta\><rsub|1>|)>\<subseteq\>V\<subseteq\>U
+      </equation*>
+
+      Let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>. As <math|f<rsub|\|V>>
+      is Fréchet differentiable at <math|x> with differential
+      <math|D<rsub|x>f<rsub|\|V>> there exist a
+      <math|\<delta\><rsub|2>\<in\>\<bbb-R\><rsup|+>> such that
+      <math|\<forall\>h\<in\>V<rsub|x>> with
+      <math|<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>\<less\>\<delta\>> we have\ 
+
+      <\equation*>
+        <around*|\<\|\|\>|f<rsub|\|V><around*|(|x+h|)>-f<rsub|\|V><around*|(|x|)>-D<rsub|x>f<rsub|\|V>|\<\|\|\>><rsub|Y>\<leqslant\>\<varepsilon\>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>><rsub|X>
+      </equation*>
+
+      Take <math|\<delta\>=min<around*|(|\<delta\><rsub|1>,\<delta\><rsub|2>|)>\<in\>\<bbb-R\><rsup|+>>
+      then we have <math|\<forall\>h\<in\>U<rsub|x>> with
+      <math|<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>\<leqslant\>\<delta\>> that\ 
+
+      <\equation*>
+        <around*|\<\|\|\>|<around*|(|x+h|)>-x|\<\|\|\>><rsub|X>=<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>\<less\>\<delta\>\<leqslant\>\<delta\><rsub|1>\<Rightarrow\>x+h\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|x,\<delta\><rsub|1>|)>\<subseteq\>V\<Rightarrow\>h\<in\>V<rsub|x>
+      </equation*>
+
+      so as also <math|<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>\<less\>\<delta\>\<leqslant\>\<delta\><rsub|2>>
+      we have that\ 
+
+      <\equation*>
+        <around*|\<\|\|\>|f<around*|(|x+h|)>-f<around*|(|x|)>-D<rsub|x>f<rsub|V><around*|(|x|)>|\<\|\|\>><rsub|Y><below|=|x,x+h\<in\>V><around*|\<\|\|\>|f<rsub|\|V><around*|(|x+h|)>-f<rsub|\|V><around*|(|x|)>=D<rsub|x>f<rsub|\|V>|\<\|\|\>><rsub|Y>\<leqslant\>\<varepsilon\>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>><rsub|X>
+      </equation*>
+
+      which proves that <math|f> is Fréchet differentiable at <math|x> with
+      <math|D<rsub|x>f=D<rsub|x>f<rsub|\|V>>.
+    </description>
+  </proof>
+
+  \;
+
   \;
 
   \;
@@ -1898,26 +2257,32 @@
     <associate|auto-8|<tuple|16.1.3|?>>
     <associate|auto-9|<tuple|differentiability|?>>
     <associate|convergence of a function to a point|<tuple|16.3|?>>
-    <associate|diff (f+g)'=f'+g'|<tuple|16.34|?>>
+    <associate|diff (f+g)'=f'+g'|<tuple|16.36|?>>
     <associate|diff Bx(x,d)|<tuple|16.17|?>>
-    <associate|diff Frechet approximation|<tuple|16.35|?>>
+    <associate|diff Frechet approximation|<tuple|16.37|?>>
     <associate|diff Ux|<tuple|16.13|?>>
     <associate|diff Ux is open if U is open|<tuple|16.16|?>>
     <associate|diff Ux=-x+U=U-x|<tuple|16.15|?>>
     <associate|diff calculus derivate|<tuple|16.22|?>>
     <associate|diff calculus derivate (1)|<tuple|16.20|?>>
     <associate|diff calculus derivate (2)|<tuple|16.23|?>>
-    <associate|diff derivative and restriction|<tuple|16.29|?>>
-    <associate|diff derivative is local|<tuple|16.31|?>>
-    <associate|diff derivative of constant|<tuple|16.24|?>>
-    <associate|diff derivative of identity function|<tuple|16.25|?>>
-    <associate|diff derivatives and continuity|<tuple|16.28|?>>
-    <associate|diff differentiability|<tuple|16.38|?>>
-    <associate|diff differentiability on a set|<tuple|16.39|?>>
-    <associate|diff equivalent norms|<tuple|16.41|?>>
-    <associate|diff identity function is differentiable|<tuple|16.40|?>>
+    <associate|diff constant function is differentiable|<tuple|16.43|?>>
+    <associate|diff derivative and restriction|<tuple|16.31|?>>
+    <associate|diff derivative function|<tuple|16.24|?>>
+    <associate|diff derivative is local|<tuple|16.33|?>>
+    <associate|diff derivative of constant|<tuple|16.27|?>>
+    <associate|diff derivative of identity function|<tuple|16.28|?>>
+    <associate|diff derivative of the empty function|<tuple|16.26|?>>
+    <associate|diff derivatives and continuity|<tuple|16.30|?>>
+    <associate|diff differentiability|<tuple|16.40|?>>
+    <associate|diff differentiability is a local property|<tuple|16.46|?>>
+    <associate|diff differentiability on a set|<tuple|16.41|?>>
+    <associate|diff differential|<tuple|16.41|?>>
+    <associate|diff equivalent norms|<tuple|16.45|?>>
+    <associate|diff identity function is differentiable|<tuple|16.43|?>>
     <associate|diff limit of a function|<tuple|16.11|?>>
-    <associate|diff scalar product function has a derivate|<tuple|16.26|?>>
+    <associate|diff linear mappings are differentiable|<tuple|16.44|?>>
+    <associate|diff scalar product function has a derivate|<tuple|16.29|?>>
     <associate|eq 16.1.2|<tuple|16.1|?>>
     <associate|eq 16.10.4|<tuple|16.10|?>>
     <associate|eq 16.2.2|<tuple|16.2|?>>
@@ -1928,11 +2293,10 @@
     <associate|eq 16.7.301|<tuple|16.7|?>>
     <associate|eq 16.8.4|<tuple|16.8|?>>
     <associate|eq 16.9.4|<tuple|16.9|?>>
-    <associate|lemma 13.37.4|<tuple|16.37|?>>
     <associate|lemma 16.11.500|<tuple|16.6|?>>
     <associate|lemma 16.18.2|<tuple|16.18|?>>
     <associate|lemma 16.19.2|<tuple|16.19|?>>
-    <associate|lemma 16.37.4|<tuple|16.37|?>>
+    <associate|lemma 16.37.4|<tuple|16.39|?>>
     <associate|normed space are assumed to be non trivial|<tuple|16.1|?>>
     <associate|topology every element of a generalized interval is a limit
     point|<tuple|16.10|?>>
@@ -1953,6 +2317,8 @@
       <tuple|<tuple|<with|mode|<quote|math>|U<rsub|x>>>|<pageref|auto-5>>
 
       <tuple|<tuple|<with|mode|<quote|math>|f<rprime|'><around*|(|x|)>>>|<pageref|auto-6>>
+
+      <tuple|<tuple|differentiability>|<pageref|auto-9>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|16<space|2spc>Differentiation
