@@ -883,7 +883,7 @@
 
     <\equation*>
       \<cal-D\><rsub|f>=<around*|{|x\<in\>A<big|cap>A<rprime|'>\|f<text| has
-      a derivative <math|f<rprime|'><rsub|x>>>|}>\<subseteq\>A.A<rprime|'>
+      a derivative at >x|}>\<subseteq\>A.A<rprime|'>
     </equation*>
 
     The derivative <math|f<rprime|'>> of <math|f> is then defined by\ 
@@ -898,9 +898,109 @@
       <math|f<rprime|'>\<subseteq\>\<cal-D\><rsub|f>\<times\>Y=\<varnothing\>>
       and <math|f<rprime|'>:\<cal-D\><rsub|f>\<rightarrow\>Y> is the empty
       function <math|\<varnothing\>:\<varnothing\>\<rightarrow\>Y> [see
-      example: <reference|function empty function>]
+      example: <reference|function empty function>].
+    </note>
+
+    <\note>
+      The benefit of this definition is that
+
+      <\enumerate>
+        <item><math|f<rprime|'>:\<cal-D\><rsub|f>\<rightarrow\>X> is always
+        defined even if <math|f> has never a derivative.
+
+        <item><math|\<cal-D\><rsub|f>> is the set of all elements of the
+        domain of <math|f> for which the derivative exists so its the most
+        natural definition of <math|f<rprime|'>>
+      </enumerate>
+    </note>
+
+    <math|f<rprime|'>> will be used later to define recursively higher order
+    derivates.
+  </definition>
+
+  <\definition>
+    <label|diff derivative on a open set>Let
+    <math|<around*|\<langle\>|\<bbb-K\>,\<\|\|\>|\<rangle\>>> be the normed
+    space of real [or complex numbers], <math|A\<subseteq\>\<bbb-K\>>,
+    <math|B\<subseteq\>A<big|cap>A<rprime|'>>
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> a
+    normed space and <math|f:A\<rightarrow\>X> a function then we say that
+
+    <\equation*>
+      f<text| has derivatives on >B
+    </equation*>
+
+    iff
+
+    <\equation*>
+      \<forall\>x\<in\>B<text| f has a derivative at> x
+    </equation*>
+
+    <\note>
+      As <math|B\<subseteq\>A<big|cap>A<rprime|'>> every element of <math|B>
+      is a limit point of <math|A> so that derivates are well defined on
+      <math|A>.
+    </note>
+
+    <\note>
+      If <math|B\<subset\>A> is either open or of the form
+      <math|<around*|[|a,\<infty\>|[>>, <math|<around*|]|a,\<infty\>|[>>,
+      <math|<around*|]|-\<infty\>,a|]>>, <math|<around*|]|-\<infty\>,a|[>>,
+      <math|<around*|[|a,b|]>>, <math|<around*|[|a,b|[>>,
+      <math|<around*|]|a,b|]>>, <math|<around*|]|a,b|[>> then by [theorems:
+      <reference|topology every element of a open set in a normed space is a
+      limit point>, <reference|topology every element of a generalized
+      interval is a limit point>] it follows that
+      <math|B\<subseteq\>B<rprime|'>>. As <math|B\<subseteq\>A> it follows
+      from [theorem: <reference|topology limit points and subsets>] that
+      <math|B<rprime|'>\<subseteq\>A<rprime|'>>. Hence the condition
+      <math|B\<subseteq\>A<big|cap>A<rprime|'>> is satisfied automatical in
+      this cases.
     </note>
   </definition>
+
+  Combining [definition: <reference|diff derivative function>] and
+  [definition: <reference|diff derivative on a open set>] we have the
+  following trivial equivalences.
+
+  <\theorem>
+    <label|diff derivative on a open set (1)>Let
+    <math|<around*|\<langle\>|\<bbb-K\>,\<\|\|\>|\<rangle\>>> be the normed
+    space of real [or complex numbers], <math|A\<subseteq\>\<bbb-K\>>,
+    <math|B\<subseteq\>A<big|cap>A<rprime|'>>,
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> a
+    normed space and <math|f:A\<rightarrow\>X> a function then we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|>|<cell|f<text| has derivatives on
+      >B>|<cell|>>|<row|<cell|>|<cell|\<Updownarrow\>>|<cell|>>|<row|<cell|>|<cell|B\<subseteq\>\<cal-D\><rsub|f>>|<cell|>>>>
+    </eqnarray*>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>Let <math|x\<in\>B\<subseteq\>A<big|cap>A<rprime|'>>
+      then as <math|f> has derivates on <math|B> it follows also that
+      <math|f> has a derivative at <math|x>. Hence we have by [definition:
+      <reference|diff derivative function>] that
+      <math|x\<in\>\<cal-D\><rsub|f>> which proves that\ 
+
+      <\equation*>
+        B\<subseteq\>\<cal-D\><rsub|f>
+      </equation*>
+
+      <item*|<math|\<Leftarrow\>>>If <math|x\<in\>B\<subseteq\>\<cal-D\><rsup|f>
+      then >by [definition: <reference|diff derivative function>] <math|f>
+      has a derivative at <math|x> which by [definition: <reference|diff
+      derivative on a open set>] that\ 
+
+      <\equation*>
+        f<text| has derivatives on >B
+      </equation*>
+    </description>
+  </proof>
 
   <\example>
     <label|diff derivative of the empty function>Let Let
@@ -1170,7 +1270,7 @@
     that <math|f> is continuous at <math|x>.
   </proof>
 
-  We look now at the depending of the derivative of a function on the domain
+  We look now at the dependency of the derivative of a function on the domain
   of the function.
 
   <\theorem>
@@ -1215,37 +1315,37 @@
     <math|<around*|(|f<rsub|\|B>|)><rprime|'><rsub|x>=f<rprime|'><rsub|x>>.
   </proof>
 
-  If we restrict ourselves to open sets then the opposite of the above
-  theorem is also true so that the existence of a derivative at a point
-  depends only on the values of the functions in a neighborhood of this
-  point. This is the so called <with|font-series|bold|locally> principal.
+  If we restrict ourselves to interior points in <math|B> then the opposite
+  of the above theorem is also true so that the existence of a derivative at
+  a inner point depends only on the values of the functions in a neighborhood
+  of this point. This is the so called <with|font-series|bold|locally>
+  principle.
 
   <\theorem>
     <label|diff derivative is local>Let <math|<around*|\<langle\>|\<bbb-K\>,\<\|\|\>|\<rangle\>>>
     be the normed space of real [or complex] numbers,
     <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> a
-    normed space, \ <math|U\<in\>\<cal-T\><rsub|<around*|\|||\|>>> a open set
-    in <math|\<bbb-K\>>, <math|x\<in\>U> and <math|f:U\<rightarrow\>X> a
-    function then <math|\<forall\>V\<in\>\<cal-T\><rsub|<around*|\|||\|>>>
-    with <math|x\<in\>V\<subseteq\>U> we have that\ 
+    normed space, <math|A\<subseteq\>X>, <math|B\<subseteq\>A>,
+    <math|x\<in\>B<rsup|\<circ\>>> and <math|f:A\<rightarrow\>X> a function
+    then we have that\ 
 
     <\eqnarray*>
       <tformat|<table|<row|<cell|>|<cell|f<text| has a derivative
-      <math|f<rprime|'><rsub|x><text| at >x>>>|<cell|>>|<row|<cell|>|<cell|\<Updownarrow\>>|<cell|>>|<row|<cell|>|<cell|f<rsub|\|V><text|
-      has a derivative <math|<around*|(|f<rsub|\|V>|)><rprime|'><rsub|x>> at
+      <math|f<rprime|'><rsub|x><text| at >x>>>|<cell|>>|<row|<cell|>|<cell|\<Updownarrow\>>|<cell|>>|<row|<cell|>|<cell|f<rsub|\|B><text|
+      has a derivative <math|<around*|(|f<rsub|\|B>|)><rprime|'><rsub|x>> at
       >x>|<cell|>>>>
     </eqnarray*>
 
     Further if either <math|f<rprime|'><rsub|x>> exist or
-    <math|<around*|(|f<rsub|\|V>|)><rprime|'><rsub|x>> exist then
-    <math|f<rprime|'><rsub|x>=<around*|(|f<rsub|\|V>|)><rprime|'><rsub|x>>.
+    <math|<around*|(|f<rsub|\|B>|)><rprime|'><rsub|x>> exist then
+    <math|f<rprime|'><rsub|x>=<around*|(|f<rsub|\|B>|)><rprime|'><rsub|x>>.
   </theorem>
 
   <\note>
-    Using [theorem: <reference|topology every element of a open set in a
-    normed space is a limit point>] we have as <math|U,V> are open and
-    <math|x\<in\>V\<subseteq\>U> that <math|x> is a limit point of <math|U>
-    and <math|V> which is needed for the definition of the derivative.
+    As <math|x\<in\>B<rsup|\<circ\>><below|\<subseteq\>|B\<subseteq\>A>A<rsup|\<circ\>>>
+    it follows using [theorem: <reference|topology interior point is a limit
+    point in a normed space>] that <math|x\<in\>B<rprime|'>\<wedge\>x\<in\>A<rprime|'>>
+    which is needed for the definition of the derivatives.
   </note>
 
   <\proof>
@@ -1256,36 +1356,40 @@
       [theorem: <reference|diff derivative and restriction>].
 
       <item*|<math|\<Leftarrow\>>>Let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>.
-      As <math|f<rsub|\|V>> has a derivative at <math|x> there exist a
+      As <math|f<rsub|\|B>> has a derivative at <math|x> there exist a
       <math|\<delta\><rsub|1>\<in\>\<bbb-R\><rsup|+>> such that
-      <math|\<forall\>h\<in\>U<rsub|x>> with
+      <math|\<forall\>h\<in\>B<rsub|x>> with
       <math|0\<less\><around*|\||h|\|>\<less\>\<delta\><rsub|1>> we have\ 
 
       <\equation*>
-        <around*|\<\|\|\>|<frac|f<rsub|\|V><around*|(|x+h|)>-f<rsub|\|V><around*|(|x|)>|h>-<around*|(|f<rsub|\|V>|)><rprime|'><rsub|x>|\<\|\|\>>\<less\>\<varepsilon\>
+        <around*|\<\|\|\>|<frac|f<rsub|\|B><around*|(|x+h|)>-f<rsub|\|B><around*|(|x|)>|h>-<around*|(|f<rsub|\|B>|)><rprime|'><rsub|x>|\<\|\|\>>\<less\>\<varepsilon\>
       </equation*>
 
-      As <math|x\<in\>V> a open set there exist a
+      As <math|x\<in\>B<rsup|\<circ\>>> there exist by [definition:
+      <reference|topology interior of a set>] there exist a
+      <math|U\<in\>\<cal-T\><rsub|<around*|\|||\|>>> such that
+      <math|x\<in\>U\<subseteq\>B>. Hence there exist a
       <math|\<delta\><rsub|2>\<in\>\<bbb-R\><rsup|+>> such that
-      <math|x\<in\>B<rsub|<around*|\|||\|>><around*|(|x,\<delta\><rsub|2>|)>\<subseteq\>U>.
+      <math|x\<in\>B<rsub|<around*|\|||\|>><around*|(|x,\<delta\><rsub|2>|)>\<subseteq\>U\<subseteq\>B\<subseteq\>A>.
       Take then <math|<rigid|\<delta\>=min<around*|(|\<delta\><rsub|1>,\<delta\><rsub|2>|)>>>
-      then if we have <math|h\<in\>U<rsub|x>> with
+      then if we have <math|h\<in\>A<rsub|x>> with
       <math|0\<less\><around*|\||h|\|>\<less\>\<delta\>> we have that
       <math|<around*|\||x+h-x|\|>=<around*|\||h|\|>\<less\>\<delta\><rsub|2>>
-      so that <math|<rigid|x+h\<in\>B<rsub|<around*|\|||\|>><around*|(|x,\<delta\><rsub|2>|)>\<subseteq\>V\<Rightarrow\>h\<in\>V<rsub|x>>>.
+      so that <math|<rigid|x+h\<in\>B<rsub|<around*|\|||\|>><around*|(|x,\<delta\><rsub|2>|)>\<subseteq\>B\<Rightarrow\>h\<in\>B<rsub|x>>>.
       Hence we have, as also <math|0\<less\><around*|\||h|\|>\<less\>\<delta\>\<leqslant\>\<delta\><rsub|1>>,
+      that
 
       <\equation*>
-        <around*|\<\|\|\>|<frac|f<around*|(|x+h|)>-f<around*|(|x|)>|h>-<around*|(|f<rsub|\|V>|)><rprime|'><rsub|x>|\<\|\|\>>\<equallim\><rsub|x\<in\>V,x+h\<in\>V><around*|\<\|\|\>|<frac|f<rsub|\|V><around*|(|x+h|)>-f<rsub|\|V><around*|(|x|)>|h>-<around*|(|f<rsub|\|V>|)><rprime|'><rsub|x>|\<\|\|\>>\<less\>\<varepsilon\>
+        <around*|\<\|\|\>|<frac|f<around*|(|x+h|)>-f<around*|(|x|)>|h>-<around*|(|f<rsub|\|B>|)><rprime|'><rsub|x>|\<\|\|\>>\<equallim\><rsub|x\<in\>B,x+h\<in\>B><around*|\<\|\|\>|<frac|f<rsub|\|B><around*|(|x+h|)>-f<rsub|\|B><around*|(|x|)>|h>-<around*|(|f<rsub|\|B>|)><rprime|'><rsub|x>|\<\|\|\>>\<less\>\<varepsilon\>
       </equation*>
 
       which proves that <math|f> has a derivative at <math|x> and
-      <math|f<rprime|'><rsub|x>=<around*|(|f<rsub|\|V>|)><rprime|'><rsub|x>>.
+      <math|f<rprime|'><rsub|x>=<around*|(|f<rsub|\|B>|)><rprime|'><rsub|x>>.
     </description>
   </proof>
 
-  The following example shows that the requirement that <math|U,V> are open
-  is neccesary.
+  The following example shows that the requirement of inner points is
+  essential.
 
   <\example>
     Consider the normed space <math|<around*|\<langle\>|\<bbb-R\>,\<\|\|\>|\<rangle\>>>
@@ -1410,6 +1514,57 @@
 
       So <math|f> has no derivative at <math|0>.
     </enumerate>
+  </proof>
+
+  Using the locally principle we have another equivalence for the existence
+  of derivatives on a open sets.
+
+  <\corollary>
+    <label|diff derivative on a open set (2)>Let
+    <math|<around*|\<langle\>|\<bbb-K\>,\<\|\|\>|\<rangle\>>> be the normed
+    space of real [or complex numbers], <math|A\<subseteq\>\<bbb-K\>>,
+    <math|U\<in\>\<cal-T\><rsub|<around*|\|||\|>>> with
+    <math|U\<subseteq\>A>, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
+    a normed space and <math|f:A\<rightarrow\>X> a function then we have the
+    following equivalences:
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|>|<cell|f<text| has derivatives on
+      >U>|<cell|>>|<row|<cell|>|<cell|\<Updownarrow\>>|<cell|>>|<row|<cell|>|<cell|\<forall\>x\<in\>U<text|
+      there exist a >V\<in\>\<cal-T\><rsub|<around*|\|||\|>><text| with
+      >x\<in\>V\<subseteq\>U<text| such that >f<rsub|\|V><text| has a
+      derivative at >x>|<cell|>>>>
+    </eqnarray*>
+  </corollary>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>Let <math|x\<in\>U> then as <math|f> has
+      derivatives on <math|U> it follows that <math|f> has a derivative at
+      <math|x>, further by ]theorem: <reference|topology every element of a
+      open set in a normed space is a limit point>]
+      <math|x\<in\>U<rprime|'>>. Hence by [theorem: <reference|diff
+      derivative and restriction>] we must conclude that <math|f<rsub|\|U>>
+      has a derivative \ at <math|x>. So by taking <math|V=U> we found a
+      <math|V\<in\>\<cal-T\><rsub|<around*|\|||\|>>> with <math|x\<in\>V>
+      such that <math|f<rsub|\|U>> has a derivative at <math|x>.
+
+      <item*|<math|\<Leftarrow\>>>Let <math|x\<in\>U> then by the hypothesis
+      there exist a <math|V\<in\>\<cal-T\><rsub|<around*|\|||\|>>> with
+      <math|x\<in\>V\<subseteq\>U> such that <math|f<rsub|\|V>> has a
+      derivative at <math|x>. As <math|V> is open it follows from [theorem:
+      <reference|topology open set and interior>] that
+      <math|V=V<rsup|\<circ\>>> so that <math|x\<in\>V<rsup|\<circ\>>>. Using
+      [theorem: <reference|diff derivative is local>] it follows then that
+      <math|f> has a derivative at <math|x>. As <math|x\<in\>U> has been
+      choosen arbitrary it follows that\ 
+
+      <\equation*>
+        f<text| has derivatives on >U
+      </equation*>
+    </description>
   </proof>
 
   Differentiating a function is a linear operation as is show in the
@@ -1852,7 +2007,7 @@
   differentia; of <math|f>.
 
   <\definition>
-    <label|diff differential><label|diff differential><dueto|Differential>Let
+    <label|diff differential><dueto|Differential>Let
     <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>
     and <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
     be normed spaces, <math|A\<subseteq\>X> and <math|f:A\<rightarrow\>Y> a
@@ -1873,6 +2028,74 @@
     <math|D f> is called the differential of <math|f>.
   </definition>
 
+  <\definition>
+    <label|diff differentiability on a set>Let
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>
+    and <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    be normed spaces, <math|A\<subseteq\>X>,
+    <math|U\<in\>\<cal-T\><rsub|<around*|\<\|\|\>|X|\<\|\|\>>>> with
+    <math|U\<subseteq\>A> and <math|f:A\<rightarrow\>Y> a function then we
+    say\ 
+
+    <\equation*>
+      f<text| is Fréchet differentiable on >U
+    </equation*>
+
+    iff
+
+    <\equation*>
+      \<forall\>x\<in\>U<text| we have that >f<text| is Fréchet
+      differentiable at >x
+    </equation*>
+
+    In the special case where <math|f> is Fréchet differentiable on its
+    domain we say that\ 
+
+    <\equation*>
+      f<text| is Fréchet differentiable>
+    </equation*>
+  </definition>
+
+  <\theorem>
+    <label|diff differentiability on a set (1)>Let
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>
+    and <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    be normed spaces, <math|A\<subseteq\>X>,
+    <math|U\<in\>\<cal-T\><rsub|<around*|\<\|\|\>|X|\<\|\|\>>>> with
+    <math|U\<subseteq\>A> and <math|f:A\<rightarrow\>Y> a function then we
+    have the following equivalences.
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|>|<cell|f<text| is Fréchet differentiable on
+      >U>|<cell|>>|<row|<cell|>|<cell|\<Updownarrow\>>|<cell|>>|<row|<cell|>|<cell|U\<subseteq\>\<frak-D\><rsub|f>>|<cell|>>>>
+    </eqnarray*>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>Let <math|x\<in\>U> then as <math|f> is
+      Fréchet differentiable on <math|U> <math|f> is Fréchet differentiable
+      at <math|x>, as further <math|x\<in\>U\<subseteq\>A>
+      <math|x\<in\>A<rsup|\<circ\>>>. Hence it follows that
+      <math|x\<in\>\<frak-D\><rsub|f>> which proves that\ 
+
+      <\equation*>
+        U\<subseteq\>\<frak-D\><rsub|f>
+      </equation*>
+
+      <item*|<math|\<Leftarrow\>>>Let <math|x\<in\>U> then as
+      <math|U\<subseteq\>\<frak-D\><rsub|f>> it follows that
+      <math|x\<in\>\<frak-D\><rsub|f>> so that <math|f> is Fréchet
+      differentiable at <math|x> which proves that\ 
+
+      <\equation*>
+        f<text| is Fréchet differentiable on >U
+      </equation*>
+    </description>
+  </proof>
+
   <\example>
     <label|diff identity function is differentiable>Let
     <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> be
@@ -1886,7 +2109,8 @@
     then
 
     <\equation*>
-      \<frak-D\><rsub|Id<rsub|U>>=U
+      \<frak-D\><rsub|Id<rsub|U>>=U<text| in other words >Id<rsub|U><text| is
+      Fréchet differentiable>
     </equation*>
 
     and for\ 
@@ -1949,7 +2173,8 @@
     then
 
     <\equation*>
-      \<frak-D\><rsub|C<rsub|y>>=U
+      \<frak-D\><rsub|C<rsub|y>>=U <text|in other words >Id<rsub|U><text| is
+      Fréchet differentiable>
     </equation*>
 
     and for\ 
@@ -2006,7 +2231,8 @@
     <math|L\<in\>L<around*|(|X,Y|)>> then we have\ 
 
     <\equation*>
-      \<frak-D\><rsub|L>=X
+      \<frak-D\><rsub|L>=X <text|in other words >L<text| is Fréchet
+      differentiable>
     </equation*>
 
     and for
@@ -2054,8 +2280,6 @@
   the norms. So if two norms generate the same topology Fréchet
   differentiability is independent of the choosen norm.
 
-  TODO check this again on mistakes
-
   <\theorem>
     <label|diff equivalent norms>Let <math|X,Y> be vector spaces over
     <math|\<bbb-K\>> with equivalent norms
@@ -2069,7 +2293,7 @@
 
     <\equation*>
       f<text| is Fréchet differentiable function at <math|x> with
-      differential >D<rsub|x>f<text| using
+      differential >D<rsub|x>f<text| at <math|x> using
       ><around*|\<\|\|\>||\<\|\|\>><rsub|X<rsub|1>><text| and
       ><around*|\<\|\|\>||\<\|\|\>><rsub|Y<rsub|1>>
     </equation*>
@@ -2078,7 +2302,7 @@
 
     <\equation*>
       f<text| is Fréchet differentiable function at <math|x> with
-      differential >D<rsub|x>f<text| using
+      differential >D<rsub|x>f<text| at <math|x> using
       ><around*|\<\|\|\>||\<\|\|\>><rsub|X<rsub|2>><text| and
       ><around*|\<\|\|\>||\<\|\|\>><rsub|Y<rsub|2>>
     </equation*>
@@ -2135,25 +2359,25 @@
   </proof>
 
   Differentiability of a function at a point is a local property it only
-  depends on the function \ values for a arbitrary open neighborhood of this
-  point not on the domain of the function.
+  depends on the function values for a arbitrary small open neighborhood of
+  this point not on the domain of the function.
 
   <\theorem>
     <label|diff differentiability is a local property>Let
     <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
     <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
-    be normed spaces, <math|x\<in\>V\<subseteq\>U> where
-    <math|U,V\<in\>\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>>> and
-    <rigid|<math|f:U\<rightarrow\>Y>> is a function then we have\ 
+    be normed spaces, <math|A\<subseteq\>X>, <math|B\<subseteq\>A>,
+    <math|x\<in\>B<rsup|\<circ\>>> and <rigid|<math|f:A\<rightarrow\>Y>> is a
+    function then we have\ 
 
     <\eqnarray*>
       <tformat|<table|<row|<cell|>|<cell|f<text| is Fréchet differentiable at
-      >x>|<cell|>>|<row|<cell|>|<cell|\<Updownarrow\>>|<cell|>>|<row|<cell|>|<cell|f<rsub|\|V><text|
+      >x>|<cell|>>|<row|<cell|>|<cell|\<Updownarrow\>>|<cell|>>|<row|<cell|>|<cell|f<rsub|\|B><text|
       is Fréchet differentiable at >x>|<cell|>>>>
     </eqnarray*>
 
-    Further if <math|f> or <math|f<rsub|\|V>> is Fréchet differentiable at
-    <math|x> then <math|D<rsub|x>f=D<rsub|x>f<rsub|\|V>>.
+    Further if <math|f> or <math|f<rsub|\|B>> is Fréchet differentiable at
+    <math|x> then <math|D<rsub|x>f=D<rsub|x>f<rsub|\|B>>.
   </theorem>
 
   <\proof>
@@ -2162,42 +2386,43 @@
     <\description>
       <item*|<math|\<Rightarrow\>>>Let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>.
       Then, as <math|f> is Fréchet differentiable at <math|x> with
-      differential <math|D<rsub|x>f\<in\>L<around*|(|X,Y|)>> then exist a
+      differential <math|D<rsub|x>f\<in\>L<around*|(|X,Y|)>>, there exist a
       <math|\<delta\>\<in\>\<bbb-R\><rsup|+>> such that
-      <math|\<forall\>y\<in\>U<rsub|x>> with
+      <math|\<forall\>y\<in\>A<rsub|x>> with
       <math|<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>\<less\>\<delta\>> we have\ 
 
       <\equation*>
         <around*|\<\|\|\>|f<around*|(|x+h|)>-f<around*|(|x|)>-D<rsub|x>f<around*|(|h|)>|\<\|\|\>><rsub|Y>\<leqslant\>\<varepsilon\>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>><rsub|X>
       </equation*>
 
-      Let <math|h\<in\>V<rsub|x>\<Rightarrow\>x+h\<in\>V\<subseteq\>U\<Rightarrow\>h\<in\>U<rsub|x>>
+      Let <math|h\<in\>B<rsub|x>\<Rightarrow\>x+h\<in\>B\<subseteq\>A\<Rightarrow\>h\<in\>B<rsub|x>>
       so if <math|<around*|\<\|\|\>|h|\<\|\|\>><rsub|x>\<less\>\<delta\>> we
       have\ 
 
       <\equation*>
-        <around*|\<\|\|\>|f<rsub|\|V><around*|(|x+h|)>-f<rsub|\|V><around*|(|x|)>-D<rsub|x>f<around*|(|h|)>|\<\|\|\>><rsub|Y><below|=|x,x+h\<in\>V><around*|\<\|\|\>|f<around*|(|x+h|)>-f<around*|(|x|)>-D<rsub|x>f<around*|(|h|)>|\<\|\|\>>\<leqslant\>\<varepsilon\>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>><rsub|X>
+        <around*|\<\|\|\>|f<rsub|\|B><around*|(|x+h|)>-f<rsub|\|B><around*|(|x|)>-D<rsub|x>f<around*|(|h|)>|\<\|\|\>><rsub|Y><below|=|x,x+h\<in\>B><around*|\<\|\|\>|f<around*|(|x+h|)>-f<around*|(|x|)>-D<rsub|x>f<around*|(|h|)>|\<\|\|\>>\<leqslant\>\<varepsilon\>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>><rsub|X>
       </equation*>
 
-      which proves that <math|f<rsub|\|V>> is Fréchet differentiable at
-      <math|x> with <math|D<rsub|x>f<rsub|\|V>=D<rsub|x>f>.
+      which proves that <math|f<rsub|\|B>> is Fréchet differentiable at
+      <math|x> with <math|D<rsub|x>f<rsub|\|B>=D<rsub|x>f>.
 
-      <item*|<math|\<Leftarrow\>>>As <math|x\<in\>V> a open set there exist a
-      <math|\<delta\><rsub|1>\<in\>\<bbb-R\><rsup|+>> such that
+      <item*|<math|\<Leftarrow\>>>As <math|x\<in\>B<rsup|\<circ\>>> there
+      exist a <math|U> open such that <math|x\<in\>U\<subseteq\>B> hence
+      there exist a <math|\<delta\><rsub|1>\<in\>\<bbb-R\><rsup|+>> such that\ 
 
       <\equation*>
-        x\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|x>><around*|(|x,\<delta\><rsub|1>|)>\<subseteq\>V\<subseteq\>U
+        x\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|x,\<delta\><rsub|1>|)>\<subseteq\>B\<subseteq\>A
       </equation*>
 
-      Let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>. As <math|f<rsub|\|V>>
+      Let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>. As <math|f<rsub|\|B>>
       is Fréchet differentiable at <math|x> with differential
-      <math|D<rsub|x>f<rsub|\|V>> there exist a
+      <math|D<rsub|x>f<rsub|\|B>> there exist a
       <math|\<delta\><rsub|2>\<in\>\<bbb-R\><rsup|+>> such that
-      <math|\<forall\>h\<in\>V<rsub|x>> with
+      <math|\<forall\>h\<in\>B<rsub|x>> with
       <math|<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>\<less\>\<delta\>> we have\ 
 
       <\equation*>
-        <around*|\<\|\|\>|f<rsub|\|V><around*|(|x+h|)>-f<rsub|\|V><around*|(|x|)>-D<rsub|x>f<rsub|\|V>|\<\|\|\>><rsub|Y>\<leqslant\>\<varepsilon\>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>><rsub|X>
+        <around*|\<\|\|\>|f<rsub|\|B><around*|(|x+h|)>-f<rsub|\|B><around*|(|x|)>-D<rsub|x>f<rsub|\|B>|\<\|\|\>><rsub|Y>\<leqslant\>\<varepsilon\>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>><rsub|X>
       </equation*>
 
       Take <math|\<delta\>=min<around*|(|\<delta\><rsub|1>,\<delta\><rsub|2>|)>\<in\>\<bbb-R\><rsup|+>>
@@ -2205,20 +2430,2199 @@
       <math|<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>\<leqslant\>\<delta\>> that\ 
 
       <\equation*>
-        <around*|\<\|\|\>|<around*|(|x+h|)>-x|\<\|\|\>><rsub|X>=<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>\<less\>\<delta\>\<leqslant\>\<delta\><rsub|1>\<Rightarrow\>x+h\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|x,\<delta\><rsub|1>|)>\<subseteq\>V\<Rightarrow\>h\<in\>V<rsub|x>
+        <around*|\<\|\|\>|<around*|(|x+h|)>-x|\<\|\|\>><rsub|X>=<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>\<less\>\<delta\>\<leqslant\>\<delta\><rsub|1>\<Rightarrow\>x+h\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|x,\<delta\><rsub|1>|)>\<subseteq\>B\<Rightarrow\>h\<in\>B<rsub|x>
       </equation*>
 
       so as also <math|<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>\<less\>\<delta\>\<leqslant\>\<delta\><rsub|2>>
       we have that\ 
 
       <\equation*>
-        <around*|\<\|\|\>|f<around*|(|x+h|)>-f<around*|(|x|)>-D<rsub|x>f<rsub|V><around*|(|x|)>|\<\|\|\>><rsub|Y><below|=|x,x+h\<in\>V><around*|\<\|\|\>|f<rsub|\|V><around*|(|x+h|)>-f<rsub|\|V><around*|(|x|)>=D<rsub|x>f<rsub|\|V>|\<\|\|\>><rsub|Y>\<leqslant\>\<varepsilon\>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>><rsub|X>
+        <around*|\<\|\|\>|f<around*|(|x+h|)>-f<around*|(|x|)>-D<rsub|x>f<rsub|V><around*|(|x|)>|\<\|\|\>><rsub|Y><below|=|x,x+h\<in\>B><around*|\<\|\|\>|f<rsub|\|B><around*|(|x+h|)>-f<rsub|\|B><around*|(|x|)>=D<rsub|x>f<rsub|\|B>|\<\|\|\>><rsub|Y>\<leqslant\>\<varepsilon\>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>><rsub|X>
       </equation*>
 
       which proves that <math|f> is Fréchet differentiable at <math|x> with
-      <math|D<rsub|x>f=D<rsub|x>f<rsub|\|V>>.
+      <math|D<rsub|x>f=D<rsub|x>f<rsub|\|B>>.
     </description>
   </proof>
+
+  Using the locally principle we have aother way to specify that a function
+  is differentiable on a set.
+
+  <\theorem>
+    <label|diff differentiability on a set (2)>Let
+    \ <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    be normed spaces, <math|A\<subseteq\>X>, <math|U\<in\>\<cal-T\><rsub|X>>
+    with <math|U\<subseteq\>A> and <math|<rigid|f:A\<rightarrow\>Y>> a
+    function then we have the following equivalences
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|>|<cell|f<text| is Fréchet differemtiable on
+      >U>|<cell|>>|<row|<cell|>|<cell|\<Updownarrow\>>|<cell|>>|<row|<cell|>|<cell|\<forall\>x\<in\>U<text|
+      there exist a >V\<in\>\<cal-T\><rsub|X><text| with
+      >x\<in\>V\<subseteq\>U<text| such that >f<rsub|\|V><text| is Fréchet
+      differentiable at >x>|<cell|>>>>
+    </eqnarray*>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>Let <math|x\<in\>U> then as <math|f> is
+      Fréchet differentiable on <math|U> it follows that <math|f> is Fréchet
+      differentiable at <math|x>. As <math|U> is open we have by [theorem:
+      <reference|topology open set and interior>] that
+      <math|U=U<rsup|\<circ\>>> so that <math|x\<in\>U<rsup|\<circ\>>\<subseteq\>A>.
+      Hence using [theorem: <reference|diff differentiability is a local
+      property>] it follows that <math|f<rsub|\|U>> is Fréchet differentiable
+      at <math|x>. Taking <math|V=U> we have that
+      <math|x\<in\>V\<subseteq\>U> such that <math|f<rsub|\|V>> is Fréchet
+      differentiable at <math|x>.
+
+      <item*|<math|\<Leftarrow\>>>Let <math|x\<in\>U> then by the hypothesis
+      there exist a <math|V\<in\>\<cal-T\><rsub|X>> with
+      <math|x\<in\>V\<subseteq\>U> such that <math|f<rsub|\|V>> is Fréchet
+      differentiable at <math|x>. As <math|V> is open have by [theorem:
+      <reference|topology open set and interior>] that
+      <math|V=V<rsup|\<circ\>>> so that <math|x\<in\>V<rsup|\<circ\>>\<subseteq\>A>.
+      Hence using [theorem: <reference|diff differentiability is a local
+      property>] it follows that <math|f> is Fréchet differentiable at
+      <math|x> which, as <math|x\<in\>U> has been chosen arbitrary, proves
+      that\ 
+
+      <\equation*>
+        f<text| is Fréchet differentiable on >U
+      </equation*>
+    </description>
+  </proof>
+
+  We look now at alternative definitions of Fréchet differentiability at a
+  point, first we introduce the concept of a <math|\<varepsilon\>>-mapping.
+
+  <\definition>
+    <label|diff e-mapping><index|<math|\<varepsilon\>>-mapping>Let
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    be normed spaces, <math|A\<subseteq\>X> and <math|0\<in\>A> then a
+    <with|font-series|bold|<math|\<varepsilon\>>-mapping> is a function
+    <math|\<varepsilon\>:A\<rightarrow\>Y> which is continuous at
+    <math|0\<in\>A> [using the subspace topology on <math|A>] and satisfies
+    <math|\<varepsilon\><around*|(|0|)>=0>.
+  </definition>
+
+  <\theorem>
+    <label|diff differentiability alternative definitions>Let
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    be normed spaces, <math|A\<subseteq\>X>, <math|x\<in\>A<rsup|\<circ\>>>
+    \ and <math|f:A\<rightarrow\>Y> a function then the following are
+    equivalent for <math|L\<in\>L<around*|(|X,Y|)>>
+
+    <\enumerate>
+      <item><math|L> is a Fréchet approximation of <math|f> at <math|x> [see
+      definition: <reference|diff Frechet approximation>]
+
+      <item>There exist a <math|\<varepsilon\>>-mapping
+      <math|\<varepsilon\>:A<rsub|x>\<rightarrow\>Y> such that
+      <math|\<forall\>h\<in\>A<rsub|x>> we have\ 
+
+      <\equation*>
+        f<around*|(|x+h|)>-f<around*|(|x|)>-L<around*|(|h|)>=<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>\<cdot\>\<varepsilon\><around*|(|h|)>
+      </equation*>
+
+      <item><math|\<forall\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>
+      <math|\<exists\>\<delta\>\<in\>\<bbb-R\><rsup|+>> such that
+      <math|\<forall\>h\<in\>A<rsub|x>> with
+      <math|0\<less\><around*|\<\|\|\>|h|\<\|\|\>><rsub|X>\<less\>\<delta\>>
+      we have\ 
+
+      <\equation*>
+        <frac|<around*|\<\|\|\>|f<around*|(|x+h|)>-f<around*|(|x|)>-L<around*|(|h|)>|\<\|\|\>><rsub|Y>|<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>>\<less\>\<varepsilon\>
+      </equation*>
+
+      <item><math|\<forall\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+>\<in\>\<bbb-R\><rsup|+>>
+      <math|\<exists\>\<delta\>\<in\>\<bbb-R\><rsup|+>> such that
+      <math|\<forall\>y\<in\>A\\<around*|{|x|}>> with
+      <math|<around*|\<\|\|\>|y-x|\<\|\|\>><rsub|X>\<less\>\<delta\>> we have\ 
+
+      <\equation*>
+        <frac|<around*|\<\|\|\>|f<around*|(|y|)>-f<around*|(|x|)>-L<around*|(|y-x|)>|\<\|\|\>><rsub|Y>|<around*|\<\|\|\>|y-x|\<\|\|\>><rsub|X>>\<less\>\<varepsilon\>
+      </equation*>
+
+      <item><math|\<forall\><around*|{|h<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>A<rsub|x>>
+      with <math|\<forall\>i\<in\>\<bbb-N\>>
+      <math|0\<less\><around*|\<\|\|\>|h<rsub|i>|\<\|\|\>><rsub|X>> and
+      <math|<below|lim|i\<rightarrow\>\<infty\>>h<rsub|i>=0> we have\ 
+
+      <\equation*>
+        <below|lim|n\<rightarrow\>\<infty\>><frac|<around*|\<\|\|\>|f<around*|(|x+h<rsub|i>|)>-f<around*|(|x|)>-L<around*|(|h<rsub|i>|)>|\<\|\|\>><rsub|Y>|<around*|\<\|\|\>|h<rsub|i>|\<\|\|\>><rsub|X>>=0
+      </equation*>
+    </enumerate>
+
+    Hence <math|f> is Fréchet differentiable at <math|x> if either
+    <math|1,2,3,4> or <math|5> is true and in that case we have that\ 
+
+    <\equation*>
+      D<rsub|x>f=L
+    </equation*>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|1\<Rightarrow\>2>>Define\ 
+
+      <\equation*>
+        \<varepsilon\>:A<rsub|x>\<rightarrow\>Y<text| by
+        >\<varepsilon\><around*|(|h|)>=<choice|<tformat|<table|<row|<cell|0<text|
+        if >h=0>>|<row|<cell|<frac|f<around*|(|x+h|)>-f<around*|(|x|)>-L<around*|(|h|)>|<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>><text|
+        if >h\<in\>A<rsub|x>\\<around*|{|0|}>>>>>>
+      </equation*>
+
+      then we have <math|\<forall\>h\<in\>A<rsub|x>> that\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>\<cdot\>\<varepsilon\><around*|(|h|)>>|<cell|=>|<cell|<choice|<tformat|<table|<row|<cell|0<text|
+        if >h=0>>|<row|<cell|f<around*|(|x+h|)>-f<around*|(|x|)>-L<around*|(|h|)><text|
+        if >h\<in\>A<rsub|x>\\<around*|{|0|}>>>>>>>>|<row|<cell|>|<cell|=>|<cell|<choice|<tformat|<table|<row|<cell|f<around*|(|x+0|)>-f<around*|(|x|)>-L<around*|(|0|)><text|
+        if >h=0>>|<row|<cell|f<around*|(|x+h|)>-f<around*|(|x|)>-L<around*|(|h|)><text|
+        if >h\<in\>A<rsub|x>\\<around*|{|0|}>>>>>>>>|<row|<cell|>|<cell|=>|<cell|f<around*|(|x+h|)>-f<around*|(|x|)>-L<around*|(|h|)>>>>>
+      </eqnarray*>
+
+      proving that\ 
+
+      <\equation*>
+        \<forall\>h\<in\>U<rsub|x><text| we have
+        >f<around*|(|x+h|)>-f<around*|(|x|)>-L<around*|(|h|)>=<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>\<cdot\>\<varepsilon\><around*|(|h|)>
+      </equation*>
+
+      Rest us to prove that <math|\<varepsilon\>> is continuous at <math|0>.
+      Let <math|\<zeta\>\<in\>\<bbb-R\><rsup|+>>. As <math|L> is a Fréchet
+      differentiable approximation of <math|f> at <math|x> there exist a
+      <math|\<delta\>\<in\>\<bbb-R\><rsup|+>> such that
+      <math|\<forall\>h\<in\>A<rsub|x>> with
+      <math|<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>\<less\>\<delta\>> we have
+
+      <\equation*>
+        <around*|\<\|\|\>|f<around*|(|x+h|)>-f<around*|(|x|)>-L<around*|(|h|)>|\<\|\|\>><rsub|Y>\<less\>\<zeta\>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>><rsub|X>
+      </equation*>
+
+      Hence we have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|\<\|\|\>|\<varepsilon\><around*|(|h|)>-\<varepsilon\><around*|(|0|)>|\<\|\|\>><rsub|Y>>|<cell|=>|<cell|<around*|\<\|\|\>|\<varepsilon\><around*|(|h|)>|\<\|\|\>><rsub|Y>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|<choice|<tformat|<table|<row|<cell|<around*|\<\|\|\>|0|\<\|\|\>><rsub|Y>\<less\>\<zeta\>
+        if h=0>>|<row|<cell|<frac|<around*|\<\|\|\>|f<around*|(|x+h|)>-f<around*|(|x|)>-D
+        f<around*|(|x|)><around*|(|h|)>|\<\|\|\>><rsub|Y>|<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>>\<less\>\<zeta\>
+        if h\<in\>A<rsub|x>\\<around*|{|0|}>>>>>>|\<\|\|\>><rsub|Y>>>|<row|<cell|>|<cell|\<less\>>|<cell|\<zeta\>>>>>
+      </eqnarray*>
+
+      which by [theorem: <reference|continuity in normed subspace>] proves
+      that <math|\<varepsilon\>> is continuous at <math|0> in the subspace
+      topology of <math|A<rsub|x>>.
+
+      <item*|<math|2\<Rightarrow\>3>>Let <math|\<varepsilon\>:A<rsub|x>\<rightarrow\>Y>
+      be a <math|\<varepsilon\>>-mapping such that
+      <math|\<forall\>h\<in\>A<rsub|x>>\ 
+
+      <\equation*>
+        f<around*|(|x+h|)>-f<around*|(|x|)>-L<around*|(|h|)>=<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>\<cdot\>\<varepsilon\><around*|(|h|)>
+      </equation*>
+
+      Take <math|\<zeta\>\<in\>\<bbb-R\><rsup|+>>. As
+      <math|\<varepsilon\>:A<rsub|x>\<rightarrow\>Y> is continuous we can use
+      [theorem: <reference|continuity in normed subspace>] to find a
+      <math|\<delta\>\<in\>\<bbb-R\><rsup|+>> such that
+      <math|\<forall\>h\<in\>A<rsub|x>> with
+      <math|<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>=<around*|\<\|\|\>|h-0|\<\|\|\>><rsub|X>\<less\>\<delta\>>
+      we have <math|<around*|\<\|\|\>|\<varepsilon\><around*|(|h|)>|\<\|\|\>><rsub|Y>=<around*|\<\|\|\>|\<varepsilon\><around*|(|h|)>-\<varepsilon\><around*|(|0|)>|\<\|\|\>><rsub|Y>\<less\>\<zeta\>>.
+      Hence if <math|0\<less\><around*|\<\|\|\>|h|\<\|\|\>><rsub|X>\<less\>\<delta\>>
+      then\ 
+
+      <\equation*>
+        <frac|<around*|\<\|\|\>|f<around*|(|x+h|)>-f<around*|(|x|)>-L<around*|(|h|)>|\<\|\|\>><rsub|Y>|<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>>=<frac|<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>\<cdot\>\<varepsilon\><around*|(|h|)>|<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>>=\<varepsilon\><around*|(|h|)>\<less\>\<zeta\>
+      </equation*>
+
+      <item*|<math|3\<Rightarrow\>1>>Assume that
+      <math|\<forall\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> there exist a
+      <math|\<delta\>\<in\>\<bbb-R\><rsup|+>> so that
+      <math|\<forall\>h\<in\>A<rsub|x>> with
+      <math|0\<less\><around*|\<\|\|\>|h|\<\|\|\>><rsub|X>\<less\>\<delta\>>
+      we have\ 
+
+      <\equation*>
+        <frac|<around*|\<\|\|\>|f<around*|(|x+h|)>-f<around*|(|x|)>-L<around*|(|h|)>|\<\|\|\>><rsub|Y>|<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>>\<less\>\<varepsilon\>
+      </equation*>
+
+      Now <math|\<forall\>h\<in\>A<rsub|x>> with
+      <math|<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>\<less\>\<delta\>> we have
+      two cases to consider:
+
+      <\description>
+        <item*|<math|<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>=0>>Then <math|h=0>
+        and\ 
+
+        <\equation*>
+          <around*|\<\|\|\>|f<around*|(|x+h|)>-f<around*|(|x|)>-L<around*|(|h|)>|\<\|\|\>><rsub|Y>=<around*|\<\|\|\>|f<around*|(|x+0|)>-f<around*|(|x|)>-L<around*|(|0|)>|\<\|\|\>><rsub|Y>=<around*|\<\|\|\>|0|\<\|\|\>><rsub|Y>=\<varepsilon\>\<cdot\>0=\<varepsilon\>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>><rsub|X>
+        </equation*>
+
+        <item*|<math|0\<less\><around*|\<\|\|\>|h|\<\|\|\>><rsub|X>>>Then\ 
+
+        <\equation*>
+          <around*|\<\|\|\>|f<around*|(|x+h|)>-f<around*|(|x|)>-L<around*|(|h|)>|\<\|\|\>><rsub|Y>=<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>\<cdot\><frac|<around*|\<\|\|\>|f<around*|(|x+h|)>-f<around*|(|x|)>-L<around*|(|h|)>|\<\|\|\>><rsub|Y>|<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>>\<leqslant\><around*|\<\|\|\>|h|\<\|\|\>><rsub|X>\<cdot\>\<varepsilon\>=\<varepsilon\>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>><rsub|x>
+        </equation*>
+      </description>
+
+      so that in all cases we have\ 
+
+      <\equation*>
+        <around*|\<\|\|\>|f<around*|(|x+h|)>-f<around*|(|x|)>-L<around*|(|h|)>|\<\|\|\>><rsub|Y>\<leqslant\>\<varepsilon\>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>><rsub|X>
+      </equation*>
+
+      Hence <math|L> is a Fréchet approximation of <math|f> at <math|x>.
+
+      <item*|<math|3\<Rightarrow\>4>>Assume that
+      <math|\<forall\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> there exist a
+      <math|\<delta\>\<in\>\<bbb-R\><rsup|+>> so that
+      <math|\<forall\>h\<in\>A<rsub|x>> with
+      <math|0\<less\><around*|\<\|\|\>|h|\<\|\|\>><rsub|X>\<less\>\<delta\>>
+      we have\ 
+
+      <\equation>
+        <label|eq 16.1.177><frac|<around*|\<\|\|\>|f<around*|(|x+h|)>-f<around*|(|x|)>-L<around*|(|h|)>|\<\|\|\>><rsub|Y>|<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>>\<less\>\<varepsilon\>
+      </equation>
+
+      Let <math|y\<in\>A\\<around*|{|x|}>\<Rightarrow\>y-x\<in\>A<rsub|x>>
+      [as <math|<around*|(|y-x|)>+x=y\<in\>A>] such that
+      \ <math|0\<less\><around*|\<\|\|\>|y-x|\<\|\|\>>\<less\>\<delta\><rsub|>>
+      then we have\ 
+
+      <\equation*>
+        <frac|<around*|\<\|\|\>|f<around*|(|y|)>-f<around*|(|x|)>-L<around*|(|y-x|)>|\<\|\|\>><rsub|Y>|<around*|\<\|\|\>|y-x|\<\|\|\>><rsub|X>>=<frac|<around*|\<\|\|\>|f<around*|(|x+<around*|(|y-x|)>|)>-f<around*|(|x|)>-L<around*|(|y-x|)>|\<\|\|\>><rsub|Y>|<around*|\<\|\|\>|<around*|(|y-x|)>|\<\|\|\>><rsub|X>><below|\<less\>|<text|[eq
+        <reference|eq 16.1.177>]>><rsub|>\<varepsilon\>
+      </equation*>
+
+      <item*|<math|4\<Rightarrow\>3>>Assume that
+      <math|\<forall\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>
+      <math|\<exists\>\<delta\>\<in\>\<bbb-R\><rsup|+>> such that
+      <math|\<forall\>y\<in\>A\\<around*|{|x|}>> with
+      <math|<around*|\<\|\|\>|y-x|\<\|\|\>><rsub|X>\<less\>\<delta\>> we have\ 
+
+      <\equation*>
+        <frac|<around*|\<\|\|\>|f<around*|(|y|)>-f<around*|(|x|)>-L<around*|(|y-x|)>|\<\|\|\>><rsub|Y>|<around*|\<\|\|\>|y-x|\<\|\|\>><rsub|X>>\<less\>\<varepsilon\>
+      </equation*>
+
+      Hence if <math|h\<in\>A<rsub|x>> with
+      <math|0\<less\><around*|\<\|\|\>|h|\<\|\|\>><rsub|X>\<less\>\<delta\>>
+      we have, if we take <math|y=x+h>, that
+      <math|0\<less\><around*|\<\|\|\>|y-x|\<\|\|\>><rsub|X>\<less\>\<delta\>>
+      and <math|y\<in\>A\\<around*|{|x|}>> so that\ 
+
+      <\equation*>
+        <frac|<around*|\<\|\|\>|f<around*|(|x+h|)>-f<around*|(|x|)>-L<around*|(|h|)>|\<\|\|\>><rsub|Y>|<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>>=<frac|<around*|\<\|\|\>|f<around*|(|y|)>-f<around*|(|x|)>-L<around*|(|y-x|)>|\<\|\|\>><rsub|Y>|<around*|\<\|\|\>|y-x|\<\|\|\>><rsub|X>>\<less\>\<varepsilon\>
+      </equation*>
+
+      <item*|<math|3\<Rightarrow\>5>>Let <math|<around*|{|h<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>A<rsub|x>>
+      be a sequence with <math|\<forall\>i\<in\>\<bbb-N\>>
+      <math|0\<less\><around*|\<\|\|\>|h<rsub|i>|\<\|\|\>><rsub|X>> such that
+      <math|<below|lim|i\<rightarrow\>\<infty\>>h<rsub|i>=0>. Take
+      <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> then by (3) there exist a
+      <math|\<delta\>\<in\>\<bbb-R\><rsup|+>> such that
+      <math|\<forall\>h\<in\>U<rsub|x>> with
+      <math|0\<less\><around*|\<\|\|\>|h|\<\|\|\>><rsub|X>\<less\>\<delta\>>
+      we have\ 
+
+      <\equation*>
+        <frac|<around*|\<\|\|\>|f<around*|(|x+h|)>-f<around*|(|x|)>-L<around*|(|h|)>|\<\|\|\>><rsub|Y>|<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>>\<less\>\<varepsilon\>
+      </equation*>
+
+      As <math|<below|lim|i\<rightarrow\>\<infty\>>h<rsub|i>=0> there exist a
+      <math|N\<in\>\<bbb-N\>> such that <math|\<forall\>i\<geqslant\>N> we
+      have that <math|0\<less\><around*|\<\|\|\>|h<rsub|i>|\<\|\|\>><rsub|X>=<around*|\<\|\|\>|h<rsub|i>-0|\<\|\|\>><rsub|X>\<less\>\<delta\>>,
+      so that\ 
+
+      <\equation*>
+        <around*|\||<frac|<around*|\<\|\|\>|f<around*|(|x+h<rsub|i>|)>-f<around*|(|x|)>-L<around*|(|h<rsub|i>|)>|\<\|\|\>><rsub|Y>|<around*|\<\|\|\>|h<rsub|i>|\<\|\|\>><rsub|X>>-0|\|>=<frac|<around*|\<\|\|\>|f<around*|(|x+h<rsub|i>|)>-f<around*|(|x|)>-L<around*|(|h<rsub|i>|)>|\<\|\|\>><rsub|Y>|<around*|\<\|\|\>|h<rsub|i>|\<\|\|\>><rsub|X>>\<less\>\<varepsilon\>
+      </equation*>
+
+      This proves that\ 
+
+      <\equation*>
+        <below|lim|i\<rightarrow\>\<infty\>><frac|<around*|\<\|\|\>|f<around*|(|x+h<rsub|i>|)>-f<around*|(|x|)>-L<around*|(|h<rsub|i>|)>|\<\|\|\>><rsub|Y>|<around*|\<\|\|\>|h<rsub|i>|\<\|\|\>><rsub|X>>=0
+      </equation*>
+
+      <item*|<math|5\<Rightarrow\>3>>Assume that <math|<around*|(|3|)>> is
+      false. Then there exist a <math|\<varepsilon\><rsub|0>\<in\>\<bbb-R\><rsup|+>>
+      such that <math|\<forall\>\<delta\>\<in\>\<bbb-R\><rsup|+>> there exist
+      a <math|h\<in\>A<rsub|x>> with <math|0\<less\><around*|\<\|\|\>|h|\<\|\|\>><rsub|X>\<less\>\<delta\>>
+      such that
+
+      <\equation*>
+        <frac|<around*|\<\|\|\>|f<around*|(|x+h|)>-f<around*|(|x|)>-L<around*|(|h|)>|\<\|\|\>><rsub|Y>|<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>>\<gtr\>\<varepsilon\><rsub|0>
+      </equation*>
+
+      Using [theorem: <reference|choice function generating>] it follows that
+      <math|\<forall\>n\<in\>\<bbb-N\>> we have, as
+      <math|<frac|1|n>\<in\>\<bbb-R\><rsup|+>>, that there exist a
+      <math|h<rsub|n>\<in\>A<rsub|x>> with
+      <math|0\<less\><around*|\<\|\|\>|h<rsub|n>|\<\|\|\>><rsub|X>\<less\><frac|1|n>>
+      such that\ 
+
+      <\equation>
+        <label|eq 16.2.177><frac|<around*|\<\|\|\>|f<around*|(|x+h<rsub|n>|)>-f<around*|(|x|)>-L<around*|(|h<rsub|n>|)>|\<\|\|\>><rsub|Y>|<around*|\<\|\|\>|h<rsub|n>|\<\|\|\>><rsub|X>>\<gtr\>\<varepsilon\><rsub|0>
+      </equation>
+
+      Now using [example: <reference|limit 1/(a+i)>] together with [theorem:
+      <reference|limit sequence dominated by a sequence converting to 0>] it
+      follows that
+
+      <\equation*>
+        <below|lim|n\<rightarrow\>\<infty\>>h<rsub|n>=0
+      </equation*>
+
+      Hence by (5) we have
+
+      <\equation*>
+        <below|lim|n\<rightarrow\>\<infty\>><frac|<around*|\<\|\|\>|f<around*|(|x+h<rsub|n>|)>-f<around*|(|x|)>-L<around*|(|h<rsub|n>|)>|\<\|\|\>><rsub|Y>|<around*|\<\|\|\>|h<rsub|n>|\<\|\|\>><rsub|X>>=0
+      </equation*>
+
+      So there exist a <math|N\<in\>\<bbb-N\>> such that <math|>
+
+      <\equation*>
+        <frac|<around*|\<\|\|\>|f<around*|(|x+h<rsub|N>|)>-f<around*|(|x|)>-L<around*|(|h<rsub|N>|)>|\<\|\|\>><rsub|Y>|<around*|\<\|\|\>|h<rsub|N>|\<\|\|\>><rsub|X>>\<less\>\<varepsilon\><rsub|0>
+      </equation*>
+
+      contradicting [eq: <reference|eq 16.2.177>]. Hence the assumption is
+      wrong and <math|<around*|(|3|)>> follows.
+    </description>
+  </proof>
+
+  The following corollary will be used later in the proof of the inverse
+  function theorem.
+
+  <\corollary>
+    <label|diff differentiability alternative definitions (1)>Let
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    be normed spaces, <math|U\<subseteq\>X> a open set, <math|x\<in\>U> and
+    <math|f:U\<rightarrow\>Y> a function then the following are equivalent:\ 
+
+    <\enumerate>
+      <item><math|f> is Fréchet differentiable at <math|x>
+
+      <item>There exist a <math|L\<in\>L<around*|(|X,Y|)>>, a
+      <math|\<delta\>\<in\>\<bbb-R\><rsup|+>> such that
+      <math|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|x,\<delta\>|)>\<subseteq\>U>
+      and a <math|\<varepsilon\>>-mapping
+      <math|\<varepsilon\>:B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,\<delta\>|)>\<rightarrow\>Y>
+      such that\ 
+
+      <\equation*>
+        \<forall\>h\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,\<delta\>|)><text|
+        >f<around*|(|x+h|)>-f<around*|(|x|)>-L<around*|(|h|)>=<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>\<cdot\>\<varepsilon\><around*|(|h|)>
+      </equation*>
+
+      Further if (1) or (2) is true then <math|D<rsub|x>f=L>
+    </enumerate>
+  </corollary>
+
+  <\proof>
+    <space|1em>
+
+    <\description>
+      <item*|<math|1\<Rightarrow\>2>>As <math|x\<in\>U> and <math|U> is open
+      we have that there exists a <math|\<delta\>\<in\>\<bbb-R\><rsup|+>>
+      such that
+
+      <\equation*>
+        x\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|x,\<delta\>|)>\<subseteq\>U
+      </equation*>
+
+      As <math|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|x,\<delta\>|)>>
+      is open it follows from [theorem: <reference|topology open set and
+      interior>] that\ 
+
+      <\equation*>
+        x\<in\><around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|x,\<delta\>|)>|)><rsup|\<circ\>>\<subseteq\>U
+      </equation*>
+
+      so that by [theorem: <reference|diff differentiability is a local
+      property>] and the fact that <math|f> is Fréchet differentiability at
+      <math|x> we have
+
+      <\equation*>
+        f<rsub|\|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|x,\<delta\>|)>><text|
+        is Fréchet differentiable at >x<text| with
+        >D<rsub|x>f<rsub|<mid|\|>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|x,\<delta\>|)>>=D<rsub|x>f
+      </equation*>
+
+      Using the previous theorem [theorem: <reference|diff differentiability
+      alternative definitions>(2)] there exist a
+      <math|\<varepsilon\>>-mapping\ 
+
+      <\equation*>
+        \<varepsilon\>:<around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|x,\<delta\>|)>|)><rsub|x>\<equallim\><rsub|<text|[theorem:
+        <reference|diff Bx(x,d)>]>>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,\<delta\>|)>\<rightarrow\>Y
+      </equation*>
+
+      \ such that <math|\<forall\>h\<in\><around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|x,\<delta\>|)>|)><rsub|x>\<equallim\><rsub|<text|[theorem:
+      <reference|diff Bx(x,d)>]>>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,\<delta\>|)>>
+      we have
+
+      <\equation*>
+        f<rsub|\|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|x,\<delta\>|)>><around*|(|x+h|)>-f<rsub|\|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|x,\<delta\>|)>><around*|(|x|)>-D<rsub|x>f<rsub|\|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|x,\<delta\>|)>><around*|(|h|)>=<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>\<cdot\>\<varepsilon\><around*|(|h|)>
+      </equation*>
+
+      As <math|x,x+h\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|x,\<delta\>|)>>
+      and <math|D<rsub|x>f<rsub|<mid|\|>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|x,\<delta\>|)>>=D<rsub|x>f>
+      we have\ 
+
+      <\equation*>
+        f<around*|(|x+h|)>-f<around*|(|x|)>-D<rsub|x>f<around*|(|h|)>=<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>\<cdot\>\<varepsilon\><around*|(|h|)>
+      </equation*>
+
+      Hence <math|L=D<rsub|x>f> is the required
+      <math|L\<in\>L<around*|(|X,Y|)>>.
+
+      <item*|<math|2\<Rightarrow\>1>>By (2) there exist a
+      <math|L\<in\>L<around*|(|X,Y|)>> and a <math|\<varepsilon\>>-mapping\ 
+
+      <\equation*>
+        \<varepsilon\>:B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,\<delta\>|)>\<equallim\><rsub|<text|[theorem:
+        <reference|diff Bx(x,d)>]>><around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|x,\<delta\>|)>|)><rsub|x>\<rightarrow\>Y
+      </equation*>
+
+      such that\ 
+
+      <\equation*>
+        \<forall\>h\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,\<delta\>|)>\<equallim\><rsub|<text|[theorem:
+        <reference|diff Bx(x,d)>]>><around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|x,\<delta\>|)>|)><rsub|x>
+      </equation*>
+
+      we have\ 
+
+      <\equation*>
+        f<rsub|\|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|x,\<delta\>|)>><around*|(|x+h|)>-f<rsub|\|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|x.\<delta\>|)>><around*|(|x|)>-L<around*|(|h|)>=f<around*|(|x+h|)>-f<around*|(|x|)>-L<around*|(|h|)>=<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>\<cdot\>\<varepsilon\><around*|(|h|)>
+      </equation*>
+
+      so that by [theorem: <reference|diff differentiability alternative
+      definitions>(2)] <math|><math|f<rsub|\|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|x,\<delta\>|)>>>
+      is Fréchet differentiable with\ 
+
+      <\equation*>
+        L=D<rsub|x>f<rsub|\|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|x,\<delta\>|)>>
+      </equation*>
+
+      As <math|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|x,\<delta\>|)>>
+      is open it follows from [theorem: <reference|topology open set and
+      interior>] that\ 
+
+      <\equation*>
+        x\<in\><around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|x,\<delta\>|)>|)><rsup|\<circ\>>\<subseteq\>U
+      </equation*>
+
+      Using then \ [theorem: <reference|diff differentiability is a local
+      property>] it follows that <math|f> is differentiable at <math|x> with
+
+      <\equation*>
+        L=D<rsub|x>f<rsub|\|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|x,\<delta\>|)>>=D<rsub|x>f
+      </equation*>
+    </description>
+  </proof>
+
+  Differentiability implies continuity as the following theorem proves.
+
+  <\theorem>
+    <label|diff differentiable function is continuous>Let
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    be normed spaces, <math|A\<subseteq\>X>, <math|x\<in\>A<rsup|\<circ\>>>
+    and <math|f:A\<rightarrow\>Y> a function that is Fréchet differentiable
+    at <math|x> then <math|f> is continuous at <math|x>.\ 
+  </theorem>
+
+  <\proof>
+    Let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>. As <math|f> is Fréchet
+    differentiable at <math|x> there exist a <math|L\<in\>L<around*|(|X,Y|)>>
+    and a <math|\<delta\><rsub|1>\<in\>\<bbb-R\><rsup|+>> such that
+    <math|\<forall\>h\<in\>A<rsub|x>> with
+    <math|<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>\<less\>\<delta\>> we have\ 
+
+    <\equation>
+      <label|eq 16.3.177><around*|\<\|\|\>|f<around*|(|x+h|)>-f<around*|(|x|)>-L<around*|(|h|)>|\<\|\|\>><rsub|Y>\<leqslant\><frac|\<varepsilon\>|2>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>><rsub|X>
+    </equation>
+
+    As <math|L\<in\>L<around*|(|X,Y|)>> we have [see theorem:
+    <reference|continuity operator norm (1)>] that
+
+    <\equation>
+      <label|eq 16.4.177>\<forall\>h\<in\>X<text|
+      <math|<around*|\<\|\|\>|L<around*|(|h|)>|\<\|\|\>><rsub|Y>\<leqslant\><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>><rsub|X>>>
+    </equation>
+
+    Define now <math|\<delta\>=min<around*|(|\<delta\><rsub|1>,1,<frac|\<varepsilon\>|2\<cdot\><around*|(|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X,Y|)>>+1|)>>|)>\<in\>\<bbb-R\><rsup|+>>
+    then for every <math|y\<in\>A> with <math|<around*|\<\|\|\>|y-x|\<\|\|\>><rsub|X>\<less\>\<delta\>>
+    we have <math|y-x\<in\>A<rsub|x>> [as
+    <math|<around*|(|y-x|)>+x=y\<in\>A>] and
+    \ <math|<around*|\<\|\|\>|y-x|\<\|\|\>><rsub|X>\<leqslant\>\<delta\><rsub|1>,1,<frac|\<varepsilon\>|2\<cdot\><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X,Y|)>>+1>>.
+    Using [eq: <reference|eq 16.3.177>] we have
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|\<\|\|\>|f<around*|(|y|)>-f<around*|(|x|)>-L<around*|(|y-x|)>|\<\|\|\>><rsub|Y>>|<cell|=>|<cell|<around*|\<\|\|\>|f<around*|(|x+<around*|(|y-x|)>|)>-f<around*|(|x|)>-L<around*|(|y-x|)>|\<\|\|\>><rsub|Y>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<frac|\<varepsilon\>|2>\<cdot\><around*|\<\|\|\>|y-x|\<\|\|\>><rsub|X>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<frac|\<varepsilon\>|2>>>>>
+    </eqnarray*>
+
+    and by [eq: <reference|eq 16.4.177>] it follows that\ 
+
+    <\equation*>
+      <around*|\<\|\|\>|L<around*|(|y-x|)>|\<\|\|\>><rsub|Y>\<leqslant\><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\<cdot\><around*|\<\|\|\>|y-x|\<\|\|\>><rsub|X>\<leqslant\><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\<cdot\><frac|\<varepsilon\>|2\<cdot\><around*|(|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X,Y|)>>+1|)>>\<less\><frac|\<varepsilon\>|2>
+    </equation*>
+
+    Hence we have <math|\<forall\>y\<in\>A> with
+    <math|<around*|\<\|\|\>|y-x|\<\|\|\>><rsub|X>\<less\>\<delta\>><space|1em>that
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|\<\|\|\>|f<around*|(|y|)>-f<around*|(|x|)>|\<\|\|\>><rsub|Y>>|<cell|=>|<cell|<around*|\<\|\|\>|f<around*|(|y|)>-f<around*|(|x|)>-L<around*|(|y-x|)>+L<around*|(|y-x|)>|\<\|\|\>><rsub|Y>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<around*|\<\|\|\>|f<around*|(|y|)>-f<around*|(|x|)>-L<around*|(|y-x|)>|\<\|\|\>><rsub|Y>+<around*|\<\|\|\>|L<around*|(|y-x|)>|\<\|\|\>><rsub|Y>>>|<row|<cell|>|<cell|\<less\>>|<cell|<frac|\<varepsilon\>|2>+<frac|\<varepsilon\>|2>>>|<row|<cell|>|<cell|=>|<cell|\<varepsilon\>>>>>
+    </eqnarray*>
+
+    So by [theorem: <reference|continuity in normed subspace>] it follows
+    that <math|f> is continuous at <math|x>.
+  </proof>
+
+  We look now at \ the relation between the Fréchet differential of a
+  function and the derivative of a function.
+
+  <\theorem>
+    <label|diff derivate and frechet differential>Let
+    <math|<around*|\<langle\>|\<bbb-K\>,\<\|\|\>|\<rangle\>>> be the normed
+    space of the real [or complex ] numbers,
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> a
+    normed space, <math|A\<subseteq\>\<bbb-K\>>,
+    <math|x\<in\>A<rsup|\<circ\>>> and <math|f:A\<rightarrow\>X> a function
+    then we have\ 
+
+    <\equation*>
+      <text|>f<text| has a derivative >f<rprime|'><rsub|x><text| at >x
+    </equation*>
+
+    <\equation*>
+      \<Updownarrow\>
+    </equation*>
+
+    <\equation*>
+      f<text| is Fréchet differentiable at >x<text| with Fréchet differential
+      >D<rsub|x>f\ 
+    </equation*>
+
+    Further in either case we have
+
+    <\equation*>
+      f<rprime|'><rsub|x>=D<rsub|x>f<around*|(|1|)>
+    </equation*>
+
+    and\ 
+
+    <\equation*>
+      \<forall\>h\<in\>\<bbb-R\><text| we have
+      >D<rsub|x>f<around*|(|h|)>=h\<cdot\>f<rsub|x><rprime|'>
+    </equation*>
+
+    <\note>
+      As <math|x\<in\>A<rsup|\<circ\>>> it follows from [theorem:
+      <reference|topology interior point is a limit point in a normed space>]
+      it follows that <math|x\<in\>A<rprime|'>> so that the derivative and
+      differential are well defined.
+    </note>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>Define\ 
+
+      <\equation*>
+        L:\<bbb-K\>\<rightarrow\>X<text| by
+        >L<around*|(|h|)>=h\<cdot\>f<rprime|'><rsub|x>
+      </equation*>
+
+      then we have by [example: <reference|continuity norm L(x)=a.x>] that\ 
+
+      <\equation*>
+        L\<in\>L<around*|(|\<bbb-K\>,X|)>
+      </equation*>
+
+      Let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>. As <math|f> has a
+      derivative <math|f<rprime|'><rsub|x>> at <math|x> it follows from
+      [theorem: <reference|diff calculus derivate (2)>] that there exists a
+      <math|\<delta\>\<in\>\<bbb-R\><rsup|+>> such that
+      <math|\<forall\>h\<in\>A<rsub|x>> with
+      <math|<around*|\||h|\|>\<less\>\<delta\>> we have\ 
+
+      <\equation*>
+        <around*|\<\|\|\>|f<around*|(|x+h|)>-f<around*|(|x|)>-h\<cdot\>f<rprime|'><rsub|z>|\<\|\|\>>\<leqslant\>\<varepsilon\>\<cdot\><around*|\||h|\|>
+      </equation*>
+
+      Hence\ 
+
+      <\equation*>
+        <around*|\<\|\|\>|f<around*|(|x+h|)>-f<around*|(|x|)>-L<around*|(|h|)>|\<\|\|\>>=<around*|\<\|\|\>|f<around*|(|x+h|)>-f<around*|(|x|)>-h\<cdot\>f<rprime|'>|\<\|\|\>>\<leqslant\>\<varepsilon\>\<cdot\>h
+      </equation*>
+
+      which proves that <math|f> is Fréchet differentiable at <math|x> with
+      <math|D<rsub|x>f=L>. Hence\ 
+
+      <\equation*>
+        \<forall\>h\<in\>\<bbb-K\><text| we have
+        >D<rsub|x>f=h\<cdot\>f<rprime|'><rsub|x><text| and
+        >D<rsub|x>f<around*|(|1|)>=f<rprime|'><rsub|x>
+      </equation*>
+
+      <item*|<math|\<Leftarrow\>>>Let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>.
+      As <math|f> is Fréchet differentiable at <math|x> with differential
+      there exist a <math|\<delta\>\<in\>\<bbb-R\><rsup|+>> such that
+      <math|\<forall\>\<delta\>\<in\>A<rsub|x>> with
+      <math|<around*|\||h|\|>\<less\>\<delta\>> we have that\ 
+
+      <\equation*>
+        <around*|\<\|\|\>|f<around*|(|x+h|)>-f<around*|(|x|)>-D<rsub|x>f<around*|(|h|)>|\<\|\|\>>\<leqslant\>\<varepsilon\>\<cdot\><around*|\||h|\|>
+      </equation*>
+
+      Hence we have that\ 
+
+      <\equation*>
+        <around*|\<\|\|\>|f<around*|(|x+h|)>-f<around*|(|x|)>-h\<cdot\>D<rsub|x>f<around*|(|1|)>|\<\|\|\>>=<around*|\<\|\|\>|f<around*|(|x+h|)>-f<around*|(|z|)>-D<rsub|x>f<around*|(|h|)>|\<\|\|\>>\<leqslant\>\<varepsilon\>\<cdot\><around*|\||h|\|>
+      </equation*>
+
+      which proves by [theorem: <reference|diff calculus derivate (2)>] that
+      <math|f> has a derivative <math|f<rprime|'><rsub|x>> at <math|x> with
+      <math|f<rprime|'><rsub|x>=D<rsub|x>f<around*|(|1|)>>.
+    </description>
+  </proof>
+
+  <subsection|Properties of the Fréchet differential.>
+
+  \;
+
+  <\theorem>
+    <label|diff derivate operator is linear>Let
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    be normed spaces, <math|A\<subseteq\>X>, <math|x\<in\>A<rsup|0>> then we
+    have:
+
+    <\enumerate>
+      <item>If <math|f:A\<rightarrow\>Y> is Fréchet differentiable at
+      <math|x> and <math|g:A\<rightarrow\>Y> is Fréchet differentiable at
+      <math|x> then\ 
+
+      <\equation*>
+        f+g:A\<rightarrow\>Y<text| is Fréchet differentiable with
+        >D<rsub|x><around*|(|f+g|)>=D<rsub|x>f+D<rsub|x>g
+      </equation*>
+
+      <item>If <math|n\<in\>\<bbb-N\>>, <math|<around*|{|f<rsub|i>:A\<rightarrow\>Y|}>>
+      be a family that are Fréchet differentiable at <math|x> then
+      <math|<big|sum><rsub|i=1><rsup|n>f<rsub|i>> is Fréchet differentiable
+      at <math|x> with\ 
+
+      <\equation*>
+        D<rsub|x><around*|(|<big|sum><rsub|i=1><rsup|n>f<rsub|i>|)>=<big|sum><rsub|i=1><rsup|n>D<rsub|x>f<rsub|i>
+      </equation*>
+
+      <item>If <math|f:A\<rightarrow\>Y> is Fréchet differentiable at
+      <math|x> and <math|\<alpha\>\<in\>\<bbb-K\>> then
+
+      <\equation*>
+        \<alpha\>\<cdot\>f:A\<rightarrow\>Y<text| is Fréchet differentiable
+        at <math|x> with Fréchet differential
+        >D<rsub|x><around*|(|\<alpha\>\<cdot\>f|)>=\<alpha\>\<cdot\>D<rsub|x>f
+      </equation*>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>Let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>. As <math|f,g>
+      are Fréchet differentiable at <math|x> there exist
+      <math|\<delta\><rsub|1>,\<delta\><rsub|2>\<in\>\<bbb-R\><rsup|+>> such
+      that\ 
+
+      <\equation*>
+        \<forall\>h\<in\>U<rsub|x><text| with
+        ><around*|\<\|\|\>|h|\<\|\|\>><rsub|x>\<less\>\<delta\><rsub|1><text|
+        we have ><around*|\<\|\|\>|f<around*|(|x+h|)>-f<around*|(|x|)>-D<rsub|x>f<around*|(|h|)>|\<\|\|\>><rsub|Y>\<leqslant\><frac|\<varepsilon\>|2>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>><rsub|X>
+      </equation*>
+
+      <\equation*>
+        \<forall\>h\<in\>U<rsub|x><text| with
+        ><around*|\<\|\|\>|h|\<\|\|\>><rsub|x>\<less\>\<delta\><rsub|2><text|
+        we have ><around*|\<\|\|\>|g<around*|(|x+h|)>-g<around*|(|x|)>-D<rsub|x>g<around*|(|h|)>|\<\|\|\>><rsub|Y>\<leqslant\><frac|\<varepsilon\>|2>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>><rsub|X>
+      </equation*>
+
+      As <math|D<rsub|x>f>, <math|D<rsub|x>g\<in\>L<around*|(|X,Y|)>> we have
+      by [theorem: <reference|continuity L(X,Y) is a subspace of Hom(X,Y)>]
+      that <math|D<rsub|x>f+D<rsub|x>g\<in\>L<around*|(|X,Y|)>>. Further if
+      <math|h\<in\>U<rsub|x>> with <math|<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>\<less\>min<around*|(|\<delta\><rsub|1>,\<delta\><rsub|2>|)>>
+      then we have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|\<\|\|\>|<around*|(|f+g|)><around*|(|x+h|)>-<around*|(|f+g|)><around*|(|x|)>-<around*|(|D<rsub|x>f+D<rsub|X>g|)><around*|(|h|)>|\<\|\|\>><rsub|Y>>|<cell|=>|<cell|>>|<row|<cell|<around*|\<\|\|\>|f<around*|(|x+h|)>+g<around*|(|x+h|)>-f<around*|(|x|)>-g<around*|(|x|)>-<around*|(|D<rsub|x>f<around*|(|h|)>+D<rsub|x>g<around*|(|h|)>|)>|\<\|\|\>><rsub|Y>>|<cell|\<leqslant\>>|<cell|>>|<row|<cell|<around*|\<\|\|\>|f<around*|(|x+h|)>-f<around*|(|x|)>-D<rsub|x>
+        f<around*|(|h|)>|\<\|\|\>><rsub|Y>+<around*|\<\|\|\>|g<around*|(|x+h|)>-g<around*|(|x|)>-D<rsub|x>g<around*|(|h|)>|\<\|\|\>><rsub|Y>>|<cell|\<leqslant\>>|<cell|>>|<row|<cell|<frac|\<varepsilon\>|2>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>><rsub|X>+<frac|\<varepsilon\>|2>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>><rsub|Y>>|<cell|=>|<cell|>>|<row|<cell|\<varepsilon\>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>><rsub|X>>|<cell|>|<cell|>>>>
+      </eqnarray*>
+
+      proving that <math|f+g> is Fréchet differentiable at <math|x> with
+      Fréchet differential
+
+      <\equation*>
+        D<rsub|x><around*|(|f+g|)>=D<rsub|x>f+D<rsub|x>g
+      </equation*>
+
+      <item>This is easely proved by induction, let\ 
+
+      <\equation*>
+        S=<around*|{|n\<in\>\<bbb-N\>\|<text|If
+        ><around*|{|f<rsub|i>:A\<rightarrow\>Y|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><text|
+        is a family of functions that are Fréchet differentiable at >x<text|
+        then ><big|sum><rsub|i=1><rsup|n>f<rsub|i><text| is Fréchet
+        differentiable at >x<text| with >D<rsub|x><around*|(|<big|sum><rsub|i=1><rsup|n>f<rsub|i>|)>=<big|sum><rsub|i=1><rsup|n>D<rsub|x>f<rsub|i>|}>
+      </equation*>
+
+      then we have:\ 
+
+      <\description>
+        <item*|<math|1\<in\>S>>If <math|<around*|{|f<rsub|i>:A\<rightarrow\>Y|}><rsub|i\<in\><around*|{|1|}>>>
+        is a family of Fréchet differentiable at <math|x> then we have that
+        <math|<big|sum><rsub|i=1><rsup|1>f<rsub|i>=f<rsub|1>> is Fréchet
+        differentiable at <math|x> with <math|D<rsub|x><around*|(|<big|sum><rsub|i=1><rsup|1>f<rsub|i>|)>=D<rsub|x>f<rsub|1>=<big|sum><rsub|i=1><rsup|1>D<rsub|x>f<rsub|i>>.
+        Hence <math|1\<in\>S>.
+
+        <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>If
+        <math|<around*|{|f<rsub|i>:A\<rightarrow\>Y|}><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>>
+        is a family of Fréchet differentiable at <math|x> then, as
+        <math|n\<in\>S>, <math|<big|sum><rsub|i=1><rsup|n>f<rsub|i>> is
+        Fréchet differentiable at <math|x> with
+        <math|D<rsub|x><around*|(|<big|sum><rsub|i=1><rsup|n>f<rsub|i>|)>=<big|sum><rsub|i=1><rsup|n>D<rsub|x>f<rsub|i>>.
+        As also <math|f<rsub|n+1>> is Fréchet differentiable at <math|x> we
+        have by (1) that
+
+        <\equation*>
+          <big|sum><rsub|i=1><rsup|n+1>f<rsub|i>=f<rsub|n+1>+<big|sum><rsub|i=1><rsup|n>f<rsub|i><rsub|>
+        </equation*>
+
+        that\ 
+
+        <\equation*>
+          D<rsub|x><around*|(|<big|sum><rsub|i=1><rsup|n+1>f<rsub|i>|)>=D<rsub|x>f<rsub|n+1>+D<rsub|x><around*|(|<big|sum><rsub|i=1><rsup|n>f<rsub|i><rsub|>|)>=D<rsub|x>f<rsub|n+1>+<big|sum><rsub|i=1><rsup|n>D<rsub|x>f<rsub|i>=<big|sum><rsub|i=1><rsup|n+1>D<rsub|x>f<rsub|i>
+        </equation*>
+
+        which proves that
+
+        <\equation*>
+          n+1\<in\>S
+        </equation*>
+      </description>
+
+      <item>Let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>. As <math|f> is
+      Fréchet differentiable at <math|x> there exist a
+      <math|\<delta\>\<in\>\<bbb-R\><rsup|+>> such that\ 
+
+      <\equation*>
+        \<forall\>h\<in\>U<rsub|x><text| with
+        ><around*|\<\|\|\>|h|\<\|\|\>><rsub|x>\<less\>\<delta\><rsub|1><text|
+        we have ><around*|\<\|\|\>|f<around*|(|x+h|)>-f<around*|(|x|)>-D<rsub|x>f<around*|(|h|)>|\<\|\|\>><rsub|Y>\<leqslant\><frac|\<varepsilon\>|<around*|\||\<alpha\>|\|>+1>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>><rsub|X>
+      </equation*>
+
+      As <math|D<rsub|x>f\<in\>L<around*|(|X,Y|)>> it follows from [theorem:
+      <reference|continuity L(X,Y) is a subspace of Hom(X,Y)>] that
+      <math|\<alpha\>\<cdot\>D<rsub|x>f\<in\>L<around*|(|X,Y|)>>. Further if
+      <math|h\<in\>U<rsub|x>> with <math|<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>\<less\>\<delta\>>
+      then we have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|\<\|\|\>|<around*|(|\<alpha\>\<cdot\>f|)><around*|(|x+h|)>-<around*|(|\<alpha\>\<cdot\>f|)><around*|(|x|)>-<around*|(|\<alpha\>\<cdot\>D<rsub|x>f|)><around*|(|h|)>|\<\|\|\>><rsub|Y>>|<cell|=>|<cell|>>|<row|<cell|<around*|\<\|\|\>|\<alpha\>\<cdot\>f<around*|(|x+h|)>-\<alpha\>\<cdot\>f<around*|(|x|)>-\<alpha\>\<cdot\>D<rsub|x>f<around*|(|h|)>|\<\|\|\>><rsub|Y>>|<cell|=>|<cell|>>|<row|<cell|<around*|\<\|\|\>|\<alpha\>\<cdot\><around*|(|f<around*|(|x+h|)>-f<around*|(|x|)>-D<rsub|x>f<around*|(|h|)>|)>|\<\|\|\>><rsub|Y>>|<cell|=>|<cell|>>|<row|<cell|<around*|\||\<alpha\>|\|>\<cdot\><around*|\<\|\|\>|f<around*|(|x+h|)>-f<around*|(|x|)>-D<rsub|x>f<around*|(|h|)>|\<\|\|\>><rsub|Y>>|<cell|\<leqslant\>>|<cell|>>|<row|<cell|<around*|\||\<alpha\>|\|>\<cdot\><frac|\<varepsilon\>|<around*|\||\<alpha\>|\|>+1>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>><rsub|X>>|<cell|\<less\>>|<cell|>>|<row|<cell|\<varepsilon\>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>><rsub|X>>|<cell|>|<cell|>>>>
+      </eqnarray*>
+
+      proving that <math|\<alpha\>\<cdot\>f> is Fréchet differentiable at
+      <math|x> with Fréchet differential <math|\<alpha\>\<cdot\>D<rsub|x>f>.
+    </enumerate>
+  </proof>
+
+  We introduce now the most import rule for Fréchet differentiable the Chain
+  Rule.
+
+  <\theorem>
+    <label|diff chain rule><index|Chain rule><dueto|Chain Rule>Let
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>,<around*|\<langle\>|Z,<around*|\<\|\|\>||\<\|\|\>><rsub|Z>|\<rangle\>>>
+    be normed spaces, <math|A\<subseteq\>X>, <math|x\<in\>A<rsub|0>>,
+    <math|B\<subseteq\>Y>, <math|f:A\<rightarrow\>Y>,
+    <math|g:B\<rightarrow\>Z> functions such that
+    <math|f<around*|(|A|)>\<subseteq\>B> and
+    <math|f<around*|(|x|)>\<in\>B<rsup|\<circ\>>>, <math|f> is Fréchet
+    differentiable at <math|x> and <math|g> is Fréchet differentiable at
+    <math|f<around*|(|x|)>> then
+
+    <\equation*>
+      g\<circ\>f:A\<rightarrow\>Z<text| is Fréchet differentiable at
+      <math|x>>
+    </equation*>
+
+    and\ 
+
+    <\equation*>
+      D<rsub|x><around*|(|g\<circ\>f|)>=D
+      <rsub|f<around*|(|x|)>>g\<circ\>D<rsub|x>f
+    </equation*>
+  </theorem>
+
+  <\proof>
+    As <math|f> is Fréchet differentiable at <math|x> we have by [theorem:
+    <reference|diff differentiability alternative definitions>] that there
+    exist a <math|\<varepsilon\>>-mapping
+    <math|\<varepsilon\><rsub|f>:A<rsub|x>\<rightarrow\>Y> such that\ 
+
+    <\equation>
+      <label|eq 16.7.178>\<forall\>h\<in\>A<rsub|x><text| we have
+      >f<around*|(|x+h|)>-f<around*|(|x|)>-D<rsub|x>f<around*|(|h|)>=<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>\<cdot\>\<varepsilon\><rsub|f><around*|(|h|)>
+    </equation>
+
+    Further as <math|g> is Fréchet differentiable at <math|f<around*|(|x|)>>
+    we can use [theorem: <reference|diff differentiability alternative
+    definitions>] again, giving a <math|\<varepsilon\>>-mapping
+    <math|\<varepsilon\><rsub|g>:B<rsub|f<around*|(|x|)>>\<rightarrow\>Z>
+    satisfying
+
+    <\equation>
+      <label|eq 16.8.178>\<forall\>k\<in\>B<rsub|f<around*|(|x|)>><text| we
+      have >g<around*|(|f<around*|(|x|)>+k|)>-g<around*|(|f<around*|(|x|)>|)>-D
+      <rsub|f<around*|(|x|)>>g<around*|(|k|)>=<around*|\<\|\|\>|k|\<\|\|\>><rsub|Y>\<cdot\>\<varepsilon\><rsub|g><around*|(|k|)>
+    </equation>
+
+    Let <math|h\<in\>A<rsub|x>>. As <math|<around*|(|f<around*|(|x+h|)>-f<around*|(|x|)>|)>+f<around*|(|x|)>=f<around*|(|x+h|)>\<in\>f<around*|(|A|)>\<subseteq\>B>
+    we have that <math|f<around*|(|x+h|)>-f<around*|(|x|)>\<in\>B<rsub|f<around*|(|x|)>>>,
+    combining this with [eq: <reference|eq 16.8.178>] gives\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|\<\|\|\>|f<around*|(|x+h|)>-f<around*|(|x|)>|\<\|\|\>><rsub|Y>\<cdot\>\<varepsilon\><rsub|g><around*|(|f<around*|(|x+h|)>-f<around*|(|x|)>|)>>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 16.8.178>]>>>|<cell|>>|<row|<cell|g<around*|(|f<around*|(|x|)>+<around*|(|f<around*|(|x+h|)>-f<around*|(|x|)>|)>|)>-g<around*|(|f<around*|(|x|)>|)>-D
+      <rsub|f<around*|(|x|)>>g<around*|(|f<around*|(|x+h|)>-f<around*|(|x|)>|)>>|<cell|=>|<cell|>>|<row|<cell|g<around*|(|f<around*|(|x+h|)>|)>-g<around*|(|f<around*|(|x|)>|)>-D<rsub|f<around*|(|x|)>>g<around*|(|f<around*|(|x+h|)>-f<around*|(|x|)>|)>>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 16.7.178>]>>>|<cell|>>|<row|<cell|g<around*|(|f<around*|(|x+h|)>|)>-g<around*|(|f<around*|(|x|)>|)>-D
+      <rsub|f<around*|(|x|)>>g<around*|(|<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>\<cdot\>\<varepsilon\><rsub|f><around*|(|h|)>+D<rsub|x>f<around*|(|h|)>|)>>|<cell|=>|<cell|>>|<row|<cell|g<around*|(|f<around*|(|x+h|)>|)>-g<around*|(|f<around*|(|x|)>|)>-D
+      <rsub|f<around*|(|x|)>>g<around*|(|<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>\<cdot\>\<varepsilon\><rsub|f><around*|(|h|)>|)>-D<rsub|f<around*|(|x|)>>
+      g<around*|(|D<rsub|x>f<around*|(|h|)>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|g\<circ\>f|)><around*|(|x+h|)>-<around*|(|g\<circ\>f|)><around*|(|x|)>-D
+      <rsub|f<around*|(|x|)>>g<around*|(|<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>\<cdot\>\<varepsilon\><rsub|f><around*|(|h|)>|)>-<around*|(|D<rsub|f<around*|(|x|)>>
+      g\<circ\>D<rsub|x>f|)><around*|(|h|)>>|<cell|>|<cell|>>>>
+    </eqnarray*>
+
+    proving that\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|(|g\<circ\>f|)><around*|(|x+h|)>-<around*|(|g\<circ\>f|)><around*|(|x|)>-<around*|(|D<rsub|f<around*|(|x|)>>
+      g\<circ\>D <rsub|x>f|)><around*|(|h|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|\<\|\|\>|f<around*|(|x+h|)>-f<around*|(|x|)>|\<\|\|\>><rsub|Y>\<cdot\>\<varepsilon\><rsub|g><around*|(|f<around*|(|x+h|)>-f<around*|(|x|)>|)>+D<rsub|f<around*|(|x|)>>
+      g<around*|(|<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>\<cdot\>\<varepsilon\><rsub|f><around*|(|h|)>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|\<\|\|\>|f<around*|(|x+h|)>-f<around*|(|x|)>|\<\|\|\>><rsub|Y>\<cdot\>\<varepsilon\><rsub|g><around*|(|f<around*|(|x+h|)>-f<around*|(|x|)>|)>+<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>\<cdot\>D<rsub|f<around*|(|x|)>>g<around*|(|\<varepsilon\><rsub|f><around*|(|h|)>|)>>|<cell|>|<cell|<eq-number><label|eq
+      16.9.178>>>>>
+    </eqnarray*>
+
+    The next logical step is to find a <math|\<varepsilon\>>-mapping
+    <math|\<zeta\>:A<rsub|x>\<rightarrow\>Y> such that
+
+    <\equation*>
+      \<zeta\><around*|(|h|)>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>><rsub|x>=<around*|\<\|\|\>|f<around*|(|x+h|)>-f<around*|(|x|)>|\<\|\|\>><rsub|Y>\<cdot\>\<varepsilon\><rsub|g><around*|(|f<around*|(|x+h|)>-f<around*|(|x|)>|)>+<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>\<cdot\>D<rsub|f<around*|(|x|)>>g<around*|(|\<varepsilon\><rsub|f><around*|(|h|)>|)>
+    </equation*>
+
+    because we can then use [theorem: <reference|diff differentiability
+    alternative definitions>] to finish the proof. So define\ 
+
+    <\equation*>
+      \<zeta\>:A<rsub|x>\<rightarrow\>Y<text| by
+      ><choice|<tformat|<table|<row|<cell|<frac|<around*|\<\|\|\>|f<around*|(|x+h|)>-f<around*|(|x|)>|\<\|\|\>><rsub|Y>\<cdot\>\<varepsilon\><rsub|g><around*|(|f<around*|(|x+h|)>-f<around*|(|x|)>|)>|<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>>+D<rsub|f<around*|(|x|)>>g<around*|(|\<varepsilon\><rsub|f><around*|(|h|)>|)><text|
+      if >h\<in\>A<rsub|x>\\<around*|{|0|}>>>|<row|<cell|0<text| if >h=0>>>>>
+    </equation*>
+
+    Then for <math|h\<in\>A<rsub|x>> we have either:
+
+    <\description>
+      <item*|<math|h=0>>Then
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|\<\|\|\>|f<around*|(|x+h|)>-f<around*|(|x|)>|\<\|\|\>><rsub|Y>\<cdot\>\<varepsilon\><rsub|g><around*|(|f<around*|(|x+h|)>-f<around*|(|x|)>|)>+<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>\<cdot\>D<rsub|f<around*|(|x|)>>g<around*|(|\<varepsilon\><rsub|f><around*|(|h|)>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|\<\|\|\>|f<around*|(|x+0|)>-f<around*|(|x|)>|\<\|\|\>><rsub|Y>\<cdot\>\<varepsilon\><rsub|g><around*|(|f<around*|(|x+0|)>-f<around*|(|x|)>|)>+<around*|\<\|\|\>|0|\<\|\|\>><rsub|X>\<cdot\>D<rsub|f<around*|(|x|)>>g<around*|(|\<varepsilon\><rsub|f><around*|(|0|)>|)>>|<cell|=>|<cell|>>|<row|<cell|0>|<cell|=>|<cell|>>|<row|<cell|0\<cdot\>\<zeta\><around*|(|0|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>\<cdot\>\<zeta\><around*|(|h|)>>|<cell|>|<cell|>>>>
+      </eqnarray*>
+
+      <item*|<math|h\<neq\>0>>Then\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|\<\|\|\>|f<around*|(|x+h|)>-f<around*|(|x|)>|\<\|\|\>><rsub|Y>\<cdot\>\<varepsilon\><rsub|g><around*|(|f<around*|(|x+h|)>-f<around*|(|x|)>|)>+<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>\<cdot\>D<rsub|f<around*|(|x|)>>g<around*|(|\<varepsilon\><rsub|f><around*|(|h|)>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>\<cdot\><frac|<around*|\<\|\|\>|f<around*|(|x+h|)>-f<around*|(|x|)>|\<\|\|\>><rsub|Y>\<cdot\>\<varepsilon\><rsub|g><around*|(|f<around*|(|x+h|)>-f<around*|(|x|)>|)>+<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>\<cdot\>D<rsub|f<around*|(|x|)>>g<around*|(|\<varepsilon\><rsub|f><around*|(|h|)>|)>|<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>>>|<cell|=>|<cell|>>|<row|<cell|<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>\<cdot\><around*|(|<frac|<around*|\<\|\|\>|f<around*|(|x+h|)>-f<around*|(|x|)>|\<\|\|\>><rsub|Y>\<cdot\>\<varepsilon\><rsub|g><around*|(|f<around*|(|x+h|)>-f<around*|(|x|)>|)>|<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>>+D<rsub|f<around*|(|x|)>>g<around*|(|\<varepsilon\><rsub|f><around*|(|h|)>|)>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>\<cdot\>\<zeta\><around*|(|h|)>>|<cell|>|<cell|>>>>
+      </eqnarray*>
+    </description>
+
+    Combining the above with [eq: <reference|eq 16.9.178>] gives us the
+    desired
+
+    <\equation>
+      <label|eq 16.10.178><around*|(|g\<circ\>f|)><around*|(|x+h|)>-<around*|(|g\<circ\>f|)><around*|(|x|)>-<around*|(|D<rsub|f<around*|(|x|)>>g\<circ\>D<rsub|x>f|)><around*|(|h|)>=<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>\<cdot\>\<zeta\><around*|(|h|)>
+    </equation>
+
+    Next we must prove that <math|\<zeta\>> is continuous at <math|0>. Let
+    <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>. As
+    <math|\<varepsilon\><rsub|f>> is a <math|\<varepsilon\>>-mapping, it is
+    continuous at 0<math|>. So by [theorem: <reference|continuity in normed
+    subspace>] there exist a <math|\<delta\><rsub|f>\<in\>\<bbb-R\><rsup|+>>
+    such that if <math|h\<in\>A<rsub|x>> with
+    <math|<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>\<less\>\<delta\><rsub|f>>
+    then\ 
+
+    <\equation>
+      <label|eq 16.11.178><around*|\<\|\|\>|\<varepsilon\><rsub|f><around*|(|h|)>|\<\|\|\>><rsub|Y>=<around*|\<\|\|\>|\<varepsilon\><rsub|f><around*|(|h|)>-0|\<\|\|\>><rsub|Y>\<less\>1
+    </equation>
+
+    So if additional <math|0\<less\><around*|\<\|\|\>|h|\<\|\|\>><rsub|X>> we
+    have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<frac|<around*|\<\|\|\>|f*<around*|(|x+h|)>-f<around*|(|x|)>|\<\|\|\>><rsub|Y>|<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>>>|<cell|\<equallim\><rsub|<text|
+      [eq: <reference|eq 16.7.178>]>>>|<cell|<frac|<around*|\<\|\|\>|<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>\<cdot\>\<varepsilon\><rsub|f><around*|(|h|)>+D<rsub|x>f<around*|(|h|)>|\<\|\|\>><rsub|Y>|<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<frac|<around*|\<\|\|\>|<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>\<cdot\>\<varepsilon\><rsub|f><around*|(|h|)>|\<\|\|\>><rsub|Y>+<around*|\<\|\|\>|D<rsub|x>f<around*|(|h|)>|\<\|\|\>><rsub|Y>|<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>>>>|<row|<cell|>|<cell|=>|<cell|<frac|<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>\<cdot\><around*|\<\|\|\>|\<varepsilon\><rsub|f><around*|(|h|)>|\<\|\|\>><rsub|Y>+<around*|\<\|\|\>|D<rsub|x>f<around*|(|h|)>|\<\|\|\>><rsub|Y>|<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<frac|<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>\<cdot\><around*|\<\|\|\>|\<varepsilon\><rsub|f><around*|(|h|)>|\<\|\|\>><rsub|Y>+<around*|\<\|\|\>|D<rsub|x>f|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>><rsub|X>|<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|\<varepsilon\><rsub|f><around*|(|h|)>|\<\|\|\>><rsub|Y>+<around*|\<\|\|\>|D<rsub|x>f|\<\|\|\>><rsub|L<around*|(|X,Y|)>>>>|<row|<cell|>|<cell|\<less\><rsub|<text|[eq:
+      <reference|eq 16.11.178>]>>>|<cell|1+<around*|\<\|\|\>|D<rsub|x>f|\<\|\|\>><rsub|L<around*|(|X,Y|)>>>>>>
+    </eqnarray*>
+
+    hence\ 
+
+    <\equation>
+      <label|eq 16.12.178>\<forall\>h\<in\>A<rsub|x><text| with
+      >0\<less\><around*|\<\|\|\>|h|\<\|\|\>><rsub|X>\<less\>\<delta\><rsub|f><text|
+      we have that ><frac|<around*|\<\|\|\>|f<around*|(|x+h|)>-f<around*|(|x|)><rsub|>|\<\|\|\>><rsub|Y>|<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>>\<less\>1+<around*|\<\|\|\>|D<rsub|x>f|\<\|\|\>><rsub|L<around*|(|X,Y|)>>
+    </equation>
+
+    <math|> As <math|\<varepsilon\><rsub|g>> is a
+    <math|\<varepsilon\>>-mapping it is continuous at <math|0>. So by
+    [theorem: <reference|continuity in normed subspace>] there exist a
+    <math|\<delta\><rsub|g>\<in\>\<bbb-R\><rsup|+>> such that
+
+    <\equation>
+      <label|eq 16.13.178>\<forall\>k\<in\>B<rsub|f<around*|(|x|)>><text|
+      with ><around*|\<\|\|\>|k|\<\|\|\>><rsub|Y>\<less\>\<delta\><rsub|g><text|
+      we have ><around*|\<\|\|\>|\<varepsilon\><rsub|g><around*|(|k|)>|\<\|\|\>><rsub|Z>\<less\><frac|\<varepsilon\>|2\<cdot\><around*|(|1+<around*|\<\|\|\>|D<rsub|x>f|\<\|\|\>><rsub|L<around*|(|X,Y|)>>|)>>
+    </equation>
+
+    As <math|f> is Fréchet differentiable at <math|x> we have by [theorem:
+    <reference|diff differentiable function is continuous>] that <math|f> is
+    continuous at <math|x>, hence there exist by \ [theorem:
+    <reference|continuity in normed subspace>] a
+    <math|\<delta\><rsub|1>\<in\>\<bbb-R\><rsup|+>> such that
+    <math|\<forall\>y\<in\>A> with <math|<around*|\<\|\|\>|y-x|\<\|\|\>><rsub|X>\<less\>\<delta\><rsub|1>>
+    we have <math|<rigid|<around*|\<\|\|\>|f<around*|(|y|)>-f<around*|(|x|)>|\<\|\|\>><rsub|Y>\<less\>\<delta\><rsub|g>>>.
+    So if <math|h\<in\>A<rsub|x>> with <math|<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>\<less\>\<delta\><rsub|1>>
+    we have <math|x+h\<in\>A> and <math|<rigid|<around*|\<\|\|\>|<around*|(|x+h|)>-x|\<\|\|\>><rsub|X>=<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>\<less\>\<delta\><rsub|1>>>
+    so that <math|<around*|\<\|\|\>|f<around*|(|x+h|)>-f<around*|(|x|)>|\<\|\|\>><rsub|Y>\<less\>\<delta\><rsub|g>>
+    which by [eq: <reference|eq 16.13.178>] results in
+    <math|><math|<around*|\<\|\|\>|\<varepsilon\><rsub|g><around*|(|f<around*|(|x+h|)>-f<around*|(|x|)>|)>|\<\|\|\>><rsub|Z>\<less\><frac|\<varepsilon\>|2\<cdot\><around*|(|1+<around*|\<\|\|\>|D<rsub|x>f|\<\|\|\>><rsub|L<around*|(|X,Y|)>>|)>>>.
+    Summarized\ 
+
+    <\equation*>
+      \<forall\>h\<in\>A<rsub|x><text| with
+      ><around*|\<\|\|\>|h|\<\|\|\>><rsub|X>\<less\>\<delta\><rsub|1><text|
+      we have ><around*|\<\|\|\>|\<varepsilon\><rsub|g><around*|(|f<around*|(|x+h|)>-f<around*|(|x|)>|)>|\<\|\|\>><rsub|Z>\<less\><frac|\<varepsilon\>|2\<cdot\><around*|(|1+<around*|\<\|\|\>|D<rsub|x>f|\<\|\|\>><rsub|L<around*|(|X,Y|)>>|)>>
+    </equation*>
+
+    Combining this with [eq: <reference|eq 16.12.178>] we have
+    <math|\<forall\>h\<in\>A<rsub|x>> with
+    <math|0\<less\><around*|\<\|\|\>|h|\<\|\|\>><rsub|X>\<less\>min<around*|(|\<delta\><rsub|1>,\<delta\><rsub|f>|)>>
+    that\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<frac|<around*|\<\|\|\>|f<around*|(|x+h|)>-f<around*|(|x|)><rsub|>|\<\|\|\>><rsub|Y>|<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>>\<cdot\><around*|\<\|\|\>|\<varepsilon\><rsub|g><around*|(|f<around*|(|x+h|)>-f<around*|(|x|)>|)>|\<\|\|\>><rsub|Z>>|<cell|\<leqslant\>>|<cell|>>|<row|<cell|<around*|(|1+<around*|\<\|\|\>|D<rsub|x>f|\<\|\|\>><rsub|L<around*|(|X,Y|)>>|)>\<cdot\><around*|\<\|\|\>|\<varepsilon\><rsub|g><around*|(|f<around*|(|x+h|)>-f<around*|(|x|)>|)>|\<\|\|\>><rsub|Z>>|<cell|\<less\>>|<cell|>>|<row|<cell|<around*|(|1+<around*|\<\|\|\>|D<rsub|x>f|\<\|\|\>><rsub|L<around*|(|X,Y|)>>|)>\<cdot\><frac|\<varepsilon\>|2\<cdot\><around*|(|1+<around*|\<\|\|\>|D<rsub|x>f|\<\|\|\>><rsub|L<around*|(|X,Y|)>>|)>>>|<cell|=>|<cell|>>|<row|<cell|<frac|\<varepsilon\>|2>>|<cell|>|<cell|>>>>
+    </eqnarray*>
+
+    or
+
+    <\equation>
+      <label|eq 16.14.178>\<forall\>h\<in\>A<rsub|x><text| with
+      <math|0\<less\><around*|\<\|\|\>|h|\<\|\|\>><rsub|X>\<less\>min<around*|(|\<delta\><rsub|1>,\<delta\><rsub|f>|)><text|
+      >>><around*|\<\|\|\>|\<varepsilon\><rsub|g><around*|(|f<around*|(|x+h|)>-f<around*|(|x|)>|)>|\<\|\|\>><rsub|Z>\<cdot\><frac|<around*|\<\|\|\>|f<around*|(|x+h|)>-f<around*|(|x|)><rsub|>|\<\|\|\>><rsub|Y>|<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>>\<less\><frac|\<varepsilon\>|2>
+    </equation>
+
+    As <math|\<varepsilon\><rsub|f>:A<rsub|x>\<rightarrow\>Y> is a
+    <math|\<varepsilon\>>-mapping it is continuous at <math|0>, so by
+    [theorem: <reference|continuity in normed subspace>] there exist a
+    <math|\<delta\><rsub|2>\<in\>\<bbb-R\><rsup|+>> such that
+    <math|\<forall\>h\<in\>A<rsub|x>> with
+    <math|<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>\<less\>\<delta\><rsub|2>> we
+    have <math|<around*|\<\|\|\>|\<varepsilon\><rsub|f><around*|(|h|)>|\<\|\|\>><rsub|Y>\<less\><frac|\<varepsilon\>|2\<cdot\><around*|(|1+<around*|\<\|\|\>|D<rsub|f<around*|(|x|)>>
+    g|\<\|\|\>><rsub|L<around*|(|Y,Z|)>>|)>>>. Hence
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|\<\|\|\>|D<rsub|f<around*|(|x|)>>g<around*|(|\<varepsilon\><rsub|f><around*|(|h|)>|)>|\<\|\|\>><rsub|Z>>|<cell|\<leqslant\>>|<cell|<around*|\<\|\|\>|D<rsub|f<around*|(|x|)>>g|\<\|\|\>><rsub|L<around*|(|Y,Z|)>>\<cdot\><around*|\<\|\|\>|\<varepsilon\><rsub|f><around*|(|h|)>|\<\|\|\>><rsub|Y>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<around*|\<\|\|\>|D<rsub|f<around*|(|x|)>>g|\<\|\|\>><rsub|L<around*|(|Y,Z|)>>\<cdot\><frac|\<varepsilon\>|2\<cdot\><around*|(|1+<around*|\<\|\|\>|D<rsub|f<around*|(|x|)>>g|\<\|\|\>><rsub|L<around*|(|Y,Z|)>>|)>>>>|<row|<cell|>|<cell|\<less\>>|<cell|<frac|\<varepsilon\>|2>>>>>
+    </eqnarray*>
+
+    In other words\ 
+
+    <\equation>
+      <label|eq 16.15.178>\<forall\>h\<in\>A<rsub|x><text| with
+      ><around*|\<\|\|\>|h|\<\|\|\>><rsub|X>\<less\>\<delta\><rsub|2><text|
+      we have ><around*|\<\|\|\>|D<rsub|f<around*|(|x|)>>g<around*|(|\<varepsilon\><rsub|f><around*|(|h|)>|)>|\<\|\|\>><rsub|Z>\<less\><frac|\<varepsilon\>|2>
+    </equation>
+
+    Take now <math|\<delta\>=min<around*|(|\<delta\><rsub|f>,\<delta\><rsub|1>,\<delta\><rsub|2>|)>>
+    and <math|h\<in\>A<rsub|x>> with <math|<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>=<around*|\<\|\|\>|h-0|\<\|\|\>><rsub|X>\<less\>\<delta\>>
+    then we have either:
+
+    <\description>
+      <item*|<math|h=0>>Then <math|<around*|\<\|\|\>|\<zeta\><around*|(|h|)>-0|\<\|\|\>><rsub|Z>=<around*|\<\|\|\>|\<zeta\><around*|(|0|)>|\<\|\|\>><rsub|Z>=<around*|\<\|\|\>|0|\<\|\|\>><rsub|Z>\<less\>\<varepsilon\>>
+
+      <item*|<math|h\<neq\>0>>Then <math|0\<less\><around*|\<\|\|\>|h|\<\|\|\>><rsub|X>\<less\>\<delta\><rsub|f>,\<delta\><rsub|1>,\<delta\><rsub|2>>
+      so that\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|\<\|\|\>|\<zeta\><around*|(|h|)>-0|\<\|\|\>><rsub|Z>>|<cell|=>|<cell|<around*|\<\|\|\>|\<zeta\><around*|(|h|)>|\<\|\|\>><rsub|Z>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|<frac|<around*|\<\|\|\>|f<around*|(|x+h|)>-f<around*|(|x|)>|\<\|\|\>><rsub|Y>\<cdot\>\<varepsilon\><rsub|g><around*|(|f<around*|(|x+h|)>-f<around*|(|x|)>|)>|<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>>+D<rsub|f<around*|(|x|)>>g<around*|(|\<varepsilon\><rsub|f><around*|(|h|)>|)>|\<\|\|\>><rsub|Z>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<around*|\<\|\|\>|<frac|<around*|\<\|\|\>|f<around*|(|x+h|)>-f<around*|(|x|)>|\<\|\|\>><rsub|Y>\<cdot\>\<varepsilon\><rsub|g><around*|(|f<around*|(|x+h|)>-f<around*|(|x|)>|)>|<around*|\<\|\|\>|h|\<\|\|\>><rsub|><rsub|X>>|\<\|\|\>><rsub|Z>+<around*|\<\|\|\>|D<rsub|f<around*|(|x|)>>g<around*|(|\<varepsilon\><rsub|f><around*|(|h|)>|)>|\<\|\|\>><rsub|Z>>>|<row|<cell|>|<cell|=>|<cell|<frac|<around*|\<\|\|\>|f<around*|(|x+h|)>-f<around*|(|x|)>|\<\|\|\>><rsub|Y>|<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>>\<cdot\><around*|\<\|\|\>|\<varepsilon\><rsub|g><around*|(|f<around*|(|x+h|)>-f<around*|(|x|)>|)>|\<\|\|\>><rsub|Z>+<around*|\<\|\|\>|D<rsub|f<around*|(|x|)>>g<around*|(|\<varepsilon\><rsub|f><around*|(|h|)>|)>|\<\|\|\>><rsub|Z>>>|<row|<cell|>|<cell|<below|\<less\>|<text|[eq:
+        <reference|eq 16.14.178>]>><rsub|<text|>>>|<cell|<frac|\<varepsilon\>|2>+<around*|\<\|\|\>|D<rsub|f<around*|(|x|)>>g<around*|(|\<varepsilon\><rsub|f><around*|(|h|)>|)>|\<\|\|\>><rsub|Z>>>|<row|<cell|>|<cell|<below|\<less\>|<text|[eq:
+        <reference|eq 16.15.178>]>><rsub|>>|<cell|<frac|\<varepsilon\>|2>+<frac|\<varepsilon\>|2>>>|<row|<cell|>|<cell|=>|<cell|\<varepsilon\>>>>>
+      </eqnarray*>
+    </description>
+
+    So we have in all cases that <math|><math|<around*|\<\|\|\>|\<zeta\><around*|(|h|)>-0|\<\|\|\>><rsub|Z>\<less\>\<varepsilon\>>
+    which as <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> was chosen
+    arbitrary proves that <math|\<zeta\>> is continuous at <math|0>. As also
+    <math|\<zeta\><around*|(|0|)>=0> it follows by definition that
+    <math|\<zeta\>:A<rsub|x>\<rightarrow\>Z> is a
+    <math|\<varepsilon\>>-mapping. Hence as by [eq: <reference|eq 16.10.178>]
+    <math|<around*|(|g\<circ\>f|)><around*|(|x+h|)>-<around*|(|g\<circ\>f|)><around*|(|x|)>-<around*|(|D<rsub|f<around*|(|x|)>>g\<circ\>D<rsub|x>f|)><around*|(|h|)>=<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>\<cdot\>\<zeta\><around*|(|h|)>>
+    it follows from [theorem: <reference|diff differentiability alternative
+    definitions>] that\ 
+
+    <\equation*>
+      g\<circ\>f<text| is Fréchet differentiable with differential
+      >D<rsub|x><around*|(|g\<circ\>f|)>=D<rsub|f<around*|(|x|)>>g\<circ\>D<rsub|x>f
+    </equation*>
+  </proof>
+
+  <\corollary>
+    <label|diff chain rule calculus>Let <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
+    be a normed space, <math|<around*|\<langle\>|\<bbb-K\>,\<\|\|\>|\<rangle\>>>
+    the normed space of real [or complex] numbers,
+    <math|A\<subseteq\>\<bbb-K\>>, <math|x\<in\>A<rsup|\<circ\>>>,
+    <math|B\<subseteq\>\<bbb-K\>> and <math|f:A\<rightarrow\>\<bbb-K\>>,
+    <math|g:B\<rightarrow\>X> functions such that
+    <math|f<around*|(|A|)>\<subseteq\>B> and
+    <math|f<around*|(|x|)>\<in\>B<rsup|\<circ\>>>, <math|f> has a derivative
+    <math|f<rprime|'><rsub|x>> at <math|x> and <math|g> has a derivative
+    <math|g<rprime|'><rsub|f<around*|(|x|)>>> at <math|f<around*|(|x|)>>.
+    Then <math|g\<circ\>f:A\<rightarrow\>Y> has a derivative at <math|x> and
+
+    <\equation*>
+      <around*|(|g\<circ\>f|)><rprime|'><rsub|x>=f<rprime|'><rsub|x>\<cdot\>g<rprime|'><rsub|f<around*|(|x|)>>
+    </equation*>
+  </corollary>
+
+  <\proof>
+    Using [theorem: <reference|diff derivate and frechet differential>] it
+    follows that <math|f> is Fréchet differentiable at <math|x> and <math|g>
+    is Fréchet differentiable at <math|f<around*|(|x|)>>. Using the Chain
+    Rule [theorem: <reference|diff chain rule>] we have that
+    <math|g\<circ\>f> is Fréchet differentiable at <math|x>. Hence, using
+    [theorem: <reference|diff derivate and frechet differential>], we have
+    that <math|g\<circ\>f> has a derivative at <math|x>. Further we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|(|g\<circ\>f|)><rprime|'><rsub|x>>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|diff derivate and frechet differential>]
+      >>>|<cell|D<rsub|x><around*|(|g\<circ\>f|)><around*|(|1|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|diff chain rule>]>>>|<cell|<around*|(|D<rsub|f<around*|(|x|)>>g\<circ\>D<rsub|x>f|)><around*|(|1|)>>>|<row|<cell|>|<cell|=>|<cell|D<rsub|f<around*|(|x|)>>g<around*|(|D<rsub|x>f<around*|(|1|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|diff derivate and frechet differential>]
+      >>>|<cell|D<rsub|f<around*|(|x|)>>g<around*|(|f<rprime|'><rsub|x>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|diff derivate and frechet differential>]
+      >>>|<cell|f<rprime|'><rsub|x>\<cdot\>g<rprime|'><rsub|f<around*|(|x|)>>>>>>
+    </eqnarray*>
+  </proof>
+
+  <\corollary>
+    <label|diff composition with a linear mapping>Let
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>,<around*|\<langle\>|Z,<around*|\<\|\|\>||\<\|\|\>><rsub|Z>|\<rangle\>>>
+    be normed spaces, <math|A\<subseteq\>X>, <math|x\<in\>A<rsup|\<circ\>>>,
+    <math|f:A\<rightarrow\>Y> a function that is Fréchet differentiable at
+    <math|x> and <math|L\<in\>L<around*|(|Y,Z|)>> then
+
+    <\equation*>
+      L\<circ\>f:U\<rightarrow\>X<text| is Fréchet differentiable at
+      <math|x>>
+    </equation*>
+
+    and\ 
+
+    <\equation*>
+      D<rsub|x><around*|(|L\<circ\>f|)>=L\<circ\>D<rsub|x>f
+    </equation*>
+  </corollary>
+
+  <\proof>
+    As <math|X> is open <math|f<around*|(|x|)>\<in\>X<below|=|<text|[theorem:
+    <reference|topology open set and interior>]>>X<rsup|\<circ\>>>. Using
+    [example: <reference|diff linear mappings are differentiable>] <math|L>
+    is Fréchet differentiable at <math|f<around*|(|x|)>> and
+    <math|D<rsub|f<around*|(|x|)>>L=L>. Hence using the chain rule [see
+    theorem: <reference|diff chain rule>] <math|L\<circ\>f> is Fréchet
+    differentiable at <math|x> and
+
+    <\equation*>
+      D<rsub|x><around*|(|L\<circ\>f|)>=D<rsub|f<around*|(|x|)>>L\<circ\>D<rsub|x>f=L\<circ\>D<rsub|x>f
+    </equation*>
+  </proof>
+
+  <subsection|Partial differentials>
+
+  The partial differential of a function of several variable is the
+  differential with respect to one of these variables while keeping the other
+  variables constant. In essence given a function
+  <math|f<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>> we create a new
+  function defined by <math|t\<rightarrow\>f<around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,t,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>>
+  and calculate the differential of this new function at <math|x<rsub|i>>. To
+  do this we write this new function as the composition of <math|f> and a
+  differentiable function an apply the chain rule.
+
+  <\definition>
+    <label|diff unprojection><index|<math|I<rsup|<around*|[|i,x|]>>>>Let
+    <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>>,
+    <math|<around*|{|X<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>> a
+    finite family of sets, <math|x\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>,
+    <math|i\<in\><around*|{|1,\<ldots\>,n|}>>, <math|t\<in\>X<rsub|i>> then
+    <math|I<rsup|<around*|[|i,x|]>>:X<rsub|i>\<rightarrow\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>
+    is defined by\ 
+
+    <\equation*>
+      I<rsup|<around*|[|i,x|]>><around*|(|t|)>=<around*|(|x<rsub|1>,\<ldots\><wide*|t|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n>|)>
+    </equation*>
+
+    or more formally
+
+    <\equation*>
+      <around*|(|I<rsup|<around*|[|i,x|]>><around*|(|t|)>|)><rsub|j>=<choice|<tformat|<table|<row|<cell|t<text|
+      if >j=i>>|<row|<cell|x<rsub|j><text| if
+      >j\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|i|}>>>>>>
+    </equation*>
+  </definition>
+
+  The following lemma show now the important properties of this function.
+
+  <\lemma>
+    <label|lemma 16.24.178>Let <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>>,
+    <math|<around*|{|<around*|\<langle\>|X<rsub|i>,<around*|\<\|\|\>||\<\|\|\>><rsub|i>|\<rangle\>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+    be a finite family of normed spaces, <math|<around*|\<langle\>|<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|j>,<around*|\<\|\|\>||\<\|\|\>><rsub|max>|\<rangle\>>>
+    the product space equipped with the maximum norm [see theorem:
+    <reference|normed maximum norm>] then we have
+    <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>> that:
+
+    <\enumerate>
+      <item><math|I<rsup|<around*|[|i,0|]>>\<in\>L<around*|(|X<rsub|i>,<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>|)>>
+      and <math|\<forall\>t\<in\>X<rsub|i>> we have
+      <math|<around*|\<\|\|\>|t|\<\|\|\>><rsub|i>=<around*|\<\|\|\>|I<rsup|<around*|[|i,0|]>><around*|(|t|)>|\<\|\|\>><rsub|max>>.
+
+      <item>If <math|x=<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\><big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|j>>
+      then <math|I<rsup|<around*|[|i,x|]>><around*|(|x<rsub|i>|)>=x>.
+
+      <item>If <math|x=<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\><big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|j>>
+      then <math|x=<big|sum><rsub|i=1><rsup|n>I<rsup|<around*|[|i,0|]>><around*|(|x<rsub|i>|)>>.
+
+      <item>If <math|x=<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\><big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|j>>
+      then <math|\<forall\>t\<in\>X<rsub|i>> <math|I<rsup|<around*|[|i,x|]>>>
+      is Fréchet differentiable at <math|x> with
+      <math|D<rsub|t>I<rsup|<around*|[|i,x|]>>=I<rsup|<around*|[|i,0|]>>>
+
+      <\note>
+        As <math|X<rsub|j>> is open we have by [theorem: <reference|topology
+        open set and interior>] that <math|t\<in\><around*|(|X<rsub|j>|)><rsup|\<circ\>>>
+        which is required for the differentiability.
+      </note>
+
+      <item>If <math|x=<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\><big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|j>>
+      then <math|I<rsup|<around*|[|i,x|]>>> is continuous.
+
+      <item>If <math|x=<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\><big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|j>>,
+      <math|A\<subseteq\>X<rsub|i>> and <math|t\<in\>A<rsup|\<circ\>>> then
+      <math|<around*|(|I<rsup|<around*|[|i,x|]>>|)><rsub|\|A>> is Fréchet
+      differentiable at <math|t> with <math|D<rsub|t><around*|(|I<rsup|<around*|[|i,x|]>>|)><rsub|\|A>=I<rsup|<around*|[|i,0|]>>>.
+
+      <item>If <math|x=<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\><big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|j>>,
+      <math|A\<subseteq\>X<rsub|j>> then then
+      <math|<around*|(|I<rsup|<around*|[|i,x|]>>|)><rsub|\|A>> is continuous.
+
+      <item>If <math|x=<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\><big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|j>>
+      then for every open set <math|U> in
+      <math|<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|j>> we
+      have that <math|<around*|(|I<rsup|<around*|[|i,x|]>>|)><rsup|-1><around*|(|U|)>>
+      is open in <math|X<rsub|i>>.
+
+      <item><math|\<forall\>i,k\<in\><around*|{|1,\<ldots\>,n|}>>,
+      <math|\<forall\>t\<in\>X<rsub|i>> we have
+      <math|<around*|(|I<rsup|<around*|[|i,0|]>><around*|(|t|)>|)><rsub|k>=\<delta\><rsub|i,k>\<cdot\>t>
+    </enumerate>
+  </lemma>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>Let <math|r,s\<in\>X<rsub|i>>, <math|\<alpha\>\<in\>\<bbb-K\>>
+      then\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|I<rsup|<around*|[|i,0|]>><around*|(|r+\<alpha\>\<cdot\>s|)>>|<cell|=>|<cell|<around*|(|0\<ldots\><wide*|r+\<alpha\>\<cdot\>s|\<wide-underbrace\>><rsub|i>\<ldots\>0|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|0\<ldots\><wide*|r|\<wide-underbrace\>><rsub|i>\<ldots\>0|)>+\<alpha\>\<cdot\><around*|(|0\<ldots\><wide*|s|\<wide-underbrace\>><rsub|i>\<ldots\>0|)>>>|<row|<cell|>|<cell|=>|<cell|I<rsup|<around*|[|i,0|]>><around*|(|r|)>+\<alpha\>\<cdot\>I<rsup|<around*|[|i,0|]>><around*|(|s|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|r|)>+\<alpha\>\<cdot\>L<around*|(|s|)>>>>>
+      </eqnarray*>
+
+      proving that\ 
+
+      <\equation*>
+        L\<in\>Hom<around*|(|X<rsub|i>,<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|j>|)>
+      </equation*>
+
+      Further if <math|t\<in\>X<rsub|i>> then for
+      <math|j\<in\><around*|{|1,\<ldots\>,n|}>> we have
+
+      <\equation*>
+        \<pi\><rsub|j><around*|(|I<rsup|<around*|[|i,0|]>><around*|(|t|)>|)>=\<pi\><rsub|j><around*|(|<around*|(|0,\<ldots\><wide*|t|\<wide-underbrace\>><rsub|j>\<ldots\>,0|)>|)>=<choice|<tformat|<table|<row|<cell|t<text|
+        if >j=i>>|<row|<cell|0<rsub|j><text| if
+        >j\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|i|}>>>>>>
+      </equation*>
+
+      so that\ 
+
+      <\equation*>
+        <around*|\<\|\|\>|\<pi\><rsub|j><around*|(|I<rsup|<around*|[|i,0|]>><around*|(|t|)>|)>|\<\|\|\>><rsub|j>=<choice|<tformat|<table|<row|<cell|<around*|\<\|\|\>|t|\<\|\|\>><rsub|i><text|
+        if >j=i>>|<row|<cell|0<text| if >j\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|i|}>>>>>>
+      </equation*>
+
+      so that\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|\<\|\|\>|I<rsup|<around*|[|i,0|]>><around*|(|t|)>|\<\|\|\>><rsub|max>>|<cell|=>|<cell|max<around*|(|<around*|{|<around*|\<\|\|\>|\<pi\><rsub|j><around*|(|I<rsup|<around*|[|i,0|]>><around*|(|t|)>|)>|\<\|\|\>><rsub|j>\|j\<in\><around*|{|1,\<ldots\>,n|}>|}>|)>>>|<row|<cell|>|<cell|=>|<cell|max<around*|(|<around*|{|<around*|\<\|\|\>|\<pi\><rsub|j><around*|(|I<rsup|<around*|[|i,0|]>><around*|(|t|)>|)>|\<\|\|\>><rsub|j>\|j\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|i|}>|}><big|cup><around*|{|<around*|\<\|\|\>|\<pi\><rsub|j><around*|(|I<rsup|<around*|[|i,0|]>><around*|(|t|)>|)>|\<\|\|\>><rsub|j>\|j\<in\><around*|{|i|}>|}>|)>>>|<row|<cell|>|<cell|=>|<cell|max<around*|(|<around*|{|0|}><big|cup><around*|{|<around*|\<\|\|\>|t|\<\|\|\>><rsub|i>|}>|)>>>|<row|<cell|>|<cell|=>|<cell|max<around*|(|<around*|{|0,<around*|\<\|\|\>|t|\<\|\|\>><rsub|i>|}>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|t|\<\|\|\>><rsub|i>>>>>
+      </eqnarray*>
+
+      proving that\ 
+
+      <\equation*>
+        <around*|\<\|\|\>|I<rsup|<around*|[|i,0|]>><around*|(|t|)>|\<\|\|\>><rsub|max>=<around*|\<\|\|\>|t|\<\|\|\>><rsub|i>=1\<cdot\><around*|\<\|\|\>|t|\<\|\|\>><rsub|i>
+      </equation*>
+
+      Hence by [theorem: <reference|continuity linear mapping (1)>] it
+      follows that\ 
+
+      <\equation*>
+        I<rsup|<around*|[|i,0|]>>\<in\>L<around*|(|X<rsub|i>,<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|j>|)>
+      </equation*>
+
+      <item>This follows from <math|I<rsup|<around*|[|x,i|]>><around*|(|x<rsub|i>|)>=<around*|(|x<rsub|1>,\<ldots\><wide*|x<rsub|i>|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n>|)>=x>
+
+      <item>Let <math|x\<in\><big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|j>>
+      and <math|j\<in\><around*|{|1,\<ldots\>,n|}>> then\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|<big|sum><rsub|i=1><rsup|n>I<rsup|<around*|[|i,0|]>><around*|(|x<rsub|i>|)>|)><rsub|j>>|<cell|=>|<cell|<around*|(|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>I<rsup|<around*|[|i,0|]>><around*|(|x<rsub|i>|)>|)><rsub|j>>>|<row|<cell|>|<cell|=>|<cell|\<pi\><rsub|j><around*|(|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>I<rsup|<around*|[|i,0|]>><around*|(|x<rsub|i>|)>|)>>>|<row|<cell|>|<cell|<below|=|<text|[theorem:
+        <reference|linear mapping projection
+        mapping>]>>>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<pi\><rsub|j><around*|(|I<rsup|<around*|[|i,0|]>><around*|(|x<rsub|i>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|j|}>>\<pi\><rsub|j><around*|(|I<rsup|<around*|[|i,0|]>><around*|(|x<rsub|i>|)>|)>+<big|sum><rsub|i\<in\><around*|{|j|}>>\<pi\><rsub|j><around*|(|I<rsup|<around*|[|i,0|]>><around*|(|x<rsub|i>|)>|)>>>|<row|<cell|>|<cell|<below|=|<around*|(|2|)>>>|<cell|0+x<rsub|j>>>|<row|<cell|>|<cell|=>|<cell|x<rsub|j>>>>>
+      </eqnarray*>
+
+      proving that\ 
+
+      <\equation*>
+        x=<big|sum><rsub|i=1><rsup|n>I<rsup|<around*|[|i,0|]>><around*|(|x<rsub|i>|)>
+      </equation*>
+
+      <item>Let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> then we have
+      <math|\<forall\>h\<in\>A<rsub|t>> that\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|\<\|\|\>|I<rsup|<around*|[|i,x|]>><around*|(|t+h|)>-I<rsup|<around*|[|i,x|]>><around*|(|t|)>-I<rsup|<around*|[|i,0|]>><around*|(|h|)>|\<\|\|\>><rsub|max>>|<cell|=>|<cell|>>|<row|<cell|<around*|\<\|\|\>|<around*|(|x<rsub|1>,\<ldots\><wide*|<rsub|t+h>|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n>|)>-<around*|(|x<rsub|1>,\<ldots\><wide*|t|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n>|)>-I<rsup|<around*|[|i,0|]>><around*|(|h|)>|\<\|\|\>><rsub|max>>|<cell|=>|<cell|>>|<row|<cell|<around*|\<\|\|\>|<around*|(|0<rsub|1>,\<ldots\><wide*|h|\<wide-underbrace\>><rsub|i>\<ldots\>,0<rsub|n>|)>-I<rsup|<around*|[|i,0|]>><around*|(|h|)>|\<\|\|\>><rsub|max>>|<cell|=>|<cell|>>|<row|<cell|<around*|\<\|\|\>|<around*|(|0<rsub|1>,\<ldots\><wide*|h|\<wide-underbrace\>><rsub|i>\<ldots\>,0<rsub|n>|)>-<around*|(|0<rsub|1>,\<ldots\><rsub|<wide*|h|\<wide-underbrace\>><rsub|i>>\<ldots\>,0<rsub|n>|)>|\<\|\|\>><rsub|max>>|<cell|=>|<cell|>>|<row|<cell|<around*|\<\|\|\>|<around*|(|0<rsub|1>,\<ldots\>,0<rsub|n>|)>|\<\|\|\>><rsub|max>>|<cell|=>|<cell|>>|<row|<cell|0>|<cell|\<less\>>|<cell|>>|<row|<cell|\<varepsilon\>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>><rsub|i>>|<cell|<below|=|<around*|(|1|)>>>|<cell|>>>>
+      </eqnarray*>
+
+      which, as by (1) <math|I<rsup|<around*|[|i,0|]>>\<in\>L<around*|(|X<rsub|j>,<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|j>|)>>
+      proves that\ 
+
+      <\equation*>
+        I<rsup|<around*|[|i,k|]>><text| is Fréchet differentiable at >t<text|
+        with >D<rsub|t>I<rsup|<around*|[|i,x|]>>=I<rsup|<around*|[|i,0|]>>
+      </equation*>
+
+      <item>Let <math|t\<in\>X<rsub|i>> then by (4)
+      <math|I<rsup|<around*|[|i,k|]>>> is Fréchet differentiable at <math|t>
+      which by [theorem: <reference|diff differentiable function is
+      continuous>] proves that <math|I<rsup|<around*|[|i,x|]>>> is continuous
+      at <math|t>. As <math|t> has been chosen arbitrary it follows that
+      <math|I<rsup|<around*|[|i,x|]>>> is a continous function.
+
+      <item>This follows from [theorem: <reference|diff differentiability is
+      a local property>] and (4).
+
+      <item>This follows from [theorem: <reference|continuity and subspace
+      topology (1)>].
+
+      <item>Let <math|U> be a open set in
+      <math|><math|<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|j>>
+      and by (5) <rigid|<math|I<rsup|<around*|[|i,x|]>>:X<rsub|i>\<rightarrow\><big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|j>>>
+      is continuous it follows that <math|<around*|(|I<rsup|<around*|[|i,x|]>>|)><rsup|-1><around*|(|U|)>>
+      is open.
+
+      <item>Let <math|i\<in\><around*|{|1,\<ldots\>,n|}>> and
+      <math|t\<in\>X<rsub|i>> then we have for
+      <math|k\<in\><around*|{|1,\<ldots\>,n|}>>\ 
+
+      <\equation*>
+        <around*|(|I<rsup|<around*|[|i,0|]>><around*|(|t|)>|)><rsub|k>=<around*|(|0,\<ldots\><wide*|t|\<wide-underbrace\>><rsub|i>\<ldots\>0|)><rsub|k>=\<delta\><rsub|i,k>\<cdot\>t
+      </equation*>
+    </enumerate>
+  </proof>
+
+  <\lemma>
+    <label|lemma 16.69.4>Let <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>>,
+    <math|<around*|{|<around*|\<langle\>|X<rsub|i>,<around*|\<\|\|\>||\<\|\|\>><rsub|i>|\<rangle\>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+    be a finite family of normed spaces, <math|<around*|\<langle\>|<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|j>,<around*|\<\|\|\>||\<\|\|\>><rsub|max>|\<rangle\>>>
+    the product space equipped with the maximum norm [see theorem:
+    <reference|normed maximum norm>] and <math|A\<subseteq\><big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|j>>
+    and <math|x\<in\>A<rsup|\<circ\>>> then
+    <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>> we have
+    <math|x<rsub|i>\<in\><around*|(|<around*|(|I<rsup|<around*|[|i,x|]>>|)><rsup|-1><around*|(|A|)>|)><rsup|\<circ\>>>.
+  </lemma>
+
+  <\proof>
+    Let As <math|x\<in\>A<rsup|\<circ\>>> there exist a open set
+    <math|U\<in\>\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|max>>> with
+    <math|x\<in\>U\<subseteq\>A>. As by [lemma: <reference|lemma 16.24.178>]
+    <math|I<rsup|<around*|[|i,x|]>>> is continuous it follows that
+    <math|<around*|(|I<rsup|<around*|[|i,x|]>>|)><rsup|-1><around*|(|U|)>\<in\>\<cal-T\><rsub|i>>.
+    Let <math|i\<in\><around*|{|1,\<ldots\>,n|}>> then as
+    <math|I<rsup|<around*|[|i,x|]>><around*|(|x<rsub|i>|)><below|=|<text|[lemma:
+    <reference|lemma 16.24.178>]>>x\<in\>U\<subseteq\>A> hence
+
+    <\equation*>
+      x<rsub|i>\<in\><around*|(|I<rsup|<around*|[|i,x|]>>|)><rsup|-1><around*|(|U|)>\<subseteq\><around*|(|I<rsup|<around*|[|i,x|]>>|)><rsup|-1><around*|(|A|)><text|
+      where ><around*|(|I<rsup|<around*|[|i,x|]>>|)><rsup|-1><around*|(|U|)>\<in\>\<cal-T\><rsub|i>
+    </equation*>
+
+    which proves that\ 
+
+    <\equation*>
+      x<rsub|i>\<in\><around*|(|<around*|(|I<rsup|<around*|[|i,x|]>>|)><rsup|-1><around*|(|A|)>|)><rsup|\<circ\>>
+    </equation*>
+  </proof>
+
+  <\definition>
+    <label|diff partial differential definition>Let
+    <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>>,
+    <math|<around*|{|<around*|\<langle\>|X<rsub|i>,<around*|\<\|\|\>||\<\|\|\>><rsub|i>|\<rangle\>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+    a finite family of normed spaces, <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
+    a normed space, <math|<around*|\<langle\>|<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|j>,<around*|\<\|\|\>||\<\|\|\>><rsub|max>|\<rangle\>>>
+    the product space equipped with the maximum norm [see theorem:
+    <reference|normed maximum norm>], <math|A\<subseteq\><big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|j>>,
+    <math|x\<in\>A>, <math|i\<in\><around*|{|1,\<ldots\>,n|}>> and\ 
+
+    <\equation*>
+      f:A\<rightarrow\>Y<text| a function>
+    </equation*>
+
+    then\ 
+
+    <\equation*>
+      f<text| is >i<text|-partial differentiable at >x<text| with
+      <math|i>-partial differential >D<rsub|x,i>f
+    </equation*>
+
+    if the function
+
+    <\equation*>
+      f\<circ\>I<rsup|<around*|[|i,x|]>>:<around*|(|I<rsup|<around*|[|i,x|]>>|)><rsup|-1><around*|(|A|)>\<rightarrow\>Y
+    </equation*>
+
+    is Fréchet differentiable at <math|x<rsub|i>> and <math|D<rsub|x,i>f> is
+    then defined to be\ 
+
+    <\equation*>
+      D<rsub|x,i>f=D<rsub|x><around*|(|f\<circ\>I<rsup|<around*|[|i,x|]>>|)>
+    </equation*>
+
+    <\note>
+      The previous lemma [see lemma: <reference|lemma 16.69.4>] ensures
+      <math|x<rsub|i>\<in\><around*|(|<around*|(|I<rsup|<around*|[|i,x|]>>|)><rsup|-1><around*|(|A|)>|)><rsup|\<circ\>>>
+      so this definition makes sense.\ 
+    </note>
+  </definition>
+
+  Just as we have introduced the derivative of a function and the
+  differential of a function we can define the partial differential of a
+  function.
+
+  <\definition>
+    <label|diff partial differential>Let <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>>,
+    <math|<around*|{|<around*|\<langle\>|X<rsub|i>,<around*|\<\|\|\>||\<\|\|\>><rsub|i>|\<rangle\>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+    a finite family of normed spaces, <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
+    a normed space, <math|<around*|\<langle\>|<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|j>,<around*|\<\|\|\>||\<\|\|\>><rsub|max>|\<rangle\>>>
+    the product space equipped with the maximum norm [see theorem:
+    <reference|normed maximum norm>], <math|A\<subseteq\><big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|j>>,
+    <math|x\<in\>A<rsup|\<circ\>>>, <math|i\<in\><around*|{|1,\<ldots\>,n|}>>
+    and <math|f:A\<rightarrow\>Y> a function. Then we define
+
+    <\equation*>
+      \<frak-D\><rsub|i,f>=<around*|{|x\<in\>A<rsup|\<circ\>>\|f<text| is
+      >i<text|-partial differentiable at >x|}>\<subseteq\>A<rsup|\<circ\>>
+    </equation*>
+
+    and\ 
+
+    <\equation*>
+      D<rsub|i>f:\<frak-D\><rsub|i,f>\<rightarrow\>L<around*|(|X,Y|)><text|
+      where >D<rsub|i>f<around*|(|x|)>=D<rsub|x,i>f
+    </equation*>
+
+    <math|D<rsub|i>f> is called the <math|i>-partial differential of
+    <math|f>.
+  </definition>
+
+  <\definition>
+    <label|diff partial differential on a set>Let
+    <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>>,
+    <math|<around*|{|<around*|\<langle\>|X<rsub|i>,<around*|\<\|\|\>||\<\|\|\>><rsub|i>|\<rangle\>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+    a finite family of normed spaces, <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
+    a normed space, <math|<around*|\<langle\>|<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|j>,<around*|\<\|\|\>||\<\|\|\>><rsub|max>|\<rangle\>>>
+    the product space equipped with the maximum norm [see theorem:
+    <reference|normed maximum norm>], <math|A\<subseteq\><big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|j>>,
+    <math|U\<in\>\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|max>>> with
+    <math|U\<subseteq\>A>, <math|i\<in\><around*|{|1,\<ldots\>,n|}>> and
+    <math|f:A\<rightarrow\>Y> a function. Then we say that
+    <with|font-series|bold|<math|f> is <math|i>-partial differentiable on
+    <math|U>> iff\ 
+
+    <\equation*>
+      \<forall\>x\<in\>U f<text| is >i<text|-partial differentiable at >x
+    </equation*>
+  </definition>
+
+  <\theorem>
+    <label|diff partial differentiability on a set>Let
+    <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>>,
+    <math|<around*|{|<around*|\<langle\>|X<rsub|i>,<around*|\<\|\|\>||\<\|\|\>><rsub|i>|\<rangle\>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+    a finite family of normed spaces, <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
+    a normed space, <math|<around*|\<langle\>|<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|j>,<around*|\<\|\|\>||\<\|\|\>><rsub|max>|\<rangle\>>>
+    the product space equipped with the maximum norm [see theorem:
+    <reference|normed maximum norm>], <math|A\<subseteq\><big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|j>>,
+    <math|U\<in\>\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|max>>> with
+    <math|U\<subseteq\>A>, <math|i\<in\><around*|{|1,\<ldots\>,n|}>> and
+    <math|f:A\<rightarrow\>Y> a function we have the following equivalences.
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|>|<cell|f<text| is Fréchet differentiable on
+      >U>|<cell|>>|<row|<cell|>|<cell|\<Updownarrow\>>|<cell|>>|<row|<cell|>|<cell|U\<subseteq\>\<frak-D\><rsub|i,f>>|<cell|>>>>
+    </eqnarray*>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>Let <math|x\<in\>U> then as <math|f> is
+      <math|i>-partial differentiable on <math|U> <math|f> is
+      <math|i>-partial differentiable at <math|x>, as further
+      <math|x\<in\>U\<subseteq\>A> <math|x\<in\>A<rsup|\<circ\>>>. Hence it
+      follows that <math|x\<in\>\<frak-D\><rsub|i,f>> which proves that\ 
+
+      <\equation*>
+        U\<subseteq\>\<frak-D\><rsub|i,f>
+      </equation*>
+
+      <item*|<math|\<Leftarrow\>>>Let <math|x\<in\>U> then as
+      <math|U\<subseteq\>\<frak-D\><rsub|i,f>> it follows that
+      <math|x\<in\>\<frak-D\><rsub|i,f>> so that <math|f> is <math|i>-partial
+      differentiable at <math|x> which proves that\ 
+
+      <\equation*>
+        f<text| is >i<text|-partial differentiable on >U
+      </equation*>
+    </description>
+  </proof>
+
+  Just as differentiability is a local property [see theorem: <reference|diff
+  differentiability is a local property>] is a local property.
+
+  <\theorem>
+    <label|diff partial differentiation is local>Let
+    <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>>,
+    <math|<around*|{|<around*|\<langle\>|X<rsub|i>,<around*|\<\|\|\>||\<\|\|\>><rsub|i>|\<rangle\>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+    a finite family of normed spaces, <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
+    a normed space, <math|<around*|\<langle\>|<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|j>,<around*|\<\|\|\>||\<\|\|\>><rsub|max>|\<rangle\>>>
+    the product space equipped with the maximum norm [see theorem:
+    <reference|normed maximum norm>], <math|A\<subseteq\><big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|j>>,
+    <math|B\<subseteq\>A>, <math|x=<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\>B<rsup|\<circ\>>>,
+    <math|i\<in\><around*|{|1,\<ldots\>,n|}>> and\ 
+
+    <\equation*>
+      f:A\<rightarrow\>Y<text| a function>
+    </equation*>
+
+    then we have\ 
+
+    <\equation*>
+      f<text| is >i<text|-partial differentiable at <math|x>>
+    </equation*>
+
+    <\equation*>
+      \<Updownarrow\>
+    </equation*>
+
+    <\equation*>
+      f<rsub|\|B><text| is >i<text|-partial differentiable at >x
+    </equation*>
+
+    Further if <math|f> or <math|f<rsub|\|B>> is <math|i>-partial
+    differentiable at <math|x> then <math|D<rsub|x,i>f=D<rsub|x,i>f<rsub|\|B>>.
+  </theorem>
+
+  <\proof>
+    As <math|x\<in\>B<rsup|\<circ\>>> it follows from \ [lemma:
+    <reference|lemma 16.69.4>] that
+
+    <\equation>
+      <label|eq 16.24.4>x<rsub|i>\<in\><around*|(|<around*|(|I<rsup|<around*|[|i,x|]>>|)><rsup|-1><around*|(|B|)>|)><rsup|\<circ\>>
+    </equation>
+
+    Let <math|t\<in\><around*|(|I<rsup|<around*|[|i,x|]>>|)><rsup|-1><around*|(|B|)>\<Rightarrow\>I<rsup|<around*|[|i,x|]>><around*|(|t|)>\<in\>B>
+    it follows that\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|(|f<rsub|\|B>\<circ\>I<rsup|<around*|[|i,x|]>>|)><around*|(|t|)>>|<cell|=>|<cell|f<rsub|\|B><around*|(|I<rsup|<around*|[|i,x|]>><around*|(|t|)>|)>>>|<row|<cell|>|<cell|<below|=|I<rsup|<around*|[|i,x|]>><around*|(|t|)>\<in\>B>>|<cell|f<around*|(|I<rsup|<around*|[|i,x|]>><around*|(|t|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|f\<circ\>I<rsup|<around*|[|i,x|]>>|)><around*|(|t|)>>>|<row|<cell|>|<cell|<below|=|t\<in\><around*|(|I<rsup|<around*|[|i,x|]>>|)><rsup|-1><around*|(|B|)>>>|<cell|<around*|(|f\<circ\>I<rsup|<around*|[|i,x|]>>|)><rsub|\|<around*|(|I<rsup|<around*|[|i,x|]>>|)><rsup|-1><around*|(|B|)>>>>>>
+    </eqnarray*>
+
+    which proves that\ 
+
+    <\equation>
+      <label|eq 16.25.4>f<rsub|\|B>\<circ\>I<rsup|<around*|[|i,x|]>>=<around*|(|f\<circ\>I<rsup|<around*|[|i,x|]>>|)><rsub|\|<around*|(|I<rsup|<around*|[|i,x|]>>|)><rsup|-1><around*|(|B|)>>
+    </equation>
+
+    Hence we have\ 
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>If <math|f> is <math|i>-partial
+      differentiable at <math|x> with <math|i>-partial differential
+      <math|D<rsub|x,i>f> then by [definition: <reference|diff partial
+      differential definition>] <math|f\<circ\>I<rsup|<around*|[|i,x|]>>> is
+      Fréchet differentiable at <math|x<rsub|i>> with\ 
+
+      <\equation>
+        <label|eq 16.26.4>D<rsub|x,i>f=D<rsub|x<rsub|i>><around*|(|f\<circ\>I<rsup|<around*|[|i,x|]>>|)>
+      </equation>
+
+      As by [eq: <reference|eq 16.24.4>] <math|x<rsub|i>\<in\><around*|(|<around*|(|I<rsup|<around*|[|i,x|]>>|)><rsup|-1><around*|(|B|)>|)><rsup|\<circ\>>>
+      it follows from [theorem: <reference|diff differentiability is a local
+      property>] that <rigid|<math|<around*|(|f\<circ\>I<rsup|<around*|[|i,x|]>>|)><rsub|\|<around*|(|I<rsup|<around*|[|i,x|]>>|)><rsup|-1><around*|(|B|)>>>>
+      is Fréchet differentiable at <math|x<rsub|i>> with\ 
+
+      <\equation*>
+        D<rsub|x<rsub|i>><around*|(|f\<circ\>I<rsup|<around*|[|i,x|]>>|)><rsub|\|<around*|(|I<rsup|<around*|[|i,x|]>>|)><rsup|-1><around*|(|B|)>>=D<rsub|x<rsub|i>><around*|(|f\<circ\>I<rsup|<around*|[|i,x|]>>|)>
+      </equation*>
+
+      Using [eq: <reference|eq 16.25.4>] on the above we have that
+      <math|f<rsub|\|B>\<circ\>I<rsup|<around*|[|i,x|]>>> is Fréchet
+      differentiable at <math|x<rsub|i>> and\ 
+
+      <\equation*>
+        D<rsub|x<rsub|i>><around*|(|f<rsub|\|B>\<circ\>I<rsup|<around*|[|i,x|]>>|)>=D<rsub|x<rsub|i>><around*|(|f\<circ\>I<rsup|<around*|[|i,x|]>>|)><below|=|<text|[eq:
+        <reference|eq 16.26.4>]>>D<rsub|x,i>f
+      </equation*>
+
+      so that by applying [definition: <reference|diff partial differential
+      definition>] we have
+
+      <\equation*>
+        f<rsub|\|B><text| is >i<text|-partial differentiable at >x<text| with
+        >D<rsub|x.i>f<rsub|\|B>=D<rsub|x,i>f
+      </equation*>
+
+      <item*|<math|\<Leftarrow\>>>If <math|f<rsub|\|B>> is <math|i>-partial
+      differentiable at <math|x> with <math|i>-partial differential
+      <math|D<rsub|x,i>f<rsub|\|B>> then by [definition: <reference|diff
+      partial differential definition>] <math|f<rsub|\|B>\<circ\>I<rsup|<around*|[|i,x|]>>>
+      is Fréchet differentiable at <math|x<rsub|i>> with\ 
+
+      <\equation>
+        <label|eq 16.27.4>D<rsub|x,i>f<rsub|\|B>=D<rsub|x<rsub|i>><around*|(|f<rsub|\|B>\<circ\>I<rsup|<around*|[|i,x|]>>|)>
+      </equation>
+
+      By [eq: <reference|eq 16.25.4>] it follows that
+      <math|<around*|(|f\<circ\>I<rsup|<around*|[|i,x|]>>|)><rsub|\|<around*|(|I<rsup|<around*|[|i,x|]>>|)><rsup|-1><around*|(|B|)>>>
+      is Fréchet differentiable at <math|x<rsub|i>> with\ 
+
+      <\equation>
+        <label|eq 16.28.4>D<rsub|x<rsub|i>><around*|(|f<rsub|\|B>\<circ\>I<rsup|<around*|[|i,x|]>>|)>=D<rsub|x<rsub|i>><around*|(|f\<circ\>I<rsup|<around*|[|i,x|]>>|)><rsub|\|<around*|(|I<rsup|<around*|[|i,x|]>>|)><rsup|-1><around*|(|B|)>>
+      </equation>
+
+      As by [eq: <reference|eq 16.24.4>] <math|x<rsub|i>\<in\><around*|(|<around*|(|I<rsup|<around*|[|i,x|]>>|)><rsup|-1><around*|(|B|)>|)><rsup|\<circ\>>>
+      it follows from [theorem: <reference|diff differentiability is a local
+      property>] that <math|f\<circ\>I<rsup|<around*|[|i,x|]>>> is Fréchet
+      differentiable at <math|x<rsub|i>> with\ 
+
+      <\equation*>
+        D<rsub|x<rsub|i>><around*|(|f\<circ\>I<rsup|<around*|[|i,x|]>>|)>=D<rsub|x<rsub|i>><around*|(|f\<circ\>I<rsup|<around*|[|i,x|]>>|)><rsub|\|<around*|(|I<rsup|<around*|[|i,x|]>>|)><rsup|-1><around*|(|B|)>><below|=|<text|[eqs:
+        <reference|eq 16.27.4>, <reference|eq
+        16.28.4>]>>D<rsub|x,i>f<rsub|\|B>
+      </equation*>
+
+      Hence using [definition: <reference|diff partial differential
+      definition>] we have that\ 
+
+      <\equation*>
+        f<text| is >i<text|-partial differentiable at >x<text| with
+        >D<rsub|x,i>f=D<rsub|x,i>f<rsub|\|B>
+      </equation*>
+    </description>
+  </proof>
+
+  We show now that Fréchet differentiability of a function with many
+  variables ensures that all the partial derivatives exist.
+
+  <\theorem>
+    <label|diff Frechet differentation implies partial differentiability >Let
+    <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>>,
+    <math|<around*|{|<around*|\<langle\>|X<rsub|i>,<around*|\<\|\|\>||\<\|\|\>><rsub|i>|\<rangle\>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+    a finite family of normed spaces, <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
+    a normed space, <math|<around*|\<langle\>|<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|j>,<around*|\<\|\|\>||\<\|\|\>><rsub|max>|\<rangle\>>>
+    the product space equipped with the maximum norm [see theorem:
+    <reference|normed maximum norm>], <math|A\<subseteq\><big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|j>>,
+    <math|x\<in\>A<rsup|\<circ\>>> and <math|f:A\<rightarrow\>Y> a function
+    that is Fréchet differentiable at <math|x> then
+    <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>> <math|f> is
+    <math|i>-partial differentiable at <math|x> with <math|i>-partial
+    differential
+
+    <\equation*>
+      D<rsub|x,i>f=D<rsub|x>f\<circ\>I<rsup|<around*|[|i,0|]>>
+    </equation*>
+
+    Further we have
+
+    <\equation*>
+      D<rsub|x>f=<big|sum><rsub|i=1><rsup|n><around*|(|D<rsub|x,i><rsup|>f\<circ\>\<pi\><rsub|i>|)>
+    </equation*>
+
+    In other words <math|\<forall\>h\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>
+    we have\ 
+
+    <\equation*>
+      D<rsub|x>f<around*|(|h|)>=<big|sum><rsub|i=1><rsup|n>D<rsub|x,i>f<around*|(|h<rsub|i>|)>
+    </equation*>
+
+    <\note>
+      If <math|A> is open then by [theorem: <reference|topology open set and
+      interior>] <math|A=A<rsup|\<circ\>>> so that <math|x\<in\>A> so the
+      condition <math|x\<in\>A<rsup|\<circ\>>> can be replaced by
+      <math|x\<in\>A>.
+
+      <\proof>
+        As <math|x\<in\>A<rsup|0>> we have by [lemma: <reference|lemma
+        16.69.4>] that\ 
+
+        <\equation*>
+          x\<in\><around*|(|<around*|(|I<rsup|<around*|[|i,x|]>>|)><rsup|-1><around*|(|A|)>|)><rsup|\<circ\>>
+        </equation*>
+
+        Using [lemma: <reference|lemma 16.24.178>(4)] it follows that\ 
+
+        <\equation*>
+          I<rsup|<around*|[|i,x|]>>:X<rsub|i>\<rightarrow\><big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|j><text|
+          is Fréchet differentiable at >x<rsub|i>
+        </equation*>
+
+        As <math|f:A\<rightarrow\>Y> is Fréchet differentiable at
+        <math|x=I<rsup|<around*|[|i,x|]>><around*|(|x<rsub|i>|)>> and
+        \ <math|I<rsup|<around*|[|i,x|]>><around*|(|<around*|(|I<rsup|<around*|[|i,x|]>>|)><rsup|-1><around*|(|A|)>|)><below|\<subseteq\>|<text|[theorem:
+        <reference|function preimage of image (1)>]>><rsub|<text|>>A> it
+        follows from the Chain Rule [theorem: <reference|diff chain rule>]
+        that\ 
+
+        <\equation*>
+          f\<circ\>I<rsup|<around*|[|i,x|]>><text| is Fréchet differentiable
+          at >x<rsub|i>
+        </equation*>
+
+        with\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|D<rsub|x<rsub|i>><around*|(|f\<circ\>I<rsup|<around*|[|i,x|]>>|)>>|<cell|=>|<cell|D<rsub|I<rsup|<around*|[|i,x|]>><around*|(|x<rsub|i>|)>>f\<circ\>D<rsub|x<rsub|i>>I<rsup|<around*|[|i,x|]>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[lemma:
+          <reference|lemma 16.24.178>(2)]>>>|<cell|D<rsub|x>f\<circ\>D<rsub|x<rsub|i>>I<rsup|<around*|[|i,x|]>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[lemma:
+          <reference|lemma 16.24.178>(4)]>>>|<cell|D<rsub|x>f\<circ\>I<rsup|<around*|[|i,0|]>>>>>>
+        </eqnarray*>
+
+        Using then [definition: <reference|diff partial differential
+        definition>] we have that\ 
+
+        <\equation>
+          <label|eq 16.29.4>f<text| is Fréchet differentiable at >x<text|
+          with >D<rsub|x,i>f=D<rsub|x>f\<circ\>I<rsup|<around*|[|i,0|]>>
+        </equation>
+
+        Further if <math|h\<in\><big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|j>>
+        then we have\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|D<rsub|x>f<around*|(|h|)>>|<cell|\<equallim\><rsub|<text|[lemma:
+          <reference|lemma 16.24.178>(3)]>>>|<cell|D<rsub|x>f<around*|(|<big|sum><rsub|i=1><rsup|n>I<rsup|<around*|[|i,0|]>><around*|(|h<rsub|i>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|n>D<rsub|x>f<around*|(|I<rsup|<around*|[|i,0|]>><around*|(|h<rsub|i>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|n><around*|(|D<rsub|x>f\<circ\>I<rsup|<around*|[|i,0|]>>|)><around*|(|h<rsub|i>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+          <reference|eq 16.29.4>]>>>|<cell|<big|sum><rsub|i=1><rsup|n>D<rsub|x,i><rsup|>f<around*|(|h<rsub|i>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|n>D<rsub|x,i>f<around*|(|\<pi\><rsub|i><around*|(|h|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|n><around*|(|D<rsub|x,i>f\<circ\>\<pi\><rsub|i>|)><around*|(|h|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<big|sum><rsub|i=1><rsup|n><around*|(|D<rsub|x,i>f\<circ\>\<pi\><rsub|i>|)>|)><around*|(|h|)>>>>>
+        </eqnarray*>
+
+        so that we have\ 
+
+        <\equation*>
+          D<rsub|x>f=<big|sum><rsub|j=1><rsup|n><around*|(|D<rsub|x,i><rsup|>f\<circ\>\<pi\><rsub|i>|)>
+        </equation*>
+      </proof>
+    </note>
+  </theorem>
+
+  <\example>
+    <label|diff constant function and partial differentiation>Let
+    <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>>,
+    <math|<around*|{|<around*|\<langle\>|X<rsub|i>,<around*|\<\|\|\>||\<\|\|\>><rsub|i>|\<rangle\>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+    a finite family of normed spaces, <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
+    a normed space, <math|<around*|\<langle\>|<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|j>,<around*|\<\|\|\>||\<\|\|\>><rsub|max>|\<rangle\>>>
+    the product space equipped with the maximum norm [see theorem:
+    <reference|normed maximum norm>], <math|A\<subseteq\><big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|j>>,
+    <math|x\<in\>A<rsup|0>> and <math|y\<in\>Y> then
+    <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>> we have that the
+    constant function
+
+    <\equation*>
+      C<rsub|y>:A\<rightarrow\>Y<text| defined by >C<rsub|y><around*|(|x|)>=y
+    </equation*>
+
+    has a <math|i>-partial differential at <math|x> with
+
+    <\equation*>
+      D<rsub|y,i>C<rsub|i>=C<rsub|0>
+    </equation*>
+
+    where\ 
+
+    <\equation*>
+      C<rsub|0>:X<rsub|i>\<rightarrow\>Y<text|is defined by
+      >C<rsub|0><around*|(|h|)>=0
+    </equation*>
+  </example>
+
+  <\proof>
+    By [example: <reference|diff constant function is differentiable>]
+    <math|C<rsub|y>> is Fréchet differentiable at <math|x> with
+    <math|D<rsub|x>C<rsub|y>=C<rsub|0>> where\ 
+
+    <\equation*>
+      C<rsub|0>:X\<rightarrow\>Y<text| is defined by
+      >C<rsub|0><around*|(|x|)>=0
+    </equation*>
+
+    Hence using [theorem: <reference|diff Frechet differentation implies
+    partial differentiability >] we have <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
+    that <math|C<rsub|y>> has a <math|i>-partial differential with
+
+    <\equation*>
+      D<rsub|x,i>C<rsub|y>=C<rsub|0>\<circ\>I<rsup|<around*|[|i,0|]>>=C<rsub|0>
+    </equation*>
+
+    [because <math|\<forall\>h\<in\>X<rsub|i>>
+    <math|<around*|(|C<rsub|0>\<circ\>I<rsup|<around*|[|i,0|]>>|)><around*|(|h|)>=C<rsub|0><around*|(|I<rsup|<around*|[|i,0|]>><around*|(|h|)>|)>=0>].
+  </proof>
+
+  Although Fréchet differentiability of a multi parameter function implies
+  that all the partial differentials exist the opposite is not true as the
+  following example proves.
+
+  <\example>
+    <label|diff partial differentiability does not mean
+    differentiaility>Define the function
+
+    <\equation*>
+      f:\<bbb-R\><rsup|2>\<rightarrow\>\<bbb-R\><text| by
+      >f<around*|(|x,y|)>=<choice|<tformat|<table|<row|<cell|<frac|x\<cdot\>y|x<rsup|2>+y<rsup|2>><text|
+      if ><around*|(|x,y|)>\<in\>\<bbb-R\><rsup|2>\\<around*|{|<around*|(|0,0|)>|}>>>|<row|<cell|0<text|
+      if ><around*|(|x,y|)>=<around*|(|0,0|)>>>>>>
+    </equation*>
+
+    <\equation*>
+      \;
+    </equation*>
+
+    then <math|f> is not Fréchet differentiable at <math|<around*|(|0,0|)>>
+    however <math|f> is <math|1>-partial and <math|2>-partial differentiable
+    at <math|<around*|(|0,0|)>>
+  </example>
+
+  <\proof>
+    Let <math|\<varepsilon\>=<frac|1|4>>,
+    <math|\<delta\>\<in\>\<bbb-R\><rsup|+>> and consider
+    <math|z=<around*|(|<frac|\<delta\>|2>,<frac|\<delta\>|2>|)>> then we have\ 
+
+    <\equation*>
+      <around*|\<\|\|\>|z|\<\|\|\>><rsub|max>=max<around*|(|<around*|{|<around*|\||<frac|\<delta\>|2>|\|>,<around*|\||<frac|\<delta\>|2>|\|>|}>|)>=<frac|\<delta\>|2>\<less\>\<delta\>
+    </equation*>
+
+    However\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|\||f<around*|(|z|)>-f<around*|(|0,0|)>|\|>>|<cell|\<equallim\><rsub|<around*|(|\<delta\>,\<delta\>|)>\<neq\><around*|(|0,0|)>>>|<cell|<around*|\||<frac|<frac|\<delta\>|2>\<cdot\><frac|\<delta\>|2>|<around*|(|<frac|\<delta\>|2>|)><rsup|2>+<around*|(|<frac|\<delta\>|2>|)><rsup|2>>-0|\|>>>|<row|<cell|>|<cell|=>|<cell|<around*|\||<frac|1|2>|\|>>>|<row|<cell|>|<cell|\<gtr\>>|<cell|\<varepsilon\>>>>>
+    </eqnarray*>
+
+    which proves that <math|f> is not continuous at <math|<around*|(|0,0|)>>.
+    So <math|f> can not be Fréchet differentiable at <math|<around*|(|0,0|)>>
+    because Fréchet differentiable functions are continuous [see theorem:
+    <reference|diff differentiable function is continuous>]. However we have
+    that\ 
+
+    <\equation*>
+      <around*|(|f\<circ\>I<rsup|<around*|[|1,0|]>>|)><around*|(|t|)>=f<around*|(|t,0|)>=<choice|<tformat|<table|<row|<cell|<frac|t\<cdot\>0|t<rsup|2>+0<rsup|2>><text|
+      if ><around*|(|t,0|)>\<neq\><around*|(|0,0|)>>>|<row|<cell|0<text| if
+      ><around*|(|t,0|)>=0>>>>>=0=C<rsub|0><around*|(|t|)>
+    </equation*>
+
+    <\equation*>
+      <around*|(|f\<circ\>I<rsup|<around*|[|2,0|]>>|)><around*|(|t|)>=f<around*|(|0,t|)>=<choice|<tformat|<table|<row|<cell|<frac|0\<cdot\>t|0<rsup|2>+t<rsup|2>><text|
+      if ><around*|(|t,0|)>\<neq\><around*|(|0,0|)>>>|<row|<cell|0<text| if
+      ><around*|(|t,0|)>=0>>>>>=0=C<rsub|0><around*|(|t|)>
+    </equation*>
+
+    proving that\ 
+
+    <\equation*>
+      f<rsup|<around*|[|1,<around*|[|<around*|(|0,0|)>|]>|]>>=C<rsub|0>=f<rsup|<around*|[|2,<around*|[|<around*|(|0,0|)>|]>|]>>
+    </equation*>
+
+    By [example: <reference|diff constant function is differentiable>]
+    <math|><math|f\<circ\>I<rsup|<around*|[|1,0|]>>>,
+    <math|f\<circ\>I<rsup|<around*|[|2,0|]>>> are Fréchet differentiable at
+    <math|0> with
+
+    <\equation*>
+      D<rsub|0><around*|(|f\<circ\>I<rsup|<around*|[|1,0|]>>|)>=C<rsub|0>=D<rsub|0>f\<circ\>I<rsup|<around*|[|2,0|]>>
+    </equation*>
+
+    Hence <math|f> is is <math|1>-partial and <math|2>-partial differentiable
+    at <math|<around*|(|0,0|)>> with\ 
+
+    <\equation*>
+      D<rsub|<around*|(|0,0|)>,1>f=C<rsub|0>=D<rsub|<around*|(|0,0|)>,2>f
+    </equation*>
+  </proof>
+
+  As the partial differential is based on the Fréchet differential of
+  <math|f\<circ\>I<rsup|<around*|[|i,x|]>>> many properties of the Fréchet
+  differential also applies for the partial differential.
+
+  <\theorem>
+    <label|diff partial differential properties>Let
+    <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>>,
+    <math|<around*|{|<around*|\<langle\>|X<rsub|i>,<around*|\<\|\|\>||\<\|\|\>><rsub|i>|\<rangle\>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+    a finite family of normed spaces, <math|><math|<around*|\<langle\>|<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|j>,<around*|\<\|\|\>||\<\|\|\>><rsub|max>|\<rangle\>>>
+    the product space equipped with the maximum norm [see theorem:
+    <reference|normed maximum norm>], <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
+    a normed space, <math|A\<subseteq\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>,
+    <math|x\<in\>A<rsup|\<circ\>>> and <math|i\<in\><around*|{|1,\<ldots\>,n|}>>
+    then we have:
+
+    <\enumerate>
+      <item>If <math|f:A\<rightarrow\>Y> and <math|g:A\<rightarrow\>Y> are
+      functions that are <math|i>-partial differentiable at <math|x> then\ 
+
+      <\equation*>
+        f+g:A\<rightarrow\>Y
+      </equation*>
+
+      is <math|i>-partial differentiable at <math|x> with\ 
+
+      <\equation*>
+        D<rsub|x,i><rsup|><around*|(|f+g|)>=D<rsub|x,i>f+D<rsub|x,i>g
+      </equation*>
+
+      <item>If <math|\<alpha\>\<in\>\<bbb-K\>> and <math|f:A\<rightarrow\>Y>
+      is a function that is <math|i>-partial differentiable at <math|x> then\ 
+
+      <\equation*>
+        \<alpha\>\<cdot\>f:A\<rightarrow\>Y
+      </equation*>
+
+      is <math|i>-partial differentiable at <math|x> with\ 
+
+      <\equation*>
+        D<rsub|x,i><around*|(|\<alpha\>\<cdot\>f|)>=\<alpha\>\<cdot\>D<rsub|x,i>f
+      </equation*>
+
+      <item>If <math|f:X\<rightarrow\>Y> is such that
+      <math|f\<circ\>I<rsup|<around*|[|i,x|]>>\<in\>L<around*|(|X<rsub|i>,Y|)>>
+      then <math|f> is <math|i>-partial differentiable and\ 
+
+      <\equation*>
+        D<rsub|x,i>f=f\<circ\>I<rsup|<around*|[|i,x|]>>
+      </equation*>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>As <math|f,g> are <math|i>-partial differentiable at <math|x> we
+      have by definition that <math|f\<circ\>I<rsup|<around*|[|i,x|]>>> and
+      <math|g\<circ\>I<rsup|<around*|[|i,x|]>>> are Fréchet differentiable at
+      <math|x<rsub|i>> with
+
+      <\equation>
+        <label|eq 16.18.179>D<rsub|x,i><rsup|>f=D<rsub|x<rsub|i>><around*|(|f\<circ\>I<rsup|<around*|[|i,x|]>>|)><text|
+        and >D<rsub|x,i><rsup|>g=D<rsub|x<rsub|i>><around*|(|g\<circ\>I<rsup|<around*|[|i,x|]>>|)>
+      </equation>
+
+      Using [theorem: <reference|diff derivate operator is linear>] we have
+      that
+
+      <\equation*>
+        f\<circ\>I<rsup|<around*|[|i,x|]>>+g\<circ\>I<rsup|<around*|[|i,x|]>><text|
+        is Fréchet differentiable at <math|x<rsub|i>>>
+      </equation*>
+
+      with\ 
+
+      <\equation*>
+        D<rsub|x<rsub|i>><around*|(|f\<circ\>I<rsup|<around*|[|i,x|]>>+g\<circ\>I<rsup|<around*|[|i,x|]>>|)>=D<rsub|x<rsub|i>><around*|(|f\<circ\>I<rsup|<around*|[|i,x|]>>|)>+D<rsub|x<rsub|i>><around*|(|g\<circ\><around*|\<nobracket\>|I<rsup|<around*|[|i,x|]>>|)><rsub|>|\<nobracket\>>
+      </equation*>
+
+      As <math|<around*|(|f+g|)>\<circ\>I<rsup|<around*|[|i,x|]>>=f\<circ\>I<rsup|<around*|[|i,x|]>>+g\<circ\>I<rsup|<around*|[|i,x|]>>>
+      it follows that <math|f+g> is Fréchet differentiable at
+      <math|x<rsub|i>> with\ 
+
+      <\equation*>
+        D<rsub|x<rsub|i>><around*|(|<around*|(|f+g|)>\<circ\><around*|\<nobracket\>|I<rsup|<around*|[|i,x|]>>|)><rsub|>|\<nobracket\>>=D<rsub|x<rsub|i>><around*|(|f\<circ\><around*|\<nobracket\>|I<rsup|<around*|[|i,x|]>>|)>|\<nobracket\>>+D<rsub|x<rsub|i>><around*|(|g\<circ\>I<rsup|<around*|[|i,x|]>>|)>\<equallim\><rsub|<text|[eq:
+        <reference|eq 16.18.179>]>>D<rsub|x,i><rsup|>f+D<rsub|x,i><rsup|>g
+      </equation*>
+
+      Hence by definition\ 
+
+      <\equation*>
+        f+g <text| is >i<text|-partial differentiable with
+        >D<rsub|x,i><rsup|><around*|(|f+g|)>=D<rsub|x,i><rsup|>f+D<rsub|x,i><rsup|>g
+      </equation*>
+
+      <item>As <math|f> is <math|i>-partial differentiable we have by
+      definition that <math|f\<circ\>I<rsup|<around*|[|i,x|]>>> is Fréchet
+      differentiable at <math|x<rsub|i>> with
+
+      <\equation>
+        <label|eq 16.19.179>D<rsub|x,i><rsup|>f=D<rsub|x<rsub|i>><around*|(|f\<circ\><around*|\<nobracket\>|I<rsup|<around*|[|i,x|]>>|)>|\<nobracket\>>
+      </equation>
+
+      Using [theorem: <reference|diff derivate operator is linear>] we have
+      that
+
+      <\equation*>
+        \<alpha\>\<cdot\><around*|(|f\<circ\>I<rsup|<around*|[|i,x|]>>|)><text|
+        is Fréchet differentiable at <math|x<rsub|i>>>
+      </equation*>
+
+      with\ 
+
+      <\equation*>
+        D<rsub|x<rsub|i>><around*|(|\<alpha\>\<cdot\><around*|(|f\<circ\><around*|\<nobracket\>|I<rsup|<around*|[|i,x|]>>|)>|)>|\<nobracket\>>=\<alpha\>\<cdot\>D<rsub|x<rsub|i>><around*|(|f\<circ\><around*|\<nobracket\>|I<rsup|<around*|[|i,x|]>>|)>|\<nobracket\>>
+      </equation*>
+
+      As <math|<around*|(|\<alpha\>\<cdot\>f|)>\<circ\>I<rsup|<around*|[|i,x|]>>=\<alpha\>\<cdot\><around*|(|f\<circ\>I<rsup|<around*|[|i,x|]>>|)>>
+      it follows that <math|\<alpha\>\<cdot\>f> is Fréchet differentiable at
+      <math|x<rsub|i>> with\ 
+
+      <\equation*>
+        D<rsub|x<rsub|i>><around*|(|<around*|(|\<alpha\>f|)>\<circ\>I<rsup|<around*|[|i,x|]>>|)>=\<alpha\>\<cdot\>D<rsub|x<rsub|i>><around*|(|f\<circ\>I<rsup|<around*|[|i,x|]>>|)>\<equallim\><rsub|<text|[eq:
+        <reference|eq 16.19.179>]>>\<alpha\>\<cdot\>D<rsub|x,i><rsup|>f
+      </equation*>
+
+      Hence by definition\ 
+
+      <\equation*>
+        \<alpha\>\<cdot\>f <text| is >i<text|-partial differentiable with
+        >D<rsub|x,i><rsup|><around*|(|\<alpha\>\<cdot\>f|)>=\<alpha\>\<cdot\>D<rsub|x,i><rsup|>f
+      </equation*>
+
+      <item>As <math|f\<circ\>I<rsup|<around*|[|i,x|]>>\<in\>L<around*|(|X<rsub|i>,Y|)>>
+      we have by [example: <reference|diff linear mappings are
+      differentiable>] that <math|f\<circ\>I<rsup|<around*|[|i,x|]>>> is
+      Fréchet differentiable at <math|x<rsub|i>> with
+      <math|D<rsub|x<rsub|i>><around*|(|f\<circ\>I<rsup|<around*|[|i,x|]>>|)>=f\<circ\>I<rsup|<around*|[|i,x|]>>>.
+      Hence by definition we have that\ 
+
+      <\equation*>
+        f<text| is >i<text|-partial differentiable at >x<text| with
+        >D<rsub|x,i><rsup|>f<around*|(|x|)>=f\<circ\>I<rsup|<around*|[|i,x|]>>
+      </equation*>
+    </enumerate>
+  </proof>
+
+  We have a special version of the Chain rule for partial differentiation.
+
+  <\theorem>
+    <label|diff chain rule and partial differential>Let
+    <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>>,
+    <math|<around*|{|<around*|\<langle\>|X<rsub|i>,<around*|\<\|\|\>||\<\|\|\>><rsub|i>|\<rangle\>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+    a finite family of vector spaces, <math|><math|<around*|\<langle\>|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>,<around*|\<\|\|\>||\<\|\|\>><rsub|max>|\<rangle\>>>
+    the product space equipped with the maximum norm [see theorem:
+    <reference|normed maximum norm>], <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Z,<around*|\<\|\|\>||\<\|\|\>><rsub|Z>|\<rangle\>>>
+    normed spaces, <math|A\<subseteq\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>,
+    <math|B\<subseteq\>Y>, <math|x\<in\>A<rsup|\<circ\>>>,
+    <math|i\<in\><around*|{|1,\<ldots\>,n|}>>,
+
+    <\equation*>
+      f:A\<rightarrow\>Y<text| a function that is \ >i<text|-partial
+      differentiable at >x<text| such that
+      >f<around*|(|A|)>\<subseteq\>B<text| and
+      >f<around*|(|x|)>\<in\>B<rsup|\<circ\>>
+    </equation*>
+
+    and
+
+    <\equation*>
+      g:B\<rightarrow\>Z<text| a function that is Fréchet differentiable at
+      >f<around*|(|x|)>
+    </equation*>
+
+    then\ 
+
+    <\equation*>
+      g\<circ\>f:A\<rightarrow\>Z<text| is >i<text|-partial differentiable at
+      >x<text| and >D<rsub|x,i><around*|(|g\<circ\>f|)>=D<rsub|f<around*|(|x|)>>g\<circ\>D<rsub|x,i>f
+    </equation*>
+  </theorem>
+
+  <\proof>
+    As <math|f> is <math|i>-partial differentiable at <math|x> we have by
+    [definition: <reference|diff partial differential definition>] that\ 
+
+    <\equation*>
+      f\<circ\>I<rsup|<around*|[|i,x|]>>:<around*|(|I<rsup|<around*|[|i,x|]>>|)><rsup|-1><around*|(|A|)>\<rightarrow\>Y<text|
+      is Fréchet differentiable at >x<rsub|i>
+    </equation*>
+
+    and\ 
+
+    <\equation>
+      <label|eq 16.73.3>D<rsub|x,i>f=D<rsub|x<rsub|i>><around*|(|f\<circ\>I<rsup|<around*|[|i,x|]>>|)>
+    </equation>
+
+    As <math|<around*|(|f\<circ\>I<rsup|<around*|[|i,x|]>>|)><around*|(|<around*|(|I<rsup|<around*|[|i,x|]>>|)><rsup|-1><around*|(|A|)>|)>\<equallim\><rsub|<text|[theorem:
+    <reference|partial function image preimage of
+    compositions>]>>f<around*|(|I<rsup|<around*|[|i,x|]>><around*|(|<around*|(|I<rsup|<around*|[|i,x|]>>|)><rsup|-1><around*|(|A|)>|)>|)><below|\<subseteq\>|<text|[theorem:
+    <reference|function preimage of image
+    (1)>]>>f<around*|(|A|)>\<subseteq\>B> and <math|g:B\<rightarrow\>Z> is
+    Fréchet differentiable at <math|f<around*|(|x|)>> it follows from the
+    chain rule [theorem: <reference|diff chain rule>] that\ 
+
+    <\equation>
+      <label|eq 16.74.3>g\<circ\><around*|(|f\<circ\>I<rsup|<around*|[|i,x|]>>|)><text|
+      is Fréchet differentiable at >x<rsub|i><text|>
+    </equation>
+
+    with\ 
+
+    <\equation>
+      <label|eq 16.75.3>D<rsub|x<rsub|i>><around*|(|g\<circ\><around*|(|f\<circ\>I<rsup|<around*|[|i,x|]>>|)>|)>=D<rsub|g<around*|(|<around*|(|f\<circ\>I<rsup|<around*|[|i,x|]>>|)><around*|(|x<rsub|i>|)>|)>>g\<circ\>D<rsub|x<rsub|i>><around*|(|f\<circ\>I<rsup|<around*|[|i,x|]>>|)>\<equallim\><rsub|<text|[eq:
+      <reference|eq 16.73.3>]>>D<rsub|g<around*|(|<around*|(|f\<circ\>I<rsup|<around*|[|i,x|]>>|)><around*|(|x<rsub|i>|)>|)>>g\<circ\>D<rsub|x,i>f
+    </equation>
+
+    As
+
+    <\equation*>
+      <around*|(|g\<circ\>f|)>\<circ\>I<rsup|<around*|[|i,x|]>><below|=|<text|[theorem:
+      <reference|partial function associativity>]>>g\<circ\><around*|(|f\<circ\>I<rsup|<around*|[|i,x|]>>|)>
+    </equation*>
+
+    and
+
+    <\equation*>
+      g<around*|(|<around*|(|f\<circ\>I<rsup|<around*|[|i,x|]>>|)><around*|(|x<rsub|i>|)>|)>=g<around*|(|f<around*|(|I<rsup|<around*|[|i,x|]>><around*|(|x<rsub|i>|)>|)>|)>\<equallim\><rsub|<text|[lemma:
+      <reference|lemma 16.24.178>]>>g<around*|(|f<around*|(|x|)>|)>
+    </equation*>
+
+    [eqs: <reference|eq 16.74.3>, <reference|eq 16.75.3>] becomes\ 
+
+    <\equation*>
+      <around*|(|g\<circ\>f|)>\<circ\>I<rsup|<around*|[|i,x|]>><text| is
+      Fréchet differentiable at <math|x<rsub|i>> and
+      >D<rsub|x<rsub|i>><around*|(|<around*|(|g\<circ\>f|)>\<circ\>I<rsup|<around*|[|i,x|]>>|)>=D<rsub|g<around*|(|f<around*|(|x|)>|)>>\<circ\>D<rsub|x,i>f
+    </equation*>
+
+    Hence we have by [definition: <reference|diff partial differential
+    definition>] that\ 
+
+    <\equation*>
+      g\<circ\>f<text| is partial differentiable at <math|x<text| and
+      >D<rsub|x,i><around*|(|g\<circ\>f|)>=D<rsub|g<around*|(|f<around*|(|x|)>|)>>\<circ\>D<rsub|x,i>f>>
+    </equation*>
+  </proof>
+
+  <subsection|Partial Derivates>
+
+  If we want to define partial derivatives of <math|f:A\<rightarrow\>X> in a
+  similar fashion as partial differentials [see definition: <reference|diff
+  partial differential definition>] we would define the partial derivative at
+  <math|x> as the derivative of <rigid|<math|f\<circ\>I<rsup|<around*|[|i,x|]>>:<around*|(|I<rsup|<around*|[|i,x|]>>|)><rsup|-1>\<rightarrow\>X>>
+  at <math|x<rsub|i>>. There is however a problem, <math|x<rsub|i>> has then
+  to be a limit point of <math|I<rsup|<around*|[|i,x|]>-1>> for the
+  derivative to be well defined and it is not true in general that if
+  <math|x\<in\>A> is a limit point of <math|A> that then <math|x<rsub|i>> is
+  a limit point of <math|<around*|(|I<rsup|<around*|[|i,x|]>>|)><rsup|-1><around*|(|A|)>>
+  as the following example shows.
+
+  <\example>
+    Consider the normed space <math|<around*|\<langle\>|\<bbb-R\><rsup|2>,<around*|\<\|\|\>||\<\|\|\>><rsub|2>|\<rangle\>>>
+    <math|A=<around*|{|<around*|(|x<rsub|1>,x<rsub|2>|)>\<in\>\<bbb-R\><rsup|2>\|x<rsub|1>=0|}>>
+    then <math|<around*|(|0,0|)>\<in\>A> is a limit point of <math|A> but
+    <math|0> is not a limit point of <math|<around*|(|I<rsup|<around*|[|1,<around*|(|0,0|)>|]>>|)><rsup|-1><around*|(|A|)>>
+  </example>
+
+  <\proof>
+    Let <math|U> be a open set in <math|\<bbb-R\><rsup|2>> such that
+    <math|<around*|(|0,0|)>\<in\>U> then there exist a
+    <math|\<delta\>\<in\>\<bbb-R\><rsup|+>> such that
+    <math|<around*|(|0,0|)>\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|2>><around*|(|<around*|(|0,0|)>,\<delta\>|)>\<subseteq\>U>
+    take <math|x=<around*|(|0,<frac|\<delta\>|2>|)>> then
+    <math|x\<neq\><around*|(|0,0|)>>, <math|x\<in\>A>,
+
+    <\equation*>
+      <around*|\<\|\|\>|x-<around*|(|0,0|)>|\<\|\|\>><rsub|2>=max<around*|(|<around*|{|<around*|\||0-0|\|>,<around*|\||<frac|\<delta\>|2>-0|\|>|}>|)>=<frac|\<delta\>|2>\<less\>\<delta\>
+    </equation*>
+
+    so that <math|x\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|2>><around*|(|<around*|(|0,0|)>,\<delta\>|)>\<subseteq\>U>.
+    Hence <math|x\<in\>U<big|cap><around*|(|A\\<around*|{|<around*|(|0,0|)>|}>|)>>
+    which proves that
+
+    <\equation*>
+      x<text| is a limit point of >A
+    </equation*>
+
+    Further we have <math|t\<in\><around*|(|I<rsup|<around*|[|1,<around*|(|0,0|)>|]>>|)><rsup|-1><around*|(|A|)>\<Leftrightarrow\><around*|(|t,0|)>=I<rsup|<around*|[|1,<around*|(|0,0|)>|]>><around*|(|t|)>\<in\>A\<Leftrightarrow\>t=0>
+    so that
+
+    <\equation*>
+      <around*|(|I<rsup|<around*|[|1,<around*|(|0,0|)>|]>>|)><rsup|-1><around*|(|A|)>=<around*|{|0|}>
+    </equation*>
+
+    Now for the open set <math|B<rsub|<around*|\|||\|>><around*|(|0,1|)>> we
+    have \ <math|0\<in\>B<rsub|<around*|\|||\|>><around*|(|0,1|)>> but also
+
+    <\equation*>
+      <around*|(|<around*|(|I<rsup|<around*|[|1,<around*|(|0,0|)>|]>>|)><rsup|-1><around*|(|A|)>\\<around*|{|0|}>|)><big|cap>U=<around*|(|<around*|{|0|}>\\<around*|{|0|}>|)><big|cap>U=\<varnothing\>
+    </equation*>
+
+    <math|> so that <math|0> is not a limit point of
+    <math|<around*|(|I<rsup|<around*|[|1,<around*|(|0,0|)>|]>>|)><rsup|-1><around*|(|A|)>>.
+  </proof>
+
+  However interior points are limit points [see theorem: <reference|topology
+  interior point is a limit point in a normed space>] and
+  <math|x\<in\>A<rsup|\<circ\>>> implies <math|x<rsub|i>\<in\><around*|(|<around*|(|I<rsup|<around*|[|i,x|]>>|)><rsup|-1><around*|(|A|)>|)><rsup|\<circ\>>>
+  [see lemma: <reference|lemma 16.69.4>]. This suggest that we define partial
+  derivatives for interior points of <math|A>.
+
+  \;
+
+  \;
 
   \;
 
@@ -2248,6 +4652,12 @@
 <\references>
   <\collection>
     <associate|auto-1|<tuple|16|?>>
+    <associate|auto-10|<tuple|<with|mode|<quote|math>|\<varepsilon\>>-mapping|?>>
+    <associate|auto-11|<tuple|16.1.4|?>>
+    <associate|auto-12|<tuple|Chain rule|?>>
+    <associate|auto-13|<tuple|16.1.5|?>>
+    <associate|auto-14|<tuple|<with|mode|<quote|math>|I<rsup|<around*|[|i,x|]>>>|?>>
+    <associate|auto-15|<tuple|16.1.6|?>>
     <associate|auto-2|<tuple|16.1|?>>
     <associate|auto-3|<tuple|16.1.1|?>>
     <associate|auto-4|<tuple|convergence of a function|?>>
@@ -2257,46 +4667,102 @@
     <associate|auto-8|<tuple|16.1.3|?>>
     <associate|auto-9|<tuple|differentiability|?>>
     <associate|convergence of a function to a point|<tuple|16.3|?>>
-    <associate|diff (f+g)'=f'+g'|<tuple|16.36|?>>
+    <associate|diff (f+g)'=f'+g'|<tuple|16.42|?>>
     <associate|diff Bx(x,d)|<tuple|16.17|?>>
-    <associate|diff Frechet approximation|<tuple|16.37|?>>
+    <associate|diff Frechet approximation|<tuple|16.43|?>>
+    <associate|diff Frechet differentation implies partial differentiability
+    |<tuple|16.76|?>>
     <associate|diff Ux|<tuple|16.13|?>>
     <associate|diff Ux is open if U is open|<tuple|16.16|?>>
     <associate|diff Ux=-x+U=U-x|<tuple|16.15|?>>
     <associate|diff calculus derivate|<tuple|16.22|?>>
     <associate|diff calculus derivate (1)|<tuple|16.20|?>>
     <associate|diff calculus derivate (2)|<tuple|16.23|?>>
-    <associate|diff constant function is differentiable|<tuple|16.43|?>>
-    <associate|diff derivative and restriction|<tuple|16.31|?>>
+    <associate|diff chain rule|<tuple|16.63|?>>
+    <associate|diff chain rule and partial differential|<tuple|16.81|?>>
+    <associate|diff chain rule calculus|<tuple|16.64|?>>
+    <associate|diff composition with a linear mapping|<tuple|16.65|?>>
+    <associate|diff constant function and partial
+    differentiation|<tuple|16.78|?>>
+    <associate|diff constant function is differentiable|<tuple|16.51|?>>
+    <associate|diff derivate and frechet differential|<tuple|16.60|?>>
+    <associate|diff derivate operator is linear|<tuple|16.62|?>>
+    <associate|diff derivative and restriction|<tuple|16.36|?>>
     <associate|diff derivative function|<tuple|16.24|?>>
-    <associate|diff derivative is local|<tuple|16.33|?>>
-    <associate|diff derivative of constant|<tuple|16.27|?>>
-    <associate|diff derivative of identity function|<tuple|16.28|?>>
-    <associate|diff derivative of the empty function|<tuple|16.26|?>>
-    <associate|diff derivatives and continuity|<tuple|16.30|?>>
-    <associate|diff differentiability|<tuple|16.40|?>>
-    <associate|diff differentiability is a local property|<tuple|16.46|?>>
-    <associate|diff differentiability on a set|<tuple|16.41|?>>
-    <associate|diff differential|<tuple|16.41|?>>
-    <associate|diff equivalent norms|<tuple|16.45|?>>
-    <associate|diff identity function is differentiable|<tuple|16.43|?>>
+    <associate|diff derivative is local|<tuple|16.38|?>>
+    <associate|diff derivative of constant|<tuple|16.32|?>>
+    <associate|diff derivative of identity function|<tuple|16.33|?>>
+    <associate|diff derivative of the empty function|<tuple|16.31|?>>
+    <associate|diff derivative on a open set|<tuple|16.27|?>>
+    <associate|diff derivative on a open set (1)|<tuple|16.30|?>>
+    <associate|diff derivative on a open set (2)|<tuple|16.41|?>>
+    <associate|diff derivatives and continuity|<tuple|16.35|?>>
+    <associate|diff differentiability|<tuple|16.46|?>>
+    <associate|diff differentiability alternative
+    definitions|<tuple|16.57|?>>
+    <associate|diff differentiability alternative definitions
+    (1)|<tuple|16.58|?>>
+    <associate|diff differentiability is a local property|<tuple|16.54|?>>
+    <associate|diff differentiability on a set|<tuple|16.48|?>>
+    <associate|diff differentiability on a set (1)|<tuple|16.49|?>>
+    <associate|diff differentiability on a set (2)|<tuple|16.55|?>>
+    <associate|diff differentiable function is continuous|<tuple|16.59|?>>
+    <associate|diff differential|<tuple|16.47|?>>
+    <associate|diff e-mapping|<tuple|16.56|?>>
+    <associate|diff equivalent norms|<tuple|16.53|?>>
+    <associate|diff identity function is differentiable|<tuple|16.50|?>>
     <associate|diff limit of a function|<tuple|16.11|?>>
-    <associate|diff linear mappings are differentiable|<tuple|16.44|?>>
-    <associate|diff scalar product function has a derivate|<tuple|16.29|?>>
+    <associate|diff linear mappings are differentiable|<tuple|16.52|?>>
+    <associate|diff partial differentiability does not mean
+    differentiaility|<tuple|16.79|?>>
+    <associate|diff partial differentiability on a set|<tuple|16.74|?>>
+    <associate|diff partial differential|<tuple|16.72|?>>
+    <associate|diff partial differential definition|<tuple|16.70|?>>
+    <associate|diff partial differential on a set|<tuple|16.73|?>>
+    <associate|diff partial differential properties|<tuple|16.80|?>>
+    <associate|diff partial differentiation is local|<tuple|16.75|?>>
+    <associate|diff scalar product function has a derivate|<tuple|16.34|?>>
+    <associate|diff unprojection|<tuple|16.66|?>>
+    <associate|eq 16.1.177|<tuple|16.11|?>>
     <associate|eq 16.1.2|<tuple|16.1|?>>
+    <associate|eq 16.10.178|<tuple|16.18|?>>
     <associate|eq 16.10.4|<tuple|16.10|?>>
+    <associate|eq 16.11.178|<tuple|16.19|?>>
+    <associate|eq 16.12.178|<tuple|16.20|?>>
+    <associate|eq 16.13.178|<tuple|16.21|?>>
+    <associate|eq 16.14.178|<tuple|16.22|?>>
+    <associate|eq 16.15.178|<tuple|16.23|?>>
+    <associate|eq 16.18.179|<tuple|16.30|?>>
+    <associate|eq 16.19.179|<tuple|16.31|?>>
+    <associate|eq 16.2.177|<tuple|16.12|?>>
     <associate|eq 16.2.2|<tuple|16.2|?>>
+    <associate|eq 16.24.4|<tuple|16.24|?>>
+    <associate|eq 16.25.4|<tuple|16.25|?>>
+    <associate|eq 16.26.4|<tuple|16.26|?>>
+    <associate|eq 16.27.4|<tuple|16.27|?>>
+    <associate|eq 16.28.4|<tuple|16.28|?>>
+    <associate|eq 16.29.4|<tuple|16.29|?>>
+    <associate|eq 16.3.177|<tuple|16.13|?>>
     <associate|eq 16.3.2|<tuple|16.3|?>>
     <associate|eq 16.4.1|<tuple|16.4|?>>
+    <associate|eq 16.4.177|<tuple|16.14|?>>
     <associate|eq 16.5.1|<tuple|16.5|?>>
     <associate|eq 16.6.301|<tuple|16.6|?>>
+    <associate|eq 16.7.178|<tuple|16.15|?>>
     <associate|eq 16.7.301|<tuple|16.7|?>>
+    <associate|eq 16.73.3|<tuple|16.32|?>>
+    <associate|eq 16.74.3|<tuple|16.33|?>>
+    <associate|eq 16.75.3|<tuple|16.34|?>>
+    <associate|eq 16.8.178|<tuple|16.16|?>>
     <associate|eq 16.8.4|<tuple|16.8|?>>
+    <associate|eq 16.9.178|<tuple|16.17|?>>
     <associate|eq 16.9.4|<tuple|16.9|?>>
     <associate|lemma 16.11.500|<tuple|16.6|?>>
     <associate|lemma 16.18.2|<tuple|16.18|?>>
     <associate|lemma 16.19.2|<tuple|16.19|?>>
-    <associate|lemma 16.37.4|<tuple|16.39|?>>
+    <associate|lemma 16.24.178|<tuple|16.67|?>>
+    <associate|lemma 16.37.4|<tuple|16.45|?>>
+    <associate|lemma 16.69.4|<tuple|16.69|?>>
     <associate|normed space are assumed to be non trivial|<tuple|16.1|?>>
     <associate|topology every element of a generalized interval is a limit
     point|<tuple|16.10|?>>
@@ -2319,6 +4785,12 @@
       <tuple|<tuple|<with|mode|<quote|math>|f<rprime|'><around*|(|x|)>>>|<pageref|auto-6>>
 
       <tuple|<tuple|differentiability>|<pageref|auto-9>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|\<varepsilon\>>-mapping>|<pageref|auto-10>>
+
+      <tuple|<tuple|Chain rule>|<pageref|auto-12>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|I<rsup|<around*|[|i,x|]>>>>|<pageref|auto-14>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|16<space|2spc>Differentiation
@@ -2340,6 +4812,14 @@
       <with|par-left|<quote|1tab>|16.1.3<space|2spc>Fréchet differential of a
       function <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-8>>
+
+      <with|par-left|<quote|1tab>|16.1.4<space|2spc>Properties of the Fréchet
+      differential. <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-11>>
+
+      <with|par-left|<quote|1tab>|16.1.5<space|2spc>Partial differentials
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-13>>
     </associate>
   </collection>
 </auxiliary>
