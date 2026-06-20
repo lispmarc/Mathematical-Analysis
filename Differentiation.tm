@@ -2055,8 +2055,8 @@
     <label|diff differential><dueto|Differential>Let
     <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>
     and <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
-    be normed spaces, <math|A\<subseteq\>X> and <math|f:A\<rightarrow\>Y> a
-    function. Then we define
+    be normed spaces, <math|A\<subseteq\>X> and
+    <math|<rigid|f:A\<rightarrow\>Y>> a function. Then we define
 
     <\equation*>
       \<frak-D\><rsub|f>=<around*|{|x\<in\>A\|f<text| is Fréchet
@@ -7197,13 +7197,27 @@
         D<rsup|<around*|[|1|]>>f=D f
       </equation*>
 
-      See [definition: <reference|diff differential>] for the definition of
-      <math|\<frak-D\><rsub|f>> and <math|D f>.
+      where <math|\<frak-D\><rsup|><rsub|f>> and <math|D f> is defined by
+      [definition: <reference|diff differential>]. In other words\ 
+
+      <\equation*>
+        \<frak-D\><rsup|1><rsub|f>=<around*|{|x\<in\>A\|f<text| is Fréchet
+        differentiable at >x|}>
+      </equation*>
+
+      and <math|D<rsup|<around*|[|1|]>>f> is defined by\ 
+
+      <\equation*>
+        D<rsup|<around*|[|1|]>>f:\<frak-D\><rsup|1><rsub|f>\<rightarrow\>L<rsub|1><around*|(|X;Y|)><text|
+        where >D<rsup|<around*|[|1|]>>f<around*|(|x|)>=D<rsub|x>f
+      </equation*>
 
       <item*|<math|1\<less\>n>>Then\ 
 
       <\equation*>
-        \<frak-D\><rsup|n><rsub|f>=\<frak-D\><rsub|D<rsup|<around*|[|n-1|]>>f><around*|(|\<frak-D\><rsup|n-1><rsub|f>|)>
+        \<frak-D\><rsup|n><rsub|f>=\<frak-D\><rsub|D<rsup|<around*|[|n-1|]>>f>\<equallim\><rsub|<text|[definition:
+        <reference|diff differential>]>><around*|{|x\<in\>\<frak-D\><rsup|n-1><rsub|f>\|D<rsup|<around*|[|n-1|]>>f<text|
+        is Fréchet differentiable at >x|}>
       </equation*>
 
       and
@@ -7218,9 +7232,6 @@
       <\equation*>
         D<rsup|<around*|[|n|]>>f=D<around*|(|D<rsup|<around*|[|n-1|]>>f|)>
       </equation*>
-
-      See [definition: <reference|diff differential>] for the definition of
-      <math|\<frak-D\><rsub|f>> and <math|D f>
     </description>
 
     <\note>
@@ -7233,7 +7244,7 @@
       If <math|\<frak-D\><rsup|n><rsub|f>=\<varnothing\>> then
 
       <\equation*>
-        \<frak-D\><rsup|n+1><rsub|f>=\<frak-D\><rsub|D<rsup|<around*|[|n|]>>f><around*|(|\<frak-D\><rsup|n><rsub|f>|)><below|=|<text|def>><around*|{|x\<in\>\<frak-D\><rsup|n>=\<varnothing\>\|D<rsup|<around*|[|n|]>>f<text|
+        \<frak-D\><rsup|n+1><rsub|f>=\<frak-D\><rsub|D<rsup|<around*|[|n|]>>f><below|=|<text|def>><around*|{|x\<in\>\<frak-D\><rsup|n>=\<varnothing\>\|D<rsup|<around*|[|n|]>>f<text|
         is Fréchet differentiable at >x|}>=\<varnothing\>
       </equation*>
 
@@ -7279,7 +7290,7 @@
     order differential>] we have that
 
     <\equation*>
-      \<frak-D\><rsup|n+1><rsub|f>=\<frak-D\><rsub|D<rsup|<around*|[|n|]>>f><around*|(|\<frak-D\><rsup|n><rsub|f>|)><below|=|<text|[theorem:
+      \<frak-D\><rsup|n+1><rsub|f>=\<frak-D\><rsub|D<rsup|<around*|[|n|]>>f><below|=|<text|[definition:
       <reference|diff differential>]>><around*|{|x\<in\>\<frak-D\><rsup|n><rsub|f>\|D<rsup|<around*|[|n|]>><rsub|f><text|
       is Fréchet differentiable at >x|}>\<subseteq\>\<frak-D\><rsup|n><rsub|f>
     </equation*>
@@ -7555,7 +7566,7 @@
           D<rsup|<around*|[|n-1|]>>f<text| is Fréchet differentiable at >x
         </equation*>
 
-        So that <math|x\<in\>\<frak-D\><rsup|><rsub|D<rsup|<around*|[|n-1|]>>f><around*|(|\<frak-D\><rsup|n-1><rsub|f>|)><below|=|<text|[definition:
+        So that <math|x\<in\>\<frak-D\><rsup|><rsub|D<rsup|<around*|[|n-1|]>>f><below|=|<text|[definition:
         <reference|diff higher order differential>]>>\<frak-D\><rsup|n><rsub|f>>
         which by [definition: <reference|diff higher order differentiation>]
         proves that\ 
@@ -8574,7 +8585,8 @@
       <item*|<math|1\<less\>n>>Then
 
       <\equation*>
-        \<cal-D\><rsup|n><rsub|f>=\<cal-D\><rsub|f<rsup|<around*|(|n-1|)>>><around*|(|\<cal-D\><rsup|n-1><rsub|f>|)>=<around*|{|x\<in\>\<cal-D\><rsup|n-1><rsub|f>\|f<rsup|<around*|(|n-1|)>><text|
+        \<cal-D\><rsup|n><rsub|f>=\<cal-D\><rsub|f<rsup|<around*|(|n-1|)>>><below|=|<text|[definition:
+        <reference|diff derivative function>]>><around*|{|x\<in\>\<cal-D\><rsup|n-1><rsub|f>\|f<rsup|<around*|(|n-1|)>><text|
         has a derivative at >x|}>
       </equation*>
 
@@ -8608,7 +8620,7 @@
     Let <math|n\<in\>\<bbb-N\>> then we have that\ 
 
     <\equation*>
-      \<cal-D\><rsup|n+1><rsub|f>=\<cal-D\><rsub|f><around*|(|\<cal-D\><rsup|n><rsub|f>|)>=<around*|{|x\<in\>\<cal-D\><rsup|n><rsub|f>\|f<rsup|<around*|(|n-1|)>><text|
+      \<cal-D\><rsup|n+1><rsub|f>=\<cal-D\><rsub|f>=<around*|{|x\<in\>\<cal-D\><rsup|n><rsub|f>\|f<rsup|<around*|(|n-1|)>><text|
       has a derivative at >x|}>\<subseteq\>\<cal-D\><rsup|n><rsub|f>
     </equation*>
 
@@ -8882,8 +8894,6 @@
     </description>
   </proof>
 
-  TODO recheck this proof later
-
   <\theorem>
     <label|diff higher order derivate and differential>Let
     <math|n\<in\>\<bbb-N\>>, <math|<around*|\<langle\>|\<bbb-K\>,\<\|\|\>|\<rangle\>>>
@@ -8895,9 +8905,9 @@
     at <math|x> with\ 
 
     <\equation*>
-      f<rsup|<around*|(|n|)>><rsub|x<rsub|0>>=D<rsub|x<rsub|0>><rsup|<around*|[|n|]>>f<around*|(|<wide*|1:\<ldots\>:1|\<wide-underbrace\>><rsub|n>|)>\<equallim\><rsub|<text|[definition:
+      f<rsup|<around*|(|n|)>><rsub|x>=D<rsub|x><rsup|<around*|[|n|]>>f<around*|(|<wide*|1:\<ldots\>:1|\<wide-underbrace\>><rsub|n>|)>\<equallim\><rsub|<text|[definition:
       <reference|diff higher order differentiation
-      (1)>]>>D<rsub|x<rsub|0>><rsup|n>f<around*|(|<wide*|1,\<ldots\>,1|\<wide-underbrace\>><rsub|n>|)>
+      (1)>]>>D<rsub|x><rsup|n>f<around*|(|<wide*|1,\<ldots\>,1|\<wide-underbrace\>><rsub|n>|)>
     </equation*>
 
     <\note>
@@ -8913,7 +8923,7 @@
       the derivative is calculated [just as is done in differentiation of a
       function]. The problem with this approach is that then, for functions
       defined on closed intervals <math|<around*|[|a,b|]>>, we can not have
-      derivatives at <math|a> and <math|b>. So we keep out definitions and
+      derivatives at <math|a> and <math|b>. So we keep our definitions and
       accept the fact that the existence of derivatives does not guarantee
       the existence of differentials.
     </note>
@@ -8924,7 +8934,7 @@
 
     <\equation*>
       S=<around*|{|n\<in\>\<bbb-N\>\|If<text| >f<text| is >n<text|-times
-      differentiable at >x\<in\>A<text| we have that >f<text| has a
+      differentiable at >x\<in\>A<text| then we have that >f<text| has a
       >n<text|-times derivative at >x<text| with
       ><rigid|f<rsup|<around*|(|n|)>><rsub|x>=D<rsup|<around*|[|n|]>><rsub|x><around*|(|<wide*|1:\<ldots\>.:1|\<wide-underbrace\>><rsub|n>|)>>|}>
     </equation*>
@@ -8932,7 +8942,7 @@
     then we have:\ 
 
     <\description>
-      <item*|<math|0\<in\>S>>If <math|f> is <math|1>-times differentiable at
+      <item*|<math|1\<in\>S>>If <math|f> is <math|1>-times differentiable at
       <math|x> it follows from [theorem: <reference|diff higher order
       differentiation (1)>] that <math|f> is Fréchet differentiable at
       <math|x> with <math|D<rsup|<around*|[|1|]>><rsub|x>f=D<rsub|x>f>. By
@@ -8943,7 +8953,7 @@
       that
 
       <\equation*>
-        f<text| has a derivative at >x
+        f<text| has a >1<text|-times derivative at >x
       </equation*>
 
       with <math|f<rsup|<around*|(|1|)>><rsub|x>=f<rprime|'><rsub|x>>. Hence
@@ -8987,10 +8997,10 @@
         and >x\<in\><around*|(|\<frak-D\><rsup|<around*|[|n|]>><rsub|f>|)><rsup|\<circ\>>\<subseteq\>\<frak-D\><rsup|<around*|[|n|]>><rsub|f>
       </equation>
 
-      Let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> then by [eq:
-      <reference|eq 16.108.10>] there exist a
-      <math|\<delta\>\<in\>\<bbb-R\><rsup|+>> such that
-      <math|\<forall\>h\<in\><around*|(|\<frak-D\><rsup|<around*|[|n|]>><rsub|f>|)><rsub|x>>
+      Let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> then by the Fréchet
+      diffrentiability of <math|f> at <math|x> [see eq: <reference|eq
+      16.108.10>] there exist a <math|\<delta\>\<in\>\<bbb-R\><rsup|+>> such
+      that <math|\<forall\>h\<in\><around*|(|\<frak-D\><rsup|<around*|[|n|]>><rsub|f>|)><rsub|x>>
       with <math|<around*|\||h|\|>\<less\>\<delta\>> we have\ 
 
       <\equation>
@@ -9027,7 +9037,7 @@
       <\equation*>
         <around*|(|f<rsup|<around*|(|n|)>>|)><rsub|\|\<frak-D\><rsup|<around*|[|n|]>><rsub|f>><text|
         has a derivative at >x<text| with
-        ><around*|(|f<rsup|<around*|{|n|}>>|)><rprime|'><rsub|x>=D<rsup|<around*|[|n+1|]>><rsub|x>f<around*|(|<wide*|1:\<ldots\>:1|\<wide-underbrace\>><rsub|n+1>|)>
+        ><around*|(|<around*|(|f<rsup|<around*|{|n|}>>|)><rsub|\|\<frak-D\><rsup|n><rsub|f>>|)><rprime|'><rsub|x>=D<rsup|<around*|[|n+1|]>><rsub|x>f<around*|(|<wide*|1:\<ldots\>:1|\<wide-underbrace\>><rsub|n+1>|)>
       </equation*>
 
       Using now [theorem: <reference|diff derivative is local>] together with
@@ -9045,10 +9055,205 @@
         f<text| has a ><around*|(|n+1|)><text|-times derivative at >z<text|
         with >f<rsup|<around*|(|n+1|)>><rsub|x>=D<rsup|<around*|[|n+1|]>><rsub|x>f<around*|(|<wide*|1:\<ldots\>:1|\<wide-underbrace\>><rsub|n+1>|)>
       </equation*>
+
+      which proves that\ 
+
+      <\equation*>
+        n+1\<in\>S
+      </equation*>
     </description>
   </proof>
 
   <subsection|Properties of higher order differentials and derivatives.>
+
+  <\theorem>
+    <label|diff higher order differential>Let <math|n,m\<in\>\<bbb-N\>>,
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    be normed spaces, <math|A\<subseteq\>X> and <math|f:A\<rightarrow\>Y> a
+    function then we have that\ 
+
+    <\equation*>
+      \<frak-D\><rsup|n+m><rsub|f>=<around*|{|x\<in\>\<frak-D\><rsup|n><rsub|f>\|D<rsup|<around*|[|n|]>>f<text|
+      is >m<text|-times differentiable at >x|}><text| and
+      >D<rsup|<around*|[|n+m|]>>f=D<rsup|<around*|[|m|]>><around*|(|D<rsup|<around*|[|n|]>>f|)>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    We use induction to prove this, so given <math|n\<in\>\<bbb-N\>> define\ 
+
+    <\equation*>
+      S<rsub|n>=<around*|{|m\<in\>\<bbb-N\>\|\<frak-D\><rsup|n+m><rsub|f>=<around*|{|x\<in\>\<frak-D\><rsup|n><rsub|f>\|D<rsup|<around*|[|n|]>>f<text|
+      is >m<text|-times differentiable at >x|}><text| and
+      >D<rsup|<around*|[|n+m|]>>f=D<rsup|<around*|[|m|]>><around*|(|D<rsup|<around*|[|n|]>>f|)>|}>
+    </equation*>
+
+    then we have:
+
+    <\description>
+      <item*|<math|1\<in\>S<rsub|n>>>Using [definition: <reference|diff
+      higher order differential>] we have that
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|\<frak-D\><rsup|n+1><rsub|f>>|<cell|=>|<cell|\<frak-D\><rsub|D<rsup|<around*|[|n|]>>f>>>|<row|<cell|>|<cell|=>|<cell|<around*|{|x\<in\>\<frak-D\><rsup|n><rsub|f>\|D<rsup|<around*|[|n|]>>f<text|
+        is Fréchet differentiable at >x|}>>>|<row|<cell|>|<cell|<below|=|<text|[theorem:
+        <reference|diff higher order differentiation
+        (1)>]>>>|<cell|<around*|{|x\<in\>\<frak-D\><rsup|n><rsub|f>\|D<rsup|<around*|[|n|]>>f<text|
+        is >1<text|-times differentiable at >x|}>>>>>
+      </eqnarray*>
+
+      and
+
+      <\equation*>
+        D<rsup|<around*|[|n+1|]>>f<below|=|<text|[definition: <reference|diff
+        higher order differential>]>>D<around*|(|D<rsup|<around*|[|n|]>>f|)><below|=|<text|[definition:
+        <reference|diff higher order differential>]>>D<rsup|<around*|[|1|]>><around*|(|D<rsup|<around*|[|n|]>>f|)>
+      </equation*>
+
+      which proves that\ 
+
+      <\equation*>
+        1\<in\>S
+      </equation*>
+
+      <item*|<math|m\<in\>S<rsub|n>\<Rightarrow\>m+1\<in\>S<rsub|n>>>We have
+      for <math|\<frak-D\><rsup|n+<around*|(|m+1|)>><rsub|f>> and
+      <math|D<rsup|n+<around*|(|m+1|)>>f> that\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|\<frak-D\><rsup|n+<around*|(|m+1|)>><rsub|f>>|<cell|=>|<cell|\<frak-D\><rsup|<around*|(|n+m|)>+1><rsub|f>>>|<row|<cell|>|<cell|<below|=|<text|[definition:
+        <reference|diff higher order differential>]>>>|<cell|<around*|{|x\<in\>\<frak-D\><rsup|n+m><rsub|f>\|D<rsup|<around*|[|n+m|]>>f<text|
+        is Fréchet differentiable at >x|}>>>>>
+      </eqnarray*>
+
+      and <math|D<rsup|<around*|[|n+<around*|(|m+1|)>|]>>f=D<rsup|<around*|[|<around*|(|n+m|)>+1|]>>f><math|<below|=|<text|[definition:
+      <reference|diff higher order differential>]>>D<around*|(|D<rsup|<around*|[|n+m|]>>f|)>>.
+      Summarized we have\ 
+
+      <\equation>
+        <label|eq 16.113.11.1>\<frak-D\><rsup|n+<around*|(|m+1|)>><rsub|f>=<around*|{|x\<in\>\<frak-D\><rsup|<around*|[|n+m|]>><rsub|f>\|D<rsup|<around*|[|n+m|]>>f<text|
+        is Fréchet differentiable at >x|}>
+      </equation>
+
+      <\equation>
+        <label|eq 16.114.11.1>D<rsup|<around*|[|n+<around*|(|m+1|)>|]>>f=D<around*|(|D<rsup|<around*|[|n+m|]>>f|)>
+      </equation>
+
+      As <math|m\<in\>S> we have that
+
+      <\equation>
+        <label|eq 16.115.11.1>\<frak-D\><rsup|n+m><rsub|f>=<around*|{|x\<in\>\<frak-D\><rsup|n><rsub|f>\|D<rsup|<around*|[|n|]>>f<text|
+        is >m<text|-times differentiable at >x|}>
+      </equation>
+
+      <\equation>
+        <label|eq 16.116.11.1>D<rsup|<around*|[|n+m|]>>f=D<rsup|<around*|[|m|]>><around*|(|D<rsup|<around*|[|n|]>>f|)>
+      </equation>
+
+      Let <math|x\<in\>\<frak-D\><rsup|n+<around*|(|m+1|)>><rsub|f>> then by
+      [eq: <reference|eq 16.113.11.1>] we have that\ 
+
+      <\equation*>
+        x\<in\>\<frak-D\><rsup|<around*|[|n+m|]>><rsub|f><text| and
+        >D<rsup|<around*|[|n+m|]>>f<text| is Fréchet differentiable at >x
+      </equation*>
+
+      Using [eqs: <reference|eq 16.115.11.1>, <reference|eq 16.116.11.1>] on
+      the above we have that
+
+      <\equation*>
+        x\<in\>\<frak-D\><rsup|n><rsub|f><text| and
+        >D<rsup|<around*|[|m|]>><around*|(|D<rsup|<around*|[|n|]>>f|)><text|
+        is Fréchet differentiable at >x
+      </equation*>
+
+      Using \ [theorem: <reference|diff higher order differentiation (1)>] on
+      the above it follows that <math|D<rsup|<around*|[|n|]>>f<text| is
+      ><around*|(|m+1|)>>-times differentiable at <math|x> so that we have
+      that <math|x\<in\><around*|{|x\<ni\>\<frak-D\><rsup|<around*|[|n|]>><rsub|f>\|D<rsup|<around*|[|n|]>>f<text|
+      is ><around*|(|m+1|)><text|-times differentiable at >x|}>>. Hence we
+      have\ 
+
+      <\equation>
+        <label|eq 16.117.11.1>\<frak-D\><rsup|n+<around*|(|m+1|)>><rsub|f>\<subseteq\><around*|{|x\<in\>\<frak-D\><rsup|<around*|[|n|]>><rsub|f>\|D<rsup|<around*|[|n|]>>f<text|
+        is ><around*|(|m+1|)><text|-times differentiable at >x|}>
+      </equation>
+
+      For the opposite inclusion. Let <math|y\<in\><around*|{|x\<in\>\<frak-D\><rsup|<around*|[|n|]>><rsub|f>\|D<rsup|<around*|[|n|]>>f<text|
+      is ><around*|(|m+1|)><text|-times differentiable at >x|}>> then we have\ 
+
+      <\equation*>
+        y\<in\>\<frak-D\><rsup|<around*|[|n|]>><rsub|f><text| and
+        >D<rsup|<around*|[|n|]>>f<text| is ><around*|(|m+1|)><text|-times
+        differentiable at >y
+      </equation*>
+
+      Using [theorem: <reference|diff n-times and m-times differentiability>]
+      <math|>it follows that <math|D<rsup|<around*|[|n|]>>f> is
+      <math|m>-times differentiable at <math|y>, hence
+
+      <\equation>
+        <label|eq 16.118.11.1>y\<in\><around*|{|x\<in\>\<frak-D\><rsup|n><rsub|f>\|D<rsup|<around*|[|n|]>>f<text|
+        is >m<text|-times differentiable at >x|}><below|=|<text|[eq:
+        <reference|eq 16.115.11.1>]>>\<frak-D\><rsup|n+m><rsub|f>
+      </equation>
+
+      Further as <math|D<rsup|<around*|[|n|]>>f> is
+      <math|<around*|(|m+1|)>>-times differentiable at <math|y> if follows
+      from [theorem: <reference|diff higher order differentiation (1)>] that
+      <math|D<rsup|<around*|[|m|]>><around*|(|D<rsup|<around*|[|n|]>>f|)>> is
+      Fréchet differentiable at <math|y>. Hence we have that
+
+      <\equation*>
+        y<below|\<in\>|<text|[eq: <reference|eq
+        16.118.11.1>]>><around*|{|x\<in\>\<frak-D\><rsup|<around*|[|n+m|]>><rsub|f>\|D<rsup|<around*|[|m|]>><around*|(|D<rsup|<around*|[|n|]>>f|)><text|
+        is Fréchet differentiable at >x|}><below|=|<text|[eq: <reference|eq
+        16.113.11.1>]>>\<frak-D\><rsup|n+<around*|(|m+1|)>><rsub|f>
+      </equation*>
+
+      which prove that\ 
+
+      <\equation*>
+        <around*|{|x\<in\>\<frak-D\><rsup|<around*|[|n|]>><rsub|f>\|D<rsup|<around*|[|n|]>>f<text|
+        is ><around*|(|m+1|)><text|-times differentiable at
+        >x|}>\<subseteq\>\<frak-D\><rsup|n+<around*|(|m+1|)>><rsub|f>
+      </equation*>
+
+      Combining the above with [eq: <reference|eq 16.117.11.1>] results in\ 
+
+      <\equation>
+        <label|eq 16.119\<point\>11.1>\<frak-D\><rsup|n+<around*|(|m+1|)>><rsub|f>=<around*|{|x\<in\>\<frak-D\><rsup|<around*|[|n|]>><rsub|f>\|D<rsup|<around*|[|n|]>>f<text|
+        is ><around*|(|m+1|)><text|-times differentiable at >x|}>
+      </equation>
+
+      Further we have
+
+      <\equation*>
+        D<rsup|<around*|[|n+<around*|(|m+1|)>|]>>f<below|=|<text|[eq:
+        <reference|eq 16.114.11.1>]>>D<around*|[|D<rsup|<around*|[|n+m|]>>f|]><below|=|<text|[eq:
+        <reference|eq 16.116.11.1>]>>D<around*|(|D<rsup|<around*|[|m|]>><around*|(|D<rsup|<around*|[|n|]>>f|)>|)><below|=|<text|[definition:
+        <reference|diff higher order differential>]>>D<rsup|<around*|[|m+1|]>><around*|(|D<rsup|<around*|[|n|]>>f|)>
+      </equation*>
+
+      so that\ 
+
+      <\equation*>
+        D<rsup|<around*|[|n+<around*|(|m+1|)>|]>>f=D<rsup|<around*|[|m+1|]>><around*|(|D<rsup|<around*|[|n|]>>f|)>
+      </equation*>
+
+      which together with [eq: <reference|eq 16.119\<point\>11.1>] proves
+      that\ 
+
+      <\equation*>
+        m+1\<in\>S
+      </equation*>
+    </description>
+  </proof>
+
+  \;
+
+  \;
 
   \;
 
@@ -9180,7 +9385,6 @@
     <associate|diff e-mapping|<tuple|16.59|?>>
     <associate|diff equivalent norms|<tuple|16.55|?>>
     <associate|diff higher order derivate and differential|<tuple|16.154|?>>
-    <associate|diff higher order derivate on a open set|<tuple|16.149|?>>
     <associate|diff higher order derivative at a point|<tuple|16.149|?>>
     <associate|diff higher order derivative at a point (1)|<tuple|16.151|?>>
     <associate|diff higher order derivative function|<tuple|16.147|?>>
@@ -9188,7 +9392,7 @@
     <associate|diff higher order derivative on a set|<tuple|16.150|?>>
     <associate|diff higher order differentiability
     condition|<tuple|16.137|?>>
-    <associate|diff higher order differential|<tuple|16.123|?>>
+    <associate|diff higher order differential|<tuple|16.156|?>>
     <associate|diff higher order differential domains|<tuple|16.127|?>>
     <associate|diff higher order differentiation|<tuple|16.128|?>>
     <associate|diff higher order differentiation (1)|<tuple|16.134|?>>
@@ -9241,7 +9445,18 @@
     <associate|eq 16.11.5|<tuple|16.11|?>>
     <associate|eq 16.110.10|<tuple|16.112|?>>
     <associate|eq 16.110.11|<tuple|16.111|?>>
+    <associate|eq 16.113.11|<tuple|16.120|?>>
+    <associate|eq 16.113.11.1|<tuple|16.113|?>>
+    <associate|eq 16.114.11|<tuple|16.121|?>>
+    <associate|eq 16.114.11.1|<tuple|16.114|?>>
+    <associate|eq 16.115.11|<tuple|16.122|?>>
+    <associate|eq 16.115.11.1|<tuple|16.115|?>>
+    <associate|eq 16.116.11|<tuple|16.123|?>>
+    <associate|eq 16.116.11.1|<tuple|16.116|?>>
     <associate|eq 16.116.313|<tuple|16.59|?>>
+    <associate|eq 16.117.11.1|<tuple|16.117|?>>
+    <associate|eq 16.118.11.1|<tuple|16.118|?>>
+    <associate|eq 16.119\<point\>11.1|<tuple|16.119|?>>
     <associate|eq 16.12.178|<tuple|16.27|?>>
     <associate|eq 16.12.5|<tuple|16.12|?>>
     <associate|eq 16.121.6|<tuple|16.67|?>>
@@ -9456,6 +9671,11 @@
       <with|par-left|<quote|1tab>|16.2.3<space|2spc>Higher order derivatives
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-31>>
+
+      <with|par-left|<quote|1tab>|16.2.4<space|2spc>Properties of higher
+      order differentials and derivatives.
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-32>>
     </associate>
   </collection>
 </auxiliary>
