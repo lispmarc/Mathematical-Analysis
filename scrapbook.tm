@@ -15505,6 +15505,211 @@
 
   \;
 
+  <\theorem>
+    <label|diff higher order differentiation is local>Let
+    <math|n\<in\>\<bbb-N\>>, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    be normed spaces, <math|A\<subseteq\>X>, <math|B\<subseteq\>A>,
+    <math|x\<in\>B<rsup|\<circ\>>> and <math|f:A\<rightarrow\>Y> a function
+    then we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|>|<cell|f<text| is >n<text|-times
+      differentiable at >x>|<cell|>>|<row|<cell|>|<cell|\<Updownarrow\>>|<cell|>>|<row|<cell|>|<cell|f<rsub|\|B><text|
+      is >n<text|-times differentiable at >x>|<cell|>>>>
+    </eqnarray*>
+
+    Further we have in either cases that\ 
+
+    <\equation*>
+      D<rsup|<around*|[|n|]>><rsub|x>f=D<rsup|<around*|[|n|]>><rsub|x>f<rsub|\|B>
+    </equation*>
+
+    <\note>
+      If <math|B> is a open set in the topology
+      <math|\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>>> of <math|X>
+      then we have that <math|B<below|=|<text|[theorem: <reference|topology
+      open set and interior>]>>B<rsup|\<circ\>>> so that in this case we can
+      replace <math|x\<in\>B<rsup|\<circ\>>> by <math|x\<in\>B>.
+    </note>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>We use induction to prove this, so let\ 
+
+      <\equation*>
+        S=<around*|{|n\<in\>\<bbb-N\>\|If \ f<text| is > n<text|-times
+        differentiable at >x\<in\>A<text| then we have that
+        >f<rsub|\|B><text| is >n<text|-times differentiable at >x<text| and
+        >D<rsup|<around*|[|n|\<nobracket\>>><rsub|x>f=D<rsup|<around*|[|n|]>><rsub|x>f<rsub|\|B>|}>
+      </equation*>
+
+      then we have
+
+      <\description>
+        <item*|<math|1\<in\>S>>Then using [theorem: <reference|diff higher
+        order differentiation (1)>] we have that <math|f> is Fréchet
+        differentiable at <math|x\<in\>B<rsup|\<circ\>>>. Applying then
+        [theorem: <reference|diff differentiability is a local property>] it
+        follows that <math|f<rsub|\|B>> is Fréchet differentiable at <math|x>
+        with <math|D<rsub|x>f=D<rsub|x>f<rsub|\|B>>. Finally using [theorem:
+        <reference|diff higher order differentiation (1)>] again we have that
+        <math|f<rsub|\|B>> is <math|1>-times differentiable with
+        <math|D<rsub|x><rsup|<around*|[|1|]>>f=D<rsup|<around*|[|1|]>><rsub|x>f<rsub|\|B>>
+        which proves that <math|1\<in\>S>.
+
+        <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>As <math|f> is
+        <math|<around*|(|n+1|)>>-times differentiable at <math|x> it follows
+        from [theorem: <reference|diff higher order differentiation (1)>]
+        that
+
+        <\equation*>
+          D<rsup|<around*|[|n|]>>f<text| is Fréchet differentiable at
+          <math|x> with >D<rsup|<around*|[|n+1|]>><rsub|x>f=D<rsub|x><around*|(|D<rsup|<around*|[|n|]>>f|)>
+        </equation*>
+
+        Let <math|y\<in\>\<frak-D\><rsup|n><rsub|f>> then <math|f> is
+        <math|n>-times differentiable at <math|x> [see definition:
+        <reference|diff higher order differentiation>], hence as
+        <math|n\<in\>S> it follows that <math|f<rsub|\|B>> is <math|n>-times
+        differentiable at <math|y> or using [definition: <reference|diff
+        higher order differentiation>] <math|y\<in\>\<frak-D\><rsup|n><rsub|f<rsub|\|B>>>
+        with <math|D<rsup|<around*|[|n|]>><rsub|y>f=D<rsup|<around*|[|n|]>><rsub|y>f<rsub|\|B><below|\<Rightarrow\>|<text|[definition:
+        <reference|diff higher order differentiation>]
+        >>D<rsup|<around*|[|n|]>>f<around*|(|y|)>=D<rsup|<around*|[|n|]>><rsub|f<rsub|\|B>><around*|(|y|)>>.
+        Hence we have that\ 
+
+        <\equation>
+          <label|eq 16.83.12>\<frak-D\><rsup|n><rsub|f>\<subseteq\>\<frak-D\><rsup|n><rsub|f<rsub|\|B>><text|
+          with >D<rsup|<around*|[|n|]>><rsub|>f=<around*|(|D<rsup|<around*|[|n|]>>f<rsub|\|B>|)><rsub|\|\<frak-D\><rsup|n><rsub|f>>
+        </equation>
+
+        As <math|D<rsup|<around*|[|n|]>>f> is Fréchet differentiable at
+        <math|x> it follows from the above that\ 
+
+        <\equation*>
+          <around*|(|D<rsup|<around*|[|n|]>>f<rsub|\|B>|)><rsub|\|\<frak-D\><rsup|n><rsub|f>><text|
+          is Fréchet differentiable at >x
+        </equation*>
+
+        Using [theorem: <reference|diff differentiability is a local
+        property>] it follows then that\ 
+
+        <\equation*>
+          D<rsup|<around*|[|n|]>>f<rsub|\|B><text| is Fréchet differentiable
+          at >x
+        </equation*>
+
+        with
+
+        <\equation*>
+          D<rsub|x><around*|(|D<rsup|<around*|[|n|]>>f<rsub|\|B>|)>=D<rsub|x><around*|(|<around*|(|D<rsup|<around*|[|n|]>>f<rsub|\|B>|)><rsub|\|\<frak-D\><rsup|n><rsub|f>>|)><below|=|<text|[eq:
+          <reference|eq 16.83.12>]>>D<rsub|x><around*|(|D<rsup|<around*|[|n|]>>f|)>
+        </equation*>
+
+        Hence using [theorem: <reference|diff higher order differentiation
+        (1)>] we have that\ 
+
+        <\equation*>
+          f<rsub|\|B><text| is ><around*|(|n+1|)><text|-times differentiable
+          with >D<rsup|<around*|[|n+1|]>><rsub|x>f=D<rsup|<around*|[|n+1|]>><rsub|x>f<rsub|\|B>
+        </equation*>
+
+        <\equation*>
+          n+1\<in\>S
+        </equation*>
+      </description>
+
+      <item*|<math|\<Leftarrow\>>>We use induction to prove this. so let\ 
+
+      <\equation*>
+        S=<around*|{|n\<in\>\<bbb-N\>\|<text|If>f<rsub|\|B><text| is
+        >n<text|-times differentiable at >x<text| then f is >n<text|-times
+        diffrentiable at >x<text| and >D<rsub|x><rsup|<around*|[|n|]>>f=D<rsup|<around*|[|n|]>><rsub|x>f<rsub|\|B>|}>
+      </equation*>
+
+      then we have\ 
+
+      <\description>
+        <item*|<math|1\<in\>S>>Then using [theorem: <reference|diff higher
+        order differentiation (1)>] we have that <math|f<rsub|\|B>> is
+        Fréchet differentiable at <math|x>. Applying then [theorem:
+        <reference|diff differentiability is a local property>] it follows
+        that <math|f> is Fréchet differentiable at <math|x> with
+        <math|D<rsub|x>f=D<rsub|x>f<rsub|\|B>>. Finally using [theorem:
+        <reference|diff higher order differentiation (1)>] again we have that
+        <math|f> is <math|1>-times differentiable with
+        <math|D<rsub|x><rsup|<around*|[|1|]>>f=D<rsup|<around*|[|1|]>><rsub|x>f<rsub|\|B>>
+        which proves that <math|1\<in\>S>.
+
+        <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>As <math|f<rsub|\|B>>
+        is <math|<around*|(|n+1|)>>-times differentiable at <math|x> it
+        follows from [theorem: <reference|diff higher order differentiation
+        (1)>] that
+
+        <\equation*>
+          D<rsup|<around*|[|n|]>>f<rsub|\|B><text| is Fréchet differentiable
+          at <math|x> with >D<rsup|<around*|[|n+1|]>><rsub|x>f<rsub|\|B>=D<rsub|x><around*|(|D<rsup|<around*|[|n|]>>f<rsub|\|B>|)>
+        </equation*>
+
+        Let <math|y\<in\>\<frak-D\><rsup|n><rsub|f<rsub|\|B>>> then by
+        [definition: <reference|diff higher order differentiation>]
+        <math|f<rsub|\|B>> is <math|n>-times differentiable at <math|x>.
+        Hence as <math|n\<in\>S> it follows that <math|f<text| is >n>-times
+        differentiable at <math|x> or using [definition: <reference|diff
+        higher order differentiation>] that
+        <math|x\<in\>\<frak-D\><rsup|n><rsub|f>> and
+        <math|D<rsup|<around*|[|n|]>><rsub|x>f=D<rsup|<around*|[|n|]>><rsub|x>f<rsub|\|B><below|\<Rightarrow\>|<text|[definition:
+        <reference|diff higher order differentiation>]>>D<rsup|<around*|[|n|]>>f<around*|(|x|)>=D<rsup|<around*|[|n|]>>f<rsub|\|B><around*|(|x|)>>.
+        Hence we have that\ 
+
+        <\equation>
+          <label|eq 16.84.12>\<frak-D\><rsup|n><rsub|f<rsub|\|B>>\<subseteq\>\<frak-D\><rsup|n><rsub|f><text|
+          and >D<rsup|<around*|[|n|]>>f<rsub|\|B>=<around*|(|D<rsup|<around*|[|n|]>>f|)><rsub|\|\<frak-D\><rsup|n><rsub|f<rsub|\|B>>>
+        </equation>
+
+        As <math|D<rsup|<around*|[|n|]>>f<rsub|\|B>> is Fréchet
+        differentiable at <math|x> it follows from the above that\ 
+
+        <\equation*>
+          <around*|(|D<rsup|<around*|[|n|]>>f|)><rsub|\|\<frak-D\><rsup|n><rsub|f<rsub|\|B>>><text|
+          is is Fréchet differentiable at >x
+        </equation*>
+
+        Using [theorem: <reference|diff differentiability is a local
+        property>] it follows then that\ 
+
+        <\equation*>
+          D<rsup|<around*|[|n|]>>f<text| is Fréchet differentiable at >x
+        </equation*>
+
+        and\ 
+
+        <\equation*>
+          D<rsub|x><around*|(|D<rsup|<around*|[|n|]>>f|)>=D<rsub|x><around*|(|<around*|(|D<rsup|<around*|[|n|]>>f|)><rsub|\|\<frak-D\><rsup|n><rsub|f<rsub|\|B>>>|)><below|=|<text|[eq:
+          <reference|eq 16.84.12>]>>D<rsub|x><around*|(|D<rsup|<around*|[|n|]>>f<rsub|\|B>|)>
+        </equation*>
+
+        Hence using [theorem: <reference|diff higher order differentiation
+        (1)>] we have that\ 
+
+        <\equation*>
+          f<text| is ><around*|(|n+1|)><text|-times differentiable at
+          >z<text| and >D<rsup|<around*|[|n+1|]>><rsub|x>f=D<rsup|<around*|[|n+1|]>><rsub|x>f<rsub|\|B>
+        </equation*>
+
+        which proves that\ 
+
+        <\equation*>
+          n+1\<in\>S
+        </equation*>
+      </description>
+    </description>
+  </proof>
+
   \;
 
   \;
@@ -15569,6 +15774,7 @@
     <associate|diff higher order differentiation and vector
     functions|<tuple|97|?>>
     <associate|diff higher order differentiation classes|<tuple|98|111>>
+    <associate|diff higher order differentiation is local|<tuple|120|?>>
     <associate|diff mean value theorem (3)|<tuple|109|119>>
     <associate|diff mean value theorem (5)|<tuple|36|45>>
     <associate|diff mean value theorem (6)|<tuple|38|50>>
@@ -15872,7 +16078,9 @@
     <associate|eq 16.80.5|<tuple|526|?>>
     <associate|eq 16.81.5|<tuple|527|?>>
     <associate|eq 16.82.5|<tuple|528|?>>
+    <associate|eq 16.83.12|<tuple|530|?>>
     <associate|eq 16.83.5.1|<tuple|529|?>>
+    <associate|eq 16.84.12|<tuple|531|?>>
     <associate|eq 16.85.181|<tuple|411|?>>
     <associate|eq 16.86.181|<tuple|413|?>>
     <associate|eq 16.87.181|<tuple|414|?>>
