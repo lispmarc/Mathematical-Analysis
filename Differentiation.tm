@@ -1102,18 +1102,18 @@
 
   <\example>
     <label|diff scalar product function has a derivate>Let
-    <math|<around*|\<langle\>|\<bbb-K\>,\<\|\|\>|\<rangle\>>> the \ normed
-    space of real [or complex] numbers and <math|A\<subset\>X> either a open
-    set or of the form <math|<around*|[|a,\<infty\>|[>>,
+    <math|<around*|\<langle\>|\<bbb-K\>,\<\|\|\>|\<rangle\>>> be the \ normed
+    space of real [or complex] numbers, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
+    be a normed space and <math|A\<subseteq\>\<bbb-R\>> either a open set or
+    of the form <math|<around*|[|a,\<infty\>|[>>,
     <math|<around*|]|a,\<infty\>|[>>, <math|<around*|]|-\<infty\>,a|]>>,
     <math|<around*|]|-\<infty\>,a|[>>, <math|<around*|[|a,b|]>>,
     <math|<around*|[|a,b|[>>, <math|<around*|]|a,b|]>>,
-    <math|<around*|]|a,b|[>>. <math|A\<subseteq\>K>. Let
+    <math|<around*|]|a,b|[>> if <math|\<bbb-K\>=\<bbb-R\>>. Let
     <rigid|<math|x,y\<in\>X>> and define\ 
 
     <\equation*>
-      f:A\<rightarrow\>\<bbb-K\><text| defined by
-      >f<around*|(|t|)>=t\<cdot\>x+y
+      f:A\<rightarrow\>X<text| defined by >f<around*|(|t|)>=t\<cdot\>x+y
     </equation*>
 
     then we have\ 
@@ -8201,7 +8201,7 @@
     set in <math|X> and <math|f:A\<rightarrow\>Y> a function then <math|f> is
     of class \ <math|C<rsup|\<infty\>>> on <math|U> iff
     <math|\<forall\>n\<in\>\<bbb-N\><rsub|0>> <math|f> is of class
-    <math|C<rsup|n>>.
+    <math|C<rsup|n>> with <math|f<rprime|'>=C>
   </definition>
 
   In the special case where the open set is the domain of the function we say
@@ -10648,7 +10648,7 @@
 
     we have that <math|\<varphi\>> is <math|\<infty\>>-times differentiable
     on <math|U> [hence by [theorem: <reference|diff C-infinity condition>]
-    <math|L> is of class <math|C<rsup|\<infty\>>>] and
+    <math|\<varphi\>> is of class <math|C<rsup|\<infty\>>>] and
     <math|\<forall\>t\<in\>U> we have <math|D<rsup|<around*|[|1|]>><rsub|t>\<varphi\>=D<rsub|t>\<varphi\>=L>
     where <math|L\<in\>L<around*|(|\<bbb-K\>,X|)>> is defined by
     <math|L<around*|(|r|)>=r\<cdot\>x>. So by [theorem: <reference|diff
@@ -11020,7 +11020,7 @@
     </equation*>
   </proof>
 
-  <subsection|The chain rule for higher order derivatives>
+  <subsection|The chain rule for higher order differentials an derivatives>
 
   The purpose of this section is to prove that the composition of
   <math|n>-times differentiable functions is again <math|n>-times
@@ -11080,8 +11080,6 @@
       <around*|(|L\<circ\>\<ast\>|)>\<in\>L<around*|(|L<around*|(|X,Y|)>,L<around*|(|X,Z|)>|)>
     </equation*>
   </proof>
-
-  TODO check the next proofs
 
   We prove now a limited version of the chain rule for higher order
   differentiation.
@@ -13820,18 +13818,6 @@
       F<rprime|'>:<around*|[|a,b|]>\<rightarrow\>X<text| is defined by
       >F<rprime|'><around*|(|x|)>=F<rprime|'><rsub|x>
     </equation*>
-
-    <\note>
-      Let <math|x\<in\><around*|[|a,b|]>> then by [theorem:
-      <reference|topology every element of a generalized interval is a limit
-      point>] <math|x> is a limit point of <math|<around*|[|a,b|]>>, hence
-      <math|x\<in\><around*|[|a,b|]><rprime|'>>. As
-      <math|<around*|[|a,b|]>\<subseteq\>A> we have by [theorem:
-      <reference|topology limit points and subsets>] that
-      <math|<around*|[|a,b|]><rprime|'>\<subseteq\>A<rprime|'>> so that
-      <math|x> is a limit point of <math|A> which is needed for the
-      derivatieve at <math|x> to even exist.
-    </note>
   </theorem>
 
   <\proof>
@@ -13925,6 +13911,610 @@
       F<rprime|'>=f
     </equation*>
   </proof>
+
+  We use now the above theorem to prove the Fundamental Theorem of Calculus.
+
+  <\theorem>
+    <label|diff fundamental theorem of calculus (2)><dueto|Fundamental
+    Theorem of Calculus (II)>Let <math|<around*|\<langle\>|\<bbb-R\>,\<\|\|\>|\<rangle\>>>
+    be the normed space of real numbers, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
+    be a <with|font-series|bold|Banach space>, <math|a,b\<in\>\<bbb-R\>> with
+    <math|a\<less\>b> and <math|f:<around*|[|a,b|]>\<rightarrow\>X> a
+    function such that <math|f> has derivatives on <math|<around*|[|a,b|]>>
+    and <with|font-series|bold|<math|f<rprime|'>> is continuous> then\ 
+
+    <\equation*>
+      f<around*|(|b|)>-f<around*|(|a|)>=<big|int><rsub|a><rsup|b>f<rprime|'>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    Given that <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
+    is a Banach space, <math|f> has a derivative on <math|<around*|[|a,b|]>>
+    and <math|f<rprime|'>:<around*|[|a,b|]>\<rightarrow\>X> is continuous, it
+    follows from [theorem: <reference|riemann integral over [a,b] to [a,c]
+    [c,b]>] <math|>that <math|\<forall\>x\<in\><around*|[|a,b|]>>
+    <math|<big|int><rsub|a><rsup|x>f<rprime|'>> is well defined. This allows
+    us to define\ 
+
+    <\equation*>
+      g:<around*|[|a,b|]>\<rightarrow\>X<text| by
+      >g<around*|(|x|)>=f<around*|(|a|)>+<big|int><rsub|a><rsup|x>f<rprime|'>
+    </equation*>
+
+    So if we define\ 
+
+    <\equation*>
+      F:<around*|[|a,b|]>\<rightarrow\>X<text| by
+      >F<around*|(|x|)>=<big|int><rsub|a><rsup|x>f<rprime|'>
+    </equation*>
+
+    then we have that\ 
+
+    <\equation*>
+      g=C<rsub|f<around*|(|a|)>>+F
+    </equation*>
+
+    Let <math|x\<in\><around*|[|a,b|]>>. By [example: <reference|diff
+    derivative of constant>] <math|C<rsub|f<around*|(|a|)>>> has derivates on
+    <math|<around*|[|a,b|]>> with <math|<around*|(|C<rsub|f<around*|(|a|)>>|)><rprime|'>=C<rsub|0>>
+    and using [theorem: <reference|diff fundamental theorem of calculus (1)>]
+    <math|F> has derivatives on <math|<around*|[|a,b|]>> with
+    <math|F<rprime|'>=f<rprime|'>>. Using then the linearity of derivation
+    [see theorem: <reference|diff (f+g)'=f'+g'>] it follows that <math|g> has
+    derivatives on <math|<around*|[|a,b|]>> with\ 
+
+    <\equation>
+      <label|eq 16.179.200>g<rprime|'>=<around*|(|C<rsub|f<around*|(|a|)>>|)><rprime|'>+F<rprime|'>=C<rsub|0>+f<rprime|'>=f<rprime|'>
+    </equation>
+
+    Note also that <math|g<around*|(|a|)>=C<rsub|f<around*|(|a|)>><around*|(|a|)>+F<around*|(|a|)>=f<around*|(|a|)>+<big|int><rsub|a><rsup|a>f<rprime|'>\<equallim\><rsub|<text|[definition:
+    <reference|riemann integral (1)>]>>f<around*|(|a|)>+0=f<around*|(|a|)>>
+    or\ 
+
+    <\equation>
+      <label|eq 16.180.200>f<around*|(|a|)>=g<around*|(|a|)>
+    </equation>
+
+    Define now the function <math|\<varphi\>> by\ 
+
+    <\equation*>
+      \<varphi\>:<around*|[|a,b|]>\<rightarrow\>X<text| where
+      >\<varphi\><around*|(|x|)>=<around*|\<\|\|\>|f<around*|(|x|)>-g<around*|(|x|)>|\<\|\|\>>
+    </equation*>
+
+    Let <math|x\<in\><around*|[|a,b|]>> then as <math|f> and <math|g> has a
+    derivative at <math|x> we have that <math|f-g> has a derivative at
+    <math|x> [see theorem: <reference|diff (f+g)'=f'+g'>] so that by
+    [theorem: <reference|diff derivatives and continuity>] <math|f-g> is
+    continuous at <math|x>. Hence <math|f-g:<around*|[|a,b|]>\<rightarrow\>X>
+    is a continuous function. Further by [theorem: <reference|continuity norm
+    is uniform continuous>] <math|<around*|\<\|\|\>||\<\|\|\>>:X\<rightarrow\>\<bbb-R\><text|>>
+    defined by <math|<around*|\<\|\|\>||\<\|\|\>><around*|(|x|)>=<around*|\<\|\|\>||\<\|\|\>>>
+    is a continuous function. Hence, using <reference|continuity composition
+    (1)>]\ 
+
+    <\equation*>
+      <around*|\<\|\|\>||\<\|\|\>>\<circ\><around*|(|f-g|)>:<around*|[|a,b|]>\<rightarrow\>\<bbb-R\><text|
+      is a continuous function>
+    </equation*>
+
+    As <math|\<forall\>x\<in\><around*|[|a,b|]>>
+    <math|<around*|(|<around*|\<\|\|\>||\<\|\|\>>\<circ\><around*|(|f-g|)>|)><around*|(|x|)>=<around*|\<\|\|\>||\<\|\|\>><around*|(|<around*|(|f-g|)><around*|(|x|)>|)>=<around*|\<\|\|\>|f<around*|(|x|)>-g<around*|(|x|)>|\<\|\|\>>=\<varphi\><around*|(|x|)>>
+    it follows that <math|<rigid|\<varphi\>=<around*|\<\|\|\>||\<\|\|\>>\<circ\><around*|(|f-g|)>>>,
+    which proves that
+
+    <\equation*>
+      \<varphi\>\<in\>\<cal-C\><around*|(|<around*|[|a,b|]>,\<bbb-R\>|)>
+    </equation*>
+
+    Let <math|x\<in\><around*|]|a,b|[>> then as <math|<around*|]|a,b|[>> is
+    open there exist a <math|\<delta\>\<in\>\<bbb-R\><rsup|+>> such that
+    <math|B<rsub|<around*|\|||\|>><around*|(|x,\<delta\>|)>\<subseteq\><around*|]|a,b|[>>.
+    If <math|0\<less\><around*|\||h|\|>\<less\>\<delta\>> then
+    <math|<around*|\||x+h-x|\|>=<around*|\||h|\|>\<less\>\<delta\>> so that
+    <math|x+h\<in\>B<rsub|<around*|\|||\|>><around*|(|x,\<delta\>|)>\<subseteq\><around*|]|a,b|[>>.
+    Then we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|\||<frac|\<varphi\><around*|(|x+h|)>-\<varphi\><around*|(|x|)>|h>|\|>>|<cell|=>|<cell|<around*|\||<frac|<around*|\<\|\|\>|f<around*|(|x+h|)>-g<around*|(|x+h|)>|\<\|\|\>>-<around*|\<\|\|\>|f<around*|(|x|)>-g<around*|(|x|)>|\<\|\|\>>|h>|\|>>>|<row|<cell|>|<cell|=>|<cell|<frac|<around*|\||<around*|\<\|\|\>|f<around*|(|x+h|)>-g<around*|(|x+h|)>|\<\|\|\>>-<around*|\<\|\|\>|f<around*|(|x|)>-g<around*|(|x|)>|\<\|\|\>>|\|>|<around*|\||h|\|>>>>|<row|<cell|>|<cell|<below|\<leqslant\>|<text|[theorem:
+      <reference|normed absolute value norm
+      differences>]>>>|<cell|<frac|<around*|\<\|\|\>|f<around*|(|x+h|)>-g<around*|(|x+h|)>-<around*|(|f<around*|(|x|)>-g<around*|(|x|)>|)>|\<\|\|\>>|<around*|\||h|\|>>>>|<row|<cell|>|<cell|=>|<cell|<frac|<around*|\<\|\|\>|f<around*|(|x+h|)>-g<around*|(|x+h|)>+<around*|(|g<around*|(|x|)>-f<around*|(|x|)>|)>|\<\|\|\>>|<around*|\||h|\|>>>>|<row|<cell|>|<cell|\<equallim\><rsub|
+      <around*|[|eq: <with|mode|text|<reference|eq
+      16.179.200>>|]>\<Rightarrow\>f<rprime|'>=g<rprime|'>>>|<cell|<around*|\<\|\|\>|<frac|f<around*|(|x+h|)>-f<around*|(|x|)>|h>-f<rprime|'><around*|(|x|)>-<around*|(|<frac|g<around*|(|x+h|)>-g<around*|(|x|)>|h>-g<rprime|'><around*|(|x|)>|)>|\<\|\|\>>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<around*|\<\|\|\>|<frac|f<around*|(|x+h|)>-f<around*|(|x|)>|h>-f<rprime|'><around*|(|x|)>|\<\|\|\>>+<around*|\<\|\|\>|<frac|g<around*|(|x+h|)>-g<around*|(|x|)>|h>-g<rprime|'><around*|(|x|)>|\<\|\|\>>>>>>
+    </eqnarray*>
+
+    Summarized, if <math|<text|>0\<less\><around*|\||h|\|>\<less\>\<delta\><text|
+    then >>
+
+    <\equation>
+      <label|eq 16.181.200><around*|\||<frac|\<varphi\><around*|(|x+h|)>-\<varphi\><around*|(|x|)>|h>|\|>\<leqslant\><around*|\<\|\|\>|<frac|f<around*|(|x+h|)>-f<around*|(|x|)>|h>-f<rprime|'><around*|(|x|)>|\<\|\|\>>+<around*|\<\|\|\>|<frac|g<around*|(|x+h|)>-g<around*|(|x|)>|h>-g<rprime|'><around*|(|x|)>|\<\|\|\>>
+    </equation>
+
+    Let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>. As <math|f> has
+    derivatives on <math|<around*|[|a,b|]>> <math|f> has a derivative at
+    <math|x>. Hence there exist a <math|\<delta\><rsub|1>\<in\>\<bbb-R\><rsup|+>>
+    such that if <math|0\<less\><around*|\||h|\|>\<less\>\<delta\><rsub|1>>
+    and <math|h\<in\><around*|]|a,b|[><rsub|x>\<Rightarrow\>x,x+h\<in\><around*|]|a,b|[>>
+    that
+
+    <\equation*>
+      <around*|\<\|\|\>|<frac|f<around*|(|x+h|)>-f<around*|(|x|)>|h>-f<rprime|'><around*|(|x|)>|\<\|\|\>>\<less\><frac|\<varepsilon\>|2>
+    </equation*>
+
+    Likewise as <math|g> has derivatives on <math|<around*|[|a,b|]>> we have
+    by definition that <math|g> has a derivative at <math|x>. Hence there
+    exist a <math|\<delta\><rsub|2>\<in\>\<bbb-R\><rsup|+>> such that if
+    <math|0\<less\><around*|\||h|\|>\<less\>\<delta\><rsub|2>> and
+    <math|h\<in\><around*|]|a,b|[><rsub|x>\<Rightarrow\>x,x+h\<in\><around*|]|a,b|[>>
+    that
+
+    <\equation*>
+      <around*|\<\|\|\>|<frac|g<around*|(|x+h|)>-g<around*|(|x|)>|h>-g<rprime|'><around*|(|x|)>|\<\|\|\>>\<less\><frac|\<varepsilon\>|2>
+    </equation*>
+
+    So if <math|0\<less\><around*|\||h|\|>\<less\>min<around*|(|\<delta\>,\<delta\><rsub|1>,\<delta\><rsub|2>|)>>
+    and <math|h\<in\><around*|]|a,b|[><rsub|x>> we have using the above and
+    [eq: <reference|eq 16.181.200>] that\ 
+
+    <\equation*>
+      <around*|\||<frac|\<varphi\><around*|(|x+h|)>-\<varphi\><around*|(|x|)>|h>-0|\|>=<around*|\||<frac|\<varphi\><around*|(|x+h|)>-\<varphi\><around*|(|x|)>|h>|\|>\<less\><frac|\<varepsilon\>|2>+<frac|\<varepsilon\>|2>=\<varepsilon\>
+    </equation*>
+
+    Hence\ 
+
+    <\equation*>
+      \<forall\>x\<in\><around*|]|a,b|[><text| >\<varphi\><text| has a
+      derivative at >x<text| and <math|>>\<varphi\><rprime|'><rsub|x>=0
+    </equation*>
+
+    Let <math|x\<in\><around*|[|a,b|]>> then
+    <math|<around*|[|a,x|]>\<subseteq\><around*|[|a,b|]>> so that we can use
+    Lagrange's theorem [see theorem: <reference|diff Lagrange theorem (1)>]
+    to find a <math|\<zeta\>\<in\><around*|]|a,b|[>> with\ 
+
+    <\equation*>
+      \<varphi\><around*|(|x|)>-\<varphi\><around*|(|a|)>=\<varphi\><rprime|'><rsub|\<zeta\>>\<cdot\><around*|(|x-y|)>=0\<cdot\><around*|(|x-y|)>=0
+    </equation*>
+
+    This prove that <math|\<forall\>x\<in\><around*|[|a,b|]>>
+    <math|\<varphi\><around*|(|x|)>=\<varphi\><around*|(|a|)>=<around*|\<\|\|\>|f<around*|(|a|)>-g<around*|(|a|)>|\<\|\|\>>\<equallim\><rsub|<text|[eq:
+    <reference|eq 16.180.200>]>>0>. Hence
+    <math|\<forall\>x\<in\><around*|[|a,b|]>> that\ 
+
+    <\equation*>
+      <around*|\<\|\|\>|f<around*|(|x|)>-g<around*|(|x|)>|\<\|\|\>>=\<varphi\><around*|(|x|)>=0
+    </equation*>
+
+    proving that <math|f<around*|(|x|)>=g<around*|(|x|)>> so that
+    <math|f<around*|(|b|)>=g<around*|(|b|)>=f<around*|(|a|)>+<big|int><rsub|a><rsup|b>f<rprime|'>>.
+    Hence\ 
+
+    <\equation*>
+      f<around*|(|b|)>-f<around*|(|a|)>=<big|int><rsub|a><rsup|b>f<rprime|'>
+    </equation*>
+  </proof>
+
+  <\theorem>
+    <label|diff integration by part><dueto|Integration by Parts>Let
+    <math|<around*|\<langle\>|\<bbb-R\>,\<\|\|\>|\<rangle\>>> be the normed
+    space of real numbers, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
+    be a Banach space, <math|a,b\<in\>\<bbb-R\>> with <math|a\<less\>b> and
+    <math|f:<around*|[|a,b|]>\<rightarrow\>\<bbb-R\>>,
+    <math|g:<around*|[|a,b|]>\<rightarrow\>X> functions such that:\ 
+
+    <\enumerate>
+      <item><math|f<text| has derivatives on <math|<around*|[|a,b|]>>>>.
+
+      <item><math|f<rprime|'>:<around*|[|a,b|]>\<rightarrow\>\<bbb-R\><text|
+      defined by >f<rprime|'><around*|(|x|)>=f<rprime|'><rsub|x>> is
+      continuous.
+
+      <item><math|g<text| has derivatives on <math|<around*|[|a,b|]>>>>.
+
+      <item><math|g<rprime|'>:<around*|[|a,b|]>\<rightarrow\>X<text| defined
+      by >f<rprime|'><around*|(|x|)>=f<rprime|'><rsub|x>> is continuous.
+    </enumerate>
+
+    then we have that <math|f<rprime|'>,g<rprime|'>>,
+    <math|f\<cdot\>g<rprime|'>> and <math|f<rprime|'>\<cdot\>g> are Riemann
+    integrable and\ 
+
+    <\equation*>
+      <big|int><rsub|a><rsup|b><around*|(|f<rprime|'>\<cdot\>g|)>=f<around*|(|b|)>\<cdot\>g<around*|(|b|)>-f<around*|(|a|)>\<cdot\>g<around*|(|a|)>-<big|int><rsub|a><rsup|b><around*|(|f\<cdot\>g<rprime|'>|)>
+    </equation*>
+
+    <\equation*>
+      <big|int><rsub|a><rsup|b><around*|(|f\<cdot\>g<rprime|'>|)>=f<around*|(|b|)>\<cdot\>g<around*|(|b|)>-f<around*|(|a|)>\<cdot\>g<around*|(|a|)>-<big|int><rsub|a><rsup|b><around*|(|f<rprime|'>\<cdot\>g|)>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    As <math|f> has derivatives on <math|<around*|[|a,b|]>> it follows from
+    [theorem: <reference|diff derivatives and continuity>] it follows that
+    <math|f> is continuous, likewise <math|g> is continuous. Hence using
+    [theorem: <reference|continuity product of continuous functions>] it
+    follows that\ 
+
+    <\equation>
+      <label|eq 16.255.312>f\<cdot\>g<rprime|'><text|,
+      >f<rprime|'>\<cdot\>g<text| are continuous >
+    </equation>
+
+    Using then [theorem: <reference|riemann continuous functions are
+    integrable>] it follows that\ 
+
+    <\equation*>
+      f\<cdot\>g<rprime|'><text|, >f<rprime|'>\<cdot\>g<text| are Riemann
+      integrable>
+    </equation*>
+
+    Using [theorem: <reference|diff derivative of a scalar product>] we have
+    that <math|f\<cdot\>g> has derivatives on <math|<around*|[|a,b|]>> and\ 
+
+    <\equation*>
+      \<forall\>x\<in\><around*|[|a,b|]><text| we have
+      ><around*|(|f\<cdot\>g|)><rprime|'><rsub|x>=f<around*|(|x|)>\<cdot\>g<rprime|'><rsub|x>+f<rprime|'><rsub|x>\<cdot\>g<around*|(|x|)>=f<around*|(|x|)>\<cdot\>g<rprime|'><around*|(|x|)>+f<rprime|'><around*|(|x|)>\<cdot\>g<around*|(|x|)>
+    </equation*>
+
+    or if we define\ 
+
+    <\equation>
+      <label|eq 16.256.312><around*|(|f\<cdot\>g|)><rprime|'>:<around*|[|a,b|]>\<rightarrow\>X<text|
+      by ><around*|(|f\<cdot\>g|)><rprime|'><around*|(|x|)>=<around*|(|f\<cdot\>g|)><rprime|'><around*|(|x|)>=<around*|(|f\<cdot\>g|)><rprime|'><rsub|x>
+    </equation>
+
+    it follows that\ 
+
+    <\equation>
+      <label|eq 16.257.312><around*|(|f\<cdot\>g|)><rprime|'>=f\<cdot\>g<rprime|'>+f<rprime|'>\<cdot\>g
+    </equation>
+
+    Hence using [theorem: <reference|diff (f+g)'=f'+g'>] and [eq:
+    <reference|eq 16.255.312>] it follows that
+    <math|<around*|(|f\<cdot\>g|)><rprime|'>> is continuous so that by
+    [theorem: <reference|riemann continuous functions are integrable>]\ 
+
+    <\equation*>
+      <around*|(|f\<cdot\>g|)><rprime|'><text| is Rieamann integrable>
+    </equation*>
+
+    Finally we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|f<around*|(|b|)>\<cdot\>g<around*|(|b|)>-f<around*|(|a|)>\<cdot\>g<around*|(|a|)>>|<cell|<below|=|<text|[theorem:
+      <reference|diff fundamental theorem of calculus
+      (2)>]>>>|<cell|<big|int><rsub|a><rsup|b><around*|(|f\<cdot\>g|)><rprime|'><below||>>>|<row|<cell|>|<cell|<below|=|<text|[eq:
+      <reference|eq 16.257.312>]>>>|<cell|<big|int><rsub|a><rsup|b><around*|(|f\<cdot\>g<rprime|'>+f<rprime|'>\<cdot\>g|)>>>|<row|<cell|>|<cell|<below|=|<text|[theorem:
+      <reference|riemann riemann integral is
+      linear>]>>>|<cell|<big|int><rsub|a><rsup|b><around*|(|f\<cdot\>g<rprime|'>|)>+<big|int><rsub|a><rsup|b><around*|(|f<rprime|'>\<cdot\>g|)>>>>>
+    </eqnarray*>
+
+    so that\ 
+
+    <\equation*>
+      <big|int><rsub|a><rsup|b><around*|(|f<rprime|'>\<cdot\>g|)>=f<around*|(|b|)>\<cdot\>g<around*|(|b|)>-f<around*|(|a|)>\<cdot\>g<around*|(|a|)>-<big|int><rsub|a><rsup|b><around*|(|f\<cdot\>g<rprime|'>|)>
+    </equation*>
+
+    and
+
+    <\equation*>
+      <big|int><rsub|a><rsup|b><around*|(|f\<cdot\>g<rprime|'>|)>=f<around*|(|b|)>\<cdot\>g<around*|(|b|)>-f<around*|(|a|)>\<cdot\>g<around*|(|a|)>-<big|int><rsub|a><rsup|b><around*|(|f<rprime|'>\<cdot\>g|)>
+    </equation*>
+  </proof>
+
+  <subsection|Mean Value Theorems>
+
+  The mean value theorems shows how function values varies based on the
+  variation of the function arguments. In essence they specify for a function
+  <math|f:X\<rightarrow\>Y> a relation between
+  <math|f<around*|(|x|)>-f<around*|(|y|)>> and <math|<rigid|x-y>>. A example
+  that is already proved is the Lagrange's Mean Value Theorem [see theorem:
+  <reference|diff Lagrange theorem>] which states that
+  <math|f<around*|(|b|)>-f<around*|(|a|)>=f<rprime|'><rsub|\<zeta\>>\<cdot\><around*|(|b-a|)>>
+  where <math|\<zeta\>\<in\><around*|[|a,b|]>>. For these new Mean Value
+  Theorems we first need a little lemma that says that translating and
+  scaling is essential continuous differentiable.
+
+  <\lemma>
+    <label|lemma 16.135.200>Let <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
+    be a normed vector space, <math|<around*|\<langle\>|\<bbb-R\>,\<\|\|\>|\<rangle\>>>
+    the normed spaces of real numbers, <math|x,y\<in\>X> and <math|a,b> with
+    <math|a\<less\>b> then we have that for the function
+
+    <\equation*>
+      \<sigma\>:<around*|[|a,b|]>\<rightarrow\>X<text| defined by
+      >\<sigma\><around*|(|t|)>=x+t\<cdot\><around*|(|y-x|)>
+    </equation*>
+
+    that\ 
+
+    <\enumerate>
+      <item><math|\<sigma\>> is of class <math|C<rsup|1>> on
+      <math|<around*|]|a,b|[>> where <math|\<forall\>t\<in\><around*|]|a,b|[>>
+      we have <math|D<rsub|t>\<sigma\>> is defined by
+      <math|D<rsub|t>\<sigma\><around*|(|s|)>=s\<cdot\><around*|(|y-x|)>>
+
+      <item><math|\<sigma\>> has a derivative on <math|<around*|[|a,b|]>> and
+      <math|\<sigma\><rprime|'>=C<rsub|y-x>> so that by [theorem:
+      <reference|continuity constant function>] is continuous
+    </enumerate>
+  </lemma>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>This follows from [example: <reference|diff f(t)=a.x+y is
+      infinite differentiable>]
+
+      <item>This follows from [example: <reference|diff scalar product
+      function has a derivate>].
+    </enumerate>
+  </proof>
+
+  <\theorem>
+    <label|diff mean value theorem (1)><dueto|Mean Value Theorem (I>Let
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> be
+    a normed vector space, <math|U> a open set in <math|X>,
+    <math|<around*|\<langle\>|\<bbb-R\>,\<\|\|\>|\<rangle\>>> the normed
+    spaces of real numbers, <math|x,y\<in\>U> such that
+    <math|<around*|{|<around*|(|1-t|)>\<cdot\>x+t\<cdot\>y\|t\<in\><around*|[|0,1|]>|}>\<subseteq\>U>
+    and <math|<rigid|f:U\<rightarrow\>\<bbb-R\>>> a function such that
+    <math|\<forall\>t\<in\><around*|[|0,1|]>> <math|f> is Fréchet
+    differentiable at <math|<around*|(|1-t|)>\<cdot\>x+t\<cdot\>y> then there
+    exists a <math|\<zeta\>\<in\><around*|]|0,1|[>> such that\ 
+
+    <\equation*>
+      f<around*|(|y|)>-f<around*|(|x|)>=D<rsub|z>f<around*|(|y-x|)><text|
+      where >z=x+\<zeta\>\<cdot\><around*|(|y-x|)>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    We have to be carefull here, derivating is defined on
+    <math|<around*|[|a,b|]>> but differentiating is only defined on the open
+    set <math|<around*|]|0,1|[>>, Define\ 
+
+    <\equation*>
+      \<sigma\>:<around*|[|0,1|]>\<rightarrow\>X<text| by
+      >\<sigma\><around*|(|t|)>=x+t\<cdot\><around*|(|y-x|)>=<around*|(|1-t|)>\<cdot\>x+t\<cdot\>y
+    </equation*>
+
+    then we have by the hypothesis that
+
+    <\equation*>
+      \<sigma\><around*|(|<around*|[|0,1|]>|)>=<around*|{|x+t\<cdot\><around*|(|y-x|)>\|t\<in\><around*|[|0,1|]>|}>\<subseteq\>U
+    </equation*>
+
+    and we can define\ 
+
+    <\equation*>
+      f\<circ\>\<sigma\>:<around*|[|0,1|]>\<rightarrow\>\<bbb-R\>
+    </equation*>
+
+    For <math|t\<in\><around*|[|0,1|]>> we have \ by the hypothesis that
+    <math|f> is Fréchet differentiable at <math|\<sigma\><around*|(|t|)>>
+    which by [theorem: <reference|diff differentiable function is
+    continuous>] proves that\ 
+
+    <\equation*>
+      \<forall\>t\<in\><around*|[|0,1|]><text| >f<text| is continuous at
+      >\<sigma\><around*|(|t|)>
+    </equation*>
+
+    For <math|t\<in\><around*|[|0,1|]>> we have by [lemma: <reference|lemma
+    16.135.200>] that <math|\<sigma\>> has a derivative at <math|t> which by
+    [theorem: <reference|diff derivatives and continuity>] proves that
+
+    <\equation*>
+      \<forall\>t\<in\><around*|[|0,1|]><text| >\<sigma\><text| is continuous
+      at >t
+    </equation*>
+
+    Hence using [theorem: <reference|continuity composition>[ it follows that\ 
+
+    <\equation>
+      <label|eq 16.224.17>\<forall\>t\<in\><around*|[|0,1|]><text|
+      >f\<circ\>\<sigma\><text| is continuous at >t<text| or
+      >f\<circ\>\<sigma\>\<in\>\<cal-C\><around*|[|<around*|[|0,1|]>,\<bbb-R\>|]>
+    </equation>
+
+    Let <math|t\<in\><around*|]|0,1|[>> then by [lemma: <reference|lemma
+    16.135.200>] <math|\<sigma\>> is Fréchet differentiable at <math|t>
+    which, as by the hypothesis <math|f> is Fréchet differentiable at
+    <math|\<sigma\><around*|(|t|)>>, proves by the chain rule [see theorem:
+    <reference|diff chain rule>] that\ 
+
+    <\equation>
+      <label|eq 16.225.17>f\<circ\>\<sigma\><text| is Fréchet differentiable
+      at >t<text| with >D<rsub|t><around*|(|f\<circ\>\<sigma\>|)>=D<rsub|\<sigma\><around*|(|t|)>>f\<circ\>D<rsub|t>f
+    </equation>
+
+    As <math|t\<in\><around*|]|0,1|[>=<around*|]|0,1|[><rsup|\<circ\>>> it
+    follows from [theorem: <reference|diff derivate and frechet
+    differential>] that <math|f\<circ\>\<sigma\>> has a derivative at
+    <math|t> with\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|(|f\<circ\>\<sigma\>|)><rprime|'><rsub|t>>|<cell|=>|<cell|D<rsub|t><around*|(|f\<circ\>\<sigma\>|)><around*|(|1|)>>>|<row|<cell|>|<cell|<below|=|<text|[eq:
+      <reference|eq 16.225.17>]>>>|<cell|<around*|(|D<rsub|\<sigma\><around*|(|t|)>>f\<circ\>D<rsub|t>\<sigma\>|)><around*|(|1|)>>>|<row|<cell|>|<cell|<below|=|>>|<cell|D<rsub|\<sigma\><around*|(|t|)>>f<around*|(|D<rsub|t>\<sigma\><around*|(|1|)>|)>>>|<row|<cell|>|<cell|<below|=|<text|[lemma:
+      <reference|lemma 16.135.200>]>>>|<cell|D<rsub|\<sigma\><around*|(|t|)>>f<around*|(|1\<cdot\><around*|(|y-x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|D<rsub|\<sigma\><around*|(|t|)>>f<around*|(|y-x|)>>>>>
+    </eqnarray*>
+
+    Summarized we have\ 
+
+    <\equation>
+      <label|eq 16.226.17>\<forall\>t\<in\><around*|]|0,1|[><text|
+      >f\<circ\>\<sigma\><text| has a derivative at >t<text| with
+      ><around*|(|f\<circ\>\<sigma\>|)><rprime|'><rsub|t>=D<rsub|\<sigma\><around*|(|t|)>>f<around*|(|y-x|)>
+    </equation>
+
+    [eqs: <reference|eq 16.225.17>, <reference|eq 16.226.17>] allows us to
+    use Lagrange's theorem [theorem: <reference|diff Lagrange theorem>]
+    giving
+
+    <\equation>
+      <label|eq 16.227.17>\<exists\>\<zeta\>\<in\><around*|]|0,1|[><text|
+      such that ><around*|(|f\<circ\>\<sigma\>|)><around*|(|1|)>-<around*|(|f\<circ\>\<sigma\>|)><around*|(|0|)>=<around*|(|f\<circ\>\<sigma\>|)><rprime|'><rsub|\<zeta\>>\<cdot\><around*|(|1-0|)><below|=|<text|[eq:
+      <reference|eq 16.226.17>]>>D<rsub|\<sigma\><around*|(|\<zeta\>|)>>f<around*|(|y-x|)>
+    </equation>
+
+    Finally
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|f<around*|(|y|)>-f<around*|(|x|)>>|<cell|=>|<cell|f<around*|(|x+1\<cdot\><around*|(|y-x|)>|)>-f<around*|(|x+0\<cdot\><around*|(|y-x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|f<around*|(|\<sigma\><around*|(|1|)>|)>-f<around*|(|\<sigma\><around*|(|0|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|f\<circ\>\<sigma\>|)><around*|(|1|)>-<around*|(|f\<circ\>\<sigma\>|)><around*|(|0|)>>>|<row|<cell|>|<cell|<below|=|<text|[eq:
+      <reference|eq 16.227.17>]>>>|<cell|D<rsub|\<sigma\><around*|(|\<zeta\>|)>>f<around*|(|y-z|)>>>>>
+    </eqnarray*>
+
+    which, if we take <math|z=\<sigma\><around*|(|\<zeta\>|)>=x+\<zeta\>\<cdot\><around*|(|y-x|)>>
+    proves that\ 
+
+    <\equation*>
+      f<around*|(|y|)>-f<around*|(|x|)>=D<rsub|z>f<around*|(|y-x|)><text|
+      where >z=\<sigma\><around*|(|\<zeta\>|)>=x+\<zeta\>\<cdot\><around*|(|y-x|)>
+    </equation*>
+  </proof>
+
+  We generalize now the the above Mean Value Theorem to functions where the
+  codomain of the function is a arbitrary normed space. To do this we need
+  the concept of convex sets.
+
+  <\definition>
+    <label|diff convex set><dueto|Convex Sets>Let <math|X> be a vector space
+    over <math|\<bbb-K\>> then <math|C\<subseteq\>X> is
+    <with|font-series|bold|convex> if <math|\<forall\>x,y\<in\>C> we have
+    <math|\<forall\>t\<in\><around*|[|0,1|]>> that
+    <math|x+t\<cdot\><around*|(|y-x|)>=<around*|(|1-t|)>\<cdot\>x+t\<cdot\>y\<in\>C>.
+  </definition>
+
+  Best examples of complex sets are open and closes balls in a normed space
+  as is proved in the next theorems.
+
+  <\theorem>
+    <label|diff balls are convex>Let <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
+    be a normed space, <math|x\<in\>X> and
+    <math|\<delta\>\<in\>\<bbb-R\><rsup|+>> then
+    <math|B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|x,\<delta\>|)>> and
+    <math|<wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|x,\<delta\>|)>|\<wide-bar\>>>
+    are convex.
+  </theorem>
+
+  <\proof>
+    Let <math|x\<in\>X>, <math|\<delta\>\<in\>\<bbb-R\><rsup|+>>,
+    <math|y,z\<in\>X> and <math|t\<in\><around*|[|0,1|]>> then we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|\<\|\|\>|<around*|(|1-t|)>\<cdot\>y+t\<cdot\>z-x|\<\|\|\>>>|<cell|=>|<cell|<around*|\<\|\|\>|<around*|(|1-t|)>\<cdot\>y+t\<cdot\>z-x+t\<cdot\>x-t\<cdot\>x|\<\|\|\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|<around*|(|1-t|)>\<cdot\>y-x\<cdot\><around*|(|1-t|)>+t\<cdot\>z-t\<cdot\>x|\<\|\|\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|<around*|(|1-t|)>\<cdot\><around*|(|y-x|)>+t\<cdot\><around*|(|z-x|)>|\<\|\|\>>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<around*|\<\|\|\>|<around*|(|1-t|)>\<cdot\><around*|(|y-x|)>|\<\|\|\>>+<around*|\<\|\|\>|t\<cdot\><around*|(|z-x|)>|\<\|\|\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\||1-t|\|>\<cdot\><around*|\<\|\|\>|y-x|\<\|\|\>>+<around*|\||t|\|>\<cdot\><around*|\<\|\|\>|z-x|\<\|\|\>>>>|<row|<cell|>|<cell|\<equallim\><rsub|0\<leqslant\>1-t,t>>|<cell|<around*|(|1-t|)>\<cdot\><around*|\<\|\|\>|y-x|\<\|\|\>>+t\<cdot\><around*|\<\|\|\>|z-x|\<\|\|\>><eq-number><label|eq
+      16.187.200>>>>>
+    </eqnarray*>
+
+    Hence if <math|y,z\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|x,\<delta\>|)>>
+    then\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|\<\|\|\>|<around*|(|1-t|)>\<cdot\>y+t\<cdot\>z-x|\<\|\|\>>>|<cell|<below|\<leqslant\>|<text|[eq:
+      <reference|eq 16.187.200>]>>>|<cell|<around*|(|1-t|)>\<cdot\><around*|\<\|\|\>|y-x|\<\|\|\>>+t\<cdot\><around*|\<\|\|\>|z-x|\<\|\|\>>>>|<row|<cell|>|<cell|\<less\>>|<cell|<around*|(|1-t|)>\<cdot\>\<delta\>+t\<cdot\>\<delta\>>>|<row|<cell|>|<cell|=>|<cell|\<delta\>>>>>
+    </eqnarray*>
+
+    proving that <math|>
+
+    <\equation*>
+      <around*|(|1-t|)>\<cdot\>y+t\<cdot\>z\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|x,\<delta\>|)>
+    </equation*>
+
+    Further if <math|y,z\<in\><wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|x,\<delta\>|)>|\<wide-bar\>>>
+    then\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|\<\|\|\>|<around*|(|1-t|)>\<cdot\>y+t\<cdot\>z-x|\<\|\|\>>>|<cell|<below|\<leqslant\>|<text|[eq:
+      <reference|eq 16.187.200>]>>>|<cell|<around*|(|1-t|)>\<cdot\><around*|\<\|\|\>|y-x|\<\|\|\>>+t\<cdot\><around*|\<\|\|\>|z-x|\<\|\|\>>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<around*|(|1-t|)>\<cdot\>\<delta\>+t\<cdot\>\<delta\>>>|<row|<cell|>|<cell|=>|<cell|\<delta\>>>>>
+    </eqnarray*>
+
+    so that\ 
+
+    <\equation*>
+      <around*|(|1-t|)>\<cdot\>y+t\<cdot\>z\<in\><wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|x,\<delta\>|)>|\<wide-bar\>>
+    </equation*>
+  </proof>
+
+  <\theorem>
+    <label|diff mean value theorem (2)><dueto|Mean Value Theorem
+    (II><label|diff mean value theorem (0)>Let
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>
+    be a normed space, <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    a Banach space, <math|U> a open set in <math|X> and
+    <math|f:U\<rightarrow\>Y> a function that of class <math|C<rsup|1>>.
+    Assume that there is a <with|font-series|bold|convex subset
+    ><math|C\<subseteq\>U> and a <math|k\<in\>\<bbb-R\>> such that
+    <math|\<forall\>x\<in\>C> <math|<around*|\<\|\|\>|D<rsub|x>f|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\<leqslant\>k>
+    then\ 
+
+    <\equation*>
+      \<forall\>x,y\<in\>C<text| we have ><around*|\<\|\|\>|f<around*|(|y|)>-f<around*|(|x|)>|\<\|\|\>><rsub|Y>\<leqslant\>k\<cdot\><around*|\<\|\|\>|y-x|\<\|\|\>><rsub|X>
+    </equation*>
+
+    <\note>
+      As <math|f> is of class <math|C<rsup|1>> <math|f> is <math|1>-times
+      differentiable on <math|U> hence Fréchet differentiable on <math|U> so
+      that <math|\<forall\>x\<in\>C\<subseteq\>U>
+      <math|<around*|\<\|\|\>|D<rsub|x>f|\<\|\|\>><rsub|L<around*|(|X,Y|)>>>
+      is well defined.
+    </note>
+  </theorem>
+
+  <\proof>
+    Let <math|x,y\<in\>C>. Define the function\ 
+
+    <\equation*>
+      \<sigma\>:\<bbb-R\>\<rightarrow\>X<text| by
+      >\<sigma\><around*|(|t|)>=x+t\<cdot\><around*|(|y-x|)>
+    </equation*>
+
+    then if <math|t\<in\><around*|[|0,1|]>> we have
+    <math|\<sigma\><around*|(|t|)>=x+t\<cdot\><around*|(|y-x|)>=x\<cdot\><around*|(|1-t|)>+t\<cdot\>y\<in\>C>
+    [as <math|C> is convex] proving that\ 
+
+    <\equation>
+      <label|eq 16.188.201>\<sigma\><around*|(|<around*|[|0,1|]>|)>\<subseteq\>C\<subseteq\>U
+    </equation>
+
+    By [exercise: <reference|diff f(t)=a.x+y is infinite differentiable>]
+    <math|\<sigma\>> is of class <math|C<rsup|\<infty\>>> hence by definition
+    also of class <math|C<rsup|0>> so that <math|\<sigma\>> is continuous so
+    that
+
+    <\equation*>
+      W=\<sigma\><rsup|-1><around*|(|U|)><text| is a open set> in \<bbb-R\>
+    </equation*>
+
+    Take now <math|\<sigma\><rsub|\|W>> then <math|\<sigma\><rsub|\|W>> is
+    defined by\ 
+
+    <\equation*>
+      \<sigma\><rsub|\|W>:W\<rightarrow\>X<text| where
+      >\<sigma\><rsub|\|W><around*|(|t|)>=\<sigma\><around*|(|t|)>=x+t\<cdot\><around*|(|y-x|)>
+    </equation*>
+
+    so that by [exercise: <reference|diff f(t)=a.x+y is infinite
+    differentiable>]
+
+    <\equation*>
+      \<sigma\><rsub|\|W><text| is of class >C<rsup|\<infty\>>
+    </equation*>
+
+    \;
+  </proof>
+
+  \ 
+
+  \;
+
+  \;
+
+  \;
+
+  \;
 
   \;
 
@@ -14034,6 +14624,7 @@
     <associate|auto-45|<tuple|convex function|?>>
     <associate|auto-46|<tuple|16.3|?>>
     <associate|auto-47|<tuple|16.3.2|?>>
+    <associate|auto-48|<tuple|16.3.3|?>>
     <associate|auto-5|<tuple|<with|mode|<quote|math>|U<rsub|x>>|?>>
     <associate|auto-6|<tuple|<with|mode|<quote|math>|f<rprime|'><around*|(|x|)>>|?>>
     <associate|auto-7|<tuple|16.1.2|?>>
@@ -14055,11 +14646,12 @@
     <associate|diff L(x1:..xn)=L(1:..:1). product|<tuple|16.112|?>>
     <associate|diff L_n(X;Y)|<tuple|16.104|?>>
     <associate|diff Lagrange theorem|<tuple|16.195|?>>
-    <associate|diff Lagrange theorem (1)|<tuple|16.199|?>>
+    <associate|diff Lagrange theorem (1)|<tuple|16.197|?>>
     <associate|diff Rolle's theorem|<tuple|16.193|?>>
     <associate|diff Ux|<tuple|16.13|?>>
     <associate|diff Ux is open if U is open|<tuple|16.16|?>>
     <associate|diff Ux=-x+U=U-x|<tuple|16.15|?>>
+    <associate|diff balls are convex|<tuple|16.209|?>>
     <associate|diff bilinear functions|<tuple|16.98|?>>
     <associate|diff bilinear mappings are infinite times
     differentiable|<tuple|16.175|?>>
@@ -14083,6 +14675,7 @@
     <associate|diff constant function is infinitely times
     differentiable|<tuple|16.168|?>>
     <associate|diff convex concave|<tuple|16.200|?>>
+    <associate|diff convex set|<tuple|16.208|?>>
     <associate|diff convex/concave alternative|<tuple|16.201|?>>
     <associate|diff derivate and frechet differential|<tuple|16.63|?>>
     <associate|diff derivate and local extremum|<tuple|16.192|?>>
@@ -14116,6 +14709,7 @@
     <associate|diff equivalent norms|<tuple|16.55|?>>
     <associate|diff f(t)=a.x+y is infinite differentiable|<tuple|16.171|?>>
     <associate|diff fundamental theorem of calculus (1)|<tuple|16.203|?>>
+    <associate|diff fundamental theorem of calculus (2)|<tuple|16.204|?>>
     <associate|diff higher order derivate and differential|<tuple|16.160|?>>
     <associate|diff higher order derivative at a point|<tuple|16.155|?>>
     <associate|diff higher order derivative at a point (1)|<tuple|16.157|?>>
@@ -14148,11 +14742,15 @@
     differentiable|<tuple|16.170|?>>
     <associate|diff increasing decreasing function|<tuple|16.199|?>>
     <associate|diff inifint=ite differentiable|<tuple|16.133|?>>
+    <associate|diff integration by part|<tuple|16.205|?>>
     <associate|diff limit of a function|<tuple|16.11|?>>
     <associate|diff linear mapping is infinite times
     differentiable|<tuple|16.169|?>>
     <associate|diff linear mappings are differentiable|<tuple|16.54|?>>
     <associate|diff linear to multilinear|<tuple|16.120|?>>
+    <associate|diff mean value theorem (0)|<tuple|16.210|?>>
+    <associate|diff mean value theorem (1)|<tuple|16.207|?>>
+    <associate|diff mean value theorem (2)|<tuple|16.210|?>>
     <associate|diff minimum maximum|<tuple|16.190|?>>
     <associate|diff n+m derivative|<tuple|16.165|?>>
     <associate|diff n+m differentiation|<tuple|16.162|?>>
@@ -14175,6 +14773,7 @@
     <associate|diff projection functon is infinite times
     differentiable|<tuple|16.174|?>>
     <associate|diff scalar product function has a derivate|<tuple|16.32|?>>
+    <associate|diff scalar product function is C^1|<tuple|16.149|?>>
     <associate|diff second derivate convex concave|<tuple|16.202|?>>
     <associate|diff translation is infinite differentiable|<tuple|16.173|?>>
     <associate|diff unprojection|<tuple|16.69|?>>
@@ -14184,6 +14783,7 @@
     <associate|diff vector functions (1)|<tuple|16.94|?>>
     <associate|diff vector functions (2)|<tuple|16.96|?>>
     <associate|diff vector functions and linearity|<tuple|16.93|?>>
+    <associate|eq 116.225.17|<tuple|16.224|?>>
     <associate|eq 16.1.177|<tuple|16.16|?>>
     <associate|eq 16.1.2|<tuple|16.1|?>>
     <associate|eq 16.10.178|<tuple|16.25|?>>
@@ -14290,22 +14890,26 @@
     <associate|eq 16.173.16|<tuple|16.173|?>>
     <associate|eq 16.174.16|<tuple|16.174|?>>
     <associate|eq 16.175.16|<tuple|16.175|?>>
-    <associate|eq 16.176.16|<tuple|16.176|?>>
     <associate|eq 16.177.16|<tuple|16.176|?>>
     <associate|eq 16.178.16|<tuple|16.177|?>>
     <associate|eq 16.179.16|<tuple|16.178|?>>
+    <associate|eq 16.179.200|<tuple|16.218|?>>
     <associate|eq 16.18.179|<tuple|16.37|?>>
     <associate|eq 16.18.180|<tuple|16.54|?>>
     <associate|eq 16.18.5|<tuple|16.18|?>>
     <associate|eq 16.180.16|<tuple|16.179|?>>
+    <associate|eq 16.180.200|<tuple|16.219|?>>
     <associate|eq 16.181.16|<tuple|16.180|?>>
+    <associate|eq 16.181.200|<tuple|16.220|?>>
     <associate|eq 16.182.16|<tuple|16.181|?>>
     <associate|eq 16.183\<point\>16|<tuple|16.182|?>>
     <associate|eq 16.184.16|<tuple|16.183|?>>
     <associate|eq 16.185.16|<tuple|16.184|?>>
     <associate|eq 16.186.16|<tuple|16.185|?>>
     <associate|eq 16.187.16|<tuple|16.186|?>>
+    <associate|eq 16.187.200|<tuple|16.228|?>>
     <associate|eq 16.188.16|<tuple|16.187|?>>
+    <associate|eq 16.188.201|<tuple|16.229|?>>
     <associate|eq 16.189.16|<tuple|16.188|?>>
     <associate|eq 16.19.179|<tuple|16.38|?>>
     <associate|eq 16.19.180|<tuple|16.55|?>>
@@ -14319,8 +14923,11 @@
     <associate|eq 16.20.178|<tuple|16.45|?>>
     <associate|eq 16.20.181|<tuple|16.56|?>>
     <associate|eq 16.21.5|<tuple|16.21|?>>
-    <associate|eq 16.214.17|<tuple|16.215|?>>
     <associate|eq 16.215.17|<tuple|16.215|?>>
+    <associate|eq 16.224.17|<tuple|16.224|?>>
+    <associate|eq 16.225.17|<tuple|16.225|?>>
+    <associate|eq 16.226.17|<tuple|16.226|?>>
+    <associate|eq 16.227.17|<tuple|16.227|?>>
     <associate|eq 16.23.178|<tuple|16.49|?>>
     <associate|eq 16.24.178|<tuple|16.50|?>>
     <associate|eq 16.24.4|<tuple|16.31|?>>
@@ -14333,14 +14940,23 @@
     <associate|eq 16.246.310.1|<tuple|16.212|?>>
     <associate|eq 16.25.178|<tuple|16.51|?>>
     <associate|eq 16.25.4|<tuple|16.32|?>>
+    <associate|eq 16.255.312|<tuple|16.221|?>>
+    <associate|eq 16.256.312|<tuple|16.222|?>>
+    <associate|eq 16.257.312|<tuple|16.223|?>>
     <associate|eq 16.26.4|<tuple|16.33|?>>
-    <associate|eq 16.262.12|<tuple|16.205|?>>
-    <associate|eq 16.263.12|<tuple|16.206|?>>
-    <associate|eq 16.264.12|<tuple|16.207|?>>
+    <associate|eq 16.262.12|<tuple|16.202|?>>
+    <associate|eq 16.263.12|<tuple|16.203|?>>
+    <associate|eq 16.264.12|<tuple|16.204|?>>
     <associate|eq 16.27.4|<tuple|16.34|?>>
     <associate|eq 16.272.12|<tuple|16.216|?>>
     <associate|eq 16.273.12|<tuple|16.217|?>>
+    <associate|eq 16.277.12|<tuple|16.224|?>>
+    <associate|eq 16.278.12|<tuple|16.224|?>>
+    <associate|eq 16.279.12|<tuple|16.225|?>>
     <associate|eq 16.28.4|<tuple|16.35|?>>
+    <associate|eq 16.280.12|<tuple|16.226|?>>
+    <associate|eq 16.281.12|<tuple|16.227|?>>
+    <associate|eq 16.282.12|<tuple|16.228|?>>
     <associate|eq 16.29.4|<tuple|16.36|?>>
     <associate|eq 16.3.177|<tuple|16.19|?>>
     <associate|eq 16.3.2|<tuple|16.3|?>>
@@ -14404,6 +15020,7 @@
     <associate|eq 16.99.6|<tuple|16.95|?>>
     <associate|lemma 16.101.194|<tuple|16.184|?>>
     <associate|lemma 16.11.500|<tuple|16.6|?>>
+    <associate|lemma 16.135.200|<tuple|16.206|?>>
     <associate|lemma 16.18.2|<tuple|16.18|?>>
     <associate|lemma 16.19.2|<tuple|16.19|?>>
     <associate|lemma 16.24.178|<tuple|16.70|?>>
@@ -14438,6 +15055,13 @@
 
 <\auxiliary>
   <\collection>
+    <\associate|figure>
+      <tuple|normal|<surround|<hidden-binding|<tuple>|16.1>||>|<pageref|auto-42>>
+
+      <tuple|normal|<surround|<hidden-binding|<tuple>|16.2>||>|<pageref|auto-43>>
+
+      <tuple|normal|<surround|<hidden-binding|<tuple>|16.3>||>|<pageref|auto-46>>
+    </associate>
     <\associate|idx>
       <tuple|<tuple|convergence of a function>|<pageref|auto-4>>
 
@@ -14479,6 +15103,16 @@
 
       <tuple|<tuple|higher order differentiation chain
       rule>|<pageref|auto-36>>
+
+      <tuple|<tuple|local weak minimum>|<pageref|auto-39>>
+
+      <tuple|<tuple|local weak maximum>|<pageref|auto-40>>
+
+      <tuple|<tuple|local extremum>|<pageref|auto-41>>
+
+      <tuple|<tuple|concave function>|<pageref|auto-44>>
+
+      <tuple|<tuple|convex function>|<pageref|auto-45>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|16<space|2spc>Differentiation
@@ -14551,9 +15185,17 @@
       order derivatives <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-34>>
 
-      16.3<space|2spc>Intermediate value amd main value theorems.
+      16.3<space|2spc>Intermediate value and main value theorems.
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-37>
+
+      <with|par-left|<quote|1tab>|16.3.1<space|2spc>Derivatives, extremums,
+      concavity, and convexity <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-38>>
+
+      <with|par-left|<quote|1tab>|16.3.2<space|2spc>Fundamental theorem of
+      Calculus for the Riemann Integral <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-47>>
     </associate>
   </collection>
 </auxiliary>
