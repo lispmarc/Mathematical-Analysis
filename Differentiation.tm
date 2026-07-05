@@ -14444,8 +14444,8 @@
     <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>
     be a normed space, <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
     a Banach space, <math|U> a open set in <math|X> and
-    <math|f:U\<rightarrow\>Y> a function that of class <math|C<rsup|1>>.
-    Assume that there is a <with|font-series|bold|convex subset
+    <math|f:U\<rightarrow\>Y> a function of class <math|C<rsup|1>>. Assume
+    that there is a <with|font-series|bold|convex subset
     ><math|C\<subseteq\>U> and a <math|k\<in\>\<bbb-R\>> such that
     <math|\<forall\>x\<in\>C> <math|<around*|\<\|\|\>|D<rsub|x>f|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\<leqslant\>k>
     then\ 
@@ -14456,8 +14456,8 @@
 
     <\note>
       As <math|f> is of class <math|C<rsup|1>> <math|f> is <math|1>-times
-      differentiable on <math|U> hence Fréchet differentiable on <math|U> so
-      that <math|\<forall\>x\<in\>C\<subseteq\>U>
+      differentiable on <math|U>, hence Fréchet differentiable on <math|U>,
+      so that <math|\<forall\>x\<in\>C\<subseteq\>U>
       <math|<around*|\<\|\|\>|D<rsub|x>f|\<\|\|\>><rsub|L<around*|(|X,Y|)>>>
       is well defined.
     </note>
@@ -14480,9 +14480,9 @@
     </equation>
 
     By [exercise: <reference|diff f(t)=a.x+y is infinite differentiable>]
-    <math|\<sigma\>> is of class <math|C<rsup|\<infty\>>> hence by definition
-    also of class <math|C<rsup|0>> so that <math|\<sigma\>> is continuous so
-    that
+    <math|\<sigma\>> is of class <math|C<rsup|\<infty\>>>, hence by
+    definition also of class <math|C<rsup|0>>, so that <math|\<sigma\>> is
+    continuous from which it follows that
 
     <\equation*>
       W=\<sigma\><rsup|-1><around*|(|U|)><text| is a open set> in \<bbb-R\>
@@ -14505,8 +14505,9 @@
       >D<rsub|t>\<sigma\><rsub|\|W><around*|(|1|)>=y-x
     </equation>
 
-    Hence as <math|f> is of class <math|C<rsup|1>> it follows from the chain
-    rule [see theorem: <reference|diff chain rule higher order class>[ that\ 
+    Hence, as <math|f> is of class <math|C<rsup|1>>, it follows from the
+    chain rule [see theorem: <reference|diff chain rule higher order class>[
+    that\ 
 
     <\equation*>
       h=f\<circ\>\<sigma\><rsub|\|W>:W\<rightarrow\>Y<text| is of class
@@ -14523,7 +14524,7 @@
     </equation>
 
     As <math|f> is of class <math|C<rsup|1>> <math|f> is <math|1>-times
-    differentiable on <math|U> hence Fréchet differentiable on <math|U>.
+    differentiable on <math|U>, hence Fréchet differentiable on <math|U>.
     Likewise, as <math|\<sigma\><rsub|\|W>> is of class <math|C<rsup|1>>,
     <math|\<sigma\><rsub|\|W>> is <math|1>-times differentiable on <math|W>
     hence Fréchet differentiable on <math|W>. Using then the chain rule [see
@@ -14548,7 +14549,7 @@
     </equation*>
 
     Let <math|t\<in\><around*|[|0,1|]>> then, as <math|h> has a derivative
-    <math|h<rprime|'><rsub|t>> at <math|t> [see eq: <reference|eq 16.232.17>]
+    <math|h<rprime|'><rsub|t>> at <math|t> [see eq: <reference|eq 16.231.17>]
     and by [theorem: <reference|topology every element of a generalized
     interval is a limit point>] <math|t> is a limit point of
     <math|<around*|[|0,1|]>>, it follows from [theorem: <reference|diff
@@ -14596,9 +14597,9 @@
     <\eqnarray*>
       <tformat|<table|<row|<cell|<around*|\<\|\|\>|g<rprime|'><around*|(|t|)>|\<\|\|\>><rsub|Y>>|<cell|=>|<cell|<around*|\<\|\|\>|g<rprime|'><rsub|t>|\<\|\|\>><rsub|Y>>>|<row|<cell|>|<cell|<below|=|<text|[eq:
       <reference|eq 16.233.17>]>>>|<cell|<around*|\<\|\|\>|h<rprime|'><rsub|t>|\<\|\|\>><rsub|Y>>>|<row|<cell|>|<cell|<below|=|<text|[eq:
-      <reference|eq 16.231.17>]>>>|<cell|<around*|\<\|\|\>|D<rsub|t>h<around*|(|1|)>|\<\|\|\>><rsub|Y>>>|<row|<cell|>|<cell|<below|=|<text|[theorem:
+      <reference|eq 16.231.17>]>>>|<cell|<around*|\<\|\|\>|D<rsub|t>h<around*|(|1|)>|\<\|\|\>><rsub|Y>>>|<row|<cell|>|<cell|<below|=|<text|[eq:
       <reference|eq 16.232.17>]>>>|<cell|<around*|\<\|\|\>|<around*|(|D<rsub|\<sigma\><rsub|\|W><around*|(|t|)>>f\<circ\>D<rsub|t><around*|(|\<sigma\><rsub|\|W>|)>|)><around*|(|1|)>|\<\|\|\>><rsub|Y>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|D<rsub|\<sigma\><around*|(|t|)>>f<around*|(|D<rsub|t><around*|(|\<sigma\><rsub|\|W>|)><around*|(|1|)>|)>|\<\|\|\>><rsub|Y>>>|<row|<cell|>|<cell|<below|=|<text|[eq:
-      <reference|eq 16.230.17>]>>>|<cell|<around*|\<\|\|\>|D<rsub|\<sigma\><around*|(|t|)>>f<around*|(|y-x|)>|\<\|\|\>><rsub|Y>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<around*|\<\|\|\>|D<rsub|\<sigma\><around*|(|t|)>>f<around*|(|y-x|)>|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\<cdot\><around*|\<\|\|\>|y-x|\<\|\|\>><rsub|X>>>|<row|<cell|>|<cell|<below|\<leqslant\>|\<sigma\><around*|(|t|)>\<in\>C<text|
+      <reference|eq 16.230.17>]>>>|<cell|<around*|\<\|\|\>|D<rsub|\<sigma\><around*|(|t|)>>f<around*|(|y-x|)>|\<\|\|\>><rsub|Y>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<around*|\<\|\|\>|D<rsub|\<sigma\><around*|(|t|)>>f|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\<cdot\><around*|\<\|\|\>|y-x|\<\|\|\>><rsub|X>>>|<row|<cell|>|<cell|<below|\<leqslant\>|\<sigma\><around*|(|t|)>\<in\>C<text|
       by [eq: <reference|eq 16.229.17>]>>>|<cell|k\<cdot\><around*|\<\|\|\>|y-x|\<\|\|\>><rsub|X>>>>>
     </eqnarray*>
 
@@ -14606,7 +14607,7 @@
 
     <\equation>
       <label|eq 16.237.17>\<forall\>t\<in\><around*|[|0,1|]><text|
-      ><around*|\<\|\|\>|g<rprime|'><around*|(|t|)>|\<\|\|\>>=k\<cdot\><around*|\<\|\|\>|y-x|\<\|\|\>><rsub|X>
+      ><around*|\<\|\|\>|g<rprime|'><around*|(|t|)>|\<\|\|\>>\<leqslant\>k\<cdot\><around*|\<\|\|\>|y-x|\<\|\|\>><rsub|X>
     </equation>
 
     Finally we have\ 
@@ -14619,64 +14620,6 @@
     </eqnarray*>
 
     which completes the proof.
-  </proof>
-
-  <\corollary>
-    <label|diff mean value theorem (2.2)>Let
-    \ <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>
-    a normed space, <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
-    a Banach space, <math|U> a open set in <math|X> and
-    <math|f:U\<rightarrow\>Y> a function that is of class <math|C<rsup|1>>.
-    Then if <math|C\<subseteq\>U> is a convex set such that
-    <math|\<forall\>x\<in\>C> <math|<around*|\<\|\|\>|D<rsub|x>f|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\<leqslant\>k>
-    where <math|k\<in\>\<bbb-R\>> then we have\ 
-
-    <\equation*>
-      \<forall\>x,y\<in\>C<text| we have ><around*|\<\|\|\>|f<around*|(|y|)>-f<around*|(|x|)>|\<\|\|\>><rsub|Y>\<leqslant\>k\<cdot\><around*|\<\|\|\>|y-x|\<\|\|\>><rsub|X>
-    </equation*>
-  </corollary>
-
-  <\proof>
-    As <math|f> is of class <math|C<rsup|1>> we have
-    <math|\<forall\>x\<in\>U> that <math|f> is <math|1>-times [hence Fréchet
-    differentiable] at <math|x> and the function\ 
-
-    <\equation*>
-      D<rsup|<around*|[|1|]>>f:U\<rightarrow\>L<around*|(|X,X|)><text|
-      defined by >D<rsup|<around*|[|1|]>>f<around*|(|x|)>=D<rsup|<around*|[|1|]>><rsub|x>f<below|=|def>D<rsub|x>f<text|
-      is continuous>
-    </equation*>
-
-    Hence we have that <math|\<forall\>x\<in\>C> that <math|f> is Fréchet
-    differentiable at <math|x> so that we can define\ 
-
-    <\equation*>
-      D f:C\<rightarrow\>L<around*|(|X,X|)><text| by >D
-      f<around*|(|x|)>=D<rsub|x>f
-    </equation*>
-
-    As <math|\<forall\>x\<in\>C> we have <math|D
-    f<around*|(|x|)>=D<rsub|x>f=D<rsup|<around*|[|1|]>><rsub|x>f=D<rsup|<around*|[|1|]>>f<around*|(|x|)>>
-    it follows that\ 
-
-    <\equation*>
-      D f=<around*|(|D<rsup|<around*|[|1|]>>f|)><rsub|\|C>
-    </equation*>
-
-    Hence as <math|D<rsup|<around*|[|1|]>>t> is continuous it follows that
-
-    <\equation*>
-      D f<text| is continuous>
-    </equation*>
-
-    Further by the hypothesis we have that <math|\<forall\>x\<in\>X> that
-    <math|<around*|\<\|\|\>|D<rsub|x>f|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<leqslant\>k>,
-    hence all conditions for the Mean Value Theorem (II) [see theorem:
-    <reference|diff mean value theorem (2)>] are satisfied and we get that\ 
-
-    <\equation*>
-      \<forall\>x,y\<in\>C<text| we have ><around*|\<\|\|\>|f<around*|(|y|)>-f<around*|(|x|)>|\<\|\|\>><rsub|Y>\<leqslant\>k\<cdot\><around*|\<\|\|\>|y-x|\<\|\|\>><rsub|X>
-    </equation*>
   </proof>
 
   For the next Mean Value theorems we introduce the concept of line
@@ -15052,7 +14995,7 @@
     Hence\ 
 
     <\eqnarray*>
-      <tformat|<table|<row|<cell|<around*|\<\|\|\>|f<around*|(|a|)>-f<around*|(|b|)>-D<rsub|x>f<around*|(|a-b|)>|\<\|\|\>><rsub|Y>>|<cell|=>|<cell|<around*|\<\|\|\>|f<around*|(|a|)>-f<around*|(|b|)>-<around*|(|D<rsub|x>f<around*|(|a|)>-D<rsub|c>f<around*|(|b|)>|)>|\<\|\|\>><rsub|Y>>>|<row|<cell|>|<cell|<rsub|<text|[eq:
+      <tformat|<table|<row|<cell|<around*|\<\|\|\>|f<around*|(|a|)>-f<around*|(|b|)>-D<rsub|x>f<around*|(|a-b|)>|\<\|\|\>><rsub|Y>>|<cell|=>|<cell|<around*|\<\|\|\>|f<around*|(|a|)>-f<around*|(|b|)>-<around*|(|D<rsub|x>f<around*|(|a|)>-D<rsub|x>f<around*|(|b|)>|)>|\<\|\|\>><rsub|Y>>>|<row|<cell|>|<cell|<rsub|<text|[eq:
       <reference|eq 16.194.201>]>>>|<cell|<around*|\<\|\|\>|g<around*|(|a|)>-g<around*|(|b|)>|\<\|\|\>><rsub|<around*|\||Y|\|>>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|sup<around*|(|<around*|{|<around*|\<\|\|\>|D<rsub|\<zeta\>>g|\<\|\|\>><rsub|\|L<around*|(|X,Y|)>><around*|\||\<zeta\>\<in\>L<rsub|a,b>|\|>|}>|)>\<cdot\><around*|\<\|\|\>|a-b|\<\|\|\>><rsub|X>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
       <reference|eq 16.195.201>]>>>|<cell|sup<around*|(|<around*|{|<around*|\<\|\|\>|D<rsub|\<varsigma\>>f-D<rsub|x>f|\<\|\|\>><rsub|\|L<around*|(|X,Y|)>>\|\<zeta\>\<in\>L<rsub|a,b>|}>|)>\<cdot\><around*|\<\|\|\>|a-b|\<\|\|\>><rsub|X>>>>>
     </eqnarray*>
@@ -15060,14 +15003,66 @@
 
   <section|Symmetry of Higher Order Differentials>
 
-  We set out now to proof that <math|D<rsup|<around*|[|n|]>><rsub|x>f<around*|(|h<rsub|1>:\<ldots\>:h<rsub|n>|)>=D<rsup|<around*|[|n|]>><rsub|x>f<around*|(|h<rsub|\<sigma\><around*|(|1|)>>:\<ldots\>:h<rsub|\<sigma\><around*|(|n|)>>|)>>
-  where <math|\<sigma\>\<in\>P<rsub|n>> or, using the multilinear
-  representation of the higher order differential, that
-  <math|<rigid|D<rsup|n><rsub|x>f<around*|(|h<rsub|1>,\<ldots\>,h<rsub|n>|)>=D<rsup|n><rsub|x>f<around*|(|h<rsub|\<sigma\><around*|(|1|)>>,\<ldots\>,h<rsub|\<sigma\><around*|(|n|)>>|)>>>.
-  In other words <math|D<rsup|n><rsub|x>f> is a symmetric multilinear
-  function. The proof is rather elaborated, so to simplify it we divide the
-  proof in different lemma'a. First we prove symmetry for the case
-  <math|n=2>.
+  In this scction we will prove that the <math|n>-times differential of a
+  function is symmetric in its arguments. More specific if
+  <math|\<sigma\>\<in\>P<rsub|n>> is a permutation of
+  <math|<around*|(|1,\<ldots\>,n|)>> then we have that\ 
+
+  <\equation*>
+    D<rsup|<around*|[|n|]>><rsub|x>f<around*|(|h<rsub|1>:\<ldots\>h<rsub|n>|)>=D<rsup|<around*|[|n|]>><rsub|x>f<around*|(|h<rsub|\<sigma\><around*|(|1|)>>:\<ldots\>:h<rsub|\<sigma\><around*|(|n|)>>|)>
+  </equation*>
+
+  or using the multilinear representation <math|D<rsup|n><rsub|x>f> of the
+  higher order differential [see definition: <reference|diff higher order
+  differentiation (2)>] that
+
+  <\equation*>
+    D<rsup|n><rsub|x>f<around*|(|h<rsub|1>,\<ldots\>,h<rsub|n>|)>=D<rsup|n><rsub|x>f<around*|(|h<rsub|\<sigma\><around*|(|1|)>>,\<ldots\>,h<rsub|\<sigma\><around*|(|n|)>>|)>
+  </equation*>
+
+  The proof is rather elaborated, so to simplify it we divide the proof in
+  different lemma's. First we show that we have to proves this only for
+  transpositions. Then we prove it for <math|2>-times differentials and
+  finally extend this to <math|n>-times differentials.
+
+  <\lemma>
+    <label|lemma 16.157.205>Let <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>>,
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    be normed spaces, <math|L\<in\>L<rsub|n><around*|(|X;Y|)>> and
+    <math|<rigid|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\>X<rsup|n>>>
+    then if <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n-1|}>>
+    <math|L<around*|(|x<rsub|1>:\<ldots\>:x<rsub|n>|)>=L<around*|(|x<rsub|<around*|(|i\<leftrightarrowlim\><rsub|n>i+1|)><around*|(|1|)>>:\<ldots\>:x<rsub|<around*|(|i\<leftrightarrowlim\><rsub|n>i+1|)><around*|(|n|)>>|)>>
+    it follows that <math|\<forall\>\<sigma\>\<in\>P<rsub|n>>
+    <math|L<around*|(|x<rsub|1>:\<ldots\>:x<rsub|n>|)>=L<around*|(|x<rsub|\<sigma\><around*|(|1|)>>:\<ldots\>:x<rsub|\<sigma\><around*|(|n|)>>|)>>.
+  </lemma>
+
+  <\proof>
+    Using [theorem: <reference|diff linear to multilinear>] there exist a
+    linear isometric isomorphism
+
+    <\equation*>
+      \<cal-I\><rsub|n,X,Y>:L<rsub|n><around*|(|X;Y|)>\<rightarrow\>L<rsup|n><around*|(|X;Y|)>
+    </equation*>
+
+    such that <math|\<forall\><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<subseteq\>X<rsup|n>>
+    <math|<around*|(|\<cal-I\><rsub|n,X,Y><around*|(|L|)>|)><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>=L<around*|(|x<rsub|1>:\<ldots\>:x<rsub|n>|)>>.
+    Take <math|K=\<cal-I\><rsub|n,X,Y><around*|(|L|)>> then
+    <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n-1|}>> we have
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|(|<around*|(|i<long-arrow|\<rubber-leftrightarrow\>||n>i+1|)>K|)><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>>|<cell|=>|<cell|<around*|(|K<around*|(|x<rsub|<around*|(|i\<leftrightarrowlim\><rsub|n>i+1|)><around*|(|1|)>>,\<ldots\>,x<rsub|<around*|(|i\<leftrightarrowlim\><rsub|n>i+1|)><around*|(|n|)>>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|x<rsub|<around*|(|i\<leftrightarrowlim\><rsub|n>i+1|)><around*|(|1|)>>:\<ldots\>:x<rsub|<around*|(|i\<leftrightarrowlim\><rsub|n>i+1|)><around*|(|n|)>>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|x<rsub|1>:\<ldots\>:x<rsub|n>|)>>>|<row|<cell|>|<cell|=>|<cell|K<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>>>>>
+    </eqnarray*>
+
+    proving that <math|><math|<around*|(|i<long-arrow|\<rubber-leftrightarrow\>||n>i+1|)>K=K>.
+    Hence if <math|\<sigma\>\<in\>P<rsub|n>> we have by [corollary:
+    <reference|permutation transposition symmetry (2)>] that
+    <math|\<sigma\>K=K>. Hence\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|L<around*|(|x<rsub|\<sigma\><around*|(|1|)>>:\<ldots\>:x<rsub|\<sigma\><around*|(|n|)>>|)>>|<cell|=>|<cell|K<around*|(|x<rsub|\<sigma\><around*|(|1|)>>,\<ldots\>,x<rsub|\<sigma\><around*|(|n|)>>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|\<sigma\>K|)><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>>>|<row|<cell|>|<cell|=>|<cell|K<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|x<rsub|1>:\<ldots\>:x<rsub|n>|)>>>>>
+    </eqnarray*>
+  </proof>
 
   <\lemma>
     <label|lemma 16.155.203>Let <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>
@@ -15100,8 +15095,17 @@
     </equation>
 
     If <math|t\<in\><around*|]|-2,2|[>> then we have
-    <math|<around*|\<\|\|\>|\<varphi\><rsub|v,w><around*|(|t|)>-x|\<\|\|\>><rsub|X>=<around*|\<\|\|\>|t\<cdot\>v|\<\|\|\>><rsub|X>=<around*|\||t|\|>\<cdot\><around*|\<\|\|\>|v|\<\|\|\>><rsub|x>\<leqslant\>2\<cdot\><frac|r|4>\<less\>r>
-    and <math|<around*|\<\|\|\>|\<psi\><rsub|v,w><around*|(|t|)>-x|\<\|\|\>><rsub|X>=<around*|\<\|\|\>|w+t\<cdot\>v|\<\|\|\>><rsub|X>\<leqslant\><around*|\<\|\|\>|w|\<\|\|\>><rsub|X>+<around*|\||t|\|>\<cdot\><around*|\<\|\|\>|v|\<\|\|\>><rsub|X>\<leqslant\><frac|r|4>+2\<cdot\><frac|r|4>\<less\>r>
+
+    <\equation*>
+      <around*|\<\|\|\>|\<varphi\><rsub|v,w><around*|(|t|)>-x|\<\|\|\>><rsub|X>=<around*|\<\|\|\>|t\<cdot\>v|\<\|\|\>><rsub|X>=<around*|\||t|\|>\<cdot\><around*|\<\|\|\>|v|\<\|\|\>><rsub|x>\<leqslant\>2\<cdot\><frac|r|4>\<less\>r
+    </equation*>
+
+    and
+
+    <\equation*>
+      <around*|\<\|\|\>|\<psi\><rsub|v,w><around*|(|t|)>-x|\<\|\|\>><rsub|X>=<around*|\<\|\|\>|w+t\<cdot\>v|\<\|\|\>><rsub|X>\<leqslant\><around*|\<\|\|\>|w|\<\|\|\>><rsub|X>+<around*|\||t|\|>\<cdot\><around*|\<\|\|\>|v|\<\|\|\>><rsub|X>\<leqslant\><frac|r|4>+2\<cdot\><frac|r|4>\<less\>r
+    </equation*>
+
     proving that\ 
 
     <\equation>
@@ -15117,10 +15121,11 @@
 
     As by [example: <reference|diff f(t)=a.x+y is infinite differentiable>]
     <math|\<psi\><rsub|v,w>,\<varphi\><rsub|v,w>> are
-    <math|C<rsup|\<infty\>>> on <math|U> and <math|f> is \ <math|C<rsup|2>>
-    on <math|U> it follows from [theorems: <reference|diff chain rule higher
-    order class>, <reference|diff higher order differential is linear>] that
-    <math|g<rsub|v,w>> is <math|C<rsup|2>> on <math|U>. Hence by [theorem:
+    <math|C<rsup|\<infty\>>> on <math|<around*|]|-2,2|[>> and <math|f> is
+    \ <math|C<rsup|2>> on <math|U>, it follows from [theorems:
+    <reference|diff chain rule higher order class>, <reference|diff higher
+    order differential is linear>] that <math|g<rsub|v,w>> is
+    <math|C<rsup|2>> on <math|<around*|]|-2,2|[>>. Hence by [theorem:
     <reference|diff C^n and C^m>] <math|g<rsub|v,w>> is <math|C<rsup|1>> on
     <math|U>. So, as <math|L<rsub|0,1>\<equallim\><rsub|<text|[example:
     <reference|diff line segment [0,1]>]>><around*|[|0,1|]>\<subseteq\><around*|]|-2,2|[>>
@@ -15129,7 +15134,7 @@
     get\ 
 
     <\equation*>
-      <around*|\<\|\|\>|g<rsub|v,w><around*|(|0|)>-g<rsub|v,w><around*|(|1|)>-D<rsub|0>g<rsub|v,w><around*|(|0-1|)>|\<\|\|\>><rsub|Y>\<leqslant\>sup<around*|(|<around*|{|<around*|\<\|\|\>|D<rsub|\<zeta\>>g<rsub|v,w>-D<rsub|0>g<rsub|v,w>|\<\|\|\>><rsub|L<around*|(|\<bbb-K\>,Y|)>>\|\<zeta\>\<in\>L<rsub|0,1>|}>|)>\<cdot\><around*|\||0-1|\|>
+      <around*|\<\|\|\>|g<rsub|v,w><around*|(|0|)>-g<rsub|v,w><around*|(|1|)>-D<rsub|0>g<rsub|v,w><around*|(|0-1|)>|\<\|\|\>><rsub|Y>\<leqslant\>sup<around*|(|<around*|{|<around*|\<\|\|\>|D<rsub|\<zeta\>>g<rsub|v,w>-D<rsub|0>g<rsub|v,w>|\<\|\|\>><rsub|L<around*|(|\<bbb-R\>,Y|)>>\|\<zeta\>\<in\>L<rsub|0,1>|}>|)>\<cdot\><around*|\||0-1|\|>
     </equation*>
 
     As <math|L<rsub|0,1>=<around*|[|0,1|]>> and <math|0-1=-1> we have\ 
@@ -15190,18 +15195,23 @@
       ><around*|(|g<rsub|v,w>|)><rprime|'><rsub|\<zeta\>>=D<rsub|x+\<zeta\>\<cdot\>v+w>f<around*|(|v|)>-D<rsub|x+\<zeta\>\<cdot\>v>f<around*|(|v|)>
     </equation>
 
-    As <math|f> is <math|C<rsup|2>> on <math|U> we have that the function
+    As <math|f> is <math|C<rsup|2>> on <math|U> we have that <math|f> is
+    <math|2>-times differentiable on <math|U>, so that by [theorem:
+    <reference|diff higher order differentiation (1)>]
+    <math|D<rsup|<around*|[|1|]>>f> is Fréchet differentiable on <math|U>
+    with <math|\<forall\>x\<in\>U> <math|D<rsup|<around*|[|2|]>><rsub|x>f=D<rsub|x><around*|(|D<rsup|<around*|[|1|]>>f|)>>.
+    As <math|D<rsup|1>f=D f> [see definition: <reference|diff higher order
+    differential>] we have that\ 
 
     <\equation*>
-      D f:U\<rightarrow\>L<rsub|1><around*|(|X;Y|)>=L<around*|(|X,Y|)> <text|
-      defined by >D f<around*|(|x|)>=D<rsub|x>f
+      D f<text| is Fréchet differentiable on >U<text| and
+      >\<forall\>x\<in\>U<text| >D<rsup|<around*|[|2|]>><rsub|x>f=D<rsub|x><around*|(|D
+      f|)>
     </equation*>
 
-    is Fréchet differentiable on every <math|x\<in\>U> and
-    <math|D<rsub|x><around*|(|D f|)>=D<rsup|<around*|[|2|]>><rsub|x>f>. Then
-    given <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> there exist a
+    Then given <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> there exist a
     <math|\<delta\>\<in\>\<bbb-R\><rsup|+>> such that if
-    <math|h\<in\>U<rsub|x>> and <math|<around*|\<\|\|\>|x|\<\|\|\>>\<less\>\<delta\>>
+    <math|h\<in\>U<rsub|x>> and <math|<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>\<less\>\<delta\>>
     then
 
     <\equation>
@@ -15209,8 +15219,8 @@
       f<around*|(|x|)>-D<rsup|<around*|[|2|]>><rsub|x>f<around*|(|h|)>|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\<leqslant\>\<varepsilon\>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>><rsub|X>
     </equation>
 
-    Let <math|v,w\<in\>X> with <math|<around*|\<\|\|\>|v|\<\|\|\>><rsub|X>\<less\>min<around*|(|<frac|\<delta\>|4>,<frac|r|4>|)>>,
-    <math|<around*|\<\|\|\>|w|\<\|\|\>><rsub|X>\<leqslant\>min<around*|(|<frac|\<delta\>|4>,<frac|r|4>|)>>
+    Let <math|v,w\<in\>X> with <math|<around*|\<\|\|\>|v|\<\|\|\>><rsub|X>\<less\>min<around*|(|<frac|\<delta\>|4>,<frac|r|4>,1|)>>,
+    <math|<around*|\<\|\|\>|w|\<\|\|\>><rsub|X>\<leqslant\>min<around*|(|<frac|\<delta\>|4>,<frac|r|4>,1|)>>
     then <math|\<forall\>\<zeta\>\<in\><around*|[|0,1|]>> we have\ 
 
     <\equation*>
@@ -15219,7 +15229,7 @@
     </equation*>
 
     As <math|<around*|\<\|\|\>|v|\<\|\|\>><rsub|X>>,<math|<around*|\<\|\|\>|w|\<\|\|\>><rsub|X>\<less\><frac|r|4>>
-    and <math|\<zeta\>\<leqslant\>1> we have that
+    and <math|<around*|\||\<zeta\>|\|>\<leqslant\>1> we have that
 
     <\equation*>
       <around*|\<\|\|\>|x+\<zeta\>\<cdot\>v+w-x|\<\|\|\>><rsub|X>\<leqslant\><around*|\||\<zeta\>|\|>\<cdot\><around*|\<\|\|\>|v|\<\|\|\>><rsub|X>+<around*|\<\|\|\>|w|\<\|\|\>><rsub|X>\<leqslant\><frac|r|4>+<frac|r|4>\<less\>r<text|
@@ -15233,7 +15243,7 @@
       \<zeta\>\<cdot\>v+w,\<zeta\>\<cdot\>v\<in\>U<rsub|x>
     </equation*>
 
-    Using the above we have that\ 
+    Using the above on [eq: <reference|eq 16.218.203>] we have that\ 
 
     <\equation>
       <label|eq 16.219.203><around*|\<\|\|\>|D
@@ -15257,11 +15267,11 @@
 
     <\eqnarray*>
       <tformat|<table|<row|<cell|<around*|\<\|\|\>|<around*|(|g<rsub|v,w>|)><rprime|'><rsub|\<zeta\>>-D<rsup|<around*|[|2|]>><rsub|x>f<around*|(|w|)><around*|(|v|)>|\<\|\|\>><rsub|Y>>|<cell|\<equallim\><rsub|<text|[eq:
-      <reference|eq 16.217.203>]>>>|<cell|>>|<row|<cell|<around*|\<\|\|\>|D<rsub|x+\<zeta\>\<cdot\>v+w>f<around*|(|v|)>-D<rsub|x+\<zeta\>\<cdot\>v>f<around*|(|v|)>-D<rsup|<around*|[|2|]>><rsub|x>f<around*|(|w|)><around*|(|v|)>|\<\|\|\>><rsub|Y>>|<cell|\<equallim\><rsub|<text|def
-      of >D f>>|<cell|>>|<row|<cell|<around*|\<\|\|\>|D
+      <reference|eq 16.217.203>]>>>|<cell|>>|<row|<cell|<around*|\<\|\|\>|D<rsub|x+\<zeta\>\<cdot\>v+w>f<around*|(|v|)>-D<rsub|x+\<zeta\>\<cdot\>v>f<around*|(|v|)>-D<rsup|<around*|[|2|]>><rsub|x>f<around*|(|w|)><around*|(|v|)>|\<\|\|\>><rsub|Y>>|<cell|<below|=|<text|[definition:
+      <reference|diff differential>]>>>|<cell|>>|<row|<cell|<around*|\<\|\|\>|D
       f<around*|(|x+\<zeta\>\<cdot\>v+w|)><around*|(|v|)>-D
       f<around*|(|x+\<zeta\>\<cdot\>v|)><around*|(|v|)>-D<rsup|<around*|[|2|]>><rsub|x>f<around*|(|w|)><around*|(|v|)>|\<\|\|\>><rsub|Y>>|<cell|\<equallim\><rsub|<text|[eq:
-      <reference|eq 16.221.203>>>>|<cell|>>|<row|<cell|<around*|\<\|\|\>|<wide*|D
+      <reference|eq 16.221.203>]>>>|<cell|>>|<row|<cell|<around*|\<\|\|\>|<wide*|D
       f<around*|(|x+\<zeta\>\<cdot\>v+w|)><around*|(|v|)>|\<wide-underbrace\>><rsub|1>-<wide*|D
       f<around*|(|x+\<zeta\>\<cdot\>v|)><around*|(|v|)>|\<wide-underbrace\>><rsub|2>-<around*|(|<wide*|D<rsup|<around*|[|2|]>><rsub|x>f<around*|(|\<zeta\>\<cdot\>v+w|)><around*|(|v|)>|\<wide-underbrace\>><rsub|3>-<wide*|D<rsup|<around*|[|2|]>><rsub|x>f<around*|(|\<zeta\>\<cdot\>v|)><around*|(|v|)>|\<wide-underbrace\>><rsub|4>|)>|\<\|\|\>><rsub|Y>>|<cell|=>|<cell|>>|<row|<cell|<around*|\<\|\|\>|<wide*|D
       f<around*|(|x+\<zeta\>\<cdot\>v+w|)><around*|(|v|)>|\<wide-underbrace\>><rsub|1>-D
@@ -15275,9 +15285,9 @@
       f<around*|(|x+\<zeta\>\<cdot\>v+w|)>-D
       f<around*|(|x|)>-D<rsup|<around*|[|2|]>><rsub|x>f<around*|(|\<zeta\>\<cdot\>v+w|)>|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\<cdot\><around*|\<\|\|\>|v|\<\|\|\>><rsub|X>+<around*|\<\|\|\>|D
       f<around*|(|x+\<zeta\>\<cdot\>v|)>-D
-      f<around*|(|x|)>-D<rsup|<around*|[|2|]>><rsub|x>f<around*|(|\<zeta\>\<cdot\>v|)>|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\<cdot\><around*|\<\|\|\>|v|\<\|\|\>><rsub|X>>|<cell|\<leqslant\><rsub|<text|[eqs:
+      f<around*|(|x|)>-D<rsup|<around*|[|2|]>><rsub|x>f<around*|(|\<zeta\>\<cdot\>v|)>|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\<cdot\><around*|\<\|\|\>|v|\<\|\|\>><rsub|X>>|<cell|<below|\<leqslant\>|<text|[eqs:
       <reference|eq 16.219.203>, <reference|eq
-      16.220.203>>>>|<cell|>>|<row|<cell|\<varepsilon\>\<cdot\><around*|(|<around*|\<\|\|\>|\<zeta\>\<cdot\>v+w|\<\|\|\>><rsub|X>+<around*|\<\|\|\>|\<zeta\>\<cdot\>v|\<\|\|\>><rsub|X>|)>\<cdot\><around*|\<\|\|\>|v|\<\|\|\>><rsub|X>>|<cell|\<leqslant\>>|<cell|>>|<row|<cell|\<varepsilon\>\<cdot\><around*|\<\|\|\>|v|\<\|\|\>><rsub|X>\<cdot\><around*|(|<around*|\||\<zeta\>|\|>\<cdot\><around*|\<\|\|\>|v|\<\|\|\>><rsub|X>+<around*|\<\|\|\>|w|\<\|\|\>><rsub|X>+<around*|\||\<zeta\>|\|>\<cdot\><around*|\<\|\|\>|v|\<\|\|\>><rsub|X>|)>>|<cell|\<leqslant\><rsub|\<zeta\>\<in\><around*|[|0,1|]>>>|<cell|>>|<row|<cell|\<varepsilon\>\<cdot\><around*|\<\|\|\>|v<rsub|x>|\<\|\|\>>\<cdot\><around*|(|<around*|\<\|\|\>|v|\<\|\|\>><rsub|x>+<around*|\<\|\|\>|w|\<\|\|\>><rsub|X+><around*|\<\|\|\>|v|\<\|\|\>><rsub|X>|)>>|<cell|\<leqslant\>>|<cell|>>|<row|<cell|\<varepsilon\>\<cdot\><around*|\<\|\|\>|v<rsub|x>|\<\|\|\>>\<cdot\><around*|(|<around*|\<\|\|\>|v|\<\|\|\>><rsub|x>+<around*|\<\|\|\>|w|\<\|\|\>><rsub|X>+<around*|\<\|\|\>|w|\<\|\|\>><rsub|X>+<around*|\<\|\|\>|v|\<\|\|\>><rsub|X>|)>>|<cell|=>|<cell|>>|<row|<cell|2\<cdot\>\<varepsilon\>*\<cdot\><around*|\<\|\|\>|v|\<\|\|\>><rsub|X>\<cdot\><around*|(|<around*|\<\|\|\>|v|\<\|\|\>><rsub|X>+<around*|\<\|\|\>|w|\<\|\|\>><rsub|X>|)>>|<cell|>|<cell|>>>>
+      16.220.203>]>><rsub|>>|<cell|>>|<row|<cell|\<varepsilon\>\<cdot\><around*|(|<around*|\<\|\|\>|\<zeta\>\<cdot\>v+w|\<\|\|\>><rsub|X>+<around*|\<\|\|\>|\<zeta\>\<cdot\>v|\<\|\|\>><rsub|X>|)>\<cdot\><around*|\<\|\|\>|v|\<\|\|\>><rsub|X>>|<cell|\<leqslant\>>|<cell|>>|<row|<cell|\<varepsilon\>\<cdot\><around*|\<\|\|\>|v|\<\|\|\>><rsub|X>\<cdot\><around*|(|<around*|\||\<zeta\>|\|>\<cdot\><around*|\<\|\|\>|v|\<\|\|\>><rsub|X>+<around*|\<\|\|\>|w|\<\|\|\>><rsub|X>+<around*|\||\<zeta\>|\|>\<cdot\><around*|\<\|\|\>|v|\<\|\|\>><rsub|X>|)>>|<cell|<below|\<leqslant\>|\<zeta\>\<in\><around*|[|0,1|]>><rsub|>>|<cell|>>|<row|<cell|\<varepsilon\>\<cdot\><around*|\<\|\|\>|v<rsub|x>|\<\|\|\>>\<cdot\><around*|(|<around*|\<\|\|\>|v|\<\|\|\>><rsub|x>+<around*|\<\|\|\>|w|\<\|\|\>><rsub|X+><around*|\<\|\|\>|v|\<\|\|\>><rsub|X>|)>>|<cell|\<leqslant\>>|<cell|>>|<row|<cell|\<varepsilon\>\<cdot\><around*|\<\|\|\>|v<rsub|x>|\<\|\|\>>\<cdot\><around*|(|<around*|\<\|\|\>|v|\<\|\|\>><rsub|x>+<around*|\<\|\|\>|w|\<\|\|\>><rsub|X>+<around*|\<\|\|\>|w|\<\|\|\>><rsub|X>+<around*|\<\|\|\>|v|\<\|\|\>><rsub|X>|)>>|<cell|=>|<cell|>>|<row|<cell|2\<cdot\>\<varepsilon\>*\<cdot\><around*|\<\|\|\>|v|\<\|\|\>><rsub|X>\<cdot\><around*|(|<around*|\<\|\|\>|v|\<\|\|\>><rsub|X>+<around*|\<\|\|\>|w|\<\|\|\>><rsub|X>|)>>|<cell|>|<cell|>>>>
     </eqnarray*>
 
     proving that\ 
@@ -15290,7 +15300,7 @@
     Further for \ <math|t\<in\><around*|[|0,1|]>> we have:
 
     <\eqnarray*>
-      <tformat|<table|<row|<cell|<around*|\<\|\|\>|<around*|(|g<rsub|v,w>|)><rprime|'><rsub|t>-<around*|(|g<rsub|v,w>|)><rprime|'><rsub|0>|\<\|\|\>><rsub|Y>>|<cell|=>|<cell|>>|<row|<cell|<around*|\<\|\|\>|<around*|(|g<rsub|v,w>|)><rprime|'><rsub|t>-D<rsup|<around*|[|2|]>><rsub|x>f<around*|(|w|)><around*|(|v|)>-<around*|(|<around*|(|g<rsub|v,w>|)><rprime|'><rsub|0>-D<rsup|<around*|[|2|]>><rsub|x>f<around*|(|w|)><around*|(|v|)>|)>|\<\|\|\>><rsub|Y>>|<cell|\<leqslant\>>|<cell|>>|<row|<cell|<around*|\<\|\|\>|<around*|(|g<rsub|v,w>|)><rprime|'><rsub|t>-D<rsup|<around*|[|2|]>><rsub|x>f<around*|(|w|)><around*|(|v|)>|\<\|\|\>><rsub|Y>+<around*|\<\|\|\>|<around*|(|g<rsub|v,w>|)><rprime|'><rsub|0>-D<rsup|<around*|[|2|]>><rsub|x>f<around*|(|w|)><around*|(|v|)>|\<\|\|\>><rsub|Y>>|<cell|\<leqslant\><rsub|<text|<math|t,0\<in\><around*|[|0,1|]>\<wedge\><text|[eq:
+      <tformat|<table|<row|<cell|<around*|\<\|\|\>|<around*|(|g<rsub|v,w>|)><rprime|'><rsub|t>-<around*|(|g<rsub|v,w>|)><rprime|'><rsub|0>|\<\|\|\>><rsub|Y>>|<cell|=>|<cell|>>|<row|<cell|<around*|\<\|\|\>|<around*|(|g<rsub|v,w>|)><rprime|'><rsub|t>-D<rsup|<around*|[|2|]>><rsub|x>f<around*|(|w|)><around*|(|v|)>-<around*|(|<around*|(|g<rsub|v,w>|)><rprime|'><rsub|0>-D<rsup|<around*|[|2|]>><rsub|x>f<around*|(|w|)><around*|(|v|)>|)>|\<\|\|\>><rsub|Y>>|<cell|\<leqslant\>>|<cell|>>|<row|<cell|<around*|\<\|\|\>|<around*|(|g<rsub|v,w>|)><rprime|'><rsub|t>-D<rsup|<around*|[|2|]>><rsub|x>f<around*|(|w|)><around*|(|v|)>|\<\|\|\>><rsub|Y>+<around*|\<\|\|\>|<around*|(|g<rsub|v,w>|)><rprime|'><rsub|0>-D<rsup|<around*|[|2|]>><rsub|x>f<around*|(|w|)><around*|(|v|)>|\<\|\|\>><rsub|Y>>|<cell|<below|\<leqslant\><rsub|>|<text|<math|t,0\<in\><around*|[|0,1|]>\<wedge\><text|[eq:
       <reference|eq 16.223.204>]>>>>>|<cell|>>|<row|<cell|2\<cdot\>\<varepsilon\>*\<cdot\><around*|\<\|\|\>|v|\<\|\|\>><rsub|X>\<cdot\><around*|(|<around*|\<\|\|\>|v|\<\|\|\>><rsub|X>+<around*|\<\|\|\>|w|\<\|\|\>><rsub|X>|)>+2\<cdot\>\<varepsilon\>*\<cdot\><around*|\<\|\|\>|v|\<\|\|\>><rsub|X>\<cdot\><around*|(|<around*|\<\|\|\>|v|\<\|\|\>><rsub|X>+<around*|\<\|\|\>|w|\<\|\|\>><rsub|X>|)>>|<cell|=>|<cell|>>|<row|<cell|4\<cdot\>\<varepsilon\>*\<cdot\><around*|\<\|\|\>|v|\<\|\|\>><rsub|X>\<cdot\><around*|(|<around*|\<\|\|\>|v|\<\|\|\>><rsub|X>+<around*|\<\|\|\>|w|\<\|\|\>><rsub|X>|)>>|<cell|>|<cell|>>>>
     </eqnarray*>
 
@@ -15301,12 +15311,11 @@
     </equation>
 
     As <math|g<rsub|v,w>> is <math|C<rsup|1>> on <math|<around*|]|-2,2|[>>,
-    it follows from [theorem: <reference|diff C^1 and derivates>] that the
+    it follows from [theorem: <reference|diff C^1 and derivatives>] that the
     function
 
     <\equation*>
-      g<rprime|'><rsub|v,w>:<around*|]|-2,2|[>\<rightarrow\>Y<text| defined
-      by >g<rprime|'><rsub|v,w><around*|(|\<zeta\>|)>=<around*|(|g<rsub|v,w>|)><rprime|'><rsub|\<zeta\>>
+      g<rprime|'><rsub|v,w>:<around*|]|-2,2|[>\<rightarrow\>Y
     </equation*>
 
     is continuous. Define\ 
@@ -15343,12 +15352,12 @@
     Next\ 
 
     <\eqnarray*>
-      <tformat|<table|<row|<cell|<around*|\<\|\|\>|g<rsub|v,w><around*|(|1|)>-g<rsub|v,w><around*|(|0|)>-D<rsup|<around*|[|2|]>><rsub|x>f<around*|(|w|)><around*|(|v|)>|\<\|\|\>><rsub|Y>>|<cell|=>|<cell|>>|<row|<cell|<around*|\<\|\|\>|g<rsub|v,w><around*|(|1|)>-g<rsub|v,w><around*|(|0|)>-<around*|(|g<rsub|v,w>|)><rprime|'><rsub|0>+<around*|(|g<rsub|v,w>|)><rprime|'><rsub|0>-<around*|(|g<rsub|v,w>|)><rprime|'><rsub|\<xi\><rsub|0>>+<around*|(|g<rsub|v,w>|)><rprime|'><rsub|\<xi\><rsub|0>>-D<rsup|<around*|[|2|]>><rsub|x>f<around*|(|w|)><around*|(|v|)>|\<\|\|\>><rsub|Y>>|<cell|\<leqslant\>>|<cell|>>|<row|<cell|<around*|\<\|\|\>|g<rsub|v,w><around*|(|1|)>-g<rsub|v,w><around*|(|0|)>-<around*|(|g<rsub|v,w>|)><rprime|'><rsub|0>|\<\|\|\>><rsub|Y>+<around*|\<\|\|\>|<around*|(|g<rsub|v,w>|)><rprime|'><rsub|0>-<around*|(|g<rsub|v,w>|)><rprime|'><rsub|\<xi\><rsub|0>>|\<\|\|\>><rsub|Y>+<around*|\<\|\|\>|<around*|(|g<rsub|v,w>|)><rprime|'><rsub|\<xi\><rsub|0>>-D<rsup|<around*|[|2|]>><rsub|x>f<around*|(|w|)><around*|(|v|)>|\<\|\|\>><rsub|Y>>|<cell|\<leqslant\><rsub|<text|[eq:
-      <reference|eq 16.217.204>]>>>|<cell|>>|<row|<cell|sup<around*|(|<around*|{|<around*|\<\|\|\>|<around*|(|g<rsub|v,w>|)><rprime|'><rsub|\<zeta\>>-<around*|(|g<rsub|v,w>|)><rprime|'><rsub|0>|\<\|\|\>><rsub|Y>\|\<zeta\>\<in\><around*|[|0,1|]>|}>|)>+<around*|\<\|\|\>|<around*|(|g<rsub|v,w>|)><rprime|'><rsub|0>-<around*|(|g<rsub|v,w>|)><rprime|'><rsub|\<xi\><rsub|0>>|\<\|\|\>><rsub|Y>+<around*|\<\|\|\>|<around*|(|g<rsub|v,w>|)><rprime|'><rsub|\<xi\><rsub|0>>-D<rsup|<around*|[|2|]>><rsub|x>f<around*|(|w|)><around*|(|v|)>|\<\|\|\>><rsub|Y>>|<cell|\<equallim\><rsub|<text|[eq:
+      <tformat|<table|<row|<cell|<around*|\<\|\|\>|g<rsub|v,w><around*|(|1|)>-g<rsub|v,w><around*|(|0|)>-D<rsup|<around*|[|2|]>><rsub|x>f<around*|(|w|)><around*|(|v|)>|\<\|\|\>><rsub|Y>>|<cell|=>|<cell|>>|<row|<cell|<around*|\<\|\|\>|g<rsub|v,w><around*|(|1|)>-g<rsub|v,w><around*|(|0|)>-<around*|(|g<rsub|v,w>|)><rprime|'><rsub|0>+<around*|(|g<rsub|v,w>|)><rprime|'><rsub|0>-<around*|(|g<rsub|v,w>|)><rprime|'><rsub|\<xi\><rsub|0>>+<around*|(|g<rsub|v,w>|)><rprime|'><rsub|\<xi\><rsub|0>>-D<rsup|<around*|[|2|]>><rsub|x>f<around*|(|w|)><around*|(|v|)>|\<\|\|\>><rsub|Y>>|<cell|\<leqslant\>>|<cell|>>|<row|<cell|<around*|\<\|\|\>|g<rsub|v,w><around*|(|1|)>-g<rsub|v,w><around*|(|0|)>-<around*|(|g<rsub|v,w>|)><rprime|'><rsub|0>|\<\|\|\>><rsub|Y>+<around*|\<\|\|\>|<around*|(|g<rsub|v,w>|)><rprime|'><rsub|0>-<around*|(|g<rsub|v,w>|)><rprime|'><rsub|\<xi\><rsub|0>>|\<\|\|\>><rsub|Y>+<around*|\<\|\|\>|<around*|(|g<rsub|v,w>|)><rprime|'><rsub|\<xi\><rsub|0>>-D<rsup|<around*|[|2|]>><rsub|x>f<around*|(|w|)><around*|(|v|)>|\<\|\|\>><rsub|Y>>|<cell|<below|\<leqslant\>|<text|[eq:
+      <reference|eq 16.217.204>]>><rsub|>>|<cell|>>|<row|<cell|sup<around*|(|<around*|{|<around*|\<\|\|\>|<around*|(|g<rsub|v,w>|)><rprime|'><rsub|\<zeta\>>-<around*|(|g<rsub|v,w>|)><rprime|'><rsub|0>|\<\|\|\>><rsub|Y>\|\<zeta\>\<in\><around*|[|0,1|]>|}>|)>+<around*|\<\|\|\>|<around*|(|g<rsub|v,w>|)><rprime|'><rsub|0>-<around*|(|g<rsub|v,w>|)><rprime|'><rsub|\<xi\><rsub|0>>|\<\|\|\>><rsub|Y>+<around*|\<\|\|\>|<around*|(|g<rsub|v,w>|)><rprime|'><rsub|\<xi\><rsub|0>>-D<rsup|<around*|[|2|]>><rsub|x>f<around*|(|w|)><around*|(|v|)>|\<\|\|\>><rsub|Y>>|<cell|\<equallim\><rsub|<text|[eq:
       <reference|eq 16.225.204>,<reference|eq
-      16.225.205>]>>>|<cell|>>|<row|<cell|<around*|\<\|\|\>|g<rprime|'><rsub|v,w><around*|(|\<xi\><rsub|0>|)>-g<rprime|'><rsub|v,w><around*|(|0|)>|\<\|\|\>><rsub|Y>+<around*|\<\|\|\>|<around*|(|g<rsub|v,w>|)><rprime|'><rsub|0>-<around*|(|g<rsub|v,w>|)><rprime|'><rsub|\<xi\><rsub|0>>|\<\|\|\>><rsub|Y>+<around*|\<\|\|\>|<around*|(|g<rsub|v,w>|)><rprime|'><rsub|\<xi\><rsub|0>>-D<rsup|<around*|[|2|]>><rsub|x>f<around*|(|w|)><around*|(|v|)>|\<\|\|\>><rsub|Y>>|<cell|=>|<cell|>>|<row|<cell|<around*|\<\|\|\>|<around*|(|g<rsub|v,w>|)><rprime|'><rsub|\<xi\><rsub|9>>-<around*|(|g<rsub|v,w>|)><rprime|'><rsub|0>|\<\|\|\>><rsub|Y>+<around*|\<\|\|\>|<around*|(|g<rsub|v,w>|)><rprime|'><rsub|0>-<around*|(|g<rsub|v,w>|)><rprime|'><rsub|\<xi\><rsub|0>><rsub|>|\<\|\|\>><rsub|Y>+<around*|\<\|\|\>|<around*|(|g<rsub|v,w>|)><rprime|'><rsub|\<xi\><rsub|0>>-D<rsup|<around*|[|2|]>><rsub|x>f<around*|(|w|)><around*|(|v|)>|\<\|\|\>><rsub|Y>>|<cell|=>|<cell|>>|<row|<cell|2\<cdot\><around*|\<\|\|\>|<around*|(|g<rsub|v,w>|)><rprime|'><rsub|\<xi\><rsub|0>>-<around*|(|g<rsub|v,w>|)><rprime|'><rsub|0>|\<\|\|\>><rsub|Y>+<around*|\<\|\|\>|<around*|(|g<rsub|v,w>|)><rprime|'><rsub|\<xi\><rsub|0>>-D<rsup|<around*|[|2|]>><rsub|x>f<around*|(|w|)><around*|(|v|)>|\<\|\|\>><rsub|Y>>|<cell|\<leqslant\><rsub|<text|[eq:
-      <reference|eq 16.224.204>]>>>|<cell|>>|<row|<cell|8\<cdot\>\<varepsilon\>*\<cdot\><around*|\<\|\|\>|v|\<\|\|\>><rsub|X>\<cdot\><around*|(|<around*|\<\|\|\>|v|\<\|\|\>><rsub|X>+<around*|\<\|\|\>|w|\<\|\|\>><rsub|X>|)>+<around*|\<\|\|\>|<around*|(|g<rsub|v,w>|)><rprime|'><rsub|\<xi\><rsub|0>>-D<rsup|<around*|[|2|]>><rsub|x>f<around*|(|w|)><around*|(|v|)>|\<\|\|\>><rsub|Y>>|<cell|\<leqslant\><rsub|<text|[eq:
-      <reference|eq 16.223.204>]>>>|<cell|>>|<row|<cell|8\<cdot\>\<varepsilon\>*\<cdot\><around*|\<\|\|\>|v|\<\|\|\>><rsub|X>\<cdot\><around*|(|<around*|\<\|\|\>|v|\<\|\|\>><rsub|X>+<around*|\<\|\|\>|w|\<\|\|\>><rsub|X>|)>+2\<cdot\>\<varepsilon\>*\<cdot\><around*|\<\|\|\>|v|\<\|\|\>><rsub|X>\<cdot\><around*|(|<around*|\<\|\|\>|v|\<\|\|\>><rsub|X>+<around*|\<\|\|\>|w|\<\|\|\>><rsub|X>|)>>|<cell|=>|<cell|>>|<row|<cell|10\<cdot\>\<varepsilon\>*\<cdot\><around*|\<\|\|\>|v|\<\|\|\>><rsub|X>\<cdot\><around*|(|<around*|\<\|\|\>|v|\<\|\|\>><rsub|X>+<around*|\<\|\|\>|w|\<\|\|\>><rsub|X>|)>>|<cell|>|<cell|>>>>
+      16.225.205>]>>>|<cell|>>|<row|<cell|<around*|\<\|\|\>|g<rprime|'><rsub|v,w><around*|(|\<xi\><rsub|0>|)>-g<rprime|'><rsub|v,w><around*|(|0|)>|\<\|\|\>><rsub|Y>+<around*|\<\|\|\>|<around*|(|g<rsub|v,w>|)><rprime|'><rsub|0>-<around*|(|g<rsub|v,w>|)><rprime|'><rsub|\<xi\><rsub|0>>|\<\|\|\>><rsub|Y>+<around*|\<\|\|\>|<around*|(|g<rsub|v,w>|)><rprime|'><rsub|\<xi\><rsub|0>>-D<rsup|<around*|[|2|]>><rsub|x>f<around*|(|w|)><around*|(|v|)>|\<\|\|\>><rsub|Y>>|<cell|=>|<cell|>>|<row|<cell|<around*|\<\|\|\>|<around*|(|g<rsub|v,w>|)><rprime|'><rsub|\<xi\><rsub|9>>-<around*|(|g<rsub|v,w>|)><rprime|'><rsub|0>|\<\|\|\>><rsub|Y>+<around*|\<\|\|\>|<around*|(|g<rsub|v,w>|)><rprime|'><rsub|0>-<around*|(|g<rsub|v,w>|)><rprime|'><rsub|\<xi\><rsub|0>><rsub|>|\<\|\|\>><rsub|Y>+<around*|\<\|\|\>|<around*|(|g<rsub|v,w>|)><rprime|'><rsub|\<xi\><rsub|0>>-D<rsup|<around*|[|2|]>><rsub|x>f<around*|(|w|)><around*|(|v|)>|\<\|\|\>><rsub|Y>>|<cell|=>|<cell|>>|<row|<cell|2\<cdot\><around*|\<\|\|\>|<around*|(|g<rsub|v,w>|)><rprime|'><rsub|\<xi\><rsub|0>>-<around*|(|g<rsub|v,w>|)><rprime|'><rsub|0>|\<\|\|\>><rsub|Y>+<around*|\<\|\|\>|<around*|(|g<rsub|v,w>|)><rprime|'><rsub|\<xi\><rsub|0>>-D<rsup|<around*|[|2|]>><rsub|x>f<around*|(|w|)><around*|(|v|)>|\<\|\|\>><rsub|Y>>|<cell|<below|\<leqslant\>|<text|[eq:
+      <reference|eq 16.224.204>]>><rsub|<text|>>>|<cell|>>|<row|<cell|8\<cdot\>\<varepsilon\>*\<cdot\><around*|\<\|\|\>|v|\<\|\|\>><rsub|X>\<cdot\><around*|(|<around*|\<\|\|\>|v|\<\|\|\>><rsub|X>+<around*|\<\|\|\>|w|\<\|\|\>><rsub|X>|)>+<around*|\<\|\|\>|<around*|(|g<rsub|v,w>|)><rprime|'><rsub|\<xi\><rsub|0>>-D<rsup|<around*|[|2|]>><rsub|x>f<around*|(|w|)><around*|(|v|)>|\<\|\|\>><rsub|Y>>|<cell|<below|\<leqslant\>|<text|[eq:
+      <reference|eq 16.223.204>]>><rsub|>>|<cell|>>|<row|<cell|8\<cdot\>\<varepsilon\>*\<cdot\><around*|\<\|\|\>|v|\<\|\|\>><rsub|X>\<cdot\><around*|(|<around*|\<\|\|\>|v|\<\|\|\>><rsub|X>+<around*|\<\|\|\>|w|\<\|\|\>><rsub|X>|)>+2\<cdot\>\<varepsilon\>*\<cdot\><around*|\<\|\|\>|v|\<\|\|\>><rsub|X>\<cdot\><around*|(|<around*|\<\|\|\>|v|\<\|\|\>><rsub|X>+<around*|\<\|\|\>|w|\<\|\|\>><rsub|X>|)>>|<cell|=>|<cell|>>|<row|<cell|10\<cdot\>\<varepsilon\>*\<cdot\><around*|\<\|\|\>|v|\<\|\|\>><rsub|X>\<cdot\><around*|(|<around*|\<\|\|\>|v|\<\|\|\>><rsub|X>+<around*|\<\|\|\>|w|\<\|\|\>><rsub|X>|)>>|<cell|>|<cell|>>>>
     </eqnarray*>
 
     proving that <math|\<forall\>v,w\<in\>X<text| with
@@ -15359,8 +15368,8 @@
       <label|eq 16.226.204><around*|\<\|\|\>|g<rsub|v,w><around*|(|1|)>-g<rsub|v,w><around*|(|0|)>-D<rsup|<around*|[|2|]>><rsub|x>f<around*|(|w|)><around*|(|v|)>|\<\|\|\>><rsub|Y>\<leqslant\>10\<cdot\>\<varepsilon\>*\<cdot\><around*|\<\|\|\>|v|\<\|\|\>><rsub|X>\<cdot\><around*|(|<around*|\<\|\|\>|v|\<\|\|\>><rsub|X>+<around*|\<\|\|\>|w|\<\|\|\>><rsub|X>|)>
     </equation>
 
-    As for <math|v<rprime|'>=w> and <math|w<rprime|'>=v<rprime|'>> we have
-    also <math|<around*|\<\|\|\>|v<rprime|'>|\<\|\|\>><rsub|X>\<less\>min<around*|(|<frac|\<delta\>|4>,<frac|r|4>|)>,<around*|\<\|\|\>|w<rprime|'>|\<\|\|\>><rsub|X>\<less\>min<around*|(|<frac|\<delta\>|4>,<frac|r|4>|)>>
+    As for <math|v<rprime|'>=w> and <math|w<rprime|'>=v> we have also
+    <math|<around*|\<\|\|\>|v<rprime|'>|\<\|\|\>><rsub|X>\<less\>min<around*|(|<frac|\<delta\>|4>,<frac|r|4>|)>,<around*|\<\|\|\>|w<rprime|'>|\<\|\|\>><rsub|X>\<less\>min<around*|(|<frac|\<delta\>|4>,<frac|r|4>|)>>
     it follows that
 
     <\equation*>
@@ -15376,46 +15385,47 @@
     Now\ 
 
     <\eqnarray*>
-      <tformat|<table|<row|<cell|g<rsub|v,w><around*|(|1|)>-g<rsub|v,w><around*|(|0|)>>|<cell|=>|<cell|<around*|(|f\<circ\>\<psi\><rsub|v,w>|)><around*|(|1|)>-<around*|(|f\<circ\>\<varphi\><rsub|v,w>|)><around*|(|1|)>-<around*|(|<around*|(|f\<circ\>\<psi\><rsub|v,w>|)><around*|(|0|)>-<around*|(|f\<circ\>\<varphi\><rsub|v,w>|)><around*|(|0|)>|)>>>|<row|<cell|>|<cell|=>|<cell|f<around*|(|\<psi\><rsub|v,w><around*|(|1|)>|)>-f<around*|(|\<varphi\><rsub|v,w><around*|(|1|)>|)>-f<around*|(|\<psi\><rsub|v,w><around*|(|0|)>|)>+f<around*|(|\<varphi\><rsub|v,w><around*|(|0|)>|)>>>|<row|<cell|>|<cell|=>|<cell|f<around*|(|x+v\<cdot\>1+w|)>-f<around*|(|x+v\<cdot\>1|)>-f<around*|(|x+v\<cdot\>0+w|)>+f<around*|(|x+v\<cdot\>0|)>>>|<row|<cell|>|<cell|=>|<cell|f<around*|(|x+v+w|)>-f<around*|(|x+v|)>-f<around*|(|x+w|)>+f<around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|f<around*|(|x+w+v|)>-f<around*|(|x+w|)>-f<around*|(|x+v|)>+f<around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|f<around*|(|x+w\<cdot\>1+v|)>-f<around*|(|x+w\<cdot\>1|)>-f<around*|(|x+w\<cdot\>0+v|)>+f<around*|(|x+w\<cdot\>0|)>>>|<row|<cell|>|<cell|=>|<cell|f<around*|(|\<psi\><rsub|w,v><around*|(|1|)>|)>-f<around*|(|\<varphi\><rsub|w,v><around*|(|1|)>|)>-f<around*|(|\<psi\><rsub|w,v><around*|(|0|)>|)>+f<around*|(|\<varphi\><rsub|w,v><around*|(|0|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|f\<circ\>\<psi\><rsub|w,v>|)><around*|(|1|)>-<around*|(|f\<circ\>\<varphi\><rsub|w,v>|)><around*|(|1|)>-<around*|(|<around*|(|f\<circ\>\<psi\><rsub|w,v>|)><around*|(|0|)>-<around*|(|f\<circ\>\<varphi\><rsub|w,v>|)><around*|(|0|)>|)>>>|<row|<cell|>|<cell|=>|<cell|g<rsub|w.v><around*|(|1|)>-g<rsub|w,v><around*|(|0|)>>>>>
+      <tformat|<table|<row|<cell|g<rsub|v,w><around*|(|1|)>-g<rsub|v,w><around*|(|0|)>>|<cell|=>|<cell|<around*|(|f\<circ\>\<psi\><rsub|v,w>|)><around*|(|1|)>-<around*|(|f\<circ\>\<varphi\><rsub|v,w>|)><around*|(|1|)>-<around*|(|<around*|(|f\<circ\>\<psi\><rsub|v,w>|)><around*|(|0|)>-<around*|(|f\<circ\>\<varphi\><rsub|v,w>|)><around*|(|0|)>|)>>>|<row|<cell|>|<cell|=>|<cell|f<around*|(|\<psi\><rsub|v,w><around*|(|1|)>|)>-f<around*|(|\<varphi\><rsub|v,w><around*|(|1|)>|)>-f<around*|(|\<psi\><rsub|v,w><around*|(|0|)>|)>+f<around*|(|\<varphi\><rsub|v,w><around*|(|0|)>|)>>>|<row|<cell|>|<cell|=>|<cell|f<around*|(|x+1\<cdot\>v+w|)>-f<around*|(|x+1\<cdot\>v|)>-f<around*|(|x+0\<cdot\>v+w|)>+f<around*|(|x+0\<cdot\>v|)>>>|<row|<cell|>|<cell|=>|<cell|f<around*|(|x+v+w|)>-f<around*|(|x+v|)>-f<around*|(|x+w|)>+f<around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|f<around*|(|x+w+v|)>-f<around*|(|x+w|)>-f<around*|(|x+v|)>+f<around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|f<around*|(|x+1\<cdot\>w+v|)>-f<around*|(|x+1\<cdot\>w|)>-f<around*|(|x+0\<cdot\>w+v|)>+f<around*|(|x+0\<cdot\>w|)>>>|<row|<cell|>|<cell|=>|<cell|f<around*|(|\<psi\><rsub|w,v><around*|(|1|)>|)>-f<around*|(|\<varphi\><rsub|w,v><around*|(|1|)>|)>-f<around*|(|\<psi\><rsub|w,v><around*|(|0|)>|)>+f<around*|(|\<varphi\><rsub|w,v><around*|(|0|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|f\<circ\>\<psi\><rsub|w,v>|)><around*|(|1|)>-<around*|(|f\<circ\>\<varphi\><rsub|w,v>|)><around*|(|1|)>-<around*|(|<around*|(|f\<circ\>\<psi\><rsub|w,v>|)><around*|(|0|)>-<around*|(|f\<circ\>\<varphi\><rsub|w,v>|)><around*|(|0|)>|)>>>|<row|<cell|>|<cell|=>|<cell|g<rsub|w.v><around*|(|1|)>-g<rsub|w,v><around*|(|0|)>>>>>
     </eqnarray*>
 
-    substituting in [eq: <reference|eq 16.227.204>] gives\ 
+    substituting this in [eq: <reference|eq 16.227.204>] gives\ 
 
     <\equation>
       <label|eq 16.228.204><around*|\<\|\|\>|g<rsub|v,w><around*|(|1|)>-g<rsub|v,w><around*|(|0|)>-D<rsup|<around*|[|2|]>><rsub|x>f<around*|(|v|)><around*|(|w|)>|\<\|\|\>><rsub|Y>\<leqslant\>10\<cdot\>\<varepsilon\>*\<cdot\><around*|\<\|\|\>|w|\<\|\|\>><rsub|X>\<cdot\><around*|(|<around*|\<\|\|\>|v|\<\|\|\>><rsub|X>+<around*|\<\|\|\>|w|\<\|\|\>><rsub|X>|)>
     </equation>
 
-    Next
+    Next taking in account that <math|<around*|\<\|\|\>|v|\<\|\|\>><rsub|X>\<less\>min<around*|(|<frac|\<delta\>|4>,<frac|r|4>,1|)>\<Rightarrow\><around*|\<\|\|\>|v|\<\|\|\>><rsub|X>\<leqslant\>1>,
+    <math|<around*|\<\|\|\>|w|\<\|\|\>><rsub|X>\<less\>min<around*|(|<frac|\<delta\>|4>,<frac|r|4>,1|)>\<Rightarrow\><around*|\<\|\|\>|w|\<\|\|\>><rsub|X>\<leqslant\>1>
+    we have
 
     <\eqnarray*>
-      <tformat|<table|<row|<cell|<around*|\<\|\|\>|D<rsup|<around*|[|2|]>><rsub|x>f<around*|(|v|)><around*|(|w|)>-D<rsup|<around*|[|2|]>><rsub|x>f<around*|(|w|)><around*|(|v|)>|\<\|\|\>><rsub|Y>>|<cell|=>|<cell|>>|<row|<cell|<around*|\<\|\|\>|g<rsub|v,w><around*|(|1|)>-g<rsub|v,w><around*|(|0|)>-D<rsup|<around*|[|2|]>><rsub|x>f<around*|(|w|)><around*|(|v|)>-<around*|(|g<rsub|v,w><around*|(|1|)>-g<rsub|v,w><around*|(|0|)>-D<rsup|<around*|[|2|]>><rsub|x>f<around*|(|v|)><around*|(|w|)>|)>|\<\|\|\>><rsub|Y>>|<cell|\<leqslant\>>|<cell|>>|<row|<cell|<around*|\<\|\|\>|g<rsub|v,w><around*|(|1|)>-g<rsub|v,w><around*|(|0|)>-D<rsup|<around*|[|2|]>><rsub|x>f<around*|(|w|)><around*|(|v|)>|\<\|\|\>><rsub|Y>+<around*|\<\|\|\>|g<rsub|v,w><around*|(|1|)>-g<rsub|v,w><around*|(|0|)>-D<rsup|<around*|[|2|]>><rsub|x>f<around*|(|v|)><around*|(|w|)>|\<\|\|\>><rsub|Y>>|<cell|\<leqslant\><rsub|<text|[eq:
+      <tformat|<table|<row|<cell|<around*|\<\|\|\>|D<rsup|<around*|[|2|]>><rsub|x>f<around*|(|v|)><around*|(|w|)>-D<rsup|<around*|[|2|]>><rsub|x>f<around*|(|w|)><around*|(|v|)>|\<\|\|\>><rsub|Y>>|<cell|=>|<cell|>>|<row|<cell|<around*|\<\|\|\>|g<rsub|v,w><around*|(|1|)>-g<rsub|v,w><around*|(|0|)>-D<rsup|<around*|[|2|]>><rsub|x>f<around*|(|w|)><around*|(|v|)>-<around*|(|g<rsub|v,w><around*|(|1|)>-g<rsub|v,w><around*|(|0|)>-D<rsup|<around*|[|2|]>><rsub|x>f<around*|(|v|)><around*|(|w|)>|)>|\<\|\|\>><rsub|Y>>|<cell|\<leqslant\>>|<cell|>>|<row|<cell|<around*|\<\|\|\>|g<rsub|v,w><around*|(|1|)>-g<rsub|v,w><around*|(|0|)>-D<rsup|<around*|[|2|]>><rsub|x>f<around*|(|w|)><around*|(|v|)>|\<\|\|\>><rsub|Y>+<around*|\<\|\|\>|g<rsub|v,w><around*|(|1|)>-g<rsub|v,w><around*|(|0|)>-D<rsup|<around*|[|2|]>><rsub|x>f<around*|(|v|)><around*|(|w|)>|\<\|\|\>><rsub|Y>>|<cell|<below|\<leqslant\>|<text|[eq:
       <reference|eq 16.226.204>,<reference|eq
-      16.228.204>]>>>|<cell|>>|<row|<cell|10\<cdot\>\<varepsilon\>*\<cdot\><around*|\<\|\|\>|v|\<\|\|\>><rsub|X>\<cdot\><around*|(|<around*|\<\|\|\>|v|\<\|\|\>><rsub|X>+<around*|\<\|\|\>|w|\<\|\|\>><rsub|X>|)>+10\<cdot\>\<varepsilon\>*\<cdot\><around*|\<\|\|\>|w|\<\|\|\>><rsub|X>\<cdot\><around*|(|<around*|\<\|\|\>|v|\<\|\|\>><rsub|X>+<around*|\<\|\|\>|w|\<\|\|\>><rsub|X>|)>>|<cell|=>|<cell|>>|<row|<cell|\<varepsilon\>\<cdot\><around*|[|10\<cdot\><around*|\<\|\|\>|v|\<\|\|\>><rsub|X>\<cdot\><around*|(|<around*|\<\|\|\>|v|\<\|\|\>><rsub|X>+<around*|\<\|\|\>|w|\<\|\|\>><rsub|X>|)>+10\<cdot\><around*|\<\|\|\>|w|\<\|\|\>><rsub|X>\<cdot\><around*|(|<around*|\<\|\|\>|v|\<\|\|\>><rsub|X>+<around*|\<\|\|\>|w|\<\|\|\>><rsub|X>|)>|]>>|<cell|>|<cell|>>>>
+      16.228.204>]>><rsub|>>|<cell|>>|<row|<cell|10\<cdot\>\<varepsilon\>*\<cdot\><around*|\<\|\|\>|v|\<\|\|\>><rsub|X>\<cdot\><around*|(|<around*|\<\|\|\>|v|\<\|\|\>><rsub|X>+<around*|\<\|\|\>|w|\<\|\|\>><rsub|X>|)>+10\<cdot\>\<varepsilon\>*\<cdot\><around*|\<\|\|\>|w|\<\|\|\>><rsub|X>\<cdot\><around*|(|<around*|\<\|\|\>|v|\<\|\|\>><rsub|X>+<around*|\<\|\|\>|w|\<\|\|\>><rsub|X>|)>>|<cell|=>|<cell|>>|<row|<cell|\<varepsilon\>\<cdot\><around*|[|10\<cdot\><around*|\<\|\|\>|v|\<\|\|\>><rsub|X>\<cdot\><around*|(|<around*|\<\|\|\>|v|\<\|\|\>><rsub|X>+<around*|\<\|\|\>|w|\<\|\|\>><rsub|X>|)>+10\<cdot\><around*|\<\|\|\>|w|\<\|\|\>><rsub|X>\<cdot\><around*|(|<around*|\<\|\|\>|v|\<\|\|\>><rsub|X>+<around*|\<\|\|\>|w|\<\|\|\>><rsub|X>|)>|]>>|<cell|<below|\<leqslant\>|<around*|\<\|\|\>|v|\<\|\|\>><rsub|X>\<leqslant\>1\<wedge\><around*|\<\|\|\>|w|\<\|\|\>><rsub|X>\<leqslant\>1>>|<cell|>>|<row|<cell|\<varepsilon\>\<cdot\><around*|[|10\<cdot\>1\<cdot\><around*|(|1+1|)>+10\<cdot\>1\<cdot\><around*|(|1+1|)>|]>>|<cell|=>|<cell|>>|<row|<cell|\<varepsilon\>\<cdot\>40>|<cell|>|<cell|>>>>
     </eqnarray*>
 
-    As <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> was chosen arbitrary and
-    <math|v,w> do not depend on <math|\<varepsilon\>> it follows from
-    [theorem: <reference|complex Archimedean property consequence (2)>] that
-    <math|<around*|\<\|\|\>|D<rsup|<around*|[|2|]>><rsub|x>f<around*|(|v|)><around*|(|w|)>-D<rsup|<around*|[|2|]>><rsub|x>f<around*|(|w|)><around*|(|v|)>|\<\|\|\>><rsub|Y>\<leqslant\>0>
+    As <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> was chosen arbitrary \ it
+    follows from [theorem: <reference|complex Archimedean property
+    consequence (2)>] that <rigid|<math|<around*|\<\|\|\>|D<rsup|<around*|[|2|]>><rsub|x>f<around*|(|v|)><around*|(|w|)>-D<rsup|<around*|[|2|]>><rsub|x>f<around*|(|w|)><around*|(|v|)>|\<\|\|\>><rsub|Y>\<leqslant\>0>>
     so that <math|<around*|\<\|\|\>|D<rsup|<around*|[|2|]>><rsub|x>f<around*|(|v|)><around*|(|w|)>-D<rsup|<around*|[|2|]>><rsub|x>f<around*|(|w|)><around*|(|v|)>|\<\|\|\>><rsub|Y>=0>
     proving that <math|D<rsup|<around*|[|2|]>><rsub|x>f<around*|(|v|)><around*|(|w|)>=D<rsup|<around*|[|2|]>><rsub|x>f<around*|(|w|)><around*|(|v|)>>.
     Hence
 
     <\equation*>
-      \<forall\>v,w\<in\>X<text| with ><around*|\<\|\|\>|v|\<\|\|\>><rsub|X>\<less\>min<around*|(|<frac|\<delta\>|4>,<frac|r|4>|)>,<around*|\<\|\|\>|w|\<\|\|\>><rsub|X>\<less\>min<around*|(|<frac|\<delta\>|4>,<frac|r|4>|)><text|
+      \<forall\>v,w\<in\>X<text| with ><around*|\<\|\|\>|v|\<\|\|\>><rsub|X>\<less\>min<around*|(|<frac|\<delta\>|4>,<frac|r|4>,1|)>,<around*|\<\|\|\>|w|\<\|\|\>><rsub|X>\<less\>min<around*|(|<frac|\<delta\>|4>,<frac|r|4>,1|)><text|
       we have >D<rsup|<around*|[|2|]>><rsub|x>f<around*|(|v|)><around*|(|w|)>=D<rsup|<around*|[|2|]>><rsub|x>f<around*|(|w|)><around*|(|v|)>
     </equation*>
 
-    Let <math|u,v\<in\>X> then for <math|v<rprime|'>=<frac|min<around*|(|<frac|\<delta\>|4>,<frac|r|4>|)>|<around*|\<\|\|\>|v|\<\|\|\>><rsub|X>+1>\<cdot\>v>,
-    \ <math|w<rprime|'>=<frac|min<around*|(|<frac|\<delta\>|4>,<frac|r|4>|)>|<around*|\<\|\|\>|w|\<\|\|\>><rsub|X>+1>\<cdot\>w>
-    we have <math|<text|><around*|\<\|\|\>|v<rprime|'>|\<\|\|\>><rsub|X>\<less\>min<around*|(|<frac|\<delta\>|4>,<frac|r|4>|)>,<rigid|<around*|\<\|\|\>|w<rprime|'>|\<\|\|\>><rsub|X>\<less\>min<around*|(|<frac|\<delta\>|4>,<frac|r|4>|)>>>
+    Let <math|u,v\<in\>X> then for <math|v<rprime|'>=<frac|min<around*|(|<frac|\<delta\>|4>,<frac|r|4>,1|)>|<around*|\<\|\|\>|v|\<\|\|\>><rsub|X>+1>\<cdot\>v>,
+    \ <math|w<rprime|'>=<frac|min<around*|(|<frac|\<delta\>|4>,<frac|r|4>,1|)>|<around*|\<\|\|\>|w|\<\|\|\>><rsub|X>+1>\<cdot\>w>
+    we have <math|<text|><around*|\<\|\|\>|v<rprime|'>|\<\|\|\>><rsub|X>\<less\>min<around*|(|<frac|\<delta\>|4>,<frac|r|4>,1|)>,<rigid|<around*|\<\|\|\>|w<rprime|'>|\<\|\|\>><rsub|X>\<less\>min<around*|(|<frac|\<delta\>|4>,<frac|r|4>,1|)>>>
     so that\ 
 
     <\eqnarray*>
-      <tformat|<table|<row|<cell|<frac|min<around*|(|<frac|\<delta\>|4>,<frac|r|4>|)>|<around*|\<\|\|\>|v|\<\|\|\>><rsub|X>+1>\<cdot\><frac|min<around*|(|<frac|\<delta\>|4>,<frac|r|4>|)>|<around*|\<\|\|\>|w|\<\|\|\>><rsub|X>+1>\<cdot\>D<rsup|<around*|[|2|]>><rsub|x>f<around*|(|v|)><around*|(|w|)>>|<cell|=>|<cell|D<rsup|<around*|[|2|]>><rsub|x>f<around*|(|<frac|min<around*|(|<frac|\<delta\>|4>,<frac|r|4>|)>|<around*|\<\|\|\>|v|\<\|\|\>><rsub|X>+1>\<cdot\>v|)><around*|(|<frac|min<around*|(|<frac|\<delta\>|4>,<frac|r|4>|)>|<around*|\<\|\|\>|w|\<\|\|\>><rsub|X>+1>\<cdot\>w|)>>>|<row|<cell|>|<cell|=>|<cell|D<rsup|<around*|[|2|]>><rsub|x>f<around*|(|v<rprime|'>|)><around*|(|w<rprime|'>|)>>>|<row|<cell|>|<cell|=>|<cell|D<rsup|<around*|[|2|]>><rsub|x>f<around*|(|w<rprime|'>|)><around*|(|v<rprime|'>|)>>>|<row|<cell|>|<cell|=>|<cell|D<rsup|<around*|[|2|]>><rsub|x>f<around*|(|<frac|min<around*|(|<frac|\<delta\>|4>,<frac|r|4>|)>|<around*|\<\|\|\>|w|\<\|\|\>><rsub|X>+1>\<cdot\>w|)><around*|(|<frac|min<around*|(|<frac|\<delta\>|4>,<frac|r|4>|)>|<around*|\<\|\|\>|v|\<\|\|\>><rsub|X>+1>\<cdot\>v|)>>>|<row|<cell|>|<cell|=>|<cell|<frac|min<around*|(|<frac|\<delta\>|4>,<frac|r|4>|)>|<around*|\<\|\|\>|v|\<\|\|\>><rsub|X>+1>\<cdot\><frac|min<around*|(|<frac|\<delta\>|4>,<frac|r|4>|)>|<around*|\<\|\|\>|w|\<\|\|\>><rsub|X>+1>\<cdot\>D<rsup|<around*|[|2|]>><rsub|x>f<around*|(|w|)><around*|(|v|)>>>>>
+      <tformat|<table|<row|<cell|<frac|min<around*|(|<frac|\<delta\>|4>,<frac|r|4>,1|)>|<around*|\<\|\|\>|v|\<\|\|\>><rsub|X>+1>\<cdot\><frac|min<around*|(|<frac|\<delta\>|4>,<frac|r|4>,1|)>|<around*|\<\|\|\>|w|\<\|\|\>><rsub|X>+1>\<cdot\>D<rsup|<around*|[|2|]>><rsub|x>f<around*|(|v|)><around*|(|w|)>>|<cell|=>|<cell|D<rsup|<around*|[|2|]>><rsub|x>f<around*|(|<frac|min<around*|(|<frac|\<delta\>|4>,<frac|r|4>,1|)>|<around*|\<\|\|\>|v|\<\|\|\>><rsub|X>+1>\<cdot\>v|)><around*|(|<frac|min<around*|(|<frac|\<delta\>|4>,<frac|r|4>,1|)>|<around*|\<\|\|\>|w|\<\|\|\>><rsub|X>+1>\<cdot\>w|)>>>|<row|<cell|>|<cell|=>|<cell|D<rsup|<around*|[|2|]>><rsub|x>f<around*|(|v<rprime|'>|)><around*|(|w<rprime|'>|)>>>|<row|<cell|>|<cell|=>|<cell|D<rsup|<around*|[|2|]>><rsub|x>f<around*|(|w<rprime|'>|)><around*|(|v<rprime|'>|)>>>|<row|<cell|>|<cell|=>|<cell|D<rsup|<around*|[|2|]>><rsub|x>f<around*|(|<frac|min<around*|(|<frac|\<delta\>|4>,<frac|r|4>,1|)>|<around*|\<\|\|\>|w|\<\|\|\>><rsub|X>+1>\<cdot\>w|)><around*|(|<frac|min<around*|(|<frac|\<delta\>|4>,<frac|r|4>,1|)>|<around*|\<\|\|\>|v|\<\|\|\>><rsub|X>+1>\<cdot\>v|)>>>|<row|<cell|>|<cell|=>|<cell|<frac|min<around*|(|<frac|\<delta\>|4>,<frac|r|4>,1|)>|<around*|\<\|\|\>|v|\<\|\|\>><rsub|X>+1>\<cdot\><frac|min<around*|(|<frac|\<delta\>|4>,<frac|r|4>,1|)>|<around*|\<\|\|\>|w|\<\|\|\>><rsub|X>+1>\<cdot\>D<rsup|<around*|[|2|]>><rsub|x>f<around*|(|w|)><around*|(|v|)>>>>>
     </eqnarray*>
 
-    proving, as \ <math|<frac|min<around*|(|<frac|\<delta\>|4>,<frac|r|4>|)>|<around*|\<\|\|\>|v|\<\|\|\>><rsub|X>+1>\<cdot\><frac|min<around*|(|<frac|\<delta\>|4>,<frac|r|4>|)>|<around*|\<\|\|\>|w|\<\|\|\>><rsub|X>+1>\<neq\>0>,
+    proving, as \ <math|<frac|min<around*|(|<frac|\<delta\>|4>,<frac|r|4>,1|)>|<around*|\<\|\|\>|v|\<\|\|\>><rsub|X>+1>\<cdot\><frac|min<around*|(|<frac|\<delta\>|4>,<frac|r|4>,1|)>|<around*|\<\|\|\>|w|\<\|\|\>><rsub|X>+1>\<neq\>0>,
     that
 
     <\equation*>
@@ -15424,11 +15434,1871 @@
     </equation*>
   </proof>
 
-  \;
+  Next we define the evaluation operator and prove that is linear and
+  continuous hence \ <math|C<rsup|\<infty\>>> on its domain.
+
+  <\definition>
+    <label|diff evaluation operator><index|<math|ev<rsub|v<rsub|1>,\<ldots\>,v<rsub|n>>>><index|evaluation
+    operator>Let <math|n\<in\>\<bbb-N\>>,
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    be normed spaces and <math|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\>X<rsup|n>>
+    then the evaluation operator <math|ev<rsub|x<rsub|1>,\<ldots\>,x<rsub|n>>>
+    is defined by\ 
+
+    <\equation*>
+      ev<rsub|x<rsub|1>,\<ldots\>,x<rsub|n>>:L<rsub|n><around*|(|X;Y|)>\<rightarrow\>Y<text|
+      where >ev<rsub|x<rsub|1>,\<ldots\>,x<rsub|n>><around*|(|L|)>=L<around*|(|x<rsub|1>:\<ldots\>:x<rsub|n>|)>
+    </equation*>
+  </definition>
+
+  <\lemma>
+    <label|lemma 16.159.206>Let <math|n\<in\>\<bbb-N\>>,
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    be normed spaces and <math|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\>X<rsup|n>>
+    then\ 
+
+    <\equation*>
+      ev<rsub|x<rsub|1>,\<ldots\>,x<rsub|n>>\<in\>L<around*|(|L<rsub|n><around*|(|X;Y|)>,Y|)>
+    </equation*>
+
+    Hence by [example: <reference|diff linear mapping is infinite times
+    differentiable>] <math|ev<rsub|x<rsub|1>,\<ldots\>,x<rsub|n>>> is
+    <math|C<rsup|\<infty\>>> on <math|L<rsub|n><around*|(|X;Y|)>> and
+
+    <\equation*>
+      \<forall\>L\<in\>L<rsub|n><around*|(|X;Y|)><text| we have
+      >D<rsub|L><rsup|<around*|[|n|]>>ev<rsub|x<rsub|1>,\<ldots\>,x<rsub|n>>=<choice|<tformat|<table|<row|<cell|ev<rsub|x<rsub|1>,\<ldots\>,x<rsub|n>><text|
+      if >n=1<rsub|>>>|<row|<cell|0<rsub|n><text| if >1\<less\>n>>>>>
+    </equation*>
+  </lemma>
+
+  <\proof>
+    Let <math|\<beta\>\<in\>\<bbb-K\>>, <math|L<rsub|1>,L<rsub|2>\<in\>L<rsub|n><around*|(|X;Y|)>>
+    then\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|ev<rsub|x<rsub|1>,\<ldots\>,x<rsub|n>><around*|(|L<rsub|1>+\<beta\>\<cdot\>L<rsub|2>|)>>|<cell|=>|<cell|<around*|(|L<rsub|1>+\<beta\>\<cdot\>L<rsub|2>|)><around*|(|x<rsub|1>:\<ldots\>:x<rsub|n>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|lemma 16.54.187>]>>>|<cell|L<rsub|1><around*|(|x<rsub|1>:\<ldots\>:x<rsub|n>|)>+\<beta\>\<cdot\>L<rsub|2><around*|(|x<rsub|1>:\<ldots\>:x<rsub|n>|)>>>|<row|<cell|>|<cell|=>|<cell|ev<rsub|x<rsub|1>,\<ldots\>,x<rsub|n>><around*|(|L<rsub|1>|)>+\<beta\>\<cdot\>ev<rsub|x<rsub|1>,\<ldots\>,x<rsub|n>><around*|(|L<rsub|2>|)>>>>>
+    </eqnarray*>
+
+    proving that\ 
+
+    <\equation*>
+      ev<rsub|x<rsub|1>,\<ldots\>,x<rsub|n>>\<in\>Hom<around*|(|L<rsub|n><around*|(|X;Y|)>,Y|)>
+    </equation*>
+
+    Further if <math|L\<in\>L<rsub|n><around*|(|X;Y|)>> then\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|\<\|\|\>|ev<rsub|x<rsub|1>,\<ldots\>,x<rsub|n>><around*|(|L|)>|\<\|\|\>><rsub|Y>>|<cell|=>|<cell|<around*|\<\|\|\>|L<around*|(|x<rsub|1>:\<ldots\>:x<rsub|n>|)>|\<\|\|\>><rsub|Y>>>|<row|<cell|>|<cell|<below|\<leqslant\>|<text|[lemma:
+      <reference|lemma 16.56.187>]>><rsub|>>|<cell|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<rsub|n><around*|(|X;Y|)>>\<cdot\><big|prod><rsub|i=1><rsup|n><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>><rsub|X>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<big|prod><rsub|i=1><rsup|n><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>><rsub|X>|)>\<cdot\><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<rsub|n><around*|(|X;Y|)>>>>>>
+    </eqnarray*>
+
+    proving by [theorem: <reference|continuity linear mapping (1)>] that
+    <math|ev<rsub|x<rsub|1>,\<ldots\>,x<rsub|n>>> is continuous hence\ 
+
+    <\equation*>
+      ev<rsub|v<rsub|1>,\<ldots\>,v<rsub|n>>\<in\>L<around*|(|L<rsub|n><around*|(|X;Y|)>,Y|)>
+    </equation*>
+  </proof>
+
+  <\lemma>
+    <label|lemma 16.160.206>Let <math|n\<in\>\<bbb-N\>>,
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    be normed spaces, <math|U> a open set in <math|X>,
+    <rigid|<math|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\>X<rsup|n>>>
+    and <math|f:U\<rightarrow\>Y> a function that is of class
+    <math|C<rsup|n+1>> then for the function
+
+    <\equation*>
+      g:U\<rightarrow\>Y<text| defined by
+      >g<around*|(|y|)>=D<rsup|<around*|[|n|]>><rsub|y>f<around*|(|x<rsub|1>:\<ldots\>:x<rsub|n>|)>
+    </equation*>
+
+    we have that <math|g> is of class <math|C<rsup|1>> and
+    <math|\<forall\>y\<in\>U> we have <math|\<forall\>h\<in\>X> that
+    <math|D<rsub|y>g<around*|(|h|)>=D<rsup|<around*|[|n+1|]>><rsub|y>f<around*|(|h:x<rsub|1>:\<ldots\>:x<rsub|n>|)>>
+
+    <\note>
+      As <math|f> is of class <math|C<rsup|n+1>> it follows from [theorem:
+      <reference|diff C^n and C^m>] that <math|f> is of class
+      <math|C<rsup|n>> so that <math|f> is <math|n>-times differentiable on
+      <math|U>. This proves that <math|\<forall\>x\<in\>U>
+      <math|D<rsup|<around*|[|n|]>><rsub|x>f> exist so that <math|g> is well
+      defined.
+    </note>
+  </lemma>
+
+  <\proof>
+    As <math|f> is of class <math|C<rsup|n+1>> it follows that <math|f> is
+    <math|<around*|(|n+1|)>>-times differentiable on <math|U> and the
+    function
+
+    <\equation*>
+      D<rsup|<around*|[|n+1|]>>f:U\<rightarrow\>L<rsub|n+1><around*|(|X;Y|)><text|
+      is continuous>
+    </equation*>
+
+    Further using [theorem: <reference|diff C^(n+m)>] it follows that\ 
+
+    <\equation*>
+      D<rsup|<around*|[|n|]>>f<text| is of class >C<rsup|1>
+    </equation*>
+
+    Let <math|y\<in\>U> then we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|g<around*|(|y|)>>|<cell|=>|<cell|D<rsup|<around*|[|n|]>><rsub|y>f<around*|(|x<rsub|1>:\<ldots\>:x<rsub|n>|)>>>|<row|<cell|>|<cell|=>|<cell|ev<rsub|x<rsub|1>,\<ldots\>x<rsub|n>><around*|(|D<rsup|<around*|[|n|]>><rsub|y>f|)>>>|<row|<cell|>|<cell|<below|=|<text|[definition:
+      <reference|diff higher order differentiation>]>>>|<cell|ev<rsub|x<rsub|1>,\<ldots\>,x<rsub|n>><around*|(|D<rsup|<around*|[|n|]>>f<around*|(|y|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|ev<rsub|x<rsub|1>,\<ldots\>,x<rsub|n>>\<circ\>D<rsup|<around*|[|n|]>>f|)><around*|(|y|)>>>>>
+    </eqnarray*>
+
+    proving that\ 
+
+    <\equation*>
+      g=<around*|(|ev<rsub|x<rsub|1>,\<ldots\>,x<rsub|n>>\<circ\>D<rsup|<around*|[|n|]>>f|)>
+    </equation*>
+
+    By [lemma: <reference|lemma 16.159.206>]
+    <math|ev<rsub|x<rsub|1>,\<ldots\>,x<rsub|n>>> is of class
+    <math|C<rsup|\<infty\>>> and as <math|D<rsup|<around*|[|n|]>>f> is of
+    class <math|C<rsup|1>>, so it follows from the chain rule [see theorem:
+    <reference|diff chain rule higher order class>] that\ 
+
+    <\equation>
+      <label|eq 16.230.206>g=ev<rsub|x<rsub|1>,\<ldots\>,x<rsub|n>>\<circ\>D<rsup|<around*|[|n|]>>f<text|
+      is of class >C<rsup|1>
+    </equation>
+
+    and <math|\<forall\>y\<in\>U> we have
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|D<rsub|y>g>|<cell|=>|<cell|D<rsub|y><around*|(|ev<rsub|x<rsub|1>,\<ldots\>,x<rsub|n>>\<circ\>D<rsup|<around*|[|n|]>>f|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|diff chain rule>]>>>|<cell|D<rsub|D<rsup|<around*|[|n|]>>f<around*|(|y|)>>ev<rsub|x<rsub|1>,\<ldots\>,x<rsub|n>>\<circ\>D<rsub|y><around*|(|D<rsup|<around*|[|n|]>>f|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[lemma:
+      <reference|lemma 16.159.206>]>>>|<cell|ev<rsub|x<rsub|1>,\<ldots\>,x<rsub|n>>\<circ\>D<rsub|y><around*|(|D<rsup|<around*|[|n|]>>f|)>>>|<row|<cell|>|<cell|<below|=|<text|[theorem:
+      <reference|diff higher order differentiation
+      (1)>]>>>|<cell|ev<rsub|x<rsub|1>,\<ldots\>,x<rsub|n>>\<circ\>D<rsup|<around*|[|n+1|]>><rsub|y>f>>>>
+    </eqnarray*>
+
+    proving that\ 
+
+    <\equation*>
+      D<rsub|y>g=ev<rsub|x<rsub|1>,\<ldots\>,x<rsub|n>>\<circ\>D<rsup|<around*|[|n+1|]>><rsub|y>f
+    </equation*>
+
+    Hence if <math|h\<in\>X> we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|D<rsub|y>g<around*|(|h|)>>|<cell|=>|<cell|<around*|(|ev<rsub|x<rsub|1>,\<ldots\>,x<rsub|n>>\<circ\>D<rsup|<around*|[|n+1|]>><rsub|y>f|)><around*|(|h|)>>>|<row|<cell|>|<cell|=>|<cell|ev<rsub|x<rsub|1>,\<ldots\>,x<rsub|n>><around*|(|D<rsup|<around*|[|n+1|]>><rsub|y>f<around*|(|h|)>|)>>>|<row|<cell|>|<cell|=>|<cell|D<rsup|<around*|[|n+1|]>><rsub|y>f<around*|(|h|)><around*|(|x<rsub|1>:\<ldots\>:x<rsub|n>|)>>>|<row|<cell|>|<cell|=>|<cell|D<rsup|<around*|[|n+1|]>><rsub|y>f<around*|(|h:x<rsub|1>:\<ldots\>:x<rsub|n>|)>>>>>
+    </eqnarray*>
+
+    The lemma is then proved by the above and [eq: <reference|eq
+    16.230.206>].
+  </proof>
+
+  <\lemma>
+    <label|lemma 16.104.194>Let <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    be normed spaces then
+
+    <\equation*>
+      ev:L<around*|(|X,Y|)>\<cdot\>X\<rightarrow\>Y<text| defined by
+      >ev<around*|(|L,x|)>=L<around*|(|x|)>
+    </equation*>
+
+    is of class <math|C<rsup|\<infty\>>>. Further
+    <math|\<forall\>L\<in\>L<around*|(|X,Y|)>> and <math|x\<in\>X> we have\ 
+
+    <\equation*>
+      D<rsup|><rsub|<around*|(|L,x|)>>ev<below|=|<text|[definition:
+      <reference|diff higher order differential>]>>D<rsup|<around*|[|1|]>><rsub|<around*|(|L,x|)>>ev=ev<around*|(|L,\<ast\>|)>+ev<around*|(|\<ast\>,x|)>
+    </equation*>
+
+    [see also theorem: <reference|diff bilinear mappings are infinite times
+    differentiable>].
+  </lemma>
+
+  <\proof>
+    Using [theorem: <reference|diff bilinear mappings are infinite times
+    differentiable>] it is enough to prove that <math|ev> is a bi-linear
+    continuous function or in other words
+    <math|ev\<in\>L<around*|(|L<around*|(|X,Y|)>,X;Y|)>>. Let
+    <math|L<rsub|1>,L<rsub|2>\<in\>L<around*|(|X,Y|)>>, <math|x\<in\>X> and
+    <math|\<alpha\>\<in\>\<bbb-K\>> then\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|ev<around*|(|L<rsub|1>+\<alpha\>\<cdot\>L<rsub|2>,x|)>>|<cell|=>|<cell|<around*|(|L<rsub|1>+\<alpha\>\<cdot\>L<rsub|2>|)><around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|L<rsub|1><around*|(|x|)>+\<alpha\>\<cdot\>L<rsub|2><around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|ev<around*|(|L<rsub|1>,x|)>+\<alpha\>\<cdot\>ev<around*|(|L<rsub|2>,x|)>>>>>
+    </eqnarray*>
+
+    and for <math|L\<in\>L<around*|(|X,Y|)>>, <math|x,y\<in\>X> and
+    <math|\<alpha\>\<in\>\<bbb-K\>>\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|ev<around*|(|L,x+\<alpha\>\<cdot\>y|)>>|<cell|=>|<cell|L<around*|(|x+\<alpha\>\<cdot\>y|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|x|)>+\<alpha\>\<cdot\>L<around*|(|y|)>>>|<row|<cell|>|<cell|=>|<cell|ev<around*|(|L,x|)>+\<alpha\>\<cdot\>ev<around*|(|L,y|)>>>>>
+    </eqnarray*>
+
+    proving that\ 
+
+    <\equation*>
+      ev\<in\>Hom<around*|(|L<around*|(|X,Y|)>,X;Y|)>
+    </equation*>
+
+    Let <math|<around*|(|L,x|)>\<in\>L<around*|(|X,Y|)>\<cdot\>X> then\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|\<\|\|\>|ev<around*|(|L,x|)>|\<\|\|\>><rsub|Y>>|<cell|=>|<cell|<around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsub|Y>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsub|X>>>>>
+    </eqnarray*>
+
+    proving by [theorem: <reference|continuity multilinear mapping (1)>] that\ 
+
+    <\equation*>
+      ev\<in\>L<around*|(|L<around*|(|X,Y|)>,X;Y|)>
+    </equation*>
+  </proof>
+
+  <\lemma>
+    <label|lemma 16.105.194>Let <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    be normed spaces, <math|U> a open set in <math|X>,
+    <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>> and\ 
+
+    <\equation*>
+      f:U\<rightarrow\>Y<text| a function that is of class >C<rsup|n>
+    </equation*>
+
+    then for <math|h\<in\>X> the function
+
+    <\equation*>
+      D<rsup|>f<around*|(|\<ast\>|)><around*|(|h|)>:U\<rightarrow\>Y<text|
+      defined by ><around*|(|D<rsup|>f<around*|(|\<ast\>|)><around*|(|h|)>|)><around*|(|y|)>=D
+      <rsub|y>f<around*|(|h|)>
+    </equation*>
+
+    is of class <math|C<rsup|n-1>> [hence, as
+    <math|1\<less\>n\<Rightarrow\>1\<in\><around*|{|0,\<ldots\>,n-1|}>>, it
+    follows by \ [theorem: <reference|diff C^n and C^m>] that <math|>
+    <math|><math|D<rsup|>f<around*|(|\<ast\>|)><around*|(|h|)>> is of class
+    <math|C<rsup|1>>]. Further <math|\<forall\>x\<in\>U>
+    <math|\<forall\>k,h\<in\>X> we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|(|D<rsub|x><rsup|><around*|(|D<rsup|>f<around*|(|\<ast\>|)><around*|(|h|)>|)>|)><around*|(|k|)>>|<cell|=>|<cell|<around*|(|<around*|(|D<rsub|x><rsup|<around*|[|2|]>>f|)><around*|(|k|)>|)><around*|(|h|)>>>>>
+    </eqnarray*>
+  </lemma>
+
+  <\proof>
+    As <math|f> is of class <math|C<rsup|n>> and <math|1\<less\>n> we have by
+    [theorem: <reference|diff C^n and C^m>] that <math|f> is of class
+    <math|C<rsup|1>> hence <math|1>-times differentiable <math|U>]. So given
+    <math|h\<in\>X> we can define\ 
+
+    <\equation>
+      <label|eq 16.226.141>\<varphi\><rsub|h>:U\<rightarrow\>L<around*|(|X,Y|)>\<cdot\>X<text|
+      by >\<varphi\><rsub|h><around*|(|y|)>=<around*|(|D<rsup|<around*|[|1|]>><rsub|y>f,h|)><below|=|<text|[definition:
+      <reference|diff higher order differentiation>]>><around*|(|D<rsup|<around*|[|1|]>><rsup|>f<around*|(|y|)>,h<rsup|>|)>
+    </equation>
+
+    Then we have for <math|y\<in\>X>
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|(|\<pi\><rsub|1>\<circ\>\<varphi\><rsub|h>|)><around*|(|y|)>>|<cell|=>|<cell|\<pi\><rsub|1><around*|(|\<varphi\><rsub|h><around*|(|y|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<pi\><rsub|1><around*|(|<around*|(|D<rsup|<around*|[|1|]>><rsup|>f<around*|(|y|)>,h<rsup|>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|D<rsup|<around*|[|1|]>>f<around*|(|y|)>>>|<row|<cell|<around*|(|\<pi\><rsub|2>\<circ\>\<varphi\><rsub|h>|)><around*|(|y|)>>|<cell|=>|<cell|\<pi\><rsub|2><around*|(|\<varphi\><rsub|h><around*|(|y|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<pi\><rsub|2><around*|(|<around*|(|D<rsup|<around*|[|1|]>>
+      f<around*|(|y|)>,h<rsup|>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|h>>|<row|<cell|>|<cell|=>|<cell|C<rsub|h><around*|(|y|)>>>>>
+    </eqnarray*>
+
+    proving that\ 
+
+    <\equation>
+      <label|eq 16.122.194>\<pi\><rsub|1>\<circ\>\<varphi\><rsub|h>=D<rsup|<around*|[|1|]>><rsup|>f<text|
+      and >\<pi\><rsub|2>\<circ\>\<varphi\><rsub|h>=C<rsub|h>
+    </equation>
+
+    As <math|f> is of class <math|C<rsup|n+1>> it follows from [theorem:
+    <reference|diff C^(n+m)>] that <math|D<rsup|<around*|[|1|]>> f> is of
+    class <math|C<rsup|n-1>>. \ Hence it follows from [theorem:
+    <reference|diff chain rule higher order class>] that
+    <math|\<pi\><rsub|1>\<circ\>\<varphi\><rsub|h>> is of class
+    <math|C<rsup|n-1>>. Further as by \ [xample: <reference|diff constant
+    function is infinitely times differentiable>] <math|C<rsup|\<infty\>>> it
+    follows that <math|\<pi\><rsub|2>\<circ\>\<varphi\><rsub|h>> is also of
+    class <math|C<rsup|n-1><rsup|>>. From [theorem: <reference|diff higher
+    order differentiation classes>] it follows then that
+
+    <\equation>
+      <label|eq 16.123.194>\<varphi\><rsub|h><text| is of class >C<rsup|n-1>
+    </equation>
+
+    As <math|1\<less\>n> it follows that <math|1\<in\><around*|{|1,\<ldots\>,n-1|}>>
+    so that by [theorem: <reference|diff C^n and C^m>]
+    <math|\<varphi\><rsub|h>> is of class <math|C<rsup|1>> hence Fréchet
+    differentiable on <math|U>. Let <math|x\<in\>U> then
+    <math|\<varphi\><rsub|h>> is differentiable at <math|x> so that by
+    [theorem: <reference|diff differential of a vector valued function>]
+    <math|><math|\<pi\><rsub|1>\<circ\>\<varphi\><rsub|h>>,
+    <math|\<pi\><rsub|2>\<circ\>\<varphi\><rsub|h>> are Fréchet
+    differentiable at <math|x> and
+
+    <\equation*>
+      \<pi\><rsub|1>\<circ\>D<rsup|><rsub|x>\<varphi\><rsub|h><below|=|<text|[theorem:
+      <reference|diff differential of a vector valued
+      function>]>>D<rsub|x><around*|(|\<pi\><rsub|1>\<circ\>\<varphi\><rsub|h>|)>\<equallim\><rsub|<text|[eq:
+      <reference|eq 16.122.194>]>>D<rsub|x><around*|(|D<rsup|<around*|[|1|]>><rsup|>f|)>=D<rsub|x><rsup|<around*|[|2|]>>f
+    </equation*>
+
+    <\equation*>
+      \<pi\><rsub|2>\<circ\>D<rsub|x><rsup|>\<varphi\><rsub|h><below|=|<text|[theorem:
+      <reference|diff differential of a vector valued
+      function>]>>D<rsub|x><around*|(|\<pi\><rsub|2>\<circ\>\<varphi\><rsub|h>|)>\<equallim\><rsub|<text|[eq:
+      <reference|eq 16.122.194>]>>D<rsub|x>C<rsub|h>\<equallim\><rsub|<text|[example:
+      <reference|diff constant function is infinitely times
+      differentiable>]>>C<rsub|0>
+    </equation*>
+
+    So that by [theorem: <reference|diff differential of a vector valued
+    function>]
+
+    <\equation>
+      <label|eq 16.124.194>\<forall\>x\<in\>U<text|
+      >D<rsub|x><rsup|>\<varphi\><rsub|h>=<around*|(|D<rsup|<around*|[|2|]>><rsub|x>f,C<rsub|0>|)><rsub|\<ast\>>
+    </equation>
+
+    Let <math|y\<in\>U> then by [theorem: <reference|diff n-times and m-times
+    differentiability>] \ <math|f> is <math|1>-times differentiable at
+    <math|y> [hence Fréchet differentiable at <math|y>], so we can define the
+    function
+
+    <\equation*>
+      D<rsup|>f<around*|(|\<ast\>|)><around*|(|h|)>:U\<rightarrow\>Y<text| by
+      ><around*|(|D<rsup|>f<around*|(|\<ast\>|)><around*|(|h|)>|)><around*|(|y|)>=D<rsub|y><rsup|>f<around*|(|h|)>
+    </equation*>
+
+    Then we have
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|(|D<rsup|>f<around*|(|\<ast\>|)><around*|(|h|)>|)><around*|(|y|)>>|<cell|=>|<cell|D<rsup|><rsub|y>f<around*|(|h|)>>>|<row|<cell|>|<cell|=>|<cell|ev<around*|(|D<rsub|y><rsup|>f,h|)>>>|<row|<cell|>|<cell|=>|<cell|ev<around*|(|\<varphi\><rsub|h><around*|(|y|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|ev\<circ\>\<varphi\><rsub|h>|)><around*|(|y|)>>>>>
+    </eqnarray*>
+
+    proving that\ 
+
+    <\equation>
+      <label|eq 16.125.194>D<rsup|>f<around*|(|\<ast\>|)><around*|(|h|)>=ev\<circ\>\<varphi\><rsub|h>
+    </equation>
+
+    As <math|ev> is of class <math|C<rsup|\<infty\>>> on
+    <math|L<around*|(|X,Y|)>\<cdot\>X> by [lemma: <reference|lemma
+    16.104.194>] and <math|\<varphi\><rsub|h>> is of class <math|C<rsup|n-1>>
+    on <math|U >by [eq: <reference|eq 16.123.194>] it follows from the chain
+    rule [see theorem: <reference|diff chain rule higher order class>] that
+    <math|ev\<circ\>\<varphi\><rsub|h>> is of class <math|C<rsup|n-1>> on
+    <math|U> hence we have that
+
+    <\equation*>
+      D<rsup|>f<around*|(|\<ast\>|)><around*|(|h|)><text| is
+      >C<rsup|n-1><text| on >U
+    </equation*>
+
+    Let <math|x\<in\>U> then by the above <math|D
+    f<around*|(|\<ast\>|)><around*|(|h|)>> is <math|<around*|(|n-1|)>>-times
+    differentiable at <math|x>. Given that <math|1\<less\>n> it follows that
+    <math|1\<in\><around*|{|1,\<ldots\>,n-1|}>> so that by [theorem:
+    <reference|diff n-times and m-times differentiability>]
+    <math|D<rsup|>f<around*|(|\<ast\>|)><around*|(|h|)>> is <math|1>-times
+    differentiable at <math|x>. Then for <math|k\<in\>X> we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|(|D<rsub|x><rsup|><around*|(|D<rsup|>f<around*|(|\<ast\>|)><around*|(|h|)>|)>|)><around*|(|k|)>>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 16.125.194>]>>>|<cell|<around*|(|D<rsub|x><rsup|><around*|(|ev\<circ\>\<varphi\><rsub|h>|)>|)><around*|(|k|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|diff chain rule>]>>>|<cell|<around*|(|D
+      <rsub|\<varphi\><rsub|h><around*|(|x|)>>ev\<circ\>D<rsub|x>
+      \<varphi\><rsub|h>|)><around*|(|k|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 16.226.141>]>>>|<cell|<around*|(|D<rsub|<around*|(|D<rsup|<around*|[|1|]>>
+      f<around*|(|x|)>,h|)>>ev\<circ\>D<rsub|x>
+      \<varphi\><rsub|h>|)><around*|(|k|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[lemma:
+      <reference|lemma 16.104.194>]>>>|<cell|<around*|(|<around*|(|ev<around*|(|D<rsup|<around*|[|1|]>>f<around*|(|x|)>,\<ast\>|)>+ev<around*|(|\<ast\>,h|)>|)>\<circ\>D\<varphi\><rsub|h><around*|(|x|)>|)><around*|(|k|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 16.124.194>]>>>|<cell|<around*|(|<around*|(|ev<around*|(|D<rsup|<around*|[|1|]>>f<around*|(|x|)>,\<ast\>|)>+ev<around*|(|\<ast\>,h|)>|)>\<circ\><around*|(|D<rsup|<around*|[|2|]>><rsub|x>f,C<rsub|0><rsub|>|)><rsub|\<ast\>>|)><around*|(|k|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|ev<around*|(|D<rsup|<around*|[|1|]>>f<around*|(|x|)>,\<ast\>|)>+ev<around*|(|\<ast\>,h|)>|)><around*|(|<around*|(|D<rsup|<around*|[|2|]>><rsub|x>f,C<rsub|0><rsub|>|)><rsub|\<ast\>><around*|(|k|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|ev<around*|(|D<rsup|<around*|[|1|]>>f<around*|(|x|)>,\<ast\>|)>+ev<around*|(|\<ast\>,h|)>|)><around*|(|D<rsup|<around*|[|2|]>><rsub|x>f<around*|(|k|)>,C<rsub|0><around*|(|k|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|ev<around*|(|D<rsup|<around*|[|1|]>>f<around*|(|x|)>,\<ast\>|)>+ev<around*|(|\<ast\>,h|)>|)><around*|(|D<rsup|<around*|[|2|]>><rsub|x>f<around*|(|k|)>,0|)>>>|<row|<cell|>|<cell|=>|<cell|ev<around*|(|D<rsup|<around*|[|1|]>>f<around*|(|x|)>,0|)>+ev<around*|(|D<rsub|x><rsup|<around*|[|2|]>>f<around*|(|k|)>,h|)>>>|<row|<cell|>|<cell|=>|<cell|D<rsup|<around*|[|1|]>>f<around*|(|x|)><around*|(|0|)>+<around*|(|<around*|(|D<rsub|x><rsup|<around*|[|2|]>>f|)><around*|(|k|)>|)><around*|(|h|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|D<rsub|x><rsup|<around*|[|2|]>>f<around*|(|k|)>|)><around*|(|h|)>>>>>
+    </eqnarray*>
+
+    proving that\ 
+
+    <\equation*>
+      <around*|(|D<rsub|x><rsup|><around*|(|D<rsup|>f<around*|(|\<ast\>|)><around*|(|h|)>|)>|)><around*|(|k|)>=<around*|(|D<rsub|x><rsup|<around*|[|2|]>>f<around*|(|k|)>|)><around*|(|h|)>
+    </equation*>
+  </proof>
+
+  <\lemma>
+    <label|lemma 16.166.210>Let <math|n\<in\>\<bbb-N\>> with
+    <math|2\<less\>n>, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    be normed spaces, <math|U> a open set in <math|X>,
+    <math|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n-2>|)>\<in\>X<rsup|n-2>> and
+    <math|f:U\<rightarrow\>Y> a function that is of class <math|C<rsup|n>>
+    then the function\ 
+
+    <\equation*>
+      g:U\<rightarrow\>Y<text| defined by
+      >g<around*|(|y|)>=D<rsub|y><rsup|<around*|[|n-2|]>>f<around*|(|x<rsub|1>:\<ldots\>:x<rsub|n-2>|)>
+    </equation*>
+
+    is of class <math|C<rsup|2>> and for <math|u,v\<in\>X> we have
+    <math|D<rsup|<around*|[|2|]>><rsub|x>g<around*|(|v|)><around*|(|u|)>=D<rsup|<around*|[|n|]>><rsub|x>f<around*|(|v:u:x<rsub|1>:\<ldots\>:x<rsub|n-2>|)>>
+  </lemma>
+
+  <\proof>
+    As <math|f> is of class <math|C<rsup|n>> and
+    <math|n-1,n-2<below|\<in\>|2\<less\>n><around*|{|1,\<ldots\>,n|}>> it
+    follows from [theorem: <reference|diff C^n and C^m>] that <math|f> is of
+    class <math|C<rsup|n-2>> and of class <math|C<rsup|n-1>> so that
+
+    <\equation*>
+      D<rsup|<around*|[|n-1|]>>f:U\<rightarrow\>L<rsub|n-1><around*|(|X;Y|)><text|
+      is continous and >D<rsup|<around*|[|n-2|]>>f:U\<rightarrow\>L<rsub|n-2><around*|(|X;Y|)><text|
+      is continuous>
+    </equation*>
+
+    Let <math|y\<in\>U> then we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|g<around*|(|y|)>>|<cell|=>|<cell|D<rsub|y><rsup|<around*|[|n-2|]>>f<around*|(|x<rsub|1>:\<ldots\>:x<rsub|n-2>|)>>>|<row|<cell|>|<cell|<below|=|<text|[definition:
+      <reference|diff higher order differentiation>]>>>|<cell|D<rsup|<around*|[|n-2|]>>f<around*|(|y|)><around*|(|x<rsub|1>:\<ldots\>:x<rsub|n-2>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[definition:
+      <reference|diff evaluation operator>]>>>|<cell|ev<rsub|x<rsub|1>,\<ldots\>,x<rsub|n-2>><around*|(|D<rsup|<around*|[|n-2|]>>f<around*|(|y|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|ev<rsub|x<rsub|1>,\<ldots\>,x<rsub|n-2>>\<circ\>D<rsup|<around*|[|n-2|]>>f|)><around*|(|y|)>>>>>
+    </eqnarray*>
+
+    proving that\ 
+
+    <\equation>
+      <label|eq 16.236.210>g=ev<rsub|x<rsub|1>,\<ldots\>,x<rsub|n-2>>\<circ\>D<rsup|<around*|[|n-2|]>>f
+    </equation>
+
+    As <math|n=<around*|(|n-2|)>+2> it follows from [theorem: <reference|diff
+    n+m differentiation>] that <math|D<rsup|<around*|[|n-2|]>>f> is of class
+    <math|C<rsup|2>>, further by [lemma: <reference|lemma 16.159.206>]
+    <math|ev<rsub|x<rsub|1>,\<ldots\>,x<rsub|n-2>>> is of class
+    <math|C<rsup|\<infty\>>>. Hence using the chain rule [theorem:
+    <reference|diff chain rule higher order class>]
+    <math|<rigid|ev<rsub|x<rsub|1>,\<ldots\>,x<rsub|n-2>>\<circ\>D<rsup|<around*|[|n-2|]>>f>>
+    is of class <math|C<rsup|2>> which together with [eq: <reference|eq
+    16.236.210>] proves that
+
+    <\equation*>
+      g<text| is of class >C<rsup|2>
+    </equation*>
+
+    From the above it follows by [theorem: <reference|diff C^n and C^m>] it
+    follows that <math|g> is of class <math|C<rsup|1>> on <math|U> hence
+    <math|g> is <math|1>-times differentiable [or Fréchet differentiable] on
+    <math|U> so that the following make sense\ 
+
+    Let <math|y\<in\>U> then we have:\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|D g<around*|(|y|)>>|<cell|=>|<cell|D<rsub|y>g>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 16.236.210>]>>>|<cell|D<rsub|y><around*|(|ev<rsub|x<rsub|1>,\<ldots\>,x<rsub|n-2>>\<circ\>D<rsup|<around*|[|n-2|]>>f|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|diff chain rule>]>>>|<cell|D<rsub|D<rsup|<around*|[|n-2|]>>f<around*|(|y|)>>ev<rsub|x<rsub|1>,\<ldots\>,x<rsub|n-2>>\<circ\>D<rsub|y><around*|(|D<rsup|<around*|[|n-2|]>>f|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[lemma:
+      <reference|lemma 16.159.206>]>>>|<cell|ev<rsub|x<rsub|1>,\<ldots\>,x<rsub|n-2>>\<circ\>D<rsub|y><around*|(|D<rsup|<around*|[|n-2|]>>f|)>>>|<row|<cell|>|<cell|=>|<cell|ev<rsub|x<rsub|1>,\<ldots\>,x<rsub|n-2>>\<circ\>D<rsub|y><rsup|<around*|[|n-1|]>>f<eq-number><label|eq
+      16.232.141>>>>>
+    </eqnarray*>
+
+    Let <math|u\<in\>X> then we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|D g<around*|(|y|)><around*|(|u|)>>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 16.232.141>]>>>|<cell|<around*|(|ev<rsub|x<rsub|1>,\<ldots\>,x<rsub|n-2>>\<circ\><around*|\<nobracket\>|D<rsub|y><rsup|<around*|[|n-1|]>>f|)>|\<nobracket\>><around*|(|u|)>>>|<row|<cell|>|<cell|=>|<cell|ev<rsub|x<rsub|1>,\<ldots\>,x<rsub|n-2>><around*|(|D<rsub|y><rsup|<around*|[|n-1|]>>f<around*|(|u|)>|)>>>|<row|<cell|>|<cell|=>|<cell|D<rsub|y><rsup|<around*|[|n-1|]>>f<around*|(|u|)><around*|(|x<rsub|1>:\<ldots\>:x<rsub|n-2>|)>>>|<row|<cell|>|<cell|=>|<cell|D<rsub|y><rsup|<around*|[|n-1|]>>f<around*|(|u:x<rsub|1>:\<ldots\>:x<rsub|n-2>|)>>>|<row|<cell|>|<cell|=>|<cell|ev<rsub|u,x<rsub|1>,\<ldots\>,x<rsub|n-2>><around*|(|D<rsup|<around*|[|n-1|]>><rsub|y>f|)>>>|<row|<cell|>|<cell|=>|<cell|ev<rsub|u,x<rsub|1>,\<ldots\>,x<rsub|n-2>><around*|(|D<rsup|<around*|[|n-1|]>>f<around*|(|y|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|ev<rsub|u,x<rsub|1>,\<ldots\>,x<rsub|n-2>>\<circ\>D<rsup|<around*|[|n-1|]>>f|)><around*|(|y|)><eq-number><label|eq
+      16.237.210>>>>>
+    </eqnarray*>
+
+    Define now\ 
+
+    <\equation*>
+      D g<around*|(|\<ast\>|)><around*|(|u|)>:U\<rightarrow\>Y<text| by
+      ><around*|(|D g<around*|(|\<ast\>|)><around*|(|u|)>|)><around*|(|y|)>=D
+      g<around*|(|y|)><around*|(|u|)>
+    </equation*>
+
+    then we have <math|\<forall\>y\<in\>U> <math|<around*|(|D
+    g<around*|(|\<ast\>|)><around*|(|u|)>|)><around*|(|y|)>=D
+    g<around*|(|y|)><around*|(|u|)>\<equallim\><rsub|<text|[eq: <reference|eq
+    16.237.210>]>><around*|(|ev<rsub|u,x<rsub|1>,\<ldots\>,x<rsub|n-2>>\<circ\>D<rsup|<around*|[|n-1|]>>|)><around*|(|y|)>>
+    so that\ 
+
+    <\equation>
+      <label|eq 16.238.210>D g<around*|(|\<star\>|)><around*|(|u|)>=ev<rsub|u,x<rsub|1>,\<ldots\>,x<rsub|n-2>>\<circ\>D<rsup|<around*|[|n-1|]>>f
+    </equation>
+
+    As <math|D<rsup|<around*|[|n-1|]>>f> is of class <math|C<rsup|1>> [see
+    theorem: <reference|diff C^(n+m)>] and
+    \ <math|ev<rsub|x<rsub|1>,\<ldots\>,x<rsub|n-2>>> is of class
+    <math|C<rsup|\<infty\>>> [see lemma: <reference|lemma 16.159.206>], it
+    follows from the chain rule [theorem: <reference|diff chain rule higher
+    order class>] and the above that\ 
+
+    <\equation*>
+      D g<around*|(|\<star\>|)><around*|(|u|)><text| is of class
+      >C<rsup|1><text| hence differentiable on >U
+    </equation*>
+
+    and for <math|y\<in\>U> that
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|D<rsub|y><around*|(|D
+      g<around*|(|\<ast\>|)><around*|(|u|)>|)>>|<cell|<below|=|<text|[eq:
+      <reference|eq 16.238.210>]>>>|<cell|D<rsub|y><around*|(|ev<rsub|u,x<rsub|1>,\<ldots\>,x<rsub|n-2>>\<circ\>D<rsup|<around*|[|n-1|]>>f|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|diff chain rule>]>>>|<cell|D<rsub|D<rsup|<around*|[|n-1|]>>f<around*|(|y|)>>ev<rsub|u,x<rsub|1>,\<ldots\>,x<rsub|n-2>>\<circ\>D<rsub|y><around*|(|D<rsup|<around*|[|n-1|]>>f|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[lemma:
+      <reference|lemma 16.159.206>]>>>|<cell|ev<rsub|u,x<rsub|1>,\<ldots\>,x<rsub|n-2>>\<circ\>D<rsub|y><around*|(|D<rsup|<around*|[|n-1|]>>f|)>>>|<row|<cell|>|<cell|=>|<cell|ev<rsub|u,x<rsub|1>,\<ldots\>,x<rsub|n-2>>\<circ\>D<rsub|y><rsup|<around*|[|n|]>>f<eq-number><label|eq
+      16.245.210>>>>>
+    </eqnarray*>
+
+    Let additional <math|v\<in\>X> then\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|D<rsup|<around*|[|2|]>><rsub|y>g<around*|(|v|)><around*|(|u|)>>|<cell|\<equallim\><rsub|<text|[lemma:
+      <reference|lemma 16.105.194>]>>>|<cell|<around*|(|D<rsub|y><around*|(|D
+      g<around*|(|\<ast\>|)><around*|(|u|)>|)>|)><around*|(|v|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 16.245.210>]>>>|<cell|<around*|(|ev<rsub|u,x<rsub|1>,\<ldots\>,x<rsub|n-2>>\<circ\>D<rsub|y><rsup|<around*|[|n|]>>f|)><around*|(|v|)>>>|<row|<cell|>|<cell|=>|<cell|ev<rsub|u,x<rsub|1>,\<ldots\>,x<rsub|n-2>><around*|(|D<rsub|y><rsup|<around*|[|n|]>>f<around*|(|v|)>|)>>>|<row|<cell|>|<cell|=>|<cell|D<rsup|<around*|[|n|]>><rsub|y>f<around*|(|v|)><around*|(|u:x<rsub|1>:\<ldots\>x<rsub|n-<rsub|2>>|)>>>|<row|<cell|>|<cell|=>|<cell|D<rsup|<around*|[|n|]>><rsub|y>f<around*|(|v:u:x<rsub|1>:\<ldots\>:x<rsub|n-2>|)>>>>>
+    </eqnarray*>
+
+    proving the last part of the lemma.
+  </proof>
+
+  <\lemma>
+    <label|lemma 16.167.210>Let <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>>,
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>
+    a normed space, <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    a Banach space, <math|U> a open set in <math|X>,
+    <math|f:U\<rightarrow\>Y> a function that is of class <math|C<rsup|n>>
+    then <math|\<forall\>x\<in\>U> and <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n-1|}>>
+    we have for <math|<around*|(|u<rsub|1>,\<ldots\>,u<rsub|n>|)>\<in\>X<rsup|n>>
+    that\ 
+
+    <\equation*>
+      D<rsup|n><rsub|x>f<around*|(|u<rsub|1>:\<ldots\>:u<rsub|n>|)>=D<rsup|n><rsub|x>f<around*|(|u<rsub|<around*|(|i\<leftrightarrowlim\><rsub|n>i+1|)><around*|(|1|)>>:\<ldots\>:u<rsub|<around*|(|i\<leftrightarrowlim\><rsub|n>i+1|)><around*|(|n|)>>|)>
+    </equation*>
+  </lemma>
+
+  <\proof>
+    We prove this by induction on <math|n>, so let
+
+    <\equation*>
+      S=<around*|{|n\<in\><around*|{|2,\<ldots\>,\<infty\>|}>\|<text|If
+      >f:U\<rightarrow\>Y<text| is of class >C<rsup|n><text| then
+      >\<forall\>x\<in\>U\<wedge\>\<forall\>i\<in\><around*|{|1,\<ldots\>,n-1|}><text|
+      we have that for <math|<around*|(|u<rsub|1>,\<ldots\>,u<rsub|n>|)>\<in\>X<rsup|n>>
+      <math|D<rsup|n><rsub|x>f<around*|(|u<rsub|1>:\<ldots\>:u<rsub|n>|)>=D<rsup|n><rsub|x>f<around*|(|u<rsub|<around*|(|i\<leftrightarrowlim\><rsub|n>i+1|)><around*|(|1|)>>:\<ldots\>:u<rsub|<around*|(|i\<leftrightarrowlim\><rsub|n>i+1|)><around*|(|n|)>>|)>>>|}>
+    </equation*>
+
+    then we have:
+
+    <\description>
+      <item*|<math|2\<in\>S>>Let <math|f:U\<rightarrow\>Y> be a function that
+      is of class <math|C<rsup|2>>, <math|x\<in\>U> then for
+      <math|i\<in\><around*|{|1,\<ldots\>,2-1|}>=<around*|{|1|}>\<Rightarrow\>i=1>
+      and <math|<around*|(|u<rsub|1>,u<rsub|2>|)>\<in\>X<rsup|2>> we have
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|D<rsup|<around*|[|2|]>><rsub|x>f<around*|(|u<rsub|1>:\<ldots\>:u<rsub|2>|)>>|<cell|=>|<cell|D<rsub|x><rsup|<around*|[|2|]>>f<around*|(|u<rsub|1>|)><around*|(|u<rsub|2>|)><rsup|>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|lemma 16.155.203>]>>>|<cell|D<rsup|<around*|[|2|]>><rsub|x>f<around*|(|u<rsub|2>|)><around*|(|u<rsub|1>|)>>>|<row|<cell|>|<cell|=>|<cell|D<rsup|<around*|[|2|]>><rsub|x>f<around*|(|u<rsub|2>:\<ldots\>:u<rsub|1>|)>>>|<row|<cell|>|<cell|=>|<cell|D<rsup|<around*|[|2|]>><rsub|x>f<around*|(|u<rsub|<around*|(|1\<leftrightarrowlim\><rsub|2>2|)><around*|(|1|)>>:\<ldots\>:u<rsub|<around*|(|1\<leftrightarrowlim\><rsub|2>2|)><around*|(|2|)>><rsub|>|)>>>>>
+      </eqnarray*>
+
+      proving that <math|2\<in\>S>.
+
+      <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>Let
+      <math|f:U\<rightarrow\>Y> be a function that is of class
+      <math|C<rsup|n+1>>, <math|x\<in\>U>,
+      <math|<rigid|<around*|(|u<rsub|1>,\<ldots\>,u<rsub|n+1>|)>\<in\>X<rsup|n+1>>>
+      then for <math|i\<in\><around*|{|1,\<ldots\>,<around*|(|n+1|)>-1|}>=<around*|{|1,\<ldots\>,n|}>>
+      we have the following cases to consider:
+
+      <\description>
+        <item*|<math|i=1>>Then <math|<around*|(|i\<leftrightarrowlim\><rsub|n+1>i+1|)>=<around*|(|1\<leftrightarrowlim\><rsub|n+1>2|)>\<in\>P<rsub|n+1>>,
+        so that <math|<around*|(|i\<leftrightarrowlim\><rsub|n+1>i+1|)><around*|(|1|)>=2>,
+        <math|<rigid|<around*|(|i\<leftrightarrowlim\><rsub|n+1>i+1|)><around*|(|2|)>=1>>
+        and <math|\<forall\>k\<in\><around*|{|3,\<ldots\>,n+1|}>>
+        <math|<around*|(|i\<leftrightarrowlim\><rsub|n+1>i+1|)><around*|(|k|)>=k>.
+        Define\ 
+
+        <\equation*>
+          g:U\<rightarrow\>Y<text| by >g<around*|(|y|)>=D<rsub|y><rsup|<around*|[|<around*|(|n+1|)>-2|]>>f<around*|(|u<rsub|3>:\<ldots\>:u<rsub|n+1>|)>
+        </equation*>
+
+        then by the previous lemma [lemma: <reference|lemma 16.166.210>]
+        <math|g> is of class <math|C<rsup|2>> and
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|D<rsup|<around*|[|n+1|]>><rsub|x>f<around*|(|u<rsub|1>:u<rsub|2>:\<ldots\>:u<rsub|n+1>|)>>|<cell|\<equallim\><rsub|<text|[lemma:
+          <reference|lemma 16.166.210>]>>>|<cell|>>|<row|<cell|D<rsup|<around*|[|2|]>><rsub|x>g<around*|(|u<rsub|1>|)><around*|(|u<rsub|2>|)>>|<cell|\<equallim\><rsub|<text|[theorem:
+          <reference|lemma 16.155.203>]>>>|<cell|>>|<row|<cell|D<rsup|<around*|[|2|]>><rsub|x>g<around*|(|u<rsub|2>|)><around*|(|u<rsub|1>|)>>|<cell|\<equallim\><rsub|<text|[lemma:
+          <reference|lemma 16.166.210>]>>>|<cell|>>|<row|<cell|D<rsup|<around*|[|n+1|]>><rsub|x>f<around*|(|u<rsub|2>:u<rsub|1>:\<ldots\>:u<rsub|n+1>|)>>|<cell|=>|<cell|>>|<row|<cell|D<rsup|<around*|[|n+1|]>><rsub|x>f<around*|(|u<rsub|<around|(|i\<leftrightarrowlim\><rsub|n+1>i+1|)><around*|(|1|)>>:u<rsub|<around|(|i\<leftrightarrowlim\><rsub|n+1>i+1|)><around*|(|2|)>><rsub|>:\<ldots\>:u<rsub|<around|(|i\<leftrightarrowlim\><rsub|n+1>i+1|)><around*|(|n+1|)>>|)>>|<cell|>|<cell|>>>>
+        </eqnarray*>
+
+        proving that in this case <math|n+1\<in\>S>.
+
+        <item*|<math|i\<in\><around*|{|2,\<ldots\>,n|}>>>Then
+        <math|\<forall\>k\<in\><around*|{|1,\<ldots\>,n-1|}>> we have\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<around*|(|i-1\<leftrightarrowlim\><rsub|n>i|)><around*|(|k|)>+1>|<cell|=>|<cell|1+<choice|<tformat|<table|<row|<cell|i-1<text|
+          if >k=i>>|<row|<cell|i<text| if >k=i-1>>|<row|<cell|k<text| if
+          >k\<neq\>i-1,i>>>>>>>|<row|<cell|>|<cell|=>|<cell|<choice|<tformat|<table|<row|<cell|i<text|
+          if >k=i>>|<row|<cell|i+1<text| if >k=i-1>>|<row|<cell|k+1<text| if
+          >k\<neq\>i-1.i>>>>><eq-number><label|eq 16.246.210>>>>>
+        </eqnarray*>
+
+        further\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<around*|(|i\<leftrightarrowlim\><rsub|n+1>i+1|)><around*|(|k+1|)>>|<cell|=>|<cell|<choice|<tformat|<table|<row|<cell|i<text|
+          if >k+1=i+1>>|<row|<cell|i+1<text| if >k+1=i>>|<row|<cell|k+1<text|
+          if >k+1\<neq\>i+1,i>>>>>>>|<row|<cell|>|<cell|=>|<cell|<choice|<tformat|<table|<row|<cell|i<text|
+          if >k=i>>|<row|<cell|i+1<text| if >k=i-1>>|<row|<cell|k+1<text| if
+          >k\<neq\>i-1,i>>>>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+          <reference|eq 16.246.210>]>>>|<cell|<around*|(|i-1\<leftrightarrowlim\><rsub|n>i|)><around*|(|k|)>+1>>>>
+        </eqnarray*>
+
+        so that\ 
+
+        <\equation>
+          <label|eq 16.247.210>\<forall\>k\<in\><around*|{|1,\<ldots\>,n-1|}><text|
+          we have ><around*|(|i-1\<leftrightarrowlim\><rsub|n>i|)><around*|(|k|)>+1=<around*|(|i\<leftrightarrowlim\><rsub|n+1>i+1|)><around*|(|k+1|)>
+        </equation>
+
+        Let <math|y\<in\>U> then, as <math|f> is of class <math|C<rsup|n+1>>,
+        we have also that <math|f> is of class <math|C<rsup|n>> [see theorem:
+        <reference|diff C^n and C^m>] , so we have, if we define
+        <math|<around*|(|y<rsub|1>,\<ldots\>,y<rsub|n>|)>> by
+        <math|y<rsub|i>=u<rsub|i+1>>, that\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|D<rsup|<around*|[|n|]>><rsub|y>f<around*|(|u<rsub|2>:\<ldots\>:u<rsub|n+1>|)>>|<cell|=>|<cell|>>|<row|<cell|D<rsup|<around*|[|n|]>><rsub|y>f<around*|(|y<rsub|1>:\<ldots\>:y<rsub|n>|)>>|<cell|\<equallim\><rsub|n\<in\>S,i-1\<in\><around*|{|1,\<ldots\>,n-1|}>>>|<cell|>>|<row|<cell|D<rsup|<around*|[|n|]>><rsub|y>f<around*|(|y<rsub|<around*|(|i-1\<leftrightarrowlim\><rsub|n>i|)><around*|(|1|)>>:\<ldots\>:y<rsub|<around*|(|i-1\<leftrightarrowlim\><rsub|n>i|)><around*|(|n|)>>|)>>|<cell|=>|<cell|>>|<row|<cell|D<rsup|<around*|[|n|]>><rsub|y>f<around*|(|u<rsub|<around*|(|i-1\<leftrightarrowlim\><rsub|n>i|)><around*|(|1|)>+1>:\<ldots\>:u<rsub|<around*|(|i-1\<leftrightarrowlim\><rsub|n>i|)><around*|(|n|)>+1>|)>>|<cell|\<equallim\><rsub|<text|[eq:
+          <reference|eq 16.247.210>]>>>|<cell|>>|<row|<cell|D<rsup|<around*|[|n|]>><rsub|y>f<around*|(|u<rsub|<around|(|i\<leftrightarrowlim\><rsub|n+1>i+1|)><around*|(|2|)>>:\<ldots\>:u<rsub|<around|(|i\<leftrightarrowlim\><rsub|n+1>i+1|)><around*|(|n+1|)>>|)>>|<cell|>|<cell|<eq-number><label|eq
+          16.248.210>>>>>
+        </eqnarray*>
+
+        Define then <math|g>, <math|h> [as in [lemma: <reference|lemma
+        16.160.206>]]
+
+        <\equation>
+          <label|eq 16.239.141>g:U\<rightarrow\>Y<text| by
+          >g<around*|(|y|)>=D<rsup|<around*|[|n|]>><rsub|y>f<around*|(|u<rsub|2>:\<ldots\>:u<rsub|n+1>|)>
+        </equation>
+
+        <\equation*>
+          h:U\<rightarrow\>Y<text| by >h<around*|(|y|)>=D<rsup|<around*|[|n|]>><rsub|y>f<around*|(|u<rsub|<around|(|i\<leftrightarrowlim\><rsub|n+1>i+1|)><around*|(|2|)>>:\<ldots\>:u<rsub|<around|(|i\<leftrightarrowlim\><rsub|n+1>i+1|)><around*|(|n+1|)>>|)>
+        </equation*>
+
+        then we have by [eq: <reference|eq 16.248.210>] that\ 
+
+        <\equation>
+          <label|eq 16.249.210>g=h
+        </equation>
+
+        As <math|1\<less\>2\<leqslant\>i\<less\>i+1> we have that
+        <math|<around*|(|i\<leftrightarrowlim\><rsub|n+1>i+1|)><around*|(|1|)>=1>
+        so that
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|D<rsup|<around*|[|n+1|]>><rsub|x>f<around*|(|u<rsub|1>:\<ldots\>:u<rsub|n+1>|)>>|<cell|=>|<cell|D<rsub|x><rsup|<around*|[|n+1|]>>f<around*|(|u<rsub|<around|(|i\<leftrightarrowlim\><rsub|n+1>i+1|)><around*|(|1|)>>:u<rsub|2>:\<ldots\>:u<rsub|n+1>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[lemma:
+          <reference|lemma 16.160.206>]>>>|<cell|D<rsub|x>g<around*|(|u<rsub|<around|(|i\<leftrightarrowlim\><rsub|n+1>i+1|)><around*|(|1|)>>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+          <reference|eq 16.249.210>]>>>|<cell|D<rsub|y>h<around*|(|u<rsub|<around|(|i\<leftrightarrowlim\><rsub|n+1>i+1|)><around*|(|1|)>>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[lemma:
+          <reference|lemma 16.160.206>]>>>|<cell|D<rsub|x><rsup|<around*|[|n+1|]>>f<around*|(|u<rsub|<around|(|i\<leftrightarrowlim\><rsub|n+1>i+1|)><around*|(|1|)>>:\<ldots\>:u<rsub|<around|(|i\<leftrightarrowlim\><rsub|n+1>i+1|)><around*|(|n+1|)>>|)>>>>>
+        </eqnarray*>
+
+        proving that in this case we have also <math|n+1\<in\>S>.
+      </description>
+    </description>
+
+    Mathematical induction proves then the theorem.
+  </proof>
+
+  Having done all the heavy lifting with the previous lemma's we can now
+  prove that higher order differentials are symmetric in there arguments.
 
   \;
 
-  \ 
+  <\theorem>
+    <label|diff higher order differentials are symmetric in there
+    arguments>Let <math|n\<in\>\<bbb-N\>>,
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>
+    a normed space, <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    a Banach space, <math|U> a open set and <math|f:U\<rightarrow\>Y> a
+    function that is of class <math|C<rsup|n>> then
+    <math|\<forall\>x\<in\>U>, <math|\<forall\>\<sigma\>\<in\>P<rsub|n>> and
+    <math|\<forall\><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\>X<rsup|n>>
+    we have\ 
+
+    <\equation*>
+      D<rsup|<around*|[|n|]>><rsub|x>f<around*|(|x<rsub|1>:\<ldots\>:x<rsub|n>|)>=D<rsup|<around*|[|n|]>><rsub|x>f<around*|(|x<rsub|\<sigma\><around*|(|1|)>>:\<ldots\>:x<rsub|\<sigma\><around*|(|n|)>>|)>
+    </equation*>
+
+    <\note>
+      As <math|D<rsup|n><rsub|x>f<around*|(|y<rsub|1>,\<ldots\>,y<rsub|n>|)>=D<rsup|<around*|[|n|]>><rsub|x>f<around*|(|y<rsub|1>:\<ldots\>:y<rsub|n>|)>>
+      we have also\ 
+
+      <\equation*>
+        D<rsup|n><rsub|x>f<around*|(|x<rsub|1>,\<ldots\>:x<rsub|n>|)>=D<rsup|n><rsub|x>f<around*|(|x<rsub|\<sigma\><around*|(|1|)>>,\<ldots\>,x<rsub|\<sigma\><around*|(|n|)>>|)>
+      </equation*>
+    </note>
+  </theorem>
+
+  <\proof>
+    For <math|n\<in\>\<bbb-N\>> we have two possibilities to consider:
+
+    <\description>
+      <item*|<math|n=1>>Then <math|P<rsub|n>=<around*|{|Id<rsub|<around*|{|1|}>>|}>>
+      so that we have trivially\ 
+
+      <\equation*>
+        D<rsup|<around*|[|1|]>><rsub|x>f<around*|(|<wide*|x<rsub|1>:\<ldots\>:x<rsub|1>|\<wide-underbrace\>><rsub|1>|)>=D<rsup|<around*|[|1|]>><rsub|x>f<around*|(|<wide*|x<rsub|\<sigma\><around*|(|1|)>>:\<ldots\>:x<rsub|\<sigma\><around*|(|1|)>>|\<wide-underbrace\>><rsub|1>|)>
+      </equation*>
+
+      <item*|<math|n\<in\>\<bbb-N\>\\<around*|{|1|}>>>Then
+      <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n-1|}>> we have by
+      [lemma: <reference|lemma 16.167.210>] that\ 
+
+      <\equation*>
+        D<rsup|<around*|[|n|]>><rsub|x>f<around*|(|x<rsub|1>:\<ldots\>:x<rsub|n>|)>=D<rsup|<around*|[|n|]>><rsub|x>f<around*|(|x<rsub|<around*|(|i\<leftrightarrowlim\><rsub|n>i+1|)><around*|(|1|)>>:\<ldots\>:x<rsub|<around*|(|i\<leftrightarrowlim\><rsub|n>i+1|)><around*|(|n|)>>|)>
+      </equation*>
+
+      Let <math|\<sigma\>\<in\>P<rsub|n>> then by the above and [lemma:
+      <reference|lemma 16.157.205>] it follows that\ 
+
+      <\equation*>
+        D<rsup|<around*|[|n|]>><rsub|x>f<around*|(|x<rsub|1>:\<ldots\>:x<rsub|n>|)>=D<rsup|<around*|[|n|]>><rsub|x>f<around*|(|x<rsub|<around*|(|\<sigma\>1|)>>:\<ldots\>:x<rsub|\<sigma\><around*|(|n|)>>|)>
+      </equation*>
+    </description>
+  </proof>
+
+  <section|Hugher Order Partial Differentiation>
+
+  <subsection|Linear and mulilinear mappings.>
+
+  \;
+
+  In order to define higher order partial differentiability we work with
+  functions <math|f:A\<rightarrow\>Y> where
+  <math|A\<subseteq\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>.
+  For this we need to extend the definition of
+  <math|L<rsub|n><around*|(|X;Y|)>> [see definition: <reference|diff
+  L_n(X;Y)>].
+
+  <\definition>
+    <label|diff L_n(x1,..,xn;Y)><index|<math|L<rsub|n><around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>>Let
+    <math|n\<in\>\<bbb-N\>>, <math|<around*|{|<around*|\<langle\>|X<rsub|i>,<around*|\<\|\|\>||\<\|\|\>><rsub|i>|\<rangle\>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+    a finite family of normed spaces, <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    a normed space then we define <math|L<rsub|n><around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>
+    recursively as follows
+
+    <\equation*>
+      L<rsub|n><around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>=<choice|<tformat|<table|<row|<cell|L<around*|(|X<rsub|1>,Y|)><text|
+      if >n=1>>|<row|<cell|L<around*|(|X<rsub|1>,L<rsub|n-1><around*|(|X<rsub|2>\<ldots\>X<rsub|n>|)>|)><text|
+      if >1\<less\>n>>>>>
+    </equation*>
+
+    <\note>
+      If <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
+      <math|X<rsub|i>=X> then <math|L<rsub|n><around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>
+      reduces to <math|L<rsub|n><around*|(|X;Y|)>>
+    </note>
+  </definition>
+
+  <\example>
+    \ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|L<rsub|4><around*|(|X<rsub|1>\<ldots\>X<rsub|4>;Y|)>>|<cell|=>|<cell|L<around*|(|X<rsub|1>,L<rsub|3><around*|(|X<rsub|2>\<ldots\>X<rsub|4>;Y|)>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|X<rsub|1>,L<around*|(|X<rsub|2>,L<rsub|2><around*|(|X<rsub|3>\<ldots\>X<rsub|4>;Y|)>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|X<rsub|1>,L<around*|(|X<rsub|2>,L<around*|(|X<rsub|3>,L<rsub|1><around*|(|X<rsub|4>\<ldots\>X<rsub|4>;Y|)>|)>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|X<rsub|1>,L<around*|(|X<rsub|2>,L<around*|(|X<rsub|3>,L<around*|(|X<rsub|4>,Y|)>|)>|)>|)>>>>>
+    </eqnarray*>
+
+    Further we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|L<rsub|2><around*|(|X<rsub|1>\<ldots\>X<rsub|2>;L<rsub|2><around*|(|X<rsub|3>\<ldots\>X<rsub|4>;Y|)>|)>>|<cell|=>|<cell|L<around*|(|X<rsub|1>,L<rsub|1><around*|(|X<rsub|2>\<ldots\>X<rsub|2>;L<rsub|2><around*|(|X<rsub|3>\<ldots\>X<rsub|4>;Y|)>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|X<rsub|1>,L<around*|(|X<rsub|2>,L<rsub|2><around*|(|X<rsub|3>\<ldots\>X<rsub|4>;Y|)>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|X<rsub|1>,L<around*|(|X<rsub|2>,L<around*|(|X<rsub|3>,L<rsub|1><around*|(|X<rsub|4>\<ldots\>X<rsub|4>;Y|)>|)>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|X<rsub|1>,L<around*|(|X<rsub|2>,L<around*|(|X<rsub|3>,L<around*|(|X<rsub|4>,Y|)>|)>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|L<rsub|4><around*|(|X<rsub|1>\<ldots\>X<rsub|4>;Y|)>>>>>
+    </eqnarray*>
+  </example>
+
+  The above example suggest the following two lemmas.
+
+  <\lemma>
+    <label|lemma 16.173.211>Let <math|n\<in\>\<bbb-N\>> and
+    <math|<around*|{|<around*|\<langle\>|X<rsub|i>,<around*|\<\|\|\>||\<\|\|\>><rsub|i>|\<rangle\>>|}><rsub|i\<in\>n+1>>
+    be a finite family of normed spaces then we have\ 
+
+    <\equation*>
+      L<rsub|n+1><around*|(|X<rsub|1>\<ldots\>X<rsub|n+1>;Y|)>=L<rsub|n><around*|(|X<rsub|1>\<ldots\>X<rsub|n>;L<around*|(|X<rsub|n+1>,Y|)>|)>
+    </equation*>
+  </lemma>
+
+  <\proof>
+    We prove this by induction so let\ 
+
+    <\equation*>
+      S=<around*|{|n\<in\>\<bbb-N\>\|<text|If
+      ><around*|{|X<rsub|i>,<around*|\<\|\|\>||\<\|\|\>><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>
+      <text|is a family of normed spaces and
+      ><around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>><text|
+      a normed space \ then >L<rsub|n+1><around*|(|X<rsub|1>\<ldots\>X<rsub|n+1>;Y|)>=L<rsub|n><around*|(|X<rsub|1>\<ldots\>X<rsub|n>;<around*|(|L<around*|(|X<rsub|n+1>,Y|)>|)>|)>|}>
+    </equation*>
+
+    then we have:
+
+    <\description>
+      <item*|<math|1\<in\>S>>If <math|<around*|{|<around*|\<langle\>|X<rsub|i>,<around*|\<\|\|\>||\<\|\|\>><rsub|i>|\<rangle\>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,2|}>>>
+      is a family of normed spaces and <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+      a normed space then\ 
+
+      <\equation*>
+        L<rsub|2><around*|(|X<rsub|1>\<ldots\>X<rsub|2>;Y|)>=L<around*|(|X<rsub|1>,L<rsub|1><around*|(|X<rsub|2>\<ldots\>X<rsub|2>;Y|)>|)>=L<rsub|1><around*|(|<wide*|X<rsub|1>\<ldots\>X<rsub|1>|\<wide-underbrace\>><rsub|1>;L<around*|(|X<rsub|2>,Y|)>|)>
+      </equation*>
+
+      proving that <math|1\<in\>S>.
+
+      <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>If
+      <math|<around*|{|<around*|\<langle\>|X<rsub|i>,<around*|\<\|\|\>||\<\|\|\>><rsub|i>|\<rangle\>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,<around*|(|n+1|)>+1|}>>>
+      is a family of normed spaces and <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+      a normed space. Define <math|<around*|{|Y<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>>
+      by <math|Y<rsub|i>=X<rsub|i+1>> then we have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|L<rsub|<around*|(|n+1|)>+1><around*|(|X<rsub|1>\<ldots\>X<rsub|<around*|(|n+1|)>+1>;Y|)>>|<cell|\<equallim\><rsub|def>>|<cell|L<around*|(|X<rsub|1>,L<rsub|n+1><around*|(|X<rsub|2>\<ldots\>X<rsub|<around*|(|n+1|)>+1>;Y|)>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|X<rsub|1>,L<rsub|n+1><around*|(|Y<rsub|1>\<ldots\>Y<rsub|n+1>;Y|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|n\<in\>S>>|<cell|L<around*|(|X<rsub|1>,L<rsub|n><around*|(|Y<rsub|1>,\<ldots\>,Y<rsub|n>;L<around*|(|Y<rsub|n+1>,Y|)>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|X<rsub|1>,L<rsub|n><around*|(|X<rsub|2>\<ldots\>X<rsub|n+1>|)>;L<around*|(|X<rsub|<around*|(|n+1|)>+1>,Y|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|def>>|<cell|L<rsub|n+1><around*|(|X<rsub|1>\<ldots\>X<rsub|n+1>;L<around*|(|X<rsub|<around*|(|n+1|)>+1>,Y|)>|)>>>>>
+      </eqnarray*>
+
+      proving that\ 
+
+      <\equation*>
+        n+1\<in\>S
+      </equation*>
+    </description>
+  </proof>
+
+  <\lemma>
+    <label|lemma 16.174.211>Let <math|n,m\<in\>\<bbb-N\>>,
+    <math|<around*|{|<around*|\<langle\>|X<rsub|i>,<around*|\<\|\|\>||\<\|\|\>><rsub|i>|\<rangle\>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n+m|}>>>
+    a finite family of normed spaces, <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    a normed space then\ 
+
+    <\equation*>
+      L<rsub|n+m><around*|(|X<rsub|1>\<ldots\>X<rsub|n+m>|)>=L<rsub|n><around*|(|X<rsub|1>\<ldots\>X<rsub|n>;L<rsub|m><around*|(|X<rsub|n+1>\<ldots\>X<rsub|n+m>;Y|)>|)>
+    </equation*>
+  </lemma>
+
+  <\proof>
+    For <math|n\<in\>\<bbb-N\>> we have two cases to consider:
+
+    <\description>
+      <item*|<math|n=1>>Then\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|L<rsub|1+m><around*|(|X<rsub|1>,\<ldots\>,X<rsub|1+m>;Y|)>>|<cell|=>|<cell|L<around*|(|X<rsub|1>,L<rsub|m><around*|(|X<rsub|2>\<ldots\>X<rsub|1+m>;Y|)>|)>>>|<row|<cell|>|<cell|=>|<cell|L<rsub|1><around*|(|X<rsub|1>\<ldots\>X<rsub|1>;L<rsub|m><around*|(|X<rsub|2>\<ldots\>X<rsub|1+m>;Y|)>|)>>>>>
+      </eqnarray*>
+
+      proving the lemma for this case.
+
+      <item*|<math|1\<less\>n>>We prove this case by induction on <math|m>,
+      so let\ 
+
+      <\equation*>
+        S<rsub|n>=<around*|{|m\<in\>\<bbb-N\>\|<text|If
+        ><around*|{|<around*|\<langle\>|X<rsub|i>,<around*|\<\|\|\>||\<\|\|\>><rsub|i>|\<rangle\>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n+m|}>><text|
+        is a family of normed spaces then
+        ><rigid|L<rsub|n+m><around*|(|X<rsub|1>\<ldots\>X<rsub|n+m>;Y|)>=L<rsub|n><around*|(|X<rsub|1>\<ldots\>X<rsub|n>;L<rsub|m><around*|(|X<rsub|n+1>\<ldots\>X<rsub|n+m>;Y|)>|)>>|}>
+      </equation*>
+
+      then we have:
+
+      <\description>
+        <item*|<math|1\<in\>S<rsub|n>>>If
+        <math|<around*|{|<around*|\<langle\>|X<rsub|i>,<around*|\<\|\|\>||\<\|\|\>><rsub|i>|\<rangle\>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>>
+        is a family of normed spaces then\ 
+
+        <\equation*>
+          L<rsub|n+1><around*|(|X<rsub|1>\<ldots\>X<rsub|n+1>;Y|)>=L<around*|(|X<rsub|1>;L<rsub|n><around*|(|X<rsub|2>\<ldots\>X<rsub|n+1>;Y|)>|)>=L<rsub|1><around*|(|X<rsub|1>\<ldots\>X<rsub|1>;L<rsub|n><around*|(|X<rsub|2>\<ldots\>X<rsub|n+1>;Y|)>|)>
+        </equation*>
+
+        proving that <math|1\<in\>S<rsub|n>>.
+
+        <item*|<math|m\<in\>S<rsub|n>\<Rightarrow\>m+1\<in\>S<rsub|n>>>Let
+        <math|<around*|{|<around*|\<langle\>|X<rsub|i>,<around*|\<\|\|\>||\<\|\|\>><rsub|i>|\<rangle\>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n+<around*|(|m+1|)>|}>>>
+        be a family of normed spaces. Define
+        <math|<around*|{|Y<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n+m|}>>>
+        by <math|Y<rsub|i>=X<rsub|i+1>> then we have
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|L<rsub|n+<around*|(|m+1|)>><around*|(|X<rsub|1>\<ldots\>.X<rsub|n+<around*|(|m+1|)>>;Y|)>>|<cell|=>|<cell|>>|<row|<cell|L<rsub|><around*|(|X<rsub|1>,L<rsub|n+m><around*|(|X<rsub|2>\<ldots\>X<rsub|n+m+1>;Y|)>|)>>|<cell|=>|<cell|>>|<row|<cell|L<around*|(|X<rsub|1>,L<rsub|n+m><around*|(|Y<rsub|1>\<ldots\>Y<rsub|n+m>;Y|)>|)>>|<cell|\<equallim\><rsub|m\<in\>S<rsub|n>>>|<cell|>>|<row|<cell|L<around*|(|X<rsub|1>,L<rsub|n><around*|(|Y<rsub|1>\<ldots\>Y<rsub|n>;L<rsub|m><around*|(|Y<rsub|n+1>\<ldots\>Y<rsub|n+m>;Y|)>|)>|)>>|<cell|\<equallim\><rsub|1\<less\>n\<wedge\><text|[lemma:
+          <reference|lemma 16.173.211>]>>>|<cell|>>|<row|<cell|L<around*|(|X<rsub|1>,L<rsub|n-1><around*|(|Y<rsub|1>\<ldots\>Y<rsub|n-1>;L<around*|(|Y<rsub|n>,L<rsub|m><around*|(|Y<rsub|n+1>\<ldots\>Y<rsub|n+m>;Y|)>|)>|)>|)>>|<cell|\<equallim\><rsub|def>>|<cell|>>|<row|<cell|L<around*|(|X<rsub|1>,L<rsub|n-1><around*|(|Y<rsub|1>\<ldots\>Y<rsub|n-1>;L<rsub|m+1><around*|(|Y<rsub|n>\<ldots\>Y<rsub|n+m>;Y|)>|)>|)>>|<cell|=>|<cell|>>|<row|<cell|L<around*|(|X<rsub|1>,L<rsub|n-1><around*|(|X<rsub|2>,\<ldots\>,X<rsub|n>;L<rsub|m+1><around*|(|X<rsub|n+1>\<ldots\>X<rsub|n+m+1>;Y|)>|)>|)>>|<cell|\<equallim\><rsub|def>>|<cell|>>|<row|<cell|L<rsub|n><around*|(|X<rsub|1>\<ldots\>X<rsub|n>;L<rsub|m+1><around*|(|X<rsub|n+1>\<ldots\>X<rsub|n+<around*|(|m+1|)>>;Y|)>|)>>|<cell|>|<cell|>>>>
+        </eqnarray*>
+
+        proves that <math|n+1>
+      </description>
+
+      Mathematical induction proves the lemma for the case <math|1\<less\>n>.
+    </description>
+  </proof>
+
+  We extend now the definition of <math|L<around*|(|x<rsub|1>:\<ldots\>:x<rsub|n>|)>>
+  [see definition: <reference|diff L(x1:..xn)>] to the more general case.
+
+  <\definition>
+    <label|diff L(x1:..:xn) (1)>Let <math|n\<in\>\<bbb-N\>>,
+    <math|<around*|{|<around*|\<langle\>|X<rsub|i>,<around*|\<\|\|\>||\<\|\|\>><rsub|i>|\<rangle\>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n+m|}>>>
+    a finite family of normed spaces, <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    a normed space, <math|m\<in\>\<bbb-N\>> with <math|m\<leqslant\>n> then
+    if <math|L\<in\>L<rsub|n><around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>> and
+    <math|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|m>|)>\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>>X<rsub|i>>
+    then we define\ 
+
+    <\equation*>
+      L<around*|(|x<rsub|1>:\<ldots\>:x<rsub|m>|)>=<choice|<tformat|<table|<row|<cell|L<around*|(|x<rsub|1>|)><text|
+      if >m=1>>|<row|<cell|<around*|(|L<around*|(|x<rsub|1>|)>|)><around*|(|x<rsub|2>:\<ldots\>x<rsub|m>|)><text|
+      if >1\<less\>m>>>>>
+    </equation*>
+  </definition>
+
+  <\lemma>
+    <label|eq 16.176.211>Let <math|n\<in\>\<bbb-N\>>,
+    <math|<around*|{|<around*|\<langle\>|X<rsub|i>,<around*|\<\|\|\>||\<\|\|\>><rsub|i>|\<rangle\>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+    a finite family of normed spaces, <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    a normed space, <math|m\<in\>\<bbb-N\>> with <math|m\<leqslant\>n> then
+    if <math|L\<in\>L<rsub|n><around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>> and
+    <math|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|m>|)>\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>>X<rsub|i>>
+    then\ 
+
+    <\equation*>
+      L<around*|(|x<rsub|1>:\<ldots\>:x<rsub|m>|)>\<in\><choice|<tformat|<table|<row|<cell|Y<text|
+      if m=n>>>|<row|<cell|L<rsub|n-m><around*|(|X<rsub|m+1><rsub|>\<ldots\>X<rsub|n>;Y|)><text|
+      if >m\<less\>n>>>>>
+    </equation*>
+  </lemma>
+
+  <\proof>
+    We prove this by induction, so let
+
+    <\equation*>
+      S=<around*|{|n\<in\>\<bbb-N\>\|<text|If
+      <math|<around*|{|<around*|\<langle\>|X<rsub|i>,<around*|\<\|\|\>||\<\|\|\>><rsub|i>|\<rangle\>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+      is a family of normed space and <math|<rigid|L\<in\>L<rsub|n><around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>><text|
+      then for every ><rigid|m\<in\><around*|{|1,\<ldots\>,n|}>>> we have for
+      every ><around*|(|x<rsub|1>,\<ldots\>,x<rsub|m>|)>\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>>X<rsub|i><text|
+      that ><rigid|L<around*|(|x<rsub|1>:\<ldots\>:x<rsub|m>|)>\<in\><choice|<tformat|<table|<row|<cell|Y<text|
+      if >m=n>>|<row|<cell|L<rsub|n-m><around*|(|X<rsub|m+1><rsub|>\<ldots\>X<rsub|n>;Y|)><text|
+      if >m\<less\>n>>>>>> |}>
+    </equation*>
+
+    then we have:\ 
+
+    <\description>
+      <item*|<math|1\<in\>S>>If <math|m\<in\><around*|{|1,\<ldots\>,1|}>=<around*|{|1|}>>
+      then for <math|L\<in\>L<rsub|1><around*|(|X<rsub|1>\<ldots\>X<rsub|1>;Y|)>=L<around*|(|X<rsub|1>,Y|)>>
+      we have for <math|<around*|(|x<rsub|1>|)>\<in\><big|prod><rsub|i\<in\><around*|{|1|}>>X<rsub|i>>
+      that <math|L<around*|(|x<rsub|1>:\<ldots\>:x<rsub|1>|)>=L<around*|(|x<rsub|1>|)>\<in\>Y>
+      which as <math|m=1=n> proves that <math|1\<in\>S>.
+
+      <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>Let
+      <math|L\<in\>L<rsub|n+1><around*|(|X<rsub|1>\<ldots\>X<rsub|n+1>;Y|)>>
+      and <math|m\<in\><around*|{|1,\<ldots\>,n+1|}>> then we must consider
+      the following cases:
+
+      <\description>
+        <item*|<math|m=1>>Let <math|<around*|(|x<rsub|1>|)>\<subseteq\>X<rsup|1>>
+        then, as <math|L<rsub|n+1><around*|(|X<rsub|1>\<ldots\>X<rsub|n+1>;Y|)>=L<around*|(|X<rsub|1>,L<rsub|n><around*|(|X<rsub|2>\<ldots\>X<rsub|n+1>;Y|)>|)>>,
+        we have
+
+        <\equation*>
+          L<around*|(|<wide*|x<rsub|1>:\<ldots\>:x<rsub|1>|\<wide-underbrace\>><rsub|1>|)>=L<around*|(|x<rsub|1>|)>\<in\>L<rsub|n><around*|(|X<rsub|2>\<ldots\>X<rsub|n+1>;Y|)>\<equallim\><rsub|m=1>L<rsub|<around*|(|n+1|)>-m><around*|(|X<rsub|m+1>\<ldots\>X<rsub|n+1>;Y|)><rsub|>
+        </equation*>
+
+        <item*|<math|m=n+1>>Let <math|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n+1>|)>\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>X<rsub|i>>
+        then, as
+
+        <\equation*>
+          L<rsub|n+1><around*|(|X<rsub|1>\<ldots\>X<rsub|n+1>;Y|)>=L<around*|(|X<rsub|1>,L<rsub|n><around*|(|X<rsub|2>\<ldots\>X<rsub|n+1>;Y|)>|)>
+        </equation*>
+
+        we have
+
+        <\equation*>
+          L<around*|(|x<rsub|1>|)>\<in\>L<rsub|n><around*|(|X<rsub|2>\<ldots\>X<rsub|n+1>;Y|)>
+        </equation*>
+
+        Define <math|<around*|{|<around*|\<langle\>|Y<rsub|i>,<around*|\<\|\|\>||\<\|\|\>><rsub|Y,i>|\<rangle\>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+        by <math|<around*|\<langle\>|Y<rsub|i>,<around*|\<\|\|\>|<rsub|Y,i>|\<\|\|\>>|\<rangle\>>=<around*|\<langle\>|X<rsub|i+1>,<around*|\<\|\|\>||\<\|\|\>><rsub|i+1>|\<rangle\>>>
+        and <rigid|<math|<around*|(|y<rsub|1>,\<ldots\>,y<rsub|n>|)>\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>Y<rsub|i>>>
+        by <math|y<rsub|i>=x<rsub|i+1>> then
+        <math|L<around*|(|x<rsub|1>|)>\<in\>L<rsub|n><around*|(|Y<rsub|1>\<ldots\>Y<rsub|n>;Y|)>>.
+        As <math|n\<in\>S> we have that <math|L<around*|(|x<rsub|1>|)><around*|(|y<rsub|1>:\<ldots\>:y<rsub|n>|)>\<in\>Y>,
+        so that <math|L<around*|(|x<rsub|1>|)><around*|(|x<rsub|2>:\<ldots\>:x<rsub|n+1>|)>\<in\>Y>.
+        Hence
+
+        <\equation*>
+          L<around*|(|x<rsub|1>:\<ldots\>:x<rsub|m>|)>=L<around*|(|x<rsub|1>:\<ldots\>:x<rsub|n+1>|)>=L<around*|(|x<rsub|1>|)><around*|(|x<rsub|2>:\<ldots\>:x<rsub|n+1>|)>\<in\>Y
+        </equation*>
+
+        <item*|<math|m\<in\><around*|{|2,\<ldots\>,n|}>>>Let
+        <math|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|m>|)>\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>>X<rsub|i>>
+        then as
+
+        <\equation*>
+          L<rsub|n+1><around*|(|X<rsub|1>\<ldots\>X<rsub|n+1>;Y|)>=L<around*|(|X<rsub|1>,L<rsub|n><around*|(|X<rsub|2>\<ldots\>X<rsub|n+1>;Y|)>|)>
+        </equation*>
+
+        we have that
+
+        <\equation*>
+          L<around*|(|x<rsub|1>|)>\<in\>L<rsub|n><around*|(|X<rsub|2>\<ldots\>X<rsub|n+1>;Y|)>
+        </equation*>
+
+        Define <math|<around*|{|<around*|\<langle\>|Y<rsub|i>,<around*|\<\|\|\>||\<\|\|\>><rsub|Y,i>|\<rangle\>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+        by <math|<around*|\<langle\>|Y<rsub|i>,<around*|\<\|\|\>|<rsub|Y,i>|\<\|\|\>>|\<rangle\>>=<around*|\<langle\>|X<rsub|i+1>,<around*|\<\|\|\>||\<\|\|\>><rsub|i+1>|\<rangle\>>>
+        and <math|<around*|(|y<rsub|1>,\<ldots\>,y<rsub|m-1>|)>\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>Y<rsub|i>>
+        by <math|y<rsub|i>=x<rsub|i+1>> then\ 
+
+        <\equation*>
+          L<around*|(|x<rsub|1>|)>\<in\>L<around*|(|Y<rsub|1>\<ldots\>Y<rsub|n>;Y|)><text|>
+        </equation*>
+
+        so, as <math|1\<leqslant\>m-1\<less\>n> and <math|n\<in\>S> it
+        follows that\ 
+
+        <\equation*>
+          L<around*|(|x<rsub|1>|)><around*|(|y<rsub|1>:\<ldots\>:y<rsub|m-1>|)>\<in\>L<rsub|n-<around*|(|m-1|)>><around*|(|Y<rsub|<around*|(|m-1|)>+1>\<ldots\>Y<rsub|n>;Y|)>
+        </equation*>
+
+        hence\ 
+
+        <\equation*>
+          L<around*|(|x<rsub|1>|)><around*|(|x<rsub|2>:\<ldots\>:x<rsub|m>|)>\<in\>L<rsub|<around*|(|n+1|)>-m><around*|(|X<rsub|m+1>\<ldots\>X<rsub|n+1>;Y|)>
+        </equation*>
+
+        so that\ 
+
+        <\equation*>
+          L<around*|(|x<rsub|1>:\<ldots\>x<rsub|m>|)>=L<around*|(|x<rsub|1>|)><around*|(|x<rsub|2>:\<ldots\>:x<rsub|m>|)>\<in\>L<rsub|<around*|(|n+1|)>-m><around*|(|X<rsub|m+1\<ldots\>>X<rsub|n+1>;Y|)>
+        </equation*>
+      </description>
+
+      So we have proved that\ 
+
+      <\equation*>
+        L<around*|(|x<rsub|1>:\<ldots\>:x<rsub|m>|)>\<in\><choice|<tformat|<table|<row|<cell|Y<text|
+        if >m=n+1>>|<row|<cell|L<rsub|<around*|(|n+1|)>-m><around*|(|X<rsub|m+1\<ldots\>>X<rsub|n+1>;Y|)><text|
+        if >m\<less\>n>>>>>
+      </equation*>
+
+      from which it follows that\ 
+
+      <\equation*>
+        n+1\<in\>S
+      </equation*>
+    </description>
+  </proof>
+
+  <\lemma>
+    <label|lemma 16.177.211>Let <math|n\<in\>\<bbb-N\>>,
+    <math|<around*|{|<around*|\<langle\>|X<rsub|i>,<around*|\<\|\|\>||\<\|\|\>><rsub|i>|\<rangle\>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+    a finite family of normed spaces, <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    a normed space, <math|\<alpha\>\<in\>\<bbb-K\>>,
+    <math|L<rsub|1>,L<rsub|2>\<in\>L<rsub|n><around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>
+    then <math|\<forall\><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>
+    we have\ 
+
+    <\equation*>
+      <around*|(|L<rsub|1>+\<alpha\>\<cdot\>L<rsub|2>|)><around*|(|x<rsub|1>:\<ldots\>:x<rsub|n>|)>=L<rsub|1><around*|(|x<rsub|1>:\<ldots\>:x<rsub|n>|)>+\<alpha\>\<cdot\>L<rsub|2><around*|(|x<rsub|1>:\<ldots\>:x<rsub|n>|)>
+    </equation*>
+  </lemma>
+
+  <\proof>
+    The proof is by induction, so let\ 
+
+    <\equation*>
+      S=<around*|{|n\<in\>\<bbb-N\>\|\<forall\>\<alpha\>\<in\>\<bbb-K\><text|
+      and >\<forall\>L<rsub|1>,L<rsub|2>\<in\>L<rsub|n><around*|(|X;Y|)><text|
+      we have >\<forall\><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i><text|
+      that ><rigid|<around*|(|L<rsub|1>+\<alpha\>\<cdot\>L<rsub|2>|)><around*|(|x<rsub|1>:\<ldots\>:x<rsub|n>|)>=L<rsub|1><around*|(|x<rsub|1>:\<ldots\>:x<rsub|n>|)>+\<alpha\>\<cdot\>L<rsub|2><around*|(|x<rsub|1>:\<ldots\>:x<rsub|n>|)>>|}>
+    </equation*>
+
+    then we have:\ 
+
+    <\description>
+      <item*|<math|1\<in\>S>>Take <math|\<alpha\>\<in\>\<bbb-K\>>,
+      <math|L<rsub|1>,L<rsub|2>\<in\>L<rsub|1><around*|(|X<rsub|1>\<ldots\>X<rsub|1>;Y|)>=L<around*|(|X,Y|)>>
+      then we have for <math|<around*|(|x<rsub|1>|)>\<in\><big|prod><rsub|i\<in\><around*|{|1|}>>X<rsub|i>>
+      that\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|L<rsub|1>+\<alpha\>\<cdot\>L<rsub|2>|)><around*|(|x<rsub|1>:\<ldots\>:x<rsub|1>|)>>|<cell|=>|<cell|<around*|(|L<rsub|1>+\<alpha\>\<cdot\>L<rsub|2>|)><around*|(|x<rsub|1>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|pointwise
+        definition>>>|<cell|L<rsub|1><around*|(|x|)>+\<alpha\>\<cdot\>L<rsub|2><around*|(|x<rsub|1>|)>>>|<row|<cell|>|<cell|=>|<cell|L<rsub|1><around*|(|x<rsub|1>:\<ldots\>:x<rsub|1>|)>+\<alpha\>\<cdot\>L<rsub|2><around*|(|x<rsub|1>:\<ldots\>:x<rsub|1>|)>>>>>
+      </eqnarray*>
+
+      proving that <math|1\<in\>S>
+
+      <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>Take
+      <math|\<alpha\>\<in\>\<bbb-K\>>, <math|L<rsub|1>,L<rsub|2>\<in\>L<rsub|n+1><around*|(|X<rsub|1>\<ldots\>X<rsub|n+1>;Y|)>=L<around*|(|X<rsub|1>,L<rsub|n><around*|(|X<rsub|2>\<ldots\>X<rsub|n+1>;Y|)>|)>>
+      and <math|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>
+      then
+
+      <\equation*>
+        <around*|(|L<rsub|1>+\<alpha\>\<cdot\>L<rsub|2>|)><around*|(|x<rsub|1>|)>\<equallim\><rsub|<text|pointwise
+        definition>>L<rsub|1><around*|(|x<rsub|1>|)>+\<alpha\>\<cdot\>L<rsub|2><around*|(|x<rsub|1>|)><text|>
+      </equation*>
+
+      hence
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|L<rsub|1>+\<alpha\>\<cdot\>L<rsub|2>|)><around*|(|x<rsub|1>:\<ldots\>:x<rsub|n>|)>>|<cell|=>|<cell|<around*|(|<around*|(|L<rsub|1>+\<alpha\>\<cdot\>L<rsub|2>|)><around*|(|x<rsub|1>|)>|)><around*|(|x<rsub|2>:\<ldots\>:x<rsub|n>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|L<rsub|1><around*|(|x<rsub|1>|)>+\<alpha\>\<cdot\>L<rsub|2><around*|(|x<rsub|1>|)>|)><around*|(|x<rsub|2>:\<ldots\>:x<rsub|n>|)><eq-number><label|eq
+        16.250.210>>>>>
+      </eqnarray*>
+
+      As <math|L<rsub|1><around*|(|x<rsub|1>|)>,L<rsub|2><around*|(|x<rsub|1>|)>\<in\>L<rsub|n><around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>
+      and <math|n\<in\>S> it follows that\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|L<rsub|1><around*|(|x<rsub|1>|)>+\<alpha\>\<cdot\>L<rsub|2><around*|(|x<rsub|1>|)>|)><around*|(|x<rsub|2>:\<ldots\>:x<rsub|n>|)>>|<cell|=>|<cell|<around*|(|L<rsub|1><around*|(|x<rsub|1>|)>|)><around*|(|x<rsub|2>:\<ldots\>:x<rsub|n>|)>+\<alpha\>\<cdot\><around*|(|L<rsub|2><around*|(|x<rsub|1>|)>|)><around*|(|x<rsub|2>:\<ldots\>:x<rsub|n>|)>>>|<row|<cell|>|<cell|=>|<cell|L<rsub|1><around*|(|x<rsub|1>:\<ldots\>:x<rsub|n>|)>+\<alpha\>\<cdot\>L<rsub|2><around*|(|x<rsub|1>:\<ldots\>:x<rsub|n>|)>>>>>
+      </eqnarray*>
+
+      which combined with [eq: <reference|eq 16.250.210>] proves that\ 
+
+      <\equation*>
+        <around*|(|L<rsub|1>+\<alpha\>\<cdot\>L<rsub|2>|)><around*|(|x<rsub|1>:\<ldots\>:x<rsub|n>|)>=L<rsub|1><around*|(|x<rsub|1>:\<ldots\>:x<rsub|n>|)>+\<alpha\>\<cdot\>L<rsub|2><around*|(|x<rsub|1>:\<ldots\>:x<rsub|n>|)>
+      </equation*>
+
+      Hence we have that\ 
+
+      <\equation*>
+        n+1\<in\>S
+      </equation*>
+    </description>
+  </proof>
+
+  <\lemma>
+    <label|lemma 16.178.210>Let <math|n\<in\>\<bbb-N\>>,
+    <math|<around*|{|<around*|\<langle\>|X<rsub|i>,<around*|\<\|\|\>||\<\|\|\>><rsub|i>|\<rangle\>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+    a finite family of normed spaces, <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    a normed space, <math|L\<in\>L<rsub|n><around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>
+    and <math|i\<in\><around*|{|1,\<ldots\>,n|}>> then we have for
+
+    <\equation*>
+      <around*|(|x<rsub|1>\<ldots\><wide*|r+\<alpha\>\<cdot\>t|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n>|)>\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>
+    </equation*>
+
+    that\ 
+
+    <\equation*>
+      L<around*|(|x<rsub|1>:\<ldots\><wide*|r+\<alpha\>\<cdot\>t|\<wide-underbrace\>><rsub|i>\<ldots\>:x<rsub|n>|)>=L<around*|(|x<rsub|1>:\<ldots\><wide*|r|\<wide-underbrace\>><rsub|i>\<ldots\>:x<rsub|n>|)>+\<alpha\>\<cdot\>L<around*|(|x<rsub|1>:\<ldots\><wide*|t|\<wide-underbrace\>><rsub|i>\<ldots\>:x<rsub|n>|)>
+    </equation*>
+  </lemma>
+
+  <\proof>
+    We use mathematical induction on <math|n> for the proof, so let\ 
+
+    <\equation*>
+      S=<around*|{|n\<in\>\<bbb-N\>\|<text|If
+      >L\<in\>L<rsub|n><around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)><text| then
+      >\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><text| we have for
+      <math|<around*|(|x<rsub|1>,\<ldots\><wide*|r+\<alpha\>\<cdot\>t|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n>|)>\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i><text|
+      that >L<around*|(|x<rsub|1>:\<ldots\><wide*|r+\<alpha\>\<cdot\>t|\<wide-underbrace\>><rsub|i>\<ldots\>:x<rsub|n>|)>=L<around*|(|x<rsub|1>:\<ldots\><wide*|r|\<wide-underbrace\>><rsub|i>\<ldots\>:x<rsub|n>|)>+\<alpha\>\<cdot\>L<around*|(|x<rsub|1>:\<ldots\><wide*|t|\<wide-underbrace\>><rsub|i>\<ldots\>:x<rsub|n>|)>>>|}>
+    </equation*>
+
+    then we have:\ 
+
+    <\description>
+      <item*|<math|1\<in\>S>>Let <math|L\<in\>L<rsub|1><around*|(|X<rsub|1>\<ldots\>X<rsub|1>;Y|)>=L<around*|(|X<rsub|1>,Y|)>>
+      then if <math|i\<in\><around*|{|1,\<ldots\>,1|}>=<around*|{|1|}>> we
+      have <math|i=1>. So given\ 
+
+      <\equation*>
+        <around*|(|r+\<alpha\>\<cdot\>t|)>=<around*|(|x<rsub|1>,\<ldots\><wide*|r+\<alpha\>\<cdot\>t|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n>|)>\<in\>X<rsup|1>
+      </equation*>
+
+      we have
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|L<around*|(|x<rsub|1>:\<ldots\><wide*|r+\<alpha\>\<cdot\>t|\<wide-underbrace\>><rsub|i>\<ldots\>:x<rsub|n>|)>>|<cell|=>|<cell|>>|<row|<cell|L<around*|(|r+\<alpha\>\<cdot\>t|)>>|<cell|\<equallim\><rsub|L\<in\>L<around*|(|X<rsub|1>,Y|)>>>|<cell|>>|<row|<cell|L<around*|(|r|)>+\<alpha\>\<cdot\>L<around*|(|t|)>>|<cell|=>|<cell|>>|<row|<cell|L<around*|(|x<rsub|1>:\<ldots\><wide*|r|\<wide-underbrace\>><rsub|i>\<ldots\>:x<rsub|n>|)>+\<alpha\>\<cdot\>L<around*|(|x<rsub|1>:\<ldots\><wide*|t|\<wide-underbrace\>><rsub|i>\<ldots\>:x<rsub|n>|)>>|<cell|>|<cell|>>>>
+      </eqnarray*>
+
+      proving that <math|1\<in\>S>.
+
+      <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>Let
+      <math|L\<in\>L<rsub|n+1><around*|(|X<rsub|1>\<ldots\>X<rsub|n+1>;Y|)>=L<around*|(|X<rsub|1>,L<rsub|n><around*|(|X<rsub|2>\<ldots\>X<rsub|n+1>;Y|)>|)>>
+      and take <math|<rigid|i\<in\><around*|{|1,\<ldots\>,n+1|}>>> then we
+      have either:\ 
+
+      <\description>
+        <item*|<math|i=1>>Then for <math|<around*|(|x<rsub|1>,\<ldots\><wide*|r+\<alpha\>\<cdot\>t|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n+1>|)>=<around*|(|r+\<alpha\>\<cdot\>t,x<rsub|2>,\<ldots\>,x<rsub|n+1>|)>>
+        we have \ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|L<around*|(|x<rsub|1>:\<ldots\><wide*|r+\<alpha\>\<cdot\>t|\<wide-underbrace\>><rsub|i>\<ldots\>:x<rsub|n+1>|)>>|<cell|=>|<cell|>>|<row|<cell|L<around*|(|r+\<alpha\>\<cdot\>t:x<rsub|2>:\<ldots\>:x<rsub|n+1>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|L<around*|(|r+\<alpha\>\<cdot\>t|)>|)><around*|(|x<rsub|2>:\<ldots\>:x<rsub|n+1>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|L<around*|(|r|)>+\<alpha\>\<cdot\>L<around*|(|t|)>|)><around*|(|x<rsub|2>:\<ldots\>:x<rsub|n+1>|)>>|<cell|\<equallim\><rsub|<text|[lemma:
+          <reference|lemma 16.177.211>]>>>|<cell|>>|<row|<cell|<around*|(|L<around*|(|r|)>|)><around*|(|x<rsub|2>:\<ldots\>:x<rsub|n+1>|)>+\<alpha\>\<cdot\>L<around*|(|t|)><around*|(|x<rsub|2>:\<ldots\>:x<rsub|n+1>|)>>|<cell|=>|<cell|>>|<row|<cell|L<around*|(|r:x<rsub|2>:\<ldots\>:x<rsub|n+1>|)>+\<alpha\>\<cdot\>L<around*|(|t:x<rsub|2>:\<ldots\>:x<rsub|n+1>|)>>|<cell|=>|<cell|>>|<row|<cell|L<around*|(|x<rsub|1>:\<ldots\><wide*|r|\<wide-underbrace\>><rsub|i>\<ldots\>:x<rsub|n+1>|)>+\<alpha\>\<cdot\>L<around*|(|x<rsub|1>:\<ldots\><wide*|t|\<wide-underbrace\>><rsub|i>\<ldots\>:x<rsub|n+1>|)>>|<cell|>|<cell|>>>>
+        </eqnarray*>
+
+        proving
+
+        <\equation*>
+          n+1\<in\>S
+        </equation*>
+
+        <item*|<math|i\<in\><around*|{|2,\<ldots\>,n+1|}>>>Then for
+        <math|<around*|(|x<rsub|1>,\<ldots\><wide*|r+\<alpha\>\<cdot\>t|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n+1>|)>\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>
+        we have <math|<around*|(|x<rsub|2>,\<ldots\><wide*|r+\<alpha\>\<cdot\>t|\<wide-underbrace\>><rsub|i-1>\<ldots\>,x<rsub|n+1>|)>\<in\><big|prod><rsub|i\<in\><around*|{|2,\<ldots\>,n+1|}>>X<rsub|i>>
+        which as <math|L<around*|(|x<rsub|1>|)>\<in\>L<rsub|n><around*|(|X<rsub|2>\<ldots\>X<rsub|n+1>;Y|)>>
+        and <math|n\<in\>S> results in
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|L<around*|(|x<rsub|1>:\<ldots\><wide*|r+\<alpha\>\<cdot\>t|\<wide-underbrace\>><rsub|i>\<ldots\>:x<rsub|n+1>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|L<around*|(|x<rsub|1>|)>|)><around*|(|x<rsub|2>:\<ldots\><wide*|r+\<alpha\>\<cdot\>t|\<wide-underbrace\>><rsub|i-1>\<ldots\>:x<rsub|n>|)>>|<cell|\<equallim\><rsub|n\<in\>S>>|<cell|>>|<row|<cell|<around*|(|L<around*|(|x<rsub|1>|)>|)><around*|(|x<rsub|2>:\<ldots\><wide*|r|\<wide-underbrace\>><rsub|i-1>\<ldots\>:x<rsub|n>|)>+\<alpha\>\<cdot\><around*|(|L<around*|(|x<rsub|1>|)>|)><around*|(|x<rsub|2>:\<ldots\><wide*|t|\<wide-underbrace\>><rsub|i-1>\<ldots\>:x<rsub|n>|)>>|<cell|=>|<cell|>>|<row|<cell|L<around*|(|x<rsub|1>:\<ldots\><wide*|r|\<wide-underbrace\>><rsub|i>\<ldots\>:x<rsub|n>|)>+\<alpha\>\<cdot\>L<around*|(|x<rsub|1>:|\<nobracket\>><around*|\<nobracket\>|\<ldots\><wide*|t|\<wide-underbrace\>><rsub|i>\<ldots\>:x<rsub|n>|)>>|<cell|=>|<cell|>>>>
+        </eqnarray*>
+
+        so that in this case we have also
+
+        <\equation*>
+          n+1\<in\>S
+        </equation*>
+      </description>
+
+      So in all cases we have\ 
+
+      <\equation*>
+        n+1\<in\>S
+      </equation*>
+    </description>
+  </proof>
+
+  <\lemma>
+    <label|lemma 16.179.210>Let <math|n\<in\>\<bbb-N\>>,
+    <math|<around*|{|<around*|\<langle\>|X<rsub|i>,<around*|\<\|\|\>||\<\|\|\>><rsub|i>|\<rangle\>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+    a finite family of normed spaces, <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    a normed space, <math|L\<in\>L<rsub|n><around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>
+    and <math|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>
+    then we have\ 
+
+    <\equation*>
+      <around*|\<\|\|\>|L<around*|(|x<rsub|1>:\<ldots\>:x<rsub|n>|)>|\<\|\|\>><rsub|Y>\<leqslant\><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<rsub|n><around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>\<cdot\><big|prod><rsub|i=1><rsup|n><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>><rsub|i>
+    </equation*>
+  </lemma>
+
+  <\proof>
+    We prove this by induction, so define
+
+    <\equation*>
+      S=<around*|{|n\<in\>\<bbb-N\>\|<text|If
+      >L\<in\>L<rsub|n><around*|(|X<rsub|1>\<ldots\>Xn;Y|)><text| then
+      >\<forall\><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i><text|
+      we have <math|<around*|\<\|\|\>|L<around*|(|x<rsub|1>:\<ldots\>:x<rsub|n>|)>|\<\|\|\>><rsub|Y>\<leqslant\><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<rsub|n><around*|(|X;Y|)>>\<cdot\><big|prod><rsub|i=1><rsup|n><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>><rsub|i>>>|}>
+    </equation*>
+
+    then we have:\ 
+
+    <\description>
+      <item*|<math|1\<in\>S>>If <math|L\<in\>L<rsub|1><around*|(|X<rsub|1>\<ldots\>X<rsub|1>;Y|)>=L<around*|(|X<rsub|1>,Y|)>>
+      then <math|\<forall\><around*|(|x<rsub|1>|)>\<in\><big|prod><rsub|i\<in\><around*|{|1|}>>X<rsub|i>>
+      we have
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|\<\|\|\>|L<around*|(|x<rsub|1>:\<ldots\>:x<rsub|1>|)>|\<\|\|\>><rsub|Y>>|<cell|=>|<cell|<around*|\<\|\|\>|L<around*|(|x<rsub|1>|)>|\<\|\|\>><rsub|Y>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>,Y|)>>\<cdot\><around*|\<\|\|\>|x<rsub|1>|\<\|\|\>><rsub|1>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<rsub|1><around*|(|X<rsub|1>\<ldots\>X<rsub|1>;Y|)>>\<cdot\><around*|\<\|\|\>|x<rsub|1>|\<\|\|\>><rsub|1>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<rsub|1><around*|(|X\<ldots\>X<rsub|1>;Y|)>>\<cdot\><big|prod><rsub|i=1><rsup|1><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>><rsub|i>>>>>
+      </eqnarray*>
+
+      \ proving that <math|1\<in\>S>.
+
+      <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>Let
+      <math|L\<in\>L<rsub|n+1><around*|(|X<rsub|1>\<ldots\>X<rsub|n+1>;Y|)>=<rigid|L<around*|(|X<rsub|1>,L<rsub|n><around*|(|X<rsub|2>\<ldots\>X<rsub|n+1>;Y|)>|)>>>
+      and <rigid|<math|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n+1>|)>\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>X<rsub|i>>>
+      then, as <math|L<around*|(|x<rsub|1>|)>\<in\>L<rsub|n><around*|(|X<rsub|1>\<ldots\>X<rsub|1>;Y|)>>,
+      <math|<rigid|<around*|(|x<rsub|2>,\<ldots\>,x<rsub|n+1>|)>\<in\><big|prod><rsub|i\<in\><around*|{|2,\<ldots\>,n+1|}>>X<rsub|i>>>
+      and <math|n\<in\>S>, we have \ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|\<\|\|\>|L<around*|(|x<rsub|1>|)><around*|(|x<rsub|2>:\<ldots\>:x<rsub|n+1>|)>|\<\|\|\>><rsub|Y>>|<cell|\<leqslant\>>|<cell|<around*|\<\|\|\>|L<around*|(|x<rsub|1>|)>|\<\|\|\>><rsub|L<rsub|n><around*|(|X<rsub|2>\<ldots\>X<rsub|n+1>;Y|)>>\<cdot\><big|prod><rsub|i=1><rsup|n><around*|\<\|\|\>|x<rsub|i+1>|\<\|\|\>><rsub|i+1>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|L<around*|(|x<rsub|i>|)>|\<\|\|\>><rsub|L<rsub|n><around*|(|X<rsub|2>\<ldots\>X<rsub|n+1>;Y|)>>\<cdot\><big|prod><rsub|i=2><rsup|n+1><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>><rsub|X><eq-number><label|eq
+        16.251.210>>>>>
+      </eqnarray*>
+
+      Next we have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|\<\|\|\>|L<around*|(|x<rsub|1>:\<ldots\>:x<rsub|n+1>|)>|\<\|\|\>><rsub|Y>>|<cell|=>|<cell|<around*|\<\|\|\>|<around*|(|L<around*|(|x<rsub|1>|)>|)><around*|(|x<rsub|2>:\<ldots\>:x<rsub|n+1>|)>|\<\|\|\>><rsub|Y>>>|<row|<cell|>|<cell|<below|\<leqslant\>|<text|[eq:
+        <reference|eq 16.251.210>]>>>|<cell|<around*|\<\|\|\>|L<around*|(|x<rsub|i>|)>|\<\|\|\>><rsub|L<rsub|n><around*|(|X<rsub|2>\<ldots\>X<rsub|n+1>;Y|)>>\<cdot\><big|prod><rsub|i=2><rsup|n+1><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>><rsub|X>>>|<row|<cell|>|<cell|<below|\<leqslant\>|L\<in\>L<around*|(|X<rsub|1>,L<rsub|n><around*|(|X<rsub|2>\<ldots\>X<rsub|n+1>;Y|)>|)>>>|<cell|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<rsub|n+1><around*|(|X<rsub|1>\<ldots\>X<rsub|n+1>;Y|)>>\<cdot\><around*|\<\|\|\>|x<rsub|1>|\<\|\|\>><rsub|X>\<cdot\><big|prod><rsub|i=2><rsup|n+1><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>><rsub|X>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<rsub|n+1><around*|(|X<rsub|1>\<ldots\>X<rsub|n+1>;Y|)>>\<cdot\><big|prod><rsub|i=1><rsup|n+1><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>><rsub|X>>>>>
+      </eqnarray*>
+
+      proving that\ 
+
+      <\equation*>
+        n+1\<in\>S
+      </equation*>
+    </description>
+  </proof>
+
+  <\lemma>
+    <label|lemma 16.180.210>Let <math|n\<in\>\<bbb-N\>>,
+    <math|<around*|{|<around*|\<langle\>|X<rsub|i>,<around*|\<\|\|\>||\<\|\|\>><rsub|i>|\<rangle\>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+    a finite family of normed spaces, <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    a normed space, <math|L<rsub|1>,L<rsub|2>\<in\>L<rsub|n><around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>
+    such that <math|\<forall\><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>
+    we have
+
+    <\equation*>
+      L<rsub|1><around*|(|x<rsub|1>:\<ldots\>:x<rsub|n>|)>=L<rsub|2><around*|(|x<rsub|1>:\<ldots\>x<rsub|n>|)>
+    </equation*>
+
+    then\ 
+
+    <\equation*>
+      L<rsub|1>=L<rsub|2>
+    </equation*>
+  </lemma>
+
+  <\proof>
+    We use induction to prove this, so define\ 
+
+    <\equation*>
+      S=<around*|{|n\<in\>\<bbb-N\>\|<text|If
+      >L<rsub|1>,L<rsub|2>\<in\>L<rsub|n><around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)><text|
+      satisfies >\<forall\><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)><text|
+      >L<rsub|1><around*|(|x<rsub|1>:\<ldots\>:x<rsub|n>|)>=L<rsub|2><around*|(|x<rsub|1>:\<ldots\>:x<rsub|n>|)>
+      <text|then >L<rsub|1>=L<rsub|2>|}>
+    </equation*>
+
+    then we have:\ 
+
+    <\description>
+      <item*|<math|1\<in\>S>>Let <math|L<rsub|1>,L<rsub|2>\<in\>L<rsub|1><around*|(|X<rsub|1>;Y|)>=L<around*|(|X<rsub|1>,Y|)>>
+      be such that <math|\<forall\><around*|(|x<rsub|1>|)>\<in\>X<rsup|1>> we
+      have <math|<rigid|L<rsub|1><around*|(|x<rsub|1>:\<ldots\>:x<rsub|1>|)>=L<rsub|2><around*|(|x<rsub|1>:\<ldots\>:x<rsub|1>|)>>>.
+      Then <math|\<forall\>x\<in\>X> we have for
+      <math|y=<around*|(|x|)>\<in\>X<rsup|1>> [so that <math|y<rsub|1>=x>]
+      that
+
+      <\equation*>
+        L<rsub|1><around*|(|x|)>=L<rsub|1><around*|(|y<rsub|1>|)>=L<rsub|1><around*|(|<wide*|y<rsub|1>:\<ldots\>:y<rsub|1>|\<wide-underbrace\>><rsub|1>|)>=L<rsub|2><around*|(|<wide*|y<rsub|1>:\<ldots\>:y<rsub|1>|\<wide-underbrace\>><rsub|1>|)>=L<rsub|2><around*|(|y<rsub|1>|)>=L<rsub|2><around*|(|x|)>
+      </equation*>
+
+      proving that <math|L<rsub|1>=L<rsub|2>>. Hence <math|1\<in\>S>.
+
+      <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>Let
+      <math|L<rsub|1>,L<rsub|2>\<in\>L<rsub|n+1><around*|(|X<rsub|1>\<ldots\>X<rsub|n+1>;Y|)>=L<around*|(|X<rsub|1>,L<rsub|n><around*|(|X<rsub|2>\<ldots\>X<rsub|n+1>;Y|)>|)>>
+      such that
+
+      <\equation*>
+        \<forall\>x=<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n+1>|)>\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>X<rsub|i><text|
+        we have >L<rsub|1><around*|(|x<rsub|1>:\<ldots\>:x<rsub|n+1>|)>=L<rsub|2><around*|(|x<rsub|1>:\<ldots\>:x<rsub|n+1>|)>
+      </equation*>
+
+      Let <math|y\<in\>X> then <math|L<rsub|1><around*|(|y|)>,L<rsub|2><around*|(|y|)>\<in\>L<rsub|n><around*|(|X;Y|)>>
+      and <math|\<forall\><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\>X<rsup|n>>
+      we have\ 
+
+      <\equation*>
+        L<rsub|1><around*|(|y|)><around*|(|x<rsub|1>:\<ldots\>:x<rsub|n>|)>=L<rsub|1><around*|(|y:x<rsub|1>:\<ldots\>:x<rsub|n>|)>=L<rsub|2><around*|(|y:x<rsub|1>:\<ldots\>:x<rsub|n>|)>=L<rsub|2><around*|(|y|)><around*|(|x<rsub|1>:\<ldots\>:x<rsub|n>|)>
+      </equation*>
+
+      which, as <math|n\<in\>S>, proves that
+      <math|L<rsub|1><around*|(|y|)>=L<rsub|2><around*|(|y|)>>. As <math|y>
+      is chosen arbitrary we conclude that <math|L<rsub|1>=L<rsub|2>>. Hence
+      we have proved that
+
+      <\equation*>
+        n+1\<in\>S
+      </equation*>
+    </description>
+  </proof>
+
+  <\lemma>
+    <label|lemma 16.181.210>Let <math|n\<in\>\<bbb-N\>>,
+    <math|<around*|{|<around*|\<langle\>|X<rsub|i>,<around*|\<\|\|\>||\<\|\|\>><rsub|i>|\<rangle\>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+    a finite family of normed spaces, <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    a normed space. If <math|\<forall\><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>
+    we have
+
+    <\equation*>
+      <around*|\<\|\|\>|L<around*|(|x<rsub|1>:\<ldots\>:x<rsub|>|)>|\<\|\|\>><rsub|Y>\<leqslant\>M\<cdot\><big|prod><rsub|i=1><rsup|n><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>><rsub|i>
+    </equation*>
+
+    then it follows that\ 
+
+    <\equation*>
+      <around*|\<\|\|\>|L|\<\|\|\>><rsub|L<rsub|n><around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>\<leqslant\>M
+    </equation*>
+  </lemma>
+
+  <\proof>
+    We prove this by induction, so let\ 
+
+    <\equation*>
+      S=<around*|{|n\<in\>\<bbb-N\>\|<text|If for
+      <math|L\<in\>L<rsub|n><around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)><text|
+      we have >\<forall\><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i><text|
+      that ><rigid|<around*|\<\|\|\>|L<around*|(|x<rsub|1>:\<ldots\>:x<rsub|n>|)>|\<\|\|\>><rsub|Y>\<leqslant\>M\<cdot\><big|prod><rsub|i=1><rsup|n><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>><rsub|i>>>
+      then ><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<rsub|n><around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>\<leqslant\>M|}>
+    </equation*>
+
+    then we have:
+
+    <\description>
+      <item*|<math|1\<in\>S>>Let <math|L\<in\>L<rsub|1><around*|(|<wide*|X<rsub|1>\<ldots\>X<rsub|1>|\<wide-underbrace\>><rsub|1>;Y|)>=L<around*|(|X<rsub|1>,Y|)>>
+      such that <math|\<forall\><around*|(|x<rsub|1>|)>\<in\><big|prod><rsub|i\<in\><around*|{|1|}>>X<rsub|i>>
+      we have <math|<rigid|<around*|\<\|\|\>|L<around*|(|x<rsub|1>:\<ldots\>:x<rsub|1>|)>|\<\|\|\>><rsub|Y>\<leqslant\>M\<cdot\><big|prod><rsub|i=1><rsup|1><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>><rsub|i>>>.
+      Then given <math|y\<in\>X<rsub|1>> we have for
+      <math|x=<around*|(|y|)>\<in\><big|prod><rsub|i\<in\><around*|{|1|}>>X<rsub|i>>
+      that
+
+      <\equation*>
+        <around*|\<\|\|\>|L<around*|(|y|)>|\<\|\|\>><rsub|Y>=<around*|\<\|\|\>|L<around*|(|x<rsub|1>|)>|\<\|\|\>><rsub|Y>=<around*|\<\|\|\>|L<around*|(|<wide*|x<rsub|1>:\<ldots\>:x<rsub|1>|\<wide-underbrace\>><rsub|1>|)>|\<\|\|\>><rsub|Y>\<leqslant\>M\<cdot\><big|prod><rsub|i=1><rsup|1><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>><rsub|i>=M\<cdot\><around*|\<\|\|\>|y|\<\|\|\>><rsub|X>
+      </equation*>
+
+      so that by [definition: <reference|continuity operator norm>]
+      <math|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<rsub|1><around*|(|X<rsub|1>\<ldots\>X<rsub|1>;Y|)>>=<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>,Y|)>>\<leqslant\>M>
+      proving that <math|1\<in\>S>.
+
+      <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>Let
+      <math|L\<in\>L<rsub|n+1><around*|(|X<rsub|1>\<ldots\>X<rsub|n+1>;Y|)>=L<around*|(|X<rsub|1>,L<rsub|n><around*|(|X<rsub|2>\<ldots\>X<rsub|n>;Y|)>|)>>
+      such that <math|<rigid|\<forall\><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n+1>|)>\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>X<rsub|i>>>
+      we have:
+
+      <\equation*>
+        <around*|\<\|\|\>|L<around*|(|x<rsub|1>:\<ldots\>:x<rsub|n+1>|)>|\<\|\|\>><rsub|Y>\<leqslant\>M\<cdot\><big|prod><rsub|i=1><rsup|n+1><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>><rsub|i>
+      </equation*>
+
+      Fix <math|x\<in\>X> then <math|\<forall\><around*|(|x<rsub|2>,\<ldots\>,x<rsub|n+1>|)>\<in\><big|prod><rsub|i\<in\><around*|{|2,\<ldots\>,n+1|}>>X<rsub|i>>
+      we have\ 
+
+      <\equation*>
+        <around*|\<\|\|\>|<around*|(|L<around*|(|x|)>|)><around*|(|x<rsub|2>:\<ldots\>:x<rsub|n+1>|)>|\<\|\|\>><rsub|Y>=<around*|\<\|\|\>|L<around*|(|x<rsub|>:x<rsub|2>:\<ldots\>:x<rsub|n+1>|)>|\<\|\|\>><rsub|Y>\<leqslant\>M\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsub|1>\<cdot\><big|prod><rsub|i=2><rsup|n+1><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>><rsub|i>=<around*|(|M\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsub|1>|)>\<cdot\><big|prod><rsub|i=2><rsup|n+1><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>><rsub|i>
+      </equation*>
+
+      As <math|n\<in\>S> and <math|L<around*|(|x<rsub|1>|)>\<in\>L<rsub|n><around*|(|X<rsub|2>\<ldots\>X<rsub|n+1>;Y|)>>
+      it follows that <math|<around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsub|L<rsub|n><around*|(|X<rsub|2>\<ldots\>X<rsub|n+1>;Y|)>>\<leqslant\>M\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsub|1>>.
+      Hence by \ [definition: <reference|continuity operator norm>] it
+      follows that <math|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<rsub|n+1><around*|(|X<rsub|1>\<ldots\>X<rsub|n+1>;Y|)>>\<leqslant\>M>
+      proving
+
+      <\equation*>
+        n+1\<in\>S
+      </equation*>
+    </description>
+  </proof>
+
+  <\lemma>
+    <label|lemma 16.182.210>Let <math|n\<in\>\<bbb-N\>>,
+    <math|<around*|{|<around*|\<langle\>|X<rsub|i>,<around*|\<\|\|\>||\<\|\|\>><rsub|i>|\<rangle\>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+    a finite family of normed spaces, <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    a normed space, <math|L\<in\>L<rsup|><around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>
+    [see definition: <reference|multilinear continuous mapping space>] then
+    there exist a <math|K\<in\>L<rsub|n><around*|(|X<rsub|1>\<ldots\>X<rsub|n>;L|)>>
+    such that <rigid|<math|\<forall\><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>>\ 
+
+    <\equation*>
+      K<around*|(|x<rsub|1>:\<ldots\>:x<rsub|n>|)>=L<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>
+    </equation*>
+  </lemma>
+
+  <\proof>
+    We use induction to prove this, so let
+
+    <\equation*>
+      S=<around*|{|n\<in\>\<bbb-N\>\|<text|If
+      >L\<in\>L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)><text| then there
+      exist a >K\<in\>L<rsub|n><around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)><text|
+      such that ><rigid|\<forall\><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>X<rsub|i><text|
+      we have >K<around*|(|x<rsub|1>:\<ldots\>:x<rsub|n>|)>=L<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>|}>
+    </equation*>
+
+    then we have:\ 
+
+    <\description>
+      <item*|<math|1\<in\>S>>If <math|L\<in\>L<around*|(|<wide*|X<rsub|1>\<ldots\>X<rsub|1>|\<wide-underbrace\>><rsub|1>;Y|)>>
+      then, as <math|L<rsub|1><around*|(|<wide*|X<rsub|1>\<ldots\>X<rsub|1>|\<wide-underbrace\>><rsub|1>;Y|)>=L<around*|(|X<rsub|1>,Y|)>=L<around*|(|<wide*|X<rsub|1>\<ldots\>X<rsub|1>|\<wide-underbrace\>><rsub|1>;Y|)>>,
+      we have that <math|L\<in\>L<rsub|1><around*|(|X<rsub|1>\<ldots\>X<rsub|1>,Y|)>>
+      so if we take <math|K=L> then we have
+      <math|K\<in\>L<rsub|1><around*|(|X<rsub|1>\<ldots\>X<rsub|1>,Y|)>> and
+      for <math|<around*|(|x<rsub|1>|)>\<in\><big|prod><rsub|i\<in\><around*|{|1|}>>X<rsub|i>>
+      we have <math|K<around*|(|<wide*|x<rsub|1>:\<ldots\>:x<rsub|1>|\<wide-underbrace\>><rsub|1>|)>=K<around*|(|x<rsub|1>|)>=L<around*|(|x<rsub|1>|)>=L<around*|(|<wide*|x<rsub|1>,\<ldots\>,x<rsub|1>|\<wide-underbrace\>><rsub|1>|)>>.
+      So we have that <math|1\<in\>S>.
+
+      <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>Let
+      <math|L\<in\>L<around*|(|X<rsub|1>\<ldots\>X<rsub|n+1>;Y|)>>. Take
+      <math|x\<in\>X<rsub|1>> and define
+
+      <\equation*>
+        L<rsub|x>:<big|prod><rsub|i\<in\><around*|{|2,\<ldots\>,n+1|}>>X<rsub|i>\<rightarrow\>Y<text|
+        by >L<rsub|x><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>=L<around*|(|x,x<rsub|1>,\<ldots\>,x<rsub|n>|)>
+      </equation*>
+
+      If <math|i\<in\><around*|{|1,\<ldots\>,n|}>> and
+      <math|<around*|(|x<rsub|1>,\<ldots\><wide*|r+\<alpha\>\<cdot\>t|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n>|)>\<in\><big|prod><rsub|i\<in\><around*|{|2,\<ldots\>,n+1|}>>X<rsub|i>>
+      then\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|L<rsub|x><around*|(|x<rsub|1>,\<ldots\><wide*|r+\<alpha\>\<cdot\>t|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n>|)>>|<cell|=>|<cell|>>|<row|<cell|L<around*|(|x,x<rsub|1>,\<ldots\><wide*|r+\<alpha\>\<cdot\>t|\<wide-underbrace\>><rsub|i+1>\<ldots\>,x<rsub|n>|)>>|<cell|=>|<cell|>>|<row|<cell|L<around*|(|x,x<rsub|1>,\<ldots\><wide*|r|\<wide-underbrace\>><rsub|i+1>\<ldots\>,x<rsub|n>|)>+\<alpha\>\<cdot\>L<around*|(|x,x<rsub|1>,\<ldots\><wide*|t|\<wide-underbrace\>><rsub|i+1>\<ldots\>,x<rsub|n>|)>>|<cell|=>|<cell|>>|<row|<cell|L<rsub|x><around*|(|x<rsub|1>,\<ldots\><wide*|r|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n>|)>+\<alpha\>\<cdot\>L<rsub|x><around*|(|x<rsub|1>,\<ldots\><wide*|t|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n>|)>>|<cell|>|<cell|>>>>
+      </eqnarray*>
+
+      proving that
+
+      <\equation>
+        <label|eq 16.252.210>L<rsub|x>\<in\>Hom<around*|(|X<rsub|2>\<ldots\>X<rsub|n+1>;Y|)>
+      </equation>
+
+      Let <math|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\><big|prod><rsub|i\<in\><around*|{|2,\<ldots\>,n+1|}>>X<rsub|i>>
+      then for <math|<around*|(|y<rsub|1>,\<ldots\>,y<rsub|n+1>|)>> where
+      <math|y<rsub|i>=<choice|<tformat|<table|<row|<cell|x<text| if
+      >i=1>>|<row|<cell|x<rsub|i-1><text| if
+      >i\<in\><around*|{|2,\<ldots\>,n+1|}>>>>>>>we have
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|\<\|\|\>|L<rsub|x><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>|\<\|\|\>><rsub|Y>>|<cell|=>|<cell|<around*|\<\|\|\>|L<around*|(|x,x<rsub|1>,\<ldots\>,x<rsub|n>|)>|\<\|\|\>><rsub|Y>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|L<around*|(|y<rsub|1>,\<ldots\>,y<rsub|n+1>|)>|\<\|\|\>><rsub|Y>>>|<row|<cell|>|<cell|<below|\<leqslant\>|L\<in\>L<around*|(|X<rsub|1>\<ldots\>X<rsub|n+1>;Y|)>><rsub|>>|<cell|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<rsup|><around*|(|X<rsub|1>\<ldots\>X<rsub|n+1>;Y|)>>\<cdot\><big|prod><rsub|i=1><rsup|n+1><around*|\<\|\|\>|y<rsub|i>|\<\|\|\>><rsub|i>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<rsup|><around*|(|X<rsub|1>\<ldots\>X<rsub|n+1>;Y|)>>\<cdot\><around*|\<\|\|\>|y<rsub|1>|\<\|\|\>><rsub|1>\<cdot\><big|prod><rsub|i=2><rsup|n+1><around*|\<\|\|\>|y<rsub|i>|\<\|\|\>><rsub|i>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<rsup|><around*|(|X<rsub|1>\<ldots\>X<rsub|n+1>;Y|)>>\<cdot\><around*|\<\|\|\>|x<rsub|>|\<\|\|\>><rsub|1>\<cdot\><big|prod><rsub|i=2><rsup|n+1><around*|\<\|\|\>|x<rsub|i-1>|\<\|\|\>><rsub|i>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<around*|\<\|\|\>|x|\<\|\|\>><rsub|X>\<cdot\><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<rsup|n+1><around*|(|X;Y|)>>|)>\<cdot\><big|prod><rsub|i=1><rsup|n><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>><rsub|i+1>>>>>
+      </eqnarray*>
+
+      proving by [theorem: <reference|continuity multilinear mapping (1)>]
+      and \ [eq: <reference|eq 16.252.210>] that <math|L<rsub|x>> is
+      continuous. Hence\ 
+
+      <\equation>
+        <label|eq 16.253.210>L<rsub|x>\<in\>L<around*|(|X<rsub|2>\<ldots\>X<rsub|n+1>;Y|)><text|>
+      </equation>
+
+      As <math|n\<in\>S> there exist a <math|K<rsub|x>\<in\>L<rsub|n><around*|(|X<rsub|2>\<ldots\>X<rsub|n+1>;Y|)>>
+      such that <math|\<forall\><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\><big|prod><rsub|i\<in\><around*|{|2,\<ldots\>,n+1|}>>X<rsub|i>>
+      we have\ 
+
+      <\equation>
+        <label|eq 16.254.210>K<rsub|x><around*|(|x<rsub|1>:\<ldots\>:x<rsub|n>|)>=L<rsub|x><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>=L<around*|(|x,x<rsub|1>,\<ldots\>,x<rsub|n>|)>
+      </equation>
+
+      This allows us to define
+
+      <\equation*>
+        K:X<rsub|1>\<rightarrow\>L<rsub|n><around*|(|X<rsub|2>\<ldots\>.X<rsub|n+1>;Y|)><text|
+        where >K<around*|(|x|)>=K<rsub|x>
+      </equation*>
+
+      then by [eq: <reference|eq 16.254.210>] we have that for
+      <math|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n+1>|)>\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>X<rsub|i>>
+
+      <\equation>
+        <label|eq 16.255.210>K<around*|(|x<rsub|1>|)><around*|(|x<rsub|2>:\<ldots\>:x<rsub|n+1>|)>=K<rsub|x<rsub|1>><around*|(|x<rsub|2>:\<ldots\>:x<rsub|1>|)>=L<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n+1>|)>
+      </equation>
+
+      If <math|x,y\<in\>X<rsub|1>> and <math|\<alpha\>\<in\>\<bbb-K\>> then
+      we have <math|\<forall\><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\><big|prod><rsub|i\<in\><around*|{|2,\<ldots\>,n+1|}>>X<rsub|i>>
+      that\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|K<around*|(|x+\<alpha\>\<cdot\>y|)><around*|(|x<rsub|1>:\<ldots\>:x<rsub|n>|)>>|<cell|\<equallim\><rsub|<text|[eq:
+        <reference|eq 16.255.210>]>>>|<cell|L<around*|(|x+\<alpha\>\<cdot\>y,x<rsub|1>,\<ldots\>,x<rsub|n>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|L\<in\>L<rsup|><around*|(|X<rsub|1>\<ldots\>X<rsub|n+1>;Y|)>>>|<cell|L<around*|(|x,x<rsub|1>,\<ldots\>,x<rsub|n>|)>+\<alpha\>\<cdot\>L<around*|(|y,x<rsub|1>,\<ldots\>,x<rsub|n>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+        <reference|eq 16.255.210>]>>>|<cell|K<around*|(|x|)><around*|(|x<rsub|1>:\<ldots\>:x<rsub|n>|)>+\<alpha\>\<cdot\>K<around*|(|y|)><around*|(|x<rsub|1>:\<ldots\>:x<rsub|n>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[lemma:
+        <reference|lemma 16.54.187>]>>>|<cell|<around*|(|K<around*|(|x|)>+\<alpha\>\<cdot\>K<around*|(|y|)>|)><around*|(|x<rsub|1>:\<ldots\>:x<rsub|n>|)>>>>>
+      </eqnarray*>
+
+      which by [lemma: <reference|lemma 16.57.187>] proves that\ 
+
+      <\equation*>
+        K<around*|(|x+\<alpha\>\<cdot\>y|)>=K<around*|(|x|)>+\<alpha\>\<cdot\>K<around*|(|y|)>
+      </equation*>
+
+      Hence we have that\ 
+
+      <\equation>
+        <label|eq 16.256.210>K\<in\>Hom<around*|(|X,L<rsub|n><around*|(|X<rsub|1>\<ldots\>X<rsub|n+1>;Y|)>|)>
+      </equation>
+
+      Let <math|x<rsub|1>\<in\>X<rsub|1> >then we have for
+      <math|<around*|(|x<rsub|2>,\<ldots\>,x<rsub|n+1>|)>\<in\><big|prod><rsub|i\<in\><around*|{|2,\<ldots\>,n+1|}>>X<rsub|i>>
+      that
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|\<\|\|\>|K<around*|(|x<rsub|1>|)><around*|(|x<rsub|2>:\<ldots\>:x<rsub|n+1>|)>|\<\|\|\>><rsub|Y>>|<cell|=>|<cell|<around*|\<\|\|\>|K<rsub|x<rsub|1>><around*|(|x<rsub|2>:\<ldots\>:x<rsub|n+1>|)>|\<\|\|\>><rsub|Y>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+        <reference|eq 16.255.210>]>>>|<cell|<around*|\<\|\|\>|L<around*|(|x<rsub|1>,x<rsub|2>,\<ldots\>,x<rsub|n+1>|)>|\<\|\|\>><rsub|Y>>>|<row|<cell|>|<cell|<below|\<leqslant\>|L\<in\>L<around*|(|X<rsub|1>\<ldots\>X<rsub|n+1>;Y|)>><rsub|>>|<cell|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>\<ldots\>X<rsub|n+1>;Y|)>>\<cdot\><big|prod><rsub|i=1><rsup|n+1><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>><rsub|i>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<rsup|><around*|(|X<rsub|1>\<ldots\>X<rsub|n+1>;Y|)>>\<cdot\><around*|\<\|\|\>|x<rsub|1>|\<\|\|\>><rsub|1>\<cdot\><big|prod><rsub|i=2><rsup|n+1><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>><rsub|i>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<rsup|><around*|(|X<rsub|1>\<ldots\>X<rsub|n+1>;Y|)>>\<cdot\><around*|\<\|\|\>|x<rsub|1>|\<\|\|\>><rsub|1>|)>\<cdot\><big|prod><rsub|i=2><rsup|n+1><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>><rsub|i>>>>>
+      </eqnarray*>
+
+      which as <math|K<around*|(|x<rsub|1>|)>\<in\>L<rsub|n><around*|(|X<rsub|2>\<ldots\>X<rsub|n>;Y|)>>
+      proves using [lemma: <reference|lemma 16.181.210>] that
+
+      <\equation*>
+        <around*|\<\|\|\>|K<around*|(|x<rsub|1>|)>|\<\|\|\>><rsub|L<rsub|n><around*|(|X<rsub|2>\<ldots\>X<rsub|n+1>;Y|)>>\<leqslant\><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<rsup|><around*|(|X<rsub|1>\<ldots\>X<rsub|n+1>;Y|)>>\<cdot\><around*|\<\|\|\>|x<rsub|1>|\<\|\|\>><rsub|X>
+      </equation*>
+
+      Hence using [eq: <reference|eq 16.256.210>] together with [theorem:
+      <reference|continuity linear mapping (1)>] proves that <math|K> is
+      continuous or\ 
+
+      <\equation*>
+        K\<in\>L<around*|(|X<rsub|1>,L<rsub|n><around*|(|X<rsub|2>\<ldots\>X<rsub|n+1>;Y|)>|)>=L<rsub|n+1><around*|(|X<rsub|1>\<ldots\>X<rsub|n+1>;Y|)>
+      </equation*>
+
+      further\ 
+
+      <\equation*>
+        K<around*|(|x<rsub|1>:\<ldots\>:x<rsub|n+1>|)>=K<around*|(|x<rsub|1>|)><around*|(|x<rsub|2>:\<ldots\>:x<rsub|n+1>|)>\<equallim\><rsub|<text|[eq:
+        <reference|eq 16.255.210>]>>L<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n+1>|)>
+      </equation*>
+
+      The above proves that\ 
+
+      <\equation*>
+        n+1\<in\>S
+      </equation*>
+    </description>
+  </proof>
+
+  <\theorem>
+    <label|diff linear to multilinear (1)>Let <math|n\<in\>\<bbb-N\>>,
+    <math|<around*|{|<around*|\<langle\>|X<rsub|i>,<around*|\<\|\|\>||\<\|\|\>><rsub|i>|\<rangle\>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+    a finite family of normed spaces, <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    a normed space then\ 
+
+    <\equation*>
+      \<cal-I\><rsub|X<rsub|1>\<ldots\>X<rsub|n>,Y>:L<rsub|n><around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>\<rightarrow\>L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)><text|
+      where >\<cal-I\><rsub|X<rsub|1>\<ldots\>X<rsub|n>,Y><around*|(|L|)>:<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>\<rightarrow\>Y<text|
+      is defined by>
+    </equation*>
+
+    <\equation*>
+      <around*|(|\<cal-I\><rsub|X<rsub|1>\<ldots\>X<rsub|n>,Y><around*|(|L|)>|)><around*|(|x<rsub|1>,\<ldots\>,x<rsub|m>|)>=L<around*|(|x<rsub|1>:\<ldots\>x<rsub|m>|)>
+    </equation*>
+
+    is a linear isometric isomorphism. In other words\ 
+
+    <\enumerate>
+      <item><math|\<forall\>L\<in\>L<rsub|n><around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>
+      <math|\<cal-I\><rsub|X<rsub|1>\<ldots\>X<rsub|n>,Y><around*|(|L|)>\<in\>L<rsup|><around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>
+      so that
+
+      <\equation*>
+        \<cal-I\><rsub|X<rsub|1>\<ldots\>X<rsub|n>,Y>:L<rsub|n><around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>\<rightarrow\>L<rsup|><around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>
+      </equation*>
+
+      is indeed a function
+
+      <item><math|\<cal-I\><rsub|X<rsub|1>\<ldots\>X<rsub|n>,Y>:L<rsub|n><around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>\<rightarrow\>L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>
+      is a bijection.
+
+      <item>For <math|L\<in\>L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>> we
+      have <math|\<forall\><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>
+      that
+
+      <\equation*>
+        <around*|(|\<cal-I\><rsub|X<rsub|1>\<ldots\>X<rsub|n>,Y>|)><rsup|-1><around*|(|L|)><around*|(|x<rsub|1>:\<ldots\>:x<rsub|n>|)>=L<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>
+      </equation*>
+
+      <item><math|\<forall\>L<rsub|1>,L<rsub|2>\<in\>L<rsub|n><around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>
+      and <math|\<alpha\>\<in\>\<bbb-K\>> we have
+
+      <\equation*>
+        \<cal-I\><rsub|X<rsub|1>\<ldots\>X<rsub|n>,Y><around*|(|L<rsub|1>+\<alpha\>\<cdot\>L<rsub|2>|)>=\<cal-I\><rsub|X<rsub|1>\<ldots\>X<rsub|n>,Y><around*|(|L<rsub|1>|)>+\<alpha\>\<cdot\>\<cal-I\><rsub|X<rsub|1>\<ldots\>X<rsub|n>,Y><around*|(|L<rsub|2>|)>
+      </equation*>
+
+      <item><math|\<forall\>L\<in\>L<rsub|n><around*|(|X<rsub|1>\<ldots\>X<rsub|n>:Y|)>>
+      we have <math|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<rsub|n><around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>=<around*|\<\|\|\>|\<cal-I\><rsub|X<rsub|1>\<ldots\>X<rsub|n>,Y><around*|(|L|)>|\<\|\|\>><rsub|L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>>
+    </enumerate>
+
+    <\note>
+      Using [theorem: <reference|normed isometry and inverse>] it follows
+      that
+
+      <\equation*>
+        <around*|(|\<cal-I\><rsub|X<rsub|1>\<ldots\>X<rsub|n>,Y>|)><rsup|-1>:L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>\<rightarrow\>L<rsub|n><around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>
+      </equation*>
+
+      is a linear isometric isomorphism. In other words:
+
+      <\enumerate>
+        <item><math|<around*|(|\<cal-I\><rsub|X<rsub|1>\<ldots\>X<rsub|n>,Y>|)><rsup|-1>>
+        is a bijection.
+
+        <item><math|\<forall\>L<rsub|1>,L<rsub|2>\<in\>L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>
+        and <math|\<alpha\>\<in\>\<bbb-K\>> we have
+
+        <\equation*>
+          <around*|(|\<cal-I\><rsub|X<rsub|1>\<ldots\>X<rsub|n>,Y>|)><rsup|-1><around*|(|L<rsub|1>+\<alpha\>\<cdot\>L<rsub|2>|)>=<around*|(|\<cal-I\><rsub|X<rsub|1>\<ldots\>X<rsub|n>,Y>|)><rsup|-1><around*|(|L<rsub|1>|)>+\<alpha\>\<cdot\><around*|(|\<cal-I\><rsub|X<rsub|1>\<ldots\>X<rsub|n>,Y>|)><rsup|-1><around*|(|L<rsub|2>|)>
+        </equation*>
+
+        <item><math|\<forall\>L\<in\>L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>|)>>
+        we have <math|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>=<around*|\<\|\|\>|<around*|(|\<cal-I\><rsub|X<rsub|1>\<ldots\>X<rsub|n>,Y>|)><rsup|-1><around*|(|L|)>|\<\|\|\>><rsub|L<rsub|n><around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>>
+      </enumerate>
+    </note>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>Let <math|L\<in\>L<rsub|n><around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>
+      then for <math|i\<in\><around*|{|1,\<ldots\>,n|}>> and
+      <math|<around*|(|x<rsub|1>,\<ldots\><wide*|r+\<alpha\>\<cdot\>r|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n>|)>\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>
+      we have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|\<cal-I\><rsub|X<rsub|1>\<ldots\>X<rsub|n>,Y><around*|(|L|)><around*|(|x<rsub|1>,\<ldots\><wide*|r+\<alpha\>\<cdot\>t|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n>|)>>|<cell|=>|<cell|>>|<row|<cell|L<around*|(|x<rsub|1>:\<ldots\><wide*|r+\<alpha\>\<cdot\>t|\<wide-underbrace\>><rsub|i>\<ldots\>:x<rsub|n>|)>>|<cell|\<equallim\><rsub|<text|[lemma:
+        <reference|lemma 16.178.210>]>>>|<cell|>>|<row|<cell|L<around*|(|x<rsub|1>:\<ldots\><wide*|r|\<wide-underbrace\>><rsub|i>\<ldots\>:x<rsub|n>|)>+\<alpha\>\<cdot\>L<around*|(|x<rsub|1>:\<ldots\><wide*|t|\<wide-underbrace\>><rsub|i>\<ldots\>:x<rsub|n>|)>>|<cell|=>|<cell|>>|<row|<cell|\<cal-I\><rsub|X<rsub|1>\<ldots\>X<rsub|n>,Y><around*|(|L|)><around*|(|x<rsub|1>,\<ldots\><wide*|r|\<wide-underbrace\>><rsub|i>\<ldots\>x<rsub|n>|)>+\<alpha\>*\<cdot\>\<cal-I\><rsub|X<rsub|1>\<ldots\>X<rsub|n>,Y><around*|(|L|)><around*|(|x<rsub|1>,\<ldots\><wide*|s|\<wide-underbrace\>><rsub|i>\<ldots\>x<rsub|n>|)>>|<cell|>|<cell|>>>>
+      </eqnarray*>
+
+      proving that\ 
+
+      <\equation>
+        <label|eq 16.257.210>\<cal-I\><rsub|X<rsub|1>\<ldots\>X<rsub|n>,Y><around*|(|L|)>\<in\>Hom<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>
+      </equation>
+
+      Further if <math|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>
+      then we have:
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|\<\|\|\>|\<cal-I\><rsub|X<rsub|1>\<ldots\>X<rsub|n>,Y><around*|(|L|)><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>|\<\|\|\>><rsub|Y>>|<cell|=>|<cell|<around*|\<\|\|\>|L<around*|(|x<rsub|1>:\<ldots\>:x<rsub|n>|)>|\<\|\|\>><rsub|Y>>>|<row|<cell|>|<cell|<below|\<leqslant\>|<text|[lemma:
+        <reference|lemma 16.179.210>]>><rsub|>>|<cell|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<rsub|n><around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>\<cdot\><big|prod><rsub|i=1><rsup|n><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>><rsub|i>>>>>
+      </eqnarray*>
+
+      Using \ [theorems: <reference|continuity multilinear mapping (1)> and
+      <reference|continuity operator norm of multilinear mappings (1)>] it
+      follows then that
+
+      <\equation>
+        <label|eq 16.258.210>\<cal-I\><rsub|X<rsub|1>\<ldots\>X<rsub|n>,Y><around*|(|L|)><text|
+        is continuous and ><around*|\<\|\|\>|\<cal-I\><rsub|X<rsub|1>\<ldots\>X<rsub|n>,Y><around*|(|L|)>|\<\|\|\>><rsub|L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>\<leqslant\><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<rsub|n><around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>
+      </equation>
+
+      Combining the above with [eq: <reference|eq 16.257.210>] we have
+
+      <\equation*>
+        \<cal-I\><rsub|X<rsub|1>\<ldots\>X<rsub|n>,Y><around*|(|L|)>\<in\>L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>
+      </equation*>
+
+      <item>For bijectivity we have to prove:
+
+      <\description>
+        <item*|injectivity>If <math|L<rsub|1>,L<rsub|2>\<in\>L<rsub|n><around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>
+        is such that <math|\<cal-I\><rsub|X<rsub|1>\<ldots\>X<rsub|n>,Y><around*|(|L<rsub|1>|)>=\<cal-I\><rsub|X<rsub|1>\<ldots\>X<rsub|n>,Y><around*|(|L<rsub|2>|)>>
+        then we have <math|\<forall\><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>
+        that\ 
+
+        <\equation*>
+          L<rsub|1><around*|(|x<rsub|1>:\<ldots\>:x<rsub|n>|)>=\<cal-I\><rsub|X<rsub|1>\<ldots\>X<rsub|n>,Y><around*|(|L<rsub|1>|)><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>=\<cal-I\><rsub|X<rsub|1>\<ldots\>X<rsub|n>,Y><around*|(|L<rsub|2>|)><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>=L<rsub|2><around*|(|x<rsub|1>:\<ldots\>:x<rsub|n>|)>
+        </equation*>
+
+        Hence by [lemma: <reference|lemma 16.180.210>] it follows that
+        <math|L<rsub|1>=L<rsub|2>>.
+
+        <item*|surjectivity>Let <math|L\<in\>L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>
+        then using [lemma: <reference|lemma 16.182.210>] there exist a
+        <math|<rigid|K\<in\>L<rsub|n><around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>>
+        such that <math|\<forall\><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>
+        we have\ 
+
+        <\equation*>
+          K<around*|(|x<rsub|1>:\<ldots\>:x<rsub|n>|)>=L<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>
+        </equation*>
+
+        Hence\ 
+
+        <\equation*>
+          \<cal-I\><rsub|X<rsub|1>\<ldots\>X<rsub|n>,Y><around*|(|K|)><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>=K<around*|(|x<rsub|1>:\<ldots\>:x<rsub|n>|)>=L<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>
+        </equation*>
+
+        which proves that\ 
+
+        <\equation*>
+          \<cal-I\><rsub|X<rsub|1>\<ldots\>X<rsub|n>,Y><around*|(|K|)>=L
+        </equation*>
+
+        so that <math|><math|\<cal-I\><rsub|X<rsub|1>\<ldots\>X<rsub|n>,Y>>
+        is surjective.
+      </description>
+
+      <item>Let <math|L\<in\>L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>
+      and take <math|K=<around*|(|\<cal-I\><rsub|X<rsub|1>\<ldots\>X<rsub|n>,Y>|)><rsup|-1><around*|(|L|)>\<in\>L<rsub|n><around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>
+      then we have that <math|L=\<cal-I\><rsub|X<rsub|1>\<ldots\>X<rsub|n>,Y><around*|(|K|)>>
+      so that
+
+      <\equation*>
+        <around*|(|\<cal-I\><rsub|X<rsub|1>\<ldots\>X<rsub|n>,Y>|)><rsup|-1><around*|(|L|)><around*|(|x<rsub|1>:\<ldots\>:x<rsub|n>|)>=K<around*|(|x<rsub|1>:\<ldots\>:x<rsub|n>|)>=\<cal-I\><rsub|X<rsub|1>\<ldots\>X<rsub|n>,Y><around*|(|K|)><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>=L<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>.
+      </equation*>
+
+      <item>Let <math|L<rsub|1>,L<rsub|2>\<in\>L<rsub|n><around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>
+      and <math|\<alpha\>\<in\>\<bbb-K\>> then
+      <math|\<forall\><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>
+      we have:
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|\<cal-I\><rsub|X<rsub|1>\<ldots\>X<rsub|n>,Y><around*|(|L<rsub|1>+\<alpha\>\<cdot\>L<rsub|2>|)><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|L<rsub|1>+\<alpha\>\<cdot\>L<rsub|2>|)><around*|(|x<rsub|1>:\<ldots\>:x<rsub|n>|)>>|<cell|\<equallim\><rsub|<text|[lemma:
+        <reference|lemma 16.177.211>]>>>|<cell|>>|<row|<cell|L<rsub|1><around*|(|x<rsub|1>:\<ldots\>:x<rsub|n>|)>+\<alpha\>\<cdot\>L<rsub|2><around*|(|x<rsub|1>:\<ldots\>:x<rsub|n>|)>>|<cell|=>|<cell|>>|<row|<cell|\<cal-I\><rsub|X<rsub|1>\<ldots\>X<rsub|n>,Y><around*|(|L<rsub|1>|)><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>+\<alpha\>\<cdot\>\<cal-I\><rsub|X<rsub|1>\<ldots\>X<rsub|n>,Y><around*|(|L<rsub|2>|)><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|\<cal-I\><rsub|X<rsub|1>\<ldots\>X<rsub|n>,Y><around*|(|L<rsub|1>|)>+\<alpha\>\<cdot\>\<cal-I\><rsub|X<rsub|1>\<ldots\>X<rsub|n>,Y><around*|(|L<rsub|2>|)>|)><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>>|<cell|>|<cell|>>>>
+      </eqnarray*>
+
+      proving that\ 
+
+      <\equation*>
+        \<cal-I\><rsub|X<rsub|1>\<ldots\>X<rsub|n>,Y><around*|(|L<rsub|1>+\<alpha\>\<cdot\>L<rsub|2>|)>=\<cal-I\><rsub|X<rsub|1>\<ldots\>X<rsub|n>,Y><around*|(|L<rsub|1>|)>+\<alpha\>\<cdot\>\<cal-I\><rsub|X<rsub|1>\<ldots\>X<rsub|n>,Y><around*|(|L<rsub|2>|)>
+      </equation*>
+
+      <item>Let <math|L\<in\>L<rsub|n><around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>
+      then by [eq: <reference|eq 16.258.210>] we have\ 
+
+      <\equation>
+        <label|eq 16.259.210><around*|\<\|\|\>|\<cal-I\><rsub|X<rsub|1>\<ldots\>X<rsub|n>,Y><around*|(|L|)>|\<\|\|\>><rsub|L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>\<leqslant\><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<rsub|n><around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>
+      </equation>
+
+      For the opposite inequality, let <math|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>
+      then\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|\<\|\|\>|L<around*|(|x<rsub|1>:\<ldots\>:x<rsub|n>|)>|\<\|\|\>><rsub|Y>>|<cell|=>|<cell|<around*|\<\|\|\>|\<cal-I\><rsub|X<rsub|1>\<ldots\>X<rsub|n>,Y><around*|(|L|)><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>|\<\|\|\>><rsub|Y>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<around*|\<\|\|\>|\<cal-I\><rsub|X<rsub|1>\<ldots\>X<rsub|n>,Y><around*|(|L|)>|\<\|\|\>><rsub|L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>\<cdot\><big|prod><rsub|i=1><rsup|n><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>><rsub|i>>>>>
+      </eqnarray*>
+
+      so that by [lemma: <reference|lemma 16.181.210>]\ 
+
+      <\equation*>
+        <around*|\<\|\|\>|L|\<\|\|\>><rsub|L<rsub|n><around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>\<leqslant\><around*|\<\|\|\>|\<cal-I\><rsub|X<rsub|1>\<ldots\>X<rsub|n>,Y><around*|(|L|)>|\<\|\|\>><rsub|L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>
+      </equation*>
+
+      which combined with [eq: <reference|eq 16.259.210>] proves that
+
+      <\equation*>
+        <around*|\<\|\|\>|L|\<\|\|\>><rsub|L<rsub|n><around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>=<around*|\<\|\|\>|\<cal-I\><rsub|X<rsub|1>\<ldots\>X<rsub|n>,Y><around*|(|L|)>|\<\|\|\>><rsub|L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>
+      </equation*>
+    </enumerate>
+  </proof>
+
+  <subsection|Higher Order Partial Differentiation>
+
+  <\definition>
+    <label|diff higher order partial differentiation><index|higher order
+    partial differential>Let <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>>,
+    <math|<around*|{|<around*|\<langle\>|X<rsub|i>,<around*|\<\|\|\>||\<\|\|\>><rsub|i>|\<rangle\>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+    a finite family of normed spaces, <math|<rigid|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>>
+    a normed space, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|max>|\<rangle\>>>
+    the normed space based on the product
+    <math|X=<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>
+    with the maximum norm <math|<around*|\<\|\|\>||\<\|\|\>><rsub|max>> [see
+    definition: <reference|normed maximum norm>], <math|A\<subseteq\>X>,
+    <math|m\<in\>\<bbb-N\>>, <math|<rigid|i\<in\><around*|{|1,\<ldots\>,n|}><rsup|m>>>
+    and <math|<rigid|f:A\<rightarrow\>Y>> a function then we define
+    <math|\<frak-D\><rsup|m><rsub|i<rsub|m>,\<ldots\>,i<rsub|1>,f>> and
+    <math|D<rsup|<around*|[|m|]>><rsub|i<rsub|m>\<ldots\>i<rsub|1>>>
+    recursively as follows for <math|m>
+
+    <\description>
+      <item*|<math|m=1>>Then <math|>
+
+      <\equation*>
+        \<frak-D\><rsup|<around*|[|1|]>><rsub|i<rsub|1>\<ldots\>i<rsub|1>,f>=\<frak-D\><rsub|i<rsub|1>,f>
+      </equation*>
+
+      and\ 
+
+      <\equation*>
+        D<rsup|<around*|[|1|]>><rsub|i<rsub|1>,\<ldots\>,i<rsub|1>>f=D<rsub|i<rsub|1>>f
+      </equation*>
+
+      See [definition: <reference|diff partial differential>] for the
+      definition of <math|\<frak-D\><rsub|i<rsub|1>,f>> and
+      <math|D<rsub|i<rsub|1>>f>.
+
+      <item*|<math|1\<less\>m>>Then\ 
+
+      <\equation*>
+        \<frak-D\><rsub|i<rsub|m>,\<ldots\>,i<rsub|m-1>,f>=<around*|{|x\<in\>\<frak-D\><rsup|m-1><rsub|i<rsub|m-1>,\<ldots\>,i<rsub|1>,f>\|D<rsup|<around*|[|m-1|]>><rsub|x,i<rsub|m-1>,\<ldots\>,i+1>f<text|
+        has a >i<rsub|m><text|partial differential at >x|}>
+      </equation*>
+
+      and
+
+      <\equation*>
+        D<rsup|<around*|[|m|]>><rsub|i<rsub|m>,\<ldots\>,i<rsub|1>>f=D<rsub|i<rsub|m>><around*|(|D<rsup|<around*|[|m-1|]>><rsub|i<rsub|m-1>,\<ldots\>,i+1>f|)>
+      </equation*>
+    </description>
+
+    \;
+  </definition>
 
   \;
 
@@ -15549,6 +17419,13 @@
     <associate|auto-48|<tuple|16.3.3|?>>
     <associate|auto-49|<tuple|16.4|?>>
     <associate|auto-5|<tuple|<with|mode|<quote|math>|U<rsub|x>>|?>>
+    <associate|auto-50|<tuple|<with|mode|<quote|math>|ev<rsub|v<rsub|1>,\<ldots\>,v<rsub|n>>>|?>>
+    <associate|auto-51|<tuple|evaluation operator|?>>
+    <associate|auto-52|<tuple|16.5|?>>
+    <associate|auto-53|<tuple|16.5.1|?>>
+    <associate|auto-54|<tuple|<with|mode|<quote|math>|L<rsub|n><around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>|?>>
+    <associate|auto-55|<tuple|16.5.2|?>>
+    <associate|auto-56|<tuple|higher order partial differential|?>>
     <associate|auto-6|<tuple|<with|mode|<quote|math>|f<rprime|'><around*|(|x|)>>|?>>
     <associate|auto-7|<tuple|16.1.2|?>>
     <associate|auto-8|<tuple|16.1.3|?>>
@@ -15565,9 +17442,11 @@
     <associate|diff Frechet differentation implies partial differentiability
     |<tuple|16.79|?>>
     <associate|diff Jacobian matrix|<tuple|16.97|?>>
+    <associate|diff L(x1:..:xn) (1)|<tuple|16.237|?>>
     <associate|diff L(x1:..xn)|<tuple|16.108|?>>
     <associate|diff L(x1:..xn)=L(1:..:1). product|<tuple|16.112|?>>
     <associate|diff L_n(X;Y)|<tuple|16.104|?>>
+    <associate|diff L_n(x1,..,xn;Y)|<tuple|16.232|?>>
     <associate|diff Lagrange theorem|<tuple|16.195|?>>
     <associate|diff Lagrange theorem (1)|<tuple|16.197|?>>
     <associate|diff Rolle's theorem|<tuple|16.193|?>>
@@ -15630,6 +17509,7 @@
     <associate|diff differential of product of functions|<tuple|16.99|?>>
     <associate|diff e-mapping|<tuple|16.59|?>>
     <associate|diff equivalent norms|<tuple|16.55|?>>
+    <associate|diff evaluation operator|<tuple|16.222|?>>
     <associate|diff f(t)=a.x+y is infinite differentiable|<tuple|16.171|?>>
     <associate|diff fundamental theorem of calculus (1)|<tuple|16.203|?>>
     <associate|diff fundamental theorem of calculus (2)|<tuple|16.204|?>>
@@ -15645,6 +17525,8 @@
     <associate|diff higher order differential of a product|<tuple|16.188|?>>
     <associate|diff higher order differential of a product
     (1)|<tuple|16.189|?>>
+    <associate|diff higher order differentials are symmetric in there
+    arguments|<tuple|16.230|?>>
     <associate|diff higher order differentiation|<tuple|16.130|?>>
     <associate|diff higher order differentiation (1)|<tuple|16.134|?>>
     <associate|diff higher order differentiation (2)|<tuple|16.127|?>>
@@ -15658,10 +17540,9 @@
     (1)|<tuple|16.141|?>>
     <associate|diff higher order differentiation is local
     (2)|<tuple|16.142|?>>
-    <associate|diff higher order differentiation is local
-    (3)|<tuple|16.142|?>>
     <associate|diff higher order differentiation on a open
     set|<tuple|16.135|?>>
+    <associate|diff higher order partial differentiation|<tuple|16.247|?>>
     <associate|diff identity function is differentiable|<tuple|16.52|?>>
     <associate|diff identity function is infinite times
     differentiable|<tuple|16.170|?>>
@@ -15669,20 +17550,21 @@
     <associate|diff inifint=ite differentiable|<tuple|16.133|?>>
     <associate|diff integration by part|<tuple|16.205|?>>
     <associate|diff limit of a function|<tuple|16.11|?>>
-    <associate|diff line segment [0,1]|<tuple|16.215|?>>
+    <associate|diff line segment [0,1]|<tuple|16.214|?>>
     <associate|diff linear mapping is infinite times
     differentiable|<tuple|16.169|?>>
     <associate|diff linear mappings are differentiable|<tuple|16.54|?>>
     <associate|diff linear to multilinear|<tuple|16.120|?>>
-    <associate|diff linesegement|<tuple|16.213|?>>
+    <associate|diff linear to multilinear (1)|<tuple|16.245|?>>
+    <associate|diff linesegement|<tuple|16.212|?>>
     <associate|diff mean value theorem (0)|<tuple|16.210|?>>
     <associate|diff mean value theorem (1)|<tuple|16.207|?>>
     <associate|diff mean value theorem (2)|<tuple|16.210|?>>
-    <associate|diff mean value theorem (2.1)|<tuple|16.217|?>>
+    <associate|diff mean value theorem (2.1)|<tuple|16.216|?>>
     <associate|diff mean value theorem (2.2)|<tuple|16.212|?>>
-    <associate|diff mean value theorem (3)|<tuple|16.218|?>>
-    <associate|diff mean value theorem (3.1)|<tuple|16.219|?>>
-    <associate|diff mean value theorem (4)|<tuple|16.220|?>>
+    <associate|diff mean value theorem (3)|<tuple|16.217|?>>
+    <associate|diff mean value theorem (3.1)|<tuple|16.218|?>>
+    <associate|diff mean value theorem (4)|<tuple|16.219|?>>
     <associate|diff minimum maximum|<tuple|16.190|?>>
     <associate|diff n+m derivative|<tuple|16.165|?>>
     <associate|diff n+m differentiation|<tuple|16.162|?>>
@@ -15748,14 +17630,18 @@
     <associate|eq 16.121.6|<tuple|16.67|?>>
     <associate|eq 16.122.11|<tuple|16.117|?>>
     <associate|eq 16.122.12|<tuple|16.126|?>>
+    <associate|eq 16.122.194|<tuple|16.260|?>>
     <associate|eq 16.123.11|<tuple|16.118|?>>
     <associate|eq 16.123.12|<tuple|16.127|?>>
+    <associate|eq 16.123.194|<tuple|16.261|?>>
     <associate|eq 16.123.195|<tuple|16.194|?>>
     <associate|eq 16.124.11|<tuple|16.119|?>>
     <associate|eq 16.124.12|<tuple|16.128|?>>
+    <associate|eq 16.124.194|<tuple|16.262|?>>
     <associate|eq 16.124.195|<tuple|16.195|?>>
     <associate|eq 16.125.11|<tuple|16.120|?>>
     <associate|eq 16.125.12|<tuple|16.129|?>>
+    <associate|eq 16.125.194|<tuple|16.263|?>>
     <associate|eq 16.125.195|<tuple|16.196|?>>
     <associate|eq 16.126.11|<tuple|16.121|?>>
     <associate|eq 16.126.195|<tuple|16.197|?>>
@@ -15820,6 +17706,7 @@
     <associate|eq 16.173.16|<tuple|16.173|?>>
     <associate|eq 16.174.16|<tuple|16.174|?>>
     <associate|eq 16.175.16|<tuple|16.175|?>>
+    <associate|eq 16.176.211|<tuple|16.238|?>>
     <associate|eq 16.177.16|<tuple|16.176|?>>
     <associate|eq 16.178.16|<tuple|16.177|?>>
     <associate|eq 16.179.16|<tuple|16.178|?>>
@@ -15839,8 +17726,6 @@
     <associate|eq 16.187.16|<tuple|16.186|?>>
     <associate|eq 16.187.200|<tuple|16.228|?>>
     <associate|eq 16.188.16|<tuple|16.187|?>>
-    <associate|eq 16.188.201|<tuple|16.229|?>>
-    <associate|eq 16.188.201.17|<tuple|16.229|?>>
     <associate|eq 16.189.16|<tuple|16.188|?>>
     <associate|eq 16.19.179|<tuple|16.38|?>>
     <associate|eq 16.19.180|<tuple|16.55|?>>
@@ -15874,6 +17759,7 @@
     <associate|eq 16.225.17|<tuple|16.225|?>>
     <associate|eq 16.225.204|<tuple|16.254|?>>
     <associate|eq 16.225.205|<tuple|16.253|?>>
+    <associate|eq 16.226.141|<tuple|16.259|?>>
     <associate|eq 16.226.17|<tuple|16.226|?>>
     <associate|eq 16.226.204|<tuple|16.255|?>>
     <associate|eq 16.227.17|<tuple|16.227|?>>
@@ -15882,27 +17768,48 @@
     <associate|eq 16.229.17|<tuple|16.229|?>>
     <associate|eq 16.23.178|<tuple|16.49|?>>
     <associate|eq 16.230.17|<tuple|16.230|?>>
+    <associate|eq 16.230.206|<tuple|16.258|?>>
     <associate|eq 16.231.17|<tuple|16.231|?>>
+    <associate|eq 16.232.141|<tuple|16.265|?>>
     <associate|eq 16.232.17|<tuple|16.232|?>>
     <associate|eq 16.233.17|<tuple|16.233|?>>
     <associate|eq 16.234.17|<tuple|16.234|?>>
     <associate|eq 16.235.17|<tuple|16.235|?>>
     <associate|eq 16.236.17|<tuple|16.236|?>>
+    <associate|eq 16.236.210|<tuple|16.264|?>>
     <associate|eq 16.237.17|<tuple|16.237|?>>
+    <associate|eq 16.237.210|<tuple|16.266|?>>
+    <associate|eq 16.238.210|<tuple|16.267|?>>
+    <associate|eq 16.239.141|<tuple|16.272|?>>
     <associate|eq 16.24.178|<tuple|16.50|?>>
     <associate|eq 16.24.4|<tuple|16.31|?>>
     <associate|eq 16.242.310|<tuple|16.208|?>>
     <associate|eq 16.243.310|<tuple|16.209|?>>
     <associate|eq 16.244.310|<tuple|16.210|?>>
+    <associate|eq 16.245.210|<tuple|16.268|?>>
     <associate|eq 16.245.310|<tuple|16.213|?>>
     <associate|eq 16.245.310.1|<tuple|16.211|?>>
+    <associate|eq 16.246.210|<tuple|16.269|?>>
     <associate|eq 16.246.310|<tuple|16.214|?>>
     <associate|eq 16.246.310.1|<tuple|16.212|?>>
+    <associate|eq 16.247.210|<tuple|16.270|?>>
+    <associate|eq 16.248.210|<tuple|16.271|?>>
+    <associate|eq 16.249.210|<tuple|16.273|?>>
     <associate|eq 16.25.178|<tuple|16.51|?>>
     <associate|eq 16.25.4|<tuple|16.32|?>>
+    <associate|eq 16.250.210|<tuple|16.274|?>>
+    <associate|eq 16.251.210|<tuple|16.275|?>>
+    <associate|eq 16.252.210|<tuple|16.276|?>>
+    <associate|eq 16.253.210|<tuple|16.277|?>>
+    <associate|eq 16.254.210|<tuple|16.278|?>>
+    <associate|eq 16.255.210|<tuple|16.279|?>>
     <associate|eq 16.255.312|<tuple|16.221|?>>
+    <associate|eq 16.256.210|<tuple|16.280|?>>
     <associate|eq 16.256.312|<tuple|16.222|?>>
+    <associate|eq 16.257.210|<tuple|16.281|?>>
     <associate|eq 16.257.312|<tuple|16.223|?>>
+    <associate|eq 16.258.210|<tuple|16.282|?>>
+    <associate|eq 16.259.210|<tuple|16.283|?>>
     <associate|eq 16.26.4|<tuple|16.33|?>>
     <associate|eq 16.262.12|<tuple|16.202|?>>
     <associate|eq 16.263.12|<tuple|16.203|?>>
@@ -15973,11 +17880,26 @@
     <associate|eq 16.99.4|<tuple|16.60|?>>
     <associate|eq 16.99.6|<tuple|16.95|?>>
     <associate|lemma 16.101.194|<tuple|16.184|?>>
+    <associate|lemma 16.104.194|<tuple|16.226|?>>
+    <associate|lemma 16.105.194|<tuple|16.227|?>>
     <associate|lemma 16.11.500|<tuple|16.6|?>>
     <associate|lemma 16.135.200|<tuple|16.206|?>>
-    <associate|lemma 16.144.201|<tuple|16.216|?>>
+    <associate|lemma 16.144.201|<tuple|16.215|?>>
     <associate|lemma 16.155.203|<tuple|16.221|?>>
+    <associate|lemma 16.157.205|<tuple|16.220|?>>
+    <associate|lemma 16.159.206|<tuple|16.223|?>>
+    <associate|lemma 16.160.206|<tuple|16.224|?>>
+    <associate|lemma 16.166.210|<tuple|16.228|?>>
+    <associate|lemma 16.167.210|<tuple|16.229|?>>
+    <associate|lemma 16.173.211|<tuple|16.235|?>>
+    <associate|lemma 16.174.211|<tuple|16.236|?>>
+    <associate|lemma 16.177.211|<tuple|16.239|?>>
+    <associate|lemma 16.178.210|<tuple|16.240|?>>
+    <associate|lemma 16.179.210|<tuple|16.241|?>>
     <associate|lemma 16.18.2|<tuple|16.18|?>>
+    <associate|lemma 16.180.210|<tuple|16.242|?>>
+    <associate|lemma 16.181.210|<tuple|16.243|?>>
+    <associate|lemma 16.182.210|<tuple|16.244|?>>
     <associate|lemma 16.19.2|<tuple|16.19|?>>
     <associate|lemma 16.24.178|<tuple|16.70|?>>
     <associate|lemma 16.37.4|<tuple|16.45|?>>
@@ -16156,6 +18078,10 @@
       <with|par-left|<quote|1tab>|16.3.3<space|2spc>Mean Value Theorems
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-48>>
+
+      16.4<space|2spc>Symmetry of Higher Order Differentials
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-49>
     </associate>
   </collection>
 </auxiliary>
