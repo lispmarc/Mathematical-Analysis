@@ -17261,44 +17261,194 @@
     with the maximum norm <math|<around*|\<\|\|\>||\<\|\|\>><rsub|max>> [see
     definition: <reference|normed maximum norm>], <math|A\<subseteq\>X>,
     <math|m\<in\>\<bbb-N\>>, <math|<rigid|i\<in\><around*|{|1,\<ldots\>,n|}><rsup|m>>>
-    and <math|<rigid|f:A\<rightarrow\>Y>> a function then we define
-    <math|\<frak-D\><rsup|m><rsub|i<rsub|m>,\<ldots\>,i<rsub|1>,f>> and
-    <math|D<rsup|<around*|[|m|]>><rsub|i<rsub|m>\<ldots\>i<rsub|1>>>
-    recursively as follows for <math|m>
+    and <math|<rigid|f:A\<rightarrow\>Y>> a function then we define for
+    <math|k\<in\><around*|{|1,\<ldots\>,m|}>>
+    <math|\<frak-D\><rsup|><rsub|f,<around*|[|i<rsub|k>\<ldots\>i<rsub|m>|]>>>
+    and <math|D<rsub|<around*|[|i<rsub|k>\<ldots\>i<rsub|m>|]>>f> recursively
+    as follows for <math|k>
 
     <\description>
-      <item*|<math|m=1>>Then <math|>
+      <item*|<math|k=m>>Then <math|>
 
       <\equation*>
-        \<frak-D\><rsup|<around*|[|1|]>><rsub|i<rsub|1>\<ldots\>i<rsub|1>,f>=\<frak-D\><rsub|i<rsub|1>,f>
+        \<frak-D\><rsub|f,<around*|[|i<rsub|m>\<ldots\>i<rsub|m>|]>>=\<frak-D\><rsub|i<rsub|m>,f>
       </equation*>
 
       and\ 
 
       <\equation*>
-        D<rsup|<around*|[|1|]>><rsub|i<rsub|1>,\<ldots\>,i<rsub|1>>f=D<rsub|i<rsub|1>>f
+        D<rsub|<around*|[|i<rsub|m>\<ldots\>i<rsub|m>|]>>f=D<rsub|i<rsub|m>>f
       </equation*>
 
-      See [definition: <reference|diff partial differential>] for the
-      definition of <math|\<frak-D\><rsub|i<rsub|1>,f>> and
-      <math|D<rsub|i<rsub|1>>f>.
-
-      <item*|<math|1\<less\>m>>Then\ 
+      Using [definition: <reference|diff partial differential>] for the
+      definition of <math|\<frak-D\><rsub|i<rsub|m>,f><rsup|>> and
+      <math|D<rsub|i<rsub|m>>f> we have that\ 
 
       <\equation*>
-        \<frak-D\><rsub|i<rsub|m>,\<ldots\>,i<rsub|m-1>,f>=<around*|{|x\<in\>\<frak-D\><rsup|m-1><rsub|i<rsub|m-1>,\<ldots\>,i<rsub|1>,f>\|D<rsup|<around*|[|m-1|]>><rsub|x,i<rsub|m-1>,\<ldots\>,i+1>f<text|
-        has a >i<rsub|m><text|partial differential at >x|}>
+        \<frak-D\><rsub|f,<around*|[|i<rsub|m>\<ldots\>i<rsub|m>|]>>=\<frak-D\><rsub|i<rsub|m>,f>=<around*|{|x\<in\>A\|f<text|
+        is >i<rsub|m><text|-partial differentiable at >x|}>\<subseteq\>A
+      </equation*>
+
+      and\ 
+
+      <\equation*>
+        D<rsub|<around*|[|i<rsub|m>\<ldots\>i<rsub|m>|]>>f:\<frak-D\><rsub|f,<around*|[|i<rsub|m>\<ldots\>i<rsub|m>|]>>\<rightarrow\>L<around*|(|X<rsub|i<rsub|m>>,Y|)>
+        is defined by D<rsub|<around*|[|i<rsub|m>\<ldots\>i<rsub|m>|]>>f<around*|(|x|)>=D<rsup|><rsub|x,i<rsub|m>>f
+      </equation*>
+
+      <item*|<math|k\<less\>m>>Then\ 
+
+      <\equation*>
+        \<frak-D\><rsub|f,<around*|[|i<rsub|k>\<ldots\>i<rsub|m>|]>>=<around*|{|x\<in\>\<frak-D\><rsub|<around*|[|i<rsub|k+1>\<ldots\>i<rsub|m>|]>>\|D<rsub|<around*|[|i<rsub|k+1>\<ldots\>i<rsub|m>|]>>f<text|
+        has a >i<rsub|k><text|-partial differential at >x|}>
       </equation*>
 
       and
 
       <\equation*>
-        D<rsup|<around*|[|m|]>><rsub|i<rsub|m>,\<ldots\>,i<rsub|1>>f=D<rsub|i<rsub|m>><around*|(|D<rsup|<around*|[|m-1|]>><rsub|i<rsub|m-1>,\<ldots\>,i+1>f|)>
+        D<rsub|<around*|[|i<rsub|k>\<ldots\>i<rsub|m>|]>>f:\<frak-D\><rsub|f,<around*|[|i<rsub|k+1>\<ldots\>i<rsub|m>|]>>\<rightarrow\>L<around*|(|X<rsub|i<rsub|k>>,L<rsub|m-k><around*|(|X<rsub|i<rsub|k+1>>,\<ldots\>,X<rsub|i<rsub|m>>;Y|)>|)><below|=L<rsub|m-k+1><around*|(|X<rsub|k>,\<ldots\>,X<rsub|m>;Y|)>|<text|>>
+      </equation*>
+
+      is defined by
+
+      <\equation*>
+        D<rsup|<around*|[|m|]>><rsub|i<rsub|1>,\<ldots\>,i<rsub|m>>f=D<rsub|i<rsub|1>><around*|(|D<rsup|<around*|[|m-1|]>><rsub|i<rsub|2>\<ldots\>i<rsub|m>>f|)>
       </equation*>
     </description>
-
-    \;
   </definition>
+
+  The domains of higher order partial is decreasing with increasing order.
+
+  <\theorem>
+    <label|diff higher order partial differentiation (domain)>Let
+    <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>>,
+    <math|<around*|{|<around*|\<langle\>|X<rsub|i>,<around*|\<\|\|\>||\<\|\|\>><rsub|i>|\<rangle\>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+    a finite family of normed spaces, <math|<rigid|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>>
+    a normed space, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|max>|\<rangle\>>>
+    the normed space based on the product
+    <math|X=<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>
+    with the maximum norm <math|<around*|\<\|\|\>||\<\|\|\>><rsub|max>> [see
+    definition: <reference|normed maximum norm>], <math|A\<subseteq\>X>,
+    <math|m\<in\>\<bbb-N\>>, <math|<rigid|i\<in\><around*|{|1,\<ldots\>,n|}><rsup|m>>>
+    and <math|<rigid|f:A\<rightarrow\>Y>> a function then we have that
+    <math|\<forall\>k,l\<in\><around*|{|1,\<ldots\>,m|}>> with
+    <math|k\<leqslant\>l> that\ 
+
+    <\equation*>
+      \<frak-D\><rsub|f,<around*|[|i<rsub|l>\<ldots\>i<rsub|m>|]>>\<subseteq\>\<frak-D\><rsub|f,<around*|[|i<rsub|k>\<ldots\>i<rsub|m>|]>>\<subseteq\>\<frak-D\><rsub|f,<around*|[|i<rsub|m>\<ldots\>i<rsub|m>|]>>\<subseteq\>A
+    </equation*>
+  </theorem>
+
+  <\proof>
+    Let <math|l\<in\><around*|{|1,\<ldots\>,m|}>> then we have that
+    <math|\<forall\>r\<in\><around*|{|1,\<ldots\>,l-1|}>>
+
+    <\equation*>
+      \<frak-D\><rsub|f,<around*|[|i<rsub|l>\<ldots\>i<rsub|m>|]>>=<around*|{|x\<in\>\<frak-D\><rsub|f,<around*|[|i<rsub|l+1>\<ldots\>i<rsub|m>|]>>\|D<rsub|<around*|[|i<rsub|l+1>\<ldots\>i<rsub|m>|]>>f<text|
+      has a >i<rsub|l><text|-partial differential at
+      >x|}>\<subseteq\>\<frak-D\><rsub|f,<around*|[|i<rsub|l+1>\<ldots\>i<rsub|m>|]>>
+    </equation*>
+
+    so that by \ [theorem: <reference|recursion order>] we have that
+    <math|\<forall\>k\<in\><around*|{|1,\<ldots\>,l|}>>\ 
+
+    <\equation*>
+      \<frak-D\><rsub|f,<around*|[|i<rsub|l>\<ldots\>i<rsub|m>|]>>\<subseteq\>\<frak-D\><rsub|f,<around*|[|i<rsub|k>\<ldots\>i<rsub|k>|]>>
+    </equation*>
+
+    Further we have <math|\<forall\>k\<in\><around*|{|1,\<ldots\>,m|}>>
+    either\ 
+
+    <\description>
+      <item*|<math|k=m>>Then <math|\<frak-D\><rsub|f,<around*|[|i<rsub|k>\<ldots\>i<rsub|m>|]>>=\<frak-D\><rsub|f,<around*|[|i<rsub|m>\<ldots\>i<rsub|m>|]>>\<subseteq\>A>
+
+      <item*|<math|k\<less\>m>>Then <math|\<frak-D\><rsub|f,<around*|[|i<rsub|k>\<ldots\>i<rsub|m>|]>>\<subseteq\>\<frak-D\><rsub|f,<around*|[|i<rsub|m>\<ldots\>i<rsub|m>|]>>\<subseteq\>A>
+    </description>
+
+    so in all cases we have\ 
+
+    <\equation*>
+      \<frak-D\><rsub|f,<around*|[|i<rsub|k>\<ldots\>i<rsub|m>|]>>\<subseteq\>\<frak-D\><rsub|f,<around*|[|i<rsub|m>\<ldots\>i<rsub|m>|]>>\<subseteq\>A
+    </equation*>
+  </proof>
+
+  We can define now the concept of functions that have partial differential
+  at a point.
+
+  <\definition>
+    <label|diff higher order partial differentiation (1)>Let
+    <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>>,
+    <math|<around*|{|<around*|\<langle\>|X<rsub|i>,<around*|\<\|\|\>||\<\|\|\>><rsub|i>|\<rangle\>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+    a finite family of normed spaces, <math|<rigid|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>>
+    a normed space, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|max>|\<rangle\>>>
+    the normed space based on the product
+    <math|X=<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>
+    with the maximum norm <math|<around*|\<\|\|\>||\<\|\|\>><rsub|max>> [see
+    definition: <reference|normed maximum norm>], <math|A\<subseteq\>X>,
+    <math|x\<in\>A>, <math|m\<in\>\<bbb-N\>>,
+    <math|<rigid|i\<in\><around*|{|1,\<ldots\>,n|}><rsup|m>>> and
+    <math|<rigid|f:A\<rightarrow\>Y>> a funtion then we say that\ 
+
+    <\equation*>
+      f<text| has a partial differential >D<rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f<text|
+      at >x<text| iff >x\<in\>\<frak-D\><rsub|f,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>
+    </equation*>
+
+    the partial differential <math|><math|D<rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f>
+    at <math|x> is then defined by\ 
+
+    <\equation*>
+      D<rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f=D<rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f<around*|(|x|)>
+    </equation*>
+  </definition>
+
+  Just as Fréchet differentiability implies partial differentiability, higher
+  order differentiability implies higher order partial differentiability. We
+  have now a theorem similar to [theorem: <reference|diff higher order
+  differentiation (1)>]\ 
+
+  <\theorem>
+    <label|diff higher order partial differentiation (2)>Let
+    <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>>,
+    <math|<around*|{|<around*|\<langle\>|X<rsub|i>,<around*|\<\|\|\>||\<\|\|\>><rsub|i>|\<rangle\>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+    a finite family of normed spaces, <math|<rigid|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>>
+    a normed space, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|max>|\<rangle\>>>
+    the normed space based on the product
+    <math|X=<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>
+    with the maximum norm <math|<around*|\<\|\|\>||\<\|\|\>><rsub|max>> [see
+    definition: <reference|normed maximum norm>], <math|A\<subseteq\>X>,
+    <math|x\<in\>A>, <math|m\<in\>\<bbb-N\>>,
+    <math|<rigid|i\<in\><around*|{|1,\<ldots\>,n|}><rsup|m>>> and
+    <math|<rigid|f:A\<rightarrow\>Y>> a function then we have that the
+    following are equivalent:\ 
+
+    <\enumerate>
+      <item><math|f> has a <math|D<rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f>
+      partial differential at <math|x>
+
+      <item>We have for <math|m> either:
+
+      <\description>
+        <item*|<math|m=1>>Then <math|f\<circ\>I<rsup|<around*|[|i,x|]>>> is
+        Fréchet differentiable at <math|x<rsub|i>>
+
+        <item*|<math|1\<less\>m>>Then <math|D<rsub|<around*|[|i<rsub|2>\<ldots\>i<rsub|m>|]>>f\<circ\>I<rsup|<around*|[|i,x|]>>>
+        is Fréchet differentiable at <math|x<rsub|i>>
+      </description>
+    </enumerate>
+
+    Further we have if <math|<around*|(|1|)>> is true that\ 
+
+    <\equation*>
+      D<rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f=<choice|<tformat|<table|<row|<cell|D<rsub|x<rsub|i>><around*|(|f\<circ\>I<rsup|<around*|[|i,x|]>>|)><text|
+      if >m=1>>|<row|<cell|D<rsub|x<rsub|i>><around*|(|D<rsub|<around*|[|i<rsub|2>\<ldots\>i<rsub|m>|]>>\<circ\>I<rsup|<around*|[|i,x|]>>|)><text|
+      if >1\<less\>m>>>>>
+    </equation*>
+  </theorem>
+
+  \;
+
+  \;
 
   \;
 
@@ -17543,6 +17693,14 @@
     <associate|diff higher order differentiation on a open
     set|<tuple|16.135|?>>
     <associate|diff higher order partial differentiation|<tuple|16.247|?>>
+    <associate|diff higher order partial differentiation
+    (1)|<tuple|16.249|?>>
+    <associate|diff higher order partial differentiation
+    (2)|<tuple|16.250|?>>
+    <associate|diff higher order partial differentiation
+    (domain)|<tuple|16.248|?>>
+    <associate|diff higher order partial differentiation
+    list|<tuple|16.247|?>>
     <associate|diff identity function is differentiable|<tuple|16.52|?>>
     <associate|diff identity function is infinite times
     differentiable|<tuple|16.170|?>>
@@ -17561,7 +17719,6 @@
     <associate|diff mean value theorem (1)|<tuple|16.207|?>>
     <associate|diff mean value theorem (2)|<tuple|16.210|?>>
     <associate|diff mean value theorem (2.1)|<tuple|16.216|?>>
-    <associate|diff mean value theorem (2.2)|<tuple|16.212|?>>
     <associate|diff mean value theorem (3)|<tuple|16.217|?>>
     <associate|diff mean value theorem (3.1)|<tuple|16.218|?>>
     <associate|diff mean value theorem (4)|<tuple|16.219|?>>
@@ -17991,6 +18148,14 @@
       <tuple|<tuple|concave function>|<pageref|auto-44>>
 
       <tuple|<tuple|convex function>|<pageref|auto-45>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|ev<rsub|v<rsub|1>,\<ldots\>,v<rsub|n>>>>|<pageref|auto-50>>
+
+      <tuple|<tuple|evaluation operator>|<pageref|auto-51>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|L<rsub|n><around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>>|<pageref|auto-54>>
+
+      <tuple|<tuple|higher order partial differential>|<pageref|auto-56>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|16<space|2spc>Differentiation
@@ -18082,6 +18247,18 @@
       16.4<space|2spc>Symmetry of Higher Order Differentials
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-49>
+
+      16.5<space|2spc>Hugher Order Partial Differentiation
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-52>
+
+      <with|par-left|<quote|1tab>|16.5.1<space|2spc>Linear and mulilinear
+      mappings. <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-53>>
+
+      <with|par-left|<quote|1tab>|16.5.2<space|2spc>Higher Order Partial
+      Differentiation <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-55>>
     </associate>
   </collection>
 </auxiliary>

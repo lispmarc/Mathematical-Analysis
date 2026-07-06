@@ -1,4 +1,4 @@
-<TeXmacs|2.1.4>
+<TeXmacs|2.1.5>
 
 <project|FullBook.tm>
 
@@ -11172,6 +11172,22 @@
       <math|\<forall\>k\<in\><around*|{|n,\<ldots\>,m|}>> we have
       <math|\<forall\>i\<in\><around*|{|n,\<ldots\>,k|}>> we have
       <math|x<rsub|i>\<leqslant\>x<rsub|k>>.
+
+      <item>If <math|n\<in\>\<bbb-N\><rsub|0>> and
+      <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>>\<subseteq\>A>
+      a sequence such that <math|\<forall\>i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>>
+      <math|x<rsub|i+1>\<leqslant\>x<rsub|i>> then
+      <math|\<forall\>k\<in\><around*|{|n,\<ldots\>,\<infty\>|}>> we have
+      <math|\<forall\>i\<in\><around*|{|0,\<ldots\>,k|}>> that
+      <math|x<rsub|k>\<leqslant\>x<rsub|i>>
+
+      <item>If <math|n,m\<in\>\<bbb-N\><rsub|0>> with <math|n\<leqslant\>m>
+      and <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|n,\<ldots\>,m|}>>\<subseteq\>A>
+      a finite family such that <math|\<forall\>i\<in\><around*|{|n,\<ldots\>,m-1|}>>
+      <math|x<rsub|i+1>\<leqslant\>x<rsub|i>> then
+      <math|\<forall\>k\<in\><around*|{|n,\<ldots\>,m|}>> we have
+      <math|\<forall\>i\<in\><around*|{|n,\<ldots\>,k|}>> we have
+      <math|x<rsub|k>\<leqslant\>x<rsub|i>>.
     </enumerate>
   </theorem>
 
@@ -11216,7 +11232,7 @@
       <math|\<forall\>i\<in\><around*|{|n,\<ldots\>,k|}>> that
       <math|x<rsub|i>\<leqslant\>x<rsub|k>>.
 
-      <item>This also proved by induction, take\ 
+      <item>This is also proved by induction, take\ 
 
       <\equation*>
         S=<around*|{|k\<in\><around*|{|n,\<ldots\>,\<infty\>|}>\|k\<in\><around*|{|m+1,.,\<infty\>|}>\<vee\>\<forall\>i\<in\><around*|{|n,\<ldots\>,k|}><text|
@@ -11263,6 +11279,91 @@
       <math|k\<nin\><around*|{|m+1,\<ldots\>,\<infty\>|}>> so that
       <math|\<forall\>i\<in\><around*|{|n,\<ldots\>,k|}>> we have
       <math|x<rsub|i>\<leqslant\>x<rsub|k>>.
+
+      <item>We prove this by induction, take\ 
+
+      <\equation*>
+        S=<around*|{|k\<in\><around*|{|n,\<ldots\>.,\<infty\>|}>\|\<forall\>i\<in\><around*|{|n,\<ldots\>,k|}><text|we
+        have >x<rsub|k>\<leqslant\>x<rsub|i>|}>
+      </equation*>
+
+      then we have:
+
+      <\description>
+        <item*|<math|n\<in\>S>>If <math|i\<in\><around*|{|n,\<ldots\>,n|}>>
+        then <math|i=n> so that <math|x<rsub|n>\<leqslant\>x<rsub|n>=x<rsub|i>>
+        proving that <math|n\<in\>S>.
+
+        <item*|<math|k\<in\>S\<Rightarrow\>k+1\<in\>S>>Let
+        <math|i\<in\><around*|{|n,\<ldots\>,k+1|}>> then for <math|i> we have
+        either:
+
+        <\description>
+          <item*|<math|i=k+1>>Then <math|x<rsub|k+1>\<leqslant\>x<rsub|k+1>=x<rsub|i>>
+
+          <item*|<math|i\<in\><around*|{|n,\<ldots\>,k|}>>>Then as
+          <math|k\<in\>S> we have <math|x<rsub|k>\<leqslant\>x<rsub|i>> and
+          as by the hypothesis <math|x<rsub|k+1>\<leqslant\>x<rsub|k>> it
+          follows that <math|x<rsub|k+1>\<leqslant\>x<rsub|i>>.
+        </description>
+
+        so in all cases we have <math|x<rsub|k+1>\<leqslant\>x<rsub|i>> which
+        proves that <math|k+1\<in\>S>
+      </description>
+
+      Mathematical induction [theorem: <reference|complex mathematical
+      induction>] proves then that <math|S=<around*|{|n,\<ldots\>,\<infty\>|}>>
+      so <math|\<forall\>k\<in\><around*|{|n,\<ldots\>,\<infty\>|}>> we have
+      <math|\<forall\>i\<in\><around*|{|n,\<ldots\>,k|}>> that
+      <math|x<rsub|k>\<leqslant\>x<rsub|i>>.
+
+      <item>This is also proved by induction, take\ 
+
+      <\equation*>
+        S=<around*|{|k\<in\><around*|{|n,\<ldots\>,\<infty\>|}>\|k\<in\><around*|{|m+1,.,\<infty\>|}>\<vee\>\<forall\>i\<in\><around*|{|n,\<ldots\>,k|}><text|
+        we have >x<rsub|k>\<leqslant\>x<rsub|i>|}>
+      </equation*>
+
+      then we have:
+
+      <\description>
+        <item*|<math|n\<in\>S>>If <math|i\<in\><around*|{|n,\<ldots\>,n|}>>
+        then <math|i=n> and <math|x<rsub|n>\<leqslant\>x<rsub|n>=x<rsub|i>>
+        proving that <math|n\<in\>S>.
+
+        <item*|<math|k\<in\>S\<Rightarrow\>k+1\<in\>S>>For <math|k+1> we have
+        either:
+
+        <\description>
+          <item*|<math|k+1\<in\><around*|{|m+1,\<ldots\>,\<infty\>|}>>>Then
+          <math|k+1\<in\>S>
+
+          <item*|<math|k+1\<nin\><around*|{|m+1,\<ldots\>,\<infty\>|}>>>Then
+          <math|k\<less\>k+1\<less\>m+1> so that
+          <math|k\<nin\><around*|{|m+1,\<ldots\>,\<infty\>|}>>. For
+          <math|i\<in\><around*|{|n,\<ldots\>,k+1|}>> we have either:
+
+          <\description>
+            <item*|<math|i=k+1>>Then <math|x<rsub|k+1>\<leqslant\>x<rsub|k+1>=x<rsub|i>>
+
+            <item*|<math|i\<in\><around*|{|n,\<ldots\>,k|}>>>Then as
+            <math|k\<in\>S> and <math|k\<nin\><around*|{|m+1,\<ldots\>,\<infty\>|}>>
+            we must have that <math|x<rsub|k>\<leqslant\>x<rsub|i>> which as
+            by the hypothesis <math|x<rsub|k+1>\<leqslant\>x<rsub|k>> proves
+            that <math|x<rsub|k+1>\<leqslant\>x<rsub|i>>.
+          </description>
+
+          so in all cases we have <math|x<rsub|k+1>\<leqslant\>x<rsub|i>>
+          proving that <math|k+1\<in\>S>.
+        </description>
+      </description>
+
+      Using mathematical induction it follows then that
+      <math|S=<around*|{|n,\<ldots\>,\<infty\>|}>>. So if
+      <math|k\<in\><around*|{|n,\<ldots\>,m|}>> then <math|k\<in\>S> and
+      <math|k\<nin\><around*|{|m+1,\<ldots\>,\<infty\>|}>> so that
+      <math|\<forall\>i\<in\><around*|{|n,\<ldots\>,k|}>> we have
+      <math|x<rsub|k>\<leqslant\>x<rsub|i>>.
     </enumerate>
   </proof>
 
@@ -14340,7 +14441,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|6>
-    <associate|page-first|205>
+    <associate|page-first|219>
     <associate|par-first|0tab>
     <associate|project-flag|false>
     <associate|section-nr|3>
