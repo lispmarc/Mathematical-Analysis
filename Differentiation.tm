@@ -17400,11 +17400,177 @@
     <\equation*>
       D<rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f=D<rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f<around*|(|x|)>
     </equation*>
+
+    <\remark>
+      Instead of saying\ 
+
+      <\equation*>
+        f<text| has a partial differential
+        >D<rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f<text| at >x
+      </equation*>
+
+      we sometimes use the term\ 
+
+      <\equation*>
+        D<rsub|x>,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>f<text| exist>
+      </equation*>
+    </remark>
   </definition>
 
-  Just as Fréchet differentiability implies partial differentiability, higher
-  order differentiability implies higher order partial differentiability. We
-  have now a theorem similar to [theorem: <reference|diff higher order
+  <\definition>
+    <label|diff higher order partial differentiation on open set>Let
+    <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>>,
+    <math|<around*|{|<around*|\<langle\>|X<rsub|i>,<around*|\<\|\|\>||\<\|\|\>><rsub|i>|\<rangle\>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+    a finite family of normed spaces, <math|<rigid|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>>
+    a normed space, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|max>|\<rangle\>>>
+    the normed space based on the product
+    <math|X=<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>
+    with the maximum norm <math|<around*|\<\|\|\>||\<\|\|\>><rsub|max>> [see
+    definition: <reference|normed maximum norm>], <math|A\<subseteq\>X>,
+    <math|U\<in\>\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|max>>> a
+    open set in <math|X> with <rigid|<math|U\<subseteq\>A>>,
+    <math|m\<in\>\<bbb-N\>>, <math|<rigid|i\<in\><around*|{|1,\<ldots\>,n|}><rsup|m>>>
+    and <math|<rigid|f:A\<rightarrow\>Y>> a funtion then we say that\ 
+
+    <\equation*>
+      f<text| has >D<rsub|<around*|[|i<rsub|1>\<ldots\>i+m|]>>f<text| partial
+      differentials on >U
+    </equation*>
+
+    iff\ 
+
+    <\equation*>
+      \<forall\>x\<in\>U<text| >f<text| has a><text| partial differe>ntial
+      D<rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f<text| at >x
+    </equation*>
+
+    Using [definition: <reference|diff higher order partial differentiation
+    (1)>]\ 
+
+    <\equation*>
+      f<text| has >D<rsub|<around*|[|i<rsub|1>\<ldots\>i+m|]>>f<text| partial
+      differentials on >U
+    </equation*>
+
+    is equivalent with
+
+    <\equation*>
+      U\<subseteq\>\<frak-D\><rsub|f,<around*|[|i<rsub|1>\<ldots\>,i<rsub|m>|]>>
+    </equation*>
+  </definition>
+
+  In the cases where <math|U=dom<around*|(|f|)>> we have the following
+  definition
+
+  <\definition>
+    <label|diff higher order partial differentiation on open domain>Let
+    <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>>,
+    <math|<around*|{|<around*|\<langle\>|X<rsub|i>,<around*|\<\|\|\>||\<\|\|\>><rsub|i>|\<rangle\>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+    a finite family of normed spaces, <math|<rigid|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>>
+    a normed space, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|max>|\<rangle\>>>
+    the normed space based on the product
+    <math|X=<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>
+    with the maximum norm <math|<around*|\<\|\|\>||\<\|\|\>><rsub|max>> [see
+    definition: <reference|normed maximum norm>],
+    <math|U\<in\>\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|max>>> a
+    open set in <math|X>, <math|m\<in\>\<bbb-N\>>,
+    <math|<rigid|i\<in\><around*|{|1,\<ldots\>,n|}><rsup|m>>> and
+    <math|<rigid|f:U\<rightarrow\>Y>> a funtion then we say that\ 
+
+    <\equation*>
+      f<text| has >D<rsub|<around*|[|i<rsub|1>\<ldots\>i+m|]>>f<text| partial
+      differentials>
+    </equation*>
+
+    iff \ 
+
+    <\equation*>
+      f<text| has >D<rsub|<around*|[|i<rsub|1>\<ldots\>i+m|]>>f<text| partial
+      differentials on >U
+    </equation*>
+
+    <\note>
+      If <math|f> has <math|D<rsub|<around*|[|i<rsub|1>\<ldots\>,i<rsub|m>|]>>f>
+      partial differentials then by [definition: <reference|diff higher order
+      partial differentiation on open set>]
+      <math|U\<subseteq\>\<frak-D\><rsub|f,<around*|[|i<rsub|1>\<ldots\>im|]>>>
+      which, as <math|\<frak-D\><rsub|f,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>\<subseteq\>U>
+      by [theorem: <reference|diff higher order partial differentiation
+      (domain)>], proves that in this case we have\ 
+
+      <\equation*>
+        \<frak-D\><rsub|f,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>=U
+      </equation*>
+    </note>
+  </definition>
+
+  <\theorem>
+    <label|diff higher order partial differentiation n,m>Let
+    <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>>,
+    <math|<around*|{|<around*|\<langle\>|X<rsub|i>,<around*|\<\|\|\>||\<\|\|\>><rsub|i>|\<rangle\>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+    a finite family of normed spaces, <math|<rigid|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>>
+    a normed space, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|max>|\<rangle\>>>
+    the normed space based on the product
+    <math|X=<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>
+    with the maximum norm <math|<around*|\<\|\|\>||\<\|\|\>><rsub|max>> [see
+    definition: <reference|normed maximum norm>], <math|m\<in\>\<bbb-N\>>,
+    <math|<rigid|i\<in\><around*|{|1,\<ldots\>,n|}><rsup|m>>> then we have
+    for <math|k\<in\><around*|{|1,\<ldots\>,m|}>> that
+
+    <\enumerate>
+      <item>If <math|A\<subseteq\>X>, <math|x\<in\>A> and
+      <math|f:A\<rightarrow\>Y> a function that has a
+      <math|D<rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f> partial
+      differential at <math|x> then <math|f<text| has a
+      >D<rsub|x,<around*|[|i<rsub|k>\<ldots\>i<rsub|m>|]>>f> partial
+      differential at <math|x>.
+
+      <item>If <math|A\<subseteq\>X>, <math|U> a open set and
+      <math|f:A\<rightarrow\>Y> a function that has
+      <math|D<rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f> partial
+      differentials on <math|U> then <math|f> has
+      <math|D<rsub|<around*|[|i<rsub|k>\<ldots\>i<rsub|m>|]>>f> partial
+      differentials on <math|U>.
+
+      <item>If <math|U> is a open set iin <math|X> and
+      <math|f:U\<rightarrow\>Y> has <math|D<rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f>
+      partial differentials then <math|f> has
+      <math|D<rsub|<around*|[|i<rsub|k>\<ldots\>i<rsub|m>|]>>f> partial
+      differentials.
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>Using [definition: <reference|diff higher order partial
+      differentiation (1)>] we have that <math|x\<in\>\<frak-D\><rsub|f,<around*|[|i<rsub|1>,\<ldots\>,i+m|]>>>
+      which, as by [theorem: <reference|diff higher order partial
+      differentiation (domain)>] <math|\<frak-D\><rsub|f,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>\<subseteq\>\<frak-D\><rsub|f,<around*|[|i<rsub|k>\<ldots\>i+m|]>>>,
+      proves that <math|x\<in\>\<frak-D\><rsub|f,<around*|[|i<rsub|k>\<ldots\>i<rsub|m>|]>>>.
+      Hence using [definition: <reference|diff higher order partial
+      differentiation (1)>] again it follows that <math|f> has a partial
+      differential <math|D<rsub|x,<around*|[|i<rsub|k>\<ldots\>i<rsub|m>|]>>f>
+      at <math|x>.
+
+      <item>Using [definition: <reference|diff higher order partial
+      differentiation on open set>] we have that
+      <math|U\<subseteq\>\<frak-D\><rsub|f,<around*|[|i<rsub|1>,\<ldots\>,i+m|]>>>
+      which, as by [theorem: <reference|diff higher order partial
+      differentiation (domain)>] <math|\<frak-D\><rsub|f,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>\<subseteq\>\<frak-D\><rsub|f,<around*|[|i<rsub|k>\<ldots\>i+m|]>>>,
+      proves that <math|U\<subseteq\>\<frak-D\><rsub|f,<around*|[|i<rsub|k>\<ldots\>i<rsub|m>|]>>>.
+      Hence using [definition: <reference|diff higher order partial
+      differentiation on open set>[] again it follows that <math|f> has a
+      partial differential <math|D<rsub|x,<around*|[|i<rsub|k>\<ldots\>i<rsub|m>|]>>f>
+      on <math|U>.
+
+      <item>This follows from (2) using [definition: <reference|diff higher
+      order partial differentiation on open domain>].
+    </enumerate>
+  </proof>
+
+  We have now a theorem similar to [theorem: <reference|diff higher order
   differentiation (1)>]\ 
 
   <\theorem>
@@ -17429,22 +17595,657 @@
       <item>We have for <math|m> either:
 
       <\description>
-        <item*|<math|m=1>>Then <math|f\<circ\>I<rsup|<around*|[|i,x|]>>> is
-        Fréchet differentiable at <math|x<rsub|i>>
-
-        <item*|<math|1\<less\>m>>Then <math|D<rsub|<around*|[|i<rsub|2>\<ldots\>i<rsub|m>|]>>f\<circ\>I<rsup|<around*|[|i,x|]>>>
+        <item*|<math|m=1>>Then <math|f\<circ\>I<rsup|<around*|[|i<rsub|1>,x|]>>:<around*|(|I<rsup|<around*|[|i<rsub|1>,x|]>>|)><rsup|-1><around*|(|A|)>\<rightarrow\>Y>
         is Fréchet differentiable at <math|x<rsub|i>>
+
+        <item*|<math|1\<less\>m>>Then
+
+        <\equation*>
+          D<rsub|<around*|[|i<rsub|2>\<ldots\>i<rsub|m>|]>>f\<circ\>I<rsup|<around*|[|i<rsub|1>,x|]>>:<around*|(|I<rsup|<around*|[|i<rsub|1>,x|]>>|)><rsup|-1><around*|(|\<frak-D\><rsub|f,<around*|[|i<rsub|2>\<ldots\>i<rsub|m>|]>>|)>\<rightarrow\>L<rsub|m-1><around*|(|X<rsub|2>,\<ldots\>,X<rsub|m>;Y|)>
+        </equation*>
+
+        is Fréchet differentiable at <math|x<rsub|i>>
+      </description>
+
+      <item>We have for <math|m> either:
+
+      <\description>
+        <item*|<math|m=1>>Then <math|f> is <math|i<rsub|1>>-partial
+        differentiable at <math|x>
+
+        <item*|<math|1\<less\>m>>Then\ 
+
+        <\equation*>
+          D<rsub|<around*|[|i<rsub|2>\<ldots\>i<rsub|m>|]>>f<text| is
+          >i<rsub|1><text|-partial differentiable at >x
+        </equation*>
       </description>
     </enumerate>
 
     Further we have if <math|<around*|(|1|)>> is true that\ 
 
     <\equation*>
-      D<rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f=<choice|<tformat|<table|<row|<cell|D<rsub|x<rsub|i>><around*|(|f\<circ\>I<rsup|<around*|[|i,x|]>>|)><text|
-      if >m=1>>|<row|<cell|D<rsub|x<rsub|i>><around*|(|D<rsub|<around*|[|i<rsub|2>\<ldots\>i<rsub|m>|]>>\<circ\>I<rsup|<around*|[|i,x|]>>|)><text|
+      D<rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f=<choice|<tformat|<table|<row|<cell|D<rsub|x<rsub|i>><around*|(|f\<circ\>I<rsup|<around*|[|i<rsub|1>,x|]>>|)><text|
+      if >m=1>>|<row|<cell|D<rsub|x<rsub|i>><around*|(|D<rsub|<around*|[|i<rsub|2>\<ldots\>i<rsub|m>|]>>\<circ\>I<rsup|<around*|[|i<rsub|1>,x|]>>|)><text|
+      if >1\<less\>m>>>>>=<choice|<tformat|<table|<row|<cell|D<rsub|x,i<rsub|1>>f<text|
+      if >m=1>>|<row|<cell|D<rsub|x,i<rsub|i>><around*|(|D<rsub|<around*|[|i<rsub|2\<ldots\>i<rsub|m>>|]>>f|)><text|
       if >1\<less\>m>>>>>
     </equation*>
   </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|1\<Rightarrow\>2>>For <math|m\<in\>\<bbb-N\>> we have
+      either:\ 
+
+      <\description>
+        <item*|<math|m=1>>By [definition: <reference|diff higher order
+        partial differentiation>] we have that
+
+        <\equation*>
+          \<frak-D\><rsub|f,<around*|[|i<rsub|1>\<ldots\>i<rsub|1>|]>>=<around*|{|x\<in\>A\|f<text|
+          is >i<rsub|1><text|-partial differentiable at >x|}><text| and
+          >D<rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|i>|]>>f=D<rsub|i<rsub|1>>f
+        </equation*>
+
+        As <math|f> has a partial differential
+        <math|D<rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|1>|]>>f> at
+        <math|x> we have by [definition: <reference|diff higher order partial
+        differentiation (1)>] that\ 
+
+        <\equation*>
+          x\<in\>\<frak-D\><rsub|f,<around*|[|i<rsub|1>\<ldots\>i<rsub|1>|]>><text|
+          and >D<rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|1>|]>>f=D<rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|1>|]>>f<around*|(|x|)>
+        </equation*>
+
+        so that\ 
+
+        <\equation*>
+          f<text| is >i<rsub|1><text|-partial differentiable at >x<text|>
+        </equation*>
+
+        with\ 
+
+        <\equation*>
+          D<rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|1>|]>>f=D<rsub|i<rsub|1>>f<around*|(|x|)><below|=|<text|[definition:
+          <reference|diff partial differential>]>>D<rsub|x,i<rsub|1>>f
+        </equation*>
+
+        Applying then the definition of partial differentiability [see
+        definition: <reference|diff partial differential definition>] on the
+        above proves that\ 
+
+        <\equation*>
+          f\<circ\>I<rsup|<around*|[|i<rsub|1>,x|]>>:<around*|(|I<rsup|<around*|[|i<rsub|1>,x|]>>|)><rsup|-1><around*|(|A|)>\<rightarrow\>Y<text|
+          is Fréchet differentiable at >x<rsub|i>
+        </equation*>
+
+        with\ 
+
+        <\equation*>
+          D<rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|1>|]>>f=D<rsub|x<rsub|i>><around*|(|f\<circ\>I<rsup|<around*|[|i<rsub|1>,x|]>>|)>
+        </equation*>
+
+        <item*|<math|1\<less\>m>>By [definition: <reference|diff higher order
+        partial differentiation>] we have that
+
+        <\equation*>
+          \<frak-D\><rsub|f,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>=<around*|{|x\<in\>\<frak-D\><rsub|f,<around*|[|i<rsub|2>\<ldots\>i<rsub|m>|]>>\|D<rsub|<around*|[|i<rsub|2>\<ldots\>i<rsub|m>|]>>f<text|
+          is >i<rsub|1><text|-partial differentiable at >x|}>
+        </equation*>
+
+        and\ 
+
+        <\equation*>
+          D<rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f=D<rsub|i<rsub|1>><around*|(|D<rsub|<around*|[|i<rsub|2>\<ldots\>i<rsub|m>|]>>f|)>
+        </equation*>
+
+        As <math|f> has a partial differential
+        <math|D<rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f> at
+        <math|x> it follows from [definition: <reference|diff higher order
+        partial differentiation (1)>] that\ 
+
+        <\equation*>
+          x\<in\>\<frak-D\><rsub|f,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>><text|
+          and >D<rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f=D<rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f<around*|(|x|)>
+        </equation*>
+
+        so that\ 
+
+        <\equation*>
+          D<rsub|<around*|[|i<rsub|2>\<ldots\>i<rsub|m>|]>>f<text| is
+          >i<rsub|1><text|-partial differentiable at >x
+        </equation*>
+
+        with\ 
+
+        <\equation*>
+          D<rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f=D<rsub|i<rsub|1>><around*|(|D<rsub|<around*|[|i<rsub|2>\<ldots\>i<rsub|m>|]>>f|)><around*|(|x|)><below|=|<text|[definition:
+          <reference|diff partial differential>]>>D<rsub|x,i<rsub|1>><around*|(|D<rsub|<around*|[|i<rsub|2>\<ldots\>i<rsub|m>|]>>f|)>
+        </equation*>
+
+        Applying then the definition of partial differentiability [see
+        definition: <reference|diff partial differential definition>] on the
+        above proves that\ 
+
+        <\equation*>
+          D<rsub|<around*|[|i<rsub|2>\<ldots\>i<rsub|m>|]>>f\<circ\>I<rsup|<around*|[|i<rsub|1>,x|]>>:<around*|(|I<rsup|<around*|[|i<rsub|1>,x|]>>|)><rsup|-1><around*|(|\<frak-D\><rsub|f,<around*|[|i<rsub|2>\<ldots\>i<rsub|m>|]>>|)>\<rightarrow\>L<rsub|m-1><around*|(|X<rsub|2>,\<ldots\>,X<rsub|m>;Y|)><text|>
+        </equation*>
+
+        is Fréchet differentiable at <math|x<rsub|i>> with\ 
+
+        <\equation*>
+          D<rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f=D<rsub|x<rsub|i>><around*|(|f\<circ\>I<rsup|<around*|[|i<rsub|1>,x|]>>|)>
+        </equation*>
+      </description>
+
+      <item*|<math|2\<Rightarrow\>1>>For <math|m\<in\>\<bbb-N\>> we have
+      either:\ 
+
+      <\description>
+        <item*|<math|m=1>>As <math|f\<circ\>I<rsup|<around*|[|i<rsub|1>,x|]>>>
+        is Fréchet differentiable at <math|x<rsub|i>> it follows from
+        [definition: <reference|diff partial differential definition>] that
+        <math|f> is <math|i<rsub|1>>-partial differentiable at <math|x> so
+        that\ 
+
+        <\equation*>
+          x\<in\><around*|{|x\<in\>A\|f<text| is >i<rsub|1><text|-partial
+          differentiable at >x|}>
+        </equation*>
+
+        which by [definition: <reference|diff higher order partial
+        differentiation>] proves that\ 
+
+        <\equation*>
+          x\<in\>\<frak-D\><rsub|f,<around*|[|i<rsub|1>\<ldots\>i<rsub|1>|]>>
+        </equation*>
+
+        so that by [definition: <reference|diff higher order partial
+        differentiation (1)>]\ 
+
+        <\equation*>
+          f<text| has a partial differential
+          >D<rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|1>|]>>f<text| at >x
+        </equation*>
+
+        <item*|<math|1\<less\>m>>As <math|D<rsub|<around*|[|i<rsub|2>\<ldots\>i<rsub|m>|]>>f\<circ\>I<rsup|<around*|[|i<rsub|1>,x|]>>>
+        is Fréchet differentiable at <math|x<rsub|i>> it follows from
+        [definition: <reference|diff partial differential definition>] that
+        <math|D<rsub|<around*|[|i<rsub|2>\<ldots\>i<rsub|m>|]>>f> is
+        <math|i<rsub|1>>-partial differentiable at <math|x>. Hence\ 
+
+        <\equation*>
+          x\<in\><around*|{|x\<in\>\<frak-D\><rsub|f,<around*|[|i<rsub|2>\<ldots\>i<rsub|1>|]>>\|D<rsub|<around*|[|i<rsub|2>\<ldots\>i<rsub|1>|]>>f<text|
+          is >i<rsub|1><text|-partial differentiable at >x|}>
+        </equation*>
+
+        which by [theorem: <reference|diff higher order partial
+        differentiation>] proves that\ 
+
+        <\equation*>
+          x\<in\>\<frak-D\><rsub|f,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>
+        </equation*>
+
+        so that by [definition: <reference|diff higher order partial
+        differentiation (1)>]\ 
+
+        <\equation*>
+          f<text| has a partial differential
+          >D<rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f<text| at >x
+        </equation*>
+      </description>
+
+      <item*|<math|1\<Rightarrow\>3>>For <math|m\<in\>\<bbb-N\>> we have
+      either:\ 
+
+      <\description>
+        <item*|<math|m=1>>By [definition: <reference|diff higher order
+        partial differentiation>] we have that
+
+        <\equation*>
+          \<frak-D\><rsub|f,<around*|[|i<rsub|1>\<ldots\>i<rsub|1>|]>>=<around*|{|x\<in\>A\|f<text|
+          is >i<rsub|1><text|-partial differentiable at >x|}><text| and
+          >D<rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|i>|]>>f=D<rsub|i<rsub|1>>f
+        </equation*>
+
+        As <math|f> has a partial differential
+        <math|D<rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|1>|]>>f> at
+        <math|x> we have by [definition: <reference|diff higher order partial
+        differentiation (1)>] that\ 
+
+        <\equation*>
+          x\<in\>\<frak-D\><rsub|f,<around*|[|i<rsub|1>\<ldots\>i<rsub|1>|]>><text|
+          and >D<rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|1>|]>>f=D<rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|1>|]>>f<around*|(|x|)>
+        </equation*>
+
+        so that\ 
+
+        <\equation*>
+          f<text| is >i<rsub|1><text|-partial differentiable at >x<text|>
+        </equation*>
+
+        with\ 
+
+        <\equation*>
+          D<rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|1>|]>>f=D<rsub|i<rsub|1>>f<around*|(|x|)><below|=|<text|[definition:
+          <reference|diff partial differential>]>>D<rsub|x,i<rsub|1>>f
+        </equation*>
+
+        <item*|<math|1\<less\>m>>By [definition: <reference|diff higher order
+        partial differentiation>] we have that
+
+        <\equation*>
+          \<frak-D\><rsub|f,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>=<around*|{|x\<in\>\<frak-D\><rsub|f,<around*|[|i<rsub|2>\<ldots\>i<rsub|m>|]>>\|D<rsub|<around*|[|i<rsub|2>\<ldots\>i<rsub|m>|]>>f<text|
+          is >i<rsub|1><text|-partial differentiable at >x|}>
+        </equation*>
+
+        and\ 
+
+        <\equation*>
+          D<rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f=D<rsub|i<rsub|1>><around*|(|D<rsub|<around*|[|i<rsub|2>\<ldots\>i<rsub|m>|]>>f|)>
+        </equation*>
+
+        As <math|f> has a partial differential
+        <math|D<rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f> at
+        <math|x> it follows from [definition: <reference|diff higher order
+        partial differentiation (1)>] that\ 
+
+        <\equation*>
+          x\<in\>\<frak-D\><rsub|f,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>><text|
+          and >D<rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f=D<rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f<around*|(|x|)>
+        </equation*>
+
+        so that\ 
+
+        <\equation*>
+          D<rsub|<around*|[|i<rsub|2>\<ldots\>i<rsub|m>|]>>f<text| is
+          >i<rsub|1><text|-partial differentiable at >x
+        </equation*>
+
+        with\ 
+
+        <\equation*>
+          D<rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f=D<rsub|i<rsub|1>><around*|(|D<rsub|<around*|[|i<rsub|2>\<ldots\>i<rsub|m>|]>>f|)><around*|(|x|)><below|=|<text|[definition:
+          <reference|diff partial differential>]>>D<rsub|x,i<rsub|1>><around*|(|D<rsub|<around*|[|i<rsub|2>\<ldots\>i<rsub|m>|]>>f|)>
+        </equation*>
+      </description>
+
+      <item*|<math|3\<Rightarrow\>1>>For <math|m\<in\>\<bbb-N\>> we have
+      either:\ 
+
+      <\description>
+        <item*|<math|m=1>>As <math|f> is <math|i<rsub|1>>-partial
+        differentiable at <math|x> it follows that\ 
+
+        <\equation*>
+          x\<in\><around*|{|x\<in\>A\|f<text| is >i<rsub|1><text|-partial
+          differentiable at >x|}>
+        </equation*>
+
+        which by [definition: <reference|diff higher order partial
+        differentiation>] proves that\ 
+
+        <\equation*>
+          x\<in\>\<frak-D\><rsub|f,<around*|[|i<rsub|1>\<ldots\>i<rsub|1>|]>>
+        </equation*>
+
+        so that by [definition: <reference|diff higher order partial
+        differentiation (1)>]\ 
+
+        <\equation*>
+          f<text| has a partial differential
+          >D<rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|1>|]>>f<text| at >x
+        </equation*>
+
+        <item*|<math|1\<less\>m>>As <math|D<rsub|<around*|[|i<rsub|2>\<ldots\>i<rsub|m>|]>>f>
+        is <math|i<rsub|1>>-partial differentiable at <math|x> it follows
+        that\ 
+
+        <\equation*>
+          x\<in\><around*|{|x\<in\>\<frak-D\><rsub|f,<around*|[|i<rsub|2>\<ldots\>i<rsub|1>|]>>\|D<rsub|<around*|[|i<rsub|2>\<ldots\>i<rsub|1>|]>>f<text|
+          is >i<rsub|1><text|-partial differentiable at >x|}>
+        </equation*>
+
+        which by [theorem: <reference|diff higher order partial
+        differentiation>] proves that\ 
+
+        <\equation*>
+          x\<in\>\<frak-D\><rsub|f,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>
+        </equation*>
+
+        so that by [definition: <reference|diff higher order partial
+        differentiation (1)>]\ 
+
+        <\equation*>
+          f<text| has a partial differential
+          >D<rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f<text| at >x
+        </equation*>
+      </description>
+    </description>
+  </proof>
+
+  We prove now that higher order differentiability implies higher order
+  partial differentiability. First we look at <math|1>-times
+  differentiability.
+
+  <\lemma>
+    <label|lemma 16.192.122>Let <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>>,
+    <math|<around*|{|<around*|\<langle\>|X<rsub|i>,<around*|\<\|\|\>||\<\|\|\>><rsub|i>|\<rangle\>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+    a finite family of normed spaces, <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    a normed space, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|max>|\<rangle\>>>
+    the normed space based on the product
+    <math|X=<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>
+    with the maximum norm <math|<around*|\<\|\|\>||\<\|\|\>><rsub|max>> [see
+    definition: <reference|normed maximum norm>], <math|A\<subseteq\>X>,
+    <math|x\<in\>A> and <math|f:A\<rightarrow\>Y> that is <math|1>-times
+    differentiable at <math|x> then <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
+    we have that\ 
+
+    <\equation*>
+      f<text| has a partial derivative >D<rsub|x,<around*|[|i<rsub|>\<ldots\>i|]>>f<text|
+      at >x
+    </equation*>
+
+    and\ 
+
+    <\equation*>
+      D<rsub|x,<around*|[|i\<ldots\>i|]>>f=D<rsup|<around*|[|1|]>><rsub|x>f\<circ\>I<rsup|<around*|[|i,0|]>>
+    </equation*>
+
+    further
+
+    <\equation*>
+      D<rsub|x><rsup|<around*|[|1|]>>f=<big|sum><rsub|i=1><rsup|n><around*|(|D<rsub|x,<around*|[|i\<ldots\>i|]>>f\<circ\>\<pi\><rsub|i>|)>
+    </equation*>
+  </lemma>
+
+  <\proof>
+    As <math|f> is <math|1>-times differentiable at <math|x> it follows from
+    [theorem: <reference|diff higher order differentiation (1)>] that
+    <math|f> is Fréchet differentiable at <math|x>. Hence using [theorem:
+    <reference|diff Frechet differentation implies partial differentiability
+    >] it follows that <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
+
+    <\equation*>
+      f<text| is >i<text|-partial differentiable at >x<text|>
+    </equation*>
+
+    with
+
+    <\equation*>
+      D<rsub|x,i>f=D<rsub|x>f\<circ\>I<rsup|<around*|[|i,x<text|>|]>><text|
+      and >D<rsub|x>f=<big|sum><rsub|i=1><rsup|n><around*|(|D<rsub|x,i>f\<circ\>\<pi\><rsub|i>|)>
+    </equation*>
+
+    Using then [theorems: <reference|diff higher order differentiation>,
+    <reference|diff higher order partial differentiation (2)>] that\ 
+
+    <\equation*>
+      f<text| has a partial differential >D<rsub|x,<around*|[|i\<ldots\>i|]>>f<text|
+      at >x
+    </equation*>
+
+    with\ 
+
+    <\equation*>
+      D<rsub|x,<around*|[|i\<ldots\>i|]>>f=D<rsup|<around*|[|1|]>><rsub|x>f<text|
+      and >D<rsup|<around*|[|1|]>><rsub|x>f=<big|sum><rsub|i=1><rsup|n><around*|(|D<rsub|x,<around*|[|i\<ldots\>i|]>>f\<circ\>\<pi\><rsub|i>|)>
+    </equation*>
+  </proof>
+
+  To extend the above to <math|n>-times differentiability we need a new
+  lemma.
+
+  <\lemma>
+    <label|lemma 16.195.124>Let <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>>,
+    <math|m\<in\>\<bbb-N\>>, <math|<around*|{|<around*|\<langle\>|X<rsub|i>,<around*|\<\|\|\>||\<\|\|\>><rsub|i>|\<rangle\>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+    a finite family of normed spaces, <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    a normed space, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|max>|\<rangle\>>>
+    the normed space based on the product
+    <math|X=<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>
+    with the maximum norm <math|<around*|\<\|\|\>||\<\|\|\>><rsub|max>> [see
+    definition: <reference|normed maximum norm>] and
+    <math|i\<in\><around*|{|1,\<ldots\>,n|}><rsup|m>> then there exist a\ 
+
+    <\equation*>
+      \<Phi\>\<in\>L<around*|(|L<rsub|m><around*|(|X;Y|)>,L<rsub|m><around*|(|X<rsub|i<rsub|1>>\<ldots\>X<rsub|i<rsub|m>>;Y|)>|)>
+    </equation*>
+
+    such that for every <math|L\<in\>L<rsub|m><around*|(|X;Y|)>> and
+    <math|\<forall\><around*|(|h<rsub|1>,\<ldots\>,h<rsub|m>|)>\<in\><big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,m|}>>X<rsub|i<rsub|j>>>
+
+    we have\ 
+
+    <\equation*>
+      \<Phi\><around*|(|L|)><around*|(|h<rsub|1>:\<ldots\>:h<rsub|m>|)>=L<around*|(|I<rsup|<around*|[|i<rsub|1>,0|]>><around*|(|h<rsub|1>|)>:\<ldots\>:I<rsup|<around*|[|i<rsub|m>,0|]>><around*|(|h<rsub|m>|)>|)>
+    </equation*>
+  </lemma>
+
+  <\proof>
+    \ Let <math|L\<in\>L<rsub|m><around*|(|X;Y|)>> and define
+
+    <\equation>
+      <label|eq 16.279.124>\<Psi\><rsub|L>:<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,m|}>>X<rsub|i<rsub|j>>\<rightarrow\>Y<text|
+      by >\<Psi\><rsub|L><around*|(|h<rsub|1>,\<ldots\>,h<rsub|m>|)>=L<around*|(|I<rsup|<around*|[|i<rsub|1>,0|]>><around*|(|h<rsub|1>|)>:\<ldots\>:I<rsup|<around*|[|i<rsub|m>,0|]>><around*|(|h<rsub|m>|)>|)>\<in\>Y
+    </equation>
+
+    Let <math|j\<in\><around*|{|1,\<ldots\>,m|}>> and
+
+    <\equation*>
+      <around*|(|h<rsub|1>,\<ldots\><wide*|k+\<alpha\>\<cdot\>l|\<wide-underbrace\>><rsub|j>\<ldots\>,h<rsub|m>|)>\<in\><big|prod><rsub|k\<in\><around*|{|1,\<ldots\>,m|}>>X<rsub|i<rsub|k>>
+    </equation*>
+
+    where <math|k,l\<in\>X<rsub|i<rsub|m-j+1>>> and <math|k\<in\>\<bbb-K\>>
+    then we have
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|\<Psi\><rsub|L><around*|(|h<rsub|1>,\<ldots\><wide*|k+\<alpha\>\<cdot\>l|\<wide-underbrace\>><rsub|j>\<ldots\>,h<rsub|m>|)>>|<cell|=>|<cell|>>|<row|<cell|L<around*|(|I<rsup|<around*|[|i<rsub|1>,0|]>><around*|(|h<rsub|1>|)>:\<ldots\><wide*|I<rsup|<around*|[|i<rsub|j>,0|]>><around*|(|k+\<alpha\>\<cdot\>l|)>|\<wide-underbrace\>><rsub|j>\<ldots\>:I<rsup|<around*|[|i<rsub|m>,0|]>><around*|(|h<rsub|m>|)>|)>>|<cell|\<equallim\><rsub|<text|[lemma:
+      <reference|lemma 16.24.178>]>>>|<cell|>>|<row|<cell|L<around*|(|I<rsup|<around*|[|i<rsub|1>,0|]>><around*|(|h<rsub|1>|)>:\<ldots\><wide*|I<rsup|<around*|[|i<rsub|j>,0|]>><around*|(|k|)>+\<alpha\>\<cdot\>I<rsup|<around*|[|i<rsub|j>,0|]>><around*|(|l|)>|\<wide-underbrace\>><rsub|j>\<ldots\>:I<rsup|<around*|[|i<rsub|m>,0|]>><around*|(|h<rsub|m>|)>|)>>|<cell|\<equallim\><rsub|<text|[lemma:
+      <reference|lemma 16.178.210>]>>>|<cell|>>|<row|<cell|L<around*|(|I<rsup|<around*|[|i<rsub|1>,0|]>><around*|(|h<rsub|1>|)>:\<ldots\><wide*|I<rsup|<around*|[|i<rsub|j>,0|]>><around*|(|k|)>|\<wide-underbrace\>><rsub|j>\<ldots\>:I<rsup|<around*|[|i<rsub|m>,0|]>><around*|(|h<rsub|m>|)>|)>+\<alpha\>\<cdot\>L<around*|(|I<rsup|<around*|[|i<rsub|1>,0|]>><around*|(|h<rsub|1>|)>:\<ldots\><wide*|I<rsup|<around*|[|i<rsub|j>,0|]>><around*|(|l|)>|\<wide-underbrace\>><rsub|j>\<ldots\>:I<rsup|<around*|[|i<rsub|m>,0|]>><around*|(|h<rsub|m>|)>|)>>|<cell|=>|<cell|>>|<row|<cell|\<Psi\><rsub|L><around*|(|h<rsub|1>,\<ldots\><wide*|k|\<wide-underbrace\>><rsub|j>\<ldots\>,h<rsub|m>|)>+\<alpha\>\<cdot\>\<Psi\><rsub|L><around*|(|h<rsub|1>,\<ldots\><wide*|l|\<wide-underbrace\>><rsub|j>\<ldots\>,h<rsub|m>|)>>|<cell|>|<cell|>>>>
+    </eqnarray*>
+
+    proving that\ 
+
+    <\equation>
+      <label|eq 16.280.124>\<Psi\><rsub|L>\<in\>Hom<around*|(|X<rsub|i<rsub|1>>\<ldots\>X<rsub|i<rsub|m>>;Y|)>
+    </equation>
+
+    Further if <math|<around*|(|h<rsub|1>,\<ldots\>,h<rsub|m>|)>\<in\><big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,m|}>>X<rsub|i<rsub|j>>>
+    then we have
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|\<\|\|\>|\<Psi\><rsub|L><around*|(|h<rsub|1>,\<ldots\>,h<rsub|m>|)>|\<\|\|\>><rsub|Y>>|<cell|=>|<cell|<around*|\<\|\|\>|L<around*|(|I<rsup|<around*|[|i<rsub|1>,0|]>><around*|(|h<rsub|1>|)>:\<ldots\>:I<rsup|<around*|[|i<rsub|m>,0|]>><around*|(|h<rsub|m>|)>|)>|\<\|\|\>><rsub|Y>>>|<row|<cell|>|<cell|<below|\<leqslant\><rsub|<text|>>|<text|[lemma:
+      <reference|lemma 16.179.210>]>>>|<cell|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<rsup|m><around*|(|X;Y|)>>\<cdot\><big|prod><rsub|j=1><rsup|m><around*|\<\|\|\>|I<rsup|<around*|[|i<rsub|j>,0|]>><around*|(|h<rsub|j>|)>|\<\|\|\>><rsub|i<rsub|j>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[lemma:
+      <reference|lemma 16.24.178>]>>>|<cell|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<rsup|m><around*|(|X;Y|)>>\<cdot\><big|prod><rsub|j=1><rsup|m><around*|\<\|\|\>|h<rsub|j>|\<\|\|\>><rsub|i<rsub|j>>>>>>
+    </eqnarray*>
+
+    proving by [theorems: <reference|continuity multilinear mapping (1)>,
+    <reference|continuity norm on L(X,Y)>] and [eq: <reference|eq
+    16.280.124>] that\ 
+
+    <\equation>
+      <label|eq 16.281.124>\<Psi\><rsub|L>\<in\>L<around*|(|X<rsub|i<rsub|1>>\<ldots\>X<rsub|i<rsub|m>>;Y|)><text|
+      and ><around*|\<\|\|\>|\<Psi\><rsub|L>|\<\|\|\>><rsub|L<around*|(|X<rsub|i<rsub|1>>\<ldots\>X<rsub|i<rsub|m>>;Y|)>>\<leqslant\><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<rsup|m><around*|(|X;Y|)>>
+    </equation>
+
+    Define now the function\ 
+
+    <\equation>
+      <label|eq 16.282.124>\<Psi\>:L<rsub|m><around*|(|X;Y|)>\<rightarrow\>L<around*|(|X<rsub|i<rsub|1>>\<ldots\>X<rsub|i<rsub|m>>;Y|)><text|
+      by >\<Psi\><around*|(|L|)>=\<Psi\><rsub|L>
+    </equation>
+
+    Let <math|\<alpha\>\<in\>\<bbb-K\>>, <math|L<rsub|1>,L<rsub|2>\<in\>L<rsub|m><around*|(|X;Y|)>>
+    and <math|<around*|(|h<rsub|1>,\<ldots\>,h<rsub|m>|)>\<in\><big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,m|}>>X<rsub|i<rsub|j>>>
+    then we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|(|\<Psi\><around*|(|L<rsub|1>+\<alpha\>\<cdot\>L<rsub|2>|)>|)><around*|(|h<rsub|1>:\<ldots\>h<rsub|m>|)>>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 16.282.124>]>><rsub|>>|<cell|>>|<row|<cell|\<Psi\><rsub|L<rsub|1>+\<alpha\>\<cdot\>L<rsub|2>><around*|(|h<rsub|1>:\<ldots\>:h<rsub|m>|)>>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 16.279.124>]>>>|<cell|>>|<row|<cell|<around*|(|L<rsub|1>+\<alpha\>\<cdot\>L<rsub|2>|)><around*|(|I<rsup|<around*|[|i<rsub|1>,0|]>><around*|(|h<rsub|1>|)>:\<ldots\>:I<rsup|<around*|[|i<rsub|m>,0|]>><around*|(|h<rsub|m>|)>|)>>|<cell|\<equallim\><rsub|<text|[lemma:
+      <reference|lemma 16.54.187>]>>>|<cell|>>|<row|<cell|L<rsub|1><around*|(|I<rsup|<around*|[|i<rsub|1>,0|]>><around*|(|h<rsub|1>|)>:\<ldots\>:I<rsup|<around*|[|i<rsub|m>,0|]>><around*|(|h<rsub|m>|)>|)>+\<alpha\>\<cdot\>L<rsub|2><around*|(|I<rsup|<around*|[|i<rsub|1>,0|]>><around*|(|h<rsub|1>|)>:\<ldots\>:I<rsup|<around*|[|i<rsub|m>,0|]>><around*|(|h<rsub|m>|)>|)>>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 16.279.124>]>>>|<cell|>>|<row|<cell|\<Psi\><rsub|L<rsub|1>><around*|(|h<rsub|1>:\<ldots\>:h<rsub|m>|)>+\<alpha\>\<cdot\>\<Psi\><rsub|L<rsub|2>><around*|(|h<rsub|1>:\<ldots\>:h<rsub|m>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|\<Psi\><rsub|L<rsub|1>>+\<alpha\>\<cdot\>\<Psi\><rsub|L<rsub|2>>|)><around*|(|h<rsub|1>:\<ldots\>:h<rsub|m>|)>>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 16.282.124>]>><rsub|>>|<cell|>>|<row|<cell|<around*|(|\<Psi\><around*|(|L<rsub|1>|)>+\<alpha\>\<cdot\>\<Psi\><around*|(|L<rsub|2>|)>|)><around*|(|h<rsub|1>:\<ldots\>:h<rsub|m>|)>>|<cell|>|<cell|>>>>
+    </eqnarray*>
+
+    proving by [lemma: <reference|lemma 16.180.210>] that
+
+    <\equation>
+      <label|eq 16.283.124>\<Psi\><around*|(|L<rsub|1>+\<alpha\>\<cdot\>L<rsub|2>|)>=\<Psi\><around*|(|L<rsub|1>|)>+\<alpha\>\<cdot\>\<Psi\><around*|(|L<rsub|2>|)>
+    </equation>
+
+    Using [theorem: <reference|diff linear to multilinear (1)>] we can define
+    the function
+
+    <\equation>
+      <label|eq 16.284.124>\<Phi\>:L<rsub|m><rsup|><around*|(|X;Y|)>\<rightarrow\>L<rsub|m><around*|(|X<rsub|i<rsub|1>>\<ldots\>X<rsub|i<rsub|m>>;Y|)><text|
+      by >\<Phi\>=<around*|(|\<cal-I\><rsub|X<rsub|i<rsub|1>>\<ldots\>X<rsub|i<rsub|m>>,Y>|)><rsup|-1>\<circ\>\<Psi\>
+    </equation>
+
+    then we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|\<Phi\><around*|(|L<rsub|1>+\<alpha\>\<cdot\>L<rsub|2>|)>>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 16.284.124>]>>>|<cell|<around*|(|<around*|(|\<cal-I\><rsub|X<rsub|i<rsub|1>>\<ldots\>X<rsub|i<rsub|m>>,Y>|)><rsup|-1>\<circ\>\<Psi\>|)><around*|(|L<rsub|1>+\<alpha\>\<cdot\>L<rsub|2>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|\<cal-I\><rsub|X<rsub|i<rsub|1>>\<ldots\>X<rsub|i<rsub|m>>,Y>|)><rsup|-1><around*|(|\<Psi\><around*|(|L<rsub|1>+\<alpha\>\<cdot\>L<rsub|2>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 16.283.124>]>>>|<cell|<around*|(|\<cal-I\><rsub|X<rsub|i<rsub|1>>\<ldots\>X<rsub|i<rsub|m>>,Y>|)><rsup|-1><around*|(|\<Psi\><around*|(|L<rsub|1>|)>+\<alpha\>\<cdot\>\<Psi\><around*|(|L<rsub|2>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|diff linear to multilinear
+      (1)>]>>>|<cell|<around*|(|\<cal-I\><rsub|X<rsub|i<rsub|1>>\<ldots\>X<rsub|i<rsub|m>>,Y>|)><rsup|-1><around*|(|\<Psi\><around*|(|L<rsub|1>|)>|)>+\<alpha\>\<cdot\><around*|(|\<cal-I\><rsub|X<rsub|i<rsub|1>>\<ldots\>X<rsub|i<rsub|m>>,Y>|)><rsup|-1><around*|(|\<Psi\><around*|(|L<rsub|2>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<around*|(|\<cal-I\><rsub|X<rsub|i<rsub|1>>\<ldots\>X<rsub|i<rsub|m>>,Y>|)><rsup|-1>\<circ\>\<Psi\>|)><around*|(|L<rsub|1>|)>+\<alpha\>\<cdot\><around*|(|<around*|(|\<cal-I\><rsub|X<rsub|i<rsub|1>>\<ldots\>X<rsub|i<rsub|m>>,Y>|)><rsup|-1>\<circ\>\<Psi\>|)><around*|(|L<rsub|2>|)>>>|<row|<cell|>|<cell|=>|<cell|\<Phi\><around*|(|L<rsub|1>|)>+\<alpha\>\<cdot\>\<Phi\><around*|(|L<rsub|2>|)>>>>>
+    </eqnarray*>
+
+    proving that\ 
+
+    <\equation>
+      <label|eq 16.285.124>\<Phi\>\<in\>Hom<around*|(|L<rsub|m><around*|(|X;Y|)>,L<rsub|m><around*|(|X<rsub|i<rsub|1>>\<ldots\>X<rsub|i<rsub|m>>;Y|)>|)>
+    </equation>
+
+    If <math|L\<in\>L<rsub|m><around*|(|X;Y|)>> then\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|\<\|\|\>|\<Phi\><around*|(|L|)>|\<\|\|\>><rsub|L<rsub|m><around*|(|X<rsub|i<rsub|1>>:\<ldots\>:X<rsub|i<rsub|m>>;Y|)>>>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 16.284.124>]>>>|<cell|<around*|\<\|\|\>|<around*|(|<around*|(|\<cal-I\><rsub|X<rsub|i<rsub|1>>\<ldots\>X<rsub|i<rsub|m>>,Y>|)><rsup|-1>\<circ\>\<Psi\>|)><around*|(|L|)>|\<\|\|\>><rsub|L<rsub|m><around*|(|X<rsub|i<rsub|1>>:\<ldots\>:X<rsub|i<rsub|m>>;Y|)>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|<around*|(|\<cal-I\><rsub|X<rsub|i<rsub|1>>\<ldots\>X<rsub|i<rsub|m>>,Y>|)><rsup|-1><around*|(|\<Psi\><around*|(|L|)>|)>|\<\|\|\>><rsub|L<rsub|m><around*|(|X<rsub|i<rsub|1>>:\<ldots\>:X<rsub|i<rsub|m>>;Y|)>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|diff linear to multilinear
+      (1)>]>>>|<cell|<around*|\<\|\|\>|\<Psi\><around*|(|L|)>|\<\|\|\>><rsub|L<around*|(|X<rsub|i<rsub|1>>\<ldots\>X<rsub|i<rsub|m>>;Y|)>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 16.282.124>]>>>|<cell|<around*|\<\|\|\>|\<Psi\><rsub|L>|\<\|\|\>><rsub|L<around*|(|X<rsub|i<rsub|1>>\<ldots\>X<rsub|i<rsub|m>>;Y|)>>>>|<row|<cell|>|<cell|<below|\<leqslant\>|<text|[eq:
+      <reference|eq 16.281.124>]>><rsub|>>|<cell|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<rsup|m><around*|(|X;Y|)>>>>>>
+    </eqnarray*>
+
+    proving by [theorem: <reference|continuity linear mapping (1)>] together
+    with [eq: <reference|eq 16.285.124>] that
+
+    <\equation>
+      <label|eq 16.286.124>\<Phi\>\<in\>L<around*|(|L<rsub|m><around*|(|X;Y|)>,L<rsub|m><around*|(|X<rsub|i<rsub|1>>\<ldots\>X<rsub|i<rsub|m>>;Y|)>|)>
+    </equation>
+
+    Finally if <math|L\<in\>L<rsub|m><around*|(|X;Y|)>> and
+    <math|<around*|(|h<rsub|1>,\<ldots\>,h<rsub|m>|)>\<in\><big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,m|}>>X<rsub|i<rsub|j>>>
+    then we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|\<Phi\><around*|(|L|)><around*|(|h<rsub|1>:\<ldots\>:h<rsub|m>|)>>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 16.284.124>]>>>|<cell|<around*|(|<around*|(|<around*|(|\<cal-I\><rsub|X<rsub|i<rsub|1>>\<ldots\>X<rsub|i<rsub|m>>,Y>|)><rsup|-1>\<circ\>\<Psi\>|)><around*|(|L|)>|)><around*|(|h<rsub|1>:\<ldots\>:h<rsub|m>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<around*|(|\<cal-I\><rsub|X<rsub|i<rsub|1>>\<ldots\>X<rsub|i<rsub|m>>,Y>|)><rsup|-1>\<Psi\><around*|(|L|)>|)><around*|(|h<rsub|1>:\<ldots\>:h<rsub|m>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|diff linear to multilinear
+      (1)>]>>>|<cell|\<Psi\><around*|(|L|)><around*|(|h<rsub|1>,\<ldots\>,h<rsub|m>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 16.282.124>]>>>|<cell|\<Psi\><rsub|L><around*|(|h<rsub|1>,\<ldots\>,h<rsub|m>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|<math|<around*|[|eq:<reference|eq
+      16.279.124>|]>>>>>|<cell|L<around*|(|I<rsup|<around*|[|i<rsub|1>,0|]>><around*|(|h<rsub|1>|)>:\<ldots\>:I<rsup|<around*|[|i<rsub|m>,0|]>><around*|(|m|)>|)>>>>>
+    </eqnarray*>
+
+    proving\ 
+
+    <\equation*>
+      \<Phi\><around*|(|L|)><around*|(|h<rsub|1>:\<ldots\>:h<rsub|m>|)>=L<around*|(|I<rsup|<around*|[|i<rsub|1>,0|]>><around*|(|h<rsub|1>|)>:\<ldots\>:I<rsup|<around*|[|i<rsub|m>,0|]>><around*|(|m|)>|)>
+    </equation*>
+  </proof>
+
+  We are now ready to prove <math|m>-times partial differentiability of
+  <math|f> at <math|x> implies that <math|f> has partial differentials
+  <math|D<rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f> for every
+  <math|i\<in\><around*|{|1,\<ldots\>,n|}><rsup|m>>.
+
+  \ 
+
+  <\theorem>
+    <label|diff higher order differation implies higher order partial
+    differation>Let <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>>,
+    <math|m\<in\>\<bbb-N\>>, <math|<around*|{|<around*|\<langle\>|X<rsub|i>,<around*|\<\|\|\>||\<\|\|\>><rsub|i>|\<rangle\>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+    a finite family of normed spaces, <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    a normed space, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|max>|\<rangle\>>>
+    the normed space based on the product
+    <math|X=<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>
+    with the maximum norm <math|<around*|\<\|\|\>||\<\|\|\>><rsub|max>> [see
+    definition: <reference|normed maximum norm>], <math|A\<subseteq\>X>,
+    <math|x\<in\>X> and <math|f:A\<rightarrow\>Y> a function that is
+    <math|m>-times differentiable at <math|x> then
+    <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><rsup|m>> <math|f> has
+    a partial differential <math|D<rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f>.
+    Further <math|\<forall\><around*|(|h<rsub|1>,\<ldots\>,h<rsub|n>|)>\<in\><big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,m|}>>X<rsub|i<rsub|j>><rsub|>>
+    we have\ 
+
+    <\equation*>
+      D<rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f<around*|(|h<rsub|1>:\<ldots\>:h<rsub|m>|)>=D<rsup|<around*|[|m|]>><rsub|x>f<around*|(|I<rsup|<around*|[|i<rsub|1>,0|]>><around*|(|h<rsub|1>|)>:\<ldots\>:I<rsup|<around*|[|i<rsub|m>,0|]>><around*|(|h<rsub|m>|)>|)>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    We prove this by induction, so let\ 
+
+    <\equation*>
+      S=<around*|{|m\<in\>\<bbb-N\>\|If A\<subseteq\>X<text| and
+      >f:A\<rightarrow\>Y<text| is a function that is >m<text|-times
+      differentiable at >x\<in\>A<text| then
+      >\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><rsup|m><text| >f<text|
+      has a partial differential >D<rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>><text|
+      at >x<text| and >\<forall\><around*|(|h<rsub|1>,\<ldots\>,h<rsub|m>|)>\<in\><big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,m|}>>X<rsub|i<rsub|j>><text|
+      we have >D<rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f<around*|(|h<rsub|1>:\<ldots\>:h<rsub|m>|)>=D<rsup|<around*|[|m|]>><rsub|x>f<around*|(|I<rsup|<around*|[|i<rsub|1>,0|]>><around*|(|h<rsub|1>|)>:\<ldots\>:f<around*|(|I<rsup|<around*|[|i<rsub|m>,0|]>><around*|(|h<rsub|m>|)>|)>|)>|}>
+    </equation*>
+
+    then we have:\ 
+
+    <\description>
+      <item*|<math|1\<in\>S>>If <math|f> is <math|1>-times differentiable at
+      <math|x> then by [lemma: <reference|lemma 16.192.122>] we have
+      <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><rsup|1>> that\ 
+
+      <\equation*>
+        D<rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|1>|]>>f<text| exist>
+      </equation*>
+
+      and
+
+      <\equation*>
+        D<rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|1>|]>>f=D<rsup|<around*|[|1|]>><rsub|x>\<circ\>I<rsup|<around*|[|i<rsub|1>,0|]>>
+      </equation*>
+
+      So <math|\<forall\>h\<in\><big|prod><rsub|j\<in\><around*|{|1|}>>X<rsub|i<rsub|j>>>
+      we have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|D<rsup|<around*|[|1|]>><rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|1>|]>>f<around*|(|h<rsub|1>:\<ldots\>:h<rsub|1>|)>>|<cell|=>|<cell|D<rsup|<around*|[|1|]>><rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|1>|]>>f<around*|(|h<rsub|1>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|D<rsup|<around*|[|1|]>><rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|1>|]>>\<circ\>I<rsup|<around*|[|i<rsub|1>,0|]>>|)><around*|(|h<rsub|1>|)>>>|<row|<cell|>|<cell|=>|<cell|D<rsup|<around*|[|1|]>><rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|1>|]>><around*|(|I<rsup|<around*|[|i<rsub|1>,0|]>><around*|(|h<rsub|1>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|D<rsup|<around*|[|1|]>><rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|1>|]>><around*|(|I<rsup|<around*|[|i<rsub|1>,0|]>><around*|(|h<rsub|1>|)>:\<ldots\>:I<rsup|<around*|[|i<rsub|1>,0|]>><around*|(|h<rsub|1>|)>|)>>>>>
+      </eqnarray*>
+
+      which proves that\ 
+
+      <\equation*>
+        1\<in\>S
+      </equation*>
+
+      <item*|<math|m\<in\>S\<Rightarrow\>m+1\<in\>S>>As <math|f> is
+      <math|<around*|(|m+1|)>>-times differentiable at <math|x> it follows
+      from [theorem: <reference|diff higher order partial differentiation
+      (2)>] that\ 
+
+      <\equation*>
+        D<rsup|<around*|[|m|]>><rsub|<around*|[|i<rsub|2>\<ldots\>i<rsub|m>|]>>f<text|
+        has a >i<rsub|1><text|-partial differential at >x
+      </equation*>
+    </description>
+
+    \;
+  </proof>
+
+  \;
 
   \;
 
@@ -17669,6 +18470,8 @@
     <associate|diff higher order derivative function|<tuple|16.153|?>>
     <associate|diff higher order derivative function domain|<tuple|16.154|?>>
     <associate|diff higher order derivative on a set|<tuple|16.156|?>>
+    <associate|diff higher order differation implies higher order partial
+    differation|<tuple|16.258|?>>
     <associate|diff higher order differential|<tuple|16.123|?>>
     <associate|diff higher order differential domains|<tuple|16.129|?>>
     <associate|diff higher order differential is linear|<tuple|16.167|?>>
@@ -17696,11 +18499,15 @@
     <associate|diff higher order partial differentiation
     (1)|<tuple|16.249|?>>
     <associate|diff higher order partial differentiation
-    (2)|<tuple|16.250|?>>
+    (2)|<tuple|16.255|?>>
     <associate|diff higher order partial differentiation
     (domain)|<tuple|16.248|?>>
     <associate|diff higher order partial differentiation
-    list|<tuple|16.247|?>>
+    n,m|<tuple|16.254|?>>
+    <associate|diff higher order partial differentiation on open
+    domain|<tuple|16.252|?>>
+    <associate|diff higher order partial differentiation on open
+    set|<tuple|16.251|?>>
     <associate|diff identity function is differentiable|<tuple|16.52|?>>
     <associate|diff identity function is infinite times
     differentiable|<tuple|16.170|?>>
@@ -17974,7 +18781,15 @@
     <associate|eq 16.27.4|<tuple|16.34|?>>
     <associate|eq 16.272.12|<tuple|16.216|?>>
     <associate|eq 16.273.12|<tuple|16.217|?>>
+    <associate|eq 16.279.124|<tuple|16.284|?>>
     <associate|eq 16.28.4|<tuple|16.35|?>>
+    <associate|eq 16.280.124|<tuple|16.285|?>>
+    <associate|eq 16.281.124|<tuple|16.286|?>>
+    <associate|eq 16.282.124|<tuple|16.287|?>>
+    <associate|eq 16.283.124|<tuple|16.288|?>>
+    <associate|eq 16.284.124|<tuple|16.289|?>>
+    <associate|eq 16.285.124|<tuple|16.290|?>>
+    <associate|eq 16.286.124|<tuple|16.291|?>>
     <associate|eq 16.29.4|<tuple|16.36|?>>
     <associate|eq 16.3.177|<tuple|16.19|?>>
     <associate|eq 16.3.2|<tuple|16.3|?>>
@@ -18058,6 +18873,8 @@
     <associate|lemma 16.181.210|<tuple|16.243|?>>
     <associate|lemma 16.182.210|<tuple|16.244|?>>
     <associate|lemma 16.19.2|<tuple|16.19|?>>
+    <associate|lemma 16.192.122|<tuple|16.256|?>>
+    <associate|lemma 16.195.124|<tuple|16.257|?>>
     <associate|lemma 16.24.178|<tuple|16.70|?>>
     <associate|lemma 16.37.4|<tuple|16.45|?>>
     <associate|lemma 16.51.186|<tuple|16.111|?>>
