@@ -3958,6 +3958,21 @@
       <math|x<rsub|i>\<in\><around*|(|<around*|(|I<rsup|<around*|[|i,x|]>>|)><rsup|-1><around*|(|A|)>|)><rsup|\<circ\>>>.
       \ 
     </note>
+
+    <\remark>
+      Instead of saying\ 
+
+      <\equation*>
+        f<text| is >i<text|-partial differentiable at >x<text| with
+        >i<text|-partial differential >D<rsub|x,i>f
+      </equation*>
+
+      we use sometimes the shorter form
+
+      <\equation*>
+        D<rsub|x,i>f<text| exists>
+      </equation*>
+    </remark>
   </definition>
 
   Just as we have introduced the derivative of a function and the
@@ -18844,7 +18859,7 @@
     such that <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
 
     <\equation*>
-      <text|>\<frak-D\><rsub|i,f>=U
+      <text|>U=\<frak-D\><rsub|i,f>
     </equation*>
 
     and
@@ -19083,7 +19098,7 @@
     a function such that <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
 
     <\equation*>
-      <text|>\<frak-D\><rsub|i,f>=U
+      <text|>U=\<frak-D\><rsub|i,f><text|>
     </equation*>
 
     and
@@ -19112,23 +19127,6 @@
       D f<around*|(|x|)>=<big|sum><rsub|i=1><rsup|n><around*|(|D<rsub|i>f<around*|(|x|)>\<circ\>\<pi\><rsub|i>|)>
     </equation*>
   </theorem>
-
-  <\note>
-    Here <math|\<frak-D\><rsub|i,f>> and <math|D<rsub|i>f> are defined in
-    \ [definition: 16.75] to be\ 
-
-    <\equation*>
-      \<frak-D\><rsub|i,f>=<around*|{|y\<in\>U\|f<text| has a
-      >i<text|-partial differential at >y|}>
-    </equation*>
-
-    and\ 
-
-    <\equation*>
-      D<rsub|i>f:\<frak-D\><rsub|i,f>\<rightarrow\>L<around*|(|X<rsub|i>,Y|)><text|
-      where >D<rsub|i>f<around*|(|x|)>=D<rsub|x,i>f<rsub|>
-    </equation*>
-  </note>
 
   <\render-proof|Proof>
     By the hypothesis we have that\ 
@@ -19713,6 +19711,904 @@
     </equation*>
   </proof>
 
+  <\lemma>
+    <label|lemma 16.314.320>Let <math|n\<in\>\<bbb-N\>>,
+    <math|<around*|{|<around*|\<langle\>|X<rsub|i>,<around*|\<\|\|\>||\<\|\|\>><rsub|i>|\<rangle\>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+    a finite family of normed spaces, <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    a normed space, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|n>|\<rangle\>>>
+    be the normed space where <math|X=<big|prod><rsub|i=1><rsup|n>X<rsub|i>>
+    and <math|<around*|\<\|\|\>||\<\|\|\>><rsub|max>> is the maximum norm on
+    <math|X>, <math|m\<in\>\<bbb-N\>>, <math|i\<in\><around*|{|1,\<ldots\>,n|}><rsup|m>>
+    then we have for\ 
+
+    <\equation*>
+      \<pi\><rsup|<around*|[|i<rsub|1>,\<ldots\>,i<rsub|k>|]>>:L<rsub|m><around*|(|X<rsub|i<rsub|1>>:\<ldots\>:X<rsub|i<rsub|m>>;Y|)>\<rightarrow\>L<rsub|m><around*|(|X;Y<rsub|m>|)>
+      <around*|[|see lemma:<reference|lemma 16.313.310>|]>
+    </equation*>
+
+    that\ 
+
+    <\equation*>
+      \<pi\><rsup|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>\<in\>L<around*|(|L<rsub|m><around*|(|X<rsub|i<rsub|1>>:\<ldots\>:X<rsub|i<rsub|m>>;Y|)>,L<rsub|m><around*|(|X;Y<rsub|m>|)>|)>
+    </equation*>
+
+    with\ 
+
+    <\equation*>
+      <around*|\<\|\|\>|\<pi\><rsup|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>|\<\|\|\>><rsub|L<around*|(|L<rsub|m><around*|(|X<rsub|i<rsub|1>>:\<ldots\>:X<rsub|i<rsub|m>>;Y|)>,L<rsub|m><around*|(|X;Y<rsub|m>|)>|)>><rsub|>\<leqslant\>1
+    </equation*>
+  </lemma>
+
+  <\proof>
+    Let <math|L,K\<in\>L<rsub|m><around*|(|X<rsub|i<rsub|1>>:\<ldots\>:X<rsub|i<rsub|m>>;Y|)>>,
+    <math|\<alpha\>\<in\>\<bbb-K\>> then we have for every
+    <math|y\<in\>X<rsup|m>> that\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|(|\<pi\><rsup|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>><around*|(|L+\<alpha\>\<cdot\>K|)>|)><around*|(|y<rsub|1>:\<ldots\>:y<rsub|2>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|L+\<alpha\>\<cdot\>K|)><around*|(|\<pi\><rsub|i<rsub|1>><around*|(|y<rsub|1>|)>:\<ldots\>:\<pi\><rsub|i<rsub|m>><around*|(|y<rsub|m>|)>|)>>|<cell|<below|=|<text|[theorem:
+      <reference|lemma 16.177.211>]>>>|<cell|>>|<row|<cell|L<around*|(|\<pi\><rsub|i<rsub|1>><around*|(|y<rsub|1>|)>:\<ldots\>:\<pi\><rsub|i<rsub|m>><around*|(|y<rsub|m>|)>|)>+\<alpha\>\<cdot\>K<around*|(|\<pi\><rsub|i<rsub|1>><around*|(|y<rsub|1>|)>:\<ldots\>:\<pi\><rsub|i<rsub|m>><around*|(|y<rsub|m>|)>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|\<pi\><rsup|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>><around*|(|L|)>|)><around*|(|y<rsub|1>,\<ldots\>,y<rsub|m>|)>+\<alpha\>\<cdot\><around*|(|\<pi\><rsup|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>><around*|(|K|)>|)><around*|(|y<rsub|1>,\<ldots\>,y<rsub|m>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|\<pi\><rsup|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>><around*|(|L|)>+\<alpha\>\<cdot\>\<pi\><rsup|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>><around*|(|K|)>|)><around*|(|y<rsub|1>\<ldots\>y<rsub|m>|)>>|<cell|>|<cell|>>>>
+    </eqnarray*>
+
+    which proves by [lemma: <reference|lemma 16.180.210>] that\ 
+
+    <\equation*>
+      \<pi\><rsup|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>><around*|(|L+\<alpha\>\<cdot\>K|)>=\<pi\><rsup|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>><around*|(|L|)>+\<alpha\>\<cdot\>\<pi\><rsup|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>><around*|(|K|)>
+    </equation*>
+
+    which proves that\ 
+
+    <\equation*>
+      \<pi\><rsup|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>\<in\>Hom<around*|(|L<rsub|m><around*|(|X<rsub|i<rsub|1>>:\<ldots\>:X<rsub|i<rsub|m>>;Y|)>,L<rsub|m><around*|(|X;Y|)>|)>
+    </equation*>
+
+    Further we have for <math|L\<in\>L<rsub|m><around*|(|X<rsub|i<rsub|1>>:\<ldots\>:X<rsub|i<rsub|m>>;Y|)>>
+    that
+
+    <\equation*>
+      <around*|\<\|\|\>|\<pi\><rsup|<around*|[|i<rsub|1>,\<ldots\>,i<rsub|m>|]>><around*|(|L|)>|\<\|\|\>><rsub|L<rsub|m><around*|(|X;Y|)>><below|\<leqslant\>|<text|<math|<around*|[|lemma:<reference|lemma
+      16.313.310>|]>>>><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<rsub|m><around*|(|X<rsub|1>,\<ldots\>,X<rsub|m>;Y|)>>
+    </equation*>
+
+    which by [theorem: <reference|continuity linear mapping (1)>] proves that\ 
+
+    <\equation*>
+      \<pi\><rsup|<around*|[|i<rsub|1>,\<ldots\>i<rsub|m>|]>>\<in\>L<around*|(|L<rsub|m><around*|(|X<rsub|i<rsub|1>>:\<ldots\>:X<rsub|i<rsub|m>>;Y|)>,L<rsub|m><around*|(|X<rsub|m>;Y<rsub|m>|)>|)>
+    </equation*>
+
+    and by [theorem: <reference|continuity norm on L(X,Y)>] that\ 
+
+    <\equation*>
+      <around*|\<\|\|\>|\<pi\><rsup|<around*|[|i<rsub|1>,\<ldots\>,i<rsub|m>|]>>|\<\|\|\>><rsub|L<around*|(|L<rsub|m><around*|(|X<rsub|i<rsub|1>>\<ldots\>X<rsub|i<rsub|m>>;Y|)>|)>>\<leqslant\>1
+    </equation*>
+  </proof>
+
+  <\lemma>
+    <label|lemma 16.315.320>Let <math|n\<in\>\<bbb-N\>>,
+    <math|<around*|{|<around*|\<langle\>|X<rsub|i>,<around*|\<\|\|\>||\<\|\|\>><rsub|i>|\<rangle\>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+    a finite family of normed spaces, <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    a normed space, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|n>|\<rangle\>>>
+    be the normed space where <math|X=<big|prod><rsub|i=1><rsup|n>X<rsub|i>>
+    and <math|<around*|\<\|\|\>||\<\|\|\>><rsub|max>> is the maximum norm on
+    <math|X> then we have
+
+    <\enumerate>
+      <item>If <math|i\<in\><around*|{|1,\<ldots\>,n|}><rsup|1>> and
+      <math|L\<in\>L<rsub|1><around*|(|X<rsub|i<rsub|1>>\<ldots\>X<rsub|i<rsub|1>>;Y|)>>
+      then <math|\<pi\><rsup|<around*|[|i<rsub|1>\<ldots\>i<rsub|1>|]>><around*|(|L|)>=L\<circ\>\<pi\><rsub|i<rsub|1>>>
+
+      <item>If <math|k\<in\><around*|{|1,\<ldots\>,n|}>>,
+      <math|i\<in\><around*|{|1,\<ldots\>,n|}><rsup|m>> and
+      <math|L\<in\>L<rsub|m+1><around*|(|X<rsub|k>,X<rsub|i<rsub|1>>\<ldots\>X<rsub|i<rsub|m>>;Y|)>>
+      then\ 
+
+      <\equation*>
+        \<forall\>x\<in\>X<text| we have ><around*|(|\<pi\><rsup|<around*|[|k,i<rsub|1>\<ldots\>i<rsub|m>|]>><around*|(|L|)>|)><around*|(|x|)>=\<pi\><rsup|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>><around*|(|L<around*|(|\<pi\><rsub|k><around*|(|x|)>|)>|)>
+      </equation*>
+    </enumerate>
+  </lemma>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>Let <math|x\<in\>X> then <math|\<pi\><rsup|<around*|[|i<rsub|1>\<ldots\>i<rsub|1>|]>><around*|(|L|)><around*|(|x|)>=L<around*|(|\<pi\><rsub|i<rsub|1>><around*|(|x|)>|)>=<around*|(|L\<circ\>\<pi\><rsub|i>|)><around*|(|x|)>>
+      so that <math|\<pi\><rsup|<around*|[|i<rsub|1>\<ldots\>i<rsub|1>|]>><around*|(|L|)>=L\<circ\>\<pi\><rsub|i<rsub|1>>>.
+
+      <item>Let <math|x\<in\>X> then \ we have, as
+      <math|L\<in\>L<rsub|m+1><around*|(|X<rsub|k>,X<rsub|i<rsub|1>>\<ldots\>,X<rsub|i<rsub|m>>|)>=L<around*|(|X<rsub|k>,L<rsub|m><around*|(|X<rsub|i<rsub|1>>,\<ldots\>,X<rsub|i<rsub|m>>;Y|)>|)>>,
+      that
+
+      <\equation>
+        <label|eq 16.346.18>L<around*|(|\<pi\><rsub|k><around*|(|x|)>|)>\<in\>L<rsub|m><around*|(|X<rsub|i<rsub|1>>,\<ldots\>,X<rsub|i<rsub|m>>;Y|)>
+      </equation>
+
+      Hence for every <math|y\<in\>X<rsup|m>> we<space|1em>have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|<around*|(|<around*|(|\<pi\><rsup|<around*|[|k,i<rsub|1>\<ldots\>i<rsub|m>|]>><around*|(|L|)>|)>|)><around*|(|x|)>|)><around*|(|y<rsub|1>:\<ldots\>:y<rsub|m>|)>>|<cell|<below|=|def>>|<cell|<around*|(|\<pi\><rsup|<around*|[|k,i<rsub|1>\<ldots\>i<rsub|m>|]>><around*|(|L|)>|)><around*|(|x:y<rsub|1>\<ldots\>y<rsub|m>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|\<pi\><rsub|k><around*|(|x|)>:\<pi\><rsub|1><around*|(|y<rsub|1>|)>:\<ldots\>:\<pi\><rsub|m><around*|(|y<rsub|m>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|\<pi\><rsub|k><around*|(|x|)>|)><around*|(|\<pi\><rsub|1><around*|(|y<rsub|1>|)>:\<ldots\>:\<pi\><rsub|m><around*|(|y<rsub|m>|)>|)>>>|<row|<cell|>|<cell|<below|=|<text|[eq:
+        <reference|eq 16.346.18>]>>>|<cell|<around*|(|\<pi\><rsup|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>><around*|(|L<around*|(|\<pi\><rsub|k><around*|(|x|)>|)>|)>|)><around*|(|y<rsub|1>:\<ldots\>:y<rsub|m>|)>>>>>
+      </eqnarray*>
+
+      so using [lemma: <reference|lemma 16.180.210>] we have\ 
+
+      <\equation*>
+        <around*|(|<around*|(|\<pi\><rsup|<around*|[|k,i<rsub|1>\<ldots\>i<rsub|m>|]>><around*|(|L|)>|)>|)><around*|(|x|)>=<around*|(|\<pi\><rsup|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>|)><around*|(|L<around*|(|\<pi\><rsub|k><around*|(|x|)>|)>|)>
+      </equation*>
+    </enumerate>
+  </proof>
+
+  <\lemma>
+    <label|lemma 16.316.320>Let <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>>,
+    <math|m\<in\>\<bbb-N\>>, <math|<around*|{|<around*|\<langle\>|X<rsub|i>,<around*|\<\|\|\>||\<\|\|\>><rsub|i>|\<rangle\>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+    a finite family of normed spaces, <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    a normed space, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|max>|\<rangle\>>>
+    the normed space based on the product
+    <math|X=<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>
+    with the maximum norm <math|<around*|\<\|\|\>||\<\|\|\>><rsub|max>>,
+    <math|U> a open set in <math|X>, <math|x\<in\>U>,
+    <math|i\<in\><around*|{|1,\<ldots\>,n|}><rsup|m>>,
+    <math|k\<in\><around*|{|1,\<ldots\>,n|}>> and
+
+    <\equation*>
+      f:U\<rightarrow\>L<rsub|m><around*|(|X<rsub|i<rsub|1>><rsub|>\<ldots\>X<rsub|i<rsub|m>>;Y|)>
+    </equation*>
+
+    a function such that is <math|k>-partial differentiable at <math|x>. Then
+    we have for the following function\ 
+
+    <\equation*>
+      g:U\<rightarrow\>L<rsub|m><around*|(|<wide*|X\<ldots\>X|\<wide-underbrace\>><rsub|m>;Y|)>=L<rsub|m><around*|(|X;Y|)><text|
+      defined by >g<around*|(|x|)>=\<pi\><rsup|<around*|[|i<rsub|1>,\<ldots\>,i<rsub|m>|]>><around*|(|f<around*|(|x|)>|)>
+    </equation*>
+
+    that <math|g> is <math|k>-partial differentiable at <math|x> where
+    <math|D<rsub|x,k>f> is defined by<math|>
+
+    <\equation*>
+      D<rsub|x,k>g:X<rsub|k>\<rightarrow\>L<rsub|m><around*|(|X;Y|)><text|
+      where >D<rsub|x,k>g<around*|(|h|)>=\<pi\><rsup|<around*|[|i<rsub|1>,\<ldots\>,i<rsub|m>|]>><around*|(|D<rsub|x,k>f<around*|(|h|)>|)>
+    </equation*>
+
+    Further if instead of the condition that <math|f> is <math|k>-partial
+    differentiable at <math|x> we have the stronger condition that
+
+    <\equation*>
+      U=\<frak-D\><rsub|k,f><below|=|def><around*|{|y\<in\>U\|f<text| is
+      >k<text|-partial differentiable at >y|}>
+    </equation*>
+
+    \ and\ 
+
+    <\equation*>
+      D<rsub|k>f:\<frak-D\><rsub|k,f>=U\<rightarrow\>L<around*|(|X<rsub|k>,L<rsub|m><around*|(|X<rsub|i<rsub|1>>\<ldots\>X<rsub|i<rsub|m>>;Y|)>|)><below|=|def>L<rsub|m+1><around*|(|X<rsub|k>,X<rsub|i<rsub|1>>\<ldots\>X<rsub|i<rsub|m>>;Y|)><text|
+      where >D<rsub|k>f<around*|(|y|)>=D<rsub|x,k>f
+    </equation*>
+
+    is <with|font-series|bold|continuous> then\ 
+
+    <\equation*>
+      \<frak-D\><rsub|k,g><below|=|def><around*|{|y\<in\>U\|g<text| is
+      >k<text|-partial differentiable at >y|}>=U<rsub|>
+    </equation*>
+
+    and
+
+    <\equation*>
+      D<rsub|k>g:\<frak-D\><rsub|k,g>=U\<rightarrow\>L<around*|(|X<rsub|k>,L<rsub|m><around*|(|X;Y|)>|)><text|
+      defined by >D<rsub|k>g<around*|(|x|)>=D<rsub|x,g>g<text| is
+      <with|font-series|bold|continuous>>
+    </equation*>
+
+    <\note>
+      By definition we have for <math|x\<in\>U>
+
+      <\equation*>
+        D<rsub|x,k>f\<in\>L<around*|(|X<rsub|k>,L<rsub|m><around*|(|X<rsub|i<rsub|1>>\<ldots\>X<rsub|i<rsub|m>>;Y|)>|)>=L<rsub|m+1><around*|(|X<rsub|k>,X<rsub|i<rsub|1>>\<ldots\>X<rsub|m>;Y|)>
+      </equation*>
+
+      so that for <math|h\<in\>X<rsub|k>>
+
+      <\equation*>
+        D<rsub|x,k>f<around*|(|h|)>\<in\>L<rsub|m><around*|(|X<rsub|i<rsub|1>>\<ldots\>X<rsub|i<rsub|m>>;Y|)>
+      </equation*>
+
+      from which it follows that\ 
+
+      <\equation*>
+        \<pi\><rsup|<around*|[|i<rsub|1>,\<ldots\>,i<rsub|m>|]>><around*|(|D<rsub|x,k>f<around*|(|h|)>|)>\<in\>L<rsub|m><around*|(|X;Y|)>
+      </equation*>
+
+      Further <math|D<rsub|x,k>g\<in\>L<around*|(|X<rsub|k>,L<rsub|m><around*|(|X;Y|)>|)>>
+      so that\ 
+
+      <\equation*>
+        D<rsub|x,k>g<around*|(|h|)>\<in\>L<rsub|m><around*|(|X;Y|)>
+      </equation*>
+
+      which prove that the types check out for the equation
+
+      <\equation*>
+        D<rsub|x,k>g<around*|(|h|)>=\<pi\><rsup|<around*|[|i<rsub|1>,\<ldots\>,i<rsub|m>|]>><around*|(|D<rsub|x,k>f<around*|(|h|)>|)>
+      </equation*>
+    </note>
+  </lemma>
+
+  <\proof>
+    Let <math|x\<in\>\<frak-D\><rsub|k,f>> or equivalently <math|f> is
+    <math|k>-partial differentiable at <math|x>. First we prove that the
+    function defined by
+
+    <\equation*>
+      L:X<rsub|k>\<rightarrow\>L<rsub|m><around*|(|X;Y|)><text| where
+      >D<rsub|x,g><around*|(|h|)>=\<pi\><rsup|<around*|[|i<rsub|1>,\<ldots\>,i<rsub|m>|]>><around*|(|D<rsub|x,k>f<around*|(|h|)>|)>
+    </equation*>
+
+    is a element of <math|L<around*|(|X<rsub|k>,L<rsub|m><around*|(|X;Y|)>|)>>.
+    Let <math|h,l\<in\>X<rsub|k>> and <math|\<alpha\>\<in\>\<bbb-K\>> then we
+    have that
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|L<around*|(|h+\<alpha\>\<cdot\>l|)>>|<cell|=>|<cell|\<pi\><rsup|<around*|[|i<rsub|1>\<ldots\>i<rsub|k>|]>><around*|(|D<rsub|x,k>f<around*|(|h+\<alpha\>\<cdot\>l|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<pi\><rsup|<around*|[|i<rsub|1>\<ldots\>i<rsub|k>|]>><around*|(|D<rsub|x,k>f<around*|(|h|)>+\<alpha\>\<cdot\>D<rsub|x,k>f<around*|(|l|)>|)>>>|<row|<cell|>|<cell|<below|=|<text|[lemma:
+      <reference|lemma 16.314.320>]>>>|<cell|\<pi\><rsup|<around*|[|i<rsub|1>\<ldots\>i<rsub|k>|]>><around*|(|D<rsub|x,k>f<around*|(|h|)>|)>+\<alpha\>\<cdot\>\<pi\><rsup|<around*|[|i<rsub|1>\<ldots\>i<rsub|k>|]>><around*|(|D<rsub|x,k><around*|(|l|)>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|h|)>+\<alpha\>\<cdot\>L<around*|(|l|)>>>>>
+    </eqnarray*>
+
+    so that\ 
+
+    <\equation>
+      <label|eq 16.391.320>L\<in\>Hom<around*|(|X<rsub|k>,L<rsub|m><around*|(|X;Y|)>|)>
+    </equation>
+
+    Let <math|h\<in\>X<rsub|k>> then we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|\<\|\|\>|L<around*|(|h|)>|\<\|\|\>><rsub|L<rsub|m><around*|(|X;Y|)>>>|<cell|=>|<cell|<around*|\<\|\|\>|\<pi\><rsup|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>><around*|(|D<rsub|x,k>f<around*|(|h|)>|)>|\<\|\|\>><rsub|L<rsub|m><around*|(|X;Y|)>>>>|<row|<cell|>|<cell|<below|\<leqslant\>|<text|[lemma:
+      <reference|lemma 16.314.320>]>>>|<cell|<around*|\<\|\|\>|\<pi\><rsup|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>|\<\|\|\>><rsub|L<around*|(|L<rsub|m><around*|(|X<rsub|i<rsub|1>>\<ldots\>X<rsub|i<rsub|m>>;Y|)>,L<rsub|m><around*|(|X;Y|)>|)>>\<cdot\><around*|\<\|\|\>|D<rsub|x,k>f<around*|(|h|)>|\<\|\|\>><rsub|L<rsub|m><around*|(|X<rsub|i<rsub|1>\<ldots\>>X<rsub|i<rsub|m>>;Y|)>>>>|<row|<cell|>|<cell|<below|\<leqslant\>|<text|[lemma:
+      <reference|lemma 16.314.320>]>>>|<cell|<around*|\<\|\|\>|D<rsub|x,k>f<around*|(|h|)>|\<\|\|\>><rsub|L<rsub|m><around*|(|X<rsub|i<rsub|1>\<ldots\>>X<rsub|i<rsub|m>>;Y|)>>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<around*|\<\|\|\>|D<rsub|x,k>f|\<\|\|\>><rsub|L<around*|(|X<rsub|k>,L<around*|(|X<rsub|i<rsub|1>>:\<ldots\>:X<rsub|i<rsub|m>>;Y|)>|)>>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>><rsub|k><rsub|>>>>>
+    </eqnarray*>
+
+    which by [eq: <reference|eq 16.391.320>] and [theorem:
+    <reference|continuity linear mapping (1)>] proves that\ 
+
+    <\equation>
+      <label|eq 16.348.18>L\<in\>L<around*|(|X<rsub|k>,L<rsub|m><around*|(|X;Y|)>|)>
+    </equation>
+
+    \ 
+
+    Next we prove differentiability. As <math|f> is <math|k>-partial
+    differentiable at <math|x> with <math|k>-partial differential
+    <math|D<rsub|x,k>f> at <math|x> we have by [definition: <reference|diff
+    partial differential definition>] that
+
+    <\equation>
+      <label|eq 16.349.18>f\<circ\>I<rsup|<around*|[|k,x|]>>:<around*|(|I<rsup|<around*|[|k,x|]>>|)><rsup|-1><around*|(|U|)>\<rightarrow\>Y
+    </equation>
+
+    is Fréchet differentiable at <math|x<rsub|i>> with differential
+    <math|D<rsub|x<rsub|k>><around*|(|f\<circ\>I<rsup|<around*|[|k,x|]>>|)>>
+    at <math|x<rsub|k>> where <math|x<rsub|k>=\<pi\><rsub|k><around*|(|x|)>>.
+    Hence using [definition: <reference|diff differentiability>] we have
+
+    <\equation>
+      <label|eq 16.350.18>x<rsub|i>\<in\><around*|(|I<rsup|<around*|[|k,x|]>>|)><rsup|-1><around*|(|U|)><rsup|\<circ\>>
+    </equation>
+
+    and given <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> there exist a
+    <math|\<delta\>\<in\>\<bbb-R\><rsup|+>> such that
+    <math|\<forall\>h\<in\><around*|(|<around*|(|I<rsup|<around*|[|k,x|]>>|)><rsup|-1><around*|(|U|)>|)><rsub|x<rsub|k>>>
+    with <math|<around*|\<\|\|\>|h|\<\|\|\>><rsub|k>\<less\>\<delta\>> we
+    have\ 
+
+    <\equation>
+      <label|eq 16.392.320><around*|\<\|\|\>|f<around*|(|I<rsup|<around*|[|k,x|]>><around*|(|x<rsub|k>+h|)>|)>-f<around*|(|I<rsup|<around*|[|k,x|]>><around*|(|x<rsub|k>|)>|)>-D<rsub|x,k>f<around*|(|h|)>|\<\|\|\>><rsub|L<rsub|m><around*|(|X<rsub|i<rsub|1>>\<ldots\>X<rsub|i<rsub|m>>;Y|)>>\<leqslant\>\<varepsilon\>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>><rsub|k>
+    </equation>
+
+    Hence we have that\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|\<\|\|\>|g<around*|(|I<rsup|<around*|[|k,x|]>><around*|(|x<rsub|k>+h|)>|)>-g<around*|(|I<rsup|<around*|[|k,x|]>><around*|(|x<rsub|k>|)>|)>-L<around*|(|h|)>|\<\|\|\>><rsub|L<rsub|m><around*|(|X;Y|)>>>|<cell|=>|<cell|>>|<row|<cell|<around*|\<\|\|\>|\<pi\><rsup|<around*|[|i<rsub|<lprime|`>>\<ldots\>i<rsub|m>|]>><around*|(|f<around*|(|I<rsup|<around*|[|k,x|]>><around*|(|x<rsub|x>+h|)>|)>|)>-\<pi\><rsup|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>><around*|(|f<around*|(|I<rsup|<around*|[|k,x|]>><around*|(|x<rsub|k>|)>|)>|)>-\<pi\><rsup|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>><around*|(|D<rsub|x,k>f<around*|(|h|)>|)>|\<\|\|\>><rsub|L<rsub|m><around*|(|X;Y|)>>>|<cell|<below|=|<text|[lemma:<reference|lemma
+      16.314.320>]>>>|<cell|>>|<row|<cell|<around*|\<\|\|\>|\<pi\><rsup|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>><around*|(|f<around*|(|I<rsup|<around*|[|k,x|]>><around*|(|x<rsub|x>+h|)>|)>-f<around*|(|I<rsup|<around*|[|k,x|]>><around*|(|x<rsub|k>|)>|)>-D<rsub|x,k>f<around*|(|h|)>|)>|\<\|\|\>><rsub|L<rsub|m><around*|(|X;Y|)>>>|<cell|<below|\<leqslant\>|<text|[lemma:
+      <reference|lemma 16.313.310>]>>>|<cell|>>|<row|<cell|<around*|\<\|\|\>|f<around*|(|I<rsup|<around*|[|k,x|]>><around*|(|x<rsub|x>+h|)>|)>-f<around*|(|I<rsup|<around*|[|k,x|]>><around*|(|x<rsub|k>|)>|)>-D<rsub|x,k>f<around*|(|h|)>|\<\|\|\>><rsub|L<rsub|m><around*|(|X<rsub|i<rsub|1>\<ldots\>>X<rsub|i<rsub|m>>;Y|)>>>|<cell|<below|\<leqslant\>|<text|[eq:
+      <reference|eq 16.392.320>]>>>|<cell|>>|<row|<cell|\<varepsilon\>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>><rsub|k>>|<cell|>|<cell|>>>>
+    </eqnarray*>
+
+    The above together with [eqs: <reference|eq 16.348.18>, <reference|eq
+    16.350.18>] proves that <math|g\<circ\>I<rsup|<around*|[|k,x|]>>> is
+    Fréchet differentiable at <math|x<rsub|k>> with differential
+    <math|D<rsub|x<rsub|k>><around*|(|g\<circ\>I<rsup|<around*|[|k,x|]>>|)>=L>.
+    \ Hence if <math|x\<in\>\<frak-D\><rsub|k,f>>
+
+    <\equation>
+      <label|eq 16.352.18>g<text| is >k<text|-partial differentiable at
+      >x<text| with >D<rsub|k,x>g=D<rsub|x<rsub|k>><around*|(|g\<circ\>I<rsup|<around*|[|k,x|]>>|)>=L
+    </equation>
+
+    so that <math|D<rsub|k,x>g> is defined by
+
+    <\equation>
+      <label|eq 16.393.321>D<rsub|x,k>g:X<rsub|k>\<rightarrow\>L<rsub|m><around*|(|X;Y|)><text|
+      where >D<rsub|x,g><around*|(|h|)>=\<pi\><rsup|<around*|[|i<rsub|1>,\<ldots\>,i<rsub|m>|]>><around*|(|D<rsub|x,k>f<around*|(|h|)>|)>
+    </equation>
+
+    Now for the final part. Assume now that that\ 
+
+    <\equation*>
+      U=\<frak-D\><rsub|k,f>=<around*|{|y\<in\>U\|f<text| is >k<text|-partial
+      differentiable at >x|}>
+    </equation*>
+
+    If <math|x\<in\>U> then g is <math|k>-partial differentiable at <math|x>
+    [see eq: <reference|eq 16.352.18>] so that
+
+    <\equation*>
+      U\<subseteq\>\<frak-D\><rsub|k,g>=<around*|{|y\<in\>U\|g<text| is
+      >k<text|-partial differentiable at >y|}>\<subseteq\>U
+    </equation*>
+
+    hence\ 
+
+    <\equation*>
+      U=\<frak-D\><rsub|k,g>=<around*|{|y\<in\>U\|g<text| is >k<text|-partial
+      differentiable at >y|}>
+    </equation*>
+
+    amd <math|D<rsub|k>g> is defined by\ 
+
+    <\equation*>
+      D<rsub|k>g:\<frak-D\><rsub|k,g>\<rightarrow\>L<around*|(|X<rsub|k>,L<rsub|m><around*|(|X;Y|)>|)><text|
+      where >D<rsub|k>g<around*|(|x|)>=D<rsub|x,k>g<below||>
+    </equation*>
+
+    Let <math|x\<in\>U> and <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> then
+    as <math|D<rsub|k>f> is continuous there exist a
+    <math|\<delta\>\<in\>\<bbb-R\><rsup|+>> such that\ 
+
+    <\equation>
+      <label|eq 16.394.321>\<forall\>y\<in\>U<text| with
+      ><around*|\<\|\|\>|x-y|\<\|\|\>><rsub|k>\<less\>\<delta\><text| we have
+      ><around*|\<\|\|\>|D<rsub|k>f<around*|(|x|)>-D<rsub|k>f<around*|(|y|)>|\<\|\|\>><rsub|L<around*|(|X<rsub|k>,X<rsub|i<rsub|1>>\<ldots\>X<rsub|i<rsub|m>>;Y|)>>\<less\><frac|\<varepsilon\>|2>
+    </equation>
+
+    Let <math|h\<in\>X<rsub|k>> then we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|\<\|\|\>|<around*|(|D<rsub|k>g<around*|(|x|)>-D<rsub|k>g<around*|(|y|)>|)><around*|(|h|)>|\<\|\|\>><rsub|L<rsub|m><around*|(|X;Y|)>>>|<cell|=>|<cell|<around*|\<\|\|\>|D<rsub|k>g<around*|(|x|)><around*|(|h|)>-D<rsub|k>g<around*|(|y|)><around*|(|h|)>|\<\|\|\>><rsub|L<rsub|m><around*|(|X;Y|)>>>>|<row|<cell|>|<cell|\<equallim\>>|<cell|<around*|\<\|\|\>|D<rsub|x,k>g<around*|(|h|)>-D<rsub|y,k>g<around*|(|h|)>|\<\|\|\>><rsub|L<rsub|m><around*|(|X;Y|)>>>>|<row|<cell|>|<cell|<below|=|<text|[eq:
+      <reference|eq 16.393.321>]>>>|<cell|<around*|\<\|\|\>|\<pi\><rsup|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>><around*|(|D<rsub|x,k>f<around*|(|h|)>|)>-\<pi\><rsup|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>><around*|(|D<rsub|y,k>f<around*|(|h|)>|)>|\<\|\|\>><rsub|L<rsub|m><around*|(|X;Y|)>>>>|<row|<cell|>|<cell|<below|=|<text|[lemma:<reference|lemma
+      16.314.320>]>>>|<cell|<around*|\<\|\|\>|\<pi\><rsup|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>><around*|(|D<rsub|x,k>f<around*|(|h|)>-D<rsub|y,k>f<around*|(|h|)>|)>|\<\|\|\>><rsub|L<rsub|m><around*|(|X;Y|)>>>>|<row|<cell|>|<cell|<below|\<leqslant\>|<text|[lemma:
+      <reference|lemma 16.313.310>]>>>|<cell|<around*|\<\|\|\>|D<rsub|x,k>f<around*|(|h|)>-D<rsub|y,k>f<around*|(|h|)>|\<\|\|\>><rsub|L<rsub|m><around*|(|X<rsub|i<rsub|1>>\<ldots\>X<rsub|i<rsub|m>>;Y|)>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|<around*|(|D<rsub|x,k>f-D<rsub|y,k>f|)><around*|(|h|)>|\<\|\|\>><rsub|L<rsub|m><around*|(|X<rsub|i<rsub|1>>\<ldots\>X<rsub|i<rsub|m>>;Y|)>>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<around*|\<\|\|\>|D<rsub|k>f<around*|(|x|)>-D<rsub|k>f<around*|(|y|)>|\<\|\|\>><rsub|L<around*|(|X<rsub|k>,X<rsub|i<rsub|1>>\<ldots\>X<rsub|i<rsub|m>>;Y|)>>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>><rsub|k>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<frac|\<varepsilon\>|2>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>><rsub|k>>>>>
+    </eqnarray*>
+
+    so that by [theorem: <reference|continuity norm on L(X,Y)>] we have
+
+    <\equation*>
+      <around*|\<\|\|\>|D<rsub|k>g<around*|(|x|)>-D<rsub|k>g<around*|(|y|)>|\<\|\|\>><rsub|L<around*|(|X<rsub|k>,L<rsub|m><around*|(|X;Y|)>|)>>\<leqslant\><frac|\<varepsilon\>|2>\<less\>\<varepsilon\>
+    </equation*>
+
+    which proves that <math|D<rsub|k>g> is continuous at <math|x>. As
+    <math|x\<in\>U> was chosen arbitrary it follows that\ 
+
+    <\equation*>
+      D<rsub|x>g<text| is continuous>
+    </equation*>
+  </proof>
+
+  We can now write a explicit formula for the <math|m>-times differential of
+  a function in terms of the <math|m>-times partial differentials of this
+  function.
+
+  <\lemma>
+    <label|lemma 16.318.320>Let <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>>,
+    <math|m\<in\>\<bbb-N\>>, <math|<around*|{|<around*|\<langle\>|X<rsub|i>,<around*|\<\|\|\>||\<\|\|\>><rsub|i>|\<rangle\>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+    a finite family of normed spaces, <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    a normed space, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|max>|\<rangle\>>>
+    the normed space based on the product
+    <math|X=<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>
+    with the maximum norm <math|<around*|\<\|\|\>||\<\|\|\>><rsub|max>>,
+    <math|U> a open set in <math|X> and <math|f:U\<rightarrow\>Y> a function
+    such that\ 
+
+    <\equation*>
+      U=\<frak-D\><rsup|m><rsub|f>
+    </equation*>
+
+    then we have\ 
+
+    <\equation*>
+      \<forall\>x\<in\>U<text| that >D<rsup|<around*|[|m|]>><rsub|x>f=<big|sum><rsub|k\<in\><around*|{|1,\<ldots\>,n|}><rsup|m>>\<pi\><rsup|<around*|[|k<rsub|1>,\<ldots\>,k<rsub|m>|]>><around*|(|D<rsub|x,<around*|[|k<rsub|1>\<ldots\>k<rsub|m>|]>>f|)>
+    </equation*>
+
+    <\note>
+      As <math|D<rsup|<around*|[|m|]>><rsub|x>f> exist it follows from
+      [theorem: <reference|diff higher order differation implies higher order
+      partial differation>] that <math|\<forall\>k\<in\><around*|{|1,\<ldots\>,n|}><rsup|m>>
+      <math|D<rsub|x,<around*|[|k<rsub|1>\<ldots\>k<rsub|m>|]>>f> exist so
+      that the formula for <math|D<rsup|<around*|[|m|]>><rsub|x>f> is well
+      defined.
+    </note>
+  </lemma>
+
+  <\proof>
+    We use induction to prove this, so define\ 
+
+    <\equation*>
+      S=<around*|{|m\<in\>\<bbb-N\>\|<text|If
+      >U=\<frak-D\><rsup|m><rsub|f><text| exist then
+      >\<forall\>x\<in\>U<text| >D<rsup|<around*|[|m|]>><rsub|x>f=<big|sum><rsub|k\<in\><around*|{|1,\<ldots\>,n|}><rsup|m>>\<pi\><rsup|<around*|[|k<rsub|1>,\<ldots\>,k<rsub|m>|]>><around*|(|D<rsub|x,<around*|[|k<rsub|1>\<ldots\>k<rsub|m>|]>>f|)>|}>
+    </equation*>
+
+    then we have:\ 
+
+    <\description>
+      <item*|<math|1\<in\>S>>Let <math|x\<in\>U=\<frak-D\><rsup|1><rsub|f>>
+      then <math|D<rsup|<around*|[|1|]>><rsub|x>f> exist and we have by
+      definition that <math|f> is Fréchet differentiable at <math|x> so that
+      we have by [theorem: <reference|diff Frechet differentation implies
+      partial differentiability >] that <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
+      <math|D<rsub|x,i>f> exist and\ 
+
+      <\equation*>
+        D<rsub|x>f=<big|sum><rsub|i=1><rsup|n><around*|(|D<rsub|x,i>f\<circ\>\<pi\><rsub|i>|)>
+      </equation*>
+
+      or using [theorem: <reference|diff higher order partial differentiation
+      (2)>] we have\ 
+
+      <\equation*>
+        D<rsub|x>f=<big|sum><rsub|i=1><rsup|n><around*|(|D<rsub|x,<around*|[|i\<ldots\>i|]>>f<rsup|>\<circ\>\<pi\><rsub|i>|)>=<big|sum><rsub|k\<in\><around*|{|1,\<ldots\>,n|}><rsup|1>><around*|(|D<rsub|x,<around*|[|k<rsub|1>\<ldots\>k<rsub|1>|]>>f\<circ\>\<pi\><rsub|i>|)>
+      </equation*>
+
+      Using now [lemma: <reference|lemma 16.315.320>(1)] it follows that\ 
+
+      <\equation*>
+        D<rsub|x>f=<big|sum><rsub|k\<in\><around*|{|1,\<ldots\>,n|}><rsup|1>>\<pi\><rsup|<around*|[|k<rsub|1>\<ldots\>k<rsub|1>|]>><around*|(|D<rsup|<around*|[|1|]>><rsub|x,k<rsub|1>,\<ldots\>,k<rsub|1>>f|)>
+      </equation*>
+
+      which proves that <math|1\<in\>S>.
+
+      <item*|<math|m\<in\>S\<Rightarrow\>m+1\<in\>S>>Assume that
+      <math|U=\<frak-D\><rsup|m+1><rsub|f>>. Let
+      <math|l\<in\><around*|{|1\<ldots\>,n|}><rsup|m>> and take
+      <math|x\<in\>U> then as <math|f> is
+      <math|<around*|(|m+1|)>>-differentiable at <math|x> it follows from
+      [theorem: <reference|diff n-times and m-times differentiability>] that
+      <math|f> is <math|m>-times differentiable at <math|x>. Using [theorem:
+      <reference|diff higher order differation implies higher order partial
+      differation>] it follows that <math|f> has a partial differential
+      <math|D<rsub|x,<around*|[|l<rsub|1>\<ldots\>l<rsub|m>|]>>f> at <math|x>
+      so that <math|x\<in\>\<frak-D\><rsub|<around*|[|l<rsub|1>\<ldots\>l<rsub|m>|]>,f>>.
+      Hence <math|U\<subseteq\>\<frak-D\><rsub|<around*|[|l<rsub|1>\<ldots\>l<rsub|m>|]>,f><below|\<subseteq\>|<text|[theorem:
+      <reference|diff higher order partial differentiation (domain)>]>>U>
+      which proves that\ 
+
+      <\equation*>
+        U=\<frak-D\><rsub|<around*|[|l<rsub|1>\<ldots\>l<rsub|m>|]>,f>
+      </equation*>
+
+      so that <math|D<rsub|<around*|[|l<rsub|1>\<ldots\>l<rsub|m>|]>>f> is of
+      the form
+
+      <\equation>
+        <label|eq 16.355.18>D<rsub|<around*|[|l<rsub|1>\<ldots\>l<rsub|n>|]>>f:U=\<frak-D\><rsub|<around*|[|l<rsub|1>\<ldots\>l<rsub|m>|]>>\<rightarrow\>L<rsub|m><around*|(|X<rsub|l<rsub|1>>\<ldots\>X<rsub|l<rsub|m>>|)>
+      </equation>
+
+      Let <math|k\<in\><around*|{|1,\<ldots\>,n|}>> so that
+      <math|<around*|(|k,l<rsub|1>,\<ldots\>,l<rsub|m>|)>\<in\><around*|{|1,\<ldots\>,n|}><rsup|m+1>>.
+      Take <math|x\<in\>U> then, as <math|f> is
+      <math|<around*|(|m+1|)>>-differentiable at <math|x>, it follows from
+      [theorem: <reference|diff higher order differation implies higher order
+      partial differation>] that <math|f> has a partial differential
+      <math|D<rsub|x,<around*|[|k,l<rsub|1>\<ldots\>l<rsub|m>|]>>f> at
+      <math|x>. Using then [theorem: <reference|diff higher order partial
+      differentiation (2)>] we have that <math|D<rsub|<around*|[|l<rsub|1>\<ldots\>l<rsub|m>|]>>f>
+      is <math|k>-partial differentiable at <math|x> with
+      <math|D<rsub|x,<around*|[|k,l<rsub|1>\<ldots\>l<rsub|m>|]>>f=D<rsub|x,k><around*|(|D<rsub|<around*|[|l<rsub|1>\<ldots\>l<rsub|m>|]>>f|)>>.
+      Summarized we have\ 
+
+      <\equation>
+        <label|eq 16.356.18>\<forall\>x\<in\>U<text|
+        >D<rsub|x,<around*|[|k,l<rsub|1>\<ldots\>l<rsub|m>|]>>f<text| exist
+        with >D<rsub|x,<around*|[|k,l<rsub|1>\<ldots\>l<rsub|m>|]>>f=D<rsub|x,k><around*|(|D<rsub|<around*|[|l<rsub|1>\<ldots\>l<rsub|m>|]>>f|)>
+      </equation>
+
+      Using now [lemma: <reference|lemma 16.316.320>] on [eqs: <reference|eq
+      16.355.18>, <reference|eq 16.356.18>] it follows that for
+
+      <\equation>
+        <label|eq 16.357.18>g<rsub|l<rsub|1>\<ldots\>l<rsub|m>>:U\<rightarrow\>L<rsub|m><around*|(|X;Y|)><text|
+        defined by >g<rsub|l<rsub|1>\<ldots\>l<rsub|m>><around*|(|y|)>=\<pi\><rsup|<around*|[|l<rsub|1>\<ldots\>l<rsub|m>|]>><around*|(|D<rsub|<around*|[|l<rsub|1>\<ldots\>l<rsub|m>|]>>f<around*|(|y|)>|)>
+      </equation>
+
+      we have that\ 
+
+      <\equation*>
+        g<rsub|l<rsub|1>\<ldots\>l<rsub|m>><text| is >k<text|-partial
+        differentiable at >x<text|>
+      </equation*>
+
+      where <math|D<rsub|x,k>g<rsub|l<rsub|1>\<ldots\>l<rsub|m>>> is defined
+      by <math|\<forall\>h\<in\>X<rsub|k>>\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|D<rsub|x,k>g<rsub|l<rsub|1>\<ldots\>l<rsub|m>><around*|(|h|)>>|<cell|=>|<cell|\<pi\><rsup|<around*|[|l<rsub|1>\<ldots\>l<rsub|m>|]>><around*|(|<around*|(|D<rsub|x,k><around*|(|D<rsub|<around*|[|l<rsub|1>\<ldots\>l<rsub|m>|]>>f|)>|)><around*|(|h|)>|)>>>|<row|<cell|>|<cell|<below|=|<text|[eq:
+        <reference|eq 16.356.18>]>>>|<cell|\<pi\><rsup|<around*|[|l<rsub|1>\<ldots\>l<rsub|m>|]>><around*|(|<around*|(|D<rsub|x,<around*|[|k,l<rsub|1>\<ldots\>l<rsub|m>|]>>f|)><around*|(|h|)>|)><eq-number><label|eq
+        16.358.18>>>>>
+      </eqnarray*>
+
+      Let <math|y\<in\>X> then <math|\<pi\><rsub|k><around*|(|y|)>\<in\>X<rsub|k>>
+      so that\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|D<rsub|x,k>g<rsub|l<rsub|1>\<ldots\>l<rsub|m>>\<circ\>\<pi\><rsub|k>|)><around*|(|y|)>>|<cell|=>|<cell|D<rsub|x,k>g<rsub|l<rsub|1>\<ldots\>l<rsub|m>><around*|(|\<pi\><rsub|k><around*|(|y|)>|)>>>|<row|<cell|>|<cell|<below|=|<text|[eq:
+        <reference|eq 16.358.18>]>>>|<cell|\<pi\><rsup|<around*|[|l<rsub|1>\<ldots\>l<rsub|m>|]>><around*|(|<around*|(|D<rsub|x,<around*|[|k,l<rsub|1>\<ldots\>l<rsub|m>|]>>f|)><around*|(|\<pi\><rsub|k><around*|(|h|)>|)>|)>>>|<row|<cell|>|<cell|<below|=|<text|[lemma:
+        <reference|lemma 16.315.320>(2)]>>>|<cell|<around*|(|\<pi\><rsup|<around*|[|k,l<rsub|1>\<ldots\>l<rsub|m>|]>><around*|(|D<rsub|x,<around*|[|k,l<rsub|1>\<ldots\>l<rsub|m>|]>>f|)>|)><around*|(|y|)>>>>>
+      </eqnarray*>
+
+      which proves that\ 
+
+      <\equation>
+        <label|eq 16.359.18>D<rsub|x,k>g<rsub|l<rsub|1>\<ldots\>l<rsub|l<rsub|m>>>\<circ\>\<pi\><rsub|k>=\<pi\><rsup|<around*|[|k,l<rsub|1>\<ldots\>l<rsub|m>|]>><around*|(|D<rsub|x,<around*|[|k,l<rsub|1>\<ldots\>l<rsub|m>|]>>f|)>
+      </equation>
+
+      As <math|\<forall\>x\<in\>U> <math|D<rsup|<around*|[|m+1|]>><rsub|x>f>
+      exist we have by [theorem: <reference|diff n-times and m-times
+      differentiability>] that <math|\<forall\>x\<in\>U>
+      <math|D<rsup|<around*|[|n|]>><rsub|x>f> exist which proves that
+
+      <\equation*>
+        U=\<frak-D\><rsup|m><rsub|f>=<around*|{|x\<in\>U\|f<text| is
+        >m<text|-times differentiable at >x|}>
+      </equation*>
+
+      so that <math|D<rsup|<around*|[|m|]>>f> is of the form\ 
+
+      <\equation*>
+        D<rsup|<around*|[|m|]>>f:\<frak-D\><rsup|m><rsub|f>=U\<rightarrow\>L<rsub|m><around*|(|X,Y|)>
+      </equation*>
+
+      Again as <math|D<rsup|<around*|[|m+1|]>><rsub|x>f> exist it follows
+      from [theorem: <reference|diff higher order differentiation (1)>] that\ 
+
+      <\equation*>
+        D<rsup|<around*|[|m|]>>f<text| is Fréchet differentiable at >x<text|
+        with >D<rsup|<around*|[|m+1|]>><rsub|x>=D<rsub|x><around*|(|D<rsup|<around*|[|m|]>>f|)>
+      </equation*>
+
+      Now
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|D<rsup|<around*|[|m|]>>f<around*|(|x|)>>|<cell|<below|=|<text|[theorem:
+        <reference|diff higher order differentiation>]>>>|<cell|D<rsup|<around*|[|m|]>><rsub|x>f>>|<row|<cell|>|<cell|<below|=|m\<in\>S>>|<cell|<big|sum><rsub|l\<in\><around*|{|1,\<ldots\>,n|}><rsup|m>>\<pi\><rsup|<around*|[|l<rsub|1>\<ldots\>l<rsub|m>|]>><around*|(|D<rsub|x,<around*|[|l<rsub|1>\<ldots\>l<rsub|m>|]>>f|)>>>|<row|<cell|>|<cell|<below|=|<text|[definition:
+        <reference|diff higher order partial differentiation (1)>]
+        >>>|<cell|<big|sum><rsub|l\<in\><around*|{|1,\<ldots\>,n|}><rsup|m>>\<pi\><rsup|<around*|[|l<rsub|1>\<ldots\>l<rsub|m>|]>><around*|(|D<rsub|<around*|[|l<rsub|1>\<ldots\>l<rsub|m>|]>>f<around*|(|x|)>|)>>>|<row|<cell|>|<cell|<below|=|<text|[eq:
+        <reference|eq 16.357.18>]>>>|<cell|<big|sum><rsub|l\<in\><around*|{|1,\<ldots\>,n|}><rsup|m>>g<rsub|l<rsub|1>\<ldots\>l<rsub|m>><around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<big|sum><rsub|l\<in\><around*|{|1,\<ldots\>,n|}><rsup|m>>g<rsub|l<rsub|1>\<ldots\>l<rsub|m>>|)><around*|(|x|)>>>>>
+      </eqnarray*>
+
+      which as this is true <math|\<forall\>x\<in\>U> that\ 
+
+      <\equation>
+        <label|eq 16.360.18>D<rsup|<around*|[|m|]>>f=<big|sum><rsub|l\<in\><around*|{|1,\<ldots\>,n|}><rsup|m>>g<rsub|l<rsub|1>\<ldots\>l<rsub|m>>
+      </equation>
+
+      As <math|D<rsup|<around*|[|m|]>><rsub|>f> is Fréchet differentiable at
+      <math|x> with <math|D<rsup|<around*|[|m+1|]>><rsub|x>f=D<rsub|x><around*|(|D<rsup|<around*|[|m|]>>f|)>>
+      we have by [theorem: <reference|diff Frechet differentation implies
+      partial differentiability >] that
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|D<rsub|x><rsup|<around*|[|m+1|]>>f>|<cell|=>|<cell|<big|sum><rsub|k=1><rsup|n><around*|(|<around*|(|D<rsub|x,k><around*|(|D<rsup|<around*|[|m|]>>f|)>|)>\<circ\>\<pi\><rsub|k>|)>>>|<row|<cell|>|<cell|<below|=|<text|[eq:
+        <reference|eq 16.360.18>]>>>|<cell|<big|sum><rsub|k=1><rsup|n><around*|(|<around*|(|D<rsub|x,k><around*|(|<big|sum><rsub|l\<in\><around*|{|1,\<ldots\>,m|}><rsup|,>>g<rsub|l<rsub|1>\<ldots\>l<rsub|m>>|)>|)>\<circ\>\<pi\><rsub|k>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|k=1><rsup|n><around*|(|<big|sum><rsub|l\<in\><around*|{|1,\<ldots\>,n|}><rsup|m><rsup|>>D<rsub|x,k>g<rsub|l<rsub|1>\<ldots\>l<rsub|m>>\<circ\>\<pi\><rsub|k>|)>>>|<row|<cell|>|<cell|<below|=|<text|[eq:
+        <reference|eq 16.359.18>]>>>|<cell|<big|sum><rsub|k=1><rsup|n><around*|(|<big|sum><rsub|l\<in\><around*|{|1,\<ldots\>,n|}><rsup|m>>\<pi\><rsup|<around*|[|k,l<rsub|1>\<ldots\>l<rsub|m>|]>><around*|(|D<rsub|x,<around*|[|k,l<rsub|1>\<ldots\>l<rsub|m>|]>>f|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|k\<in\><around*|{|1,\<ldots\>,n|}><rsup|m+1>>\<pi\><rsup|<around*|[|k<rsub|1>\<ldots\>k<rsub|m+1>|]>><around*|(|D<rsup|><rsub|x,<around*|[|k<rsub|1>\<ldots\>k<rsub|m+1>|]>>f|)>>>>>
+      </eqnarray*>
+
+      which proves that\ 
+
+      <\equation*>
+        m+1\<in\>S
+      </equation*>
+    </description>
+  </proof>
+
+  Finally we can now extend [theorem: \ <reference|diff continuous partial
+  differentials implies differentiability>].
+
+  <\theorem>
+    <label|diff continuous partial differentials implies differentiability
+    (1)>Let <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>>,
+    <math|m\<in\>\<bbb-N\>>, <math|<around*|{|<around*|\<langle\>|X<rsub|i>,<around*|\<\|\|\>||\<\|\|\>><rsub|i>|\<rangle\>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+    a finite family of normed spaces, <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    a normed space, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|max>|\<rangle\>>>
+    the normed space based on the product
+    <math|X=<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>
+    with the maximum norm <math|<around*|\<\|\|\>||\<\|\|\>><rsub|max>> [see
+    definition: <reference|normed maximum norm>], <math|U> a open set in
+    <math|X>, <math|f:U\<rightarrow\>Y> a function such that
+    <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><rsup|m>> we have that\ 
+
+    <\equation*>
+      U=\<frak-D\><rsub|<around*|[|l<rsub|1>\<ldots\>i<rsub|m>|]>,f>
+    </equation*>
+
+    and
+
+    <\equation*>
+      D<rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|k>|]>>f:U=\<frak-D\><rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|k>|]>,f>\<rightarrow\>L<rsub|k><around*|(|X<rsub|i<rsub|1>>\<ldots\>X<rsub|i<rsub|k>>;Y|)><text|
+      is continuous>
+    </equation*>
+
+    then\ 
+
+    <\equation*>
+      f<text| is of class >C<rsup|m>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    We use induction to prove this, so let
+
+    <\equation*>
+      S=<around*|{|m\<in\>\<bbb-N\>\|<text|If
+      >\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><rsup|k><text|
+      >U=\<frak-D\><rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>,f><text|><rigid|<text|
+      >D<rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f:U\<rightarrow\>L<rsub|m><around*|(|X<rsub|i<rsub|1>>\<ldots\>X<rsub|i<rsub|m>>;Y|)>><text|
+      is continous then >f<text| is of class >C<rsup|m>|}><text|>
+    </equation*>
+
+    then we have:\ 
+
+    <\description>
+      <item*|<math|1\<in\>S>>Assume that <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><rsup|1>>
+      we have that\ 
+
+      <\equation*>
+        U=\<frak-D\><rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|1>|]>,f><text|
+        and >D<rsub|<around*|[|i<rsub|<lprime|`>>\<ldots\>i<rsub|1>|]>>f<text|
+        is continuous>
+      </equation*>
+
+      it follows from [definition: <reference|diff higher order partial
+      differentiation>] that\ 
+
+      <\equation*>
+        U=\<frak-D\><rsub|i<rsub|1>,f><text| and >D<rsub|i<rsub|1>>f<text| is
+        continuous>
+      </equation*>
+
+      Hence by [theorem: <reference|diff continuous partial differentials
+      implies differentiability>] it follows that <math|f> is of class
+      <math|C<rsup|1>>.
+
+      <item*|<math|m\<in\>S\<Rightarrow\>m+1\<in\>S>>Assume that <math|> we
+      have\ 
+
+      <\equation>
+        <label|eq 16.361.18>\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><rsup|m+1><text|
+        >U=\<frak-D\><rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m+1>|]>,f><text|
+        and >D<rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m+1>|]>>f<text| is
+        continuous>
+      </equation>
+
+      Let <math|l\<in\><around*|{|1,\<ldots\>,n|}>> and
+      <math|i\<in\><around*|{|1,\<ldots\>,n|}><rsup|m>> then
+      <math|<around*|(|l,i<rsub|1>,\<ldots\>,i<rsub|m>|)>\<in\><around*|{|1,\<ldots\>,n|}><rsup|m+1>>
+      so that\ 
+
+      <\equation*>
+        U<below|=|<text|[eq: <reference|eq
+        16.361.18>]>>\<frak-D\><rsub|<around*|[|l,i<rsub|1>\<ldots\>i<rsub|m>|]>,f><below|\<subseteq\>|<text|
+        [theorem: <reference|diff higher order partial differentiation
+        (domain)>]>>\<frak-D\><rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>,f>\<subseteq\>U
+      </equation*>
+
+      which proves that
+
+      <\equation>
+        <label|eq 16.362.19>\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><rsup|m><text|
+        that >U=\<frak-D\><rsub|<around*|[|l<rsub|1>\<ldots\>l<rsub|m>|]>>f
+      </equation>
+
+      So that the function <math|D<rsub|<around*|[|i<rsub|1>,\<ldots\>i<rsub|m>|]>>f>
+      is of the form
+
+      <\equation>
+        <label|eq 16.362.18>D<rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f:\<frak-D\><rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>,f>=U\<rightarrow\>L<rsub|m><around*|(|X<rsub|i<rsub|1>>,\<ldots\>,X<rsub|i<rsub|m>>;Y|)>
+      </equation>
+
+      and using [theorem: <reference|diff higher order partial
+      differentiation>]\ 
+
+      <\equation>
+        <label|eq 16.363.18>D<rsub|<around*|[|l,i<rsub|1>\<ldots\>i<rsub|m>|]>>f=D<rsub|l><around*|(|D<rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f|)>
+      </equation>
+
+      so that by [eq: <reference|eq 16.361.18>]\ 
+
+      <\equation>
+        <label|eq 16.364.18>U=\<frak-D\><rsub|l,D<rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f><text|
+        and >D<rsub|l><around*|(|D<rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f|)><text|
+        is continuous>
+      </equation>
+
+      Use [eq: <reference|eq 16.362.18>] to define\ 
+
+      <\equation>
+        <label|eq 16.365.18>g<rsub|i<rsub|1>\<ldots\>i<rsub|m>>:U\<rightarrow\>L<rsub|m><around*|(|X;Y|)><text|
+        by >g<rsub|i<rsub|1>\<ldots\>i<rsub|m>><around*|(|x|)>=\<pi\><rsup|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>><around*|(|D<rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f<around*|(|x|)>|)>
+      </equation>
+
+      We can use now [lemma: <reference|lemma 16.316.320>] together with [eq:
+      <reference|eq 16.364.18>] to get\ 
+
+      <\equation*>
+        U=\<frak-D\><rsub|k,g<rsub|i<rsub|1>\<ldots\>i<rsub|m>>>=<around*|{|x\<in\>U\|g<rsub|l<rsub|1>\<ldots\>l<rsub|m>><text|
+        is >l<text|-partial differentiable at >x|}><text|>
+      </equation*>
+
+      and\ 
+
+      <\equation*>
+        D<rsub|l>g<rsub|i<rsub|1>\<ldots\>i<rsub|m>>:U\<rightarrow\>L<rsub|m><around*|(|X;Y|)><text|
+        defined by >D<rsub|l>g<rsub|i<rsub|1>\<ldots\>i<rsub|m>><around*|(|x|)>=D<rsub|x,l>g<rsub|i<rsub|1>\<ldots\>i<rsub|m>><text|
+        is continupus><rsub|>
+      </equation*>
+
+      Hence we have, using [theorems: <reference|diff partial differential
+      properties>, <reference|continuity of finite sum of continuous
+      functions>], for the <with|font-series|bold|finite> sum
+
+      <\equation*>
+        g=<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}><rsup|m>>g<rsub|i<rsub|1\<ldots\>>i<rsub|m>>
+      </equation*>
+
+      that <math|\<forall\>l\<in\><around*|{|1,\<ldots\>,n|}>>
+      <math|\<forall\>x\<in\>U> the <math|l>-partial derivative
+      <math|D<rsub|x,l>g> exist and that\ 
+
+      <\equation*>
+        D<rsub|l>g:U\<rightarrow\>L<around*|(|X<rsub|l>,L<rsub|m><around*|(|X,Y|)>|)><text|
+        defined by >D<rsub|l>g<around*|(|x|)>=D<rsub|x,l>g<text| is
+        continuous>
+      </equation*>
+
+      \ Applying then [theorem: <reference|diff continuous partial
+      differentials implies differentiability>] proves that
+
+      <\equation>
+        <label|eq 16.366.18>g<text| is of class >C<rsup|1>
+      </equation>
+
+      As <math|m\<in\>\<cal-S\><rsub|n>> we have, using [eq: <reference|eq
+      16.362.19>] that <math|f> is of class <math|C<rsup|m>> so that
+      <math|\<forall\>x\<in\>U> <math|D<rsup|<around*|[|m|]>><rsub|x>f>
+      exist, hence we can define\ 
+
+      <\equation*>
+        D<rsup|<around*|[|m|]>>f:U\<rightarrow\>L<rsub|m><around*|(|X;Y|)><text|
+        by >D<rsup|<around*|[|m|]>>f<around*|(|x|)>=D<rsup|<around*|[|m|]>><rsub|x>f
+      </equation*>
+
+      \ 
+
+      <item*|<math|m\<in\>S\<Rightarrow\>m+1\<in\>\<cal-S\>>>Assume that
+      <math|\<forall\>k\<in\><around*|{|1,\<ldots\>,m+1|}>>,
+      <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><rsup|k>> we have
+      <math|\<forall\>x\<in\>U> that <math|D<rsup|<around*|[|k|]>><rsub|x,i<rsub|1>\<ldots\>i<rsub|k>>f>
+      exist and
+
+      <\equation>
+        <label|eq 16.401.322>D<rsup|<around*|[|k|]>><rsub|i<rsub|1>,\<ldots\>,i<rsub|k>>f:U\<rightarrow\>L<rsub|k><around*|(|X<rsub|i<rsub|1>>\<ldots\>X<rsub|i<rsub|k>>;Y|)><text|
+        defined by >D<rsup|<around*|[|k|]>><rsub|i<rsub|1>\<ldots\>i<rsub|k>>f<around*|(|x|)>=D<rsup|<around*|[|k|]>><rsub|x,i<rsub|1>\<ldots\>i<rsub|k>>f<text|
+        is continuous>
+      </equation>
+
+      Let <math|l\<in\><around*|{|1,\<ldots\>,n|}>> then, as
+      <math|D<rsup|<around*|[|m+1|]>><rsub|x,l,i<rsub|1>,\<ldots\>,i<rsub|m>>f>
+      exist, the function
+
+      <\equation*>
+        D<rsup|<around*|[|m|]>><rsub|x,i<rsub|1>\<ldots\>i<rsub|m>>f:U\<rightarrow\>L<rsub|m><around*|(|X<rsub|i<rsub|1>>\<ldots\>X<rsub|i<rsub|m>>;Y|)><text|
+        defined by >D<rsup|<around*|[|m|]>><rsub|i<rsub|1>\<ldots\>i<rsub|m>>f<around*|(|x|)>=D<rsup|<around*|[|m|]>><rsub|x,i<rsub|1>\<ldots\>i<rsub|m>>f
+      </equation*>
+
+      has a <math|l>-partial differential
+      <math|D<rsub|x,l><around*|(|D<rsup|<around*|[|m|]>><rsub|x,i<rsub|1>\<ldots\>i<rsub|m>>f|)>>
+      at <math|x> with <math|>
+
+      <\equation*>
+        D<rsup|<around*|[|m+1|]>><rsub|x,l,i<rsub|1>,\<ldots\>,i<rsub|m>>f=D<rsub|x,l><around*|(|D<rsup|<around*|[|m|]>><rsub|x,i<rsub|1>\<ldots\>i<rsub|m>>f|)>
+      </equation*>
+
+      Further as <math|m+1\<in\><around*|{|1,\<ldots\>,m+1|}>> we have that\ 
+
+      <\equation*>
+        D<rsup|<around*|[|m+1|]>><rsub|l,i<rsub|1>,\<ldots\>,i<rsub|m+1>>f:U\<rightarrow\>L<rsub|m+1><around*|(|X<rsub|l>,X<rsub|i<rsub|1>>\<ldots\>X<rsub|i<rsub|k>>;Y|)><text|
+        defined by >D<rsup|<around*|[|m+1|]>><rsub|l,i<rsub|1>\<ldots\>i<rsub|k>>f<around*|(|x|)>=D<rsup|<around*|[|m+1|]>><rsub|x,l,i<rsub|1>\<ldots\>i<rsub|k>>f
+      </equation*>
+
+      is continuous. Define now
+
+      <\equation>
+        <label|eq 16.399.321>g<rsub|i<rsub|i\<ldots\>i<rsub|m>><rsub|>>:U\<rightarrow\>L<rsub|m><around*|(|X;Y|)><text|
+        by >g<rsub|<around*|[|i<rsub|i\<ldots\>i<rsub|m>><rsub|>|]>><around*|(|x|)>=\<pi\><rsup|<around*|[|i<rsub|1>,\<ldots\>,i<rsub|m>|]>><around*|(|D<rsup|<around*|[|m|]>><rsub|i<rsub|1>\<ldots\>i<rsub|m>>f<around*|(|x|)>|)>
+      </equation>
+
+      then it follows from [lemma: <reference|lemma 16.316.320>] and [eq:
+      <reference|eq 16.401.322>] that
+
+      <\equation>
+        <label|eq 16.400.321>\<forall\>x\<in\>U<text| we have that
+        >D<rsub|x,l>g<rsub|i<rsub|1>\<ldots\>i<rsub|m>><text| exist>
+      </equation>
+
+      and that\ 
+
+      <\equation>
+        <label|eq 16.401.321>D<rsub|x,l>g<rsub|i<rsub|1>\<ldots\>.i<rsub|m>><text|>:X<rsub|l>\<rightarrow\>L<rsub|m><around*|(|X;Y|)><text|
+        defined by >D<rsub|l>g<rsub|i<rsub|1>\<ldots\>i<rsub|m>><around*|(|x|)>=D<rsub|x,l,i<rsub|1>\<ldots\>i<rsub|m>>f<text|
+        is continuous>
+      </equation>
+
+      Hence we have, using [theorems: <reference|diff partial differential
+      properties>, <reference|continuity of finite sum of continuous
+      functions>], for the <with|font-series|bold|finite> sum
+
+      <\equation*>
+        g=<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}><rsup|m>>g<rsub|i<rsub|1\<ldots\>>i<rsub|m>>
+      </equation*>
+
+      that <math|\<forall\>l\<in\><around*|{|1,\<ldots\>,n|}>>
+      <math|\<forall\>x\<in\>U> the <math|l>-partial derivative
+      <math|D<rsub|x,l>g> exist and that\ 
+
+      <\equation*>
+        D<rsub|l>g:U\<rightarrow\>L<around*|(|X<rsub|l>,L<rsub|m><around*|(|X,Y|)>|)><text|
+        define by >D<rsub|l>g<around*|(|x|)>=D<rsub|x,l>g<text| is
+        continuous>
+      </equation*>
+
+      Applying then [theorem: <reference|diff continuous partial
+      differentials implies differentiability>] proves that\ 
+
+      <\equation>
+        <label|eq 16.402.321>g<text| is of class >C<rsup|1>
+      </equation>
+
+      TODO check and correct the reminder
+
+      As <math|m\<in\>\<cal-S\><rsub|n>> we have, using [eq: <reference|eq
+      16.362.19>] that <math|f> is of class <math|C<rsup|m>> so that
+      <math|\<forall\>x\<in\>U> <math|D<rsup|<around*|[|m|]>><rsub|x>f>
+      exist, hence we can define\ 
+
+      <\equation*>
+        D<rsup|<around*|[|m|]>>f:U\<rightarrow\>L<rsub|m><around*|(|X;Y|)><text|
+        by >D<rsup|<around*|[|m|]>>f<around*|(|x|)>=D<rsup|<around*|[|m|]>><rsub|x>f
+      </equation*>
+
+      Let <math|x\<in\>U> then we have using [lemma: <reference|lemma
+      16.318.320>] that\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|D<rsup|<around*|[|m|]>>f<around*|(|x|)>>|<cell|=>|<cell|D<rsup|<around*|[|m|]>><rsub|x>f>>|<row|<cell|>|<cell|<below|=|<text|[lemma:
+        <reference|lemma 16.318.320>]>>>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}><rsup|m>>\<pi\><rsup|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>><around*|(|D<rsup|<around*|[|m|]>><rsub|x,i<rsub|1>\<ldots\>i<rsub|m>>f|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}><rsup|m>>\<pi\><rsup|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>><around*|(|D<rsup|<around*|[|m|]>><rsub|i<rsub|1>\<ldots\>i<rsub|m>>f<around*|(|x|)>|)>>>|<row|<cell|>|<cell|<below|=|<text|[eq:
+        <reference|eq 16.399.321>]>>>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}><rsup|m>>g<rsub|i<rsub|1>\<ldots\>i<rsub|m>><around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|g<around*|(|x|)>>>>>
+      </eqnarray*>
+
+      which proves that <math|D<rsup|<around*|[|m|]>>f=g> or using [eq:
+      <reference|eq 16.402.321>] that <math|D<rsup|<around*|[|m|]>>f> is of
+      class <math|C<rsup|1>>. Applying then [theorem: <reference|diff
+      C^(n+m)>] prove that <math|f> is of class <math|C<rsup|m+1>>. Hence we
+      have proved that\ 
+
+      <\equation*>
+        m+1\<in\>S
+      </equation*>
+    </description>
+
+    \;
+  </proof>
+
+  \;
+
   \;
 
   \;
@@ -19783,7 +20679,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|15>
-    <associate|page-first|919>
+    <associate|page-first|917>
     <associate|par-first|0>
     <associate|section-nr|0>
     <associate|subsection-nr|2>
@@ -19850,66 +20746,68 @@
     <associate|auto-8|<tuple|16.1.3|?>>
     <associate|auto-9|<tuple|differentiability|?>>
     <associate|convergence of a function to a point|<tuple|16.3|?>>
-    <associate|corollary 16.50.192|<tuple|16.107|?>>
+    <associate|corollary 16.50.192|<tuple|16.108|?>>
     <associate|diff (f+g)'=f'+g'|<tuple|16.40|?>>
     <associate|diff Bx(x,d)|<tuple|16.17|?>>
-    <associate|diff C-infinity condition|<tuple|16.149|?>>
-    <associate|diff C^(n+m)|<tuple|16.164|?>>
-    <associate|diff C^1 and derivatives|<tuple|16.152|?>>
-    <associate|diff C^n and C^m|<tuple|16.150|?>>
+    <associate|diff C-infinity condition|<tuple|16.150|?>>
+    <associate|diff C^(n+m)|<tuple|16.165|?>>
+    <associate|diff C^1 and derivatives|<tuple|16.153|?>>
+    <associate|diff C^n and C^m|<tuple|16.151|?>>
     <associate|diff Frechet approximation|<tuple|16.43|?>>
     <associate|diff Frechet differentation implies partial differentiability
-    |<tuple|16.79|?>>
-    <associate|diff Jacobian matrix|<tuple|16.97|?>>
-    <associate|diff L(x1:..:xn) (1)|<tuple|16.237|?>>
-    <associate|diff L(x1:..xn)|<tuple|16.108|?>>
-    <associate|diff L(x1:..xn)=L(1:..:1). product|<tuple|16.112|?>>
-    <associate|diff L_n(X;Y)|<tuple|16.104|?>>
-    <associate|diff L_n(x1,..,xn;Y)|<tuple|16.232|?>>
-    <associate|diff Lagrange theorem|<tuple|16.195|?>>
-    <associate|diff Lagrange theorem (1)|<tuple|16.197|?>>
-    <associate|diff Rolle's theorem|<tuple|16.193|?>>
+    |<tuple|16.80|?>>
+    <associate|diff Jacobian matrix|<tuple|16.98|?>>
+    <associate|diff L(x1:..:xn) (1)|<tuple|16.238|?>>
+    <associate|diff L(x1:..xn)|<tuple|16.109|?>>
+    <associate|diff L(x1:..xn)=L(1:..:1). product|<tuple|16.113|?>>
+    <associate|diff L_n(X;Y)|<tuple|16.105|?>>
+    <associate|diff L_n(x1,..,xn;Y)|<tuple|16.233|?>>
+    <associate|diff Lagrange theorem|<tuple|16.196|?>>
+    <associate|diff Lagrange theorem (1)|<tuple|16.198|?>>
+    <associate|diff Rolle's theorem|<tuple|16.194|?>>
     <associate|diff Ux|<tuple|16.13|?>>
     <associate|diff Ux is open if U is open|<tuple|16.16|?>>
     <associate|diff Ux=-x+U=U-x|<tuple|16.15|?>>
-    <associate|diff balls are convex|<tuple|16.209|?>>
-    <associate|diff bilinear functions|<tuple|16.98|?>>
+    <associate|diff balls are convex|<tuple|16.210|?>>
+    <associate|diff bilinear functions|<tuple|16.99|?>>
     <associate|diff bilinear mappings are infinite times
-    differentiable|<tuple|16.175|?>>
+    differentiable|<tuple|16.176|?>>
     <associate|diff calculus derivate|<tuple|16.22|?>>
     <associate|diff calculus derivate (1)|<tuple|16.20|?>>
     <associate|diff calculus derivate (2)|<tuple|16.23|?>>
     <associate|diff chain rule|<tuple|16.66|?>>
-    <associate|diff chain rule and partial differential|<tuple|16.83|?>>
+    <associate|diff chain rule and partial differential|<tuple|16.84|?>>
     <associate|diff chain rule calculus|<tuple|16.67|?>>
-    <associate|diff chain rule higher order|<tuple|16.185|?>>
-    <associate|diff chain rule higher order class|<tuple|16.186|?>>
-    <associate|diff class C^@@|<tuple|16.146|?>>
-    <associate|diff class C^n|<tuple|16.144|?>>
-    <associate|diff class C^n (1)|<tuple|16.147|?>>
-    <associate|diff class C^n (2)|<tuple|16.148|?>>
-    <associate|diff class C^n (domain)|<tuple|16.145|?>>
+    <associate|diff chain rule higher order|<tuple|16.186|?>>
+    <associate|diff chain rule higher order class|<tuple|16.187|?>>
+    <associate|diff class C^@@|<tuple|16.147|?>>
+    <associate|diff class C^n|<tuple|16.145|?>>
+    <associate|diff class C^n (1)|<tuple|16.148|?>>
+    <associate|diff class C^n (2)|<tuple|16.149|?>>
+    <associate|diff class C^n (domain)|<tuple|16.146|?>>
     <associate|diff composition with a linear mapping|<tuple|16.68|?>>
     <associate|diff constant function and partial
-    differentiation|<tuple|16.80|?>>
+    differentiation|<tuple|16.81|?>>
     <associate|diff constant function is differentiable|<tuple|16.53|?>>
     <associate|diff constant function is infinitely times
-    differentiable|<tuple|16.168|?>>
+    differentiable|<tuple|16.169|?>>
     <associate|diff continuous partial differentials implies
-    differentiability|<tuple|16.268|?>>
-    <associate|diff convex concave|<tuple|16.200|?>>
-    <associate|diff convex set|<tuple|16.208|?>>
-    <associate|diff convex/concave alternative|<tuple|16.201|?>>
+    differentiability|<tuple|16.269|?>>
+    <associate|diff continuous partial differentials implies
+    differentiability (1)|<tuple|16.277|?>>
+    <associate|diff convex concave|<tuple|16.201|?>>
+    <associate|diff convex set|<tuple|16.209|?>>
+    <associate|diff convex/concave alternative|<tuple|16.202|?>>
     <associate|diff derivate and frechet differential|<tuple|16.63|?>>
-    <associate|diff derivate and local extremum|<tuple|16.192|?>>
-    <associate|diff derivate of inverse function|<tuple|16.101|?>>
+    <associate|diff derivate and local extremum|<tuple|16.193|?>>
+    <associate|diff derivate of inverse function|<tuple|16.102|?>>
     <associate|diff derivate operator is linear|<tuple|16.65|?>>
     <associate|diff derivative and restriction|<tuple|16.34|?>>
     <associate|diff derivative function|<tuple|16.24|?>>
     <associate|diff derivative is local|<tuple|16.36|?>>
     <associate|diff derivative of a scalar product|<tuple|16.41|?>>
     <associate|diff derivative of constant|<tuple|16.30|?>>
-    <associate|diff derivative of f/g|<tuple|16.103|?>>
+    <associate|diff derivative of f/g|<tuple|16.104|?>>
     <associate|diff derivative of identity function|<tuple|16.31|?>>
     <associate|diff derivative of the empty function|<tuple|16.29|?>>
     <associate|diff derivative on a open set|<tuple|16.28|?>>
@@ -19920,120 +20818,120 @@
     definitions|<tuple|16.60|?>>
     <associate|diff differentiability alternative definitions
     (1)|<tuple|16.61|?>>
-    <associate|diff differentiability and K^n|<tuple|16.90|?>>
+    <associate|diff differentiability and K^n|<tuple|16.91|?>>
     <associate|diff differentiability is a local property|<tuple|16.56|?>>
     <associate|diff differentiability on a set|<tuple|16.51|?>>
     <associate|diff differentiability on a set (2)|<tuple|16.58|?>>
     <associate|diff differentiable function is continuous|<tuple|16.62|?>>
     <associate|diff differential|<tuple|16.48|?>>
-    <associate|diff differential of a vector valued function|<tuple|16.95|?>>
-    <associate|diff differential of product of functions|<tuple|16.99|?>>
+    <associate|diff differential of a vector valued function|<tuple|16.96|?>>
+    <associate|diff differential of product of functions|<tuple|16.100|?>>
     <associate|diff e-mapping|<tuple|16.59|?>>
     <associate|diff equivalent norms|<tuple|16.55|?>>
-    <associate|diff evaluation operator|<tuple|16.222|?>>
-    <associate|diff f(t)=a.x+y is infinite differentiable|<tuple|16.171|?>>
-    <associate|diff fundamental theorem of calculus (1)|<tuple|16.203|?>>
-    <associate|diff fundamental theorem of calculus (2)|<tuple|16.204|?>>
-    <associate|diff higher order derivate and differential|<tuple|16.160|?>>
-    <associate|diff higher order derivative at a point|<tuple|16.155|?>>
-    <associate|diff higher order derivative at a point (1)|<tuple|16.157|?>>
-    <associate|diff higher order derivative function|<tuple|16.153|?>>
-    <associate|diff higher order derivative function domain|<tuple|16.154|?>>
-    <associate|diff higher order derivative on a set|<tuple|16.156|?>>
+    <associate|diff evaluation operator|<tuple|16.223|?>>
+    <associate|diff f(t)=a.x+y is infinite differentiable|<tuple|16.172|?>>
+    <associate|diff fundamental theorem of calculus (1)|<tuple|16.204|?>>
+    <associate|diff fundamental theorem of calculus (2)|<tuple|16.205|?>>
+    <associate|diff higher order derivate and differential|<tuple|16.161|?>>
+    <associate|diff higher order derivative at a point|<tuple|16.156|?>>
+    <associate|diff higher order derivative at a point (1)|<tuple|16.158|?>>
+    <associate|diff higher order derivative function|<tuple|16.154|?>>
+    <associate|diff higher order derivative function domain|<tuple|16.155|?>>
+    <associate|diff higher order derivative on a set|<tuple|16.157|?>>
     <associate|diff higher order differation implies higher order partial
-    differation|<tuple|16.258|?>>
-    <associate|diff higher order differential|<tuple|16.123|?>>
-    <associate|diff higher order differential domains|<tuple|16.129|?>>
-    <associate|diff higher order differential is linear|<tuple|16.167|?>>
-    <associate|diff higher order differential of a product|<tuple|16.188|?>>
+    differation|<tuple|16.259|?>>
+    <associate|diff higher order differential|<tuple|16.124|?>>
+    <associate|diff higher order differential domains|<tuple|16.130|?>>
+    <associate|diff higher order differential is linear|<tuple|16.168|?>>
+    <associate|diff higher order differential of a product|<tuple|16.189|?>>
     <associate|diff higher order differential of a product
-    (1)|<tuple|16.189|?>>
+    (1)|<tuple|16.190|?>>
     <associate|diff higher order differentials are symmetric in there
-    arguments|<tuple|16.230|?>>
-    <associate|diff higher order differentiation|<tuple|16.130|?>>
-    <associate|diff higher order differentiation (1)|<tuple|16.134|?>>
-    <associate|diff higher order differentiation (2)|<tuple|16.127|?>>
-    <associate|diff higher order differentiation (3)|<tuple|16.143|?>>
-    <associate|diff higher order differentiation (4)|<tuple|16.138|?>>
+    arguments|<tuple|16.231|?>>
+    <associate|diff higher order differentiation|<tuple|16.131|?>>
+    <associate|diff higher order differentiation (1)|<tuple|16.135|?>>
+    <associate|diff higher order differentiation (2)|<tuple|16.128|?>>
+    <associate|diff higher order differentiation (3)|<tuple|16.144|?>>
+    <associate|diff higher order differentiation (4)|<tuple|16.139|?>>
     <associate|diff higher order differentiation and vector
-    functions|<tuple|16.181|?>>
-    <associate|diff higher order differentiation classes|<tuple|16.182|?>>
+    functions|<tuple|16.182|?>>
+    <associate|diff higher order differentiation classes|<tuple|16.183|?>>
     <associate|diff higher order differentiation implies higher order partial
-    differation (1)|<tuple|16.259|?>>
-    <associate|diff higher order differentiation is local|<tuple|16.139|?>>
+    differation (1)|<tuple|16.260|?>>
+    <associate|diff higher order differentiation is local|<tuple|16.140|?>>
     <associate|diff higher order differentiation is local
-    (1)|<tuple|16.141|?>>
+    (1)|<tuple|16.142|?>>
     <associate|diff higher order differentiation is local
-    (2)|<tuple|16.142|?>>
+    (2)|<tuple|16.143|?>>
     <associate|diff higher order differentiation on a open
-    set|<tuple|16.135|?>>
-    <associate|diff higher order partial differentiation|<tuple|16.247|?>>
+    set|<tuple|16.136|?>>
+    <associate|diff higher order partial differentiation|<tuple|16.248|?>>
     <associate|diff higher order partial differentiation
-    (1)|<tuple|16.249|?>>
+    (1)|<tuple|16.250|?>>
     <associate|diff higher order partial differentiation
-    (2)|<tuple|16.255|?>>
+    (2)|<tuple|16.256|?>>
     <associate|diff higher order partial differentiation
-    (domain)|<tuple|16.248|?>>
+    (domain)|<tuple|16.249|?>>
     <associate|diff higher order partial differentiation is
-    symmetric|<tuple|16.260|?>>
+    symmetric|<tuple|16.261|?>>
     <associate|diff higher order partial differentiation
-    n,m|<tuple|16.254|?>>
+    n,m|<tuple|16.255|?>>
     <associate|diff higher order partial differentiation on open
-    domain|<tuple|16.252|?>>
+    domain|<tuple|16.253|?>>
     <associate|diff higher order partial differentiation on open
-    set|<tuple|16.251|?>>
+    set|<tuple|16.252|?>>
     <associate|diff identity function is differentiable|<tuple|16.52|?>>
     <associate|diff identity function is infinite times
-    differentiable|<tuple|16.170|?>>
-    <associate|diff increasing decreasing function|<tuple|16.199|?>>
-    <associate|diff inifint=ite differentiable|<tuple|16.133|?>>
-    <associate|diff integration by part|<tuple|16.205|?>>
+    differentiable|<tuple|16.171|?>>
+    <associate|diff increasing decreasing function|<tuple|16.200|?>>
+    <associate|diff inifint=ite differentiable|<tuple|16.134|?>>
+    <associate|diff integration by part|<tuple|16.206|?>>
     <associate|diff limit of a function|<tuple|16.11|?>>
-    <associate|diff line segment [0,1]|<tuple|16.214|?>>
+    <associate|diff line segment [0,1]|<tuple|16.215|?>>
     <associate|diff linear mapping is infinite times
-    differentiable|<tuple|16.169|?>>
+    differentiable|<tuple|16.170|?>>
     <associate|diff linear mappings are differentiable|<tuple|16.54|?>>
-    <associate|diff linear to multilinear|<tuple|16.120|?>>
-    <associate|diff linear to multilinear (1)|<tuple|16.245|?>>
-    <associate|diff linesegement|<tuple|16.212|?>>
-    <associate|diff mean value theorem (0)|<tuple|16.210|?>>
-    <associate|diff mean value theorem (1)|<tuple|16.207|?>>
-    <associate|diff mean value theorem (2)|<tuple|16.210|?>>
-    <associate|diff mean value theorem (2.1)|<tuple|16.216|?>>
-    <associate|diff mean value theorem (3)|<tuple|16.217|?>>
-    <associate|diff mean value theorem (3.1)|<tuple|16.218|?>>
-    <associate|diff mean value theorem (4)|<tuple|16.219|?>>
-    <associate|diff minimum maximum|<tuple|16.190|?>>
-    <associate|diff n+m derivative|<tuple|16.165|?>>
-    <associate|diff n+m differentiation|<tuple|16.162|?>>
-    <associate|diff n+m differentiation (1)|<tuple|16.163|?>>
-    <associate|diff n-times and m-times derivating|<tuple|16.158|?>>
-    <associate|diff n-times and m-times differentiability|<tuple|16.132|?>>
-    <associate|diff partial derivate|<tuple|16.86|?>>
+    <associate|diff linear to multilinear|<tuple|16.121|?>>
+    <associate|diff linear to multilinear (1)|<tuple|16.246|?>>
+    <associate|diff linesegement|<tuple|16.213|?>>
+    <associate|diff mean value theorem (0)|<tuple|16.211|?>>
+    <associate|diff mean value theorem (1)|<tuple|16.208|?>>
+    <associate|diff mean value theorem (2)|<tuple|16.211|?>>
+    <associate|diff mean value theorem (2.1)|<tuple|16.217|?>>
+    <associate|diff mean value theorem (3)|<tuple|16.218|?>>
+    <associate|diff mean value theorem (3.1)|<tuple|16.219|?>>
+    <associate|diff mean value theorem (4)|<tuple|16.220|?>>
+    <associate|diff minimum maximum|<tuple|16.191|?>>
+    <associate|diff n+m derivative|<tuple|16.166|?>>
+    <associate|diff n+m differentiation|<tuple|16.163|?>>
+    <associate|diff n+m differentiation (1)|<tuple|16.164|?>>
+    <associate|diff n-times and m-times derivating|<tuple|16.159|?>>
+    <associate|diff n-times and m-times differentiability|<tuple|16.133|?>>
+    <associate|diff partial derivate|<tuple|16.87|?>>
     <associate|diff partial derivate and partial
-    differential|<tuple|16.89|?>>
-    <associate|diff partial derivate definition|<tuple|16.84|?>>
-    <associate|diff partial derivative on a set|<tuple|16.88|?>>
+    differential|<tuple|16.90|?>>
+    <associate|diff partial derivate definition|<tuple|16.85|?>>
+    <associate|diff partial derivative on a set|<tuple|16.89|?>>
     <associate|diff partial differentiability does not mean
-    differentiaility|<tuple|16.81|?>>
-    <associate|diff partial differential|<tuple|16.75|?>>
+    differentiaility|<tuple|16.82|?>>
+    <associate|diff partial differential|<tuple|16.76|?>>
     <associate|diff partial differential definition|<tuple|16.73|?>>
-    <associate|diff partial differential on a set|<tuple|16.77|?>>
-    <associate|diff partial differential properties|<tuple|16.82|?>>
-    <associate|diff partial differentiation is local|<tuple|16.78|?>>
-    <associate|diff power|<tuple|16.102|?>>
+    <associate|diff partial differential on a set|<tuple|16.78|?>>
+    <associate|diff partial differential properties|<tuple|16.83|?>>
+    <associate|diff partial differentiation is local|<tuple|16.79|?>>
+    <associate|diff power|<tuple|16.103|?>>
     <associate|diff projection functon is infinite times
-    differentiable|<tuple|16.174|?>>
+    differentiable|<tuple|16.175|?>>
     <associate|diff scalar product function has a derivate|<tuple|16.32|?>>
-    <associate|diff second derivate convex concave|<tuple|16.202|?>>
-    <associate|diff translation is infinite differentiable|<tuple|16.173|?>>
+    <associate|diff second derivate convex concave|<tuple|16.203|?>>
+    <associate|diff translation is infinite differentiable|<tuple|16.174|?>>
     <associate|diff unprojection|<tuple|16.69|?>>
     <associate|diff unprojection is infinite times
-    differentiable|<tuple|16.172|?>>
-    <associate|diff vector functions|<tuple|16.91|?>>
-    <associate|diff vector functions (1)|<tuple|16.94|?>>
-    <associate|diff vector functions (2)|<tuple|16.96|?>>
-    <associate|diff vector functions and linearity|<tuple|16.93|?>>
+    differentiable|<tuple|16.173|?>>
+    <associate|diff vector functions|<tuple|16.92|?>>
+    <associate|diff vector functions (1)|<tuple|16.95|?>>
+    <associate|diff vector functions (2)|<tuple|16.97|?>>
+    <associate|diff vector functions and linearity|<tuple|16.94|?>>
     <associate|eq 16.1.177|<tuple|16.16|?>>
     <associate|eq 16.1.2|<tuple|16.1|?>>
     <associate|eq 16.10.178|<tuple|16.25|?>>
@@ -20144,7 +21042,7 @@
     <associate|eq 16.173.16|<tuple|16.173|?>>
     <associate|eq 16.174.16|<tuple|16.174|?>>
     <associate|eq 16.175.16|<tuple|16.175|?>>
-    <associate|eq 16.176.211|<tuple|16.238|?>>
+    <associate|eq 16.176.211|<tuple|16.239|?>>
     <associate|eq 16.177.16|<tuple|16.176|?>>
     <associate|eq 16.178.16|<tuple|16.177|?>>
     <associate|eq 16.179.16|<tuple|16.178|?>>
@@ -20305,11 +21203,29 @@
     <associate|eq 16.317.19|<tuple|16.317|?>>
     <associate|eq 16.33.181|<tuple|16.57|?>>
     <associate|eq 16.34.181|<tuple|16.58|?>>
+    <associate|eq 16.346.18|<tuple|16.346|?>>
+    <associate|eq 16.348.18|<tuple|16.348|?>>
+    <associate|eq 16.349.18|<tuple|16.349|?>>
+    <associate|eq 16.350.18|<tuple|16.350|?>>
+    <associate|eq 16.352.18|<tuple|16.352|?>>
+    <associate|eq 16.355.18|<tuple|16.355|?>>
+    <associate|eq 16.356.18|<tuple|16.356|?>>
+    <associate|eq 16.357.18|<tuple|16.357|?>>
+    <associate|eq 16.358.18|<tuple|16.358|?>>
+    <associate|eq 16.359.18|<tuple|16.359|?>>
     <associate|eq 16.36.182|<tuple|16.61|?>>
+    <associate|eq 16.360.18|<tuple|16.360|?>>
+    <associate|eq 16.361.18|<tuple|16.361|?>>
+    <associate|eq 16.362.18|<tuple|16.363|?>>
+    <associate|eq 16.362.19|<tuple|16.362|?>>
     <associate|eq 16.362.310|<tuple|16.311|?>>
+    <associate|eq 16.363.18|<tuple|16.364|?>>
     <associate|eq 16.363.310|<tuple|16.312|?>>
+    <associate|eq 16.364.18|<tuple|16.365|?>>
     <associate|eq 16.364.310|<tuple|16.313|?>>
+    <associate|eq 16.365.18|<tuple|16.366|?>>
     <associate|eq 16.365.310|<tuple|16.314|?>>
+    <associate|eq 16.366.18|<tuple|16.367|?>>
     <associate|eq 16.366.310|<tuple|16.315|?>>
     <associate|eq 16.367.310|<tuple|16.316|?>>
     <associate|eq 16.368.310|<tuple|16.318|?>>
@@ -20321,12 +21237,26 @@
     <associate|eq 16.374.310|<tuple|16.322|?>>
     <associate|eq 16.38.182|<tuple|16.63|?>>
     <associate|eq 16.380.310|<tuple|16.328|?>>
-    <associate|eq 16.389.310|<tuple|16.337|?>>
     <associate|eq 16.389.320|<tuple|16.344|?>>
     <associate|eq 16.39.182|<tuple|16.64|?>>
     <associate|eq 16.390.320|<tuple|16.345|?>>
+    <associate|eq 16.391.320|<tuple|16.347|?>>
+    <associate|eq 16.392.320|<tuple|16.351|?>>
+    <associate|eq 16.393.320|<tuple|16.357|?>>
+    <associate|eq 16.393.321|<tuple|16.353|?>>
+    <associate|eq 16.394.320|<tuple|16.358|?>>
+    <associate|eq 16.394.321|<tuple|16.354|?>>
+    <associate|eq 16.395.320|<tuple|16.359|?>>
+    <associate|eq 16.395.322|<tuple|16.355|?>>
+    <associate|eq 16.396.320|<tuple|16.360|?>>
+    <associate|eq 16.396.322|<tuple|16.356|?>>
+    <associate|eq 16.399.321|<tuple|16.369|?>>
     <associate|eq 16.4.1|<tuple|16.4|?>>
     <associate|eq 16.4.177|<tuple|16.20|?>>
+    <associate|eq 16.400.321|<tuple|16.370|?>>
+    <associate|eq 16.401.321|<tuple|16.371|?>>
+    <associate|eq 16.401.322|<tuple|16.368|?>>
+    <associate|eq 16.402.321|<tuple|16.372|?>>
     <associate|eq 16.41.182|<tuple|16.66|?>>
     <associate|eq 16.42.187|<tuple|16.69|?>>
     <associate|eq 16.43.187|<tuple|16.70|?>>
@@ -20377,51 +21307,56 @@
     <associate|eq 16.98.8.1|<tuple|16.94|?>>
     <associate|eq 16.99.4|<tuple|16.60|?>>
     <associate|eq 16.99.6|<tuple|16.95|?>>
-    <associate|lemma 16.101.194|<tuple|16.184|?>>
-    <associate|lemma 16.104.194|<tuple|16.226|?>>
-    <associate|lemma 16.105.194|<tuple|16.227|?>>
+    <associate|eq 16361.18|<tuple|16.361|?>>
+    <associate|lemma 16.101.194|<tuple|16.185|?>>
+    <associate|lemma 16.104.194|<tuple|16.227|?>>
+    <associate|lemma 16.105.194|<tuple|16.228|?>>
     <associate|lemma 16.11.500|<tuple|16.6|?>>
-    <associate|lemma 16.135.200|<tuple|16.206|?>>
-    <associate|lemma 16.144.201|<tuple|16.215|?>>
-    <associate|lemma 16.155.203|<tuple|16.221|?>>
-    <associate|lemma 16.157.205|<tuple|16.220|?>>
-    <associate|lemma 16.159.206|<tuple|16.223|?>>
-    <associate|lemma 16.160.206|<tuple|16.224|?>>
-    <associate|lemma 16.166.210|<tuple|16.228|?>>
-    <associate|lemma 16.167.210|<tuple|16.229|?>>
-    <associate|lemma 16.173.211|<tuple|16.235|?>>
-    <associate|lemma 16.174.211|<tuple|16.236|?>>
-    <associate|lemma 16.177.211|<tuple|16.239|?>>
-    <associate|lemma 16.178.210|<tuple|16.240|?>>
-    <associate|lemma 16.179.210|<tuple|16.241|?>>
+    <associate|lemma 16.135.200|<tuple|16.207|?>>
+    <associate|lemma 16.144.201|<tuple|16.216|?>>
+    <associate|lemma 16.155.203|<tuple|16.222|?>>
+    <associate|lemma 16.157.205|<tuple|16.221|?>>
+    <associate|lemma 16.159.206|<tuple|16.224|?>>
+    <associate|lemma 16.160.206|<tuple|16.225|?>>
+    <associate|lemma 16.166.210|<tuple|16.229|?>>
+    <associate|lemma 16.167.210|<tuple|16.230|?>>
+    <associate|lemma 16.173.211|<tuple|16.236|?>>
+    <associate|lemma 16.174.211|<tuple|16.237|?>>
+    <associate|lemma 16.177.211|<tuple|16.240|?>>
+    <associate|lemma 16.178.210|<tuple|16.241|?>>
+    <associate|lemma 16.179.210|<tuple|16.242|?>>
     <associate|lemma 16.18.2|<tuple|16.18|?>>
-    <associate|lemma 16.180.210|<tuple|16.242|?>>
-    <associate|lemma 16.181.210|<tuple|16.243|?>>
-    <associate|lemma 16.182.210|<tuple|16.244|?>>
+    <associate|lemma 16.180.210|<tuple|16.243|?>>
+    <associate|lemma 16.181.210|<tuple|16.244|?>>
+    <associate|lemma 16.182.210|<tuple|16.245|?>>
     <associate|lemma 16.19.2|<tuple|16.19|?>>
-    <associate|lemma 16.192.122|<tuple|16.256|?>>
-    <associate|lemma 16.195.124|<tuple|16.257|?>>
-    <associate|lemma 16.200.126|<tuple|16.265|?>>
-    <associate|lemma 16.202.127|<tuple|16.266|?>>
+    <associate|lemma 16.192.122|<tuple|16.257|?>>
+    <associate|lemma 16.195.124|<tuple|16.258|?>>
+    <associate|lemma 16.200.126|<tuple|16.266|?>>
+    <associate|lemma 16.202.127|<tuple|16.267|?>>
     <associate|lemma 16.24.178|<tuple|16.70|?>>
     <associate|lemma 16.313.310|<tuple|16.270|?>>
+    <associate|lemma 16.314.320|<tuple|16.271|?>>
+    <associate|lemma 16.315.320|<tuple|16.272|?>>
+    <associate|lemma 16.316.320|<tuple|16.273|?>>
+    <associate|lemma 16.318.320|<tuple|16.275|?>>
     <associate|lemma 16.37.4|<tuple|16.45|?>>
-    <associate|lemma 16.51.186|<tuple|16.111|?>>
-    <associate|lemma 16.53.186|<tuple|16.113|?>>
-    <associate|lemma 16.54.187|<tuple|16.114|?>>
-    <associate|lemma 16.55.187|<tuple|16.115|?>>
-    <associate|lemma 16.56.187|<tuple|16.116|?>>
-    <associate|lemma 16.57.187|<tuple|16.117|?>>
-    <associate|lemma 16.58.188|<tuple|16.118|?>>
-    <associate|lemma 16.59.188|<tuple|16.119|?>>
-    <associate|lemma 16.61.207|<tuple|16.106|?>>
+    <associate|lemma 16.51.186|<tuple|16.112|?>>
+    <associate|lemma 16.53.186|<tuple|16.114|?>>
+    <associate|lemma 16.54.187|<tuple|16.115|?>>
+    <associate|lemma 16.55.187|<tuple|16.116|?>>
+    <associate|lemma 16.56.187|<tuple|16.117|?>>
+    <associate|lemma 16.57.187|<tuple|16.118|?>>
+    <associate|lemma 16.58.188|<tuple|16.119|?>>
+    <associate|lemma 16.59.188|<tuple|16.120|?>>
+    <associate|lemma 16.61.207|<tuple|16.107|?>>
     <associate|lemma 16.69.4|<tuple|16.72|?>>
-    <associate|lemma 16.72.189|<tuple|16.159|?>>
-    <associate|lemma 16.83.197|<tuple|16.151|?>>
-    <associate|lemma 16.93.193|<tuple|16.176|?>>
-    <associate|lemma 16.96.193|<tuple|16.177|?>>
-    <associate|lemma 16.97.193|<tuple|16.178|?>>
-    <associate|lemma 16.98.194|<tuple|16.180|?>>
+    <associate|lemma 16.72.189|<tuple|16.160|?>>
+    <associate|lemma 16.83.197|<tuple|16.152|?>>
+    <associate|lemma 16.93.193|<tuple|16.177|?>>
+    <associate|lemma 16.96.193|<tuple|16.178|?>>
+    <associate|lemma 16.97.193|<tuple|16.179|?>>
+    <associate|lemma 16.98.194|<tuple|16.181|?>>
     <associate|normed space are assumed to be non trivial|<tuple|16.1|?>>
     <associate|topology every element of a generalized interval is a limit
     point|<tuple|16.10|?>>
