@@ -20613,6 +20613,8 @@
     </description>
   </proof>
 
+  TODO check this
+
   <subsection|Higher Order Partial Derivatives>
 
   <\definition>
@@ -20985,11 +20987,11 @@
   <\theorem>
     <label|diff partial derivate and partial differential of higher order>Let
     <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>>, <math|m\<in\>\<bbb-N\>>,
-    <math|<around*|\<langle\>|\<bbb-R\><rsup|n>,<around*|\<\|\|\>||\<\|\|\>><rsub|n>|\<rangle\>>>
+    <math|<around*|\<langle\>|\<bbb-K\><rsup|n>,<around*|\<\|\|\>||\<\|\|\>><rsub|n>|\<rangle\>>>
     the normed space with the maximum norm
     <math|<around*|\<\|\|\>||\<\|\|\>><rsub|n>>,
     <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> a
-    normed space,a open set <math|A\<subseteq\>\<bbb-R\><rsup|n>>,
+    normed space,a open set <math|A\<subseteq\>\<bbb-K\><rsup|n>>,
     <math|x\<in\>A>, <math|i\<in\><around*|{|1,\<ldots\>,n|}><rsup|m>> and
     <math|f:A\<rightarrow\>X> a function that has a partial differential
     <math|D<rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f> at <math|x>
@@ -22030,11 +22032,11 @@
 
   <\lemma>
     <label|lemma 16.216.144>Let <math|n\<in\>\<bbb-N\>>,
-    <math|m\<in\>\<bbb-N\>>, <math|<around*|\<langle\>|\<bbb-K\><rsup|n>,<around*|\<\|\|\>||\<\|\|\>><rsub|N>|\<rangle\>>>
-    be the vector space of <math|\<bbb-K\><rsup|n>> with the maximum norm,
+    <math|m\<in\>\<bbb-N\>>, <math|<around*|\<langle\>|\<bbb-R\><rsup|n>,<around*|\<\|\|\>||\<\|\|\>><rsub|N>|\<rangle\>>>
+    be the vector space of <math|\<bbb-R\><rsup|n>> with the maximum norm,
     <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> a
-    normed space and <math|L\<in\>L<rsub|m><around*|(|\<bbb-K\><rsup|n>;X|)>>
-    then for <math|<around*|{|h<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>>\<subseteq\>\<bbb-K\><rsup|n>>
+    normed space and <math|L\<in\>L<rsub|m><around*|(|\<bbb-R\><rsup|n>;X|)>>
+    then for <math|<around*|{|h<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>>\<subseteq\>\<bbb-R\><rsup|n>>
     we have\ 
 
     <\equation*>
@@ -22042,7 +22044,7 @@
     </equation*>
 
     where <math|<around*|{|e<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
-    is the canonical basis on <math|\<bbb-K\><rsup|n>> [see theorem:
+    is the canonical basis on <math|\<bbb-R\><rsup|n>> [see theorem:
     <reference|basis F^n>] defined by <math|<around*|(|e<rsub|i>|)><rsub|j>=\<delta\><rsub|i,j>>.
   </lemma>
 
@@ -22051,16 +22053,16 @@
 
     <\equation*>
       S=<around*|{|m\<in\>\<bbb-N\>\|<text|If
-      ><around*|{|h<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>>\<subseteq\>\<bbb-K\><rsup|n><text|
-      and >L\<in\>L<rsub|m><around*|(|\<bbb-K\><rsup|n>;Y|)><text| then
+      ><around*|{|h<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>>\<subseteq\>\<bbb-R\><rsup|n><text|
+      and >L\<in\>L<rsub|m><around*|(|\<bbb-R\><rsup|n>;Y|)><text| then
       >L<around*|(|h<rsub|1>:\<ldots\>:h<rsub|m>|)>=<rigid|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}><rsup|m>><around*|(|<big|prod><rsub|j=1><rsup|m><around*|(|h<rsub|j>|)><rsub|i<rsub|j>>|)>\<cdot\>L<around*|(|e<rsub|i<rsub|1>>:\<ldots\>:e<rsub|i<rsub|m>>|)>>|}>
     </equation*>
 
     then we have:
 
     <\description>
-      <item*|<math|1\<in\>S>>If <math|<around*|{|h<rsub|i>|}><rsub|i\<in\><around*|{|1|}>>\<subseteq\>\<bbb-K\><rsup|n>>
-      and <math|L\<in\>L<rsub|1><around*|(|\<bbb-K\><rsup|n>;X|)>=L<around*|(|\<bbb-K\><rsup|n>,X|)>>
+      <item*|<math|1\<in\>S>>If <math|<around*|{|h<rsub|i>|}><rsub|i\<in\><around*|{|1|}>>\<subseteq\>\<bbb-R\><rsup|n>>
+      and <math|L\<in\>L<rsub|1><around*|(|\<bbb-R\><rsup|n>;X|)>=L<around*|(|\<bbb-R\><rsup|n>,X|)>>
       then we have\ 
 
       <\eqnarray*>
@@ -22071,10 +22073,10 @@
       which proves that <math|1\<in\>S>.
 
       <item*|<math|m\<in\>S\<Rightarrow\>m+1\<in\>S>>If
-      <math|<around*|{|h<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,m+1|}>>\<subseteq\>\<bbb-K\><rsup|n>>
-      and <math|L\<in\>L<rsub|m+1><around*|(|\<bbb-K\><rsup|n>;X|)>> then for
+      <math|<around*|{|h<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,m+1|}>>\<subseteq\>\<bbb-R\><rsup|n>>
+      and <math|L\<in\>L<rsub|m+1><around*|(|\<bbb-R\><rsup|n>;X|)>> then for
       <math|i\<in\><around*|{|1,\<ldots\>,n|}>>
-      <math|L<around*|(|e<rsub|i>|)>\<in\>L<rsub|m><around*|(|\<bbb-K\><rsup|n>;X|)>>
+      <math|L<around*|(|e<rsub|i>|)>\<in\>L<rsub|m><around*|(|\<bbb-R\><rsup|n>;X|)>>
       so, as <math|m\<in\>S>, we have\ 
 
       <\equation>
@@ -22093,6 +22095,1985 @@
       proving that <math|m+1\<in\>S>
     </description>
   </proof>
+
+  <\theorem>
+    <label|diff higher order differentiation implies higher order
+    derivates>Let <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>>,
+    <math|m\<in\>\<bbb-N\>>, <math|<around*|\<langle\>|\<bbb-R\><rsup|n>,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
+    be the vector space <math|\<bbb-R\><rsup|n>> with the maximum norm,
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> a
+    normed space, a open set <math|U\<subseteq\>\<bbb-R\><rsup|n>>,
+    <math|x\<in\>U>, <math|f:U\<rightarrow\>X> a function that is
+    <math|m>-times differentiable at <math|x> then for
+    <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><rsup|m>>
+    <math|D<rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f> and
+    <math|\<partial\><rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f>
+    exists and we have\ 
+
+    <\equation*>
+      \<partial\><rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f=D<rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f<around*|(|<wide*|1:\<ldots\>:1|\<wide-underbrace\>><rsub|m>|)>=D<rsub|x>f<around*|(|e<rsub|i<rsub|1>>:\<ldots\>:e<rsub|i<rsub|m>>|)>
+    </equation*>
+
+    and for <math|<around*|{|h<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>>\<subseteq\>\<bbb-R\><rsup|n>>
+    that
+
+    <\equation*>
+      D<rsup|<around*|(|m|)>><rsub|x>f<around*|(|h<rsub|1>,\<ldots\>,h<rsub|m>|)>=D<rsup|<around*|[|m|]>><rsub|x>f<around*|(|h<rsub|1>:\<ldots\>:h<rsub|m>|)>=<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}><rsup|m>><around*|(|<big|prod><rsub|j=1><rsup|m><around*|(|h<rsub|j>|)><rsub|i<rsub|j>>|)>\<cdot\>\<partial\><rsub|x,<around*|[|i<rsub|1>\<ldots\>i+m|]>>f
+    </equation*>
+
+    where <math|<around*|{|e<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+    is the canonical basis on <math|\<bbb-R\><rsup|n>> defined by
+    <math|<around*|(|e<rsub|i>|)><rsub|j>=\<delta\><rsub|i,j>>.
+  </theorem>
+
+  <\proof>
+    Let <math|i\<in\><around*|{|1,\<ldots\>,n|}><rsup|m>>. Using [theorem:
+    <reference|diff higher order differation implies higher order partial
+    differation>] it follows that <math|D<rsup|<around*|[|m|]>><rsub|x,i<rsub|m>\<ldots\>i<rsub|1>>f>
+    exist and for <math|h\<in\>\<bbb-R\><rsup|m>>\ 
+
+    <\equation>
+      <label|eq 16.301.144>D<rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f<around*|(|h<rsub|1>:\<ldots\>:h<rsub|m>|)>=D<rsup|<around*|[|m|]>><rsub|x>f<around*|(|I<rsup|<around*|[|i<rsub|m>,0|]>><around*|(|h<rsub|1>|)>:\<ldots\>:I<rsup|<around*|[|i<rsub|1>,0|]>><around*|(|h<rsub|m>|)>|)>
+    </equation>
+
+    Next by [theorem: <reference|diff partial derivate and partial
+    differential of higher order>] <math|\<partial\><rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f>
+    exist and\ 
+
+    <\equation>
+      <label|eq 16.302.144>\<partial\><rsub|x.<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f=D<rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f<around*|(|<wide*|1:\<ldots\>:1|\<wide-underbrace\>><rsub|m>|)>
+    </equation>
+
+    Let <math|k\<in\><around*|{|1,\<ldots\>,n|}>> and
+    <math|j\<in\><around*|{|1,\<ldots\>,m|}>> then
+    <math|<around*|(|I<rsup|<around*|[|i<rsub|j>,0|]>><around*|(|1|)>|)><rsub|k>\<equallim\><rsub|<text|[lemma:
+    <reference|lemma 16.24.178>]>>\<delta\><rsub|i<rsub|j>,k>\<cdot\>1=\<delta\><rsub|i<rsub|j>,k>=<around*|(|e<rsub|i<rsub|j>>|)><rsub|k>>
+    so that\ 
+
+    <\equation>
+      <label|eq 16.303.144>I<rsup|<around*|[|i<rsub|j>,0|]>><around*|(|1|)>=e<rsub|i<rsub|j>>
+    </equation>
+
+    \ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|\<partial\><rsub|x.<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f>|<cell|\<equallim\><rsub|<text|[eqs:
+      <reference|eq 16.301.144>, <reference|eq
+      16.302.144>]>>>|<cell|D<rsup|<around*|[|m|]>><rsub|x>f<around*|(|<wide*|I<rsup|<around*|[|i<rsub|m>,0|]>><around*|(|1|)>:\<ldots\>:I<rsup|<around*|[|i<rsub|1>,0|]>><around*|(|1|)>|\<wide-underbrace\>><rsub|m>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 16.303.144>]>>>|<cell|D<rsup|<around*|[|m|]>><rsub|x>f<around*|(|e<rsub|i<rsub|m>>:\<ldots\>:e<rsub|i<rsub|1>>|)><eq-number><label|eq
+      16.305.144>>>>>
+    </eqnarray*>
+
+    Finally we have
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|D<rsup|<around*|[|m|]>><rsub|x>f<around*|(|h<rsub|1>:\<ldots\>:h<rsub|m>|)>>|<cell|\<equallim\><rsub|<text|[lemma:
+      <reference|lemma 16.216.144>]>>>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}><rsup|m>><around*|(|<big|prod><rsub|j=1><rsup|m><around*|(|h<rsub|j>|)><rsub|i<rsub|j>>|)>\<cdot\>D<rsup|<around*|[|m|]>><rsub|x>f<around*|(|e<rsub|i<rsub|1>>:\<ldots\>:e<rsub|i<rsub|m>>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 16.305.144>]>>>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}><rsup|m>><around*|(|<big|prod><rsub|j=1><rsup|m><around*|(|h<rsub|j>|)><rsub|i<rsub|j>>|)>\<cdot\>\<partial\><rsub|x.<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f>>>>
+    </eqnarray*>
+  </proof>
+
+  <section|Inverse Function Theorem>
+
+  <subsection|Prerequisites>
+
+  The purpose of this section is to prove the inverse function theorem that
+  gives sufficient conditions for a function between Banach spaces to be
+  invertible. First we need to introduce some concepts needed to prove the
+  Inverse Function Theorem. We start with the concept of topological vector
+  spaces which are essential vector spaces where the sum and scalar products
+  are continuous.
+
+  <\definition>
+    <label|topology topological vector space><index|topological vector
+    space>A topological vector space is a vector space
+    <math|<around*|\<langle\>|X,+,\<cdot\>|\<rangle\>>> over <math|\<bbb-K\>>
+    together with a topology <math|\<cal-T\>> \ on <math|X> such that\ 
+
+    <\enumerate>
+      <item><math|+:X\<times\>X\<rightarrow\>X> defined by
+      <math|<around*|(|x,y|)>\<rightarrow\>+<around*|(|x,y|)>=x+y> is
+      continuous
+
+      <item><math|\<cdot\>:\<bbb-K\>\<times\>X\<rightarrow\>X> defined by
+      <math|<around*|(|\<alpha\>,x|)>\<rightarrow\>\<cdot\><around*|(|\<alpha\>,x|)>=\<alpha\>\<cdot\>x>
+      is continuous
+    </enumerate>
+
+    <\note>
+      Here we use the product topology on <math|X\<times\>X> based on the
+      topology <math|\<cal-T\>> of <math|X> and the product topology on
+      <math|\<bbb-K\>\<times\>X> based on the absolute norm topology
+      <math|\<cal-T\><rsub|<around*|\|||\|>>> of <math|\<bbb-K\>> and the
+      topology <math|\<cal-T\>> of <math|X>.
+    </note>
+  </definition>
+
+  <\example>
+    <label|topology normed space is a topological vector space>If
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> is
+    a normed space over <math|\<bbb-K\>> then
+    <math|<around*|\<langle\>|X,\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>>>|\<rangle\>>>
+    is a topological vector space.
+  </example>
+
+  <\proof>
+    This follows from [theorems: <reference|continuity scalar product> and
+    <reference|continuity of sum>]\ 
+  </proof>
+
+  <\definition>
+    <label|toplinear isomorphism><index|toplinear isomorphism>Let <math|X,Y>
+    be topological vector spaces then a <with|font-series|bold|toplinear
+    isomorphism> is a function <math|L:X\<rightarrow\>Y> satisfying
+
+    <\enumerate>
+      <item><math|L> is a linear isomorphism, meaning that
+
+      <\enumerate>
+        <item><math|L> is a bijection
+
+        <item><math|L<around*|(|x+y|)>=L<around*|(|x|)>+L<around*|(|y|)>>
+
+        <item><math|L<around*|(|\<alpha\>\<cdot\>x|)>=\<alpha\>\<cdot\>L<around*|(|x|)>>
+      </enumerate>
+
+      <item><math|L> and <math|L<rsup|-1>> are continuous
+    </enumerate>
+
+    In other words a toplinear isomorphism is a linear homeomorphism [see
+    definition: <reference|continuity homeomorphism>].
+
+    <\note>
+      Using [theorems: <reference|linear mapping inverse of a isomorphism>,
+      <reference|function bijection and inverse>] <math|L<rsup|-1>> is also a
+      continuous bijective linear isomorphism. Hence
+      <math|L<rsup|-1>\<in\>L<around*|(|Y,X|)>> if <math|L> is a toplinear
+      isomorphism.
+    </note>
+  </definition>
+
+  We have the following characterization of toplinear isomorphisms.
+
+  <\theorem>
+    <label|topology toplinear isomorphism in a normed space>Let
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    be normed spaces then <math|\<forall\>L\<in\>L<around*|(|X,Y|)>> we have
+    that <math|L> is a toplinear isomorphism if and only if <math|L> is a
+    bijection and <math|L<rsup|-1>> is continuous.
+  </theorem>
+
+  <\proof>
+    This follows trivial from the definition of <math|L<around*|(|X,Y|)>> and
+    a toplinear isomorphism.
+  </proof>
+
+  We can use a consequence of the open mapping theorem [see corollary:
+  <reference|complete continuous linear isomorphism is a homeomorphism>] to
+  formulate the following theorem.
+
+  <\theorem>
+    <label|diff toplinear isomorphism between Banach spaces>Let
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    be Banach spaces, <math|L:X\<rightarrow\>Y> a continuous isomorphism [in
+    other words <math|L\<in\>L<around*|(|X,Y|)>> and <math|L> is a bijection]
+    then <math|L> is a toplinear isomorphism.
+  </theorem>
+
+  <\proof>
+    By \ [corollary: <reference|complete continuous linear isomorphism is a
+    homeomorphism>] <math|L> is a homeomorphism so that <math|L<rsup|-1>> is
+    continuous, hence by [theorem: <reference|topology toplinear isomorphism
+    in a normed space>] <math|L> is a toplinear isomorphism.
+  </proof>
+
+  We define now the set of toplinear isomorphisms on a Banach space
+
+  <\definition>
+    <label|diff space of toplinear isomorphism><index|<math|\<cal-G\>L<around*|(|X|)>>>If
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> is
+    a normed space then <math|\<cal-G\>L<around*|(|X|)>> is defined by\ 
+
+    <\equation*>
+      \<cal-G\>L<around*|(|X|)>=<around*|{|L\<in\>L<around*|(|X,X|)>\|L<text|
+      is a toplinear isomorphism>|}>\<subseteq\>L<around*|(|X,X|)>
+    </equation*>
+  </definition>
+
+  The set of toplinear isomorphisms on a Banach space forms a group under
+  composition as stated in the next theorem.
+
+  <\theorem>
+    <label|diff GL(X) is a group>If <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
+    is a normed space then <math|\<cal-G\>L<around*|(|X|)>> is a group with
+    the composition <math|\<circ\>> as the operator and the identity function
+    <math|Id<rsub|X>> [see definition: <reference|function identity
+    function>] as neutral element and for every
+    <math|L\<in\>\<cal-G\>L<around*|(|X|)>> <math|L<rsup|-1>> as inverse of
+    <math|L>.
+  </theorem>
+
+  <\proof>
+    If <math|L<rsub|1>,L<rsub|2>\<in\>\<cal-G\>L<around*|(|X|)>> then by
+    definition <math|L<rsub|1>,L<rsub|2>\<in\>L<around*|(|X,Y|)>> and
+    <math|L<rsub|1>,L<rsub|2>> are toplinear isomorphism. Hence by [theorem:
+    <reference|topology toplinear isomorphism in a normed space>
+    <math|L<rsub|1>,L<rsub|2>> are bijections and <math|L<rsub|1><rsup|-1>>,
+    <math|L<rsup|-1><rsub|2>> are continuous. As the composition of
+    bijections is a bijection [see theorem: <reference|function composition
+    injectivity, surjectivity and bijectivity (1)>]
+    <math|L<rsub|1>\<circ\>L<rsub|2>> is bijective, further by [theorem:
+    <reference|continuity composition of continuous linear mapping>] we have
+    \ <math|L<rsub|1>\<circ\>L<rsub|2>\<in\>L<around*|(|X,Y|)>>. As
+    <math|<around*|(|L<rsub|1>\<circ\>L<rsub|2>|)><rsup|-1>\<equallim\><rsub|<text|[theorem:
+    <reference|function composition injectivity, surjectivity and bijectivity
+    (1)>]>>L<rsup|-1><rsub|2>\<circ\>L<rsup|-1><rsub|1>> we have by [theorem:
+    <reference|continuity composition>] that
+    <math|<around*|(|L<rsub|1>\<circ\>L<rsub|2>|)><rsup|-1>> is continuous.
+    Hence <math|L<rsub|1>\<circ\>L<rsub|2>\<in\>\<cal-G\>L<around*|(|X|)>> so
+    that\ 
+
+    <\equation*>
+      \<circ\>:\<cal-G\>L<around*|(|X|)>\<times\>\<cal-G\>L<around*|(|X|)>\<rightarrow\>\<cal-G\>L<around*|(|X|)>
+    </equation*>
+
+    is well defined. Next we have:
+
+    <\description>
+      <item*|neutral element>As <math|Id<rsub|X>> is a bijection [see
+      theorem: <reference|function identity map is a bijection>],
+      <math|Id<rsub|X>\<in\>L<around*|(|X,X|)>> [see theorem:
+      <reference|continuity identity map is linear and continuous>] and
+      <math|<around*|(|Id<rsub|X>|)><rsup|-1>=Id<rsub|X>\<Rightarrow\><around*|(|Id<rsub|X>|)><rsup|-1><text|>>
+      is continuous it follows that <math|Id<rsub|X>\<in\>\<cal-G\>L<around*|(|X|)>>.
+      Finally we have trivially that <math|\<forall\>L\<in\>L<around*|(|X,X|)>>
+      <math|Id<rsub|X>\<circ\>L=L=L\<circ\>Id<rsub|X>>.
+
+      <item*|inverse element>If <math|L\<in\>\<cal-G\>L<around*|(|X|)>> then
+      <math|L> is a linear isomorphism and <math|L<rsup|-1>> is continuous.
+      As by [theorem: <reference|linear mapping inverse of a isomorphism>]
+      <math|L<rsup|-1>> is a linear isomorphism it follows that
+      <math|L<rsup|-1>\<in\>L<around*|(|X,X|)>>, further
+      <math|<around*|(|L<rsup|-1>|)><rsup|-1>=L> so that
+      <math|<around*|(|L<rsup|-1>|)><rsup|-1>> is continuous. proving that
+      <math|L<rsup|-1>\<in\>\<cal-G\>L<around*|(|X|)>>. Finally
+      <rigid|<math|L\<circ\>L<rsup|-1>=Id<rsub|X>=L<rsup|-1>\<circ\>L>>.
+
+      <item*|associativity>This is trivial as composition of function is
+      associative.
+    </description>
+  </proof>
+
+  We will need the following theorem about limits in
+  <math|L<around*|(|X,X|)>> and composition.
+
+  <\theorem>
+    <label|continuity limit of composition of linear maps>Let
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> be
+    a normed space, <math|L\<in\>L<around*|(|X,X|)>> and
+    <math|<around*|{|K<rsub|n>|}><rsub|n\<in\>\<bbb-N\>>\<subseteq\>L<around*|(|X,X|)>>
+    a countable family such that <math|<below|lim|n\<rightarrow\>\<infty\>>K<rsub|n>>
+    exist. Then we have
+
+    <\equation*>
+      <below|lim|n\<rightarrow\>\<infty\>><around*|(|L\<circ\>K<rsub|n>|)><text|
+      exist and ><below|lim|n\<rightarrow\>\<infty\>><around*|(|L\<circ\>K<rsub|n>|)>=L\<circ\><around*|(|<below|lim|n\<rightarrow\>\<infty\>>K<rsub|n>|)>
+    </equation*>
+
+    <\equation*>
+      <below|lim|n\<rightarrow\>\<infty\>><around*|(|K<rsub|n>\<circ\>L|)><text|
+      exist and ><below|lim|n\<rightarrow\>\<infty\>><around*|(|K<rsub|n>\<circ\>L|)>=<around*|(|<below|lim|n\<rightarrow\>\<infty\>>K<rsub|n>|)>\<circ\>L
+    </equation*>
+
+    <\note>
+      [theorem: <reference|continuity composition of continuous linear
+      mapping>] ensures that <math|L\<circ\>K<rsub|n>>,
+      <math|K<rsub|n>\<circ\>L\<in\>L<around*|(|X,X|)>> for every
+      <math|n\<in\>\<bbb-N\>>.
+    </note>
+  </theorem>
+
+  <\proof>
+    As <math|><math|<below|lim|n\<rightarrow\>\<infty\>>K<rsub|n>> exist we
+    have for <math|K=<below|lim|n\<rightarrow\>\<infty\>>K<rsub|n>> that
+    <math|\<forall\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> there exist a
+    <math|N\<in\>\<bbb-N\>> such that <math|\<forall\>n\<geqslant\>N> we have
+
+    <\equation*>
+      <around*|\<\|\|\>|K<rsub|n>-K|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<less\><frac|\<varepsilon\>|1+<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X,X|)>>>
+    </equation*>
+
+    Further we have\ 
+
+    <\equation>
+      <label|eq 16.308.128>L\<circ\>K<rsub|n>-L\<circ\>K\<equallim\><rsub|<text|[theorem:
+      <reference|continuity composition is
+      multilinear>]>>L\<circ\><around*|(|K<rsub|n>-K|)><text| and
+      >K<rsub|n>\<circ\>L-K\<circ\>L\<equallim\><rsub|<text|[theorem:
+      <reference|continuity composition is
+      multilinear>]>><around*|(|K<rsub|n>-K|)>\<circ\>L
+    </equation>
+
+    Next if <math|n\<geqslant\>N> then we have
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|\<\|\|\>|L\<circ\>K<rsub|n>-L\<circ\>K|\<\|\|\>><rsub|L<around*|(|X,Y|)>>>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 16.308.128>]>>>|<cell|<around*|\<\|\|\>|L\<circ\><around*|(|K<rsub|n>-K|)>|\<\|\|\>><rsub|L<around*|(|X,X|)>>>>|<row|<cell|>|<cell|<below|\<leqslant\><rsub|>|<text|[theorem:
+      <reference|continuity composition of continuous linear
+      mapping>]>>>|<cell|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<cdot\><around*|\<\|\|\>|K<rsub|n>-K|\<\|\|\>><rsub|L<around*|(|X,X|)>>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<cdot\><frac|\<varepsilon\>|1+<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X,X|)>>>>>|<row|<cell|>|<cell|\<less\>>|<cell|\<varepsilon\>>>|<row|<cell|<around*|\<\|\|\>|K<rsub|n>\<circ\>L-K\<circ\>L|\<\|\|\>><rsub|L<around*|(|X,X|)>>>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 16.308.128>]>>>|<cell|<around*|\<\|\|\>|<around*|(|K<rsub|n>-K|)>\<circ\>L|\<\|\|\>><rsub|L<around*|(|X,X|)>>>>|<row|<cell|>|<cell|<below|\<leqslant\><rsub|>|<text|[theorem:
+      <reference|continuity composition of continuous linear
+      mapping>]>>>|<cell|<around*|\<\|\|\>|K<rsub|n>-K|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<cdot\><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X,X|)>>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<frac|\<varepsilon\>|1+<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X,X|)>>>\<cdot\><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X,X|)>>>>|<row|<cell|>|<cell|\<less\>>|<cell|\<varepsilon\>>>>>
+    </eqnarray*>
+
+    which proves that\ 
+
+    <\equation*>
+      <below|lim|n\<rightarrow\>\<infty\>><around*|(|L\<circ\>K<rsub|n>|)>=L\<circ\>K=L\<circ\><around*|(|<below|lim|n\<rightarrow\>\<infty\>>K<rsub|n>|)>
+    </equation*>
+
+    and\ 
+
+    <\equation*>
+      <below|lim|n\<rightarrow\>\<infty\>><around*|(|K<rsub|n>\<circ\>L|)>=K\<circ\>L=<around*|(|<below|lim|n\<rightarrow\>\<infty\>>K<rsub|n>|)>\<circ\>L
+    </equation*>
+  </proof>
+
+  <\definition>
+    <label|diff power of composition><index|<math|H<rsup|n>>>Let
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> be
+    a normed space and <math|H\<in\>L<around*|(|X,X|)>>,
+    <math|n\<in\>\<bbb-N\>> then <math|H<rsup|n>:X\<rightarrow\>X> is defined
+    by\ 
+
+    <\equation*>
+      H<rsup|n>=<choice|<tformat|<table|<row|<cell|H<text| if
+      >n=1>>|<row|<cell|H\<circ\>H<rsup|n-1><text| if >1\<less\>n>>>>>
+    </equation*>
+
+    in other words
+
+    <\equation*>
+      H<rsup|n>=<wide*|H\<circ\>\<cdots\>\<circ\>H|\<wide-underbrace\>><rsub|n>
+    </equation*>
+  </definition>
+
+  \;
+
+  <\theorem>
+    <label|diff H^n properties>Let <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
+    be a normed space, <math|n\<in\>\<bbb-N\>> and
+    <math|H\<in\>L<around*|(|X,X|)>> then we have:
+
+    <\enumerate>
+      <item><math|H<rsup|n>\<circ\>H=H<rsup|n+1>>
+
+      <item><math|\<forall\>\<alpha\>\<in\>\<bbb-K\><text| we have
+      ><around*|(|\<alpha\>\<cdot\>H|)><rsup|n>=<around*|(|\<alpha\>|)><rsup|n>\<cdot\>H<rsup|n>>
+
+      <item><math|><math|H<rsup|n>\<in\>L<around*|(|X,X|)>> and
+      <math|<around*|\<\|\|\>|H<rsup|n>|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<leqslant\><around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,Y|)>><rsup|n>>
+
+      <item><math|<big|sum><rsub|i=1><rsup|n>H<rsup|i>\<in\>L<around*|(|X,X|)>>
+      and <math|<around*|\<\|\|\>|<big|sum><rsub|i=1><rsup|n>H<rsup|i>|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<leqslant\><big|sum><rsub|i=1><rsup|n><around*|\<\|\|\>|H|\<\|\|\>><rsup|i><rsub|L<around*|(|X,X|)>>>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    <space|1em>
+
+    <\enumerate>
+      <item>We prove this by induction so let\ 
+
+      <\equation*>
+        S=<around*|{|n\<in\>\<bbb-N\>\|H<rsup|n>\<circ\>H=H<rsup|n+1>|}>
+      </equation*>
+
+      then we have:\ 
+
+      <\description>
+        <item*|<math|1\<in\>S>>As <math|H<rsup|1>\<circ\>H=H\<circ\>H=H\<circ\>H<rsup|1>=H<rsup|1+1>>
+        it follows that <math|1\<in\>S>
+
+        <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>We have\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|H<rsup|n+1>\<circ\>H>|<cell|=>|<cell|<around*|(|H\<circ\>H<rsup|n>|)>\<circ\>H>>|<row|<cell|>|<cell|=>|<cell|<around*|(|H<rsup|1>\<circ\>H<rsup|n>|)>\<circ\>H>>|<row|<cell|>|<cell|\<equallim\><rsub|\<circ\><text|
+          is associative>>>|<cell|H<rsup|1>\<circ\><around*|(|H<rsup|n>\<circ\>H|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|n\<in\>S>>|<cell|H<rsup|1>\<circ\>H<rsup|n+1>>>|<row|<cell|>|<cell|=>|<cell|H\<circ\>H<rsup|n+1>>>|<row|<cell|>|<cell|=>|<cell|H<rsup|<around*|(|n+1|)>+1>>>>>
+        </eqnarray*>
+
+        proving that <math|n+1\<in\>S>.
+      </description>
+
+      <item>This is easily proved by induction, so let\ 
+
+      <\equation*>
+        S=<around*|{|n\<in\>\<bbb-N\>\|<around*|(|\<alpha\>\<cdot\>H|)><rsup|n>=\<alpha\><rsup|n>\<cdot\>H<rsup|n>|}>
+      </equation*>
+
+      then we have:
+
+      <\description>
+        <item*|<math|1\<in\>S>>Let <math|x\<in\>X> then
+        <math|<around*|(|\<alpha\>\<cdot\>H|)><rsup|1><around*|(|x|)>=<around*|(|\<alpha\>\<cdot\>H|)><around*|(|x|)>=\<alpha\>\<cdot\>H<around*|(|x|)>=\<alpha\><rsup|1>\<cdot\>H<rsup|1><around*|(|x|)>=<around*|(|\<alpha\>\<cdot\>H<rsup|1>|)><around*|(|x|)>>
+        proving that <math|<around*|(|\<alpha\>\<cdot\>H|)><rsup|1>=\<alpha\><rsup|1>\<cdot\>H<rsup|1>>.
+        Hence <math|1\<in\>S>.
+
+        <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>Let <math|x\<in\>X>
+        then we have as <math|1\<less\>n+1>
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<around*|(|\<alpha\>\<cdot\>H|)><rsup|n+1><around*|(|x|)>>|<cell|=>|<cell|<around*|(|<around*|(|\<alpha\>\<cdot\>H|)>\<circ\><around*|(|\<alpha\>\<cdot\>H|)><rsup|n>|)><around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|\<alpha\>\<cdot\>H|)><around*|(|<around*|(|\<alpha\>\<cdot\>H|)><rsup|n><around*|(|x|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|n\<in\>S>>|<cell|<around*|(|\<alpha\>\<cdot\>H|)><around*|(|<around*|(|\<alpha\><rsup|n>\<cdot\>H<rsup|n>|)><around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|\<alpha\>\<cdot\>H|)><around*|(|\<alpha\><rsup|n>\<cdot\>H<rsup|n><around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<alpha\>\<cdot\>H<around*|(|\<alpha\><rsup|n>\<cdot\>H<rsup|n><around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<alpha\>\<cdot\>\<alpha\><rsup|n>\<cdot\>H<around*|(|H<rsup|n><around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<alpha\><rsup|n+1>\<cdot\><around*|(|<around*|(|H\<circ\>H<rsup|n>|)>|)><around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|\<alpha\><rsup|n+1>\<cdot\>H<rsup|n+1><around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|\<alpha\><rsup|n+1>\<cdot\>H<rsup|n+1>|)><around*|(|x|)>>>>>
+        </eqnarray*>
+
+        proving that <math|<around*|(|\<alpha\>\<cdot\>H|)><rsup|n+1>=\<alpha\><rsup|n+1>\<cdot\>H<rsup|n+1>>.
+        Hence\ 
+
+        <\equation*>
+          n+1\<in\>S
+        </equation*>
+      </description>
+
+      <item>We prove this by induction, so let\ 
+
+      <\equation*>
+        S=<around*|{|n\<in\>\<bbb-N\>\|H<rsup|n>\<in\>L<around*|(|X,X|)><text|
+        and ><around*|\<\|\|\>|H<rsup|n>|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\<leqslant\><around*|\<\|\|\>|H|\<\|\|\>><rsup|n><rsub|L<around*|(|X,X|)>>|}>
+      </equation*>
+
+      then we have:\ 
+
+      <\description>
+        <item*|<math|1\<in\>S>>As <math|H<rsup|1>=H\<in\>L<around*|(|X,X|)>>
+        and <math|<around*|\<\|\|\>|H<rsup|1>|\<\|\|\>><rsub|L<around*|(|X,X|)>>=<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>=<around*|\<\|\|\>|H|\<\|\|\>><rsup|1><rsub|L<around*|(|X,X|)>>>
+        it follows that <math|1\<in\>S>.
+
+        <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>As <math|n\<in\>S> it
+        follows that <math|H<rsup|n>\<in\>L<around*|(|X,X|)>> and
+        <math|<rigid|<around*|\<\|\|\>|H<rsup|n>|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<leqslant\><around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>><rsup|n>>>.
+        So as <math|H\<in\>L<around*|(|X,X|)>> it follows from [theorem:
+        <reference|continuity composition of continuous linear mapping>] that\ 
+
+        <\equation*>
+          H<rsup|n+1>=H\<circ\>H<rsup|n>\<in\>L<around*|(|X,X|)><rsup|>
+        </equation*>
+
+        and
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<around*|\<\|\|\>|H<rsup|n+1>|\<\|\|\>>>|<cell|=>|<cell|<around*|\<\|\|\>|H\<circ\>H<rsup|n>|\<\|\|\>><rsub|L<around*|(|X,X|)>>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<cdot\><around*|\<\|\|\>|H<rsup|n>|\<\|\|\>><rsub|L<around*|(|X,X|)>>>>|<row|<cell|>|<cell|<below|\<leqslant\>|n\<in\>S>>|<cell|<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<cdot\><around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>><rsup|n>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>><rsup|n+1>>>>>
+        </eqnarray*>
+
+        which proves that\ 
+
+        <\equation*>
+          n+1\<in\>S
+        </equation*>
+      </description>
+
+      <item>Let <math|\<beta\>\<in\>\<bbb-K\>> and <math|x,y\<in\>X>
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|<big|sum><rsub|i=1><rsup|n>H<rsup|i>|)><around*|(|x+\<beta\>\<cdot\>y|)>>|<cell|\<equallim\><rsub|def>>|<cell|<big|sum><rsub|i=1><rsup|n>H<rsup|i><around*|(|x+\<beta\>\<cdot\>y|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<around*|(|3|)>>>|<cell|<big|sum><rsub|i=1><rsup|n><around*|(|H<rsup|i><around*|(|x|)>+\<beta\>\<cdot\>H<rsup|i><around*|(|y|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|n>H<rsup|i><around*|(|x|)>+\<beta\>\<cdot\><big|sum><rsub|i=1><rsup|n>H<rsup|i><around*|(|y|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<big|sum><rsub|i=1><rsup|n>H<rsup|i>|)><around*|(|x|)>+\<beta\>\<cdot\><around*|(|<big|sum><rsub|i=1><rsup|n>H<rsup|i>|)><around*|(|y|)>>>>>
+      </eqnarray*>
+
+      proving that\ 
+
+      <\equation*>
+        <big|sum><rsub|i=1><rsup|n>H<rsup|i>\<in\>Hom<around*|(|X,X|)>
+      </equation*>
+
+      Further
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|\<\|\|\>|<around*|(|<big|sum><rsub|i=1><rsup|n>H<rsup|i>|)><around*|(|x|)>|\<\|\|\>>>|<cell|=>|<cell|<around*|\<\|\|\>|<big|sum><rsub|i=1><rsup|n>H<rsup|i><around*|(|x|)>|\<\|\|\>>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<big|sum><rsub|i=1><rsup|n><around*|\<\|\|\>|H<rsup|i><around*|(|x|)>|\<\|\|\>>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<big|sum><rsub|i=1><rsup|n><around*|(|<around*|\<\|\|\>|H<rsup|i>|\<\|\|\>>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>>|)>>>|<row|<cell|>|<cell|<below|\<leqslant\>|<around*|(|3|)>>>|<cell|<big|sum><rsub|i=1><rsup|n><around*|(|<around*|\<\|\|\>|H|\<\|\|\>><rsup|i><rsub|L<around*|(|X,X|)>>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<big|sum><rsub|i=1><rsup|n><around*|\<\|\|\>|H|\<\|\|\>><rsup|i><rsub|L<around*|(|X,Y|)>>|)>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>>>>>>
+      </eqnarray*>
+
+      so that by [theorem: <reference|continuity linear mapping (1)>]
+
+      <\equation*>
+        <big|sum><rsub|i=1><rsup|n>H<rsup|i>\<in\>L<around*|(|X,X|)>
+      </equation*>
+
+      and by [theorem: <reference|continuity norm on L(X,Y)>] that
+
+      <\equation*>
+        <around*|\<\|\|\>|<big|sum><rsub|i=1><rsup|n>H<rsup|i>|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<leqslant\><big|sum><rsub|i=1><rsup|n><around*|\<\|\|\>|H|\<\|\|\>><rsup|i><rsub|L<around*|(|X,Y|)>>
+      </equation*>
+    </enumerate>
+  </proof>
+
+  <\lemma>
+    <label|lemma 16.228.127>Let <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
+    be a normed space, <math|k\<in\>\<bbb-N\>> and
+    <math|H\<in\>L<around*|(|X,X|)>> such that
+    <math|<big|sum><rsub|i=k><rsup|\<infty\>>H<rsup|i>> converges [using the
+    norm <math|<around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X,X|)>>>] then
+    <math|\<forall\>x\<in\>X> we have that
+    <math|<big|sum><rsub|i=k><rsup|\<infty\>>H<rsup|i><around*|(|x|)>>
+    converges and <math|<around*|(|<big|sum><rsub|i=k><rsup|\<infty\>>H<rsup|i>|)><around*|(|x|)>=<big|sum><rsub|i=k><rsup|\<infty\>>H<rsup|i><around*|(|x|)>>.
+  </lemma>
+
+  <\proof>
+    Let <math|x\<in\>X> and <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> then
+    there exist a <math|N\<in\>\<bbb-N\>> such that for <math|n\<geqslant\>N>
+    we have that\ 
+
+    <\equation*>
+      <around*|\<\|\|\>|<big|sum><rsub|i=k><rsup|n>H<rsup|i>-<big|sum><rsub|i=k><rsup|\<infty\>>H<rsup|i>|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<less\><frac|\<varepsilon\>|1+<around*|\<\|\|\>|x|\<\|\|\>>>
+    </equation*>
+
+    then we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|\<\|\|\>|<big|sum><rsub|i=k><rsup|n>H<rsup|i><around*|(|x|)>-<around*|(|<big|sum><rsub|i=k><rsup|\<infty\>>H<rsup|i>|)><around*|(|x|)>|\<\|\|\>>>|<cell|=>|<cell|<around*|\<\|\|\>|<around*|(|<big|sum><rsub|i=k><rsup|n>H<rsup|i>-<big|sum><rsub|i=k><rsup|\<infty\>>H<rsup|i>|)><around*|(|x|)>|\<\|\|\>>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<around*|\<\|\|\>|<big|sum><rsub|i=k><rsup|n>H<rsup|i>-<big|sum><rsub|i=k><rsup|\<infty\>>H<rsup|i>|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>>>>|<row|<cell|>|<cell|\<less\>>|<cell|<frac|\<varepsilon\>|1+<around*|\<\|\|\>|x|\<\|\|\>>>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>>>>|<row|<cell|>|<cell|\<less\>>|<cell|\<varepsilon\>>>>>
+    </eqnarray*>
+
+    proving that <math|<below|lim|n\<rightarrow\>\<infty\>><big|sum><rsub|i=k><rsup|n>H<rsup|i><around*|(|x|)>>
+    converges and
+
+    <\equation*>
+      <below|lim|n\<rightarrow\>\<infty\>><big|sum><rsub|i=k><rsup|n>H<rsup|i><around*|(|x|)>=<around*|(|<big|sum><rsub|i=k><rsup|\<infty\>>H<rsup|i>|)><around*|(|x|)>
+    </equation*>
+
+    so that\ 
+
+    <\equation*>
+      <big|sum><rsub|i=k><rsup|\<infty\>>H<rsup|i><around*|(|x|)>=<around*|(|<big|sum><rsub|i=k><rsup|\<infty\>>H<rsup|i>|)><around*|(|x|)>
+    </equation*>
+  </proof>
+
+  <\lemma>
+    <label|lemma 16.229.127>Let <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
+    be a Banach space and <math|H\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X,X|)>>><around*|(|0,1|)>>
+    then\ 
+
+    <\equation*>
+      <big|sum><rsub|i=1><rsup|\<infty\>>H<rsup|i><text| converges >
+    </equation*>
+
+    <\equation*>
+      Id<rsub|X>-H\<in\>\<cal-G\>L<around*|(|X|)><text|>
+    </equation*>
+
+    <\equation*>
+      <around*|(|Id<rsub|X>-H|)><rsup|-1>=Id<rsub|X>+<big|sum><rsub|i=1><rsup|\<infty\>>H<rsup|i>
+    </equation*>
+  </lemma>
+
+  <\note>
+    In this lemma and the rest of this subsection the neutral element of
+    <math|L<around*|(|X,X|)>> is noted as <math|0>. Context can be used to
+    determine if <math|0> is the neutral element of <math|\<bbb-K\>>,
+    <math|X> or <math|L<around*|(|X,X|)>>.
+  </note>
+
+  <\proof>
+    As <math|H\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X,X|)>>><around*|(|0,1|)>>
+    it follows that <math|<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\<less\>1>
+    so that by [example: <reference|series power series in R>]
+
+    <\equation*>
+      <big|sum><rsub|i=1><rsup|\<infty\>><around*|\<\|\|\>|H|\<\|\|\>><rsup|i><rsub|L<around*|(|X,X|)>><text|
+      exist and ><big|sum><rsub|i=1><rsup|\<infty\>><around*|\<\|\|\>|H|\<\|\|\>><rsup|i><rsub|L<around*|(|X,X|)>>=<frac|<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>|1-<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>>
+    </equation*>
+
+    As <math|X> is a Banach space it follows from [theorem:
+    <reference|complete L(X,Y) is Banach>] that <math|L<around*|(|X,X|)>> is
+    a Banach space. Further for <math|i\<in\>\<bbb-N\>> we have
+    <math|<around*|\<\|\|\>|H<rsup|i><rsup|>|\<\|\|\>><rsub|L<around*|(|X,Y|)>><below|\<leqslant\>|<text|[theorem:
+    <reference|diff H^n properties>]>><rsub|<text|>><around*|\<\|\|\>|H|\<\|\|\>><rsup|i><rsub|L<around*|(|X,X|)>>>.
+    So we can use dominant convergence [see <reference|series absolute
+    dominant convergence>] to prove that\ 
+
+    <\equation>
+      <label|eq 16.308.127><big|sum><rsub|i=1><rsup|\<infty\>>H<rsup|i><text|
+      exist,<space|1em><math|<big|sum><rsub|i=1><rsup|\<infty\>>H<rsup|i>\<in\>L<around*|(|X,X|)>>
+      and ><around*|\<\|\|\>|<big|sum><rsub|i=1><rsup|\<infty\>>H<rsup|i>|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<leqslant\><big|sum><rsub|i=1><rsup|\<infty\>><around*|\<\|\|\>|H|\<\|\|\>><rsup|i><rsub|L<around*|(|X,X|)>>=<frac|<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>|1-<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>>
+    </equation>
+
+    From the above and the fact that <math|Id<rsub|X>\<in\>L<around*|(|X,X|)>>
+    [see example: <reference|continuity identity function norm>] it follows
+    that
+
+    <\equation>
+      <label|eq 16.309.127>Id<rsub|X>+<big|sum><rsub|i=1><rsup|\<infty\>>H<rsup|i>\<in\>L<around*|(|X,X|)>
+    </equation>
+
+    Further as <math|<big|sum><rsub|i=1><rsup|\<infty\>>H<rsup|i>> converges
+    it follows from [theorem: <reference|series terms converges to zero>]
+    that\ 
+
+    <\equation>
+      <label|eq 16.310.128><below|lim|n\<rightarrow\>\<infty\>>H<rsup|i>=0
+    </equation>
+
+    Next\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|\<\|\|\>|Id<rsub|X>+<big|sum><rsub|i=1><rsup|\<infty\>>H<rsup|i>|\<\|\|\>><rsub|L<around*|(|X,X|)>>>|<cell|\<leqslant\>>|<cell|<around*|\<\|\|\>|Id<rsub|X>|\<\|\|\>><rsub|L<around*|(|X,Y|)>>+<around*|\<\|\|\>|<big|sum><rsub|i=1><rsup|\<infty\>>H<rsup|i>|\<\|\|\>><rsub|L<around*|(|X,X|)>>>>|<row|<cell|>|<cell|<below|\<leqslant\>|<text|[example:
+      <reference|continuity identity function
+      norm>]>><rsub|>>|<cell|1+<around*|\<\|\|\>|<big|sum><rsub|i=1><rsup|\<infty\>>H<rsup|i>|\<\|\|\>><rsub|L<around*|(|X,X|)>>>>|<row|<cell|>|<cell|<below|\<leqslant\><rsub|>|<text|[eq:
+      <reference|eq 16.308.127>]>>>|<cell|1+<frac|<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>|1-<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>>>>|<row|<cell|>|<cell|=>|<cell|<frac|1-<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>+<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X.X|)>>|1-<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>>>>|<row|<cell|>|<cell|=>|<cell|<frac|1|1-<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>><eq-number><label|eq
+      16.310.127>>>>>
+    </eqnarray*>
+
+    Next we prove by induction on <math|n> that \ 
+
+    <\equation>
+      <label|eq 16.311.127>\<forall\>n\<in\>\<bbb-N\><text| we have
+      ><around*|(|Id<rsub|X>-H|)>\<circ\><around*|(|Id<rsub|X>+<big|sum><rsub|i=1><rsup|n>H<rsup|i>|)>=Id<rsub|X>-H<rsup|n+1>
+    </equation>
+
+    <\proof>
+      Let\ 
+
+      <\equation*>
+        S=<around*|{|n\<in\>\<bbb-N\>\|<around*|(|Id<rsub|X>-H|)>\<circ\><around*|(|Id<rsub|X>+<big|sum><rsub|i=1><rsup|n>H<rsup|i>|)>=Id<rsub|X>-H<rsup|n+1>|}>
+      </equation*>
+
+      then we have:
+
+      <\description>
+        <item*|<math|1\<in\>S>>Let <math|x\<in\>X> then we have
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<around*|(|<around*|(|Id<rsub|X>-H|)>\<circ\><around*|(|Id<rsub|X>+<big|sum><rsub|i=1><rsup|1>H<rsup|i>|)>|)><around*|(|x|)>>|<cell|=>|<cell|<around*|(|Id<rsub|X>-H|)><around*|(|<around*|(|Id<rsub|X>+<big|sum><rsub|i=1><rsup|1>H<rsup|i>|)><around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|Id<rsub|X>-H|)><around*|(|Id<rsub|X><around*|(|x|)>+<around*|(|<big|sum><rsub|i=1><rsup|1>H<rsup|i>|)><around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|Id<rsub|X>-H|)><around*|(|x+H<around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|Id<rsub|X><around*|(|x+H<around*|(|x|)>|)>-H<around*|(|x+H<around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|x+H<around*|(|x|)>-H<around*|(|x|)>-H<around*|(|H<around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|x-<around*|(|H\<circ\>H|)><around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|x-H<rsup|2><around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|Id<rsub|X><around*|(|x|)>-H<rsup|2><around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|Id<rsub|X>-H<rsup|2>|)><around*|(|x|)>>>>>
+        </eqnarray*>
+
+        proving that
+
+        <\equation*>
+          <around*|(|Id<rsub|X>-H|)>\<circ\><around*|(|Id<rsub|X>+<big|sum><rsub|i=1><rsup|1>H<rsup|i>|)>=Id<rsub|X>-H<rsup|<around*|(|1+1|)>>
+        </equation*>
+
+        from which it follows that <math|1\<in\>S>.
+
+        <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>Let <math|x\<in\>X>
+        then\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<around*|(|<around*|(|Id<rsub|X>-H|)>\<circ\><around*|(|Id<rsub|X>+<big|sum><rsub|i=1><rsup|n+1>H<rsup|i>|)>|)><around*|(|x|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|Id<rsub|X>-H|)><around*|(|<around*|(|Id<rsub|X>+<big|sum><rsub|i=1><rsup|n+1>H<rsup|i>|)><around*|(|x|)>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|Id<rsub|X>-H|)><around*|(|Id<rsub|X><around*|(|x|)>+<around*|(|<big|sum><rsub|i=1><rsup|n+1>H<rsup|i>|)><around*|(|x|)>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|Id<rsub|X>-H|)><around*|(|Id<rsub|X><around*|(|x|)>+<big|sum><rsub|i=1><rsup|n+1>H<rsup|i><around*|(|x|)>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|Id<rsub|X>-H|)><around*|(|Id<rsub|X><around*|(|x|)>+<big|sum><rsub|i=1><rsup|n>H<rsup|i><around*|(|x|)>+H<rsup|n+1><around*|(|x|)>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|Id<rsub|X>-H|)>*<around*|(|Id<rsub|X><around*|(|x|)>+<big|sum><rsub|i=1><rsup|n>H<rsup|i><around*|(|x|)>|)>+<around*|(|Id<rsub|X>-H|)><around*|(|H<rsup|n+1><around*|(|x|)>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|Id<rsub|X>-H|)>*<around*|(|<around*|(|Id<rsub|X>+<big|sum><rsub|i=1><rsup|n>H<rsup|i>|)><around*|(|x|)>|)>+<around*|(|Id<rsub|X>-H|)><around*|(|H<rsup|n+1><around*|(|x|)>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|<around*|(|Id<rsub|X>-H|)>\<circ\><around*|(|Id<rsub|X>+<big|sum><rsub|i=1><rsup|n>H<rsup|i>|)>|)><around*|(|x|)>+Id<rsub|X><around*|(|H<rsup|n+1><around*|(|x|)>|)>-H<around*|(|H<rsup|n+1><around*|(|x|)>|)>>|<cell|\<equallim\><rsub|n\<in\>S>>|<cell|>>|<row|<cell|<around*|(|Id<rsub|X>-H<rsup|n+1>|)><around*|(|x|)>+H<rsup|n+1><around*|(|x|)>-<around*|(|H\<circ\>H<rsup|n+1>|)><around*|(|x|)>>|<cell|=>|<cell|>>|<row|<cell|Id<rsub|X><around*|(|x|)>-H<rsup|<around*|(|n+1|)>+1><around*|(|x|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|Id<rsub|X>-H<rsup|<around*|(|n+1|)>+1>|)><around*|(|x|)>>|<cell|>|<cell|>>>>
+        </eqnarray*>
+
+        proving that <math|><math|<around*|(|Id<rsub|X>-H|)>\<circ\><around*|(|Id<rsub|X>+<big|sum><rsub|i=1><rsup|n+1>H<rsup|i>|)>=<around*|(|Id<rsub|X>-H<rsup|<around*|(|n+1|)>+1>|)>>.
+        Hence\ 
+
+        <\equation*>
+          n+1\<in\>S
+        </equation*>
+      </description>
+
+      Mathematical induction completes the proof of [eq: <reference|eq
+      16.311.127>].\ 
+    </proof>
+
+    Next using induction we prove that\ 
+
+    <\equation>
+      <label|eq 16.312.127>\<forall\>n\<in\>\<bbb-N\><text| we have
+      ><around*|(|Id<rsub|X>+<big|sum><rsub|i=1><rsup|n>H<rsup|i>|)>\<circ\><around*|(|Id<rsub|X>-H|)>=Id<rsub|X>-H<rsup|n+1>
+    </equation>
+
+    <\proof>
+      Define
+
+      <\equation*>
+        S=<around*|{|n\<in\>\<bbb-N\>\|<around*|(|Id<rsub|X>+<big|sum><rsub|i=1><rsup|n>H<rsup|i>|)>\<circ\><around*|(|Id<rsub|X>-H|)>=Id<rsub|X>-H<rsup|n+1>|}>
+      </equation*>
+
+      then we have:\ 
+
+      <\description>
+        <item*|<math|1\<in\>S>>Let <math|x\<in\>X> then
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<around*|(|<around*|(|Id<rsub|X>+<big|sum><rsub|i=1><rsup|1>H<rsup|i>|)>\<circ\><around*|(|Id<rsub|X>-H|)>|)><around*|(|x|)>>|<cell|=>|<cell|<around*|(|<around*|(|Id<rsub|X>+H|)>\<circ\><around*|(|Id<rsub|X>-H|)>|)><around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|Id<rsub|X>+H|)><around*|(|<around*|(|Id<rsub|X>-H|)><around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|Id<rsub|X>+H|)><around*|(|Id<rsub|X><around*|(|x|)>-H<around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|Id<rsub|X><around*|(|Id<rsub|X><around*|(|x|)>-H<around*|(|x|)>|)>+H<around*|(|Id<rsub|X><around*|(|x|)>-H<around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|Id<rsub|X><around*|(|x|)>-H<around*|(|x|)>+H<around*|(|Id<rsub|X><around*|(|x|)>|)>-H<around*|(|H<around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|Id<rsub|X><around*|(|x|)>-H<around*|(|x|)>+H<around*|(|x|)>-<around*|(|H\<circ\>H|)><around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|Id<rsub|X><around*|(|x|)>-H<rsup|2><around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|Id<rsub|X>-H<rsup|2>|)><around*|(|x|)>>>>>
+        </eqnarray*>
+
+        proving that <math|<around*|(|Id<rsub|X>+<big|sum><rsub|i=1><rsup|1>H<rsup|i>|)>\<circ\><around*|(|Id<rsub|X>-H|)>=Id<rsub|X>-H<rsup|1+1>>.
+        Hence <math|1\<in\>S>.
+
+        <item*|<math|n\<in\>S\<Rightarrow\>n+1>>Let <math|x\<in\>X> then\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<around*|(|<around*|(|Id<rsub|X>+<big|sum><rsub|i=1><rsup|n+1>H<rsup|i>|)>\<circ\><around*|(|Id<rsub|X>-H|)>|)><around*|(|x|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|Id<rsub|X>+<big|sum><rsub|i=1><rsup|n+1>H<rsup|i>|)><around*|(|<around*|(|Id<rsub|X>-H|)><around*|(|x|)>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|Id<rsub|X>+<big|sum><rsub|i=1><rsup|n>H<rsup|i>+H<rsup|n+1>|)><around*|(|<around*|(|Id<rsub|X>-H|)><around*|(|x|)>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|Id<rsub|X>+<big|sum><rsub|i=1><rsup|n>H<rsup|i>|)><around*|(|<around*|(|Id<rsub|X>-H|)><around*|(|x|)>|)>+H<rsup|n+1><around*|(|<around*|(|Id<rsub|X>-H|)><around*|(|x|)>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|<around*|(|Id<rsub|X>+<big|sum><rsub|i=1><rsup|n>H<rsup|i>|)>\<circ\><around*|(|Id<rsub|X>-H|)>|)><around*|(|x|)>+H<rsup|n+1><around*|(|x-H<around*|(|x|)>|)>>|<cell|\<equallim\><rsub|n\<in\>S>>|<cell|>>|<row|<cell|<around*|(|Id<rsub|X>-H<rsup|n+1>|)><around*|(|x|)>+H<rsup|n+1><around*|(|x|)>-H<rsup|n+1><around*|(|H<around*|(|x|)>|)>>|<cell|=>|<cell|>>|<row|<cell|Id<rsub|X><around*|(|x|)>-<around*|(|H<rsup|n+1>\<circ\>H|)><around*|(|x|)>>|<cell|\<equallim\><rsub|<text|[theorem:
+          <reference|diff H^n properties>]>>>|<cell|>>|<row|<cell|Id<rsub|X><around*|(|x|)>-H<rsup|<around*|(|n+1|)>+1><around*|(|x|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|Id<rsub|X>-H<rsup|<around*|(|n+1|)>+1>|)><around*|(|x|)>>|<cell|>|<cell|>>>>
+        </eqnarray*>
+
+        proving that <math|<around*|(|Id<rsub|X>+<big|sum><rsub|i=1><rsup|n+1>H<rsup|i>|)>\<circ\><around*|(|Id<rsub|X>-H|)>=Id<rsub|X>-H<rsup|<around*|(|n+1|)>+1>>.
+        Hence\ 
+
+        <\equation*>
+          n+1\<in\>S
+        </equation*>
+      </description>
+
+      Mathematical induction proves then [eq: <reference|eq 16.312.127>].\ 
+    </proof>
+
+    To summarize [eqs: <reference|eq 16.311.127>,<reference|eq 16.312.127>]
+    we have <math|\<forall\>n\<in\>\<bbb-N\>>
+
+    <\equation>
+      <label|eq 16.314.128><around*|(|Id<rsub|X>-H|)>\<circ\><around*|(|Id<rsub|X>+<big|sum><rsub|i=1><rsup|n>H<rsup|i>|)>=Id<rsub|X>-H<rsup|n+1>=<around*|(|Id<rsub|X>+<big|sum><rsub|i=1><rsup|n>H<rsup|i>|)>\<circ\><around*|(|Id<rsub|X>-H|)>
+    </equation>
+
+    Let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> then as
+    <math|<below|lim|n\<rightarrow\>\<infty\>>H<rsup|i>=0> [see eq:
+    <reference|eq 16.310.128>] there exist a <math|N\<in\>\<bbb-N\>> such
+    that for <math|n\<gtr\>N>
+
+    <\equation*>
+      <around*|\<\|\|\>|H<rsup|n>|\<\|\|\>><rsub|L<around*|(|X.X|)>>\<less\>\<varepsilon\><text|>
+    </equation*>
+
+    then\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|\<\|\|\>|<around*|(|Id<rsub|X>-H|)>\<circ\><around*|(|Id<rsub|X>+<big|sum><rsub|i=1><rsup|n>H<rsup|i>|)>-Id<rsub|X>|\<\|\|\>><rsub|L<around*|(|X,X|)>>>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 16.314.128>]>>>|<cell|<around*|\<\|\|\>|Id<rsub|X>-H<rsup|n+1>-Id<rsub|X>|\<\|\|\>><rsub|L<around*|(|X,Y|)>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|H<rsup|n+1>|\<\|\|\>><rsub|L<around*|(|X,Y|)>>>>|<row|<cell|>|<cell|<below|\<less\>|n+1\<gtr\>n\<geqslant\>N><rsub|>>|<cell|\<varepsilon\>>>>>
+    </eqnarray*>
+
+    and\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|\<\|\|\>|<around*|(|Id<rsub|X>+<big|sum><rsub|i=1><rsup|n>H<rsup|i>|)>\<circ\><around*|(|Id<rsub|X>-H|)>-Id<rsub|X>|\<\|\|\>><rsub|L<around*|(|X,X|)>>>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 16.314.128>]>>>|<cell|<around*|\<\|\|\>|Id<rsub|X>-H<rsup|n+1>-Id<rsub|X>|\<\|\|\>><rsub|L<around*|(|X,Y|)>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|H<rsup|n+1>|\<\|\|\>><rsub|L<around*|(|X,Y|)>>>>|<row|<cell|>|<cell|<below|\<less\>|n+1\<gtr\>n\<geqslant\>N>>|<cell|\<varepsilon\>>>>>
+    </eqnarray*>
+
+    So that\ 
+
+    <\equation>
+      <label|eq 16.315.128><below|lim|n\<rightarrow\>\<infty\>><around*|(|<around*|(|Id<rsub|X>+<big|sum><rsub|i=1><rsup|n>H<rsup|i>|)>\<circ\><around*|(|Id<rsub|X>-H|)>|)>=Id<rsub|X>=<below|lim|n\<rightarrow\>\<infty\>><around*|(|<around*|(|Id<rsub|X>-H|)>\<circ\><around*|(|Id<rsub|X>+<big|sum><rsub|i=1><rsup|n>H<rsup|i>|)>|)>
+    </equation>
+
+    Next we have, as <math|<big|sum><rsub|i=1><rsup|\<infty\>>H<rsup|i>>
+    exist [see eq: <reference|eq 16.308.127>], by \ [theorem:
+    <reference|limit x_n+a>] that <math|<below|lim|n\<rightarrow\>\<infty\>><around*|(|Id<rsub|X>+<big|sum><rsub|i=1><rsup|n>H<rsup|i>|)>>
+    exist. Hence we have
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<below|lim|n\<rightarrow\>\<infty\>><around*|(|<around*|(|Id<rsub|X>+<big|sum><rsub|i=1><rsup|n>H<rsup|i>|)>\<circ\><around*|(|Id<rsub|X>-H|)>|)>>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|continuity limit of composition of linear
+      maps>]>>>|<cell|<around*|(|<below|lim|n\<rightarrow\>\<infty\>><around*|(|Id<rsub|X>+<big|sum><rsub|i=1><rsup|n>H<rsup|i>|)>|)>\<circ\><around*|(|Id<rsub|X>-H|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|limit x_n+a>]>>>|<cell|<around*|(|Id<rsub|X>+<below|lim|n\<rightarrow\>\<infty\>><big|sum><rsub|i=1><rsup|n>H<rsup|i>|)>\<circ\><around*|(|Id<rsub|X>-H|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|Id<rsub|X>+<big|sum><rsub|i=1><rsup|\<infty\>>H<rsup|i>|)>\<circ\><around*|(|Id<rsub|X>-H|)>>>>>
+    </eqnarray*>
+
+    and\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<below|lim|n\<rightarrow\>\<infty\>><around*|(|<around*|(|Id<rsub|X>-H|)>\<circ\><around*|(|Id<rsub|X>+<big|sum><rsub|i=1><rsup|n>H<rsup|i>|)>|)>>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|continuity limit of composition of linear
+      maps>]>>>|<cell|<around*|(|Id<rsub|X>-H|)>\<circ\><around*|(|<below|lim|n\<rightarrow\>\<infty\>><around*|(|Id<rsub|X>+<big|sum><rsub|i=1><rsup|n>H<rsup|i>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|limit x_n+a>]>>>|<cell|<around*|(|Id<rsub|X>-H|)>\<circ\><around*|(|Id<rsub|X>+<below|lim|n\<rightarrow\>\<infty\>><around*|(|<big|sum><rsub|i=1><rsup|n>H<rsup|i>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|Id<rsub|X>-H|)>\<circ\><around*|(|Id<rsub|X>+<around*|\<nobracket\>|<big|sum><rsub|i=1><rsup|\<infty\>>H<rsup|i>|)>|\<nobracket\>>>>>>
+    </eqnarray*>
+
+    which combined with [eq: <reference|eq 16.315.128>] proves that\ 
+
+    <\equation*>
+      <around*|(|Id<rsub|X>-H|)>\<circ\><around*|(|Id<rsub|X>+<around*|\<nobracket\>|<big|sum><rsub|i=1><rsup|\<infty\>>H<rsup|i>|)>|\<nobracket\>>=Id<rsub|X>=<around*|(|Id<rsub|X>+<big|sum><rsub|i=1><rsup|\<infty\>>H<rsup|i>|)>\<circ\><around*|(|Id<rsub|X>-H|)>
+    </equation*>
+
+    hence\ 
+
+    <\equation*>
+      Id<rsub|X>-H<text| is a bijection and
+      ><around*|(|Id<rsub|X>-H|)><rsup|-1>=Id<rsub|X>+<big|sum><rsub|i=1><rsup|\<infty\>>H<rsup|i>\<in\>L<around*|(|X,X|)>
+    </equation*>
+
+    As <math|Id<rsub|X>\<in\>L<around*|(|X,X|)>>,
+    <math|H\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X,X|)>>><around*|(|0,1|)>\<subseteq\>L<around*|(|X,X|)>>
+    so that <math|Id<rsub|X>-H\<in\>L<around*|(|X,X|)>> and <math|X> is a
+    Banach space it follows from [theorem: <reference|diff toplinear
+    isomorphism between Banach spaces>] that <math|Id<rsub|X>-H> is a
+    toplinear isomorphism, so that\ 
+
+    <\equation*>
+      Id<rsub|X>-H\<in\>\<cal-G\>L<around*|(|X|)>
+    </equation*>
+  </proof>
+
+  <\corollary>
+    <label|diff I+H has inverse if norm of H is less then 1>Let
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> be
+    a Banach space, <math|H\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X,X|)>>><around*|(|0,1|)>>
+    then <math|<big|sum><rsub|i=1><rsup|\<infty\>><around*|(|-1|)><rsup|i>\<cdot\>H<rsup|i>>
+    converges, <math|Id<rsub|X>+H\<in\>\<cal-G\>L<around*|(|X|)>> and
+    <math|<around*|(|Id<rsub|X>+H|)><rsup|-1>=Id<rsub|X>+<big|sum><rsub|i=1><rsup|\<infty\>><around*|(|-1|)><rsup|i>\<cdot\>H<rsup|i>>.
+  </corollary>
+
+  <\proof>
+    If <math|H\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X,X|)>>><around*|(|0,1|)>>
+    then <math|<around*|\<\|\|\>|-H|\<\|\|\>><rsub|L<around*|(|X,X|)>>=<around*|\<\|\|\>|<around*|(|-1|)>\<cdot\>H|\<\|\|\>><rsub|L<around*|(|X,Y|)>>=<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<less\>1>
+    so that <math|<rigid|-H\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X,X|)>>><around*|(|0,1|)>>>.
+    Hence by the previous theorem [theorem: <reference|lemma 16.229.127>] we
+    have that
+
+    <\equation*>
+      Id<rsub|X>+H=Id<rsub|X>-<around*|(|-H|)>\<in\>\<cal-G\>L<around*|(|X|)>
+    </equation*>
+
+    and
+
+    <\equation*>
+      <big|sum><rsup|\<infty\>><rsub|i=1><around*|(|-1|)><rsup|i>\<cdot\>H<rsup|i>\<equallim\><rsub|<text|[theorem:
+      <reference|diff H^n properties>]>><big|sum><rsub|i=1><rsup|\<infty\>><around*|(|-H|)><rsup|i><text|
+      exist >
+    </equation*>
+
+    and\ 
+
+    <\equation*>
+      <around*|(|Id<rsub|X>+H|)><rsup|-1>=<around*|(|Id<rsub|X>-<around*|(|-H|)>|)><rsup|-1>=Id<rsub|X>+<big|sum><rsub|i=1><rsup|\<infty\>><around*|(|-H|)><rsup|i>\<equallim\><rsub|<text|[theorem:
+      <reference|diff H^n properties>]>>Id<rsub|X>+<big|sum><rsub|i=1><rsup|\<infty\>><around*|(|-1|)><rsup|n>\<cdot\>H<rsup|i>
+    </equation*>
+  </proof>
+
+  TODO check this
+
+  <\theorem>
+    <label|diff inverse mapping on GL(X)>Let
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> be
+    a Banach space then we have:
+
+    <\enumerate>
+      <item><math|\<cal-G\>L<around*|(|X|)>> is a open set in
+      <math|L<around*|(|X,X|)>>
+
+      <item>The function\ 
+
+      <\equation*>
+        \<tau\>:\<cal-G\>L<around*|(|X|)>\<rightarrow\>L<around*|(|X,X|)><text|
+        defined by >\<tau\><around*|(|L|)>=L<rsup|-1>
+      </equation*>
+
+      is Fréchet differentiable on <math|\<cal-G\>L<around*|(|X|)>> and
+      <math|\<forall\>L\<in\>\<cal-G\>L<around*|(|X|)>> we have that
+
+      <\equation*>
+        D<rsub|L>\<tau\>\<in\>L<around*|(|L<around*|(|X,X|)>,L<around*|(|X,X|)>|)><text|
+        is defined by >D<rsub|L>\<tau\><around*|(|H|)>=-L<rsup|-1>\<circ\>H\<circ\>L
+      </equation*>
+
+      <item>The function <math|\<tau\>> is of class <math|C<rsup|\<infty\>>>.
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>Let <math|L\<in\>\<cal-G\>L<around*|(|X|)>\<subseteq\>L<around*|(|X,X|)>>
+      then for any <math|H\<in\>L<around*|(|X,X|)>> we have
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|H>|<cell|=>|<cell|L+<around*|(|H-L|)>>>|<row|<cell|>|<cell|=>|<cell|L\<circ\>Id<rsub|X>+Id<rsub|X>\<circ\><around*|(|H-L|)>>>|<row|<cell|>|<cell|=>|<cell|L\<circ\>Id<rsub|X>+<around*|(|L\<circ\>L<rsup|-1>|)>\<circ\><around*|(|H-L|)>>>|<row|<cell|>|<cell|=>|<cell|L\<circ\>Id<rsub|X>+L\<circ\><around*|(|L<rsup|-1>\<circ\><around*|(|H-L|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|continuity composition is
+        multilinear>]>>>|<cell|L\<circ\><around*|(|Id<rsub|X>+L<rsup|-1>\<circ\><around*|(|H-L|)>|)><eq-number><label|eq
+        16.317.128>>>>>
+      </eqnarray*>
+
+      Take <math|\<delta\><rsub|L>=<frac|1|<around*|\<\|\|\>|L<rsup|-1>|\<\|\|\>><rsub|L<around*|(|X,Y|)>>+1>\<in\>\<bbb-R\><rsup|+>>
+      then if <math|<around*|\<\|\|\>|H-L|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\<less\>\<delta\><rsub|L>>
+      we have that\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|\<\|\|\>|L<rsup|-1>\<circ\><around*|(|H-L|)>|\<\|\|\>><rsub|L<around*|(|X,X|)>>>|<cell|<below|\<leqslant\>|<text|[theorem:
+        <reference|continuity composition of continuous linear
+        mapping>]>><rsub|>>|<cell|<around*|\<\|\|\>|L<rsup|-1>|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<cdot\><around*|\<\|\|\>|H-L|\<\|\|\>><rsub|L<around*|(|X,X|)>>>>|<row|<cell|>|<cell|\<less\>>|<cell|<around*|\<\|\|\>|L<rsup|-1>|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<cdot\>\<delta\><rsub|L>>>|<row|<cell|>|<cell|=>|<cell|<frac|<around*|\<\|\|\>|L<rsup|-1>|\<\|\|\>><rsub|L<around*|(|X,X|)>>|<around*|\<\|\|\>|L<rsup|-1>|\<\|\|\>><rsub|L<around*|(|X,X|)>>+1>>>|<row|<cell|>|<cell|\<less\>>|<cell|1>>>>
+      </eqnarray*>
+
+      Hence <math|<around*|\<\|\|\>|L<rsup|-1>\<circ\><around*|(|H-L|)>|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X,X|)>>><around*|(|0,1|)>>
+      so that by [corollary: <reference|diff I+H has inverse if norm of H is
+      less then 1>]
+
+      <\equation*>
+        Id<rsub|X>+L<rsup|-1>\<circ\><around*|(|H-L|)>\<in\>\<cal-G\>L<around*|(|X|)>
+      </equation*>
+
+      and as <math|L\<in\>\<cal-G\>L<around*|(|X|)>> we have by [theorem:
+      <reference|diff GL(X) is a group>] that
+      <math|L\<circ\><around*|(|Id<rsub|X>+L<rsup|-1>\<circ\><around*|(|H-L|)>|)>\<in\>\<cal-G\>L<around*|(|X|)>>,
+      so by [eq: <reference|eq 16.317.128>] <math|H\<in\>GL<around*|(|X|)>>.
+      In other words if <math|H\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X,X|)>>><around*|(|L,\<delta\><rsub|L>|)>>
+      then <math|H\<in\>\<cal-G\>L<around*|(|X|)>> so that\ 
+
+      <\equation>
+        <label|eq 16.318.129>\<forall\>L\<in\>\<cal-G\>L<around*|(|X|)><text|
+        we have >L\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X,X|)>>><around*|(|L,\<delta\><rsub|L>|)>\<subseteq\>\<cal-G\>L<around*|(|X|)>
+      </equation>
+
+      which proves that\ 
+
+      <\equation*>
+        \<cal-G\>L<around*|(|X|)><text| is a open set>
+      </equation*>
+
+      <item>If <math|H\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X,X|)>>><around*|(|Id<rsub|X>,1|)>>
+      then <math|<around*|\<\|\|\>|H-Id<rsub|X>|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<less\>1>
+      hence <math|H-Id<rsub|X>\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X,X|)>>><around*|(|0,1|)>>
+      so that by [corollary: <reference|diff I+H has inverse if norm of H is
+      less then 1>]
+
+      <\equation*>
+        H=Id<rsub|X>+<around*|(|H-Id<rsub|X>|)>\<in\>\<cal-G\>L<around*|(|X|)>
+      </equation*>
+
+      so that\ 
+
+      <\equation>
+        <label|eq 16.318.128><label|eq 16.319.129>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X,X|)>>><around*|(|Id<rsub|X>,1|)>\<subseteq\>\<cal-G\>L<around*|(|X|)>
+      </equation>
+
+      To prove differentiability of <math|\<tau\>> we will rely on
+      [corollary: <reference|diff differentiability alternative definitions
+      (1)>], hence the need for a <math|\<varepsilon\>>-mapping [see
+      definition: <reference|diff e-mapping>]. Let
+      <math|H\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X,X|)>>><around*|(|0,1|)>>
+      then by \ [corollary: <reference|diff I+H has inverse if norm of H is
+      less then 1>] <math|<rigid|<big|sum><rsub|i=1><rsup|\<infty\>><around*|(|-1|)><rsup|i>\<cdot\>H<rsup|i>>>
+      converges, so applying [theorem: <reference|series partition series>]
+      we have that\ 
+
+      <\equation>
+        <label|eq 16.319.128><big|sum><rsub|i=2><rsup|\<infty\>><around*|(|-1|)><rsup|i>\<cdot\>H<rsup|i>\<in\>L<around*|(|X,X|)><text|
+        converges and ><big|sum><rsub|i=1><rsup|\<infty\>><around*|(|-1|)><rsup|i>H<rsup|i>=-H+<big|sum><rsub|i=2><rsup|\<infty\>><around*|(|-1|)><rsup|i>\<cdot\>H<rsup|i>
+      </equation>
+
+      As <math|0,> <math|><math|<big|sum><rsub|i=2><rsup|\<infty\>><around*|(|-1|)><rsup|i>\<cdot\>H<rsup|i>\<in\>L<around*|(|X,X|)>>
+      it follows that the following function is well defined
+
+      \;
+
+      <\equation>
+        <label|eq 16.320.128>\<varepsilon\>:B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X,X|)>>><around*|(|0,1|)>\<rightarrow\>L<around*|(|X,Y|)><text|
+        by >\<varepsilon\><around*|(|H|)>=<choice|<tformat|<table|<row|<cell|0<text|
+        if >H=0>>|<row|<cell|<frac|1|<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>>\<cdot\><big|sum><rsub|i=2><rsup|\<infty\>><around*|(|-1|)><rsup|i>\<cdot\>H<rsup|i><text|
+        if >H\<neq\>0>>>>>
+      </equation>
+
+      Let <math|x\<in\>X> then we have
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|\<\|\|\>|<around*|(|\<varepsilon\><around*|(|H|)>|)><around*|(|x|)>|\<\|\|\>>>|<cell|\<equallim\><rsub|>>|<cell|<choice|<tformat|<table|<row|<cell|<around*|\<\|\|\>|0<around*|(|x|)>|\<\|\|\>><text|
+        if >H=0>>|<row|<cell|<around*|\<\|\|\>|<frac|1|<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>>\<cdot\><around*|(|<big|sum><rsub|i=2><rsup|\<infty\>><around*|(|-1|)><rsup|i>\<cdot\>H<rsup|i>|)><around*|(|x|)>|\<\|\|\>><text|
+        if >H\<neq\>0>>>>>>>|<row|<cell|>|<cell|=>|<cell|<choice|<tformat|<table|<row|<cell|0<text|
+        if >H=0>>|<row|<cell|<frac|1|<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>>\<cdot\><around*|\<\|\|\>|<around*|(|<big|sum><rsub|i=2><rsup|\<infty\>><around*|(|-1|)><rsup|i>\<cdot\>H<rsup|i>|)><around*|(|x|)>|\<\|\|\>><text|
+        if >H\<neq\>0>>>>>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<tabular*|<tformat|<table|<row|<cell|<choice|<tformat|<table|<row|<cell|0\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><text|
+        if >H=0>>|<row|<cell|<frac|1|<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>>\<cdot\><around*|\<\|\|\>|<big|sum><rsub|i=2><rsup|\<infty\>><around*|(|-1|)><rsup|i>\<cdot\>H<rsup|i>|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><text|
+        if >H\<neq\>0>>>>>>>>>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|x|\<\|\|\>>\<cdot\><choice|<tformat|<table|<row|<cell|0<text|
+        if >H=0>>|<row|<cell|<frac|1|<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>>\<cdot\><around*|\<\|\|\>|<big|sum><rsub|i=2><rsup|\<infty\>><around*|(|-1|)><rsup|i>\<cdot\>H<rsup|i>|\<\|\|\>><rsub|L<around*|(|X,X|)>><text|
+        if >H\<neq\>0>>>>>>>>>
+      </eqnarray*>
+
+      proving by [theorem: <reference|continuity norm on L(X,Y)>] that\ 
+
+      <\equation>
+        <label|eq 16.321.128><around*|\<\|\|\>|\<varepsilon\><around*|(|H|)>|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\<leqslant\><choice|<tformat|<table|<row|<cell|0<text|
+        if >H=0>>|<row|<cell|<frac|1|<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>>\<cdot\><around*|\<\|\|\>|<big|sum><rsub|i=2><rsup|\<infty\>><around*|(|-1|)>\<cdot\>H<rsup|i>|\<\|\|\>><rsub|L<around*|(|X,X|)>><text|
+        if >H\<neq\>0>>>>>
+      </equation>
+
+      For <math|H\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X,X|)>>><around*|(|0,1|)>>
+      we have <math|<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<less\>1>
+      so that by [example: <reference|series power series in R>]
+      <math|<big|sum><rsub|i=1><rsup|\<infty\>><around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>><rsup|i>=<frac|<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>|1-<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>>>.
+      Hence we have that
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<big|sum><rsub|i=2><rsup|\<infty\>><around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>><rsup|i>>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|series partition series>]>>>|<cell|<around*|(|<big|sum><rsub|i=1><rsup|\<infty\>><around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>><rsup|i>|)>-<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>>>|<row|<cell|>|<cell|=>|<cell|<frac|<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>|1-<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>>-<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>>>|<row|<cell|>|<cell|=>|<cell|<frac|<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>-<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<cdot\><around*|(|1-<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>|)>|1-<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>>>>|<row|<cell|>|<cell|=>|<cell|<frac|<around*|\<\|\|\>|H|\<\|\|\>><rsup|2><rsub|L<around*|(|X,X|)>>|1-<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>><eq-number><label|eq
+        16.322.128>>>>>
+      </eqnarray*>
+
+      As by [theorem: <reference|diff H^n properties>] we have
+      <math|<around*|\<\|\|\>|<around*|(|-1|)><rsup|i>H<rsup|i>|\<\|\|\>><rsub|L<around*|(|X,X|)>>=<around*|\<\|\|\>|H<rsup|i>|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<leqslant\><around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>><rsup|i>>
+      we can apply the dominant convergence theorem [theorem:
+      <reference|series absolute dominant convergence>] proving that
+      <math|<around*|\<\|\|\>|<big|sum><rsup|\<infty\>><rsub|i=2><around*|(|-1|)><rsup|i>\<cdot\>H<rsup|i>|\<\|\|\>><rsub|L<around*|(|X,X|)>>>
+      converges and <math|<around*|\<\|\|\>|<big|sum><rsup|\<infty\>><rsub|i=2><around*|(|-1|)><rsup|i>\<cdot\>H<rsup|i>|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<leqslant\><frac|<around*|\<\|\|\>|H|\<\|\|\>><rsup|2><rsub|L<around*|(|X,X|)>>|1-<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>>>.
+      Substituting this result in [eq: <reference|eq 16.321.128>] gives\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|\<\|\|\>|\<varepsilon\><around*|(|H|)>|\<\|\|\>><rsub|L<around*|(|X,X|)>>>|<cell|\<leqslant\>>|<cell|<choice|<tformat|<table|<row|<cell|0<text|
+        if >H=0>>|<row|<cell|<frac|1|<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>>\<cdot\><frac|<around*|\<\|\|\>|H|\<\|\|\>><rsup|2><rsub|L<around*|(|X,X|)>>|1-<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>><text|
+        if >H\<neq\>0>>>>>>>|<row|<cell|>|<cell|=>|<cell|<choice|<tformat|<table|<row|<cell|0<text|
+        if >H=0>>|<row|<cell|<frac|<around*|\<\|\|\>|H|\<\|\|\>><rsup|><rsub|L<around*|(|X,X|)>>|1-<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>><text|
+        if >H\<neq\>0>>>>>>>>>
+      </eqnarray*>
+
+      so that\ 
+
+      <\equation>
+        <label|eq 16.325.131>\<forall\>H\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X,X|)>>><around*|(|0,1|)><text|
+        we have ><around*|\<\|\|\>|\<varepsilon\><around*|(|H|)>|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<leqslant\><frac|<around*|\<\|\|\>|H|\<\|\|\>><rsup|><rsub|L<around*|(|X,X|)>>|1-<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>>
+      </equation>
+
+      Let <math|\<zeta\>\<in\>\<bbb-R\><rsup|+>> then if
+      <math|<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<less\>min<around*|(|<frac|1|2>,<frac|\<zeta\>|2>|)>\<less\>1>
+      it follows that
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|\<\|\|\>|\<varepsilon\><around*|(|H|)>-\<varepsilon\><around*|(|0|)>|\<\|\|\>><rsub|L<around*|(|X,X|)>>>|<cell|=>|<cell|<around*|\<\|\|\>|\<varepsilon\><around*|(|H|)>|\<\|\|\>><rsub|L<around*|(|X,Y|)>>>>|<row|<cell|>|<cell|<below|\<leqslant\>|<text|[eq:
+        <reference|eq 16.325.131>]>><rsub|>>|<cell|<frac|<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>|1-<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>>>>|<row|<cell|>|<cell|\<less\>>|<cell|<frac|<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>|1-<frac|1|2>>>>|<row|<cell|>|<cell|\<less\>>|<cell|<frac|\<zeta\>|2>\<cdot\><frac|2|1>>>|<row|<cell|>|<cell|=>|<cell|\<zeta\>>>>>
+      </eqnarray*>
+
+      which proves that\ 
+
+      <\equation>
+        <label|eq 16.325.129>\<varepsilon\><text| is continuous at >0
+      </equation>
+
+      or using [definition: <reference|diff e-mapping>]
+
+      <\equation>
+        <label|eq 16.327.130>\<varepsilon\><text| is a
+        >\<varepsilon\><text|-mapping>
+      </equation>
+
+      If <math|H\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X,X|)>>><around*|(|0,1|)>>
+      then\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|\<tau\><around*|(|Id<rsub|X>+H|)>-\<tau\><around*|(|Id<rsub|X>|)>>|<cell|=>|<cell|<around*|(|Id<rsub|X>+H|)><rsup|-1>-<around*|(|Id<rsub|X>|)><rsup|-1>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|Id<rsub|X>+H|)><rsup|-1>-Id<rsub|X>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[corollary:
+        <reference|diff I+H has inverse if norm of H is less then
+        1>]>>>|<cell|Id<rsub|X>+<big|sum><rsub|i=1><rsup|\<infty\>><around*|(|-1|)><rsup|i>\<cdot\>H<rsup|i>-Id<rsub|X>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|\<infty\>><around*|(|-1|)><rsup|i>\<cdot\>H<rsup|i>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|series partition series>]>>>|<cell|-H+<big|sum><rsub|i=2><rsup|\<infty\>><around*|(|-1|)><rsup|i>\<cdot\>H<rsup|i>>>>>
+      </eqnarray*>
+
+      As <math|\<tau\><around*|(|Id<rsub|X>+0|)>-\<tau\><around*|(|Id<rsub|X>|)>-0=0>
+      we have using the above that\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|\<tau\><around*|(|Id<rsub|X>+H|)>-\<tau\><around*|(|Id<rsub|X>|)>-<around*|(|-H|)>>|<cell|=>|<cell|>>|<row|<cell|<choice|<tformat|<table|<row|<cell|0<text|
+        if >H=0>>|<row|<cell|<big|sum><rsub|i=2><rsup|\<infty\>><around*|(|-1|)><rsup|i>\<cdot\>H<rsup|i><text|
+        if >H\<neq\>0>>>>>>|<cell|=>|<cell|>>|<row|<cell|<choice|<tformat|<table|<row|<cell|<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<cdot\>0<text|
+        if >H=0>>|<row|<cell|<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<cdot\><around*|(|<frac|1|<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>>\<cdot\><big|sum><rsub|i=2><rsup|\<infty\>><around*|(|-1|)><rsup|i>\<cdot\>H<rsup|i>|)><text|
+        if >H\<neq\>0>>>>>>|<cell|\<equallim\><rsub|<text|[eq: <reference|eq
+        16.320.128>>>>|<cell|>>|<row|<cell|<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<cdot\>\<varepsilon\><around*|(|H|)>>|<cell|>|<cell|>>>>
+      </eqnarray*>
+
+      so that\ 
+
+      <\equation>
+        <label|eq 16.327.134>\<forall\>H\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X,X|)>>><around*|(|0,1|)><text|
+        we have >\<tau\><around*|(|Id<rsub|X>+H|)>-\<tau\><around*|(|Id<rsub|X>|)>-<around*|(|-H|)>=<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<cdot\>\<varepsilon\><around*|(|H|)>
+      </equation>
+
+      Consider <math|L\<in\>\<cal-G\>L<around*|(|X|)>> then we have the
+      following cases to consider:\ 
+
+      <\description>
+        <item*|<math|L=Id<rsub|X>>>
+
+        As <math|-Id<rsub|X>\<circ\>H\<circ\>Id<rsub|X>=-H> we have that
+
+        <\equation>
+          <label|eq 16.329.131>\<tau\><around*|(|Id<rsub|X>+H|)>-\<tau\><around*|(|Id<rsub|X>|)>-<around*|(|-Id<rsub|X>\<circ\>H\<circ\>Id<rsub|X>|)><below|=|<text|[eq:
+          <reference|eq 16.327.134>]>><around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<cdot\>\<varepsilon\><around*|(|H|)>
+        </equation>
+
+        Note that <math|-Id<rsub|L<around*|(|L<around*|(|X,X|)>,L<around*|(|X,X|)>|)>>\<in\>L<around*|(|L<around*|(|X,X|)>,L<around*|(|X,X|)>|)>>
+        and
+
+        <\equation*>
+          -Id<rsub|L<around*|(|L<around*|(|X,X|)>,L<around*|(|X,X|)>|)>><around*|(|H|)>=-H<rsub|>=-Id<rsub|X>\<circ\>H\<circ\>Id<rsub|X>
+        </equation*>
+
+        So that <math|\<forall\>H\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,1|)>>
+        we have\ 
+
+        <\equation>
+          <label|eq 16.329.133>\<tau\><around*|(|Id<rsub|X>+H|)>-\<tau\><around*|(|Id<rsub|X>|)>-<around*|(|-Id<rsub|L<around*|(|L<around*|(|X,X|)>,L<around*|(|X,X|)>|)>>|)><around*|(|H|)>=<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<cdot\>\<varepsilon\><around*|(|H|)>
+        </equation>
+
+        Using the above, the fact that <math|\<varepsilon\>> is a
+        <math|\<varepsilon\>>-mapping [see eq: <reference|eq 16.327.130>] and
+        <math|<rigid|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X,X|)>>><around*|(|Id<rsub|X>,1|)>\<subseteq\>\<cal-G\>L<around*|(|X|)>>>
+        [see eq: <reference|eq 16.318.128>] we can apply [corollary:
+        <reference|diff differentiability alternative definitions (1)>]
+        resulting in
+
+        <\equation*>
+          D<rsub|Id<rsub|X>> \<tau\><text| exist and
+          >D<rsub|Id<rsub|X>>\<tau\>=-Id<rsub|L<around*|(|L<around*|(|X,X|)>,L<around*|(|X,X|)>|)>>
+        </equation*>
+
+        where <math|D<rsub|Id<rsub|X>>\<tau\>\<in\>L<around*|(|L<around*|(|X,X|)>,L<around*|(|X,X|)>|)>>
+        is defined by
+
+        <\equation*>
+          D<rsub|Id<rsub|X>>\<tau\><around*|(|H|)>=-Id<rsub|L<around*|(|L<around*|(|X,X|)>,L<around*|(|X,X|)>|)>><around*|(|H|)>=-H=-Id<rsub|X>\<circ\>H\<circ\>Id<rsub|X>
+        </equation*>
+
+        <item*|<math|L\<neq\>Id<rsub|X>>>Take
+        <math|\<delta\>=min<around*|(|<frac|1|1+<around*|\<\|\|\>|L<rsup|-1>|\<\|\|\>><rsub|L<around*|(|X,X|)>>>,1|)>>
+        then if <math|H\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|L*X,X>><around*|(|0,\<delta\>|)>>
+        we have
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<around*|\<\|\|\>|H\<circ\>L<rsup|-1>|\<\|\|\>><rsub|L<around*|(|X,X|)>>>|<cell|<below|\<leqslant\>|<text|[theorem:
+          <reference|continuity composition of continuous linear
+          mapping>]>><rsub|>>|<cell|<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<cdot\><around*|\<\|\|\>|L<rsup|-1>|\<\|\|\>><rsub|L<around*|(|X,X|)>>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|\<delta\>\<cdot\><around*|\<\|\|\>|L<rsup|-1>|\<\|\|\>><rsub|L<around*|(|X,X|)>>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<frac|1|1+<around*|\<\|\|\>|L<rsup|-1>|\<\|\|\>><rsub|L<around*|(|X,X|)>>>\<cdot\><around*|\<\|\|\>|L<rsup|-1>|\<\|\|\>><rsub|L<around*|(|X,X|)>>>>|<row|<cell|>|<cell|\<less\>>|<cell|1>>>>
+        </eqnarray*>
+
+        Hence using [corollary: <reference|diff I+H has inverse if norm of H
+        is less then 1>] we conclude that
+
+        <\equation>
+          <label|eq 16.330.130>Id<rsub|X>+H\<circ\>L<rsup|-1>\<in\>\<cal-G\>L<around*|(|X|)>
+        </equation>
+
+        As <math|L\<in\>\<cal-G\>L<around*|(|X|)>> we have that
+        <math|<around*|(|Id<rsub|X>+H\<circ\>L<rsup|-1>|)>\<circ\>L\<in\>\<cal-G\>L<around*|(|X|)>>
+        [see theorem: <reference|diff GL(X) is a group>], further we have
+        that
+
+        <\equation*>
+          <around*|(|Id<rsub|X>+H\<circ\>L<rsup|-1>|)>\<circ\>L\<equallim\><rsub|<text|[theorem:
+          <reference|continuity composition is
+          multilinear>]>>Id<rsub|X>\<circ\>L+<around*|(|H\<circ\>L<rsup|-1>|)>\<circ\>L=Id<rsub|X>\<circ\>L+H=L+H
+        </equation*>
+
+        hence \ it follows that
+
+        <\equation>
+          <label|eq 16.330.131>L+H=<around*|(|Id<rsub|X>+H\<circ\>L<rsup|-1>|)>\<circ\>L\<in\>\<cal-G\>L<around*|(|X|)>
+        </equation>
+
+        If <math|H\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X,X|)>>><around*|(|L,\<delta\>|)>>
+        then <math|<around*|\<\|\|\>|H-L|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<less\>\<delta\>>
+        so that <math|L-H\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X,X|)>>><around*|(|0,\<delta\>|)>>
+        and by [eq: <reference|eq 16.330.131>] that
+        <math|L=<around*|(|L-H|)>+H\<in\>\<cal-G\>L<around*|(|X|)>>, proving
+        that
+
+        <\equation>
+          <label|eq 16.331.131>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X,X|)>>><around*|(|L,\<delta\>|)>\<subseteq\>\<cal-G\>L<around*|(|X|)>
+        </equation>
+
+        If <math|H\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X,X|)>>><around*|(|0,\<delta\>|)>>
+        then we have\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<around*|\<\|\|\>|H\<circ\>L<rsup|-1>|\<\|\|\>><rsub|L<around*|(|X,X|)>>>|<cell|<below|\<leqslant\>|<text|[theorem:
+          <reference|continuity composition of continuous linear
+          mapping>]>>>|<cell|<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<cdot\><around*|\<\|\|\>|L<rsup|-1>|\<\|\|\>><rsub|L<around*|(|X,X|)>>>>|<row|<cell|>|<cell|\<less\>>|<cell|\<delta\>\<cdot\><around*|\<\|\|\>|L<rsup|-1>|\<\|\|\>><rsub|L<around*|(|X,X|)>>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<frac|1|1+<around*|\<\|\|\>|L<rsup|-1>|\<\|\|\>><rsub|L<around*|(|X,X|)>>>\<cdot\><around*|\<\|\|\>|L<rsup|-1>|\<\|\|\>><rsub|L<around*|(|X,X|)>>>>|<row|<cell|>|<cell|\<less\>>|<cell|1>>>>
+        </eqnarray*>
+
+        so that\ 
+
+        <\equation*>
+          H\<circ\>L<rsup|-1>\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X,X|)>>><around*|(|0,1|)>
+        </equation*>
+
+        proving, as <math|dom<around*|(|\<varepsilon\>|)>\<equallim\><rsub|<text|[eq:
+        <reference|eq 16.320.128>]>>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X,X|)>>><around*|(|0,1|)>>,
+        that
+
+        <\equation*>
+          \<forall\>H\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X,X|)>>><around*|(|0,\<delta\>|)><text|
+          we have that >\<varepsilon\><around*|(|H\<circ\>L<rsup|-1>|)><text|
+          is defined>
+        </equation*>
+
+        and by inserting <math|H\<circ\>L<rsup|-1>> for <math|H> in [eq:
+        <reference|eq 16.327.134>]\ 
+
+        <\equation>
+          <label|eq 16.334.133>\<tau\><around*|(|Id<rsub|X>+H\<circ\>L<rsup|-1>|)>-\<tau\><around*|(|Id<rsub|X>|)>=-H\<circ\>L<rsup|-1>+<around*|\<\|\|\>|H\<circ\>L<rsup|-1>|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<cdot\>\<varepsilon\><around*|(|H\<circ\>L<rsup|-1>|)>
+        </equation>
+
+        Hence
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|\<tau\><around*|(|L+H|)>-\<tau\><around*|(|L|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|L+H|)><rsup|-1>-L<rsup|-1>>|<cell|\<equallim\><rsub|<text|[eq:
+          <reference|eq 16.330.131>]>>>|<cell|>>|<row|<cell|<around*|(|<around*|(|Id<rsub|X>+H\<circ\>L<rsup|-1>|)>\<circ\>L|)><rsup|-1>-L<rsup|-1>>|<cell|=>|<cell|>>|<row|<cell|L<rsup|-1>\<circ\><around*|(|Id<rsub|X>+H\<circ\>L<rsup|-1>|)><rsup|-1>-L<rsup|-1>>|<cell|=>|<cell|>>|<row|<cell|L<rsup|-1>\<circ\><around*|(|Id<rsub|X>+H\<circ\>L<rsup|-1>|)><rsup|-1>-L<rsup|-1>\<circ\>Id<rsub|X>>|<cell|\<equallim\><rsub|<text|[theorem:
+          <reference|continuity composition is
+          multilinear>]>>>|<cell|>>|<row|<cell|L<rsup|-1>\<circ\><around*|(|<around*|(|Id<rsub|X>+H\<circ\>L<rsup|-1>|)><rsup|-1>-Id<rsub|X>|)>>|<cell|=>|<cell|>>|<row|<cell|L<rsup|-1>\<circ\><around*|(|\<tau\><around*|(|Id<rsub|X>+H\<circ\>L<rsup|-1>|)>-Id<rsub|X>|)>>|<cell|=>|<cell|>>|<row|<cell|L<rsup|-1>\<circ\><around*|(|\<tau\><around*|(|Id<rsub|X>+H\<circ\>L<rsup|-1>|)>-Id<rsub|X><rsup|-1>|)>>|<cell|=>|<cell|>>|<row|<cell|L<rsup|-1>\<circ\><around*|(|\<tau\><around*|(|Id<rsub|X>+H\<circ\>L<rsup|-1>|)>-\<tau\><around*|(|Id<rsub|X>|)>|)>>|<cell|\<equallim\><rsub|<text|[eq:
+          <reference|eq 16.334.133>]>>>|<cell|>>|<row|<cell|L<rsup|-1>\<circ\><around*|(|-H\<circ\>L<rsup|-1>+<around*|\<\|\|\>|H\<circ\>L<rsup|-1>|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<cdot\>\<varepsilon\><around*|(|H\<circ\>L<rsup|-1>|)>|)>>|<cell|\<equallim\><rsub|<text|[theorem:
+          <reference|continuity composition is
+          multilinear>]>>>|<cell|>>|<row|<cell|-L\<circ\>H\<circ\>L<rsup|-1>+<around*|\<\|\|\>|H\<circ\>L<rsup|-1>|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<cdot\>L<rsup|-1>\<circ\>\<varepsilon\><around*|(|H\<circ\>L<rsup|-1>|)>>|<cell|>|<cell|>>>>
+        </eqnarray*>
+
+        proving that\ 
+
+        <\equation>
+          <label|eq 16.335.133>\<tau\><around*|(|L+H|)>-\<tau\><around*|(|H|)>=-L\<circ\>H\<circ\>L<rsup|-1>+<around*|\<\|\|\>|H\<circ\>L<rsup|-1>|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<cdot\>L<rsup|-1>\<circ\>\<varepsilon\><around*|(|H\<circ\>L<rsup|-1>|)>
+        </equation>
+
+        As <math|0\<in\>L<around*|(|X,X|)>> and if <math|H\<neq\>0> by
+        ]theorem: <reference|continuity composition of continuous linear
+        mapping>]
+
+        <\equation*>
+          <frac|<around*|\<\|\|\>|H\<circ\>L<rsup|-1>|\<\|\|\>><rsub|L<around*|(|X,X|)>>|<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>>\<cdot\>L<rsup|-1>\<circ\>\<varepsilon\><around*|(|H\<circ\>L<rsup|-1>|)>\<in\>L<around*|(|X,X|)>
+        </equation*>
+
+        we can define the following function
+
+        <\equation*>
+          \<varepsilon\><rprime|'>:B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X,X|)>>><around*|(|0,\<delta\>|)>\<rightarrow\>L<around*|(|X,X|)><text|
+          by >\<varepsilon\><rprime|'><around*|(|H|)>=<choice|<tformat|<table|<row|<cell|0<text|
+          if >H=0>>|<row|<cell|<frac|<around*|\<\|\|\>|H\<circ\>L<rsup|-1>|\<\|\|\>><rsub|L<around*|(|X,X|)>>|<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>>\<cdot\>L<rsup|-1>\<circ\>\<varepsilon\><around*|(|H\<circ\>L<rsup|-1>|)><text|
+          if >H\<neq\>0>>>>>
+        </equation*>
+
+        then <math|\<forall\>H\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X,X|)>>><around*|(|0,\<delta\>|)>>
+
+        <\equation>
+          <label|eq 16.336.134><around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<cdot\>\<varepsilon\><rprime|'><around*|(|H|)><below|=|\<varepsilon\><around*|(|0\<circ\>L<rsup|-1>|)>=\<varepsilon\><around*|(|0|)>=0=\<varepsilon\><rprime|'><around*|(|0|)>><around*|\<\|\|\>|H\<circ\>L<rsup|-1>|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<cdot\>L<rsup|-1>\<circ\>\<varepsilon\><around*|(|H\<circ\>L<rsup|-1>|)>
+        </equation>
+
+        Further for <math|H\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X,X|)>>><around*|(|0,\<delta\>|)>>
+        and <math|x\<in\>X> we have
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<around*|\<\|\|\>|\<varepsilon\><rprime|'><around*|(|H|)><around*|(|x|)>|\<\|\|\>>>|<cell|=>|<cell|>>|<row|<cell|<around*|\<\|\|\>|<choice|<tformat|<table|<row|<cell|0<around*|(|x|)><text|
+          if >H=0>>|<row|<cell|<frac|<around*|\<\|\|\>|H\<circ\>L<rsup|-1>|\<\|\|\>><rsub|L<around*|(|X,X|)>>|<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>>\<cdot\><around*|(|L<rsup|-1>\<circ\>\<varepsilon\><around*|(|H\<circ\>L<rsup|-1>|)>|)><around*|(|x|)><text|
+          if >H\<neq\>0>>>>>|\<\|\|\>><rsub|>>|<cell|=>|<cell|>>|<row|<cell|<around*|\<\|\|\>|<choice|<tformat|<table|<row|<cell|0<text|
+          if >H=0>>|<row|<cell|<frac|<around*|\<\|\|\>|H\<circ\>L<rsup|-1>|\<\|\|\>><rsub|L<around*|(|X,X|)>>|<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>>\<cdot\><around*|(|L<rsup|-1>\<circ\>\<varepsilon\><around*|(|H\<circ\>L<rsup|-1>|)>|)><around*|(|x|)><text|
+          if >H\<neq\>0>>>>>|\<\|\|\>>>|<cell|=>|<cell|>>|<row|<cell|<choice|<tformat|<table|<row|<cell|<around*|\<\|\|\>|x|\<\|\|\>>\<cdot\>0
+          <text|if >H=0>>|<row|<cell|<frac|<around*|\<\|\|\>|H\<circ\>L<rsup|-1>|\<\|\|\>><rsub|L<around*|(|X,X|)>>|<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>>\<cdot\><around*|\<\|\|\>|<around*|(|L<rsup|-1>\<circ\>\<varepsilon\><around*|(|H\<circ\>L<rsup|-1>|)>|)><around*|(|x|)>|\<\|\|\>><rsub|><text|
+          if >H\<neq\>0>>>>>>|<cell|\<leqslant\>>|<cell|>>|<row|<cell|<choice|<tformat|<table|<row|<cell|<around*|\<\|\|\>|x|\<\|\|\>>\<cdot\>0
+          <text|if >H=0>>|<row|<cell|<frac|<around*|\<\|\|\>|H\<circ\>L<rsup|-1>|\<\|\|\>><rsub|L<around*|(|X,X|)>>|<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>>\<cdot\><around*|\<\|\|\>|<around*|(|L<rsup|-1>\<circ\>\<varepsilon\><around*|(|H\<circ\>L<rsup|-1>|)>|)>|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsub|><text|
+          if >H\<neq\>0>>>>>>|<cell|=>|<cell|>>|<row|<cell|<around*|\<\|\|\>|x|\<\|\|\>>\<cdot\><choice|<tformat|<table|<row|<cell|0
+          <text|if >H=0>>|<row|<cell|<frac|<around*|\<\|\|\>|H\<circ\>L<rsup|-1>|\<\|\|\>><rsub|L<around*|(|X,X|)>>|<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>>\<cdot\><around*|\<\|\|\>|<around*|(|L<rsup|-1>\<circ\>\<varepsilon\><around*|(|H\<circ\>L<rsup|-1>|)>|)>|\<\|\|\>><rsub|L<around*|(|X,X|)>><rsub|><text|
+          if >H\<neq\>0>>>>>>|<cell|<below|\<leqslant\>|<text|[theorem
+          <reference|continuity composition of continuous linear
+          mapping>]>><rsub|>>|<cell|>>|<row|<cell|<around*|\<\|\|\>|x|\<\|\|\>>\<cdot\><choice|<tformat|<table|<row|<cell|0
+          <text|if >H=0>>|<row|<cell|<frac|<around*|\<\|\|\>|H\<circ\>L<rsup|-1>|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<cdot\>|<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>>\<cdot\><around*|\<\|\|\>|*L<rsup|-1>|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<cdot\><around*|\<\|\|\>|\<varepsilon\><around*|(|H\<circ\>L<rsup|-1>|)>|\<\|\|\>><rsub|L<around*|(|X,X|)>><rsub|><text|
+          if >H\<neq\>0>>>>>>|<cell|<math|<below|\<leqslant\>|<text|[theorem
+          <reference|continuity composition of continuous linear
+          mapping>]>>>>|<cell|>>|<row|<cell|<around*|\<\|\|\>|x|\<\|\|\>>\<cdot\><choice|<tformat|<table|<row|<cell|0
+          <text|if >H=0>>|<row|<cell|<frac|<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>|<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>>\<cdot\><around*|\<\|\|\>|L<rsup|-1>|\<\|\|\>><rsub|L<around*|(|X,X|)>><rsup|2>\<cdot\><around*|\<\|\|\>|\<varepsilon\><around*|(|H\<circ\>L<rsup|-1>|)>|\<\|\|\>><rsub|L<around*|(|X,X|)>><rsub|><text|
+          if >H\<neq\>0>>>>>>|<cell|=>|<cell|>>|<row|<cell|<around*|\<\|\|\>|x|\<\|\|\>>\<cdot\><choice|<tformat|<table|<row|<cell|0
+          <text|if >H=0>>|<row|<cell|<around*|\<\|\|\>|L<rsup|-1>|\<\|\|\>><rsub|L<around*|(|X,X|)>><rsup|2>\<cdot\><around*|\<\|\|\>|\<varepsilon\><around*|(|H\<circ\>L<rsup|-1>|)>|\<\|\|\>><rsub|L<around*|(|X,X|)>><rsub|><text|
+          if >H\<neq\>0>>>>>>|<cell|\<leqslant\>>|<cell|>>|<row|<cell|<around*|\<\|\|\>|x|\<\|\|\>>\<cdot\><around*|\<\|\|\>|L<rsup|-1>|\<\|\|\>><rsub|L<around*|(|X,X|)>><rsup|2>\<cdot\><around*|\<\|\|\>|\<varepsilon\><around*|(|H\<circ\>L<rsup|-1>|)>|\<\|\|\>><rsub|L<around*|(|X,X|)>><rsub|>>|<cell|>|<cell|>>>>
+        </eqnarray*>
+
+        proving by [theorem: <reference|continuity norm on L(X,Y)>] that\ 
+
+        <\equation>
+          <label|eq 16.336.133><around*|\<\|\|\>|\<varepsilon\><rprime|'><around*|(|H|)>|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<leqslant\><around*|\<\|\|\>|L<rsup|-1>|\<\|\|\>><rsub|L<around*|(|X,X|)>><rsup|2>\<cdot\><around*|\<\|\|\>|\<varepsilon\><around*|(|H\<circ\>L<rsup|-1>|)>|\<\|\|\>><rsub|L<around*|(|X,X|)>><rsub|>
+        </equation>
+
+        Let <math|\<zeta\>\<in\>\<bbb-R\><rsup|+>> then as
+        <math|\<varepsilon\>> is continue at 0 [see <reference|eq
+        16.325.129>] there exist a <math|\<delta\><rsub|1>\<in\>\<bbb-R\><rsup|+>>
+        such that if <math|<around*|\<\|\|\>|H-0|\<\|\|\>><rsub|L<around*|(|X,X|)>>=<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<less\>\<delta\><rsub|1>>
+        then
+
+        <\equation*>
+          <around*|\<\|\|\>|\<varepsilon\><around*|(|H|)>|\<\|\|\>><rsub|L<around*|(|X,X|)>><below|=|\<varepsilon\><around*|(|0|)>=0><around*|\<\|\|\>|\<varepsilon\><around*|(|H|)>-\<varepsilon\><around*|(|0|)>|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<less\><frac|\<zeta\>|<around*|\<\|\|\>|L<rsup|-1>|\<\|\|\>><rsup|2><rsub|L<around*|(|X,X|)>>+1>
+        </equation*>
+
+        Take <math|\<delta\><rsub|2>=<frac|\<delta\><rsub|1>|<around*|\<\|\|\>|L<rsup|-1>|\<\|\|\>><rsub|L<around*|(|X,X|)>>+1>>
+        then if <math|<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<less\>\<delta\><rsub|2>>
+        we have\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<around*|\<\|\|\>|H\<circ\>L<rsup|-1>|\<\|\|\>><rsub|L<around*|(|X,X|)>>>|<cell|<below|\<leqslant\>|<text|[theorem:
+          <reference|continuity composition of continuous linear
+          mapping>]>><rsub|>>|<cell|<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<cdot\><around*|\<\|\|\>|L<rsup|-1>|\<\|\|\>><rsub|L<around*|(|X,X|)>>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<frac|\<delta\><rsub|1>|<around*|\<\|\|\>|L<rsup|-1>|\<\|\|\>><rsub|L<around*|(|X,X|)>>+1>\<cdot\><around*|\<\|\|\>|L<rsup|-1>|\<\|\|\>><rsub|L<around*|(|X,X|)>>>>|<row|<cell|>|<cell|\<less\>>|<cell|\<delta\><rsub|1>>>>>
+        </eqnarray*>
+
+        so that\ 
+
+        <\equation*>
+          <around*|\<\|\|\>|\<varepsilon\><around*|(|H\<circ\>L<rsup|-1>|)>|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<less\><frac|\<zeta\>|<around*|\<\|\|\>|L<rsup|-1>|\<\|\|\>><rsup|2><rsub|L<around*|(|X,X|)>>+1>
+        </equation*>
+
+        Substituting the above in [eq: <reference|eq 16.336.133>] we have for
+        <math|<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\<less\>min<around*|(|\<delta\>,\<delta\><rsub|2>|)>>
+        that\ 
+
+        <\equation*>
+          <around*|\<\|\|\>|\<varepsilon\><rprime|'><around*|(|H|)>-\<varepsilon\><rprime|'><around*|(|0|)>|\<\|\|\>>=<around*|\<\|\|\>|\<varepsilon\><rprime|'><around*|(|H|)>|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<leqslant\><around*|\<\|\|\>|L<rsup|-1>|\<\|\|\>><rsub|L<around*|(|X,X|)>><rsup|2>\<cdot\><frac|\<zeta\>|<around*|\<\|\|\>|L<rsup|-1>|\<\|\|\>><rsup|2><rsub|L<around*|(|X,X|)>>+1>\<less\>\<zeta\>
+        </equation*>
+
+        which proves that <math|\<varepsilon\><rprime|'>> is continuous at
+        <math|0>. Hence\ 
+
+        <\equation>
+          <label|eq 16.337.133>\<varepsilon\><rprime|'><text| is a
+          >\<varepsilon\><text|-mapping at >0
+        </equation>
+
+        Define now\ 
+
+        <\equation*>
+          \<psi\>:L<around*|(|X,X|)>\<rightarrow\>L<around*|(|X,X|)><text| by
+          >\<psi\><around*|(|H|)>=-L<rsup|-1>\<circ\>H\<circ\>L
+        </equation*>
+
+        Then for <math|H<rsub|1>,H<rsub|2>\<in\>L<around*|(|X,X|)>> and
+        <math|\<alpha\>\<in\>\<bbb-K\>> we have\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|\<psi\><around*|(|H<rsub|1>+\<alpha\>\<cdot\>H<rsub|2>|)>>|<cell|=>|<cell|-L<rsup|-1>\<circ\><around*|(|H<rsub|1>+\<alpha\>\<cdot\>H<rsub|2>|)>\<circ\>L>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|associativity>>>|<cell|-L<rsup|-1>\<circ\><around*|(|<around*|(|H<rsub|1>+\<alpha\>\<cdot\>H<rsub|2>|)>\<circ\>L|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+          <reference|continuity composition is
+          multilinear>]>>>|<cell|-L<rsup|-1>\<circ\><around*|(|H<rsub|1>\<circ\>L+\<alpha\>\<cdot\>H<rsub|2>\<circ\>L|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+          <reference|continuity composition is
+          multilinear>]>>>|<cell|-L<rsup|-1>\<circ\>H<rsub|1>\<circ\>L+\<alpha\>\<cdot\><around*|(|-L<rsup|-1>\<circ\>H<rsub|2>\<circ\>L|)>>>|<row|<cell|>|<cell|=>|<cell|\<psi\><around*|(|H<rsub|1>|)>+\<alpha\>\<cdot\>\<psi\><around*|(|H<rsub|2>|)>>>>>
+        </eqnarray*>
+
+        proving that\ 
+
+        <\equation*>
+          \<psi\>\<in\>Hom<around*|(|L<around*|(|X,X|)>,L<around*|(|X,X|)>|)>
+        </equation*>
+
+        Further for <math|H\<in\>L<around*|(|X,X|)>> we have
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<around*|\<\|\|\>|\<psi\><around*|(|H|)>|\<\|\|\>><rsub|L<around*|(|X,X|)>>>|<cell|=>|<cell|<around*|\<\|\|\>|-L\<circ\>H\<circ\>L|\<\|\|\>><rsub|L<around*|(|X,X|)>>>>|<row|<cell|>|<cell|<below|\<leqslant\>|<text|[theorem:
+          <reference|continuity composition of continuous linear
+          mapping>]>><rsub|>>|<cell|<around*|\<\|\|\>|-L\<circ\>H|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<cdot\><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X,X|)>>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<cdot\><around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<cdot\><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X,X|)>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X,X|)>><rsup|2>\<cdot\><around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>>>>>
+        </eqnarray*>
+
+        proving by [theorem: <reference|continuity norm on L(X,Y)>] that\ 
+
+        <\equation>
+          <label|eq 16.338.133>\<psi\>\<in\>L<around*|(|L<around*|(|X,X|)>,L<around*|(|X,X|)>|)><text|
+          and ><around*|\<\|\|\>|\<psi\>|\<\|\|\>><rsub|L<around*|(|L<around*|(|X,X|)>,L<around*|(|X,X|)>|)>>\<leqslant\><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X,X|)>><rsup|2>
+        </equation>
+
+        Next\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|\<tau\><around*|(|L+H|)>-\<tau\><around*|(|L|)>-\<psi\><around*|(|H|)>>|<cell|=>|<cell|\<tau\><around*|(|L+H|)>-\<tau\><around*|(|L|)>-<around*|(|-L\<circ\>H\<circ\>L|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+          <reference|eq 16.335.133>]>>>|<cell|<around*|\<\|\|\>|H\<circ\>L<rsup|-1>|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<cdot\>L<rsup|-1>\<circ\>\<varepsilon\><around*|(|H\<circ\>L<rsup|-1>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+          <reference|eq 16.336.134>]>>>|<cell|<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<cdot\>\<varepsilon\><rprime|'><around*|(|H|)>>>>>
+        </eqnarray*>
+
+        Finally using [eqs: <reference|eq 16.331.131>, <reference|eq
+        16.337.133> and the above allows us to] apply [corollary:
+        <reference|diff differentiability alternative definitions (1)>]
+        proving that <math|\<tau\>> is Fréchet differentiable at <math|L> and\ 
+
+        <\equation*>
+          D<rsub|L>\<tau\>=\<psi\>
+        </equation*>
+
+        so that <math|D<rsub|L>\<tau\>\<in\>L<around*|(|L<around*|(|X,X|)>,L<around*|(|X,X|)>|)>>
+        is defined by <math|D<rsub|L>\<tau\><around*|(|H|)>=\<psi\><around*|(|H|)>=-L\<circ\>H\<circ\>L>.
+      </description>
+
+      So in all cases we have that <math|\<forall\>L\<in\>\<cal-G\>L<around*|(|X|)>>
+      <math|\<tau\>> is Fréchet differentiable at <math|L> and
+      <math|<rigid|D<rsub|L>\<tau\>\<in\>L<around*|(|L<around*|(|X,X|)>,L<around*|(|X,X|)>|)>>>
+      is defined by <math|D<rsub|L>\<tau\><around*|(|H|)>=-L\<circ\>H\<circ\>L>.
+
+      <item>Using (2) we have that <math|\<forall\>L\<in\>\<cal-G\>L<around*|(|X|)>>
+      <math|\<tau\>> has a Fréchet differential <math|D<rsub|L>\<tau\>> at
+      <math|L> where <math|<rigid|D<rsub|L>\<tau\>\<in\>L<around*|(|L<around*|(|X,X|)>,L<around*|(|X,X|)>|)>>>
+      is defined by <math|D<rsub|L>\<tau\><around*|(|H|)>=-L\<circ\>H\<circ\>L>.
+      Hence we can define\ 
+
+      <\equation*>
+        D<rsup|<around*|[|1|]>> \<tau\>:\<cal-G\>L<around*|(|X|)>\<rightarrow\>L<around*|(|L<around*|(|X,X|)>,L<around*|(|X,X|)>|)><text|
+        by >D<rsup|<around*|[|1|]>>\<tau\><around*|(|L|)>=D<rsub|L>\<tau\>
+      </equation*>
+
+      where\ 
+
+      <\equation>
+        <label|eq 16.340.134>D<rsub|L>\<tau\><text| is defined by
+        >D<rsub|L><around*|(|\<tau\>|)><around*|(|H|)>=-L\<circ\>H\<circ\>L
+      </equation>
+
+      We proceed now to show that <math|D <rsup|<around*|[|1|]>>\<tau\>> is
+      the composition of <math|C<rsup|\<infty\>>> mappings so that we can
+      apply the chain rule to prove that <math|D<rsup|<around*|[|1|]>>\<tau\>>.is
+      <math|C<rsup|\<infty\>>> on <math|\<cal-G\>L<around*|(|X|)>>. Define\ 
+
+      <\equation*>
+        \<chi\>:\<cal-G\>L<around*|(|X|)>\<rightarrow\>\<cal-G\>L<around*|(|X|)>\<cdot\>\<cal-G\>L<around*|(|X|)><text|
+        by >\<chi\><around*|(|L|)>=<around*|(|L,L|)>
+      </equation*>
+
+      then <math|\<forall\>L\<in\>\<cal-G\>L<around*|(|X|)>> we have
+
+      <\equation*>
+        <around*|(|\<pi\><rsub|1>\<circ\>\<chi\>|)><around*|(|L|)>=\<pi\><rsub|1><around*|(|\<chi\><around*|(|L|)>|)>=\<pi\><rsub|1><around*|(|<around*|(|L,L|)>|)>=L=Id<rsub|\<cal-G\>L<around*|(|X|)>><around*|(|L|)>
+      </equation*>
+
+      and\ 
+
+      <\equation*>
+        <around*|(|\<pi\><rsub|2>\<circ\>\<chi\>|)><around*|(|L|)>=\<pi\><rsub|2><around*|(|\<chi\><around*|(|L|)>|)>=\<pi\><rsub|2><around*|(|<around*|(|L,L|)>|)>=L=Id<rsub|\<cal-G\>L<around*|(|X|)>><around*|(|L|)>
+      </equation*>
+
+      so that <math|\<pi\><rsub|1>\<circ\>\<chi\>=Id<rsub|\<cal-G\>L<around*|(|X|)>>>,
+      <math|\<pi\><rsub|2>\<circ\>\<chi\>=Id<rsub|\<cal-G\>L<around*|(|X|)>>>.
+      As <math|Id<rsub|\<cal-G\>L<around*|(|X|)>>> is
+      <math|C<rsup|\<infty\>>> on <math|\<cal-G\>L<around*|(|X|)>> [see
+      theorem: <reference|diff constant function is infinitely times
+      differentiable>], it follows from [theorem: <reference|diff
+      differential of a vector valued function>] that\ 
+
+      <\equation>
+        <label|eq 16.340.133>\<cal-X\><text| is \ >C<rsup|\<infty\>><text| on
+        >\<cal-G\>L<around*|(|X|)>
+      </equation>
+
+      Given <math|L,K\<in\>L<around*|(|X,X|)>> define
+
+      <\equation>
+        <label|eq 16.341.133>\<varphi\><rsub|L,K>:L<around*|(|X,X|)>\<rightarrow\>L<around*|(|X,X|)><text|
+        by >\<varphi\><rsub|L,K><around*|(|H|)>=-L\<circ\>H\<circ\>K
+      </equation>
+
+      Let <math|H<rsub|1>,H<rsub|2>\<in\>L<around*|(|X,X|)>>,
+      <math|\<alpha\>\<in\>\<bbb-K\>> then we have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|\<varphi\><rsub|L,K><around*|(|H<rsub|1>+\<alpha\>\<cdot\>H<rsub|2>|)>>|<cell|=>|<cell|-L\<circ\><around*|(|H<rsub|1>+\<alpha\>\<cdot\>H<rsub|2>|)>\<circ\>K>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|continuity composition is
+        multilinear>]>>>|<cell|-L\<circ\><around*|(|H<rsub|1>\<circ\>K+\<alpha\>\<cdot\>H<rsub|2>\<circ\>K|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|continuity composition is
+        multilinear>]>>>|<cell|-L\<circ\>H<rsub|1>\<circ\>K+\<alpha\>\<cdot\><around*|(|-L\<circ\>H<rsub|2>\<circ\>K|)>>>|<row|<cell|>|<cell|=>|<cell|\<varphi\><rsub|L,K><around*|(|H<rsub|1>|)>+\<alpha\>\<cdot\>\<varphi\><rsub|L,K><around*|(|H<rsub|2>|)>>>>>
+      </eqnarray*>
+
+      proving that\ 
+
+      <\equation*>
+        \<varphi\><rsub|L,K>\<in\>Hom<around*|(|L<around*|(|X,X|)>,L<around*|(|X,X|)>|)>
+      </equation*>
+
+      Further if <math|H\<in\>L<around*|(|X,X|)>> then\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|\<\|\|\>|\<varphi\><rsub|L,K><around*|(|H|)>|\<\|\|\>><rsub|L<around*|(|X,X|)>>>|<cell|=>|<cell|<around*|\<\|\|\>|-L\<circ\>H\<circ\>K|\<\|\|\>><rsub|L<around*|(|X,X|)>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|-L\<circ\><around*|(|H\<circ\>K|)>|\<\|\|\>><rsub|L<around*|(|X,X|)>>>>|<row|<cell|>|<cell|<below|\<leqslant\>|<text|[theorem:
+        <reference|continuity composition of continuous linear
+        mapping>]>><rsub|>>|<cell|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X\<less\>X|)>>\<cdot\><around*|\<\|\|\>|H\<circ\>K|\<\|\|\>><rsub|L<around*|(|X,X|)>>>>|<row|<cell|>|<cell|<below|\<leqslant\>|<text|[theorem:
+        <reference|continuity composition of continuous linear
+        mapping>]>><rsub|>>|<cell|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X\<less\>X|)>>\<cdot\><around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<cdot\><around*|\<\|\|\>|K|\<\|\|\>><rsub|L<around*|(|X,X|)>>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<cdot\><around*|\<\|\|\>|K|\<\|\|\>><rsub|L<around*|(|X,X|)>>|)>\<cdot\><around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>>>>>
+      </eqnarray*>
+
+      hence, using [theorems: <reference|continuity linear mapping (1)> and
+      <reference|continuity norm on L(X,Y)>] it follows that\ 
+
+      <\equation>
+        <label|eq 16.342.133>\<varphi\><rsub|L,K>\<in\>L<around*|(|L<around*|(|X,X|)>,L<around*|(|X,X|)>|)>\<wedge\><text|><around*|\<\|\|\>|\<varphi\><rsub|L,K>|\<\|\|\>><rsub|L<around*|(|L<around*|(|X,X|)>,L<around*|(|X,X|)>|)>>\<leqslant\><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<cdot\><around*|\<\|\|\>|K|\<\|\|\>><rsub|L<around*|(|X,X|)>>
+      </equation>
+
+      So we can define\ 
+
+      <\equation>
+        <label|eq 16.343.133>\<varphi\>:L<around*|(|X,X|)>\<cdot\>L<around*|(|X,X|)>\<rightarrow\>L<around*|(|L<around*|(|X,X|)>,L<around*|(|X,X|)>|)><text|
+        by >\<varphi\><around*|(|L,K|)>=\<varphi\><rsub|L,K>
+      </equation>
+
+      Then we have for <math|L,L<rsub|1>,L<rsub|2>\<in\>L<around*|(|X,X|)>>
+      and <math|\<alpha\>\<in\>\<bbb-K\>> that\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|\<varphi\><around*|(|L,L<rsub|1>+\<alpha\>\<cdot\>L<rsub|2>|)><around*|(|H|)>>|<cell|\<equallim\><rsub|<text|[eq:
+        <reference|eq 16.343.133>>>>|<cell|\<varphi\><rsub|L,L<rsub|1>+\<alpha\>\<cdot\>L<rsub|2>><around*|(|H|)><rsub|>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+        <reference|eq 16.341.133>]>>>|<cell|-L\<circ\>H\<circ\><around*|(|L<rsub|1>+\<alpha\>\<cdot\>L<rsub|2>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|continuity composition is
+        multilinear>]>>>|<cell|-L\<circ\><around*|(|H\<circ\>L<rsub|1>+\<alpha\>\<cdot\>H\<circ\>L<rsub|2>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|continuity composition is
+        multilinear>]>>>|<cell|-L\<circ\>H\<circ\>L<rsub|1>+\<alpha\>\<cdot\><around*|(|-L\<circ\>H\<circ\>L<rsub|2>|)>>>|<row|<cell|>|<cell|=>|<cell|\<varphi\><around*|(|L,L<rsub|1>|)><around*|(|H|)>+\<alpha\>\<cdot\>\<varphi\><around*|(|L,L<rsub|2>|)><around*|(|H|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|\<varphi\><around*|(|L,L<rsub|1>|)>+\<alpha\>\<cdot\>\<varphi\><around*|(|L,L<rsub|2>|)>|)><around*|(|H|)>>>|<row|<cell|\<varphi\><around*|(|L<rsub|1>+\<alpha\>\<cdot\>L<rsub|2>,L|)><around*|(|H|)>>|<cell|=>|<cell|\<varphi\><rsub|L<rsub|1>+\<alpha\>\<cdot\>L<rsub|2>,L><around*|(|H|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+        <reference|eq 16.341.133>]>>>|<cell|-<around*|(|L<rsub|1>+\<alpha\>\<cdot\>L<rsub|2>|)>\<circ\>H\<circ\>L>>|<row|<cell|>|<cell|=>|<cell|<around*|(|-<around*|(|L<rsub|1>+\<alpha\>\<cdot\>L<rsub|2>|)>\<circ\>H|)>\<circ\>L>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|continuity composition is
+        multilinear>]>>>|<cell|<around*|(|-L<rsub|1>\<circ\>H+\<alpha\>\<cdot\><around*|(|-L<rsub|2>\<circ\>H|)>|)>\<circ\>L>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|continuity composition is
+        multilinear>]>>>|<cell|-L<rsub|1>\<circ\>H\<circ\>L+\<alpha\>\<cdot\><around*|(|-L<rsub|2>\<circ\>H\<circ\>L|)>>>|<row|<cell|>|<cell|=>|<cell|\<varphi\><around*|(|L<rsub|1>,L|)><around*|(|H|)>+\<alpha\>\<cdot\>\<varphi\><around*|(|L<rsub|2>,L|)><around*|(|H|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|\<varphi\><around*|(|L<rsub|1>,L|)>+\<alpha\>\<cdot\>\<varphi\><around*|(|L<rsub|2>,L|)>|)><around*|(|H|)>>>>>
+      </eqnarray*>
+
+      which proves that
+
+      <\equation*>
+        \<varphi\><around*|(|L,L<rsub|1>+\<alpha\>\<cdot\>L<rsub|2>|)>=\<varphi\><around*|(|L<rsub|1>,L|)>+\<alpha\>\<cdot\>\<varphi\><around*|(|L<rsub|2>,L|)><text|
+        and >\<varphi\><around*|(|L<rsub|1>+\<alpha\>\<cdot\>L<rsub|2>,L|)>=\<varphi\><around*|(|L<rsub|1>,L|)>+\<alpha\>\<cdot\>\<varphi\><around*|(|L<rsub|2>,L|)>
+      </equation*>
+
+      Hence
+
+      <\equation*>
+        \<varphi\>\<in\>Hom<around*|(|L*<around*|(|X,X|)>,L<around*|(|X,X|)>;L<around*|(|L<around*|(|X,X|)>,L<around*|(|X,X|)>|)>|)>
+      </equation*>
+
+      Further if <math|<around*|(|L,K|)>\<in\>L<around*|(|X,X|)>\<cdot\>L<around*|(|X,X|)>>
+      then we have
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|\<\|\|\>|\<varphi\><around*|(|L,K|)>|\<\|\|\>><rsub|\|L<around*|(|L<around*|(|X,X|)>,L<around*|(|X,X|)>|)>><rsub|>>|<cell|\<equallim\><rsub|<text|[eq:
+        <reference|eq 16.343.133>]>>>|<cell|<around*|\<\|\|\>|\<varphi\><rsub|L,K>|\<\|\|\>><rsub|L<around*|(|L<around*|(|X,X|)>,L<around*|(|X,X|)>|)>>>>|<row|<cell|>|<cell|<below|\<leqslant\>|<text|[eq:
+        <reference|eq 16.342.133>]>><rsub|>>|<cell|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<cdot\><around*|\<\|\|\>|K|\<\|\|\>><rsub|L<around*|(|X,X|)>>>>>>
+      </eqnarray*>
+
+      which by [theorem: <reference|continuity multilinear mapping (1)>]
+      proves that\ 
+
+      <\equation*>
+        \<varphi\>\<in\>L<around*|(|L<around*|(|X,X|)>,L<around*|(|X,X|)>;L<around*|(|L<around*|(|X,X|)>,L<around*|(|X,X|)>|)>|)>
+      </equation*>
+
+      Hence by [theorem: <reference|diff bilinear mappings are infinite times
+      differentiable>] we have that\ 
+
+      <\equation>
+        <label|eq 16.344.133>\<varphi\><text| is >C<rsup|\<infty\>><text| on
+        >L<around*|(|X,X|)>\<cdot\>L<around*|(|X,X|)>
+      </equation>
+
+      Take <math|L\<in\>\<cal-G\>L<around*|(|X|)>> then for
+      <math|H\<in\>L<around*|(|X,X|)>> we have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|<around*|(|\<varphi\>\<circ\>\<chi\>|)><around*|(|L|)>|)><around*|(|H|)>>|<cell|=>|<cell|<around*|(|\<varphi\><around*|(|\<chi\><around*|(|L|)>|)>|)><around*|(|H|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|\<varphi\><around*|(|L,L|)>|)><around*|(|H|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+        <reference|eq 16.343.133>>>>|<cell|\<varphi\><rsub|L,L><around*|(|H|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+        <reference|eq 16.341.133>]>>>|<cell|-L\<circ\>H\<circ\>L>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+        <reference|eq 16.340.134>]>>>|<cell|D<rsub|L>\<tau\><around*|(|H|)>>>>>
+      </eqnarray*>
+
+      proving that <math|\<forall\>L\<in\>\<cal-G\>L<around*|(|X|)>>
+      <math|><math|<around*|(|\<varphi\>\<circ\>\<chi\>|)><around*|(|L|)>=D<rsub|L>\<tau\>=D
+      <rsup|<around*|[|1|]>>\<tau\><around*|(|L|)>>. Hence we have\ 
+
+      <\equation>
+        <label|eq 16.346.134.1>D<rsup|<around*|[|1|]>>
+        \<tau\>=\<varphi\>\<circ\>\<chi\>
+      </equation>
+
+      As <math|\<varphi\>> and <math|\<chi\>> are <math|C<rsup|\<infty\>>>
+      [see eqs: <reference|eq 16.340.133>, <reference|eq 16.344.133>] it
+      follows from [theorem: <reference|diff chain rule higher order>] that
+      <math|\<varphi\>\<circ\>\<chi\>> is <math|C<rsup|\<infty\>>> on
+      <math|\<cal-G\>L<around*|(|X|)>> so that\ 
+
+      <\equation*>
+        D<rsup|<around*|[|1|]>>\<tau\><text| is >C<rsup|\<infty\>><text| on
+        >\<cal-G\>L<around*|(|X|)>
+      </equation*>
+
+      Finally using [theorem: <reference|diff C^(n+m)>] it follows that\ 
+
+      <\equation*>
+        \<tau\><text| is >C<rsup|\<infty\>><text| on
+        >\<cal-G\>L<around*|(|X|)>
+      </equation*>
+    </enumerate>
+  </proof>
+
+  We introduce now the concept of differentiable functions who have a
+  differentiable inverse.
+
+  <\definition>
+    <label|diff diffeomorphism><index|diff diffeomorphism>Let
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    be normed spaces, <math|U> a open set in <math|X>, <math|V> a open set in
+    <math|Y> and <math|f:U\<rightarrow\>V> a function then we say that
+
+    <\enumerate>
+      <item><math|f> is a <with|font-series|bold|diffeomorphism> iff
+
+      <\enumerate>
+        <item><math|f:U\<rightarrow\>V> is a bijection
+
+        <item><math|f:U\<rightarrow\>Y > is differentiable on <math|U>
+
+        <item><math|f<rsup|-1>:V\<rightarrow\>X> is differentiable on
+        <math|V>
+      </enumerate>
+
+      <item><math|f> is a <with|font-series|bold|diffeomorphism of class
+      <math|C<rsup|n>>> where <math|n\<in\>\<bbb-N\><rsub|0><big|cup><around*|{|\<infty\>|}>>
+      iff
+
+      <\enumerate>
+        <item><math|f:U\<rightarrow\>V> is a bijection
+
+        <item><math|f:U\<rightarrow\>Y> is <math|C<rsup|n>> on <math|U>
+
+        <item><math|f<rsup|-1>:V\<rightarrow\>X> is <math|C<rsup|n>> on
+        <math|V>
+      </enumerate>
+    </enumerate>
+  </definition>
+
+  <\theorem>
+    <label|diff diffeomorphism inverse>Let
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    be normed spaces, <math|U> a open set in <math|X>, <math|V> a open set in
+    <math|Y> and <math|f:U\<rightarrow\>V> a function then we have:
+
+    <\enumerate>
+      <item>
+
+      <\equation*>
+        f<text| is a diffeomorphism >\<Leftrightarrow\><text|
+        >f<rsup|-1><text| is a diffeomorphism>
+      </equation*>
+
+      <item>Let <math|n\<in\>\<bbb-N\><rsub|0><big|cup><around*|{|\<infty\>|}>>\ 
+
+      <\equation*>
+        f<text| is a diffeomorphism of class >C<rsup|n><text|
+        >\<Leftrightarrow\><text| >f<rsup|-1><text| is a diffeomorphism of
+        class >C<rsup|n>
+      </equation*>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>\ 
+
+      <\description>
+        <item*|<math|\<Rightarrow\>>>As <math|f> is a diffeomorphism we have
+        that:\ 
+
+        <\enumerate>
+          <item><math|f:U\<rightarrow\>V> is a bijection so that by [theorem:
+          <reference|function bijection and inverse>]
+          <math|f<rsup|-1>:V\<rightarrow\>U> is a bijection.
+
+          <item><math|f<rsup|-1>:V\<rightarrow\>X> is differentiable on
+          <math|V>
+
+          <item><math|<around*|(|f<rsup|-1>|)><rsup|-1><below|=|<text|[theorem:
+          <reference|function inverse of a bijection is
+          unique>]>>f:U\<rightarrow\>Y> is differentiable on <math|V>
+        </enumerate>
+
+        so that by definition <math|f<rsup|-1>> is diffeomorphism.
+
+        <item*|<math|\<Leftarrow\>>>As <math|f<rsup|-1>> is a diffeomorphism
+        we have that:\ 
+
+        <\enumerate>
+          <item><math|f<rsup|-1>:V\<rightarrow\>U> is a bijection so that by
+          [theorem: <reference|function bijection and inverse>]
+
+          <\equation*>
+            f<below|=|<text|[theorem: <reference|function inverse of a
+            bijection is unique>]>><around*|(|f<rsup|-1>|)><rsup|-1>:U\<rightarrow\>V
+          </equation*>
+
+          is a bijection.
+
+          <item>Then <math|f<below|=|<text|[theorem: <reference|function
+          inverse of a bijection is unique>]>><around*|(|f<rsup|-1>|)><rsup|-1>:U\<rightarrow\>Y>
+          is differentiable on <math|U>.
+
+          <item>Then <math|f<rsup|-1>:V\<rightarrow\>X> is is differentiable
+          on <math|V>.
+        </enumerate>
+
+        so that definition <math|f> is diffeomorphism.
+      </description>
+
+      <item>
+
+      <\description>
+        <item*|<math|\<Rightarrow\>>>As <math|f> is a diffeomorphism of class
+        <math|C<rsup|n>> we have that:\ 
+
+        <\enumerate>
+          <item><math|f:U\<rightarrow\>V> is a bijection so that by [theorem:
+          <reference|function bijection and inverse>]
+          <math|f<rsup|-1>:V\<rightarrow\>U> is a bijection.
+
+          <item><math|f<rsup|-1>:V\<rightarrow\>X> is diffeomorphism of class
+          <math|C<rsup|n>>.
+
+          <item><math|<around*|(|f<rsup|-1>|)><rsup|-1><below|=|<text|[theorem:
+          <reference|function inverse of a bijection is
+          unique>]>>f:U\<rightarrow\>Y> is diffeomorphism of class
+          <math|C<rsup|n>>.
+        </enumerate>
+
+        so that by definition <math|f<rsup|-1>> diffeomorphism of class
+        <math|C<rsup|n>>.
+
+        <item*|<math|\<Leftarrow\>>>As <math|f<rsup|-1>> is a diffeomorphism
+        of class <math|C<rsup|n>> we have that:\ 
+
+        <\enumerate>
+          <item><math|f<rsup|-1>:V\<rightarrow\>U> is a bijection so that by
+          [theorem: <reference|function bijection and inverse>]
+
+          <\equation*>
+            f<below|=|<text|[theorem: <reference|function inverse of a
+            bijection is unique>]>><around*|(|f<rsup|-1>|)><rsup|-1>:U\<rightarrow\>V
+          </equation*>
+
+          is a bijection.
+
+          <item>Then <math|f<below|=|<text|[theorem: <reference|function
+          inverse of a bijection is unique>]>><around*|(|f<rsup|-1>|)><rsup|-1>:U\<rightarrow\>Y>
+          is diffeomorphism of class <math|C<rsup|n>>.
+
+          <item>Then <math|f<rsup|-1>:V\<rightarrow\>X> is is a
+          diffeomorphism of class <math|C<rsup|n>>.
+        </enumerate>
+
+        so that definition <math|f> is a diffeomorphism of class
+        <math|C<rsup|n>>.
+      </description>
+    </enumerate>
+  </proof>
+
+  <\example>
+    <label|diff homeomorphism is a diffeomorphism of class C^0>Let
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    be normed spaces then a homeomorphism <math|f:X\<rightarrow\>Y> is a
+    diffeomorphism of class <math|C<rsup|0>>
+  </example>
+
+  <\proof>
+    This follows trivially from the definitions of a homeomorphism
+    [definition: <reference|continuity homeomorphism>] and diffeomorphism of
+    class <math|C<rsup|0>> [definition: <reference|diff diffeomorphism>].
+  </proof>
+
+  <\example>
+    <label|diff linear isomorphism between Banach spaces are
+    diffeomorphisms>Let <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    be Banach spaces and <math|L:X\<rightarrow\>Y> a continuous linear
+    isomorphism [in other words <math|L\<in\>L<around*|(|X,Y|)>> and <math|L>
+    is a bijection] then <math|L> is a diffeomorphism of class
+    <math|C<rsup|\<infty\>>>.
+  </example>
+
+  <\proof>
+    First using [theorem: <reference|complete continuous linear isomorphism
+    is a homeomorphism>] <math|L> is a homeomorphism so that
+    <math|L,L<rsup|-1>> are continuous. Taking in account [theorem:
+    <reference|linear mapping inverse of a isomorphism>] we have also that
+    <math|L<rsup|-1>> is linear. So <math|L\<in\>L<around*|(|X,Y|)>> and
+    <math|L<rsup|-1>\<in\>L<around*|(|Y,X|)>>. Finally by [example:
+    <reference|diff linear mapping is infinite times differentiable>] it
+    follows that <math|L,L<rsup|-1>> are of class <math|C<rsup|\<infty\>>>
+    proving that <math|L> is a diffeomorphism of class
+    <math|C<rsup|\<infty\>>>.
+  </proof>
+
+  <\example>
+    <label|diff diffeomorphism identity>Let
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    be normed spaces, <math|U> a open set in <math|X> then the identity
+    function <math|Id<rsub|U>:U\<rightarrow\>U> is a diffeomorphism of class
+    <math|C<rsup|\<infty\>>>.
+  </example>
+
+  <\proof>
+    Using [theorems: <reference|function identity map is a bijection>,
+    <reference|function inverse of Id>] it follows that
+    <math|Id<rsub|U>:U\<rightarrow\>U> is a bijection with
+    <math|<around*|(|Id<rsub|U>|)><rsup|-1>=Id<rsub|U>>. Hence using
+    [theorem: <reference|diff identity function is infinite times
+    differentiable>] it follows that <math|Id<rsub|U>:U\<rightarrow\>U> and
+    <math|<around*|(|Id<rsub|U>|)><rsup|-1>:U\<rightarrow\>U> are of class
+    <math|C<rsup|\<infty\>>>. Hence we have by definition that
+    <math|Id<rsub|U>:U\<rightarrow\>U> is a diffeomorphism of class
+    <math|\<bbb-C\>>.
+  </proof>
+
+  The restriction of a diffeomorphism of class <math|C<rsup|n>> to a open set
+  is again a diffeomorphism of class as the following theorem shows.
+
+  <\theorem>
+    <label|diff restriction of a diffeomorphism is a diffeomorphism>Let
+    <math|n\<in\>\<bbb-N\><rsub|0>>, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    be normed spaces, <math|U> a open set in <math|X>, <math|V> a open set in
+    <math|Y> and <math|f:U\<rightarrow\>V> a diffeomorphism of class
+    <math|C<rsup|n>> then for every open set <math|W\<subseteq\>U> we have
+    that\ 
+
+    <\equation*>
+      f<rsub|\|W>:W\<rightarrow\>f<around*|(|W|)>
+    </equation*>
+
+    is a diffeomorphism of class <math|C<rsup|n>>.
+  </theorem>
+
+  <\proof>
+    Using [theorem: <reference|function restriction of a function>] it
+    follows that <math|f<rsub|\|W>:W\<rightarrow\>f<around*|(|W|)>> is a
+    bijection. As <math|f> is a diffeomorphism of class <math|C<rsup|n>>
+    <math|f:U\<rightarrow\>Y> is of class <math|C<rsup|n>> and
+    <math|f<rsup|-1>:V\<rightarrow\>X> is of class <math|C<rsup|n>>. Using
+    [theorem: <reference|diff class C^n sub-sets>] it follows that
+    <math|f<rsub|\|W>:W\<rightarrow\>Y> is of class <math|C<rsup|n>>. Further
+    as <math|f<rsup|-1>:V\<rightarrow\>Y> is of class <math|C<rsup|n>> it is
+    of class <math|C<rsup|0>> [see theorem: <reference|diff C^n and C^m>]
+    hence continuous. So <math|f<around*|(|W|)>\<equallim\><rsub|<text|[theorem:
+    <reference|function inverse image preimage>]>><around*|(|f<rsup|-1>|)><rsup|-1><around*|(|W|)>>
+    is open in the subspace topology of <math|V> hence open in the topology
+    of <math|X> [see theorem: <reference|topology subspace topology open
+    subset>]. Applying further [theorem: <reference|diff class C^n sub-sets>]
+    it follows that <math|<around*|(|f<rsup|-1>|)><rsub|\|f<around*|(|W|)>>:f<around*|(|W|)>\<rightarrow\>X>
+    is of class \ <math|C<rsup|n>> on <math|f<around*|(|W|)>>. Finally by
+    [theorem: <reference|function inverse function and bijection>]
+    \ <math|<around*|(|f<rsup|-1>|)><rsub|\|f<around*|(|W|)>>=<around*|(|f<rsub|\|W>|)><rsup|-1>>
+    so that <math|<around*|(|f<rsub|\|W>|)><rsup|-1>> is of class
+    <math|C<rsup|n>>. Hence <math|f<rsub|\|W>:W\<rightarrow\>f<around*|(|W|)>>
+    is a diffeomorphism of class <math|C<rsup|n>>.
+  </proof>
+
+  We examine now what happens when diffeomorphism's are composed.
+
+  <\theorem>
+    <label|diff diffeomorphism D(f@f^-1)>Let
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    be normed spaces, \ <math|U> a open set in <math|X>, <math|V> a open set
+    in <math|Y> and <math|f:U\<rightarrow\>V> a diffeomorphism then
+    <math|\<forall\>x\<in\>U> we have that\ 
+
+    <\equation*>
+      D<rsub|f<around*|(|x|)>><around*|(|f<rsup|-1>|)>\<circ\>D<rsub|x>f=Id<rsub|X><rsub|><text|
+      and >D<rsub|x>f\<circ\>D<rsub|f<around*|(|x|)>><around*|(|f<rsup|-1>|)>=Id<rsub|Y>
+    </equation*>
+
+    so that\ 
+
+    <\equation*>
+      D<rsub|f<around*|(|x|)>><around*|(|f<rsup|-1>|)>=<around*|(|D<rsub|x>f|)><rsup|-1>
+    </equation*>
+
+    Further <math|D<rsub|f<around*|(|x|)>><around*|(|f<rsup|-1>|)>> and
+    <math|D<rsub|x>f> are toplinear isomorphisms [see definition:
+    <reference|toplinear isomorphism>]
+  </theorem>
+
+  <\proof>
+    Using [theorem: <reference|diff identity function is differentiable>]
+    <math|Id<rsub|U>>, <math|Id<rsub|V>> are Fréchet differentiable on
+    <math|U>, V and <math|\<forall\>x\<in\>U> we have
+    <math|<rigid|D<rsub|x>Id<rsub|U>=Id<rsub|X>>> and
+    <math|D<rsub|f<around*|(|x|)>>Id<rsub|V>=Id<rsub|Y>>. Further using the
+    chain rule [see theorem: <reference|diff chain rule>] we have\ 
+
+    <\equation*>
+      Id<rsub|X>=D<rsub|x>Id<rsub|U>=D<rsub|x><around*|(|f<rsup|-1>\<circ\>f|)>=D<rsub|f<around*|(|x|)>><around*|(|f<rsup|-1>|)>\<circ\>D<rsub|x>f
+    </equation*>
+
+    and\ 
+
+    <\equation*>
+      Id<rsub|Y>=D<rsub|f<around*|(|x|)>>Id<rsub|V>=D<rsub|f<around*|(|x|)>><around*|(|f\<circ\>f<rsup|-1>|)>=D<rsub|f<rsup|-1><around*|(|f<around*|(|x|)>|)>>f\<circ\>D<rsub|f<around*|(|x|)>><around*|(|f<rsup|-1>|)>=D<rsub|x>f\<circ\>D<rsub|f<around*|(|x|)>><around*|(|f<rsup|-1>|)>
+    </equation*>
+
+    Further as <math|D<rsub|f<around*|(|x|)>><around*|(|f<rsup|-1>|)>\<circ\>D<rsub|x>f=Id<rsub|X>>
+    and <math|D<rsub|x>f\<circ\>D<rsub|f<around*|(|x|)>><around*|(|f<rsup|-1>|)>=Id<rsub|Y>>
+    it follows from [theorem: <reference|function bijection condition (2)>,
+    <reference|function inverse of a bijection is unique>] that
+    <math|D<rsub|f<around*|(|x|)>><around*|(|f<rsup|-1>|)>>,
+    <math|D<rsub|x>f> are bijections and <math|<around*|(|D<rsub|x>f|)><rsup|-1>=D<rsub|f<around*|(|x|)>><around*|(|f<rsup|-1>|)>\<in\>L<around*|(|Y,X|)>>,
+    <math|<rigid|<around*|(|D<rsub|f<around*|(|x|)>><around*|(|f<rsup|-1>|)>|)><rsup|-1>=D<rsub|x>f\<in\>L<around*|(|X,Y|)>>>
+    proving that \ <math|<around*|(|D<rsub|x>f|)><rsup|-1>,<around*|(|D<rsub|f<around*|(|x|)>>g|)><rsup|-1>>
+    are continuous. Applying then [theorem: <reference|topology toplinear
+    isomorphism in a normed space>] proves that
+    <math|D<rsub|f<around*|(|x|)>>g> and <math|D<rsub|x>f> are toplinear
+    isomorphisms.\ 
+  </proof>
+
+  Composition of diffeomorphism's is again a diffeomorphism as is show in the
+  next theorem.
+
+  <\theorem>
+    <label|diff diffeomorphism composition>Let
+    <math|n\<in\>\<bbb-N\><rsub|0>>, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Z,<around*|\<\|\|\>||\<\|\|\>><rsub|Z>|\<rangle\>>>
+    be normed spaces, <math|U> a open set in <math|X>, <math|V> a open set in
+    <math|Y>, <math|W> a open set in <math|X> then\ 
+
+    <\enumerate>
+      <item>If <math|f:U\<rightarrow\>V> and <math|g:V\<rightarrow\>W> are
+      diffeomorphisms with then <math|g\<circ\>f:U\<rightarrow\>W> is a
+      diffeomorphism
+
+      <item>If <math|n\<in\>\<bbb-N\><rsub|0>> and <math|f:U\<rightarrow\>V>
+      and <math|g:V\<rightarrow\>W> are diffeomorphisms of class
+      <math|C<rsup|n>> then <math|g\<circ\>f:U\<rightarrow\>W> is a
+      diffeomorphism of class <math|C<rsup|n>.>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>Using [theorem: <reference|function composition injectivity,
+      surjectivity and bijectivity (1)>] it follows that <math|g\<circ\>f> is
+      a bijection and <math|<around*|(|g\<circ\>f|)><rsup|-1>=f<rsup|-1>\<circ\>g<rsup|-1>>.
+      If <math|f,g> are diffeomorphism's then <math|f> is differentiable on
+      <math|U>, <math|f<rsup|-1>,g> are differentiable on <math|V> and
+      <math|g<rsup|-1>> is differentiable on <math|W>. Using the chain rule
+      [theorem: <reference|diff chain rule>] <math|g\<circ\>f> is
+      differentiable on <math|U> and <math|<around*|(|g\<circ\>f|)><rsup|-1>=f<rsup|-1>\<circ\>g<rsup|-1>>
+      is differentiable on <math|W>, hence <math|g\<circ\>f> is a
+      diffeomorphism.
+
+      <item>Likewise if <math|f,g> are diffeomorphism's of class
+      <math|C<rsup|n>> then <math|f,g,f<rsup|-1>,g<rsup|-1>> are
+      <math|C<rsup|n>> on their domains, hence, using the chain rule
+      [theorem: <reference|diff chain rule higher order class>],
+      <math|g\<circ\>f> and <math|<around*|(|g\<circ\>f|)><rsup|-1>=f<rsup|-1>\<circ\>g<rsup|-1>>
+      are <math|C<rsup|n>> on their domains. From this it follows that
+      <math|g\<circ\>f> are differentiable of class <math|C<rsup|n>>.
+    </enumerate>
+  </proof>
+
+  We introduce now a weaker version of a diffeomorphism the concept of a
+  local diffeomorphism.
+
+  <\definition>
+    <label|diff local diffeomorphism><index|local diffeomorphism>Let
+    <math|n\<in\>\<bbb-N\><rsub|0>>, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    be normed spaces, <math|U> a open set in <math|X>, <math|x\<in\>U> and
+    <math|f:U\<rightarrow\>Y> a function then we define:\ 
+
+    <\enumerate>
+      <item><with|font-series|bold|<math|f> is a local diffeomorphism at
+      <math|x>> if there exist a open set <math|U<rsub|x>> in <math|X> with
+      <math|x\<in\>U<rsub|x>\<subseteq\>U> and a open set
+      <math|V<rsub|f<around*|(|x|)>>> in <math|Y> with
+      <math|f<around*|(|x|)>\<in\>V<rsub|f<around*|(|x|)>>\<subseteq\>V> such
+      that\ 
+
+      <\equation*>
+        f<rsub|\|U<rsub|x>>:U<rsub|x>\<rightarrow\>V<rsub|f<around*|(|x|)>><text|
+        is a diffeomorphism>
+      </equation*>
+
+      <item><with|font-series|bold|<math|f> is a local diffeomorphism at
+      <math|x> of class <math|C<rsup|n>>> if there exist a open set
+      <math|U<rsub|x>> in <math|X> with <math|x\<in\>U<rsub|x>\<subseteq\>U>
+      and a open set <math|V<rsub|f<around*|(|x|)>>> in <math|Y> with
+      <math|f<around*|(|x|)>\<in\>V<rsub|f<around*|(|x|)>>\<subseteq\>V> such
+      that\ 
+
+      <\equation*>
+        f<rsub|\|U<rsub|x>>:U<rsub|x>\<rightarrow\>V<rsub|f<around*|(|x|)>><text|
+        is a diffeomorphism> of class C<rsup|n>
+      </equation*>
+    </enumerate>
+  </definition>
+
+  \;
+
+  \;
 
   \;
 
@@ -22175,10 +24156,20 @@
     <associate|auto-55|<tuple|16.5.2|?>>
     <associate|auto-56|<tuple|higher order partial differential|?>>
     <associate|auto-57|<tuple|16.5.3|?>>
+    <associate|auto-58|<tuple|16.6|?>>
+    <associate|auto-59|<tuple|16.6.1|?>>
     <associate|auto-6|<tuple|<with|mode|<quote|math>|f<rprime|'><around*|(|x|)>>|?>>
+    <associate|auto-60|<tuple|topological vector space|?>>
+    <associate|auto-61|<tuple|toplinear isomorphism|?>>
+    <associate|auto-62|<tuple|<with|mode|<quote|math>|\<cal-G\>L<around*|(|X|)>>|?>>
+    <associate|auto-63|<tuple|<with|mode|<quote|math>|H<rsup|n>>|?>>
+    <associate|auto-64|<tuple|diff diffeomorphism|?>>
+    <associate|auto-65|<tuple|local diffeomorphism|?>>
     <associate|auto-7|<tuple|16.1.2|?>>
     <associate|auto-8|<tuple|16.1.3|?>>
     <associate|auto-9|<tuple|differentiability|?>>
+    <associate|continuity limit of composition of linear
+    maps|<tuple|16.307|?>>
     <associate|convergence of a function to a point|<tuple|16.3|?>>
     <associate|corollary 16.50.192|<tuple|16.110|?>>
     <associate|diff (f+g)'=f'+g'|<tuple|16.40|?>>
@@ -22190,6 +24181,10 @@
     <associate|diff Frechet approximation|<tuple|16.43|?>>
     <associate|diff Frechet differentation implies partial differentiability
     |<tuple|16.81|?>>
+    <associate|diff GL(X) is a group|<tuple|16.306|?>>
+    <associate|diff H^n properties|<tuple|16.310|?>>
+    <associate|diff I+H has inverse if norm of H is less then
+    1|<tuple|16.314|?>>
     <associate|diff Jacobian matrix|<tuple|16.100|?>>
     <associate|diff L(x1:..:xn) (1)|<tuple|16.240|?>>
     <associate|diff L(x1:..xn)|<tuple|16.111|?>>
@@ -22251,6 +24246,11 @@
     <associate|diff derivative on a open set|<tuple|16.28|?>>
     <associate|diff derivative on a open set (2)|<tuple|16.39|?>>
     <associate|diff derivatives and continuity|<tuple|16.33|?>>
+    <associate|diff diffeomorphism|<tuple|16.316|?>>
+    <associate|diff diffeomorphism D(f@f^-1)|<tuple|16.322|?>>
+    <associate|diff diffeomorphism composition|<tuple|16.323|?>>
+    <associate|diff diffeomorphism identity|<tuple|16.320|?>>
+    <associate|diff diffeomorphism inverse|<tuple|16.317|?>>
     <associate|diff differentiability|<tuple|16.46|?>>
     <associate|diff differentiability alternative
     definitions|<tuple|16.60|?>>
@@ -22297,6 +24297,8 @@
     <associate|diff higher order differentiation and vector
     functions|<tuple|16.184|?>>
     <associate|diff higher order differentiation classes|<tuple|16.185|?>>
+    <associate|diff higher order differentiation implies higher order
+    derivates|<tuple|16.297|?>>
     <associate|diff higher order differentiation implies higher order partial
     differation (1)|<tuple|16.262|?>>
     <associate|diff higher order differentiation is local|<tuple|16.142|?>>
@@ -22327,20 +24329,26 @@
     domain|<tuple|16.255|?>>
     <associate|diff higher order partial differentiation on open
     set|<tuple|16.254|?>>
+    <associate|diff homeomorphism is a diffeomorphism of class
+    C^0|<tuple|16.318|?>>
     <associate|diff identity function is differentiable|<tuple|16.52|?>>
     <associate|diff identity function is infinite times
     differentiable|<tuple|16.173|?>>
     <associate|diff increasing decreasing function|<tuple|16.202|?>>
     <associate|diff inifint=ite differentiable|<tuple|16.136|?>>
     <associate|diff integration by part|<tuple|16.208|?>>
+    <associate|diff inverse mapping on GL(X)|<tuple|16.315|?>>
     <associate|diff limit of a function|<tuple|16.11|?>>
     <associate|diff line segment [0,1]|<tuple|16.217|?>>
+    <associate|diff linear isomorphism between Banach spaces are
+    diffeomorphisms|<tuple|16.319|?>>
     <associate|diff linear mapping is infinite times
     differentiable|<tuple|16.172|?>>
     <associate|diff linear mappings are differentiable|<tuple|16.54|?>>
     <associate|diff linear to multilinear|<tuple|16.123|?>>
     <associate|diff linear to multilinear (1)|<tuple|16.248|?>>
     <associate|diff linesegement|<tuple|16.215|?>>
+    <associate|diff local diffeomorphism|<tuple|16.324|?>>
     <associate|diff mean value theorem (0)|<tuple|16.213|?>>
     <associate|diff mean value theorem (1)|<tuple|16.210|?>>
     <associate|diff mean value theorem (2)|<tuple|16.213|?>>
@@ -22373,10 +24381,16 @@
     <associate|diff partial differential properties|<tuple|16.84|?>>
     <associate|diff partial differentiation is local|<tuple|16.80|?>>
     <associate|diff power|<tuple|16.105|?>>
+    <associate|diff power of composition|<tuple|16.309|?>>
     <associate|diff projection functon is infinite times
     differentiable|<tuple|16.177|?>>
+    <associate|diff restriction of a diffeomorphism is a
+    diffeomorphism|<tuple|16.321|?>>
     <associate|diff scalar product function has a derivate|<tuple|16.32|?>>
     <associate|diff second derivate convex concave|<tuple|16.205|?>>
+    <associate|diff space of toplinear isomorphism|<tuple|16.305|?>>
+    <associate|diff toplinear isomorphism between Banach
+    spaces|<tuple|16.304|?>>
     <associate|diff translation is infinite differentiable|<tuple|16.176|?>>
     <associate|diff unprojection|<tuple|16.69|?>>
     <associate|diff unprojection is infinite times
@@ -22647,15 +24661,58 @@
     <associate|eq 16.300.127|<tuple|16.350|?>>
     <associate|eq 16.300.17|<tuple|16.309|?>>
     <associate|eq 16.301.127|<tuple|16.351|?>>
+    <associate|eq 16.301.144|<tuple|16.405|?>>
     <associate|eq 16.301.144.1|<tuple|16.404|?>>
+    <associate|eq 16.302.144|<tuple|16.406|?>>
     <associate|eq 16.302.18|<tuple|16.310|?>>
+    <associate|eq 16.303.144|<tuple|16.407|?>>
     <associate|eq 16.303.18|<tuple|16.311|?>>
     <associate|eq 16.304.18|<tuple|16.312|?>>
+    <associate|eq 16.305.144|<tuple|16.408|?>>
     <associate|eq 16.307.18|<tuple|16.315|?>>
+    <associate|eq 16.308.127|<tuple|16.410|?>>
+    <associate|eq 16.308.128|<tuple|16.409|?>>
     <associate|eq 16.308.18|<tuple|16.316|?>>
+    <associate|eq 16.309.127|<tuple|16.411|?>>
+    <associate|eq 16.310.127|<tuple|16.413|?>>
+    <associate|eq 16.310.128|<tuple|16.412|?>>
+    <associate|eq 16.311.127|<tuple|16.414|?>>
+    <associate|eq 16.312.127|<tuple|16.415|?>>
+    <associate|eq 16.314.128|<tuple|16.416|?>>
+    <associate|eq 16.315.128|<tuple|16.417|?>>
+    <associate|eq 16.317.128|<tuple|16.418|?>>
     <associate|eq 16.317.19|<tuple|16.325|?>>
+    <associate|eq 16.318.128|<tuple|16.420|?>>
+    <associate|eq 16.318.129|<tuple|16.419|?>>
+    <associate|eq 16.319.128|<tuple|16.421|?>>
+    <associate|eq 16.319.129|<tuple|16.420|?>>
+    <associate|eq 16.320.128|<tuple|16.422|?>>
+    <associate|eq 16.321.128|<tuple|16.423|?>>
+    <associate|eq 16.322.128|<tuple|16.424|?>>
+    <associate|eq 16.325.129|<tuple|16.426|?>>
+    <associate|eq 16.325.131|<tuple|16.425|?>>
+    <associate|eq 16.327.130|<tuple|16.427|?>>
+    <associate|eq 16.327.134|<tuple|16.428|?>>
+    <associate|eq 16.329.131|<tuple|16.429|?>>
+    <associate|eq 16.329.133|<tuple|16.430|?>>
     <associate|eq 16.33.181|<tuple|16.65|?>>
+    <associate|eq 16.330.130|<tuple|16.431|?>>
+    <associate|eq 16.330.131|<tuple|16.432|?>>
+    <associate|eq 16.331.131|<tuple|16.433|?>>
+    <associate|eq 16.334.133|<tuple|16.434|?>>
+    <associate|eq 16.335.133|<tuple|16.435|?>>
+    <associate|eq 16.336.133|<tuple|16.437|?>>
+    <associate|eq 16.336.134|<tuple|16.436|?>>
+    <associate|eq 16.337.133|<tuple|16.438|?>>
+    <associate|eq 16.338.133|<tuple|16.439|?>>
     <associate|eq 16.34.181|<tuple|16.66|?>>
+    <associate|eq 16.340.133|<tuple|16.441|?>>
+    <associate|eq 16.340.134|<tuple|16.440|?>>
+    <associate|eq 16.341.133|<tuple|16.442|?>>
+    <associate|eq 16.342.133|<tuple|16.443|?>>
+    <associate|eq 16.343.133|<tuple|16.444|?>>
+    <associate|eq 16.344.133|<tuple|16.445|?>>
+    <associate|eq 16.346.134.1|<tuple|16.446|?>>
     <associate|eq 16.346.18|<tuple|16.354|?>>
     <associate|eq 16.348.18|<tuple|16.356|?>>
     <associate|eq 16.349.18|<tuple|16.357|?>>
@@ -22814,6 +24871,8 @@
     <associate|lemma 16.202.127|<tuple|16.269|?>>
     <associate|lemma 16.211.127|<tuple|16.290|?>>
     <associate|lemma 16.216.144|<tuple|16.296|?>>
+    <associate|lemma 16.228.127|<tuple|16.311|?>>
+    <associate|lemma 16.229.127|<tuple|16.312|?>>
     <associate|lemma 16.24.178|<tuple|16.70|?>>
     <associate|lemma 16.313.310|<tuple|16.272|?>>
     <associate|lemma 16.314.320|<tuple|16.273|?>>
@@ -22839,6 +24898,7 @@
     <associate|lemma 16.98.194|<tuple|16.183|?>>
     <associate|normed space are assumed to be non trivial|<tuple|16.1|?>>
     <associate|note 16.210.127|<tuple|16.289|?>>
+    <associate|toplinear isomorphism|<tuple|16.301|?>>
     <associate|topology every element of a generalized interval is a limit
     point|<tuple|16.10|?>>
     <associate|topology every element of a open or closed ball is a limit
@@ -22847,6 +24907,11 @@
     limit point|<tuple|16.7|?>>
     <associate|topology interior point is a limit point in a normed
     space|<tuple|16.8|?>>
+    <associate|topology normed space is a topological vector
+    space|<tuple|16.300|?>>
+    <associate|topology toplinear isomorphism in a normed
+    space|<tuple|16.303|?>>
+    <associate|topology topological vector space|<tuple|16.298|?>>
   </collection>
 </references>
 
@@ -23010,7 +25075,7 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-49>
 
-      16.5<space|2spc>Hugher Order Partial Differentiation
+      16.5<space|2spc>Higher Order Partial Differentiation
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-52>
 
