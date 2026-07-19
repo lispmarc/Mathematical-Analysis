@@ -15710,6 +15710,318 @@
     </description>
   </proof>
 
+  <\theorem>
+    <label|diff Taylor I><dueto|Taylor Theorem (I)>Let
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> be
+    a normed space, <math|a,b\<in\>\<bbb-R\>> with <math|a\<less\>b>,
+    <math|x<rsub|0>\<in\><around*|]|a,b|[>> and
+    <math|f:<around*|[|a,b|]>\<rightarrow\>X> a function that has is
+    <math|n>-times di on <math|<around*|[|a,b|]>> then\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|>|<cell|\<forall\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+><text|
+      >\<exists\>\<delta\>\<in\>\<bbb-R\><rsup|+><text| such that
+      >\<forall\>h\<in\><around*|[|a,b|]><rsub|x<rsub|0>><text| with
+      ><around*|\||h|\|>\<less\>\<delta\><text| we have
+      >>|<cell|>>|<row|<cell|>|<cell|<around*|\<\|\|\>|f<around*|(|x<rsub|0>+h|)>-f<around*|(|x<rsub|0>|)>-<big|sum><rsub|k=1><rsup|n><frac|h<rsup|k>|k!>\<cdot\>f<rsup|<around*|(|k|)>><rsub|x<rsub|0>>|\<\|\|\>>\<leqslant\>\<varepsilon\>\<cdot\><around*|\||h|\|><rsup|n>>|<cell|>>>>
+    </eqnarray*>
+
+    <\equation*>
+      \;
+    </equation*>
+
+    <\note>
+      As <math|f> has a <math|n>-times derivative on <math|<around*|[|a,b|]>>
+      it follows from [theorem: <reference|diff n-times and m-times
+      derivating>] that <math|<rigid|\<forall\>m\<in\><around*|{|1,\<ldots\>,n|}>>>
+      <math|f> has a <math|m>-times derivative on <math|<around*|[|a,b|]>> so
+      that <math|<big|sum><rsub|k=1><rsup|n><frac|h<rsup|n>|k!>\<cdot\>f<rsup|<around*|(|k|)>><rsub|x<rsub|0>>>
+      is well defined.
+    </note>
+
+    <\note>
+      As <math|x<rsub|0>\<in\><around*|[|a,b|]>> it follows from [theorem:
+      <reference|topology every element of a generalized interval is a limit
+      point>] that <math|x<rsub|0>> is a limit point of
+      <math|<around*|[|a,b|]>> which is a necessary condition for the
+      definition of the derivatives.
+    </note>
+  </theorem>
+
+  <\proof>
+    We prove this by induction on <math|n> so define\ 
+
+    <\equation*>
+      S=<around*|{|n\<in\>\<bbb-N\>\|<text|If >a,b\<in\>\<bbb-R\><text| with
+      >a\<less\>b<text|, <math|x<rsub|0>\<in\><around*|[|a,b|]><text| and
+      >f:<around*|[|a,b|]>\<rightarrow\>X<text| a function >>that has
+      >n<text|-times derivatives on <math|<around*|[|a,b|]><text| then
+      >\<forall\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+><text|
+      >\<exists\>\<delta\>\<in\>\<bbb-R\><rsup|+><text| such that
+      >\<forall\>h\<in\><around*|[|a,b|]><rsub|x><text| with
+      ><around*|\||h|\|>\<less\>\<delta\><text| we have
+      >>><rigid|<around*|\<\|\|\>|f<around*|(|x<rsub|0>+h|)>-f<around*|(|x<rsub|0>|)>-<big|sum><rsub|k=1><rsup|n><frac|h<rsup|k>|k!>\<cdot\>f<rsup|<around*|(|k|)>><rsub|x<rsub|0>>|\<\|\|\>>\<leqslant\>\<varepsilon\>\<cdot\><around*|\||h|\|><rsup|n>>|}>
+    </equation*>
+
+    then we have:
+
+    <\description>
+      <item*|<math|1\<in\>S>>If <math|f> has a <math|1>-times derivative at
+      <math|x<rsub|0>> then by definition <math|f> has a derivative
+      <math|f<rprime|'><rsub|x<rsub|0>>> at <math|x<rsub|0>>. Let
+      <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> then by [theorem:
+      <reference|diff calculus derivate (2)>] there exists a
+      <math|\<delta\>\<in\>\<bbb-R\><rsup|+>> such that
+      <math|\<forall\>h\<in\><around*|[|a,b|]><rsub|x<rsub|0>>> with
+      <math|<around*|\||h|\|>\<less\>\<delta\>> we have\ 
+
+      <\equation*>
+        <around*|\<\|\|\>|f<around*|(|x<rsub|0>+h|)>-f<around*|(|x<rsub|0>|)>-h\<cdot\>f<rprime|'><rsub|x<rsub|0>>|\<\|\|\>>\<leqslant\>\<varepsilon\>\<cdot\><around*|\||h|\|>
+      </equation*>
+
+      hence
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|\<\|\|\>|f<around*|(|x<rsub|0>+h|)>-f<around*|(|x<rsub|0>|)>-<big|sum><rsub|k=1><rsup|1><frac|h<rsup|n>|k!>\<cdot\>f<rsup|<around*|(|k|)>><rsub|x<rsub|0>>|\<\|\|\>>>|<cell|=>|<cell|<around*|\<\|\|\>|f<around*|(|x<rsub|0>+h|)>-f<around*|(|x<rsub|0>|)>-<frac|h<rsup|1>|1!>\<cdot\>f<rsup|<around*|(|1|)>><rsub|x<rsub|0>>|\<\|\|\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|f<around*|(|x<rsub|0>+h|)>-f<around*|(|x<rsub|0>|)>-h\<cdot\>f<rprime|'><rsub|x<rsub|0>>|\<\|\|\>>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|\<varepsilon\>\<cdot\><around*|\||h|\|>>>>>
+      </eqnarray*>
+
+      which proves that <math|1\<in\>S>.
+
+      <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>If <math|f> has a
+      <math|<around*|(|n+1|)>>-times derivative
+      <math|f<rsup|<around*|(|n+1|)>><rsub|x<rsub|0>>> at <math|x<rsub|0>>
+      then <math|\<forall\>m\<in\><around*|{|2,\<ldots\>,n+1|}>> we have by
+      [theorem: <reference|diff n+m derivative (1)>] that
+      <math|f<rsup|<around*|(|1|)>>> has a
+      <math|<around*|(|m-1|)>>-derivative at <math|x<rsub|0>> with
+      <math|f<rsup|<around*|(|m|)>><rsub|x<rsub|0>>=<around*|(|f<rsup|<around*|(|1|)>>|)><rsup|<around*|(|m-1|)>><rsub|x<rsub|0>>>.
+      Hence using [definition: <reference|diff higher order derivative
+      function>] we have that\ 
+
+      <\equation>
+        <label|eq 16.595.408>f<rprime|'><text| has a
+        ><around*|(|m-1|)><text|-times derivative at >x<rsub|0><text| with
+        >f<rsup|<around*|(|m|)>><rsub|x<rsub|0>>=<around*|(|f<rprime|'>|)><rsup|<around*|(|m-1|)>><rsub|x<rsub|0>>
+      </equation>
+
+      In particular as <math|2\<leqslant\>n+1> it follows that\ 
+
+      <\equation*>
+        f<rprime|'><text| has a <math|n>-time derivative
+        ><around*|(|f<rprime|'>|)><rsup|<around*|(|n|)>><rsub|x<rsub|0>><text|
+        at <math|x<rsub|0>> with ><around*|(|f<rprime|'>|)><rsup|n><rsub|x<rsub|0>>=f<rsup|<around*|(|n+1|)>><rsub|x<rsub|0>>
+      </equation*>
+
+      Let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> then as
+      <math|n\<in\>S> it follows from the above that there exist a
+      <math|\<delta\>\<in\>\<bbb-R\><rsup|+>> such that
+      \ <math|\<forall\>h\<in\><around*|[|a,b|]><rsub|x<rsub|0>>> with
+      <math|<around*|\||h|\|>\<less\>\<delta\>> we have\ 
+
+      <\equation>
+        <label|eq 16.591.305><around*|\<\|\|\>|f<rprime|'><around*|(|x<rsub|0>+h|)>-f<rprime|'><around*|(|x<rsub|0>|)>-<big|sum><rsup|n><rsub|k=1><frac|h<rsup|k>|k!>\<cdot\><around*|(|f<rprime|'>|)><rsup|<around*|(|k|)>><rsub|x<rsub|0>>|\<\|\|\>>\<leqslant\><around*|(|n+1|)>\<cdot\>\<varepsilon\>\<cdot\><around*|\||h|\|><rsup|n>
+      </equation>
+
+      now for <math|<around*|\||h|\|>\<less\>\<delta\>> we have the following
+      possibilities [not exclusive]
+
+      <\description>
+        <item*|<math|0\<leqslant\>h\<less\>\<delta\>>>Then
+        <math|<around*|\||h|\|><rsup|n>=h<rsup|n>> and [eq: <reference|eq
+        16.591.305>] becomes\ 
+
+        <\equation>
+          <label|eq 16.592.505><around*|\<\|\|\>|f<rprime|'><around*|(|x<rsub|0>+h|)>-f<rprime|'><around*|(|x<rsub|0>|)>-<big|sum><rsub|k=1><rsup|n><frac|h<rsup|k>|k!>\<cdot\><around*|(|f<rprime|'>|)><rsup|<around*|(|k|)>><rsub|x<rsub|0>>|\<\|\|\>>\<leqslant\><around*|(|n+1|)>\<cdot\>\<varepsilon\>\<cdot\>h<rsup|n>
+        </equation>
+
+        Define now\ 
+
+        <\equation*>
+          g:<around*|[|0,\<delta\>|]>\<rightarrow\>X<text| by
+          >g<around*|(|h|)>=f<around*|(|x<rsub|0>+h|)>-f<around*|(|x<rsub|0>|)>-f<rprime|'><around*|(|x<rsub|0>|)>\<cdot\><frac|h|1!>-<big|sum><rsub|k=2><rsup|n+1><frac|h<rsup|k>|k!>\<cdot\>f<rsup|<around*|(|k|)>><rsub|x<rsub|0>>
+        </equation*>
+
+        then by [example: <reference|diff derivative of constant>],[theorems:
+        <reference|diff (f+g)'=f'+g'>, <reference|diff power>,
+        <reference|diff chain rule calculus>, <reference|diff derivative is
+        local>] and the fact that <math|f> has a derivative at
+        <math|x<rsub|0>+h\<in\><around*|[|a,b|]>> it follows that
+        <math|\<forall\>h\<in\><around*|[|0,\<delta\>|]>> <math|g> has a
+        derivative at <math|h> with\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|g<rprime|'><rsub|h>>|<cell|=>|<cell|1\<cdot\>f<rprime|'><rsub|x<rsub|0>+h>-0-f<rprime|'><around*|(|x<rsub|0>|)>\<cdot\><frac|1|1!>-<big|sum><rsub|k=2><rsup|n+1><frac|k\<cdot\>h<rsup|k-1>|k!>\<cdot\>f<rsup|<around*|(|k|)>><rsub|x<rsub|0>>>>|<row|<cell|>|<cell|=>|<cell|f<rprime|'><around*|(|x<rsub|0>+h|)>-f<rprime|'><around*|(|x<rsub|0>|)>-<big|sum><rsub|k=2><rsup|n+1><frac|h<rsup|k-1>|<around*|(|k-1|)>!>\<cdot\>f<rsup|<around*|(|k|)>><rsub|x<rsub|0>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+          <reference|eq 16.595.408>]>>>|<cell|f<rprime|'><around*|(|x<rsub|0>+h|)>-f<rprime|'><around*|(|x<rsub|0>|)>-<big|sum><rsub|k=2><rsup|n+1><frac|h<rsup|k-1>|<around*|(|k-1|)>!>\<cdot\><around*|(|f<rprime|'>|)><rsup|<around*|(|k-1|)>><rsub|x<rsub|0>>>>|<row|<cell|>|<cell|=>|<cell|f<rprime|'><around*|(|x<rsub|0>+h|)>-f<rprime|'><around*|(|x<rsub|0>|)>-<big|sum><rsub|k=1><rsup|n><frac|h<rsup|k>|k!>\<cdot\><around*|(|f<rprime|'>|)><rsup|<around*|(|k|)>><rsub|x<rsub|0>>>>>>
+        </eqnarray*>
+
+        so that\ 
+
+        <\equation>
+          <label|eq 16.593.505>\<forall\>h\<in\><around*|[|0,\<delta\>|]><text|
+          we have >g<rprime|'><rsub|h>=f<rprime|'><around*|(|x<rsub|0>+h|)>-f<rprime|'><around*|(|x<rsub|0>|)>-<big|sum><rsub|k=1><rsup|n><frac|h<rsup|k>|k!>\<cdot\><around*|(|f<rprime|'>|)><rsup|<around*|(|k|)>><rsub|x<rsub|0>>
+        </equation>
+
+        Define further\ 
+
+        <\equation*>
+          \<varphi\>:<around*|[|0,\<delta\>|]>\<rightarrow\>\<bbb-R\><text|
+          by >\<varphi\><around*|(|h|)>=\<varepsilon\>\<cdot\>h<rsup|n+1>
+        </equation*>
+
+        then we have by [theorems: <reference|diff power>, <reference|diff
+        derivative is local>] together with the fact that
+        <math|\<forall\>h\<in\><around*|[|0,\<delta\>|]>> <math|h> is a limit
+        point of <math|<around*|[|0,\<delta\>|]>> [see theorem:
+        <reference|topology every element of a generalized interval is a
+        limit point>] that
+
+        <\equation>
+          <label|eq 16.594.305>\<forall\>h\<in\><around*|[|0,\<delta\>|]><text|>
+          \<varphi\><text| has a derivative at >h<text| with
+          >\<varphi\><rprime|'><rsub|h>=<around*|(|n+1|)>\<cdot\>\<varepsilon\>\<cdot\>h<rsup|n>
+        </equation>
+
+        Hence we have <math|\<forall\>h\<in\><around*|[|0,\<delta\>|]>> that\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<around*|\<\|\|\>|g<rprime|'><rsub|h>|\<\|\|\>>>|<cell|<below|=|<text|[eq:
+          <reference|eq 16.593.505>]>>>|<cell|<around*|\<\|\|\>|f<rprime|'><around*|(|x<rsub|0>+h|)>-f<rprime|'><around*|(|x<rsub|0>|)>-<big|sum><rsub|k=1><rsup|n><frac|h<rsup|k>|k!>\<cdot\><around*|(|f<rprime|'>|)><rsup|<around*|(|k|)>><rsub|x<rsub|0>>|\<\|\|\>>>>|<row|<cell|>|<cell|<below|\<leqslant\>|<text|[eq:
+          <reference|eq 16.592.505>]>>>|<cell|<around*|(|n+1|)>\<cdot\>\<varepsilon\>\<cdot\>h<rsup|n>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+          <reference|eq 16.594.305>]>>>|<cell|\<varphi\><rprime|'><rsub|h>>>>>
+        </eqnarray*>
+
+        so that\ 
+
+        <\equation*>
+          \<forall\>h\<in\><around*|[|0,\<delta\>|]><text| we have
+          ><around*|\<\|\|\>|g<rprime|'><rsub|h>|\<\|\|\>>\<leqslant\>\<varphi\><rprime|'><rsub|y>
+        </equation*>
+
+        Using the Mean Value Theorem [theorem: <reference|diff mean value
+        theorem (5)>] it follows then that\ 
+
+        <\equation>
+          <label|eq 16.596.505><around*|\<\|\|\>|g<around*|(|\<delta\>|)>-g<around*|(|0|)>|\<\|\|\>>\<leqslant\>\<varphi\><around*|(|\<delta\>|)>-\<varphi\><around*|(|0|)>
+        </equation>
+
+        so that\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<around*|\<\|\|\>|f<around*|(|x<rsub|0>+h|)>-f<around*|(|x<rsub|0>|)>-<big|sum><rsub|k=1><rsup|n+1><frac|h<rsup|k>|k!>\<cdot\>f<rsup|<around*|(|k|)>><rsub|x<rsub|0>>|\<\|\|\>>>|<cell|=>|<cell|>>|<row|<cell|<around*|\<\|\|\>|f<around*|(|x<rsub|0>+h|)>-f<around*|(|x<rsub|0>|)>-f<rprime|'><around*|(|x<rsub|0>|)>\<cdot\><frac|h|1!>-<big|sum><rsub|k=2><rsup|n+1><frac|h<rsup|k>|k!>\<cdot\>f<rsup|<around*|(|k|)>><rsub|x<rsub|0>>|\<\|\|\>>>|<cell|=>|<cell|>>|<row|<cell|<around*|\<\|\|\>|g<around*|(|h|)>|\<\|\|\>>>|<cell|>|<cell|>>|<row|<cell|<around*|\<\|\|\>|g<around*|(|h|)>-0|\<\|\|\>>>|<cell|=>|<cell|>>|<row|<cell|<around*|\<\|\|\>|g<around*|(|h|)>-<around*|(|f<around*|(|x<rsub|0>+0|)>-f<around*|(|x<rsub|0>|)>-f<rprime|'><around*|(|x<rsub|0>|)>\<cdot\><frac|0|1!>-<big|sum><rsub|k=2><rsup|n+1><frac|0<rsup|k>|k!>\<cdot\>f<rsup|<around*|(|k|)>><rsub|x<rsub|0>>|)>|\<\|\|\>>>|<cell|=>|<cell|>>|<row|<cell|<around*|\<\|\|\>|g<around*|(|h|)>-g<around*|(|0|)>|\<\|\|\>>>|<cell|<below|\<leqslant\>|<text|[eq:
+          <reference|eq 16.596.505>]>>>|<cell|>>|<row|<cell|\<varphi\><around*|(|\<delta\>|)>-\<varphi\><around*|(|0|)>>|<cell|=>|<cell|>>|<row|<cell|\<varepsilon\>\<cdot\>h<rsup|n+1>-\<varepsilon\>\<cdot\>0<rsup|n+1>>|<cell|=>|<cell|>>|<row|<cell|\<varepsilon\>\<cdot\>h<rsup|n+1>>|<cell|<below|=|0\<leqslant\>h>>|<cell|>>|<row|<cell|\<varepsilon\>\<cdot\><around*|\||h|\|><rsup|n+1>>|<cell|>|<cell|>>>>
+        </eqnarray*>
+
+        \ which prove that\ 
+
+        <\equation*>
+          <around*|\<\|\|\>|f<around*|(|x<rsub|0>+h|)>-f<around*|(|x<rsub|0>|)>-<big|sum><rsub|k=1><rsup|n+1><frac|h<rsup|k>|k!>\<cdot\>f<rsup|<around*|(|k|)>><rsub|x<rsub|0>>|\<\|\|\>>\<leqslant\>\<varepsilon\>\<cdot\><around*|\||h|\|><rsup|n+1>
+        </equation*>
+
+        <item*|<math|-\<delta\>\<less\>h\<leqslant\>0>>Then
+        <math|<around*|\||h|\|><rsup|n>=<around*|(|-h|)><rsup|n>=<around*|(|-1|)><rsup|n>\<cdot\>h<rsup|n>>
+        so that [eq: <reference|eq 16.591.305>] becomes\ 
+
+        <\equation>
+          <label|eq 16.597.505><around*|\<\|\|\>|f<rprime|'><around*|(|x<rsub|0>+h|)>-f<rprime|'><around*|(|x<rsub|0>|)>-<big|sum><rsub|k=1><rsup|n><frac|h<rsup|k>|k!>\<cdot\><around*|(|f<rprime|'>|)><rsup|<around*|(|k|)>><rsub|x<rsub|0>>|\<\|\|\>>\<leqslant\><around*|(|n+1|)>\<cdot\>\<varepsilon\>\<cdot\><around*|(|-1|)><rsup|n>\<cdot\>h<rsup|n>
+        </equation>
+
+        Define now\ 
+
+        <\equation*>
+          g:<around*|[|-\<delta\>,0|]>\<rightarrow\>X<text| by
+          >g<around*|(|h|)>=f<around*|(|x<rsub|0>+h|)>-f<around*|(|x<rsub|0>|)>-f<rprime|'><around*|(|x<rsub|0>|)>\<cdot\><frac|h|1!>-<big|sum><rsub|k=2><rsup|n+1><frac|h<rsup|k>|k!>\<cdot\>f<rsup|<around*|(|k|)>><rsub|x<rsub|0>>
+        </equation*>
+
+        then by [example: <reference|diff derivative of constant>],[theorems:
+        <reference|diff (f+g)'=f'+g'>, <reference|diff power>,
+        <reference|diff chain rule calculus>, <reference|diff derivative is
+        local>] and the fact that <math|f> has a derivative at
+        <math|x<rsub|0>+h> it follows that
+        <math|\<forall\>h\<in\><around*|[|-\<delta\>,0|]>> <math|g> has a
+        derivative at <math|h> with\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|g<rprime|'><rsub|h>>|<cell|=>|<cell|1\<cdot\>f<rprime|'><rsub|x<rsub|0>+h>-0-f<rprime|'><around*|(|x<rsub|0>|)>\<cdot\><frac|1|1!>-<big|sum><rsub|k=2><rsup|n+1><frac|k\<cdot\>h<rsup|k-1>|k!>\<cdot\>f<rsup|<around*|(|k|)>><rsub|x<rsub|0>>>>|<row|<cell|>|<cell|=>|<cell|f<rprime|'><around*|(|x<rsub|0>+h|)>-f<rprime|'><around*|(|x<rsub|0>|)>-<big|sum><rsub|k=2><rsup|n+1><frac|h<rsup|k-1>|<around*|(|k-1|)>!>\<cdot\>f<rsup|<around*|(|k|)>><rsub|x<rsub|0>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq::
+          <reference|eq 16.595.408>]>>>|<cell|f<rprime|'><around*|(|x<rsub|0>+h|)>-f<rprime|'><around*|(|x<rsub|0>|)>-<big|sum><rsub|k=2><rsup|n+1><frac|h<rsup|k-1>|<around*|(|k-1|)>!>\<cdot\><around*|(|f<rprime|'>|)><rsup|<around*|(|k-1|)>><rsub|x<rsub|0>>>>|<row|<cell|>|<cell|=>|<cell|f<rprime|'><around*|(|x<rsub|0>+h|)>-f<rprime|'><around*|(|x<rsub|0>|)>-<big|sum><rsub|k=1><rsup|n><frac|h<rsup|k>|k!>\<cdot\><around*|(|f<rprime|'>|)><rsup|<around*|(|k|)>><rsub|x<rsub|0>>>>>>
+        </eqnarray*>
+
+        so that\ 
+
+        <\equation>
+          <label|eq 16.598.505>\<forall\>y\<in\><around*|[|-\<delta\>,0|]><text|
+          we have >g<rprime|'><rsub|h>=f<rprime|'><around*|(|x<rsub|0>+h|)>-f<rprime|'><around*|(|x<rsub|0>|)>-<big|sum><rsub|k=1><rsup|n><frac|h<rsup|k>|k!>\<cdot\><around*|(|f<rprime|'>|)><rsup|<around*|(|k|)>><rsub|x<rsub|0>>
+        </equation>
+
+        Define now\ 
+
+        <\equation*>
+          \<varphi\>:<around*|[|0,\<delta\>|]>\<rightarrow\>\<bbb-R\><text|
+          by >\<varphi\><around*|(|h|)>=\<varepsilon\>\<cdot\><around*|(|-1|)><rsup|n>\<cdot\>h<rsup|n+1>
+        </equation*>
+
+        then we have by [theorems: <reference|diff power>, <reference|diff
+        derivative is local>] that
+
+        <\equation>
+          <label|eq 16.599.305>\<forall\>h\<in\><around*|[|-\<delta\>,0|]><text|>
+          \<varphi\><text| has a derivative at >h<text| with
+          >\<varphi\><rprime|'><rsub|h>=<around*|(|n+1|)>\<cdot\>\<varepsilon\>\<cdot\><around*|(|-1|)><rsup|n>\<cdot\>h<rsup|n>
+        </equation>
+
+        Hence we have <math|\<forall\>h\<in\><around*|[|-\<delta\>,0|]>> that\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<around*|\<\|\|\>|g<rprime|'><rsub|h>|\<\|\|\>>>|<cell|<below|=|<text|[eq:
+          <reference|eq 16.598.505>]>>>|<cell|<around*|\<\|\|\>|f<rprime|'><around*|(|x<rsub|0>+h|)>-f<rprime|'><around*|(|x<rsub|0>|)>-<big|sum><rsub|k=1><rsup|n><frac|h<rsup|k>|k!>\<cdot\><around*|(|f<rprime|'>|)><rsup|<around*|(|k|)>><rsub|x<rsub|0>>|\<\|\|\>>>>|<row|<cell|>|<cell|<below|\<leqslant\>|<text|[eq:
+          <reference|eq 16.597.505>]>>>|<cell|<around*|(|n+1|)>\<cdot\>\<varepsilon\>\<cdot\><around*|(|-1|)><rsup|n>\<cdot\>h<rsup|n>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+          <reference|eq 16.599.305>]>>>|<cell|\<varphi\><rprime|'><rsub|h>>>>>
+        </eqnarray*>
+
+        so that\ 
+
+        <\equation*>
+          \<forall\>h\<in\><around*|[|0,\<delta\>|]><text| we have
+          ><around*|\<\|\|\>|g<rprime|'><rsub|h>|\<\|\|\>>\<leqslant\>\<varphi\><rprime|'><rsub|y>
+        </equation*>
+
+        Using the Mean Value Theorem [theorem: <reference|diff mean value
+        theorem (5)>] it follows then that\ 
+
+        <\equation>
+          <label|eq 16.600.505><around*|\<\|\|\>|g<around*|(|\<delta\>|)>-g<around*|(|0|)>|\<\|\|\>>\<leqslant\>\<varphi\><around*|(|\<delta\>|)>-\<varphi\><around*|(|0|)>
+        </equation>
+
+        so that\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<around*|\<\|\|\>|f<around*|(|x<rsub|0>+h|)>-f<around*|(|x<rsub|0>|)>-<big|sum><rsub|k=1><rsup|n+1><frac|h<rsup|k>|k!>\<cdot\>f<rsup|<around*|(|k|)>><rsub|x<rsub|0>>|\<\|\|\>>>|<cell|>|<cell|>>|<row|<cell|<around*|\<\|\|\>|f<around*|(|x<rsub|0>+h|)>-f<around*|(|x<rsub|0>|)>-f<rprime|'><around*|(|x<rsub|0>|)>\<cdot\><frac|h|1!>-<big|sum><rsub|k=2><rsup|n+1><frac|h<rsup|k>|k!>\<cdot\>f<rsup|<around*|(|k|)>><rsub|x<rsub|0>>|\<\|\|\>>>|<cell|=>|<cell|>>|<row|<cell|<around*|\<\|\|\>|g<around*|(|h|)>|\<\|\|\>>>|<cell|>|<cell|>>|<row|<cell|<around*|\<\|\|\>|g<around*|(|h|)>-0|\<\|\|\>>>|<cell|=>|<cell|>>|<row|<cell|<around*|\<\|\|\>|g<around*|(|h|)>-<around*|(|f<around*|(|x<rsub|0>+0|)>-f<around*|(|x<rsub|0>|)>-f<rprime|'><around*|(|x<rsub|0>|)>\<cdot\><frac|0|1!>-<big|sum><rsub|k=2><rsup|n+1><frac|0<rsup|k>|k!>\<cdot\>f<rsup|<around*|(|k|)>><rsub|x<rsub|0>>|)>|\<\|\|\>>>|<cell|=>|<cell|>>|<row|<cell|<around*|\<\|\|\>|g<around*|(|h|)>-g<around*|(|0|)>|\<\|\|\>>>|<cell|<below|\<leqslant\>|<text|[eq:
+          <reference|eq 16.600.505>]>>>|<cell|>>|<row|<cell|\<varphi\><around*|(|\<delta\>|)>-\<varphi\><around*|(|0|)>>|<cell|=>|<cell|>>|<row|<cell|\<varepsilon\>\<cdot\><around*|(|-1|)><rsup|n>\<cdot\>h<rsup|n+1>-\<varepsilon\>\<cdot\><around*|(|-1|)><rsup|n>\<cdot\>0<rsup|n+1>>|<cell|=>|<cell|>>|<row|<cell|\<varepsilon\>\<cdot\><around*|(|-1<rsup|n>|)>\<cdot\>h<rsup|n+1>>|<cell|\<leqslant\>>|<cell|>>|<row|<cell|\<varepsilon\>\<cdot\><around*|\||h|\|><rsup|n+1>>|<cell|>|<cell|>>>>
+        </eqnarray*>
+
+        \ which prove that\ 
+
+        <\equation*>
+          <around*|\<\|\|\>|f<around*|(|x<rsub|0>+h|)>-f<around*|(|x<rsub|0>|)>-<big|sum><rsub|k=1><rsup|n+1><frac|h<rsup|k>|k!>\<cdot\>f<rsup|<around*|(|k|)>><rsub|x<rsub|0>>|\<\|\|\>>\<leqslant\>\<varepsilon\>\<cdot\><around*|\||h|\|><rsup|n+1>
+        </equation*>
+      </description>
+
+      So we have <math|\<forall\>h\<in\><around*|[|-\<delta\>,\<delta\>|]>>
+      that <math|<around*|\<\|\|\>|f<around*|(|x<rsub|0>+h|)>-f<around*|(|x<rsub|0>|)>-<big|sum><rsub|k=1><rsup|n+1><frac|h<rsup|k>|k!>\<cdot\>f<rsup|<around*|(|k|)>><rsub|x<rsub|0>>|\<\|\|\>>\<leqslant\>\<varepsilon\>\<cdot\><around*|\||h|\|><rsup|n+1>>
+      hence we have, as <math|<around*|]|-\<delta\>,\<delta\>|[>\<subseteq\><around*|[|-\<delta\>,\<delta\>|]>>,
+      that\ 
+
+      <\equation*>
+        \<forall\>h\<in\><around*|[|a,b|]><rsub|x><text| with
+        ><around*|\||h|\|>\<less\>\<delta\><text| that
+        ><around*|\<\|\|\>|f<around*|(|x<rsub|0>+h|)>-f<around*|(|x<rsub|0>|)>-<big|sum><rsub|k=1><rsup|n+1><frac|h<rsup|k>|k!>\<cdot\>f<rsup|<around*|(|k|)>><rsub|x<rsub|0>>|\<\|\|\>>\<leqslant\>\<varepsilon\>\<cdot\><around*|\||h|\|><rsup|n+1>
+      </equation*>
+
+      which proves that <math|n+1\<in\>S>.
+    </description>
+  </proof>
+
+  \;
+
   \;
 
   \;
@@ -15761,6 +16073,7 @@
     countable|<tuple|4|4>>
     <associate|diff (i-\<gtr\>x)|<tuple|17|18>>
     <associate|diff C^(n+m)|<tuple|94|?>>
+    <associate|diff Taylor I|<tuple|122|?>>
     <associate|diff Taylor II|<tuple|106|?>>
     <associate|diff chain rule higher order|<tuple|99|?>>
     <associate|diff delta function|<tuple|20|19>>
@@ -16072,7 +16385,17 @@
     <associate|eq 16.577.311|<tuple|509|?>>
     <associate|eq 16.58.189|<tuple|327|103>>
     <associate|eq 16.59.189|<tuple|328|103>>
+    <associate|eq 16.591.305|<tuple|533|?>>
+    <associate|eq 16.592.505|<tuple|534|?>>
+    <associate|eq 16.593.505|<tuple|535|?>>
+    <associate|eq 16.594.305|<tuple|536|?>>
+    <associate|eq 16.595.408|<tuple|532|?>>
+    <associate|eq 16.596.505|<tuple|537|?>>
+    <associate|eq 16.597.505|<tuple|538|?>>
+    <associate|eq 16.598.505|<tuple|539|?>>
+    <associate|eq 16.599.305|<tuple|540|?>>
     <associate|eq 16.60.189|<tuple|329|103>>
+    <associate|eq 16.600.505|<tuple|541|?>>
     <associate|eq 16.61.189|<tuple|330|103>>
     <associate|eq 16.79.5|<tuple|525|?>>
     <associate|eq 16.80.5|<tuple|526|?>>
