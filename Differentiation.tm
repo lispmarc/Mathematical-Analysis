@@ -15397,6 +15397,50 @@
     </equation*>
   </proof>
 
+  <\lemma>
+    <label|lemma 16.227.23>Let <math|a,b\<in\>\<bbb-R\>> with
+    <math|a\<less\>b> and <math|h:<around*|[|a,b|]>> a continuous function
+    such that <math|0\<less\>h<around*|(|a|)>> then there exist a
+    <math|\<rho\>\<in\>\<bbb-R\><rsup|+>> so that <math|a+\<rho\>\<less\>b>
+    and <math|\<forall\>x\<in\><around*|[|a,a+\<rho\>|[>>
+    <math|0\<less\>h<around*|(|x|)>>
+  </lemma>
+
+  <\proof>
+    Take <math|\<varepsilon\>=h<around*|(|a|)>\<in\>\<bbb-R\><rsup|+>> then
+    as <math|h> is continuous at <math|a> there exist a
+    <math|\<delta\>\<in\>\<bbb-R\><rsup|+>> such that
+
+    <\equation>
+      <label|eq 16.250.23>\<forall\>x\<in\><around*|[|a,b|]><text| with
+      ><around*|\||x-a|\|>\<less\>\<delta\><text| we have
+      ><around*|\||h<around*|(|x|)>-h<around*|(|a|)>|\|>\<less\>\<varepsilon\>=h<around*|(|a|)>
+    </equation>
+
+    Let <math|\<rho\>=min<around*|(|\<delta\>,<frac|b-a|2>|)>\<in\>\<bbb-R\><rsup|+>>
+    then <math|a+\<rho\>\<leqslant\>a+<frac|b-a|2>=<frac|2\<cdot\>a+b-a|2>=<frac|a+b|2>\<less\><frac|b+b|2>=b>
+    so that\ 
+
+    <\equation*>
+      a+\<rho\>\<less\>b
+    </equation*>
+
+    Let <math|x\<in\><around*|[|a,a+\<rho\>|[>> then
+    <math|0\<leqslant\>x-a\<exterior\>x\<less\>a+\<rho\>> so that
+    <math|<around*|\||x-a|\|>=x-a\<less\>\<rho\>\<less\>\<delta\>> so that by
+    [eq: <reference|eq 16.250.23>
+
+    <\equation*>
+      h<around*|(|a|)>-h<around*|(|x|)>\<leqslant\><around*|\||h<around*|(|x|)>-h<around*|(|a|)>|\|>\<less\>h<around*|(|a|)>
+    </equation*>
+
+    from which it follows that <math|-h<around*|(|x|)>\<less\>0> so that\ 
+
+    <\equation*>
+      0\<less\>h<around*|(|x|)>
+    </equation*>
+  </proof>
+
   <\theorem>
     <label|diff mean value theorem (5)><dueto|Mean Value Theorem (V)>Let
     <math|a,b\<in\>\<bbb-R\>> with <math|a\<less\>b>,
@@ -15412,7 +15456,7 @@
     and
 
     <\equation*>
-      \<forall\>x\<in\><around*|[|a,b|]><text| >f<text| and >\<varphi\><text|
+      \<forall\>x\<in\><around*|]|a,b|[><text| >f<text| and >\<varphi\><text|
       have a derivative at >x<text| with ><around*|\<\|\|\>|f<rprime|'><rsub|x>|\<\|\|\>>\<leqslant\>\<varphi\><rprime|'><rsub|x>
     </equation*>
 
@@ -15534,7 +15578,7 @@
 
         <\equation*>
           g:<around*|[|a,b|]>\<rightarrow\>\<bbb-R\><text| where
-          >g<around*|(|x|)>=<around*|\<\|\|\>|f<around*|(|y|)>-f<around*|(|a|)>|\<\|\|\>>-<around*|(|\<varphi\><around*|(|y|)>-\<varphi\><around*|(|a|)>|)>
+          >g<around*|(|y|)>=<around*|\<\|\|\>|f<around*|(|y|)>-f<around*|(|a|)>|\<\|\|\>>-<around*|(|\<varphi\><around*|(|y|)>-\<varphi\><around*|(|a|)>|)>
         </equation*>
 
         then as <math|f,\<varphi\><text|>> are continuous,
@@ -15575,8 +15619,58 @@
         <label|eq 16.313.302><around*|\<\|\|\>|f<around*|(|\<gamma\>|)>-f<around*|(|a|)>|\<\|\|\>>\<leqslant\>\<varphi\><around*|(|\<gamma\>|)>-\<varphi\><around*|(|a|)>+\<varepsilon\><around*|(|\<gamma\>-a|)>
       </equation>
 
+      We prove now that <math|a\<less\>\<gamma\>>. Let
+      <math|\<mu\>\<in\>\<bbb-R\><rsup|+>>
+
+      <\equation*>
+        h:<around*|[|a,b|]>\<rightarrow\>\<bbb-R\><text| by
+        >h<around*|(|y|)>=\<varphi\><around*|(|y|)>-\<varphi\><around*|(|a|)>+\<varepsilon\>\<cdot\><around*|(|y-a|)>+\<mu\>-<around*|\<\|\|\>|f<around*|(|y|)>-f<around*|(|a|)>|\<\|\|\>>
+      </equation*>
+
+      them as <math|f,\<varphi\><text|>> are continuous,
+      <math|<around*|\<\|\|\>||\<\|\|\>>> is continuous [see theorem:
+      <reference|continuity norm is continuous>] it follows from [theorems:
+      <reference|continuity composition (1)>, <reference|continuity of sum of
+      continuous functions>] that\ 
+
+      <\equation*>
+        h<text| is continuous>
+      </equation*>
+
+      Futher we have that <math|h<around*|(|a|)>=\<varphi\><around*|(|a|)>-\<varphi\><around*|(|a|)>+\<varepsilon\>\<cdot\><around*|(|a-a|)>+\<mu\>-<around*|\<\|\|\>|f<around*|(|a|)>-f<around*|(|a|)>|\<\|\|\>>=\<mu\>>
+      so that\ 
+
+      <\equation*>
+        h<around*|(|a|)>=\<mu\>\<gtr\>0
+      </equation*>
+
+      Using now [lemma: <reference|lemma 16.227.23>] there exist a
+      <math|\<rho\>\<in\>\<bbb-R\><rsup|+>> such that
+      <math|a+\<rho\>\<less\>b> and <math|\<forall\>y\<in\><around*|[|a,a+\<rho\>|[>>
+      we have <math|0\<less\>h<around*|(|y|)>>. So using the definition of
+      <math|h> we have <math|\<forall\>y\<in\><around*|[|a,a+\<rho\>|[>> that\ 
+
+      <\equation*>
+        <around*|\<\|\|\>|f<around*|(|y|)>-f<around*|(|a|)>|\<\|\|\>>\<less\>\<varphi\><around*|(|y|)>-\<varphi\><around*|(|a|)>+\<varepsilon\>\<cdot\><around*|(|y-a|)>+\<mu\>
+      </equation*>
+
+      as this is true for every <math|\<mu\>\<in\>\<bbb-R\><rsup|+>> it
+      follows from [theorem: <reference|complex Archimedean property
+      consequence (2)>] that\ 
+
+      <\equation*>
+        <around*|\<\|\|\>|f<around*|(|y|)>-f<around*|(|a|)>|\<\|\|\>>\<leqslant\>\<varphi\><around*|(|y|)>-\<varphi\><around*|(|a|)>+\<varepsilon\>\<cdot\><around*|(|y-a|)>
+      </equation*>
+
+      which by definition of <math|A> proves that <math|a+\<rho\>\<in\>A>.
+      Hence <math|a\<less\>a+\<rho\>\<leqslant\>\<gamma\>> which proves that\ 
+
+      <\equation*>
+        a\<less\>\<gamma\>
+      </equation*>
+
       We prove now by contradiction that <math|\<gamma\>=b>. Assume that
-      <math|\<gamma\>\<less\>b>. As <math|\<gamma\>\<in\><around*|[|a,b|[>>
+      <math|\<gamma\>\<less\>b>. As <math|\<gamma\>\<in\><around*|]|a,b|[>>
       <math|f<rprime|'><rsub|\<gamma\>>> and
       <math|\<varphi\><rprime|'><rsub|\<gamma\>>> exist, so that by [theorem:
       <reference|diff calculus derivate (2)>] there exists
@@ -27599,8 +27693,8 @@
     <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> be
     a normed space, <math|a,b\<in\>\<bbb-R\>> with <math|a\<less\>b>,
     <math|x<rsub|0>\<in\><around*|]|a,b|[>> and
-    <math|f:<around*|[|a,b|]>\<rightarrow\>X> a function that has a
-    <math|n>-the derivative at <math|x<rsub|0>> then
+    <math|f:<around*|[|a,b|]>\<rightarrow\>X> a function that is a
+    <math|n>-times differentiable at <math|x<rsub|0>> then
 
     <\equation*>
       f<around*|(|x|)>-f<around*|(|x<rsub|0>|)>-<big|sum><rsub|k=1><rsup|n><frac|<around*|(|x-x<rsub|0>|)><rsup|k>|k!>\<cdot\>f<rsup|<around*|(|n|)>><around*|(|x<rsub|0>|)>=<below|ord|x<below|\<rightarrow\>|A>x<rsub|0>><around*|(|<around*|\||<around*|(|x-x<rsub|0>|)><rsup|n>|\|>|)>
@@ -27618,11 +27712,763 @@
     Theorem (I.1) [theorem: <reference|diff Taylor I.1>]
   </proof>
 
-  \;
+  There is a link between <math|f<around*|(|x|)>=o<around*|(|<around*|\||x-x<rsub|0>|\|><rsup|n>|)>>
+  and a limit of the quotient <math|<frac|f<around*|(|x|)>|<around*|(|x-x<rsub|0>|)>>.>
 
-  \;
+  <\theorem>
+    <label|diff little o and limits>Let <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
+    be a normed space, <math|n\<in\>\<bbb-N\>>, <math|a,b\<in\>\<bbb-R\>>
+    with <math|a\<less\>b>, <math|x<rsub|0>\<in\><around*|[|a,b|]>> and
+    <math|<rigid|f:<around*|[|a,b|]>\<rightarrow\>X>> a function then
 
-  \;
+    <\equation*>
+      f=<below|ord|x<below|\<rightarrow\>|A>x<rsub|0>><around*|(|<around*|\||x-x<rsub|0><rsup|n>|\|>|)>\<Leftrightarrow\><below|lim|x<below|\<rightarrow\>|A>x<rsub|0>><frac|f<around*|(|x|)>|<around*|(|x-x<rsub|0>|)><rsup|n>>=0
+    </equation*>
+
+    <\note>
+      By [theorem: <reference|topology every element of a generalized
+      interval is a limit point>] <math|x<rsub|0>> is a limit point of
+      <math|<around*|[|a,b|]>> so that <math|<below|lim|x<below|\<rightarrow\>|A>x<rsub|0>><frac|f<around*|(|x|)>|<around*|(|x-x<rsub|0>|)><rsup|n>>>
+      is well defined.
+    </note>
+  </theorem>
+
+  <\note>
+    In essence the theorem says that in the limit
+    <math|<around*|\<\|\|\>|f<around*|(|x|)>|\<\|\|\>>> decreases faster then
+    <math|<around*|\||x-x<rsub|0>|\|><rsup|n>>
+  </note>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>Let <math|\<varepsilon\>\<in\>\<bbb-R\>>.
+      As <math|f=<below|ord|x<below|\<rightarrow\>|A>x<rsub|0>><around*|(|<around*|\||x-x<rsub|0>|\|><rsup|n>|)>>
+      there exist a <math|\<delta\>\<in\>\<bbb-R\><rsup|+>> such that
+      <math|\<forall\>x\<in\>A> with <math|0\<less\><around*|\||x-x<rsub|0>|\|>\<less\>\<delta\>>
+      we have\ 
+
+      <\equation>
+        <label|eq 16.605.307><around*|\<\|\|\>|f<around*|(|x|)>|\<\|\|\>>\<leqslant\><frac|\<varepsilon\>|2>\<cdot\><around*|\||x-x<rsub|0>|\|><rsup|n>
+      </equation>
+
+      As <math|0\<less\><around*|\||x<rsub|0>-x|\|>> we have that
+      <math|<around*|\||x-x<rsub|0>|\|>\<neq\>0> so that we can divide by
+      <math|<around*|\||x-x<rsub|0>|\|><rsup|n>>,
+      <math|<around*|(|x-x<rsub|0>|)><rsup|n>> so that\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|\<\|\|\>|<frac|f<around*|(|x|)>|<around*|(|x-x<rsub|0>|)><rsup|n>>-0|\<\|\|\>>>|<cell|=>|<cell|<around*|\<\|\|\>|<frac|f<around*|(|x|)>|<around*|(|x-x<rsub|0>|)><rsup|n>>|\<\|\|\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\||<frac|1|<around*|(|x-x<rsub|0>|)><rsup|n>>|\|>\<cdot\><around*|\<\|\|\>|f<around*|(|x|)>|\<\|\|\>>>>|<row|<cell|>|<cell|<below|\<leqslant\>|<text|[eq:
+        <reference|eq 16.605.307>]>>>|<cell|<frac|1|<around*|\||x-x<rsub|0>|\|><rsup|n>>\<cdot\><frac|\<varepsilon\>|2>\<cdot\><around*|\||x-x<rsub|0>|\|><rsup|n>>>|<row|<cell|>|<cell|=>|<cell|<frac|\<varepsilon\>|2>>>|<row|<cell|>|<cell|\<less\>>|<cell|\<varepsilon\>>>>>
+      </eqnarray*>
+
+      which proves that <math|<below|lim|x<below|\<rightarrow\>|A>x<rsub|0>><frac|f<around*|(|x|)>|<around*|(|x-x<rsub|0>|)><rsup|n>>=0>.
+
+      <item*|<math|\<Leftarrow\>>>Let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>.
+      As <math|<below|lim|x<below|\<rightarrow\>|A>x<rsub|0>><frac|f<around*|(|x|)>|<around*|(|x-x<rsub|0>|)><rsup|n>>=0>
+      there exist a <math|\<delta\>\<in\>\<bbb-R\><rsup|+> such that
+      \<forall\>x\<in\>A> with 0\<less\><math|<around*|\||x-x<rsub|0>|\|>\<less\>\<delta\>>
+      we have\ 
+
+      <\equation*>
+        <around*|\<\|\|\>|<frac|f<around*|(|x|)>|<around*|(|x-x<rsub|0>|)><rsup|n>>|\<\|\|\>>=<around*|\<\|\|\>|<frac|f<around*|(|x|)>|<around*|(|x-x<rsub|0>|)><rsup|n>>-0|\<\|\|\>>\<less\>\<varepsilon\>
+      </equation*>
+
+      so that\ 
+
+      <\equation*>
+        <around*|\<\|\|\>|f<around*|(|x|)>|\<\|\|\>>=<around*|\<\|\|\>|<frac|<around*|(|x-x<rsub|0>|)><rsup|n>|<around*|(|x-x<rsub|0>|)><rsup|n>>\<cdot\>f<around*|(|x|)>|\<\|\|\>>=<around*|\||x-x<rsub|0>|\|><rsup|n>\<cdot\><around*|\<\|\|\>|<frac|f<around*|(|x|)>|<around*|(|x-x<rsub|0>|)><rsup|n>>|\<\|\|\>>\<less\>\<varepsilon\>\<cdot\><around*|\||x-x<rsub|0>|\|><rsup|n>
+      </equation*>
+
+      which proves that <math|f=<below|ord|x<below|\<rightarrow\>|A>x<rsub|0>><around*|(|<around*|\||x-x<rsub|0>|\|><rsup|n>|)>>
+    </description>
+  </proof>
+
+  As a consequence of the above theorem we have the following:
+
+  <\theorem>
+    <dueto|Taylor's Theorem (I.3)>Let <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
+    be a normed space, <math|a,b\<in\>\<bbb-R\>> with <math|a\<less\>b>,
+    <math|x<rsub|0>\<in\><around*|[|a,b|]>> and
+    <math|f:<around*|[|a,b|]>\<rightarrow\>X> a function that is a
+    <math|n>-times differentiable at <math|x<rsub|0>> then we have\ 
+
+    <\equation*>
+      <below|lim|x<below|\<rightarrow\>|<around*|[|a,b|]>>x<rsub|0>><frac|f<around*|(|x|)>-f<around*|(|x<rsub|0>|)>-<big|sum><rsub|k=1><rsup|n><frac|<around*|(|x-x<rsub|0>|)><rsup|k>|k!>\<cdot\>f<rsup|<around*|(|k|)>><rsub|x<rsub|0>>|<around*|(|x-x<rsub|0>|)>>=0
+    </equation*>
+  </theorem>
+
+  <\proof>
+    Using [theorem: <reference|diff Taylor I.2>] we have that\ 
+
+    <\equation*>
+      f<around*|(|x|)>-f<around*|(|x<rsub|0>|)>-<big|sum><rsub|k=1><rsup|n><frac|<around*|(|x-x<rsub|0>|)><rsup|k>|k!>\<cdot\>f<rsup|<around*|(|n|)>><around*|(|x<rsub|0>|)>=<below|ord|x<below|\<rightarrow\>|A>x<rsub|0>><around*|(|<around*|\||<around*|(|x-x<rsub|0>|)><rsup|n>|\|>|)>
+    </equation*>
+
+    so that by [theorem: <reference|diff little o and limits>]
+
+    <\equation*>
+      <below|lim|x<below|\<rightarrow\>|<around*|[|a,b|]>>x<rsub|0>><frac|f<around*|(|x|)>-f<around*|(|x<rsub|0>|)>-<big|sum><rsub|k=1><rsup|n><frac|<around*|(|x-x<rsub|0>|)><rsup|k>|k!>\<cdot\>f<rsup|<around*|(|k|)>><rsub|x<rsub|0>>|<around*|(|x-x<rsub|0>|)>>=0
+    </equation*>
+  </proof>
+
+  Next we want to extend Taylor's theorem to functions between two Banach
+  spaces. The mean problem lies in the terms of the form
+  <math|<frac|h<rsup|k>|k!>\<cdot\>f<rsup|<around*|[|k|]>><rsub|x<rsub|0>>>
+  in the Taylor's expansion because the power <math|h<rsup|n>> is not defined
+  in a general normed space. Further derivatives are not defined for
+  functions between general normed spaces. So we have to use terms of the
+  form <math|<frac|1|k!>\<cdot\>D<rsup|<around*|[|k|]>><rsub|x<rsub|0>>f<around*|(|<wide*|h:\<ldots\>:h|\<wide-underbrace\>><rsub|k>|)>>
+  and <math|<frac|1|k!>\<cdot\>D<rsup|<around*|[|k|]>><rsub|x<rsub|0>><around*|(|<wide*|x+h:\<ldots\>:x+h|\<wide-underbrace\>><rsub|k>|)>>
+  To get started we first need a definition and some lemma's.\ 
+
+  <\definition>
+    Let <math|X> be a set, <math|n\<in\>\<bbb-N\>> then for <math|x\<in\>X>
+    and <math|h\<in\>X> we define for <math|p,q\<in\>\<bbb-N\><rsub|0>> with
+    <math|p+q=n>
+
+    <\equation*>
+      x<rsup|p>h<rsup|q>\<in\>X<rsup|n><text| where
+      ><around*|(|x<rsup|p>h<rsup|q>|)><rsub|i><rsup|>=<choice|<tformat|<table|<row|<cell|x<text|
+      if >i\<in\><around*|{|1,\<ldots\>,p|}>>>|<row|<cell|h<text| if
+      >i\<in\><around*|{|p+1,\<ldots\>,q|}>>>>>><rsup|>
+    </equation*>
+  </definition>
+
+  <\example>
+    Let <math|n=3> then we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|x<rsup|0>h<rsup|3>>|<cell|=>|<cell|<around*|(|h,h,h|)>>>|<row|<cell|x<rsup|1>h<rsup|2>>|<cell|=>|<cell|<around*|(|x,h,h|)>>>|<row|<cell|x<rsup|2>h<rsup|1>>|<cell|=>|<cell|<around*|(|x,x,h|)>>>|<row|<cell|x<rsup|3>h<rsup|0>>|<cell|=>|<cell|<around*|(|x,x,x|)>>>>>
+    </eqnarray*>
+  </example>
+
+  <\lemma>
+    <label|lemma 16.380.315>Let <math|X> be a set, <math|n\<in\>\<bbb-N\>>
+    and <math|x,h\<in\>X> then we have for <math|p,q> with <math|p+q=n> that
+
+    <\enumerate>
+      <item>We have for
+
+      <\equation*>
+        y=<around*|(|y<rsub|1>,\<ldots\>,y<rsub|n+1>|)><text| defined by
+        >y<rsub|i>=<choice|<tformat|<table|<row|<cell|x<text| if
+        >i=1>>|<row|<cell|<around*|(|x<rsup|p>h<rsup|q>|)><rsub|i-1><text| if
+        >i\<in\><around*|{|2,\<ldots\>,n+1|}>>>>>>
+      </equation*>
+
+      that\ 
+
+      <\equation*>
+        y=x<rsup|p+1>h<rsup|q>
+      </equation*>
+
+      <item>There <with|font-series|bold|exist> a
+      <math|\<sigma\>\<in\>\<cal-P\><rsub|n+1>> such that for\ 
+
+      <\equation*>
+        y=<around*|(|y<rsub|1>,\<ldots\>,y<rsub|n+1>|)><text| defined by
+        >y<rsub|i>=<choice|<tformat|<table|<row|<cell|h<text| if
+        >i=1>>|<row|<cell|<around*|(|x<rsup|p>h<rsup|q>|)><rsub|i-1><text| if
+        >i\<in\><around*|{|2,\<ldots\>,n+1|}>>>>>>
+      </equation*>
+
+      we have\ 
+
+      <\equation*>
+        <around*|(|y<rsub|\<sigma\><around*|(|1|)>>,\<ldots\>,y<rsub|\<sigma\><around*|(|n+1|)>>|)>=x<rsup|p>h<rsup|q+1>
+      </equation*>
+
+      <item><math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
+      <math|<around*|(|x<rsup|n>h<rsup|0>|)><rsub|i>=x>
+    </enumerate>
+  </lemma>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>Let <math|p,q\<in\>\<bbb-N\><rsub|0>> with <math|p+q=n> then
+      <math|<around*|(|p+1|)>+q=n+1> and for
+      <math|i\<in\><around*|{|1,\<ldots\>,n+1|}>> we have either:\ 
+
+      <\description>
+        <item*|<math|i\<in\><around*|{|1,\<ldots\>,p+1|}>>>Then for <math|i>
+        we have either:\ 
+
+        <\description>
+          <item*|<math|i=1>>Then <math|y<rsub|i>=x> and as
+          <math|i\<in\><around*|{|1,\<ldots\>,p+1|}>>
+          <math|<around*|(|x<rsup|p+1>q<rsup|q>|)><rsub|i>=x> it follows that\ 
+
+          <\equation*>
+            y<rsub|i>=<around*|(|x<rsup|p+1>h<rsup|q>|)><rsub|i>
+          </equation*>
+
+          <item*|<math|i\<in\><around*|{|2,\<ldots\>,p+1|}>>>Then
+          <math|i-1\<in\><around*|{|1,\<ldots\>,p|}>> so that
+          <math|y<rsub|i>=<around*|(|x<rsup|p>h<rsup|q>|)><rsub|i-1>=x>,
+          further as <math|i\<in\><around*|{|2,\<ldots\>,p+1|}>\<subseteq\><around*|{|1,\<ldots\>,p+1|}>>
+          we have that <math|<around*|(|x<rsup|p+1>h<rsup|q>|)><rsub|i>=x>.
+          Hence\ 
+
+          <\equation*>
+            y<rsub|i>=<around*|(|x<rsup|p+1>h<rsup|q>|)><rsub|i>
+          </equation*>
+        </description>
+
+        <item*|<math|i\<in\><around*|{|p+2,\<ldots\>,n+1|}>>>Then
+        <math|i-1\<in\><around*|{|p+1,\<ldots\>,n|}>> so that
+        <math|y<rsub|i>=<around*|(|x<rsup|p>h<rsup|q>|)><rsub|i-1>=h>,
+        further as <math|i\<in\><around*|{|<around*|(|p+1|)>+1,\<ldots\>,n+1|}>>
+        <math|<around*|(|x<rsup|p+1>h<rsup|q>|)><rsub|i>=h>. Hence\ 
+
+        <\equation*>
+          y<rsub|i>=<around*|(|x<rsup|p+1>h<rsup|q>|)><rsub|i>
+        </equation*>
+      </description>
+
+      As in all possible cases we have <math|y<rsub|i>=<around*|(|x<rsup|p+1>h<rsup|q>|)><rsub|i>>
+      it follows that\ 
+
+      <\equation*>
+        y=<around*|(|x<rsup|p+1>h<rsup|q>|)>
+      </equation*>
+
+      <item>Let <math|p,q\<in\>\<bbb-N\><rsub|0>> with <math|p+q=n> then
+      <math|p+<around*|(|q+1|)>=n+1> and for <math|p> we have either:\ 
+
+      <\description>
+        <item*|<math|p=0>>Then for <math|i\<in\><around*|{|1,\<ldots\>,n+1|}>>
+        we have either:\ 
+
+        <\description>
+          <item*|<math|i=1>>Then <math|y<rsub|i>=h>, further as
+          <math|1\<in\><around*|{|1,\<ldots\>,n+1|}>=<around*|{|p+1,\<ldots\>,n+1|}>>
+          that <math|<rigid|<around*|(|x<rsup|p>h<rsup|q+1>|)><rsub|i>=h>>.
+          Hence\ 
+
+          <\equation*>
+            y<rsub|i>=<around*|(|x<rsup|p>h<rsup|q+1>|)><rsub|i>
+          </equation*>
+
+          <item*|<math|i\<in\><around*|{|2,\<ldots\>,n+1|}>>>Then
+          <math|i-1\<in\><around*|{|1,\<ldots\>,n|}>=<around*|{|p+1,\<ldots\>,n|}>>
+          so that<rigid| <math|y<rsub|i>=<around*|(|x<rsup|p>h<rsup|q>|)><rsub|i-1>=h>>.
+          Further as <rigid|<math|i\<in\><around*|{|2,\<ldots\>,n+1|}>=<around*|{|<around*|(|p+1|)>+1,\<ldots\>,n+1|}>>>
+          <math|<around*|(|x<rsup|p>h<rsup|q+1>|)><rsub|i>=h>. Hence\ 
+
+          <\equation*>
+            y<rsub|i>=<around*|(|x<rsup|p>h<rsup|q+1>|)><rsub|i>
+          </equation*>
+        </description>
+
+        So we have that <math|y=x<rsup|p>h<rsup|q+1>>, take now
+        <math|\<sigma\>=Id<rsub|<around*|{|1,\<ldots\>,n+1|}>>\<in\>P<rsub|n+1>>
+        then we have\ 
+
+        <\equation*>
+          <around*|(|y<rsub|\<sigma\><around*|(|1|)>>,\<ldots\>.,y<rsub|\<sigma\><around*|(|n|)>>|)>=<around*|(|y<rsub|1>,\<ldots\>,y<rsub|n>|)>=x<rsup|p>h<rsup|q+1>
+        </equation*>
+
+        <item*|<math|p\<neq\>0>>Define <math|\<sigma\>=<around*|(|1<below|\<leftrightarrow\>|n+1>p+1|)>\<in\>P<rsub|n+1>>
+        then we have for <math|i\<in\><around*|{|1,\<ldots\>,n+1|}>> either:\ 
+
+        <\description>
+          <item*|<math|i=1>>Then <math|y<rsub|\<sigma\><around*|(|i|)>>=y<rsub|\<sigma\><around*|(|1|)>>=y<rsub|p+1>\<equallim\><rsub|p+1\<in\><around*|{|p+1,\<ldots\>,n+1|}>><around*|(|x<rsup|p>h<rsup|q+1>|)><rsub|i>>,
+          hence\ 
+
+          <\equation*>
+            y<rsub|\<sigma\><around*|(|i|)>>=<around*|(|x<rsup|p>h<rsup|q+1>|)><rsub|i>
+          </equation*>
+
+          <item*|<math|i\<in\><around*|{|2,\<ldots\>,p-1|}>>>Then
+          <math|y<rsub|\<sigma\><around*|(|i|)>>=y<rsub|i>=<around*|(|x<rsup|p>h<rsup|q>|)><rsub|i-1>\<equallim\><rsub|i-1\<in\><around*|{|1,\<ldots\>,p-1|}>\<subseteq\><around*|{|1,\<ldots\>,p|}>>x>.
+          As <math|<around*|(|x<rsup|p>h<rsup|q>|)><rsub|i><below|=|i\<in\><around*|{|2,\<ldots\>,p|}>\<subseteq\><around*|{|1,\<ldots\>,p|}>>x>
+          it follows that\ 
+
+          <\equation*>
+            y<rsub|\<sigma\><around*|(|i|)>>=<around*|(|x<rsup|p>h<rsup|q+1>|)><rsub|i>
+          </equation*>
+
+          <item*|<math|i=p+1>>Then <math|y<rsub|\<sigma\><around*|(|i|)>>=y<rsub|\<sigma\><around*|(|p+1|)>>=y<rsub|1>=h>.
+          As <math|i=p+1\<in\><around*|{|p+1,\<ldots\>,n+1|}>>
+          <math|<rigid|<around*|(|x<rsup|p>h<rsup|q+1>|)><rsub|i>=h>> so that\ 
+
+          <\equation*>
+            y<rsub|\<sigma\><around*|(|i|)>>=<around*|(|x<rsup|p>h<rsup|q+1>|)><rsub|i>
+          </equation*>
+
+          <item*|<math|i\<in\><around*|{|p+2,\<ldots\>,n+1|}>>>Then
+          <math|y<rsub|\<sigma\><around*|(|i|)>>=y<rsub|i>=<around*|(|x<rsup|p>h<rsup|q>|)><rsub|i-1>\<equallim\><rsub|i-1\<in\><around*|{|p+1,\<ldots\>,n|}>>h>,
+          further as <math|<around*|{|p+2,\<ldots\>,n+1|}>\<subseteq\><around*|{|p+1,\<ldots\>,n+1|}>>
+          we have <math|<around*|(|x<rsup|p>h<rsup|q+1>|)><rsub|i>=h> which
+          proves that\ 
+
+          <\equation*>
+            y<rsub|\<sigma\><around*|(|i|)>>=<around*|(|x<rsup|p>h<rsup|q+1>|)><rsub|i>
+          </equation*>
+        </description>
+
+        Hence we have\ 
+
+        <\equation*>
+          <around*|(|y<rsub|\<sigma\><around*|(|1|)>>,\<ldots\>,y<rsub|\<sigma\><around*|(|n+1|)>>|)>=x<rsup|p>h<rsup|q+1>
+        </equation*>
+      </description>
+
+      <item>Let <math|i\<in\><around*|{|1,\<ldots\>,n|}>> then if <math|q=0>
+      we have, as <math|p+q=n>, that <math|p=n> so that
+      <math|i\<in\><around*|{|1,\<ldots\>,n|}>=<around*|{|1,\<ldots\>,p|}>>
+      from which it follows that <math|<around*|(|x<rsup|p>h<rsup|q>|)><rsub|i>=x>.
+    </enumerate>
+  </proof>
+
+  <\lemma>
+    <label|lemma 16.381.315>Let <math|n\<in\>\<bbb-N\>>,
+    <math|L\<in\>L<rsub|n+1><around*|(|X;Y|)>> such that
+    <math|\<forall\>\<sigma\>\<in\>P<rsub|n+1>> and
+    <math|\<forall\><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n+1>|)>\<in\>X<rsup|n>>
+    <math|L<around*|(|x<rsub|1>:\<ldots\>:x<rsub|n+1>|)>=L<around*|(|x<rsub|\<sigma\><around*|(|1|)>>:\<ldots\>:x<rsub|\<sigma\><around*|(|n+1|)>>|)>>
+    then we have <math|\<forall\>x\<in\>X>,
+    <math|\<forall\>\<tau\>\<in\>P<rsub|n>>,
+    <math|\<forall\><around*|(|y<rsub|1>,\<ldots\>,y<rsub|n>|)>\<in\>X<rsup|n>>
+    that \ <math|L<around*|(|x|)><around*|(|y<rsub|1>:\<ldots\>:y<rsub|n>|)>=L<around*|(|x|)><around*|(|y<rsub|\<tau\><around*|(|1|)>>:\<ldots\>:y<rsub|\<tau\><around*|(|n|)>>|)>>.
+  </lemma>
+
+  <\proof>
+    Let <math|x\<in\>X>, <math|\<tau\>\<in\>P<rsub|n>> and
+    <math|<around*|(|y<rsub|1>,\<ldots\>,y<rsub|n>|)>\<in\>X<rsup|n>>. Define
+    now\ 
+
+    <\equation*>
+      <around*|(|x<rsub|1>,\<ldots\>,x<rsub|n+1>|)>\<in\>X<rsup|n+1><text| by
+      >x<rsub|i>=<choice|<tformat|<table|<row|<cell|x<text| if
+      >i=1>>|<row|<cell|y<rsub|i-1><text| if
+      >i\<in\><around*|{|2,\<ldots\>,n+1|}>>>>>>
+    </equation*>
+
+    <\equation*>
+      \<sigma\>:<around*|{|1,\<ldots\>,n+1|}>\<rightarrow\><around*|{|1,\<ldots\>,n+1|}><text|
+      by >\<sigma\><around*|(|i|)>=<choice|<tformat|<table|<row|<cell|1<text|
+      if i=1>>>|<row|<cell|\<tau\><around*|(|i-1|)>+1<text| if
+      >i\<in\><around*|{|2,\<ldots\>,n|}>>>>>>
+    </equation*>
+
+    then we have for <math|\<sigma\>>:\ 
+
+    <\description>
+      <item*|injectivity>Let <math|i,j\<in\><around*|{|1,\<ldots\>,n+1|}>>
+      such that <math|\<sigma\><around*|(|i|)>=\<sigma\><around*|(|j|)>> then
+      for <math|i,j> we have either:
+
+      <\description>
+        <item*|<math|i=1>>Assume that <math|j\<in\><around*|{|2,\<ldots\>,n+1|}>>
+        then
+
+        <\equation*>
+          \<sigma\><around*|(|j|)>=\<tau\><around*|(|j-1|)>+1<below|\<in\>|\<tau\>:<around*|{|1,\<ldots\>,n|}>\<rightarrow\><around*|{|1,\<ldots\>,n|}>><around*|{|2,\<ldots\>,n+1|}>
+        </equation*>
+
+        so that <math|\<sigma\><around*|(|j|)>\<neq\>1=\<sigma\><around*|(|1|)>=\<sigma\><around*|(|i|)>>
+        and we reach a contradiction. So we must have <math|i=1=j>.
+
+        <item*|<math|j=1>>Assume that <math|i\<in\><around*|{|2,\<ldots\>,n+1|}>>
+        then
+
+        <\equation*>
+          \<sigma\><around*|(|i|)>=\<tau\><around*|(|i-1|)>+1<below|\<in\>|\<tau\>:<around*|{|1,\<ldots\>,n|}>\<rightarrow\><around*|{|1,\<ldots\>,n|}>><around*|{|2,\<ldots\>,n+1|}>
+        </equation*>
+
+        so that <math|\<sigma\><around*|(|i|)>\<neq\>1=\<sigma\><around*|(|1|)>=\<sigma\><around*|(|j|)>>
+        and we reach a contradiction. So we must have <math|i=1=j>.
+
+        <item*|<math|i,j\<in\><around*|{|2,\<ldots\>,n+1|}>>>Then
+        <math|\<tau\><around*|(|i-1|)>+1=\<sigma\><around*|(|i|)>=\<sigma\><around*|(|j|)>=\<tau\><around*|(|i-1|)>+1>
+        so that <math|\<tau\><around*|(|i-1|)>=\<tau\><around*|(|j-1|)>>. As
+        <math|\<tau\>> is injective it follows that <math|i-1=j-1> hence
+        <math|i=j>.
+      </description>
+
+      <item*|surjectivity>Let <math|k\<in\><around*|{|1,\<ldots\>,n+1|}>>
+      then we have either:
+
+      <\description>
+        <item*|<math|k=1>>Then <math|k=\<sigma\><around*|(|1|)>>
+
+        <item*|<math|k\<in\><around*|{|2,\<ldots\>,n+1|}>>>Then
+        <math|k-1\<in\><around*|{|1,\<ldots\>,n|}>> and as <math|\<tau\>> is
+        surjection there exist a <math|<rigid|j\<in\><around*|{|1,\<ldots\>,n|}>>>
+        such that <math|\<tau\><around*|(|j|)>=k-1>. Hence for
+        <math|i=j+1\<in\><around*|{|2,\<ldots\>,n+1|}>> we have\ 
+
+        <\equation*>
+          \<sigma\><around*|(|i|)>=\<tau\><around*|(|i-1|)>+1=\<tau\><around*|(|j|)>+1=k
+        </equation*>
+      </description>
+    </description>
+
+    So it follows that\ 
+
+    <\equation*>
+      \<sigma\>\<in\>\<cal-P\><rsub|n+1>
+    </equation*>
+
+    Further\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|L<around*|(|x|)><around*|(|y<rsub|1>:\<ldots\>:y<rsub|n>|)>>|<cell|=>|<cell|L<around*|(|x<rsub|1>|)><around*|(|x<rsub|2>:\<ldots\>x<rsub|n+1>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|x<rsub|1>:\<ldots\>x<rsub|n+1>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|x<rsub|\<sigma\><around*|(|1|)>>:\<ldots\>:x<rsub|\<sigma\><around*|(|n+1|)>>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|x<rsub|\<sigma\><around*|(|1|)>>|)><around*|(|x<rsub|\<sigma\><around*|(|2|)>>:\<ldots\>:x<rsub|\<sigma\><around*|(|n+1|)>>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|x<rsub|1>|)><around*|(|x<rsub|\<sigma\><around*|(|2|)>>:\<ldots\>:x<rsub|\<sigma\><around*|(|n+1|)>>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|x|)><around*|(|x<rsub|\<tau\><around*|(|1|)>+1>:\<ldots\>:x<rsub|\<tau\><around*|(|n|)>+1>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|x|)><around*|(|y<rsub|\<tau\><around*|(|1|)>>:\<ldots\>:y<rsub|\<tau\><around*|(||)>>|)>>>>>
+    </eqnarray*>
+
+    proving that\ 
+
+    <\equation*>
+      L<around*|(|x|)><around*|(|y<rsub|1>:\<ldots\>:y<rsub|n>|)>=L<around*|(|x|)><around*|(|y<rsub|\<tau\><around*|(|1|)>>:\<ldots\>:y<rsub|\<tau\><around*|(|n|)>>|)>
+    </equation*>
+  </proof>
+
+  <\lemma>
+    <label|lemma 16.382.315>Let <math|n\<in\>\<bbb-N\>>,
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    be normed spaces, <math|L\<in\>L<rsub|n><around*|(|X;Y|)>> such that
+    <math|\<forall\>\<sigma\>\<in\>P<rsub|n>> and
+    <math|\<forall\><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\>X<rsup|n>>
+    <math|L<around*|(|x<rsub|1>:\<ldots\>:x<rsub|n>|)>=L<around*|(|x<rsub|\<sigma\><around*|(|1|)>>:\<ldots\>:x<rsub|\<sigma\><around*|(|n|)>>|)>>
+    then we have for <math|x,h\<in\>X> that there exist a
+    <math|k\<in\>\<bbb-N\><rsub|0>> and a
+    <math|<around*|{|<around*|(|p<rsub|i>,q<rsub|i>|)>|}><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>>
+    with <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,k|}>>
+    <math|2\<leqslant\>q<rsub|i>> ,<math|n=p<rsub|i>+q<rsub|i>> such that\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|L<around*|(|<wide*|x+h:\<ldots\>:x+h|\<wide-underbrace\>><rsub|n>|)>>|<cell|=>|<cell|T<rsub|1>+T<rsub|2>+T<rsub|3>>>>>
+    </eqnarray*>
+
+    where
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|T<rsub|1>>|<cell|=>|<cell|L<around*|(|<around*|(|x<rsup|n>h<rsup|0>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|n>h<rsup|0>|)><rsub|n>|)>>>|<row|<cell|T<rsub|2>>|<cell|=>|<cell|n\<cdot\>L<around*|(|<around*|(|x<rsup|n-1>h<rsup|1>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|n-1>h<rsup|1>|)><rsub|n>|)>>>|<row|<cell|T<rsub|3>>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>L<around*|(|<around*|(|x<rsup|p<rsub|i>>h<rsup|q<rsub|i>>|)><rsub|1>:\<ldots\><around*|(|x<rsup|p<rsub|i>>h<rsup|q<rsub|i>>|)><rsub|n>|)>>>>>
+    </eqnarray*>
+
+    \ 
+  </lemma>
+
+  <\proof>
+    We prove this by induction so let\ 
+
+    <\equation*>
+      S=<around*|{|n\<in\>\<bbb-N\>\|If L\<in\>L<rsub|n><around*|(|X;Y|)><text|
+      satisfies >\<forall\>\<sigma\>\<in\>P<rsub|n><text|,
+      >\<forall\>y\<in\>X<rsup|n><text| >L<around*|(|y<rsub|\<sigma\><around*|(|1|)>>:\<ldots\>:y<rsub|\<sigma\><around*|(|n|)>>|)>=L<around*|(|y<rsub|1>:\<ldots\>:y<rsub|n>|)><text|
+      then there exist a ><around*|{|<around*|(|p<rsub|i>,q<rsub|i>|)>|}><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>><text|
+      with >k\<in\>\<bbb-N\><rsub|0><text| \ with
+      >\<forall\>i\<in\><around*|{|1,\<ldots\>,k|}><text|
+      >2\<leqslant\>q<rsub|i>\<wedge\>n=p<rsub|i>+q<rsub|i><text| such that
+      <math|L<around*|(|<wide*|x+h:\<ldots\>:x+h|\<wide-underbrace\>><rsub|n>|)>=T<rsub|1>+T<rsub|2>+T<rsub|3><text|
+      where >T<rsub|1>=L<around*|(|<around*|(|x<rsup|n>h<rsup|0>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|n>h<rsup|0>|)><rsub|n>|)>>,
+      >T<rsub|2>=n\<cdot\>L<around*|(|<around*|(|x<rsup|n-1>h<rsup|1>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|n-1>h<rsup|1>|)><rsub|n>|)><text|
+      and ><rigid|T<rsub|3>=<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>L<around*|(|<around*|(|x<rsup|p<rsub|i>>h<rsup|q<rsub|i>>|)><rsub|1>:\<ldots\><around*|(|x<rsup|p<rsub|i>>h<rsup|q<rsub|i>>|)><rsub|n>|)>>|}>
+    </equation*>
+
+    then we have:\ 
+
+    <\description>
+      <item*|<math|1\<in\>S>>Let <math|L\<in\>L<rsub|1><around*|(|X;Y|)>=L<around*|(|X,Y|)>>.
+      Take <math|k=0> then <math|<around*|{|1,\<ldots\>,k|}>=\<varnothing\>>
+      so that for <math|<around*|{|x<rsup|p<rsub|i>>h<rsup|q<rsub|i>>|}><rsub|i\<in\>\<varnothing\>>>
+      we have vacuously that <math|\<forall\>i\<in\>\<varnothing\>>
+      <math|2\<leqslant\>q<rsub|i>*n=p<rsub|i>+q<rsub|i>>. Further
+
+      <\equation*>
+        <big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>L<around*|(|<around*|(|x<rsup|p<rsub|i>>h<rsup|q<rsub|i>>|)><rsub|1>:\<ldots\><around*|(|x<rsup|p<rsub|i>>h<rsup|q<rsub|i>>|)><rsub|n>|)>=<big|sum><rsub|i\<in\>\<varnothing\>>L<around*|(|<around*|(|x<rsup|p<rsub|i>>h<rsup|q<rsub|i>>|)><rsub|1>:\<ldots\><around*|(|x<rsup|p<rsub|i>>h<rsup|q<rsub|i>>|)><rsub|n>|)>=0
+      </equation*>
+
+      For <math|x,h\<in\>X> we have
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|L<around*|(|<wide*|x+h:\<ldots\>:x+h|\<wide-underbrace\>><rsub|1>|)>>|<cell|=>|<cell|L<around*|(|x+h|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|x|)>+L<around*|(|h|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|x|)>+L<around*|(|h|)>+0>>|<row|<cell|>|<cell|=>|<cell|T<rsub|1>+T<rsub|2>+T<rsub|3>>>>>
+      </eqnarray*>
+
+      where\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|T<rsub|1>>|<cell|=>|<cell|L<around*|(|x|)>=L<around*|(|<around*|(|x<rsup|1>h<rsup|0>|)><rsub|1>|)>=L<around*|(|<wide*|<around*|(|x<rsup|1>h<rsup|0>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|1>h<rsup|0>|)><rsub|1>|\<wide-underbrace\>><rsub|1>|)>>>|<row|<cell|T<rsub|2>>|<cell|=>|<cell|1\<cdot\>L<around*|(|h|)>=1\<cdot\>L<around*|(|<around*|(|x<rsup|0>h<rsup|1>|)><rsub|1>|)>=1\<cdot\>L<around*|(|<around*|(|x<rsup|0>h<rsup|1>|)><rsub|1>:\<ldots\>:L<around*|(|x<rsup|0>h<rsup|1>|)><rsub|1>|)>>>|<row|<cell|T<rsub|3>>|<cell|=>|<cell|<big|sum><rsub|<around*|(|q,p|)>\<in\>\<varnothing\>>L<around*|(|<around*|(|x<rsup|p>h<rsup|q>|)><rsub|1>:\<ldots\><around*|(|x<rsup|p>h<rsup|q>|)><rsub|n>|)>=0>>>>
+      </eqnarray*>
+
+      which proves that <math|1\<in\>S>.
+
+      <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>Let <math|x,h\<in\>X>
+      and <math|L\<in\>L<rsub|n+1><around*|(|X;Y|)>=L<around*|(|X,L<rsub|n><around*|(|X;Y|)>|)>>
+      such that <math|\<forall\>\<sigma\>\<in\>P<rsub|n+1>> we have
+      <math|<rigid|\<forall\><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\>X<rsup|n>>>
+      we have <math|L<around*|(|x<rsub|1>:\<ldots\>:x<rsub|n+1>|)>=L<around*|(|x<rsub|\<sigma\><around*|(|1|)>>:\<ldots\>:x<rsub|\<sigma\><around*|(|n+1|)>>|)>>.
+      As <math|<rigid|L\<in\>L<around*|(|X,L<rsub|n><around*|(|X;Y|)>|)>>> it
+      follows from [lemma: <reference|lemma 16.381.315>] that
+      <math|\<forall\>\<sigma\>\<in\>P<rsub|n>>,
+      <math|\<forall\><around*|(|y<rsub|1>,\<ldots\>,y<rsub|n>|)>\<in\>X<rsup|n>>
+
+      <\equation*>
+        L<around*|(|x+h|)><around*|(|y<rsub|\<sigma\><around*|(|1|)>>,\<ldots\>,y<rsub|\<sigma\><around*|(|n|)>>|)>=L<around*|(|x+h|)><around*|(|y<rsub|1>,\<ldots\>,y<rsub|n>|)>.
+      </equation*>
+
+      Hence as <math|n\<in\>S> it follows that there exist a
+
+      <\equation*>
+        <around*|{|<around*|(|p<rsub|i>,q<rsub|i>|)>|}><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>><text|
+        with >\<forall\>i\<in\><around*|{|1,\<ldots\>,k|}><text|
+        >2\<leqslant\>q<rsub|i>\<wedge\>n=p<rsub|i>+q<rsub|i>
+      </equation*>
+
+      such that\ 
+
+      <\equation>
+        <label|eq 16.574.315>L<around*|(|x+h|)><around*|(|<wide*|x+h:\<ldots\>:x+h|\<wide-underbrace\>><rsub|n>|)>=T<rsub|1>+T<rsub|2>+T<rsub|3>
+      </equation>
+
+      where\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|T<rsub|1>>|<cell|=>|<cell|L<around*|(|x+h|)><around*|(|<around*|(|x<rsup|n>h<rsup|0>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|n>h<rsup|0>|)><rsub|n>|)>>>|<row|<cell|T<rsub|2>>|<cell|=>|<cell|n\<cdot\>L<around*|(|x+h|)><around*|(|<around*|(|x<rsup|n-1>h<rsup|1>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|n-1>h<rsup|1>|)><rsub|n>|)>>>|<row|<cell|T<rsub|3>>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>L<around*|(|x+h|)><around*|(|<around*|(|x<rsup|p<rsub|i>>y<rsup|q<rsub|i>>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|p<rsub|i>>y<rsup|q<rsub|i>>|)><rsub|n>|)>>>>>
+      </eqnarray*>
+
+      Define\ 
+
+      <\equation*>
+        u=<around*|(|u<rsub|1>,\<ldots\>,u<rsub|n+1>|)><text| by
+        >u<rsub|i>=<choice|<tformat|<table|<row|<cell|x<text| if
+        >i=1>>|<row|<cell|<around*|(|x<rsup|n>h<rsup|0>|)><rsub|i-1><text| if
+        >i\<in\><around*|{|2,\<ldots\>,n+1|}>>>>>>
+      </equation*>
+
+      then we have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|L<around*|(|x|)><around*|(|<around*|(|x<rsup|n>h<rsup|0>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|n>h<rsup|0>|)><rsub|n>|)>>|<cell|=>|<cell|L<around*|(|u<rsub|1>|)><around*|(|u<rsub|2>,\<ldots\>,u<rsub|n+1>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|u<rsub|1>:\<ldots\>:u<rsub|n+1>|)>>>|<row|<cell|>|<cell|<below|=|<text|[lemma:
+        <reference|lemma 16.380.315>(1)]>>>|<cell|L<around*|(|<around*|(|x<rsup|p+1>h<rsup|0>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|p+1>h<rsup|0>|)><rsub|n+1>|)><eq-number><label|eq
+        16.575.315>>>>>
+      </eqnarray*>
+
+      Define
+
+      <\equation*>
+        v=<around*|(|v<rsub|1>,\<ldots\>,v<rsub|n+1>|)><text| by
+        >v<rsub|i>=<choice|<tformat|<table|<row|<cell|h<text| if
+        >i=1>>|<row|<cell|<around*|(|x<rsup|n>h<rsup|0>|)><rsub|i-1><text| if
+        >i\<in\><around*|{|2,\<ldots\>,n+1|}>>>>>>
+      </equation*>
+
+      then by [lemma: <reference|lemma 16.380.315>(2)] there exist a
+      <math|\<sigma\>\<in\>P<rsub|n+1>> so that\ 
+
+      <\equation*>
+        <around*|(|v<rsub|\<sigma\><around*|(|1|)>>,\<ldots\>,v<rsub|\<sigma\><around*|(|n+1|)>>|)>=x<rsup|n>h<rsup|1>=x<rsup|<around*|(|n+1|)>-1>h<rsup|1>
+      </equation*>
+
+      hence\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|L<around*|(|h|)><around*|(|<around*|(|x<rsup|n>h<rsup|0>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|n>h<rsup|0>|)><rsub|n>|)>>|<cell|=>|<cell|L<around*|(|v<rsub|1>|)><around*|(|v<rsub|2>:\<ldots\>:v<rsub|n+1>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|v<rsub|1>:\<ldots\>:v<rsub|n+1>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|v<rsub|\<sigma\><around*|(|1|)>>:\<ldots\>:v<rsub|\<sigma\><around*|(|n+1|)>>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|<around*|(|x<rsup|<around*|(|n+1|)>-1>h<rsup|1>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|<around*|(|n+1|)>-1>h<rsup|1>|)><rsub|n+1>|)><eq-number><label|eq
+        16.576.315>>>>>
+      </eqnarray*>
+
+      Define\ 
+
+      <\equation*>
+        w=<around*|(|w<rsub|1>,\<ldots\>,w<rsub|n>|)><text| by
+        >w<rsub|i>=<choice|<tformat|<table|<row|<cell|x<text| if
+        >i=1>>|<row|<cell|<around*|(|x<rsup|n-1>h<rsup|1>|)><rsub|i-1><text|
+        if >i\<in\><around*|{|2,\<ldots\>,n+1|}>>>>>>
+      </equation*>
+
+      then we have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|L<around*|(|x|)><around*|(|<around*|(|x<rsup|n-1>h<rsup|1>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|n-1>h<rsup|1>|)>|)>>|<cell|=>|<cell|>>|<row|<cell|L<around*|(|w<rsub|1>:\<ldots\>:w<rsub|n+1>|)>>|<cell|<below|=|<text|[lemma:
+        <reference|lemma 16.380.315>(1)]>>>|<cell|>>|<row|<cell|L<around*|(|<around*|(|x<rsup|n>h<rsup|1>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|n>h<rsup|1>|)><rsub|n+1>|)>>|<cell|=>|<cell|>>|<row|<cell|L<around*|(|<around*|(|x<rsup|<around*|(|n+1|)>-1>h<rsup|1>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|<around*|(|n+1|)>-1>h<rsup|1>|)><rsub|n+1>|)>>|<cell|>|<cell|<eq-number><label|eq
+        16.577.315>>>>>
+      </eqnarray*>
+
+      Define\ 
+
+      <\equation*>
+        y=<around*|(|y<rsub|1>,\<ldots\>,y<rsub|n+1>|)><text| by
+        >y<rsub|i>=<choice|<tformat|<table|<row|<cell|h<text| if
+        >i=1>>|<row|<cell|<around*|(|x<rsup|n-1>h<rsup|1>|)><rsub|i-1><text|
+        if >i\<in\><around*|{|2,\<ldots\>,n+1|}>>>>>>
+      </equation*>
+
+      then by [lemma: <reference|lemma 16.380.315>] there exist a
+      <math|\<tau\>\<in\>P<rsub|n+1>> such that
+
+      <\equation*>
+        <around*|(|y<rsub|\<tau\><around*|(|1|)>>,\<ldots\>,y<rsub|\<tau\><around*|(|n+1|)>>|)>=x<rsup|n-1>h<rsup|2>
+      </equation*>
+
+      Then
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|L<around*|(|h|)><around*|(|<around*|(|x<rsup|n-1>h<rsup|1>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|n-1>h<rsup|1>|)><rsub|n>|)>>|<cell|=>|<cell|L<around*|(|y<rsub|1>|)><around*|(|y<rsub|2>:\<ldots\>:y<rsub|n+1>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|y<rsub|1>:\<ldots\>:y<rsub|n+1>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|y<rsub|\<tau\><around*|(|1|)>>:\<ldots\>:y<rsub|\<tau\><around*|(|n+1|)>>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|<around*|(|x<rsup|n-1>h<rsup|2>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|n-1>h<rsup|2>|)><rsub|n+1>|)><eq-number><label|eq
+        16.578.315>>>>>
+      </eqnarray*>
+
+      Let <math|i\<in\><around*|{|1,\<ldots\>,k|}>> and define\ 
+
+      <\equation*>
+        r<rsup|i>=<around*|(|r<rsup|i><rsub|1>,\<ldots\>,r<rsup|i><rsub|n+1>|)><text|
+        by >r<rsup|i><rsub|j>=<choice|<tformat|<table|<row|<cell|x<text| if
+        >i=1>>|<row|<cell|<around*|(|x<rsup|p<rsub|i>>h<rsup|q<rsub|i>>|)><rsub|i-1><text|
+        if >i\<in\><around*|{|2,\<ldots\>,n+1|}>>>>>>
+      </equation*>
+
+      then we have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|L<around*|(|x|)><around*|(|<around*|(|<around*|(|x<rsup|p<rsub|i>>y<rsup|q<rsub|i>>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|p<rsub|i>>y<rsup|q<rsub|i>>|)><rsub|n>|)>|)>>|<cell|=>|<cell|L<around*|(|r<rsup|i><rsub|1>|)><around*|(|r<rsup|i><rsub|2>:\<ldots\>:r<rsup|i><rsub|n+1>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|r<rsup|i><rsub|1>:\<ldots\>:r<rsup|i><rsub|n+1>|)>>>|<row|<cell|>|<cell|<below|=|<text|[lemma:<reference|lemma
+        16.380.315>(1)]>>>|<cell|L<around*|(|<around*|(|x<rsup|p<rsub|i>+1>h<rsup|q<rsub|i>>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|p<rsub|i>+1>h<rsup|q<rsub|i>>|)><rsub|n+1>|)><eq-number><label|eq
+        16.579.315>>>>>
+      </eqnarray*>
+
+      Define
+
+      <\equation*>
+        z<rsup|i>=<around*|(|z<rsup|i><rsub|1>,\<ldots\>,z<rsup|i><rsub|n+1>|)><text|
+        by >z<rsup|i><rsub|j>=<choice|<tformat|<table|<row|<cell|h<text| if
+        >i=1>>|<row|<cell|<around*|(|x<rsup|p<rsub|i>>h<rsup|q<rsub|i>>|)><rsub|i-1><text|
+        if >i\<in\><around*|{|2,\<ldots\>,n+1|}>>>>>>
+      </equation*>
+
+      By [lemma:<reference|lemma 16.380.315>] there exist a
+      <math|\<rho\>\<in\>P<rsub|n+1>> such that\ 
+
+      <\equation*>
+        <around*|(|z<rsup|i><rsub|\<rho\><around*|(|1|)>>,\<ldots\>,z<rsup|i><rsub|\<rho\><around*|(|n+1|)>>|)>=<around*|(|<around*|(|x<rsup|p<rsub|i>>h<rsup|q<rsub|i>+1>|)><rsub|1>,\<ldots\>,<around*|(|x<rsup|p<rsub|i>>h<rsup|q<rsub|i>+1>|)><rsub|n+1>|)>
+      </equation*>
+
+      hence\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|L<around*|(|h|)><around*|(|<around*|(|x<rsup|p<rsub|i>>h<rsup|q<rsub|i>>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|p<rsub|i>>h<rsup|q<rsub|i>>|)><rsub|n+1>|)>>|<cell|=>|<cell|L<around*|(|z<rsup|i><rsub|1>|)><around*|(|z<rsup|i><rsub|2>:\<ldots\>:z<rsup|i><rsub|n+1>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|z<rsup|i><rsub|1>:\<ldots\>:z<rsup|i><rsub|n+1>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|z<rsup|i><rsub|\<rho\><around*|(|1|)>>:\<ldots\>:z<rsup|i><rsub|\<rho\><around*|(|n+1|)>>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|<around*|(|x<rsup|p<rsub|i>>h<rsup|q<rsub|i>+1>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|p<rsub|i>>h<rsup|q<rsub|i>+1>|)><rsub|n+1>|)><eq-number><label|eq
+        16.580.315>>>>>
+      </eqnarray*>
+
+      Now
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|T<rsub|1>>|<cell|=>|<cell|L<around*|(|x+h|)><around*|(|<around*|(|x<rsup|n>h<rsup|0>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|n>h<rsup|0>|)><rsub|n>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|x|)><around*|(|<around*|(|x<rsup|n>h<rsup|0>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|n>h<rsup|0>|)><rsub|n>|)>+L<around*|(|h|)><around*|(|<around*|(|x<rsup|n>h<rsup|0>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|n>h<rsup|0>|)><rsub|n>|)>>>|<row|<cell|>|<cell|=>|<cell|T<rsub|1,1>+T<rsub|1,2>>>>>
+      </eqnarray*>
+
+      where by [eqs: <reference|eq 16.575.315>, <reference|eq 16.576.315>]\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|T<rsub|1,1>>|<cell|=>|<cell|L<around*|(|<around*|(|x<rsup|p+1>h<rsup|0>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|p+1>h<rsup|0>|)><rsub|\|n+1>|)>>>|<row|<cell|T<rsub|1,2>>|<cell|=>|<cell|L<around*|(|<around*|(|x<rsup|<around*|(|n+1|)>-1>h<rsup|1>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|<around*|(|n+1|)>-1>h<rsup|1>|)><rsub|n+1>|)>>>>>
+      </eqnarray*>
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|T<rsub|2>>|<cell|=>|<cell|n\<cdot\>L<around*|(|x+h|)><around*|(|<around*|(|x<rsup|n-1>h<rsup|1>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|n-1>h<rsup|1>|)><rsub|n>|)>>>|<row|<cell|>|<cell|=>|<cell|n\<cdot\>L<around*|(|x|)><around*|(|<around*|(|x<rsup|n-1>h<rsup|1>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|n-1>h<rsup|1>|)><rsub|n>|)>+n\<cdot\>L<around*|(|h|)><around*|(|<around*|(|x<rsup|n-1>h<rsup|1>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|n-1>h<rsup|1>|)><rsub|n>|)>>>|<row|<cell|>|<cell|=>|<cell|T<rsub|2,1>+T<rsub|2,2>>>>>
+      </eqnarray*>
+
+      where by [eqs: <reference|eq 16.577.315>, <reference|eq 16.578.315>] we
+      have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|T<rsub|2,1>>|<cell|=>|<cell|n\<cdot\>L<around*|(|<around*|(|x<rsup|<around*|(|n+1|)>-1>h<rsup|1>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|<around*|(|n+1|)>-1>h<rsup|1>|)><rsub|n+1>|)>>>|<row|<cell|T<rsub|2,2>>|<cell|=>|<cell|n\<cdot\>L<around*|(|<around*|(|x<rsup|n-1>h<rsup|2>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|n-1>h<rsup|2>|)><rsub|n+1>|)>>>>>
+      </eqnarray*>
+
+      Further\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|T<rsub|3>>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>L<around*|(|x+h|)><around*|(|<around*|(|x<rsup|p<rsub|i>>y<rsup|q<rsub|i>>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|p<rsub|i>>y<rsup|q<rsub|i>>|)><rsub|n>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>L<around*|(|x|)><around*|(|<around*|(|x<rsup|p<rsub|i>>y<rsup|q<rsub|i>>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|p<rsub|i>>y<rsup|q<rsub|i>>|)><rsub|n>|)>+<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>L<around*|(|h|)><around*|(|<around*|(|x<rsup|p<rsub|i>>y<rsup|q<rsub|i>>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|p<rsub|i>>y<rsup|q<rsub|i>>|)><rsub|n>|)>>>|<row|<cell|>|<cell|=>|<cell|T<rsub|3,1>+T<rsub|3,2>>>>>
+      </eqnarray*>
+
+      where by [eqs: <reference|eq 16.579.315>, <reference|eq 16.580.315>]\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|T<rsub|3,1>>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>L<around*|(|<around*|(|x<rsup|p<rsub|i>+1>h<rsup|q<rsub|i>>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|p<rsub|i>+1>h<rsup|q<rsub|i>>|)><rsub|n+1>|)>>>|<row|<cell|T<rsub|3,2>>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>L<around*|(|<around*|(|x<rsup|p<rsub|i>>h<rsup|q<rsub|i>+1>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|p<rsub|i>>h<rsup|q<rsub|i>+1>|)><rsub|n+1>|)>>>>>
+      </eqnarray*>
+
+      Define now <math|<around*|{|<around*|(|P<rsub|i>,Q<rsub|i>|)>|}><rsub|i\<in\><around*|{|1,\<ldots\>,2\<cdot\>k+n|}>>>
+      by\ 
+
+      <\equation*>
+        <around*|(|P<rsub|i>,Q<rsub|i>|)>=<choice|<tformat|<table|<row|<cell|<around*|(|p<rsub|i>+1,q<rsub|i>|)><text|
+        if >i\<in\><around*|{|1,\<ldots\>,k|}>>>|<row|<cell|<around*|(|p<rsub|i-k>,q<rsub|i-k>+1|)><text|
+        if >i\<in\><around*|{|k+1,\<ldots\>,2\<cdot\>k|}>>>|<row|<cell|<around*|(|n-1,2|)><text|
+        if >i\<in\><around*|{|2\<cdot\>k+1,\<ldots\>,2\<cdot\>k+n|}>>>>>>
+      </equation*>
+
+      then we have <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,2\<cdot\>k+1|}>>
+      either:\ 
+
+      <\description>
+        <item*|<math|i\<in\><around*|{|1,\<ldots\>,k|}>>>Then
+        <math|><math|<around*|(|P<rsub|i>,Q<rsub|i>|)>=<around*|(|p<rsub|1>+1,q<rsub|i>|)>>
+        so that <math|2\<leqslant\>q<rsub|i>=Q<rsub|i><rsup|>> and
+        <rigid|<math|P<rsub|i>+Q<rsub|i>=p<rsub|i>+1+q<rsub|i>=n+1>>.
+
+        <item*|<math|i\<in\><around*|{|k+1,\<ldots\>,2\<cdot\>k|}>>>Then
+        <math|<around*|(|P<rsub|i>,Q<rsub|i>|)>=<around*|(|p<rsub|i-k>,q<rsub|i-k>+1|)>>
+        so that <math|2\<leqslant\>q<rsub|i-k>\<leqslant\>q<rsub|i-k>+1=Q<rsub|i>>
+        and <math|P<rsub|i>+Q<rsub|i>=p<rsub|i-k>+q<rsub|i-k>+1=n+1>.
+
+        <item*|<math|i\<in\><around*|{|2\<cdot\>k+1,\<ldots\>,2\<cdot\>k+n|}>>>Then
+        <math|<around*|(|P<rsub|i>,Q<rsub|i>|)>=<around*|(|n-1,2|)>> so that
+        <math|2\<leqslant\>Q<rsub|i>> and
+        <math|P<rsub|i>+Q<rsub|i>=n-1+2=n+1>.
+      </description>
+
+      so that\ 
+
+      <\equation>
+        <label|eq 16.581.315>\<forall\>i\<in\><around*|{|1,\<ldots\>,2\<cdot\>k+1|}><text|
+        we have >2\<leqslant\>Q<rsub|i>\<wedge\>P<rsub|i>+Q<rsub|i>=n+1
+      </equation>
+
+      Further
+
+      <\equation*>
+        <big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,2\<cdot\>k+n|}>>L<around*|(|<around*|(|x<rsup|Q<rsub|i>>h<rsup|P<rsub|i>>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|Q<rsub|i>>h<rsup|P<rsub|i>>|)><rsub|n+1>|)>=S<rsub|1>+S<rsub|2>+S<rsub|3>
+      </equation*>
+
+      where\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|S<rsub|1>>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>L<around*|(|<around*|(|x<rsup|Q<rsub|i>>h<rsup|P<rsub|i>>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|Q<rsub|i>>h<rsup|P<rsub|i>>|)><rsub|n+1>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>L<around*|(|<around*|(|x<rsup|q<rsub|i>>h<rsup|p<rsub|i>+1>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|q<rsub|i>>h<rsup|p<rsub|i>+1>|)><rsub|n+1>|)>>>|<row|<cell|>|<cell|=>|<cell|T<rsub|3,1>>>|<row|<cell|S<rsub|2>>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|k+1,\<ldots\>,2\<cdot\>k|}>>L<around*|(|<around*|(|x<rsup|Q<rsub|i>>h<rsup|P<rsub|i>>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|Q<rsub|i>>h<rsup|P<rsub|i>>|)><rsub|n+1>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|k+1,\<ldots\>,2\<cdot\>k|}>>L<around*|(|<around*|(|x<rsup|p<rsub|i-k>>h<rsup|q<rsub|i-k>+1>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|p<rsub|i-k>>h<rsup|q<rsub|i-k>+1>|)><rsub|n+1>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>L<around*|(|<around*|(|x<rsup|p<rsub|i>>h<rsup|q<rsub|i>+1>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|p<rsub|i>>h<rsup|q<rsub|i>+1>|)><rsub|n+1>|)>>>|<row|<cell|>|<cell|=>|<cell|T<rsub|3,2>>>|<row|<cell|S<rsub|3>>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|2\<cdot\>k+1,\<ldots\>,2\<cdot\>k+n|}>>L<around*|(|<around*|(|x<rsup|Q<rsub|i>>h<rsup|P<rsub|i>>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|Q<rsub|i>>h<rsup|P<rsub|i>>|)><rsub|n+1>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|2\<cdot\>k+1,\<ldots\>,2\<cdot\>k+n|}>>L<around*|(|<around*|(|x<rsup|n-1>h<rsup|2>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|n-1>h<rsup|2>|)><rsub|n+1>|)>>>|<row|<cell|>|<cell|=>|<cell|n\<cdot\>L<around*|(|<around*|(|x<rsup|n-1>h<rsup|2>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|n-1>h<rsup|2>|)><rsub|n+1>|)>>>|<row|<cell|>|<cell|=>|<cell|T<rsub|2,2>>>>>
+      </eqnarray*>
+
+      Hence\ 
+
+      <\equation>
+        <label|eq 16.569.318>T<rsub|2,2>+T<rsub|3,1>+T<rsub|3,2>=<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,2\<cdot\>k+n|}>>L<around*|(|<around*|(|x<rsup|Q<rsub|i>>h<rsup|P<rsub|i>>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|Q<rsub|i>>h<rsup|P<rsub|i>>|)><rsub|n+1>|)>
+      </equation>
+
+      So
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|L<around*|(|<wide*|x+h:\<ldots\>:x+h|\<wide-underbrace\>><rsub|n+1>|)>>|<cell|=>|<cell|L<around*|(|x+h|)><around*|(|<wide*|x+h:\<ldots\>:x+h|\<wide-underbrace\>><rsub|n>|)>>>|<row|<cell|>|<cell|=>|<cell|T<rsub|1>+T<rsub|2>+T<rsub|3>>>|<row|<cell|>|<cell|=>|<cell|T<rsub|1,1>+T<rsub|1,2>+T<rsub|2,1>+T<rsub|2,2>+T<rsub|3,1>+T<rsub|3,2>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|<around*|(|x<rsup|p+1>h<rsup|0>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|p+1>h<rsup|0>|)><rsub|\|n+1>|)>+>>|<row|<cell|>|<cell|>|<cell|L<around*|(|<around*|(|x<rsup|<around*|(|n+1|)>-1>h<rsup|1>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|<around*|(|n+1|)>-1>h<rsup|1>|)><rsub|n+1>|)>+>>|<row|<cell|>|<cell|>|<cell|n\<cdot\>L<around*|(|<around*|(|x<rsup|<around*|(|n+1|)>-1>h<rsup|1>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|<around*|(|n+1|)>-1>h<rsup|1>|)><rsub|n+1>|)>+>>|<row|<cell|>|<cell|>|<cell|T<rsub|2,2>+T<rsub|3,1>+T<rsub|3,2>>>|<row|<cell|>|<cell|<below|=|<text|[eq:
+        <reference|eq 16.569.318>]>>>|<cell|L<around*|(|<around*|(|x<rsup|p+1>h<rsup|0>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|p+1>h<rsup|0>|)><rsub|n+1>|)>+>>|<row|<cell|>|<cell|>|<cell|L<around*|(|<around*|(|x<rsup|<around*|(|n+1|)>-1>h<rsup|1>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|<around*|(|n+1|)>-1>h<rsup|1>|)><rsub|n+1>|)>+>>|<row|<cell|>|<cell|>|<cell|n\<cdot\>L<around*|(|<around*|(|x<rsup|<around*|(|n+1|)>-1>h<rsup|1>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|<around*|(|n+1|)>-1>h<rsup|1>|)><rsub|n+1>|)>+>>|<row|<cell|>|<cell|>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,2\<cdot\>k+n|}>>L<around*|(|<around*|(|x<rsup|Q<rsub|i>>h<rsup|P<rsub|i>>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|Q<rsub|i>>h<rsup|P<rsub|i>>|)><rsub|n+1>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|<around*|(|x<rsup|p+1>h<rsup|0>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|p+1>h<rsup|0>|)>|)>+>>|<row|<cell|>|<cell|>|<cell|<around*|(|n+1|)>\<cdot\>L<around*|(|<around*|(|x<rsup|<around*|(|n+1|)>-1>h<rsup|1>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|<around*|(|n+1|)>-1>h<rsup|1>|)><rsub|n+1>|)>+>>|<row|<cell|>|<cell|>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,2\<cdot\>k+n|}>>L<around*|(|<around*|(|x<rsup|Q<rsub|i>>h<rsup|P<rsub|i>>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|Q<rsub|i>>h<rsup|P<rsub|i>>|)><rsub|n+1>|)>>>>>
+      </eqnarray*>
+
+      Hence\ 
+
+      <\equation*>
+        L<around*|(|<wide*|x+h:\<ldots\>:x+h|\<wide-underbrace\>><rsub|n+1>|)>=K<rsub|1>+K<rsub|2>+K<rsub|3>
+      </equation*>
+
+      where
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|K<rsub|1>>|<cell|=>|<cell|L<around*|(|<around*|(|x<rsup|p+1>h<rsup|0>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|p+1>h<rsup|0>|)><rsub|n+1>|)>>>|<row|<cell|K<rsub|2>>|<cell|=>|<cell|<around*|(|n+1|)>\<cdot\>L<around*|(|<around*|(|x<rsup|<around*|(|n+1|)>-1>h<rsup|1>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|<around*|(|n+1|)>-1>h<rsup|1>|)><rsub|n+1>|)>+>>|<row|<cell|K<rsub|3>>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,2\<cdot\>k+n|}>>L<around*|(|<around*|(|x<rsup|Q<rsub|i>>h<rsup|P<rsub|i>>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|Q<rsub|i>>h<rsup|P<rsub|i>>|)><rsub|n+1>|)>>>>>
+      </eqnarray*>
+
+      This together with [eq: <reference|eq 16.581.315>] proves that\ 
+
+      <\equation*>
+        n+1\<in\>S
+      </equation*>
+    </description>
+  </proof>
 
   \;
 </body>
@@ -27712,13 +28558,13 @@
     <associate|auto-72|<tuple|16.7|?>>
     <associate|auto-8|<tuple|16.1.3|?>>
     <associate|auto-9|<tuple|differentiability|?>>
-    <associate|conjecture 16.245.136|<tuple|16.333|?>>
-    <associate|conjecture 16.246.136|<tuple|16.334|?>>
-    <associate|conjecture 16.247.136|<tuple|16.335|?>>
-    <associate|conjecture 16.248.136|<tuple|16.336|?>>
-    <associate|conjecture 16.252|<tuple|16.338|?>>
+    <associate|conjecture 16.245.136|<tuple|16.334|?>>
+    <associate|conjecture 16.246.136|<tuple|16.335|?>>
+    <associate|conjecture 16.247.136|<tuple|16.336|?>>
+    <associate|conjecture 16.248.136|<tuple|16.337|?>>
+    <associate|conjecture 16.252|<tuple|16.339|?>>
     <associate|continuity limit of composition of linear
-    maps|<tuple|16.312|?>>
+    maps|<tuple|16.313|?>>
     <associate|convergence of a function to a point|<tuple|16.3|?>>
     <associate|corollary 16.50.192|<tuple|16.110|?>>
     <associate|diff (f+g)'=f'+g'|<tuple|16.40|?>>
@@ -27732,22 +28578,22 @@
     <associate|diff Frechet approximation|<tuple|16.43|?>>
     <associate|diff Frechet differentation implies partial differentiability
     |<tuple|16.81|?>>
-    <associate|diff GL(X) is a group|<tuple|16.311|?>>
-    <associate|diff H^n properties|<tuple|16.315|?>>
+    <associate|diff GL(X) is a group|<tuple|16.312|?>>
+    <associate|diff H^n properties|<tuple|16.316|?>>
     <associate|diff I+H has inverse if norm of H is less then
-    1|<tuple|16.319|?>>
+    1|<tuple|16.320|?>>
     <associate|diff Jacobian matrix|<tuple|16.100|?>>
-    <associate|diff L(x1:..:xn) (1)|<tuple|16.245|?>>
+    <associate|diff L(x1:..:xn) (1)|<tuple|16.246|?>>
     <associate|diff L(x1:..xn)|<tuple|16.111|?>>
     <associate|diff L(x1:..xn)=L(1:..:1). product|<tuple|16.115|?>>
     <associate|diff L_n(X;Y)|<tuple|16.107|?>>
-    <associate|diff L_n(x1,..,xn;Y)|<tuple|16.240|?>>
+    <associate|diff L_n(x1,..,xn;Y)|<tuple|16.241|?>>
     <associate|diff Lagrange theorem|<tuple|16.201|?>>
     <associate|diff Lagrange theorem (1)|<tuple|16.203|?>>
     <associate|diff Rolle's theorem|<tuple|16.199|?>>
-    <associate|diff Taylor I|<tuple|16.344|?>>
-    <associate|diff Taylor I.1|<tuple|16.346|?>>
-    <associate|diff Taylor I.2|<tuple|16.349|?>>
+    <associate|diff Taylor I|<tuple|16.345|?>>
+    <associate|diff Taylor I.1|<tuple|16.347|?>>
+    <associate|diff Taylor I.2|<tuple|16.350|?>>
     <associate|diff Ux|<tuple|16.13|?>>
     <associate|diff Ux is open if U is open|<tuple|16.16|?>>
     <associate|diff Ux=-x+U=U-x|<tuple|16.15|?>>
@@ -27765,13 +28611,13 @@
     <associate|diff chain rule higher order class|<tuple|16.192|?>>
     <associate|diff class C^@@|<tuple|16.152|?>>
     <associate|diff class C^m is equivalent with continuous partial
-    differentials|<tuple|16.285|?>>
+    differentials|<tuple|16.286|?>>
     <associate|diff class C^n|<tuple|16.148|?>>
     <associate|diff class C^n (1)|<tuple|16.153|?>>
     <associate|diff class C^n (2)|<tuple|16.154|?>>
     <associate|diff class C^n (domain)|<tuple|16.149|?>>
     <associate|diff class C^n is equivalent with continuous
-    derivatives|<tuple|16.299|?>>
+    derivatives|<tuple|16.300|?>>
     <associate|diff class C^n sub-sets|<tuple|16.146|?>>
     <associate|diff composition with a linear mapping|<tuple|16.68|?>>
     <associate|diff constant function and partial
@@ -27780,9 +28626,9 @@
     <associate|diff constant function is infinitely times
     differentiable|<tuple|16.174|?>>
     <associate|diff continuous partial differentials implies
-    differentiability|<tuple|16.276|?>>
+    differentiability|<tuple|16.277|?>>
     <associate|diff continuous partial differentials implies
-    differentiability (1)|<tuple|16.284|?>>
+    differentiability (1)|<tuple|16.285|?>>
     <associate|diff convex concave|<tuple|16.206|?>>
     <associate|diff convex set|<tuple|16.214|?>>
     <associate|diff convex/concave alternative|<tuple|16.207|?>>
@@ -27801,11 +28647,11 @@
     <associate|diff derivative on a open set|<tuple|16.28|?>>
     <associate|diff derivative on a open set (2)|<tuple|16.39|?>>
     <associate|diff derivatives and continuity|<tuple|16.33|?>>
-    <associate|diff diffeomorphism|<tuple|16.321|?>>
-    <associate|diff diffeomorphism D(f@f^-1)|<tuple|16.327|?>>
-    <associate|diff diffeomorphism composition|<tuple|16.328|?>>
-    <associate|diff diffeomorphism identity|<tuple|16.325|?>>
-    <associate|diff diffeomorphism inverse|<tuple|16.322|?>>
+    <associate|diff diffeomorphism|<tuple|16.322|?>>
+    <associate|diff diffeomorphism D(f@f^-1)|<tuple|16.328|?>>
+    <associate|diff diffeomorphism composition|<tuple|16.329|?>>
+    <associate|diff diffeomorphism identity|<tuple|16.326|?>>
+    <associate|diff diffeomorphism inverse|<tuple|16.323|?>>
     <associate|diff differentiability|<tuple|16.46|?>>
     <associate|diff differentiability alternative
     definitions|<tuple|16.60|?>>
@@ -27821,21 +28667,21 @@
     <associate|diff differential of product of functions|<tuple|16.102|?>>
     <associate|diff e-mapping|<tuple|16.59|?>>
     <associate|diff equivalent norms|<tuple|16.55|?>>
-    <associate|diff evaluation operator|<tuple|16.230|?>>
+    <associate|diff evaluation operator|<tuple|16.231|?>>
     <associate|diff f(t)=a.x+y is infinite differentiable|<tuple|16.177|?>>
     <associate|diff fundamental theorem of calculus (1)|<tuple|16.209|?>>
     <associate|diff fundamental theorem of calculus (2)|<tuple|16.210|?>>
     <associate|diff higher order continuous differential and higher order
-    continuous derivate|<tuple|16.298|?>>
+    continuous derivate|<tuple|16.299|?>>
     <associate|diff higher order derivate and differential|<tuple|16.166|?>>
-    <associate|diff higher order derivates|<tuple|16.286|?>>
+    <associate|diff higher order derivates|<tuple|16.287|?>>
     <associate|diff higher order derivative at a point|<tuple|16.161|?>>
     <associate|diff higher order derivative at a point (1)|<tuple|16.163|?>>
     <associate|diff higher order derivative function|<tuple|16.159|?>>
     <associate|diff higher order derivative function domain|<tuple|16.160|?>>
     <associate|diff higher order derivative on a set|<tuple|16.162|?>>
     <associate|diff higher order differation implies higher order partial
-    differation|<tuple|16.266|?>>
+    differation|<tuple|16.267|?>>
     <associate|diff higher order differential|<tuple|16.126|?>>
     <associate|diff higher order differential domains|<tuple|16.132|?>>
     <associate|diff higher order differential is linear|<tuple|16.173|?>>
@@ -27843,7 +28689,7 @@
     <associate|diff higher order differential of a product
     (1)|<tuple|16.195|?>>
     <associate|diff higher order differentials are symmetric in there
-    arguments|<tuple|16.238|?>>
+    arguments|<tuple|16.239|?>>
     <associate|diff higher order differentiation|<tuple|16.133|?>>
     <associate|diff higher order differentiation (1)|<tuple|16.137|?>>
     <associate|diff higher order differentiation (2)|<tuple|16.130|?>>
@@ -27853,9 +28699,9 @@
     functions|<tuple|16.187|?>>
     <associate|diff higher order differentiation classes|<tuple|16.188|?>>
     <associate|diff higher order differentiation implies higher order
-    derivates|<tuple|16.302|?>>
+    derivates|<tuple|16.303|?>>
     <associate|diff higher order differentiation implies higher order partial
-    differation (1)|<tuple|16.267|?>>
+    differation (1)|<tuple|16.268|?>>
     <associate|diff higher order differentiation is local|<tuple|16.142|?>>
     <associate|diff higher order differentiation is local
     (1)|<tuple|16.144|?>>
@@ -27863,52 +28709,53 @@
     (2)|<tuple|16.145|?>>
     <associate|diff higher order differentiation on a open
     set|<tuple|16.138|?>>
-    <associate|diff higher order partial derivative (1)|<tuple|16.288|?>>
-    <associate|diff higher order partial derivative (2)|<tuple|16.289|?>>
-    <associate|diff higher order partial derivative (3)|<tuple|16.290|?>>
-    <associate|diff higher order partial derivative (4)|<tuple|16.291|?>>
+    <associate|diff higher order partial derivative (1)|<tuple|16.289|?>>
+    <associate|diff higher order partial derivative (2)|<tuple|16.290|?>>
+    <associate|diff higher order partial derivative (3)|<tuple|16.291|?>>
+    <associate|diff higher order partial derivative (4)|<tuple|16.292|?>>
     <associate|diff higher order partial derivative
-    (domains)|<tuple|16.287|?>>
-    <associate|diff higher order partial differentiation|<tuple|16.255|?>>
+    (domains)|<tuple|16.288|?>>
+    <associate|diff higher order partial differentiation|<tuple|16.256|?>>
     <associate|diff higher order partial differentiation
-    (1)|<tuple|16.257|?>>
+    (1)|<tuple|16.258|?>>
     <associate|diff higher order partial differentiation
-    (2)|<tuple|16.263|?>>
+    (2)|<tuple|16.264|?>>
     <associate|diff higher order partial differentiation
-    (domain)|<tuple|16.256|?>>
+    (domain)|<tuple|16.257|?>>
     <associate|diff higher order partial differentiation is
-    symmetric|<tuple|16.268|?>>
+    symmetric|<tuple|16.269|?>>
     <associate|diff higher order partial differentiation
-    n,m|<tuple|16.262|?>>
+    n,m|<tuple|16.263|?>>
     <associate|diff higher order partial differentiation on open
-    domain|<tuple|16.260|?>>
+    domain|<tuple|16.261|?>>
     <associate|diff higher order partial differentiation on open
-    set|<tuple|16.259|?>>
+    set|<tuple|16.260|?>>
     <associate|diff homeomorphism is a diffeomorphism of class
-    C^0|<tuple|16.323|?>>
+    C^0|<tuple|16.324|?>>
     <associate|diff identity function is differentiable|<tuple|16.52|?>>
     <associate|diff identity function is infinite times
     differentiable|<tuple|16.176|?>>
-    <associate|diff implicit function theorem|<tuple|16.342|?>>
-    <associate|diff implicit function theorem (1)|<tuple|16.343|?>>
+    <associate|diff implicit function theorem|<tuple|16.343|?>>
+    <associate|diff implicit function theorem (1)|<tuple|16.344|?>>
     <associate|diff increasing decreasing function|<tuple|16.205|?>>
     <associate|diff inifint=ite differentiable|<tuple|16.136|?>>
     <associate|diff integration by part|<tuple|16.211|?>>
-    <associate|diff inverse function theorem|<tuple|16.330|?>>
-    <associate|diff inverse function theorem and Jacobian|<tuple|16.339|?>>
-    <associate|diff inverse mapping on GL(X)|<tuple|16.320|?>>
+    <associate|diff inverse function theorem|<tuple|16.331|?>>
+    <associate|diff inverse function theorem and Jacobian|<tuple|16.340|?>>
+    <associate|diff inverse mapping on GL(X)|<tuple|16.321|?>>
     <associate|diff limit of a function|<tuple|16.11|?>>
     <associate|diff line segment [0,1]|<tuple|16.220|?>>
     <associate|diff linear isomorphism between Banach spaces are
-    diffeomorphisms|<tuple|16.324|?>>
+    diffeomorphisms|<tuple|16.325|?>>
     <associate|diff linear mapping is infinite times
     differentiable|<tuple|16.175|?>>
     <associate|diff linear mappings are differentiable|<tuple|16.54|?>>
     <associate|diff linear to multilinear|<tuple|16.123|?>>
-    <associate|diff linear to multilinear (1)|<tuple|16.253|?>>
+    <associate|diff linear to multilinear (1)|<tuple|16.254|?>>
     <associate|diff linesegement|<tuple|16.218|?>>
-    <associate|diff little o|<tuple|16.348|?>>
-    <associate|diff local diffeomorphism|<tuple|16.329|?>>
+    <associate|diff little o|<tuple|16.349|?>>
+    <associate|diff little o and limits|<tuple|16.351|?>>
+    <associate|diff local diffeomorphism|<tuple|16.330|?>>
     <associate|diff mean value theorem (0)|<tuple|16.216|?>>
     <associate|diff mean value theorem (1)|<tuple|16.213|?>>
     <associate|diff mean value theorem (2)|<tuple|16.216|?>>
@@ -27916,7 +28763,7 @@
     <associate|diff mean value theorem (3)|<tuple|16.223|?>>
     <associate|diff mean value theorem (3.1)|<tuple|16.224|?>>
     <associate|diff mean value theorem (4)|<tuple|16.225|?>>
-    <associate|diff mean value theorem (5)|<tuple|16.227|?>>
+    <associate|diff mean value theorem (5)|<tuple|16.228|?>>
     <associate|diff minimum maximum|<tuple|16.196|?>>
     <associate|diff n+m derivative|<tuple|16.171|?>>
     <associate|diff n+m derivative (1)|<tuple|16.172|?>>
@@ -27928,11 +28775,11 @@
     <associate|diff partial derivate and partial
     differential|<tuple|16.92|?>>
     <associate|diff partial derivate and partial differential of higher
-    order|<tuple|16.292|?>>
+    order|<tuple|16.293|?>>
     <associate|diff partial derivate and partial differential of higher order
-    (1)|<tuple|16.296|?>>
+    (1)|<tuple|16.297|?>>
     <associate|diff partial derivate and partial differential of higher order
-    (2)|<tuple|16.297|?>>
+    (2)|<tuple|16.298|?>>
     <associate|diff partial derivate definition|<tuple|16.86|?>>
     <associate|diff partial derivative on a set|<tuple|16.91|?>>
     <associate|diff partial differentiability does not mean
@@ -27943,16 +28790,16 @@
     <associate|diff partial differential properties|<tuple|16.84|?>>
     <associate|diff partial differentiation is local|<tuple|16.80|?>>
     <associate|diff power|<tuple|16.105|?>>
-    <associate|diff power of composition|<tuple|16.314|?>>
+    <associate|diff power of composition|<tuple|16.315|?>>
     <associate|diff projection functon is infinite times
     differentiable|<tuple|16.180|?>>
     <associate|diff restriction of a diffeomorphism is a
-    diffeomorphism|<tuple|16.326|?>>
+    diffeomorphism|<tuple|16.327|?>>
     <associate|diff scalar product function has a derivate|<tuple|16.32|?>>
     <associate|diff second derivate convex concave|<tuple|16.208|?>>
-    <associate|diff space of toplinear isomorphism|<tuple|16.310|?>>
+    <associate|diff space of toplinear isomorphism|<tuple|16.311|?>>
     <associate|diff toplinear isomorphism between Banach
-    spaces|<tuple|16.309|?>>
+    spaces|<tuple|16.310|?>>
     <associate|diff translation is infinite differentiable|<tuple|16.179|?>>
     <associate|diff unprojection|<tuple|16.69|?>>
     <associate|diff unprojection is infinite times
@@ -27961,7 +28808,7 @@
     <associate|diff vector functions (1)|<tuple|16.97|?>>
     <associate|diff vector functions (2)|<tuple|16.99|?>>
     <associate|diff vector functions and linearity|<tuple|16.96|?>>
-    <associate|eq 14.411.143|<tuple|16.534|?>>
+    <associate|eq 14.411.143|<tuple|16.535|?>>
     <associate|eq 16.1.177|<tuple|16.16|?>>
     <associate|eq 16.1.2|<tuple|16.1|?>>
     <associate|eq 16.10.178|<tuple|16.25|?>>
@@ -27996,18 +28843,18 @@
     <associate|eq 16.121.6|<tuple|16.75|?>>
     <associate|eq 16.122.11|<tuple|16.125|?>>
     <associate|eq 16.122.12|<tuple|16.134|?>>
-    <associate|eq 16.122.194|<tuple|16.283|?>>
+    <associate|eq 16.122.194|<tuple|16.284|?>>
     <associate|eq 16.123.11|<tuple|16.126|?>>
     <associate|eq 16.123.12|<tuple|16.135|?>>
-    <associate|eq 16.123.194|<tuple|16.284|?>>
+    <associate|eq 16.123.194|<tuple|16.285|?>>
     <associate|eq 16.123.195|<tuple|16.202|?>>
     <associate|eq 16.124.11|<tuple|16.127|?>>
     <associate|eq 16.124.12|<tuple|16.136|?>>
-    <associate|eq 16.124.194|<tuple|16.285|?>>
+    <associate|eq 16.124.194|<tuple|16.286|?>>
     <associate|eq 16.124.195|<tuple|16.203|?>>
     <associate|eq 16.125.11|<tuple|16.128|?>>
     <associate|eq 16.125.12|<tuple|16.137|?>>
-    <associate|eq 16.125.194|<tuple|16.286|?>>
+    <associate|eq 16.125.194|<tuple|16.287|?>>
     <associate|eq 16.125.195|<tuple|16.204|?>>
     <associate|eq 16.126.11|<tuple|16.129|?>>
     <associate|eq 16.126.195|<tuple|16.205|?>>
@@ -28072,7 +28919,7 @@
     <associate|eq 16.173.16|<tuple|16.181|?>>
     <associate|eq 16.174.16|<tuple|16.182|?>>
     <associate|eq 16.175.16|<tuple|16.183|?>>
-    <associate|eq 16.176.211|<tuple|16.246|?>>
+    <associate|eq 16.176.211|<tuple|16.247|?>>
     <associate|eq 16.177.16|<tuple|16.184|?>>
     <associate|eq 16.178.16|<tuple|16.185|?>>
     <associate|eq 16.179.16|<tuple|16.186|?>>
@@ -28106,76 +28953,78 @@
     <associate|eq 16.2.2|<tuple|16.2|?>>
     <associate|eq 16.20.178|<tuple|16.53|?>>
     <associate|eq 16.20.181|<tuple|16.64|?>>
-    <associate|eq 16.20317|<tuple|16.317|?>>
+    <associate|eq 16.20317|<tuple|16.318|?>>
     <associate|eq 16.21.5|<tuple|16.21|?>>
-    <associate|eq 16.212.203|<tuple|16.263|?>>
-    <associate|eq 16.213.203|<tuple|16.264|?>>
-    <associate|eq 16.214.203|<tuple|16.265|?>>
+    <associate|eq 16.212.203|<tuple|16.264|?>>
+    <associate|eq 16.213.203|<tuple|16.265|?>>
+    <associate|eq 16.214.203|<tuple|16.266|?>>
     <associate|eq 16.215.17|<tuple|16.223|?>>
-    <associate|eq 16.215.203|<tuple|16.266|?>>
-    <associate|eq 16.216.203|<tuple|16.267|?>>
-    <associate|eq 16.217.203|<tuple|16.269|?>>
-    <associate|eq 16.217.204|<tuple|16.268|?>>
-    <associate|eq 16.218.203|<tuple|16.270|?>>
-    <associate|eq 16.219.203|<tuple|16.271|?>>
-    <associate|eq 16.220.203|<tuple|16.272|?>>
-    <associate|eq 16.221.203|<tuple|16.273|?>>
-    <associate|eq 16.223.204|<tuple|16.274|?>>
+    <associate|eq 16.215.203|<tuple|16.267|?>>
+    <associate|eq 16.216.203|<tuple|16.268|?>>
+    <associate|eq 16.217.203|<tuple|16.270|?>>
+    <associate|eq 16.217.204|<tuple|16.269|?>>
+    <associate|eq 16.218.203|<tuple|16.271|?>>
+    <associate|eq 16.219.203|<tuple|16.272|?>>
+    <associate|eq 16.220.203|<tuple|16.273|?>>
+    <associate|eq 16.221.203|<tuple|16.274|?>>
+    <associate|eq 16.223.204|<tuple|16.275|?>>
     <associate|eq 16.224.17|<tuple|16.232|?>>
-    <associate|eq 16.224.204|<tuple|16.275|?>>
+    <associate|eq 16.224.204|<tuple|16.276|?>>
     <associate|eq 16.225.17|<tuple|16.233|?>>
-    <associate|eq 16.225.204|<tuple|16.277|?>>
-    <associate|eq 16.225.205|<tuple|16.276|?>>
-    <associate|eq 16.226.141|<tuple|16.282|?>>
+    <associate|eq 16.225.204|<tuple|16.278|?>>
+    <associate|eq 16.225.205|<tuple|16.277|?>>
+    <associate|eq 16.226.141|<tuple|16.283|?>>
     <associate|eq 16.226.17|<tuple|16.234|?>>
-    <associate|eq 16.226.204|<tuple|16.278|?>>
+    <associate|eq 16.226.204|<tuple|16.279|?>>
     <associate|eq 16.227.17|<tuple|16.235|?>>
-    <associate|eq 16.227.204|<tuple|16.279|?>>
-    <associate|eq 16.228.204|<tuple|16.280|?>>
+    <associate|eq 16.227.204|<tuple|16.280|?>>
+    <associate|eq 16.227.23|<tuple|16.227|?>>
+    <associate|eq 16.228.204|<tuple|16.281|?>>
     <associate|eq 16.229.17|<tuple|16.237|?>>
     <associate|eq 16.23.178|<tuple|16.57|?>>
     <associate|eq 16.230.17|<tuple|16.238|?>>
-    <associate|eq 16.230.206|<tuple|16.281|?>>
+    <associate|eq 16.230.206|<tuple|16.282|?>>
     <associate|eq 16.231.17|<tuple|16.239|?>>
-    <associate|eq 16.232.141|<tuple|16.288|?>>
+    <associate|eq 16.232.141|<tuple|16.289|?>>
     <associate|eq 16.232.17|<tuple|16.240|?>>
     <associate|eq 16.233.17|<tuple|16.241|?>>
     <associate|eq 16.234.17|<tuple|16.242|?>>
     <associate|eq 16.235.17|<tuple|16.243|?>>
     <associate|eq 16.236.17|<tuple|16.244|?>>
-    <associate|eq 16.236.210|<tuple|16.287|?>>
+    <associate|eq 16.236.210|<tuple|16.288|?>>
     <associate|eq 16.237.17|<tuple|16.245|?>>
-    <associate|eq 16.237.210|<tuple|16.289|?>>
-    <associate|eq 16.238.210|<tuple|16.290|?>>
-    <associate|eq 16.239.141|<tuple|16.295|?>>
+    <associate|eq 16.237.210|<tuple|16.290|?>>
+    <associate|eq 16.238.210|<tuple|16.291|?>>
+    <associate|eq 16.239.141|<tuple|16.296|?>>
     <associate|eq 16.24.178|<tuple|16.58|?>>
     <associate|eq 16.242.310|<tuple|16.216|?>>
     <associate|eq 16.243.310|<tuple|16.217|?>>
     <associate|eq 16.244.310|<tuple|16.218|?>>
-    <associate|eq 16.245.210|<tuple|16.291|?>>
+    <associate|eq 16.245.210|<tuple|16.292|?>>
     <associate|eq 16.245.310|<tuple|16.221|?>>
     <associate|eq 16.245.310.1|<tuple|16.219|?>>
-    <associate|eq 16.246.210|<tuple|16.292|?>>
+    <associate|eq 16.246.210|<tuple|16.293|?>>
     <associate|eq 16.246.310|<tuple|16.222|?>>
     <associate|eq 16.246.310.1|<tuple|16.220|?>>
-    <associate|eq 16.247.210|<tuple|16.293|?>>
-    <associate|eq 16.248.210|<tuple|16.294|?>>
-    <associate|eq 16.249.210|<tuple|16.296|?>>
+    <associate|eq 16.247.210|<tuple|16.294|?>>
+    <associate|eq 16.248.210|<tuple|16.295|?>>
+    <associate|eq 16.249.210|<tuple|16.297|?>>
     <associate|eq 16.25.178|<tuple|16.59|?>>
     <associate|eq 16.25.4|<tuple|16.31|?>>
-    <associate|eq 16.250.210|<tuple|16.297|?>>
-    <associate|eq 16.251.210|<tuple|16.298|?>>
-    <associate|eq 16.252.210|<tuple|16.299|?>>
-    <associate|eq 16.253.210|<tuple|16.300|?>>
-    <associate|eq 16.254.210|<tuple|16.301|?>>
-    <associate|eq 16.255.210|<tuple|16.302|?>>
+    <associate|eq 16.250.210|<tuple|16.298|?>>
+    <associate|eq 16.250.23|<tuple|16.250|?>>
+    <associate|eq 16.251.210|<tuple|16.299|?>>
+    <associate|eq 16.252.210|<tuple|16.300|?>>
+    <associate|eq 16.253.210|<tuple|16.301|?>>
+    <associate|eq 16.254.210|<tuple|16.302|?>>
+    <associate|eq 16.255.210|<tuple|16.303|?>>
     <associate|eq 16.255.312|<tuple|16.229|?>>
-    <associate|eq 16.256.210|<tuple|16.303|?>>
+    <associate|eq 16.256.210|<tuple|16.304|?>>
     <associate|eq 16.256.312|<tuple|16.230|?>>
-    <associate|eq 16.257.210|<tuple|16.304|?>>
+    <associate|eq 16.257.210|<tuple|16.305|?>>
     <associate|eq 16.257.312|<tuple|16.231|?>>
-    <associate|eq 16.258.210|<tuple|16.305|?>>
-    <associate|eq 16.259.210|<tuple|16.306|?>>
+    <associate|eq 16.258.210|<tuple|16.306|?>>
+    <associate|eq 16.259.210|<tuple|16.307|?>>
     <associate|eq 16.26.4|<tuple|16.32|?>>
     <associate|eq 16.262.12|<tuple|16.210|?>>
     <associate|eq 16.263.12|<tuple|16.211|?>>
@@ -28183,304 +29032,304 @@
     <associate|eq 16.27.4|<tuple|16.33|?>>
     <associate|eq 16.272.12|<tuple|16.224|?>>
     <associate|eq 16.273.12|<tuple|16.225|?>>
-    <associate|eq 16.275.142|<tuple|16.347|?>>
-    <associate|eq 16.279.124|<tuple|16.307|?>>
+    <associate|eq 16.275.142|<tuple|16.348|?>>
+    <associate|eq 16.279.124|<tuple|16.308|?>>
     <associate|eq 16.28.4|<tuple|16.34|?>>
-    <associate|eq 16.280.124|<tuple|16.308|?>>
-    <associate|eq 16.281.124|<tuple|16.309|?>>
-    <associate|eq 16.282.124|<tuple|16.310|?>>
+    <associate|eq 16.280.124|<tuple|16.309|?>>
+    <associate|eq 16.281.124|<tuple|16.310|?>>
+    <associate|eq 16.282.124|<tuple|16.311|?>>
     <associate|eq 16.282.125|<tuple|<with|mode|<quote|math>|k\<in\><around*|{|i+1,\<ldots\>,n|}>>|?>>
-    <associate|eq 16.283.124|<tuple|16.311|?>>
-    <associate|eq 16.284.124|<tuple|16.312|?>>
-    <associate|eq 16.284.126|<tuple|16.348|?>>
-    <associate|eq 16.285.124|<tuple|16.313|?>>
-    <associate|eq 16.285.126|<tuple|16.349|?>>
-    <associate|eq 16.286.124|<tuple|16.314|?>>
-    <associate|eq 16.286.126|<tuple|16.350|?>>
-    <associate|eq 16.287.126|<tuple|16.352|?>>
-    <associate|eq 16.288.126|<tuple|16.353|?>>
-    <associate|eq 16.289.126|<tuple|16.354|?>>
+    <associate|eq 16.283.124|<tuple|16.312|?>>
+    <associate|eq 16.284.124|<tuple|16.313|?>>
+    <associate|eq 16.284.126|<tuple|16.349|?>>
+    <associate|eq 16.285.124|<tuple|16.314|?>>
+    <associate|eq 16.285.126|<tuple|16.350|?>>
+    <associate|eq 16.286.124|<tuple|16.315|?>>
+    <associate|eq 16.286.126|<tuple|16.351|?>>
+    <associate|eq 16.287.126|<tuple|16.353|?>>
+    <associate|eq 16.288.126|<tuple|16.354|?>>
+    <associate|eq 16.289.126|<tuple|16.355|?>>
     <associate|eq 16.29.4|<tuple|16.36|?>>
-    <associate|eq 16.290.126|<tuple|16.355|?>>
-    <associate|eq 16.291.126|<tuple|16.356|?>>
-    <associate|eq 16.292.126|<tuple|16.357|?>>
-    <associate|eq 16.292.17|<tuple|16.315|?>>
-    <associate|eq 16.293.126|<tuple|16.358|?>>
-    <associate|eq 16.293.128|<tuple|16.359|?>>
-    <associate|eq 16.293.18|<tuple|16.316|?>>
-    <associate|eq 16.294.17|<tuple|16.318|?>>
-    <associate|eq 16.295.128|<tuple|16.360|?>>
-    <associate|eq 16.295.17|<tuple|16.319|?>>
-    <associate|eq 16.296.17|<tuple|16.320|?>>
-    <associate|eq 16.297.126|<tuple|16.361|?>>
-    <associate|eq 16.297.17|<tuple|16.321|?>>
-    <associate|eq 16.298.126|<tuple|16.362|?>>
-    <associate|eq 16.298.17|<tuple|16.322|?>>
-    <associate|eq 16.299.126|<tuple|16.363|?>>
-    <associate|eq 16.299.17|<tuple|16.323|?>>
+    <associate|eq 16.290.126|<tuple|16.356|?>>
+    <associate|eq 16.291.126|<tuple|16.357|?>>
+    <associate|eq 16.292.126|<tuple|16.358|?>>
+    <associate|eq 16.292.17|<tuple|16.316|?>>
+    <associate|eq 16.293.126|<tuple|16.359|?>>
+    <associate|eq 16.293.128|<tuple|16.360|?>>
+    <associate|eq 16.293.18|<tuple|16.317|?>>
+    <associate|eq 16.294.17|<tuple|16.319|?>>
+    <associate|eq 16.295.128|<tuple|16.361|?>>
+    <associate|eq 16.295.17|<tuple|16.320|?>>
+    <associate|eq 16.296.17|<tuple|16.321|?>>
+    <associate|eq 16.297.126|<tuple|16.362|?>>
+    <associate|eq 16.297.17|<tuple|16.322|?>>
+    <associate|eq 16.298.126|<tuple|16.363|?>>
+    <associate|eq 16.298.17|<tuple|16.323|?>>
+    <associate|eq 16.299.126|<tuple|16.364|?>>
+    <associate|eq 16.299.17|<tuple|16.324|?>>
     <associate|eq 16.3.177|<tuple|16.19|?>>
     <associate|eq 16.3.2|<tuple|16.3|?>>
-    <associate|eq 16.300.126|<tuple|16.364|?>>
-    <associate|eq 16.300.127|<tuple|16.365|?>>
-    <associate|eq 16.300.142|<tuple|16.504|?>>
-    <associate|eq 16.300.17|<tuple|16.324|?>>
-    <associate|eq 16.301.127|<tuple|16.366|?>>
-    <associate|eq 16.301.144|<tuple|16.420|?>>
-    <associate|eq 16.301.144.1|<tuple|16.419|?>>
-    <associate|eq 16.302.144|<tuple|16.421|?>>
-    <associate|eq 16.302.18|<tuple|16.325|?>>
-    <associate|eq 16.303.144|<tuple|16.422|?>>
-    <associate|eq 16.303.18|<tuple|16.326|?>>
-    <associate|eq 16.304.18|<tuple|16.327|?>>
-    <associate|eq 16.305.144|<tuple|16.423|?>>
+    <associate|eq 16.300.126|<tuple|16.365|?>>
+    <associate|eq 16.300.127|<tuple|16.366|?>>
+    <associate|eq 16.300.142|<tuple|16.505|?>>
+    <associate|eq 16.300.17|<tuple|16.325|?>>
+    <associate|eq 16.301.127|<tuple|16.367|?>>
+    <associate|eq 16.301.144|<tuple|16.421|?>>
+    <associate|eq 16.301.144.1|<tuple|16.420|?>>
+    <associate|eq 16.302.144|<tuple|16.422|?>>
+    <associate|eq 16.302.18|<tuple|16.326|?>>
+    <associate|eq 16.303.144|<tuple|16.423|?>>
+    <associate|eq 16.303.18|<tuple|16.327|?>>
+    <associate|eq 16.304.18|<tuple|16.328|?>>
+    <associate|eq 16.305.144|<tuple|16.424|?>>
     <associate|eq 16.305.302|<tuple|16.248|?>>
     <associate|eq 16.306.302|<tuple|16.249|?>>
-    <associate|eq 16.307.18|<tuple|16.330|?>>
-    <associate|eq 16.307.302|<tuple|16.250|?>>
-    <associate|eq 16.308.127|<tuple|16.425|?>>
-    <associate|eq 16.308.128|<tuple|16.424|?>>
-    <associate|eq 16.308.18|<tuple|16.331|?>>
-    <associate|eq 16.308.302|<tuple|16.251|?>>
-    <associate|eq 16.309.127|<tuple|16.426|?>>
-    <associate|eq 16.309.302|<tuple|16.252|?>>
-    <associate|eq 16.310.127|<tuple|16.428|?>>
-    <associate|eq 16.310.128|<tuple|16.427|?>>
-    <associate|eq 16.310.302|<tuple|16.253|?>>
-    <associate|eq 16.311.127|<tuple|16.429|?>>
-    <associate|eq 16.311.302|<tuple|16.254|?>>
-    <associate|eq 16.312.127|<tuple|16.430|?>>
-    <associate|eq 16.312.301|<tuple|16.255|?>>
-    <associate|eq 16.313.302|<tuple|16.256|?>>
-    <associate|eq 16.314.128|<tuple|16.431|?>>
-    <associate|eq 16.314.302|<tuple|16.257|?>>
-    <associate|eq 16.315.128|<tuple|16.432|?>>
-    <associate|eq 16.315.302|<tuple|16.258|?>>
-    <associate|eq 16.316.302|<tuple|16.260|?>>
-    <associate|eq 16.316.303|<tuple|16.259|?>>
-    <associate|eq 16.317.128|<tuple|16.433|?>>
-    <associate|eq 16.317.19|<tuple|16.340|?>>
-    <associate|eq 16.317.302|<tuple|16.261|?>>
-    <associate|eq 16.318.128|<tuple|16.435|?>>
-    <associate|eq 16.318.129|<tuple|16.434|?>>
-    <associate|eq 16.318.302|<tuple|16.262|?>>
-    <associate|eq 16.319.128|<tuple|16.436|?>>
-    <associate|eq 16.319.129|<tuple|16.435|?>>
-    <associate|eq 16.320.128|<tuple|16.437|?>>
-    <associate|eq 16.321.128|<tuple|16.438|?>>
-    <associate|eq 16.322.128|<tuple|16.439|?>>
-    <associate|eq 16.325.129|<tuple|16.441|?>>
-    <associate|eq 16.325.131|<tuple|16.440|?>>
-    <associate|eq 16.327.130|<tuple|16.442|?>>
-    <associate|eq 16.327.134|<tuple|16.443|?>>
-    <associate|eq 16.329.131|<tuple|16.444|?>>
-    <associate|eq 16.329.133|<tuple|16.445|?>>
+    <associate|eq 16.307.18|<tuple|16.331|?>>
+    <associate|eq 16.307.302|<tuple|16.251|?>>
+    <associate|eq 16.308.127|<tuple|16.426|?>>
+    <associate|eq 16.308.128|<tuple|16.425|?>>
+    <associate|eq 16.308.18|<tuple|16.332|?>>
+    <associate|eq 16.308.302|<tuple|16.252|?>>
+    <associate|eq 16.309.127|<tuple|16.427|?>>
+    <associate|eq 16.309.302|<tuple|16.253|?>>
+    <associate|eq 16.310.127|<tuple|16.429|?>>
+    <associate|eq 16.310.128|<tuple|16.428|?>>
+    <associate|eq 16.310.302|<tuple|16.254|?>>
+    <associate|eq 16.311.127|<tuple|16.430|?>>
+    <associate|eq 16.311.302|<tuple|16.255|?>>
+    <associate|eq 16.312.127|<tuple|16.431|?>>
+    <associate|eq 16.312.301|<tuple|16.256|?>>
+    <associate|eq 16.313.302|<tuple|16.257|?>>
+    <associate|eq 16.314.128|<tuple|16.432|?>>
+    <associate|eq 16.314.302|<tuple|16.258|?>>
+    <associate|eq 16.315.128|<tuple|16.433|?>>
+    <associate|eq 16.315.302|<tuple|16.259|?>>
+    <associate|eq 16.316.302|<tuple|16.261|?>>
+    <associate|eq 16.316.303|<tuple|16.260|?>>
+    <associate|eq 16.317.128|<tuple|16.434|?>>
+    <associate|eq 16.317.19|<tuple|16.341|?>>
+    <associate|eq 16.317.302|<tuple|16.262|?>>
+    <associate|eq 16.318.128|<tuple|16.436|?>>
+    <associate|eq 16.318.129|<tuple|16.435|?>>
+    <associate|eq 16.318.302|<tuple|16.263|?>>
+    <associate|eq 16.319.128|<tuple|16.437|?>>
+    <associate|eq 16.319.129|<tuple|16.436|?>>
+    <associate|eq 16.320.128|<tuple|16.438|?>>
+    <associate|eq 16.321.128|<tuple|16.439|?>>
+    <associate|eq 16.322.128|<tuple|16.440|?>>
+    <associate|eq 16.325.129|<tuple|16.442|?>>
+    <associate|eq 16.325.131|<tuple|16.441|?>>
+    <associate|eq 16.327.130|<tuple|16.443|?>>
+    <associate|eq 16.327.134|<tuple|16.444|?>>
+    <associate|eq 16.329.131|<tuple|16.445|?>>
+    <associate|eq 16.329.133|<tuple|16.446|?>>
     <associate|eq 16.33.181|<tuple|16.65|?>>
-    <associate|eq 16.330.130|<tuple|16.446|?>>
-    <associate|eq 16.330.131|<tuple|16.447|?>>
-    <associate|eq 16.331.131|<tuple|16.448|?>>
-    <associate|eq 16.334.133|<tuple|16.449|?>>
-    <associate|eq 16.335.133|<tuple|16.450|?>>
-    <associate|eq 16.336.133|<tuple|16.452|?>>
-    <associate|eq 16.336.134|<tuple|16.451|?>>
-    <associate|eq 16.337.133|<tuple|16.453|?>>
-    <associate|eq 16.338.133|<tuple|16.454|?>>
+    <associate|eq 16.330.130|<tuple|16.447|?>>
+    <associate|eq 16.330.131|<tuple|16.448|?>>
+    <associate|eq 16.331.131|<tuple|16.449|?>>
+    <associate|eq 16.334.133|<tuple|16.450|?>>
+    <associate|eq 16.335.133|<tuple|16.451|?>>
+    <associate|eq 16.336.133|<tuple|16.453|?>>
+    <associate|eq 16.336.134|<tuple|16.452|?>>
+    <associate|eq 16.337.133|<tuple|16.454|?>>
+    <associate|eq 16.338.133|<tuple|16.455|?>>
     <associate|eq 16.34.181|<tuple|16.66|?>>
-    <associate|eq 16.340.133|<tuple|16.456|?>>
-    <associate|eq 16.340.134|<tuple|16.455|?>>
-    <associate|eq 16.341.133|<tuple|16.457|?>>
-    <associate|eq 16.342.133|<tuple|16.458|?>>
-    <associate|eq 16.343.133|<tuple|16.459|?>>
-    <associate|eq 16.344.133|<tuple|16.460|?>>
-    <associate|eq 16.346.134|<tuple|16.462|?>>
-    <associate|eq 16.346.134.1|<tuple|16.461|?>>
-    <associate|eq 16.346.18|<tuple|16.369|?>>
-    <associate|eq 16.347.134|<tuple|16.465|?>>
-    <associate|eq 16.347.135|<tuple|16.464|?>>
-    <associate|eq 16.347.136|<tuple|16.463|?>>
-    <associate|eq 16.348.134|<tuple|16.466|?>>
-    <associate|eq 16.348.18|<tuple|16.371|?>>
-    <associate|eq 16.349.134|<tuple|16.467|?>>
-    <associate|eq 16.349.18|<tuple|16.372|?>>
-    <associate|eq 16.350.18|<tuple|16.373|?>>
-    <associate|eq 16.351.134|<tuple|16.470|?>>
-    <associate|eq 16.352.18|<tuple|16.375|?>>
-    <associate|eq 16.354.136|<tuple|16.473|?>>
-    <associate|eq 16.355.18|<tuple|16.378|?>>
-    <associate|eq 16.356.136|<tuple|16.474|?>>
-    <associate|eq 16.356.18|<tuple|16.379|?>>
-    <associate|eq 16.357.137|<tuple|16.475|?>>
-    <associate|eq 16.357.18|<tuple|16.380|?>>
-    <associate|eq 16.358.136|<tuple|16.476|?>>
-    <associate|eq 16.358.18|<tuple|16.381|?>>
-    <associate|eq 16.359.136|<tuple|16.478|?>>
-    <associate|eq 16.359.18|<tuple|16.382|?>>
+    <associate|eq 16.340.133|<tuple|16.457|?>>
+    <associate|eq 16.340.134|<tuple|16.456|?>>
+    <associate|eq 16.341.133|<tuple|16.458|?>>
+    <associate|eq 16.342.133|<tuple|16.459|?>>
+    <associate|eq 16.343.133|<tuple|16.460|?>>
+    <associate|eq 16.344.133|<tuple|16.461|?>>
+    <associate|eq 16.346.134|<tuple|16.463|?>>
+    <associate|eq 16.346.134.1|<tuple|16.462|?>>
+    <associate|eq 16.346.18|<tuple|16.370|?>>
+    <associate|eq 16.347.134|<tuple|16.466|?>>
+    <associate|eq 16.347.135|<tuple|16.465|?>>
+    <associate|eq 16.347.136|<tuple|16.464|?>>
+    <associate|eq 16.348.134|<tuple|16.467|?>>
+    <associate|eq 16.348.18|<tuple|16.372|?>>
+    <associate|eq 16.349.134|<tuple|16.468|?>>
+    <associate|eq 16.349.18|<tuple|16.373|?>>
+    <associate|eq 16.350.18|<tuple|16.374|?>>
+    <associate|eq 16.351.134|<tuple|16.471|?>>
+    <associate|eq 16.352.18|<tuple|16.376|?>>
+    <associate|eq 16.354.136|<tuple|16.474|?>>
+    <associate|eq 16.355.18|<tuple|16.379|?>>
+    <associate|eq 16.356.136|<tuple|16.475|?>>
+    <associate|eq 16.356.18|<tuple|16.380|?>>
+    <associate|eq 16.357.137|<tuple|16.476|?>>
+    <associate|eq 16.357.18|<tuple|16.381|?>>
+    <associate|eq 16.358.136|<tuple|16.477|?>>
+    <associate|eq 16.358.18|<tuple|16.382|?>>
+    <associate|eq 16.359.136|<tuple|16.479|?>>
+    <associate|eq 16.359.18|<tuple|16.383|?>>
     <associate|eq 16.36.182|<tuple|16.69|?>>
     <associate|eq 16.36.20|<tuple|16.35|?>>
-    <associate|eq 16.360.136|<tuple|16.479|?>>
-    <associate|eq 16.360.18|<tuple|16.383|?>>
-    <associate|eq 16.361.136|<tuple|16.480|?>>
-    <associate|eq 16.361.18|<tuple|16.384|?>>
-    <associate|eq 16.362.136|<tuple|16.481|?>>
-    <associate|eq 16.362.18|<tuple|16.386|?>>
-    <associate|eq 16.362.19|<tuple|16.385|?>>
-    <associate|eq 16.362.310|<tuple|16.334|?>>
-    <associate|eq 16.363.136|<tuple|16.482|?>>
-    <associate|eq 16.363.18|<tuple|16.387|?>>
-    <associate|eq 16.363.310|<tuple|16.335|?>>
-    <associate|eq 16.364.136|<tuple|16.483|?>>
-    <associate|eq 16.364.18|<tuple|16.388|?>>
-    <associate|eq 16.364.310|<tuple|16.336|?>>
-    <associate|eq 16.365.18|<tuple|16.389|?>>
-    <associate|eq 16.365.310|<tuple|16.337|?>>
-    <associate|eq 16.366.137|<tuple|16.485|?>>
-    <associate|eq 16.366.138|<tuple|16.484|?>>
-    <associate|eq 16.366.18|<tuple|16.390|?>>
-    <associate|eq 16.366.310|<tuple|16.338|?>>
-    <associate|eq 16.367.137|<tuple|16.486|?>>
-    <associate|eq 16.367.310|<tuple|16.339|?>>
-    <associate|eq 16.368.137|<tuple|16.487|?>>
-    <associate|eq 16.368.310|<tuple|16.341|?>>
-    <associate|eq 16.369.137|<tuple|16.488|?>>
-    <associate|eq 16.369.310|<tuple|16.342|?>>
+    <associate|eq 16.360.136|<tuple|16.480|?>>
+    <associate|eq 16.360.18|<tuple|16.384|?>>
+    <associate|eq 16.361.136|<tuple|16.481|?>>
+    <associate|eq 16.361.18|<tuple|16.385|?>>
+    <associate|eq 16.362.136|<tuple|16.482|?>>
+    <associate|eq 16.362.18|<tuple|16.387|?>>
+    <associate|eq 16.362.19|<tuple|16.386|?>>
+    <associate|eq 16.362.310|<tuple|16.335|?>>
+    <associate|eq 16.363.136|<tuple|16.483|?>>
+    <associate|eq 16.363.18|<tuple|16.388|?>>
+    <associate|eq 16.363.310|<tuple|16.336|?>>
+    <associate|eq 16.364.136|<tuple|16.484|?>>
+    <associate|eq 16.364.18|<tuple|16.389|?>>
+    <associate|eq 16.364.310|<tuple|16.337|?>>
+    <associate|eq 16.365.18|<tuple|16.390|?>>
+    <associate|eq 16.365.310|<tuple|16.338|?>>
+    <associate|eq 16.366.137|<tuple|16.486|?>>
+    <associate|eq 16.366.138|<tuple|16.485|?>>
+    <associate|eq 16.366.18|<tuple|16.391|?>>
+    <associate|eq 16.366.310|<tuple|16.339|?>>
+    <associate|eq 16.367.137|<tuple|16.487|?>>
+    <associate|eq 16.367.310|<tuple|16.340|?>>
+    <associate|eq 16.368.137|<tuple|16.488|?>>
+    <associate|eq 16.368.310|<tuple|16.342|?>>
+    <associate|eq 16.369.137|<tuple|16.489|?>>
+    <associate|eq 16.369.310|<tuple|16.343|?>>
     <associate|eq 16.37.182|<tuple|16.70|?>>
-    <associate|eq 16.370.137|<tuple|16.489|?>>
-    <associate|eq 16.371.137|<tuple|16.490|?>>
-    <associate|eq 16.372.137|<tuple|16.493|?>>
-    <associate|eq 16.372.20|<tuple|16.395|?>>
-    <associate|eq 16.372.310|<tuple|16.343|?>>
-    <associate|eq 16.373.300|<tuple|16.346|?>>
-    <associate|eq 16.373.310|<tuple|16.344|?>>
-    <associate|eq 16.374.138|<tuple|16.495|?>>
-    <associate|eq 16.374.310|<tuple|16.345|?>>
-    <associate|eq 16.375\<point\>139|<tuple|16.497|?>>
-    <associate|eq 16.376.138|<tuple|16.498|?>>
-    <associate|eq 16.377.138|<tuple|16.499|?>>
-    <associate|eq 16.378.138|<tuple|16.500|?>>
-    <associate|eq 16.379.138|<tuple|16.501|?>>
+    <associate|eq 16.370.137|<tuple|16.490|?>>
+    <associate|eq 16.371.137|<tuple|16.491|?>>
+    <associate|eq 16.372.137|<tuple|16.494|?>>
+    <associate|eq 16.372.20|<tuple|16.396|?>>
+    <associate|eq 16.372.310|<tuple|16.344|?>>
+    <associate|eq 16.373.300|<tuple|16.347|?>>
+    <associate|eq 16.373.310|<tuple|16.345|?>>
+    <associate|eq 16.374.138|<tuple|16.496|?>>
+    <associate|eq 16.374.310|<tuple|16.346|?>>
+    <associate|eq 16.375\<point\>139|<tuple|16.498|?>>
+    <associate|eq 16.376.138|<tuple|16.499|?>>
+    <associate|eq 16.377.138|<tuple|16.500|?>>
+    <associate|eq 16.378.138|<tuple|16.501|?>>
+    <associate|eq 16.379.138|<tuple|16.502|?>>
     <associate|eq 16.38.182|<tuple|16.71|?>>
-    <associate|eq 16.380.138|<tuple|16.502|?>>
-    <associate|eq 16.380.310|<tuple|16.351|?>>
-    <associate|eq 16.381.138|<tuple|16.503|?>>
-    <associate|eq 16.382.145|<tuple|16.507|?>>
-    <associate|eq 16.382.21|<tuple|16.397|?>>
-    <associate|eq 16.383.21|<tuple|16.398|?>>
-    <associate|eq 16.384.21|<tuple|16.399|?>>
-    <associate|eq 16.385.21|<tuple|16.400|?>>
-    <associate|eq 16.386.21|<tuple|16.401|?>>
-    <associate|eq 16.387.21|<tuple|16.402|?>>
-    <associate|eq 16.388.21|<tuple|16.403|?>>
-    <associate|eq 16.389.21|<tuple|16.404|?>>
-    <associate|eq 16.389.320|<tuple|16.367|?>>
+    <associate|eq 16.380.138|<tuple|16.503|?>>
+    <associate|eq 16.380.310|<tuple|16.352|?>>
+    <associate|eq 16.381.138|<tuple|16.504|?>>
+    <associate|eq 16.382.145|<tuple|16.508|?>>
+    <associate|eq 16.382.21|<tuple|16.398|?>>
+    <associate|eq 16.383.21|<tuple|16.399|?>>
+    <associate|eq 16.384.21|<tuple|16.400|?>>
+    <associate|eq 16.385.21|<tuple|16.401|?>>
+    <associate|eq 16.386.21|<tuple|16.402|?>>
+    <associate|eq 16.387.21|<tuple|16.403|?>>
+    <associate|eq 16.388.21|<tuple|16.404|?>>
+    <associate|eq 16.389.21|<tuple|16.405|?>>
+    <associate|eq 16.389.320|<tuple|16.368|?>>
     <associate|eq 16.39.182|<tuple|16.72|?>>
-    <associate|eq 16.390.21|<tuple|16.405|?>>
-    <associate|eq 16.390.320|<tuple|16.368|?>>
-    <associate|eq 16.391.142|<tuple|16.505|?>>
-    <associate|eq 16.391.21|<tuple|16.406|?>>
-    <associate|eq 16.391.320|<tuple|16.370|?>>
-    <associate|eq 16.392.142|<tuple|16.506|?>>
-    <associate|eq 16.392.21|<tuple|16.407|?>>
-    <associate|eq 16.392.320|<tuple|16.374|?>>
-    <associate|eq 16.393.142|<tuple|16.508|?>>
-    <associate|eq 16.393.21|<tuple|16.408|?>>
-    <associate|eq 16.393.321|<tuple|16.376|?>>
-    <associate|eq 16.394.142|<tuple|16.509|?>>
-    <associate|eq 16.394.21|<tuple|16.409|?>>
-    <associate|eq 16.394.321|<tuple|16.377|?>>
-    <associate|eq 16.395.142|<tuple|16.510|?>>
-    <associate|eq 16.395.21|<tuple|16.410|?>>
-    <associate|eq 16.396.142|<tuple|16.511|?>>
-    <associate|eq 16.396.21|<tuple|16.411|?>>
-    <associate|eq 16.397.142|<tuple|16.512|?>>
-    <associate|eq 16.397.21|<tuple|16.412|?>>
-    <associate|eq 16.398.142|<tuple|16.513|?>>
-    <associate|eq 16.398.21|<tuple|16.413|?>>
-    <associate|eq 16.399.142|<tuple|16.514|?>>
-    <associate|eq 16.399.21|<tuple|16.414|?>>
-    <associate|eq 16.399.321|<tuple|16.392|?>>
+    <associate|eq 16.390.21|<tuple|16.406|?>>
+    <associate|eq 16.390.320|<tuple|16.369|?>>
+    <associate|eq 16.391.142|<tuple|16.506|?>>
+    <associate|eq 16.391.21|<tuple|16.407|?>>
+    <associate|eq 16.391.320|<tuple|16.371|?>>
+    <associate|eq 16.392.142|<tuple|16.507|?>>
+    <associate|eq 16.392.21|<tuple|16.408|?>>
+    <associate|eq 16.392.320|<tuple|16.375|?>>
+    <associate|eq 16.393.142|<tuple|16.509|?>>
+    <associate|eq 16.393.21|<tuple|16.409|?>>
+    <associate|eq 16.393.321|<tuple|16.377|?>>
+    <associate|eq 16.394.142|<tuple|16.510|?>>
+    <associate|eq 16.394.21|<tuple|16.410|?>>
+    <associate|eq 16.394.321|<tuple|16.378|?>>
+    <associate|eq 16.395.142|<tuple|16.511|?>>
+    <associate|eq 16.395.21|<tuple|16.411|?>>
+    <associate|eq 16.396.142|<tuple|16.512|?>>
+    <associate|eq 16.396.21|<tuple|16.412|?>>
+    <associate|eq 16.397.142|<tuple|16.513|?>>
+    <associate|eq 16.397.21|<tuple|16.413|?>>
+    <associate|eq 16.398.142|<tuple|16.514|?>>
+    <associate|eq 16.398.21|<tuple|16.414|?>>
+    <associate|eq 16.399.142|<tuple|16.515|?>>
+    <associate|eq 16.399.21|<tuple|16.415|?>>
+    <associate|eq 16.399.321|<tuple|16.393|?>>
     <associate|eq 16.4.1|<tuple|16.4|?>>
     <associate|eq 16.4.177|<tuple|16.20|?>>
-    <associate|eq 16.400.142|<tuple|16.515|?>>
-    <associate|eq 16.400.21|<tuple|16.415|?>>
-    <associate|eq 16.400.321|<tuple|16.393|?>>
-    <associate|eq 16.401.142|<tuple|16.516|?>>
-    <associate|eq 16.401.21|<tuple|16.416|?>>
-    <associate|eq 16.401.321|<tuple|16.394|?>>
-    <associate|eq 16.401.322|<tuple|16.391|?>>
-    <associate|eq 16.402.142|<tuple|16.517|?>>
-    <associate|eq 16.402.143|<tuple|16.525|?>>
-    <associate|eq 16.402.21|<tuple|16.417|?>>
-    <associate|eq 16.402.321|<tuple|16.396|?>>
-    <associate|eq 16.403.142|<tuple|16.518|?>>
-    <associate|eq 16.403.143|<tuple|16.526|?>>
-    <associate|eq 16.403.21|<tuple|16.418|?>>
-    <associate|eq 16.404.142|<tuple|16.519|?>>
-    <associate|eq 16.404.143|<tuple|16.527|?>>
-    <associate|eq 16.405.142|<tuple|16.520|?>>
-    <associate|eq 16.405.143|<tuple|16.528|?>>
-    <associate|eq 16.406.142|<tuple|16.521|?>>
-    <associate|eq 16.406.143|<tuple|16.529|?>>
-    <associate|eq 16.407.142|<tuple|16.522|?>>
-    <associate|eq 16.407.143|<tuple|16.530|?>>
-    <associate|eq 16.408.142|<tuple|16.523|?>>
-    <associate|eq 16.408.143|<tuple|16.531|?>>
-    <associate|eq 16.409.142|<tuple|16.524|?>>
-    <associate|eq 16.409.143|<tuple|16.532|?>>
+    <associate|eq 16.400.142|<tuple|16.516|?>>
+    <associate|eq 16.400.21|<tuple|16.416|?>>
+    <associate|eq 16.400.321|<tuple|16.394|?>>
+    <associate|eq 16.401.142|<tuple|16.517|?>>
+    <associate|eq 16.401.21|<tuple|16.417|?>>
+    <associate|eq 16.401.321|<tuple|16.395|?>>
+    <associate|eq 16.401.322|<tuple|16.392|?>>
+    <associate|eq 16.402.142|<tuple|16.518|?>>
+    <associate|eq 16.402.143|<tuple|16.526|?>>
+    <associate|eq 16.402.21|<tuple|16.418|?>>
+    <associate|eq 16.402.321|<tuple|16.397|?>>
+    <associate|eq 16.403.142|<tuple|16.519|?>>
+    <associate|eq 16.403.143|<tuple|16.527|?>>
+    <associate|eq 16.403.21|<tuple|16.419|?>>
+    <associate|eq 16.404.142|<tuple|16.520|?>>
+    <associate|eq 16.404.143|<tuple|16.528|?>>
+    <associate|eq 16.405.142|<tuple|16.521|?>>
+    <associate|eq 16.405.143|<tuple|16.529|?>>
+    <associate|eq 16.406.142|<tuple|16.522|?>>
+    <associate|eq 16.406.143|<tuple|16.530|?>>
+    <associate|eq 16.407.142|<tuple|16.523|?>>
+    <associate|eq 16.407.143|<tuple|16.531|?>>
+    <associate|eq 16.408.142|<tuple|16.524|?>>
+    <associate|eq 16.408.143|<tuple|16.532|?>>
+    <associate|eq 16.409.142|<tuple|16.525|?>>
+    <associate|eq 16.409.143|<tuple|16.533|?>>
     <associate|eq 16.41.182|<tuple|16.74|?>>
-    <associate|eq 16.410.143|<tuple|16.533|?>>
-    <associate|eq 16.413.143|<tuple|16.537|?>>
-    <associate|eq 16.414.144|<tuple|16.538|?>>
-    <associate|eq 16.415.143|<tuple|16.541|?>>
-    <associate|eq 16.415.144|<tuple|16.539|?>>
-    <associate|eq 16.417.143|<tuple|16.544|?>>
-    <associate|eq 16.417.145|<tuple|16.543|?>>
-    <associate|eq 16.418.143|<tuple|16.545|?>>
-    <associate|eq 16.419\<point\>143|<tuple|16.546|?>>
+    <associate|eq 16.410.143|<tuple|16.534|?>>
+    <associate|eq 16.413.143|<tuple|16.538|?>>
+    <associate|eq 16.414.144|<tuple|16.539|?>>
+    <associate|eq 16.415.143|<tuple|16.542|?>>
+    <associate|eq 16.415.144|<tuple|16.540|?>>
+    <associate|eq 16.417.143|<tuple|16.545|?>>
+    <associate|eq 16.417.145|<tuple|16.544|?>>
+    <associate|eq 16.418.143|<tuple|16.546|?>>
+    <associate|eq 16.419\<point\>143|<tuple|16.547|?>>
     <associate|eq 16.42.187|<tuple|16.77|?>>
-    <associate|eq 16.422.143|<tuple|16.549|?>>
-    <associate|eq 16.422.143.1|<tuple|16.547|?>>
-    <associate|eq 16.422.145|<tuple|16.548|?>>
-    <associate|eq 16.423.143|<tuple|16.550|?>>
-    <associate|eq 16.424.143|<tuple|16.551|?>>
-    <associate|eq 16.427.144|<tuple|16.552|?>>
-    <associate|eq 16.428.144|<tuple|16.553|?>>
+    <associate|eq 16.422.143|<tuple|16.550|?>>
+    <associate|eq 16.422.143.1|<tuple|16.548|?>>
+    <associate|eq 16.422.145|<tuple|16.549|?>>
+    <associate|eq 16.423.143|<tuple|16.551|?>>
+    <associate|eq 16.424.143|<tuple|16.552|?>>
+    <associate|eq 16.427.144|<tuple|16.553|?>>
+    <associate|eq 16.428.144|<tuple|16.554|?>>
     <associate|eq 16.43.187|<tuple|16.78|?>>
     <associate|eq 16.43.21|<tuple|16.42|?>>
-    <associate|eq 16.430.144|<tuple|16.554|?>>
-    <associate|eq 16.430.144.1|<tuple|16.555|?>>
-    <associate|eq 16.431.144|<tuple|16.556|?>>
-    <associate|eq 16.432.144|<tuple|16.557|?>>
-    <associate|eq 16.433.144|<tuple|16.558|?>>
-    <associate|eq 16.434.144|<tuple|16.559|?>>
-    <associate|eq 16.435.144|<tuple|16.560|?>>
-    <associate|eq 16.436.144|<tuple|16.561|?>>
-    <associate|eq 16.438.145|<tuple|16.563|?>>
-    <associate|eq 16.439.145|<tuple|16.564|?>>
+    <associate|eq 16.430.144|<tuple|16.555|?>>
+    <associate|eq 16.430.144.1|<tuple|16.556|?>>
+    <associate|eq 16.431.144|<tuple|16.557|?>>
+    <associate|eq 16.432.144|<tuple|16.558|?>>
+    <associate|eq 16.433.144|<tuple|16.559|?>>
+    <associate|eq 16.434.144|<tuple|16.560|?>>
+    <associate|eq 16.435.144|<tuple|16.561|?>>
+    <associate|eq 16.436.144|<tuple|16.562|?>>
+    <associate|eq 16.438.145|<tuple|16.564|?>>
+    <associate|eq 16.439.145|<tuple|16.565|?>>
     <associate|eq 16.44.188|<tuple|16.79|?>>
     <associate|eq 16.44.21|<tuple|16.43|?>>
-    <associate|eq 16.440.145|<tuple|16.565|?>>
-    <associate|eq 16.442.145|<tuple|16.567|?>>
-    <associate|eq 16.443.145|<tuple|16.568|?>>
-    <associate|eq 16.444.145|<tuple|16.569|?>>
-    <associate|eq 16.445.145|<tuple|16.570|?>>
-    <associate|eq 16.446.145|<tuple|16.571|?>>
+    <associate|eq 16.440.145|<tuple|16.566|?>>
+    <associate|eq 16.442.145|<tuple|16.568|?>>
+    <associate|eq 16.443.145|<tuple|16.569|?>>
+    <associate|eq 16.444.145|<tuple|16.570|?>>
+    <associate|eq 16.445.145|<tuple|16.571|?>>
+    <associate|eq 16.446.145|<tuple|16.572|?>>
     <associate|eq 16.45.153|<tuple|16.76|?>>
     <associate|eq 16.45.188|<tuple|16.80|?>>
     <associate|eq 16.45.21|<tuple|16.44|?>>
-    <associate|eq 16.454.300|<tuple|16.468|?>>
-    <associate|eq 16.455.300|<tuple|16.469|?>>
-    <associate|eq 16.457.300|<tuple|16.471|?>>
+    <associate|eq 16.454.300|<tuple|16.469|?>>
+    <associate|eq 16.455.300|<tuple|16.470|?>>
+    <associate|eq 16.457.300|<tuple|16.472|?>>
     <associate|eq 16.46.188|<tuple|16.81|?>>
     <associate|eq 16.46.21|<tuple|16.45|?>>
-    <associate|eq 16.462.311|<tuple|16.472|?>>
-    <associate|eq 16.462\<point\>300|<tuple|16.477|?>>
+    <associate|eq 16.462.311|<tuple|16.473|?>>
+    <associate|eq 16.462\<point\>300|<tuple|16.478|?>>
     <associate|eq 16.47.188|<tuple|16.82|?>>
     <associate|eq 16.47.21|<tuple|16.46|?>>
-    <associate|eq 16.476.22|<tuple|16.491|?>>
-    <associate|eq 16.477.22|<tuple|16.492|?>>
-    <associate|eq 16.478.300|<tuple|16.496|?>>
+    <associate|eq 16.476.22|<tuple|16.492|?>>
+    <associate|eq 16.477.22|<tuple|16.493|?>>
+    <associate|eq 16.478.300|<tuple|16.497|?>>
     <associate|eq 16.48.188|<tuple|16.83|?>>
     <associate|eq 16.48.21|<tuple|16.47|?>>
-    <associate|eq 16.482.311|<tuple|16.494|?>>
+    <associate|eq 16.482.311|<tuple|16.495|?>>
     <associate|eq 16.49.189|<tuple|16.84|?>>
     <associate|eq 16.49.21|<tuple|16.48|?>>
     <associate|eq 16.5.1|<tuple|16.5|?>>
@@ -28489,23 +29338,31 @@
     <associate|eq 16.51.21|<tuple|16.50|?>>
     <associate|eq 16.51\<point\>189|<tuple|16.86|?>>
     <associate|eq 16.52.190|<tuple|16.110|?>>
-    <associate|eq 16.521.22|<tuple|16.536|?>>
-    <associate|eq 16.525.22|<tuple|16.540|?>>
-    <associate|eq 16.527.22|<tuple|16.542|?>>
-    <associate|eq 16.572.22|<tuple|16.572|?>>
-    <associate|eq 16.573.22|<tuple|16.573|?>>
-    <associate|eq 16.574.22|<tuple|16.574|?>>
-    <associate|eq 16.591.305|<tuple|16.584|?>>
-    <associate|eq 16.592.505|<tuple|16.575|?>>
-    <associate|eq 16.593.505|<tuple|16.576|?>>
-    <associate|eq 16.594.305|<tuple|16.577|?>>
-    <associate|eq 16.595.408|<tuple|16.583|?>>
-    <associate|eq 16.596.505|<tuple|16.578|?>>
-    <associate|eq 16.597.505|<tuple|16.579|?>>
-    <associate|eq 16.598.505|<tuple|16.580|?>>
-    <associate|eq 16.599.305|<tuple|16.581|?>>
+    <associate|eq 16.521.22|<tuple|16.537|?>>
+    <associate|eq 16.525.22|<tuple|16.541|?>>
+    <associate|eq 16.527.22|<tuple|16.543|?>>
+    <associate|eq 16.569.318|<tuple|16.593|?>>
+    <associate|eq 16.572.22|<tuple|16.573|?>>
+    <associate|eq 16.573.22|<tuple|16.574|?>>
+    <associate|eq 16.574.22|<tuple|16.575|?>>
+    <associate|eq 16.574.315|<tuple|16.585|?>>
+    <associate|eq 16.575.315|<tuple|16.586|?>>
+    <associate|eq 16.576.315|<tuple|16.587|?>>
+    <associate|eq 16.577.315|<tuple|16.588|?>>
+    <associate|eq 16.578.315|<tuple|16.589|?>>
+    <associate|eq 16.579.315|<tuple|16.590|?>>
+    <associate|eq 16.580.315|<tuple|16.591|?>>
+    <associate|eq 16.581.315|<tuple|16.592|?>>
+    <associate|eq 16.592.505|<tuple|16.576|?>>
+    <associate|eq 16.593.505|<tuple|16.577|?>>
+    <associate|eq 16.594.305|<tuple|16.578|?>>
+    <associate|eq 16.596.505|<tuple|16.579|?>>
+    <associate|eq 16.597.505|<tuple|16.580|?>>
+    <associate|eq 16.598.505|<tuple|16.581|?>>
+    <associate|eq 16.599.305|<tuple|16.582|?>>
     <associate|eq 16.6.301|<tuple|16.6|?>>
-    <associate|eq 16.600.505|<tuple|16.582|?>>
+    <associate|eq 16.600.505|<tuple|16.583|?>>
+    <associate|eq 16.605.307|<tuple|16.584|?>>
     <associate|eq 16.67.140|<tuple|16.111|?>>
     <associate|eq 16.7.178|<tuple|16.22|?>>
     <associate|eq 16.7.301|<tuple|16.7|?>>
@@ -28542,46 +29399,50 @@
     <associate|eq 16.99.6|<tuple|16.103|?>>
     <associate|fig 4.311|<tuple|16.4|?>>
     <associate|fig 5.311|<tuple|16.5|?>>
-    <associate|inverse function and derivate|<tuple|16.340|?>>
+    <associate|inverse function and derivate|<tuple|16.341|?>>
     <associate|lemma 16.101.194|<tuple|16.190|?>>
-    <associate|lemma 16.104.194|<tuple|16.234|?>>
-    <associate|lemma 16.105.194|<tuple|16.235|?>>
+    <associate|lemma 16.104.194|<tuple|16.235|?>>
+    <associate|lemma 16.105.194|<tuple|16.236|?>>
     <associate|lemma 16.11.500|<tuple|16.6|?>>
     <associate|lemma 16.135.200|<tuple|16.212|?>>
     <associate|lemma 16.144.201|<tuple|16.221|?>>
-    <associate|lemma 16.155.203|<tuple|16.229|?>>
-    <associate|lemma 16.157.205|<tuple|16.228|?>>
-    <associate|lemma 16.159.206|<tuple|16.231|?>>
-    <associate|lemma 16.160.206|<tuple|16.232|?>>
-    <associate|lemma 16.166.210|<tuple|16.236|?>>
-    <associate|lemma 16.167.210|<tuple|16.237|?>>
-    <associate|lemma 16.173.211|<tuple|16.243|?>>
-    <associate|lemma 16.174.211|<tuple|16.244|?>>
-    <associate|lemma 16.177.211|<tuple|16.247|?>>
-    <associate|lemma 16.178.210|<tuple|16.248|?>>
-    <associate|lemma 16.179.210|<tuple|16.249|?>>
+    <associate|lemma 16.155.203|<tuple|16.230|?>>
+    <associate|lemma 16.157.205|<tuple|16.229|?>>
+    <associate|lemma 16.159.206|<tuple|16.232|?>>
+    <associate|lemma 16.160.206|<tuple|16.233|?>>
+    <associate|lemma 16.166.210|<tuple|16.237|?>>
+    <associate|lemma 16.167.210|<tuple|16.238|?>>
+    <associate|lemma 16.173.211|<tuple|16.244|?>>
+    <associate|lemma 16.174.211|<tuple|16.245|?>>
+    <associate|lemma 16.177.211|<tuple|16.248|?>>
+    <associate|lemma 16.178.210|<tuple|16.249|?>>
+    <associate|lemma 16.179.210|<tuple|16.250|?>>
     <associate|lemma 16.18.2|<tuple|16.18|?>>
-    <associate|lemma 16.180.210|<tuple|16.250|?>>
-    <associate|lemma 16.181.210|<tuple|16.251|?>>
-    <associate|lemma 16.182.210|<tuple|16.252|?>>
+    <associate|lemma 16.180.210|<tuple|16.251|?>>
+    <associate|lemma 16.181.210|<tuple|16.252|?>>
+    <associate|lemma 16.182.210|<tuple|16.253|?>>
     <associate|lemma 16.19.2|<tuple|16.19|?>>
-    <associate|lemma 16.192.122|<tuple|16.264|?>>
-    <associate|lemma 16.195.124|<tuple|16.265|?>>
-    <associate|lemma 16.200.126|<tuple|16.273|?>>
-    <associate|lemma 16.202.127|<tuple|16.274|?>>
-    <associate|lemma 16.211.127|<tuple|16.295|?>>
-    <associate|lemma 16.216.144|<tuple|16.301|?>>
-    <associate|lemma 16.228.127|<tuple|16.316|?>>
-    <associate|lemma 16.229.127|<tuple|16.317|?>>
+    <associate|lemma 16.192.122|<tuple|16.265|?>>
+    <associate|lemma 16.195.124|<tuple|16.266|?>>
+    <associate|lemma 16.200.126|<tuple|16.274|?>>
+    <associate|lemma 16.202.127|<tuple|16.275|?>>
+    <associate|lemma 16.211.127|<tuple|16.296|?>>
+    <associate|lemma 16.216.144|<tuple|16.302|?>>
+    <associate|lemma 16.227.23|<tuple|16.227|?>>
+    <associate|lemma 16.228.127|<tuple|16.317|?>>
+    <associate|lemma 16.229.127|<tuple|16.318|?>>
     <associate|lemma 16.232.301|<tuple|16.226|?>>
     <associate|lemma 16.24.178|<tuple|16.70|?>>
-    <associate|lemma 16.254.143|<tuple|16.341|?>>
-    <associate|lemma 16.313.310|<tuple|16.277|?>>
-    <associate|lemma 16.314.320|<tuple|16.278|?>>
-    <associate|lemma 16.315.320|<tuple|16.279|?>>
-    <associate|lemma 16.316.320|<tuple|16.280|?>>
-    <associate|lemma 16.318.320|<tuple|16.282|?>>
+    <associate|lemma 16.254.143|<tuple|16.342|?>>
+    <associate|lemma 16.313.310|<tuple|16.278|?>>
+    <associate|lemma 16.314.320|<tuple|16.279|?>>
+    <associate|lemma 16.315.320|<tuple|16.280|?>>
+    <associate|lemma 16.316.320|<tuple|16.281|?>>
+    <associate|lemma 16.318.320|<tuple|16.283|?>>
     <associate|lemma 16.37.4|<tuple|16.45|?>>
+    <associate|lemma 16.380.315|<tuple|16.357|?>>
+    <associate|lemma 16.381.315|<tuple|16.358|?>>
+    <associate|lemma 16.382.315|<tuple|16.359|?>>
     <associate|lemma 16.51.186|<tuple|16.114|?>>
     <associate|lemma 16.53.186|<tuple|16.116|?>>
     <associate|lemma 16.54.187|<tuple|16.117|?>>
@@ -28599,10 +29460,10 @@
     <associate|lemma 16.97.193|<tuple|16.184|?>>
     <associate|lemma 16.98.194|<tuple|16.186|?>>
     <associate|normed space are assumed to be non trivial|<tuple|16.1|?>>
-    <associate|note 16.210.127|<tuple|16.294|?>>
-    <associate|proposition 16.244.134|<tuple|16.332|?>>
-    <associate|proposition 16.249.138|<tuple|16.337|?>>
-    <associate|toplinear isomorphism|<tuple|16.306|?>>
+    <associate|note 16.210.127|<tuple|16.295|?>>
+    <associate|proposition 16.244.134|<tuple|16.333|?>>
+    <associate|proposition 16.249.138|<tuple|16.338|?>>
+    <associate|toplinear isomorphism|<tuple|16.307|?>>
     <associate|topology every element of a generalized interval is a limit
     point|<tuple|16.10|?>>
     <associate|topology every element of a open or closed ball is a limit
@@ -28612,10 +29473,10 @@
     <associate|topology interior point is a limit point in a normed
     space|<tuple|16.8|?>>
     <associate|topology normed space is a topological vector
-    space|<tuple|16.305|?>>
+    space|<tuple|16.306|?>>
     <associate|topology toplinear isomorphism in a normed
-    space|<tuple|16.308|?>>
-    <associate|topology topological vector space|<tuple|16.303|?>>
+    space|<tuple|16.309|?>>
+    <associate|topology topological vector space|<tuple|16.304|?>>
   </collection>
 </references>
 
