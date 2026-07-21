@@ -15813,6 +15813,154 @@
     </equation*>
   </proof>
 
+  <\theorem>
+    <label|diff mean value theorem (6)><dueto|Mean Value Theorem (VI)>Let
+    <math|a,b\<in\>\<bbb-R\>> with <math|a\<less\>b>,
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> a
+    normed space, <math|f:<around*|[|a,b|]>\<rightarrow\>X> a
+    <with|font-series|bold|continuous >function such that
+    <math|\<forall\>x\<in\><around*|]|a,b|[>> <math|f<rprime|'><rsub|x>>
+    exist and there exist a <math|K\<in\>\<bbb-R\>> such that
+    <math|\<forall\>x\<in\><around*|]|a,b|[>>
+    <math|<around*|\<\|\|\>|f<rprime|'><rsub|x>|\<\|\|\>>\<leqslant\>K> then\ 
+
+    <\equation*>
+      <around*|\<\|\|\>|f<around*|(|b|)>-f<around*|(|a|)>|\<\|\|\>>\<leqslant\>K\<cdot\><around*|(|b-a|)>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    Define\ 
+
+    <\equation*>
+      \<varphi\>:<around*|[|a,b|]>\<rightarrow\>\<bbb-R\><text| by
+      >\<varphi\><around*|(|x|)>=K\<cdot\>x
+    </equation*>
+
+    then <math|\<varphi\>> is continuous [see: <reference|continuity scalar
+    product (1)>] and by [example: <reference|diff derivative of identity
+    function>], [theorem: <reference|diff (f+g)'=f'+g'>] we have that
+    <math|\<forall\>x\<in\><around*|]|a,b|[>> <math|\<varphi\>> has a
+    derivative at <math|x> with <math|\<varphi\><rprime|'><rsub|x>=K>. Hence
+    <math|\<forall\>x\<in\><around*|]|a,b|[>> we have that
+    <math|<around*|\<\|\|\>|f<rprime|'><rsub|x>|\<\|\|\>>\<leqslant\>K=\<varphi\><rprime|'><rsub|x>>,
+    so using the previous theorem [theorem: <reference|diff mean value
+    theorem (5)>] it follows that\ 
+
+    <\equation*>
+      <around*|\<\|\|\>|f<around*|(|b|)>-f<around*|(|a|)>|\<\|\|\>>\<leqslant\>\<varphi\><around*|(|b|)>-\<varphi\><around*|(|a|)>=K\<cdot\>b-K\<cdot\>a=K\<cdot\><around*|(|b-a|)>
+    </equation*>
+  </proof>
+
+  <\theorem>
+    <label|diff mean value theorem (7)><dueto|Mean Value Theorem (VII)>Let
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    be normed spaces, <math|A\<subseteq\>X>, <math|C\<subseteq\>A> a convex
+    subset of <math|A> and <math|f:A\<rightarrow\>Y> a function that is
+    Fréchet differentiable on <math|A> such that there exist a
+    <math|K\<in\>\<bbb-R\>> such that <math|\<forall\>x\<in\>C>
+    <math|<around*|\<\|\|\>|D<rsub|x>f|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\<leqslant\>K>
+    then we have
+
+    <\equation*>
+      \<forall\>x,y\<in\>C<text| ><around*|\<\|\|\>|f<around*|(|y|)>-f<around*|(|x|)>|\<\|\|\>><rsub|Y>\<leqslant\>K\<cdot\><around*|\<\|\|\>|y-x|\<\|\|\>><rsub|X>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    As <math|f> is Fréchet differentiable on <math|C> it follows from
+    [theorem: <reference|diff differentiable function is continuous>] that
+
+    <\equation*>
+      f<text| is continuous>
+    </equation*>
+
+    Let <math|x,y\<in\>C> and define the function\ 
+
+    <\equation*>
+      \<sigma\>:<around*|[|0,1|]>\<rightarrow\>X<text| by
+      >\<sigma\><around*|(|t|)>=x+t\<cdot\><around*|(|y-x|)>
+    </equation*>
+
+    Let <math|z\<in\>\<sigma\><around*|(|<around*|[|0,1|]>|)>> then there
+    exist a <math|t\<in\><around*|[|0,1|]>> such that
+    <math|z=\<sigma\><around*|(|t|)>=x+t\<cdot\><around*|(|y-x|)>>, as
+    <math|x,y\<in\>C> and <math|C> is convex it follows that <math|z\<in\>C>.
+    Hence we have\ 
+
+    <\equation*>
+      \<sigma\><around*|(|<around*|[|0,1|]>|)>\<subseteq\>C\<subseteq\>A
+    </equation*>
+
+    As <math|f> is continuous and <math|\<sigma\>> is continuous [see
+    examples: <reference|continuity identity function>, <reference|continuity
+    scalar product (1)> and theorem: <reference|continuity of sum of
+    continuous functions>] it follows from [theorem: <reference|continuity
+    composition (1)>] that\ 
+
+    <\equation*>
+      f\<circ\>\<sigma\><text| is continuous>
+    </equation*>
+
+    Further by [lemma: <reference|lemma 16.135.200>] <math|\<sigma\>> is
+    Fréchet differentiable on <math|<around*|[|0,1|]>> with\ 
+
+    <\equation*>
+      \<forall\>t\<in\><around*|[|0,1|]><text| >D<rsub|t>\<varphi\><text| is
+      defined by >D<rsub|t>\<varphi\>:\<bbb-R\>\<rightarrow\>X<text| where
+      >D<rsub|t>\<varphi\><around*|(|h|)>=h\<cdot\><around*|(|y-x|)>
+    </equation*>
+
+    Let <math|t\<in\><around*|[|0,1|]>> then using the chain rule [theorem:
+    <reference|diff chain rule>] <math|f\<circ\>\<varphi\>:<around*|[|0,1|]>\<rightarrow\>Y>
+    is Fréchet differentiable at <math|t> with\ 
+
+    <\equation*>
+      D<rsub|t><around*|(|f\<circ\>\<sigma\>|)>=D<rsub|\<sigma\><around*|(|t|)>>f\<circ\>D<rsub|t>\<varphi\>=D<rsub|\<sigma\><around*|(|t|)>>f\<circ\>D<rsub|t>\<varphi\>
+    </equation*>
+
+    Using [theorem: <reference|diff derivate and frechet differential>] it
+    follows then that <math|<around*|(|f\<circ\>\<sigma\>|)><rprime|'><rsub|t>>
+    exist and <math|<around*|(|f\<circ\>\<sigma\>|)><rprime|'><rsub|t>=D<rsub|t><around*|(|f\<circ\>\<sigma\>|)><around*|(|1|)>>,
+    hence\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|\<\|\|\>|<around*|(|f\<circ\>\<sigma\>|)><rprime|'><rsub|t>|\<\|\|\>><rsub|Y>>|<cell|=>|<cell|<around*|\<\|\|\>|<around*|(|D<rsub|\<sigma\><around*|(|t|)>>\<circ\>D<rsub|t>\<varphi\>|)><around*|(|1|)>|\<\|\|\>><rsub|Y>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|D<rsub|\<sigma\><around*|(|t|)>><around*|(|D<rsub|t>\<varphi\><around*|(|1|)>|)>|\<\|\|\>><rsub|Y>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|D<rsub|\<sigma\><around*|(|t|)>>f<around*|(|y-x|)>|\<\|\|\>><rsub|Y>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<around*|\<\|\|\>|D<rsub|\<sigma\><around*|(|t|)>>g|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\<cdot\><around*|\<\|\|\>|y-x|\<\|\|\>><rsub|X>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|K\<cdot\><around*|\<\|\|\>|y-x|\<\|\|\>><rsub|X>>>>>
+    </eqnarray*>
+
+    To summarize <math|f\<circ\>\<sigma\>> is continuous and
+    <math|\<forall\>t\<in\><around*|[|0,1|]>>
+    <math|<around*|(|f\<circ\>\<sigma\>|)><rprime|'><rsub|t>> exist with
+    <math|<around*|\<\|\|\>|<around*|(|f\<circ\>\<sigma\>|)><rprime|'><rsub|t>|\<\|\|\>><rsub|Y>\<leqslant\>K\<cdot\><around*|\<\|\|\>|y-x|\<\|\|\>><rsub|X>>.
+    Using then the previous theorem [theorem: <reference|diff mean value
+    theorem (6)>] it follows that\ 
+
+    <\equation*>
+      <around*|(|f\<circ\>\<sigma\>|)><around*|(|1|)>-<around*|(|f\<circ\>\<sigma\>|)><around*|(|0|)>\<leqslant\><around*|(|K\<cdot\><around*|\<\|\|\>|y-x|\<\|\|\>><rsub|X>|)>\<cdot\><around*|(|1-0|)>=K\<cdot\><around*|\<\|\|\>|y-x|\<\|\|\>><rsub|X>
+    </equation*>
+
+    As
+
+    <\equation*>
+      <around*|(|f\<circ\>\<sigma\>|)><around*|(|1|)>=f<around*|(|\<sigma\><around*|(|1|)>|)>=f<around*|(|x+1\<cdot\><around*|(|y-x|)>|)>=f<around*|(|y|)>
+    </equation*>
+
+    and
+
+    <\equation*>
+      <around*|(|f\<circ\>\<sigma\>|)><around*|(|0|)>=f<around*|(|\<sigma\><around*|(|0|)>|)>=f<around*|(|x+0\<cdot\><around*|(|y-x|)>|)>=f<around*|(|x|)>
+    </equation*>
+
+    we have finally\ 
+
+    <\equation*>
+      f<around*|(|y|)>-f<around*|(|x|)>\<leqslant\>K\<cdot\><around*|\<\|\|\>|y-x|\<\|\|\>><rsub|X>
+    </equation*>
+  </proof>
+
+  \;
+
   <section|Symmetry of Higher Order Differentials>
 
   In this scction we will prove that the <math|n>-times differential of a
@@ -27722,7 +27870,7 @@
     <math|<rigid|f:<around*|[|a,b|]>\<rightarrow\>X>> a function then
 
     <\equation*>
-      f=<below|ord|x<below|\<rightarrow\>|A>x<rsub|0>><around*|(|<around*|\||x-x<rsub|0><rsup|n>|\|>|)>\<Leftrightarrow\><below|lim|x<below|\<rightarrow\>|A>x<rsub|0>><frac|f<around*|(|x|)>|<around*|(|x-x<rsub|0>|)><rsup|n>>=0
+      f=<below|ord|x<below|\<rightarrow\>|<around*|[|a,b|]>>x<rsub|0>><around*|(|<around*|\||x-x<rsub|0><rsup|n>|\|>|)>\<Leftrightarrow\><below|lim|x<below|\<rightarrow\>|<around*|[|a,b|]>>x<rsub|0>><frac|f<around*|(|x|)>|<around*|(|x-x<rsub|0>|)><rsup|n>>=0
     </equation*>
 
     <\note>
@@ -28201,7 +28349,7 @@
 
       <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>Let <math|x,h\<in\>X>
       and <math|L\<in\>L<rsub|n+1><around*|(|X;Y|)>=L<around*|(|X,L<rsub|n><around*|(|X;Y|)>|)>>
-      such that <math|\<forall\>\<sigma\>\<in\>P<rsub|n+1>> we have
+      such that <math|\<forall\>\<sigma\>\<in\>P<rsub|n+1>>, and
       <math|<rigid|\<forall\><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\>X<rsup|n>>>
       we have <math|L<around*|(|x<rsub|1>:\<ldots\>:x<rsub|n+1>|)>=L<around*|(|x<rsub|\<sigma\><around*|(|1|)>>:\<ldots\>:x<rsub|\<sigma\><around*|(|n+1|)>>|)>>.
       As <math|<rigid|L\<in\>L<around*|(|X,L<rsub|n><around*|(|X;Y|)>|)>>> it
@@ -28210,7 +28358,7 @@
       <math|\<forall\><around*|(|y<rsub|1>,\<ldots\>,y<rsub|n>|)>\<in\>X<rsup|n>>
 
       <\equation*>
-        L<around*|(|x+h|)><around*|(|y<rsub|\<sigma\><around*|(|1|)>>,\<ldots\>,y<rsub|\<sigma\><around*|(|n|)>>|)>=L<around*|(|x+h|)><around*|(|y<rsub|1>,\<ldots\>,y<rsub|n>|)>.
+        L<around*|(|x+h|)><around*|(|y<rsub|\<sigma\><around*|(|1|)>>,\<ldots\>,y<rsub|\<sigma\><around*|(|n|)>>|)>=L<around*|(|x+h|)><around*|(|y<rsub|1>,\<ldots\>,y<rsub|n>|)>
       </equation*>
 
       Hence as <math|n\<in\>S> it follows that there exist a
@@ -28245,7 +28393,7 @@
       then we have\ 
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|L<around*|(|x|)><around*|(|<around*|(|x<rsup|n>h<rsup|0>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|n>h<rsup|0>|)><rsub|n>|)>>|<cell|=>|<cell|L<around*|(|u<rsub|1>|)><around*|(|u<rsub|2>,\<ldots\>,u<rsub|n+1>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|u<rsub|1>:\<ldots\>:u<rsub|n+1>|)>>>|<row|<cell|>|<cell|<below|=|<text|[lemma:
+        <tformat|<table|<row|<cell|L<around*|(|x|)><around*|(|<around*|(|x<rsup|n>h<rsup|0>|)><rsub|2>:\<ldots\>:<around*|(|x<rsup|n>h<rsup|0>|)><rsub|n>|)>>|<cell|=>|<cell|L<around*|(|u<rsub|1>|)><around*|(|u<rsub|2>,\<ldots\>,u<rsub|n+1>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|u<rsub|1>:\<ldots\>:u<rsub|n+1>|)>>>|<row|<cell|>|<cell|<below|=|<text|[lemma:
         <reference|lemma 16.380.315>(1)]>>>|<cell|L<around*|(|<around*|(|x<rsup|p+1>h<rsup|0>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|p+1>h<rsup|0>|)><rsub|n+1>|)><eq-number><label|eq
         16.575.315>>>>>
       </eqnarray*>
@@ -28269,7 +28417,7 @@
       hence\ 
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|L<around*|(|h|)><around*|(|<around*|(|x<rsup|n>h<rsup|0>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|n>h<rsup|0>|)><rsub|n>|)>>|<cell|=>|<cell|L<around*|(|v<rsub|1>|)><around*|(|v<rsub|2>:\<ldots\>:v<rsub|n+1>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|v<rsub|1>:\<ldots\>:v<rsub|n+1>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|v<rsub|\<sigma\><around*|(|1|)>>:\<ldots\>:v<rsub|\<sigma\><around*|(|n+1|)>>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|<around*|(|x<rsup|<around*|(|n+1|)>-1>h<rsup|1>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|<around*|(|n+1|)>-1>h<rsup|1>|)><rsub|n+1>|)><eq-number><label|eq
+        <tformat|<table|<row|<cell|L<around*|(|h|)><around*|(|<around*|(|x<rsup|n>h<rsup|0>|)><rsub|2>:\<ldots\>:<around*|(|x<rsup|n>h<rsup|0>|)><rsub|n>|)>>|<cell|=>|<cell|L<around*|(|v<rsub|1>|)><around*|(|v<rsub|2>:\<ldots\>:v<rsub|n+1>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|v<rsub|1>:\<ldots\>:v<rsub|n+1>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|v<rsub|\<sigma\><around*|(|1|)>>:\<ldots\>:v<rsub|\<sigma\><around*|(|n+1|)>>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|<around*|(|x<rsup|<around*|(|n+1|)>-1>h<rsup|1>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|<around*|(|n+1|)>-1>h<rsup|1>|)><rsub|n+1>|)><eq-number><label|eq
         16.576.315>>>>>
       </eqnarray*>
 
@@ -28285,7 +28433,7 @@
       then we have\ 
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|L<around*|(|x|)><around*|(|<around*|(|x<rsup|n-1>h<rsup|1>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|n-1>h<rsup|1>|)>|)>>|<cell|=>|<cell|>>|<row|<cell|L<around*|(|w<rsub|1>:\<ldots\>:w<rsub|n+1>|)>>|<cell|<below|=|<text|[lemma:
+        <tformat|<table|<row|<cell|L<around*|(|x|)><around*|(|<around*|(|x<rsup|n-1>h<rsup|1>|)><rsub|2>:\<ldots\>:<around*|(|x<rsup|n-1>h<rsup|1>|)>|)>>|<cell|=>|<cell|>>|<row|<cell|L<around*|(|w<rsub|1>|)><around*|(|w<rsub|2>:\<ldots\>:w<rsub|n+1>|)>>|<cell|>|<cell|>>|<row|<cell|L<around*|(|w<rsub|1>:\<ldots\>:w<rsub|n+1>|)>>|<cell|<below|=|<text|[lemma:
         <reference|lemma 16.380.315>(1)]>>>|<cell|>>|<row|<cell|L<around*|(|<around*|(|x<rsup|n>h<rsup|1>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|n>h<rsup|1>|)><rsub|n+1>|)>>|<cell|=>|<cell|>>|<row|<cell|L<around*|(|<around*|(|x<rsup|<around*|(|n+1|)>-1>h<rsup|1>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|<around*|(|n+1|)>-1>h<rsup|1>|)><rsub|n+1>|)>>|<cell|>|<cell|<eq-number><label|eq
         16.577.315>>>>>
       </eqnarray*>
@@ -28299,7 +28447,7 @@
         if >i\<in\><around*|{|2,\<ldots\>,n+1|}>>>>>>
       </equation*>
 
-      then by [lemma: <reference|lemma 16.380.315>] there exist a
+      then by [lemma: <reference|lemma 16.380.315>(2)] there exist a
       <math|\<tau\>\<in\>P<rsub|n+1>> such that
 
       <\equation*>
@@ -28309,7 +28457,7 @@
       Then
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|L<around*|(|h|)><around*|(|<around*|(|x<rsup|n-1>h<rsup|1>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|n-1>h<rsup|1>|)><rsub|n>|)>>|<cell|=>|<cell|L<around*|(|y<rsub|1>|)><around*|(|y<rsub|2>:\<ldots\>:y<rsub|n+1>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|y<rsub|1>:\<ldots\>:y<rsub|n+1>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|y<rsub|\<tau\><around*|(|1|)>>:\<ldots\>:y<rsub|\<tau\><around*|(|n+1|)>>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|<around*|(|x<rsup|n-1>h<rsup|2>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|n-1>h<rsup|2>|)><rsub|n+1>|)><eq-number><label|eq
+        <tformat|<table|<row|<cell|L<around*|(|h|)><around*|(|<around*|(|x<rsup|n-1>h<rsup|1>|)><rsub|2>:\<ldots\>:<around*|(|x<rsup|n-1>h<rsup|1>|)><rsub|n>|)>>|<cell|=>|<cell|L<around*|(|y<rsub|1>|)><around*|(|y<rsub|2>:\<ldots\>:y<rsub|n+1>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|y<rsub|1>:\<ldots\>:y<rsub|n+1>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|y<rsub|\<tau\><around*|(|1|)>>:\<ldots\>:y<rsub|\<tau\><around*|(|n+1|)>>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|<around*|(|x<rsup|n-1>h<rsup|2>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|n-1>h<rsup|2>|)><rsub|n+1>|)><eq-number><label|eq
         16.578.315>>>>>
       </eqnarray*>
 
@@ -28318,14 +28466,14 @@
       <\equation*>
         r<rsup|i>=<around*|(|r<rsup|i><rsub|1>,\<ldots\>,r<rsup|i><rsub|n+1>|)><text|
         by >r<rsup|i><rsub|j>=<choice|<tformat|<table|<row|<cell|x<text| if
-        >i=1>>|<row|<cell|<around*|(|x<rsup|p<rsub|i>>h<rsup|q<rsub|i>>|)><rsub|i-1><text|
-        if >i\<in\><around*|{|2,\<ldots\>,n+1|}>>>>>>
+        >j=1>>|<row|<cell|<around*|(|x<rsup|p<rsub|i>>h<rsup|q<rsub|i>>|)><rsub|j-1><text|
+        if >j\<in\><around*|{|2,\<ldots\>,n+1|}>>>>>>
       </equation*>
 
       then we have\ 
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|L<around*|(|x|)><around*|(|<around*|(|<around*|(|x<rsup|p<rsub|i>>y<rsup|q<rsub|i>>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|p<rsub|i>>y<rsup|q<rsub|i>>|)><rsub|n>|)>|)>>|<cell|=>|<cell|L<around*|(|r<rsup|i><rsub|1>|)><around*|(|r<rsup|i><rsub|2>:\<ldots\>:r<rsup|i><rsub|n+1>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|r<rsup|i><rsub|1>:\<ldots\>:r<rsup|i><rsub|n+1>|)>>>|<row|<cell|>|<cell|<below|=|<text|[lemma:<reference|lemma
+        <tformat|<table|<row|<cell|L<around*|(|x|)><around*|(|<around*|(|<around*|(|x<rsup|p<rsub|i>>y<rsup|q<rsub|i>>|)><rsub|2>:\<ldots\>:<around*|(|x<rsup|p<rsub|i>>y<rsup|q<rsub|i>>|)><rsub|n>|)>|)>>|<cell|=>|<cell|L<around*|(|r<rsup|i><rsub|1>|)><around*|(|r<rsup|i><rsub|2>:\<ldots\>:r<rsup|i><rsub|n+1>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|r<rsup|i><rsub|1>:\<ldots\>:r<rsup|i><rsub|n+1>|)>>>|<row|<cell|>|<cell|<below|=|<text|[lemma:<reference|lemma
         16.380.315>(1)]>>>|<cell|L<around*|(|<around*|(|x<rsup|p<rsub|i>+1>h<rsup|q<rsub|i>>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|p<rsub|i>+1>h<rsup|q<rsub|i>>|)><rsub|n+1>|)><eq-number><label|eq
         16.579.315>>>>>
       </eqnarray*>
@@ -28339,7 +28487,7 @@
         if >i\<in\><around*|{|2,\<ldots\>,n+1|}>>>>>>
       </equation*>
 
-      By [lemma:<reference|lemma 16.380.315>] there exist a
+      By [lemma:<reference|lemma 16.380.315>(2)] there exist a
       <math|\<rho\>\<in\>P<rsub|n+1>> such that\ 
 
       <\equation*>
@@ -28349,24 +28497,26 @@
       hence\ 
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|L<around*|(|h|)><around*|(|<around*|(|x<rsup|p<rsub|i>>h<rsup|q<rsub|i>>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|p<rsub|i>>h<rsup|q<rsub|i>>|)><rsub|n+1>|)>>|<cell|=>|<cell|L<around*|(|z<rsup|i><rsub|1>|)><around*|(|z<rsup|i><rsub|2>:\<ldots\>:z<rsup|i><rsub|n+1>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|z<rsup|i><rsub|1>:\<ldots\>:z<rsup|i><rsub|n+1>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|z<rsup|i><rsub|\<rho\><around*|(|1|)>>:\<ldots\>:z<rsup|i><rsub|\<rho\><around*|(|n+1|)>>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|<around*|(|x<rsup|p<rsub|i>>h<rsup|q<rsub|i>+1>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|p<rsub|i>>h<rsup|q<rsub|i>+1>|)><rsub|n+1>|)><eq-number><label|eq
+        <tformat|<table|<row|<cell|L<around*|(|h|)><around*|(|<around*|(|x<rsup|p<rsub|i>>h<rsup|q<rsub|i>>|)><rsub|2>:\<ldots\>:<around*|(|x<rsup|p<rsub|i>>h<rsup|q<rsub|i>>|)><rsub|n+1>|)>>|<cell|=>|<cell|L<around*|(|z<rsup|i><rsub|1>|)><around*|(|z<rsup|i><rsub|2>:\<ldots\>:z<rsup|i><rsub|n+1>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|z<rsup|i><rsub|1>:\<ldots\>:z<rsup|i><rsub|n+1>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|z<rsup|i><rsub|\<rho\><around*|(|1|)>>:\<ldots\>:z<rsup|i><rsub|\<rho\><around*|(|n+1|)>>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|<around*|(|x<rsup|p<rsub|i>>h<rsup|q<rsub|i>+1>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|p<rsub|i>>h<rsup|q<rsub|i>+1>|)><rsub|n+1>|)><eq-number><label|eq
         16.580.315>>>>>
       </eqnarray*>
 
       Now
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|T<rsub|1>>|<cell|=>|<cell|L<around*|(|x+h|)><around*|(|<around*|(|x<rsup|n>h<rsup|0>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|n>h<rsup|0>|)><rsub|n>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|x|)><around*|(|<around*|(|x<rsup|n>h<rsup|0>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|n>h<rsup|0>|)><rsub|n>|)>+L<around*|(|h|)><around*|(|<around*|(|x<rsup|n>h<rsup|0>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|n>h<rsup|0>|)><rsub|n>|)>>>|<row|<cell|>|<cell|=>|<cell|T<rsub|1,1>+T<rsub|1,2>>>>>
+        <tformat|<table|<row|<cell|T<rsub|1>>|<cell|=>|<cell|L<around*|(|x+h|)><around*|(|<around*|(|x<rsup|n>h<rsup|0>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|n>h<rsup|0>|)><rsub|n>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|x|)><around*|(|<around*|(|x<rsup|n>h<rsup|0>|)><rsub|2>:\<ldots\>:<around*|(|x<rsup|n>h<rsup|0>|)><rsub|n>|)>+L<around*|(|h|)><around*|(|<around*|(|x<rsup|n>h<rsup|0>|)><rsub|2>:\<ldots\>:<around*|(|x<rsup|n>h<rsup|0>|)><rsub|n>|)>>>|<row|<cell|>|<cell|=>|<cell|T<rsub|1,1>+T<rsub|1,2>>>>>
       </eqnarray*>
 
       where by [eqs: <reference|eq 16.575.315>, <reference|eq 16.576.315>]\ 
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|T<rsub|1,1>>|<cell|=>|<cell|L<around*|(|<around*|(|x<rsup|p+1>h<rsup|0>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|p+1>h<rsup|0>|)><rsub|\|n+1>|)>>>|<row|<cell|T<rsub|1,2>>|<cell|=>|<cell|L<around*|(|<around*|(|x<rsup|<around*|(|n+1|)>-1>h<rsup|1>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|<around*|(|n+1|)>-1>h<rsup|1>|)><rsub|n+1>|)>>>>>
+        <tformat|<table|<row|<cell|T<rsub|1,1>>|<cell|=>|<cell|L<around*|(|<around*|(|x<rsup|n+1>h<rsup|0>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|n+1>h<rsup|0>|)><rsub|\|n+1>|)>>>|<row|<cell|T<rsub|1,2>>|<cell|=>|<cell|L<around*|(|<around*|(|x<rsup|<around*|(|n+1|)>-1>h<rsup|1>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|<around*|(|n+1|)>-1>h<rsup|1>|)><rsub|n+1>|)>>>>>
       </eqnarray*>
 
+      Next
+
       <\eqnarray*>
-        <tformat|<table|<row|<cell|T<rsub|2>>|<cell|=>|<cell|n\<cdot\>L<around*|(|x+h|)><around*|(|<around*|(|x<rsup|n-1>h<rsup|1>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|n-1>h<rsup|1>|)><rsub|n>|)>>>|<row|<cell|>|<cell|=>|<cell|n\<cdot\>L<around*|(|x|)><around*|(|<around*|(|x<rsup|n-1>h<rsup|1>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|n-1>h<rsup|1>|)><rsub|n>|)>+n\<cdot\>L<around*|(|h|)><around*|(|<around*|(|x<rsup|n-1>h<rsup|1>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|n-1>h<rsup|1>|)><rsub|n>|)>>>|<row|<cell|>|<cell|=>|<cell|T<rsub|2,1>+T<rsub|2,2>>>>>
+        <tformat|<table|<row|<cell|T<rsub|2>>|<cell|=>|<cell|n\<cdot\>L<around*|(|x+h|)><around*|(|<around*|(|x<rsup|n-1>h<rsup|1>|)><rsub|2>:\<ldots\>:<around*|(|x<rsup|n-1>h<rsup|1>|)><rsub|n>|)>>>|<row|<cell|>|<cell|=>|<cell|n\<cdot\>L<around*|(|x|)><around*|(|<around*|(|x<rsup|n-1>h<rsup|1>|)><rsub|2>:\<ldots\>:<around*|(|x<rsup|n-1>h<rsup|1>|)><rsub|n>|)>+n\<cdot\>L<around*|(|h|)><around*|(|<around*|(|x<rsup|n-1>h<rsup|1>|)><rsub|2>:\<ldots\>:<around*|(|x<rsup|n-1>h<rsup|1>|)><rsub|n>|)>>>|<row|<cell|>|<cell|=>|<cell|T<rsub|2,1>+T<rsub|2,2>>>>>
       </eqnarray*>
 
       where by [eqs: <reference|eq 16.577.315>, <reference|eq 16.578.315>] we
@@ -28379,7 +28529,7 @@
       Further\ 
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|T<rsub|3>>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>L<around*|(|x+h|)><around*|(|<around*|(|x<rsup|p<rsub|i>>y<rsup|q<rsub|i>>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|p<rsub|i>>y<rsup|q<rsub|i>>|)><rsub|n>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>L<around*|(|x|)><around*|(|<around*|(|x<rsup|p<rsub|i>>y<rsup|q<rsub|i>>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|p<rsub|i>>y<rsup|q<rsub|i>>|)><rsub|n>|)>+<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>L<around*|(|h|)><around*|(|<around*|(|x<rsup|p<rsub|i>>y<rsup|q<rsub|i>>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|p<rsub|i>>y<rsup|q<rsub|i>>|)><rsub|n>|)>>>|<row|<cell|>|<cell|=>|<cell|T<rsub|3,1>+T<rsub|3,2>>>>>
+        <tformat|<table|<row|<cell|T<rsub|3>>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>L<around*|(|x+h|)><around*|(|<around*|(|x<rsup|p<rsub|i>>y<rsup|q<rsub|i>>|)><rsub|2>:\<ldots\>:<around*|(|x<rsup|p<rsub|i>>y<rsup|q<rsub|i>>|)><rsub|n>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>L<around*|(|x|)><around*|(|<around*|(|x<rsup|p<rsub|i>>y<rsup|q<rsub|i>>|)><rsub|2>:\<ldots\>:<around*|(|x<rsup|p<rsub|i>>y<rsup|q<rsub|i>>|)><rsub|n>|)>+<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>L<around*|(|h|)><around*|(|<around*|(|x<rsup|p<rsub|i>>y<rsup|q<rsub|i>>|)><rsub|2>:\<ldots\>:<around*|(|x<rsup|p<rsub|i>>y<rsup|q<rsub|i>>|)><rsub|n>|)>>>|<row|<cell|>|<cell|=>|<cell|T<rsub|3,1>+T<rsub|3,2>>>>>
       </eqnarray*>
 
       where by [eqs: <reference|eq 16.579.315>, <reference|eq 16.580.315>]\ 
@@ -28446,8 +28596,8 @@
       So
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|L<around*|(|<wide*|x+h:\<ldots\>:x+h|\<wide-underbrace\>><rsub|n+1>|)>>|<cell|=>|<cell|L<around*|(|x+h|)><around*|(|<wide*|x+h:\<ldots\>:x+h|\<wide-underbrace\>><rsub|n>|)>>>|<row|<cell|>|<cell|=>|<cell|T<rsub|1>+T<rsub|2>+T<rsub|3>>>|<row|<cell|>|<cell|=>|<cell|T<rsub|1,1>+T<rsub|1,2>+T<rsub|2,1>+T<rsub|2,2>+T<rsub|3,1>+T<rsub|3,2>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|<around*|(|x<rsup|p+1>h<rsup|0>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|p+1>h<rsup|0>|)><rsub|\|n+1>|)>+>>|<row|<cell|>|<cell|>|<cell|L<around*|(|<around*|(|x<rsup|<around*|(|n+1|)>-1>h<rsup|1>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|<around*|(|n+1|)>-1>h<rsup|1>|)><rsub|n+1>|)>+>>|<row|<cell|>|<cell|>|<cell|n\<cdot\>L<around*|(|<around*|(|x<rsup|<around*|(|n+1|)>-1>h<rsup|1>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|<around*|(|n+1|)>-1>h<rsup|1>|)><rsub|n+1>|)>+>>|<row|<cell|>|<cell|>|<cell|T<rsub|2,2>+T<rsub|3,1>+T<rsub|3,2>>>|<row|<cell|>|<cell|<below|=|<text|[eq:
-        <reference|eq 16.569.318>]>>>|<cell|L<around*|(|<around*|(|x<rsup|p+1>h<rsup|0>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|p+1>h<rsup|0>|)><rsub|n+1>|)>+>>|<row|<cell|>|<cell|>|<cell|L<around*|(|<around*|(|x<rsup|<around*|(|n+1|)>-1>h<rsup|1>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|<around*|(|n+1|)>-1>h<rsup|1>|)><rsub|n+1>|)>+>>|<row|<cell|>|<cell|>|<cell|n\<cdot\>L<around*|(|<around*|(|x<rsup|<around*|(|n+1|)>-1>h<rsup|1>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|<around*|(|n+1|)>-1>h<rsup|1>|)><rsub|n+1>|)>+>>|<row|<cell|>|<cell|>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,2\<cdot\>k+n|}>>L<around*|(|<around*|(|x<rsup|Q<rsub|i>>h<rsup|P<rsub|i>>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|Q<rsub|i>>h<rsup|P<rsub|i>>|)><rsub|n+1>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|<around*|(|x<rsup|p+1>h<rsup|0>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|p+1>h<rsup|0>|)>|)>+>>|<row|<cell|>|<cell|>|<cell|<around*|(|n+1|)>\<cdot\>L<around*|(|<around*|(|x<rsup|<around*|(|n+1|)>-1>h<rsup|1>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|<around*|(|n+1|)>-1>h<rsup|1>|)><rsub|n+1>|)>+>>|<row|<cell|>|<cell|>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,2\<cdot\>k+n|}>>L<around*|(|<around*|(|x<rsup|Q<rsub|i>>h<rsup|P<rsub|i>>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|Q<rsub|i>>h<rsup|P<rsub|i>>|)><rsub|n+1>|)>>>>>
+        <tformat|<table|<row|<cell|L<around*|(|<wide*|x+h:\<ldots\>:x+h|\<wide-underbrace\>><rsub|n+1>|)>>|<cell|=>|<cell|L<around*|(|x+h|)><around*|(|<wide*|x+h:\<ldots\>:x+h|\<wide-underbrace\>><rsub|n>|)>>>|<row|<cell|>|<cell|=>|<cell|T<rsub|1>+T<rsub|2>+T<rsub|3>>>|<row|<cell|>|<cell|=>|<cell|T<rsub|1,1>+T<rsub|1,2>+T<rsub|2,1>+T<rsub|2,2>+T<rsub|3,1>+T<rsub|3,2>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|<around*|(|x<rsup|n+1>h<rsup|0>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|n+1>h<rsup|0>|)><rsub|\|n+1>|)>+>>|<row|<cell|>|<cell|>|<cell|L<around*|(|<around*|(|x<rsup|<around*|(|n+1|)>-1>h<rsup|1>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|<around*|(|n+1|)>-1>h<rsup|1>|)><rsub|n+1>|)>+>>|<row|<cell|>|<cell|>|<cell|n\<cdot\>L<around*|(|<around*|(|x<rsup|<around*|(|n+1|)>-1>h<rsup|1>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|<around*|(|n+1|)>-1>h<rsup|1>|)><rsub|n+1>|)>+>>|<row|<cell|>|<cell|>|<cell|T<rsub|2,2>+T<rsub|3,1>+T<rsub|3,2>>>|<row|<cell|>|<cell|<below|=|<text|[eq:
+        <reference|eq 16.569.318>]>>>|<cell|L<around*|(|<around*|(|x<rsup|n+1>h<rsup|0>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|n+1>h<rsup|0>|)><rsub|n+1>|)>+>>|<row|<cell|>|<cell|>|<cell|L<around*|(|<around*|(|x<rsup|<around*|(|n+1|)>-1>h<rsup|1>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|<around*|(|n+1|)>-1>h<rsup|1>|)><rsub|n+1>|)>+>>|<row|<cell|>|<cell|>|<cell|n\<cdot\>L<around*|(|<around*|(|x<rsup|<around*|(|n+1|)>-1>h<rsup|1>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|<around*|(|n+1|)>-1>h<rsup|1>|)><rsub|n+1>|)>+>>|<row|<cell|>|<cell|>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,2\<cdot\>k+n|}>>L<around*|(|<around*|(|x<rsup|Q<rsub|i>>h<rsup|P<rsub|i>>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|Q<rsub|i>>h<rsup|P<rsub|i>>|)><rsub|n+1>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|<around*|(|x<rsup|n+1>h<rsup|0>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|n+1>h<rsup|0>|)>|)>+>>|<row|<cell|>|<cell|>|<cell|<around*|(|n+1|)>\<cdot\>L<around*|(|<around*|(|x<rsup|<around*|(|n+1|)>-1>h<rsup|1>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|<around*|(|n+1|)>-1>h<rsup|1>|)><rsub|n+1>|)>+>>|<row|<cell|>|<cell|>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,2\<cdot\>k+n|}>>L<around*|(|<around*|(|x<rsup|Q<rsub|i>>h<rsup|P<rsub|i>>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|Q<rsub|i>>h<rsup|P<rsub|i>>|)><rsub|n+1>|)>>>>>
       </eqnarray*>
 
       Hence\ 
@@ -28459,7 +28609,7 @@
       where
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|K<rsub|1>>|<cell|=>|<cell|L<around*|(|<around*|(|x<rsup|p+1>h<rsup|0>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|p+1>h<rsup|0>|)><rsub|n+1>|)>>>|<row|<cell|K<rsub|2>>|<cell|=>|<cell|<around*|(|n+1|)>\<cdot\>L<around*|(|<around*|(|x<rsup|<around*|(|n+1|)>-1>h<rsup|1>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|<around*|(|n+1|)>-1>h<rsup|1>|)><rsub|n+1>|)>+>>|<row|<cell|K<rsub|3>>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,2\<cdot\>k+n|}>>L<around*|(|<around*|(|x<rsup|Q<rsub|i>>h<rsup|P<rsub|i>>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|Q<rsub|i>>h<rsup|P<rsub|i>>|)><rsub|n+1>|)>>>>>
+        <tformat|<table|<row|<cell|K<rsub|1>>|<cell|=>|<cell|L<around*|(|<around*|(|x<rsup|n+1>h<rsup|0>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|n+1>h<rsup|0>|)><rsub|n+1>|)>>>|<row|<cell|K<rsub|2>>|<cell|=>|<cell|<around*|(|n+1|)>\<cdot\>L<around*|(|<around*|(|x<rsup|<around*|(|n+1|)>-1>h<rsup|1>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|<around*|(|n+1|)>-1>h<rsup|1>|)><rsub|n+1>|)>+>>|<row|<cell|K<rsub|3>>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,2\<cdot\>k+n|}>>L<around*|(|<around*|(|x<rsup|Q<rsub|i>>h<rsup|P<rsub|i>>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|Q<rsub|i>>h<rsup|P<rsub|i>>|)><rsub|n+1>|)>>>>>
       </eqnarray*>
 
       This together with [eq: <reference|eq 16.581.315>] proves that\ 
@@ -28468,6 +28618,422 @@
         n+1\<in\>S
       </equation*>
     </description>
+  </proof>
+
+  <\lemma>
+    <label|lemma 16.383.315>Let <math|n\<in\>\<bbb-N\>>,
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    be normed spaces, <math|L\<in\>L<rsub|n><around*|(|X;Y|)>> such that
+    <math|\<forall\>\<sigma\>\<in\>P<rsub|n>>,
+    <math|\<forall\>y=<around*|(|y<rsub|1>,\<ldots\>,y<rsub|n>|)>> we have
+    <math|L<around*|(|y<rsub|\<sigma\><around*|(|1|)>>:\<ldots\>:y<rsub|\<sigma\><around*|(|n|)>>|)>=L<around*|(|y<rsub|1>,\<ldots\>,y<rsub|n>|)>>
+    then we have that\ 
+
+    <\equation*>
+      \<Phi\>:X\<rightarrow\>Y<text| defined by
+      >\<Phi\><around*|(|x|)>=L<around*|(|<wide*|x:\<ldots\>:x|\<wide-underbrace\>><rsub|n>|)>
+    </equation*>
+
+    is Fréchet differentiable at every <math|x\<in\>X> where\ 
+
+    <\equation*>
+      D<rsub|x>\<Phi\>:X\<rightarrow\>Y
+    </equation*>
+
+    is defined by\ 
+
+    <\equation*>
+      D<rsub|x>\<Phi\><around*|(|h|)>=n\<cdot\>L<around*|(|<around*|(|x<rsup|n-1>h<rsup|1>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|n-1>h<rsup|1>|)><rsub|n>|)>=n\<cdot\>L<around*|(|<wide*|x:\<ldots\>:x|\<wide-underbrace\>><rsub|n-1>:h|)>
+    </equation*>
+  </lemma>
+
+  <\proof>
+    Let <math|x\<in\>X> then by the previous lemma [lemma: <reference|lemma
+    16.382.315>] there exist a <math|<around*|{|q<rsub|i>,p<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>>
+    with <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,k|}>>
+    <math|2\<leqslant\>q<rsub|i>>, <math|n=p<rsub|i>+q<rsub|i>> such that
+    <math|\<forall\>h\<in\>X>
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|L<around*|(|x+h:\<ldots\>:x+h|)>>|<cell|=>|<cell|T<rsub|1>+T<rsub|2>+T<rsub|3>>>|<row|<cell|>|<cell|where>|<cell|>>|<row|<cell|T<rsub|1>>|<cell|=>|<cell|L<around*|(|<around*|(|x<rsup|n>h<rsup|0>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|n>h<rsup|0>|)><rsub|n>|)>>>|<row|<cell|T<rsub|2>>|<cell|=>|<cell|n\<cdot\>L<around*|(|<around*|(|x<rsup|n-1>h<rsup|1>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|n-1>h<rsup|1>|)><rsub|n>|)>>>|<row|<cell|T<rsub|3>>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>L<around*|(|<around*|(|x<rsup|p<rsub|i>>h<rsup|q<rsub|i>>|)><rsub|1>:\<ldots\><around*|(|x<rsup|p<rsub|i>>h<rsup|q<rsub|i>>|)><rsub|n>|)>>>>>
+    </eqnarray*>
+
+    Now
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|\<Phi\><around*|(|x+h|)>>|<cell|=>|<cell|L<around*|(|x+h:\<ldots\>:x+h|)>>>|<row|<cell|\<Phi\><around*|(|x|)>>|<cell|=>|<cell|L<around*|(|<wide*|x:\<ldots\>:x|\<wide-underbrace\>><rsub|n>|)>>>|<row|<cell|>|<cell|<below|=|<text|[lemma:
+      <reference|lemma 16.380.315>(3)]>>>|<cell|L<around*|(|<around*|(|x<rsup|n>h<rsup|0>|)><rsub|1>,\<ldots\>,<around*|(|x<rsup|n>h<rsup|0>|)><rsub|n>|)>>>|<row|<cell|>|<cell|=>|<cell|T<rsub|1>>>>>
+    </eqnarray*>
+
+    hence we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|\<Phi\><around*|(|x+h|)>-\<Phi\><around*|(|x|)>-n\<cdot\>L<around*|(|<around*|(|x<rsup|n-1>h<rsup|1>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|n-1>h<rsup|1>|)><rsub|n>|)>>|<cell|=>|<cell|T<rsub|3><eq-number><label|eq
+      16.582.315>>>>>
+    </eqnarray*>
+
+    Now\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|\<\|\|\>|T<rsub|3>|\<\|\|\>><rsub|Y>>|<cell|=>|<cell|<around*|\<\|\|\>|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>L<around*|(|<around*|(|x<rsup|p<rsub|i>>h<rsup|q<rsub|i>>|)><rsub|1>:\<ldots\><around*|(|x<rsup|p<rsub|i>>h<rsup|q<rsub|i>>|)><rsub|n>|)>|\<\|\|\>><rsub|Y>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>><around*|\<\|\|\>|L<around*|(|<around*|(|x<rsup|p<rsub|i>>h<rsup|q<rsub|i>>|)><rsub|1>:\<ldots\><around*|(|x<rsup|p<rsub|i>>h<rsup|q<rsub|i>>|)><rsub|n>|)>|\<\|\|\>>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>><around*|(|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<rsub|n><around*|(|X;Y|)>>\<cdot\>\<Pi\><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>><around*|\<\|\|\>|<around*|(|x<rsup|p<rsub|i>>h<rsup|q<rsub|i>>|)><rsub|j>|\<\|\|\>><rsub|X>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>><around*|(|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<rsub|n><around*|(|X;Y|)>>\<cdot\><around*|(|\<Pi\><rsub|j\<in\><around*|{|1,\<ldots\>,p<rsub|i>|}>><around*|\<\|\|\>|<around*|(|x<rsup|p<rsub|i>>h<rsup|q<rsub|i>>|)><rsub|j>|\<\|\|\>><rsub|X>|)>\<cdot\><around*|(|\<Pi\><rsub|j\<in\><around*|{|p<rsub|i>+1,\<ldots\>,n|}>><around*|\<\|\|\>|<around*|(|x<rsup|p<rsub|i>>h<rsup|q<rsub|i>>|)><rsub|j>|\<\|\|\>><rsub|X>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>><around*|(|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<rsub|n><around*|(|X;Y|)>>\<cdot\><around*|(|\<Pi\><rsub|j\<in\><around*|{|1,\<ldots\>,p<rsub|i>|}>><around*|\<\|\|\>|x|\<\|\|\>><rsub|X>|)>\<cdot\><around*|(|\<Pi\><rsub|j\<in\><around*|{|p<rsub|i>+1,\<ldots\>,n|}>><around*|\<\|\|\>|h|\<\|\|\>><rsub|X>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>><around*|(|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<rsub|n><around*|(|X;Y|)>>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsub|X><rsup|p<rsub|i>>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>><rsup|q<rsub|i>><rsub|X>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>><around*|(|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<rsub|n><around*|(|X;Y|)>>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsup|p<rsub|i>><rsub|X>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>><rsub|X><rsup|q<rsub|i>-2>|)>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>><rsup|2><rsub|X>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>><around*|(|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<rsub|n><around*|(|X;Y|)>>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsup|p<rsub|i>><rsub|X>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>><rsub|X><rsup|q<rsub|i>-2>|)>|)>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>><rsup|2><rsub|X>>>>>
+    </eqnarray*>
+
+    which proves that\ 
+
+    <\equation>
+      <label|eq 16.583.315><around*|\<\|\|\>|T<rsub|3>|\<\|\|\>><rsub|Y>\<leqslant\><around*|(|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>><around*|(|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<rsub|n><around*|(|X;Y|)>>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsup|p<rsub|i>><rsub|X>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>><rsub|X><rsup|q<rsub|i>-2>|)>|)>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>><rsup|2><rsub|X>
+    </equation>
+
+    Assume that <math|<around*|\<\|\|\>|h|\<\|\|\>>\<less\>1> then as
+    <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,k|}>>
+    <math|2\<leqslant\>q<rsub|i>> we have
+    <math|<around*|\<\|\|\>|h|\<\|\|\>><rsub|X><rsup|q<rsub|i>-2>\<leqslant\>1>
+    so that\ 
+
+    <\equation>
+      <label|eq 16.584.315.1>\<forall\>h\<in\>X<text| with
+      ><around*|\<\|\|\>|h|\<\|\|\>><rsub|X>\<less\>1<text| we have
+      ><around*|\<\|\|\>|T<rsub|3>|\<\|\|\>><rsub|Y>\<leqslant\><around*|(|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>><around*|(|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<rsub|n><around*|(|X;Y|)>>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsup|p<rsub|i>><rsub|X>|)>|)>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>><rsup|2><rsub|X>
+    </equation>
+
+    Let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>. Take
+    <math|\<delta\><rsub|\<varepsilon\>>=min<around*|(|1,<frac|\<varepsilon\>|1+<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>><around*|(|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<rsub|n><around*|(|X;Y|)>>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsup|p<rsub|i>><rsub|X>|)>>|)>>
+    then for <math|h\<in\>X=X<rsub|x>> with
+    <math|<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>\<less\>\<delta\><rsub|\<varepsilon\>>>
+    we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|\<\|\|\>|\<Phi\><around*|(|x+h|)>-\<Phi\><around*|(|x|)>-n\<cdot\>L<around*|(|<around*|(|x<rsup|n-1>h<rsup|1>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|n-1>h<rsup|1>|)><rsub|n>|)>|\<\|\|\>><rsub|Y>>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 16.582.315>]>>>|<cell|>>|<row|<cell|<around*|\<\|\|\>|T<rsub|3>|\<\|\|\>><rsub|Y>>|<cell|<below|\<leqslant\>|<text|[eq:
+      <reference|eq 16.584.315.1>]>>>|<cell|>>|<row|<cell|<around*|(|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>><around*|(|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<rsub|n><around*|(|X;Y|)>>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsup|p<rsub|i>><rsub|X>|)>|)>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>><rsup|2><rsub|X>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|<around*|(|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>><around*|(|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<rsub|n><around*|(|X;Y|)>>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsup|p<rsub|i>><rsub|X>|)>|)>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>><rsub|X>|)>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>><rsub|X>>|<cell|\<leqslant\>>|<cell|>>|<row|<cell|<around*|(|<around*|(|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>><around*|(|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<rsub|n><around*|(|X;Y|)>>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsup|p<rsub|i>><rsub|X>|)>|)>\<cdot\><frac|\<varepsilon\>|1+<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>><around*|(|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<rsub|n><around*|(|X;Y|)>>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsup|p<rsub|i>><rsub|X>|)>>|)>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>><rsub|X>>|<cell|\<leqslant\>>|<cell|>>|<row|<cell|\<varepsilon\>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>><rsub|x>>|<cell|>|<cell|>>>>
+    </eqnarray*>
+
+    Hence <math|\<forall\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> we have
+    <math|\<forall\>h\<in\>X=X<rsub|x>> with
+    <math|<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>\<less\>\<delta\><rsub|\<varepsilon\>>>
+    that
+
+    <\equation>
+      <label|eq 16.585.315><text| ><around*|\<\|\|\>|\<Phi\><around*|(|x+h|)>-\<Phi\><around*|(|x|)>-n\<cdot\>L<around*|(|<around*|(|x<rsup|n-1>h<rsup|1>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|n-1>h<rsup|1>|)><rsub|n>|)>|\<\|\|\>><rsub|Y>\<leqslant\>\<varepsilon\>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>><rsub|X>
+    </equation>
+
+    Define
+
+    <\equation*>
+      K:X\<rightarrow\>Y<text| by >K<around*|(|h|)>=n\<cdot\>L<around*|(|<around*|(|x<rsup|n-1>h<rsup|1>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|n-1>h<rsup|1>|)><rsub|n>|)>
+    </equation*>
+
+    As <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n-1|}>> we have
+    <math|<around*|(|x<rsup|n-1>h<rsup|1>|)><rsub|i>\<equallim\>x> and
+    <math|<around*|(|x<rsup|n-1>h<rsup|1>|)><rsub|n>=h> it follows that
+
+    <\equation*>
+      \<forall\>h\<in\>X<text| >K<around*|(|h|)>=n\<cdot\>L<around*|(|<wide*|x:\<ldots\>:x|\<wide-underbrace\>><rsub|n-1>:h|)>
+    </equation*>
+
+    Hence for <math|h,k\<in\>X>, <math|\<alpha\>\<in\>\<bbb-K\>> we have
+
+    <\equation*>
+      K<around*|(|h+\<alpha\>\<cdot\>k|)>=n\<cdot\>L<around*|(|<wide*|x:\<ldots\>:x|\<wide-underbrace\>><rsub|n-1>:h+\<alpha\>\<cdot\>k|)>=n\<cdot\>L<around*|(|<wide*|x:\<ldots\>:x|\<wide-underbrace\>><rsub|n-1>:h|)>+\<alpha\>\<cdot\>n\<cdot\>L<around*|(|<wide*|x:\<ldots\>:x|\<wide-underbrace\>><rsub|n-1>:k|)>=K<around*|(|h|)>+\<alpha\>\<cdot\>K<around*|(|k|)>
+    </equation*>
+
+    which proves that
+
+    <\equation*>
+      K\<in\>Hom<around*|(|X,Y|)>
+    </equation*>
+
+    Further <math|\<forall\>h\<in\>X> we have
+    <math|<around*|\<\|\|\>|K<around*|(|x|)>|\<\|\|\>><rsub|Y>=<around*|\<\|\|\>|n\<cdot\>L<around*|(|<wide*|x:\<ldots\>:x|\<wide-underbrace\>><rsub|n-1>:h|)>|\<\|\|\>><rsub|Y>\<leqslant\>n\<cdot\><around*|(|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<rsub|n><around*|(|X;Y|)>>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsub|x><rsup|n-1>|)>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>><rsub|X>>
+    which proves that <math|K> is continuous, hence
+
+    <\equation*>
+      K\<in\>L<around*|(|X;Y|)>
+    </equation*>
+
+    As further <math|X> is open it follows from the definition of Fréchet
+    differentiability [see definition: <reference|diff differentiability>]
+    that <math|\<Phi\>> is Fréchet differentiable at <math|x> with
+    <math|D<rsub|x>\<Phi\>=K>. Further <math|D<rsub|x>\<Phi\>> is defined by\ 
+
+    <\equation*>
+      \<forall\>h\<in\>X<text| >D<rsub|x>\<Phi\><around*|(|h|)>=K<around*|(|h|)>=n\<cdot\>L<around*|(|<around*|(|x<rsup|n-1>h<rsup|1>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|n-1>h<rsup|1>|)><rsub|n>|)>=n\<cdot\>L<around*|(|<wide*|x:\<ldots\>:x|\<wide-underbrace\>><rsub|n-1>:h|)>
+    </equation*>
+  </proof>
+
+  We can now prove a version of Taylor's theorem for functions between normed
+  spaces.
+
+  TODO check this
+
+  <\theorem>
+    <label|diff Taylor I.3><dueto|Taylor's Theorem (I.3)>Let
+    <math|n\<in\>\<bbb-N\>>, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    be normed spaces, <math|U> a open set in <math|X>, <math|x\<in\>U> and
+    <math|f:U\<rightarrow\>Y> a function that is <math|n>-times
+    differentiable at <math|x<rsub|0>> then
+    <math|\<forall\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> there exist a
+    <math|\<delta\>\<in\>\<bbb-R\><rsup|+>> such that
+    <math|\<forall\>h\<in\>U<rsub|x<rsub|0>>> with
+    <math|<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>\<less\>\<delta\>> we have\ 
+
+    <\equation*>
+      <around*|\<\|\|\>|f<around*|(|x<rsub|0>+h|)>-f<around*|(|x<rsub|0>|)>-<big|sum><rsub|k=1><rsup|n><frac|1|k!>\<cdot\>D<rsub|x<rsub|0>><rsup|<around*|[|k|]>>f<around*|(|<wide*|h:\<ldots\>:h|\<wide-underbrace\>><rsub|k>|)>|\<\|\|\>><rsub|Y>\<leqslant\>\<varepsilon\>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>><rsub|X><rsup|n>
+    </equation*>
+
+    <\note>
+      Let <math|x\<in\>U> then as <math|f> is <math|n>-times differentiable
+      at <math|x<rsub|0>> it follows from [theorem: <reference|diff n-times
+      and m-times differentiability>] that
+      <math|\<forall\>m\<in\><around*|{|1,\<ldots\>,n|}>> <math|f> is
+      <math|m>-times differentiable at <math|x<rsub|0>> so that
+      <math|<big|sum><rsub|k\<in\><around*|{|1,\<ldots\>,n-1|}>><frac|1|k!>\<cdot\>D<rsub|x<rsub|0>><rsup|<around*|[|k|]>>f<around*|(|<wide*|h:\<ldots\>:h|\<wide-underbrace\>><rsub|k>|)>>
+      is well defined.
+    </note>
+
+    <\note>
+      Using [definition: <reference|diff little o>] this equivalent with
+      saying that\ 
+
+      <\equation*>
+        f<around*|(|x<rsub|0>+h|)>=f<around*|(|x<rsub|0>|)>+<big|sum><rsub|k=1><rsup|n><frac|1|k!>\<cdot\>D<rsub|x<rsub|0>><rsup|<around*|[|k|]>>f<around*|(|<wide*|h:\<ldots\>:h|\<wide-underbrace\>><rsub|k>|)>=<below|ord|h<below|\<rightarrow\>|U<rsub|x>>0><around*|(|<around*|\<\|\|\>|h|\<\|\|\>><rsub|X><rsup|n>|)>
+      </equation*>
+    </note>
+  </theorem>
+
+  <\proof>
+    We prove this by induction so let\ 
+
+    <\equation*>
+      S<rsub|X>=<around*|{|n\<in\>\<bbb-N\>\|<text|If
+      <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+      is a normed space and >f:U\<rightarrow\>Y<text| is >n<text|-times
+      differentiable at >x<rsub|0><text| then
+      >\<forall\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+><text|
+      >\<exists\>\<delta\>\<in\>\<bbb-R\><rsup|+><text| such that
+      >\<forall\>h\<in\>U<rsub|x<rsub|0>><text| with
+      ><around*|\<\|\|\>|h|\<\|\|\>><rsub|X>\<less\>\<delta\><text| we have
+      ><around*|\<\|\|\>|f<around*|(|x<rsub|0>+h|)>-f<around*|(|x<rsub|0>|)>-<big|sum><rsub|k=1><rsup|n><frac|1|k!>\<cdot\>D<rsup|<around*|[|k|]>><rsub|x<rsub|0>>f<around*|(|<wide*|h:\<ldots\>:h|\<wide-underbrace\>><rsub|k>|)>|\<\|\|\>><rsub|Y>\<leqslant\>\<varepsilon\>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>><rsup|n><rsub|X>|}>
+    </equation*>
+
+    then we have:\ 
+
+    <\description>
+      <item*|<math|1\<in\>S>>If <math|f> is <math|1>-times differentiable at
+      <math|x<rsub|0>> then by [theorem: <reference|diff higher order
+      differentiation (1)>] <math|f> is Fréchet differentiable at
+      <math|x<rsub|0>> with <math|<rigid|D<rsup|<around*|[|1|]>><rsub|x<rsub|0>>f=D<rsub|x<rsub|0>>f>>.
+      Let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> then there exists a
+      <math|\<delta\>\<in\>\<bbb-R\><rsup|+>> such that
+      <math|\<forall\>h\<in\>U<rsub|x<rsub|0>>> with
+      <math|<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>\<less\>\<delta\>> we have\ 
+
+      <\equation*>
+        <around*|\<\|\|\>|f<around*|(|x<rsub|0>+h|)>-f<around*|(|x<rsub|0>|)>-<big|sum><rsub|k=1><rsup|1><frac|1|k!>\<cdot\>D<rsup|<around*|[|k|]>><rsub|x<rsub|0>>f<around*|(|<wide*|h:\<ldots\>:h|\<wide-underbrace\>><rsub|1>|)>|\<\|\|\>><rsub|Y>=<around*|\<\|\|\>|f<around*|(|x<rsub|0>+h|)>-f<around*|(|x<rsub|0>|)>-D<rsub|x<rsub|0>>f<around*|(|h|)>|\<\|\|\>><rsub|Y>\<leqslant\>\<varepsilon\>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>><rsup|><rsub|X>
+      </equation*>
+
+      \ which proves that <math|1\<in\>S>.
+
+      <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>As <math|f> is
+      <math|<around*|(|n+1|)>>-times differentiable at <math|x<rsub|0>> and
+      <math|2\<in\><around*|{|1,\<ldots\>,n+1|}>> we have by [theorem:
+      <reference|diff n-times and m-times differentiability>] that <math|f>
+      is <math|2>-times differentiable at <math|x<rsub|0>>. By [theorem:
+      <reference|diff higher order differentiation (1)>] it follows that
+      <math|D<rsup|<around*|[|1|]>>f> is Fréchet differentiable at
+      <math|x<rsub|0>>, so by the definition of Fréchet differentiability
+      [see definition: <reference|diff differentiability>] it follows that
+      <math|x<rsub|0>\<in\><around*|(|\<frak-D\><rsup|1><rsub|f>|)><rsup|\<circ\>>>
+      where <math|\<frak-D\><rsup|1><rsub|f>> is the domain of
+      <math|D<rsup|<around*|[|1|]>>f>. Hence there exist a
+      <math|\<delta\><rsub|1>\<in\>\<bbb-R\><rsup|+>> such that
+
+      <\equation*>
+        B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|x<rsub|0>,\<delta\><rsub|1>|)>\<subseteq\>\<frak-D\><rsup|1><rsub|f><below|\<subseteq\>|<text|[theorem:
+        <reference|diff higher order differential domains>]>>U
+      </equation*>
+
+      Hence using [definition: <reference|diff higher order differentiation
+      on a open set>] and [theorem: <reference|diff higher order
+      differentiation (1)>] we have that\ 
+
+      <\equation>
+        <label|eq 16.598.23>\<forall\>x\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|x<rsub|0>,\<delta\><rsub|1>|)><text|
+        >f<text| is Fréchet differentiable at >x
+      </equation>
+
+      Further as <math|f> is <math|<around*|(|n+1|)>>-times differentiable at
+      <math|x<rsub|0>> it follows that <math|\<forall\>k\<in\><around*|{|1,\<ldots\>,n+1|}>>
+      <math|D<rsup|<around*|[|k|]>><rsub|0>f> exist. Hence we can define the
+      following function.
+
+      <\equation>
+        <label|eq 16.573.316>\<varphi\>:B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|x<rsub|0>,\<delta\><rsub|1>|)>\<rightarrow\>Y<text|
+        where >\<varphi\><around*|(|x|)>=f<around*|(|x<rsub|0>+x|)>-f<around*|(|x<rsub|0>|)>-<big|sum><rsub|k=1><rsup|n+1><frac|1|k!>\<cdot\>D<rsup|<around*|[|k|]>><rsub|x<rsub|0>>f<around*|(|<wide*|x:\<ldots\>:x|\<wide-underbrace\>><rsub|k>|)>
+      </equation>
+
+      Let <math|k\<in\><around*|{|1,\<ldots\>,n+1|}>> and define\ 
+
+      <\equation*>
+        \<Phi\><rsub|k>:B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|x<rsub|0>,\<delta\><rsub|1>|)>\<rightarrow\>Y<text|
+        by >\<Phi\><rsub|k><around*|(|x|)>=D<rsup|<around*|[|k|]>><rsub|x<rsub|0>>f<around*|(|<wide*|x:\<ldots\>:x|\<wide-underbrace\>><rsub|k>|)>
+      </equation*>
+
+      then it follows from [theorem: <reference|diff differentiability is a
+      local property>], and [lemma: <reference|lemma 16.383.315>] that
+      <math|\<forall\>x\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,\<delta\><rsub|1>|)>>
+      <math|\<Phi\><rsub|k>> is Fréchet differentiable at <math|x> where
+      <math|D<rsub|x>\<Phi\><rsub|k>> is defined by\ 
+
+      <\equation*>
+        D<rsub|x>\<Phi\><rsub|k>:X\<rightarrow\>Y<text| where
+        >D<rsub|x>\<Phi\><rsub|k><around*|(|h|)>=k\<cdot\>D<rsup|<around*|[|k|]>><rsub|x<rsub|0>>f<around*|(|<wide*|x:\<ldots\>:x|\<wide-underbrace\>><rsub|k-1>:h|)>
+      </equation*>
+
+      Define
+
+      <\equation>
+        <label|eq 16.574.316>\<varphi\><rsub|2>:<rsub|>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,\<delta\><rsub|1>|)>\<rightarrow\>Y<text|
+        by >\<varphi\><rsub|2><around*|(|x|)>=-<big|sum><rsub|k=1><rsup|n+1><frac|1|k!>\<cdot\>D<rsup|<around*|[|k|]>><rsub|x<rsub|0>>f<around*|(|<wide*|x:\<ldots\>:x|\<wide-underbrace\>><rsub|k>|)>
+      </equation>
+
+      then <math|\<varphi\><rsub|2>=-<big|sum><rsub|k=1><rsup|n+1><frac|1|k!>\<cdot\>\<Phi\><rsub|k>>
+      so that by [theorem: <reference|diff derivate operator is linear>]
+      <math|\<varphi\><rsub|2>> is Fréchet differentiable at
+      <math|<rigid|x\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,\<delta\><rsub|1>|)>>>
+      where <math|D<rsub|x>\<varphi\><rsub|2>\<in\>L<around*|(|X,Y|)>> is
+      defined by\ 
+
+      <\equation>
+        <label|eq 16.575.316>D<rsub|x>\<varphi\><rsub|2><around*|(|h|)>=-<big|sum><rsub|k=1><rsup|n+1><frac|1|k!>\<cdot\>k\<cdot\>D<rsup|<around*|[|k|]>><rsub|x<rsub|0>>f<around*|(|<wide*|x:\<ldots\>:x|\<wide-underbrace\>><rsub|k-1>:h|)>=-<big|sum><rsub|k=1><rsup|n+1><frac|1|<around*|(|k-1|)>!>\<cdot\>D<rsup|<around*|[|k|]>><rsub|x<rsub|0>>f<around*|(|<wide*|x:\<ldots\>:x|\<wide-underbrace\>><rsub|k-1>:h|)>
+      </equation>
+
+      Define\ 
+
+      <\equation>
+        <label|eq 16.576.316>\<varphi\><rsub|1>:B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,\<delta\><rsub|1>|)>\<rightarrow\>Y<text|
+        by >\<varphi\><rsub|1><around*|(|x|)>=f<around*|(|x<rsub|0>+x|)>-f<around*|(|x<rsub|0>|)>=<around*|(|f\<circ\><around*|(|Id<rsub|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>>>+C<rsub|x<rsub|o>><rsub|>|)>+C<rsub|-f<around*|(|x<rsub|0>|)>>|)><around*|(|x|)>
+      </equation>
+
+      By [examples: <reference|diff constant function is differentiable>,
+      <reference|diff identity function is differentiable>], [theorems:
+      <reference|diff chain rule>, <reference|diff derivate operator is
+      linear>] and [eq: <reference|eq 16.598.23>] it follows that
+      <math|\<varphi\><rsub|1>> is Fréchet differentiable at
+      <math|x\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,\<delta\><rsub|1>|)>>
+      with\ 
+
+      <\equation>
+        <label|eq 16.577.316>D<rsub|x>\<varphi\><rsub|1>=D<rsub|x<rsub|0>+x>f
+      </equation>
+
+      Combining [eqs: <reference|eq 16.573.316>, <reference|eq 16.574.316>,
+      <reference|eq 16.576.316>] results in\ 
+
+      <\equation*>
+        \<varphi\>=\<varphi\><rsub|1>+\<varphi\><rsub|2>
+      </equation*>
+
+      So that by [theorem: <reference|diff derivate operator is linear>] and
+      [eqs: <reference|eq 16.575.316>, <reference|eq 16.577.316>] we have
+      <math|\<forall\>x\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,\<delta\><rsub|1>|)>>
+      that <math|\<varphi\>> is Fréchet differentiable at <math|x> where\ 
+
+      <\equation*>
+        D<rsub|x>\<varphi\>\<in\>L<around*|(|X,Y|)>
+      </equation*>
+
+      is defined by\ 
+
+      <\equation>
+        <label|eq 16.578.316>D<rsub|x>\<varphi\>:X\<rightarrow\>Y<text| where
+        >D<rsub|x>\<varphi\><around*|(|h|)>=D<rsub|x<rsub|0>+x>f<around*|(|h|)>-<big|sum><rsub|k=1><rsup|n+1><frac|1|<around*|(|k-1|)>!>\<cdot\>D<rsup|<around*|[|k|]>><rsub|x<rsub|0>>f<around*|(|<wide*|x:\<ldots\>:x|\<wide-underbrace\>><rsub|k-1>:h|)>
+      </equation>
+
+      As <math|f> is <math|<around*|(|n+1|)>> differentiable at
+      <math|x<rsub|0>> it follows from [theorem: <reference|diff n+m
+      differentiation (1)>] that <math|D<rsup|<around*|[|1|]>>f> is
+      <math|n>-times differentiable at <math|x<rsub|0>> with
+
+      <\equation*>
+        D<rsup|<around*|[|n+1|]>><rsub|x<rsub|0>>f=D<rsup|<around*|[|n|]>><rsub|x<rsub|0>><around*|(|D<rsup|<around*|[|1|]>>f|)>
+      </equation*>
+
+      Let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>. As <math|n\<in\>S>
+      there exist a <math|\<delta\><rsub|2>\<in\>\<bbb-R\><rsup|+>> such that
+      <math|\<forall\>h\<in\>U<rsub|x<rsub|0>>> with
+      <math|<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>\<less\>\<delta\><rsub|2>>
+      we have\ 
+
+      <\equation>
+        <label|eq 16.579.316><around*|\<\|\|\>|D<rsup|<around*|[|1|]>>f<around*|(|x<rsub|0>+h|)>-D<rsup|<around*|[|1|]>>f<around*|(|x<rsub|0>|)>-<big|sum><rsub|k=1><rsup|n><frac|1|k!>\<cdot\>D<rsup|<around*|[|k|]>><rsub|x<rsub|0>><around*|(|D<rsup|<around*|[|1|]>>f|)><around*|(|<wide*|h:\<ldots\>:h|\<wide-underbrace\>><rsub|k>|)>|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\<leqslant\>\<varepsilon\>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>><rsup|n><rsub|X>
+      </equation>
+
+      Let <math|\<delta\>=min<around*|(|\<delta\><rsub|1>,\<delta\><rsub|2>|)>>
+      and take <math|h\<in\>U<rsub|x<rsub|0>>> with
+      <math|<around*|\<\|\|\>|h|\<\|\|\>><rsub|X>\<less\>\<delta\>>. Given
+      <math|y\<in\>X> we have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|D<rsup|<around*|[|1|]>>f<around*|(|x<rsub|0>|)>+<big|sum><rsub|k=1><rsup|n><frac|1|k!>\<cdot\>D<rsup|<around*|[|k|]>><rsub|x<rsub|0>><around*|(|D<rsup|<around*|[|1|]>>f|)><around*|(|<wide*|h:\<ldots\>:h|\<wide-underbrace\>><rsub|k>|)>|)><around*|(|y|)>>|<cell|<below|=|<text|[theorem:
+        <reference|diff n+m differentiation
+        (1)>]>>>|<cell|>>|<row|<cell|<around*|(|D<rsup|<around*|[|1|]>>f<around*|(|x<rsub|0>|)>+<big|sum><rsub|k=1><rsup|n><frac|1|k!>\<cdot\>D<rsup|<around*|[|k+1|]>><rsub|x<rsub|0>>f<around*|(|<wide*|h:\<ldots\>:h|\<wide-underbrace\>><rsub|k>|)>|)><around*|(|y|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|D<rsup|<around*|[|1|]>><rsub|x<rsub|0>>f+<big|sum><rsub|k=2><rsup|n+1><frac|1|<around*|(|k-1|)>!>\<cdot\>D<rsup|<around*|\<nobracket\>|k|]>><rsub|x<rsub|0>>f<around*|(|<wide*|h:\<ldots\>:h|\<wide-underbrace\>><rsub|k-1>|)>|)><around*|(|y|)>>|<cell|=>|<cell|>>|<row|<cell|D<rsup|<around*|[|1|]>><rsub|x<rsub|0>>f<around*|(|y|)>+<big|sum><rsub|k=2><rsup|n+1><frac|1|<around*|(|k-1|)>!>\<cdot\>D<rsup|<around*|\<nobracket\>|k|]>><rsub|x<rsub|0>>f<around*|(|<wide*|h:\<ldots\>:h|\<wide-underbrace\>><rsub|k-1>|)><around*|(|y|)>>|<cell|\<equallim\><rsub|<text|[lemma:
+        <reference|lemma 16.53.186>]>>>|<cell|>>|<row|<cell|D<rsub|x<rsub|0>><rsup|<around*|[|1|]>>f<around*|(|y|)>+<big|sum><rsub|k=2><rsup|n+1><frac|1|<around*|(|k-1|)>!>\<cdot\>D<rsup|<around*|\<nobracket\>|k|]>><rsub|x<rsub|0>>f<around*|(|<wide*|h:\<ldots\>:h|\<wide-underbrace\>><rsub|k-1>:y|)>>|=|<cell|>>|<row|<cell|<frac|1|<around*|(|1-1|)>!>\<cdot\>D<rsup|<around*|[|1|]>><rsub|x<rsub|0>>f<around*|(|<wide*|h:\<ldots\>:h|\<wide-underbrace\>><rsub|1-1>:y|)>+<big|sum><rsub|k=2><rsup|n+1><frac|1|<around*|(|k-1|)>!>\<cdot\>D<rsup|<around*|\<nobracket\>|k|]>><rsub|x<rsub|0>>f<around*|(|<wide*|h:\<ldots\>:h|\<wide-underbrace\>><rsub|k-1>:y|)>>|<cell|=>|<cell|>>|<row|<cell|<big|sum><rsub|k=1><rsup|n+1><frac|1|<around*|(|k-1|)>!>\<cdot\>D<rsup|<around*|\<nobracket\>|k|]>><rsub|x<rsub|0>>f<around*|(|<wide*|h:\<ldots\>:h|\<wide-underbrace\>><rsub|k-1>:y|)>>|<cell|<below|=|<text|[eq:
+        <reference|eq 16.578.316>]>>>|<cell|>>|<row|<cell|D<rsub|x<rsub|0>+h>f<around*|(|y|)>-D<rsub|h>\<varphi\><around*|(|y|)>>|<cell|=>|<cell|>>|<row|<cell|D<rsup|<around*|[|1|]>><rsub|x<rsub|0>+h>f<around*|(|y|)>-D<rsub|h>\<varphi\><around*|(|y|)>>|<cell|>|<cell|<eq-number><label|eq
+        16.580.316>>>>>
+      </eqnarray*>
+
+      hence we have <math|\<forall\>y\<in\>X> that\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|D<rsup|<around*|[|1|]>>f<around*|(|x<rsub|0>+h|)>-D<rsup|<around*|[|1|]>>f<around*|(|x<rsub|0>|)>-<big|sum><rsub|k=1><rsup|n><frac|1|k!>\<cdot\>D<rsup|<around*|[|k|]>><rsub|x<rsub|0>><around*|(|D<rsup|<around*|[|1|]>>f|)><around*|(|<wide*|h:\<ldots\>:h|\<wide-underbrace\>><rsub|k>|)>|)><around*|(|y|)>>|<cell|<below|=|<text|[eq:
+        <reference|eq 16.580.316>]>>>|<cell|>>|<row|<cell|D<rsup|<around*|[|1|]>>f<around*|(|x<rsub|0>+h|)><around*|(|y|)>-D<rsup|<around*|[|1|]>><rsub|x<rsub|0>+h>f<around*|(|y|)>+D<rsub|h>\<varphi\><around*|(|y|)>>|<cell|=>|<cell|>>|<row|<cell|D<rsup|<around*|[|1|]>><rsub|x<rsub|0>+h>f<around*|(|h|)>-D<rsup|<around*|[|1|]>><rsub|x<rsub|0>+h>f<around*|(|h|)>+D<rsub|h>\<varphi\><around*|(|y|)>>|<cell|=>|<cell|>>|<row|<cell|D<rsub|h>\<varphi\><around*|(|y|)>>|<cell|>|<cell|>>>>
+      </eqnarray*>
+
+      so that <math|\<forall\>y\<in\>X> we have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|\<\|\|\>|D<rsub|h>\<varphi\><around*|(|y|)>|\<\|\|\>><rsub|Y>>|<cell|=>|<cell|>>|<row|<cell|<around*|\<\|\|\>|<around*|(|D<rsup|<around*|[|1|]>>f<around*|(|x<rsub|0>+h|)>-D<rsup|<around*|[|1|]>>f<around*|(|x<rsub|0>|)>-<big|sum><rsub|k=1><rsup|n><frac|1|k!>\<cdot\>D<rsup|<around*|[|k|]>><rsub|x<rsub|0>><around*|(|D<rsup|<around*|[|1|]>>f|)><around*|(|<wide*|h:\<ldots\>:h|\<wide-underbrace\>><rsub|k>|)>|)><around*|(|y|)>|\<\|\|\>><rsub|Y>>|<cell|\<leqslant\>>|<cell|>>|<row|<cell|<around*|\<\|\|\>|D<rsup|<around*|[|1|]>>f<around*|(|x<rsub|0>+h|)>-D<rsup|<around*|[|1|]>>f<around*|(|x<rsub|0>|)>-<big|sum><rsub|k=1><rsup|n><frac|1|k!>\<cdot\>D<rsup|<around*|[|k|]>><rsub|x<rsub|0>><around*|(|D<rsup|<around*|[|1|]>>f|)><around*|(|<wide*|h:\<ldots\>:h|\<wide-underbrace\>><rsub|k>|)>|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\<cdot\><around*|\<\|\|\>|y|\<\|\|\>><rsub|X>>|<cell|<below|\<leqslant\>|<text|[eq:
+        <reference|eq 16.579.316>]>>>|<cell|>>|<row|<cell|\<varepsilon\>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>><rsup|n><rsub|X>\<cdot\><around*|\<\|\|\>|y|\<\|\|\>><rsub|X>>|<cell|>|<cell|>>>>
+      </eqnarray*>
+
+      \ Hence using [theorem: <reference|continuity norm on L(X,Y)>] it
+      follows that
+
+      <\equation*>
+        <around*|\<\|\|\>|D<rsub|x<rsub|0>>\<varphi\>|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\<leqslant\>\<varepsilon\>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>><rsup|n><rsub|X>
+      </equation*>
+
+      As <math|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,\<delta\>|)>\<subseteq\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,\<delta\><rsub|1>|)>>
+      <math|\<varphi\>> is Fréchet differentiable on
+      <math|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,\<delta\>|)>>
+      and <math|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,\<delta\>|)>>
+      is convex [see theorem: <reference|diff balls are convex>] we can use
+      the Mean Value Theorem [theorem: <reference|diff mean value theorem
+      (7)>] to get for <math|0,h\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,\<delta\>|)>>
+
+      <\equation*>
+        <around*|\<\|\|\>|\<varphi\><around*|(|h|)>-\<varphi\><around*|(|0|)>|\<\|\|\>><rsub|Y>\<leqslant\>\<varepsilon\>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>><rsup|n><rsub|X>*\<cdot\><around*|\<\|\|\>|h-0|\<\|\|\>><rsub|X>=\<varepsilon\>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>><rsup|n+1><rsub|X>
+      </equation*>
+
+      As\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|\<varphi\><around*|(|h|)>-\<varphi\><around*|(|0|)>>|<cell|=>|<cell|>>|<row|<cell|\<varphi\><around*|(|h|)>-<around*|(|f<around*|(|x<rsub|0>|)>-f<around*|(|x<rsub|0>|)>-<big|sum><rsub|k=1><rsup|n+1><frac|1|k!>\<cdot\>D<rsup|<around*|[|k|]>><rsub|x<rsub|0>>f<around*|(|<wide*|0:\<ldots\>:0|\<wide-underbrace\>><rsub|k>|)>|)>>|<cell|=>|<cell|>>|<row|<cell|\<varphi\><around*|(|h|)>-0>|<cell|=>|<cell|>>|<row|<cell|\<varphi\><around*|(|h|)>>|<cell|=>|<cell|>>|<row|<cell|f<around*|(|x<rsub|0>+h|)>-f<around*|(|x<rsub|0>|)>-<big|sum><rsub|k=1><rsup|n+1><frac|1|k!>\<cdot\>D<rsup|<around*|[|k|]>><rsub|x<rsub|0>>f<around*|(|<wide*|h:\<ldots\>:h|\<wide-underbrace\>><rsub|k>|)>>|<cell|>|<cell|>>>>
+      </eqnarray*>
+
+      it follows that\ 
+
+      <\equation*>
+        <around*|\<\|\|\>|f<around*|(|x<rsub|0>+h|)>-f<around*|(|x<rsub|0>|)>-<big|sum><rsub|k=1><rsup|n+1><frac|1|k!>\<cdot\>D<rsup|<around*|[|k|]>><rsub|x<rsub|0>>f<around*|(|<wide*|h:\<ldots\>:h|\<wide-underbrace\>><rsub|k>|)>|\<\|\|\>><rsub|Y>\<leqslant\>\<varepsilon\>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>><rsup|n+1><rsub|X>
+      </equation*>
+
+      which finally proves that <math|n+1\<in\>S>.
+    </description>
+
+    \;
   </proof>
 
   \;
@@ -28558,13 +29124,13 @@
     <associate|auto-72|<tuple|16.7|?>>
     <associate|auto-8|<tuple|16.1.3|?>>
     <associate|auto-9|<tuple|differentiability|?>>
-    <associate|conjecture 16.245.136|<tuple|16.334|?>>
-    <associate|conjecture 16.246.136|<tuple|16.335|?>>
-    <associate|conjecture 16.247.136|<tuple|16.336|?>>
-    <associate|conjecture 16.248.136|<tuple|16.337|?>>
-    <associate|conjecture 16.252|<tuple|16.339|?>>
+    <associate|conjecture 16.245.136|<tuple|16.336|?>>
+    <associate|conjecture 16.246.136|<tuple|16.337|?>>
+    <associate|conjecture 16.247.136|<tuple|16.338|?>>
+    <associate|conjecture 16.248.136|<tuple|16.339|?>>
+    <associate|conjecture 16.252|<tuple|16.341|?>>
     <associate|continuity limit of composition of linear
-    maps|<tuple|16.313|?>>
+    maps|<tuple|16.315|?>>
     <associate|convergence of a function to a point|<tuple|16.3|?>>
     <associate|corollary 16.50.192|<tuple|16.110|?>>
     <associate|diff (f+g)'=f'+g'|<tuple|16.40|?>>
@@ -28578,22 +29144,23 @@
     <associate|diff Frechet approximation|<tuple|16.43|?>>
     <associate|diff Frechet differentation implies partial differentiability
     |<tuple|16.81|?>>
-    <associate|diff GL(X) is a group|<tuple|16.312|?>>
-    <associate|diff H^n properties|<tuple|16.316|?>>
+    <associate|diff GL(X) is a group|<tuple|16.314|?>>
+    <associate|diff H^n properties|<tuple|16.318|?>>
     <associate|diff I+H has inverse if norm of H is less then
-    1|<tuple|16.320|?>>
+    1|<tuple|16.322|?>>
     <associate|diff Jacobian matrix|<tuple|16.100|?>>
-    <associate|diff L(x1:..:xn) (1)|<tuple|16.246|?>>
+    <associate|diff L(x1:..:xn) (1)|<tuple|16.248|?>>
     <associate|diff L(x1:..xn)|<tuple|16.111|?>>
     <associate|diff L(x1:..xn)=L(1:..:1). product|<tuple|16.115|?>>
     <associate|diff L_n(X;Y)|<tuple|16.107|?>>
-    <associate|diff L_n(x1,..,xn;Y)|<tuple|16.241|?>>
+    <associate|diff L_n(x1,..,xn;Y)|<tuple|16.243|?>>
     <associate|diff Lagrange theorem|<tuple|16.201|?>>
     <associate|diff Lagrange theorem (1)|<tuple|16.203|?>>
     <associate|diff Rolle's theorem|<tuple|16.199|?>>
-    <associate|diff Taylor I|<tuple|16.345|?>>
-    <associate|diff Taylor I.1|<tuple|16.347|?>>
-    <associate|diff Taylor I.2|<tuple|16.350|?>>
+    <associate|diff Taylor I|<tuple|16.347|?>>
+    <associate|diff Taylor I.1|<tuple|16.349|?>>
+    <associate|diff Taylor I.2|<tuple|16.352|?>>
+    <associate|diff Taylor I.3|<tuple|16.363|?>>
     <associate|diff Ux|<tuple|16.13|?>>
     <associate|diff Ux is open if U is open|<tuple|16.16|?>>
     <associate|diff Ux=-x+U=U-x|<tuple|16.15|?>>
@@ -28611,13 +29178,13 @@
     <associate|diff chain rule higher order class|<tuple|16.192|?>>
     <associate|diff class C^@@|<tuple|16.152|?>>
     <associate|diff class C^m is equivalent with continuous partial
-    differentials|<tuple|16.286|?>>
+    differentials|<tuple|16.288|?>>
     <associate|diff class C^n|<tuple|16.148|?>>
     <associate|diff class C^n (1)|<tuple|16.153|?>>
     <associate|diff class C^n (2)|<tuple|16.154|?>>
     <associate|diff class C^n (domain)|<tuple|16.149|?>>
     <associate|diff class C^n is equivalent with continuous
-    derivatives|<tuple|16.300|?>>
+    derivatives|<tuple|16.302|?>>
     <associate|diff class C^n sub-sets|<tuple|16.146|?>>
     <associate|diff composition with a linear mapping|<tuple|16.68|?>>
     <associate|diff constant function and partial
@@ -28626,9 +29193,9 @@
     <associate|diff constant function is infinitely times
     differentiable|<tuple|16.174|?>>
     <associate|diff continuous partial differentials implies
-    differentiability|<tuple|16.277|?>>
+    differentiability|<tuple|16.279|?>>
     <associate|diff continuous partial differentials implies
-    differentiability (1)|<tuple|16.285|?>>
+    differentiability (1)|<tuple|16.287|?>>
     <associate|diff convex concave|<tuple|16.206|?>>
     <associate|diff convex set|<tuple|16.214|?>>
     <associate|diff convex/concave alternative|<tuple|16.207|?>>
@@ -28647,11 +29214,11 @@
     <associate|diff derivative on a open set|<tuple|16.28|?>>
     <associate|diff derivative on a open set (2)|<tuple|16.39|?>>
     <associate|diff derivatives and continuity|<tuple|16.33|?>>
-    <associate|diff diffeomorphism|<tuple|16.322|?>>
-    <associate|diff diffeomorphism D(f@f^-1)|<tuple|16.328|?>>
-    <associate|diff diffeomorphism composition|<tuple|16.329|?>>
-    <associate|diff diffeomorphism identity|<tuple|16.326|?>>
-    <associate|diff diffeomorphism inverse|<tuple|16.323|?>>
+    <associate|diff diffeomorphism|<tuple|16.324|?>>
+    <associate|diff diffeomorphism D(f@f^-1)|<tuple|16.330|?>>
+    <associate|diff diffeomorphism composition|<tuple|16.331|?>>
+    <associate|diff diffeomorphism identity|<tuple|16.328|?>>
+    <associate|diff diffeomorphism inverse|<tuple|16.325|?>>
     <associate|diff differentiability|<tuple|16.46|?>>
     <associate|diff differentiability alternative
     definitions|<tuple|16.60|?>>
@@ -28667,21 +29234,21 @@
     <associate|diff differential of product of functions|<tuple|16.102|?>>
     <associate|diff e-mapping|<tuple|16.59|?>>
     <associate|diff equivalent norms|<tuple|16.55|?>>
-    <associate|diff evaluation operator|<tuple|16.231|?>>
+    <associate|diff evaluation operator|<tuple|16.233|?>>
     <associate|diff f(t)=a.x+y is infinite differentiable|<tuple|16.177|?>>
     <associate|diff fundamental theorem of calculus (1)|<tuple|16.209|?>>
     <associate|diff fundamental theorem of calculus (2)|<tuple|16.210|?>>
     <associate|diff higher order continuous differential and higher order
-    continuous derivate|<tuple|16.299|?>>
+    continuous derivate|<tuple|16.301|?>>
     <associate|diff higher order derivate and differential|<tuple|16.166|?>>
-    <associate|diff higher order derivates|<tuple|16.287|?>>
+    <associate|diff higher order derivates|<tuple|16.289|?>>
     <associate|diff higher order derivative at a point|<tuple|16.161|?>>
     <associate|diff higher order derivative at a point (1)|<tuple|16.163|?>>
     <associate|diff higher order derivative function|<tuple|16.159|?>>
     <associate|diff higher order derivative function domain|<tuple|16.160|?>>
     <associate|diff higher order derivative on a set|<tuple|16.162|?>>
     <associate|diff higher order differation implies higher order partial
-    differation|<tuple|16.267|?>>
+    differation|<tuple|16.269|?>>
     <associate|diff higher order differential|<tuple|16.126|?>>
     <associate|diff higher order differential domains|<tuple|16.132|?>>
     <associate|diff higher order differential is linear|<tuple|16.173|?>>
@@ -28689,7 +29256,7 @@
     <associate|diff higher order differential of a product
     (1)|<tuple|16.195|?>>
     <associate|diff higher order differentials are symmetric in there
-    arguments|<tuple|16.239|?>>
+    arguments|<tuple|16.241|?>>
     <associate|diff higher order differentiation|<tuple|16.133|?>>
     <associate|diff higher order differentiation (1)|<tuple|16.137|?>>
     <associate|diff higher order differentiation (2)|<tuple|16.130|?>>
@@ -28699,9 +29266,9 @@
     functions|<tuple|16.187|?>>
     <associate|diff higher order differentiation classes|<tuple|16.188|?>>
     <associate|diff higher order differentiation implies higher order
-    derivates|<tuple|16.303|?>>
+    derivates|<tuple|16.305|?>>
     <associate|diff higher order differentiation implies higher order partial
-    differation (1)|<tuple|16.268|?>>
+    differation (1)|<tuple|16.270|?>>
     <associate|diff higher order differentiation is local|<tuple|16.142|?>>
     <associate|diff higher order differentiation is local
     (1)|<tuple|16.144|?>>
@@ -28709,53 +29276,53 @@
     (2)|<tuple|16.145|?>>
     <associate|diff higher order differentiation on a open
     set|<tuple|16.138|?>>
-    <associate|diff higher order partial derivative (1)|<tuple|16.289|?>>
-    <associate|diff higher order partial derivative (2)|<tuple|16.290|?>>
-    <associate|diff higher order partial derivative (3)|<tuple|16.291|?>>
-    <associate|diff higher order partial derivative (4)|<tuple|16.292|?>>
+    <associate|diff higher order partial derivative (1)|<tuple|16.291|?>>
+    <associate|diff higher order partial derivative (2)|<tuple|16.292|?>>
+    <associate|diff higher order partial derivative (3)|<tuple|16.293|?>>
+    <associate|diff higher order partial derivative (4)|<tuple|16.294|?>>
     <associate|diff higher order partial derivative
-    (domains)|<tuple|16.288|?>>
-    <associate|diff higher order partial differentiation|<tuple|16.256|?>>
+    (domains)|<tuple|16.290|?>>
+    <associate|diff higher order partial differentiation|<tuple|16.258|?>>
     <associate|diff higher order partial differentiation
-    (1)|<tuple|16.258|?>>
+    (1)|<tuple|16.260|?>>
     <associate|diff higher order partial differentiation
-    (2)|<tuple|16.264|?>>
+    (2)|<tuple|16.266|?>>
     <associate|diff higher order partial differentiation
-    (domain)|<tuple|16.257|?>>
+    (domain)|<tuple|16.259|?>>
     <associate|diff higher order partial differentiation is
-    symmetric|<tuple|16.269|?>>
+    symmetric|<tuple|16.271|?>>
     <associate|diff higher order partial differentiation
-    n,m|<tuple|16.263|?>>
+    n,m|<tuple|16.265|?>>
     <associate|diff higher order partial differentiation on open
-    domain|<tuple|16.261|?>>
+    domain|<tuple|16.263|?>>
     <associate|diff higher order partial differentiation on open
-    set|<tuple|16.260|?>>
+    set|<tuple|16.262|?>>
     <associate|diff homeomorphism is a diffeomorphism of class
-    C^0|<tuple|16.324|?>>
+    C^0|<tuple|16.326|?>>
     <associate|diff identity function is differentiable|<tuple|16.52|?>>
     <associate|diff identity function is infinite times
     differentiable|<tuple|16.176|?>>
-    <associate|diff implicit function theorem|<tuple|16.343|?>>
-    <associate|diff implicit function theorem (1)|<tuple|16.344|?>>
+    <associate|diff implicit function theorem|<tuple|16.345|?>>
+    <associate|diff implicit function theorem (1)|<tuple|16.346|?>>
     <associate|diff increasing decreasing function|<tuple|16.205|?>>
     <associate|diff inifint=ite differentiable|<tuple|16.136|?>>
     <associate|diff integration by part|<tuple|16.211|?>>
-    <associate|diff inverse function theorem|<tuple|16.331|?>>
-    <associate|diff inverse function theorem and Jacobian|<tuple|16.340|?>>
-    <associate|diff inverse mapping on GL(X)|<tuple|16.321|?>>
+    <associate|diff inverse function theorem|<tuple|16.333|?>>
+    <associate|diff inverse function theorem and Jacobian|<tuple|16.342|?>>
+    <associate|diff inverse mapping on GL(X)|<tuple|16.323|?>>
     <associate|diff limit of a function|<tuple|16.11|?>>
     <associate|diff line segment [0,1]|<tuple|16.220|?>>
     <associate|diff linear isomorphism between Banach spaces are
-    diffeomorphisms|<tuple|16.325|?>>
+    diffeomorphisms|<tuple|16.327|?>>
     <associate|diff linear mapping is infinite times
     differentiable|<tuple|16.175|?>>
     <associate|diff linear mappings are differentiable|<tuple|16.54|?>>
     <associate|diff linear to multilinear|<tuple|16.123|?>>
-    <associate|diff linear to multilinear (1)|<tuple|16.254|?>>
+    <associate|diff linear to multilinear (1)|<tuple|16.256|?>>
     <associate|diff linesegement|<tuple|16.218|?>>
-    <associate|diff little o|<tuple|16.349|?>>
-    <associate|diff little o and limits|<tuple|16.351|?>>
-    <associate|diff local diffeomorphism|<tuple|16.330|?>>
+    <associate|diff little o|<tuple|16.351|?>>
+    <associate|diff little o and limits|<tuple|16.353|?>>
+    <associate|diff local diffeomorphism|<tuple|16.332|?>>
     <associate|diff mean value theorem (0)|<tuple|16.216|?>>
     <associate|diff mean value theorem (1)|<tuple|16.213|?>>
     <associate|diff mean value theorem (2)|<tuple|16.216|?>>
@@ -28764,6 +29331,8 @@
     <associate|diff mean value theorem (3.1)|<tuple|16.224|?>>
     <associate|diff mean value theorem (4)|<tuple|16.225|?>>
     <associate|diff mean value theorem (5)|<tuple|16.228|?>>
+    <associate|diff mean value theorem (6)|<tuple|16.229|?>>
+    <associate|diff mean value theorem (7)|<tuple|16.230|?>>
     <associate|diff minimum maximum|<tuple|16.196|?>>
     <associate|diff n+m derivative|<tuple|16.171|?>>
     <associate|diff n+m derivative (1)|<tuple|16.172|?>>
@@ -28775,11 +29344,11 @@
     <associate|diff partial derivate and partial
     differential|<tuple|16.92|?>>
     <associate|diff partial derivate and partial differential of higher
-    order|<tuple|16.293|?>>
+    order|<tuple|16.295|?>>
     <associate|diff partial derivate and partial differential of higher order
-    (1)|<tuple|16.297|?>>
+    (1)|<tuple|16.299|?>>
     <associate|diff partial derivate and partial differential of higher order
-    (2)|<tuple|16.298|?>>
+    (2)|<tuple|16.300|?>>
     <associate|diff partial derivate definition|<tuple|16.86|?>>
     <associate|diff partial derivative on a set|<tuple|16.91|?>>
     <associate|diff partial differentiability does not mean
@@ -28790,16 +29359,16 @@
     <associate|diff partial differential properties|<tuple|16.84|?>>
     <associate|diff partial differentiation is local|<tuple|16.80|?>>
     <associate|diff power|<tuple|16.105|?>>
-    <associate|diff power of composition|<tuple|16.315|?>>
+    <associate|diff power of composition|<tuple|16.317|?>>
     <associate|diff projection functon is infinite times
     differentiable|<tuple|16.180|?>>
     <associate|diff restriction of a diffeomorphism is a
-    diffeomorphism|<tuple|16.327|?>>
+    diffeomorphism|<tuple|16.329|?>>
     <associate|diff scalar product function has a derivate|<tuple|16.32|?>>
     <associate|diff second derivate convex concave|<tuple|16.208|?>>
-    <associate|diff space of toplinear isomorphism|<tuple|16.311|?>>
+    <associate|diff space of toplinear isomorphism|<tuple|16.313|?>>
     <associate|diff toplinear isomorphism between Banach
-    spaces|<tuple|16.310|?>>
+    spaces|<tuple|16.312|?>>
     <associate|diff translation is infinite differentiable|<tuple|16.179|?>>
     <associate|diff unprojection|<tuple|16.69|?>>
     <associate|diff unprojection is infinite times
@@ -28919,7 +29488,7 @@
     <associate|eq 16.173.16|<tuple|16.181|?>>
     <associate|eq 16.174.16|<tuple|16.182|?>>
     <associate|eq 16.175.16|<tuple|16.183|?>>
-    <associate|eq 16.176.211|<tuple|16.247|?>>
+    <associate|eq 16.176.211|<tuple|16.249|?>>
     <associate|eq 16.177.16|<tuple|16.184|?>>
     <associate|eq 16.178.16|<tuple|16.185|?>>
     <associate|eq 16.179.16|<tuple|16.186|?>>
@@ -28978,7 +29547,6 @@
     <associate|eq 16.226.204|<tuple|16.279|?>>
     <associate|eq 16.227.17|<tuple|16.235|?>>
     <associate|eq 16.227.204|<tuple|16.280|?>>
-    <associate|eq 16.227.23|<tuple|16.227|?>>
     <associate|eq 16.228.204|<tuple|16.281|?>>
     <associate|eq 16.229.17|<tuple|16.237|?>>
     <associate|eq 16.23.178|<tuple|16.57|?>>
@@ -29344,20 +29912,33 @@
     <associate|eq 16.569.318|<tuple|16.593|?>>
     <associate|eq 16.572.22|<tuple|16.573|?>>
     <associate|eq 16.573.22|<tuple|16.574|?>>
+    <associate|eq 16.573.316|<tuple|16.599|?>>
     <associate|eq 16.574.22|<tuple|16.575|?>>
     <associate|eq 16.574.315|<tuple|16.585|?>>
+    <associate|eq 16.574.316|<tuple|16.600|?>>
     <associate|eq 16.575.315|<tuple|16.586|?>>
+    <associate|eq 16.575.316|<tuple|16.601|?>>
     <associate|eq 16.576.315|<tuple|16.587|?>>
+    <associate|eq 16.576.316|<tuple|16.602|?>>
     <associate|eq 16.577.315|<tuple|16.588|?>>
+    <associate|eq 16.577.316|<tuple|16.603|?>>
     <associate|eq 16.578.315|<tuple|16.589|?>>
+    <associate|eq 16.578.316|<tuple|16.604|?>>
     <associate|eq 16.579.315|<tuple|16.590|?>>
+    <associate|eq 16.579.316|<tuple|16.605|?>>
     <associate|eq 16.580.315|<tuple|16.591|?>>
+    <associate|eq 16.580.316|<tuple|16.606|?>>
     <associate|eq 16.581.315|<tuple|16.592|?>>
+    <associate|eq 16.582.315|<tuple|16.594|?>>
+    <associate|eq 16.583.315|<tuple|16.595|?>>
+    <associate|eq 16.584.315.1|<tuple|16.596|?>>
+    <associate|eq 16.585.315|<tuple|16.597|?>>
     <associate|eq 16.592.505|<tuple|16.576|?>>
     <associate|eq 16.593.505|<tuple|16.577|?>>
     <associate|eq 16.594.305|<tuple|16.578|?>>
     <associate|eq 16.596.505|<tuple|16.579|?>>
     <associate|eq 16.597.505|<tuple|16.580|?>>
+    <associate|eq 16.598.23|<tuple|16.598|?>>
     <associate|eq 16.598.505|<tuple|16.581|?>>
     <associate|eq 16.599.305|<tuple|16.582|?>>
     <associate|eq 16.6.301|<tuple|16.6|?>>
@@ -29399,50 +29980,51 @@
     <associate|eq 16.99.6|<tuple|16.103|?>>
     <associate|fig 4.311|<tuple|16.4|?>>
     <associate|fig 5.311|<tuple|16.5|?>>
-    <associate|inverse function and derivate|<tuple|16.341|?>>
+    <associate|inverse function and derivate|<tuple|16.343|?>>
     <associate|lemma 16.101.194|<tuple|16.190|?>>
-    <associate|lemma 16.104.194|<tuple|16.235|?>>
-    <associate|lemma 16.105.194|<tuple|16.236|?>>
+    <associate|lemma 16.104.194|<tuple|16.237|?>>
+    <associate|lemma 16.105.194|<tuple|16.238|?>>
     <associate|lemma 16.11.500|<tuple|16.6|?>>
     <associate|lemma 16.135.200|<tuple|16.212|?>>
     <associate|lemma 16.144.201|<tuple|16.221|?>>
-    <associate|lemma 16.155.203|<tuple|16.230|?>>
-    <associate|lemma 16.157.205|<tuple|16.229|?>>
-    <associate|lemma 16.159.206|<tuple|16.232|?>>
-    <associate|lemma 16.160.206|<tuple|16.233|?>>
-    <associate|lemma 16.166.210|<tuple|16.237|?>>
-    <associate|lemma 16.167.210|<tuple|16.238|?>>
-    <associate|lemma 16.173.211|<tuple|16.244|?>>
-    <associate|lemma 16.174.211|<tuple|16.245|?>>
-    <associate|lemma 16.177.211|<tuple|16.248|?>>
-    <associate|lemma 16.178.210|<tuple|16.249|?>>
-    <associate|lemma 16.179.210|<tuple|16.250|?>>
+    <associate|lemma 16.155.203|<tuple|16.232|?>>
+    <associate|lemma 16.157.205|<tuple|16.231|?>>
+    <associate|lemma 16.159.206|<tuple|16.234|?>>
+    <associate|lemma 16.160.206|<tuple|16.235|?>>
+    <associate|lemma 16.166.210|<tuple|16.239|?>>
+    <associate|lemma 16.167.210|<tuple|16.240|?>>
+    <associate|lemma 16.173.211|<tuple|16.246|?>>
+    <associate|lemma 16.174.211|<tuple|16.247|?>>
+    <associate|lemma 16.177.211|<tuple|16.250|?>>
+    <associate|lemma 16.178.210|<tuple|16.251|?>>
+    <associate|lemma 16.179.210|<tuple|16.252|?>>
     <associate|lemma 16.18.2|<tuple|16.18|?>>
-    <associate|lemma 16.180.210|<tuple|16.251|?>>
-    <associate|lemma 16.181.210|<tuple|16.252|?>>
-    <associate|lemma 16.182.210|<tuple|16.253|?>>
+    <associate|lemma 16.180.210|<tuple|16.253|?>>
+    <associate|lemma 16.181.210|<tuple|16.254|?>>
+    <associate|lemma 16.182.210|<tuple|16.255|?>>
     <associate|lemma 16.19.2|<tuple|16.19|?>>
-    <associate|lemma 16.192.122|<tuple|16.265|?>>
-    <associate|lemma 16.195.124|<tuple|16.266|?>>
-    <associate|lemma 16.200.126|<tuple|16.274|?>>
-    <associate|lemma 16.202.127|<tuple|16.275|?>>
-    <associate|lemma 16.211.127|<tuple|16.296|?>>
-    <associate|lemma 16.216.144|<tuple|16.302|?>>
+    <associate|lemma 16.192.122|<tuple|16.267|?>>
+    <associate|lemma 16.195.124|<tuple|16.268|?>>
+    <associate|lemma 16.200.126|<tuple|16.276|?>>
+    <associate|lemma 16.202.127|<tuple|16.277|?>>
+    <associate|lemma 16.211.127|<tuple|16.298|?>>
+    <associate|lemma 16.216.144|<tuple|16.304|?>>
     <associate|lemma 16.227.23|<tuple|16.227|?>>
-    <associate|lemma 16.228.127|<tuple|16.317|?>>
-    <associate|lemma 16.229.127|<tuple|16.318|?>>
+    <associate|lemma 16.228.127|<tuple|16.319|?>>
+    <associate|lemma 16.229.127|<tuple|16.320|?>>
     <associate|lemma 16.232.301|<tuple|16.226|?>>
     <associate|lemma 16.24.178|<tuple|16.70|?>>
-    <associate|lemma 16.254.143|<tuple|16.342|?>>
-    <associate|lemma 16.313.310|<tuple|16.278|?>>
-    <associate|lemma 16.314.320|<tuple|16.279|?>>
-    <associate|lemma 16.315.320|<tuple|16.280|?>>
-    <associate|lemma 16.316.320|<tuple|16.281|?>>
-    <associate|lemma 16.318.320|<tuple|16.283|?>>
+    <associate|lemma 16.254.143|<tuple|16.344|?>>
+    <associate|lemma 16.313.310|<tuple|16.280|?>>
+    <associate|lemma 16.314.320|<tuple|16.281|?>>
+    <associate|lemma 16.315.320|<tuple|16.282|?>>
+    <associate|lemma 16.316.320|<tuple|16.283|?>>
+    <associate|lemma 16.318.320|<tuple|16.285|?>>
     <associate|lemma 16.37.4|<tuple|16.45|?>>
-    <associate|lemma 16.380.315|<tuple|16.357|?>>
-    <associate|lemma 16.381.315|<tuple|16.358|?>>
-    <associate|lemma 16.382.315|<tuple|16.359|?>>
+    <associate|lemma 16.380.315|<tuple|16.359|?>>
+    <associate|lemma 16.381.315|<tuple|16.360|?>>
+    <associate|lemma 16.382.315|<tuple|16.361|?>>
+    <associate|lemma 16.383.315|<tuple|16.362|?>>
     <associate|lemma 16.51.186|<tuple|16.114|?>>
     <associate|lemma 16.53.186|<tuple|16.116|?>>
     <associate|lemma 16.54.187|<tuple|16.117|?>>
@@ -29460,10 +30042,10 @@
     <associate|lemma 16.97.193|<tuple|16.184|?>>
     <associate|lemma 16.98.194|<tuple|16.186|?>>
     <associate|normed space are assumed to be non trivial|<tuple|16.1|?>>
-    <associate|note 16.210.127|<tuple|16.295|?>>
-    <associate|proposition 16.244.134|<tuple|16.333|?>>
-    <associate|proposition 16.249.138|<tuple|16.338|?>>
-    <associate|toplinear isomorphism|<tuple|16.307|?>>
+    <associate|note 16.210.127|<tuple|16.297|?>>
+    <associate|proposition 16.244.134|<tuple|16.335|?>>
+    <associate|proposition 16.249.138|<tuple|16.340|?>>
+    <associate|toplinear isomorphism|<tuple|16.309|?>>
     <associate|topology every element of a generalized interval is a limit
     point|<tuple|16.10|?>>
     <associate|topology every element of a open or closed ball is a limit
@@ -29473,10 +30055,10 @@
     <associate|topology interior point is a limit point in a normed
     space|<tuple|16.8|?>>
     <associate|topology normed space is a topological vector
-    space|<tuple|16.306|?>>
+    space|<tuple|16.308|?>>
     <associate|topology toplinear isomorphism in a normed
-    space|<tuple|16.309|?>>
-    <associate|topology topological vector space|<tuple|16.304|?>>
+    space|<tuple|16.311|?>>
+    <associate|topology topological vector space|<tuple|16.306|?>>
   </collection>
 </references>
 
