@@ -30044,7 +30044,7 @@
     </equation*>
   </proof>
 
-  <\corollary>
+  <\theorem>
     <label|diff Taylor II.2><dueto|Taylor's Theorem II.3 (Lagrange's
     remainder>Let <math|n\<in\>\<bbb-N\>>,
     <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
@@ -30071,7 +30071,7 @@
     <\equation*>
       <around*|\<\|\|\>|R<rsub|x<rsub|0>,h,n>|\<\|\|\>><rsub|Y>\<leqslant\><frac|<around*|\<\|\|\>|h|\<\|\|\>><rsub|X><rsup|n+1>|<around*|(|n+1|)>!>\<cdot\>sup<around*|(|<around*|{|<around*|\<\|\|\>|D<rsub|x<rsub|0>+t\<cdot\>h><rsup|<around*|[|n+1|]>>f|\<\|\|\>><rsub|L<rsub|n+1><around*|(|X;Y|)>>\|t\<in\><around*|[|0,1|]>|}>|)>
     </equation*>
-  </corollary>
+  </theorem>
 
   <\proof>
     As <math|f> is of class <math|C<rsup|n+1>> it follows that <math|f> is
@@ -30494,10 +30494,6 @@
     </description>
   </proof>
 
-  TODO relax (1) and (2) to <math|<around*|[|x<rsub|0>,x|]>\<subseteq\>\<cal-D\><rsup|n><rsub|f>>
-  and <math|<around*|(|f<rsup|<around*|(|n|)>>|)><rsub|\|<around*|[|x<rsub|0>,x|]>>>
-  is continuous
-
   <\theorem>
     <label|diff Taylor III><dueto|Taylor's Theorem III>Let
     <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> be
@@ -30507,12 +30503,12 @@
     and <math|f:A\<rightarrow\>Y> a function such that
 
     <\enumerate>
-      <item><math|A=\<cal-D\><rsup|n><rsub|f>> [or equivalently by
-      [definition: <reference|diff higher order derivative on a set>]
-      <math|\<forall\>t\<in\><around*|[|a,b|]><text|
+      <item><math|<around*|[|x<rsub|0>,x|]>\<subseteq\>\<cal-D\><rsup|n><rsub|f>>
+      [or equivalently by [definition: <reference|diff higher order
+      derivative on a set>] <math|\<forall\>t\<in\><around*|[|a,b|]><text|
       >f<rsup|<around*|(|n|)>><rsub|t><text| exist]>>.
 
-      <item><math|f<rsup|<around*|(|n|)>>:\<cal-D\><rsup|n><rsub|f>\<rightarrow\>X>
+      <item><math|<around*|(|\<cal-D\><rsup|n>f|)><rsub|\|<around*|[|x<rsub|0>,x|]>>>
       is continuous.
     </enumerate>
 
@@ -30556,7 +30552,7 @@
   </theorem>
 
   <\proof>
-    As <math|<around*|[|x<rsub|0>,x|]>\<subseteq\>A=\<cal-D\><rsub|f><rsup|n>>
+    As <math|<around*|[|x<rsub|0>,x|]>\<subseteq\>\<cal-D\><rsub|f><rsup|n>>
     and by [theorem: <reference|topology every element of a generalized
     interval is a limit point>] <math|<around*|[|x<rsub|0>,x|]>\<subseteq\><around*|[|x<rsub|0>,x|]><rprime|'>>
     it follows from [theorem: <reference|diff higher order derivative and
@@ -30582,9 +30578,9 @@
       and ><around*|(|f<rsub|\|<around*|[|x<rsub|0>,x|]>>|)><rsup|<around*|(|n|)>><rsub|t>=f<rsup|<around*|(|n|)>><rsub|t>
     </equation>
 
-    As <math|f<rsup|<around*|(|n|)>>> is continuous it follows from [theorem:
-    <reference|continuity and subspace topology (1)>] that
-    <math|><math|<around*|(|f<rsup|<around*|(|n|)>>|)><rsub|\|<around*|[|x<rsub|0>,x|]>>>
+    As <math|<around*|(|f<rsup|<around*|(|n|)>>|)><rsub|\|<around*|[|x<rsub|0>,x|]>>>
+    is continuous it follows from [theorem: <reference|continuity and
+    subspace topology (1)>] that <math|><math|<around*|(|f<rsup|<around*|(|n|)>>|)><rsub|\|<around*|[|x<rsub|0>,x|]>>>
     is continuous or using [eq: <reference|eq 16.646.23>] that
 
     <\equation>
@@ -30636,9 +30632,291 @@
     </equation*>
   </proof>
 
-  \;
+  The above form of Taylor's theorem allows us to introduce Taylor series
+  where a function can be written as a power series.
 
-  \;
+  <\theorem>
+    <label|diff Taylor series (1))>Let <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
+    be a normed space, <math|A\<subseteq\>\<bbb-R\>>,
+    <math|x<rsub|0>,x\<in\>\<bbb-R\>> with <math|x<rsub|0>\<less\>x>,
+    <math|<around*|[|x<rsub|0>,x|]>\<subseteq\>A> and
+    <math|f:A\<rightarrow\>Y> a function such that
+    <math|\<forall\>n\<in\>\<bbb-N\>> <math|<around*|[|x<rsub|0>,x|]>\<subseteq\>\<cal-D\><rsup|n><rsub|f>>
+    [or equivalently [see definition: <reference|diff higher order derivative
+    on a set>] <math|f> has <math|n>-times derivatives on
+    <math|<around*|[|x<rsub|0>,x|]>>] then we have that
+
+    <\enumerate>
+      <item><math|\<forall\>n\<in\>\<bbb-N\>\\<around*|{|1|}>>
+      <math|f<around*|(|x|)>=f<around*|(|x<rsub|0>|)>+<big|sum><rsub|k=1><rsup|n-1><frac|<around*|(|x-x<rsub|0>|)><rsup|k>|k!>\<cdot\>f<rsup|<around*|(|k|)>><rsub|x<rsub|0>>+T<rsub|n><around*|(|x|)>>
+      where
+
+      <\equation*>
+        T<rsub|n><around*|(|x|)>=<frac|1|<around*|(|n-1|)>!>\<cdot\><big|int><rsub|x<rsub|0>><rsup|x>R<rsub|n,x,f><text|>
+      </equation*>
+
+      <\equation*>
+        R<rsub|n,x,f>:<around*|[|x<rsub|0>,x|]>\<rightarrow\>X<text| by
+        >R<rsub|n,x,f><around*|(|t|)>=<around*|(|x-t|)><rsup|n-1>\<cdot\>f<rsup|<around*|(|n|)>><around*|(|t|)>
+      </equation*>
+
+      <item>
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|>|<cell|<below|lim|n\<rightarrow\>\<infty\>>T<rsub|n><around*|(|x|)><text|
+        exist and ><below|lim|n\<rightarrow\>\<infty\>>T<rsub|n><around*|(|x|)>=0>|<cell|>>|<row|<cell|>|<cell|\<Updownarrow\>>|<cell|>>|<row|<cell|>|<cell|<big|sum><rsub|i=1><rsup|\<infty\>><frac|<around*|(|x-x<rsub|0>|)><rsup|k>|k!>\<cdot\>f<rsup|<around*|(|k|)>><rsub|x<rsub|0>><text|
+        exist and >f<around*|(|x|)>=f<around*|(|x<rsub|0>|)>+<big|sum><rsub|k=1><rsup|\<infty\>><frac|<around*|(|x-x<rsub|0>|)><rsup|k>|k!>\<cdot\>f<rsup|<around*|(|k|)>><rsub|x<rsub|0>>>|<cell|>>>>
+      </eqnarray*>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>Let <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>> then by by the
+      hypothesis we have\ 
+
+      <\equation*>
+        <around*|[|x<rsub|0>.x|]>\<subseteq\>\<cal-D\><rsup|n><rsub|f><text|
+        and also ><around*|[|x<rsub|0>,x|]>\<subseteq\>\<cal-D\><rsup|n+1><rsub|f>
+      </equation*>
+
+      Hence if <math|y\<in\><around*|[|x<rsub|0>,x|]>> then
+      <math|y\<in\>\<cal-D\><rsup|n+1><rsub|f>> so that by [definition:
+      <reference|diff higher order derivative at a point>] <math|f> has a
+      <math|<around*|(|n+1|)>>-times derivative at <math|y>. Using then
+      [theorem: <reference|diff higher order derivative at a point (1)>] it
+      follows that <math|f<rsup|<around*|(|n|)>>> has a derivative at
+      <math|y> so that by [theorem: <reference|diff derivatives and
+      continuity>] it continuous at <math|y>. As this is valid
+      <math|\<forall\>y\<in\><around*|[|x<rsub|0>,x|]>> it follows that
+
+      <\equation*>
+        f<rsup|<around*|(|n|)>><text| is continuous>
+      </equation*>
+
+      So all the conditions for Taylor's Theorem III [see theorem:
+      <reference|diff Taylor III>] are satisfied from which it follows that\ 
+
+      <\equation*>
+        f<around*|(|x|)>=f<around*|(|x<rsub|0>|)>+<big|sum><rsub|k=1><rsup|n-1><frac|<around*|(|x-x<rsub|0>|)><rsup|k>|k!>\<cdot\>f<rsup|<around*|(|k|)>><rsub|x<rsub|0>>+T<rsub|n><around*|(|x|)>
+      </equation*>
+
+      where\ 
+
+      <\equation*>
+        T<rsub|n><around*|(|x|)>=<frac|1|<around*|(|n-1|)>!>\<cdot\><big|int><rsub|x<rsub|0>><rsup|x>R<rsub|n,x,f><text|>
+      </equation*>
+
+      <\equation*>
+        R<rsub|n,x,f>:<around*|[|x<rsub|0>,x|]>\<rightarrow\>X<text| by
+        >R<rsub|n,x,f><around*|(|t|)>=<around*|(|x-t|)><rsup|n>\<cdot\>f<rsup|<around*|(|n|)>><around*|(|t|)>
+      </equation*>
+
+      <item> Using (1) we have that\ 
+
+      <\equation*>
+        T<rsub|n><around*|(|x|)>=f<around*|(|x|)>-f<around*|(|x<rsub|0>|)>-<big|sum><rsub|k=1><rsup|n-1><frac|<around*|(|x-x<rsub|0>|)><rsup|k>|k!>\<cdot\>f<rsup|<around*|(|k|)>><rsub|x<rsub|0>>
+      </equation*>
+
+      Define then <math|<around*|{|u<rsub|n>|}><rsub|n\<in\>\<bbb-N\>>> by
+      <math|u<rsub|1>=f<around*|(|x|)>-f<around*|(|x<rsub|0>|)>> and for
+      <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>>
+      <math|u<rsub|n>=-<frac|<around*|(|x-x<rsub|0>|)><rsup|n-1>|<around*|(|n-1|)>!>\<cdot\>f<rsup|<around*|(|n-1|)>><rsub|x<rsub|0>>>
+      then for <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>> we have \ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<big|sum><rsub|k=1><rsup|n>u<rsub|k>>|<cell|=>|<cell|u<rsub|1>+<big|sum><rsub|k=2><rsup|n>u<rsub|k>>>|<row|<cell|>|<cell|=>|<cell|f<around*|(|x|)>-f<around*|(|x<rsub|0>|)>-<big|sum><rsub|k=2><rsup|n><frac|<around*|(|x-x<rsub|0>|)><rsup|k-1>|<around*|(|k-1|)>!>\<cdot\>f<rsup|<around*|(|k-1|)>><rsub|x<rsub|0>>>>|<row|<cell|>|<cell|=>|<cell|f<around*|(|x|)>-f<around*|(|x<rsub|0>|)>-<big|sum><rsub|k=1><rsup|n-1><frac|<around*|(|x-x<rsub|0>|)><rsup|k>|k!>\<cdot\>f<rsup|<around*|(|k|)>><rsub|x<rsub|0>>>>|<row|<cell|>|<cell|=>|<cell|T<rsub|n><around*|(|x|)>>>>>
+      </eqnarray*>
+
+      so that
+
+      <\equation>
+        <label|eq 16.585.313>\<forall\>n\<in\>\<bbb-N\>\\<around*|{|1|}><text|
+        >T<rsub|n><around*|(|x|)>=<big|sum><rsub|k=1><rsup|n>u<rsub|k>
+      </equation>
+
+      <\description>
+        <item*|<math|\<Rightarrow\>>>If <math|<below|lim|n\<rightarrow\>\<infty\>>T<rsub|n><around*|(|x|)>=0>
+        exist then by [eq: <reference|eq 16.585.313>]
+
+        <\equation*>
+          <big|sum><rsub|k=1><rsup|\<infty\>>u<rsub|k>=<below|lim|n=1><around*|(|<big|sum><rsub|k=1><rsup|n>u<rsub|k>|)>=<below|lim|n\<rightarrow\>\<infty\>>T<rsub|n><around*|(|x|)>=0<text|
+          exist>
+        </equation*>
+
+        Hence\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|0>|<cell|=>|<cell|<big|sum><rsub|k=1><rsup|\<infty\>>u<rsub|k>>>|<row|<cell|>|<cell|<below|=|<text|[theorem:
+          <reference|series partition series>]>>>|<cell|u<rsub|1>+<big|sum><rsub|k=2><rsup|\<infty\>>u<rsub|k>>>|<row|<cell|>|<cell|<below|=|<text|[theorem:
+          <reference|series translation start>]>>>|<cell|u<rsub|1>+<big|sum><rsub|k=1><rsup|\<infty\>>u<rsub|k+1>>>|<row|<cell|>|<cell|=>|<cell|f<around*|(|x|)>-f<around*|(|x<rsub|0>|)>+<big|sum><rsub|k=1><rsup|\<infty\>><around*|(|-<frac|<around*|(|x-x<rsub|0>|)><rsup|k>|k!>\<cdot\>f<rsup|<around*|(|k|)>><rsub|x<rsub|0>>|)>>>|<row|<cell|>|<cell|<below|=|<text|[theorem:
+          <reference|serie sum and scalar
+          product>]>>>|<cell|f<around*|(|x|)>-f<around*|(|x<rsub|0>|)>-<big|sum><rsub|k=1><rsup|\<infty\>><frac|<around*|(|x-x<rsub|0>|)><rsup|k>|k!>\<cdot\>f<rsup|<around*|(|k|)>><rsub|x<rsub|0>>>>>>
+        </eqnarray*>
+
+        so that <math|<big|sum><rsub|k=1><rsup|\<infty\>><frac|<around*|(|x-x<rsub|0>|)><rsup|k>|k!>\<cdot\>f<rsup|<around*|(|k|)>><rsub|x<rsub|0>>>
+        exist and\ 
+
+        <\equation*>
+          f<around*|(|x|)>=f<around*|(|x<rsub|0>|)>+<big|sum><rsub|k=1><rsup|\<infty\>><frac|<around*|(|x-x<rsub|0>|)><rsup|k>|k!>\<cdot\>f<rsup|<around*|(|k|)>><rsub|x<rsub|0>>
+        </equation*>
+
+        <item*|<math|\<Leftarrow\>>>If <math|><math|<big|sum><rsub|k=1><rsup|\<infty\>><frac|<around*|(|x-x<rsub|0>|)><rsup|k>|k!>\<cdot\>f<rsup|<around*|(|k|)>><rsub|x<rsub|0>>>
+        exist and <math|f<around*|(|x|)>=f<around*|(|x<rsub|0>|)>+<big|sum><rsub|k=1><rsup|\<infty\>><frac|<around*|(|x-x<rsub|0>|)><rsup|k>|k!>\<cdot\>f<rsup|<around*|(|k|)>><rsub|x<rsub|0>>>
+        \ then we have
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|0>|<cell|=>|<cell|>>|<row|<cell|f<around*|(|x|)>-f<around*|(|x<rsub|0>|)>-<big|sum><rsub|k=1><rsup|\<infty\>><frac|<around*|(|x-x<rsub|0>|)><rsup|k>|k!>\<cdot\>f<rsup|<around*|(|k|)>><rsub|x<rsub|0>>>|<cell|=>|<cell|>>|<row|<cell|f<around*|(|x|)>-f<around*|(|x<rsub|0>|)>-<below|lim|n\<rightarrow\>\<infty\>><big|sum><rsub|k=1><rsup|n><frac|<around*|(|x-x<rsub|0>|)><rsup|k>|k!>\<cdot\>f<rsup|<around*|(|k|)>><rsub|x<rsub|0>>>|<cell|<below|=|<text|[theorem:
+          <reference|limit x_n+a>]>>>|<cell|>>|<row|<cell|<below|lim|n\<rightarrow\>\<infty\>><around*|(|f<around*|(|x|)>-f<around*|(|x<rsub|o>|)>-<big|sum><rsub|k=1><rsup|n><frac|<around*|(|x-x<rsub|0>|)><rsup|k>|k!>\<cdot\>f<rsup|<around*|(|k|)>><rsub|x<rsub|0>>|)>>|<cell|=>|<cell|>>|<row|<cell|<below|lim|n\<rightarrow\>\<infty\>>T<rsub|n><around*|(|x|)>>|<cell|>|<cell|>>>>
+        </eqnarray*>
+      </description>
+    </enumerate>
+  </proof>
+
+  We have also a variant of the Taylor Series for a <math|C<rsup|\<infty\>>>
+  function based on the Taylor's Theorem with Lagrange's remainder [see
+  theorem: <reference|diff Taylor II.2>]. First we need a little lemma that
+  will be used to prove that the Lagrange remainder
+  <around*|\<\|\|\>|R<rsub|x<rsub|0>,h,n>|\<\|\|\>><rsub|Y> in [theorem:
+  <reference|diff Taylor II.2>] converges to <math|0>.
+
+  <\lemma>
+    <label|lemma 16.383.23>Let <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
+    be a normed space, <math|h\<in\>X> with
+    <math|0\<less\><around*|\<\|\|\>|h|\<\|\|\>>> then
+    <math|<below|lim|n\<rightarrow\>\<infty\>><frac|<around*|\<\|\|\>|h|\<\|\|\>><rsup|n+1>|<around*|(|n+1|)>!>>
+    converges with <math|<below|lim|n\<rightarrow\>\<infty\>><frac|<around*|\<\|\|\>|h|\<\|\|\>><rsup|n+1>|<around*|(|n+1|)>!>=0>.
+  </lemma>
+
+  <\proof>
+    Define <math|<around*|{|x<rsub|n>|}><rsub|n\<in\>\<bbb-N\>>\<subseteq\>\<bbb-R\><rsup|+>>
+    by <math|x<rsub|n>=<frac|<around*|\<\|\|\>|h|\<\|\|\>><rsup|n+1>|<around*|(|n+1|)>!>>
+    then we have for <math|n\<in\>\<bbb-N\>> that\ 
+
+    <\equation*>
+      <around*|\||<frac|x<rsub|n+1>|x<rsub|n>>|\|>=<frac|x<rsub|n+1>|x<rsub|n>>=<frac|<around*|\<\|\|\>|h|\<\|\|\>><rsup|n+2>|<around*|(|n+2|)>!>\<cdot\><frac|<around*|(|n+1|)>!|<around*|\<\|\|\>|h|\<\|\|\>><rsup|n+1>>=<around*|\<\|\|\>|h|\<\|\|\>>\<cdot\><frac|1|n+1>
+    </equation*>
+
+    then we have by [example: <reference|limit 1/(a+i)>] and [theorem:
+    <reference|limit a.x_n>] that\ 
+
+    <\equation*>
+      <below|lim|n\<rightarrow\>\<infty\>><around*|\||<frac|x<rsub|n+1>|x<rsub|n>>|\|>=0\<less\>1
+    </equation*>
+
+    so that by [theorem: <reference|limit convergence condition>]
+    <math|<below|lim|n\<rightarrow\>\<infty\>>x<rsub|n>> converges with
+    <math|<below|lim|n\<rightarrow\>\<infty\>>x<rsub|n>=0>. Hence using the
+    definition of <math|<around*|{|x<rsub|n>|}><rsub|n\<in\>\<bbb-N\>>> it
+    follows that\ 
+
+    <\equation*>
+      <below|lim|n\<rightarrow\>\<infty\>><frac|<around*|\<\|\|\>|h|\<\|\|\>><rsup|n+1>|<around*|(|n+1|)>!><text|
+      converges with ><below|lim|n\<rightarrow\>\<infty\>><frac|<around*|\<\|\|\>|h|\<\|\|\>><rsup|n+1>|<around*|(|n+1|)>!>=0
+    </equation*>
+
+    \ 
+  </proof>
+
+  <\theorem>
+    <label|diff Taylor series (3)>Let <math|n\<in\>\<bbb-N\>>,
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    be normed spaces, a open set <math|U> in <math|X>,
+    <math|x<rsub|0>\<in\>U>, <math|h\<in\>X> such that the line segment
+    <math|L<rsub|x<rsub|0>,x<rsub|0>+h>\<subseteq\>U> and
+    <math|f:U\<rightarrow\>Y> a function that is of class
+    <math|C<rsup|\<infty\>>> such that there exist a
+    <math|K\<in\><around*|[|0,\<infty\>|[>>\ 
+
+    <\equation*>
+      \<forall\>n\<in\>\<bbb-N\><text| >sup<around*|(|<around*|{|<around*|\<\|\|\>|D<rsub|x<rsub|0>+t\<cdot\>h><rsup|<around*|[|n+1|]>>f|\<\|\|\>><rsub|L<rsub|n+1><around*|(|X;Y|)>>\|t\<in\><around*|[|0,1|]>|}>|)>\<leqslant\>K
+    </equation*>
+
+    then\ 
+
+    <\equation*>
+      f<around*|(|x<rsub|0>+h|)>=f<around*|(|x<rsub|0>|)>+<big|sum><rsub|k=1><rsup|\<infty\>><frac|1|k!>\<cdot\>D<rsup|<around*|[|k|]>><rsub|x<rsub|0>>f<around*|(|<wide*|h:\<ldots\>:h|\<wide-underbrace\>><rsub|k>|)>
+    </equation*>
+
+    <\note>
+      The existence of <math|sup<around*|(|<around*|{|<around*|\<\|\|\>|D<rsub|x<rsub|0>+t\<cdot\>h><rsup|<around*|[|n+1|]>>f|\<\|\|\>><rsub|L<rsub|n+1><around*|(|X;Y|)>>\|t\<in\><around*|[|0,1|]>|}>|)>>is
+      guaranteed by [theorem: <reference|diff Taylor II.2>]\ 
+    </note>
+  </theorem>
+
+  <\proof>
+    Let <math|n\<in\>\<bbb-N\>> then we have that <math|f> is of class
+    <math|C<rsup|n+1>> so that by [theorem: <reference|diff Taylor II.2>]\ 
+
+    <\equation*>
+      f<around*|(|x<rsub|0>+h|)>=f<around*|(|x<rsub|0>|)>+<big|sum><rsub|k=1><rsup|n><frac|1|k!>\<cdot\>D<rsup|<around*|[|k|]>><rsub|x<rsub|0>>f<around*|(|<wide*|h:\<ldots\>:h|\<wide-underbrace\>><rsub|k>|)>+R<rsub|x<rsub|0>,h,n>
+    </equation*>
+
+    where\ 
+
+    <\equation*>
+      <around*|\<\|\|\>|R<rsub|x<rsub|0>,h,n>|\<\|\|\>><rsub|Y>\<leqslant\><frac|<around*|\<\|\|\>|h|\<\|\|\>><rsub|X><rsup|n+1>|<around*|(|n+1|)>!>\<cdot\>sup<around*|(|<around*|{|<around*|\<\|\|\>|D<rsub|x<rsub|0>+t\<cdot\>h><rsup|<around*|[|n+1|]>>f|\<\|\|\>><rsub|L<rsub|n+1><around*|(|X;Y|)>>\|t\<in\><around*|[|0,1|]>|}>|)>
+    </equation*>
+
+    Using the hypothesis we have that <math|\<forall\>n\<in\>\<bbb-N\>>
+    <math|sup<around*|(|<around*|{|<around*|\<\|\|\>|D<rsub|x<rsub|0>+t\<cdot\>h><rsup|<around*|[|n+1|]>>f|\<\|\|\>><rsub|L<rsub|n+1><around*|(|X;Y|)>>\|t\<in\><around*|[|0,1|]>|}>|)>\<leqslant\>K>
+    so that we have\ 
+
+    <\equation>
+      <label|eq 16.653.23>\<forall\>n\<in\>\<bbb-N\><text|
+      ><around*|\<\|\|\>|R<rsub|x<rsub|0>,h,n>|\<\|\|\>><rsub|Y>\<leqslant\><frac|<around*|\<\|\|\>|h|\<\|\|\>><rsub|X><rsup|n+1>|<around*|(|n+1|)>!>\<cdot\>K
+    </equation>
+
+    Using [lemma: <reference|lemma 16.383.23>] it follows that
+    <math|<below|lim|n\<rightarrow\>\<infty\>>><math|<frac|<around*|\<\|\|\>|h|\<\|\|\>><rsub|X><rsup|n+1>|<around*|(|n+1|)>!>=0>
+    so that by [theorem: <reference|limit a.x_n>] we have that\ 
+
+    <\equation*>
+      <below|lim|n\<rightarrow\>\<infty\>><frac|<around*|\<\|\|\>|h|\<\|\|\>><rsub|X><rsup|n+1>|<around*|(|n+1|)>!>\<cdot\>K=0\<cdot\>K=0
+    </equation*>
+
+    Let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> then there exist a
+    <math|N\<in\>\<bbb-N\>> such that <math|\<forall\>n\<in\><around*|{|N,\<ldots\>\<infty\>|}>>
+    we have that\ 
+
+    <\equation*>
+      <frac|<around*|\<\|\|\>|h|\<\|\|\>><rsub|X><rsup|n+1>|<around*|(|n+1|)>!>\<cdot\>K=<around*|\<\|\|\>|<frac|<around*|\<\|\|\>|h|\<\|\|\>><rsub|X><rsup|n+1>|<around*|(|n+1|)>!>\<cdot\>K-0|\<\|\|\>>\<less\>\<varepsilon\>
+    </equation*>
+
+    so that by [eq: <reference|eq 16.653.23>]\ 
+
+    <\equation*>
+      <around*|\<\|\|\>|R<rsub|x<rsub|0>,h,n>-0|\<\|\|\>><rsub|Y>=<around*|\<\|\|\>|R<rsub|x<rsub|0>,h,n>|\<\|\|\>><rsub|Y>\<less\>\<varepsilon\>
+    </equation*>
+
+    which prove that\ 
+
+    <\equation*>
+      <below|lim|n\<rightarrow\>\<infty\>>R<rsub|x<rsub|0>,h,n>=0
+    </equation*>
+
+    or\ 
+
+    <\equation*>
+      <below|lim|n\<rightarrow\>\<infty\>><around*|(|f<around*|(|x<rsub|0>+h|)>-f<around*|(|x<rsub|0>|)>-<big|sum><rsub|k=1><rsup|n><frac|1|k!>\<cdot\>D<rsup|<around*|[|k|]>><rsub|x<rsub|0>>f<around*|(|<wide*|h:\<ldots\>:h|\<wide-underbrace\>><rsub|k>|)>|)>=0
+    </equation*>
+
+    Now
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|0>|<cell|=>|<cell|>>|<row|<cell|<below|lim|n\<rightarrow\>\<infty\>><around*|(|f<around*|(|x<rsub|0>+h|)>-f<around*|(|x<rsub|0>|)>-<big|sum><rsub|k=1><rsup|n><frac|1|k!>\<cdot\>D<rsup|<around*|[|k|]>><rsub|x<rsub|0>>f<around*|(|<wide*|h:\<ldots\>:h|\<wide-underbrace\>><rsub|k>|)>|)>>|<cell|<below|=|<text|[theorem:
+      <reference|limit x_n+a>]>>>|<cell|>>|<row|<cell|f<around*|(|x<rsub|0>+h|)>-f<around*|(|x<rsub|>|)>-<below|lim|n\<rightarrow\>\<infty\>><big|sum><rsub|k=1><rsup|n><frac|1|k!>\<cdot\>D<rsup|<around*|[|k|]>><rsub|x<rsub|0>>f<around*|(|<wide*|h:\<ldots\>:h|\<wide-underbrace\>><rsub|k>|)>>|<cell|=>|<cell|>>|<row|<cell|f<around*|(|x<rsub|0>+h|)>-f<around*|(|x<rsub|0>|)>-<big|sum><rsub|k=1><rsup|\<infty\>><frac|1|k!>\<cdot\>D<rsup|<around*|[|k|]>><rsub|x<rsub|0>>f<around*|(|<wide*|h:\<ldots\>:h|\<wide-underbrace\>><rsub|k>|)>>|<cell|>|<cell|>>>>
+    </eqnarray*>
+
+    so that\ 
+
+    <\equation*>
+      f<around*|(|x<rsub|0>+h|)>=f<around*|(|x<rsub|0>|)>+<big|sum><rsub|k=1><rsup|\<infty\>><frac|1|k!>\<cdot\>D<rsup|<around*|[|k|]>><rsub|x<rsub|0>>f<around*|(|<wide*|h:\<ldots\>:h|\<wide-underbrace\>><rsub|k>|)>
+    </equation*>
+  </proof>
 
   \;
 
@@ -30773,7 +31051,8 @@
     <associate|diff Taylor II.1|<tuple|16.375|?>>
     <associate|diff Taylor II.2|<tuple|16.376|?>>
     <associate|diff Taylor III|<tuple|16.379|?>>
-    <associate|diff Taylor series (2)|<tuple|16.382|?>>
+    <associate|diff Taylor series (1))|<tuple|16.382|?>>
+    <associate|diff Taylor series (3)|<tuple|16.384|?>>
     <associate|diff Ux|<tuple|16.13|?>>
     <associate|diff Ux is open if U is open|<tuple|16.16|?>>
     <associate|diff Ux=-x+U=U-x|<tuple|16.15|?>>
@@ -31553,9 +31832,7 @@
     <associate|eq 16.581.315|<tuple|16.594|?>>
     <associate|eq 16.582.313|<tuple|16.645|?>>
     <associate|eq 16.582.315|<tuple|16.596|?>>
-    <associate|eq 16.583.313|<tuple|16.652|?>>
     <associate|eq 16.583.315|<tuple|16.597|?>>
-    <associate|eq 16.584.313|<tuple|16.653|?>>
     <associate|eq 16.584.315.1|<tuple|16.598|?>>
     <associate|eq 16.585.313|<tuple|16.652|?>>
     <associate|eq 16.585.315|<tuple|16.599|?>>
@@ -31598,15 +31875,15 @@
     <associate|eq 16.634.23|<tuple|16.636|?>>
     <associate|eq 16.635.23|<tuple|16.637|?>>
     <associate|eq 16.636.23|<tuple|16.638|?>>
-    <associate|eq 16.642.23|<tuple|16.642|?>>
-    <associate|eq 16.644.23|<tuple|16.646|?>>
-    <associate|eq 16.645.23|<tuple|16.647|?>>
+    <associate|eq 16.644.23|<tuple|16.110|?>>
+    <associate|eq 16.645.23|<tuple|16.111|?>>
     <associate|eq 16.646.23|<tuple|16.646|?>>
     <associate|eq 16.647.23|<tuple|16.647|?>>
     <associate|eq 16.648.23|<tuple|16.648|?>>
     <associate|eq 16.649.23|<tuple|16.649|?>>
     <associate|eq 16.650.23|<tuple|16.650|?>>
     <associate|eq 16.651.23|<tuple|16.651|?>>
+    <associate|eq 16.653.23|<tuple|16.653|?>>
     <associate|eq 16.67.140|<tuple|16.113|?>>
     <associate|eq 16.7.178|<tuple|16.22|?>>
     <associate|eq 16.7.301|<tuple|16.7|?>>
@@ -31688,6 +31965,7 @@
     <associate|lemma 16.380.315|<tuple|16.360|?>>
     <associate|lemma 16.381.315|<tuple|16.361|?>>
     <associate|lemma 16.382.315|<tuple|16.362|?>>
+    <associate|lemma 16.383.23|<tuple|16.383|?>>
     <associate|lemma 16.383.315|<tuple|16.363|?>>
     <associate|lemma 16.389.316|<tuple|16.371|?>>
     <associate|lemma 16.391.316|<tuple|16.372|?>>

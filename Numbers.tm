@@ -11178,7 +11178,7 @@
       a sequence such that <math|\<forall\>i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>>
       <math|x<rsub|i+1>\<leqslant\>x<rsub|i>> then
       <math|\<forall\>k\<in\><around*|{|n,\<ldots\>,\<infty\>|}>> we have
-      <math|\<forall\>i\<in\><around*|{|0,\<ldots\>,k|}>> that
+      <math|\<forall\>i\<in\><around*|{|n,\<ldots\>,k|}>> that
       <math|x<rsub|k>\<leqslant\>x<rsub|i>>
 
       <item>If <math|n,m\<in\>\<bbb-N\><rsub|0>> with <math|n\<leqslant\>m>
