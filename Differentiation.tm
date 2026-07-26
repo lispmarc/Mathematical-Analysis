@@ -162,8 +162,8 @@
     <math|y<rsub|1>=y<rsub|2>>.
   </proof>
 
-  From the above it follows that it is usefull to find cases where <math|x>
-  is a limit point of a set.
+  From the above it follows that it is useful to find cases where <math|x> is
+  a limit point of a set.
 
   <\theorem>
     <label|topology every element of a open set in a normed space is a limit
@@ -680,7 +680,7 @@
       <reference|topology every element of a open or closed ball is a limit
       point>] and [corollary: <reference|topology every element of a
       generalized interval is a limit point>] it follows that (1) is
-      satisfied automatical in the following cases
+      satisfied automatically in the following cases
 
       <\enumerate>
         <item><math|A> is a open set in <math|<around*|\<langle\>|\<bbb-K\>,\<\|\|\>|\<rangle\>>>
@@ -902,7 +902,7 @@
     </equation*>
 
     <\note>
-      As the existence of a derivate at <math|x> implies that
+      As the existence of a derivative at <math|x> implies that
       <math|x\<in\>A<rprime|'>> [see definition: <reference|diff calculus
       derivate>] it follows that\ 
 
@@ -928,12 +928,20 @@
 
         <item><math|\<cal-D\><rsub|f>> is the set of all elements of the
         domain of <math|f> for which the derivative exists so its the most
-        natural definition of <math|f<rprime|'>>
+        natural definition of domain of <math|f<rprime|'>>
+
+        <item>If we refer to <math|f<rprime|'>> where
+        <math|f:A\<rightarrow\>Y> is a function then we can automatically
+        assume that <math|f<rprime|'>> is the graph of the function\ 
+
+        <\equation*>
+          f<rprime|'>:\<cal-D\><rsub|f>\<rightarrow\>Y
+        </equation*>
       </enumerate>
     </note>
 
     <math|f<rprime|'>> will be used later to define recursively higher order
-    derivates.
+    derivatives.
   </definition>
 
   <\definition>
@@ -1236,7 +1244,7 @@
     at <math|x> with <math|<around*|(|f<rsub|\|B>|)><rprime|'><rsub|x>=f<rprime|'><rsub|x>>.
 
     <\note>
-      The requirement that <math|x> is a limit point is needed, the existance
+      The requirement that <math|x> is a limit point is needed, the existence
       of <math|f<rprime|'><rsub|x>> ensures that <math|x> is a limit point of
       <math|A> but in general this does not ensure that <math|x> is a limit
       point of <math|B>.
@@ -1510,7 +1518,7 @@
       <math|V=V<rsup|\<circ\>>> so that <math|x\<in\>V<rsup|\<circ\>>>. Using
       [theorem: <reference|diff derivative is local>] it follows then that
       <math|f> has a derivative at <math|x>. As <math|x\<in\>U> has been
-      choosen arbitrary it follows that\ 
+      chosen arbitrary it follows that\ 
 
       <\equation*>
         f<text| has derivatives on >U
@@ -1796,9 +1804,8 @@
   </definition>
 
   Next we have to ensure that the <with|font-series|bold|Fréchet
-  approximation> of a function is unique. Unfourtunately this is not as
-  simple as requiring that <math|x> is a limit point as the following example
-  shows.
+  approximation> of a function is unique. Unfortunately this is not as simple
+  as requiring that <math|x> is a limit point as the following example shows.
 
   <\example>
     Consider <math|<around*|\<langle\>|\<bbb-R\><rsup|2>,<around*|\<\|\|\>||\<\|\|\>><rsub|2>|\<rangle\>>>,<math|<around*|\<langle\>|\<bbb-R\>,\<\|\|\>|\<rangle\>>>,
@@ -2037,7 +2044,7 @@
       ><around*|\<\|\|\>|f<around*|(|x+h|)>-f<around*|(|x|)>-L<around*|(|x|)>|\<\|\|\>><rsub|Y>\<leqslant\>\<varepsilon\>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>><rsub|X>>|<cell|>>>>
     </eqnarray*>
 
-    The unique <math|L> [seee lemma: <reference|lemma 16.37.4>] is called the
+    The unique <math|L> [see lemma: <reference|lemma 16.37.4>] is called the
     \ <with|font-series|bold|Fréchet differential of f at <math|x>> and noted
     as <math|D<rsub|x> f>.\ 
 
@@ -2086,6 +2093,27 @@
     <\note>
       If <math|\<frak-D\><rsub|f>=\<varnothing\>> then <math|D<rsub|>f> is
       the empty function [see example: <reference|function empty function>].
+    </note>
+
+    <\note>
+      The benefit of this definition is that
+
+      <\enumerate>
+        <item><math|D f:\<frak-D\><rsub|f>\<rightarrow\>X> is always defined
+        even if <math|f> is never differentiable at a point in <math|A>.
+
+        <item><math|\<frak-D\><rsub|f>> is the set of all elements of the
+        domain of <math|f> for which <math|f> is differentiable at hence it
+        is the most natural definition of the domain of <math|D f>.
+
+        <item>If we refer to <math|D f> where <math|f:A\<rightarrow\>Y> is a
+        function then we can automatically assume that <math|D f> is the
+        graph of the function\ 
+
+        <\equation*>
+          D f:\<frak-D\><rsub|f>\<rightarrow\>Y
+        </equation*>
+      </enumerate>
     </note>
   </definition>
 
@@ -2299,7 +2327,7 @@
   Although Fréchet differentiability and the differential is defined using
   norms, the definition is actually dependent on the topology generated by
   the norms. So if two norms generate the same topology Fréchet
-  differentiability is independent of the choosen norm.
+  differentiability is independent of the chosen norm.
 
   <\theorem>
     <label|diff equivalent norms>Let <math|X,Y> be vector spaces over
@@ -2418,8 +2446,8 @@
     <\note>
       If <math|B> is open in <math|X> then <math|B<below|=|<text|[theorem:
       <reference|topology open set and interior>]>>B<rsup|\<circ\>>> so that
-      <math|x\<in\>B<rsup|\<circ\>>> in the above is automatical satsfied and
-      can be removed.
+      <math|x\<in\>B<rsup|\<circ\>>> in the above is automatically satisfied
+      and can be removed.
     </note>
   </theorem>
 
@@ -2513,7 +2541,7 @@
     function then we have the following equivalences
 
     <\eqnarray*>
-      <tformat|<table|<row|<cell|>|<cell|f<text| is Fréchet differemtiable on
+      <tformat|<table|<row|<cell|>|<cell|f<text| is Fréchet differentiable on
       >U>|<cell|>>|<row|<cell|>|<cell|\<Updownarrow\>>|<cell|>>|<row|<cell|>|<cell|\<forall\>x\<in\>U<text|
       there exist a >V\<in\>\<cal-T\><rsub|X><text| with
       >x\<in\>V\<subseteq\>U<text| such that >f<rsub|\|V><text| is Fréchet
@@ -3274,7 +3302,7 @@
         D<rsub|x><around*|(|f+g|)>=D<rsub|x>f+D<rsub|x>g
       </equation*>
 
-      <item>This is easely proved by induction, let\ 
+      <item>This is easily proved by induction, let\ 
 
       <\equation*>
         S=<around*|{|n\<in\>\<bbb-N\>\|<text|If
@@ -3846,7 +3874,7 @@
       </eqnarray*>
 
       which, as by (1) <math|I<rsup|<around*|[|i,0|]>>\<in\>L<around*|(|X<rsub|j>,<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|j>|)>>
-      amd <math|t\<in\>X<rsub|j><below|=|<text|[theorem: <reference|topology
+      and <math|t\<in\>X<rsub|j><below|=|<text|[theorem: <reference|topology
       open set and interior>]>><around*|(|X<rsub|j>|)><rsup|\<circ\>>> proves
       that\ 
 
@@ -3860,7 +3888,7 @@
       which by [theorem: <reference|diff differentiable function is
       continuous>] proves that <math|I<rsup|<around*|[|i,x|]>>> is continuous
       at <math|t>. As <math|t> has been chosen arbitrary it follows that
-      <math|I<rsup|<around*|[|i,x|]>>> is a continous function.
+      <math|I<rsup|<around*|[|i,x|]>>> is a continuous function.
 
       <item>This follows from [theorem: <reference|diff differentiability is
       a local property>] and (4).
@@ -3954,7 +3982,7 @@
     <\note>
       As <math|A\<subseteq\><big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|j>>
       and <math|I<rsup|<around*|[|i,x|]>>:X<rsub|i>\<rightarrow\><big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|j>>
-      it follows from [corollart: <reference|function restriction and
+      it follows from [corollary: <reference|function restriction and
       composition (1)>] that\ 
 
       <\equation*>
@@ -4020,6 +4048,29 @@
     <\note>
       If <math|\<frak-D\><rsub|i,f>=\<varnothing\>> then <math|D<rsub|i>f> is
       the empty function [see example: <reference|function empty function>].
+    </note>
+
+    <\note>
+      The benefit of this definition is that
+
+      <\enumerate>
+        <item><math|D<rsub|i> f:\<frak-D\><rsub|i,f>\<rightarrow\>X> is
+        always defined even if <math|f> is never <math|i>-partial
+        differentiable at a point in <math|A>.
+
+        <item><math|\<frak-D\><rsub|i,f>> is the set of all elements of the
+        domain of <math|f> for which <math|f> is <math|i>-partial
+        differentiable at hence it is the most natural definition of the
+        domain of <math|D<rsub|i>f>.
+
+        <item>If we refer to <math|D<rsub|i>f> where
+        <math|f:A\<rightarrow\>Y> is a function then we can automatically
+        assume that <math|D<rsub|i>f> is the graph of the function\ 
+
+        <\equation*>
+          D<rsub|i>f:\<frak-D\><rsub|i,f>\<rightarrow\>Y
+        </equation*>
+      </enumerate>
     </note>
   </definition>
 
@@ -4106,7 +4157,7 @@
         <label|eq 16.26.4>D<rsub|x,i>f=D<rsub|x<rsub|i>><around*|(|f\<circ\>I<rsup|<around*|[|i,x|]>>|)>
       </equation>
 
-      As by the hypothese <math|x<rsub|i>\<in\><around*|(|<around*|(|I<rsup|<around*|[|i,x|]>>|)><rsup|-1><around*|(|B|)>|)><rsup|\<circ\>>>
+      As by the hypothesis <math|x<rsub|i>\<in\><around*|(|<around*|(|I<rsup|<around*|[|i,x|]>>|)><rsup|-1><around*|(|B|)>|)><rsup|\<circ\>>>
       it follows from [theorem: <reference|diff differentiability is a local
       property>] that <rigid|<math|<around*|(|f\<circ\>I<rsup|<around*|[|i,x|]>>|)><rsub|\|<around*|(|I<rsup|<around*|[|i,x|]>>|)><rsup|-1><around*|(|B|)>>>>
       is Fréchet differentiable at <math|x<rsub|i>> with\ 
@@ -4674,7 +4725,7 @@
     </equation*>
   </proof>
 
-  <subsection|Partial Derivates>
+  <subsection|Partial Derivatives>
 
   <\definition>
     <label|diff partial derivate definition><index|partial
@@ -4724,7 +4775,7 @@
     </note>
   </definition>
 
-  Using the above definition we can define the partial derivate of a
+  Using the above definition we can define the partial derivative of a
   function.
 
   <\definition>
@@ -4738,7 +4789,7 @@
 
     <\equation*>
       \<cal-D\><rsub|i,f>=<around*|{|x\<in\>A\|f<text| has a >i<text|-partial
-      derivastive at >x|}>
+      derivative at >x|}>
     </equation*>
 
     and\ 
@@ -4752,6 +4803,29 @@
       If <math|\<cal-D\><rsub|i,f>=\<varnothing\>> then
       <math|\<partial\><rsub|i>f> is the empty function [see example:
       <reference|function empty function>].
+    </note>
+
+    <\note>
+      The benefit of this definition is that
+
+      <\enumerate>
+        <item><math|\<partial\><rsub|i> f:\<cal-D\><rsub|i,f>\<rightarrow\>X>
+        is always defined even if <math|f> has never a <math|i>-partial
+        derivative at a point in <math|A>.
+
+        <item><math|\<cal-D\><rsub|i,f>> is the set of all elements of the
+        domain of <math|f> for which <math|f> has a <math|i>-partial
+        derivative at, hence it is the most natural definition of the domain
+        of <math|\<partial\><rsub|i>f>.
+
+        <item>If we refer to <math|\<partial\><rsub|i>f> where
+        <math|f:A\<rightarrow\>Y> is a function then we can automatically
+        assume that <math|\<partial\><rsub|i>f> is the graph of the function\ 
+
+        <\equation*>
+          \<partial\><rsub|i>f:\<cal-D\><rsub|i,f>\<rightarrow\>Y
+        </equation*>
+      </enumerate>
     </note>
   </definition>
 
@@ -5588,7 +5662,7 @@
 
   We turn our attention now to the differentiability of the scalar product of
   differentiable functions. For this we look at the differentiability of
-  bilinear functions.
+  bi-linear functions.
 
   <\theorem>
     <label|diff bilinear functions>Let <math|<around*|\<langle\>|X<rsub|1>,<around*|\<\|\|\>||\<\|\|\>><rsub|1>|\<rangle\>>>,
@@ -5683,7 +5757,7 @@
 
     which proves that <math|L<around*|(|x<rsub|1>,\<ast\>|)>+L<around*|(|\<ast\>,x<rsub|2>|)>>
     is a Fréchet approximation of <math|L> at <math|x>, further
-    <math|<rigid|x\<in\>X<rsub|1>\<cdot\>X<rsub|2><below|=|<text|[theore,:
+    <math|<rigid|x\<in\>X<rsub|1>\<cdot\>X<rsub|2><below|=|<text|[theorem,:
     <reference|topology open set and interior>]>><around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)><rsup|\<circ\>>>>.
     Hence we have by [definition: <reference|diff differentiability>] that
 
@@ -5764,7 +5838,7 @@
       L<around*|(|x+\<alpha\>\<cdot\>y,z|)>=<around*|(|x+\<alpha\>\<cdot\>y|)>\<cdot\>z=<around*|(|x\<cdot\>z|)>+\<alpha\>\<cdot\><around*|(|y\<cdot\>z|)>=L<around*|(|x,z|)>+\<alpha\>\<cdot\>L<around*|(|y,z|)>
     </equation*>
 
-    proving that <math|L> is bilinear or\ 
+    proving that <math|L> is bi-linear or\ 
 
     <\equation>
       <label|eq 16.20.181>L\<in\>Hom<around*|(|\<bbb-K\>,Y;Y|)>
@@ -5860,7 +5934,7 @@
     </equation*>
   </proof>
 
-  <subsection|Usefull derivatives >
+  <subsection|Usefully derivatives >
 
   <\theorem>
     <label|diff derivate of inverse function>Let
@@ -7406,15 +7480,12 @@
       </equation*>
 
       <\convention>
-        For simplicity we refer to the function
-        <math|D<rsup|<around*|[|n|]>>f:\<frak-D\><rsup|n><rsub|f>\<rightarrow\>L<rsub|n><around*|(|X;Y|)>>
-        just by the name of its graph <math|D<rsup|<around*|[|n|]>>f>. We
-        always assume that the domain of <math|D<rsup|<around*|[|n|]>>f> is
-        <math|\<frak-D\><rsup|n><rsub|f>> and the codomain is
-        <math|L<rsub|n><around*|(|X;Y|)>>. Likewise if
-        <math|U\<subseteq\>\<frak-D\><rsup|n><rsub|f>> then
-        <math|<around*|(|D<rsup|<around*|[|n|]>>f|)><rsub|\|U>> will refer to
-        the function <math|<around*|(|D<rsup|<around*|[|n|]>>f|)><rsub|\|U>:U\<rightarrow\>L<rsub|n><around*|(|X;Y|)>>.
+        If <math|A\<subseteq\>X> and <math|f:A\<rightarrow\>Y > is a function
+        then <math|D<rsup|<around*|[|n|]>>f> is always the graph of the
+        function <math|D<rsup|<around*|[|n|]>>f:\<frak-D\><rsup|n><rsub|f>\<rightarrow\>L<around*|(|,Y|)>>.
+        In other words the domain of <math|D<rsup|<around*|[|n|]>>f> is
+        always <math|\<frak-D\><rsup|n><rsub|f>> and the codomain is always
+        <math|L<rsub|n><around*|(|X;Y|)>>.
       </convention>
     </note>
   </definition>
@@ -7463,7 +7534,7 @@
 
   \;
 
-  The domains <math|\<cal-D\><rsup|n><rsub|f>> of the differential
+  The domains <math|\<frak-D\><rsup|n><rsub|f>> of the differential
   <math|D<rsup|<around*|[|n|]>>f> is decreasing with <math|n>.
 
   <\theorem>
@@ -7478,8 +7549,8 @@
       \<frak-D\><rsup|n><rsub|f>\<subseteq\>\<frak-D\><rsup|m><rsub|f>\<subseteq\>\<frak-D\><rsub|f>\<subseteq\>A<rsup|\<circ\>>\<subseteq\>A
     </equation*>
 
-    Furthe we have <math|\<forall\>n,m\<in\>\<bbb-N\>> with <math|n\<less\>m>
-    that\ 
+    Further we have <math|\<forall\>n,m\<in\>\<bbb-N\>> with
+    <math|n\<less\>m> that\ 
 
     <\equation*>
       \<frak-D\><rsup|n><rsub|f>\<subseteq\><around*|(|\<frak-D\><rsup|m><rsub|f>|)><rsup|\<circ\>>
@@ -7732,7 +7803,7 @@
         means that\ 
 
         <\equation*>
-          f<text| is 1-times differentible at >x
+          f<text| is 1-times differentiable at >x
         </equation*>
 
         <item*|<math|1\<less\>n>>By the hypothesis
@@ -7785,8 +7856,8 @@
     </note>
 
     <\note>
-      You can ask yourself why we limit ourself to open sets and not use more
-      general sets. Assume that <math|B> is a set such that
+      You can ask yourself why we limit our self to open sets and not use
+      more general sets. Assume that <math|B> is a set such that
       <math|\<forall\>x\<in\>B> <math|f> is <math|n>-times differentiable at
       <math|x>. Let <math|x\<in\>B> then by [theorem: <reference|diff n-times
       and m-times differentiability>] <math|f> is <math|1>-times
@@ -8035,7 +8106,7 @@
       <\equation*>
         S=<around*|{|n\<in\>\<bbb-N\>\|<text|If>f<rsub|\|B><text| is
         >n<text|-times differentiable at >x<text| then <math|f> is
-        >n<text|-times diffrentiable at >x<text| and
+        >n<text|-times differentiable at >x<text| and
         >D<rsub|x><rsup|<around*|[|n|]>>f=D<rsup|<around*|[|n|]>><rsub|x>f<rsub|\|B>|}>
       </equation*>
 
@@ -8139,7 +8210,7 @@
     </eqnarray*>
 
     Further if <math|f> or <math|f<rsub|\|U>> is <math|n>-times
-    differentiable on <math|U> then we havw\ 
+    differentiable on <math|U> then we have\ 
 
     <\equation*>
       \<forall\>x\<in\>U<text| we have that
@@ -8191,7 +8262,7 @@
     <\description>
       <item*|<math|\<Rightarrow\>>>By definition <math|f> is <math|n>-times
       differentiable on <math|U> and <math|<around*|(|D<rsup|<around*|[|n|]>>f|)><rsub|\|U>>
-      is continous. Using [corollary: <reference|diff higher order
+      is continuous. Using [corollary: <reference|diff higher order
       differentiation is local (1)>] it follows that\ 
 
       <\equation>
@@ -8234,7 +8305,7 @@
       <item*|<math|\<Leftarrow\>>>By definition <math|f<rsub|\|U>> is
       <math|n>-times differentiable on <math|U> and
       <math|<around*|(|D<rsup|<around*|[|n|]>>f<rsub|\|U>|)><rsub|\|U>> is
-      continous. Using [corollary: <reference|diff higher order
+      continuous. Using [corollary: <reference|diff higher order
       differentiation is local (1)>] it follows that\ 
 
       <\equation>
@@ -8554,7 +8625,7 @@
   </definition>
 
   In the above cases the definition of a function of class <math|C<rsup|n>>
-  becomese simpler as we don't have to work with restricted functions as is
+  becomes simpler as we don't have to work with restricted functions as is
   shown in the following theorem.
 
   <\theorem>
@@ -8652,7 +8723,7 @@
   <\theorem>
     <label|diff C-infinity condition>Let <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
     <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
-    be normed spaces, a tengential spanning set <math|A\<subseteq\>X>,
+    be normed spaces, <math|A\<subseteq\>X>,
     <math|U\<in\>\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>>> a open
     set in <math|X> and <math|f<rigid|:A\<rightarrow\>Y>> a function then we
     have \ 
@@ -9105,6 +9176,14 @@
         f<rsup|<around*|(|n|)>>=<around*|(|f<rsup|<around*|(|n-1|)>>|)><rprime|'>:\<cal-D\><rsup|n><rsub|f>\<rightarrow\>X
       </equation*>
     </description>
+
+    <\convention>
+      If <math|A\<subseteq\>\<bbb-K\>> and <math|f:A\<rightarrow\>X > is a
+      function then <math|f<rsup|<around*|(|n|)>>> is always the graph of the
+      function <math|f<rsup|<around*|(|n|)>>:\<cal-D\><rsup|n><rsub|f>\<rightarrow\>X>.
+      In other words the domain of <math|f<rsup|<around*|(|n|)>>> is always
+      <math|\<cal-D\><rsup|n><rsub|f>> and the codomain is always <math|Y>.
+    </convention>
   </definition>
 
   The domain of <math|\<cal-D\><rsup|n><rsub|f>> of
@@ -9317,8 +9396,6 @@
   The following theorem shows the effect that restricting a function has on
   the existence of derivatives.
 
-  TODO check this theorem
-
   <\theorem>
     <label|diff higher order derivative and restriction>Let
     <math|n\<in\>\<bbb-N\>>, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
@@ -9329,9 +9406,10 @@
     <math|f:A\<rightarrow\>X> a function such that
     <math|B\<subseteq\>\<cal-D\><rsub|f><rsup|n>> [hence by [definition:
     <reference|diff higher order derivative on a set>] <math|f> has
-    <math|n>-times on <math|B>] then <math|B=\<cal-D\><rsup|n><rsub|f<rsub|\|B>>>
-    [hence by [definition: <reference|diff higher order derivative on a set>]
-    <math|f<rsub|\|B>> has <math|n>-times derivatives on <math|B>] with
+    <math|n>-times derivatives on <math|B>] then
+    <math|B=\<cal-D\><rsup|n><rsub|f<rsub|\|B>>> [hence by [definition:
+    <reference|diff higher order derivative on a set>] <math|f<rsub|\|B>> has
+    <math|n>-times derivatives on <math|B>] with
     <math|<around*|(|f<rsub|\|B>|)><rsup|<around*|(|n|)>>=<around*|(|f<rsup|<around*|(|n|)>>|)><rsub|\|B>>.
   </theorem>
 
@@ -9339,8 +9417,9 @@
     We use induction to prove this, so define
 
     <\equation*>
-      S=<around*|{|n\<in\>S\|<text|If >B\<subseteq\>\<cal-D\><rsup|n><rsub|f><text|
-      then >B=\<cal-D\><rsup|n><rsub|f<rsub|\|B>><text| and
+      S=<around*|{|n\<in\>\<bbb-N\>\|<text|If
+      >B\<subseteq\>\<cal-D\><rsup|n><rsub|f><text| then
+      >B=\<cal-D\><rsup|n><rsub|f<rsub|\|B>><text| and
       ><around*|(|f<rsub|\|B>|)><rsup|<around*|(|n|)>>=<around*|(|f<rsup|<around*|(|n|)>>|)><rsub|\|B>|}>
     </equation*>
 
@@ -9382,7 +9461,7 @@
         ><around*|(|f<rsub|\|B>|)><rsup|<around*|(|1|)>><around*|(|y|)>=f<rsup|<around*|(|1|)>><around*|(|y|)>
       </equation*>
 
-      As <math|y\<in\>B> is choosen arbitrary it follows from the above that\ 
+      As <math|y\<in\>B> is chosen arbitrary it follows from the above that\ 
 
       <\equation*>
         B\<subseteq\>\<cal-D\><rsup|1><rsub|f<rsub|\|B>><text| and
@@ -9406,8 +9485,8 @@
 
       <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>Assume that
       <math|B\<subseteq\>\<cal-D\><rsup|n+1><rsub|f>>. Then we have by
-      [theorem: <reference|diff higher order derivative function domain>] we
-      have that\ 
+      [theorem: <reference|diff higher order derivative function domain>]
+      that\ 
 
       <\equation*>
         B\<subseteq\>\<cal-D\><rsup|n+1><rsub|f>\<subseteq\>\<cal-D\><rsup|n><rsub|f>
@@ -9440,7 +9519,7 @@
         derivative at >y<text| with ><around*|(|<around*|(|f<rsup|<around*|(|n|)>>|)><rsub|\|B>|)><rprime|'><rsub|y>=<around*|(|f<rsup|<around*|(|n|)>>|)><rprime|'><rsub|y>
       </equation*>
 
-      substituring [eq: <reference|eq 16.644.23>] in the above gives
+      substituting [eq: <reference|eq 16.644.23>] in the above gives
 
       <\equation*>
         <around*|(|f<rsub|\|B>|)><rsup|n><text| has a derivative at >y<text|
@@ -9464,7 +9543,7 @@
         ><around*|(|f<rsub|\|B>|)><rsup|<around*|(|n+1|)>><around*|(|y|)>=f<rsup|<around*|(|n+1|)>><around*|(|y|)>
       </equation*>
 
-      As <math|y\<in\>B> has been choosen arbitrary it follows that\ 
+      As <math|y\<in\>B> has been chosen arbitrary it follows that\ 
 
       <\equation*>
         B\<subseteq\>\<cal-D\><rsup|n+1><rsub|f<rsub|\|B>><text| and
@@ -9681,7 +9760,7 @@
       </equation>
 
       Let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> then by the Fréchet
-      diffrentiability of <math|f> at <math|x> [see eq: <reference|eq
+      differentiability of <math|f> at <math|x> [see eq: <reference|eq
       16.108.10>] there exist a <math|\<delta\>\<in\>\<bbb-R\><rsup|+>> such
       that <math|\<forall\>h\<in\><around*|(|\<frak-D\><rsup|<around*|[|n|]>><rsub|f>|)><rsub|x>>
       with <math|<around*|\||h|\|>\<less\>\<delta\>> we have\ 
@@ -9976,13 +10055,13 @@
       <item>We have\ 
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|f<text| is ><around*|(|n+m|)><text|-timses
+        <tformat|<table|<row|<cell|f<text| is ><around*|(|n+m|)><text|-times
         differentiable at >x>|<cell|<below|\<Leftrightarrow\>|<text|[definition:
         <reference|diff higher order differentiation>]>>>|<cell|>>|<row|<cell|x\<in\>\<frak-D\><rsup|n+m><rsub|f>>|<cell|<below|\<Leftrightarrow\>|<text|[theorem:
         <reference|diff n+m differentiation>]>>>|<cell|>>|<row|<cell|x\<in\><around*|{|x\<in\>\<frak-D\><rsup|<around*|[|n|]>><rsub|f>\|D<rsup|<around*|[|n|]>>f<text|
         is >m<text|-times differentiable at
         >x|}>>|<cell|\<Leftrightarrow\>>|<cell|>>|<row|<cell|D<rsup|<around*|[|n|]>>f<text|
-        is >m<text|-timese differentiable at >x>|<cell|>|<cell|>>>>
+        is >m<text|-times differentiable at >x>|<cell|>|<cell|>>>>
       </eqnarray*>
 
       Further if <math|f> is <math|<around*|(|n+m|)>>-times differentiable at
@@ -10036,7 +10115,7 @@
 
     <\description>
       <item*|<math|\<Rightarrow\>>>As <math|f> is of class <math|C<rsup|n+m>>
-      we have by defiinition that <math|f> is <math|<around*|(|n+m|)>>-times
+      we have by definition that <math|f> is <math|<around*|(|n+m|)>>-times
       differentiable on <math|U> and <math|<around*|(|D<rsup|<around*|[|n+m|]>>f|)><rsub|\|U>>
       is continuous. Using [theorem: <reference|diff n+m differentiation
       (1)>(2) we have that\ 
@@ -10250,7 +10329,7 @@
       </equation>
 
       Further as <math|f<rsup|<around*|(|n|)>>> has a
-      <math|<around*|(|m+1|)>>-timese derivative at <math|y> it follows from
+      <math|<around*|(|m+1|)>>-times derivative at <math|y> it follows from
       [theorem: <reference|diff higher order derivative at a point (1)> that
       <math|<around*|(|f<rsup|<around*|(|n|)>>|)><rsup|<around*|(|m|)>>> has
       a derivative at <math|x>. Hence we have that\ 
@@ -10344,14 +10423,14 @@
 
       <\eqnarray*>
         <tformat|<table|<row|<cell|f<text| has a
-        ><around*|(|n+m|)><text|-timses differentiable at
+        ><around*|(|n+m|)><text|-times differentiable at
         >x>|<cell|<below|\<Leftrightarrow\>|<text|[definition:
         <reference|diff higher order derivative at a
         point>]>>>|<cell|>>|<row|<cell|x\<in\>\<cal-D\><rsup|n+m><rsub|f>>|<cell|<below|\<Leftrightarrow\>|<text|[theorem:
         <reference|diff n+m derivative>]>>>|<cell|>>|<row|<cell|x\<in\><around*|{|x\<in\>\<cal-D\><rsup|<around*|[|n|]>><rsub|f>\|f<rsup|<around*|(|n|)>><text|
         has a >m<text|-times derivative at
         >x|}>>|<cell|\<Leftrightarrow\>>|<cell|>>|<row|<cell|f<rsup|<around*|(|n|)>><text|
-        has a >m<text|-timese derivative at >x>|<cell|>|<cell|>>>>
+        has a >m<text|-times derivative at >x>|<cell|>|<cell|>>>>
       </eqnarray*>
 
       Further if <math|f> has a <math|<around*|(|n+m|)>>-times derivative at
@@ -10849,7 +10928,7 @@
 
         <\equation*>
           <around*|(|D<rsup|<around*|[|n|]>><around*|(|f+g|)>|)><rsub|\|U><text|
-          is continous>
+          is continuous>
         </equation*>
 
         Hence we have that\ 
@@ -11134,7 +11213,7 @@
     that by [example: <reference|diff linear mapping is infinite times
     differentiable>] <math|Id<rsub|X>> is <math|n>-times differentiable on
     <math|X>. Let <math|x\<in\>U> then by [theorem: <reference|diff higher
-    order differentiation is local>] we hve that
+    order differentiation is local>] we have that
     <math|<around*|(|Id<rsub|X>|)><rsub|\|U>> is <math|n>-times
     differentiable at <math|x>. As clearly
     <math|<around*|(|Id<rsub|X>|)><rsub|\|U>=Id<rsub|U>> it follows that
@@ -11512,7 +11591,7 @@
     </equation*>
 
     Using then [theorem: <reference|diff n+m differentiation (1)>] on the
-    abive it follows that\ 
+    above it follows that\ 
 
     <\equation*>
       L<text| is >n<text|-times differentiable on
@@ -11612,7 +11691,7 @@
       ><around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>,<around*|\<langle\>|Z,<around*|\<\|\|\>||\<\|\|\>><rsub|Z>|\<rangle\>><text|
       are normed spaces, >f:A\<rightarrow\>Y<text| is >n<text|-times
       differentiable at >x<text| and >L\<in\>L<around*|(|Y,Z|)><text| then
-      >L\<circ\>f<text| is >n<text|-times differentable at >x|}>
+      >L\<circ\>f<text| is >n<text|-times differentiable at >x|}>
     </equation*>
 
     then we have:\ 
@@ -11664,11 +11743,11 @@
       Let <math|y\<in\>\<frak-D\><rsup|1><rsub|f>> then we have\ 
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|D<rsup|<around*|[|1|]>><around*|(|L\<circ\>f|)><around*|(|y|)>>|<cell|<below|=|<text|[definitioon:
+        <tformat|<table|<row|<cell|D<rsup|<around*|[|1|]>><around*|(|L\<circ\>f|)><around*|(|y|)>>|<cell|<below|=|<text|[definition:
         <reference|diff higher order differentiation>]>>>|<cell|D<rsup|<around*|[|1|]>><rsub|y><around*|(|L\<circ\>f|)>>>|<row|<cell|>|<cell|<below|=|<text|[theorem:
         <reference|diff higher order differentiation
         (1)>]>>>|<cell|D<rsub|y><around*|(|L\<circ\>f|)>>>|<row|<cell|>|<cell|<below|=|<text|[eq:
-        <reference|eq 16.139.13>]>>>|<cell|<around*|(|L\<circ\>\<ast\>|)><around*|(|D<rsub|y>f|)>>>|<row|<cell|>|<cell|<below|=|<text|[definitioon:
+        <reference|eq 16.139.13>]>>>|<cell|<around*|(|L\<circ\>\<ast\>|)><around*|(|D<rsub|y>f|)>>>|<row|<cell|>|<cell|<below|=|<text|[definition:
         <reference|diff higher order differentiation>]>>>|<cell|<around*|(|L\<circ\>\<ast\>|)><around*|(|D
         f<around*|(|y|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<around*|(|L\<circ\>\<ast\>|)>\<circ\>D
         f|)><around*|(|y|)>>>|<row|<cell|>|<cell|<below|=|<text|[definition:
@@ -11693,7 +11772,7 @@
       f|)>> is <math|n>-times differentiable at <math|x>. Which by [eq:
       <reference|eq 16.140.13>] proves that
       <math|D<rsup|<around*|[|1|]>><around*|(|L\<circ\>f|)><rsub|\|\<frak-D\><rsup|1><rsub|f>>>
-      is <math|n>-times differentiable. Using now locallity [see theorem:
+      is <math|n>-times differentiable. Using now locality [see theorem:
       <reference|diff higher order differentiation is local>] it follows that
       <math|D<rsup|<around*|[|1|]>><around*|(|L\<circ\>f|)>> is
       <math|n>-times differentiable at <math|x>. Finally using [theorem:
@@ -12562,7 +12641,7 @@
           </equation>
 
           As by [eq: <reference|eq 16.167.16>] <math|g> is of class
-          <math|C<rsup|n>> and <math|\<cal-K\>> is linear and continous [see
+          <math|C<rsup|n>> and <math|\<cal-K\>> is linear and continuous [see
           eq: <reference|eq 16.170.16>] it follows from [lemma:
           <reference|lemma 16.97.193>] that <math|\<cal-K\>\<circ\>g> is of
           class <math|C<rsup|n>> so that by [eq: <reference|eq 16.171.16>]
@@ -12889,7 +12968,7 @@
     <\description>
       <item*|<math|n=0>>As <math|f> is of class <math|C<rsup|0>> and <math|g>
       is of class <math|C<rsup|0>><math|> it follows that <math|f> is
-      continnuous and <math|g> is continuous. As
+      continuous and <math|g> is continuous. As
       <math|f<around*|(|U|)>\<subseteq\>V> it follows, using \ [theorem:
       <reference|continuity composition (1)>], that <math|g\<circ\>f> is
       continuous which proves that <math|g\<circ\>f> is of class
@@ -12989,7 +13068,7 @@
         (1)>], <math|D<rsup|<around*|[|1|]>>g\<circ\>f> is continuous which
         proves that <math|\<pi\><rsub|1>\<circ\>h> is continuous. Further as
         <math|f> is of class <math|C<rsup|1>> <math|D<rsup|<around*|[|1|]>>f>
-        is continous so that <math|\<pi\><rsub|2>\<circ\>h> is continuous.
+        is continuous so that <math|\<pi\><rsub|2>\<circ\>h> is continuous.
         Finally using [theorem: <reference|continuity product and continuous
         functions>] it follows that
 
@@ -13168,8 +13247,8 @@
     </description>
   </proof>
 
-  Ass exampels of the general chain rule we prove that the product of
-  <math|n>-times differemtiable functions or functions of class
+  As a example of the general chain rule we prove that the product of
+  <math|n>-times differentiable functions or functions of class
   <math|C<rsup|n>> is <math|n>-times <math|n>-times differentiable or of
   class <math|C<rsup|n>>.
 
@@ -13424,7 +13503,7 @@
       is a open set and <math|x\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|x,y|)>\<subseteq\>A>
       it follows from [theorem: <reference|topology biggest open subset>]
       that <math|x\<in\>A<rsup|\<circ\>>> hence a local weak extremum is
-      automatical a interior point of <math|A>.
+      automatically a interior point of <math|A>.
     </note>
   </definition>
 
@@ -13813,7 +13892,7 @@
       Let <math|x\<in\><around*|[|a,b|]>> then by [theorem:
       <reference|topology every element of a generalized interval is a limit
       point>] <math|x> is a limit point of <math|<around*|[|a,b|]>> which is
-      needed for the derivatieve at <math|x> to even exist.
+      needed for the derivative at <math|x> to even exist.
     </note>
   </corollary>
 
@@ -14202,7 +14281,7 @@
         <label|eq 16.244.310><around*|(|<around*|(|f<rsub|\|<around*|[|a,b|]>>|)><rprime|'>|)><rprime|'><rsub|x>=<around*|(|f<rsup|><rsub|\|<around*|[|a,b|]>>|)><rsup|<around*|(|2|)>><rsub|x>
       </equation>
 
-      As <math|x\<in\><around*|[|a,b|]>> was choosen arbitrary we can define\ 
+      As <math|x\<in\><around*|[|a,b|]>> was chosen arbitrary we can define\ 
 
       <\equation>
         <label|eq 16.245.310.1><around*|(|f<rsub|><rsub|\|<around*|[|a,b|]>>|)><rsup|<around*|(|2|)>>:<around*|[|a,b|]>\<rightarrow\>\<bbb-R\><text|
@@ -14465,8 +14544,8 @@
     </equation*>
 
     Let <math|x\<in\><around*|[|a,b|]>>. By [example: <reference|diff
-    derivative of constant>] <math|C<rsub|f<around*|(|a|)>>> has derivates on
-    <math|<around*|[|a,b|]>> with <math|<around*|(|C<rsub|f<around*|(|a|)>>|)><rprime|'>=C<rsub|0>>
+    derivative of constant>] <math|C<rsub|f<around*|(|a|)>>> has derivatives
+    on <math|<around*|[|a,b|]>> with <math|<around*|(|C<rsub|f<around*|(|a|)>>|)><rprime|'>=C<rsub|0>>
     and using [theorem: <reference|diff fundamental theorem of calculus (1)>]
     <math|F> has derivatives on <math|<around*|[|a,b|]>> with
     <math|F<rprime|'>=f<rprime|'>>. Using then the linearity of derivation
@@ -14685,7 +14764,7 @@
     [theorem: <reference|riemann continuous functions are integrable>]\ 
 
     <\equation*>
-      <around*|(|f\<cdot\>g|)><rprime|'><text| is Rieamann integrable>
+      <around*|(|f\<cdot\>g|)><rprime|'><text| is Riemann integrable>
     </equation*>
 
     Finally we have\ 
@@ -14781,7 +14860,7 @@
   </theorem>
 
   <\proof>
-    We have to be carefull here, derivating is defined on
+    We have to be Riemann here, derivating is defined on
     <math|<around*|[|a,b|]>> but differentiating is only defined on the open
     set <math|<around*|]|0,1|[>>, Define\ 
 
@@ -15131,8 +15210,7 @@
     which completes the proof.
   </proof>
 
-  For the next Mean Value theorems we introduce the concept of line
-  segements.
+  For the next Mean Value theorems we introduce the concept of line segments.
 
   <\definition>
     <label|diff linesegement>Let <math|X> be a vector space,
@@ -15218,7 +15296,7 @@
     Hence we have that\ 
 
     <\equation*>
-      L<rsub|a,b><text| is onvex>
+      L<rsub|a,b><text| is convex>
     </equation*>
 
     Define\ 
@@ -15470,7 +15548,7 @@
     follows that <math|<around*|(|D<rsub|x>f|)><rsub|\|U>> is <math|1>-times
     differentiable on <math|U> and using [theorem: <reference|continuity and
     subspace topology (1)>] <math|<around*|(|D<rsub|x>f|)><rsub|\|U>> is
-    continupus, hence <math|<around*|(|D<rsub|x>f|)><rsub|\|U>> is of class
+    continuous, hence <math|<around*|(|D<rsub|x>f|)><rsub|\|U>> is of class
     <math|C<rsup|1>>. As <math|f> is also of class <math|C<rsup|1>> it
     follows from [theorem: <reference|diff higher order differential is
     linear>] that <math|g> is of class <math|C<rsup|1>>. Hence we have that
@@ -15811,7 +15889,7 @@
         h<text| is continuous>
       </equation*>
 
-      Futher we have that <math|h<around*|(|a|)>=\<varphi\><around*|(|a|)>-\<varphi\><around*|(|a|)>+\<varepsilon\>\<cdot\><around*|(|a-a|)>+\<mu\>-<around*|\<\|\|\>|f<around*|(|a|)>-f<around*|(|a|)>|\<\|\|\>>=\<mu\>>
+      Further we have that <math|h<around*|(|a|)>=\<varphi\><around*|(|a|)>-\<varphi\><around*|(|a|)>+\<varepsilon\>\<cdot\><around*|(|a-a|)>+\<mu\>-<around*|\<\|\|\>|f<around*|(|a|)>-f<around*|(|a|)>|\<\|\|\>>=\<mu\>>
       so that\ 
 
       <\equation*>
@@ -16137,7 +16215,7 @@
 
   <section|Symmetry of Higher Order Differentials>
 
-  In this scction we will prove that the <math|n>-times differential of a
+  In this section we will prove that the <math|n>-times differential of a
   function is symmetric in its arguments. More specific if
   <math|\<sigma\>\<in\>P<rsub|n>> is a permutation of
   <math|<around*|(|1,\<ldots\>,n|)>> then we have that\ 
@@ -16853,7 +16931,7 @@
     class <math|C<rsup|n-1>>. \ Hence it follows from [theorem:
     <reference|diff chain rule higher order class>] that
     <math|\<pi\><rsub|1>\<circ\>\<varphi\><rsub|h>> is of class
-    <math|C<rsup|n-1>>. Further as by \ [xample: <reference|diff constant
+    <math|C<rsup|n-1>>. Further as by \ [example: <reference|diff constant
     function is infinitely times differentiable>] <math|C<rsup|\<infty\>>> it
     follows that <math|\<pi\><rsub|2>\<circ\>\<varphi\><rsub|h>> is also of
     class <math|C<rsup|n-1><rsup|>>. From [theorem: <reference|diff higher
@@ -16986,7 +17064,7 @@
 
     <\equation*>
       D<rsup|<around*|[|n-1|]>>f:U\<rightarrow\>L<rsub|n-1><around*|(|X;Y|)><text|
-      is continous and >D<rsup|<around*|[|n-2|]>>f:U\<rightarrow\>L<rsub|n-2><around*|(|X;Y|)><text|
+      is continuous and >D<rsup|<around*|[|n-2|]>>f:U\<rightarrow\>L<rsub|n-2><around*|(|X;Y|)><text|
       is continuous>
     </equation*>
 
@@ -17303,7 +17381,7 @@
 
   <section|Higher Order Partial Differentiation>
 
-  <subsection|Linear and mulilinear mappings.>
+  <subsection|Linear and multilinear mappings.>
 
   \;
 
@@ -18449,7 +18527,20 @@
         D<rsup|<around*|[|m|]>><rsub|i<rsub|1>,\<ldots\>,i<rsub|m>>f=D<rsub|i<rsub|1>><around*|(|D<rsup|<around*|[|m-1|]>><rsub|i<rsub|2>\<ldots\>i<rsub|m>>f|)>
       </equation*>
     </description>
+
+    <\convention>
+      If <math|A\<subseteq\>X=<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>>
+      and <math|f:A\<rightarrow\>Y > is a function then
+      <math|D<rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>><rsup|<around*|[|m|]>>f>
+      is always the graph of the function
+      <math|D<rsup|<around*|[|m|]>><rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f:\<frak-D\><rsup|m><rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>,f>\<rightarrow\>L<rsub|m><around*|(|X<rsub|i<rsub|1>>,\<ldots\>,X<rsub|i<rsub|m>>;Y|)>>.
+      In other words the domain of <math|D<rsup|<around*|[|m|]>><rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f>
+      is always <math|\<frak-D\><rsup|m><rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>f>>
+      and the codomain is always <math|L<rsub|m><around*|(|X<rsub|i<rsub|1>>,\<ldots\>,X<rsub|i<rsub|m>>;Y|)>>.
+    </convention>
   </definition>
+
+  \;
 
   The domains of higher order partial is decreasing with increasing order.
 
@@ -18521,7 +18612,7 @@
     definition: <reference|normed maximum norm>], <math|A\<subseteq\>X>,
     <math|x\<in\>A>, <math|m\<in\>\<bbb-N\>>,
     <math|<rigid|i\<in\><around*|{|1,\<ldots\>,n|}><rsup|m>>> and
-    <math|<rigid|f:A\<rightarrow\>Y>> a funtion then we say that\ 
+    <math|<rigid|f:A\<rightarrow\>Y>> a function then we say that\ 
 
     <\equation*>
       f<text| has a partial differential >D<rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f<text|
@@ -18564,7 +18655,7 @@
     <math|U\<in\>\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|max>>> a
     open set in <math|X> with <rigid|<math|U\<subseteq\>A>>,
     <math|m\<in\>\<bbb-N\>>, <math|<rigid|i\<in\><around*|{|1,\<ldots\>,n|}><rsup|m>>>
-    and <math|<rigid|f:A\<rightarrow\>Y>> a funtion then we say that\ 
+    and <math|<rigid|f:A\<rightarrow\>Y>> a function then we say that\ 
 
     <\equation*>
       f<text| has >D<rsub|<around*|[|i<rsub|1>\<ldots\>i+m|]>>f<text| partial
@@ -18609,7 +18700,7 @@
     <math|U\<in\>\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|max>>> a
     open set in <math|X>, <math|m\<in\>\<bbb-N\>>,
     <math|<rigid|i\<in\><around*|{|1,\<ldots\>,n|}><rsup|m>>> and
-    <math|<rigid|f:U\<rightarrow\>Y>> a funtion then we say that\ 
+    <math|<rigid|f:U\<rightarrow\>Y>> a function then we say that\ 
 
     <\equation*>
       f<text| has >D<rsub|<around*|[|i<rsub|1>\<ldots\>i+m|]>>f<text| partial
@@ -18666,7 +18757,7 @@
       <math|D<rsub|<around*|[|i<rsub|k>\<ldots\>i<rsub|m>|]>>f> partial
       differentials on <math|U>.
 
-      <item>If <math|U> is a open set iin <math|X> and
+      <item>If <math|U> is a open set in <math|X> and
       <math|f:U\<rightarrow\>Y> has <math|D<rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f>
       partial differentials then <math|f> has
       <math|D<rsub|<around*|[|i<rsub|k>\<ldots\>i<rsub|m>|]>>f> partial
@@ -19383,8 +19474,8 @@
     </description>
   </proof>
 
-  The followng theorem shows the relation between functions that are of class
-  <math|C<rsup|m>> and higher order partial derivatives.
+  The following theorem shows the relation between functions that are of
+  class <math|C<rsup|m>> and higher order partial derivatives.
 
   <\theorem>
     <label|diff higher order differentiation implies higher order partial
@@ -19440,7 +19531,7 @@
     at <math|x>. Hence by [definition: <reference|diff higher order partial
     differentiation (1)>] <math|x\<in\>\<frak-D\><rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>,f>>
     which as this is true for every <math|x\<in\>U> proves that
-    <math|U\<subseteq\>\<frak-D\><rsub|f,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>>,
+    <math|U\<subseteq\>\<frak-D\><rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>,f>>,
     as further by [theorem: <reference|diff higher order partial
     differentiation (domain)>] <math|\<frak-D\><rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>,f>\<subseteq\>U>
     it follows that <math|\<frak-D\><rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>,f>=U>.
@@ -19551,7 +19642,7 @@
   It was show in [example: <reference|diff partial differentiability does not
   mean differentiaility>] that the existence of partial differentials at a
   point does not mean that the function is differentiable at the point. We
-  examine now under which extra conditions <math|>the existance of partial
+  examine now under which extra conditions <math|>the existence of partial
   differentials ensure the existence of the Fréchet differential. First we
   need some extra definitions and lemma's.
 
@@ -19807,7 +19898,7 @@
 
     <\equation*>
       D<rsub|i>f:\<frak-D\><rsub|i,f>\<rightarrow\>L<around*|(|X<rsub|i>,Y|)><text|
-      is continous>
+      is continuous>
     </equation*>
 
     Then <math|\<forall\>u,v\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|i>><around*|(|x<rsub|i>,\<delta\>|)>>
@@ -19844,7 +19935,7 @@
 
   <\proof>
     Let <math|i\<in\><around*|{|1,\<ldots\>,n|}>>. As <math|x\<in\>U> we have
-    by the hypohesis that <math|f> has a <math|i>-partial differential at
+    by the hypothesis that <math|f> has a <math|i>-partial differential at
     <math|x> so that by the definition of partial differentials [see
     definition: <reference|diff partial differential definition>] \ 
 
@@ -19923,7 +20014,7 @@
     </equation>
 
     As <math|t\<in\><around*|(|I<rsup|<around*|[|i,x|]>>|)><rsup|-1><around*|(|U|)>>
-    was choosen arbitrary we have that\ 
+    was chosen arbitrary we have that\ 
 
     <\equation>
       <label|eq 16.368.310>f\<circ\>I<rsup|<around*|[|i,x|]>>:<around*|(|I<rsup|<around*|[|i,x|]>>|)><rsup|-1><around*|(|U|)>\<rightarrow\>Y<text|
@@ -20044,7 +20135,7 @@
 
     <\equation*>
       D<rsub|i>f:\<frak-D\><rsub|i,f>=U\<rightarrow\>L<around*|(|X<rsub|i>,Y|)><text|
-      is continous>
+      is continuous>
     </equation*>
 
     then\ 
@@ -20413,7 +20504,7 @@
       <around*|\<\|\|\>|f<around*|(|x+h|)>-f<around*|(|x|)>-K<around*|(|h|)>|\<\|\|\>><rsub|Y>\<leqslant\>\<varepsilon\>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>><rsub|max>
     </equation*>
 
-    As <math|U> ia open so that <math|x\<in\>U<rsup|\<circ\>>>,
+    As <math|U> is open so that <math|x\<in\>U<rsup|\<circ\>>>,
     <math|K<below|\<in\>|<text|[eq: <reference|eq
     16.286.126>]>>L<around*|(|X,Y|)>> it follows from [definition:
     <reference|diff differentiability>]\ 
@@ -20520,7 +20611,7 @@
     Thanks to the existence and uniqueness of
     <math|\<pi\><rsup|<around*|[|i<rsub|1>,\<ldots\>,i<rsub|m>|]>><around*|(|L|)>>
     for every <math|L\<in\>L<rsub|m><around*|(|X<rsub|i<rsub|1>>\<ldots\>X<rsub|i<rsub|m>>;Y|)>>
-    we can definine a function\ 
+    we can define a function\ 
 
     <\equation*>
       \<pi\><rsup|<around*|[|i<rsub|1>,\<ldots\>i<rsub|m>|]>>:L<rsub|m><around*|(|X<rsub|i<rsub|1>>\<ldots\>X<rsub|i<rsub|m>>;Y|)>\<rightarrow\>L<rsub|m><around*|(|X;Y|)>
@@ -20991,7 +21082,7 @@
       differentiable at >y|}>
     </equation*>
 
-    amd <math|D<rsub|k>g> is defined by\ 
+    and <math|D<rsub|k>g> is defined by\ 
 
     <\equation*>
       D<rsub|k>g:\<frak-D\><rsub|k,g>\<rightarrow\>L<around*|(|X<rsub|k>,L<rsub|m><around*|(|X;Y|)>|)><text|
@@ -21289,7 +21380,7 @@
       >\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><rsup|k><text|
       >U=\<frak-D\><rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>,f><text|><rigid|<text|
       >D<rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f:U\<rightarrow\>L<rsub|m><around*|(|X<rsub|i<rsub|1>>\<ldots\>X<rsub|i<rsub|m>>;Y|)>><text|
-      is continous then >f<text| is of class >C<rsup|m>|}><text|>
+      is continuous then >f<text| is of class >C<rsup|m>|}><text|>
     </equation*>
 
     then we have:\ 
@@ -21387,7 +21478,7 @@
       <\equation*>
         D<rsub|l>g<rsub|i<rsub|1>\<ldots\>i<rsub|m>>:U\<rightarrow\>L<rsub|m><around*|(|X;Y|)><text|
         defined by >D<rsub|l>g<rsub|i<rsub|1>\<ldots\>i<rsub|m>><around*|(|x|)>=D<rsub|x,l>g<rsub|i<rsub|1>\<ldots\>i<rsub|m>><text|
-        is continupus><rsub|>
+        is continuous><rsub|>
       </equation*>
 
       Hence we have, using [theorems: <reference|diff partial differential
@@ -21568,7 +21659,7 @@
 
       <item><math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><rsup|m>> we
       have that <math|U=\<frak-D\><rsub|<around*|[|i<rsub|<lprime|`>>\<ldots\>i<rsub|m>|]>,f>>
-      [or equivalenly <math|\<forall\>x\<in\>U>
+      [or equivalently <math|\<forall\>x\<in\>U>
       <math|D<rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f> exist] and\ 
 
       <\equation*>
@@ -21591,8 +21682,6 @@
       differentiability (1)>].
     </description>
   </proof>
-
-  TODO check this section
 
   <subsection|Higher Order Partial Derivatives>
 
@@ -21648,7 +21737,7 @@
       and\ 
 
       <\equation*>
-        \<partial\><rsub|<around*|[|i<rsub|k>\<ldots\>i<rsub|m>|]>>f:\<cal-D\><rsub|<around*|[|i<rsub|k>\<ldots\>i<rsub|m>|]>>\<rightarrow\>Y
+        \<partial\><rsub|<around*|[|i<rsub|k>\<ldots\>i<rsub|m>|]>>f:\<cal-D\><rsub|<around*|[|i<rsub|k>\<ldots\>i<rsub|m>|]>>\<rightarrow\>X
       </equation*>
 
       is defined by\ 
@@ -21664,6 +21753,16 @@
         is defined by >\<partial\><rsub|<around*|[|i<rsub|k>\<ldots\>i<rsub|m>|]>>f<around*|(|x|)>=\<partial\><rsub|x,i<rsub|k>><around*|(|\<partial\><rsub|<around*|[|i<rsub|k+1>\<ldots\>i<rsub|m>|]>>f|)>
       </equation*>
     </description>
+
+    <\convention>
+      If <math|A\<subseteq\>\<bbb-K\><rsup|n>> and <math|f:A\<rightarrow\>X >
+      is a function then <math|\<partial\><rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f>
+      is always the graph of the function
+      <math|\<partial\><rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f:\<cal-D\><rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>,f>\<rightarrow\>X>.
+      In other words the domain of <math|\<partial\><rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f>
+      is always <math|\<cal-D\><rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>,f>>
+      and the codomain is always <math|X>.
+    </convention>
   </definition>
 
   We have the following relation between the domains
@@ -21684,7 +21783,7 @@
     have that\ 
 
     <\equation*>
-      \<cal-D\><rsub|<around*|[|i<rsub|l>\<ldots\>i<rsub|m>|]>,f>\<subseteq\>\<cal-D\><rsub|<around*|[|i<rsub|k>\<ldots\>i<rsub|m>,f|]>>\<subseteq\>\<cal-D\><rsub|<around*|[|i<rsub|m>\<ldots\>i<rsub|m>|]>,f>=\<cal-D\><rsub|i<rsub|m>,f>\<subseteq\>A
+      \<cal-D\><rsub|<around*|[|i<rsub|k>\<ldots\>i<rsub|m>|]>,f>\<subseteq\>\<cal-D\><rsub|<around*|[|i<rsub|l>\<ldots\>i<rsub|m>,f|]>>\<subseteq\>\<cal-D\><rsub|<around*|[|i<rsub|m>\<ldots\>i<rsub|m>|]>,f>=\<cal-D\><rsub|i<rsub|m>,f>\<subseteq\>A
     </equation*>
   </theorem>
 
@@ -21702,7 +21801,7 @@
     <math|\<forall\>k\<in\><around*|{|1,\<ldots\>,l|}>>\ 
 
     <\equation*>
-      \<cal-D\><rsub|<around*|[|i<rsub|l>\<ldots\>i<rsub|m>|]>,f>\<subseteq\>\<cal-D\><rsub|<around*|[|i<rsub|k>\<ldots\>i<rsub|k>|]>,f>
+      \<cal-D\><rsub|<around*|[|i<rsub|k>\<ldots\>i<rsub|m>|]>,f>\<subseteq\>\<cal-D\><rsub|<around*|[|i<rsub|l>\<ldots\>i<rsub|k>|]>,f>
     </equation*>
 
     Further we have <math|\<forall\>k\<in\><around*|{|1,\<ldots\>,m|}>>
@@ -21722,41 +21821,10 @@
   </proof>
 
   We can now define the concept of higher order partial derivatives at a
-  point
+  point.
 
   <\definition>
     <label|diff higher order partial derivative (1)>Let
-    <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>>, <math|m\<in\>\<bbb-N\>>,
-    <math|<around*|\<langle\>|\<bbb-K\><rsup|n>,<around*|\<\|\|\>||\<\|\|\>><rsub|n>|\<rangle\>>>
-    the normed space with the maximum norm
-    <math|<around*|\<\|\|\>||\<\|\|\>><rsub|n>>,
-    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> a
-    normed space, <math|A\<subseteq\>\<bbb-K\><rsup|n>>, <math|x\<in\>A>,
-    \ <math|i\<in\><around*|{|1,\<ldots\>,n|}><rsup|m>> and
-    <math|<rigid|f:A\<rightarrow\>X>> a function then we say that\ 
-
-    <\equation*>
-      f<text| has a partial derivative >\<partial\><rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f<text|
-      at >x<text| [or equivalently \ <math|\<partial\><rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f>
-      exist]>
-    </equation*>
-
-    iff
-
-    <\equation*>
-      x\<in\>\<cal-D\><rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>,f>
-    </equation*>
-
-    The partial derivative <math|\<partial\><rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f>
-    at <math|x> is then defined by
-
-    <\equation*>
-      \<partial\><rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f=\<partial\><rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f<around*|(|x|)>
-    </equation*>
-  </definition>
-
-  <\definition>
-    <label|diff higher order partial derivative (2)>Let
     <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>>, <math|m\<in\>\<bbb-N\>>,
     <math|<around*|\<langle\>|\<bbb-K\><rsup|n>,<around*|\<\|\|\>||\<\|\|\>><rsub|n>|\<rangle\>>>
     the normed space with the maximum norm
@@ -21834,7 +21902,7 @@
     <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> a
     normed space, <math|A\<subseteq\>\<bbb-K\><rsup|n>>, <math|x\<in\>A>
     <math|i\<in\><around*|{|1,\<ldots\>,n|}><rsup|m>> and
-    <math|f:A\<rightarrow\>Y> a function then we have thst the following are
+    <math|f:A\<rightarrow\>Y> a function then we have that the following are
     equivalent
 
     <\enumerate>
@@ -21858,8 +21926,6 @@
     <\equation*>
       \<partial\><rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f=<choice|<tformat|<table|<row|<cell|\<partial\><rsub|x,i<rsub|1>>f<text|
       if >m=1>>|<row|<cell|\<partial\><rsub|x,i<rsub|1>><around*|(|\<partial\><rsub|<around*|[|i<rsub|2>\<ldots\>i<rsub|m>|]>>f|)><text|
-      if >1\<less\>m>>>>>=<choice|<tformat|<table|<row|<cell|<around*|(|f\<circ\>I<rsup|<around*|[|i<rsub|1>,x|]>>|)><rprime|'><rsub|x<rsub|i<rsub|1>>><text|
-      if >m=1>>|<row|<cell|<around*|(|\<partial\><rsub|<around*|[|i<rsub|2>\<ldots\>i<rsub|m>|]>>f\<circ\>I<rsup|<around*|[|i<rsub|1>,x|]>>|)><rprime|'><rsub|x<rsub|i<rsub|1>>><text|
       if >1\<less\>m>>>>>
     </equation*>
   </theorem>
@@ -21898,8 +21964,8 @@
         order partial derivative (1)>] we have that
 
         <\equation*>
-          x\<in\>\<cal-D\><rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>,f><below|=|<text|[definition:
-          <reference|diff higher order derivates>[>><around*|{|x\<in\>A\|\<partial\><rsub|<around*|[|i<rsub|2>\<ldots\>i<rsub|m>|]>>f<text|
+          x\<in\>\<cal-D\><rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>,f><below|=|<text|[def:
+          <reference|diff higher order derivates>[>><around*|{|x\<in\>\<cal-D\><rsub|<around*|[|i<rsub|2>\<ldots\>i<rsub|m>|]>,f>\|\<partial\><rsub|<around*|[|i<rsub|2>\<ldots\>i<rsub|m>|]>>f<text|
           has a >i<rsub|1><text|-partial derivative at >x|}><text|>
         </equation*>
 
@@ -21970,8 +22036,8 @@
     the normed space with the maximum norm
     <math|<around*|\<\|\|\>||\<\|\|\>><rsub|n>>,
     <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> a
-    normed space,a open set <math|A\<subseteq\>\<bbb-K\><rsup|n>>,
-    <math|x\<in\>A>, <math|i\<in\><around*|{|1,\<ldots\>,n|}><rsup|m>> and
+    normed space, <math|A\<subseteq\>\<bbb-K\><rsup|n>>, <math|x\<in\>A>,
+    <math|i\<in\><around*|{|1,\<ldots\>,n|}><rsup|m>> and
     <math|f:A\<rightarrow\>X> a function that has a partial differential
     <math|D<rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f> at <math|x>
     then <math|f> has a partial derivative
@@ -22014,22 +22080,22 @@
 
       <\equation*>
         f<text| has a >i<rsub|1><text|-partial derivative at >x<text| with
-        >\<partial\><rsub|x,i<rsub|1>>f=D<rsub|x,i>f<around*|(|1|)>=D<rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|1>|]>>f<around*|(|1|)>
+        >\<partial\><rsub|x,i<rsub|1>>f=D<rsub|x,i<rsub|1>>f<around*|(|1|)>=D<rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|1>|]>>f<around*|(|1|)>
       </equation*>
 
-      Hence using [theorem: <reference|diff higher order derivative at a
-      point (1)>] it follows that\ 
+      Hence using [theorem: <reference|diff higher order partial derivative
+      (4)>] it follows that\ 
 
       <\equation*>
         f<text| has a partial derivative >\<partial\><rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|1>|]>>f<text|
-        at >x<text| with >\<partial\><rsub|x,<around*|[|1<rsub|1>\<ldots\>i<rsub|m>|]>>f=\<partial\><rsub|x,i<rsub|1>>f=D<rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|1>|]>>f<around*|(|1|)>
+        at >x<text| with >\<partial\><rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f=\<partial\><rsub|x,i<rsub|1>>f=D<rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|1>|]>>f<around*|(|1|)>
       </equation*>
 
       which proves that <math|1\<in\>S>.
 
       <item*|<math|m\<in\>S\<Rightarrow\>m+1\<in\>S>>Let
-      <math|i\<in\><around*|{|1,\<ldots\>,n|}><rsup|m>>, <math|x\<in\>A> and
-      assume that <math|f> has a partial differetial
+      <math|i\<in\><around*|{|1,\<ldots\>,n|}><rsup|m+1>>, <math|x\<in\>A>
+      and assume that <math|f> has a partial differential
       \ <math|D<rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|m+1>|]>>f> at
       <math|x>. Define
 
@@ -22045,8 +22111,8 @@
         D<rsub|x,<around*|[|k<rsub|1>\<ldots\>k<rsub|m>|]>>f:\<frak-D\><rsub|<around*|[|k<rsub|1>\<ldots\>k<rsub|m>|]>,f>\<rightarrow\>L<rsub|m><around*|(|\<bbb-K\>;Y|)>
       </equation*>
 
-      then for <math|y\<in\>\<frak-D\><rsub|<around*|[|k<rsub|1>\<ldots\>k<rsub|m>|]>,f>>
-      we have by [definition: <reference|diff higher order partial
+      Let <math|y\<in\>\<frak-D\><rsub|<around*|[|k<rsub|1>\<ldots\>k<rsub|m>|]>,f>>
+      then we have by [definition: <reference|diff higher order partial
       differentiation (1)>] that <math|f> has a partial differential
       <math|D<rsub|x,<around*|[|k<rsub|1>\<ldots\>k<rsub|m>|]>>f> at
       <math|y>. As <math|m\<in\>S> it follows that\ 
@@ -22078,7 +22144,7 @@
         \<partial\><rsub|<around*|[|k<rsub|1>\<ldots\>k<rsub|m>|]>>:\<cal-D\><rsub|<around*|[|k<rsub|1>\<ldots\>k<rsub|m>|]>>\<rightarrow\>Y
       </equation*>
 
-      Consider the evaluation operator from [see definition: <reference|diff
+      and the evaluation operator from [definition: <reference|diff
       evaluation operator>]\ 
 
       <\equation*>
@@ -22143,7 +22209,7 @@
         <reference|eq 16.387.21>]>>>|<cell|ev<rsub|<wide*|1\<ldots\>1|\<wide-underbrace\>><rsub|m>>\<circ\>D<rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|m+1>|]>>f>>|<row|<cell|>|<cell|=>|<cell|D<rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|m+1>|]>>f<around*|(|<wide*|1:\<ldots\>:1|\<wide-underbrace\>><rsub|m>|)>>>>>
       </eqnarray*>
 
-      Combining this with [eq: <reference|eq 16.386.21>] and proves thats
+      Combining this with [eq: <reference|eq 16.386.21>] proves that
 
       <\equation*>
         <around*|(|\<partial\><rsub|<around*|[|k<rsub|1>\<ldots\>k<rsub|m>|]>>f|)><rsub|\|\<frak-D\><rsub|<around*|[|k<rsub|1>\<ldots\>k<rsub|m>|]>,f>><text|
@@ -22346,7 +22412,7 @@
     <math|\<cal-P\><around*|[|m|]>> is continuous proving that\ 
 
     <\equation*>
-      \<cal-P\><around*|[|m|]>\<in\>L<around*|(|Y,L<rsub|m><around*|(|\<bbb-K\>;X|)>|)>
+      \<cal-P\><around*|[|m|]>\<in\>L<around*|(|X,L<rsub|m><around*|(|\<bbb-K\>;X|)>|)>
     </equation*>
   </proof>
 
@@ -22366,7 +22432,8 @@
     with\ 
 
     <\equation*>
-      \<forall\>x\<in\>U<text| that >D<rsub|x.<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f=\<cal-P\><around*|[|m|]><around*|(|\<partial\><rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>|)>=\<cal-P\><around*|[|m,\<partial\><rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f|]>
+      \<forall\>x\<in\>U<text| \ >D<rsub|x.<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f=\<cal-P\><around*|[|m|]><around*|(|\<partial\><rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f|)><below|=|<text|[lemma:
+      <reference|lemma 16.211.127>]>>\<cal-P\><around*|[|m,\<partial\><rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f|]>
     </equation*>
   </theorem>
 
@@ -22380,8 +22447,7 @@
       partial derivatives on >U<text| then >f<text| has
       >D<rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f<text| partial
       differentials on >U<text| and >\<forall\>x\<in\>U<text| we have
-      >D<rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f<below|=|<text|[eq:
-      <reference|lemma 16.211.127>]>>\<cal-P\><around*|[|m|]><around*|(|\<partial\><rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>|)>|}>
+      >D<rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f=\<cal-P\><around*|[|m|]><around*|(|\<partial\><rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>|)>|}>
     </equation*>
 
     then we have:\ 
@@ -22392,8 +22458,8 @@
       derivatives on <math|U>. Let <math|x\<in\>U> then
       <math|\<partial\><rsub|x.<around*|[|i<rsub|1>\<ldots\>i<rsub|1>|]>>f>
       exist so that by [theorem: <reference|diff higher order partial
-      differentiation (2)>] <math|f> is <math|i<rsub|1>>-partial derivatives
-      at <math|x>. As <math|x\<in\>U=U<rsup|\<circ\>>> we can use [theorem:
+      derivative (4)>] <math|f> has a <math|i<rsub|1>>-partial derivative at
+      <math|x>. As <math|x\<in\>U=U<rsup|\<circ\>>> we can use [theorem:
       <reference|diff partial derivate and partial differential>] from which
       it follows that <math|f> has a <math|i<rsub|1>>-partial differential at
       <math|x> where\ 
@@ -22415,7 +22481,7 @@
       Let <math|h<rsub|1>\<in\>\<bbb-K\>> then\ 
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|\<cal-P\><around*|[|1|]><around*|(|\<partial\><rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|1>|]>>f|)><around*|(|h<rsub|1>|)>>|<cell|<below|=|<text|[eq:
+        <tformat|<table|<row|<cell|\<cal-P\><around*|[|1|]><around*|(|\<partial\><rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|1>|]>>f|)><around*|(|h<rsub|1>|)>>|<cell|<below|=|<text|[lemma:
         <reference|lemma 16.211.127>]>>>|<cell|\<cal-P\><around*|[|1,\<partial\><rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|1>|]>>f|]><around*|(|h<rsub|1>|)>>>|<row|<cell|>|<cell|=>|<cell|\<cal-P\><around*|[|1,\<partial\><rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|1>|]>>f|]><around*|(|<wide*|h<rsub|1>:\<ldots\>:h<rsub|1>|\<wide-underbrace\>><rsub|1>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[note:
         <reference|note 16.210.127>]>>>|<cell|<around*|(|<big|prod><rsub|i=1><rsup|1>h<rsub|i>|)>\<cdot\>\<partial\><rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|1>|]>>f>>|<row|<cell|>|<cell|=>|<cell|h<rsub|1>\<cdot\>\<partial\><rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|1>|]>>f>>|<row|<cell|>|<cell|<below|=|<text|[theorem:
         <reference|diff higher order partial derivative (4)>]
@@ -22544,7 +22610,7 @@
       </equation>
 
       \ As <math|x\<in\>U<below|=|<text|[theorem: <reference|topology open
-      set and interior>]>>U<below|=|<text|[eq: <reference|eq
+      set and interior>]>>U<rsup|\<circ\>><below|=|<text|[eq: <reference|eq
       16.392.21>]>><around*|(|\<cal-D\><rsub|<around*|[|k<rsub|2>\<ldots\>k<rsub|m>|]>,f><below||>|)><rsup|\<circ\>>>
       it follows from [theorem: <reference|diff partial derivate and partial
       differential>] that\ 
@@ -22566,7 +22632,7 @@
       <math|\<partial\><rsub|k<rsub|1>\<ldots\>k<rsub|m>>f> has a
       <math|i<rsub|1>>-partial differential at <math|x> we can apply the
       chain rule for partial differentials [see theorem: <reference|diff
-      chain rule and partial differential>] that\ 
+      chain rule and partial differential>] to prove that\ 
 
       <\equation*>
         \<cal-P\><around*|[|m|]>\<circ\>\<partial\><rsub|<around*|[|k<rsub|1>\<ldots\>k<rsub|n>|]>>f<text|
@@ -22582,7 +22648,8 @@
         <reference|lemma 16.211.127>]>>>|<cell|\<cal-P\><around*|[|m|]>\<circ\>D<rsub|x,i<rsub|1>>\<partial\><rsub|<around*|[|k<rsub|1>\<ldots\>k<rsub|m>|]>>f>>>>
       </eqnarray*>
 
-      Substuting [eq: <reference|eq 16.396.21>][ in the above it follows that\ 
+      Substituting [eq: <reference|eq 16.396.21>][ in the above it follows
+      that\ 
 
       <\equation*>
         D<rsub|<around*|[|k<rsub|1>\<ldots\>k<rsub|m>|]>>f<text| is
@@ -22630,8 +22697,8 @@
         <reference|eq 16.401.21>]>>>|<cell|>>|<row|<cell|<around*|(|\<cal-P\><around*|[|m|]>\<circ\>D<rsub|x,i<rsub|1>>\<partial\><rsub|<around*|[|i<rsub|2>\<ldots\>i<rsub|m+1>|]>>f|)><around*|(|h<rsub|1>:\<ldots\>:h<rsub|m+1>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|<around*|(|\<cal-P\><around*|[|m|]>\<circ\>D<rsub|x,i<rsub|1>>\<partial\><rsub|<around*|[|i<rsub|2>\<ldots\>i<rsub|m+1>|]>>f|)><around*|(|h<rsub|1>|)>|)><around*|(|h<rsub|2>:\<ldots\>:h<rsub|m+1>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|\<cal-P\><around*|[|m|]><around*|(|<around*|(|D<rsub|x,i<rsub|1>>\<partial\><rsub|<around*|[|i<rsub|2>\<ldots\>i<rsub|m+1>|]>>f|)><around*|(|h<rsub|1>|)>|)>|)><around*|(|h<rsub|2>:\<ldots\>:h<rsub|m+1>|)>>|<cell|<below|=|<text|[eq:
         <reference|eq 16.399.21>]>>>|<cell|>>|<row|<cell|<around*|(|\<cal-P\><around*|[|m|]><around*|(|h<rsub|1>\<cdot\>\<partial\><rsub|x,i<rsub|1>><around*|(|\<partial\><rsub|<around*|[|i<rsub|2>\<ldots\>i<rsub|m+1>|]>>f|)>|)>|)><around*|(|h<rsub|2>\<ldots\>h<rsub|m+1>|)>>|<cell|<below|=|<text|[eq:
         <reference|eq 16.397.21>]>>>|<cell|>>|<row|<cell|<around*|(|\<cal-P\><around*|[|m|]><around*|(|h<rsub|1>\<cdot\>\<partial\><rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|m+1>|]>>f|)>|)><around*|(|h<rsub|2>:\<ldots\>:h<rsub|m+1>|)>>|<cell|\<equallim\><rsub|\<cal-P\><around*|[|m|]>\<in\>L<around*|(|X;L<rsub|m><around*|(|\<bbb-R\>;X|)>|)>>>|<cell|>>|<row|<cell|h<rsub|1>\<cdot\>\<cal-P\><around*|[|m|]><around*|(|\<partial\><rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|m+1>|]>>f|)><around*|(|h<rsub|2>:\<ldots\>:h<rsub|m+1>|)>>|<cell|<below|=|<text|[note:
-        <reference|note 16.210.127>]>>>|<cell|>>|<row|<cell|h<rsub|1>\<cdot\><around*|(|<around*|(|<big|prod><rsub|j=2><rsup|m+1>h<rsub|j>|)>\<cdot\>\<partial\><rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|m+1>|]>>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|<big|prod><rsub|j=1><rsup|m+1>h<rsub|j>|)>\<cdot\>\<partial\><rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|m+1>|]>>f>|<cell|<below|=|<text|[note:
-        <reference|note 16.210.127>]>>>|<cell|>>|<row|<cell|<around*|(|\<cal-P\><around*|[|m+1|]><around*|(|\<partial\><rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|m+1>|]>>|)>|)><around*|(|h<rsub|1>:\<ldots\>:h<rsub|m+1>|)>>|<cell|>|<cell|>>>>
+        <reference|note 16.210.127>]>>>|<cell|>>|<row|<cell|h<rsub|1>\<cdot\><around*|(|<around*|(|<big|prod><rsub|j=2><rsup|m+1>h<rsub|j>|)>\<cdot\>\<partial\><rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|m+1>|]>>f|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|<big|prod><rsub|j=1><rsup|m+1>h<rsub|j>|)>\<cdot\>\<partial\><rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|m+1>|]>>f>|<cell|<below|=|<text|[note:
+        <reference|note 16.210.127>]>>>|<cell|>>|<row|<cell|<around*|(|\<cal-P\><around*|[|m+1|]><around*|(|\<partial\><rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|m+1>|]>>f|)>|)><around*|(|h<rsub|1>:\<ldots\>:h<rsub|m+1>|)>>|<cell|>|<cell|>>>>
       </eqnarray*>
 
       hence, using [lemma: <reference|lemma 16.57.187>] we have
@@ -22677,9 +22744,8 @@
     <math|f:U\<rightarrow\>X> a function then we have\ 
 
     <\equation*>
-      f<text| has a partial differentials
-      <math|D<rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f<text| on
-      >U<text|>>>
+      f<text| has partial differentials <math|D<rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f<text|
+      on >U<text|>>>
     </equation*>
 
     <\equation*>
@@ -22704,7 +22770,7 @@
 
     <\equation*>
       D<rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f\<in\>L<rsub|m><around*|(|\<bbb-K\>;X|)><text|
-      is defined by >D<rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f=\<cal-P\><around*|[|m,\<partial\><rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>|]>
+      is defined by >D<rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f=\<cal-P\><around*|[|m,\<partial\><rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f|]>
     </equation*>
 
     so that for <math|h\<in\>\<bbb-R\><rsup|m>> we have
@@ -22769,7 +22835,7 @@
   Now in the context of [theorem: <reference|diff class C^m is equivalent
   with continuous partial differentials>] we look at continuity of
   <math|D<rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f> and
-  <math|\<partial\><rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f>.\ 
+  <math|\<partial\><rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f>.
 
   <\theorem>
     <label|diff higher order continuous differential and higher order
@@ -22783,9 +22849,8 @@
     <math|f:U\<rightarrow\>X> a function then we have\ 
 
     <\equation*>
-      f<text| has a partial differentials
-      <math|D<rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f<text| on
-      >U<text|>> and >D<rsub|i<rsub|1>\<ldots\>i<rsub|m>>f<text| is
+      f<text| has partial differentials <math|D<rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f<text|
+      on >U<text|>> and >D<rsub|i<rsub|1>\<ldots\>i<rsub|m>>f<text| is
       continuous>
     </equation*>
 
@@ -22794,7 +22859,7 @@
     </equation*>
 
     <\equation*>
-      f<text| has part>ial \ derivatives \<partial\><rsub|<around*|[|i<rsub|1>\<ldots\>m|]>>f<text|
+      f<text| has part>ial \ derivatives \<partial\><rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f<text|
       on >U<text| and >\<partial\><rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f<text|
       is continuous>
     </equation*>
@@ -22823,7 +22888,7 @@
       Let <math|x\<in\>U> then we have that
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|\<partial\><rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f<around*|(|x|)>>|<cell|<below|=|<text|[theorem:
+        <tformat|<table|<row|<cell|\<partial\><rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f<around*|(|x|)>>|<cell|<below|=|<text|[definition:
         <reference|diff higher order partial derivative
         (1)>]>>>|<cell|\<partial\><rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f>>|<row|<cell|>|<cell|=>|<cell|D<rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f<around*|(|<wide*|1:\<ldots\>:1|\<wide-underbrace\>><rsub|m>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[definition:
         <reference|diff evaluation operator>]>>>|<cell|ev<rsub|<wide*|1\<ldots\>1|\<wide-underbrace\>><rsub|m>><around*|(|D<rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f|)>>>|<row|<cell|>|<cell|<below|=|<text|[theorem:
@@ -22894,9 +22959,9 @@
     </description>
   </proof>
 
-  Next we show that <math|f> is of class <math|C<rsup|m>> if and only
+  Next we show that <math|f> is of class <math|C<rsup|m>> if and only if
   <math|\<forall\>i\<in\><around*|{|1\<ldots\>,n|}><rsup|m>> <math|f> has
-  continuous partial derivates <math|\<partial\><rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f>
+  continuous partial derivatives <math|\<partial\><rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f>
   on <math|U>.
 
   <\theorem>
@@ -22916,7 +22981,7 @@
       we have that ><rsub|>f<text| has partial differentials
       >\<partial\><rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f<text| on
       >U>|<cell|>>|<row|<cell|>|<cell|and>|<cell|>>|<row|<cell|>|<cell|\<partial\><rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f<text|
-      is continupus>>|<cell|>>>>
+      is continuous>>|<cell|>>>>
     </eqnarray*>
   </theorem>
 
@@ -22929,6 +22994,8 @@
 
   We use the above theorem to show that higher order partial derivatives are
   symmetric.
+
+  TODO
 
   <\theorem>
     Let <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>>, <math|m\<in\>\<bbb-N\>>,
@@ -22964,26 +23031,17 @@
     </equation*>
 
     and by [theorem: <reference|diff higher order partial differentiation is
-    symmetric>] that <math|\<forall\>x\<in\>U>,
-    <math|\<forall\>\<sigma\>\<in\>\<cal-P\><rsub|n>> and
-    <math|h\<in\>\<bbb-K\><rsup|n>> that\ 
+    symmetric>] that\ 
 
     <\equation>
       <label|eq 16.402.21>\<forall\>x\<in\>U<text|,
       >\<forall\>\<sigma\>\<in\>\<cal-P\><rsub|n><text| and
       >\<forall\>h\<in\>\<bbb-K\><rsup|n><text|
-      >D<rsub|x,<around*|[|i<rsub|1>\<ldots\>.i<rsub|m>|]>>f<around*|(|h<rsub|1>:\<ldots\>:h<rsub|n>|)>=D<rsub|x,<around*|[|i<rsub|\<sigma\><around*|(|1|)>>\<ldots\>i<rsub|\<sigma\><around*|(|m|)>>|]>>f
+      >D<rsub|x,<around*|[|i<rsub|1>\<ldots\>.i<rsub|m>|]>>f<around*|(|h<rsub|1>:\<ldots\>:h<rsub|n>|)>=D<rsub|x,<around*|[|i<rsub|\<sigma\><around*|(|1|)>>\<ldots\>i<rsub|\<sigma\><around*|(|m|)>>|]>>f<around*|(|h<rsub|\<sigma\><around*|(|1|)>>:\<ldots\>:h<rsub|\<sigma\><around*|(|m|)>>|)>
     </equation>
 
     Using [theorem: <reference|diff partial derivate and partial differential
     of higher order (2)>] it follows that\ 
-
-    <\equation*>
-      f<text| has partial derivatives >\<partial\><rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f<text|
-      on >U
-    </equation*>
-
-    with\ 
 
     <\equation>
       <label|eq 16.403.21>\<forall\>x\<in\>U<text|
@@ -23112,7 +23170,7 @@
     exist and for <math|h\<in\>\<bbb-R\><rsup|m>>\ 
 
     <\equation>
-      <label|eq 16.301.144>D<rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f<around*|(|h<rsub|1>:\<ldots\>:h<rsub|m>|)>=D<rsup|<around*|[|m|]>><rsub|x>f<around*|(|I<rsup|<around*|[|i<rsub|m>,0|]>><around*|(|h<rsub|1>|)>:\<ldots\>:I<rsup|<around*|[|i<rsub|1>,0|]>><around*|(|h<rsub|m>|)>|)>
+      <label|eq 16.301.144>D<rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f<around*|(|h<rsub|1>:\<ldots\>:h<rsub|m>|)>=D<rsup|<around*|[|m|]>><rsub|x>f<around*|(|I<rsup|<around*|[|i<rsub|1>,0|]>><around*|(|h<rsub|1>|)>:\<ldots\>:I<rsup|<around*|[|i<rsub|m>,0|]>><around*|(|h<rsub|m>|)>|)>
     </equation>
 
     Next by [theorem: <reference|diff partial derivate and partial
@@ -23138,8 +23196,8 @@
     <\eqnarray*>
       <tformat|<table|<row|<cell|\<partial\><rsub|x.<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f>|<cell|\<equallim\><rsub|<text|[eqs:
       <reference|eq 16.301.144>, <reference|eq
-      16.302.144>]>>>|<cell|D<rsup|<around*|[|m|]>><rsub|x>f<around*|(|<wide*|I<rsup|<around*|[|i<rsub|m>,0|]>><around*|(|1|)>:\<ldots\>:I<rsup|<around*|[|i<rsub|1>,0|]>><around*|(|1|)>|\<wide-underbrace\>><rsub|m>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
-      <reference|eq 16.303.144>]>>>|<cell|D<rsup|<around*|[|m|]>><rsub|x>f<around*|(|e<rsub|i<rsub|m>>:\<ldots\>:e<rsub|i<rsub|1>>|)><eq-number><label|eq
+      16.302.144>]>>>|<cell|D<rsup|<around*|[|m|]>><rsub|x>f<around*|(|<wide*|I<rsup|<around*|[|i<rsub|1>,0|]>><around*|(|1|)>:\<ldots\>:I<rsup|<around*|[|i<rsub|m>,0|]>><around*|(|1|)>|\<wide-underbrace\>><rsub|m>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 16.303.144>]>>>|<cell|D<rsup|<around*|[|m|]>><rsub|x>f<around*|(|e<rsub|i<rsub|1>>:\<ldots\>:e<rsub|i<rsub|m>>|)><eq-number><label|eq
       16.305.144>>>>>
     </eqnarray*>
 
@@ -28939,8 +28997,6 @@
   We can now prove a version of Taylor's theorem for functions between normed
   spaces.
 
-  TODO check this
-
   <\theorem>
     <label|diff Taylor I.3><dueto|Taylor's Theorem (I.3)>Let
     <math|n\<in\>\<bbb-N\>>, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
@@ -29781,8 +29837,9 @@
     Further as <math|f> is <math|<around*|(|n+1|)>>-times differentiable on
     <math|U> it follows from [theorems: <reference|diff n-times and m-times
     differentiability>, <reference|diff higher order differentiation (1)>]
-    that <math|f> is Fréchet differentable on <math|U>. Hence using [theorem:
-    <reference|diff derivate and frechet differential>] it follows that \ 
+    that <math|f> is Fréchet differentiable on <math|U>. Hence using
+    [theorem: <reference|diff derivate and frechet differential>] it follows
+    that \ 
 
     <\equation*>
       \<forall\>t\<in\>U<text| >f<text| has a derivative at >t<text| with
@@ -31010,266 +31067,267 @@
     <associate|auto-72|<tuple|16.7|?>>
     <associate|auto-8|<tuple|16.1.3|?>>
     <associate|auto-9|<tuple|differentiability|?>>
-    <associate|conjecture 16.245.136|<tuple|16.337|?>>
-    <associate|conjecture 16.246.136|<tuple|16.338|?>>
-    <associate|conjecture 16.247.136|<tuple|16.339|?>>
-    <associate|conjecture 16.248.136|<tuple|16.340|?>>
-    <associate|conjecture 16.252|<tuple|16.342|?>>
+    <associate|conjecture 16.245.136|<tuple|16.342|?>>
+    <associate|conjecture 16.246.136|<tuple|16.343|?>>
+    <associate|conjecture 16.247.136|<tuple|16.344|?>>
+    <associate|conjecture 16.248.136|<tuple|16.345|?>>
+    <associate|conjecture 16.252|<tuple|16.347|?>>
     <associate|continuity limit of composition of linear
-    maps|<tuple|16.316|?>>
+    maps|<tuple|16.321|?>>
     <associate|convergence of a function to a point|<tuple|16.3|?>>
-    <associate|corollary 16.50.192|<tuple|16.110|?>>
+    <associate|corollary 16.50.192|<tuple|16.113|?>>
     <associate|diff (f+g)'=f'+g'|<tuple|16.40|?>>
     <associate|diff Bx(x,d)|<tuple|16.17|?>>
-    <associate|diff C-infinity condition|<tuple|16.155|?>>
-    <associate|diff C^(n+m)|<tuple|16.171|?>>
-    <associate|diff C^1 and derivatives|<tuple|16.158|?>>
-    <associate|diff C^1 equivalence (1)|<tuple|16.150|?>>
-    <associate|diff C^1 equivalence (2)|<tuple|16.151|?>>
-    <associate|diff C^n and C^m|<tuple|16.156|?>>
+    <associate|diff C-infinity condition|<tuple|16.158|?>>
+    <associate|diff C^(n+m)|<tuple|16.175|?>>
+    <associate|diff C^1 and derivatives|<tuple|16.161|?>>
+    <associate|diff C^1 equivalence (1)|<tuple|16.153|?>>
+    <associate|diff C^1 equivalence (2)|<tuple|16.154|?>>
+    <associate|diff C^n and C^m|<tuple|16.159|?>>
     <associate|diff Frechet approximation|<tuple|16.43|?>>
     <associate|diff Frechet differentation implies partial differentiability
-    |<tuple|16.81|?>>
-    <associate|diff GL(X) is a group|<tuple|16.315|?>>
-    <associate|diff H^n properties|<tuple|16.319|?>>
+    |<tuple|16.83|?>>
+    <associate|diff GL(X) is a group|<tuple|16.320|?>>
+    <associate|diff H^n properties|<tuple|16.324|?>>
     <associate|diff I+H has inverse if norm of H is less then
-    1|<tuple|16.323|?>>
-    <associate|diff Jacobian matrix|<tuple|16.100|?>>
-    <associate|diff L(x1:..:xn) (1)|<tuple|16.249|?>>
-    <associate|diff L(x1:..xn)|<tuple|16.111|?>>
-    <associate|diff L(x1:..xn)=L(1:..:1). product|<tuple|16.115|?>>
-    <associate|diff L_n(X;Y)|<tuple|16.107|?>>
-    <associate|diff L_n(x1,..,xn;Y)|<tuple|16.244|?>>
-    <associate|diff Lagrange theorem|<tuple|16.202|?>>
-    <associate|diff Lagrange theorem (1)|<tuple|16.204|?>>
-    <associate|diff Rolle's theorem|<tuple|16.200|?>>
-    <associate|diff Taylor I|<tuple|16.348|?>>
-    <associate|diff Taylor I.1|<tuple|16.350|?>>
-    <associate|diff Taylor I.2|<tuple|16.353|?>>
-    <associate|diff Taylor I.3|<tuple|16.364|?>>
-    <associate|diff Taylor II|<tuple|16.367|?>>
-    <associate|diff Taylor II.1|<tuple|16.375|?>>
-    <associate|diff Taylor II.2|<tuple|16.376|?>>
-    <associate|diff Taylor III|<tuple|16.379|?>>
-    <associate|diff Taylor series (1))|<tuple|16.382|?>>
-    <associate|diff Taylor series (3)|<tuple|16.384|?>>
+    1|<tuple|16.328|?>>
+    <associate|diff Jacobian matrix|<tuple|16.103|?>>
+    <associate|diff L(x1:..:xn) (1)|<tuple|16.253|?>>
+    <associate|diff L(x1:..xn)|<tuple|16.114|?>>
+    <associate|diff L(x1:..xn)=L(1:..:1). product|<tuple|16.118|?>>
+    <associate|diff L_n(X;Y)|<tuple|16.110|?>>
+    <associate|diff L_n(x1,..,xn;Y)|<tuple|16.248|?>>
+    <associate|diff Lagrange theorem|<tuple|16.206|?>>
+    <associate|diff Lagrange theorem (1)|<tuple|16.208|?>>
+    <associate|diff Rolle's theorem|<tuple|16.204|?>>
+    <associate|diff Taylor I|<tuple|16.353|?>>
+    <associate|diff Taylor I.1|<tuple|16.355|?>>
+    <associate|diff Taylor I.2|<tuple|16.358|?>>
+    <associate|diff Taylor I.3|<tuple|16.369|?>>
+    <associate|diff Taylor II|<tuple|16.372|?>>
+    <associate|diff Taylor II.1|<tuple|16.380|?>>
+    <associate|diff Taylor II.2|<tuple|16.381|?>>
+    <associate|diff Taylor III|<tuple|16.384|?>>
+    <associate|diff Taylor series (1))|<tuple|16.387|?>>
+    <associate|diff Taylor series (3)|<tuple|16.389|?>>
     <associate|diff Ux|<tuple|16.13|?>>
     <associate|diff Ux is open if U is open|<tuple|16.16|?>>
     <associate|diff Ux=-x+U=U-x|<tuple|16.15|?>>
-    <associate|diff balls are convex|<tuple|16.216|?>>
-    <associate|diff bilinear functions|<tuple|16.101|?>>
+    <associate|diff balls are convex|<tuple|16.220|?>>
+    <associate|diff bilinear functions|<tuple|16.104|?>>
     <associate|diff bilinear mappings are infinite times
-    differentiable|<tuple|16.182|?>>
+    differentiable|<tuple|16.186|?>>
     <associate|diff calculus derivate|<tuple|16.22|?>>
     <associate|diff calculus derivate (1)|<tuple|16.20|?>>
     <associate|diff calculus derivate (2)|<tuple|16.23|?>>
-    <associate|diff chain rule|<tuple|16.66|?>>
-    <associate|diff chain rule and partial differential|<tuple|16.85|?>>
-    <associate|diff chain rule calculus|<tuple|16.67|?>>
-    <associate|diff chain rule higher order|<tuple|16.192|?>>
-    <associate|diff chain rule higher order class|<tuple|16.193|?>>
-    <associate|diff class C^@@|<tuple|16.152|?>>
+    <associate|diff chain rule|<tuple|16.67|?>>
+    <associate|diff chain rule and partial differential|<tuple|16.87|?>>
+    <associate|diff chain rule calculus|<tuple|16.68|?>>
+    <associate|diff chain rule higher order|<tuple|16.196|?>>
+    <associate|diff chain rule higher order class|<tuple|16.197|?>>
+    <associate|diff class C^@@|<tuple|16.155|?>>
     <associate|diff class C^m is equivalent with continuous partial
-    differentials|<tuple|16.289|?>>
-    <associate|diff class C^n|<tuple|16.148|?>>
-    <associate|diff class C^n (1)|<tuple|16.153|?>>
-    <associate|diff class C^n (2)|<tuple|16.154|?>>
-    <associate|diff class C^n (domain)|<tuple|16.149|?>>
+    differentials|<tuple|16.294|?>>
+    <associate|diff class C^n|<tuple|16.151|?>>
+    <associate|diff class C^n (1)|<tuple|16.156|?>>
+    <associate|diff class C^n (2)|<tuple|16.157|?>>
+    <associate|diff class C^n (domain)|<tuple|16.152|?>>
     <associate|diff class C^n is equivalent with continuous
-    derivatives|<tuple|16.303|?>>
-    <associate|diff class C^n sub-sets|<tuple|16.146|?>>
-    <associate|diff composition with a linear mapping|<tuple|16.68|?>>
+    derivatives|<tuple|16.308|?>>
+    <associate|diff class C^n sub-sets|<tuple|16.149|?>>
+    <associate|diff composition with a linear mapping|<tuple|16.69|?>>
     <associate|diff constant function and partial
-    differentiation|<tuple|16.82|?>>
-    <associate|diff constant function is differentiable|<tuple|16.53|?>>
+    differentiation|<tuple|16.84|?>>
+    <associate|diff constant function is differentiable|<tuple|16.54|?>>
     <associate|diff constant function is infinitely times
-    differentiable|<tuple|16.175|?>>
+    differentiable|<tuple|16.179|?>>
     <associate|diff continuous partial differentials implies
-    differentiability|<tuple|16.280|?>>
+    differentiability|<tuple|16.285|?>>
     <associate|diff continuous partial differentials implies
-    differentiability (1)|<tuple|16.288|?>>
-    <associate|diff convex concave|<tuple|16.207|?>>
-    <associate|diff convex set|<tuple|16.215|?>>
-    <associate|diff convex/concave alternative|<tuple|16.208|?>>
-    <associate|diff derivate and frechet differential|<tuple|16.63|?>>
-    <associate|diff derivate and local extremum|<tuple|16.199|?>>
-    <associate|diff derivate of inverse function|<tuple|16.104|?>>
-    <associate|diff derivate operator is linear|<tuple|16.65|?>>
+    differentiability (1)|<tuple|16.293|?>>
+    <associate|diff convex concave|<tuple|16.211|?>>
+    <associate|diff convex set|<tuple|16.219|?>>
+    <associate|diff convex/concave alternative|<tuple|16.212|?>>
+    <associate|diff derivate and frechet differential|<tuple|16.64|?>>
+    <associate|diff derivate and local extremum|<tuple|16.203|?>>
+    <associate|diff derivate of inverse function|<tuple|16.107|?>>
+    <associate|diff derivate operator is linear|<tuple|16.66|?>>
     <associate|diff derivative and restriction|<tuple|16.34|?>>
     <associate|diff derivative function|<tuple|16.24|?>>
     <associate|diff derivative is local|<tuple|16.36|?>>
     <associate|diff derivative of a scalar product|<tuple|16.41|?>>
     <associate|diff derivative of constant|<tuple|16.30|?>>
-    <associate|diff derivative of f/g|<tuple|16.106|?>>
+    <associate|diff derivative of f/g|<tuple|16.109|?>>
     <associate|diff derivative of identity function|<tuple|16.31|?>>
     <associate|diff derivative of the empty function|<tuple|16.29|?>>
     <associate|diff derivative on a open set|<tuple|16.28|?>>
     <associate|diff derivative on a open set (2)|<tuple|16.39|?>>
     <associate|diff derivatives and continuity|<tuple|16.33|?>>
-    <associate|diff diffeomorphism|<tuple|16.325|?>>
-    <associate|diff diffeomorphism D(f@f^-1)|<tuple|16.331|?>>
-    <associate|diff diffeomorphism composition|<tuple|16.332|?>>
-    <associate|diff diffeomorphism identity|<tuple|16.329|?>>
-    <associate|diff diffeomorphism inverse|<tuple|16.326|?>>
+    <associate|diff diffeomorphism|<tuple|16.330|?>>
+    <associate|diff diffeomorphism D(f@f^-1)|<tuple|16.336|?>>
+    <associate|diff diffeomorphism composition|<tuple|16.337|?>>
+    <associate|diff diffeomorphism identity|<tuple|16.334|?>>
+    <associate|diff diffeomorphism inverse|<tuple|16.331|?>>
     <associate|diff differentiability|<tuple|16.46|?>>
     <associate|diff differentiability alternative
-    definitions|<tuple|16.60|?>>
+    definitions|<tuple|16.61|?>>
     <associate|diff differentiability alternative definitions
-    (1)|<tuple|16.61|?>>
-    <associate|diff differentiability and K^n|<tuple|16.93|?>>
-    <associate|diff differentiability is a local property|<tuple|16.56|?>>
-    <associate|diff differentiability on a set|<tuple|16.51|?>>
-    <associate|diff differentiability on a set (2)|<tuple|16.58|?>>
-    <associate|diff differentiable function is continuous|<tuple|16.62|?>>
+    (1)|<tuple|16.62|?>>
+    <associate|diff differentiability and K^n|<tuple|16.96|?>>
+    <associate|diff differentiability is a local property|<tuple|16.57|?>>
+    <associate|diff differentiability on a set|<tuple|16.52|?>>
+    <associate|diff differentiability on a set (2)|<tuple|16.59|?>>
+    <associate|diff differentiable function is continuous|<tuple|16.63|?>>
     <associate|diff differential|<tuple|16.48|?>>
-    <associate|diff differential of a vector valued function|<tuple|16.98|?>>
-    <associate|diff differential of product of functions|<tuple|16.102|?>>
-    <associate|diff e-mapping|<tuple|16.59|?>>
-    <associate|diff equivalent norms|<tuple|16.55|?>>
-    <associate|diff evaluation operator|<tuple|16.234|?>>
-    <associate|diff f(t)=a.x+y is infinite differentiable|<tuple|16.178|?>>
-    <associate|diff fundamental theorem of calculus (1)|<tuple|16.210|?>>
-    <associate|diff fundamental theorem of calculus (2)|<tuple|16.211|?>>
+    <associate|diff differential of a vector valued
+    function|<tuple|16.101|?>>
+    <associate|diff differential of product of functions|<tuple|16.105|?>>
+    <associate|diff e-mapping|<tuple|16.60|?>>
+    <associate|diff equivalent norms|<tuple|16.56|?>>
+    <associate|diff evaluation operator|<tuple|16.238|?>>
+    <associate|diff f(t)=a.x+y is infinite differentiable|<tuple|16.182|?>>
+    <associate|diff fundamental theorem of calculus (1)|<tuple|16.214|?>>
+    <associate|diff fundamental theorem of calculus (2)|<tuple|16.215|?>>
     <associate|diff higher order continuous differential and higher order
-    continuous derivate|<tuple|16.302|?>>
-    <associate|diff higher order derivate and differential|<tuple|16.167|?>>
-    <associate|diff higher order derivates|<tuple|16.290|?>>
-    <associate|diff higher order derivative and restriction|<tuple|16.164|?>>
-    <associate|diff higher order derivative at a point|<tuple|16.161|?>>
-    <associate|diff higher order derivative at a point (1)|<tuple|16.163|?>>
-    <associate|diff higher order derivative function|<tuple|16.159|?>>
-    <associate|diff higher order derivative function domain|<tuple|16.160|?>>
-    <associate|diff higher order derivative on a set|<tuple|16.162|?>>
+    continuous derivate|<tuple|16.307|?>>
+    <associate|diff higher order derivate and differential|<tuple|16.171|?>>
+    <associate|diff higher order derivates|<tuple|16.295|?>>
+    <associate|diff higher order derivative and restriction|<tuple|16.168|?>>
+    <associate|diff higher order derivative at a point|<tuple|16.165|?>>
+    <associate|diff higher order derivative at a point (1)|<tuple|16.167|?>>
+    <associate|diff higher order derivative function|<tuple|16.162|?>>
+    <associate|diff higher order derivative function domain|<tuple|16.164|?>>
+    <associate|diff higher order derivative on a set|<tuple|16.166|?>>
     <associate|diff higher order differation implies higher order partial
-    differation|<tuple|16.270|?>>
-    <associate|diff higher order differential|<tuple|16.126|?>>
-    <associate|diff higher order differential domains|<tuple|16.132|?>>
-    <associate|diff higher order differential is linear|<tuple|16.174|?>>
-    <associate|diff higher order differential of a product|<tuple|16.195|?>>
+    differation|<tuple|16.275|?>>
+    <associate|diff higher order differential|<tuple|16.129|?>>
+    <associate|diff higher order differential domains|<tuple|16.135|?>>
+    <associate|diff higher order differential is linear|<tuple|16.178|?>>
+    <associate|diff higher order differential of a product|<tuple|16.199|?>>
     <associate|diff higher order differential of a product
-    (1)|<tuple|16.196|?>>
+    (1)|<tuple|16.200|?>>
     <associate|diff higher order differentials are symmetric in there
-    arguments|<tuple|16.242|?>>
-    <associate|diff higher order differentiation|<tuple|16.133|?>>
-    <associate|diff higher order differentiation (1)|<tuple|16.137|?>>
-    <associate|diff higher order differentiation (2)|<tuple|16.130|?>>
-    <associate|diff higher order differentiation (3)|<tuple|16.147|?>>
-    <associate|diff higher order differentiation (4)|<tuple|16.141|?>>
+    arguments|<tuple|16.246|?>>
+    <associate|diff higher order differentiation|<tuple|16.136|?>>
+    <associate|diff higher order differentiation (1)|<tuple|16.140|?>>
+    <associate|diff higher order differentiation (2)|<tuple|16.133|?>>
+    <associate|diff higher order differentiation (3)|<tuple|16.150|?>>
+    <associate|diff higher order differentiation (4)|<tuple|16.144|?>>
     <associate|diff higher order differentiation and vector
-    functions|<tuple|16.188|?>>
-    <associate|diff higher order differentiation classes|<tuple|16.189|?>>
+    functions|<tuple|16.192|?>>
+    <associate|diff higher order differentiation classes|<tuple|16.193|?>>
     <associate|diff higher order differentiation implies higher order
-    derivates|<tuple|16.306|?>>
+    derivates|<tuple|16.311|?>>
     <associate|diff higher order differentiation implies higher order partial
-    differation (1)|<tuple|16.271|?>>
-    <associate|diff higher order differentiation is local|<tuple|16.142|?>>
+    differation (1)|<tuple|16.276|?>>
+    <associate|diff higher order differentiation is local|<tuple|16.145|?>>
     <associate|diff higher order differentiation is local
-    (1)|<tuple|16.144|?>>
+    (1)|<tuple|16.147|?>>
     <associate|diff higher order differentiation is local
-    (2)|<tuple|16.145|?>>
+    (2)|<tuple|16.148|?>>
     <associate|diff higher order differentiation on a open
-    set|<tuple|16.138|?>>
-    <associate|diff higher order partial derivative (1)|<tuple|16.292|?>>
-    <associate|diff higher order partial derivative (2)|<tuple|16.293|?>>
-    <associate|diff higher order partial derivative (3)|<tuple|16.294|?>>
-    <associate|diff higher order partial derivative (4)|<tuple|16.295|?>>
+    set|<tuple|16.141|?>>
+    <associate|diff higher order partial derivative (1)|<tuple|16.298|?>>
+    <associate|diff higher order partial derivative (2)|<tuple|16.299|?>>
+    <associate|diff higher order partial derivative (3)|<tuple|16.299|?>>
+    <associate|diff higher order partial derivative (4)|<tuple|16.300|?>>
     <associate|diff higher order partial derivative
-    (domains)|<tuple|16.291|?>>
-    <associate|diff higher order partial differentiation|<tuple|16.259|?>>
+    (domains)|<tuple|16.297|?>>
+    <associate|diff higher order partial differentiation|<tuple|16.263|?>>
     <associate|diff higher order partial differentiation
-    (1)|<tuple|16.261|?>>
+    (1)|<tuple|16.266|?>>
     <associate|diff higher order partial differentiation
-    (2)|<tuple|16.267|?>>
+    (2)|<tuple|16.272|?>>
     <associate|diff higher order partial differentiation
-    (domain)|<tuple|16.260|?>>
+    (domain)|<tuple|16.265|?>>
     <associate|diff higher order partial differentiation is
-    symmetric|<tuple|16.272|?>>
+    symmetric|<tuple|16.277|?>>
     <associate|diff higher order partial differentiation
-    n,m|<tuple|16.266|?>>
+    n,m|<tuple|16.271|?>>
     <associate|diff higher order partial differentiation on open
-    domain|<tuple|16.264|?>>
+    domain|<tuple|16.269|?>>
     <associate|diff higher order partial differentiation on open
-    set|<tuple|16.263|?>>
+    set|<tuple|16.268|?>>
     <associate|diff homeomorphism is a diffeomorphism of class
-    C^0|<tuple|16.327|?>>
-    <associate|diff identity function is differentiable|<tuple|16.52|?>>
+    C^0|<tuple|16.332|?>>
+    <associate|diff identity function is differentiable|<tuple|16.53|?>>
     <associate|diff identity function is infinite times
-    differentiable|<tuple|16.177|?>>
-    <associate|diff implicit function theorem|<tuple|16.346|?>>
-    <associate|diff implicit function theorem (1)|<tuple|16.347|?>>
-    <associate|diff increasing decreasing function|<tuple|16.206|?>>
-    <associate|diff inifint=ite differentiable|<tuple|16.136|?>>
-    <associate|diff integration by part|<tuple|16.212|?>>
-    <associate|diff inverse function theorem|<tuple|16.334|?>>
-    <associate|diff inverse function theorem and Jacobian|<tuple|16.343|?>>
-    <associate|diff inverse mapping on GL(X)|<tuple|16.324|?>>
-    <associate|diff limit of a function|<tuple|16.11|?>>
-    <associate|diff line segment [0,1]|<tuple|16.221|?>>
-    <associate|diff linear isomorphism between Banach spaces are
-    diffeomorphisms|<tuple|16.328|?>>
-    <associate|diff linear mapping is infinite times
-    differentiable|<tuple|16.176|?>>
-    <associate|diff linear mappings are differentiable|<tuple|16.54|?>>
-    <associate|diff linear to multilinear|<tuple|16.123|?>>
-    <associate|diff linear to multilinear (1)|<tuple|16.257|?>>
-    <associate|diff linesegement|<tuple|16.219|?>>
-    <associate|diff little o|<tuple|16.352|?>>
-    <associate|diff little o and limits|<tuple|16.354|?>>
-    <associate|diff local diffeomorphism|<tuple|16.333|?>>
-    <associate|diff mean value theorem (0)|<tuple|16.217|?>>
-    <associate|diff mean value theorem (1)|<tuple|16.214|?>>
-    <associate|diff mean value theorem (2)|<tuple|16.217|?>>
-    <associate|diff mean value theorem (2.1)|<tuple|16.223|?>>
-    <associate|diff mean value theorem (3)|<tuple|16.224|?>>
-    <associate|diff mean value theorem (3.1)|<tuple|16.225|?>>
-    <associate|diff mean value theorem (4)|<tuple|16.226|?>>
-    <associate|diff mean value theorem (5)|<tuple|16.229|?>>
-    <associate|diff mean value theorem (6)|<tuple|16.230|?>>
-    <associate|diff mean value theorem (7)|<tuple|16.231|?>>
-    <associate|diff minimum maximum|<tuple|16.197|?>>
-    <associate|diff n+m derivative|<tuple|16.172|?>>
-    <associate|diff n+m derivative (1)|<tuple|16.173|?>>
-    <associate|diff n+m differentiation|<tuple|16.169|?>>
-    <associate|diff n+m differentiation (1)|<tuple|16.170|?>>
-    <associate|diff n-times and m-times derivating|<tuple|16.165|?>>
-    <associate|diff n-times and m-times differentiability|<tuple|16.135|?>>
-    <associate|diff partial derivate|<tuple|16.89|?>>
-    <associate|diff partial derivate and partial
-    differential|<tuple|16.92|?>>
-    <associate|diff partial derivate and partial differential of higher
-    order|<tuple|16.296|?>>
-    <associate|diff partial derivate and partial differential of higher order
-    (1)|<tuple|16.300|?>>
-    <associate|diff partial derivate and partial differential of higher order
-    (2)|<tuple|16.301|?>>
-    <associate|diff partial derivate definition|<tuple|16.86|?>>
-    <associate|diff partial derivative on a set|<tuple|16.91|?>>
-    <associate|diff partial differentiability does not mean
-    differentiaility|<tuple|16.83|?>>
-    <associate|diff partial differential|<tuple|16.77|?>>
-    <associate|diff partial differential definition|<tuple|16.73|?>>
-    <associate|diff partial differential on a set|<tuple|16.79|?>>
-    <associate|diff partial differential properties|<tuple|16.84|?>>
-    <associate|diff partial differentiation is local|<tuple|16.80|?>>
-    <associate|diff power|<tuple|16.105|?>>
-    <associate|diff power of composition|<tuple|16.318|?>>
-    <associate|diff projection functon is infinite times
     differentiable|<tuple|16.181|?>>
+    <associate|diff implicit function theorem|<tuple|16.351|?>>
+    <associate|diff implicit function theorem (1)|<tuple|16.352|?>>
+    <associate|diff increasing decreasing function|<tuple|16.210|?>>
+    <associate|diff inifint=ite differentiable|<tuple|16.139|?>>
+    <associate|diff integration by part|<tuple|16.216|?>>
+    <associate|diff inverse function theorem|<tuple|16.339|?>>
+    <associate|diff inverse function theorem and Jacobian|<tuple|16.348|?>>
+    <associate|diff inverse mapping on GL(X)|<tuple|16.329|?>>
+    <associate|diff limit of a function|<tuple|16.11|?>>
+    <associate|diff line segment [0,1]|<tuple|16.225|?>>
+    <associate|diff linear isomorphism between Banach spaces are
+    diffeomorphisms|<tuple|16.333|?>>
+    <associate|diff linear mapping is infinite times
+    differentiable|<tuple|16.180|?>>
+    <associate|diff linear mappings are differentiable|<tuple|16.55|?>>
+    <associate|diff linear to multilinear|<tuple|16.126|?>>
+    <associate|diff linear to multilinear (1)|<tuple|16.261|?>>
+    <associate|diff linesegement|<tuple|16.223|?>>
+    <associate|diff little o|<tuple|16.357|?>>
+    <associate|diff little o and limits|<tuple|16.359|?>>
+    <associate|diff local diffeomorphism|<tuple|16.338|?>>
+    <associate|diff mean value theorem (0)|<tuple|16.221|?>>
+    <associate|diff mean value theorem (1)|<tuple|16.218|?>>
+    <associate|diff mean value theorem (2)|<tuple|16.221|?>>
+    <associate|diff mean value theorem (2.1)|<tuple|16.227|?>>
+    <associate|diff mean value theorem (3)|<tuple|16.228|?>>
+    <associate|diff mean value theorem (3.1)|<tuple|16.229|?>>
+    <associate|diff mean value theorem (4)|<tuple|16.230|?>>
+    <associate|diff mean value theorem (5)|<tuple|16.233|?>>
+    <associate|diff mean value theorem (6)|<tuple|16.234|?>>
+    <associate|diff mean value theorem (7)|<tuple|16.235|?>>
+    <associate|diff minimum maximum|<tuple|16.201|?>>
+    <associate|diff n+m derivative|<tuple|16.176|?>>
+    <associate|diff n+m derivative (1)|<tuple|16.177|?>>
+    <associate|diff n+m differentiation|<tuple|16.173|?>>
+    <associate|diff n+m differentiation (1)|<tuple|16.174|?>>
+    <associate|diff n-times and m-times derivating|<tuple|16.169|?>>
+    <associate|diff n-times and m-times differentiability|<tuple|16.138|?>>
+    <associate|diff partial derivate|<tuple|16.91|?>>
+    <associate|diff partial derivate and partial
+    differential|<tuple|16.95|?>>
+    <associate|diff partial derivate and partial differential of higher
+    order|<tuple|16.301|?>>
+    <associate|diff partial derivate and partial differential of higher order
+    (1)|<tuple|16.305|?>>
+    <associate|diff partial derivate and partial differential of higher order
+    (2)|<tuple|16.306|?>>
+    <associate|diff partial derivate definition|<tuple|16.88|?>>
+    <associate|diff partial derivative on a set|<tuple|16.94|?>>
+    <associate|diff partial differentiability does not mean
+    differentiaility|<tuple|16.85|?>>
+    <associate|diff partial differential|<tuple|16.78|?>>
+    <associate|diff partial differential definition|<tuple|16.74|?>>
+    <associate|diff partial differential on a set|<tuple|16.81|?>>
+    <associate|diff partial differential properties|<tuple|16.86|?>>
+    <associate|diff partial differentiation is local|<tuple|16.82|?>>
+    <associate|diff power|<tuple|16.108|?>>
+    <associate|diff power of composition|<tuple|16.323|?>>
+    <associate|diff projection functon is infinite times
+    differentiable|<tuple|16.185|?>>
     <associate|diff restriction of a diffeomorphism is a
-    diffeomorphism|<tuple|16.330|?>>
+    diffeomorphism|<tuple|16.335|?>>
     <associate|diff scalar product function has a derivate|<tuple|16.32|?>>
-    <associate|diff second derivate convex concave|<tuple|16.209|?>>
-    <associate|diff space of toplinear isomorphism|<tuple|16.314|?>>
+    <associate|diff second derivate convex concave|<tuple|16.213|?>>
+    <associate|diff space of toplinear isomorphism|<tuple|16.319|?>>
     <associate|diff toplinear isomorphism between Banach
-    spaces|<tuple|16.313|?>>
-    <associate|diff translation is infinite differentiable|<tuple|16.180|?>>
-    <associate|diff unprojection|<tuple|16.69|?>>
+    spaces|<tuple|16.318|?>>
+    <associate|diff translation is infinite differentiable|<tuple|16.184|?>>
+    <associate|diff unprojection|<tuple|16.70|?>>
     <associate|diff unprojection is infinite times
-    differentiable|<tuple|16.179|?>>
-    <associate|diff vector functions|<tuple|16.94|?>>
-    <associate|diff vector functions (1)|<tuple|16.97|?>>
-    <associate|diff vector functions (2)|<tuple|16.99|?>>
-    <associate|diff vector functions and linearity|<tuple|16.96|?>>
+    differentiable|<tuple|16.183|?>>
+    <associate|diff vector functions|<tuple|16.97|?>>
+    <associate|diff vector functions (1)|<tuple|16.100|?>>
+    <associate|diff vector functions (2)|<tuple|16.102|?>>
+    <associate|diff vector functions and linearity|<tuple|16.99|?>>
     <associate|eq 14.411.143|<tuple|16.537|?>>
     <associate|eq 16.1.177|<tuple|16.16|?>>
     <associate|eq 16.1.2|<tuple|16.1|?>>
@@ -31381,7 +31439,7 @@
     <associate|eq 16.173.16|<tuple|16.183|?>>
     <associate|eq 16.174.16|<tuple|16.184|?>>
     <associate|eq 16.175.16|<tuple|16.185|?>>
-    <associate|eq 16.176.211|<tuple|16.250|?>>
+    <associate|eq 16.176.211|<tuple|16.254|?>>
     <associate|eq 16.177.16|<tuple|16.186|?>>
     <associate|eq 16.178.16|<tuple|16.187|?>>
     <associate|eq 16.179.16|<tuple|16.188|?>>
@@ -31920,77 +31978,77 @@
     <associate|eq 16.99.6|<tuple|16.103|?>>
     <associate|fig 4.311|<tuple|16.4|?>>
     <associate|fig 5.311|<tuple|16.5|?>>
-    <associate|inverse function and derivate|<tuple|16.344|?>>
-    <associate|lemma 16.101.194|<tuple|16.191|?>>
-    <associate|lemma 16.104.194|<tuple|16.238|?>>
-    <associate|lemma 16.105.194|<tuple|16.239|?>>
+    <associate|inverse function and derivate|<tuple|16.349|?>>
+    <associate|lemma 16.101.194|<tuple|16.195|?>>
+    <associate|lemma 16.104.194|<tuple|16.242|?>>
+    <associate|lemma 16.105.194|<tuple|16.243|?>>
     <associate|lemma 16.11.500|<tuple|16.6|?>>
-    <associate|lemma 16.135.200|<tuple|16.213|?>>
-    <associate|lemma 16.144.201|<tuple|16.222|?>>
-    <associate|lemma 16.155.203|<tuple|16.233|?>>
-    <associate|lemma 16.157.205|<tuple|16.232|?>>
-    <associate|lemma 16.159.206|<tuple|16.235|?>>
-    <associate|lemma 16.160.206|<tuple|16.236|?>>
-    <associate|lemma 16.166.210|<tuple|16.240|?>>
-    <associate|lemma 16.167.210|<tuple|16.241|?>>
-    <associate|lemma 16.173.211|<tuple|16.247|?>>
-    <associate|lemma 16.174.211|<tuple|16.248|?>>
-    <associate|lemma 16.177.211|<tuple|16.251|?>>
-    <associate|lemma 16.178.210|<tuple|16.252|?>>
-    <associate|lemma 16.179.210|<tuple|16.253|?>>
+    <associate|lemma 16.135.200|<tuple|16.217|?>>
+    <associate|lemma 16.144.201|<tuple|16.226|?>>
+    <associate|lemma 16.155.203|<tuple|16.237|?>>
+    <associate|lemma 16.157.205|<tuple|16.236|?>>
+    <associate|lemma 16.159.206|<tuple|16.239|?>>
+    <associate|lemma 16.160.206|<tuple|16.240|?>>
+    <associate|lemma 16.166.210|<tuple|16.244|?>>
+    <associate|lemma 16.167.210|<tuple|16.245|?>>
+    <associate|lemma 16.173.211|<tuple|16.251|?>>
+    <associate|lemma 16.174.211|<tuple|16.252|?>>
+    <associate|lemma 16.177.211|<tuple|16.255|?>>
+    <associate|lemma 16.178.210|<tuple|16.256|?>>
+    <associate|lemma 16.179.210|<tuple|16.257|?>>
     <associate|lemma 16.18.2|<tuple|16.18|?>>
-    <associate|lemma 16.180.210|<tuple|16.254|?>>
-    <associate|lemma 16.181.210|<tuple|16.255|?>>
-    <associate|lemma 16.182.210|<tuple|16.256|?>>
+    <associate|lemma 16.180.210|<tuple|16.258|?>>
+    <associate|lemma 16.181.210|<tuple|16.259|?>>
+    <associate|lemma 16.182.210|<tuple|16.260|?>>
     <associate|lemma 16.19.2|<tuple|16.19|?>>
-    <associate|lemma 16.192.122|<tuple|16.268|?>>
-    <associate|lemma 16.195.124|<tuple|16.269|?>>
-    <associate|lemma 16.200.126|<tuple|16.277|?>>
-    <associate|lemma 16.202.127|<tuple|16.278|?>>
-    <associate|lemma 16.211.127|<tuple|16.299|?>>
-    <associate|lemma 16.216.144|<tuple|16.305|?>>
-    <associate|lemma 16.227.23|<tuple|16.228|?>>
-    <associate|lemma 16.228.127|<tuple|16.320|?>>
-    <associate|lemma 16.229.127|<tuple|16.321|?>>
-    <associate|lemma 16.232.301|<tuple|16.227|?>>
-    <associate|lemma 16.24.178|<tuple|16.70|?>>
-    <associate|lemma 16.254.143|<tuple|16.345|?>>
-    <associate|lemma 16.313.310|<tuple|16.281|?>>
-    <associate|lemma 16.314.320|<tuple|16.282|?>>
-    <associate|lemma 16.315.320|<tuple|16.283|?>>
-    <associate|lemma 16.316.320|<tuple|16.284|?>>
-    <associate|lemma 16.318.320|<tuple|16.286|?>>
+    <associate|lemma 16.192.122|<tuple|16.273|?>>
+    <associate|lemma 16.195.124|<tuple|16.274|?>>
+    <associate|lemma 16.200.126|<tuple|16.282|?>>
+    <associate|lemma 16.202.127|<tuple|16.283|?>>
+    <associate|lemma 16.211.127|<tuple|16.304|?>>
+    <associate|lemma 16.216.144|<tuple|16.310|?>>
+    <associate|lemma 16.227.23|<tuple|16.232|?>>
+    <associate|lemma 16.228.127|<tuple|16.325|?>>
+    <associate|lemma 16.229.127|<tuple|16.326|?>>
+    <associate|lemma 16.232.301|<tuple|16.231|?>>
+    <associate|lemma 16.24.178|<tuple|16.71|?>>
+    <associate|lemma 16.254.143|<tuple|16.350|?>>
+    <associate|lemma 16.313.310|<tuple|16.286|?>>
+    <associate|lemma 16.314.320|<tuple|16.287|?>>
+    <associate|lemma 16.315.320|<tuple|16.288|?>>
+    <associate|lemma 16.316.320|<tuple|16.289|?>>
+    <associate|lemma 16.318.320|<tuple|16.291|?>>
     <associate|lemma 16.37.4|<tuple|16.45|?>>
-    <associate|lemma 16.380.312|<tuple|16.377|?>>
-    <associate|lemma 16.380.315|<tuple|16.360|?>>
-    <associate|lemma 16.381.315|<tuple|16.361|?>>
-    <associate|lemma 16.382.315|<tuple|16.362|?>>
-    <associate|lemma 16.383.23|<tuple|16.383|?>>
-    <associate|lemma 16.383.315|<tuple|16.363|?>>
-    <associate|lemma 16.389.316|<tuple|16.371|?>>
-    <associate|lemma 16.391.316|<tuple|16.372|?>>
-    <associate|lemma 16.392.316|<tuple|16.373|?>>
-    <associate|lemma 16.51.186|<tuple|16.114|?>>
-    <associate|lemma 16.53.186|<tuple|16.116|?>>
-    <associate|lemma 16.54.187|<tuple|16.117|?>>
-    <associate|lemma 16.55.187|<tuple|16.118|?>>
-    <associate|lemma 16.56.187|<tuple|16.119|?>>
-    <associate|lemma 16.57.187|<tuple|16.120|?>>
-    <associate|lemma 16.58.188|<tuple|16.121|?>>
-    <associate|lemma 16.59.188|<tuple|16.122|?>>
-    <associate|lemma 16.61.207|<tuple|16.109|?>>
-    <associate|lemma 16.69.4|<tuple|16.72|?>>
-    <associate|lemma 16.72.189|<tuple|16.166|?>>
-    <associate|lemma 16.83.197|<tuple|16.157|?>>
-    <associate|lemma 16.93.193|<tuple|16.183|?>>
-    <associate|lemma 16.96.193|<tuple|16.184|?>>
-    <associate|lemma 16.97.193|<tuple|16.185|?>>
-    <associate|lemma 16.98.194|<tuple|16.187|?>>
+    <associate|lemma 16.380.312|<tuple|16.382|?>>
+    <associate|lemma 16.380.315|<tuple|16.365|?>>
+    <associate|lemma 16.381.315|<tuple|16.366|?>>
+    <associate|lemma 16.382.315|<tuple|16.367|?>>
+    <associate|lemma 16.383.23|<tuple|16.388|?>>
+    <associate|lemma 16.383.315|<tuple|16.368|?>>
+    <associate|lemma 16.389.316|<tuple|16.376|?>>
+    <associate|lemma 16.391.316|<tuple|16.377|?>>
+    <associate|lemma 16.392.316|<tuple|16.378|?>>
+    <associate|lemma 16.51.186|<tuple|16.117|?>>
+    <associate|lemma 16.53.186|<tuple|16.119|?>>
+    <associate|lemma 16.54.187|<tuple|16.120|?>>
+    <associate|lemma 16.55.187|<tuple|16.121|?>>
+    <associate|lemma 16.56.187|<tuple|16.122|?>>
+    <associate|lemma 16.57.187|<tuple|16.123|?>>
+    <associate|lemma 16.58.188|<tuple|16.124|?>>
+    <associate|lemma 16.59.188|<tuple|16.125|?>>
+    <associate|lemma 16.61.207|<tuple|16.112|?>>
+    <associate|lemma 16.69.4|<tuple|16.73|?>>
+    <associate|lemma 16.72.189|<tuple|16.170|?>>
+    <associate|lemma 16.83.197|<tuple|16.160|?>>
+    <associate|lemma 16.93.193|<tuple|16.187|?>>
+    <associate|lemma 16.96.193|<tuple|16.188|?>>
+    <associate|lemma 16.97.193|<tuple|16.189|?>>
+    <associate|lemma 16.98.194|<tuple|16.191|?>>
     <associate|normed space are assumed to be non trivial|<tuple|16.1|?>>
-    <associate|note 16.210.127|<tuple|16.298|?>>
-    <associate|proposition 16.244.134|<tuple|16.336|?>>
-    <associate|proposition 16.249.138|<tuple|16.341|?>>
-    <associate|toplinear isomorphism|<tuple|16.310|?>>
+    <associate|note 16.210.127|<tuple|16.303|?>>
+    <associate|proposition 16.244.134|<tuple|16.341|?>>
+    <associate|proposition 16.249.138|<tuple|16.346|?>>
+    <associate|toplinear isomorphism|<tuple|16.315|?>>
     <associate|topology every element of a generalized interval is a limit
     point|<tuple|16.10|?>>
     <associate|topology every element of a open or closed ball is a limit
@@ -32000,10 +32058,10 @@
     <associate|topology interior point is a limit point in a normed
     space|<tuple|16.8|?>>
     <associate|topology normed space is a topological vector
-    space|<tuple|16.309|?>>
+    space|<tuple|16.314|?>>
     <associate|topology toplinear isomorphism in a normed
-    space|<tuple|16.312|?>>
-    <associate|topology topological vector space|<tuple|16.307|?>>
+    space|<tuple|16.317|?>>
+    <associate|topology topological vector space|<tuple|16.312|?>>
   </collection>
 </references>
 
