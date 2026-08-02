@@ -11,7 +11,7 @@
 
   <subsection|Topological Manifold>
 
-  This section is about the study of differentiable manifolds which are
+  This section is about the study of differentiable manifolds, which are
   essential spaces that locally look like the Banach space
   <math|<around*|\<langle\>|\<bbb-R\><rsup|n>,<around*|\<\|\|\>||\<\|\|\>><rsub|n>|\<rangle\>>>
   [see theorem: <reference|complete R^n is complete>]. This allows us to
@@ -32,29 +32,28 @@
     <math|\<bbb-R\><rsup|n>> then <math|\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>>>=\<cal-T\><rsub|\<bbb-R\><rsup|n>>>.
   </notation>
 
-  Now we can define\ 
+  We start with the concept of a topological manifold.
 
   <\definition>
     <label|manifold topological><dueto|Topological Manifold>A topological
     manifold <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> of dimension
-    <math|n\<in\>\<bbb-N\>> is a second countable Hausdorff space
+    <math|n\<in\>\<bbb-N\>> is a second countable Hausdorff topological space
     <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> [see definitions:
     <reference|separation Hausdorff>, <reference|separation second countable
     topological space>] such that <math|\<forall\>m\<in\>M> there exist a
-    open set <math|U> with <math|m\<in\>U> such that <math|U> is homeomorph
-    with a open set <math|V> in <math|\<bbb-R\><rsup|n>> [using the subspace
-    topologies <math|\<cal-T\><rsub|\|U>> and
-    <math|<around*|(|\<cal-T\><rsub|\<bbb-R\><rsup|n>><rsub|>|)><rsub|\|U>>.
+    open set <math|U> with <math|m\<in\>U> that is homeomorph with a open set
+    <math|V> in <math|\<bbb-R\><rsup|n>> [using the subspace topologies
+    <math|\<cal-T\><rsub|\|U>> and <math|<around*|(|\<cal-T\><rsub|\<bbb-R\><rsup|n>><rsub|>|)><rsub|\|U>>.
   </definition>
 
   The above definition suggest the following two definitions.
 
   <\definition>
-    <label|manifold cooridinate chart><dueto|Coordinate Chart>Let
-    <math|n\<in\>\<bbb-N\>>, <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>>
-    a <math|n>-dimensional topological manifold then a
-    <with|font-series|bold|coordinate chart> is a pair
-    <math|<around*|(|U,\<varphi\>|)>\<in\>\<cal-T\>\<times\><around*|(|\<bbb-R\><rsup|n>|)><rsup|U>>
+    <label|manifold cooridinate chart><index|coordinate
+    chart><dueto|Coordinate Chart>Let <math|n\<in\>\<bbb-N\>>,
+    <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> a <math|n>-dimensional
+    topological manifold then a <with|font-series|bold|coordinate chart> is a
+    pair <math|<around*|(|U,\<varphi\>|)>\<in\>\<cal-T\>\<times\><around*|(|\<bbb-R\><rsup|n>|)><rsup|U>>
     where <math|U\<subseteq\>M> is a open set in <math|M> and
     \ <math|<rigid|\<varphi\>:U\<rightarrow\>\<bbb-R\><rsup|n><rsup|>>> a
     function such that <math|\<varphi\><around*|(|U|)>\<in\>\<cal-T\><rsub|\<bbb-R\><rsup|n>>>
@@ -73,22 +72,24 @@
   </definition>
 
   <\definition>
-    <label|manifold coordinate domain><dueto|Coordinate Domain>Let
-    <math|n\<in\>\<bbb-N\>>, <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>>
-    a <math|n>-dimensional topological manifold then a open set
-    <math|U\<in\>\<cal-T\>> is a <with|font-series|bold|coordinate domain >if
-    there exist a homeomorphism [using the topologies <math|T<rsub|\|U>> and
+    <label|manifold coordinate domain><index|coordinate
+    domain><dueto|Coordinate Domain>Let <math|n\<in\>\<bbb-N\>>,
+    <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> a <math|n>-dimensional
+    topological manifold then a open set <math|U\<in\>\<cal-T\>> is a
+    <with|font-series|bold|coordinate domain >if there exist a homeomorphism
+    [using the topologies <math|T<rsub|\|U>> and
     <math|<around*|(|\<cal-T\><rsub|\<bbb-R\><rsup|n>>|)><rsub|\|\<varphi\><around*|(|U|)>>>]
     <math|\<varphi\>:U\<rightarrow\>\<varphi\><around*|(|U|)>> where
-    <math|\<varphi\><around*|(|M|)>> is open in <math|\<subset\>>
+    <math|\<varphi\><around*|(|M|)>> is open in <math|\<cal-T\>>
   </definition>
 
   <\definition>
-    <label|manifold coordinate ball and cube><dueto|Coordinate Ball or
-    Cube>Let <math|n\<in\>\<bbb-N\>>, <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>>
+    <label|manifold coordinate ball and cube><index|coordinate
+    ball><index|coordinate cube><dueto|Coordinate Ball or Cube>Let
+    <math|n\<in\>\<bbb-N\>>, <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>>
     a <math|n>-dimensional topological manifold then a open set
-    <math|U\<in\>\<cal-T\>> is a <with|font-series|bold|coordinate ball >if
-    there exist a homeomorphism <math|\<varphi\>:U\<rightarrow\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|X,\<delta\>|)>>
+    <math|U\<in\>\<cal-T\>> is a <with|font-series|bold|coordinate ball >iff
+    there exist a homeomorphism <rigid|<math|\<varphi\>:U\<rightarrow\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|X,\<delta\>|)>>>
     where <math|x\<in\>\<bbb-R\><rsup|n>>,
     <math|\<delta\>\<in\>\<bbb-R\><rsup|+>>and
     \ <math|<around*|\<\|\|\>||\<\|\|\>><rsub|e>> is the Euclidean norm [see
@@ -123,9 +124,10 @@
   </proof>
 
   <\definition>
-    <label|manifold atlas><dueto|Atlas>Given a <math|n>-dimensional
-    topological manifold <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>>
-    then <math|<rigid|\<cal-A\>\<subseteq\><around*|{|<around*|(|U,\<varphi\>|)>\|U\<in\>\<cal-T\>\<wedge\>\<varphi\>\<in\><around*|(|\<bbb-R\><rsup|n>|)><rsup|U>|}>>>
+    <label|manifold atlas><index|atlas><dueto|Atlas>Given a
+    <math|n>-dimensional topological manifold
+    <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> then
+    <math|<rigid|\<cal-A\>\<subseteq\><around*|{|<around*|(|U,\<varphi\>|)>\|U\<in\>\<cal-T\>\<wedge\>\<varphi\>\<in\><around*|(|\<bbb-R\><rsup|n>|)><rsup|U>|}>>>
     is a <with|font-series|bold|atlas on <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>>>
     iff
 
@@ -145,7 +147,7 @@
 
   <\proof>
     Let <math|m\<in\>M> then by [theorem: <reference|manifold cooridinate
-    chart existence>] a <math|<rigid|><around*|(|U<rsub|m>,\<varphi\><rsub|m>|)>\<in\>\<cal-T\>\<times\><around*|(|\<bbb-R\><rsup|n>|)><rsup|U>>
+    chart existence>] there exist a <math|<rigid|><around*|(|U<rsub|m>,\<varphi\><rsub|m>|)>\<in\>\<cal-T\>\<times\><around*|(|\<bbb-R\><rsup|n>|)><rsup|U>>
     such that <math|<around*|(|U,\<varphi\>|)>> is a coordinate chart. Hence
     if we define <math|\<cal-A\>=<around*|{|<around*|(|U<rsub|m>,\<varphi\><rsub|m>|)>\|m\<in\>M|}>>
     then <math|\<cal-A\>> is the required atlas.
@@ -156,7 +158,7 @@
     <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> be a
     <math|n>-dimensional topological manifold and <math|U\<in\>\<cal-T\>> a
     open subset of <math|M> then <math|<around*|\<langle\>|U,\<cal-T\><rsub|\|U>|\<rangle\>>>
-    is a toplogical manifold.
+    is a <math|n>-dimensional toplogical manifold.
   </example>
 
   <\proof>
@@ -237,8 +239,8 @@
 
   <\proof>
     By [example: <reference|separation R^n is second countable>] and
-    [theorem: <reference|separation a metric space is first countable>] we
-    have that\ 
+    [theorem: <reference|separation metric spaces are Hausdorff>] we have
+    that\ 
 
     <\equation*>
       <around*|\<langle\>|\<bbb-R\><rsup|n>,\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n>>|\<rangle\>><text|
@@ -258,8 +260,8 @@
   <math|S<rsup|n>> embedded in <math|\<bbb-R\><rsup|n+1>>.
 
   <\example>
-    Let <math|n\<in\>\<bbb-N\>>, <math|S<rsup|n>=<around*|{|x\<in\>\<bbb-R\><rsup|n+1>\|<sqrt|<big|sum><rsub|i=1><rsup|n>x<rsub|i><rsup|2>>=<around*|\<\|\|\>|x|\<\|\|\>><rsub|e>=1|}>>
-    the unit ssphere in <math|\<bbb-R\><rsup|n+1>> then\ 
+    Let <math|n\<in\>\<bbb-N\>>, <math|S<rsup|n>=<around*|{|x\<in\>\<bbb-R\><rsup|n+1>\|<sqrt|<big|sum><rsub|i=1><rsup|n+1>x<rsub|i><rsup|2>>=<around*|\<\|\|\>|x|\<\|\|\>><rsub|e>=1|}>>
+    the unit sphere in <math|\<bbb-R\><rsup|n+1>> then\ 
 
     <\equation*>
       <around*|\<langle\>|S<rsup|n>,<around*|(|\<cal-T\><rsub|\<bbb-R\><rsup|n>>|)><rsub|\|S<rsub|n>>|\<rangle\>><text|
@@ -270,21 +272,21 @@
 
     <\equation*>
       V<rsub|i><rsup|+>=<around*|{|x\<in\>\<bbb-R\><rsup|n+1>\|0\<less\>x<rsub|i>|}><text|
-      and ><around*|{|x\<in\>\<bbb-R\><rsup|n+1>\|x<rsub|i>\<less\>0|}>
+      and >V<rsup|-><rsub|i>=<around*|{|x\<in\>\<bbb-R\><rsup|n+1>\|x<rsub|i>\<less\>0|}>
     </equation*>
 
     <\equation*>
       \<psi\><rsup|+><rsub|i>:S<rsup|n><big|cap>V<rsup|+><rsub|i>\<rightarrow\><around*|{|x\<in\>\<bbb-R\><rsup|n>\|<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>x<rsub|j><rsup|2>\<less\>1|}><text|
-      where >\<psi\><rsup|+><rsub|i><around*|(|x|)><below|=|def><choice|<tformat|<table|<row|<cell|x<rsub|i><text|
-      if >i\<in\><around*|{|1,\<ldots\>,i-1|}>>>|<row|<cell|x<rsub|i+1><text|
-      if >i\<in\><around*|{|i,\<ldots\>,n|}>>>>>>
+      where ><around*|(|\<psi\><rsup|+><rsub|i><around*|(|x|)>|)><rsub|j><below|=|def><choice|<tformat|<table|<row|<cell|x<rsub|j><text|
+      if >j\<in\><around*|{|1,\<ldots\>,i-1|}>>>|<row|<cell|x<rsub|j+1><text|
+      if >j\<in\><around*|{|i,\<ldots\>,n|}>>>>>>
     </equation*>
 
     <\equation*>
       \<psi\><rsup|-><rsub|i>:S<rsup|n><big|cap>V<rsup|-><rsub|i>\<rightarrow\><around*|{|x\<in\>\<bbb-R\><rsup|n>\|<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>x<rsub|j><rsup|2>\<less\>1|}><text|
-      where >\<psi\><rsup|-><rsub|i><around*|(|x|)><below|=|def><choice|<tformat|<table|<row|<cell|x<rsub|i><text|
-      if >i\<in\><around*|{|1,\<ldots\>,i-1|}>>>|<row|<cell|x<rsub|i+1><text|
-      if >i\<in\><around*|{|i,\<ldots\>,n|}>>>>>>
+      where ><around*|(|\<psi\><rsup|-><rsub|i><around*|(|x|)>|)><rsub|j><below|=|def><choice|<tformat|<table|<row|<cell|x<rsub|j><text|
+      if >j\<in\><around*|{|1,\<ldots\>,i-1|}>>>|<row|<cell|x<rsub|j+1><text|
+      if >j\<in\><around*|{|i,\<ldots\>,n|}>>>>>>
     </equation*>
 
     then\ 
@@ -298,7 +300,7 @@
 
     <\equation*>
       <around*|(|\<psi\><rsup|+><rsub|i>|)><rsup|-1>:<around*|{|x\<in\>\<bbb-R\><rsup|n>\|<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>x<rsub|j><rsup|2>\<less\>1|}>\<rightarrow\>S<rsup|n><big|cap>V<rsup|+><rsub|i><text|
-      where ><around*|(|\<psi\><rsup|+><rsub|i>|)><rsup|-1>=<choice|<tformat|<table|<row|<cell|x<rsub|j><text|
+      where ><around*|(|<around*|(|\<psi\><rsup|+><rsub|i>|)><rsup|-1>|)><rsub|j>=<choice|<tformat|<table|<row|<cell|x<rsub|j><text|
       if >j\<in\><around*|{|1,\<ldots\>,i-1|}>>>|<row|<cell|<sqrt|1-<big|sum><rsub|k=1><rsup|n>x<rsup|2><rsub|k>><text|
       if >j=i>>|<row|<cell|x<rsub|j-1><text| if
       >j\<in\><around*|{|i+1,\<ldots\>,n+1|}>>>>>>
@@ -307,13 +309,14 @@
 
   <\equation*>
     <around*|(|\<psi\><rsup|-><rsub|i>|)><rsup|-1>:<around*|{|x\<in\>\<bbb-R\><rsup|n>\|<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>x<rsub|j><rsup|2>\<less\>1|}>\<rightarrow\>S<rsup|n><big|cap>V<rsup|-><rsub|i><text|
-    where ><around*|(|\<psi\><rsup|+><rsub|i>|)><rsup|-1>=<choice|<tformat|<table|<row|<cell|x<rsub|j><text|
+    where ><around*|(|<around*|(|\<psi\><rsup|+><rsub|i>|)><rsup|-1>|)><rsub|j>=<choice|<tformat|<table|<row|<cell|x<rsub|j><text|
     if >j\<in\><around*|{|1,\<ldots\>,i-1|}>>>|<row|<cell|-<sqrt|1-<big|sum><rsub|k=1><rsup|n>x<rsup|2><rsub|k>><text|
     if >j=i>>|<row|<cell|x<rsub|j-1><text| if
     >j\<in\><around*|{|i+1,\<ldots\>,n+1|}>>>>>>
   </equation*>
 
-  so that <math|<around*|{|<around*|(|U<rsub|i>,\<beta\><rsub|i>|)>\|i\<in\><around*|{|1,\<ldots\>,2\<cdot\>n+2|}>|}>>\ 
+  so that <math|<around*|{|<around*|(|U<rsub|i>,\<beta\><rsub|i>|)>\|i\<in\><around*|{|1,\<ldots\>,2\<cdot\>n+2|}>|}>>
+  where
 
   <\equation*>
     U<rsub|i>=<choice|<tformat|<table|<row|<cell|S<rsup|n><big|cap>V<rsup|+><rsub|i><text|
@@ -327,16 +330,15 @@
   <\equation*>
     \<beta\><rsub|i>=<choice|<tformat|<table|<row|<cell|\<psi\><rsup|+><rsub|i><text|
     if >i\<in\><around*|{|1,\<ldots\>,n+1|}>>>|<row|<cell|\<psi\><rsup|-><rsub|i-<around*|(|n+1|)>><text|
-    if ><around*|{|i\<in\>n+2,\<ldots\>,2\<cdot\>n+1|}>>>>>><text| which is a
-    homeomorphism>
+    if ><around*|{|i\<in\>n+2,\<ldots\>,2\<cdot\>n+1|}>>>>>>
   </equation*>
 
   is a atlas on <math|<around*|\<langle\>|S<rsup|n>,<around*|(|\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n>>|)><rsub|\|S<rsub|n>>|\<rangle\>>>.
 
   <\proof>
     By \ [example: <reference|separation R^n is second countable>] and
-    [theorem: <reference|separation a metric space is first countable>] we
-    have that\ 
+    [theorem: <reference|separation metric spaces are Hausdorff>] we have
+    that\ 
 
     <\equation*>
       <around*|\<langle\>|\<bbb-R\><rsup|n+1>,\<cal-T\><rsub|\<bbb-R\><rsup|n+1>>|\<rangle\>><text|
@@ -411,24 +413,24 @@
 
     <\equation*>
       \<psi\><rsub|i>:\<bbb-R\><rsup|n+1>\<rightarrow\>\<bbb-R\><rsup|n><text|
-      by >\<psi\><rsub|i><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n+1>|)>=<around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,x<rsub|i+1>,\<ldots\>,x<rsub|n+1>|)><below|=|def><choice|<tformat|<table|<row|<cell|x<rsub|i><text|
-      if >i\<in\><around*|{|1,\<ldots\>,i-1|}>>>|<row|<cell|x<rsub|i+1><text|
-      if >i\<in\><around*|{|i,\<ldots\>,n|}>>>>>>
+      by ><around*|(|\<psi\><rsub|i><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n+1>|)>|)><rsub|j><below|=|def><choice|<tformat|<table|<row|<cell|x<rsub|j><text|
+      if >j\<in\><around*|{|1,\<ldots\>,i-1|}>>>|<row|<cell|x<rsub|j+1><text|
+      if >j\<in\><around*|{|i,\<ldots\>,n|}>>>>>>
     </equation*>
 
     Then we have <math|\<forall\>x,y\<in\>\<bbb-R\><rsup|n+1>,\<alpha\>\<in\>\<bbb-R\>>
-    that\ 
+    that <math|\<forall\>j\<in\><around*|{|1,\<ldots\>,n|}>>
 
     <\eqnarray*>
-      <tformat|<table|<row|<cell|\<psi\><rsub|i><around*|(|x+\<alpha\>\<cdot\>y|)>>|<cell|=>|<cell|<choice|<tformat|<table|<row|<cell|<around*|(|x+\<alpha\>\<cdot\>y|)><rsub|i><text|
-      if >i\<in\><around*|{|1,\<ldots\>,i-1|}>>>|<row|<cell|<around*|(|x+\<alpha\>\<cdot\>y|)><rsub|i><text|
-      is >i+1\<in\><around*|{|i,\<ldots\>,n|}>>>>>>>>|<row|<cell|>|<cell|=>|<cell|<choice|<tformat|<table|<row|<cell|x<rsub|i>+\<alpha\>\<cdot\>y<rsub|i><text|
-      if >i\<in\><around*|{|1,\<ldots\>,i-1|}>>>|<row|<cell|x<rsub|i>+\<alpha\>\<cdot\>y<rsub|i><text|
-      is >i+1\<in\><around*|{|i,\<ldots\>,n|}>>>>>>>>|<row|<cell|>|<cell|=>|<cell|<choice|<tformat|<table|<row|<cell|x<rsub|i><text|
-      if >i\<in\><around*|{|1,\<ldots\>,i-1|}>>>|<row|<cell|x<rsub|i><text|
-      is >i+1\<in\><around*|{|i,\<ldots\>,n|}>>>>>>+\<alpha\>\<cdot\><choice|<tformat|<table|<row|<cell|y<rsub|i><text|
-      if >i\<in\><around*|{|1,\<ldots\>,i-1|}>>>|<row|<cell|y<rsub|i><text|
-      is >i+1\<in\><around*|{|i,\<ldots\>,n|}>>>>>>>>|<row|<cell|>|<cell|=>|<cell|\<psi\><rsub|i><around*|(|x|)>+\<alpha\>\<cdot\>\<psi\><rsub|i><around*|(|y|)>>>>>
+      <tformat|<table|<row|<cell|<around*|(|\<psi\><rsub|i><around*|(|x+\<alpha\>\<cdot\>y|)>|)><rsub|j>>|<cell|=>|<cell|<choice|<tformat|<table|<row|<cell|<around*|(|x+\<alpha\>\<cdot\>y|)><rsub|j><text|
+      if >i\<in\><around*|{|1,\<ldots\>,i-1|}>>>|<row|<cell|<around*|(|x+\<alpha\>\<cdot\>y|)><rsub|j+1><text|
+      if >i\<in\><around*|{|i,\<ldots\>,n|}>>>>>>>>|<row|<cell|>|<cell|=>|<cell|<choice|<tformat|<table|<row|<cell|x<rsub|j>+\<alpha\>\<cdot\>y<rsub|j><text|
+      if >j\<in\><around*|{|1,\<ldots\>,i-1|}>>>|<row|<cell|x<rsub|j+1>+\<alpha\>\<cdot\>y<rsub|j+1><text|
+      is >j\<in\><around*|{|i,\<ldots\>,n|}>>>>>>>>|<row|<cell|>|<cell|=>|<cell|<choice|<tformat|<table|<row|<cell|x<rsub|j><text|
+      if >j\<in\><around*|{|1,\<ldots\>,i-1|}>>>|<row|<cell|x<rsub|j+1><text|
+      is >j\<in\><around*|{|i,\<ldots\>,n|}>>>>>>+\<alpha\>\<cdot\><choice|<tformat|<table|<row|<cell|y<rsub|j><text|
+      if >j\<in\><around*|{|1,\<ldots\>,i-1|}>>>|<row|<cell|y<rsub|j+1><text|
+      is >j\<in\><around*|{|i,\<ldots\>,n|}>>>>>>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|\<psi\><rsub|i><around*|(|x|)>+\<alpha\>\<cdot\>\<psi\><rsub|i><around*|(|y|)>|)><rsub|j>>>>>
     </eqnarray*>
 
     so that\ 
@@ -440,7 +442,9 @@
     Further we have <math|\<forall\>x\<in\>\<bbb-R\><rsup|n+1>> that\ 
 
     <\eqnarray*>
-      <tformat|<table|<row|<cell|<around*|\<\|\|\>|\<psi\><rsub|i><around*|(|x|)>|\<\|\|\>><rsub|n>>|<cell|=>|<cell|<around*|\<\|\|\>|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,x<rsub|i+1>,\<ldots\>,x<rsub|n+1>|)>|\<\|\|\>><rsub|n>>>|<row|<cell|>|<cell|=>|<cell|sup<around*|(|<around*|{|<around*|\||x<rsub|i>|\|>\|i\<in\><around*|{|1,\<ldots\>,n+1|}>\\<around*|{|i|}>|}>|)>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|sup<around*|(|<around*|{|<around*|\||x<rsub|i>|\|>\|i\<in\><around*|{|1,\<ldots\>,n+1|}>|}>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|x|\<\|\|\>><rsub|n+1>>>>>
+      <tformat|<table|<row|<cell|<around*|\<\|\|\>|\<psi\><rsub|i><around*|(|x|)>|\<\|\|\>><rsub|n>>|<cell|=>|<cell|sup<around*|(|<around*|{|<around*|\||<around*|(|\<psi\><rsub|i><around*|(|x|)>|)><rsub|j>|\|>:j\<in\><around*|{|1,\<ldots\>,n|}>|}>|)>>>|<row|<cell|>|<cell|=>|<cell|sup<around*|(|<around*|{|<tabular*|<tformat|<table|<row|<cell|<around*|\||x<rsub|j>|\|><text|
+      if >j\<in\><around*|{|1,\<ldots\>,i-1|}>>>|<row|<cell|<around*|\||x<rsub|j+1>|\|><text|
+      if >j\<in\><around*|{|i,\<ldots\>,n|}>>>>>>\|j\<in\><around*|{|1,\<ldots\>,n|}>|}>|)>>>|<row|<cell|>|<cell|=>|<cell|sup<around*|(|<around*|{|<around*|\||x<rsub|1>|\|>,\<ldots\>,<around*|\||x<rsub|i-1>|\|>,<around*|\||x<rsub|i+1>|\|>,\<ldots\><around*|\||x<rsub|n+1>|\|>|}>|)>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|sup<around*|(|<around*|{|<around*|\||x<rsub|i>|\|>\|i\<in\><around*|{|1,\<ldots\>,n+1|}>|}>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|x|\<\|\|\>><rsub|n+1>>>>>
     </eqnarray*>
 
     so that by [theorem: <reference|continuity linear mapping (1)>]\ 
@@ -464,7 +468,7 @@
     strictly increasing>] we have that\ 
 
     <\eqnarray*>
-      <tformat|<table|<row|<cell|<sqrt|<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>><around*|(|\<psi\><rsub|i><around*|(|x|)><rsub|j>|)><rsup|2>>>|<cell|=>|<cell|<sqrt|<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|i|}>>x<rsub|j><rsup|2>>>>|<row|<cell|>|<cell|\<less\>>|<cell|<sqrt|<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,n+1|}>>x<rsub|j><rsup|2>>>>|<row|<cell|>|<cell|=>|<cell|1>>>>
+      <tformat|<table|<row|<cell|<sqrt|<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>><around*|(|\<psi\><rsub|i><around*|(|x|)><rsub|j>|)><rsup|2>>>|<cell|=>|<cell|<sqrt|<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|i|}>>x<rsub|j><rsup|2>>>>|<row|<cell|>|<cell|\<less\>>|<cell|<sqrt|<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,n+1|}>>x<rsub|j><rsup|2>>>>|<row|<cell|>|<cell|<below|=|x\<in\>S<rsup|n>>>|<cell|1>>>>
     </eqnarray*>
 
     So that
@@ -538,7 +542,7 @@
     Further we have\ 
 
     <\eqnarray*>
-      <tformat|<table|<row|<cell|<sqrt|<big|sum><rsub|k=1><rsup|n+1><around*|(|\<varphi\><rsup|+><rsub|i><around*|(|x|)><rsub|k>|)><rsup|2>>>|<cell|=>|<cell|<sqrt|<big|sum><rsub|k=1><rsup|i-1><around*|(|\<varphi\><rsup|+><rsub|i><around*|(|x|)><rsub|k>|)><rsup|2>+<big|sum><rsub|k=i><rsup|i><around*|(|\<varphi\><rsup|+><rsub|i><around*|(|x|)><rsub|k>|)><rsup|2>+<big|sum><rsub|k=i+1><rsup|n+1><around*|(|\<varphi\><rsup|+><rsub|i><around*|(|x|)><rsub|k>|)><rsup|2>>>>|<row|<cell|>|<cell|=>|<cell|<sqrt|<big|sum><rsub|k=1><rsup|i-1>x<rsub|i><rsup|2>+<around*|(|<sqrt|1-<big|sum><rsub|k=1><rsup|n>x<rsup|2><rsub|k>>|)><rsup|2>+<big|sum><rsub|k=i+1><rsup|n+1>x<rsub|k-1><rsup|2>>>>|<row|<cell|>|<cell|=>|<cell|<sqrt|<big|sum><rsub|k=1><rsup|i-1>x<rsub|i><rsup|2>+<around*|(|1-<big|sum><rsub|k=1><rsup|n>x<rsup|2><rsub|k>|)>+<big|sum><rsub|k=i><rsup|n>x<rsub|k><rsup|2>>>>|<row|<cell|>|<cell|=>|<cell|<sqrt|<big|sum><rsub|k=1><rsup|n>x<rsup|2><rsub|k>+<around*|(|1-<big|sum><rsub|k=1><rsup|n>x<rsup|2><rsub|k>|)>>>>|<row|<cell|>|<cell|=>|<cell|<sqrt|1>>>|<row|<cell|>|<cell|=>|<cell|1>>|<row|<cell|<sqrt|<big|sum><rsub|k=1><rsup|n+1><around*|(|\<varphi\><rsup|-><rsub|i><around*|(|x|)><rsub|k>|)><rsup|2>>>|<cell|=>|<cell|<sqrt|<big|sum><rsub|k=1><rsup|i-1><around*|(|\<varphi\><rsup|-><rsub|i><around*|(|x|)><rsub|k>|)><rsup|2>+<big|sum><rsub|k=i><rsup|i><around*|(|\<varphi\><rsup|-><rsub|i><around*|(|x|)><rsub|k>|)><rsup|2>+<big|sum><rsub|k=i+1><rsup|n+1><around*|(|\<varphi\><rsup|-><rsub|i><around*|(|x|)><rsub|k>|)><rsup|2>>>>|<row|<cell|>|<cell|=>|<cell|<sqrt|<big|sum><rsub|k=1><rsup|i-1>x<rsub|i><rsup|2>+<around*|(|-<sqrt|1-<big|sum><rsub|k=1><rsup|n>x<rsub|k><rsup|2>>|)><rsup|2>+<big|sum><rsub|k=i+1><rsup|n+1>x<rsub|k-1><rsup|2>>>>|<row|<cell|>|<cell|=>|<cell|<sqrt|<big|sum><rsub|k=1><rsup|i-1>x<rsub|i><rsup|2>+<around*|(|1-<big|sum><rsub|k=1><rsup|n>x<rsup|2><rsub|k>|)>+<big|sum><rsub|k=i><rsup|n>x<rsub|k><rsup|2>>>>|<row|<cell|>|<cell|=>|<cell|<sqrt|<big|sum><rsub|k=1><rsup|n>x<rsup|2><rsub|k>+<around*|(|1-<big|sum><rsub|k=1><rsup|n>x<rsup|2><rsub|k>|)>>>>|<row|<cell|>|<cell|=>|<cell|<sqrt|1>>>|<row|<cell|>|<cell|=>|<cell|1>>>>
+      <tformat|<table|<row|<cell|<sqrt|<big|sum><rsub|k=1><rsup|n+1><around*|(|<around*|(|\<varphi\><rsup|+><rsub|i><around*|(|x|)>|)><rsub|k>|)><rsup|2>>>|<cell|=>|<cell|<sqrt|<big|sum><rsub|k=1><rsup|i-1><around*|(|<around*|(|\<varphi\><rsup|+><rsub|i><around*|(|x|)>|)><rsub|k>|)><rsup|2>+<big|sum><rsub|k=i><rsup|i><around*|(|<around*|(|\<varphi\><rsup|+><rsub|i><around*|(|x|)>|)><rsub|k>|)><rsup|2>+<big|sum><rsub|k=i+1><rsup|n+1><around*|(|<around*|(|\<varphi\><rsup|+><rsub|i><around*|(|x|)>|)><rsub|k>|)><rsup|2>>>>|<row|<cell|>|<cell|=>|<cell|<sqrt|<big|sum><rsub|k=1><rsup|i-1>x<rsub|i><rsup|2>+<around*|(|<sqrt|1-<big|sum><rsub|k=1><rsup|n>x<rsup|2><rsub|k>>|)><rsup|2>+<big|sum><rsub|k=i+1><rsup|n+1>x<rsub|k-1><rsup|2>>>>|<row|<cell|>|<cell|=>|<cell|<sqrt|<big|sum><rsub|k=1><rsup|i-1>x<rsub|i><rsup|2>+<around*|(|1-<big|sum><rsub|k=1><rsup|n>x<rsup|2><rsub|k>|)>+<big|sum><rsub|k=i><rsup|n>x<rsub|k><rsup|2>>>>|<row|<cell|>|<cell|=>|<cell|<sqrt|<big|sum><rsub|k=1><rsup|n>x<rsup|2><rsub|k>+<around*|(|1-<big|sum><rsub|k=1><rsup|n>x<rsup|2><rsub|k>|)>>>>|<row|<cell|>|<cell|=>|<cell|<sqrt|1>>>|<row|<cell|>|<cell|=>|<cell|1>>|<row|<cell|<sqrt|<big|sum><rsub|k=1><rsup|n+1><around*|(|\<varphi\><rsup|-><rsub|i><around*|(|x|)><rsub|k>|)><rsup|2>>>|<cell|=>|<cell|<sqrt|<big|sum><rsub|k=1><rsup|i-1><around*|(|<around*|(|\<varphi\><rsup|-><rsub|i><around*|(|x|)>|)><rsub|k>|)><rsup|2>+<big|sum><rsub|k=i><rsup|i><around*|(|<around*|(|\<varphi\><rsup|-><rsub|i><around*|(|x|)>|)><rsub|k>|)><rsup|2>+<big|sum><rsub|k=i+1><rsup|n+1><around*|(|<around*|(|\<varphi\><rsup|-><rsub|i><around*|(|x|)>|)><rsub|k>|)><rsup|2>>>>|<row|<cell|>|<cell|=>|<cell|<sqrt|<big|sum><rsub|k=1><rsup|i-1>x<rsub|i><rsup|2>+<around*|(|-<sqrt|1-<big|sum><rsub|k=1><rsup|n>x<rsub|k><rsup|2>>|)><rsup|2>+<big|sum><rsub|k=i+1><rsup|n+1>x<rsub|k-1><rsup|2>>>>|<row|<cell|>|<cell|=>|<cell|<sqrt|<big|sum><rsub|k=1><rsup|i-1>x<rsub|i><rsup|2>+<around*|(|1-<big|sum><rsub|k=1><rsup|n>x<rsup|2><rsub|k>|)>+<big|sum><rsub|k=i><rsup|n>x<rsub|k><rsup|2>>>>|<row|<cell|>|<cell|=>|<cell|<sqrt|<big|sum><rsub|k=1><rsup|n>x<rsup|2><rsub|k>+<around*|(|1-<big|sum><rsub|k=1><rsup|n>x<rsup|2><rsub|k>|)>>>>|<row|<cell|>|<cell|=>|<cell|<sqrt|1>>>|<row|<cell|>|<cell|=>|<cell|1>>>>
     </eqnarray*>
 
     so that <math|\<varphi\><rsup|+><rsub|i><around*|(|x|)>\<in\>S<rsup|n>>
@@ -598,7 +602,7 @@
     </equation>
 
     Let <math|x\<in\>S<rsup|n>> then we have
-    <math|<sqrt|<big|sum><rsub|k=1><rsup|n>x<rsub|k><rsup|2>>=1> so that
+    <math|<sqrt|<big|sum><rsub|k=1><rsup|n+1>x<rsub|k><rsup|2>>=1> so that
     <math|<big|sum><rsup|n><rsub|k=1>x<rsup|2><rsub|k>=1> hence
 
     <\equation*>
@@ -622,13 +626,13 @@
 
     <\eqnarray*>
       <tformat|<table|<row|<cell|<around*|(|<around*|(|\<varphi\><rsup|+><rsub|i>\<circ\>\<psi\><rsup|+><rsub|i>|)><around*|(|x|)>|)><rsub|k>>|<cell|=>|<cell|<around*|(|\<varphi\><rsup|+><rsub|i><around*|(|\<psi\><rsup|+><rsub|i><around*|(|x|)>|)>|)><rsub|k>>>|<row|<cell|>|<cell|=>|<cell|<choice|<tformat|<table|<row|<cell|<around*|(|\<psi\><rsup|+><rsub|i><around*|(|x|)>|)><rsub|k><text|
-      if >k\<in\><around*|{|1,\<ldots\>,i-1|}>>>|<row|<cell|<sqrt|1-<big|sum><rsub|k=1><rsup|n><around*|(|\<psi\><rsup|+><rsub|i><around*|(|x|)>|)><rsup|2>><text|
+      if >k\<in\><around*|{|1,\<ldots\>,i-1|}>>>|<row|<cell|<sqrt|1-<big|sum><rsub|k=1><rsup|n><around*|(|\<psi\><rsup|+><rsub|k><around*|(|x|)>|)><rsup|2>><text|
       if k=i>>>|<row|<cell|<around*|(|\<psi\><rsup|+><rsub|i><around*|(|x|)>|)><rsub|k-1><text|
       if >k\<in\><around*|{|i+1,\<ldots\>,n|}>>>>>>>>|<row|<cell|>|<cell|=>|<cell|<choice|<tformat|<table|<row|<cell|x<rsub|k><text|
-      if >k\<in\><around*|{|1,\<ldots\>,i-1|}>>>|<row|<cell|<sqrt|1-<big|sum><rsub|k=1><rsup|n><around*|(|\<psi\><rsup|+><rsub|i><around*|(|x|)>|)><rsup|2>><text|
+      if >k\<in\><around*|{|1,\<ldots\>,i-1|}>>>|<row|<cell|<sqrt|1-<big|sum><rsub|k=1><rsup|n><around*|(|\<psi\><rsup|+><rsub|k><around*|(|x|)>|)><rsup|2>><text|
       if >>>|<row|<cell|x<rsub|<around*|(|k-1|)>+1><text| if
       >k\<in\><around*|{|i+1,\<ldots\>,n|}>>>>>>>>|<row|<cell|>|<cell|=>|<cell|<choice|<tformat|<table|<row|<cell|x<rsub|k><text|
-      if >k\<in\><around*|{|1,\<ldots\>,i-1|}>>>|<row|<cell|<sqrt|1-<big|sum><rsub|k=1><rsup|n><around*|(|\<psi\><rsup|+><rsub|i><around*|(|x|)>|)><rsup|2>><text|
+      if >k\<in\><around*|{|1,\<ldots\>,i-1|}>>>|<row|<cell|<sqrt|1-<big|sum><rsub|k=1><rsup|n><around*|(|\<psi\><rsup|+><rsub|k><around*|(|x|)>|)><rsup|2>><text|
       if k=i>>>|<row|<cell|x<rsub|k><text| if
       >k\<in\><around*|{|i+1,\<ldots\>,n|}>>>>>>>>|<row|<cell|>|<cell|<below|=|<text|[eq:
       <reference|eq 23.8.1>]>>>|<cell|x<rsub|k>>>>>
@@ -639,13 +643,13 @@
 
     <\eqnarray*>
       <tformat|<table|<row|<cell|<around*|(|<around*|(|\<varphi\><rsup|-><rsub|i>\<circ\>\<psi\><rsup|-><rsub|i>|)><around*|(|x|)>|)><rsub|k>>|<cell|=>|<cell|<around*|(|\<varphi\><rsup|-><rsub|i><around*|(|\<psi\><rsup|-><rsub|i><around*|(|x|)>|)>|)><rsub|k>>>|<row|<cell|>|<cell|=>|<cell|<choice|<tformat|<table|<row|<cell|<around*|(|\<psi\><rsup|-><rsub|i><around*|(|x|)>|)><rsub|k><text|
-      if >k\<in\><around*|{|1,\<ldots\>,i-1|}>>>|<row|<cell|-<sqrt|1-<big|sum><rsub|k=1><rsup|n><around*|(|\<psi\><rsup|-><rsub|i><around*|(|x|)>|)><rsup|2>><text|
+      if >k\<in\><around*|{|1,\<ldots\>,i-1|}>>>|<row|<cell|-<sqrt|1-<big|sum><rsub|k=1><rsup|n><around*|(|\<psi\><rsup|-><rsub|k><around*|(|x|)>|)><rsup|2>><text|
       if k=i>>>|<row|<cell|<around*|(|\<psi\><rsup|-><rsub|i><around*|(|x|)>|)><rsub|k-1><text|
       if >k\<in\><around*|{|i+1,\<ldots\>,n|}>>>>>>>>|<row|<cell|>|<cell|=>|<cell|<choice|<tformat|<table|<row|<cell|x<rsub|k><text|
-      if >k\<in\><around*|{|1,\<ldots\>,i-1|}>>>|<row|<cell|-<sqrt|1-<big|sum><rsub|k=1><rsup|n><around*|(|\<psi\><rsup|-><rsub|i><around*|(|x|)>|)><rsup|2>><text|
+      if >k\<in\><around*|{|1,\<ldots\>,i-1|}>>>|<row|<cell|-<sqrt|1-<big|sum><rsub|k=1><rsup|n><around*|(|\<psi\><rsup|-><rsub|k><around*|(|x|)>|)><rsup|2>><text|
       if >>>|<row|<cell|x<rsub|<around*|(|k-1|)>+1><text| if
       >k\<in\><around*|{|i+1,\<ldots\>,n|}>>>>>>>>|<row|<cell|>|<cell|=>|<cell|<choice|<tformat|<table|<row|<cell|x<rsub|k><text|
-      if >k\<in\><around*|{|1,\<ldots\>,i-1|}>>>|<row|<cell|-<sqrt|1-<big|sum><rsub|k=1><rsup|n><around*|(|\<psi\><rsup|-><rsub|i><around*|(|x|)>|)><rsup|2>><text|
+      if >k\<in\><around*|{|1,\<ldots\>,i-1|}>>>|<row|<cell|-<sqrt|1-<big|sum><rsub|k=1><rsup|n><around*|(|\<psi\><rsup|-><rsub|k><around*|(|x|)>|)><rsup|2>><text|
       if k=i>>>|<row|<cell|x<rsub|k><text| if
       >k\<in\><around*|{|i+1,\<ldots\>,n|}>>>>>>>>|<row|<cell|>|<cell|<below|=|<text|[eq:
       <reference|eq 23.8.1>]>>>|<cell|x<rsub|k>>>>>
@@ -680,7 +684,7 @@
       functions>] we have that
 
       <\equation*>
-        \<gamma\>=C<rsub|1>-<big|sum><rsub|j=1><rsup|n><around*|(|\<cdot\>|)><rsup|2>\<circ\>\<pi\><rsub|i>:\<bbb-R\><rsup|n>\<rightarrow\>\<bbb-R\>
+        \<gamma\>=C<rsub|1>-<big|sum><rsub|j=1><rsup|n><around*|(|\<cdot\>|)><rsup|2>\<circ\>\<pi\><rsub|j>:\<bbb-R\><rsup|n>\<rightarrow\>\<bbb-R\>
       </equation*>
 
       is continuous so that by [theorem: <reference|continuity and subspace
@@ -710,7 +714,7 @@
       we have\ 
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|<sqrt|\<cdot\>>\<circ\>\<gamma\><rsub|\|<around*|{|x\<in\>\<bbb-R\><rsup|n>\|<big|sum><rsub|j=1><rsup|n>x<rsub|j><rsup|2>\<less\>1|}>><around*|(|x|)>>|<cell|=>|<cell|<around*|(|<sqrt|><around*|(|C<rsub|1>-<big|sum><rsub|j=1><rsup|n><around*|(|\<cdot\>|)><rsup|2>\<circ\>\<pi\><rsub|i>|)>|)><around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|<sqrt|<around*|(|<sqrt|><around*|(|C<rsub|1>-<big|sum><rsub|j=1><rsup|n><around*|(|\<cdot\>|)><rsup|2>\<circ\>\<pi\><rsub|i>|)><around*|(|x|)>|)>>>>|<row|<cell|>|<cell|=>|<cell|<sqrt|<sqrt|><around*|(|1-<big|sum><rsub|j=1><rsup|n><around*|(|\<pi\><rsub|i><around*|(|x|)>|)><rsup|2>|)>>>>|<row|<cell|>|<cell|=>|<cell|<sqrt|1-<big|sum><rsub|j=1><rsup|n>x<rsub|j><rsup|2>>>>|<row|<cell|>|<cell|<below|=|<text|[eq:
+        <tformat|<table|<row|<cell|<sqrt|\<cdot\>>\<circ\>\<gamma\><rsub|\|<around*|{|x\<in\>\<bbb-R\><rsup|n>\|<big|sum><rsub|j=1><rsup|n>x<rsub|j><rsup|2>\<less\>1|}>><around*|(|x|)>>|<cell|=>|<cell|<around*|(|<sqrt|><around*|(|C<rsub|1>-<big|sum><rsub|j=1><rsup|n><around*|(|\<cdot\>|)><rsup|2>\<circ\>\<pi\><rsub|i>|)>|)><around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|<sqrt|<around*|(|C<rsub|1>-<big|sum><rsub|j=1><rsup|n><around*|(|\<cdot\>|)><rsup|2>\<circ\>\<pi\><rsub|i>|)><around*|(|x|)>>>>|<row|<cell|>|<cell|=>|<cell|<sqrt|1-<big|sum><rsub|j=1><rsup|n><around*|(|\<pi\><rsub|i><around*|(|x|)>|)><rsup|2>>>>|<row|<cell|>|<cell|=>|<cell|<sqrt|1-<big|sum><rsub|j=1><rsup|n>x<rsub|j><rsup|2>>>>|<row|<cell|>|<cell|<below|=|<text|[eq:
         <reference|eq 23.7.2>]>>>|<cell|\<pi\><rsub|k><around*|(|\<varphi\><rsub|i><rsup|+>|)>>>|<row|<cell|>|<cell|<below|=|<text|[eq:
         <reference|eq 23.8.2>]>>>|<cell|-\<pi\><rsub|k><around*|(|\<varphi\><rsup|-><rsub|i>|)>>>>>
       </eqnarray*>
@@ -754,8 +758,8 @@
     Hence <math|\<forall\>k\<in\><around*|{|1,\<ldots\>,n+1|}>> we have that
     <math|\<pi\><rsub|k>\<circ\>\<varphi\><rsup|+><rsub|i><text| and
     >\<pi\><rsub|k>\<circ\>\<varphi\><rsup|-><rsub|i><text|>> are continuous,
-    hence, using [theorem: <reference|continuity product and continuous
-    functions>] it follows that\ 
+    so that, using [theorem: <reference|continuity product and continuous
+    functions>], it follows that\ 
 
     <\equation>
       <label|eq 23.13.3>\<varphi\><rsup|+><rsub|i><text| and
@@ -772,7 +776,7 @@
     </equation>
 
     Define now <math|<around*|{|<around*|(|U<rsub|i>,\<beta\><rsub|i>|)>|}><rsub|i\<in\><around*|{|1,\<ldots\>,2\<cdot\>n+2|}>>>
-    by <reference|eq 23.4.1>
+    by [see eq: <reference|eq 23.4.1>]
 
     <\equation*>
       U<rsub|i>=<choice|<tformat|<table|<row|<cell|S<rsup|n><big|cap>V<rsup|+><rsub|i><text|
@@ -792,8 +796,8 @@
 
     Finally if <math|x\<in\>S<rsup|n>> then we have that
     <math|1=<big|sum><rsub|i=1><rsup|n+1>x<rsup|2><rsub|i>> so that
-    <math|\<exists\>k\<in\><around*|{|n+1|}>> such that
-    <math|x<rsub|k>\<neq\>0>. For <math|x<rsub|k>> w have either:
+    <math|\<exists\>k\<in\><around*|{|1,\<ldots\>,n+1|}>> such that
+    <math|x<rsub|k>\<neq\>0>. For <math|x<rsub|k>> we have either:
 
     <\description>
       <item*|<math|0\<less\>x<rsub|k>>>Then
@@ -838,15 +842,14 @@
   As a topological manifold is locally like
   <math|<around*|\<langle\>|\<bbb-R\><rsup|n>,\<cal-T\><rsub|\<bbb-R\><rsup|n>>|\<rangle\>>>
   it follows that some of the topological properties of
-  <math|\<bbb-R\><rsup|n>> are translated in the topological properties of
-  the topological manifold. In proving these properties it will turn out that
-  the requirements for a topological space
-  <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> to be Hausdorff and
-  second countability are necessary. In this section we will cover
-  topological properties like compactness, connectness, paracompactness.
-  First remember that <math|\<bbb-Q\><rsup|n>> is dense in
-  <math|\<bbb-R\><rsup|n>> using the norm
-  <math|<around*|\<\|\|\>||\<\|\|\>><rsub|e>> as the next lemma shows.
+  <math|\<bbb-R\><rsup|n>> are translated in topological properties of the
+  topological manifold. In proving these properties it will turn out that the
+  requirements for a topological manifold to be Hausdorff and second
+  countable are necessary. In this section we will cover topological
+  properties like compactness, connectness, paracompactness. First remember
+  that <math|\<bbb-Q\><rsup|n>> is dense in <math|\<bbb-R\><rsup|n>> using
+  the norm <math|<around*|\<\|\|\>||\<\|\|\>><rsub|e>> as the next lemma
+  shows.
 
   <\lemma>
     <label|lemma 23.10.2>Let <math|n\<in\>\<bbb-N\>> then
@@ -875,7 +878,7 @@
     Hence we have
 
     <\equation*>
-      <around*|\||x<rsub|i>-q<rsub|i>|\|><rsup|2><below|\<leqslant\>|0\<leqslant\><around*|\||x<rsub|y>-q<rsub|i>|\|>><frac|\<varepsilon\>|2\<cdot\><sqrt|n>>\<cdot\><around*|\||x<rsub|i>-q<rsub|i>|\|><below|\<less\>|0\<less\><frac|\<varepsilon\>|2\<cdot\><sqrt|n>>><around*|(|<frac|\<varepsilon\>|<sqrt|n>>|)><rsup|2>=<frac|\<varepsilon\><rsup|2>|n>
+      <around*|\||x<rsub|i>-q<rsub|i>|\|><rsup|2><below|\<leqslant\>|0\<leqslant\><around*|\||x<rsub|y>-q<rsub|i>|\|>><frac|\<varepsilon\>|<sqrt|n>>\<cdot\><around*|\||x<rsub|i>-q<rsub|i>|\|><below|\<less\>|0\<less\><frac|\<varepsilon\>|2\<cdot\><sqrt|n>>><around*|(|<frac|\<varepsilon\>|<sqrt|n>>|)><rsup|2>=<frac|\<varepsilon\><rsup|2>|n>
     </equation*>
 
     so that for <math|q=<around*|(|q<rsub|1>,\<ldots\>,q<rsub|n>|)>\<in\>\<bbb-Q\><rsup|n>>
@@ -910,11 +913,10 @@
 
   <\proof>
     Let <math|I=<around*|{|<around*|(|q,r|)>\<in\>\<bbb-Q\><rsup|n>\<times\>\<bbb-Q\>\|0\<less\>r\<wedge\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|q,2\<cdot\>r|)><rsub|>\<subseteq\>U|}>\<subseteq\>\<bbb-Q\><rsup|n>\<times\>\<bbb-Q\>>
-    then by [theorems: <reference|complex embedding>, <reference|countable
-    product of finite family of countable sets is countable>,
-    <reference|countable AUB and AxB>, <reference|countable subset of
-    countable set is countable>] <math|I> is countable. So that by
-    [corollary: <reference|set of countable family is countable>]\ 
+    then by [theorems: <reference|complex embedding>,, <reference|countable
+    AUB and AxB>, <reference|countable subset of countable set is countable>]
+    <math|I> is countable. So that by [corollary: <reference|set of countable
+    family is countable>]\ 
 
     <\equation>
       <label|eq 23.15.2>\<cal-B\>=<around*|{|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|q,r|)>\|<around*|(|q,r|)>\<in\>\<bbb-Q\><rsup|n>\<times\>\<bbb-Q\><text|
@@ -941,7 +943,7 @@
     As <math|0\<less\>\<delta\>> there exist by the density of
     <math|\<bbb-Q\>> in <math|\<bbb-R\>> [see theorem: <reference|complex
     densitiy theorem>] a <math|r<rprime|'>\<in\>\<bbb-Q\>> such that
-    <math|0\<less\>r<rprime|'>\<less\>\<delta\>> hence we have that\ 
+    <math|0\<less\>r<rprime|'>\<less\>\<delta\>> so that\ 
 
     <\equation>
       <label|eq 23.16.2>x\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|x,r<rprime|'>|)>\<subseteq\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|x,\<delta\>|)>\<subseteq\>V
@@ -955,28 +957,29 @@
     then we have, as <math|<around*|\<\|\|\>|x-q|\<\|\|\>><rsub|e>\<less\><frac|r<rprime|'>|4>>,
     that\ 
 
-    <\equation*>
-      x\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|q,<frac|r<rprime|'>|4>|)>
-    </equation*>
+    <\equation>
+      <label|eq 23.21.6>x\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|q,<frac|r<rprime|'>|4>|)>
+    </equation>
 
-    Further if <math|y\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|q,<frac|r<rprime|'>|4>|)>>
-    then <math|<around*|\<\|\|\>|y-q|\<\|\|\>><rsub|e>\<less\><frac|r<rprime|'>|4>>
+    Further if <math|y\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|q,<frac|r<rprime|'>|2>|)>>
+    then <math|<around*|\<\|\|\>|y-q|\<\|\|\>><rsub|e>\<less\><frac|r<rprime|'>|2>>
     so that\ 
 
     <\equation*>
-      <around*|\<\|\|\>|y-x|\<\|\|\>><rsub|e>=<around*|\<\|\|\>|y-q+q-x|\<\|\|\>><rsub|e>\<leqslant\><around*|\<\|\|\>|y-q|\<\|\|\>><rsub|e>+<around*|\<\|\|\>|q-x|\<\|\|\>>\<less\><frac|r<rprime|'>|4>+<frac|r<rprime|'>|4>\<less\><frac|r<rprime|'>|2>\<less\>r<rprime|'>
+      <around*|\<\|\|\>|y-x|\<\|\|\>><rsub|e>=<around*|\<\|\|\>|y-q+q-x|\<\|\|\>><rsub|e>\<leqslant\><around*|\<\|\|\>|y-q|\<\|\|\>><rsub|e>+<around*|\<\|\|\>|q-x|\<\|\|\>><rsub|e>\<less\><frac|r<rprime|'>|2>+<frac|r<rprime|'>|4>\<less\><frac|r<rprime|'>|2>+<frac|r<rprime|'>|2>\<less\>r<rprime|'>
     </equation*>
 
-    which proves that <math|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|q,<frac|r<rprime|'>|4>|)>\<subseteq\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|x,r<rprime|'>|)>>.
+    which proves that <math|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|q,<frac|r<rprime|'>|2>|)>\<subseteq\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|x,r<rprime|'>|)>>.
     Summarized we have that
 
     <\equation>
-      <label|eq 23.17.2>x\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|q,<frac|r<rprime|'>|4>|)>\<subseteq\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|q,<frac|r<rprime|'>|2>|)>\<subseteq\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|x,r<rprime|'>|)><below|\<subseteq\>|<text|[eq:
+      <label|eq 23.17.2>x<below|\<in\>|<text|[eq: <reference|eq
+      23.21.6>]>>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|q,<frac|r<rprime|'>|4>|)>\<subseteq\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|q,<frac|r<rprime|'>|2>|)>\<subseteq\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|x,r<rprime|'>|)><below|\<subseteq\>|<text|[eq:
       <reference|eq 23.16.2>]>>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|x,\<delta\>|)>\<subseteq\>V
     </equation>
 
     Take <math|r=<frac|r<rprime|'>|4>> then <math|0\<less\>r\<in\>\<bbb-Q\>>,
-    <math|q\<in\>\<bbb-Q\><rsup|n>> and <math|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|q,2\<cdot\>r|)>=B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|q,<frac|r<rprime|'>|2>|)><below|\<subseteq\>|<text|{eq:
+    <math|q\<in\>\<bbb-Q\><rsup|n>> and <math|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|q,2\<cdot\>r|)>=B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|q,<frac|r<rprime|'>|2>|)><below|\<subseteq\>|<text|[eq:
     <reference|eq 23.17.2>]>>V\<subseteq\>U> so that\ 
 
     <\equation*>
@@ -1000,34 +1003,42 @@
     chart on <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> then there
     exist a countable basis <math|\<cal-B\>\<subseteq\>\<cal-T\><rsub|\|U>>
     of <math|\<cal-T\><rsub|\|U>> such that <math|\<forall\>B\<in\>\<cal-B\>>
-    <math|B> is a precompact [using the topology <math|\<cal-T\>>] coordinate
-    ball.
+    <math|B> is a pre-compact [using the topology <math|\<cal-T\>>]
+    coordinate ball.
+
+    <\note>
+      Remember that by [definition: <reference|compact precompact set>]
+      <math|A\<subseteq\>M> is pre-compact if <math|<wide|A|\<wide-bar\>>> is
+      compact.
+    </note>
   </lemma>
 
   <\proof>
     As <math|<around*|(|U,\<varphi\>|)>> a coordinate chart on
     <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> we have that
     <math|U\<in\>\<cal-T\>>, <math|\<varphi\><around*|(|U|)>\<in\>\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>>>
-    and <math|\<varphi\>:U\<rightarrow\>\<varphi\><around*|(|U|)>> is a
-    homeomorphism using the toppologies <math|\<cal-T\><rsub|\|U>> and
+    and <math|<rigid|\<varphi\>:U\<rightarrow\>\<varphi\><around*|(|U|)>>> is
+    a homeomorphism using the toppologies <math|\<cal-T\><rsub|\|U>> and
     <math|<around*|(|\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>>|)><rsub|\|\<varphi\><around*|(|U|)>>>.
-    Using the previous lemma [se<space|1em>lemma: <reference|lemma 23.11.2>]
-    we have that\ 
+    Using the previous lemma [see lemma: <reference|lemma 23.11.2>] we have
+    that\ 
 
     <\equation*>
       \<cal-A\>=<around*|{|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|x,r|)>\|<around*|(|x,r|)>\<in\>\<bbb-Q\><rsup|n>\<times\>\<bbb-Q\><text|
       such that >0\<less\>r\<wedge\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|x,2\<cdot\>\<rho\>|)>\<subseteq\>U|}>
     </equation*>
 
-    is a countable basis for <math|><math|<around*|(|\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>>|)><rsub|\|\<varphi\><around*|(|U|)>>>.
+    is a countable basis for <math|><math|<around*|(|\<cal-T\><rsub|\<bbb-R\><rsup|n>>|)><rsub|\|\<varphi\><around*|(|U|)>>=<around*|(|\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>>|)><rsub|\|\<varphi\><around*|(|U|)>>>.
     Let <math|B\<in\>\<cal-A\>> then there exist a
-    <math|x\<in\>\<bbb-Q\><rsup|n>>, <math|0\<less\>r\<in\>\<bbb-Q\>> such
-    that <math|B=B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|q,r|)>>
-    and <math|B=B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|q,r|)>\<subseteq\><wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|q,r|)>|\<wide-bar\>>\<subseteq\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|q,2\<cdot\>r|)>\<subseteq\>U>.
+    <math|q\<in\>\<bbb-Q\><rsup|n>>, <math|0\<less\>r\<in\>\<bbb-Q\>> such
+    that <math|B=B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|q,r|)>>.
+    Further <math|B=B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|q,r|)>\<subseteq\><wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|q,r|)>|\<wide-bar\>>\<subseteq\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|q,2\<cdot\>r|)>\<subseteq\>U>.
     Hence we have that
 
     <\equation*>
-      <wide|B|\<wide-bar\>>\<subseteq\><wide|<wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|q,r|)>|\<wide-bar\>>|\<wide-bar\>>=<wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|q,r|)>|\<wide-bar\>>\<subseteq\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|q,2\<cdot\>r|)>\<subseteq\>U
+      <wide|B|\<wide-bar\>>\<subseteq\><wide|<wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|q,r|)>|\<wide-bar\>>|\<wide-bar\>><below|=|<text|[theorems:
+      <reference|topology closed set and closure>, <reference|metric closed
+      balls are closed>]>><wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|q,r|)>|\<wide-bar\>>\<subseteq\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|q,2\<cdot\>r|)>\<subseteq\>U
     </equation*>
 
     As <math|<wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|q,r|)>|\<wide-bar\>>>
@@ -1045,9 +1056,9 @@
     </equation*>
 
     As <math|\<varphi\>:U\<rightarrow\>\<varphi\><around*|(|U|)>> is a
-    homeomorphism that <math|\<varphi\><rsup|-1>:\<varphi\><around*|(|U|)>\<rightarrow\>U>
-    is continuous hence it follows from [theorem: <reference|compact image of
-    a cmpact set by a continuous function>] that\ 
+    homeomorphism <math|\<varphi\><rsup|-1>:\<varphi\><around*|(|U|)>\<rightarrow\>U>
+    is continuous hence it follows from [theorem: <reference|compact and
+    continuous functions>] that\ 
 
     <\equation*>
       \<varphi\><rsup|-1><around*|(|<wide|B|\<wide-bar\>>|)><below|=|<text|[theorem:
@@ -1127,7 +1138,7 @@
     proves that\ 
 
     <\equation*>
-      \<cal-B\><text| is a basis for >(\<cal-T\>_(\<\|\|\>\<\|\|\>_e))_(\|\<varphi\>(U))
+      \<cal-B\><text| is a basis for >\<cal-T\><rsub|\|U>
     </equation*>
   </proof>
 
@@ -1156,8 +1167,9 @@
       M=<big|cup><rsub|x\<in\>\<cal-C\>>U<rsub|x>
     </equation*>
 
-    By the previous lemma we have <math|\<forall\>x\<in\>\<cal-C\>> a
-    countable basis <math|\<cal-B\><rsub|x>> [in the topology
+    By the previous lemma [lemma: <reference|lemma 23.13.2>] we have
+    <math|\<forall\>x\<in\>\<cal-C\>> a countable basis
+    <math|\<cal-B\><rsub|x>> [in the topology
     <math|\<cal-T\><rsub|\|U<rsub|x>>>] of precompact [using the topology
     <math|\<cal-T\>>] coordinate balls. Take\ 
 
@@ -1176,11 +1188,11 @@
     <math|\<exists\>x\<in\>\<cal-C\>> such that
     <math|B\<in\>\<cal-B\><rsub|x>>. As <math|\<cal-B\><rsub|x>> is a basis
     for <math|\<cal-T\><rsub|\|U<rsub|x>>> we have
-    <math|\<cal-B\><rsub|x>\<subseteq\>\<cal-T\><rsub|\|U<rsub|x>>> whuch as
+    <math|\<cal-B\><rsub|x>\<subseteq\>\<cal-T\><rsub|\|U<rsub|x>>> whuch, as
     <math|\<cal-T\><rsub|\|U<rsub|x>>\<subseteq\>\<cal-T\>> [because
     <math|U<rsub|x>\<in\>\<cal-T\>> and [theorem: <reference|topology
-    subspace topology open subset>] prove that <math|B\<in\>\<cal-T\>>. Hence
-    we have\ 
+    subspace topology open subset>]], prove that <math|B\<in\>\<cal-T\>>.
+    Hence we have\ 
 
     <\equation*>
       \<cal-B\>\<subseteq\>\<cal-T\>
@@ -1209,7 +1221,7 @@
   <\theorem>
     <label|manifold connectivity properties>Let <math|n\<in\>\<bbb-N\>> and
     <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> be a non empty
-    <math|n>-dimesional topological manifold then we have that
+    <math|n>-dimensional topological manifold then we have that
 
     <\enumerate>
       <item><math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> is locally
@@ -1217,7 +1229,7 @@
       connected>].
 
       <item><math|M> is connected <math|\<Leftrightarrow\><text| >M> is
-      locally contacted.
+      locally connected.
 
       <item>The components of <math|M> are the same as its path components.
       More specifically <math|\<forall\>x\<in\>X> we have that
@@ -1239,7 +1251,7 @@
   <\proof>
     \ 
 
-    <\enumerate>
+    <\itemize>
       <item>Using [theorem: <reference|lemma 23.13.2>] there exist a basis
       <math|\<cal-B\>\<subseteq\>\<cal-T\>> such that
       <math|\<forall\>B\<in\>\<cal-B\>> <math|\<cal-B\>> is a coordinate
@@ -1273,7 +1285,8 @@
       <item>As <math|M> is locally path connected this follows from [theorem:
       <reference|connected properties of locally connected spaces>(3)].
 
-      <item>If <math|C> is a component then by (4)
+      <item>If <math|C> is a component then by (4) <math|C> is open so that
+      by [example: <reference|manifold open set is a sub manifold>]
       <math|<around*|\<langle\>|C,\<cal-T\><rsub|\|C>|\<rangle\>>> is a
       topological manifold.\ 
 
@@ -1289,7 +1302,8 @@
       <math|<around*|\<langle\>|M,\<b-cal-T\>|\<rangle\>>> is second
       countable [see definition: <reference|manifold topological>] it follows
       from [theorem: <reference|separation second countable and covering>]
-      there exist a countable <math|\<cal-A\>\<subseteq\>M/\<sim\>> such that\ 
+      thatthere exist a countable <math|\<cal-A\>\<subseteq\>M/\<sim\>> such
+      that\ 
 
       <\equation*>
         M=<big|sqcup><rsub|B\<in\>\<cal-A\>>B<rsub|>
@@ -1312,7 +1326,7 @@
       <\equation*>
         M/\<sim\><text| is countable>
       </equation*>
-    </enumerate>
+    </itemize>
   </proof>
 
   <\theorem>
@@ -1324,7 +1338,7 @@
   <\proof>
     As <math|\<cal-T\>> is Hausdorf and by [theorem: <reference|lemma
     23.13.2>] <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> has
-    precompact base, it follows from [theorem: <reference|compact locally
+    pre-compact base, it follows from [theorem: <reference|compact locally
     compact (1)>] that <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> is
     locally compact.
   </proof>
@@ -1352,9 +1366,9 @@
     space <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> is paracompact
     if <math|\<forall\>\<cal-U\>\<subseteq\>\<cal-T\>> with
     <math|X=<big|cup><rsub|U\<in\>\<cal-U\>>U> there exist a locally finite
-    refinement <math|\<cal-V\>\<subseteq\>\<cal-T\>> such that
-    <math|X=<big|cup><rsub|V\<in\>\<cal-V\>>V>. In other words every open
-    cover of <math|X> admits a open locally finite refinement.
+    refinement <math|\<cal-V\>\<subseteq\>\<cal-T\>> of <math|\<cal-U\>> such
+    that <math|X=<big|cup><rsub|V\<in\>\<cal-V\>>V>. In other words every
+    open cover of <math|X> admits a open locally finite covering refinement.
   </definition>
 
   <\theorem>
@@ -1364,20 +1378,25 @@
     such that <math|M=<big|cup><rsub|U\<in\>\<cal-U\>>U> and <math|\<cal-B\>>
     a basis for <math|\<cal-T\>> then there exist a countable locally finite
     open refinement <math|\<cal-V\>> of <math|\<cal-U\>> with
-    <math|\<cal-U\>\<subseteq\>\<cal-B\>>. Hence using the previous
-    definition <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> is
-    paracompact.
+    <math|\<cal-U\>\<subseteq\>\<cal-B\>>.\ 
+
+    <\note>
+      As by [example: <reference|topology basis topology is a basis>]
+      <math|\<cal-T\>> is a basis of itself it follows from the previous
+      definition [see definition: <reference|compact paracompactness>] that
+      <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> is paracompact.
+    </note>
   </theorem>
 
   <\proof>
-    <dueto|>As <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> is second
-    countable and locally compact [see theorem: <reference|manifold a
-    topological manifold is locally compact>] it follows from [theorem:
-    <reference|compact a second countable locally compact Hausdorff space has
-    a exhausting>] there exist a exhasting of <math|X> by compact sets
-    <math|<around*|{|C<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>>. So using the
-    definition of exhausting [see definition: <reference|compact exhausting
-    by compact sets>] we have that\ 
+    As <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> is second
+    countable, Hausdorff and locally compact [see theorem:
+    <reference|manifold a topological manifold is locally compact>] it
+    follows from [theorem: <reference|compact a second countable locally
+    compact Hausdorff space has a exhausting>] there exist a exhausting of
+    <math|X> by compact sets <math|<around*|{|C<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>>.
+    So using the definition of exhausting [see definition: <reference|compact
+    exhausting by compact sets>] we have that\ 
 
     <\equation>
       <label|eq 23.22.3>M=<big|cup><rsub|i\<in\>\<bbb-N\>>C<rsub|i><text| and
@@ -1432,7 +1451,7 @@
     there exist a <math|n\<in\>\<bbb-N\>> such that <math|x\<in\>C<rsub|n>>.
     Hence <math|<rigid|<around*|{|i\<in\><around*|{|1,\<ldots\>,n|}>\|x\<in\>C<rsub|i>|}>\<neq\>\<varnothing\>>>
     so that by [theorem: <reference|finite ordered sets have a maximum and
-    minimum>] <math|m=min<around*|(|<around*|{|i\<in\><around*|{|0,\<ldots\>,n|}>\|x\<in\>C<rsub|i>|}>|)>>
+    minimum>] <math|m=min<around*|(|<around*|{|i\<in\><around*|{|1,\<ldots\>,n|}>\|x\<in\>C<rsub|i>|}>|)>>
     exist. For <math|m\<in\><around*|{|1,\<ldots\>,n|}>> we have either:\ 
 
     <\description>
@@ -1448,7 +1467,8 @@
     </description>
 
     so in all cases we have <math|x\<in\><big|cup><rsub|i\<in\>\<bbb-N\><rsub|0>>V<rsub|i>>.
-    Hence
+    Hence, as <math|\<forall\>i\<in\>\<bbb-N\><rsub|0>>,
+    <math|V<rsub|i>\<subseteq\>M> it follows that
 
     <\equation>
       <label|eq 23.24.402>M=<big|cup><rsub|i\<in\>\<bbb-N\><rsub|0>>V<rsub|i>
@@ -1473,7 +1493,7 @@
 
       <item*|<math|i=1>>Then <math|W<rsub|i>=<around*|(|C<rsub|3>|)><rsup|\<circ\>>\<in\>T>
       and <math|V<rsub|i>=V<rsub|1>=C<rsub|2>\\<around*|(|C<rsub|1>|)><rsup|\<circ\>>\<subseteq\>C<rsub|2><below|\<subseteq\>|<text|[eq:
-      <reference|eq 23.22.3>]>><around*|(|C<rsub|3>|)><rsup|\<circ\>>>
+      <reference|eq 23.22.3>]>><around*|(|C<rsub|3>|)><rsup|\<circ\>>=W<rsub|i>>
 
       <item*|<math|i\<in\><around*|{|2,\<ldots\>,\<infty\>|}>>>As
       <math|\<cal-T\>> is Hausdorff and <math|C<rsub|i-1>> is compact it
@@ -1501,7 +1521,8 @@
     special cases for <math|j\<in\>\<bbb-N\><rsub|0>>\ 
 
     <\description>
-      <item*|0\<less\><math|j\<less\>i-2>>Now for <math|j> we have either:
+      <item*|<math|0\<leqslant\>j\<less\>i-2>>Now for <math|j> we have
+      either:
 
       <\description>
         <item*|<math|j=0>>Then <math|2\<less\>i\<Rightarrow\>2\<leqslant\>i-1>
@@ -1511,7 +1532,7 @@
         so that <math|W<rsub|i><big|cap>W<rsub|i>=\<varnothing\>>.
 
         <item*|<math|j=1>>Then <math|3\<less\>i\<Rightarrow\>3\<leqslant\>i-1>
-        so that <math|W<rsub|j>=W<rsub|3>=<around*|(|C<rsub|3>|)><rsup|\<circ\>>\<subseteq\>C<rsub|3><below|\<subseteq\>|<text|[eq:
+        so that <math|W<rsub|j>=W<rsub|1>=<around*|(|C<rsub|3>|)><rsup|\<circ\>>\<subseteq\>C<rsub|3><below|\<subseteq\>|<text|[eq:
         <reference|eq 23.23.4>]>>C<rsub|i-1>> and
         <math|<rigid|W<rsub|i>=<around*|(|C<rsub|i+2>|)><rsup|\<circ\>>\\C<rsub|i-1>>>
         so that <math|W<rsub|j><big|cap>W<rsub|i>=\<varnothing\>>.
@@ -1520,8 +1541,7 @@
         <math|j\<less\>i-2\<Rightarrow\>j+2\<less\>i-1> so that
 
         <\equation*>
-          W<rsub|j>=<around*|(|C<rsub|j+2>|)><rsup|\<circ\>>\\C<rsub|j-1><below|\<subseteq\>|<text|[eq:
-          <reference|eq 23.23.4>]>>C<rsub|j+2><below|\<subseteq\>|<text|[eq:
+          W<rsub|j>=<around*|(|C<rsub|j+2>|)><rsup|\<circ\>>\\C<rsub|j-1>\<subseteq\><around*|(|C<rsub|i+2>|)><rsup|\<circ\>>\<subseteq\>C<rsub|j+2><below|\<subseteq\>|<text|[eq:
           <reference|eq 23.23.4>]>>C<rsub|i-1>
         </equation*>
 
@@ -1539,7 +1559,7 @@
         so that <math|W<rsub|j><big|cap>W<rsub|i>=\<varnothing\>>.
 
         <item*|<math|i=1>>Then <math|3\<less\>j\<Rightarrow\>3\<leqslant\>j-1>
-        so that <math|W<rsub|i>=<around*|(|C<rsub|3>|)><rsup|\<circ\>>\<subseteq\>C<rsub|3><below|\<subseteq\>|<text|[eq:
+        so that <math|W<rsub|i>=W<rsub|1>=<around*|(|C<rsub|3>|)><rsup|\<circ\>>\<subseteq\>C<rsub|3><below|\<subseteq\>|<text|[eq:
         <reference|eq 23.23.4>]>>C<rsub|j-1>> and
         <math|<rigid|W<rsub|j>=<around*|(|C<rsub|j+2>|)><rsup|\<circ\>>\\C<rsub|j-1>>>
         so that <math|W<rsub|j><big|cap>W<rsub|i>=\<varnothing\>>.
@@ -1548,7 +1568,7 @@
         <math|i\<less\>j-2\<Rightarrow\>i+2\<leqslant\>j-1> so that
 
         <\equation*>
-          W<rsub|i>=<around*|(|C<rsub|i+2>|)><rsup|\<circ\>>\\C<rsub|i=1>\<subseteq\>C<rsub|i+2><below|\<subseteq\>|<text|[eq:
+          W<rsub|i>=<around*|(|C<rsub|i+2>|)><rsup|\<circ\>>\\C<rsub|i-1>\<subseteq\><around*|(|C<rsub|i+2>|)><rsup|\<circ\>>\<subseteq\>C<rsub|i+2><below|\<subseteq\>|<text|[eq:
           <reference|eq 23.23.4>]>>C<rsub|j-1>
         </equation*>
 
@@ -1567,22 +1587,24 @@
 
     Let <math|i\<in\>\<bbb-N\><rsub|0>> and
     <math|x\<in\>V<rsub|i><below|\<subseteq\>|<text|[eq: <reference|eq
-    23.25.3>]>>W<rsub|i>\<in\>\<cal-T\>> then as by the hypothesis
+    23.25.3>]>>W<rsub|i>\<in\>\<cal-T\>> then, as by the hypothesis,
     <math|M=<big|cup><rsub|U\<in\>\<cal-U\>>U> there exist a
     <math|U<rsub|x>\<in\>\<cal-U\>\<subseteq\>\<cal-T\>> such that
-    <math|x\<in\>U<rsub|x>> hence <math|x\<in\>U<rsub|x><big|cap>W<rsub|i>\<in\>\<cal-T\>>
+    <math|x\<in\>U<rsub|x>>, hence <math|x\<in\>U<rsub|x><big|cap>W<rsub|i>\<in\>\<cal-T\>>
     As <math|\<cal-B\>> is a basis for <math|\<cal-T\>> there exist a
     <math|B<rsub|x,i>\<in\>\<cal-B\>> such that
     <math|x\<in\>B<rsub|x,i>\<subseteq\>U<rsub|x><big|cap>W<rsub|i>>. Define
 
     <\equation>
-      <label|eq 23.28.5>\<cal-B\><rsub|i>=<around*|{|B<rsub|x,i>\|x\<in\>V<rsub|i>|}>\<subseteq\>\<cal-B\>
+      <label|eq 23.28.5>\<cal-B\><rsub|i>=<around*|{|B<rsub|x,i>\|x\<in\>V<rsub|i>|}>\<subseteq\>\<cal-B\><text|
+      where >x\<in\>B<rsub|x,i>\<subseteq\>U<rsub|x><big|cap>W<rsub|i>
     </equation>
 
     Let <math|x\<in\>V<rsub|i>> then as <math|x\<in\>B<rsub|x,i>\<in\>\<cal-B\><rsub|i>>
     it follows that <math|V<rsub|i>\<subseteq\><big|cup><rsub|B\<in\>\<cal-B\><rsub|i>>B>
-    which as <math|V<rsub|i>> is compact means that there exist a finite
-    <math|\<cal-V\><rsub|i>\<subseteq\>\<cal-B\><rsub|i>> such that
+    which as <math|V<rsub|i>> is compact [see eq: <reference|eq 23.23.402>]
+    means that there exist a finite <math|\<cal-V\><rsub|i>\<subseteq\>\<cal-B\><rsub|i>>
+    such that
 
     <\equation>
       <label|eq 23.26.3>V<rsub|i>\<subseteq\><big|cup><rsub|B\<in\>\<cal-V\><rsub|i>>B<text|
@@ -1631,7 +1653,7 @@
     <math|B\<in\>\<cal-V\>> there exist by [eq: <reference|eq 23.27.3>] a
     <math|i\<in\>\<bbb-N\><rsub|0>> so that <math|B\<in\>\<cal-V\><rsub|i>>.
     By [eq: <reference|eq 23.28.5>] it follows then that
-    <math|B=B<rsub|x,i>\<subseteq\>U<rsub|x><big|cap>W<rsub|i>\<subseteq\>W<rsub|i>>.
+    <math|x\<in\>B=B<rsub|x,i>\<subseteq\>U<rsub|x><big|cap>W<rsub|i>\<subseteq\>W<rsub|i>>.
     Hence we have that\ 
 
     <\equation*>
@@ -1639,8 +1661,8 @@
     </equation*>
 
     Let <math|B\<in\><around*|{|B\<in\>\<cal-V\>\|B<big|cap>W<rsub|i>\<neq\>\<varnothing\>|}>>
-    then by [eq: <reference|eq 23.27.3>] there exist a
-    <math|j\<in\>\<bbb-N\><rsub|0>> such that
+    then by [eqs: <reference|eq 23.26.3>,<reference|eq 23.27.3>] there exist
+    a <math|j\<in\>\<bbb-N\><rsub|0>> such that
     <math|B\<in\>\<cal-V\><rsub|j>\<subseteq\>\<cal-B\><rsub|j>>. Hence by
     [eq: <reference|eq 23.28.5>] there exist a <math|y\<in\>V<rsub|j>> such
     that <math|B=B<rsub|y,j>\<subseteq\>U<rsub|y><big|cap>W<rsub|j>\<subseteq\>W<rsub|j>>.
@@ -1665,7 +1687,8 @@
 
     To summarize [eqs: <reference|eq 23.27.3>, <reference|eq 23.31.4> and
     <reference|eq 23.33.5>] we have constructed a countable locally finite
-    refinement <math|\<cal-V\>\<subseteq\>\<cal-B\>> of <math|\<cal-U\>>.
+    refinement <math|\<cal-V\>> of <math|\<cal-U\>> where <math|\<cal-V\>>
+    covers <math|M> and <math|\<cal-V\>\<subseteq\>\<cal-B\>>.
   </proof>
 
   <subsection|Differential structure on a topological manifold>
@@ -1695,7 +1718,8 @@
   </theorem>
 
   <\proof>
-    Using [theorem: <reference|continuity homeomorphism>] it follows that\ 
+    Using [theorem: <reference|continuity homeomorphism and restriction>] it
+    follows that\ 
 
     <\equation*>
       f<rsub|\|B>:B\<rightarrow\>f<around*|(|B|)><text| is a homeomorphism
@@ -1794,8 +1818,8 @@
       As by [definition: <reference|manifold cooridinate chart>]
       <math|\<varphi\>:U\<rightarrow\>\<bbb-R\><rsup|n>> and
       <math|\<psi\>:V\<rightarrow\>\<bbb-R\><rsup|n>> are injective functions
-      so that by [theorem: <reference|function composition of function and
-      inverse function>] <math|\<psi\>\<circ\>\<varphi\><rsup|-1>:\<varphi\><around*|(|U<big|cap>V|)>\<rightarrow\>\<psi\><around*|(|U<big|cap>V|)>>
+      it follows from [theorem: <reference|function composition of function
+      and inverse function>] <math|\<psi\>\<circ\>\<varphi\><rsup|-1>:\<varphi\><around*|(|U<big|cap>V|)>\<rightarrow\>\<psi\><around*|(|U<big|cap>V|)>>
       is a well defined bijection. <math|>
     </note>
   </definition>
@@ -1814,7 +1838,7 @@
     As by [definition: <reference|manifold cooridinate chart>]
     <math|\<varphi\>:U\<rightarrow\>\<varphi\><around*|(|U|)>> is a
     homeomorphism it follows from [theorem: <reference|continuity inverse of
-    a homeomorphism>] it follows that <math|\<varphi\><rsup|-1>:\<varphi\><around*|(|U|)>\<rightarrow\>U>
+    a homeomorphism>] that <math|\<varphi\><rsup|-1>:\<varphi\><around*|(|U|)>\<rightarrow\>U>
     that is a homeomorphism. Using then [theorem: <reference|continuity
     homeomorphism and restriction (1)>] it follows that\ 
 
@@ -1842,7 +1866,7 @@
     </equation*>
 
     As further by [theorem: <reference|function composition of function and
-    inverse function>] <math|\<psi\>\<circ\>\<varphi\><rsup|-1>=\<psi\><rsub|\|U<big|cap>V>\<circ\><around*|(|\<varphi\><rsup|-1>|)><rsub|\<varphi\><around*|(|<big|cap>V|)>>>
+    inverse function>] <math|\<psi\>\<circ\>\<varphi\><rsup|-1>=\<psi\><rsub|\|U<big|cap>V>\<circ\><around*|(|\<varphi\><rsup|-1>|)><rsub|\<varphi\><around*|(|U<big|cap>V|)>>>
     it follows that\ 
 
     <\equation*>
@@ -1875,8 +1899,8 @@
 
       \;
 
-      Using [definition: <reference|diff diffeomorphism inverse>] and
-      [theorem: <reference|function composition injectivity, surjectivity and
+      Using [theorem: <reference|diff diffeomorphism inverse>] and [theorem:
+      <reference|function composition injectivity, surjectivity and
       bijectivity>] it follows that
 
       <\equation*>
@@ -1897,6 +1921,8 @@
       compatible> is symmetric. Howeve this relation is not transitive.
     </note>
   </definition>
+
+  TODO
 
   <\definition>
     <label|manifold diffentiable atlas>Let <math|n\<in\>\<bbb-N\>>,
@@ -2165,7 +2191,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|22>
-    <associate|page-first|1899>
+    <associate|page-first|1901>
     <associate|par-first|0>
     <associate|section-nr|2>
     <associate|subsection-nr|0>
@@ -2175,14 +2201,19 @@
 <\references>
   <\collection>
     <associate|auto-1|<tuple|23|?>>
+    <associate|auto-10|<tuple|23.1.3|?>>
     <associate|auto-2|<tuple|23.1|?>>
     <associate|auto-3|<tuple|23.1.1|?>>
-    <associate|auto-4|<tuple|23.1.2|?>>
-    <associate|auto-5|<tuple|23.1.3|?>>
-    <associate|compact locally finite|<tuple|23.20|?>>
-    <associate|compact paracompactness|<tuple|23.21|?>>
-    <associate|compact refinement|<tuple|23.19|?>>
-    <associate|continuity homeomorphism and restriction (1)|<tuple|23.23|?>>
+    <associate|auto-4|<tuple|coordinate chart|?>>
+    <associate|auto-5|<tuple|coordinate domain|?>>
+    <associate|auto-6|<tuple|coordinate ball|?>>
+    <associate|auto-7|<tuple|coordinate cube|?>>
+    <associate|auto-8|<tuple|atlas|?>>
+    <associate|auto-9|<tuple|23.1.2|?>>
+    <associate|compact locally finite|<tuple|23.21|?>>
+    <associate|compact paracompactness|<tuple|23.22|?>>
+    <associate|compact refinement|<tuple|23.20|?>>
+    <associate|continuity homeomorphism and restriction (1)|<tuple|23.25|?>>
     <associate|eq 23.1.1|<tuple|23.5|?>>
     <associate|eq 23.1.3|<tuple|23.2|?>>
     <associate|eq 23.1.4|<tuple|23.1|?>>
@@ -2190,23 +2221,24 @@
     <associate|eq 23.14.3|<tuple|23.18|?>>
     <associate|eq 23.15.2|<tuple|23.19|?>>
     <associate|eq 23.16.2|<tuple|23.20|?>>
-    <associate|eq 23.17.2|<tuple|23.21|?>>
+    <associate|eq 23.17.2|<tuple|23.22|?>>
     <associate|eq 23.2.1|<tuple|23.6|?>>
     <associate|eq 23.2.3|<tuple|23.3|?>>
-    <associate|eq 23.22.3|<tuple|23.22|?>>
-    <associate|eq 23.23.4|<tuple|23.23|?>>
-    <associate|eq 23.23.402|<tuple|23.24|?>>
-    <associate|eq 23.24.402|<tuple|23.25|?>>
-    <associate|eq 23.25.3|<tuple|23.26|?>>
-    <associate|eq 23.26.3|<tuple|23.29|?>>
-    <associate|eq 23.27.3|<tuple|23.30|?>>
-    <associate|eq 23.27.4|<tuple|23.27|?>>
-    <associate|eq 23.28.3|<tuple|23.31|?>>
-    <associate|eq 23.28.5|<tuple|23.28|?>>
+    <associate|eq 23.21.6|<tuple|23.21|?>>
+    <associate|eq 23.22.3|<tuple|23.23|?>>
+    <associate|eq 23.23.4|<tuple|23.24|?>>
+    <associate|eq 23.23.402|<tuple|23.25|?>>
+    <associate|eq 23.24.402|<tuple|23.26|?>>
+    <associate|eq 23.25.3|<tuple|23.27|?>>
+    <associate|eq 23.26.3|<tuple|23.30|?>>
+    <associate|eq 23.27.3|<tuple|23.31|?>>
+    <associate|eq 23.27.4|<tuple|23.28|?>>
+    <associate|eq 23.28.3|<tuple|23.32|?>>
+    <associate|eq 23.28.5|<tuple|23.29|?>>
     <associate|eq 23.3.1|<tuple|23.7|?>>
     <associate|eq 23.3.3|<tuple|23.4|?>>
-    <associate|eq 23.31.4|<tuple|23.32|?>>
-    <associate|eq 23.33.5|<tuple|23.33|?>>
+    <associate|eq 23.31.4|<tuple|23.33|?>>
+    <associate|eq 23.33.5|<tuple|23.34|?>>
     <associate|eq 23.4.1|<tuple|23.8|?>>
     <associate|eq 23.5.1|<tuple|23.9|?>>
     <associate|eq 23.6.1|<tuple|23.11|?>>
@@ -2219,33 +2251,43 @@
     <associate|lemma 23.10.2|<tuple|23.13|?>>
     <associate|lemma 23.11.2|<tuple|23.14|?>>
     <associate|lemma 23.13.2|<tuple|23.15|?>>
-    <associate|lemma 23.34.5|<tuple|23.33|?>>
-    <associate|manifold C^m chart|<tuple|23.28|?>>
+    <associate|lemma 23.34.5|<tuple|23.35|?>>
+    <associate|manifold C^m chart|<tuple|23.30|?>>
     <associate|manifold a topological manifold is locally
-    compact|<tuple|23.18|?>>
+    compact|<tuple|23.19|?>>
     <associate|manifold atlas|<tuple|23.8|?>>
     <associate|manifold canonical example|<tuple|23.11|?>>
-    <associate|manifold compatible atla|<tuple|23.32|?>>
-    <associate|manifold compatible atlas|<tuple|23.31|?>>
-    <associate|manifold compatible atlas (1)|<tuple|23.32|?>>
-    <associate|manifold connectivity properties|<tuple|23.17|?>>
+    <associate|manifold compatible atlas|<tuple|23.33|?>>
+    <associate|manifold compatible atlas (1)|<tuple|23.34|?>>
+    <associate|manifold connectivity properties|<tuple|23.18|?>>
     <associate|manifold coordinate ball and cube|<tuple|23.6|?>>
     <associate|manifold coordinate domain|<tuple|23.5|?>>
     <associate|manifold coordinate transforms are a
-    homeomorphism|<tuple|23.27|?>>
+    homeomorphism|<tuple|23.29|?>>
     <associate|manifold cooridinate chart|<tuple|23.3|?>>
     <associate|manifold cooridinate chart existence|<tuple|23.7|?>>
-    <associate|manifold diffentiable atlas|<tuple|23.30|?>>
+    <associate|manifold diffentiable atlas|<tuple|23.32|?>>
     <associate|manifold open set is a sub manifold|<tuple|23.10|?>>
     <associate|manifold topological|<tuple|23.2|?>>
     <associate|manifold topological (1)|<tuple|23.9|?>>
-    <associate|manifold topological manifold is paracompact|<tuple|23.22|?>>
-    <associate|manifold transition map|<tuple|23.25|?>>
+    <associate|manifold topological manifold is paracompact|<tuple|23.23|?>>
+    <associate|manifold transition map|<tuple|23.27|?>>
   </collection>
 </references>
 
 <\auxiliary>
   <\collection>
+    <\associate|idx>
+      <tuple|<tuple|coordinate chart>|<pageref|auto-4>>
+
+      <tuple|<tuple|coordinate domain>|<pageref|auto-5>>
+
+      <tuple|<tuple|coordinate ball>|<pageref|auto-6>>
+
+      <tuple|<tuple|coordinate cube>|<pageref|auto-7>>
+
+      <tuple|<tuple|atlas>|<pageref|auto-8>>
+    </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|23<space|2spc>Differential
       Manifolds> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
@@ -2261,11 +2303,11 @@
 
       <with|par-left|<quote|1tab>|23.1.2<space|2spc>Topological properties of
       a Topological Manifold <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-4>>
+      <no-break><pageref|auto-9>>
 
       <with|par-left|<quote|1tab>|23.1.3<space|2spc>Differential structure on
       a topological manifold <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-5>>
+      <no-break><pageref|auto-10>>
     </associate>
   </collection>
 </auxiliary>

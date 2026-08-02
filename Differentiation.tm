@@ -637,10 +637,10 @@
   </proof>
 
   <\definition>
-    <label|diff calculus derivate (1)>Let
-    <math|<around*|\<langle\>|\<bbb-K\>,\<\|\|\>|\<rangle\>>> be the normed
-    space of the real [or complex] numbers with the canonical norm
-    <math|<around*|\|||\|>>, <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
+    <label|diff calculus derivate (1)><index|<math|f<rprime|'><rsub|x>>><index|><index|derivative
+    at a point>Let <math|<around*|\<langle\>|\<bbb-K\>,\<\|\|\>|\<rangle\>>>
+    be the normed space of the real [or complex] numbers with the canonical
+    norm <math|<around*|\|||\|>>, <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
     a normed space, <math|A\<subseteq\>\<bbb-K\>>, <math|x\<in\>A> and
     <rigid|<math|f:A\<rightarrow\>Y>> a function then
     <with|font-series|bold|<math|f> has a derivative at <math|x> noted as
@@ -881,7 +881,7 @@
   <math|f<rprime|'>>.
 
   <\definition>
-    <label|diff derivative function><dueto|Derivative>Let
+    <label|diff derivative function><index|<math|\<cal-D\><rsub|f>>><index|derivative><index|<math|f<rprime|'>>><dueto|Derivative>Let
     <math|<around*|\<langle\>|\<bbb-K\>,\<\|\|\>|\<rangle\>>> be the normed
     space of real [or complex numbers], <math|A\<subseteq\>\<bbb-K\>>,
     <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> a
@@ -2061,7 +2061,8 @@
   differential of <math|f>.
 
   <\definition>
-    <label|diff differential><dueto|Differential>Let
+    <label|diff differential><index|<math|\<frak-D\><rsub|f>>><index|<math|D
+    f>><index|differential><dueto|Differential>Let
     <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>
     and <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
     be normed spaces, <math|A\<subseteq\>X> and
@@ -3946,7 +3947,8 @@
   </proof>
 
   <\definition>
-    <label|diff partial differential definition>Let
+    <label|diff partial differential definition><index|partial differential
+    at a point><index|<math|D<rsub|x,i>f>>Let
     <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>>,
     <math|<around*|{|<around*|\<langle\>|X<rsub|i>,<around*|\<\|\|\>||\<\|\|\>><rsub|i>|\<rangle\>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
     a finite family of normed spaces, <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
@@ -4021,7 +4023,9 @@
   function.
 
   <\definition>
-    <label|diff partial differential>Let <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>>,
+    <label|diff partial differential><index|partial
+    differential><index|<math|D<rsub|i,x>f>><index|<math|\<frak-D\><rsub|i,f>>>Let
+    <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>>,
     <math|<around*|{|<around*|\<langle\>|X<rsub|i>,<around*|\<\|\|\>||\<\|\|\>><rsub|i>|\<rangle\>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
     a finite family of normed spaces, <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
     a normed space, <math|<around*|\<langle\>|<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|j>,<around*|\<\|\|\>||\<\|\|\>><rsub|max>|\<rangle\>>>
@@ -4729,8 +4733,8 @@
 
   <\definition>
     <label|diff partial derivate definition><index|partial
-    derivate><index|<math|\<partial\><rsub|i>f<around*|(|x|)>>>Let
-    <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>>,
+    derivate><index|<math|\<partial\><rsub|x,i>f>><index|partial derivative
+    at a point>Let <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>>,
     <math|<around*|\<langle\>|\<bbb-K\><rsup|n>,<around*|\<\|\|\>||\<\|\|\>><rsub|n>|\<rangle\>>>
     where <math|\<bbb-K\>=\<bbb-C\>> or <math|\<bbb-R\>> equipped with the
     maximum norm <math|<around*|\<\|\|\>||\<\|\|\>><rsub|n>>,
@@ -4779,7 +4783,9 @@
   function.
 
   <\definition>
-    <label|diff partial derivate>Let <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>>,
+    <label|diff partial derivate><index|partial
+    derivative><index|<math|\<partial\><rsub|f>f>><index|<math|\<cal-D\><rsub|i,f>>>Let
+    <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>>,
     <math|<around*|\<langle\>|\<bbb-K\><rsup|n>,<around*|\<\|\|\>||\<\|\|\>><rsub|n>|\<rangle\>>>
     equipped with the maximum norm <math|<around*|\<\|\|\>||\<\|\|\>><rsub|n>>,
     <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> a
@@ -5513,8 +5519,9 @@
   <math|\<bbb-K\><rsup|n>> and <math|\<bbb-K\><rsup|m>>.
 
   <\theorem>
-    <label|diff Jacobian matrix><dueto|Jacobian matrix>Let
-    <math|n,m\<in\>\<bbb-N\>\\<around*|{|1|}>>,
+    <label|diff Jacobian matrix><index|Jacobian
+    matrix><index|<math|<around*|[|<frac|\<partial\><around*|(|f<rsub|1>\<ldots\>,f<rsub|m>|)>|\<partial\><around*|(|1,\<ldots\>,n|)>>|]><rsub|x>>><dueto|Jacobian
+    matrix>Let <math|n,m\<in\>\<bbb-N\>\\<around*|{|1|}>>,
     <math|<around*|\<langle\>|\<bbb-K\><rsup|n>,<around*|\<\|\|\>||\<\|\|\>><rsub|n>|\<rangle\>>>,
     <math|<around*|\<langle\>|\<bbb-K\><rsup|m>,<around*|\<\|\|\>||\<\|\|\>><rsub|m>|\<rangle\>>>
     two normed spaces [based on the maximum norms) over the field
@@ -7400,7 +7407,8 @@
   <subsection|Higher order Fréchet differentiation.>
 
   <\definition>
-    <label|diff higher order differential>Let <math|n\<in\>\<bbb-N\>>,
+    <label|diff higher order differential><index|<math|D<rsup|<around*|[|n|]>>f>><index|<math|\<frak-D\><rsup|n><rsub|f>>><index|higher
+    order differential>Let <math|n\<in\>\<bbb-N\>>,
     <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
     <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
     be normed spaces, <math|A\<subseteq\>X> and <math|f:A\<rightarrow\>Y> a
@@ -7600,8 +7608,9 @@
   differential at a point.
 
   <\definition>
-    <label|diff higher order differentiation>Let <math|n\<in\>\<bbb-N\>>,
-    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <label|diff higher order differentiation><index|higher order differential
+    at a point><index|<math|D<rsup|<around*|[|n|]>><rsub|x>f>>Let
+    <math|n\<in\>\<bbb-N\>>, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
     <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
     be normed spaces, <math|A\<subseteq\>X>, <math|x\<in\>A> and
     <math|f:A\<rightarrow\>Y> a function then we say that
@@ -9136,9 +9145,10 @@
   We use now recursion to define higher order derivatives.
 
   <\definition>
-    <label|diff higher order derivative function>Let <math|n\<in\>\<bbb-N\>>,
-    <math|<around*|\<langle\>|\<bbb-K\>,\<\|\|\>|\<rangle\>>> be the normed
-    space of real [or complex] numbers based on the norm
+    <label|diff higher order derivative function><index|higher order
+    derivative><index|<math|\<cal-D\><rsup|n><rsub|f>>><index|<math|f<rsup|<around*|(|n|)>>>>Let
+    <math|n\<in\>\<bbb-N\>>, <math|<around*|\<langle\>|\<bbb-K\>,\<\|\|\>|\<rangle\>>>
+    be the normed space of real [or complex] numbers based on the norm
     <math|<around*|\|||\|>>, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
     a normed space, <math|A\<subseteq\>\<bbb-K\>> and
     <math|f:A\<rightarrow\>X> a function then we define the <math|n>-times
@@ -9226,7 +9236,8 @@
   Once we have defined we can define <math|n>-times derivatives at a point.
 
   <\definition>
-    <label|diff higher order derivative at a point>Let
+    <label|diff higher order derivative at a point><index|higher order
+    derivative at a point><index|<math|f<rsup|<around*|(|n|)>><rsub|x>>>Let
     <math|n\<in\>\<bbb-N\>>, <math|<around*|\<langle\>|\<bbb-K\>,\<\|\|\>|\<rangle\>>>
     be the normed space of real [or complex] numbers based on the norm
     <math|<around*|\|||\|>>, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
@@ -14383,11 +14394,11 @@
   <subsection|Fundamental theorem of Calculus for the Riemann Integral>
 
   <\theorem>
-    <label|diff fundamental theorem of calculus (1)><dueto|Fundamental
-    Theorem of Calculus (I)>Let <math|<around*|\<langle\>|\<bbb-R\>,\<\|\|\>|\<rangle\>>>
-    be the normed space of the real numbers,
-    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> be
-    a <with|font-series|bold|Banach space>, <math|a,b\<in\>\<bbb-R\>> with
+    <label|diff fundamental theorem of calculus (1)><index|fundamental
+    theorem of calculus (I)><dueto|Fundamental Theorem of Calculus (I)>Let
+    <math|<around*|\<langle\>|\<bbb-R\>,\<\|\|\>|\<rangle\>>> be the normed
+    space of the real numbers, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
+    be a <with|font-series|bold|Banach space>, <math|a,b\<in\>\<bbb-R\>> with
     <math|a\<less\>b> and <math|f:<around*|[|a,b|]>\<rightarrow\>X> a
     continuous function [so that by [theorem: <reference|riemann integral
     over [a,b] to [a,c] [c,b]>] <math|\<forall\>x\<in\><around*|[|a,b|]><text|
@@ -14503,9 +14514,12 @@
   We use now the above theorem to prove the Fundamental Theorem of Calculus.
 
   <\theorem>
-    <label|diff fundamental theorem of calculus (2)><dueto|Fundamental
-    Theorem of Calculus (II)>Let <math|<around*|\<langle\>|\<bbb-R\>,\<\|\|\>|\<rangle\>>>
-    be the normed space of real numbers, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
+    <label|diff fundamental theorem of calculus (2)><index|fundamental
+    theorem of calculus (II)>
+
+    <dueto|Fundamental Theorem of Calculus (II)>Let
+    <math|<around*|\<langle\>|\<bbb-R\>,\<\|\|\>|\<rangle\>>> be the normed
+    space of real numbers, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
     be a <with|font-series|bold|Banach space>, <math|a,b\<in\>\<bbb-R\>> with
     <math|a\<less\>b> and <math|f:<around*|[|a,b|]>\<rightarrow\>X> a
     function such that <math|f> has derivatives on <math|<around*|[|a,b|]>>
@@ -14684,7 +14698,8 @@
   </proof>
 
   <\theorem>
-    <label|diff integration by part><dueto|Integration by Parts>Let
+    <label|diff integration by part><index|integration by
+    parts><dueto|Integration by Parts>Let
     <math|<around*|\<langle\>|\<bbb-R\>,\<\|\|\>|\<rangle\>>> be the normed
     space of real numbers, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
     be a Banach space, <math|a,b\<in\>\<bbb-R\>> with <math|a\<less\>b> and
@@ -14842,9 +14857,9 @@
   </proof>
 
   <\theorem>
-    <label|diff mean value theorem (1)><dueto|Mean Value Theorem (I>Let
-    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> be
-    a normed vector space, <math|U> a open set in <math|X>,
+    <label|diff mean value theorem (1)><index|mean value theorem
+    (I)><dueto|Mean Value Theorem (I>Let <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
+    be a normed vector space, <math|U> a open set in <math|X>,
     <math|<around*|\<langle\>|\<bbb-R\>,\<\|\|\>|\<rangle\>>> the normed
     spaces of real numbers, <math|x,y\<in\>U> such that
     <math|<around*|{|<around*|(|1-t|)>\<cdot\>x+t\<cdot\>y\|t\<in\><around*|[|0,1|]>|}>\<subseteq\>U>
@@ -14969,8 +14984,8 @@
   the concept of convex sets.
 
   <\definition>
-    <label|diff convex set><dueto|Convex Sets>Let <math|X> be a vector space
-    over <math|\<bbb-K\>> then <math|C\<subseteq\>X> is
+    <label|diff convex set><index|convex set><dueto|Convex Sets>Let <math|X>
+    be a vector space over <math|\<bbb-K\>> then <math|C\<subseteq\>X> is
     <with|font-series|bold|convex> if <math|\<forall\>x,y\<in\>C> we have
     <math|\<forall\>t\<in\><around*|[|0,1|]>> that
     <math|x+t\<cdot\><around*|(|y-x|)>=<around*|(|1-t|)>\<cdot\>x+t\<cdot\>y\<in\>C>.
@@ -15027,8 +15042,8 @@
   </proof>
 
   <\theorem>
-    <label|diff mean value theorem (2)><dueto|Mean Value Theorem
-    (II><label|diff mean value theorem (0)>Let
+    <label|diff mean value theorem (2)><index|mean value theorem><dueto|Mean
+    Value Theorem (II><label|diff mean value theorem (0)>Let
     <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>
     be a normed space, <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
     a Banach space, <math|U> a open set in <math|X> and
@@ -15380,7 +15395,8 @@
   </proof>
 
   <\theorem>
-    <label|diff mean value theorem (3)><dueto|Mean Value Theorem (III)>Let
+    <label|diff mean value theorem (3)><index|mean value theorem
+    (III)><dueto|Mean Value Theorem (III)>Let
     <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>
     be a normed space, <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
     a Banach space, <math|U> a open set in <math|X>, <math|x,y\<in\>X> such
@@ -15518,7 +15534,8 @@
   </proof>
 
   <\theorem>
-    <label|diff mean value theorem (4)><dueto|Mean Value Theorem (IV)>Let
+    <label|diff mean value theorem (4)><index|mean value theorem
+    (IV)><dueto|Mean Value Theorem (IV)>Let
     <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>
     be a normed space, <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
     a Banach space, <math|U> a open set in <math|X>, <math|a,b\<in\>X> such
@@ -15694,10 +15711,10 @@
   </proof>
 
   <\theorem>
-    <label|diff mean value theorem (5)><dueto|Mean Value Theorem (V)>Let
-    <math|a,b\<in\>\<bbb-R\>> with <math|a\<less\>b>,
-    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> a
-    normed space, <math|f:<around*|[|a,b|]>\<rightarrow\>X>,
+    <label|diff mean value theorem (5)><index|mean value theorem
+    (V)><dueto|Mean Value Theorem (V)>Let <math|a,b\<in\>\<bbb-R\>> with
+    <math|a\<less\>b>, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
+    a normed space, <math|f:<around*|[|a,b|]>\<rightarrow\>X>,
     <math|\<varphi\>:<around*|[|a,b|]>\<rightarrow\>\<bbb-R\>> functions such
     that\ 
 
@@ -16066,10 +16083,10 @@
   </proof>
 
   <\theorem>
-    <label|diff mean value theorem (6)><dueto|Mean Value Theorem (VI)>Let
-    <math|a,b\<in\>\<bbb-R\>> with <math|a\<less\>b>,
-    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> a
-    normed space, <math|f:<around*|[|a,b|]>\<rightarrow\>X> a
+    <label|diff mean value theorem (6)><index|mean value theorem
+    (VI)><dueto|Mean Value Theorem (VI)>Let <math|a,b\<in\>\<bbb-R\>> with
+    <math|a\<less\>b>, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
+    a normed space, <math|f:<around*|[|a,b|]>\<rightarrow\>X> a
     <with|font-series|bold|continuous >function such that
     <math|\<forall\>x\<in\><around*|]|a,b|[>> <math|f<rprime|'><rsub|x>>
     exist and there exist a <math|K\<in\>\<bbb-R\>> such that
@@ -16105,7 +16122,8 @@
   </proof>
 
   <\theorem>
-    <label|diff mean value theorem (7)><dueto|Mean Value Theorem (VII)>Let
+    <label|diff mean value theorem (7)><index|mean value theorem
+    (VII)><dueto|Mean Value Theorem (VII)>Let
     <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
     <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
     be normed spaces, <math|A\<subseteq\>X>, <math|C\<subseteq\>A> a convex
@@ -17548,8 +17566,8 @@
   [see definition: <reference|diff L(x1:..xn)>] to the more general case.
 
   <\definition>
-    <label|diff L(x1:..:xn) (1)>Let <math|n\<in\>\<bbb-N\>>,
-    <math|<around*|{|<around*|\<langle\>|X<rsub|i>,<around*|\<\|\|\>||\<\|\|\>><rsub|i>|\<rangle\>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n+m|}>>>
+    <label|diff L(x1:..:xn) (1)><index|<math|L<around*|(|x<rsub|1>:\<ldots\>:x<rsub|n>|)>>>Let
+    <math|n\<in\>\<bbb-N\>>, <math|<around*|{|<around*|\<langle\>|X<rsub|i>,<around*|\<\|\|\>||\<\|\|\>><rsub|i>|\<rangle\>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n+m|}>>>
     a finite family of normed spaces, <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
     a normed space, <math|m\<in\>\<bbb-N\>> with <math|m\<leqslant\>n> then
     if <math|L\<in\>L<rsub|n><around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>> and
@@ -18464,7 +18482,8 @@
 
   <\definition>
     <label|diff higher order partial differentiation><index|higher order
-    partial differential>Let <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>>,
+    partial differential><index|<math|\<frak-D\><rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>,f>>><index|<math|D<rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f>>Let
+    <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>>,
     <math|<around*|{|<around*|\<langle\>|X<rsub|i>,<around*|\<\|\|\>||\<\|\|\>><rsub|i>|\<rangle\>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
     a finite family of normed spaces, <math|<rigid|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>>
     a normed space, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|max>|\<rangle\>>>
@@ -18483,7 +18502,7 @@
       <item*|<math|k=m>>Then <math|>
 
       <\equation*>
-        \<frak-D\><rsub|<around*|\<nobracket\>|i<rsub|m>\<ldots\>i<rsub|m>|]>,f>=\<frak-D\><rsub|i<rsub|m>,f>
+        \<frak-D\><rsub|<around*|[|i<rsub|m>\<ldots\>i<rsub|m>|]>,f>=\<frak-D\><rsub|i<rsub|m>,f>
       </equation*>
 
       and\ 
@@ -18601,7 +18620,8 @@
   at a point.
 
   <\definition>
-    <label|diff higher order partial differentiation (1)>Let
+    <label|diff higher order partial differentiation (1)><index|higher order
+    partial differential at a point><index|<math|D<rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f>>Let
     <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>>,
     <math|<around*|{|<around*|\<langle\>|X<rsub|i>,<around*|\<\|\|\>||\<\|\|\>><rsub|i>|\<rangle\>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
     a finite family of normed spaces, <math|<rigid|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>>
@@ -21686,7 +21706,8 @@
   <subsection|Higher Order Partial Derivatives>
 
   <\definition>
-    <label|diff higher order derivates>Let
+    <label|diff higher order derivates><index|higher order partial
+    derivative><index|<math|\<cal-D\><rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>,f>>><index|<math|\<partial\><rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f>>Let
     <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>>, <math|m\<in\>\<bbb-N\>>,
     <math|<around*|\<langle\>|\<bbb-K\><rsup|n>,<around*|\<\|\|\>||\<\|\|\>><rsub|n>|\<rangle\>>>
     the normed space with the maximum norm
@@ -21824,7 +21845,8 @@
   point.
 
   <\definition>
-    <label|diff higher order partial derivative (1)>Let
+    <label|diff higher order partial derivative (1)><index|higher partial
+    derivative at a point><index|<math|\<partial\><rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f>>Let
     <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>>, <math|m\<in\>\<bbb-N\>>,
     <math|<around*|\<langle\>|\<bbb-K\><rsup|n>,<around*|\<\|\|\>||\<\|\|\>><rsub|n>|\<rangle\>>>
     the normed space with the maximum norm
@@ -27635,9 +27657,9 @@
   is the idea of a Taylor expansion.\ 
 
   <\theorem>
-    <label|diff Taylor I><dueto|Taylor Theorem (I)>Let
-    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> be
-    a normed space, <math|a,b\<in\>\<bbb-R\>> with <math|a\<less\>b>,
+    <label|diff Taylor I><index|Taylor's theorem (I)><dueto|Taylor's Theorem
+    (I)>Let <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
+    be a normed space, <math|a,b\<in\>\<bbb-R\>> with <math|a\<less\>b>,
     <math|x<rsub|0>\<in\><around*|]|a,b|[>> and
     <math|f:<around*|[|a,b|]>\<rightarrow\>X> a function that is
     <math|n>-times differentiable at <math|x<rsub|0>> then we have\ 
@@ -27980,9 +28002,9 @@
   We have the following variants on the first form of Taylor's theorem.
 
   <\corollary>
-    <label|diff Taylor I.1><dueto|Taylor Theorem(I.1)>Let
-    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> be
-    a normed space, <math|a,b\<in\>\<bbb-R\>> with <math|a\<less\>b>,
+    <label|diff Taylor I.1><index|Taylor's theorem (I.1)><dueto|Taylor
+    Theorem(I.1)>Let <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
+    be a normed space, <math|a,b\<in\>\<bbb-R\>> with <math|a\<less\>b>,
     <math|x<rsub|0>\<in\><around*|]|a,b|[>> and
     <math|f:<around*|[|a,b|]>\<rightarrow\>X> a function that is
     <math|n>-times differentiable at <math|x<rsub|0>> then\ 
@@ -28035,7 +28057,8 @@
   <below|ord|x<below|\<rightarrow\>|A>x<rsub|0>><around*|(|<around*|\||<around*|(|x-x<rsub|0>|)><rsup|n>|\|>|)>
 
   <\definition>
-    <label|diff little o>Let <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>,<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    <label|diff little o><index|<math|<below|ord|x<below|\<rightarrow\>|A>x<rsub|0>>g<around*|(|x|)>>>Let
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>,<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
     be two normed spaces, <math|A\<subseteq\>X>, <math|x<rsub|0>\<in\>A> and
     <math|f:A\<rightarrow\>Y> and <math|g:A\<rightarrow\><around*|[|0,\<infty\>|]>>
     be two functions then we define\ 
@@ -28069,9 +28092,9 @@
   I.1>] as follows.
 
   <\theorem>
-    <label|diff Taylor I.2><dueto|Taylor's Theorem (I.2)>Let
-    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> be
-    a normed space, <math|a,b\<in\>\<bbb-R\>> with <math|a\<less\>b>,
+    <label|diff Taylor I.2><index|Taylor's theorem (I.2)><dueto|Taylor's
+    Theorem (I.2)>Let <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
+    be a normed space, <math|a,b\<in\>\<bbb-R\>> with <math|a\<less\>b>,
     <math|x<rsub|0>\<in\><around*|]|a,b|[>> and
     <math|f:<around*|[|a,b|]>\<rightarrow\>X> a function that is a
     <math|n>-times differentiable at <math|x<rsub|0>> then
@@ -28168,7 +28191,8 @@
   As a consequence of the above theorem we have the following:
 
   <\theorem>
-    <dueto|Taylor's Theorem (I.3)>Let <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
+    <label|diff Taylor I.3><index|Taylor's theorem (I.3)><dueto|Taylor's
+    Theorem (I.3)>Let <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
     be a normed space, <math|a,b\<in\>\<bbb-R\>> with <math|a\<less\>b>,
     <math|x<rsub|0>\<in\><around*|[|a,b|]>> and
     <math|f:<around*|[|a,b|]>\<rightarrow\>X> a function that is a
@@ -28998,8 +29022,9 @@
   spaces.
 
   <\theorem>
-    <label|diff Taylor I.3><dueto|Taylor's Theorem (I.3)>Let
-    <math|n\<in\>\<bbb-N\>>, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <label|diff Taylor I.4><index|Taylor's theorem (I.4)><dueto|Taylor's
+    Theorem (I.4)>Let <math|n\<in\>\<bbb-N\>>,
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
     <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
     be normed spaces, <math|U> a open set in <math|X>, <math|x\<in\>U> and
     <math|f:U\<rightarrow\>Y> a function that is <math|n>-times
@@ -29284,11 +29309,12 @@
   of the rest terms.
 
   <\theorem>
-    <label|diff Taylor II><dueto|Taylor' Theorem (II.1)>Let
-    <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>>, <math|a,b\<in\>\<bbb-R\>> with
-    <math|a\<less\>b>, <math|x,x<rsub|0>\<in\>\<bbb-R\>> with
-    <math|x\<neq\>x<rsub|0>> and <math|<around*|[|m,M|]>\<subseteq\><around*|]|a,b|[>>
-    where <math|m=min<around*|(|x<rsub|0>,x|)>>,
+    <label|diff Taylor II><index|Taylor's theorem (II.1)><dueto|Taylor's
+    Theorem (II.1)>Let <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>>,
+    <math|a,b\<in\>\<bbb-R\>> with <math|a\<less\>b>,
+    <math|x,x<rsub|0>\<in\>\<bbb-R\>> with <math|x\<neq\>x<rsub|0>> and
+    <math|<around*|[|m,M|]>\<subseteq\><around*|]|a,b|[>> where
+    <math|m=min<around*|(|x<rsub|0>,x|)>>,
     <math|M=max<around*|(|x<rsub|0>,x|)>> and
     <math|f:<around*|[|a,b|]>\<rightarrow\>\<bbb-R\>> a function such that
 
@@ -29970,8 +29996,8 @@
   </proof>
 
   <\theorem>
-    <label|diff Taylor II.1><dueto|Taylor's Theorem II.2 (Lagrange's
-    remainder>Let <math|n\<in\>\<bbb-N\>>,
+    <label|diff Taylor II.1><index|Taylor's theorem (II.2)><dueto|Taylor's
+    Theorem II.2 (Lagrange's remainder>Let <math|n\<in\>\<bbb-N\>>,
     <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
     <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
     be normed spaces, <math|U> a open set in <math|X>,
@@ -30102,8 +30128,8 @@
   </proof>
 
   <\theorem>
-    <label|diff Taylor II.2><dueto|Taylor's Theorem II.3 (Lagrange's
-    remainder>Let <math|n\<in\>\<bbb-N\>>,
+    <label|diff Taylor II.2><label|Taylor's theorem (II.3)><dueto|Taylor's
+    Theorem (II.3) (Lagrange's remainder>Let <math|n\<in\>\<bbb-N\>>,
     <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
     <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
     be normed spaces, a open set <math|U> in <math|X>,
@@ -30552,9 +30578,9 @@
   </proof>
 
   <\theorem>
-    <label|diff Taylor III><dueto|Taylor's Theorem III>Let
-    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> be
-    a normed space, <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>>,
+    <label|diff Taylor III><index|Taylor's theorem (III)><dueto|Taylor's
+    Theorem III>Let <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
+    be a normed space, <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>>,
     <math|A\<subseteq\>\<bbb-R\>> with <math|x<rsub|0>,x\<in\>\<bbb-R\>> with
     <math|x<rsub|0>\<less\>x>, <math|<around*|[|x<rsub|0>,x|]>\<subseteq\>A>
     and <math|f:A\<rightarrow\>Y> a function such that
@@ -30878,7 +30904,8 @@
   </proof>
 
   <\theorem>
-    <label|diff Taylor series (3)>Let <math|n\<in\>\<bbb-N\>>,
+    <label|diff Taylor series (IV)><index|Taylor's theorem
+    (IV)><dueto|Taylor's Theorem (IV)>Let <math|n\<in\>\<bbb-N\>>,
     <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
     <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
     be normed spaces, a open set <math|U> in <math|X>,
@@ -30994,79 +31021,142 @@
 
 <\references>
   <\collection>
+    <associate|Taylor's theorem (II.3)|<tuple|16.381|?>>
     <associate|auto-1|<tuple|16|?>>
-    <associate|auto-10|<tuple|<with|mode|<quote|math>|\<varepsilon\>>-mapping|?>>
-    <associate|auto-11|<tuple|16.1.4|?>>
-    <associate|auto-12|<tuple|Chain rule|?>>
-    <associate|auto-13|<tuple|16.1.5|?>>
-    <associate|auto-14|<tuple|<with|mode|<quote|math>|I<rsup|<around*|[|i,x|]>>>|?>>
-    <associate|auto-15|<tuple|16.1.6|?>>
-    <associate|auto-16|<tuple|partial derivate|?>>
-    <associate|auto-17|<tuple|<with|mode|<quote|math>|\<partial\><rsub|i>f<around*|(|x|)>>|?>>
-    <associate|auto-18|<tuple|16.1.7|?>>
-    <associate|auto-19|<tuple|<with|mode|<quote|math>|<around*|(|f<rsub|1>,\<ldots\>,f<rsub|n>|)>>|?>>
+    <associate|auto-10|<tuple|<with|mode|<quote|math>|\<cal-D\><rsub|f>>|?>>
+    <associate|auto-100|<tuple|<with|mode|<quote|math>|D<rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f>|?>>
+    <associate|auto-101|<tuple|higher order partial differential at a
+    point|?>>
+    <associate|auto-102|<tuple|<with|mode|<quote|math>|D<rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f>|?>>
+    <associate|auto-103|<tuple|16.5.3|?>>
+    <associate|auto-104|<tuple|higher order partial derivative|?>>
+    <associate|auto-105|<tuple|<with|mode|<quote|math>|\<cal-D\><rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>,f>>|?>>
+    <associate|auto-106|<tuple|<with|mode|<quote|math>|\<partial\><rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f>|?>>
+    <associate|auto-107|<tuple|higher partial derivative at a point|?>>
+    <associate|auto-108|<tuple|<with|mode|<quote|math>|\<partial\><rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f>|?>>
+    <associate|auto-109|<tuple|16.6|?>>
+    <associate|auto-11|<tuple|derivative|?>>
+    <associate|auto-110|<tuple|16.6.1|?>>
+    <associate|auto-111|<tuple|topological vector space|?>>
+    <associate|auto-112|<tuple|toplinear isomorphism|?>>
+    <associate|auto-113|<tuple|<with|mode|<quote|math>|\<cal-G\>L<around*|(|X|)>>|?>>
+    <associate|auto-114|<tuple|<with|mode|<quote|math>|H<rsup|n>>|?>>
+    <associate|auto-115|<tuple|diff diffeomorphism|?>>
+    <associate|auto-116|<tuple|local diffeomorphism|?>>
+    <associate|auto-117|<tuple|inverse function theorem|?>>
+    <associate|auto-118|<tuple|16.6.2|?>>
+    <associate|auto-119|<tuple|16.4|?>>
+    <associate|auto-12|<tuple|<with|mode|<quote|math>|f<rprime|'>>|?>>
+    <associate|auto-120|<tuple|16.5|?>>
+    <associate|auto-121|<tuple|implicit function theorem (1)|?>>
+    <associate|auto-122|<tuple|implict function theorem (2)|?>>
+    <associate|auto-123|<tuple|16.7|?>>
+    <associate|auto-124|<tuple|Taylor's theorem (I)|?>>
+    <associate|auto-125|<tuple|Taylor's theorem (I.1)|?>>
+    <associate|auto-126|<tuple|<with|mode|<quote|math>|<below|ord|x<below|\<rightarrow\>|A>x<rsub|0>>g<around*|(|x|)>>|?>>
+    <associate|auto-127|<tuple|Taylor's theorem (I.2)|?>>
+    <associate|auto-128|<tuple|Taylor's theorem (I.3)|?>>
+    <associate|auto-129|<tuple|Taylor's theorem (I.4)|?>>
+    <associate|auto-13|<tuple|16.1.2|?>>
+    <associate|auto-130|<tuple|Taylor's theorem (II.1)|?>>
+    <associate|auto-131|<tuple|Taylor's theorem (II.2)|?>>
+    <associate|auto-132|<tuple|Taylor's theorem (III)|?>>
+    <associate|auto-133|<tuple|Taylor's theorem (IV)|?>>
+    <associate|auto-14|<tuple|16.1.3|?>>
+    <associate|auto-15|<tuple|differentiability|?>>
+    <associate|auto-16|<tuple|<with|mode|<quote|math>|\<frak-D\><rsub|f>>|?>>
+    <associate|auto-17|<tuple|<with|mode|<quote|math>|D f>|?>>
+    <associate|auto-18|<tuple|differential|?>>
+    <associate|auto-19|<tuple|<with|mode|<quote|math>|\<varepsilon\>>-mapping|?>>
     <associate|auto-2|<tuple|16.1|?>>
-    <associate|auto-20|<tuple|16.1.8|?>>
-    <associate|auto-21|<tuple|16.2|?>>
-    <associate|auto-22|<tuple|16.2.1|?>>
-    <associate|auto-23|<tuple|<with|mode|<quote|math>|L<rsub|n><around*|(|X;Y|)>>|?>>
-    <associate|auto-24|<tuple|<with|mode|<quote|math>|L<around*|(|x<rsub|1>:\<ldots\>:x<rsub|n>|)>>|?>>
-    <associate|auto-25|<tuple|16.2.2|?>>
-    <associate|auto-26|<tuple|<with|mode|<quote|math>|D<rsup|n>f<around*|(|x|)>>|?>>
-    <associate|auto-27|<tuple|<with|mode|<quote|math>|\<infty\>>-times
-    differentibility|?>>
-    <associate|auto-28|<tuple|<with|mode|<quote|math>|C<rsup|n>>|?>>
-    <associate|auto-29|<tuple|<with|mode|<quote|math>|C<rsup|0>>|?>>
+    <associate|auto-20|<tuple|16.1.4|?>>
+    <associate|auto-21|<tuple|Chain rule|?>>
+    <associate|auto-22|<tuple|16.1.5|?>>
+    <associate|auto-23|<tuple|<with|mode|<quote|math>|I<rsup|<around*|[|i,x|]>>>|?>>
+    <associate|auto-24|<tuple|partial differential at a point|?>>
+    <associate|auto-25|<tuple|<with|mode|<quote|math>|D<rsub|x,i>f>|?>>
+    <associate|auto-26|<tuple|partial differential|?>>
+    <associate|auto-27|<tuple|<with|mode|<quote|math>|D<rsub|i,x>f>|?>>
+    <associate|auto-28|<tuple|<with|mode|<quote|math>|\<frak-D\><rsub|i,f>>|?>>
+    <associate|auto-29|<tuple|16.1.6|?>>
     <associate|auto-3|<tuple|16.1.1|?>>
-    <associate|auto-30|<tuple|<with|mode|<quote|math>|C<rsup|\<infty\>>>|?>>
-    <associate|auto-31|<tuple|16.2.3|?>>
-    <associate|auto-32|<tuple|16.2.4|?>>
-    <associate|auto-33|<tuple|16.2.5|?>>
-    <associate|auto-34|<tuple|16.2.6|?>>
-    <associate|auto-35|<tuple|chain rule higher order differentiation|?>>
-    <associate|auto-36|<tuple|higher order differentiation chain rule|?>>
-    <associate|auto-37|<tuple|16.3|?>>
-    <associate|auto-38|<tuple|16.3.1|?>>
-    <associate|auto-39|<tuple|local weak minimum|?>>
+    <associate|auto-30|<tuple|partial derivate|?>>
+    <associate|auto-31|<tuple|<with|mode|<quote|math>|\<partial\><rsub|x,i>f>|?>>
+    <associate|auto-32|<tuple|partial derivative at a point|?>>
+    <associate|auto-33|<tuple|partial derivative|?>>
+    <associate|auto-34|<tuple|<with|mode|<quote|math>|\<partial\><rsub|f>f>|?>>
+    <associate|auto-35|<tuple|<with|mode|<quote|math>|\<cal-D\><rsub|i,f>>|?>>
+    <associate|auto-36|<tuple|16.1.7|?>>
+    <associate|auto-37|<tuple|<with|mode|<quote|math>|<around*|(|f<rsub|1>,\<ldots\>,f<rsub|n>|)>>|?>>
+    <associate|auto-38|<tuple|Jacobian matrix|?>>
+    <associate|auto-39|<tuple|<with|mode|<quote|math>|<around*|[|<frac|\<partial\><around*|(|f<rsub|1>\<ldots\>,f<rsub|m>|)>|\<partial\><around*|(|1,\<ldots\>,n|)>>|]><rsub|x>>|?>>
     <associate|auto-4|<tuple|convergence of a function|?>>
-    <associate|auto-40|<tuple|local weak maximum|?>>
-    <associate|auto-41|<tuple|local extremum|?>>
-    <associate|auto-42|<tuple|16.1|?>>
-    <associate|auto-43|<tuple|16.2|?>>
-    <associate|auto-44|<tuple|concave function|?>>
-    <associate|auto-45|<tuple|convex function|?>>
-    <associate|auto-46|<tuple|16.3|?>>
-    <associate|auto-47|<tuple|16.3.2|?>>
-    <associate|auto-48|<tuple|16.3.3|?>>
-    <associate|auto-49|<tuple|16.4|?>>
+    <associate|auto-40|<tuple|16.1.8|?>>
+    <associate|auto-41|<tuple|16.2|?>>
+    <associate|auto-42|<tuple|16.2.1|?>>
+    <associate|auto-43|<tuple|<with|mode|<quote|math>|L<rsub|n><around*|(|X;Y|)>>|?>>
+    <associate|auto-44|<tuple|<with|mode|<quote|math>|L<around*|(|x<rsub|1>:\<ldots\>:x<rsub|n>|)>>|?>>
+    <associate|auto-45|<tuple|16.2.2|?>>
+    <associate|auto-46|<tuple|<with|mode|<quote|math>|D<rsup|<around*|[|n|]>>f>|?>>
+    <associate|auto-47|<tuple|<with|mode|<quote|math>|\<frak-D\><rsup|n><rsub|f>>|?>>
+    <associate|auto-48|<tuple|higher order differential|?>>
+    <associate|auto-49|<tuple|<with|mode|<quote|math>|D<rsup|n>f<around*|(|x|)>>|?>>
     <associate|auto-5|<tuple|<with|mode|<quote|math>|U<rsub|x>>|?>>
-    <associate|auto-50|<tuple|<with|mode|<quote|math>|ev<rsub|v<rsub|1>,\<ldots\>,v<rsub|n>>>|?>>
-    <associate|auto-51|<tuple|evaluation operator|?>>
-    <associate|auto-52|<tuple|16.5|?>>
-    <associate|auto-53|<tuple|16.5.1|?>>
-    <associate|auto-54|<tuple|<with|mode|<quote|math>|L<rsub|n><around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>|?>>
-    <associate|auto-55|<tuple|16.5.2|?>>
-    <associate|auto-56|<tuple|higher order partial differential|?>>
-    <associate|auto-57|<tuple|16.5.3|?>>
-    <associate|auto-58|<tuple|16.6|?>>
-    <associate|auto-59|<tuple|16.6.1|?>>
-    <associate|auto-6|<tuple|<with|mode|<quote|math>|f<rprime|'><around*|(|x|)>>|?>>
-    <associate|auto-60|<tuple|topological vector space|?>>
-    <associate|auto-61|<tuple|toplinear isomorphism|?>>
-    <associate|auto-62|<tuple|<with|mode|<quote|math>|\<cal-G\>L<around*|(|X|)>>|?>>
-    <associate|auto-63|<tuple|<with|mode|<quote|math>|H<rsup|n>>|?>>
-    <associate|auto-64|<tuple|diff diffeomorphism|?>>
-    <associate|auto-65|<tuple|local diffeomorphism|?>>
-    <associate|auto-66|<tuple|inverse function theorem|?>>
-    <associate|auto-67|<tuple|16.6.2|?>>
-    <associate|auto-68|<tuple|16.4|?>>
-    <associate|auto-69|<tuple|16.5|?>>
-    <associate|auto-7|<tuple|16.1.2|?>>
-    <associate|auto-70|<tuple|implicit function theorem (1)|?>>
-    <associate|auto-71|<tuple|implict function theorem (2)|?>>
-    <associate|auto-72|<tuple|16.7|?>>
-    <associate|auto-8|<tuple|16.1.3|?>>
-    <associate|auto-9|<tuple|differentiability|?>>
+    <associate|auto-50|<tuple|higher order differential at a point|?>>
+    <associate|auto-51|<tuple|<with|mode|<quote|math>|D<rsup|<around*|[|n|]>><rsub|x>f>|?>>
+    <associate|auto-52|<tuple|<with|mode|<quote|math>|\<infty\>>-times
+    differentibility|?>>
+    <associate|auto-53|<tuple|<with|mode|<quote|math>|C<rsup|n>>|?>>
+    <associate|auto-54|<tuple|<with|mode|<quote|math>|C<rsup|0>>|?>>
+    <associate|auto-55|<tuple|<with|mode|<quote|math>|C<rsup|\<infty\>>>|?>>
+    <associate|auto-56|<tuple|16.2.3|?>>
+    <associate|auto-57|<tuple|higher order derivative|?>>
+    <associate|auto-58|<tuple|<with|mode|<quote|math>|\<cal-D\><rsup|n><rsub|f>>|?>>
+    <associate|auto-59|<tuple|<with|mode|<quote|math>|f<rsup|<around*|(|n|)>>>|?>>
+    <associate|auto-6|<tuple|<with|mode|<quote|math>|f<rprime|'><rsub|x>>|?>>
+    <associate|auto-60|<tuple|higher order derivative at a point|?>>
+    <associate|auto-61|<tuple|<with|mode|<quote|math>|f<rsup|<around*|(|n|)>><rsub|x>>|?>>
+    <associate|auto-62|<tuple|16.2.4|?>>
+    <associate|auto-63|<tuple|16.2.5|?>>
+    <associate|auto-64|<tuple|16.2.6|?>>
+    <associate|auto-65|<tuple|chain rule higher order differentiation|?>>
+    <associate|auto-66|<tuple|higher order differentiation chain rule|?>>
+    <associate|auto-67|<tuple|16.3|?>>
+    <associate|auto-68|<tuple|16.3.1|?>>
+    <associate|auto-69|<tuple|local weak minimum|?>>
+    <associate|auto-7|<tuple||?>>
+    <associate|auto-70|<tuple|local weak maximum|?>>
+    <associate|auto-71|<tuple|local extremum|?>>
+    <associate|auto-72|<tuple|16.1|?>>
+    <associate|auto-73|<tuple|16.2|?>>
+    <associate|auto-74|<tuple|concave function|?>>
+    <associate|auto-75|<tuple|convex function|?>>
+    <associate|auto-76|<tuple|16.3|?>>
+    <associate|auto-77|<tuple|16.3.2|?>>
+    <associate|auto-78|<tuple|fundamental theorem of calculus (I)|?>>
+    <associate|auto-79|<tuple|fundamental theorem of calculus (II)|?>>
+    <associate|auto-8|<tuple|derivative at a point|?>>
+    <associate|auto-80|<tuple|integration by parts|?>>
+    <associate|auto-81|<tuple|16.3.3|?>>
+    <associate|auto-82|<tuple|mean value theorem (I)|?>>
+    <associate|auto-83|<tuple|convex set|?>>
+    <associate|auto-84|<tuple|mean value theorem|?>>
+    <associate|auto-85|<tuple|mean value theorem (III)|?>>
+    <associate|auto-86|<tuple|mean value theorem (IV)|?>>
+    <associate|auto-87|<tuple|mean value theorem (V)|?>>
+    <associate|auto-88|<tuple|mean value theorem (VI)|?>>
+    <associate|auto-89|<tuple|mean value theorem (VII)|?>>
+    <associate|auto-9|<tuple|<with|mode|<quote|math>|f<rprime|'><around*|(|x|)>>|?>>
+    <associate|auto-90|<tuple|16.4|?>>
+    <associate|auto-91|<tuple|<with|mode|<quote|math>|ev<rsub|v<rsub|1>,\<ldots\>,v<rsub|n>>>|?>>
+    <associate|auto-92|<tuple|evaluation operator|?>>
+    <associate|auto-93|<tuple|16.5|?>>
+    <associate|auto-94|<tuple|16.5.1|?>>
+    <associate|auto-95|<tuple|<with|mode|<quote|math>|L<rsub|n><around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>|?>>
+    <associate|auto-96|<tuple|<with|mode|<quote|math>|L<around*|(|x<rsub|1>:\<ldots\>:x<rsub|n>|)>>|?>>
+    <associate|auto-97|<tuple|16.5.2|?>>
+    <associate|auto-98|<tuple|higher order partial differential|?>>
+    <associate|auto-99|<tuple|<with|mode|<quote|math>|\<frak-D\><rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>,f>>|?>>
     <associate|conjecture 16.245.136|<tuple|16.342|?>>
     <associate|conjecture 16.246.136|<tuple|16.343|?>>
     <associate|conjecture 16.247.136|<tuple|16.344|?>>
@@ -31104,12 +31194,15 @@
     <associate|diff Taylor I.1|<tuple|16.355|?>>
     <associate|diff Taylor I.2|<tuple|16.358|?>>
     <associate|diff Taylor I.3|<tuple|16.369|?>>
+    <associate|diff Taylor I.3 (1)|<tuple|16.362|?>>
+    <associate|diff Taylor I.4|<tuple|16.369|?>>
     <associate|diff Taylor II|<tuple|16.372|?>>
     <associate|diff Taylor II.1|<tuple|16.380|?>>
     <associate|diff Taylor II.2|<tuple|16.381|?>>
     <associate|diff Taylor III|<tuple|16.384|?>>
     <associate|diff Taylor series (1))|<tuple|16.387|?>>
     <associate|diff Taylor series (3)|<tuple|16.389|?>>
+    <associate|diff Taylor series (IV)|<tuple|16.389|?>>
     <associate|diff Ux|<tuple|16.13|?>>
     <associate|diff Ux is open if U is open|<tuple|16.16|?>>
     <associate|diff Ux=-x+U=U-x|<tuple|16.15|?>>
@@ -31228,7 +31321,6 @@
     <associate|diff higher order differentiation on a open
     set|<tuple|16.141|?>>
     <associate|diff higher order partial derivative (1)|<tuple|16.298|?>>
-    <associate|diff higher order partial derivative (2)|<tuple|16.299|?>>
     <associate|diff higher order partial derivative (3)|<tuple|16.299|?>>
     <associate|diff higher order partial derivative (4)|<tuple|16.300|?>>
     <associate|diff higher order partial derivative
@@ -31274,7 +31366,7 @@
     <associate|diff little o|<tuple|16.357|?>>
     <associate|diff little o and limits|<tuple|16.359|?>>
     <associate|diff local diffeomorphism|<tuple|16.338|?>>
-    <associate|diff mean value theorem (0)|<tuple|16.221|?>>
+    <associate|diff mean value theorem (0)|<tuple|mean value theorem|?>>
     <associate|diff mean value theorem (1)|<tuple|16.218|?>>
     <associate|diff mean value theorem (2)|<tuple|16.221|?>>
     <associate|diff mean value theorem (2.1)|<tuple|16.227|?>>
@@ -32068,97 +32160,119 @@
 <\auxiliary>
   <\collection>
     <\associate|figure>
-      <tuple|normal|<surround|<hidden-binding|<tuple>|16.1>||>|<pageref|auto-42>>
+      <tuple|normal|<surround|<hidden-binding|<tuple>|16.1>||>|<pageref|auto-53>>
 
-      <tuple|normal|<surround|<hidden-binding|<tuple>|16.2>||>|<pageref|auto-43>>
+      <tuple|normal|<surround|<hidden-binding|<tuple>|16.2>||>|<pageref|auto-54>>
 
-      <tuple|normal|<surround|<hidden-binding|<tuple>|16.3>||>|<pageref|auto-46>>
+      <tuple|normal|<surround|<hidden-binding|<tuple>|16.3>||>|<pageref|auto-57>>
 
       <tuple|normal|<\surround|<hidden-binding|<tuple>|16.4>|>
         \;
-      </surround>|<pageref|auto-68>>
+      </surround>|<pageref|auto-79>>
 
       <tuple|normal|<\surround|<hidden-binding|<tuple>|16.5>|>
         \;
-      </surround>|<pageref|auto-69>>
+      </surround>|<pageref|auto-80>>
     </associate>
     <\associate|idx>
       <tuple|<tuple|convergence of a function>|<pageref|auto-4>>
 
       <tuple|<tuple|<with|mode|<quote|math>|U<rsub|x>>>|<pageref|auto-5>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|f<rprime|'><around*|(|x|)>>>|<pageref|auto-6>>
+      <tuple|<tuple|<with|mode|<quote|math>|f<rprime|'><rsub|x>>>|<pageref|auto-6>>
 
-      <tuple|<tuple|differentiability>|<pageref|auto-9>>
+      <tuple|<tuple|>|<pageref|auto-7>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|\<varepsilon\>>-mapping>|<pageref|auto-10>>
+      <tuple|<tuple|derivative at a point>|<pageref|auto-8>>
 
-      <tuple|<tuple|Chain rule>|<pageref|auto-12>>
+      <tuple|<tuple|<with|mode|<quote|math>|f<rprime|'><around*|(|x|)>>>|<pageref|auto-9>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|I<rsup|<around*|[|i,x|]>>>>|<pageref|auto-14>>
+      <tuple|<tuple|<with|mode|<quote|math>|\<cal-D\><rsub|f>>>|<pageref|auto-10>>
 
-      <tuple|<tuple|partial derivate>|<pageref|auto-16>>
+      <tuple|<tuple|derivative>|<pageref|auto-11>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|\<partial\><rsub|i>f<around*|(|x|)>>>|<pageref|auto-17>>
+      <tuple|<tuple|<with|mode|<quote|math>|f<rprime|'>>>|<pageref|auto-12>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|<around*|(|f<rsub|1>,\<ldots\>,f<rsub|n>|)>>>|<pageref|auto-19>>
+      <tuple|<tuple|differentiability>|<pageref|auto-15>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|L<rsub|n><around*|(|X;Y|)>>>|<pageref|auto-23>>
+      <tuple|<tuple|<with|mode|<quote|math>|\<frak-D\><rsub|f>>>|<pageref|auto-16>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|L<around*|(|x<rsub|1>:\<ldots\>:x<rsub|n>|)>>>|<pageref|auto-24>>
+      <tuple|<tuple|<with|mode|<quote|math>|D f>>|<pageref|auto-17>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|D<rsup|n>f<around*|(|x|)>>>|<pageref|auto-26>>
+      <tuple|<tuple|differential>|<pageref|auto-18>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|\<varepsilon\>>-mapping>|<pageref|auto-19>>
+
+      <tuple|<tuple|Chain rule>|<pageref|auto-21>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|I<rsup|<around*|[|i,x|]>>>>|<pageref|auto-23>>
+
+      <tuple|<tuple|partial derivate>|<pageref|auto-25>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|\<partial\><rsub|i>f<around*|(|x|)>>>|<pageref|auto-26>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|<around*|(|f<rsub|1>,\<ldots\>,f<rsub|n>|)>>>|<pageref|auto-28>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|L<rsub|n><around*|(|X;Y|)>>>|<pageref|auto-32>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|L<around*|(|x<rsub|1>:\<ldots\>:x<rsub|n>|)>>>|<pageref|auto-33>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|D<rsup|<around*|[|n|]>>f>>|<pageref|auto-35>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|\<frak-D\><rsup|n><rsub|f>>>|<pageref|auto-36>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|D<rsup|n>f<around*|(|x|)>>>|<pageref|auto-37>>
 
       <tuple|<tuple|<with|mode|<quote|math>|\<infty\>>-times
-      differentibility>|<pageref|auto-27>>
+      differentibility>|<pageref|auto-38>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|C<rsup|n>>>|<pageref|auto-28>>
+      <tuple|<tuple|<with|mode|<quote|math>|C<rsup|n>>>|<pageref|auto-39>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|C<rsup|0>>>|<pageref|auto-29>>
+      <tuple|<tuple|<with|mode|<quote|math>|C<rsup|0>>>|<pageref|auto-40>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|C<rsup|\<infty\>>>>|<pageref|auto-30>>
+      <tuple|<tuple|<with|mode|<quote|math>|C<rsup|\<infty\>>>>|<pageref|auto-41>>
 
       <tuple|<tuple|chain rule higher order
-      differentiation>|<pageref|auto-35>>
+      differentiation>|<pageref|auto-46>>
 
       <tuple|<tuple|higher order differentiation chain
-      rule>|<pageref|auto-36>>
+      rule>|<pageref|auto-47>>
 
-      <tuple|<tuple|local weak minimum>|<pageref|auto-39>>
+      <tuple|<tuple|local weak minimum>|<pageref|auto-50>>
 
-      <tuple|<tuple|local weak maximum>|<pageref|auto-40>>
+      <tuple|<tuple|local weak maximum>|<pageref|auto-51>>
 
-      <tuple|<tuple|local extremum>|<pageref|auto-41>>
+      <tuple|<tuple|local extremum>|<pageref|auto-52>>
 
-      <tuple|<tuple|concave function>|<pageref|auto-44>>
+      <tuple|<tuple|concave function>|<pageref|auto-55>>
 
-      <tuple|<tuple|convex function>|<pageref|auto-45>>
+      <tuple|<tuple|convex function>|<pageref|auto-56>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|ev<rsub|v<rsub|1>,\<ldots\>,v<rsub|n>>>>|<pageref|auto-50>>
+      <tuple|<tuple|<with|mode|<quote|math>|ev<rsub|v<rsub|1>,\<ldots\>,v<rsub|n>>>>|<pageref|auto-61>>
 
-      <tuple|<tuple|evaluation operator>|<pageref|auto-51>>
+      <tuple|<tuple|evaluation operator>|<pageref|auto-62>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|L<rsub|n><around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>>|<pageref|auto-54>>
+      <tuple|<tuple|<with|mode|<quote|math>|L<rsub|n><around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>>|<pageref|auto-65>>
 
-      <tuple|<tuple|higher order partial differential>|<pageref|auto-56>>
+      <tuple|<tuple|higher order partial differential>|<pageref|auto-67>>
 
-      <tuple|<tuple|topological vector space>|<pageref|auto-60>>
+      <tuple|<tuple|topological vector space>|<pageref|auto-71>>
 
-      <tuple|<tuple|toplinear isomorphism>|<pageref|auto-61>>
+      <tuple|<tuple|toplinear isomorphism>|<pageref|auto-72>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|\<cal-G\>L<around*|(|X|)>>>|<pageref|auto-62>>
+      <tuple|<tuple|<with|mode|<quote|math>|\<cal-G\>L<around*|(|X|)>>>|<pageref|auto-73>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|H<rsup|n>>>|<pageref|auto-63>>
+      <tuple|<tuple|<with|mode|<quote|math>|H<rsup|n>>>|<pageref|auto-74>>
 
-      <tuple|<tuple|diff diffeomorphism>|<pageref|auto-64>>
+      <tuple|<tuple|diff diffeomorphism>|<pageref|auto-75>>
 
-      <tuple|<tuple|local diffeomorphism>|<pageref|auto-65>>
+      <tuple|<tuple|local diffeomorphism>|<pageref|auto-76>>
 
-      <tuple|<tuple|inverse function theorem>|<pageref|auto-66>>
+      <tuple|<tuple|inverse function theorem>|<pageref|auto-77>>
 
-      <tuple|<tuple|implicit function theorem (1)>|<pageref|auto-70>>
+      <tuple|<tuple|implicit function theorem (1)>|<pageref|auto-81>>
 
-      <tuple|<tuple|implict function theorem (2)>|<pageref|auto-71>>
+      <tuple|<tuple|implict function theorem (2)>|<pageref|auto-82>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|16<space|2spc>Differentiation
@@ -32175,112 +32289,112 @@
 
       <with|par-left|<quote|1tab>|16.1.2<space|2spc>Properties of the
       derivative <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-7>>
+      <no-break><pageref|auto-13>>
 
       <with|par-left|<quote|1tab>|16.1.3<space|2spc>Fréchet differential of a
       function <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-8>>
+      <no-break><pageref|auto-14>>
 
       <with|par-left|<quote|1tab>|16.1.4<space|2spc>Properties of the Fréchet
       differential. <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-11>>
+      <no-break><pageref|auto-20>>
 
       <with|par-left|<quote|1tab>|16.1.5<space|2spc>Partial differentials
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-13>>
+      <no-break><pageref|auto-22>>
 
-      <with|par-left|<quote|1tab>|16.1.6<space|2spc>Partial Derivates
+      <with|par-left|<quote|1tab>|16.1.6<space|2spc>Partial Derivatives
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-15>>
+      <no-break><pageref|auto-24>>
 
       <with|par-left|<quote|1tab>|16.1.7<space|2spc>Differentiation of vector
       valued functions <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-18>>
+      <no-break><pageref|auto-27>>
 
-      <with|par-left|<quote|1tab>|16.1.8<space|2spc>Usefull derivatives
+      <with|par-left|<quote|1tab>|16.1.8<space|2spc>Usefully derivatives
       \ <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-20>>
+      <no-break><pageref|auto-29>>
 
       16.2<space|2spc>Higher order differentials
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-21>
+      <no-break><pageref|auto-30>
 
       <with|par-left|<quote|1tab>|16.2.1<space|2spc>Linear mappings and
       multi-linear mappings <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-22>>
+      <no-break><pageref|auto-31>>
 
       <with|par-left|<quote|1tab>|16.2.2<space|2spc>Higher order Fréchet
       differentiation. <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-25>>
+      <no-break><pageref|auto-34>>
 
       <with|par-left|<quote|1tab>|16.2.3<space|2spc>Higher order derivatives
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-31>>
+      <no-break><pageref|auto-42>>
 
       <with|par-left|<quote|1tab>|16.2.4<space|2spc>Properties of higher
       order differentials and derivatives.
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-32>>
+      <no-break><pageref|auto-43>>
 
       <with|par-left|<quote|1tab>|16.2.5<space|2spc>Examples of
       <with|mode|<quote|math>|\<infty\>>-times differentiable functions
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-33>>
+      <no-break><pageref|auto-44>>
 
       <with|par-left|<quote|1tab>|16.2.6<space|2spc>The chain rule for higher
       order differentials an derivatives <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-34>>
+      <no-break><pageref|auto-45>>
 
       16.3<space|2spc>Intermediate value and main value theorems.
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-37>
+      <no-break><pageref|auto-48>
 
       <with|par-left|<quote|1tab>|16.3.1<space|2spc>Derivatives, extremums,
       concavity, and convexity <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-38>>
+      <no-break><pageref|auto-49>>
 
       <with|par-left|<quote|1tab>|16.3.2<space|2spc>Fundamental theorem of
       Calculus for the Riemann Integral <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-47>>
+      <no-break><pageref|auto-58>>
 
       <with|par-left|<quote|1tab>|16.3.3<space|2spc>Mean Value Theorems
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-48>>
+      <no-break><pageref|auto-59>>
 
       16.4<space|2spc>Symmetry of Higher Order Differentials
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-49>
+      <no-break><pageref|auto-60>
 
       16.5<space|2spc>Higher Order Partial Differentiation
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-52>
+      <no-break><pageref|auto-63>
 
-      <with|par-left|<quote|1tab>|16.5.1<space|2spc>Linear and mulilinear
+      <with|par-left|<quote|1tab>|16.5.1<space|2spc>Linear and multilinear
       mappings. <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-53>>
+      <no-break><pageref|auto-64>>
 
       <with|par-left|<quote|1tab>|16.5.2<space|2spc>Higher Order Partial
       Differentiation <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-55>>
+      <no-break><pageref|auto-66>>
 
       <with|par-left|<quote|1tab>|16.5.3<space|2spc>Higher Order Partial
       Derivatives <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-57>>
+      <no-break><pageref|auto-68>>
 
       16.6<space|2spc>Inverse Function Theorem
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-58>
+      <no-break><pageref|auto-69>
 
       <with|par-left|<quote|1tab>|16.6.1<space|2spc>Prerequisites
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-59>>
+      <no-break><pageref|auto-70>>
 
       <with|par-left|<quote|1tab>|16.6.2<space|2spc>Implicit Function Theorem
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-67>>
+      <no-break><pageref|auto-78>>
 
       16.7<space|2spc>Taylor Expansion <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-72>
+      <no-break><pageref|auto-83>
     </associate>
   </collection>
 </auxiliary>
