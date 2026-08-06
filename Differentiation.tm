@@ -8234,7 +8234,7 @@
       is >n<text|-times differentiable at
       >x>>|<row|<cell|>|<cell|<below|\<Leftrightarrow\>|<text|[theorem:
       <reference|diff higher order differentiation is local
-      (1)>]>>>|<cell|\<forall\>x\<in\>U<text| >f<rsub|\|><text| is
+      (1)>]>>>|<cell|\<forall\>x\<in\>U<text| >f<rsub|\|U><text| is
       >n<text|-times differentiable at >x>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|f<rsub|\|U><text|
       is >n<text|-times differentiable on >U>>>>
     </eqnarray*>
@@ -8247,29 +8247,56 @@
     </equation*>
   </proof>
 
-  We can use the previous theorem to specify a condition for a function to be
-  <math|n>-times differentiable.
+  TODO Check this again\ 
 
   <\corollary>
-    <label|diff higher order differentiation (3)>Let <math|n\<in\>\<bbb-N\>>,
-    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
-    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>
-    be normed spaces,A\<subseteq\>X>, <math|x\<in\>A> and
-    <math|f:A\<rightarrow\>Y> a function such that
-    <math|\<exists\>U\<in\>\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>>>
-    with <math|x\<in\>U\<subseteq\>A> such that <math|f<rsub|\|U>> is
-    <math|n>-times differentiable on <math|U> then <math|f> is <math|n>-times
-    differentiable at <math|x> with <math|D<rsup|<around*|[|n|]>><rsub|x>f=D<rsup|<around*|[|n|]>><rsub|x>f<rsub|\|U>>.
+    <label|diff higher order differentiation on a open set condition>Let
+    <math|n\<in\>\<bbb-N\>>, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    normed spaces, <math|U\<in\>\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>>>
+    and <math|f:U\<rightarrow\>Y> a function then we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|>|<cell|f<text| is differentiable on
+      >U>|<cell|>>|<row|<cell|>|<cell|\<Updownarrow\>>|<cell|>>|<row|<cell|>|<cell|\<forall\>x\<in\>U<text|
+      >\<exists\>V\<in\>\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><text|
+      with >x\<in\>V\<subseteq\>U<text| such that >f<rsub|\|V><text| is
+      differentiable on >V>|<cell|>>>>
+    </eqnarray*>
   </corollary>
 
   <\proof>
-    As <math|f<rsub|\|U>> is <math|n>-times differentiable on <math|U> it
-    follows from [theorem: <reference|diff higher order differentiation is
-    local>] that <math|f> is <math|n>-times differentiable on <math|U> with
-    <math|\<forall\>y\<in\>U> <math|D<rsup|<around*|[|n|]>><rsub|y>f=D<rsup|<around*|[|n|]>><rsub|y>f<rsub|\|U>>.
-    As <math|x\<in\>U> it follows that <math|f> is <math|n>-times
-    differentiable on <math|x> with <math|D<rsup|<around*|[|n|]>><rsub|x>f=D<rsup|<around*|[|n|]>><rsub|x>f<rsub|\|U>>.
-    <math|>
+    \ 
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>Let <math|x\<in\>U> then if we take
+      <math|V=U> we have that <math|x\<in\>V\<subseteq\>U> and
+      <math|f<rsub|\|V>=f> so that <math|f<rsub|\|V>> is <math|n>-times
+      differentiable on <math|V>.
+
+      <item*|<math|\<Leftarrow\>>>Let <math|x\<in\>U> then by the hypothesis
+      there exist a <math|V<rsub|x>\<in\>\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|x>>>
+      with <math|x\<in\>V<rsub|x>\<subseteq\>U> such that <math|f<rsub|\|V>>
+      is <math|n>-times differentiable on <math|V<rsub|x>>. Using [corollary:
+      <reference|diff higher order differentiation is local (1)>] it follows
+      that <math|f> is <math|n>-times differentiable on <math|V<rsub|x>>.
+      Using the [definition: <reference|diff higher order differentiation on
+      a open set>] it follows that <math|V<rsub|x>\<subseteq\>\<frak-D\><rsup|n><rsub|f>>
+      and by [theorem: <reference|diff higher order differential domains>]
+      <math|\<frak-D\><rsup|n><rsub|f>>. As this is true for every
+      <math|x\<in\>U> we have that \ <math|U\<subseteq\><big|cup><rsub|x\<in\>U>V<rsub|x>\<subseteq\>\<frak-D\><rsup|n><rsub|f>\<subseteq\>U>
+      which proves that\ 
+
+      <\equation*>
+        U=\<frak-D\><rsup|n><rsub|f>
+      </equation*>
+
+      so that\ 
+
+      <\equation*>
+        f<text| is differentiable on >U
+      </equation*>
+    </description>
   </proof>
 
   We define now the concept of a function of class <math|C<rsup|n>> on a open
@@ -8893,8 +8920,11 @@
 
   TODO check this again
 
+  The following theorem shows how the locality of\ 
+
   <\theorem>
-    Let <math|n\<in\>\<bbb-N\><rsub|0>>, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <label|diff higher order class condition>Let
+    <math|n\<in\>\<bbb-N\><rsub|0>>, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
     <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
     be two normed spaces, <math|U\<in\>\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>>>
     and <math|f:U\<rightarrow\>Y> a function then we have\ 
@@ -31339,6 +31369,7 @@
     <associate|diff f(t)=a.x+y is infinite differentiable|<tuple|16.182|?>>
     <associate|diff fundamental theorem of calculus (1)|<tuple|16.214|?>>
     <associate|diff fundamental theorem of calculus (2)|<tuple|16.215|?>>
+    <associate|diff higher order class condition|<tuple|16.159|?>>
     <associate|diff higher order continuous differential and higher order
     continuous derivate|<tuple|16.307|?>>
     <associate|diff higher order derivate and differential|<tuple|16.171|?>>
@@ -31378,6 +31409,8 @@
     (2)|<tuple|16.155|?>>
     <associate|diff higher order differentiation on a open
     set|<tuple|16.141|?>>
+    <associate|diff higher order differentiation on a open set
+    condition|<tuple|16.148|?>>
     <associate|diff higher order partial derivative (1)|<tuple|16.298|?>>
     <associate|diff higher order partial derivative (3)|<tuple|16.299|?>>
     <associate|diff higher order partial derivative (4)|<tuple|16.300|?>>
