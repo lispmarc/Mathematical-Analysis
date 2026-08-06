@@ -8196,8 +8196,6 @@
         </equation*>
       </description>
     </description>
-
-    \;
   </proof>
 
   We can apply the above theorem to <math|n>-times differentiability on a
@@ -8249,7 +8247,298 @@
     </equation*>
   </proof>
 
+  We can use the previous theorem to specify a condition for a function to be
+  <math|n>-times differentiable.
+
   <\corollary>
+    <label|diff higher order differentiation (3)>Let <math|n\<in\>\<bbb-N\>>,
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>
+    be normed spaces,A\<subseteq\>X>, <math|x\<in\>A> and
+    <math|f:A\<rightarrow\>Y> a function such that
+    <math|\<exists\>U\<in\>\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>>>
+    with <math|x\<in\>U\<subseteq\>A> such that <math|f<rsub|\|U>> is
+    <math|n>-times differentiable on <math|U> then <math|f> is <math|n>-times
+    differentiable at <math|x> with <math|D<rsup|<around*|[|n|]>><rsub|x>f=D<rsup|<around*|[|n|]>><rsub|x>f<rsub|\|U>>.
+  </corollary>
+
+  <\proof>
+    As <math|f<rsub|\|U>> is <math|n>-times differentiable on <math|U> it
+    follows from [theorem: <reference|diff higher order differentiation is
+    local>] that <math|f> is <math|n>-times differentiable on <math|U> with
+    <math|\<forall\>y\<in\>U> <math|D<rsup|<around*|[|n|]>><rsub|y>f=D<rsup|<around*|[|n|]>><rsub|y>f<rsub|\|U>>.
+    As <math|x\<in\>U> it follows that <math|f> is <math|n>-times
+    differentiable on <math|x> with <math|D<rsup|<around*|[|n|]>><rsub|x>f=D<rsup|<around*|[|n|]>><rsub|x>f<rsub|\|U>>.
+    <math|>
+  </proof>
+
+  We define now the concept of a function of class <math|C<rsup|n>> on a open
+  set that combines differentiability with continuity.
+
+  <\definition>
+    <label|diff class C^n><index|<math|C<rsup|n>>><index|<math|C<rsup|0>>>Let
+    <math|n\<in\>\<bbb-N\><rsub|0>>, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    normed spaces, <math|A\<subseteq\>X>.
+    <math|U\<in\>\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>>> a open
+    set in <math|X> with <math|U\<subseteq\>X> and <math|f:A\<rightarrow\>Y>
+    a function then we say that <math|f> is of class \ <math|C<rsup|n>> on
+    <math|U> iff for the following cases of <math|n> we have:
+
+    <\description>
+      <item*|<math|n=0>>Then <math|f<rsub|\|U>> is continuous
+
+      <item*|<math|n\<in\>\<bbb-N\>>><math|>Then <math|f> is <math|n>-times
+      differentiable on <math|U> and <math|<around*|(|D<rsup|<around*|[|n|]>>f|)><rsub|\|U>>
+      is continuous\ 
+    </description>
+  </definition>
+
+  We can extend the above definition to functions of class
+  <math|C<rsup|\<infty\>>> on a open set.
+
+  <\definition>
+    <label|diff class C^@@><index|<math|C<rsup|\<infty\>>>>Let
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    normed spaces, <math|A\<subseteq\>X>,
+    <math|U\<in\>\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>>> a open
+    set in <math|X> and <math|f:A\<rightarrow\>Y> a function then <math|f> is
+    of class \ <math|C<rsup|\<infty\>>> on <math|U> iff
+    <math|\<forall\>n\<in\>\<bbb-N\><rsub|0>> <math|f> is of class
+    <math|C<rsup|n>>
+  </definition>
+
+  In the special case where the open set is the domain of the function we say
+  that the function is of class <math|C<rsup|n>> as is show in the following
+  definition.
+
+  <\definition>
+    <label|diff class C^n (domain)>Let <math|n\<in\>\<bbb-N\><rsub|0><big|cup><around*|{|\<infty\>|}>>,
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    normed spaces, <math|U\<in\>\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>>>
+    a open set in <math|X> and <math|f:U\<rightarrow\>Y> a function then
+    <math|f> is of class <math|C<rsup|n>> iff <math|f> is of class
+    <math|C<rsup|n>> on <math|U>.
+  </definition>
+
+  If the domain of <math|f> is a open set and <math|f> is of class
+  <math|C<rsup|n>> we don't have to work with restricted functions so we have
+  the following equivalent definition of a function of class
+  <math|C<rsup|m>>.
+
+  <\theorem>
+    <label|diff class C^n (2)>Let <math|n\<in\>\<bbb-N\><rsub|0>>,
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    normed spaces, <math|U\<in\>\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>>>
+    a open set in <math|X> and <math|f:U\<rightarrow\>Y> a function then we
+    have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|>|<cell|f<text| is of class
+      >C<rsup|n>>|<cell|>>|<row|<cell|>|<cell|\<Updownarrow\>>|<cell|>>|<row|<cell|>|<cell|n=0<text|
+      and >f<text| is continuous>>|<cell|>>|<row|<cell|>|<cell|or>|<cell|>>|<row|<cell|>|<cell|n\<in\>\<bbb-N\><text|
+      and >U=\<frak-D\><rsub|f><rsup|n><text| and
+      >D<rsup|<around*|[|n|]>>f<text| is continuous>>|<cell|>>>>
+    </eqnarray*>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>For <math|n> we have either\ 
+
+      <\description>
+        <item*|<math|n=0>>Then, as <math|f> is of class <math|C<rsup|0>> on
+        <math|U>, <math|f<rsub|\|U>> is continuous. As
+        <math|U=dom<around*|(|f|)>> we have that <math|f=f<rsub|\|U>> so that
+        <math|f> is continuous.
+
+        <item*|<math|n\<in\>\<bbb-N\>>>Then, as <math|f> is of class
+        <math|C<rsup|n>> on <math|U>, <math|f> is <math|n>-times
+        differentiable on <math|U> and <math|<around*|(|D<rsup|<around*|[|n|]>>f|)><rsub|\|U>>
+        is continuous. Hence we have that
+        <math|U\<subseteq\>\<frak-D\><rsup|<around*|[|n|]>><rsub|f><below|\<subseteq\>|<text|[theorem:
+        <reference|diff higher order differential
+        domains>]>>U<rsup|0>\<subseteq\>U> which proves that\ 
+
+        <\equation*>
+          U=\<frak-D\><rsup|n><rsub|f>=dom<around*|(|D<rsup|<around*|[|n|]>>f|)>
+        </equation*>
+
+        Hence <math|<around*|(|D<rsup|<around*|[|n|]>>f|)><rsub|\|U>=D<rsup|<around*|[|n|]>>f>
+        which proves that\ 
+
+        <\equation*>
+          D<rsup|<around*|[|n|]>>f<text| is continuous>
+        </equation*>
+      </description>
+
+      <item*|<math|\<Leftarrow\>>>For <math|n> we have either\ 
+
+      <\description>
+        <item*|<math|n=0>>Then, as <math|U=dom<around*|(|f|)>> we have that
+        <math|f=f<rsub|\|U>> so that, as <math|f> is continuous,
+        <math|f<rsub|\|U>> is continuous. Hence\ 
+
+        <\equation*>
+          f<text| is of class >C<rsup|0> on U
+        </equation*>
+
+        <item*|<math|n\<in\>\<bbb-N\>>>As <math|U=\<frak-D\><rsup|n><rsub|f>>
+        it follows that\ 
+
+        <\equation*>
+          f<text| is >n<text|-times differentiable on >U
+        </equation*>
+
+        and
+
+        <\equation*>
+          <around*|(|D<rsup|<around*|[|n|]>>f|)><rsub|\|U>=D<rsup|<around*|[|n|]>>f
+        </equation*>
+
+        which, as <math|D<rsup|<around*|[|n|]>>f> is continuous proves that\ 
+
+        <\equation*>
+          <around*|(|D<rsup|<around*|[|n|]>>f|)><rsub|\|U><text| is
+          continuous>
+        </equation*>
+
+        Hence\ 
+
+        <\equation*>
+          f<text| is of class >C<rsup|n>
+        </equation*>
+      </description>
+    </description>
+  </proof>
+
+  For the cases where <math|n=1> we have the following simpler definition for
+  functions of class <math|C<rsup|1>> on <math|U>.
+
+  <\theorem>
+    <label|diff C^1 equivalence (1)>Let <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    normed spaces, <math|A\<subseteq\>X>.
+    <math|U\<in\>\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>>> a open
+    set in <math|X> with <math|U\<subseteq\>A> and <math|f:A\<rightarrow\>Y>
+    a function then
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|>|<cell|f<text| is of class >C<rsup|1><text|
+      on >U>|<cell|>>|<row|<cell|>|<cell|\<Updownarrow\>>|<cell|>>|<row|<cell|>|<cell|<text|f
+      is Fréchet differentiable on >U<text| and ><around*|(|D
+      f|)><rsub|\|U>:U\<rightarrow\>L<around*|(|X,Y|)><text| is
+      continuous>>|<cell|>>>>
+    </eqnarray*>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>As <math|f> is of class <math|C<rsup|1>>
+      on <math|U> then we have by definition that <math|f> is <math|1>-times
+      differentiable on <math|U> and <math|<around*|(|D<rsup|<around*|[|1|]>>f|)><rsub|\|U>>
+      is continuous. Hence we have by [definition: <reference|diff higher
+      order differentiation on a open set>] that <math|\<forall\>x\<in\>U>
+      <math|f> is <math|1>-times differentiable at <math|x> so that by
+      [theorem: <reference|diff higher order differentiation (1)>] <math|f>
+      is Fréchet differentiable at <math|x>. Hence\ 
+
+      <\equation*>
+        f<text| is Fréchet differentiable on >U
+      </equation*>
+
+      Further as <math|<around*|(|D<rsup|<around*|[|1|]>>f|)><rsub|\|U>> is
+      continuous it follows from [definition: <reference|diff higher order
+      differential>] that\ 
+
+      <\equation*>
+        <around*|(|D f|)><rsub|\|U><text| is continuous>
+      </equation*>
+
+      <item*|<math|\<Leftarrow\>>>As <math|f> is Fréchet differentiable on
+      <math|U> we have by definition that <math|\<forall\>x\<in\>U> <math|f>
+      is Fréchet differentiable at <math|x> so that by [theorem:
+      <reference|diff higher order differentiation (1)>] <math|f> is
+      <math|1>-times differentiable at <math|x>. Hence we have that\ 
+
+      <\equation*>
+        f<text| is >1<text|-times differentiable on >U
+      </equation*>
+
+      Further as <math|<around*|(|D f|)><rsub|\|U>> is continuous it follows
+      from [definition: <reference|diff higher order differential>] that\ 
+
+      <\equation*>
+        <around*|(|D<rsup|<around*|[|1|]>>f|)><rsub|\|U><text| is continuous>
+      </equation*>
+    </description>
+  </proof>
+
+  <\theorem>
+    <label|diff C^1 equivalence (2)>Let <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    normed spaces, <math|U\<in\>\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>>>
+    a open set in <math|X> and <math|f:U\<rightarrow\>Y> a function then
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|>|<cell|f<text| is of class
+      >C<rsup|1>>|<cell|>>|<row|<cell|>|<cell|\<Updownarrow\>>|<cell|>>|<row|<cell|>|<cell|<text|f
+      is Fréchet differentiable on >U<text| and >D
+      f:U\<rightarrow\>L<around*|(|X,Y|)><text| is continuous>>|<cell|>>>>
+    </eqnarray*>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>As <math|f> is of class <math|C<rsup|1>>
+      then we have by definition that <math|f> is <math|1>-times
+      differentiable on <math|U> and <math|D<rsup|<around*|[|1|]>>f> is
+      continuous. Hence we have by [definition: <reference|diff higher order
+      differentiation on a open set>] that <math|\<forall\>x\<in\>U> <math|f>
+      is <math|1>-times differentiable at <math|x> so that by [theorem:
+      <reference|diff higher order differentiation (1)>] <math|f> is Fréchet
+      differentiable at <math|x>. Hence\ 
+
+      <\equation*>
+        f<text| is Fréchet differentiable on >U
+      </equation*>
+
+      Further as <math|D<rsup|<around*|[|1|]>>f> is continuous it follows
+      from [definition: <reference|diff higher order differential>] that\ 
+
+      <\equation*>
+        D f<text| is continuous>
+      </equation*>
+
+      <item*|<math|\<Leftarrow\>>>As <math|f> is Fréchet differentiable on
+      <math|U> we have by definition that <math|\<forall\>x\<in\>U> <math|f>
+      is Fréchet differentiable at <math|x> so that by [theorem:
+      <reference|diff higher order differentiation (1)>] <math|f> is
+      <math|1>-times differentiable at <math|x>. Hence we have that\ 
+
+      <\equation*>
+        f<text| is >1<text|-times differentiable on >U
+      </equation*>
+
+      Further as <math|D f> is continuous it follows from [definition:
+      <reference|diff higher order differential>] that\ 
+
+      <\equation*>
+        D<rsup|<around*|[|1|]>>f<text| is continuous>
+      </equation*>
+    </description>
+  </proof>
+
+  <\theorem>
     <label|diff higher order differentiation is local (2)>Let
     <math|n\<in\>\<bbb-N\>>, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
     <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
@@ -8263,7 +8552,7 @@
       on >U>|<cell|>>|<row|<cell|>|<cell|\<Updownarrow\>>|<cell|>>|<row|<cell|>|<cell|f<rsub|\|U><text|
       is of class >C<rsup|n><text| on >U>|<cell|>>>>
     </eqnarray*>
-  </corollary>
+  </theorem>
 
   <\proof>
     \;
@@ -8408,321 +8697,6 @@
       <\equation*>
         f<rsub|\|V><text| is of class >C<rsup|n><text| on >V
       </equation*>
-    </description>
-  </proof>
-
-  We can use the above theorem to specify a condition for a function to be
-  <math|n>-times differentiable. This will be used later in the definition of
-  a differentiable structure on a manifold.
-
-  <\corollary>
-    <label|diff higher order differentiation (3)>Let <math|n\<in\>\<bbb-N\>>,
-    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
-    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>
-    be normed spaces,A\<subseteq\>X>, <math|x\<in\>A> and
-    <math|f:A\<rightarrow\>Y> a function such that
-    <math|\<exists\>U\<in\>\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>>>
-    with <math|x\<in\>U\<subseteq\>A> such that <math|f<rsub|\|U>> is
-    <math|n>-times differentiable on <math|U> then <math|f> is <math|n>-times
-    differentiable at <math|x> with <math|D<rsup|<around*|[|n|]>><rsub|x>f=D<rsup|<around*|[|n|]>><rsub|x>f<rsub|\|U>>.
-  </corollary>
-
-  <\proof>
-    As <math|f<rsub|\|U>> is <math|n>-times differentiable on <math|U> it
-    follows from [theorem: <reference|diff higher order differentiation is
-    local>] that <math|f> is <math|n>-times differentiable on <math|U> with
-    <math|\<forall\>y\<in\>U> <math|D<rsup|<around*|[|n|]>><rsub|y>f=D<rsup|<around*|[|n|]>><rsub|y>f<rsub|\|U>>.
-    As <math|x\<in\>U> it follows that <math|f> is <math|n>-times
-    differentiable on <math|x> with <math|D<rsup|<around*|[|n|]>><rsub|x>f=D<rsup|<around*|[|n|]>><rsub|x>f<rsub|\|U>>.
-    <math|>
-  </proof>
-
-  We define now the concept of a function of class <math|C<rsup|n>> on a open
-  set that combines differentiability with continuity.
-
-  <\definition>
-    <label|diff class C^n><index|<math|C<rsup|n>>><index|<math|C<rsup|0>>>Let
-    <math|n\<in\>\<bbb-N\><rsub|0>>, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
-    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
-    normed spaces, <math|A\<subseteq\>X>.
-    <math|U\<in\>\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>>> a open
-    set in <math|X> with <math|U\<subseteq\>X> and <math|f:A\<rightarrow\>Y>
-    a function then we say that <math|f> is of class \ <math|C<rsup|n>> on
-    <math|U> iff for the following cases of <math|n> we have:
-
-    <\description>
-      <item*|<math|n=0>>Then <math|f<rsub|\|U>> is continuous
-
-      <item*|<math|n\<in\>\<bbb-N\>>><math|>Then <math|f> is <math|n>-times
-      differentiable on <math|U> and <math|<around*|(|D<rsup|<around*|[|n|]>>f|)><rsub|\|U>>
-      is continuous\ 
-    </description>
-  </definition>
-
-  <\definition>
-    <label|diff class C^n (domain)>Let <math|n\<in\>\<bbb-N\><rsub|0>>,
-    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
-    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
-    normed spaces, <math|U\<in\>\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>>>
-    a open set in <math|X> and <math|f:U\<rightarrow\>Y> a function then
-    <math|f> is of class <math|C<rsup|n>> iff for the following cases of
-    <math|n> we have:
-
-    <\description>
-      <item*|<math|n=0>>Then <math|f> is continuous
-
-      <item*|<math|n\<in\>\<bbb-N\>>>Then <math|f> is <math|n>-times
-      differentiable on <math|U> and <math|D<rsup|<around*|[|n|]>>f> is
-      continuous
-    </description>
-
-    As <math|f=f<rsub|\|U>> this is equivalent with saying that <math|f> is
-    of class <math|C<rsup|n>> if and only if <math|f> is of class
-    <math|C<rsup|n>> on its domain <math|U>.\ 
-  </definition>
-
-  For the cases where <math|n=1> we have the following simpler definition for
-  functions of class <math|C<rsup|1>> on <math|U>.
-
-  <\theorem>
-    <label|diff C^1 equivalence (1)>Let <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
-    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
-    normed spaces, <math|A\<subseteq\>X>.
-    <math|U\<in\>\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>>> a open
-    set in <math|X> with <math|U\<subseteq\>A> and <math|f:A\<rightarrow\>Y>
-    a function then
-
-    <\eqnarray*>
-      <tformat|<table|<row|<cell|>|<cell|f<text| is of class >C<rsup|1><text|
-      on >U>|<cell|>>|<row|<cell|>|<cell|\<Updownarrow\>>|<cell|>>|<row|<cell|>|<cell|<text|f
-      is Fréchet differentiable on >U<text| and ><around*|(|D
-      f|)><rsub|\|U>:U\<rightarrow\>L<around*|(|X,Y|)><text| is
-      continuous>>|<cell|>>>>
-    </eqnarray*>
-  </theorem>
-
-  <\proof>
-    \ 
-
-    <\description>
-      <item*|<math|\<Rightarrow\>>>As <math|f> is of class <math|C<rsup|1>>
-      on <math|U> then we have by definition that <math|f> is <math|1>-times
-      differentiable on <math|U> and <math|<around*|(|D<rsup|<around*|[|1|]>>f|)><rsub|\|U>>
-      is continuous. Hence we have by [definition: <reference|diff higher
-      order differentiation on a open set>] that <math|\<forall\>x\<in\>U>
-      <math|f> is <math|1>-times differentiable at <math|x> so that by
-      [theorem: <reference|diff higher order differentiation (1)>] <math|f>
-      is Fréchet differentiable at <math|x>. Hence\ 
-
-      <\equation*>
-        f<text| is Fréchet differentiable on >U
-      </equation*>
-
-      Further as <math|<around*|(|D<rsup|<around*|[|1|]>>f|)><rsub|\|U>> is
-      continuous it follows from [definition: <reference|diff higher order
-      differential>] that\ 
-
-      <\equation*>
-        <around*|(|D f|)><rsub|\|U><text| is continuous>
-      </equation*>
-
-      <item*|<math|\<Leftarrow\>>>As <math|f> is Fréchet differentiable on
-      <math|U> we have by definition that <math|\<forall\>x\<in\>U> <math|f>
-      is Fréchet differentiable at <math|x> so that by [theorem:
-      <reference|diff higher order differentiation (1)>] <math|f> is
-      <math|1>-times differentiable at <math|x>. Hence we have that\ 
-
-      <\equation*>
-        f<text| is >1<text|-times differentiable on >U
-      </equation*>
-
-      Further as <math|<around*|(|D f|)><rsub|\|U>> is continuous it follows
-      from [definition: <reference|diff higher order differential>] that\ 
-
-      <\equation*>
-        <around*|(|D<rsup|<around*|[|1|]>>f|)><rsub|\|U><text| is continuous>
-      </equation*>
-    </description>
-  </proof>
-
-  <\theorem>
-    <label|diff C^1 equivalence (2)>Let <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
-    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
-    normed spaces, <math|U\<in\>\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>>>
-    a open set in <math|X> and <math|f:U\<rightarrow\>Y> a function then
-
-    <\eqnarray*>
-      <tformat|<table|<row|<cell|>|<cell|f<text| is of class
-      >C<rsup|1>>|<cell|>>|<row|<cell|>|<cell|\<Updownarrow\>>|<cell|>>|<row|<cell|>|<cell|<text|f
-      is Fréchet differentiable on >U<text| and >D
-      f:U\<rightarrow\>L<around*|(|X,Y|)><text| is continuous>>|<cell|>>>>
-    </eqnarray*>
-  </theorem>
-
-  <\proof>
-    \ 
-
-    <\description>
-      <item*|<math|\<Rightarrow\>>>As <math|f> is of class <math|C<rsup|1>>
-      then we have by definition that <math|f> is <math|1>-times
-      differentiable on <math|U> and <math|D<rsup|<around*|[|1|]>>f> is
-      continuous. Hence we have by [definition: <reference|diff higher order
-      differentiation on a open set>] that <math|\<forall\>x\<in\>U> <math|f>
-      is <math|1>-times differentiable at <math|x> so that by [theorem:
-      <reference|diff higher order differentiation (1)>] <math|f> is Fréchet
-      differentiable at <math|x>. Hence\ 
-
-      <\equation*>
-        f<text| is Fréchet differentiable on >U
-      </equation*>
-
-      Further as <math|D<rsup|<around*|[|1|]>>f> is continuous it follows
-      from [definition: <reference|diff higher order differential>] that\ 
-
-      <\equation*>
-        D f<text| is continuous>
-      </equation*>
-
-      <item*|<math|\<Leftarrow\>>>As <math|f> is Fréchet differentiable on
-      <math|U> we have by definition that <math|\<forall\>x\<in\>U> <math|f>
-      is Fréchet differentiable at <math|x> so that by [theorem:
-      <reference|diff higher order differentiation (1)>] <math|f> is
-      <math|1>-times differentiable at <math|x>. Hence we have that\ 
-
-      <\equation*>
-        f<text| is >1<text|-times differentiable on >U
-      </equation*>
-
-      Further as <math|D f> is continuous it follows from [definition:
-      <reference|diff higher order differential>] that\ 
-
-      <\equation*>
-        D<rsup|<around*|[|1|]>>f<text| is continuous>
-      </equation*>
-    </description>
-  </proof>
-
-  \;
-
-  We can extend the above definition to functions of class
-  <math|C<rsup|\<infty\>>> on a open set.
-
-  <\definition>
-    <label|diff class C^@@><index|<math|C<rsup|\<infty\>>>>Let
-    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
-    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
-    normed spaces, <math|A\<subseteq\>X>,
-    <math|U\<in\>\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>>> a open
-    set in <math|X> and <math|f:A\<rightarrow\>Y> a function then <math|f> is
-    of class \ <math|C<rsup|\<infty\>>> on <math|U> iff
-    <math|\<forall\>n\<in\>\<bbb-N\><rsub|0>> <math|f> is of class
-    <math|C<rsup|n>> with <math|f<rprime|'>=C>
-  </definition>
-
-  In the special case where the open set is the domain of the function we say
-  that the function is of class <math|C<rsup|n>> as is show in the following
-  definition.
-
-  <\definition>
-    <label|diff class C^n (1)>Let <math|n\<in\>\<bbb-N\><rsub|0><big|cup><around*|{|\<infty\>|}>>,
-    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
-    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
-    normed spaces, <math|U\<in\>\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>>>
-    a open set in <math|X> and <math|f:U\<rightarrow\>Y> a function then we
-    say that <math|f> is of class \ <math|C<rsup|n>> iff <math|f> is of class
-    <math|C<rsup|n>> on <math|U>
-  </definition>
-
-  In the above cases the definition of a function of class <math|C<rsup|n>>
-  becomes simpler as we don't have to work with restricted functions as is
-  shown in the following theorem.
-
-  <\theorem>
-    <label|diff class C^n (2)>Let <math|n\<in\>\<bbb-N\><rsub|0>>,
-    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
-    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
-    normed spaces, <math|U\<in\>\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>>>
-    a open set in <math|X> and <math|f:U\<rightarrow\>Y> a function then we
-    have\ 
-
-    <\eqnarray*>
-      <tformat|<table|<row|<cell|>|<cell|f<text| is of class
-      >C<rsup|n>>|<cell|>>|<row|<cell|>|<cell|\<Updownarrow\>>|<cell|>>|<row|<cell|>|<cell|n=0<text|
-      and >f<text| is continuous>>|<cell|>>|<row|<cell|>|<cell|or>|<cell|>>|<row|<cell|>|<cell|n\<in\>\<bbb-N\><text|
-      and >U=\<frak-D\><rsub|f><rsup|n><text| and
-      >D<rsup|<around*|[|n|]>>f<text| is continuous>>|<cell|>>>>
-    </eqnarray*>
-  </theorem>
-
-  <\proof>
-    \ 
-
-    <\description>
-      <item*|<math|\<Rightarrow\>>>For <math|n> we have either\ 
-
-      <\description>
-        <item*|<math|n=0>>Then, as <math|f> is of class <math|C<rsup|0>> on
-        <math|U>, <math|f<rsub|\|U>> is continuous. As
-        <math|U=dom<around*|(|f|)>> we have that <math|f=f<rsub|\|U>> so that
-        <math|f> is continuous.
-
-        <item*|<math|n\<in\>\<bbb-N\>>>Then, as <math|f> is of class
-        <math|C<rsup|n>> on <math|U>, <math|f> is <math|n>-times
-        differentiable on <math|U> and <math|<around*|(|D<rsup|<around*|[|n|]>>f|)><rsub|\|U>>
-        is continuous. Hence we have that
-        <math|U\<subseteq\>\<frak-D\><rsup|<around*|[|n|]>><rsub|f><below|\<subseteq\>|<text|[theorem:
-        <reference|diff higher order differential
-        domains>]>>U<rsup|0>\<subseteq\>U> which proves that\ 
-
-        <\equation*>
-          U=\<frak-D\><rsup|n><rsub|f>=dom<around*|(|D<rsup|<around*|[|n|]>>f|)>
-        </equation*>
-
-        Hence <math|<around*|(|D<rsup|<around*|[|n|]>>f|)><rsub|\|U>=D<rsup|<around*|[|n|]>>f>
-        which proves that\ 
-
-        <\equation*>
-          D<rsup|<around*|[|n|]>>f<text| is continuous>
-        </equation*>
-      </description>
-
-      <item*|<math|\<Leftarrow\>>>For <math|n> we have either\ 
-
-      <\description>
-        <item*|<math|n=0>>Then, as <math|U=dom<around*|(|f|)>> we have that
-        <math|f=f<rsub|\|U>> so that, as <math|f> is continuous,
-        <math|f<rsub|\|U>> is continuous. Hence\ 
-
-        <\equation*>
-          f<text| is of class >C<rsup|0> on U
-        </equation*>
-
-        <item*|<math|n\<in\>\<bbb-N\>>>As <math|U=\<frak-D\><rsup|n><rsub|f>>
-        it follows that\ 
-
-        <\equation*>
-          f<text| is >n<text|-times differentiable on >U
-        </equation*>
-
-        and
-
-        <\equation*>
-          <around*|(|D<rsup|<around*|[|n|]>>f|)><rsub|\|U>=D<rsup|<around*|[|n|]>>f
-        </equation*>
-
-        which, as <math|D<rsup|<around*|[|n|]>>f> is continuous proves that\ 
-
-        <\equation*>
-          <around*|(|D<rsup|<around*|[|n|]>>f|)><rsub|\|U><text| is
-          continuous>
-        </equation*>
-
-        Hence\ 
-
-        <\equation*>
-          f<text| is of class >C<rsup|n>
-        </equation*>
-      </description>
     </description>
   </proof>
 
@@ -8912,6 +8886,93 @@
 
         <\equation*>
           f<text| is of class >C<rsup|m>
+        </equation*>
+      </description>
+    </description>
+  </proof>
+
+  TODO check this again
+
+  <\theorem>
+    Let <math|n\<in\>\<bbb-N\><rsub|0>>, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    be two normed spaces, <math|U\<in\>\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>>>
+    and <math|f:U\<rightarrow\>Y> a function then we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|>|<cell|f<text| is of class
+      >C<rsup|n>>|<cell|>>|<row|<cell|>|<cell|\<Updownarrow\>>|<cell|>>|<row|<cell|>|<cell|\<forall\>x\<in\>U<text|
+      >\<exists\>V\<in\>\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><text|
+      with >x\<in\>V\<subseteq\>U<text| such that >f<rsub|\|V><text| is of
+      class >C<rsup|n><text| on >V>|<cell|>>>>
+    </eqnarray*>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>As <math|f> is of class <math|C<rsup|n>>
+      on <math|U> we have <math|\<forall\>x\<in\>U> that for <math|V=U>
+      <math|x\<in\>V\<subseteq\>U> and <math|f<rsub|\|V>=f> is of class
+      <math|C<rsup|n>> on <math|V>.
+
+      <item*|<math|\<Lleftarrow\>>>For <math|n> we have two possible case:
+
+      <\description>
+        <item*|<math|n=0>>Let <math|x\<in\>U> then by the hypothesis there
+        exist a <math|V\<in\>\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>>>
+        with <math|x\<in\>V\<subseteq\>U> such that <math|f<rsub|\|V>> is
+        continuous [see definition: <reference|diff class C^n>]. Hence
+        <math|f<rsub|\|V>> is continuous at <math|x> which as <math|V> is
+        open proves by [theorem: <reference|continuity and subspace topology
+        (6)>] that <math|f> is continuous at <math|x>. As this is true
+        <math|\<forall\>x\<in\>U> it follows that <math|f> is continuous.
+        Hence <math|f> is of class <math|C<rsup|n>> [see theorem:
+        <reference|diff class C^n (2)>]. \ \ 
+
+        <item*|<math|n\<in\>\<bbb-N\>>>Let <math|x\<in\>U> then by the
+        hypothesis <math|\<exists\>V<rsub|x>\<in\>\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>>>
+        with <math|x\<in\>V<rsub|x>\<subseteq\>U> such that
+        <math|f<rsub|\|V<rsub|x>>> is of class <math|C<rsup|n>> on <math|V>.
+        Using [theorem: <reference|diff higher order differentiation is local
+        (2)>] it follows that <math|f> is of class <math|C<rsup|n>> on
+        <math|V<rsub|x>>. Hence by [definitions: <reference|diff class C^n>,
+        <reference|diff higher order differentiation on a open set>] it
+        follows that
+
+        <\equation>
+          <label|eq 16.101.5>x\<in\>V<rsub|x>\<subseteq\>\<frak-D\><rsup|n><rsub|f><text|
+          and ><around*|(|D<rsup|<around*|[|n|]>>f|)><rsub|\|V<rsub|X>><text|
+          is continous>
+        </equation>
+
+        As <math|\<forall\>x\<in\>U> <math|x\<in\>V<rsub|x>\<subseteq\><big|cup><rsub|x\<in\>U>V<rsub|x>\<subseteq\>U>
+        it follows that <math|U=<big|cup><rsub|x\<in\>U>V<rsub|x>> which
+        combined with [eq: <reference|eq 16.101.5>] proves that\ 
+
+        <\equation*>
+          U=\<frak-D\><rsup|n><rsub|f><text| or >f<text| is >n<text|-times
+          differentiable on >U
+        </equation*>
+
+        Further as by [eq: <reference|eq 16.101.5>] <math|\<forall\>x\<in\>U>
+        <math|<around*|(|D<rsup|<around*|[|n|]>>f|)><rsub|\|V<rsub|x>>> is
+        continuous and <math|x\<in\>V<rsub|x>> it follows that
+        <math|<around*|(|D<rsup|<around*|[|n|]>>f|)><rsub|\|V<rsub|x>>> is
+        continuous at <math|x>, using then [theorem: <reference|continuity
+        and subspace topology (6)>] it follows that
+        <math|D<rsup|<around*|[|n|]>>f> is continuous at <math|x>. Hence we
+        have that\ 
+
+        <\equation*>
+          D<rsup|<around*|[|n|]>>f<text| is continuous>
+        </equation*>
+
+        so that\ 
+
+        <\equation*>
+          f<text| is of class >C<rsup|n>
         </equation*>
       </description>
     </description>
@@ -31168,12 +31229,12 @@
     <associate|corollary 16.50.192|<tuple|16.113|?>>
     <associate|diff (f+g)'=f'+g'|<tuple|16.40|?>>
     <associate|diff Bx(x,d)|<tuple|16.17|?>>
-    <associate|diff C-infinity condition|<tuple|16.158|?>>
+    <associate|diff C-infinity condition|<tuple|16.157|?>>
     <associate|diff C^(n+m)|<tuple|16.175|?>>
     <associate|diff C^1 and derivatives|<tuple|16.161|?>>
     <associate|diff C^1 equivalence (1)|<tuple|16.153|?>>
     <associate|diff C^1 equivalence (2)|<tuple|16.154|?>>
-    <associate|diff C^n and C^m|<tuple|16.159|?>>
+    <associate|diff C^n and C^m|<tuple|16.158|?>>
     <associate|diff Frechet approximation|<tuple|16.43|?>>
     <associate|diff Frechet differentation implies partial differentiability
     |<tuple|16.83|?>>
@@ -31193,15 +31254,13 @@
     <associate|diff Taylor I|<tuple|16.353|?>>
     <associate|diff Taylor I.1|<tuple|16.355|?>>
     <associate|diff Taylor I.2|<tuple|16.358|?>>
-    <associate|diff Taylor I.3|<tuple|16.369|?>>
-    <associate|diff Taylor I.3 (1)|<tuple|16.362|?>>
+    <associate|diff Taylor I.3|<tuple|16.362|?>>
     <associate|diff Taylor I.4|<tuple|16.369|?>>
     <associate|diff Taylor II|<tuple|16.372|?>>
     <associate|diff Taylor II.1|<tuple|16.380|?>>
     <associate|diff Taylor II.2|<tuple|16.381|?>>
     <associate|diff Taylor III|<tuple|16.384|?>>
     <associate|diff Taylor series (1))|<tuple|16.387|?>>
-    <associate|diff Taylor series (3)|<tuple|16.389|?>>
     <associate|diff Taylor series (IV)|<tuple|16.389|?>>
     <associate|diff Ux|<tuple|16.13|?>>
     <associate|diff Ux is open if U is open|<tuple|16.16|?>>
@@ -31218,16 +31277,15 @@
     <associate|diff chain rule calculus|<tuple|16.68|?>>
     <associate|diff chain rule higher order|<tuple|16.196|?>>
     <associate|diff chain rule higher order class|<tuple|16.197|?>>
-    <associate|diff class C^@@|<tuple|16.155|?>>
+    <associate|diff class C^@@|<tuple|16.150|?>>
     <associate|diff class C^m is equivalent with continuous partial
     differentials|<tuple|16.294|?>>
-    <associate|diff class C^n|<tuple|16.151|?>>
-    <associate|diff class C^n (1)|<tuple|16.156|?>>
-    <associate|diff class C^n (2)|<tuple|16.157|?>>
-    <associate|diff class C^n (domain)|<tuple|16.152|?>>
+    <associate|diff class C^n|<tuple|16.149|?>>
+    <associate|diff class C^n (2)|<tuple|16.152|?>>
+    <associate|diff class C^n (domain)|<tuple|16.151|?>>
     <associate|diff class C^n is equivalent with continuous
     derivatives|<tuple|16.308|?>>
-    <associate|diff class C^n sub-sets|<tuple|16.149|?>>
+    <associate|diff class C^n sub-sets|<tuple|16.156|?>>
     <associate|diff composition with a linear mapping|<tuple|16.69|?>>
     <associate|diff constant function and partial
     differentiation|<tuple|16.84|?>>
@@ -31304,7 +31362,7 @@
     <associate|diff higher order differentiation|<tuple|16.136|?>>
     <associate|diff higher order differentiation (1)|<tuple|16.140|?>>
     <associate|diff higher order differentiation (2)|<tuple|16.133|?>>
-    <associate|diff higher order differentiation (3)|<tuple|16.150|?>>
+    <associate|diff higher order differentiation (3)|<tuple|16.148|?>>
     <associate|diff higher order differentiation (4)|<tuple|16.144|?>>
     <associate|diff higher order differentiation and vector
     functions|<tuple|16.192|?>>
@@ -31317,7 +31375,7 @@
     <associate|diff higher order differentiation is local
     (1)|<tuple|16.147|?>>
     <associate|diff higher order differentiation is local
-    (2)|<tuple|16.148|?>>
+    (2)|<tuple|16.155|?>>
     <associate|diff higher order differentiation on a open
     set|<tuple|16.141|?>>
     <associate|diff higher order partial derivative (1)|<tuple|16.298|?>>
@@ -31420,527 +31478,528 @@
     <associate|diff vector functions (1)|<tuple|16.100|?>>
     <associate|diff vector functions (2)|<tuple|16.102|?>>
     <associate|diff vector functions and linearity|<tuple|16.99|?>>
-    <associate|eq 14.411.143|<tuple|16.537|?>>
+    <associate|eq 14.411.143|<tuple|16.538|?>>
     <associate|eq 16.1.177|<tuple|16.16|?>>
     <associate|eq 16.1.2|<tuple|16.1|?>>
     <associate|eq 16.10.178|<tuple|16.25|?>>
     <associate|eq 16.10.4|<tuple|16.15|?>>
     <associate|eq 16.10.5|<tuple|16.10|?>>
     <associate|eq 16.100.6|<tuple|16.55|?>>
-    <associate|eq 16.100.7|<tuple|16.104|?>>
+    <associate|eq 16.100.7|<tuple|16.105|?>>
+    <associate|eq 16.101.5|<tuple|16.101|?>>
     <associate|eq 16.102.6|<tuple|16.56|?>>
-    <associate|eq 16.102.8|<tuple|16.105|?>>
-    <associate|eq 16.102.9|<tuple|16.106|?>>
-    <associate|eq 16.103.9|<tuple|16.107|?>>
-    <associate|eq 16.104.10|<tuple|16.108|?>>
-    <associate|eq 16.105.10|<tuple|16.109|?>>
-    <associate|eq 16.108.10|<tuple|16.114|?>>
-    <associate|eq 16.109.10|<tuple|16.115|?>>
+    <associate|eq 16.102.8|<tuple|16.106|?>>
+    <associate|eq 16.102.9|<tuple|16.107|?>>
+    <associate|eq 16.103.9|<tuple|16.108|?>>
+    <associate|eq 16.104.10|<tuple|16.109|?>>
+    <associate|eq 16.105.10|<tuple|16.110|?>>
+    <associate|eq 16.108.10|<tuple|16.115|?>>
+    <associate|eq 16.109.10|<tuple|16.116|?>>
     <associate|eq 16.11.178|<tuple|16.26|?>>
     <associate|eq 16.11.5|<tuple|16.11|?>>
-    <associate|eq 16.110.10|<tuple|16.117|?>>
-    <associate|eq 16.110.11|<tuple|16.116|?>>
-    <associate|eq 16.113.11.1|<tuple|16.118|?>>
-    <associate|eq 16.114.11.1|<tuple|16.119|?>>
-    <associate|eq 16.115.11.1|<tuple|16.120|?>>
-    <associate|eq 16.116.11.1|<tuple|16.121|?>>
+    <associate|eq 16.110.10|<tuple|16.118|?>>
+    <associate|eq 16.110.11|<tuple|16.117|?>>
+    <associate|eq 16.113.11.1|<tuple|16.119|?>>
+    <associate|eq 16.114.11.1|<tuple|16.120|?>>
+    <associate|eq 16.115.11.1|<tuple|16.121|?>>
+    <associate|eq 16.116.11.1|<tuple|16.122|?>>
     <associate|eq 16.116.313|<tuple|16.67|?>>
-    <associate|eq 16.117.11.1|<tuple|16.122|?>>
-    <associate|eq 16.118.11.1|<tuple|16.123|?>>
-    <associate|eq 16.119\<point\>11.1|<tuple|16.124|?>>
+    <associate|eq 16.117.11.1|<tuple|16.123|?>>
+    <associate|eq 16.118.11.1|<tuple|16.124|?>>
+    <associate|eq 16.119\<point\>11.1|<tuple|16.125|?>>
     <associate|eq 16.12.178|<tuple|16.27|?>>
     <associate|eq 16.12.5|<tuple|16.12|?>>
-    <associate|eq 16.120.11|<tuple|16.125|?>>
-    <associate|eq 16.121.11|<tuple|16.126|?>>
+    <associate|eq 16.120.11|<tuple|16.126|?>>
+    <associate|eq 16.121.11|<tuple|16.127|?>>
     <associate|eq 16.121.6|<tuple|16.75|?>>
-    <associate|eq 16.122.11|<tuple|16.127|?>>
-    <associate|eq 16.122.12|<tuple|16.136|?>>
-    <associate|eq 16.122.194|<tuple|16.286|?>>
-    <associate|eq 16.123.11|<tuple|16.128|?>>
-    <associate|eq 16.123.12|<tuple|16.137|?>>
-    <associate|eq 16.123.194|<tuple|16.287|?>>
-    <associate|eq 16.123.195|<tuple|16.204|?>>
-    <associate|eq 16.124.11|<tuple|16.129|?>>
-    <associate|eq 16.124.12|<tuple|16.138|?>>
-    <associate|eq 16.124.194|<tuple|16.288|?>>
-    <associate|eq 16.124.195|<tuple|16.205|?>>
-    <associate|eq 16.125.11|<tuple|16.130|?>>
-    <associate|eq 16.125.12|<tuple|16.139|?>>
-    <associate|eq 16.125.194|<tuple|16.289|?>>
-    <associate|eq 16.125.195|<tuple|16.206|?>>
-    <associate|eq 16.126.11|<tuple|16.131|?>>
-    <associate|eq 16.126.195|<tuple|16.207|?>>
-    <associate|eq 16.126\<point\>12|<tuple|16.140|?>>
-    <associate|eq 16.127.11|<tuple|16.132|?>>
-    <associate|eq 16.127.12|<tuple|16.141|?>>
-    <associate|eq 16.127.195|<tuple|16.208|?>>
-    <associate|eq 16.128.11|<tuple|16.133|?>>
-    <associate|eq 16.128.12|<tuple|16.142|?>>
-    <associate|eq 16.128.195|<tuple|16.209|?>>
-    <associate|eq 16.129.11|<tuple|16.134|?>>
-    <associate|eq 16.129.12|<tuple|16.143|?>>
-    <associate|eq 16.129.195|<tuple|16.210|?>>
+    <associate|eq 16.122.11|<tuple|16.128|?>>
+    <associate|eq 16.122.12|<tuple|16.137|?>>
+    <associate|eq 16.122.194|<tuple|16.287|?>>
+    <associate|eq 16.123.11|<tuple|16.129|?>>
+    <associate|eq 16.123.12|<tuple|16.138|?>>
+    <associate|eq 16.123.194|<tuple|16.288|?>>
+    <associate|eq 16.123.195|<tuple|16.205|?>>
+    <associate|eq 16.124.11|<tuple|16.130|?>>
+    <associate|eq 16.124.12|<tuple|16.139|?>>
+    <associate|eq 16.124.194|<tuple|16.289|?>>
+    <associate|eq 16.124.195|<tuple|16.206|?>>
+    <associate|eq 16.125.11|<tuple|16.131|?>>
+    <associate|eq 16.125.12|<tuple|16.140|?>>
+    <associate|eq 16.125.194|<tuple|16.290|?>>
+    <associate|eq 16.125.195|<tuple|16.207|?>>
+    <associate|eq 16.126.11|<tuple|16.132|?>>
+    <associate|eq 16.126.195|<tuple|16.208|?>>
+    <associate|eq 16.126\<point\>12|<tuple|16.141|?>>
+    <associate|eq 16.127.11|<tuple|16.133|?>>
+    <associate|eq 16.127.12|<tuple|16.142|?>>
+    <associate|eq 16.127.195|<tuple|16.209|?>>
+    <associate|eq 16.128.11|<tuple|16.134|?>>
+    <associate|eq 16.128.12|<tuple|16.143|?>>
+    <associate|eq 16.128.195|<tuple|16.210|?>>
+    <associate|eq 16.129.11|<tuple|16.135|?>>
+    <associate|eq 16.129.12|<tuple|16.144|?>>
+    <associate|eq 16.129.195|<tuple|16.211|?>>
     <associate|eq 16.13.178|<tuple|16.28|?>>
-    <associate|eq 16.130.12|<tuple|16.144|?>>
-    <associate|eq 16.130.195|<tuple|16.211|?>>
-    <associate|eq 16.130\<point\>11|<tuple|16.135|?>>
+    <associate|eq 16.130.12|<tuple|16.145|?>>
+    <associate|eq 16.130.195|<tuple|16.212|?>>
+    <associate|eq 16.130\<point\>11|<tuple|16.136|?>>
     <associate|eq 16.131.11|<tuple|16.91|?>>
-    <associate|eq 16.131.12|<tuple|16.145|?>>
-    <associate|eq 16.131.195|<tuple|16.215|?>>
-    <associate|eq 16.133.12|<tuple|16.147|?>>
-    <associate|eq 16.13412|<tuple|16.148|?>>
-    <associate|eq 16.137.13|<tuple|16.151|?>>
-    <associate|eq 16.138.13|<tuple|16.152|?>>
-    <associate|eq 16.139.13|<tuple|16.153|?>>
+    <associate|eq 16.131.12|<tuple|16.146|?>>
+    <associate|eq 16.131.195|<tuple|16.216|?>>
+    <associate|eq 16.133.12|<tuple|16.148|?>>
+    <associate|eq 16.13412|<tuple|16.149|?>>
+    <associate|eq 16.137.13|<tuple|16.152|?>>
+    <associate|eq 16.138.13|<tuple|16.153|?>>
+    <associate|eq 16.139.13|<tuple|16.154|?>>
     <associate|eq 16.14.178|<tuple|16.29|?>>
-    <associate|eq 16.140.13|<tuple|16.154|?>>
-    <associate|eq 16.141.13|<tuple|16.156|?>>
-    <associate|eq 16.142.13|<tuple|16.158|?>>
-    <associate|eq 16.142.13.1|<tuple|16.157|?>>
-    <associate|eq 16.143.13|<tuple|16.159|?>>
-    <associate|eq 16.145.13|<tuple|16.160|?>>
-    <associate|eq 16.145.17|<tuple|16.155|?>>
-    <associate|eq 16.146.13|<tuple|16.161|?>>
-    <associate|eq 16.147.13|<tuple|16.162|?>>
-    <associate|eq 16.148.13|<tuple|16.164|?>>
+    <associate|eq 16.140.13|<tuple|16.155|?>>
+    <associate|eq 16.141.13|<tuple|16.157|?>>
+    <associate|eq 16.142.13|<tuple|16.159|?>>
+    <associate|eq 16.142.13.1|<tuple|16.158|?>>
+    <associate|eq 16.143.13|<tuple|16.160|?>>
+    <associate|eq 16.145.13|<tuple|16.161|?>>
+    <associate|eq 16.145.17|<tuple|16.156|?>>
+    <associate|eq 16.146.13|<tuple|16.162|?>>
+    <associate|eq 16.147.13|<tuple|16.163|?>>
+    <associate|eq 16.148.13|<tuple|16.165|?>>
     <associate|eq 16.15.178|<tuple|16.30|?>>
-    <associate|eq 16.150.152|<tuple|16.216|?>>
-    <associate|eq 16.150.7|<tuple|16.101|?>>
-    <associate|eq 16.151.152|<tuple|16.217|?>>
-    <associate|eq 16.152.15|<tuple|16.163|?>>
-    <associate|eq 16.154.16|<tuple|16.165|?>>
-    <associate|eq 16.156.315|<tuple|16.166|?>>
-    <associate|eq 16.157.15|<tuple|16.167|?>>
-    <associate|eq 16.158.15|<tuple|16.168|?>>
-    <associate|eq 16.159.15|<tuple|16.169|?>>
-    <associate|eq 16.159.16|<tuple|16.170|?>>
+    <associate|eq 16.150.152|<tuple|16.217|?>>
+    <associate|eq 16.150.7|<tuple|16.102|?>>
+    <associate|eq 16.151.152|<tuple|16.218|?>>
+    <associate|eq 16.152.15|<tuple|16.164|?>>
+    <associate|eq 16.154.16|<tuple|16.166|?>>
+    <associate|eq 16.156.315|<tuple|16.167|?>>
+    <associate|eq 16.157.15|<tuple|16.168|?>>
+    <associate|eq 16.158.15|<tuple|16.169|?>>
+    <associate|eq 16.159.15|<tuple|16.170|?>>
+    <associate|eq 16.159.16|<tuple|16.171|?>>
     <associate|eq 16.16.180|<tuple|16.60|?>>
-    <associate|eq 16.160.15|<tuple|16.171|?>>
-    <associate|eq 16.161.16|<tuple|16.172|?>>
-    <associate|eq 16.162.16|<tuple|16.173|?>>
-    <associate|eq 16.163.16|<tuple|16.174|?>>
-    <associate|eq 16.164.16|<tuple|16.175|?>>
-    <associate|eq 16.165.16|<tuple|16.176|?>>
-    <associate|eq 16.166.16|<tuple|16.177|?>>
-    <associate|eq 16.167.16|<tuple|16.178|?>>
-    <associate|eq 16.168.16|<tuple|16.179|?>>
-    <associate|eq 16.169.16|<tuple|16.180|?>>
+    <associate|eq 16.160.15|<tuple|16.172|?>>
+    <associate|eq 16.161.16|<tuple|16.173|?>>
+    <associate|eq 16.162.16|<tuple|16.174|?>>
+    <associate|eq 16.163.16|<tuple|16.175|?>>
+    <associate|eq 16.164.16|<tuple|16.176|?>>
+    <associate|eq 16.165.16|<tuple|16.177|?>>
+    <associate|eq 16.166.16|<tuple|16.178|?>>
+    <associate|eq 16.167.16|<tuple|16.179|?>>
+    <associate|eq 16.168.16|<tuple|16.180|?>>
+    <associate|eq 16.169.16|<tuple|16.181|?>>
     <associate|eq 16.17.180|<tuple|16.61|?>>
-    <associate|eq 16.170.16|<tuple|16.181|?>>
-    <associate|eq 16.171.16|<tuple|16.182|?>>
-    <associate|eq 16.173.16|<tuple|16.183|?>>
-    <associate|eq 16.174.16|<tuple|16.184|?>>
-    <associate|eq 16.175.16|<tuple|16.185|?>>
+    <associate|eq 16.170.16|<tuple|16.182|?>>
+    <associate|eq 16.171.16|<tuple|16.183|?>>
+    <associate|eq 16.173.16|<tuple|16.184|?>>
+    <associate|eq 16.174.16|<tuple|16.185|?>>
+    <associate|eq 16.175.16|<tuple|16.186|?>>
     <associate|eq 16.176.211|<tuple|16.254|?>>
-    <associate|eq 16.177.16|<tuple|16.186|?>>
-    <associate|eq 16.178.16|<tuple|16.187|?>>
-    <associate|eq 16.179.16|<tuple|16.188|?>>
-    <associate|eq 16.179.200|<tuple|16.228|?>>
+    <associate|eq 16.177.16|<tuple|16.187|?>>
+    <associate|eq 16.178.16|<tuple|16.188|?>>
+    <associate|eq 16.179.16|<tuple|16.189|?>>
+    <associate|eq 16.179.200|<tuple|16.229|?>>
     <associate|eq 16.18.179|<tuple|16.37|?>>
     <associate|eq 16.18.180|<tuple|16.62|?>>
     <associate|eq 16.18.5|<tuple|16.18|?>>
-    <associate|eq 16.180.16|<tuple|16.189|?>>
-    <associate|eq 16.180.200|<tuple|16.229|?>>
-    <associate|eq 16.181.16|<tuple|16.190|?>>
-    <associate|eq 16.181.200|<tuple|16.230|?>>
-    <associate|eq 16.182.16|<tuple|16.191|?>>
-    <associate|eq 16.183\<point\>16|<tuple|16.192|?>>
-    <associate|eq 16.184.16|<tuple|16.193|?>>
-    <associate|eq 16.185.16|<tuple|16.194|?>>
-    <associate|eq 16.186.16|<tuple|16.195|?>>
-    <associate|eq 16.187.16|<tuple|16.196|?>>
-    <associate|eq 16.187.200|<tuple|16.238|?>>
-    <associate|eq 16.188.16|<tuple|16.197|?>>
-    <associate|eq 16.189.16|<tuple|16.198|?>>
+    <associate|eq 16.180.16|<tuple|16.190|?>>
+    <associate|eq 16.180.200|<tuple|16.230|?>>
+    <associate|eq 16.181.16|<tuple|16.191|?>>
+    <associate|eq 16.181.200|<tuple|16.231|?>>
+    <associate|eq 16.182.16|<tuple|16.192|?>>
+    <associate|eq 16.183\<point\>16|<tuple|16.193|?>>
+    <associate|eq 16.184.16|<tuple|16.194|?>>
+    <associate|eq 16.185.16|<tuple|16.195|?>>
+    <associate|eq 16.186.16|<tuple|16.196|?>>
+    <associate|eq 16.187.16|<tuple|16.197|?>>
+    <associate|eq 16.187.200|<tuple|16.239|?>>
+    <associate|eq 16.188.16|<tuple|16.198|?>>
+    <associate|eq 16.189.16|<tuple|16.199|?>>
     <associate|eq 16.19.179|<tuple|16.38|?>>
     <associate|eq 16.19.180|<tuple|16.63|?>>
-    <associate|eq 16.190.16|<tuple|16.199|?>>
-    <associate|eq 16.191.16|<tuple|16.200|?>>
-    <associate|eq 16.192.16|<tuple|16.201|?>>
-    <associate|eq 16.193.16|<tuple|16.202|?>>
-    <associate|eq 16.194.16|<tuple|16.203|?>>
-    <associate|eq 16.194.201|<tuple|16.248|?>>
-    <associate|eq 16.195.201|<tuple|16.249|?>>
+    <associate|eq 16.190.16|<tuple|16.200|?>>
+    <associate|eq 16.191.16|<tuple|16.201|?>>
+    <associate|eq 16.192.16|<tuple|16.202|?>>
+    <associate|eq 16.193.16|<tuple|16.203|?>>
+    <associate|eq 16.194.16|<tuple|16.204|?>>
+    <associate|eq 16.194.201|<tuple|16.249|?>>
+    <associate|eq 16.195.201|<tuple|16.250|?>>
     <associate|eq 16.2.177|<tuple|16.17|?>>
     <associate|eq 16.2.2|<tuple|16.2|?>>
     <associate|eq 16.20.178|<tuple|16.53|?>>
     <associate|eq 16.20.181|<tuple|16.64|?>>
-    <associate|eq 16.20317|<tuple|16.320|?>>
+    <associate|eq 16.20317|<tuple|16.321|?>>
     <associate|eq 16.21.5|<tuple|16.21|?>>
-    <associate|eq 16.212.203|<tuple|16.266|?>>
-    <associate|eq 16.213.203|<tuple|16.267|?>>
-    <associate|eq 16.214.203|<tuple|16.268|?>>
-    <associate|eq 16.215.17|<tuple|16.225|?>>
-    <associate|eq 16.215.203|<tuple|16.269|?>>
-    <associate|eq 16.216.203|<tuple|16.270|?>>
-    <associate|eq 16.217.203|<tuple|16.272|?>>
-    <associate|eq 16.217.204|<tuple|16.271|?>>
-    <associate|eq 16.218.203|<tuple|16.273|?>>
-    <associate|eq 16.219.203|<tuple|16.274|?>>
-    <associate|eq 16.220.203|<tuple|16.275|?>>
-    <associate|eq 16.221.203|<tuple|16.276|?>>
-    <associate|eq 16.223.204|<tuple|16.277|?>>
-    <associate|eq 16.224.17|<tuple|16.234|?>>
-    <associate|eq 16.224.204|<tuple|16.278|?>>
-    <associate|eq 16.225.17|<tuple|16.235|?>>
-    <associate|eq 16.225.204|<tuple|16.280|?>>
-    <associate|eq 16.225.205|<tuple|16.279|?>>
-    <associate|eq 16.226.141|<tuple|16.285|?>>
-    <associate|eq 16.226.17|<tuple|16.236|?>>
-    <associate|eq 16.226.204|<tuple|16.281|?>>
-    <associate|eq 16.227.17|<tuple|16.237|?>>
-    <associate|eq 16.227.204|<tuple|16.282|?>>
-    <associate|eq 16.228.204|<tuple|16.283|?>>
-    <associate|eq 16.229.17|<tuple|16.239|?>>
+    <associate|eq 16.212.203|<tuple|16.267|?>>
+    <associate|eq 16.213.203|<tuple|16.268|?>>
+    <associate|eq 16.214.203|<tuple|16.269|?>>
+    <associate|eq 16.215.17|<tuple|16.226|?>>
+    <associate|eq 16.215.203|<tuple|16.270|?>>
+    <associate|eq 16.216.203|<tuple|16.271|?>>
+    <associate|eq 16.217.203|<tuple|16.273|?>>
+    <associate|eq 16.217.204|<tuple|16.272|?>>
+    <associate|eq 16.218.203|<tuple|16.274|?>>
+    <associate|eq 16.219.203|<tuple|16.275|?>>
+    <associate|eq 16.220.203|<tuple|16.276|?>>
+    <associate|eq 16.221.203|<tuple|16.277|?>>
+    <associate|eq 16.223.204|<tuple|16.278|?>>
+    <associate|eq 16.224.17|<tuple|16.235|?>>
+    <associate|eq 16.224.204|<tuple|16.279|?>>
+    <associate|eq 16.225.17|<tuple|16.236|?>>
+    <associate|eq 16.225.204|<tuple|16.281|?>>
+    <associate|eq 16.225.205|<tuple|16.280|?>>
+    <associate|eq 16.226.141|<tuple|16.286|?>>
+    <associate|eq 16.226.17|<tuple|16.237|?>>
+    <associate|eq 16.226.204|<tuple|16.282|?>>
+    <associate|eq 16.227.17|<tuple|16.238|?>>
+    <associate|eq 16.227.204|<tuple|16.283|?>>
+    <associate|eq 16.228.204|<tuple|16.284|?>>
+    <associate|eq 16.229.17|<tuple|16.240|?>>
     <associate|eq 16.23.178|<tuple|16.57|?>>
-    <associate|eq 16.230.17|<tuple|16.240|?>>
-    <associate|eq 16.230.206|<tuple|16.284|?>>
-    <associate|eq 16.231.17|<tuple|16.241|?>>
-    <associate|eq 16.232.141|<tuple|16.291|?>>
-    <associate|eq 16.232.17|<tuple|16.242|?>>
-    <associate|eq 16.233.17|<tuple|16.243|?>>
-    <associate|eq 16.234.17|<tuple|16.244|?>>
-    <associate|eq 16.235.17|<tuple|16.245|?>>
-    <associate|eq 16.236.17|<tuple|16.246|?>>
-    <associate|eq 16.236.210|<tuple|16.290|?>>
-    <associate|eq 16.237.17|<tuple|16.247|?>>
-    <associate|eq 16.237.210|<tuple|16.292|?>>
-    <associate|eq 16.238.210|<tuple|16.293|?>>
-    <associate|eq 16.239.141|<tuple|16.298|?>>
+    <associate|eq 16.230.17|<tuple|16.241|?>>
+    <associate|eq 16.230.206|<tuple|16.285|?>>
+    <associate|eq 16.231.17|<tuple|16.242|?>>
+    <associate|eq 16.232.141|<tuple|16.292|?>>
+    <associate|eq 16.232.17|<tuple|16.243|?>>
+    <associate|eq 16.233.17|<tuple|16.244|?>>
+    <associate|eq 16.234.17|<tuple|16.245|?>>
+    <associate|eq 16.235.17|<tuple|16.246|?>>
+    <associate|eq 16.236.17|<tuple|16.247|?>>
+    <associate|eq 16.236.210|<tuple|16.291|?>>
+    <associate|eq 16.237.17|<tuple|16.248|?>>
+    <associate|eq 16.237.210|<tuple|16.293|?>>
+    <associate|eq 16.238.210|<tuple|16.294|?>>
+    <associate|eq 16.239.141|<tuple|16.299|?>>
     <associate|eq 16.24.178|<tuple|16.58|?>>
-    <associate|eq 16.242.310|<tuple|16.218|?>>
-    <associate|eq 16.243.310|<tuple|16.219|?>>
-    <associate|eq 16.244.310|<tuple|16.220|?>>
-    <associate|eq 16.245.210|<tuple|16.294|?>>
-    <associate|eq 16.245.310|<tuple|16.223|?>>
-    <associate|eq 16.245.310.1|<tuple|16.221|?>>
-    <associate|eq 16.246.210|<tuple|16.295|?>>
-    <associate|eq 16.246.310|<tuple|16.224|?>>
-    <associate|eq 16.246.310.1|<tuple|16.222|?>>
-    <associate|eq 16.247.210|<tuple|16.296|?>>
-    <associate|eq 16.248.210|<tuple|16.297|?>>
-    <associate|eq 16.249.210|<tuple|16.299|?>>
+    <associate|eq 16.242.310|<tuple|16.219|?>>
+    <associate|eq 16.243.310|<tuple|16.220|?>>
+    <associate|eq 16.244.310|<tuple|16.221|?>>
+    <associate|eq 16.245.210|<tuple|16.295|?>>
+    <associate|eq 16.245.310|<tuple|16.224|?>>
+    <associate|eq 16.245.310.1|<tuple|16.222|?>>
+    <associate|eq 16.246.210|<tuple|16.296|?>>
+    <associate|eq 16.246.310|<tuple|16.225|?>>
+    <associate|eq 16.246.310.1|<tuple|16.223|?>>
+    <associate|eq 16.247.210|<tuple|16.297|?>>
+    <associate|eq 16.248.210|<tuple|16.298|?>>
+    <associate|eq 16.249.210|<tuple|16.300|?>>
     <associate|eq 16.25.178|<tuple|16.59|?>>
     <associate|eq 16.25.4|<tuple|16.31|?>>
-    <associate|eq 16.250.210|<tuple|16.300|?>>
-    <associate|eq 16.250.23|<tuple|16.252|?>>
-    <associate|eq 16.251.210|<tuple|16.301|?>>
-    <associate|eq 16.252.210|<tuple|16.302|?>>
-    <associate|eq 16.253.210|<tuple|16.303|?>>
-    <associate|eq 16.254.210|<tuple|16.304|?>>
-    <associate|eq 16.255.210|<tuple|16.305|?>>
-    <associate|eq 16.255.312|<tuple|16.231|?>>
-    <associate|eq 16.256.210|<tuple|16.306|?>>
-    <associate|eq 16.256.312|<tuple|16.232|?>>
-    <associate|eq 16.257.210|<tuple|16.307|?>>
-    <associate|eq 16.257.312|<tuple|16.233|?>>
-    <associate|eq 16.258.210|<tuple|16.308|?>>
-    <associate|eq 16.259.210|<tuple|16.309|?>>
+    <associate|eq 16.250.210|<tuple|16.301|?>>
+    <associate|eq 16.250.23|<tuple|16.253|?>>
+    <associate|eq 16.251.210|<tuple|16.302|?>>
+    <associate|eq 16.252.210|<tuple|16.303|?>>
+    <associate|eq 16.253.210|<tuple|16.304|?>>
+    <associate|eq 16.254.210|<tuple|16.305|?>>
+    <associate|eq 16.255.210|<tuple|16.306|?>>
+    <associate|eq 16.255.312|<tuple|16.232|?>>
+    <associate|eq 16.256.210|<tuple|16.307|?>>
+    <associate|eq 16.256.312|<tuple|16.233|?>>
+    <associate|eq 16.257.210|<tuple|16.308|?>>
+    <associate|eq 16.257.312|<tuple|16.234|?>>
+    <associate|eq 16.258.210|<tuple|16.309|?>>
+    <associate|eq 16.259.210|<tuple|16.310|?>>
     <associate|eq 16.26.4|<tuple|16.32|?>>
-    <associate|eq 16.262.12|<tuple|16.212|?>>
-    <associate|eq 16.263.12|<tuple|16.213|?>>
-    <associate|eq 16.264.12|<tuple|16.214|?>>
+    <associate|eq 16.262.12|<tuple|16.213|?>>
+    <associate|eq 16.263.12|<tuple|16.214|?>>
+    <associate|eq 16.264.12|<tuple|16.215|?>>
     <associate|eq 16.27.4|<tuple|16.33|?>>
-    <associate|eq 16.272.12|<tuple|16.226|?>>
-    <associate|eq 16.273.12|<tuple|16.227|?>>
-    <associate|eq 16.275.142|<tuple|16.350|?>>
-    <associate|eq 16.279.124|<tuple|16.310|?>>
+    <associate|eq 16.272.12|<tuple|16.227|?>>
+    <associate|eq 16.273.12|<tuple|16.228|?>>
+    <associate|eq 16.275.142|<tuple|16.351|?>>
+    <associate|eq 16.279.124|<tuple|16.311|?>>
     <associate|eq 16.28.4|<tuple|16.34|?>>
-    <associate|eq 16.280.124|<tuple|16.311|?>>
-    <associate|eq 16.281.124|<tuple|16.312|?>>
-    <associate|eq 16.282.124|<tuple|16.313|?>>
+    <associate|eq 16.280.124|<tuple|16.312|?>>
+    <associate|eq 16.281.124|<tuple|16.313|?>>
+    <associate|eq 16.282.124|<tuple|16.314|?>>
     <associate|eq 16.282.125|<tuple|<with|mode|<quote|math>|k\<in\><around*|{|i+1,\<ldots\>,n|}>>|?>>
-    <associate|eq 16.283.124|<tuple|16.314|?>>
-    <associate|eq 16.284.124|<tuple|16.315|?>>
-    <associate|eq 16.284.126|<tuple|16.351|?>>
-    <associate|eq 16.285.124|<tuple|16.316|?>>
-    <associate|eq 16.285.126|<tuple|16.352|?>>
-    <associate|eq 16.286.124|<tuple|16.317|?>>
-    <associate|eq 16.286.126|<tuple|16.353|?>>
-    <associate|eq 16.287.126|<tuple|16.355|?>>
-    <associate|eq 16.288.126|<tuple|16.356|?>>
-    <associate|eq 16.289.126|<tuple|16.357|?>>
+    <associate|eq 16.283.124|<tuple|16.315|?>>
+    <associate|eq 16.284.124|<tuple|16.316|?>>
+    <associate|eq 16.284.126|<tuple|16.352|?>>
+    <associate|eq 16.285.124|<tuple|16.317|?>>
+    <associate|eq 16.285.126|<tuple|16.353|?>>
+    <associate|eq 16.286.124|<tuple|16.318|?>>
+    <associate|eq 16.286.126|<tuple|16.354|?>>
+    <associate|eq 16.287.126|<tuple|16.356|?>>
+    <associate|eq 16.288.126|<tuple|16.357|?>>
+    <associate|eq 16.289.126|<tuple|16.358|?>>
     <associate|eq 16.29.4|<tuple|16.36|?>>
-    <associate|eq 16.290.126|<tuple|16.358|?>>
-    <associate|eq 16.291.126|<tuple|16.359|?>>
-    <associate|eq 16.292.126|<tuple|16.360|?>>
-    <associate|eq 16.292.17|<tuple|16.318|?>>
-    <associate|eq 16.293.126|<tuple|16.361|?>>
-    <associate|eq 16.293.128|<tuple|16.362|?>>
-    <associate|eq 16.293.18|<tuple|16.319|?>>
-    <associate|eq 16.294.17|<tuple|16.321|?>>
-    <associate|eq 16.295.128|<tuple|16.363|?>>
-    <associate|eq 16.295.17|<tuple|16.322|?>>
-    <associate|eq 16.296.17|<tuple|16.323|?>>
-    <associate|eq 16.297.126|<tuple|16.364|?>>
-    <associate|eq 16.297.17|<tuple|16.324|?>>
-    <associate|eq 16.298.126|<tuple|16.365|?>>
-    <associate|eq 16.298.17|<tuple|16.325|?>>
-    <associate|eq 16.299.126|<tuple|16.366|?>>
-    <associate|eq 16.299.17|<tuple|16.326|?>>
+    <associate|eq 16.290.126|<tuple|16.359|?>>
+    <associate|eq 16.291.126|<tuple|16.360|?>>
+    <associate|eq 16.292.126|<tuple|16.361|?>>
+    <associate|eq 16.292.17|<tuple|16.319|?>>
+    <associate|eq 16.293.126|<tuple|16.362|?>>
+    <associate|eq 16.293.128|<tuple|16.363|?>>
+    <associate|eq 16.293.18|<tuple|16.320|?>>
+    <associate|eq 16.294.17|<tuple|16.322|?>>
+    <associate|eq 16.295.128|<tuple|16.364|?>>
+    <associate|eq 16.295.17|<tuple|16.323|?>>
+    <associate|eq 16.296.17|<tuple|16.324|?>>
+    <associate|eq 16.297.126|<tuple|16.365|?>>
+    <associate|eq 16.297.17|<tuple|16.325|?>>
+    <associate|eq 16.298.126|<tuple|16.366|?>>
+    <associate|eq 16.298.17|<tuple|16.326|?>>
+    <associate|eq 16.299.126|<tuple|16.367|?>>
+    <associate|eq 16.299.17|<tuple|16.327|?>>
     <associate|eq 16.3.177|<tuple|16.19|?>>
     <associate|eq 16.3.2|<tuple|16.3|?>>
-    <associate|eq 16.300.126|<tuple|16.367|?>>
-    <associate|eq 16.300.127|<tuple|16.368|?>>
-    <associate|eq 16.300.142|<tuple|16.507|?>>
-    <associate|eq 16.300.17|<tuple|16.327|?>>
-    <associate|eq 16.301.127|<tuple|16.369|?>>
-    <associate|eq 16.301.144|<tuple|16.423|?>>
-    <associate|eq 16.301.144.1|<tuple|16.422|?>>
-    <associate|eq 16.302.144|<tuple|16.424|?>>
-    <associate|eq 16.302.18|<tuple|16.328|?>>
-    <associate|eq 16.303.144|<tuple|16.425|?>>
-    <associate|eq 16.303.18|<tuple|16.329|?>>
-    <associate|eq 16.304.18|<tuple|16.330|?>>
-    <associate|eq 16.305.144|<tuple|16.426|?>>
-    <associate|eq 16.305.302|<tuple|16.250|?>>
-    <associate|eq 16.306.302|<tuple|16.251|?>>
-    <associate|eq 16.307.18|<tuple|16.333|?>>
-    <associate|eq 16.307.302|<tuple|16.253|?>>
-    <associate|eq 16.308.127|<tuple|16.428|?>>
-    <associate|eq 16.308.128|<tuple|16.427|?>>
-    <associate|eq 16.308.18|<tuple|16.334|?>>
-    <associate|eq 16.308.302|<tuple|16.254|?>>
-    <associate|eq 16.309.127|<tuple|16.429|?>>
-    <associate|eq 16.309.302|<tuple|16.255|?>>
-    <associate|eq 16.310.127|<tuple|16.431|?>>
-    <associate|eq 16.310.128|<tuple|16.430|?>>
-    <associate|eq 16.310.302|<tuple|16.256|?>>
-    <associate|eq 16.311.127|<tuple|16.432|?>>
-    <associate|eq 16.311.302|<tuple|16.257|?>>
-    <associate|eq 16.312.127|<tuple|16.433|?>>
-    <associate|eq 16.312.301|<tuple|16.258|?>>
-    <associate|eq 16.313.302|<tuple|16.259|?>>
-    <associate|eq 16.314.128|<tuple|16.434|?>>
-    <associate|eq 16.314.302|<tuple|16.260|?>>
-    <associate|eq 16.315.128|<tuple|16.435|?>>
-    <associate|eq 16.315.302|<tuple|16.261|?>>
-    <associate|eq 16.316.302|<tuple|16.263|?>>
-    <associate|eq 16.316.303|<tuple|16.262|?>>
-    <associate|eq 16.317.128|<tuple|16.436|?>>
-    <associate|eq 16.317.19|<tuple|16.343|?>>
-    <associate|eq 16.317.302|<tuple|16.264|?>>
-    <associate|eq 16.318.128|<tuple|16.438|?>>
-    <associate|eq 16.318.129|<tuple|16.437|?>>
-    <associate|eq 16.318.302|<tuple|16.265|?>>
-    <associate|eq 16.319.128|<tuple|16.439|?>>
-    <associate|eq 16.319.129|<tuple|16.438|?>>
-    <associate|eq 16.320.128|<tuple|16.440|?>>
-    <associate|eq 16.321.128|<tuple|16.441|?>>
-    <associate|eq 16.322.128|<tuple|16.442|?>>
-    <associate|eq 16.325.129|<tuple|16.444|?>>
-    <associate|eq 16.325.131|<tuple|16.443|?>>
-    <associate|eq 16.327.130|<tuple|16.445|?>>
-    <associate|eq 16.327.134|<tuple|16.446|?>>
-    <associate|eq 16.329.131|<tuple|16.447|?>>
-    <associate|eq 16.329.133|<tuple|16.448|?>>
+    <associate|eq 16.300.126|<tuple|16.368|?>>
+    <associate|eq 16.300.127|<tuple|16.369|?>>
+    <associate|eq 16.300.142|<tuple|16.508|?>>
+    <associate|eq 16.300.17|<tuple|16.328|?>>
+    <associate|eq 16.301.127|<tuple|16.370|?>>
+    <associate|eq 16.301.144|<tuple|16.424|?>>
+    <associate|eq 16.301.144.1|<tuple|16.423|?>>
+    <associate|eq 16.302.144|<tuple|16.425|?>>
+    <associate|eq 16.302.18|<tuple|16.329|?>>
+    <associate|eq 16.303.144|<tuple|16.426|?>>
+    <associate|eq 16.303.18|<tuple|16.330|?>>
+    <associate|eq 16.304.18|<tuple|16.331|?>>
+    <associate|eq 16.305.144|<tuple|16.427|?>>
+    <associate|eq 16.305.302|<tuple|16.251|?>>
+    <associate|eq 16.306.302|<tuple|16.252|?>>
+    <associate|eq 16.307.18|<tuple|16.334|?>>
+    <associate|eq 16.307.302|<tuple|16.254|?>>
+    <associate|eq 16.308.127|<tuple|16.429|?>>
+    <associate|eq 16.308.128|<tuple|16.428|?>>
+    <associate|eq 16.308.18|<tuple|16.335|?>>
+    <associate|eq 16.308.302|<tuple|16.255|?>>
+    <associate|eq 16.309.127|<tuple|16.430|?>>
+    <associate|eq 16.309.302|<tuple|16.256|?>>
+    <associate|eq 16.310.127|<tuple|16.432|?>>
+    <associate|eq 16.310.128|<tuple|16.431|?>>
+    <associate|eq 16.310.302|<tuple|16.257|?>>
+    <associate|eq 16.311.127|<tuple|16.433|?>>
+    <associate|eq 16.311.302|<tuple|16.258|?>>
+    <associate|eq 16.312.127|<tuple|16.434|?>>
+    <associate|eq 16.312.301|<tuple|16.259|?>>
+    <associate|eq 16.313.302|<tuple|16.260|?>>
+    <associate|eq 16.314.128|<tuple|16.435|?>>
+    <associate|eq 16.314.302|<tuple|16.261|?>>
+    <associate|eq 16.315.128|<tuple|16.436|?>>
+    <associate|eq 16.315.302|<tuple|16.262|?>>
+    <associate|eq 16.316.302|<tuple|16.264|?>>
+    <associate|eq 16.316.303|<tuple|16.263|?>>
+    <associate|eq 16.317.128|<tuple|16.437|?>>
+    <associate|eq 16.317.19|<tuple|16.344|?>>
+    <associate|eq 16.317.302|<tuple|16.265|?>>
+    <associate|eq 16.318.128|<tuple|16.439|?>>
+    <associate|eq 16.318.129|<tuple|16.438|?>>
+    <associate|eq 16.318.302|<tuple|16.266|?>>
+    <associate|eq 16.319.128|<tuple|16.440|?>>
+    <associate|eq 16.319.129|<tuple|16.439|?>>
+    <associate|eq 16.320.128|<tuple|16.441|?>>
+    <associate|eq 16.321.128|<tuple|16.442|?>>
+    <associate|eq 16.322.128|<tuple|16.443|?>>
+    <associate|eq 16.325.129|<tuple|16.445|?>>
+    <associate|eq 16.325.131|<tuple|16.444|?>>
+    <associate|eq 16.327.130|<tuple|16.446|?>>
+    <associate|eq 16.327.134|<tuple|16.447|?>>
+    <associate|eq 16.329.131|<tuple|16.448|?>>
+    <associate|eq 16.329.133|<tuple|16.449|?>>
     <associate|eq 16.33.181|<tuple|16.65|?>>
-    <associate|eq 16.330.130|<tuple|16.449|?>>
-    <associate|eq 16.330.131|<tuple|16.450|?>>
-    <associate|eq 16.331.131|<tuple|16.451|?>>
-    <associate|eq 16.334.133|<tuple|16.452|?>>
-    <associate|eq 16.335.133|<tuple|16.453|?>>
-    <associate|eq 16.336.133|<tuple|16.455|?>>
-    <associate|eq 16.336.134|<tuple|16.454|?>>
-    <associate|eq 16.337.133|<tuple|16.456|?>>
-    <associate|eq 16.338.133|<tuple|16.457|?>>
+    <associate|eq 16.330.130|<tuple|16.450|?>>
+    <associate|eq 16.330.131|<tuple|16.451|?>>
+    <associate|eq 16.331.131|<tuple|16.452|?>>
+    <associate|eq 16.334.133|<tuple|16.453|?>>
+    <associate|eq 16.335.133|<tuple|16.454|?>>
+    <associate|eq 16.336.133|<tuple|16.456|?>>
+    <associate|eq 16.336.134|<tuple|16.455|?>>
+    <associate|eq 16.337.133|<tuple|16.457|?>>
+    <associate|eq 16.338.133|<tuple|16.458|?>>
     <associate|eq 16.34.181|<tuple|16.66|?>>
-    <associate|eq 16.340.133|<tuple|16.459|?>>
-    <associate|eq 16.340.134|<tuple|16.458|?>>
-    <associate|eq 16.341.133|<tuple|16.460|?>>
-    <associate|eq 16.342.133|<tuple|16.461|?>>
-    <associate|eq 16.343.133|<tuple|16.462|?>>
-    <associate|eq 16.344.133|<tuple|16.463|?>>
-    <associate|eq 16.346.134|<tuple|16.465|?>>
-    <associate|eq 16.346.134.1|<tuple|16.464|?>>
-    <associate|eq 16.346.18|<tuple|16.372|?>>
-    <associate|eq 16.347.134|<tuple|16.468|?>>
-    <associate|eq 16.347.135|<tuple|16.467|?>>
-    <associate|eq 16.347.136|<tuple|16.466|?>>
-    <associate|eq 16.348.134|<tuple|16.469|?>>
-    <associate|eq 16.348.18|<tuple|16.374|?>>
-    <associate|eq 16.349.134|<tuple|16.470|?>>
-    <associate|eq 16.349.18|<tuple|16.375|?>>
-    <associate|eq 16.350.18|<tuple|16.376|?>>
-    <associate|eq 16.351.134|<tuple|16.473|?>>
-    <associate|eq 16.352.18|<tuple|16.378|?>>
-    <associate|eq 16.354.136|<tuple|16.476|?>>
-    <associate|eq 16.355.18|<tuple|16.381|?>>
-    <associate|eq 16.356.136|<tuple|16.477|?>>
-    <associate|eq 16.356.18|<tuple|16.382|?>>
-    <associate|eq 16.357.137|<tuple|16.478|?>>
-    <associate|eq 16.357.18|<tuple|16.383|?>>
-    <associate|eq 16.358.136|<tuple|16.479|?>>
-    <associate|eq 16.358.18|<tuple|16.384|?>>
-    <associate|eq 16.359.136|<tuple|16.481|?>>
-    <associate|eq 16.359.18|<tuple|16.385|?>>
+    <associate|eq 16.340.133|<tuple|16.460|?>>
+    <associate|eq 16.340.134|<tuple|16.459|?>>
+    <associate|eq 16.341.133|<tuple|16.461|?>>
+    <associate|eq 16.342.133|<tuple|16.462|?>>
+    <associate|eq 16.343.133|<tuple|16.463|?>>
+    <associate|eq 16.344.133|<tuple|16.464|?>>
+    <associate|eq 16.346.134|<tuple|16.466|?>>
+    <associate|eq 16.346.134.1|<tuple|16.465|?>>
+    <associate|eq 16.346.18|<tuple|16.373|?>>
+    <associate|eq 16.347.134|<tuple|16.469|?>>
+    <associate|eq 16.347.135|<tuple|16.468|?>>
+    <associate|eq 16.347.136|<tuple|16.467|?>>
+    <associate|eq 16.348.134|<tuple|16.470|?>>
+    <associate|eq 16.348.18|<tuple|16.375|?>>
+    <associate|eq 16.349.134|<tuple|16.471|?>>
+    <associate|eq 16.349.18|<tuple|16.376|?>>
+    <associate|eq 16.350.18|<tuple|16.377|?>>
+    <associate|eq 16.351.134|<tuple|16.474|?>>
+    <associate|eq 16.352.18|<tuple|16.379|?>>
+    <associate|eq 16.354.136|<tuple|16.477|?>>
+    <associate|eq 16.355.18|<tuple|16.382|?>>
+    <associate|eq 16.356.136|<tuple|16.478|?>>
+    <associate|eq 16.356.18|<tuple|16.383|?>>
+    <associate|eq 16.357.137|<tuple|16.479|?>>
+    <associate|eq 16.357.18|<tuple|16.384|?>>
+    <associate|eq 16.358.136|<tuple|16.480|?>>
+    <associate|eq 16.358.18|<tuple|16.385|?>>
+    <associate|eq 16.359.136|<tuple|16.482|?>>
+    <associate|eq 16.359.18|<tuple|16.386|?>>
     <associate|eq 16.36.182|<tuple|16.69|?>>
     <associate|eq 16.36.20|<tuple|16.35|?>>
-    <associate|eq 16.360.136|<tuple|16.482|?>>
-    <associate|eq 16.360.18|<tuple|16.386|?>>
-    <associate|eq 16.361.136|<tuple|16.483|?>>
-    <associate|eq 16.361.18|<tuple|16.387|?>>
-    <associate|eq 16.362.136|<tuple|16.484|?>>
-    <associate|eq 16.362.18|<tuple|16.389|?>>
-    <associate|eq 16.362.19|<tuple|16.388|?>>
-    <associate|eq 16.362.310|<tuple|16.337|?>>
-    <associate|eq 16.363.136|<tuple|16.485|?>>
-    <associate|eq 16.363.18|<tuple|16.390|?>>
-    <associate|eq 16.363.310|<tuple|16.338|?>>
-    <associate|eq 16.364.136|<tuple|16.486|?>>
-    <associate|eq 16.364.18|<tuple|16.391|?>>
-    <associate|eq 16.364.310|<tuple|16.339|?>>
-    <associate|eq 16.365.18|<tuple|16.392|?>>
-    <associate|eq 16.365.310|<tuple|16.340|?>>
-    <associate|eq 16.366.137|<tuple|16.488|?>>
-    <associate|eq 16.366.138|<tuple|16.487|?>>
-    <associate|eq 16.366.18|<tuple|16.393|?>>
-    <associate|eq 16.366.310|<tuple|16.341|?>>
-    <associate|eq 16.367.137|<tuple|16.489|?>>
-    <associate|eq 16.367.310|<tuple|16.342|?>>
-    <associate|eq 16.368.137|<tuple|16.490|?>>
-    <associate|eq 16.368.310|<tuple|16.344|?>>
-    <associate|eq 16.369.137|<tuple|16.491|?>>
-    <associate|eq 16.369.310|<tuple|16.345|?>>
+    <associate|eq 16.360.136|<tuple|16.483|?>>
+    <associate|eq 16.360.18|<tuple|16.387|?>>
+    <associate|eq 16.361.136|<tuple|16.484|?>>
+    <associate|eq 16.361.18|<tuple|16.388|?>>
+    <associate|eq 16.362.136|<tuple|16.485|?>>
+    <associate|eq 16.362.18|<tuple|16.390|?>>
+    <associate|eq 16.362.19|<tuple|16.389|?>>
+    <associate|eq 16.362.310|<tuple|16.338|?>>
+    <associate|eq 16.363.136|<tuple|16.486|?>>
+    <associate|eq 16.363.18|<tuple|16.391|?>>
+    <associate|eq 16.363.310|<tuple|16.339|?>>
+    <associate|eq 16.364.136|<tuple|16.487|?>>
+    <associate|eq 16.364.18|<tuple|16.392|?>>
+    <associate|eq 16.364.310|<tuple|16.340|?>>
+    <associate|eq 16.365.18|<tuple|16.393|?>>
+    <associate|eq 16.365.310|<tuple|16.341|?>>
+    <associate|eq 16.366.137|<tuple|16.489|?>>
+    <associate|eq 16.366.138|<tuple|16.488|?>>
+    <associate|eq 16.366.18|<tuple|16.394|?>>
+    <associate|eq 16.366.310|<tuple|16.342|?>>
+    <associate|eq 16.367.137|<tuple|16.490|?>>
+    <associate|eq 16.367.310|<tuple|16.343|?>>
+    <associate|eq 16.368.137|<tuple|16.491|?>>
+    <associate|eq 16.368.310|<tuple|16.345|?>>
+    <associate|eq 16.369.137|<tuple|16.492|?>>
+    <associate|eq 16.369.310|<tuple|16.346|?>>
     <associate|eq 16.37.182|<tuple|16.70|?>>
-    <associate|eq 16.370.137|<tuple|16.492|?>>
-    <associate|eq 16.371.137|<tuple|16.493|?>>
-    <associate|eq 16.372.137|<tuple|16.496|?>>
-    <associate|eq 16.372.20|<tuple|16.398|?>>
-    <associate|eq 16.372.310|<tuple|16.346|?>>
-    <associate|eq 16.373.300|<tuple|16.349|?>>
-    <associate|eq 16.373.310|<tuple|16.347|?>>
-    <associate|eq 16.374.138|<tuple|16.498|?>>
-    <associate|eq 16.374.310|<tuple|16.348|?>>
-    <associate|eq 16.375\<point\>139|<tuple|16.500|?>>
-    <associate|eq 16.376.138|<tuple|16.501|?>>
-    <associate|eq 16.377.138|<tuple|16.502|?>>
-    <associate|eq 16.378.138|<tuple|16.503|?>>
-    <associate|eq 16.379.138|<tuple|16.504|?>>
+    <associate|eq 16.370.137|<tuple|16.493|?>>
+    <associate|eq 16.371.137|<tuple|16.494|?>>
+    <associate|eq 16.372.137|<tuple|16.497|?>>
+    <associate|eq 16.372.20|<tuple|16.399|?>>
+    <associate|eq 16.372.310|<tuple|16.347|?>>
+    <associate|eq 16.373.300|<tuple|16.350|?>>
+    <associate|eq 16.373.310|<tuple|16.348|?>>
+    <associate|eq 16.374.138|<tuple|16.499|?>>
+    <associate|eq 16.374.310|<tuple|16.349|?>>
+    <associate|eq 16.375\<point\>139|<tuple|16.501|?>>
+    <associate|eq 16.376.138|<tuple|16.502|?>>
+    <associate|eq 16.377.138|<tuple|16.503|?>>
+    <associate|eq 16.378.138|<tuple|16.504|?>>
+    <associate|eq 16.379.138|<tuple|16.505|?>>
     <associate|eq 16.38.182|<tuple|16.71|?>>
-    <associate|eq 16.380.138|<tuple|16.505|?>>
-    <associate|eq 16.380.310|<tuple|16.354|?>>
-    <associate|eq 16.381.138|<tuple|16.506|?>>
-    <associate|eq 16.382.145|<tuple|16.510|?>>
-    <associate|eq 16.382.21|<tuple|16.400|?>>
-    <associate|eq 16.383.21|<tuple|16.401|?>>
-    <associate|eq 16.384.21|<tuple|16.402|?>>
-    <associate|eq 16.385.21|<tuple|16.403|?>>
-    <associate|eq 16.386.21|<tuple|16.404|?>>
-    <associate|eq 16.387.21|<tuple|16.405|?>>
-    <associate|eq 16.388.21|<tuple|16.406|?>>
-    <associate|eq 16.389.21|<tuple|16.407|?>>
-    <associate|eq 16.389.320|<tuple|16.370|?>>
+    <associate|eq 16.380.138|<tuple|16.506|?>>
+    <associate|eq 16.380.310|<tuple|16.355|?>>
+    <associate|eq 16.381.138|<tuple|16.507|?>>
+    <associate|eq 16.382.145|<tuple|16.511|?>>
+    <associate|eq 16.382.21|<tuple|16.401|?>>
+    <associate|eq 16.383.21|<tuple|16.402|?>>
+    <associate|eq 16.384.21|<tuple|16.403|?>>
+    <associate|eq 16.385.21|<tuple|16.404|?>>
+    <associate|eq 16.386.21|<tuple|16.405|?>>
+    <associate|eq 16.387.21|<tuple|16.406|?>>
+    <associate|eq 16.388.21|<tuple|16.407|?>>
+    <associate|eq 16.389.21|<tuple|16.408|?>>
+    <associate|eq 16.389.320|<tuple|16.371|?>>
     <associate|eq 16.39.182|<tuple|16.72|?>>
-    <associate|eq 16.390.21|<tuple|16.408|?>>
-    <associate|eq 16.390.320|<tuple|16.371|?>>
-    <associate|eq 16.391.142|<tuple|16.508|?>>
-    <associate|eq 16.391.21|<tuple|16.409|?>>
-    <associate|eq 16.391.320|<tuple|16.373|?>>
-    <associate|eq 16.392.142|<tuple|16.509|?>>
-    <associate|eq 16.392.21|<tuple|16.410|?>>
-    <associate|eq 16.392.320|<tuple|16.377|?>>
-    <associate|eq 16.393.142|<tuple|16.511|?>>
-    <associate|eq 16.393.21|<tuple|16.411|?>>
-    <associate|eq 16.393.321|<tuple|16.379|?>>
-    <associate|eq 16.394.142|<tuple|16.512|?>>
-    <associate|eq 16.394.21|<tuple|16.412|?>>
-    <associate|eq 16.394.321|<tuple|16.380|?>>
-    <associate|eq 16.395.142|<tuple|16.513|?>>
-    <associate|eq 16.395.21|<tuple|16.413|?>>
-    <associate|eq 16.396.142|<tuple|16.514|?>>
-    <associate|eq 16.396.21|<tuple|16.414|?>>
-    <associate|eq 16.397.142|<tuple|16.515|?>>
-    <associate|eq 16.397.21|<tuple|16.415|?>>
-    <associate|eq 16.398.142|<tuple|16.516|?>>
-    <associate|eq 16.398.21|<tuple|16.416|?>>
-    <associate|eq 16.399.142|<tuple|16.517|?>>
-    <associate|eq 16.399.21|<tuple|16.417|?>>
-    <associate|eq 16.399.321|<tuple|16.395|?>>
+    <associate|eq 16.390.21|<tuple|16.409|?>>
+    <associate|eq 16.390.320|<tuple|16.372|?>>
+    <associate|eq 16.391.142|<tuple|16.509|?>>
+    <associate|eq 16.391.21|<tuple|16.410|?>>
+    <associate|eq 16.391.320|<tuple|16.374|?>>
+    <associate|eq 16.392.142|<tuple|16.510|?>>
+    <associate|eq 16.392.21|<tuple|16.411|?>>
+    <associate|eq 16.392.320|<tuple|16.378|?>>
+    <associate|eq 16.393.142|<tuple|16.512|?>>
+    <associate|eq 16.393.21|<tuple|16.412|?>>
+    <associate|eq 16.393.321|<tuple|16.380|?>>
+    <associate|eq 16.394.142|<tuple|16.513|?>>
+    <associate|eq 16.394.21|<tuple|16.413|?>>
+    <associate|eq 16.394.321|<tuple|16.381|?>>
+    <associate|eq 16.395.142|<tuple|16.514|?>>
+    <associate|eq 16.395.21|<tuple|16.414|?>>
+    <associate|eq 16.396.142|<tuple|16.515|?>>
+    <associate|eq 16.396.21|<tuple|16.415|?>>
+    <associate|eq 16.397.142|<tuple|16.516|?>>
+    <associate|eq 16.397.21|<tuple|16.416|?>>
+    <associate|eq 16.398.142|<tuple|16.517|?>>
+    <associate|eq 16.398.21|<tuple|16.417|?>>
+    <associate|eq 16.399.142|<tuple|16.518|?>>
+    <associate|eq 16.399.21|<tuple|16.418|?>>
+    <associate|eq 16.399.321|<tuple|16.396|?>>
     <associate|eq 16.4.1|<tuple|16.4|?>>
     <associate|eq 16.4.177|<tuple|16.20|?>>
-    <associate|eq 16.400.142|<tuple|16.518|?>>
-    <associate|eq 16.400.21|<tuple|16.418|?>>
-    <associate|eq 16.400.321|<tuple|16.396|?>>
-    <associate|eq 16.401.142|<tuple|16.519|?>>
-    <associate|eq 16.401.21|<tuple|16.419|?>>
-    <associate|eq 16.401.321|<tuple|16.397|?>>
-    <associate|eq 16.401.322|<tuple|16.394|?>>
-    <associate|eq 16.402.142|<tuple|16.520|?>>
-    <associate|eq 16.402.143|<tuple|16.528|?>>
-    <associate|eq 16.402.21|<tuple|16.420|?>>
-    <associate|eq 16.402.321|<tuple|16.399|?>>
-    <associate|eq 16.403.142|<tuple|16.521|?>>
-    <associate|eq 16.403.143|<tuple|16.529|?>>
-    <associate|eq 16.403.21|<tuple|16.421|?>>
-    <associate|eq 16.404.142|<tuple|16.522|?>>
-    <associate|eq 16.404.143|<tuple|16.530|?>>
-    <associate|eq 16.405.142|<tuple|16.523|?>>
-    <associate|eq 16.405.143|<tuple|16.531|?>>
-    <associate|eq 16.406.142|<tuple|16.524|?>>
-    <associate|eq 16.406.143|<tuple|16.532|?>>
-    <associate|eq 16.407.142|<tuple|16.525|?>>
-    <associate|eq 16.407.143|<tuple|16.533|?>>
-    <associate|eq 16.408.142|<tuple|16.526|?>>
-    <associate|eq 16.408.143|<tuple|16.534|?>>
-    <associate|eq 16.409.142|<tuple|16.527|?>>
-    <associate|eq 16.409.143|<tuple|16.535|?>>
+    <associate|eq 16.400.142|<tuple|16.519|?>>
+    <associate|eq 16.400.21|<tuple|16.419|?>>
+    <associate|eq 16.400.321|<tuple|16.397|?>>
+    <associate|eq 16.401.142|<tuple|16.520|?>>
+    <associate|eq 16.401.21|<tuple|16.420|?>>
+    <associate|eq 16.401.321|<tuple|16.398|?>>
+    <associate|eq 16.401.322|<tuple|16.395|?>>
+    <associate|eq 16.402.142|<tuple|16.521|?>>
+    <associate|eq 16.402.143|<tuple|16.529|?>>
+    <associate|eq 16.402.21|<tuple|16.421|?>>
+    <associate|eq 16.402.321|<tuple|16.400|?>>
+    <associate|eq 16.403.142|<tuple|16.522|?>>
+    <associate|eq 16.403.143|<tuple|16.530|?>>
+    <associate|eq 16.403.21|<tuple|16.422|?>>
+    <associate|eq 16.404.142|<tuple|16.523|?>>
+    <associate|eq 16.404.143|<tuple|16.531|?>>
+    <associate|eq 16.405.142|<tuple|16.524|?>>
+    <associate|eq 16.405.143|<tuple|16.532|?>>
+    <associate|eq 16.406.142|<tuple|16.525|?>>
+    <associate|eq 16.406.143|<tuple|16.533|?>>
+    <associate|eq 16.407.142|<tuple|16.526|?>>
+    <associate|eq 16.407.143|<tuple|16.534|?>>
+    <associate|eq 16.408.142|<tuple|16.527|?>>
+    <associate|eq 16.408.143|<tuple|16.535|?>>
+    <associate|eq 16.409.142|<tuple|16.528|?>>
+    <associate|eq 16.409.143|<tuple|16.536|?>>
     <associate|eq 16.41.182|<tuple|16.74|?>>
-    <associate|eq 16.410.143|<tuple|16.536|?>>
-    <associate|eq 16.413.143|<tuple|16.540|?>>
-    <associate|eq 16.414.144|<tuple|16.541|?>>
-    <associate|eq 16.415.143|<tuple|16.544|?>>
-    <associate|eq 16.415.144|<tuple|16.542|?>>
-    <associate|eq 16.417.143|<tuple|16.547|?>>
-    <associate|eq 16.417.145|<tuple|16.546|?>>
-    <associate|eq 16.418.143|<tuple|16.548|?>>
-    <associate|eq 16.419\<point\>143|<tuple|16.549|?>>
+    <associate|eq 16.410.143|<tuple|16.537|?>>
+    <associate|eq 16.413.143|<tuple|16.541|?>>
+    <associate|eq 16.414.144|<tuple|16.542|?>>
+    <associate|eq 16.415.143|<tuple|16.545|?>>
+    <associate|eq 16.415.144|<tuple|16.543|?>>
+    <associate|eq 16.417.143|<tuple|16.548|?>>
+    <associate|eq 16.417.145|<tuple|16.547|?>>
+    <associate|eq 16.418.143|<tuple|16.549|?>>
+    <associate|eq 16.419\<point\>143|<tuple|16.550|?>>
     <associate|eq 16.42.187|<tuple|16.77|?>>
-    <associate|eq 16.422.143|<tuple|16.552|?>>
-    <associate|eq 16.422.143.1|<tuple|16.550|?>>
-    <associate|eq 16.422.145|<tuple|16.551|?>>
-    <associate|eq 16.423.143|<tuple|16.553|?>>
-    <associate|eq 16.424.143|<tuple|16.554|?>>
-    <associate|eq 16.427.144|<tuple|16.555|?>>
-    <associate|eq 16.428.144|<tuple|16.556|?>>
+    <associate|eq 16.422.143|<tuple|16.553|?>>
+    <associate|eq 16.422.143.1|<tuple|16.551|?>>
+    <associate|eq 16.422.145|<tuple|16.552|?>>
+    <associate|eq 16.423.143|<tuple|16.554|?>>
+    <associate|eq 16.424.143|<tuple|16.555|?>>
+    <associate|eq 16.427.144|<tuple|16.556|?>>
+    <associate|eq 16.428.144|<tuple|16.557|?>>
     <associate|eq 16.43.187|<tuple|16.78|?>>
     <associate|eq 16.43.21|<tuple|16.42|?>>
-    <associate|eq 16.430.144|<tuple|16.557|?>>
-    <associate|eq 16.430.144.1|<tuple|16.558|?>>
-    <associate|eq 16.431.144|<tuple|16.559|?>>
-    <associate|eq 16.432.144|<tuple|16.560|?>>
-    <associate|eq 16.433.144|<tuple|16.561|?>>
-    <associate|eq 16.434.144|<tuple|16.562|?>>
-    <associate|eq 16.435.144|<tuple|16.563|?>>
-    <associate|eq 16.436.144|<tuple|16.564|?>>
-    <associate|eq 16.438.145|<tuple|16.566|?>>
-    <associate|eq 16.439.145|<tuple|16.567|?>>
+    <associate|eq 16.430.144|<tuple|16.558|?>>
+    <associate|eq 16.430.144.1|<tuple|16.559|?>>
+    <associate|eq 16.431.144|<tuple|16.560|?>>
+    <associate|eq 16.432.144|<tuple|16.561|?>>
+    <associate|eq 16.433.144|<tuple|16.562|?>>
+    <associate|eq 16.434.144|<tuple|16.563|?>>
+    <associate|eq 16.435.144|<tuple|16.564|?>>
+    <associate|eq 16.436.144|<tuple|16.565|?>>
+    <associate|eq 16.438.145|<tuple|16.567|?>>
+    <associate|eq 16.439.145|<tuple|16.568|?>>
     <associate|eq 16.44.188|<tuple|16.79|?>>
     <associate|eq 16.44.21|<tuple|16.43|?>>
-    <associate|eq 16.440.145|<tuple|16.568|?>>
-    <associate|eq 16.442.145|<tuple|16.570|?>>
-    <associate|eq 16.443.145|<tuple|16.571|?>>
-    <associate|eq 16.444.145|<tuple|16.572|?>>
-    <associate|eq 16.445.145|<tuple|16.573|?>>
-    <associate|eq 16.446.145|<tuple|16.574|?>>
+    <associate|eq 16.440.145|<tuple|16.569|?>>
+    <associate|eq 16.442.145|<tuple|16.571|?>>
+    <associate|eq 16.443.145|<tuple|16.572|?>>
+    <associate|eq 16.444.145|<tuple|16.573|?>>
+    <associate|eq 16.445.145|<tuple|16.574|?>>
+    <associate|eq 16.446.145|<tuple|16.575|?>>
     <associate|eq 16.45.153|<tuple|16.76|?>>
     <associate|eq 16.45.188|<tuple|16.80|?>>
     <associate|eq 16.45.21|<tuple|16.44|?>>
-    <associate|eq 16.454.300|<tuple|16.471|?>>
-    <associate|eq 16.455.300|<tuple|16.472|?>>
-    <associate|eq 16.457.300|<tuple|16.474|?>>
+    <associate|eq 16.454.300|<tuple|16.472|?>>
+    <associate|eq 16.455.300|<tuple|16.473|?>>
+    <associate|eq 16.457.300|<tuple|16.475|?>>
     <associate|eq 16.46.188|<tuple|16.81|?>>
     <associate|eq 16.46.21|<tuple|16.45|?>>
-    <associate|eq 16.462.311|<tuple|16.475|?>>
-    <associate|eq 16.462\<point\>300|<tuple|16.480|?>>
+    <associate|eq 16.462.311|<tuple|16.476|?>>
+    <associate|eq 16.462\<point\>300|<tuple|16.481|?>>
     <associate|eq 16.47.188|<tuple|16.82|?>>
     <associate|eq 16.47.21|<tuple|16.46|?>>
-    <associate|eq 16.476.22|<tuple|16.494|?>>
-    <associate|eq 16.477.22|<tuple|16.495|?>>
-    <associate|eq 16.478.300|<tuple|16.499|?>>
+    <associate|eq 16.476.22|<tuple|16.495|?>>
+    <associate|eq 16.477.22|<tuple|16.496|?>>
+    <associate|eq 16.478.300|<tuple|16.500|?>>
     <associate|eq 16.48.188|<tuple|16.83|?>>
     <associate|eq 16.48.21|<tuple|16.47|?>>
-    <associate|eq 16.482.311|<tuple|16.497|?>>
+    <associate|eq 16.482.311|<tuple|16.498|?>>
     <associate|eq 16.49.189|<tuple|16.84|?>>
     <associate|eq 16.49.21|<tuple|16.48|?>>
     <associate|eq 16.5.1|<tuple|16.5|?>>
@@ -31948,93 +32007,93 @@
     <associate|eq 16.50.21|<tuple|16.49|?>>
     <associate|eq 16.51.21|<tuple|16.50|?>>
     <associate|eq 16.51\<point\>189|<tuple|16.86|?>>
-    <associate|eq 16.52.190|<tuple|16.112|?>>
-    <associate|eq 16.521.22|<tuple|16.539|?>>
-    <associate|eq 16.525.22|<tuple|16.543|?>>
-    <associate|eq 16.527.22|<tuple|16.545|?>>
-    <associate|eq 16.569.318|<tuple|16.595|?>>
-    <associate|eq 16.570.311|<tuple|16.610|?>>
-    <associate|eq 16.571.311|<tuple|16.611|?>>
-    <associate|eq 16.572.22|<tuple|16.575|?>>
-    <associate|eq 16.572.311|<tuple|16.612|?>>
-    <associate|eq 16.573.22|<tuple|16.576|?>>
-    <associate|eq 16.573.311|<tuple|16.613|?>>
-    <associate|eq 16.573.316|<tuple|16.601|?>>
-    <associate|eq 16.574.22|<tuple|16.577|?>>
-    <associate|eq 16.574.311|<tuple|16.614|?>>
-    <associate|eq 16.574.315|<tuple|16.587|?>>
-    <associate|eq 16.574.316|<tuple|16.602|?>>
-    <associate|eq 16.575.311|<tuple|16.615|?>>
-    <associate|eq 16.575.315|<tuple|16.588|?>>
-    <associate|eq 16.575.316|<tuple|16.603|?>>
-    <associate|eq 16.576.311|<tuple|16.616|?>>
-    <associate|eq 16.576.315|<tuple|16.589|?>>
-    <associate|eq 16.576.316|<tuple|16.604|?>>
-    <associate|eq 16.577.311|<tuple|16.617|?>>
-    <associate|eq 16.577.315|<tuple|16.590|?>>
-    <associate|eq 16.577.316|<tuple|16.605|?>>
-    <associate|eq 16.578.315|<tuple|16.591|?>>
-    <associate|eq 16.578.316|<tuple|16.607|?>>
-    <associate|eq 16.579.315|<tuple|16.592|?>>
-    <associate|eq 16.579.316|<tuple|16.608|?>>
-    <associate|eq 16.580.315|<tuple|16.593|?>>
-    <associate|eq 16.580.316|<tuple|16.609|?>>
-    <associate|eq 16.581.315|<tuple|16.594|?>>
-    <associate|eq 16.582.313|<tuple|16.645|?>>
-    <associate|eq 16.582.315|<tuple|16.596|?>>
-    <associate|eq 16.583.315|<tuple|16.597|?>>
-    <associate|eq 16.584.315.1|<tuple|16.598|?>>
-    <associate|eq 16.585.313|<tuple|16.652|?>>
-    <associate|eq 16.585.315|<tuple|16.599|?>>
-    <associate|eq 16.589.316|<tuple|16.618|?>>
-    <associate|eq 16.590.316|<tuple|16.619|?>>
-    <associate|eq 16.592.505|<tuple|16.578|?>>
-    <associate|eq 16.593.505|<tuple|16.579|?>>
-    <associate|eq 16.594.305|<tuple|16.580|?>>
-    <associate|eq 16.596.505|<tuple|16.581|?>>
-    <associate|eq 16.597.505|<tuple|16.582|?>>
-    <associate|eq 16.598.23|<tuple|16.600|?>>
-    <associate|eq 16.598.505|<tuple|16.583|?>>
-    <associate|eq 16.599.305|<tuple|16.584|?>>
+    <associate|eq 16.52.190|<tuple|16.113|?>>
+    <associate|eq 16.521.22|<tuple|16.540|?>>
+    <associate|eq 16.525.22|<tuple|16.544|?>>
+    <associate|eq 16.527.22|<tuple|16.546|?>>
+    <associate|eq 16.569.318|<tuple|16.596|?>>
+    <associate|eq 16.570.311|<tuple|16.611|?>>
+    <associate|eq 16.571.311|<tuple|16.612|?>>
+    <associate|eq 16.572.22|<tuple|16.576|?>>
+    <associate|eq 16.572.311|<tuple|16.613|?>>
+    <associate|eq 16.573.22|<tuple|16.577|?>>
+    <associate|eq 16.573.311|<tuple|16.614|?>>
+    <associate|eq 16.573.316|<tuple|16.602|?>>
+    <associate|eq 16.574.22|<tuple|16.578|?>>
+    <associate|eq 16.574.311|<tuple|16.615|?>>
+    <associate|eq 16.574.315|<tuple|16.588|?>>
+    <associate|eq 16.574.316|<tuple|16.603|?>>
+    <associate|eq 16.575.311|<tuple|16.616|?>>
+    <associate|eq 16.575.315|<tuple|16.589|?>>
+    <associate|eq 16.575.316|<tuple|16.604|?>>
+    <associate|eq 16.576.311|<tuple|16.617|?>>
+    <associate|eq 16.576.315|<tuple|16.590|?>>
+    <associate|eq 16.576.316|<tuple|16.605|?>>
+    <associate|eq 16.577.311|<tuple|16.618|?>>
+    <associate|eq 16.577.315|<tuple|16.591|?>>
+    <associate|eq 16.577.316|<tuple|16.606|?>>
+    <associate|eq 16.578.315|<tuple|16.592|?>>
+    <associate|eq 16.578.316|<tuple|16.608|?>>
+    <associate|eq 16.579.315|<tuple|16.593|?>>
+    <associate|eq 16.579.316|<tuple|16.609|?>>
+    <associate|eq 16.580.315|<tuple|16.594|?>>
+    <associate|eq 16.580.316|<tuple|16.610|?>>
+    <associate|eq 16.581.315|<tuple|16.595|?>>
+    <associate|eq 16.582.313|<tuple|16.646|?>>
+    <associate|eq 16.582.315|<tuple|16.597|?>>
+    <associate|eq 16.583.315|<tuple|16.598|?>>
+    <associate|eq 16.584.315.1|<tuple|16.599|?>>
+    <associate|eq 16.585.313|<tuple|16.653|?>>
+    <associate|eq 16.585.315|<tuple|16.600|?>>
+    <associate|eq 16.589.316|<tuple|16.619|?>>
+    <associate|eq 16.590.316|<tuple|16.620|?>>
+    <associate|eq 16.592.505|<tuple|16.579|?>>
+    <associate|eq 16.593.505|<tuple|16.580|?>>
+    <associate|eq 16.594.305|<tuple|16.581|?>>
+    <associate|eq 16.596.505|<tuple|16.582|?>>
+    <associate|eq 16.597.505|<tuple|16.583|?>>
+    <associate|eq 16.598.23|<tuple|16.601|?>>
+    <associate|eq 16.598.505|<tuple|16.584|?>>
+    <associate|eq 16.599.305|<tuple|16.585|?>>
     <associate|eq 16.6.301|<tuple|16.6|?>>
-    <associate|eq 16.600.505|<tuple|16.585|?>>
-    <associate|eq 16.602.317|<tuple|16.639|?>>
-    <associate|eq 16.603.317|<tuple|16.640|?>>
-    <associate|eq 16.604.23|<tuple|16.606|?>>
-    <associate|eq 16.604.317|<tuple|16.641|?>>
-    <associate|eq 16.605.307|<tuple|16.586|?>>
-    <associate|eq 16.605.317|<tuple|16.642|?>>
-    <associate|eq 16.606.317|<tuple|16.643|?>>
-    <associate|eq 16.614.318|<tuple|16.644|?>>
-    <associate|eq 16.618.23|<tuple|16.620|?>>
-    <associate|eq 16.619.23|<tuple|16.621|?>>
-    <associate|eq 16.620.23|<tuple|16.622|?>>
-    <associate|eq 16.621.16.621.23|<tuple|16.623|?>>
-    <associate|eq 16.622.23|<tuple|16.624|?>>
-    <associate|eq 16.623.23|<tuple|16.625|?>>
-    <associate|eq 16.624.23|<tuple|16.626|?>>
-    <associate|eq 16.625.23|<tuple|16.627|?>>
-    <associate|eq 16.626.23|<tuple|16.628|?>>
-    <associate|eq 16.627.23|<tuple|16.629|?>>
-    <associate|eq 16.628.23|<tuple|16.630|?>>
-    <associate|eq 16.629.23|<tuple|16.631|?>>
-    <associate|eq 16.630.23|<tuple|16.632|?>>
-    <associate|eq 16.631.23|<tuple|16.633|?>>
-    <associate|eq 16.632.23|<tuple|16.634|?>>
-    <associate|eq 16.633.23|<tuple|16.635|?>>
-    <associate|eq 16.634.23|<tuple|16.636|?>>
-    <associate|eq 16.635.23|<tuple|16.637|?>>
-    <associate|eq 16.636.23|<tuple|16.638|?>>
-    <associate|eq 16.644.23|<tuple|16.110|?>>
-    <associate|eq 16.645.23|<tuple|16.111|?>>
-    <associate|eq 16.646.23|<tuple|16.646|?>>
-    <associate|eq 16.647.23|<tuple|16.647|?>>
-    <associate|eq 16.648.23|<tuple|16.648|?>>
-    <associate|eq 16.649.23|<tuple|16.649|?>>
-    <associate|eq 16.650.23|<tuple|16.650|?>>
-    <associate|eq 16.651.23|<tuple|16.651|?>>
-    <associate|eq 16.653.23|<tuple|16.653|?>>
-    <associate|eq 16.67.140|<tuple|16.113|?>>
+    <associate|eq 16.600.505|<tuple|16.586|?>>
+    <associate|eq 16.602.317|<tuple|16.640|?>>
+    <associate|eq 16.603.317|<tuple|16.641|?>>
+    <associate|eq 16.604.23|<tuple|16.607|?>>
+    <associate|eq 16.604.317|<tuple|16.642|?>>
+    <associate|eq 16.605.307|<tuple|16.587|?>>
+    <associate|eq 16.605.317|<tuple|16.643|?>>
+    <associate|eq 16.606.317|<tuple|16.644|?>>
+    <associate|eq 16.614.318|<tuple|16.645|?>>
+    <associate|eq 16.618.23|<tuple|16.621|?>>
+    <associate|eq 16.619.23|<tuple|16.622|?>>
+    <associate|eq 16.620.23|<tuple|16.623|?>>
+    <associate|eq 16.621.16.621.23|<tuple|16.624|?>>
+    <associate|eq 16.622.23|<tuple|16.625|?>>
+    <associate|eq 16.623.23|<tuple|16.626|?>>
+    <associate|eq 16.624.23|<tuple|16.627|?>>
+    <associate|eq 16.625.23|<tuple|16.628|?>>
+    <associate|eq 16.626.23|<tuple|16.629|?>>
+    <associate|eq 16.627.23|<tuple|16.630|?>>
+    <associate|eq 16.628.23|<tuple|16.631|?>>
+    <associate|eq 16.629.23|<tuple|16.632|?>>
+    <associate|eq 16.630.23|<tuple|16.633|?>>
+    <associate|eq 16.631.23|<tuple|16.634|?>>
+    <associate|eq 16.632.23|<tuple|16.635|?>>
+    <associate|eq 16.633.23|<tuple|16.636|?>>
+    <associate|eq 16.634.23|<tuple|16.637|?>>
+    <associate|eq 16.635.23|<tuple|16.638|?>>
+    <associate|eq 16.636.23|<tuple|16.639|?>>
+    <associate|eq 16.644.23|<tuple|16.111|?>>
+    <associate|eq 16.645.23|<tuple|16.112|?>>
+    <associate|eq 16.646.23|<tuple|16.647|?>>
+    <associate|eq 16.647.23|<tuple|16.648|?>>
+    <associate|eq 16.648.23|<tuple|16.649|?>>
+    <associate|eq 16.649.23|<tuple|16.650|?>>
+    <associate|eq 16.650.23|<tuple|16.651|?>>
+    <associate|eq 16.651.23|<tuple|16.652|?>>
+    <associate|eq 16.653.23|<tuple|16.654|?>>
+    <associate|eq 16.67.140|<tuple|16.114|?>>
     <associate|eq 16.7.178|<tuple|16.22|?>>
     <associate|eq 16.7.301|<tuple|16.7|?>>
     <associate|eq 16.73.3|<tuple|16.39|?>>
@@ -32048,12 +32107,12 @@
     <associate|eq 16.8.5|<tuple|16.8|?>>
     <associate|eq 16.80.5|<tuple|16.88|?>>
     <associate|eq 16.81.5|<tuple|16.89|?>>
-    <associate|eq 16.82.193|<tuple|16.146|?>>
+    <associate|eq 16.82.193|<tuple|16.147|?>>
     <associate|eq 16.82.5|<tuple|16.90|?>>
-    <associate|eq 16.83|<tuple|16.149|?>>
+    <associate|eq 16.83|<tuple|16.150|?>>
     <associate|eq 16.83.12|<tuple|16.92|?>>
     <associate|eq 16.84.12|<tuple|16.93|?>>
-    <associate|eq 16.84.193|<tuple|16.150|?>>
+    <associate|eq 16.84.193|<tuple|16.151|?>>
     <associate|eq 16.86.14|<tuple|16.94|?>>
     <associate|eq 16.87.14|<tuple|16.95|?>>
     <associate|eq 16.88.14|<tuple|16.96|?>>
@@ -32065,9 +32124,9 @@
     <associate|eq 16.96.6|<tuple|16.99|?>>
     <associate|eq 16.97.11|<tuple|16.100|?>>
     <associate|eq 16.98.6|<tuple|16.54|?>>
-    <associate|eq 16.98.8.1|<tuple|16.102|?>>
+    <associate|eq 16.98.8.1|<tuple|16.103|?>>
     <associate|eq 16.99.4|<tuple|16.68|?>>
-    <associate|eq 16.99.6|<tuple|16.103|?>>
+    <associate|eq 16.99.6|<tuple|16.104|?>>
     <associate|fig 4.311|<tuple|16.4|?>>
     <associate|fig 5.311|<tuple|16.5|?>>
     <associate|inverse function and derivate|<tuple|16.349|?>>
@@ -32160,19 +32219,19 @@
 <\auxiliary>
   <\collection>
     <\associate|figure>
-      <tuple|normal|<surround|<hidden-binding|<tuple>|16.1>||>|<pageref|auto-53>>
+      <tuple|normal|<surround|<hidden-binding|<tuple>|16.1>||>|<pageref|auto-72>>
 
-      <tuple|normal|<surround|<hidden-binding|<tuple>|16.2>||>|<pageref|auto-54>>
+      <tuple|normal|<surround|<hidden-binding|<tuple>|16.2>||>|<pageref|auto-73>>
 
-      <tuple|normal|<surround|<hidden-binding|<tuple>|16.3>||>|<pageref|auto-57>>
+      <tuple|normal|<surround|<hidden-binding|<tuple>|16.3>||>|<pageref|auto-76>>
 
       <tuple|normal|<\surround|<hidden-binding|<tuple>|16.4>|>
         \;
-      </surround>|<pageref|auto-79>>
+      </surround>|<pageref|auto-119>>
 
       <tuple|normal|<\surround|<hidden-binding|<tuple>|16.5>|>
         \;
-      </surround>|<pageref|auto-80>>
+      </surround>|<pageref|auto-120>>
     </associate>
     <\associate|idx>
       <tuple|<tuple|convergence of a function>|<pageref|auto-4>>
@@ -32207,72 +32266,173 @@
 
       <tuple|<tuple|<with|mode|<quote|math>|I<rsup|<around*|[|i,x|]>>>>|<pageref|auto-23>>
 
-      <tuple|<tuple|partial derivate>|<pageref|auto-25>>
+      <tuple|<tuple|partial differential at a point>|<pageref|auto-24>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|\<partial\><rsub|i>f<around*|(|x|)>>>|<pageref|auto-26>>
+      <tuple|<tuple|<with|mode|<quote|math>|D<rsub|x,i>f>>|<pageref|auto-25>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|<around*|(|f<rsub|1>,\<ldots\>,f<rsub|n>|)>>>|<pageref|auto-28>>
+      <tuple|<tuple|partial differential>|<pageref|auto-26>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|L<rsub|n><around*|(|X;Y|)>>>|<pageref|auto-32>>
+      <tuple|<tuple|<with|mode|<quote|math>|D<rsub|i,x>f>>|<pageref|auto-27>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|L<around*|(|x<rsub|1>:\<ldots\>:x<rsub|n>|)>>>|<pageref|auto-33>>
+      <tuple|<tuple|<with|mode|<quote|math>|\<frak-D\><rsub|i,f>>>|<pageref|auto-28>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|D<rsup|<around*|[|n|]>>f>>|<pageref|auto-35>>
+      <tuple|<tuple|partial derivate>|<pageref|auto-30>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|\<frak-D\><rsup|n><rsub|f>>>|<pageref|auto-36>>
+      <tuple|<tuple|<with|mode|<quote|math>|\<partial\><rsub|x,i>f>>|<pageref|auto-31>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|D<rsup|n>f<around*|(|x|)>>>|<pageref|auto-37>>
+      <tuple|<tuple|partial derivative at a point>|<pageref|auto-32>>
+
+      <tuple|<tuple|partial derivative>|<pageref|auto-33>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|\<partial\><rsub|f>f>>|<pageref|auto-34>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|\<cal-D\><rsub|i,f>>>|<pageref|auto-35>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|<around*|(|f<rsub|1>,\<ldots\>,f<rsub|n>|)>>>|<pageref|auto-37>>
+
+      <tuple|<tuple|Jacobian matrix>|<pageref|auto-38>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|<around*|[|<frac|\<partial\><around*|(|f<rsub|1>\<ldots\>,f<rsub|m>|)>|\<partial\><around*|(|1,\<ldots\>,n|)>>|]><rsub|x>>>|<pageref|auto-39>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|L<rsub|n><around*|(|X;Y|)>>>|<pageref|auto-43>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|L<around*|(|x<rsub|1>:\<ldots\>:x<rsub|n>|)>>>|<pageref|auto-44>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|D<rsup|<around*|[|n|]>>f>>|<pageref|auto-46>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|\<frak-D\><rsup|n><rsub|f>>>|<pageref|auto-47>>
+
+      <tuple|<tuple|higher order differential>|<pageref|auto-48>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|D<rsup|n>f<around*|(|x|)>>>|<pageref|auto-49>>
+
+      <tuple|<tuple|higher order differential at a point>|<pageref|auto-50>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|D<rsup|<around*|[|n|]>><rsub|x>f>>|<pageref|auto-51>>
 
       <tuple|<tuple|<with|mode|<quote|math>|\<infty\>>-times
-      differentibility>|<pageref|auto-38>>
+      differentibility>|<pageref|auto-52>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|C<rsup|n>>>|<pageref|auto-39>>
+      <tuple|<tuple|<with|mode|<quote|math>|C<rsup|n>>>|<pageref|auto-53>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|C<rsup|0>>>|<pageref|auto-40>>
+      <tuple|<tuple|<with|mode|<quote|math>|C<rsup|0>>>|<pageref|auto-54>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|C<rsup|\<infty\>>>>|<pageref|auto-41>>
+      <tuple|<tuple|<with|mode|<quote|math>|C<rsup|\<infty\>>>>|<pageref|auto-55>>
+
+      <tuple|<tuple|higher order derivative>|<pageref|auto-57>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|\<cal-D\><rsup|n><rsub|f>>>|<pageref|auto-58>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|f<rsup|<around*|(|n|)>>>>|<pageref|auto-59>>
+
+      <tuple|<tuple|higher order derivative at a point>|<pageref|auto-60>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|f<rsup|<around*|(|n|)>><rsub|x>>>|<pageref|auto-61>>
 
       <tuple|<tuple|chain rule higher order
-      differentiation>|<pageref|auto-46>>
+      differentiation>|<pageref|auto-65>>
 
       <tuple|<tuple|higher order differentiation chain
-      rule>|<pageref|auto-47>>
+      rule>|<pageref|auto-66>>
 
-      <tuple|<tuple|local weak minimum>|<pageref|auto-50>>
+      <tuple|<tuple|local weak minimum>|<pageref|auto-69>>
 
-      <tuple|<tuple|local weak maximum>|<pageref|auto-51>>
+      <tuple|<tuple|local weak maximum>|<pageref|auto-70>>
 
-      <tuple|<tuple|local extremum>|<pageref|auto-52>>
+      <tuple|<tuple|local extremum>|<pageref|auto-71>>
 
-      <tuple|<tuple|concave function>|<pageref|auto-55>>
+      <tuple|<tuple|concave function>|<pageref|auto-74>>
 
-      <tuple|<tuple|convex function>|<pageref|auto-56>>
+      <tuple|<tuple|convex function>|<pageref|auto-75>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|ev<rsub|v<rsub|1>,\<ldots\>,v<rsub|n>>>>|<pageref|auto-61>>
+      <tuple|<tuple|fundamental theorem of calculus (I)>|<pageref|auto-78>>
 
-      <tuple|<tuple|evaluation operator>|<pageref|auto-62>>
+      <tuple|<tuple|fundamental theorem of calculus (II)>|<pageref|auto-79>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|L<rsub|n><around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>>|<pageref|auto-65>>
+      <tuple|<tuple|integration by parts>|<pageref|auto-80>>
 
-      <tuple|<tuple|higher order partial differential>|<pageref|auto-67>>
+      <tuple|<tuple|mean value theorem (I)>|<pageref|auto-82>>
 
-      <tuple|<tuple|topological vector space>|<pageref|auto-71>>
+      <tuple|<tuple|convex set>|<pageref|auto-83>>
 
-      <tuple|<tuple|toplinear isomorphism>|<pageref|auto-72>>
+      <tuple|<tuple|mean value theorem>|<pageref|auto-84>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|\<cal-G\>L<around*|(|X|)>>>|<pageref|auto-73>>
+      <tuple|<tuple|mean value theorem (III)>|<pageref|auto-85>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|H<rsup|n>>>|<pageref|auto-74>>
+      <tuple|<tuple|mean value theorem (IV)>|<pageref|auto-86>>
 
-      <tuple|<tuple|diff diffeomorphism>|<pageref|auto-75>>
+      <tuple|<tuple|mean value theorem (V)>|<pageref|auto-87>>
 
-      <tuple|<tuple|local diffeomorphism>|<pageref|auto-76>>
+      <tuple|<tuple|mean value theorem (VI)>|<pageref|auto-88>>
 
-      <tuple|<tuple|inverse function theorem>|<pageref|auto-77>>
+      <tuple|<tuple|mean value theorem (VII)>|<pageref|auto-89>>
 
-      <tuple|<tuple|implicit function theorem (1)>|<pageref|auto-81>>
+      <tuple|<tuple|<with|mode|<quote|math>|ev<rsub|v<rsub|1>,\<ldots\>,v<rsub|n>>>>|<pageref|auto-91>>
 
-      <tuple|<tuple|implict function theorem (2)>|<pageref|auto-82>>
+      <tuple|<tuple|evaluation operator>|<pageref|auto-92>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|L<rsub|n><around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>>|<pageref|auto-95>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|L<around*|(|x<rsub|1>:\<ldots\>:x<rsub|n>|)>>>|<pageref|auto-96>>
+
+      <tuple|<tuple|higher order partial differential>|<pageref|auto-98>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|\<frak-D\><rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>,f>>>|<pageref|auto-99>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|D<rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f>>|<pageref|auto-100>>
+
+      <tuple|<tuple|higher order partial differential at a
+      point>|<pageref|auto-101>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|D<rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f>>|<pageref|auto-102>>
+
+      <tuple|<tuple|higher order partial derivative>|<pageref|auto-104>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|\<cal-D\><rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>,f>>>|<pageref|auto-105>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|\<partial\><rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f>>|<pageref|auto-106>>
+
+      <tuple|<tuple|higher partial derivative at a point>|<pageref|auto-107>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|\<partial\><rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f>>|<pageref|auto-108>>
+
+      <tuple|<tuple|topological vector space>|<pageref|auto-111>>
+
+      <tuple|<tuple|toplinear isomorphism>|<pageref|auto-112>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|\<cal-G\>L<around*|(|X|)>>>|<pageref|auto-113>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|H<rsup|n>>>|<pageref|auto-114>>
+
+      <tuple|<tuple|diff diffeomorphism>|<pageref|auto-115>>
+
+      <tuple|<tuple|local diffeomorphism>|<pageref|auto-116>>
+
+      <tuple|<tuple|inverse function theorem>|<pageref|auto-117>>
+
+      <tuple|<tuple|implicit function theorem (1)>|<pageref|auto-121>>
+
+      <tuple|<tuple|implict function theorem (2)>|<pageref|auto-122>>
+
+      <tuple|<tuple|Taylor's theorem (I)>|<pageref|auto-124>>
+
+      <tuple|<tuple|Taylor's theorem (I.1)>|<pageref|auto-125>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|<below|ord|x<below|\<rightarrow\>|A>x<rsub|0>>g<around*|(|x|)>>>|<pageref|auto-126>>
+
+      <tuple|<tuple|Taylor's theorem (I.2)>|<pageref|auto-127>>
+
+      <tuple|<tuple|Taylor's theorem (I.3)>|<pageref|auto-128>>
+
+      <tuple|<tuple|Taylor's theorem (I.4)>|<pageref|auto-129>>
+
+      <tuple|<tuple|Taylor's theorem (II.1)>|<pageref|auto-130>>
+
+      <tuple|<tuple|Taylor's theorem (II.2)>|<pageref|auto-131>>
+
+      <tuple|<tuple|Taylor's theorem (III)>|<pageref|auto-132>>
+
+      <tuple|<tuple|Taylor's theorem (IV)>|<pageref|auto-133>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|16<space|2spc>Differentiation
@@ -32305,96 +32465,96 @@
 
       <with|par-left|<quote|1tab>|16.1.6<space|2spc>Partial Derivatives
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-24>>
+      <no-break><pageref|auto-29>>
 
       <with|par-left|<quote|1tab>|16.1.7<space|2spc>Differentiation of vector
       valued functions <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-27>>
+      <no-break><pageref|auto-36>>
 
       <with|par-left|<quote|1tab>|16.1.8<space|2spc>Usefully derivatives
       \ <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-29>>
+      <no-break><pageref|auto-40>>
 
       16.2<space|2spc>Higher order differentials
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-30>
+      <no-break><pageref|auto-41>
 
       <with|par-left|<quote|1tab>|16.2.1<space|2spc>Linear mappings and
       multi-linear mappings <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-31>>
+      <no-break><pageref|auto-42>>
 
       <with|par-left|<quote|1tab>|16.2.2<space|2spc>Higher order Fréchet
       differentiation. <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-34>>
+      <no-break><pageref|auto-45>>
 
       <with|par-left|<quote|1tab>|16.2.3<space|2spc>Higher order derivatives
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-42>>
+      <no-break><pageref|auto-56>>
 
       <with|par-left|<quote|1tab>|16.2.4<space|2spc>Properties of higher
       order differentials and derivatives.
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-43>>
+      <no-break><pageref|auto-62>>
 
       <with|par-left|<quote|1tab>|16.2.5<space|2spc>Examples of
       <with|mode|<quote|math>|\<infty\>>-times differentiable functions
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-44>>
+      <no-break><pageref|auto-63>>
 
       <with|par-left|<quote|1tab>|16.2.6<space|2spc>The chain rule for higher
       order differentials an derivatives <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-45>>
+      <no-break><pageref|auto-64>>
 
       16.3<space|2spc>Intermediate value and main value theorems.
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-48>
+      <no-break><pageref|auto-67>
 
       <with|par-left|<quote|1tab>|16.3.1<space|2spc>Derivatives, extremums,
       concavity, and convexity <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-49>>
+      <no-break><pageref|auto-68>>
 
       <with|par-left|<quote|1tab>|16.3.2<space|2spc>Fundamental theorem of
       Calculus for the Riemann Integral <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-58>>
+      <no-break><pageref|auto-77>>
 
       <with|par-left|<quote|1tab>|16.3.3<space|2spc>Mean Value Theorems
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-59>>
+      <no-break><pageref|auto-81>>
 
       16.4<space|2spc>Symmetry of Higher Order Differentials
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-60>
+      <no-break><pageref|auto-90>
 
       16.5<space|2spc>Higher Order Partial Differentiation
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-63>
+      <no-break><pageref|auto-93>
 
       <with|par-left|<quote|1tab>|16.5.1<space|2spc>Linear and multilinear
       mappings. <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-64>>
+      <no-break><pageref|auto-94>>
 
       <with|par-left|<quote|1tab>|16.5.2<space|2spc>Higher Order Partial
       Differentiation <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-66>>
+      <no-break><pageref|auto-97>>
 
       <with|par-left|<quote|1tab>|16.5.3<space|2spc>Higher Order Partial
       Derivatives <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-68>>
+      <no-break><pageref|auto-103>>
 
       16.6<space|2spc>Inverse Function Theorem
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-69>
+      <no-break><pageref|auto-109>
 
       <with|par-left|<quote|1tab>|16.6.1<space|2spc>Prerequisites
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-70>>
+      <no-break><pageref|auto-110>>
 
       <with|par-left|<quote|1tab>|16.6.2<space|2spc>Implicit Function Theorem
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-78>>
+      <no-break><pageref|auto-118>>
 
       16.7<space|2spc>Taylor Expansion <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-83>
+      <no-break><pageref|auto-123>
     </associate>
   </collection>
 </auxiliary>

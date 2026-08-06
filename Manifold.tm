@@ -1959,23 +1959,22 @@
   </definition>
 
   The purpose of a <math|C<rsup|m>>-atlas is to define <math|C<rsup|m>>
-  differentiability of mappings <math|f:M\<rightarrow\>\<bbb-R\>>. However it
-  is possible that two different atlasses result produce the same set of
-  mappings of class <math|C<rsup|m>>. For example if <math|\<cal-A\>> and
-  <math|\<cal-B\>> are two <math|C<rsup|m>> atlasses on
-  <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> such for all
-  <math|<around*|(|U,\<varphi\>|)>\<in\>\<cal-A\>> and
-  <math|<around*|(|V,\<psi\>|)>\<in\>\<cal-B\>> we have that
-  <math|<around*|(|U,\<varphi\>|)>> and <math|<around*|(|V,y|)>> are
-  <math|C<rsup|m>> compatible then if <math|f\<circ\>\<varphi\><rsub|i><rsup|-1>>
-  is of class <math|C<rsup|m>> we have, as\ 
-
-  <\equation*>
-    f\<circ\>\<psi\><rsup|-1>=f\<circ\><around*|(|\<varphi\><rsup|-1>\<circ\>\<varphi\>|)>\<circ\>\<psi\><rsup|-1>=<around*|(|f\<circ\>\<varphi\><rsup|-1>|)>\<circ\><around*|(|\<varphi\>\<circ\>\<psi\><rsup|-1>|)>
-  </equation*>
-
-  that by the chain rule <math|f\<circ\>\<psi\><rsup|-1>> is of the class
-  <math|C<rsup|m>>. To solve this problem we introduce the concept of a
+  differentiability of mappings <math|f:M\<rightarrow\>\<bbb-R\>> by saying
+  that <math|f> is of class <math|C<rsup|m>> if
+  <math|f\<circ\>\<varphi\><rsup|-1>> is of class <math|C<rsup|m>> for every
+  <math|<around*|(|U,\<varphi\>|)>\<in\>\<cal-A\>>. However it is possible
+  that two different atlasses produce the same set of mappings of class
+  <math|C<rsup|m>>. If <math|\<cal-A\>> and <math|\<cal-B\>> are two
+  <math|C<rsup|m>> atlasses on <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>>
+  such that <math|\<forall\><around*|(|U,\<varphi\>|)>\<in\>\<cal-A\>>,
+  <math|\<forall\><around*|(|V,\<psi\>|)>\<in\>\<cal-B\>>
+  <math|<around*|(|U,\<varphi\>|)>> and <math|<around*|(|V,\<psi\>|)>> are
+  <math|C<rsup|m>> compatible. Then we have by definition that
+  <math|\<psi\>\<circ\>\<varphi\><rsup|-1>:\<varphi\><around*|(|U<big|cap>V|)>\<rightarrow\>\<psi\><around*|(|U<big|cap>V|)>>
+  is of class <math|C<rsup|m>>. Hence if <math|f\<circ\>\<varphi\><rsup|-1>>
+  is of class <math|C<rsup|m>> then, as <math|f\<circ\>\<psi\><rsup|-1>=f\<circ\><around*|(|\<varphi\><rsup|-1>\<circ\>\<varphi\>|)>\<circ\>\<psi\><rsup|-1>=<around*|(|f\<circ\>\<varphi\><rsup|-1>|)>\<circ\><around*|(|\<varphi\>\<circ\>\<psi\><rsup|-1>|)>>,
+  it follows by the chain rule that <math|f\<circ\>\<psi\><rsup|-1>> is of
+  class <math|C<rsup|m>>. To solve this problem we introduce the concept of a
   maximal atlas.\ 
 
   <\definition>
@@ -1985,11 +1984,11 @@
     <math|n>-dimensional topological manifold then two
     <math|C<rsup|m>>-atlasses <math|\<cal-A\>> and <math|\<cal-B\>> on
     <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> are
-    <with|font-series|bold|compatible >iff <math|\<cal-A\><big|cup>\<cal-B\>>
-    is a <math|C<rsup|m>>-atlas.\ 
+    <with|font-series|bold|<math|C<rsup|m>> compatible >iff
+    <math|\<cal-A\><big|cup>\<cal-B\>> is a <math|C<rsup|m>>-atlas.\ 
   </definition>
 
-  We have the following equivalent definition of compatible atlasses.
+  We have then the following equivalent definition of compatible atlasses.
 
   <\theorem>
     <label|manifold compatible atlas (1)>Let <math|n\<in\>\<bbb-N\>>,
@@ -2000,7 +1999,7 @@
     <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> then we have\ 
 
     <\equation*>
-      \<cal-A\><text| and >\<cal-B\><text| are compatible>
+      \<cal-A\><text| and >\<cal-B\><text| are <math|C<rsup|m>> compatible>
     </equation*>
 
     <\equation*>
@@ -2020,7 +2019,7 @@
 
     <\description>
       <item*|<math|\<Rightarrow\>>>As <math|\<cal-A\>,\<cal-B\>> are
-      compatible <math|\<cal-A\><big|cup>\<cal-B\>> is a
+      <math|C<rsup|m>> compatible <math|\<cal-A\><big|cup>\<cal-B\>> is a
       <math|C<rsup|m>>-compatible atlas hence we have
       <math|\<forall\><around*|(|U,\<varphi\>|)>\<in\>\<cal-A\>\<subseteq\>\<cal-A\><big|cup>\<cal-B\>>
       and <math|\<forall\><around*|(|V,\<psi\>|)>\<in\>\<cal-B\>\<subseteq\>\<cal-A\><big|cup>\<cal-B\>>
@@ -2032,7 +2031,7 @@
       atlas. Let <math|m\<in\>M> then as <math|M=<big|cup><rsub|<around*|(|U,\<varphi\>|)>\<in\>\<cal-A\>>U>
       there exist a <math|<around*|(|U,\<varphi\>|)>\<in\>\<cal-A\>\<subseteq\>\<cal-A\><big|cup>\<cal-B\>>
       so that <math|m\<in\>U\<subseteq\><big|cup><rsub|<around*|(|U,\<varphi\>|)>\<in\>\<cal-A\><big|cup>\<cal-B\>>U>
-      which proves that <math|M\<subseteq\><big|cup><rsub|<around*|(|U,\<varphi\>|)>\<in\>\<cal-A\><big|cup>\<cal-B\>>U<below|\<subseteq\>|U\<in\>\<cal-T\>\<subseteq\>\<cal-P\><around*|(|M|)>>M>
+      which proves that <rigid|<math|M\<subseteq\><big|cup><rsub|<around*|(|U,\<varphi\>|)>\<in\>\<cal-A\><big|cup>\<cal-B\>>U<below|\<subseteq\>|U\<in\>\<cal-T\>\<subseteq\>\<cal-P\><around*|(|M|)>>M>>
       so that
 
       <\equation*>
@@ -2062,13 +2061,13 @@
 
         <item*|<math|<around*|(|U,\<varphi\>|)>\<nin\>\<cal-A\>\<wedge\><around*|(|V,\<psi\>|)>\<in\>\<cal-B\>>>Then
         <math|<around*|(|U,\<varphi\>|)>,<around*|(|V,\<psi\>|)>\<in\>\<cal-B\>>
-        we have as <math|\<cal-B\>> is a <math|C<rsup|m>>-atlas that
+        and we have, as <math|\<cal-B\>> is a <math|C<rsup|m>>-atlas, \ that
         <math|<around*|(|U,\<varphi\>|)>> and <math|<around*|(|V,\<psi\>|)>>
         are <math|C<rsup|m>> compatible.
 
         <item*|<math|<around*|(|U,\<varphi\>|)>\<in\>\<cal-A\>\<wedge\><around*|(|V,\<psi\>|)>\<nin\>\<cal-B\>>>Then
         <math|<around*|(|U,\<varphi\>|)>,<around*|(|V,\<psi\>|)>\<in\>\<cal-A\>>
-        we have as <math|\<cal-A\>> is a <math|C<rsup|m>>-atlas that
+        and we have, as <math|\<cal-A\>> is a <math|C<rsup|m>>-atlas, \ that
         <math|<around*|(|U,\<varphi\>|)>> and <math|<around*|(|V,\<psi\>|)>>
         are <math|C<rsup|m>> compatible.
       </description>
@@ -2081,8 +2080,8 @@
     </description>
   </proof>
 
-  We show now that the relation <with|font-series|bold|compatible >is a
-  equivalence relation.
+  We show now that the relation <with|font-series|bold|<math|C<rsup|m><text|
+  >>compatible >is a equivalence relation.
 
   <\lemma>
     <label|lemma 23.34.5>Let <math|n\<in\>\<bbb-N\>>,
@@ -2091,8 +2090,8 @@
     <math|n>-dimensional topological manifold then
     <math|\<approx\><rsub|m>\<subseteq\>\<Delta\><rsup|m>\<times\>\<Delta\><rsup|m>>
     defined by <math|\<cal-A\>\<approx\><rsub|m>\<cal-B\>> iff
-    <math|\<cal-A\>> is <with|font-series|bold|compatible> with
-    <math|\<cal-B\>> is a equivalence relation.
+    <math|\<cal-A\>> is <with|font-series|bold|<math|C<rsup|m>> compatible>
+    with <math|\<cal-B\>> is a equivalence relation.
   </lemma>
 
   <\proof>
@@ -2105,9 +2104,10 @@
       proves that <math|\<cal-A\>\<approx\><rsub|m>\<cal-A\>>.
 
       <item*|symetricity>If <math|\<cal-A\>\<approx\><rsub|m>\<cal-B\>> then
-      <math|\<cal-A\><big|cup>\<b-B\>> is a <math|C<rsup|m>>-atlas so that
-      <math|\<cal-B\><big|cup>\<cal-A\>> is a <math|C<rsup|m>>-atlas proving
-      that <math|\<cal-B\>\<approx\><rsub|m>\<cal-A\>>.
+      <math|\<cal-A\><big|cup>\<b-B\>> is a <math|C<rsup|m>>-atlas from which
+      it follows that <math|\<cal-B\><big|cup>\<cal-A\>> is a
+      <math|C<rsup|m>>-atlas proving that
+      <math|\<cal-B\>\<approx\><rsub|m>\<cal-A\>>.
 
       <item*|transitivity>If <math|\<cal-A\>\<approx\><rsub|m>\<cal-B\>> and
       <math|\<cal-B\>\<approx\><rsub|m>\<cal-C\>> then
@@ -2123,18 +2123,18 @@
         M=<big|cup><rsub|<around*|(|U,\<varphi\>|)>\<in\>\<cal-A\><big|cup>\<cal-C\>>U<below||>
       </equation*>
 
-      Further if <math|<around*|(|U,\<varphi\>|)>\<in\>\<cal-A\><big|cup>\<cal-C\>>
+      Further, if <math|<around*|(|U,\<varphi\>|)>\<in\>\<cal-A\><big|cup>\<cal-C\>>
       then either <math|<around*|(|U,\<varphi\>|)>\<in\>\<cal-A\>> so that
       <math|<around*|(|U,\<varphi\>|)>> is a coordinate chart on
       <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> or
       <math|<around*|(|U,\<varphi\>|)>\<in\>\<cal-C\>> so that
       <math|<around*|(|U,\<varphi\>|)>> is a coordinate chart on
-      <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>>. Hence we have\ 
+      <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>>. Hence we have that\ 
 
       <\equation*>
         \<forall\><around*|(|U,\<varphi\>|)>\<in\>\<cal-A\><big|cup>\<cal-C\><text|
-        we have that ><around*|(|U,\<varphi\>|)><text| is a coordinate chart
-        on ><around*|\<langle\>|M,\<cal-T\>|\<rangle\>>
+        \ ><around*|(|U,\<varphi\>|)><text| is a coordinate chart on
+        ><around*|\<langle\>|M,\<cal-T\>|\<rangle\>>
       </equation*>
 
       Let <math|<around*|(|U,\<varphi\>|)>,<around*|(|V,\<psi\>|)>\<in\>\<cal-A\><big|cup>\<cal-C\>>
@@ -2151,21 +2151,95 @@
 
           <item*|<math|U<big|cap>V\<neq\>\<varnothing\>>>Let
           <math|m\<in\>U<big|cap>V> then there exist a
-          <math|<around*|(|\<Omega\>,\<gamma\>|)>\<in\>\<cal-B\>> such that
-          <math|m\<in\>\<Omega\>>. As <math|\<cal-A\>\<approx\><rsub|m>\<cal-B\>>
-          and <math|\<cal-B\>\<approx\><rsub|m>\<cal-C\>> it follows that
+          <math|<around*|(|W,\<gamma\>|)>\<in\>\<cal-B\>> such that
+          <math|m\<in\>W>. As <math|\<cal-A\>\<approx\><rsub|m>\<cal-B\>> and
+          <math|\<cal-B\>\<approx\><rsub|m>\<cal-C\>> it follows that
 
           <\equation*>
-            \<varphi\>\<circ\>\<gamma\><rsup|-1>:\<gamma\><around*|(|U<big|cap>\<Omega\>|)>\<rightarrow\>\<varphi\><around*|(|U<big|cap>\<Omega\>|)><text|
-            is of class >C<rsup|m>
+            \<varphi\>\<circ\>\<gamma\><rsup|-1>:\<gamma\><around*|(|U<big|cap>W|)>\<rightarrow\>\<varphi\><around*|(|U<big|cap>W|)><text|
+            is a diffeomorphism of class >C<rsup|m>
           </equation*>
 
           <\equation*>
-            \<gamma\>\<circ\>\<psi\><rsup|-1>:\<psi\><around*|(|\<Omega\><big|cap>V|)>\<rightarrow\>\<gamma\><around*|(|\<Omega\><big|cap>V|)><text|
-            is of class >C<rsup|m>
+            \<gamma\>\<circ\>\<psi\><rsup|-1>:\<psi\><around*|(|W<big|cap>V|)>\<rightarrow\>\<gamma\><around*|(|W<big|cap>V|)><text|
+            is a diffeomorphism of class >C<rsup|m>
           </equation*>
 
-          Take
+          Take <math|Z=U<big|cap>V<big|cap>W> then <math|Z> is a open set in
+          <math|M> and, as <math|\<gamma\>>, <math|\<varphi\>>,
+          <math|\<psi\>> are homeomorphisms, it follows that\ 
+
+          <\equation*>
+            \<gamma\><around*|(|Z|)><text|, >\<varphi\><around*|(|Z|)><text|,
+            >\<psi\><around*|(|Z|)><text| are open sets in >\<bbb-R\><rsup|n>
+          </equation*>
+
+          further we have using [theorems: <reference|partial function image
+          preimage of compositions>, <reference|function preimage of image>]
+          that
+
+          <\equation*>
+            <around*|(|\<varphi\>\<circ\>\<gamma\><rsup|-1>|)><around*|(|\<gamma\><around*|(|Z|)>|)>=\<varphi\><around*|(|<around*|(|\<gamma\><rsup|-1>|)><around*|(|\<gamma\><around*|(|Z|)>|)>|)>=\<varphi\><around*|(|Z|)>
+          </equation*>
+
+          and
+
+          <\equation*>
+            <around*|(|\<gamma\>\<circ\>\<psi\><rsup|-1>|)><around*|(|\<psi\><around*|(|Z|)>|)>=\<gamma\><around*|(|<around*|(|\<psi\><rsup|-1>|)><around*|(|\<psi\><around*|(|Z|)>|)>|)>=\<gamma\><around*|(|Z|)>
+          </equation*>
+
+          So using [theorem: <reference|diff restriction of a diffeomorphism
+          is a diffeomorphism>] it follows that\ 
+
+          <\equation*>
+            <around*|(|\<varphi\>\<circ\>\<gamma\><rsup|-1>|)><rsub|\|\<gamma\><around*|(|Z|)>>:\<gamma\><around*|(|Z|)>\<rightarrow\>\<varphi\><around*|(|Z|)><text|
+            is a diffeomorphism of class >C<rsup|m>
+          </equation*>
+
+          <\equation*>
+            <around*|(|\<gamma\>\<circ\>\<psi\><rsup|-1>|)><rsub|\|\<psi\><around*|(|Z|)>>:\<psi\><around*|(|Z|)>\<rightarrow\>\<gamma\><around*|(|Z|)><text|
+            is a diffeomorphism of class >C<rsup|m>
+          </equation*>
+
+          Hence using [theorem: <reference|diff diffeomorphism composition>]
+          it follows that\ 
+
+          <\equation>
+            <label|eq 23.35\<point\>5><around*|(|\<varphi\>\<circ\>\<gamma\><rsup|-1>|)><rsub|\|\<gamma\><around*|(|Z|)>>\<circ\><around*|(|\<gamma\>\<circ\>\<psi\><rsup|-1>|)><rsub|\|\<psi\><around*|(|Z|)>><text|
+            is a diffeomorphism of class >C<rsup|m>
+          </equation>
+
+          Further we have for <math|x\<in\>\<psi\><around*|(|Z|)>> that
+
+          <\eqnarray*>
+            <tformat|<table|<row|<cell|<around*|(|<around*|(|\<varphi\>\<circ\>\<gamma\><rsup|-1>|)><rsub|\|\<gamma\><around*|(|Z|)>>\<circ\><around*|(|\<gamma\>\<circ\>\<psi\><rsup|-1>|)><rsub|\|\<psi\><around*|(|Z|)>>|)><around*|(|x|)>>|<cell|=>|<cell|<around*|(|\<varphi\>\<circ\>\<gamma\><rsup|-1>|)><rsub|\|\<gamma\><around*|(|Z|)>><around*|(|<around*|(|\<gamma\>\<circ\>\<psi\><rsup|-1>|)><rsub|\|\<psi\><around*|(|Z|)>><around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|\<varphi\>\<circ\>\<gamma\><rsup|-1>|)><around*|(|<around*|(|\<gamma\>\<circ\>\<psi\><rsup|-1>|)><around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<varphi\><around*|(|\<gamma\><rsup|-1><around*|(|\<gamma\><around*|(|\<psi\><rsup|-1><around*|(|x|)>|)>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<varphi\><around*|(|\<psi\><rsup|-1><around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|\<varphi\>\<circ\>\<psi\><rsup|-1>|)><around*|(|x|)>>>|<row|<cell|>|<cell|<below|=|x\<in\>\<psi\><around*|(|Z|)>>>|<cell|<around*|(|\<varphi\>\<circ\>\<psi\><rsup|-1>|)><rsub|\|\<psi\><around*|(|Z|)>><around*|(|x|)>>>>>
+          </eqnarray*>
+
+          from which it follows that\ 
+
+          <\equation*>
+            <around*|(|\<varphi\>\<circ\>\<psi\><rsup|-1>|)><rsub|\|\<psi\><around*|(|Z|)>>=<around*|(|\<varphi\>\<circ\>\<gamma\><rsup|-1>|)><rsub|\|\<gamma\><around*|(|Z|)>>\<circ\><around*|(|\<gamma\>\<circ\>\<psi\><rsup|-1>|)><rsub|\|\<psi\><around*|(|Z|)>>
+          </equation*>
+
+          combining this with [eq: <reference|eq 23.35\<point\>5>] proves
+          that\ 
+
+          <\equation*>
+            <around*|(|\<varphi\>\<circ\>\<psi\><rsup|-1>|)><rsub|\|\<psi\><around*|(|Z|)>><text|
+            is diffeomorphism of class >C<rsup|m>
+          </equation*>
+
+          \ 
+
+          <\eqnarray*>
+            <tformat|<table|<row|<cell|>|<cell|>|<cell|>>>>
+          </eqnarray*>
+
+          <\equation*>
+            \;
+          </equation*>
+
+          \ 
         </description>
 
         <item*|<math|<around*|(|U,\<varphi\>|)>\<nin\>\<cal-A\>\<wedge\><around*|(|V,\<psi\>|)>\<in\>\<cal-C\>>>Then
@@ -2191,7 +2265,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|22>
-    <associate|page-first|1901>
+    <associate|page-first|1903>
     <associate|par-first|0>
     <associate|section-nr|2>
     <associate|subsection-nr|0>
@@ -2239,6 +2313,7 @@
     <associate|eq 23.3.3|<tuple|23.4|?>>
     <associate|eq 23.31.4|<tuple|23.33|?>>
     <associate|eq 23.33.5|<tuple|23.34|?>>
+    <associate|eq 23.35\<point\>5|<tuple|23.35|?>>
     <associate|eq 23.4.1|<tuple|23.8|?>>
     <associate|eq 23.5.1|<tuple|23.9|?>>
     <associate|eq 23.6.1|<tuple|23.11|?>>
