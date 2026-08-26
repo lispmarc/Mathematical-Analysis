@@ -1918,7 +1918,7 @@
       </equation*>
 
       so that the relation <with|font-series|bold|<math|C<rsup|m>>
-      compatible> is symmetric. Howeve this relation is not transitive.
+      compatible> is symmetric. However this relation is not transitive.
     </note>
   </definition>
 
@@ -1975,7 +1975,7 @@
   is of class <math|C<rsup|m>> then, as <math|f\<circ\>\<psi\><rsup|-1>=f\<circ\><around*|(|\<varphi\><rsup|-1>\<circ\>\<varphi\>|)>\<circ\>\<psi\><rsup|-1>=<around*|(|f\<circ\>\<varphi\><rsup|-1>|)>\<circ\><around*|(|\<varphi\>\<circ\>\<psi\><rsup|-1>|)>>,
   it follows by the chain rule that <math|f\<circ\>\<psi\><rsup|-1>> is of
   class <math|C<rsup|m>>. To solve this problem we introduce the concept of a
-  maximal atlas.\ 
+  compatible atlasses allowing us to define a maximal atlas.
 
   <\definition>
     <label|manifold compatible atlas>Let <math|n\<in\>\<bbb-N\>>,
@@ -2047,7 +2047,8 @@
 
       <\equation*>
         \<forall\><around*|(|U,\<varphi\>|)>\<in\>\<cal-A\><big|cup>\<cal-B\><text|
-        is a coordinate chart on ><around*|\<langle\>|M,\<cal-T\>|\<rangle\>>
+        <math|<around*|(|U,\<varphi\>|)>> is a coordinate chart on
+        ><around*|\<langle\>|M,\<cal-T\>|\<rangle\>>
       </equation*>
 
       Further if <math|<around*|(|U,\<varphi\>|)>>,
@@ -2081,7 +2082,7 @@
   </proof>
 
   We show now that the relation <with|font-series|bold|<math|C<rsup|m><text|
-  >>compatible >is a equivalence relation.
+  >>compatible> between atlasses is a equivalence relation.
 
   <\lemma>
     <label|lemma 23.34.5>Let <math|n\<in\>\<bbb-N\>>,
@@ -2150,10 +2151,15 @@
           <math|<around*|(|V,\<psi\>|)>> are <math|C<rsup|m>> compatible.
 
           <item*|<math|U<big|cap>V\<neq\>\<varnothing\>>>Let
-          <math|m\<in\>U<big|cap>V> then there exist a
+          <math|x\<in\>\<psi\><around*|(|U<big|cap>V|)>> then there exist a
+          <math|p\<in\>U<big|cap>V> such that
+          <math|\<psi\><around*|(|p|)>=x>. As <math|\<cal-B\>> is a
+          <math|C<rsup|m>> atlas there exist a
           <math|<around*|(|W,\<gamma\>|)>\<in\>\<cal-B\>> such that
-          <math|m\<in\>W>. As <math|\<cal-A\>\<approx\><rsub|m>\<cal-B\>> and
-          <math|\<cal-B\>\<approx\><rsub|m>\<cal-C\>> it follows that
+          <math|p\<in\>W>, hence <math|p\<in\>U<big|cap>V<big|cap>W> from
+          which it follows that <math|U<big|cap>W\<neq\>\<varnothing\>\<neq\>W<big|cap>V>.
+          As <math|\<cal-A\>\<approx\><rsub|m>\<cal-B\>> and
+          <math|\<cal-B\>\<approx\><rsub|m>\<cal-C\>> it follows that\ 
 
           <\equation*>
             \<varphi\>\<circ\>\<gamma\><rsup|-1>:\<gamma\><around*|(|U<big|cap>W|)>\<rightarrow\>\<varphi\><around*|(|U<big|cap>W|)><text|
@@ -2165,18 +2171,26 @@
             is a diffeomorphism of class >C<rsup|m>
           </equation*>
 
-          Take <math|Z=U<big|cap>V<big|cap>W> then <math|Z> is a open set in
-          <math|M> and, as <math|\<gamma\>>, <math|\<varphi\>>,
-          <math|\<psi\>> are homeomorphisms, it follows that\ 
+          Take <math|Z=U<big|cap>V<big|cap>W> then
+
+          <\equation*>
+            x=\<psi\><around*|(|p|)>\<in\>\<psi\><around*|(|Z|)>\<subseteq\>\<psi\><around*|(|W<big|cap>V|)><text|
+            and >\<gamma\><around*|(|Z|)>\<subseteq\>\<gamma\><around*|(|W<big|cap>V|)>
+          </equation*>
+
+          As <math|U,V,W> are open it follows that <math|Z> is a open set in
+          <math|M> and, as <math|\<gamma\>,\<varphi\>,\<psi\>> are
+          homeomorphisms, it follows that\ 
 
           <\equation*>
             \<gamma\><around*|(|Z|)><text|, >\<varphi\><around*|(|Z|)><text|,
-            >\<psi\><around*|(|Z|)><text| are open sets in >\<bbb-R\><rsup|n>
+            >\<psi\><around*|(|Z|)><text| are open sets in
+            <math|\<bbb-R\><rsup|n>>>
           </equation*>
 
-          further we have using [theorems: <reference|partial function image
-          preimage of compositions>, <reference|function preimage of image>]
-          that
+          Using [theorems: <reference|partial function image preimage of
+          compositions>, <reference|function preimage of image>] it it
+          follows that
 
           <\equation*>
             <around*|(|\<varphi\>\<circ\>\<gamma\><rsup|-1>|)><around*|(|\<gamma\><around*|(|Z|)>|)>=\<varphi\><around*|(|<around*|(|\<gamma\><rsup|-1>|)><around*|(|\<gamma\><around*|(|Z|)>|)>|)>=\<varphi\><around*|(|Z|)>
@@ -2201,8 +2215,8 @@
             is a diffeomorphism of class >C<rsup|m>
           </equation*>
 
-          Hence using [theorem: <reference|diff diffeomorphism composition>]
-          it follows that\ 
+          Hence using the chain rule [see theorem: <reference|diff
+          diffeomorphism composition>] it follows that\ 
 
           <\equation>
             <label|eq 23.35\<point\>5><around*|(|\<varphi\>\<circ\>\<gamma\><rsup|-1>|)><rsub|\|\<gamma\><around*|(|Z|)>>\<circ\><around*|(|\<gamma\>\<circ\>\<psi\><rsup|-1>|)><rsub|\|\<psi\><around*|(|Z|)>><text|
@@ -2229,17 +2243,16 @@
             is diffeomorphism of class >C<rsup|m>
           </equation*>
 
-          \ 
-
-          <\eqnarray*>
-            <tformat|<table|<row|<cell|>|<cell|>|<cell|>>>>
-          </eqnarray*>
+          As this is true for every <math|x\<in\>\<psi\><around*|(|Z|)>> it
+          follows from [theorem: <reference|diff higher order class
+          condition>] that\ 
 
           <\equation*>
-            \;
+            \<varphi\>\<circ\>\<psi\><rsup|-1><text| is of class >C<rsup|m>
           </equation*>
 
-          \ 
+          which proves that <math|<around*|(|U,\<varphi\>|)>> and
+          <math|<around*|(|V,\<psi\>|)>> are <math|C<rsup|m>> compatible
         </description>
 
         <item*|<math|<around*|(|U,\<varphi\>|)>\<nin\>\<cal-A\>\<wedge\><around*|(|V,\<psi\>|)>\<in\>\<cal-C\>>>Then
@@ -2252,9 +2265,20 @@
         so that <math|<around*|(|U,\<varphi\>|)>> and
         <math|<around*|(|V,\<psi\>|)>> are <math|C<rsup|m>> compatible.
       </description>
-    </description>
 
-    \;
+      So in all cases we have that <math|<around*|(|U,\<varphi\>|)>> and
+      <math|<around*|(|V,\<psi\>|)>> are <math|C<rsup|m>> compatible which as
+      this is true for all <math|<around*|(|U,\<varphi\>|)>,<around*|(|V,\<psi\>|)>>
+      in <math|\<cal-A\><big|cup>\<cal-C\>> it follows that
+      <math|\<cal-A\><big|cup>\<cal-C\>> is a <math|C<rsup|m>> atlas on
+      <math|M>. Hence\ 
+
+      <\equation*>
+        \<cal-A\>\<approx\><rsub|m>\<cal-C\>
+      </equation*>
+
+      proving transitivity.
+    </description>
   </proof>
 
   \;
