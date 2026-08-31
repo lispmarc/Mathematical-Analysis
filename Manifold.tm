@@ -133,7 +133,8 @@
 
     <\enumerate>
       <item><math|\<forall\><around*|(|U,\<varphi\>|)>\<in\>\<cal-A\>> we
-      have that <math|<around*|(|U,\<varphi\>|)>> is a coordinate chart.
+      have that <math|<around*|(|U,\<varphi\>|)>> is a coordinate chart on
+      <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>>
 
       <item><math|M=<big|cup><rsub|<around*|(|U,\<varphi\>|)>\<in\>\<cal-A\>>U>
     </enumerate>
@@ -1887,19 +1888,16 @@
     <reference|diff diffeomorphism>].\ 
 
     <\note>
-      As for <math|<around*|(|U,\<varphi\>|)>> we have that
-      <math|\<varphi\><around*|(|U<big|cap>U|)>=\<varphi\><around*|(|U|)>>
+      <label|note 23.31.6>As for <math|<around*|(|U,\<varphi\>|)>> we have
+      that <math|\<varphi\><around*|(|U<big|cap>U|)>=\<varphi\><around*|(|U|)>>
       and <math|\<varphi\>\<circ\>\<varphi\><rsup|-1>=Id<rsub|\<varphi\><around*|(|U|)>>>
       it follows from [example: <reference|diff diffeomorphism identity>]
       that <math|\<varphi\>\<circ\>\<varphi\><rsup|-1>:\<varphi\><around*|(|U|)>\<rightarrow\>\<varphi\><around*|(|U|)>>
       is differentiable of class <math|C<rsup|\<infty\>>. > Hence
       <math|<around*|(|U,\<varphi\>|)>> is <math|C<rsup|m>> compatible with
       <math|<around*|(|U,\<varphi\>|)>> proving that the relation
-      <with|font-series|bold|<math|C<rsup|m>> compatible> is reflexive.\ 
-
-      \;
-
-      Using [theorem: <reference|diff diffeomorphism inverse>] and [theorem:
+      <with|font-series|bold|<math|C<rsup|m>> compatible> is reflexive. Using
+      [theorem: <reference|diff diffeomorphism inverse>] and [theorem:
       <reference|function composition injectivity, surjectivity and
       bijectivity>] it follows that
 
@@ -1922,11 +1920,10 @@
     </note>
   </definition>
 
-  TODO
-
   <\definition>
-    <label|manifold diffentiable atlas>Let <math|n\<in\>\<bbb-N\>>,
-    <math|m\<in\>\<bbb-N\><rsub|0><big|cup><around*|{|\<infty\>|}>>,
+    <label|manifold diffentiable atlas><index|differentiable
+    atlas><index|<math|\<Delta\><rsup|m><around*|[|M,\<cal-T\>|]>>>Let
+    <math|n\<in\>\<bbb-N\>>, <math|m\<in\>\<bbb-N\><rsub|0><big|cup><around*|{|\<infty\>|}>>,
     <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> a <math|n>-dimensional
     topological manifold then
 
@@ -1949,11 +1946,12 @@
       <math|<around*|(|V,\<psi\>|)>> are <math|C<rsup|m>> compatible.
     </enumerate>
 
-    The set of all <math|C<rsup|m>>-atlasses is noted as
-    <math|\<Delta\><rsup|m>> in other words\ 
+    The set of all <math|C<rsup|m>>-atlasses on
+    <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> is noted as
+    <math|\<Delta\><rsup|m><around*|[|M,\<cal-T\>|]>> in other words\ 
 
     <\equation*>
-      \<Delta\><rsup|m>=<around*|{|\<cal-A\>\<subseteq\><around*|{|<around*|(|U,\<varphi\>|)>\|U\<in\>\<cal-T\>\<wedge\>\<varphi\>\<in\><around*|(|\<bbb-R\><rsup|n>|)><rsup|U>|}>\|\<cal-A\><text|
+      \<Delta\><rsup|m><around*|[|M,\<cal-T\>|]>=<around*|{|\<cal-A\>\<subseteq\><around*|{|<around*|(|U,\<varphi\>|)>\|U\<in\>\<cal-T\>\<wedge\>\<varphi\>\<in\><around*|(|\<bbb-R\><rsup|n>|)><rsup|U>|}>\|\<cal-A\><text|
       is a >C<rsup|m><text|-atlas>|}>
     </equation*>
   </definition>
@@ -1975,11 +1973,48 @@
   is of class <math|C<rsup|m>> then, as <math|f\<circ\>\<psi\><rsup|-1>=f\<circ\><around*|(|\<varphi\><rsup|-1>\<circ\>\<varphi\>|)>\<circ\>\<psi\><rsup|-1>=<around*|(|f\<circ\>\<varphi\><rsup|-1>|)>\<circ\><around*|(|\<varphi\>\<circ\>\<psi\><rsup|-1>|)>>,
   it follows by the chain rule that <math|f\<circ\>\<psi\><rsup|-1>> is of
   class <math|C<rsup|m>>. To solve this problem we introduce the concept of a
-  compatible atlasses allowing us to define a maximal atlas.
+  maximal atlas.
+
+  <\definition>
+    <label|manifold maximal atlas><index|maximal atlas><dueto|maximal
+    atlas>Let <math|n\<in\>\<bbb-N\>>, <math|m\<in\>\<bbb-N\><rsub|0><big|cup><around*|{|\<infty\>|}>>,
+    <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> a <math|n>-dimensional
+    topological manifold then a <math|C<rsup|m>> atlas <math|\<cal-A\>> on
+    <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> is
+    <with|font-series|bold|maximal> if for every coordinate chart
+    <math|<around*|(|U,\<varphi\>|)>> on <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>>
+    such that <math|\<forall\><around*|(|V,\<psi\>|)>\<in\>\<cal-A\>>
+    <math|<around*|(|U,\<varphi\>|)>> and <math|<around*|(|V,\<psi\>|)>> are
+    <math|C<rsup|m>> compatable we have that
+    <math|<around*|(|U,\<varphi\>|)>\<in\>\<cal-A\>>
+  </definition>
+
+  We are now ready to define a <math|C<rsup|m>> differentiable manifold
+
+  <\definition>
+    <label|manifold differentiable manifold><index|differentiable
+    manifold><index|<math|\<cal-M\><around*|\<langle\>|M,\<cal-T\>,\<cal-A\>|\<rangle\>>>><dueto|<math|C<rsup|m>>
+    differentiable manifold>Let <math|n\<in\>\<bbb-N\>>,
+    <math|m\<in\>\<bbb-N\><rsub|0><big|cup><around*|{|\<infty\>|}>> then
+    <math|\<cal-M\><around*|\<langle\>|M,\<cal-T\>,\<cal-A\>|\<rangle\>>> is
+    a <with|font-series|bold|<math|C<rsup|m>> differentiable manifold> iff\ 
+
+    <\enumerate>
+      <item><math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> is a
+      <math|n>-dimensional topological space
+
+      <item><math|\<cal-A\>> is a maximal <math|C<rsup|m>> atlas on
+      <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>>
+    </enumerate>
+  </definition>
+
+  Given a atlas on a topological manifold we can create a unique maximal
+  atlas that contains this atlas. To do this we define a equivalence relation
+  between atlasses and construct the maximal atlas from a equivalence class.
 
   <\definition>
     <label|manifold compatible atlas>Let <math|n\<in\>\<bbb-N\>>,
-    <math|m\<in\>\<bbb-N\><rsub|0><big|cup><around*|{|\<infty\>|}>>
+    <math|m\<in\>\<bbb-N\><rsub|0><big|cup><around*|{|\<infty\>|}>>,
     <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> be a
     <math|n>-dimensional topological manifold then two
     <math|C<rsup|m>>-atlasses <math|\<cal-A\>> and <math|\<cal-B\>> on
@@ -1994,9 +2029,11 @@
     <label|manifold compatible atlas (1)>Let <math|n\<in\>\<bbb-N\>>,
     <math|m\<in\>\<bbb-N\><rsub|0><big|cup><around*|{|\<infty\>|}>>
     <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> be a
-    <math|n>-dimensional topological manifold and <math|\<cal-A\>>,
-    <math|\<cal-B\>> two <math|C<rsup|m>>-atlasses on
-    <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> then we have\ 
+    <math|n>-dimensional topological manifold and
+    <math|\<cal-A\>\<in\>\<Delta\><rsup|m><around*|[|M,\<cal-T\>|]>>,
+    <math|\<cal-B\>\<in\>\<Delta\><rsup|m><around*|[|M,\<cal-T\>|]>> two
+    <math|C<rsup|m>>-atlasses on <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>>
+    then we have\ 
 
     <\equation*>
       \<cal-A\><text| and >\<cal-B\><text| are <math|C<rsup|m>> compatible>
@@ -2042,8 +2079,9 @@
       we have either <math|<around*|(|U,\<varphi\>|)>\<in\>\<cal-A\>> so that
       <math|<around*|(|U,\<varphi\>|)>> is a coordinate chart on
       <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> or
-      <math|<around*|(|U,\<varphi\>|)>\<in\>\<cal-B\>> is a coordinate chart
-      on <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>>, in other words
+      <math|<around*|(|U,\<varphi\>|)>\<in\>\<cal-B\>> so that
+      <math|<around*|(|U,\<varphi\>|)>> is a coordinate chart on
+      <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>>, in other words
 
       <\equation*>
         \<forall\><around*|(|U,\<varphi\>|)>\<in\>\<cal-A\><big|cup>\<cal-B\><text|
@@ -2073,6 +2111,14 @@
         are <math|C<rsup|m>> compatible.
       </description>
 
+      So
+
+      <\equation*>
+        \<forall\><around*|(|U,\<varphi\>|)>\<in\>\<cal-A\><big|cup>\<cal-B\>,\<forall\><around*|(|V,\<psi\>|)>\<in\>\<cal-A\><big|cup>\<cal-B\><text|
+        we have that ><around*|(|U,\<varphi\>|)><text| and
+        ><around*|(|V,\<psi\>|)><text| is >C<rsup|m><text| compatable>
+      </equation*>
+
       Hence if follows that\ 
 
       <\equation*>
@@ -2081,15 +2127,15 @@
     </description>
   </proof>
 
-  We show now that the relation <with|font-series|bold|<math|C<rsup|m><text|
-  >>compatible> between atlasses is a equivalence relation.
+  We show now that the relation <with|font-series|bold|<math| is
+  C<rsup|m><text| >>compatible> between atlasses is a equivalence relation.
 
   <\lemma>
-    <label|lemma 23.34.5>Let <math|n\<in\>\<bbb-N\>>,
+    <label|lemma 23.37.6>Let <math|n\<in\>\<bbb-N\>>,
     <math|m\<in\>\<bbb-N\><rsub|0><big|cup><around*|{|\<infty\>|}>>
     <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> be a
     <math|n>-dimensional topological manifold then
-    <math|\<approx\><rsub|m>\<subseteq\>\<Delta\><rsup|m>\<times\>\<Delta\><rsup|m>>
+    <math|\<approx\><rsub|m>\<subseteq\>\<Delta\><rsup|m><around*|[|M,\<cal-T\>|]>\<times\>\<Delta\><rsup|m><around*|[|\<cal-M\>,\<cal-T\>|]>>
     defined by <math|\<cal-A\>\<approx\><rsub|m>\<cal-B\>> iff
     <math|\<cal-A\>> is <with|font-series|bold|<math|C<rsup|m>> compatible>
     with <math|\<cal-B\>> is a equivalence relation.
@@ -2115,14 +2161,14 @@
       <math|\<cal-A\><big|cup>\<cal-B\>> is a <math|C<rsup|m>>-atlas and
       <math|\<cal-B\><big|cup>\<cal-C\>> is a <math|C<rsup|m>>-atlas. Let
       <math|m\<in\>M> then as <math|M=<big|cup><rsub|<around*|(|U,\<varphi\>|)>\<in\>\<cal-A\>>U>
-      there exist a <math|<around*|(|U,\<varphi\>|)>\<in\>\<cal-A\>\<subseteq\>\<cal-A\><big|cup>\<cal-C\>>
-      so that <math|m\<in\>U\<subseteq\><big|cup><rsub|<around*|(|U,\<varphi\>|)>\<in\>\<cal-A\><big|cup>\<cal-C\>>U>
+      there exist a <math|<around*|(|U,\<varphi\>|)>\<in\>\<cal-A\>\<subseteq\>\<cal-A\><big|cup>\<cal-C\>>,
+      hence <math|m\<in\>U\<subseteq\><big|cup><rsub|<around*|(|U,\<varphi\>|)>\<in\>\<cal-A\><big|cup>\<cal-C\>>U>
       which proves that <math|M\<subseteq\><big|cup><rsub|<around*|(|U,\<varphi\>|)>\<in\>\<cal-A\><big|cup>\<cal-C\>>U<below|\<subseteq\>|U\<in\>\<cal-T\>\<subseteq\>\<cal-P\><around*|(|M|)>>M>
       so that
 
-      <\equation*>
-        M=<big|cup><rsub|<around*|(|U,\<varphi\>|)>\<in\>\<cal-A\><big|cup>\<cal-C\>>U<below||>
-      </equation*>
+      <\equation>
+        <label|eq 23.35\<point\>6>M=<big|cup><rsub|<around*|(|U,\<varphi\>|)>\<in\>\<cal-A\><big|cup>\<cal-C\>>U<below||>
+      </equation>
 
       Further, if <math|<around*|(|U,\<varphi\>|)>\<in\>\<cal-A\><big|cup>\<cal-C\>>
       then either <math|<around*|(|U,\<varphi\>|)>\<in\>\<cal-A\>> so that
@@ -2132,11 +2178,11 @@
       <math|<around*|(|U,\<varphi\>|)>> is a coordinate chart on
       <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>>. Hence we have that\ 
 
-      <\equation*>
-        \<forall\><around*|(|U,\<varphi\>|)>\<in\>\<cal-A\><big|cup>\<cal-C\><text|
+      <\equation>
+        <label|eq 23.36.6>\<forall\><around*|(|U,\<varphi\>|)>\<in\>\<cal-A\><big|cup>\<cal-C\><text|
         \ ><around*|(|U,\<varphi\>|)><text| is a coordinate chart on
         ><around*|\<langle\>|M,\<cal-T\>|\<rangle\>>
-      </equation*>
+      </equation>
 
       Let <math|<around*|(|U,\<varphi\>|)>,<around*|(|V,\<psi\>|)>\<in\>\<cal-A\><big|cup>\<cal-C\>>
       then we have either:
@@ -2146,7 +2192,7 @@
         for <math|U<big|cap>V> we have either:\ 
 
         <\description>
-          <item*|<math|U<big|cap>V=\<varnothing\>>>The
+          <item*|<math|U<big|cap>V=\<varnothing\>>>Then
           <math|<around*|(|U,\<varphi\>|)>> and
           <math|<around*|(|V,\<psi\>|)>> are <math|C<rsup|m>> compatible.
 
@@ -2159,51 +2205,57 @@
           <math|p\<in\>W>, hence <math|p\<in\>U<big|cap>V<big|cap>W> from
           which it follows that <math|U<big|cap>W\<neq\>\<varnothing\>\<neq\>W<big|cap>V>.
           As <math|\<cal-A\>\<approx\><rsub|m>\<cal-B\>> and
-          <math|\<cal-B\>\<approx\><rsub|m>\<cal-C\>> it follows that\ 
+          <math|\<cal-B\>\<approx\><rsub|m>\<cal-C\>> it follows that
+          <math|\<cal-A\><big|cup>\<cal-B\>> and
+          <math|\<cal-B\><big|cup>\<cal-C\>> are <math|C<rsup|m>> atlasses so
+          that
 
-          <\equation*>
-            \<varphi\>\<circ\>\<gamma\><rsup|-1>:\<gamma\><around*|(|U<big|cap>W|)>\<rightarrow\>\<varphi\><around*|(|U<big|cap>W|)><text|
+          <\equation>
+            <label|eq 23.37.6>\<varphi\>\<circ\>\<gamma\><rsup|-1>:\<gamma\><around*|(|U<big|cap>W|)>\<rightarrow\>\<varphi\><around*|(|U<big|cap>W|)><text|
             is a diffeomorphism of class >C<rsup|m>
-          </equation*>
+          </equation>
 
-          <\equation*>
-            \<gamma\>\<circ\>\<psi\><rsup|-1>:\<psi\><around*|(|W<big|cap>V|)>\<rightarrow\>\<gamma\><around*|(|W<big|cap>V|)><text|
+          <\equation>
+            <label|eq 23.38.6>\<gamma\>\<circ\>\<psi\><rsup|-1>:\<psi\><around*|(|W<big|cap>V|)>\<rightarrow\>\<gamma\><around*|(|W<big|cap>V|)><text|
             is a diffeomorphism of class >C<rsup|m>
-          </equation*>
+          </equation>
 
           Take <math|Z=U<big|cap>V<big|cap>W> then
 
-          <\equation*>
-            x=\<psi\><around*|(|p|)>\<in\>\<psi\><around*|(|Z|)>\<subseteq\>\<psi\><around*|(|W<big|cap>V|)><text|
+          <\equation>
+            <label|eq 23.39.6>x=\<psi\><around*|(|p|)>\<in\>\<psi\><around*|(|Z|)>\<subseteq\>\<psi\><around*|(|W<big|cap>V|)><text|
             and >\<gamma\><around*|(|Z|)>\<subseteq\>\<gamma\><around*|(|W<big|cap>V|)>
-          </equation*>
+          </equation>
 
           As <math|U,V,W> are open it follows that <math|Z> is a open set in
           <math|M> and, as <math|\<gamma\>,\<varphi\>,\<psi\>> are
           homeomorphisms, it follows that\ 
 
-          <\equation*>
-            \<gamma\><around*|(|Z|)><text|, >\<varphi\><around*|(|Z|)><text|,
-            >\<psi\><around*|(|Z|)><text| are open sets in
-            <math|\<bbb-R\><rsup|n>>>
-          </equation*>
+          <\equation>
+            <label|eq 23.40.6>\<gamma\><around*|(|Z|)><text|,
+            >\<varphi\><around*|(|Z|)><text|, >\<psi\><around*|(|Z|)><text|
+            are open sets in <math|\<bbb-R\><rsup|n>>>
+          </equation>
 
           Using [theorems: <reference|partial function image preimage of
           compositions>, <reference|function preimage of image>] it it
           follows that
 
-          <\equation*>
-            <around*|(|\<varphi\>\<circ\>\<gamma\><rsup|-1>|)><around*|(|\<gamma\><around*|(|Z|)>|)>=\<varphi\><around*|(|<around*|(|\<gamma\><rsup|-1>|)><around*|(|\<gamma\><around*|(|Z|)>|)>|)>=\<varphi\><around*|(|Z|)>
-          </equation*>
+          <\equation>
+            <label|eq 23.41.6><around*|(|\<varphi\>\<circ\>\<gamma\><rsup|-1>|)><around*|(|\<gamma\><around*|(|Z|)>|)>=\<varphi\><around*|(|<around*|(|\<gamma\><rsup|-1>|)><around*|(|\<gamma\><around*|(|Z|)>|)>|)>=\<varphi\><around*|(|Z|)>
+          </equation>
 
           and
 
-          <\equation*>
-            <around*|(|\<gamma\>\<circ\>\<psi\><rsup|-1>|)><around*|(|\<psi\><around*|(|Z|)>|)>=\<gamma\><around*|(|<around*|(|\<psi\><rsup|-1>|)><around*|(|\<psi\><around*|(|Z|)>|)>|)>=\<gamma\><around*|(|Z|)>
-          </equation*>
+          <\equation>
+            <label|eq 23.42.6><around*|(|\<gamma\>\<circ\>\<psi\><rsup|-1>|)><around*|(|\<psi\><around*|(|Z|)>|)>=\<gamma\><around*|(|<around*|(|\<psi\><rsup|-1>|)><around*|(|\<psi\><around*|(|Z|)>|)>|)>=\<gamma\><around*|(|Z|)>
+          </equation>
 
           So using [theorem: <reference|diff restriction of a diffeomorphism
-          is a diffeomorphism>] it follows that\ 
+          is a diffeomorphism>] on the above [see eqs: <reference|eq
+          23.37.6>, <reference|eq 23.38.6>, <reference|eq 23.39.6>,
+          <reference|eq 23.40.6>, <reference|eq 23.41.6>, <reference|eq
+          23.42.6>] it follows that\ 
 
           <\equation*>
             <around*|(|\<varphi\>\<circ\>\<gamma\><rsup|-1>|)><rsub|\|\<gamma\><around*|(|Z|)>>:\<gamma\><around*|(|Z|)>\<rightarrow\>\<varphi\><around*|(|Z|)><text|
@@ -2216,10 +2268,10 @@
           </equation*>
 
           Hence using the chain rule [see theorem: <reference|diff
-          diffeomorphism composition>] it follows that\ 
+          diffeomorphism composition>] on the above it follows that\ 
 
           <\equation>
-            <label|eq 23.35\<point\>5><around*|(|\<varphi\>\<circ\>\<gamma\><rsup|-1>|)><rsub|\|\<gamma\><around*|(|Z|)>>\<circ\><around*|(|\<gamma\>\<circ\>\<psi\><rsup|-1>|)><rsub|\|\<psi\><around*|(|Z|)>><text|
+            <label|eq 23.43.6><around*|(|\<varphi\>\<circ\>\<gamma\><rsup|-1>|)><rsub|\|\<gamma\><around*|(|Z|)>>\<circ\><around*|(|\<gamma\>\<circ\>\<psi\><rsup|-1>|)><rsub|\|\<psi\><around*|(|Z|)>><text|
             is a diffeomorphism of class >C<rsup|m>
           </equation>
 
@@ -2235,8 +2287,7 @@
             <around*|(|\<varphi\>\<circ\>\<psi\><rsup|-1>|)><rsub|\|\<psi\><around*|(|Z|)>>=<around*|(|\<varphi\>\<circ\>\<gamma\><rsup|-1>|)><rsub|\|\<gamma\><around*|(|Z|)>>\<circ\><around*|(|\<gamma\>\<circ\>\<psi\><rsup|-1>|)><rsub|\|\<psi\><around*|(|Z|)>>
           </equation*>
 
-          combining this with [eq: <reference|eq 23.35\<point\>5>] proves
-          that\ 
+          combining this with [eq: <reference|eq 23.43.6>] proves that\ 
 
           <\equation*>
             <around*|(|\<varphi\>\<circ\>\<psi\><rsup|-1>|)><rsub|\|\<psi\><around*|(|Z|)>><text|
@@ -2252,7 +2303,7 @@
           </equation*>
 
           which proves that <math|<around*|(|U,\<varphi\>|)>> and
-          <math|<around*|(|V,\<psi\>|)>> are <math|C<rsup|m>> compatible
+          <math|<around*|(|V,\<psi\>|)>> are <math|C<rsup|m>> compatible.
         </description>
 
         <item*|<math|<around*|(|U,\<varphi\>|)>\<nin\>\<cal-A\>\<wedge\><around*|(|V,\<psi\>|)>\<in\>\<cal-C\>>>Then
@@ -2281,6 +2332,385 @@
     </description>
   </proof>
 
+  Next we define \ a <math|C<rsup|m>> differentiable structure on a
+  topological manifold and use this to define a maximal <math|C<rsup|m>>
+  atlas
+
+  <\definition>
+    <label|manifold differentiable structure><index|differentiable
+    structure><index|<math|\<cal-M\><around*|[|\<cal-A\>|]>>>Let
+    <math|n\<in\>\<bbb-N\>>, <math|m\<in\>\<bbb-N\><rsub|0><big|cup><around*|{|\<infty\>|}>>,
+    <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> a <math|n>-dimensional
+    topological manifold and <math|\<cal-A\>\<in\>\<Delta\><rsup|m><around*|[|M,\<cal-T\>|]>>
+    a <math|C<rsup|r>> atlas on <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>>
+    then a <math|C<rsup|m>> differentiable structure determined by
+    <math|\<cal-A\>> noted as <math|\<cal-M\><around*|[|\<cal-A\>|]>> is
+    defined to be\ 
+
+    <\equation*>
+      \<cal-M\><around*|[|\<cal-A\>|]>=<big|cup><rsub|\<cal-B\>\<in\>\<approx\><rsub|m><around*|[|\<cal-A\>|]>>\<cal-B\>
+    </equation*>
+
+    where\ 
+
+    <\equation*>
+      \;
+    </equation*>
+
+    <\equation*>
+      \<approx\><rsub|m><around*|[|\<cal-A\>|]>\<in\>\<Delta\><rsup|m><around*|[|M,\<cal-T\>|]>/\<approx\><rsub|m>
+    </equation*>
+
+    is the equivalence class defined by [see definitions:
+    <reference|equivalence relation class>,<reference|equivalence relation
+    A/R> and lemma: <reference|lemma 23.37.6>]\ 
+
+    <\equation*>
+      \<approx\><rsub|m><around*|[|\<cal-A\>|]><below|=|def><around*|{|\<cal-B\>\<in\>\<Delta\><rsup|m><around*|[|M,\<cal-T\>|]>\|\<cal-A\>\<approx\><rsub|m>\<cal-B\>|}>=<around*|{|\<cal-B\>\<in\>\<Delta\><rsup|m><around*|[|M,\<cal-T\>|]>\|\<cal-A\><text|
+      is >C<rsup|m><text| compatable with >\<cal-B\>|}>
+    </equation*>
+  </definition>
+
+  <\lemma>
+    <label|lemma 23.39.6>Let <math|n\<in\>\<bbb-N\>>,
+    <math|m\<in\>\<bbb-N\><rsub|0><big|cup><around*|{|\<infty\>|}>>,
+    <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> a <math|n>-dimensional
+    topological manifold and <math|\<cal-A\>\<in\>\<Delta\><rsup|m><around*|[|M,\<cal-T\>|]>>
+    a <math|C<rsup|r>> atlas on <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>>
+    and <math|<around*|(|U,\<varphi\>|)>>a coordinate chart such that
+    <math|\<forall\><around*|(|V,\<psi\>|)>\<in\>\<cal-A\>> we have that
+    <math|<around*|(|U,\<varphi\>|)>> and <math|<around*|(|V,\<psi\>|)>> are
+    <math|C<rsup|r>> compatable then\ 
+
+    <\equation*>
+      \<cal-A\><big|cup><around*|{|<around*|(|U,\<varphi\>|)>|}><text| is a
+      >C<rsup|m><text| atlas on ><around*|\<langle\>|M,\<cal-T\>|\<rangle\>>
+    </equation*>
+  </lemma>
+
+  <\proof>
+    Let <math|<around*|(|V,\<psi\>|)>\<in\>\<cal-A\><big|cup><around*|{|<around*|(|U,\<varphi\>|)>|}>>
+    then we have either:\ 
+
+    <\description>
+      <item*|<math|<around*|(|V,\<psi\>|)>=<around*|(|U,\<varphi\>|)>>>Then
+      as <math|<around*|(|U,\<varphi\>|)>> is a coordiate chart
+      <math|<around*|(|V,\<psi\>|)>> is a coordinate chart.
+
+      <item*|<math|<around*|(|V,\<psi\>|)>\<in\>\<cal-A\>>>Then as
+      <math|\<cal-A\>> is a <math|C<rsup|m>> atlas on
+      <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>>
+      <math|<around*|\<langle\>|V,\<psi\>|\<rangle\>>> is a coordicate chart
+    </description>
+
+    so that\ 
+
+    <\equation>
+      <label|eq 23.44.6>\<forall\><around*|(|V,\<psi\>|)>\<in\>\<cal-A\><big|cup><around*|{|<around*|(|U,\<varphi\>|)>|}><text|
+      ><around*|(|V,\<psi\>|)><text| is a coordinate chart>
+    </equation>
+
+    As <math|\<cal-A\>> is a <math|C<rsup|m>> atlas we have that
+    <math|M=<big|cup><rsub|<around*|(|V,\<psi\>|)>\<in\>\<cal-A\>>V\<subseteq\><big|cup><rsub|<around*|(|V,\<psi\>|)>\<in\>\<cal-A\><big|cup><around*|{|<around*|(|U,\<varphi\>|)>|}>>V<below|\<subseteq\>|\<cal-T\>\<subseteq\>\<cal-P\><around*|(|M|)>>M>
+    so that\ 
+
+    <\equation>
+      <label|eq 23.45.6>M=<big|cup><rsub|<around*|(|V,\<psi\>|)>\<in\>\<cal-A\><big|cup><around*|{|<around*|(|U,\<varphi\>|)>|}>>V
+    </equation>
+
+    Let <math|<around*|(|V,\<psi\>|)>\<in\>\<cal-A\><big|cup><around*|{|<around*|(|U,\<varphi\>|)>|}>>,
+    <math|<around*|(|W,\<gamma\>|)>\<in\>\<cal-A\><big|cup><around*|{|<around*|(|U,\<varphi\>|)>|}>>
+    then we have either:
+
+    <\description>
+      <item*|<math|<around*|(|V,\<psi\>|)>=<around*|(|U,\<varphi\>|)>\<wedge\><around*|(|W,\<gamma\>|)>=<around*|(|U,\<varphi\>|)>>>Then
+      by reflectivity [see note: <reference|note 23.31.6>] it follows that
+      <math|<around*|(|V,\<psi\>|)>=<around*|(|U,\<varphi\>|)>> and
+      <math|<around*|(|W,\<gamma\>|)>=<around*|(|U,\<varphi\>|)>> are
+      <math|C<rsup|m>> compatible.\ 
+
+      <item*|<math|<around*|(|V,\<psi\>|)>\<neq\><around*|(|U,\<varphi\>|)>\<wedge\><around*|(|W,\<gamma\>|)>=<around*|(|U,\<varphi\>|)>>>Then
+      <math|<around*|(|V,\<psi\>|)>\<in\>\<cal-A\>> so that by the hypotheses
+      <math|<rigid|<around*|(|W,\<gamma\>|)>=<around*|(|U,\<varphi\>|)>>> and
+      <math|<around*|(|V,\<psi\>|)>> are <math|C<rsup|m>> compatible so that
+      by symmetry [see note: <reference|note 23.31.6>]
+      <math|<around*|(|V,\<psi\>|)>> and <math|<around*|(|W,\<gamma\>|)>> are
+      <math|C<rsup|m>> compatible.
+
+      <item*|<math|<around*|(|V,\<psi\>|)>=<around*|(|U,\<varphi\>|)>\<wedge\><around*|(|W,\<gamma\>|)>\<neq\><around*|(|U,\<varphi\>|)>>>Then
+      <math|<around*|(|W,\<gamma\>|)>\<in\>\<cal-A\>> so that by the
+      hypothesis <math|<rigid|<around*|(|V,\<psi\>|)>=<around*|(|U,\<varphi\>|)>>>
+      and <math|<around*|(|W,\<gamma\>|)>> are <math|C<rsup|m>> compatible.
+
+      <item*|<math|<around*|(|V,\<psi\>|)>\<neq\><around*|(|U,\<varphi\>|)>\<wedge\><around*|(|W,\<gamma\>|)>\<neq\><around*|(|U,\<varphi\>|)>>>Then
+      <math|<around*|(|V,\<psi\>|)>\<in\>\<cal-A\>> and
+      <math|<around*|(|W,\<gamma\>|)>\<in\>\<cal-A\>> which, as
+      <math|\<cal-A\>> is a <math|C<rsup|m>> atlas, proves that
+      <math|<around*|(|V,\<psi\>|)>> and <math|<around*|(|W,\<gamma\>|)>> are
+      <math|C<rsup|m>> compatible.
+    </description>
+
+    To summarize we have that
+
+    <\equation>
+      <label|eq 23.46.6>\<forall\><around*|(|V,\<psi\>|)>\<in\>U<big|cup><around*|{|<around*|(|U,\<varphi\>|)>|}><text|,
+      >\<forall\><around*|(|W,\<gamma\>|)>\<in\>U<big|cup><around*|{|<around*|(|U,\<varphi\>|)>|}><text|
+      ><around*|(|V,\<psi\>|)><text| and ><around*|(|W,\<gamma\>|)><text| are
+      >C<rsup|m><text| compatible>
+    </equation>
+
+    Using then [definition: <reference|manifold diffentiable atlas>] together
+    with [eq: <reference|eq 23.44.6>, <reference|eq 23.45.6> and
+    <reference|eq 23.46.6>] proves that\ 
+
+    <\equation*>
+      \<cal-A\><big|cup><around*|{|<around*|(|U,\<varphi\>|)>|}><text| is a
+      >C<rsup|m><text| differentiable atlas on
+      <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>>>
+    </equation*>
+  </proof>
+
+  <\theorem>
+    <label|manifold existence of a maximal atlas>Let <math|n\<in\>\<bbb-N\>>,
+    <math|m\<in\>\<bbb-N\><rsub|0><big|cup><around*|{|\<infty\>|}>>,
+    <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> a <math|n>-dimensional
+    topological manifold and <math|\<cal-A\>\<in\>\<Delta\><rsup|m><around*|[|M,\<cal-T\>|]>>
+    a <math|C<rsup|r>> atlas on <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>>
+    then we have:
+
+    <\enumerate>
+      <item><math|\<cal-M\><around*|[|\<cal-A\>|]>> is a maximal
+      <math|C<rsup|m>> atlas on <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>>
+      such that <math|\<cal-A\>\<subseteq\>\<cal-M\><around*|[|\<cal-A\>|]>>
+
+      <item>If <math|\<cal-B\>> is a maximal <math|C<rsup|m>> atlas on
+      <math|<around*|\<langle\>|\<cal-M\>,\<cal-T\>|\<rangle\>>> such that
+      <math|\<cal-A\>\<subseteq\>\<cal-B\>> then
+      <math|\<cal-B\>=\<cal-M\><around*|[|\<cal-A\>|]>>. In othere words
+      <math|\<cal-M\><around*|[|\<cal-A\>|]>> is the unique maximal
+      <math|C<rsup|r>> atlas that contains <math|\<cal-A\>>
+
+      <item>If <math|\<cal-B\>\<in\>\<Delta\><rsup|m><around*|[|M,\<cal-T\>|]>>
+      then\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|>|<cell|\<cal-M\><around*|[|\<cal-A\>|]>=\<cal-M\><around*|[|\<cal-B\>|]>>|<cell|>>|<row|<cell|>|<cell|\<Updownarrow\>>|<cell|>>|<row|<cell|>|<cell|\<cal-A\><big|cup>\<cal-B\><text|
+        is a >C<rsup|m><text| atlas on ><around*|\<langle\>|M,\<cal-T\>|\<rangle\>>>|<cell|>>|<row|<cell|>|<cell|<below|\<Updownarrow\>|<text|[definition:
+        <reference|manifold compatible atlas>]>>>|<cell|>>|<row|<cell|>|<cell|\<cal-A\>\<approx\><rsub|m>\<cal-B\>>|<cell|>>>>
+      </eqnarray*>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>Let <math|<around*|(|U,\<varphi\>|)>\<in\>\<cal-M\><around*|[|\<cal-A\>|]>=<big|cup><rsub|\<cal-B\>\<in\>\<approx\><rsub|m><around*|[|\<cal-A\>|]>>\<cal-B\>>
+      then there exist a <math|\<cal-B\>\<in\>\<approx\><rsub|m><around*|[|\<cal-A\>|]>>
+      such that <math|<around*|(|U,\<varphi\>|)>\<in\>\<cal-B\>>. As
+      <math|\<cal-B\>> is a <math|C<rsup|m>> atlas it follows that
+      <math|<around*|(|U,\<varphi\>|)>> is a coordinate chart. Hence we have
+      that
+
+      <\equation>
+        <label|eq 23.47.6>\<forall\><around*|(|U,\<varphi\>|)>\<in\>\<cal-M\><around*|[|\<cal-A\>|]><text|
+        ><around*|(|U,\<varphi\>|)><text| is a coordinate chart>
+      </equation>
+
+      Further, as <math|\<cal-A\>\<in\>\<approx\><rsub|m><around*|[|A|]>>, it
+      follows that
+
+      <\equation>
+        <label|eq 23.48.7>\<cal-A\>\<subseteq\><big|cup><rsub|\<cal-B\>\<in\>\<approx\><rsub|m><around*|[|\<cal-A\>|]>>\<cal-B\>=\<cal-M\><around*|[|\<cal-A\>|]>
+      </equation>
+
+      so that
+
+      <\equation*>
+        <big|cup><rsub|<around*|(|U,\<varphi\>|)>\<in\>\<cal-A\>>U\<subseteq\><big|cup><rsub|<around*|(|U,\<varphi\>|)>\<in\>\<cal-M\><around*|[|\<cal-A\>|]>>U<below|\<subseteq\>|\<cal-T\>\<subseteq\>\<cal-P\><around*|(|M|)>>M
+      </equation*>
+
+      Given that <math|\<cal-A\>> is a <math|C<rsup|m>> atlas on
+      <math|<around*|\<langle\>|\<cal-M\>,\<cal-T\>|\<rangle\>>> it follows
+      that <math|M=<big|cup><rsub|<around*|(|U,\<varphi\>|)>\<in\>\<cal-A\>>U>
+      which combined with the above proves that\ 
+
+      <\equation>
+        <label|eq 23.48.6>M=<big|cup><rsub|<around*|(|U,\<varphi\>|)>\<in\>\<cal-M\><around*|[|\<cal-A\>|]>>U
+      </equation>
+
+      Let <math|<around*|(|U,\<varphi\>|)>\<in\>\<cal-M\><around*|[|\<cal-A\>|]>>,
+      <math|<around*|(|V,\<psi\>|)>\<in\>\<cal-M\><around*|[|\<cal-A\>|]>>
+      then there exist a <math|\<cal-B\>\<in\>\<approx\><rsub|m><around*|[|\<cal-A\>|]>>
+      and a <math|\<cal-R\>\<in\>\<approx\><rsub|m><around*|[|\<cal-A\>|]>>
+      such that <math|<around*|(|U,\<varphi\>|)>\<in\>\<cal-B\>> and
+      <math|<around*|(|V,\<psi\>|)>\<in\>\<cal-R\>> which proves that\ 
+
+      <\equation>
+        <label|eq 23.49.6><around*|(|U,\<varphi\>|)>\<in\>\<cal-B\><big|cup>\<cal-R\><text|
+        and ><around*|(|V,\<psi\>|)>\<in\>\<cal-B\><big|cup>\<cal-R\>
+      </equation>
+
+      From <math|><math|\<cal-B\>\<in\>\<approx\><rsub|m><around*|[|\<cal-A\>|]>>
+      and a <math|\<cal-R\>\<in\>\<approx\><rsub|m><around*|[|\<cal-A\>|]>>
+      it follows that <math|\<cal-B\>\<approx\><rsub|m>\<cal-A\>\<wedge\>\<cal-A\>\<approx\><rsub|m>\<cal-R\>>
+      so that <math|>by transitivity <math|\<cal-B\>\<approx\><rsub|m>\<cal-R\>>
+      which by [definition: <reference|manifold compatible atlas>] means that
+      <math|\<cal-B\><big|cup>\<cal-R\>> is a <math|C<rsup|m>> atlas on
+      <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>>. Combining this fact
+      with [eq: <reference|eq 23.49.6>] proves that
+      <math|<around*|(|U,\<varphi\>|)>> and <math|<around*|(|V,\<psi\>|)>>
+      are <math|C<rsup|m>> compatible. To summarize we have proved that\ 
+
+      <\equation>
+        <label|eq 23.50.6>\<forall\><around*|(|U,\<varphi\>|)>\<in\>\<cal-M\><around*|[|\<cal-A\>|]><text|,
+        >\<forall\><around*|(|V,\<psi\>|)>\<in\>\<cal-M\><around*|[|\<cal-A\>|]><text|
+        we have ><around*|(|U,\<varphi\>|)><text| and
+        ><around*|(|V,\<psi\>|)><text| are >C<rsup|m><text| compatible>
+      </equation>
+
+      From [eq: <reference|eq 23.48.7>, <reference|eq 23.47.6>, <reference|eq
+      23.48.6> and <reference|eq 23.50.6>] it follows that\ 
+
+      <\equation*>
+        \<cal-M\><around*|[|\<cal-A\>|]><text| is a >C<rsup|m><text| atlas on
+        ><around*|\<langle\>|M,\<cal-T\>|\<rangle\>><text| and
+        >\<cal-A\>\<subseteq\>\<cal-M\><around*|[|\<cal-A\>|]>
+      </equation*>
+
+      Next we have to prove that <math|\<cal-M\><around*|[|\<cal-A\>|]>> is a
+      maximal atlas using [definition: <reference|manifold maximal atlas>].
+      Let <math|<around*|(|U,\<varphi\>|)>> be a coordinate chart such that
+      <math|\<forall\><around*|(|V,\<psi\>|)>\<in\>\<cal-M\><around*|[|\<cal-A\>|]>>
+      we have <math|<around*|(|U,\<varphi\>|)>> and
+      <math|<around*|(|V,\<psi\>|)>> are <math|C<rsup|m>> compatible. Then,
+      as <math|\<cal-A\>\<subseteq\>\<cal-M\><around*|[|\<cal-A\>|]>>, we
+      have <math|\<forall\><around*|(|V,\<psi\>|)>\<in\>\<cal-A\>> that
+      <math|<around*|(|U,\<varphi\>|)>> and <math|<around*|(|V,\<psi\>|)>>
+      are <math|C<rsup|m>> compatible. Using now [lemma: <reference|lemma
+      23.39.6>] it follows that\ 
+
+      <\equation*>
+        A<big|cup><around*|{|<around*|(|U,\<varphi\>|)>|}><text| is a
+        >C<rsup|m><text| atlas on ><around*|\<langle\>|M,\<cal-T\>|\<rangle\>>
+      </equation*>
+
+      As <math|\<cal-A\><big|cup><around*|(|A<big|cup><around*|{|<around*|(|U,\<varphi\>|)>|}>|)>=\<cal-A\><big|cup><around*|{|<around*|(|U,\<varphi\>|)>|}>>
+      it follows from the above that <math|\<cal-A\>\<approx\><rsub|m><around*|(|\<cal-A\><big|cup><around*|{|<around*|(|U,\<varphi\>|)>|}>|)>>
+      so that <math|\<cal-A\><big|cup><around*|{|<around*|(|U,\<varphi\>|)>|}>\<in\>\<approx\><rsub|m><around*|[|\<cal-A\>|]>>
+      from which it follows that
+
+      <\equation*>
+        \<cal-A\><big|cup><around*|{|<around*|(|U,\<varphi\>|)>|}>\<subseteq\><big|cup><rsub|\<cal-B\>\<in\>\<approx\><rsub|m>>\<cal-B\>=\<cal-M\><around*|[|\<cal-A\>|]>
+      </equation*>
+
+      so that <math|<around*|(|U,\<varphi\>|)>\<in\>\<cal-M\><around*|[|\<cal-A\>|]>>.
+      Hence by [definition: <reference|manifold maximal atlas>] it follows
+      that\ 
+
+      <\equation*>
+        \<cal-M\><around*|[|\<cal-A\>|]><text| is a maximal >C<rsup|m><text|
+        atlas on ><around*|\<langle\>|M,\<cal-T\>|\<rangle\>>
+      </equation*>
+
+      \ <item>Assume that <math|\<cal-B\>> is another maximal
+      <math|C<rsup|m>> atlas on <math|<around*|\<langle\>|\<cal-M\>,\<cal-T\>|\<rangle\>>>
+      such that <math|\<cal-A\>\<subseteq\>\<cal-B\>>. Then
+      <math|<rigid|\<cal-A\><big|cup>\<cal-B\>=>\<cal-B\>> a <math|C<rsup|m>>
+      atlas on <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> so that
+      <math|\<cal-A\>\<approx\><rsub|m>\<cal-B\>> from which it follows that
+      <math|\<cal-B\>\<in\>\<approx\><rsub|m><around*|[|\<cal-A\>|]>>. Hence
+      <math|<rigid|\<cal-B\>\<subseteq\><big|cup><rsub|\<cal-R\>\<in\>\<approx\><rsub|m><around*|[|\<cal-A\>|]>>\<cal-R\>=\<cal-M\><around*|[|\<cal-A\>|]>>>
+      which proves that\ 
+
+      <\equation>
+        <label|eq 23.52.7>\<cal-B\>\<subseteq\>\<cal-M\><around*|[|\<cal-A\>|]>
+      </equation>
+
+      Let <math|<around*|(|U,\<varphi\>|)>\<in\>\<cal-M\><around*|[|\<cal-A\>|]>>
+      then as by (1) <math|\<cal-M\><around*|[|\<cal-A\>|]>> is a
+      <math|C<rsup|m>> atlas we have <math|\<forall\><around*|(|V,\<psi\>|)>\<in\>\<cal-M\><around*|[|\<cal-A\>|]>>
+      that <math|<around*|(|U,\<varphi\>|)>> is <math|C<rsup|m>> compatible
+      with <math|<around*|(|V,\<psi\>|)>>. As
+      <math|\<cal-B\>\<subseteq\>\<cal-M\><around*|[|\<cal-A\>|]>> we have
+      also that <math|\<forall\><around*|(|V,\<psi\>|)>\<in\>\<cal-B\>>
+      <math|<around*|(|U,\<varphi\>|)>> is <math|C<rsup|m>> compatible with
+      <math|<around*|(|V,\<psi\>|)>>, hence as <math|\<cal-B\>> is maximal it
+      follows that <math|<around*|(|U,\<varphi\>|)>\<in\>\<cal-B\>>. This
+      proves that <math|\<cal-M\><around*|[|\<cal-A\>|]>\<subseteq\>\<cal-B\>>
+      which combined with [eq: <reference|eq 23.52.7>] proves that
+
+      <\equation*>
+        \<cal-B\>=\<cal-M\><around*|[|\<cal-A\>|]>
+      </equation*>
+
+      <item> Let <math|\<cal-A\>,\<cal-B\>> be two <math|C<rsup|m>> atlasses
+      on <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>>
+
+      <\description>
+        <item*|<math|\<Rightarrow\>>>As <math|\<cal-A\>> and <math|\<cal-B\>>
+        are atlasses, hence collections of coordinate charts it follows that\ 
+
+        <\equation>
+          <label|eq 23.53.7>\<forall\><around*|(|U,\<varphi\>|)>\<in\>\<cal-A\><big|cup>\<cal-B\><text|
+          \ ><around*|(|U,\<varphi\>|)><text| is a coordinate chart>
+        </equation>
+
+        Further we have, as <math|M=<big|cup><rsub|<around*|(|U,\<varphi\>|)>\<in\>\<cal-A\>>U\<subseteq\><big|cup><rsub|<around*|(|U,\<varphi\>|)>\<in\>\<cal-A\><big|cup>\<cal-B\>>U<below|\<subseteq\>|\<cal-T\>\<subseteq\>\<cal-P\><around*|(|M|)>>M>,
+        that\ 
+
+        <\equation>
+          <label|eq 23.54.7>M=<big|cup><rsub|<around*|(|U,\<varphi\>|)>\<in\>\<cal-A\><big|cup>\<cal-B\>>U
+        </equation>
+
+        By (1) we have that <math|\<cal-A\>\<subseteq\>\<cal-M\><around*|[|\<cal-A\>|]>>
+        and <math|\<cal-B\>\<subseteq\>\<cal-M\><around*|[|\<cal-B\>|]>>
+        which as by the hypothesis <math|<rigid|\<cal-M\><around*|[|\<cal-A\>|]>=\<cal-M\><around*|[|\<cal-B\>|]>>>
+        proves that\ 
+
+        <\equation*>
+          \<cal-A\><big|cup>\<cal-B\>\<subseteq\>\<cal-M\><around*|[|\<cal-B\>|]>
+        </equation*>
+
+        Let <math|<around*|(|U,\<varphi\>|)>\<in\>\<cal-A\><big|cup>\<cal-B\>>
+        and <math|<around*|(|V,\<psi\>|)>\<in\>\<cal-A\><big|cup>\<cal-B\>>
+        then it follows from the above that
+        <rigid|<math|<around*|(|U,\<varphi\>|)>\<in\>\<cal-M\><around*|[|\<cal-B\>|]>>>
+        and <math|<around*|(|V,\<psi\>|)>\<in\>\<cal-M\><around*|[|\<cal-B\>|]>>
+        which, as <math|\<cal-M\><around*|[|\<cal-B\>|]>> is a
+        <math|C<rsup|m>> atlas, proves that <math|<around*|(|U,\<varphi\>|)>>
+        is <math|C<rsup|m>> compatible to <math|<around*|(|V,\<psi\>|)>>.
+        Hence\ 
+
+        <\equation*>
+          \<forall\><around*|(|U,\<varphi\>|)>\<in\>\<cal-A\><big|cup>\<cal-B\><text|,
+          >\<forall\><around*|(|V,\<psi\>|)>\<in\>\<cal-A\><big|cup>\<cal-B\><text|
+          we have ><around*|(|U,\<varphi\>|)><text| is >C<rsup|m><text|
+          compatible with ><around*|(|V,\<psi\>|)>
+        </equation*>
+
+        Combining the above with [eqs: <reference|eq 23.53.7> and
+        <reference|eq 23.54.7>] proves that\ 
+
+        <\equation*>
+          \<cal-A\><big|cup>\<cal-B\><text| is a >C<rsup|m><text| atlas on
+          >\<cal-M\><around*|[|\<cal-B\>|]>
+        </equation*>
+
+        <item*|<math|\<Leftarrow\>>>Assume that
+        <math|\<cal-A\><big|cup>\<cal-B\>> then by definition
+        <math|\<cal-A\>\<approx\><rsub|m>\<cal-B\>> so that by [theorem:
+        <reference|equivalence relation R[x]=R[y]>]
+        <math|\<approx\><rsub|m><around*|[|\<cal-A\>|]>=\<approx\><rsub|m><around*|[|\<cal-B\>|]>>.
+        Hence we have
+
+        <\equation*>
+          \<cal-M\><around*|[|\<cal-A\>|]>=<big|cup><rsub|\<cal-R\>\<in\>\<approx\><rsub|m><around*|[|\<cal-A\>|]>>\<cal-R\>=<big|cup><rsub|\<cal-R\>\<in\>\<approx\><rsub|m><around*|[|\<cal-B\>|]>>\<cal-R\>=\<cal-M\><around*|[|\<cal-B\>|]>
+        </equation*>
+      </description>
+    </enumerate>
+  </proof>
+
   \;
 
   \;
@@ -2289,7 +2719,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|22>
-    <associate|page-first|1903>
+    <associate|page-first|1905>
     <associate|par-first|0>
     <associate|section-nr|2>
     <associate|subsection-nr|0>
@@ -2300,6 +2730,13 @@
   <\collection>
     <associate|auto-1|<tuple|23|?>>
     <associate|auto-10|<tuple|23.1.3|?>>
+    <associate|auto-11|<tuple|differentiable atlas|?>>
+    <associate|auto-12|<tuple|<with|mode|<quote|math>|\<Delta\><rsup|m><around*|[|M,\<cal-T\>|]>>|?>>
+    <associate|auto-13|<tuple|maximal atlas|?>>
+    <associate|auto-14|<tuple|differentiable manifold|?>>
+    <associate|auto-15|<tuple|<with|mode|<quote|math>|\<cal-M\><around*|\<langle\>|M,\<cal-T\>,\<cal-A\>|\<rangle\>>>|?>>
+    <associate|auto-16|<tuple|differentiable structure|?>>
+    <associate|auto-17|<tuple|<with|mode|<quote|math>|\<cal-M\><around*|[|\<cal-A\>|]>>|?>>
     <associate|auto-2|<tuple|23.1|?>>
     <associate|auto-3|<tuple|23.1.1|?>>
     <associate|auto-4|<tuple|coordinate chart|?>>
@@ -2337,9 +2774,28 @@
     <associate|eq 23.3.3|<tuple|23.4|?>>
     <associate|eq 23.31.4|<tuple|23.33|?>>
     <associate|eq 23.33.5|<tuple|23.34|?>>
-    <associate|eq 23.35\<point\>5|<tuple|23.35|?>>
+    <associate|eq 23.35\<point\>6|<tuple|23.35|?>>
+    <associate|eq 23.36.6|<tuple|23.36|?>>
+    <associate|eq 23.37.6|<tuple|23.37|?>>
+    <associate|eq 23.38.6|<tuple|23.38|?>>
+    <associate|eq 23.39.6|<tuple|23.39|?>>
     <associate|eq 23.4.1|<tuple|23.8|?>>
+    <associate|eq 23.40.6|<tuple|23.40|?>>
+    <associate|eq 23.41.6|<tuple|23.41|?>>
+    <associate|eq 23.42.6|<tuple|23.42|?>>
+    <associate|eq 23.43.6|<tuple|23.43|?>>
+    <associate|eq 23.44.6|<tuple|23.44|?>>
+    <associate|eq 23.45.6|<tuple|23.45|?>>
+    <associate|eq 23.46.6|<tuple|23.46|?>>
+    <associate|eq 23.47.6|<tuple|23.47|?>>
+    <associate|eq 23.48.6|<tuple|23.49|?>>
+    <associate|eq 23.48.7|<tuple|23.48|?>>
+    <associate|eq 23.49.6|<tuple|23.50|?>>
     <associate|eq 23.5.1|<tuple|23.9|?>>
+    <associate|eq 23.50.6|<tuple|23.51|?>>
+    <associate|eq 23.52.7|<tuple|23.52|?>>
+    <associate|eq 23.53.7|<tuple|23.53|?>>
+    <associate|eq 23.54.7|<tuple|23.54|?>>
     <associate|eq 23.6.1|<tuple|23.11|?>>
     <associate|eq 23.6.3|<tuple|23.10|?>>
     <associate|eq 23.7.1|<tuple|23.14|?>>
@@ -2350,14 +2806,15 @@
     <associate|lemma 23.10.2|<tuple|23.13|?>>
     <associate|lemma 23.11.2|<tuple|23.14|?>>
     <associate|lemma 23.13.2|<tuple|23.15|?>>
-    <associate|lemma 23.34.5|<tuple|23.35|?>>
+    <associate|lemma 23.37.6|<tuple|23.37|?>>
+    <associate|lemma 23.39.6|<tuple|23.39|?>>
     <associate|manifold C^m chart|<tuple|23.30|?>>
     <associate|manifold a topological manifold is locally
     compact|<tuple|23.19|?>>
     <associate|manifold atlas|<tuple|23.8|?>>
     <associate|manifold canonical example|<tuple|23.11|?>>
-    <associate|manifold compatible atlas|<tuple|23.33|?>>
-    <associate|manifold compatible atlas (1)|<tuple|23.34|?>>
+    <associate|manifold compatible atlas|<tuple|23.35|?>>
+    <associate|manifold compatible atlas (1)|<tuple|23.36|?>>
     <associate|manifold connectivity properties|<tuple|23.18|?>>
     <associate|manifold coordinate ball and cube|<tuple|23.6|?>>
     <associate|manifold coordinate domain|<tuple|23.5|?>>
@@ -2366,11 +2823,16 @@
     <associate|manifold cooridinate chart|<tuple|23.3|?>>
     <associate|manifold cooridinate chart existence|<tuple|23.7|?>>
     <associate|manifold diffentiable atlas|<tuple|23.32|?>>
+    <associate|manifold differentiable manifold|<tuple|23.34|?>>
+    <associate|manifold differentiable structure|<tuple|23.38|?>>
+    <associate|manifold existence of a maximal atlas|<tuple|23.40|?>>
+    <associate|manifold maximal atlas|<tuple|23.33|?>>
     <associate|manifold open set is a sub manifold|<tuple|23.10|?>>
     <associate|manifold topological|<tuple|23.2|?>>
     <associate|manifold topological (1)|<tuple|23.9|?>>
     <associate|manifold topological manifold is paracompact|<tuple|23.23|?>>
     <associate|manifold transition map|<tuple|23.27|?>>
+    <associate|note 23.31.6|<tuple|23.31|?>>
   </collection>
 </references>
 
@@ -2386,6 +2848,20 @@
       <tuple|<tuple|coordinate cube>|<pageref|auto-7>>
 
       <tuple|<tuple|atlas>|<pageref|auto-8>>
+
+      <tuple|<tuple|differentiable atlas>|<pageref|auto-11>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|\<Delta\><rsup|m><around*|[|M,\<cal-T\>|]>>>|<pageref|auto-12>>
+
+      <tuple|<tuple|maximal atlas>|<pageref|auto-13>>
+
+      <tuple|<tuple|differentiable manifold>|<pageref|auto-14>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|\<cal-M\><around*|\<langle\>|M,\<cal-T\>,\<cal-A\>|\<rangle\>>>>|<pageref|auto-15>>
+
+      <tuple|<tuple|differentiable structure>|<pageref|auto-16>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|\<cal-M\><around*|[|\<cal-A\>|]>>>|<pageref|auto-17>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|23<space|2spc>Differential
