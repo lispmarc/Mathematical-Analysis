@@ -2751,10 +2751,9 @@
     Using [theorem: <reference|diff higher order derivate and differential>]
     it follows that <math|\<forall\>n\<in\>\<bbb-N\>> and
     <math|\<forall\>y\<in\><around*|]|0,\<infty\>|[>> that
-    <math|<around*|(|\<ast\>|)><rsup|x>> is <math|n>-times differentiable at
-    <math|y>. Hence using [theorem: <reference|diff C-infinity condition>]
-    <math|<around*|(|\<ast\>|)><rsup|x>> is of class
-    <math|C<rsup|\<infty\>>>.
+    <math|<sqrt|\<ast\>>> is <math|n>-times differentiable at <math|y>. Hence
+    using [theorem: <reference|diff C-infinity condition>]
+    <math|<sqrt|\<ast\>>> is of class <math|C<rsup|\<infty\>>>.
   </corollary>
 
   <\proof>
@@ -4833,7 +4832,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|18>
-    <associate|page-first|1275>
+    <associate|page-first|1313>
     <associate|page-medium|papyrus>
     <associate|section-nr|4>
     <associate|subsection-nr|4>
