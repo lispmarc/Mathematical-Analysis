@@ -13389,7 +13389,7 @@
     <label|separation and subspaces>Let <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>>
     be a topological space and <math|A\<subseteq\>X> then we have for the
     subspace topology <math|<around*|\<langle\>|A,\<cal-T\><rsub|\|A>|\<rangle\>>>
-    where <math|\<cal-T\><rsub|\|A>=<around*|{|V<big|cap>U\|V\<in\>\<cal-T\>|}>>
+    where <math|\<cal-T\><rsub|\|A>=<around*|{|V<big|cap>A\|V\<in\>\<cal-T\>|}>>
     that
 
     <\enumerate>
