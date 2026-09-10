@@ -35,180 +35,214 @@
   </notation>
 
   We define now a topological manifold which is a topological space that is
-  locally homeomorph with <math|<around*|\<langle\>|\<bbb-R\><rsup|n>,\<cal-T\><rsub|\<bbb-R\><rsup|n>>|\<rangle\>>>.\ 
+  locally homeomorph with <math|<around*|\<langle\>|\<bbb-R\><rsup|n>,\<cal-T\><rsub|\<bbb-R\><rsup|n>>|\<rangle\>>>.
+
+  <\definition>
+    <label|manifold topological><dueto|Topological Manifold>A topological
+    manifold <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> of dimension
+    <math|n\<in\>\<bbb-N\>> is a second countable Hausdorff topological space
+    <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> [see definitions:
+    <reference|separation Hausdorff>, <reference|separation second countable
+    topological space>] such that <math|\<forall\>m\<in\>M> there exist a
+    open set <math|U\<in\>\<cal-T\><rsub|\<bbb-R\><rsup|n>>> with
+    <math|m\<in\>U> that is homeomorph with a open set
+    <math|V\<in\>\<cal-T\><rsub|\<bbb-R\><rsup|n>>> [using the subspace
+    topologies <math|\<cal-T\><rsub|\|U>> and
+    <math|<around*|(|\<cal-T\><rsub|\<bbb-R\><rsup|n>><rsub|>|)><rsub|\|U>>.
+  </definition>
+
+  The above definition suggest the following two definitions.
 
   <\definition>
     <label|manifold cooridinate chart><index|coordinate
-    chart><dueto|Coordinate Chart>Let <math|n\<in\>\<bbb-N\>> and <math|M> a
-    topological space with topology <math|\<cal-T\>> then a
-    <with|font-series|bold|coordinate <math|n>-chart><with|font-series|bold|
-    on <math|M>> is a pair <math|<around*|(|U,\<varphi\>|)>\<in\>\<cal-T\>\<times\>\<bbb-R\><rsup|n>>
-    such that <math|\<varphi\>:U\<rightarrow\>\<varphi\><around*|(|U|)>> is a
-    homeomorphism [using the topologies <math|\<cal-T\><rsub|\|U>> and
+    chart><dueto|Coordinate Chart>Let <math|n\<in\>\<bbb-N\>> and
+    <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> a <math|n>-dimensional
+    topological manifold then a <with|font-series|bold|coordinate
+    <math|>chart> is a pair <math|<around*|(|U,\<varphi\>|)>> where
+    <math|U\<subseteq\>M> is a open set in <math|M> and
+    \ <math|<rigid|\<varphi\>:U\<rightarrow\>\<bbb-R\><rsup|n><rsup|>>> a
+    function such that <math|\<varphi\><around*|(|U|)>\<in\>\<cal-T\><rsub|\<bbb-R\><rsup|n>>>
+    and <math|\<varphi\>:U\<rightarrow\>\<varphi\><around*|(|U|)>> is a
+    homeomorphism [using the topologies <math|T<rsub|\|U>> and
     <math|<around*|(|\<cal-T\><rsub|\<bbb-R\><rsup|n>>|)><rsub|\|\<varphi\><around*|(|U|)>>>]
-    such that <math|\<varphi\><around*|(|U|)>\<in\>\<cal-T\><rsub|\<bbb-R\><rsup|n>>>.
+    between the open sets <math|U> and <math|\<varphi\><around*|(|U|)>>.
 
     <\note>
       As <math|\<varphi\>:U\<rightarrow\>\<varphi\><around*|(|U|)>> is a
       homeomorphism, hence injective, we have <math|\<forall\>x,y\<in\>U>
-      with <math|<rigid|\<varphi\><around*|(|x|)>=\<varphi\><around*|(|y|)>>>
-      that <math|x=y> which proves that <math|\<varphi\>:U\<rightarrow\>\<bbb-R\><rsup|n>>
+      with <math|\<varphi\><around*|(|x|)>=\<varphi\><around*|(|y|)>> that
+      <math|x=y> which proves that <math|\<varphi\>:U\<rightarrow\>\<bbb-R\><rsup|n>>
       is injective.
     </note>
   </definition>
 
   <\definition>
-    <label|manifold atlas><index|atlas><dueto|Atlas>Let
-    <math|n\<in\>\<bbb-N\>> and <math|M> a topological space with topology
-    <math|\<cal-T\>> then every \ \ <math|<rigid|\<cal-A\>\<subseteq\><around*|{|<around*|(|U,\<varphi\>|)>\|U\<in\>\<cal-T\>\<wedge\>\<varphi\>\<in\><around*|(|\<bbb-R\><rsup|n>|)><rsup|U>|}>>>
-    is a <with|font-series|bold|<math|n>-atlas on <math|M>> iff
-
-    <\enumerate>
-      <item><math|\<forall\><around*|(|U,\<varphi\>|)>\<in\>\<cal-A\>> we
-      have that <math|<around*|(|U,\<varphi\>|)>> is a coordinate
-      <math|n>-chart on <math|M>.
-
-      <item><math|M=<big|cup><rsub|<around*|(|U,\<varphi\>|)>\<in\>\<cal-A\>>U>
-    </enumerate>
-  </definition>
-
-  We can now define a <math|n>-dimensional manifold as follows
-
-  <\definition>
-    <label|manifold topological><dueto|Topological Manifold>Let
-    <math|n\<in\>\<bbb-N\>> then a <math|n>-dimensional topological manifold
-    is a pair <math|<around*|\<langle\>|M,\<cal-A\>|\<rangle\>>> where
-    <math|M> is a second countable Hausdorff topological space and
-    <math|\<cal-A\>> is a <math|n>-atlas on <math|M>.\ 
-  </definition>
-
-  <\definition>
     <label|manifold coordinate domain><index|coordinate
     domain><dueto|Coordinate Domain>Let <math|n\<in\>\<bbb-N\>> and
-    <math|<around*|\<langle\>|M,\<cal-A\>|\<rangle\>>> a <math|n>-dimensional
-    topological manifold then a open set <math|U\<subseteq\>M> is a
-    <with|font-series|bold|coordinate domain >if there exist a coordinate
-    chart <math|<rigid|<around*|(|U,\<varphi\>|)>\<in\>\<cal-A\>>>.
+    <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> a <math|n>-dimensional
+    topological manifold a open set <math|U\<in\>\<cal-T\>> is a
+    <with|font-series|bold|coordinate <math|>domain >if there exist a
+    homeomorphism [using the topologies <math|T<rsub|\|U>> and
+    <math|<around*|(|\<cal-T\><rsub|\<bbb-R\><rsup|n>>|)><rsub|\|\<varphi\><around*|(|U|)>>>]
+    <math|\<varphi\>:U\<rightarrow\>\<varphi\><around*|(|U|)>> where
+    <math|\<varphi\><around*|(|M|)>> is open in <math|\<cal-T\>>
   </definition>
 
   <\definition>
     <label|manifold coordinate ball and cube><index|coordinate
     ball><index|coordinate cube><dueto|Coordinate Ball or Cube>Let
-    <math|n\<in\>\<bbb-N\>>, <math|<around*|\<langle\>|M,\<cal-A\>|\<rangle\>>>
-    a <math|n>-dimensional topological manifold then a open set
-    <math|U\<subseteq\>M> is a <with|font-series|bold|coordinate ball >iff
-    there exist a coordinate chart <math|<around*|(|U,\<varphi\>|)>\<in\>\<cal-A\>>
-    such that <math|\<varphi\><around*|(|U|)>=B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|x,\<delta\>|)>>
+    <math|n\<in\>\<bbb-N\>>, <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>>
+    a topological space then a open set <math|U\<in\>\<cal-T\>> is a
+    <with|font-series|bold|coordinate <math|n>-ball >iff there exist a
+    homeomorphism <rigid|<math|\<varphi\>:U\<rightarrow\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|X,\<delta\>|)>>>
     where <math|x\<in\>\<bbb-R\><rsup|n>>,
     <math|\<delta\>\<in\>\<bbb-R\><rsup|+>>and
-    <math|<around*|\<\|\|\>||\<\|\|\>><rsub|e>> is the Euclidean norm [see
+    \ <math|<around*|\<\|\|\>||\<\|\|\>><rsub|e>> is the Euclidean norm [see
     definition: <reference|inner euclidean norm real numbers>]. A open set
-    <math|U\<in\>\<cal-T\>> is a <with|font-series|bold|coordinate cube >if
-    there exist a <math|<around*|(|U,\<varphi\>|)>\<in\>A> such that
-    <rigid|<math|\<varphi\><around*|(|U|)>=B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n>><around*|(|x,\<delta\>|)>>>
+    <math|U\<in\>\<cal-T\>> is a <with|font-series|bold|coordinate
+    <math|n>-cube >if there exist a homeomorphism [using the topologies
+    <math|T<rsub|\|U>> and <math|<around*|(|\<cal-T\><rsub|\<bbb-R\><rsup|n>>|)><rsub|\|\<varphi\><around*|(|U|)>>>]
+    <math|\<varphi\>:U\<rightarrow\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n>><around*|(|x,\<delta\>|)>>
     where <math|x\<in\>\<bbb-R\><rsup|n>>,
     <math|\<delta\>\<in\>\<bbb-R\><rsup|+>> and
     <math|<around*|\<\|\|\>||\<\|\|\>><rsub|n>> is the maximum norm [see
     example: <reference|normed maximum norm R^n>].
   </definition>
 
+  <\theorem>
+    <label|manifold cooridinate chart existence>Let <math|n\<in\>\<bbb-N\>>
+    and <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> a
+    <math|n>-dimensional topological manifold then <math|\<forall\>m\<in\>M>
+    there exist a coordinate <math|>chart <math|<around*|(|U,\<varphi\>|)>>
+    with <math|m\<in\>U>.
+  </theorem>
+
+  <\proof>
+    Let <math|m\<in\>M> then by definition there exist a open set
+    <math|U\<subseteq\>M> with <math|m\<in\>U> and a open set
+    <math|V\<subseteq\>\<bbb-R\><rsup|n>> such that <math|U> is homeomorphic
+    to <math|V>. Hence there exist a homeomorphism
+    <math|\<varphi\>:U\<rightarrow\>V>. As <math|\<varphi\>> is bijective it
+    follows that <math|\<varphi\><around*|(|U|)>=V>. The pair
+    <math|<around*|(|U,\<varphi\>|)>\<in\>\<cal-T\>\<times\><around*|{|\<varphi\>\<in\>\<bbb-R\><rsup|U>\|U\<in\>\<cal-T\>|}>>
+    is then the required coordinate chart.
+  </proof>
+
+  <\definition>
+    <label|manifold atlas><index|atlas><dueto|Atlas>Given a
+    <math|n>-dimensional topological manifold
+    <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> then
+    <math|<rigid|\<cal-A\>\<subseteq\><around*|{|<around*|(|U,\<varphi\>|)>\|U\<in\>\<cal-T\>\<wedge\>\<varphi\>\<in\><around*|(|\<bbb-R\><rsup|n>|)><rsup|U>|}>>>
+    is a <with|font-series|bold|<math|>atlas on
+    <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>>> iff
+
+    <\enumerate>
+      <item><math|\<forall\><around*|(|U,\<varphi\>|)>\<in\>\<cal-A\>> we
+      have that <math|<around*|(|U,\<varphi\>|)>> is a coordinate
+      <math|>chart on <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>>
+
+      <item><math|M=<big|cup><rsub|<around*|(|U,\<varphi\>|)>\<in\>\<cal-A\>>U>
+    </enumerate>
+  </definition>
+
+  <\theorem>
+    <label|manifold topological (1)>Let <math|n\<in\>\<bbb-N\>> and
+    <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> be a
+    <math|n>-dimensional topological manifold then there exist at least one
+    atlas on <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>>.
+  </theorem>
+
+  <\proof>
+    Let <math|m\<in\>M> then by [theorem: <reference|manifold cooridinate
+    chart existence>] there exist a <math|<rigid|><around*|(|U<rsub|m>,\<varphi\><rsub|m>|)>\<in\>\<cal-T\>\<times\><around*|(|\<bbb-R\><rsup|n>|)><rsup|U>>
+    such that <math|<around*|(|U,\<varphi\>|)>> is a coordinate chart. Hence
+    if we define <math|\<cal-A\>=<around*|{|<around*|(|U<rsub|m>,\<varphi\><rsub|m>|)>\|m\<in\>M|}>>
+    then <math|\<cal-A\>> is the required atlas.
+  </proof>
+
   <\example>
     <label|manifold open set is a sub manifold>Let <math|n\<in\>\<bbb-N\>>,
-    <math|<around*|\<langle\>|M,\<cal-A\>|\<rangle\>>> be a
-    <math|n>-dimensional topological manifold with topology <math|\<cal-T\>>
-    and <math|U\<in\>\<cal-T\>> a open subset of <math|M> then
-    <math|<around*|\<langle\>|U,\<cal-A\><rsub|\|U>|\<rangle\>>> is a
-    <math|n>-dimensional topological manifold where <math|U> has the topology
-    <math|\<cal-T\><rsub|\|U>> and <math|\<cal-A\><rsub|\|U>=<around*|{|<around*|(|V<big|cap>U,\<psi\><rsub|\|V<big|cap>U>|)>\|<around*|(|V,\<psi\>|)>\<in\>\<cal-A\>|}>>.
+    <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> be a
+    <math|n>-dimensional topological manifold and <math|U\<in\>\<cal-T\>> a
+    open subset of <math|M> then <math|<around*|\<langle\>|U,\<cal-T\><rsub|\|U>|\<rangle\>>>
+    is a <math|n>-dimensional toplogical manifold.
   </example>
 
   <\proof>
     Using [theorem: <reference|separation and subspaces>] it follows that
 
     <\equation>
-      <label|eq 23.1.4>U<text| with the subspace topology
-      >\<cal-T\><rsub|\|U><text| is Hausdorff and second countable>
+      <label|eq 23.1.4><around*|\<langle\>|U,\<cal-T\><rsub|\|U>|\<rangle\>><text|
+      is Hausdorff and Second Countable>
     </equation>
 
-    Let <math|<around*|(|W,\<varphi\>|)>\<in\>\<cal-A\><rsub|\|U>> then there
-    exist a <math|<around*|(|V,\<psi\>|)>\<in\>\<cal-A\>> where <math|V> is
-    open in <math|M>, <math|\<psi\><around*|(|V|)>\<in\>\<cal-T\><rsub|\<bbb-R\><rsup|n>>>
-    and <math|\<psi\>:V\<rightarrow\>\<psi\><around*|(|V|)>> is a
-    homeomorphism [using the topologies <math|\<cal-T\><rsub|\|V>> and
-    <math|<around*|(|\<cal-T\><rsub|\<bbb-R\><rsup|n>>|)><rsub|\|\<psi\><around*|(|V|)>>>]
-    such that\ 
+    Further if <math|u\<in\>U> then, as <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>>
+    is a topological manifold, there exists open sets <math|V\<in\>\<cal-T\>>
+    with <math|u\<in\>V>, <math|W\<in\>\<cal-T\><rsub|\<bbb-R\><rsup|n>><rsub|<rsup|>>>
+    and a homeomorphism [using the topologies <math|\<cal-T\><rsub|\|V>> and
+    <math|<around*|(|\<cal-T\><rsub|\<bbb-R\><rsup|n>>|)><rsub|\|W>>]
+    <math|\<varphi\>:V\<rightarrow\>W>. As <math|u\<in\>U> and
+    <math|u\<in\>V> it follows\ 
+
+    <\equation>
+      <label|eq 23.1.3>u\<in\>V<big|cap>U\<in\>\<cal-T\><rsub|\|U>
+    </equation>
+
+    As <math|V<big|cap>U\<in\>\<cal-T\><rsub|\|U>> and <math|\<varphi\>> is a
+    homeomorphism hence a open funtion, it follows that
 
     <\equation*>
-      W=V<big|cap>U<text| and >\<varphi\>=\<psi\><rsub|\|W>=\<psi\><rsub|\|V<big|cap>U>
+      \<varphi\><around*|(|V<big|cap>U|)>\<in\><around*|(|\<cal-T\><rsub|\<bbb-R\><rsup|n>>|)><rsub|\|W>
     </equation*>
 
-    As <math|V<big|cap>U\<in\>\<cal-T\><rsub|\|U>> it follows that\ 
+    As <math|W\<in\>\<cal-T\><rsub|\<bbb-R\><rsup|n>>> it follows from
+    [theorem: <reference|topology subspace topology open subset>] that\ 
+
+    <\equation>
+      <label|eq 23.2.3>\<varphi\><around*|(|V<big|cap>U|)>\<in\>\<cal-T\><rsub|\<bbb-R\><rsup|n>>
+    </equation>
+
+    Further by [theorem: <reference|continuity homeomorphism and
+    restriction>] we have as <math|\<varphi\>:V\<rightarrow\>W> is a
+    homeomorphism and <math|V<big|cap>U\<subseteq\>V> that\ 
 
     <\equation*>
-      W\<in\>\<cal-T\><rsub|\|U>
-    </equation*>
-
-    As <math|U\<in\>\<cal-T\>> it follows that
-    <math|U<big|cap>V\<in\>\<cal-T\><rsub|\|V>>, so using the fact that
-    <math|\<psi\>> is a homeomorphism, hence a open function, it follows that
-    <math|\<psi\><around*|(|U<big|cap>V|)>\<in\><around*|(|\<cal-T\><rsub|\<bbb-R\><rsup|n>>|)><rsub|\|\<psi\><around*|(|V|)>>>.
-    As <math|\<psi\><around*|(|V|)>\<in\>\<cal-T\><rsub|\<bbb-R\><rsup|n>>>
-    it follows from [theorem: <reference|topology subspace topology open
-    subset>] that <math|<around*|(|\<cal-T\><rsub|\<bbb-R\><rsup|n>>|)><rsub|\|\<psi\><around*|(|V|)>>\<subseteq\>\<cal-T\><rsub|\<bbb-R\><rsup|n>>>
-    so that\ 
-
-    <\equation*>
-      \<psi\><around*|(|U<big|cap>V|)>\<in\>\<cal-T\><rsub|\<bbb-R\><rsup|n>>
-    </equation*>
-
-    Further using the fact that <math|\<psi\>:V\<rightarrow\>\<psi\><around*|(|V|)>>
-    is a homeomorphism and <math|W=V<big|cap>U\<subseteq\>V> we can use
-    [theorem: <reference|continuity homeomorphism and restriction>] giving
-
-    <\equation*>
-      \<psi\><rsub|\|W>:W\<rightarrow\>\<psi\><around*|(|W|)><text| is a
-      homeomorphism using topologies ><around*|(|\<cal-T\><rsub|\|V>|)><rsub|\|W><rsub|>,<around*|(|<around*|(|\<cal-T\><rsub|\<bbb-R\><rsup|m>>|)><rsub|\|\<psi\><around*|(|V|)>>|)><rsub|\|\<psi\><around*|(|W|)>>
-    </equation*>
-
-    As <math|\<psi\><around*|(|W|)>=\<psi\><around*|(|V<big|cap>U|)>\<subseteq\>\<psi\><rsub|V>>
-    it follows from [theorem: <reference|topology subsubspace topology>] that
-    <math|<around*|(|<around*|(|\<cal-T\><rsub|\<bbb-R\><rsup|m>>|)><rsub|\|\<psi\><around*|(|V|)>>|)><rsub|\|\<psi\><around*|(|W|)>>=<around*|(|\<cal-T\><rsub|\<bbb-R\><rsup|n>>|)><rsub|\|W>>
-    so that\ 
-
-    <\equation*>
-      \<varphi\>=\<psi\><rsub|\|W>:W\<rightarrow\>\<psi\><around*|(|W|)><text|
+      \<varphi\><rsub|\|V<big|cap>U>:V<big|cap>U\<rightarrow\>\<varphi\><around*|(|U<big|cap>V|)><text|
       is a homeomorphism using the topologies
-      ><around*|(|\<cal-T\><rsub|\|V>|)><rsub|\|W><rsub|>,<around*|(|\<cal-T\><rsub|\<bbb-R\><rsup|n>>|)><rsub|\|W>
+      ><around*|(|\<cal-T\><rsub|\|V>|)><rsub|\|V<big|cap>U><text|,
+      ><around*|(|<around*|(|\<cal-T\><rsub|\<bbb-R\><rsup|n>>|)><rsub|\|W>|)><rsub|\|\<varphi\><around*|(|V<big|cap>U|)>>
     </equation*>
 
-    which proves that <math|<around*|(|\<varphi\>,W|)>> is a coordinate
-    <math|n>-chart. Hence we have proved that\ 
+    As <math|\<varphi\><around*|(|V<big|cap>U|)>\<subseteq\>\<varphi\><around*|(|V|)>\<subseteq\>W>
+    it follows from [theorem: <reference|topology subsubspace topology>] that
 
     <\equation*>
-      \<forall\><around*|(|\<varphi\>,W|)>\<in\>\<cal-A\><rsub|\|U><text|
-      ><around*|(|\<varphi\>,W|)><text| is a coordinate >n<text|-chart on >U
+      <around*|(|<around*|(|\<cal-T\><rsub|\<bbb-R\><rsup|n>>|)><rsub|\|W>|)><rsub|\|\<varphi\><around*|(|V<big|cap>U|)>>=<around*|(|\<cal-T\><rsub|\<bbb-R\><rsup|n>>|)><rsub|\|\<varphi\><around*|(|V<big|cap>U|)>>
     </equation*>
 
-    Further if <math|m\<in\>U> then as <math|\<cal-A\>> is a <math|n>-atlas
-    on <math|M> there exist a <math|<around*|(|V,\<psi\>|)>\<in\>\<cal-A\>>
-    such that <math|m\<in\>V>. Then <math|<around*|(|V<big|cap>U,\<psi\><rsub|\|V<big|cap>U>|)>\<in\>\<cal-A\><rsub|U>>
-    with <math|m\<in\>V<big|cap>U> so that
+    Further as <math|V<big|cap>U\<subseteq\>U> and
+    <math|V<big|cap>U\<subseteq\>V> it follows from [theorem:
+    <reference|topology subsubspace topology>] that\ 
 
     <\equation*>
-      M=<big|cup><rsub|<around*|(|W,\<varphi\>|)>\<in\>\<cal-A\><rsub|\|U>>W
+      <around*|(|\<cal-T\><rsub|\|U>|)><rsub|\|V<big|cap>U>=\<cal-T\><rsub|\|V<big|cap>U>=<around*|(|\<cal-T\><rsub|\|V>|)><rsub|\|V<big|cap>U>
     </equation*>
 
-    Hence we conclude that\ 
+    Hence\ 
+
+    <\equation>
+      <label|eq 23.3.3>\<varphi\><rsub|\|V<big|cap>U>:V<big|cap>U\<rightarrow\>\<varphi\><around*|(|V<big|cap>U|)><text|
+      is a homeomorphism using \ ><around*|(|\<cal-T\><rsub|\|U>|)><rsub|\|V<big|cap>U>,<around*|(|\<cal-T\><rsub|\<bbb-R\><rsup|n>>|)><rsub|\|\<varphi\><around*|(|U<big|cap>V|)>>
+    </equation>
+
+    Using the fact that <math|u\<in\>U> has been chosen arbitrary together
+    with [eqs: <reference|eq 23.1.4>,<reference|eq 23.1.3>, <reference|eq
+    23.2.3>, <reference|eq 23.3.3>] proves by [definition:
+    <reference|manifold topological>] that\ 
 
     <\equation*>
-      \<cal-A\><rsub|\|U><text| is a >n<text|-atlas on >U
-    </equation*>
-
-    making\ 
-
-    <\equation*>
-      <around*|\<langle\>|M,\<cal-A\><rsub|\|U>|\<rangle\>><text| a
-      >n<text|-dimensional topological space>
+      <around*|\<langle\>|U,\<cal-T\><rsub|\|U>|\<rangle\>><text| is a
+      topological manifold>
     </equation*>
   </proof>
 
@@ -217,8 +251,11 @@
 
   <\example>
     <label|manifold real numbers form a topological
-    manifold><math|<around*|\<langle\>|\<bbb-R\>,<around*|{|<around*|(|\<bbb-R\>,\<varphi\>|)>|}>|)>>
-    is a <math|1>-dimesional topological manifold where
+    manifold><math|<around*|\<langle\>|\<bbb-R\>,\<cal-T\><rsub|<around*|\|||\|>>|)>>
+    is a <math|1>-dimesional topological manifold and
+    <math|<around*|{|<around*|(|\<bbb-R\>,\<varphi\>|)>|}>> is a atlas on
+    <math|<around*|\<langle\>|\<bbb-R\>,\<cal-T\><rsub|<around*|\|||\|>>|\<rangle\>>>
+    where\ 
 
     <\equation*>
       \<varphi\>:\<bbb-R\>\<rightarrow\>\<bbb-R\><rsup|1><text| is defined by
@@ -253,19 +290,19 @@
     </equation*>
 
     then by [example: <reference|continuity R and R^1 are homeomorphism>]
-    <math|\<varphi\>> is a homeomorphism. Hence\ 
+    <math|\<varphi\>> is a homeomorphism. Hence
+    <math|<around*|\<langle\>|\<bbb-R\>,\<cal-T\><rsub|<around*|\|||\|>>|\<rangle\>>>
+    is a topological manifold where\ 
 
     <\equation*>
-      <around*|\<langle\>|\<bbb-R\>,<around*|{|<around*|(|\<bbb-R\>,\<varphi\>|)>|}>|)><text|
-      is a >n<text|-dimensional topological manifold>
+      \<cal-A\>=<around*|{|<around*|(|\<varphi\>,\<bbb-R\>|)>|}><text| is a
+      atlas on ><around*|\<langle\>|\<bbb-R\>,\<cal-T\><rsub|<around*|\|||\|>>|\<rangle\>>
     </equation*>
-
-    \;
   </proof>
 
   <\example>
     <label|manifold canonical example>Let <math|n\<in\>\<bbb-N\>> then
-    <math|<around*|\<langle\>|\<bbb-R\><rsup|n>,<around*|{|<around*|(|\<bbb-R\><rsup|n>,Id<rsub|\<bbb-R\><rsup|n>>|)>|}>|\<rangle\>>>
+    <math|<around*|\<langle\>|\<bbb-R\><rsup|n>,\<cal-T\><rsub|\<bbb-R\><rsup|n>>|\<rangle\>>>
     is a <math|n>-dimensional topological manifold.\ 
   </example>
 
@@ -284,8 +321,8 @@
     is a homeomorphism between the open sets <math|\<bbb-R\><rsup|n>> and
     <math|\<bbb-R\><rsup|n>>, as also <math|\<forall\>x\<in\>\<bbb-R\><rsup|n>>
     trivially \ <math|x\<in\>\<bbb-R\><rsup|n>> we have that
-    <math|<around*|{|<around*|\<langle\>|\<bbb-R\><rsup|n>,\<cal-T\><rsub|\<bbb-R\><rsup|n>>|\<rangle\>>|}>>
-    is a <math|n>-atlas on <math|\<bbb-R\><rsup|n>>.
+    <math|<around*|\<langle\>|\<bbb-R\><rsup|n>,\<cal-T\><rsub|\<bbb-R\><rsup|n>>|\<rangle\>>>
+    is a <math|n>-dimensional topological manifold.
   </proof>
 
   A less trivial example is the <math|n>-dimensional unit sphere
@@ -422,21 +459,14 @@
 
   <\example>
     Let <math|n\<in\>\<bbb-N\>>, <math|S<rsup|n>=<around*|{|x\<in\>\<bbb-R\><rsup|n+1>\|<sqrt|<big|sum><rsub|i=1><rsup|n+1>x<rsub|i><rsup|2>>=<around*|\<\|\|\>|x|\<\|\|\>><rsub|e>=1|}>>
-    the unit sphere in <math|\<bbb-R\><rsup|n+1>> with topology
-    <math|><math|<around*|(|\<cal-T\><rsub|\<bbb-R\><rsup|n>>|)><rsub|\|S<rsub|n>>>
-    then
+    the unit sphere in <math|\<bbb-R\><rsup|n+1>> then\ 
 
     <\equation*>
-      <around*|\<langle\>|S<rsup|n>,<around*|{|<around*|(|U<rsub|i>,\<beta\><rsub|i>|)>\|i\<in\><around*|{|1,\<ldots\>,2\<cdot\>n+2|}>|}>|\<rangle\>><text|
+      <around*|\<langle\>|S<rsup|n>,<around*|(|\<cal-T\><rsub|\<bbb-R\><rsup|n>>|)><rsub|\|S<rsub|n>>|\<rangle\>><text|
       is a >n<text|-dimensional topological manifold>
     </equation*>
 
-    where the atlas <math|<around*|{|<around*|(|U<rsub|i>,\<beta\><rsub|i>|)>\|i\<in\><around*|{|1,\<ldots\>,2\<cdot\>n+2|}>|}>>
-    is defined as follows:
-
-    \;
-
-    <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n+1|}>> define\ 
+    Further if we define <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n+1|}>>\ 
 
     <\equation*>
       V<rsub|i><rsup|+>=<around*|{|x\<in\>\<bbb-R\><rsup|n+1>\|0\<less\>x<rsub|i>|}><text|
@@ -1142,8 +1172,6 @@
     </equation*>
   </proof>
 
-  TODO
-
   <\lemma>
     <label|lemma 23.13.2>Let <math|n\<in\>\<bbb-N\>> and
     <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> a <math|n>-dimensional
@@ -1162,7 +1190,7 @@
   </lemma>
 
   <\proof>
-    As <math|<around*|(|U,\<varphi\>|)>> is a coordinate chart on
+    As <math|<around*|(|U,\<varphi\>|)>> is a coordinate <math|n>-chart on
     <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> we have that
     <math|U\<in\>\<cal-T\>>, <math|\<varphi\><around*|(|U|)>\<in\>\<cal-T\><rsub|\<bbb-R\><rsup|n>>=\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>>>
     and <math|<rigid|\<varphi\>:U\<rightarrow\>\<varphi\><around*|(|U|)>>> is
@@ -1246,7 +1274,7 @@
     \ so that by [definition: <reference|manifold coordinate ball and cube>]\ 
 
     <\equation*>
-      \<varphi\><rsup|-1><around*|(|B|)><text| is a >coordinate ball
+      \<varphi\><rsup|-1><around*|(|B|)><text| is a coordinate >n<text|-ball>
     </equation*>
 
     Further as <math|\<cal-A\>> is countable we have by [theorem:
@@ -1931,7 +1959,7 @@
   </convention>
 
   We sketch now how the fact that a topological manifold is locally
-  homeomorph with a open set of <math|\<bbb-R\><rsup|n>> can be used to
+  homeomorphic with a open set of <math|\<bbb-R\><rsup|n>> can be used to
   define differentiability for functions whose domain is in the manifolf. Let
   <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> be a
   <math|n>-dimensional topological manifold,
@@ -1977,7 +2005,7 @@
     <label|manifold transition map>Let <math|n\<in\>\<bbb-N\>> and
     <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> a <math|n>-dimensional
     topological manifold and <math|<around*|(|\<varphi\>,U|)>>,
-    <math|<around*|(|\<psi\>,V|)>> coordinate charts such that
+    <math|<around*|(|\<psi\>,V|)>> coordinate <math|>charts such that
     <math|U<big|cap>V\<neq\>\<varnothing\>> then the function
     <math|\<psi\>\<circ\>\<varphi\><rsup|-1>:\<varphi\><around*|(|U<big|cap>V|)>\<rightarrow\>\<psi\><around*|(|U<big|cap>V|)>>
     is called a <with|font-series|bold|transition map from <math|\<varphi\>>
@@ -2127,44 +2155,177 @@
     </equation*>
   </definition>
 
-  We show now that a <math|C<rsup|n>> atlas can be used to define
-  <math|C<rsup|m>> differentiability of a mapping from a manifold to
-  <math|\<bbb-R\>> in a way that is independent of the choosen coordinate
-  chart.
-
-  <\lemma>
-    <label|lemma 23.35.9>Let <math|n\<in\>\<bbb-N\>>,
-    <math|m\<in\>\<bbb-N\><rsub|0><big|cup><around*|{|\<infty\>|}>>,
+  <\definition>
+    Let <math|n\<in\>\<bbb-N\>>, <math|m\<in\>\<bbb-N\><rsub|0><big|cup><around*|{|\<infty\>|}>>,
     <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> a <math|n>-dimensional
     topological manifold, <math|\<cal-A\>> a <math|C<rsup|m>> atlas on
-    <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> and\ 
-  </lemma>
+    <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> then a coordinate
+    chart <math|<around*|(|U,\<varphi\>|)>> on
+    <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> is <math|C<rsup|r>>
+    compatible with <math|\<cal-A\>> iff\ 
 
-  We are now ready to define <math|C<rsup|m>> differentiability of mappings
-  between a manifold based on a <math|C<rsup|m>> atlas.
+    <\equation*>
+      \<forall\><around*|(|V,\<psi\>|)>\<in\>\<cal-A\><text|
+      ><around*|(|V,\<psi\>|)><text| is >C<rsup|m><text| compatible with
+      ><around*|(|U,\<varphi\>|)>
+    </equation*>
+  </definition>
 
-  \;
+  We are now ready to define differentiability for mappings from a manifold
+  to the space of real numbers.
 
-  \;
+  <\definition>
+    <label|manifold differentiability real function>Let
+    <math|n\<in\>\<bbb-N\>>, <math|m\<in\>\<bbb-N\><rsub|0><big|cup><around*|{|\<infty\>|}>>,
+    <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> a <math|n>-dimension
+    topological manifold and <math|\<cal-A\>> a <math|C<rsup|m>> atlas on
+    <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> then
+    <math|f:M\<rightarrow\>\<bbb-R\>> is of class <math|C<rsup|m>> iff
+    <math|\<forall\>p\<in\>M> there <math|\<exists\><around*|(|U,\<varphi\>|)>\<in\>\<cal-A\>>
+    such that\ 
 
-  The purpose of a <math|C<rsup|m>>-atlas is to define <math|C<rsup|m>>
-  differentiability of mappings <math|f:M\<rightarrow\>\<bbb-R\>> by saying
-  that <math|f> is of class <math|C<rsup|m>> if
-  <math|f\<circ\>\<varphi\><rsup|-1>> is of class <math|C<rsup|m>> for every
-  <math|<around*|(|U,\<varphi\>|)>\<in\>\<cal-A\>>. However it is possible
-  that two different atlasses produce the same set of mappings of class
-  <math|C<rsup|m>>. If <math|\<cal-A\>> and <math|\<cal-B\>> are two
-  <math|C<rsup|m>> atlasses on <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>>
-  such that <math|\<forall\><around*|(|U,\<varphi\>|)>\<in\>\<cal-A\>>,
-  <math|\<forall\><around*|(|V,\<psi\>|)>\<in\>\<cal-B\>>
-  <math|<around*|(|U,\<varphi\>|)>> and <math|<around*|(|V,\<psi\>|)>> are
-  <math|C<rsup|m>> compatible. Then we have by definition that
-  <math|\<psi\>\<circ\>\<varphi\><rsup|-1>:\<varphi\><around*|(|U<big|cap>V|)>\<rightarrow\>\<psi\><around*|(|U<big|cap>V|)>>
-  is of class <math|C<rsup|m>>. Hence if <math|f\<circ\>\<varphi\><rsup|-1>>
-  is of class <math|C<rsup|m>> then, as <math|f\<circ\>\<psi\><rsup|-1>=f\<circ\><around*|(|\<varphi\><rsup|-1>\<circ\>\<varphi\>|)>\<circ\>\<psi\><rsup|-1>=<around*|(|f\<circ\>\<varphi\><rsup|-1>|)>\<circ\><around*|(|\<varphi\>\<circ\>\<psi\><rsup|-1>|)>>,
-  it follows by the chain rule that <math|f\<circ\>\<psi\><rsup|-1>> is of
-  class <math|C<rsup|m>>. To solve this problem we introduce the concept of a
-  maximal atlas.
+    <\equation*>
+      p\<in\>U<text| and >f\<circ\>\<varphi\><rsup|-1>:\<varphi\><around*|(|U|)>\<rightarrow\>\<bbb-R\><text|
+      is of class >C<rsup|m>
+    </equation*>
+  </definition>
+
+  The next theorem proves then a alternative definition that shows that the
+  property 'is of class <math|C<rsup|m>>' is chart independent.
+
+  <\theorem>
+    <label|manifold differentiability real function (1)>Let
+    <math|n\<in\>\<bbb-N\>>, <math|m\<in\>\<bbb-N\><rsub|0><big|cup><around*|{|\<infty\>|}>>,
+    <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> a <math|n>-dimensional
+    topological manifold and <math|\<cal-A\>> a <math|C<rsup|m>> atlas on
+    <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> and
+    <math|f:M\<rightarrow\>\<bbb-R\>> a real valued function then we have the
+    following equivalence
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|>|<cell|f:M\<rightarrow\>\<bbb-R\><text| is
+      of class >C<rsup|m>>|<cell|>>|<row|<cell|>|<cell|\<Updownarrow\>>|<cell|>>|<row|<cell|>|<cell|\<forall\><around*|(|U,\<varphi\>|)>\<in\>\<cal-A\><text|
+      we have that >f\<circ\>\<varphi\><rsup|-1>:\<varphi\><around*|(|U|)>\<rightarrow\>\<bbb-R\><text|
+      is of class >C<rsup|m>>|<cell|>>>>
+    </eqnarray*>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>Let <math|<around*|(|V,\<psi\>|)>\<in\>\<cal-A\>>
+      and consider the function\ 
+
+      <\equation*>
+        f\<circ\>\<psi\><rsup|-1>:\<psi\><around*|(|V|)>\<rightarrow\>\<bbb-R\>
+      </equation*>
+
+      Let <math|x\<in\>\<psi\><around*|(|V|)>> then as <math|\<psi\>> is
+      bijective there exist a <math|p\<in\>V> such that
+      <math|x=\<psi\><around*|(|p|)>>. As <math|f:M\<rightarrow\>\<bbb-R\>>
+      is of class <math|C<rsup|m>> there exist a
+      <math|<around*|(|U,\<varphi\>|)>\<in\>\<cal-A\>> with <math|p\<in\>U>
+      such that \ 
+
+      <\equation>
+        <label|eq 23.35.8>f\<circ\>\<varphi\><rsup|-1>:\<varphi\><around*|(|U|)>\<rightarrow\>\<bbb-R\><text|
+        is of class >C<rsup|m>
+      </equation>
+
+      As <math|p\<in\>U> and <math|p\<in\>V> we have that
+      <math|p\<in\>U<big|cap>V> so that\ 
+
+      <\equation>
+        <label|eq 23.36.8>x=\<psi\><around*|(|p|)>\<in\>\<psi\><around*|(|U<big|cap>V|)>
+      </equation>
+
+      As <math|V\<in\>\<cal-T\>> we have that
+      <math|U<big|cap>V\<in\>\<cal-T\><rsub|\|U>> which as
+      <math|\<varphi\>:U\<rightarrow\>\<varphi\><around*|(|U|)>> is a
+      homeomorphism proves that\ 
+
+      <\equation>
+        <label|eq 23.37.8>\<varphi\><around*|(|U<big|cap>V|)>\<in\><around*|(|\<cal-T\><rsub|\<bbb-R\><rsup|n>>|)><rsub|\|\<varphi\><around*|(|V|)>>
+      </equation>
+
+      Hence using [theorem: <reference|diff restriction of a diffeomorphism
+      is a diffeomorphism>] it follows from [eqs: <reference|eq 23.35.8>,
+      <reference|eq 23.37.8>] that\ 
+
+      <\equation*>
+        <around*|(|f\<circ\>\<varphi\><rsup|-1>|)><rsub|\|\<varphi\><around*|(|U<big|cap>V|)>>:\<varphi\><around*|(|U<big|cap>V|)>\<rightarrow\>\<bbb-R\><text|
+        is of class >C<rsup|m>
+      </equation*>
+
+      Further as <math|<around*|(|U,\<varphi\>|)>> and
+      <math|<around*|(|V,\<psi\>|)>> are <math|C<rsup|m>> compatible we have
+      that\ 
+
+      <\equation*>
+        \<varphi\>\<circ\>\<psi\><rsup|-1>:\<psi\><around*|(|U<big|cap>V|)>\<rightarrow\>\<varphi\><around*|(|U<big|cap>V|)><text|
+        is of class >C<rsup|m>
+      </equation*>
+
+      Using now the chain rule [see theorem: <reference|diff chain rule
+      higher order class>] it follows that\ 
+
+      <\equation>
+        <label|eq 23.38.8><around*|(|f\<circ\>\<varphi\><rsup|-1>|)><rsub|\|\<varphi\><around*|(|U<big|cap>V|)>>\<circ\><around*|(|\<varphi\>\<circ\>\<psi\><rsup|-1>|)>:\<psi\><around*|(|U<big|cap>V|)>\<rightarrow\>\<bbb-R\><text|
+        is of class >C<rsup|m>
+      </equation>
+
+      As <math|\<forall\>y\<in\>\<psi\><around*|(|U<big|cap>V|)>> we have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|<around*|(|f\<circ\>\<varphi\><rsup|-1>|)><rsub|\|\<varphi\><around*|(|U<big|cap>V|)>>\<circ\><around*|(|\<varphi\>\<circ\>\<psi\><rsup|-1>|)>|)><around*|(|y|)>>|<cell|=>|<cell|<around*|(|f\<circ\>\<varphi\><rsup|-1>|)><rsub|\|\<varphi\><around*|(|U<big|cap>V|)>><around*|(|<around*|(|\<varphi\>\<circ\>\<psi\><rsup|-1>|)><around*|(|y|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|f\<circ\>\<varphi\><rsup|-1>|)><around*|(|<around*|(|\<varphi\>\<circ\>\<psi\><rsup|-1>|)><around*|(|y|)>|)>>>|<row|<cell|>|<cell|=>|<cell|f<around*|(|\<varphi\><rsup|-1><around*|(|\<varphi\><around*|(|\<psi\><rsup|-1><around*|(|y|)>|)>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|f<around*|(|\<psi\><rsup|-1><around*|(|y|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|f\<circ\>\<psi\>|)><rsup|-1><around*|(|y|)>>>|<row|<cell|>|<cell|<below|=|y\<in\>\<psi\><around*|(|U<big|cap>V|)>>>|<cell|<around*|(|f\<circ\>\<psi\>|)><rsub|\|\<psi\><around*|(|<big|cup><big|cap>V|)>><around*|(|y|)>>>>>
+      </eqnarray*>
+
+      so that <math|<around*|(|f\<circ\>\<psi\>|)><rsub|\|\<psi\><around*|(|<big|cup><big|cap>V|)>>=<around*|(|f\<circ\>\<varphi\><rsup|-1>|)><rsub|\|\<varphi\><around*|(|U<big|cap>V|)>>\<circ\><around*|(|\<varphi\>\<circ\>\<psi\><rsup|-1>|)>>.
+      Hence we have by [eq: <reference|eq 23.38.8>] that\ 
+
+      <\equation>
+        <label|eq 23.39.8><around*|(|f\<circ\>\<psi\>|)><rsub|\|\<psi\><around*|(|<big|cup><big|cap>V|)>>:\<psi\><around*|(|U<big|cap>V|)>\<rightarrow\>\<bbb-R\><text|
+        is of class >C<rsup|m>
+      </equation>
+
+      As <math|U\<in\>\<cal-T\>> we have that
+      <math|U<big|cap>V\<in\>\<cal-T\><rsub|\|V>> which, as <math|\<psi\>> is
+      a homeomorphism, proves that <math|<rigid|\<psi\><around*|(|U<big|cap>V|)>\<in\><around*|(|\<cal-T\><rsub|\<bbb-R\><rsup|n>>|)><rsub|\|\<psi\><around*|(|V|)>>>>.
+      Further as <math|\<psi\><around*|(|V|)>\<in\>\<cal-T\><rsub|\<bbb-R\><rsup|n>>>
+      it follows from [theorem: <reference|topology subspace topology open
+      subset>] that <math|<around*|(|\<cal-T\><rsub|\<bbb-R\><rsup|n>>|)><rsub|\|\<psi\><around*|(|V|)>>=\<cal-T\><rsub|\<bbb-R\><rsup|n>>>
+      so that\ 
+
+      <\equation>
+        <label|eq 23.40.8>\<psi\><around*|(|U<big|cap>V|)>\<subseteq\>\<psi\><around*|(|V|)><text|
+        and >\<psi\><around*|(|U<big|cap>V|)>\<in\>\<cal-T\><rsub|\<bbb-R\><rsup|n>>
+      </equation>
+
+      To summarize [eqs: <reference|eq 23.36.8>, <reference|eq 23.40.8>,
+      <reference|eq 23.40.8>] we have that
+      <math|\<forall\>x\<in\>\<psi\><around*|(|V|)>> we have that
+      <math|<rigid|\<psi\><around*|(|U<big|cap>V|)>\<in\>\<cal-T\><rsub|\<bbb-R\><rsup|n>>>>,
+      <math|x\<in\>\<psi\><around*|(|U<big|cap>V|)>\<subseteq\>\<psi\><around*|(|V|)>>
+      and <math|><math|<around*|(|f\<circ\>\<psi\>|)><rsub|\|\<psi\><around*|(|<big|cup><big|cap>V|)>>:\<psi\><around*|(|U<big|cap>V|)>\<rightarrow\>\<bbb-R\><text|
+      is of class >C<rsup|m>> so that by [theorem: <reference|diff higher
+      order class condition>]\ 
+
+      <\equation*>
+        f\<circ\>\<psi\><rsup|-1>:\<psi\><around*|(|V|)>\<rightarrow\>\<bbb-R\><text|
+        is of class >C<rsup|m>
+      </equation*>
+
+      <item*|<math|\<Leftarrow\>>>Let <math|p\<in\>M> then as
+      <math|M=<big|cup><rsub|<around*|(|U,\<varphi\>|)>\<in\>\<cal-A\>>U>
+      there exist a <math|<around*|(|U,\<varphi\>|)>\<in\>\<cal-A\>> such
+      that <math|x\<in\>U>, by the hypothesis we have also that
+      <math|f\<circ\>\<varphi\><rsup|-1>:\<varphi\><around*|(|U|)>\<rightarrow\>\<bbb-R\>>
+      is of class <math|C<rsup|m>>. As <math|p\<in\>M> has been choosen
+      arbitrary if follows that <math|f:M\<rightarrow\>\<bbb-R\>> is of class
+      <math|C<rsup|m>>.
+    </description>
+  </proof>
 
   <\definition>
     <label|manifold maximal atlas><index|maximal atlas><dueto|maximal
@@ -2931,98 +3092,112 @@
     <associate|auto-2|<tuple|23.1|?>>
     <associate|auto-3|<tuple|23.1.1|?>>
     <associate|auto-4|<tuple|coordinate chart|?>>
-    <associate|auto-5|<tuple|atlas|?>>
-    <associate|auto-6|<tuple|coordinate domain|?>>
-    <associate|auto-7|<tuple|coordinate ball|?>>
-    <associate|auto-8|<tuple|coordinate cube|?>>
+    <associate|auto-5|<tuple|coordinate domain|?>>
+    <associate|auto-6|<tuple|coordinate ball|?>>
+    <associate|auto-7|<tuple|coordinate cube|?>>
+    <associate|auto-8|<tuple|atlas|?>>
     <associate|auto-9|<tuple|23.1.2|?>>
-    <associate|compact locally finite|<tuple|23.21|?>>
-    <associate|compact paracompactness|<tuple|23.22|?>>
-    <associate|compact refinement|<tuple|23.20|?>>
-    <associate|continuity homeomorphism and restriction (1)|<tuple|23.25|?>>
-    <associate|eq 23.1.1|<tuple|23.2|?>>
+    <associate|compact locally finite|<tuple|23.23|?>>
+    <associate|compact paracompactness|<tuple|23.24|?>>
+    <associate|compact refinement|<tuple|23.22|?>>
+    <associate|continuity homeomorphism and restriction (1)|<tuple|23.27|?>>
+    <associate|eq 23.1.1|<tuple|23.5|?>>
+    <associate|eq 23.1.3|<tuple|23.2|?>>
     <associate|eq 23.1.4|<tuple|23.1|?>>
-    <associate|eq 23.13.3|<tuple|23.14|?>>
-    <associate|eq 23.14.3|<tuple|23.15|?>>
-    <associate|eq 23.15.2|<tuple|23.16|?>>
-    <associate|eq 23.16.2|<tuple|23.17|?>>
-    <associate|eq 23.17.2|<tuple|23.19|?>>
-    <associate|eq 23.2.1|<tuple|23.3|?>>
-    <associate|eq 23.21.6|<tuple|23.18|?>>
-    <associate|eq 23.22.3|<tuple|23.20|?>>
-    <associate|eq 23.23.4|<tuple|23.21|?>>
-    <associate|eq 23.23.402|<tuple|23.22|?>>
-    <associate|eq 23.24.402|<tuple|23.23|?>>
-    <associate|eq 23.25.3|<tuple|23.24|?>>
-    <associate|eq 23.26.3|<tuple|23.27|?>>
-    <associate|eq 23.27.3|<tuple|23.28|?>>
-    <associate|eq 23.27.4|<tuple|23.25|?>>
-    <associate|eq 23.28.3|<tuple|23.29|?>>
-    <associate|eq 23.28.5|<tuple|23.26|?>>
-    <associate|eq 23.3.1|<tuple|23.4|?>>
-    <associate|eq 23.31.4|<tuple|23.30|?>>
-    <associate|eq 23.33.5|<tuple|23.31|?>>
-    <associate|eq 23.35\<point\>6|<tuple|23.32|?>>
-    <associate|eq 23.36.6|<tuple|23.33|?>>
-    <associate|eq 23.37.6|<tuple|23.34|?>>
-    <associate|eq 23.38.6|<tuple|23.35|?>>
-    <associate|eq 23.39.6|<tuple|23.36|?>>
-    <associate|eq 23.4.1|<tuple|23.5|?>>
-    <associate|eq 23.40.6|<tuple|23.37|?>>
-    <associate|eq 23.41.6|<tuple|23.38|?>>
-    <associate|eq 23.42.6|<tuple|23.39|?>>
-    <associate|eq 23.43.6|<tuple|23.40|?>>
-    <associate|eq 23.44.6|<tuple|23.41|?>>
-    <associate|eq 23.45.6|<tuple|23.42|?>>
-    <associate|eq 23.46.6|<tuple|23.43|?>>
-    <associate|eq 23.47.6|<tuple|23.44|?>>
-    <associate|eq 23.48.6|<tuple|23.46|?>>
-    <associate|eq 23.48.7|<tuple|23.45|?>>
-    <associate|eq 23.49.6|<tuple|23.47|?>>
-    <associate|eq 23.5.1|<tuple|23.6|?>>
-    <associate|eq 23.50.6|<tuple|23.48|?>>
-    <associate|eq 23.52.7|<tuple|23.49|?>>
-    <associate|eq 23.53.7|<tuple|23.50|?>>
-    <associate|eq 23.54.7|<tuple|23.51|?>>
-    <associate|eq 23.6.1|<tuple|23.8|?>>
-    <associate|eq 23.6.3|<tuple|23.7|?>>
-    <associate|eq 23.7.1|<tuple|23.11|?>>
-    <associate|eq 23.7.2|<tuple|23.9|?>>
-    <associate|eq 23.8.1|<tuple|23.12|?>>
-    <associate|eq 23.8.2|<tuple|23.10|?>>
-    <associate|eq 23.9.1|<tuple|23.13|?>>
-    <associate|lemma 23.10.2|<tuple|23.13|?>>
-    <associate|lemma 23.11.2|<tuple|23.14|?>>
-    <associate|lemma 23.13.2|<tuple|23.15|?>>
-    <associate|lemma 23.13.8|<tuple|23.11|?>>
-    <associate|lemma 23.35.9|<tuple|23.33|?>>
-    <associate|lemma 23.37.6|<tuple|23.38|?>>
-    <associate|lemma 23.39.6|<tuple|23.40|?>>
-    <associate|manifold C^m chart|<tuple|23.30|?>>
+    <associate|eq 23.13.3|<tuple|23.17|?>>
+    <associate|eq 23.14.3|<tuple|23.18|?>>
+    <associate|eq 23.15.2|<tuple|23.19|?>>
+    <associate|eq 23.16.2|<tuple|23.20|?>>
+    <associate|eq 23.17.2|<tuple|23.22|?>>
+    <associate|eq 23.2.1|<tuple|23.6|?>>
+    <associate|eq 23.2.3|<tuple|23.3|?>>
+    <associate|eq 23.21.6|<tuple|23.21|?>>
+    <associate|eq 23.22.3|<tuple|23.23|?>>
+    <associate|eq 23.23.4|<tuple|23.24|?>>
+    <associate|eq 23.23.402|<tuple|23.25|?>>
+    <associate|eq 23.24.402|<tuple|23.26|?>>
+    <associate|eq 23.25.3|<tuple|23.27|?>>
+    <associate|eq 23.26.3|<tuple|23.30|?>>
+    <associate|eq 23.27.3|<tuple|23.31|?>>
+    <associate|eq 23.27.4|<tuple|23.28|?>>
+    <associate|eq 23.28.3|<tuple|23.32|?>>
+    <associate|eq 23.28.5|<tuple|23.29|?>>
+    <associate|eq 23.3.1|<tuple|23.7|?>>
+    <associate|eq 23.3.3|<tuple|23.4|?>>
+    <associate|eq 23.31.4|<tuple|23.33|?>>
+    <associate|eq 23.33.5|<tuple|23.34|?>>
+    <associate|eq 23.35.8|<tuple|23.35|?>>
+    <associate|eq 23.35\<point\>6|<tuple|23.41|?>>
+    <associate|eq 23.36.6|<tuple|23.42|?>>
+    <associate|eq 23.36.8|<tuple|23.36|?>>
+    <associate|eq 23.37.6|<tuple|23.43|?>>
+    <associate|eq 23.37.8|<tuple|23.37|?>>
+    <associate|eq 23.38.6|<tuple|23.44|?>>
+    <associate|eq 23.38.8|<tuple|23.38|?>>
+    <associate|eq 23.39.6|<tuple|23.45|?>>
+    <associate|eq 23.39.8|<tuple|23.39|?>>
+    <associate|eq 23.4.1|<tuple|23.8|?>>
+    <associate|eq 23.40.6|<tuple|23.46|?>>
+    <associate|eq 23.40.8|<tuple|23.40|?>>
+    <associate|eq 23.41.6|<tuple|23.47|?>>
+    <associate|eq 23.42.6|<tuple|23.48|?>>
+    <associate|eq 23.43.6|<tuple|23.49|?>>
+    <associate|eq 23.44.6|<tuple|23.50|?>>
+    <associate|eq 23.45.6|<tuple|23.51|?>>
+    <associate|eq 23.46.6|<tuple|23.52|?>>
+    <associate|eq 23.47.6|<tuple|23.53|?>>
+    <associate|eq 23.48.6|<tuple|23.55|?>>
+    <associate|eq 23.48.7|<tuple|23.54|?>>
+    <associate|eq 23.49.6|<tuple|23.56|?>>
+    <associate|eq 23.5.1|<tuple|23.9|?>>
+    <associate|eq 23.50.6|<tuple|23.57|?>>
+    <associate|eq 23.52.7|<tuple|23.58|?>>
+    <associate|eq 23.53.7|<tuple|23.59|?>>
+    <associate|eq 23.54.7|<tuple|23.60|?>>
+    <associate|eq 23.6.1|<tuple|23.11|?>>
+    <associate|eq 23.6.3|<tuple|23.10|?>>
+    <associate|eq 23.7.1|<tuple|23.14|?>>
+    <associate|eq 23.7.2|<tuple|23.12|?>>
+    <associate|eq 23.8.1|<tuple|23.15|?>>
+    <associate|eq 23.8.2|<tuple|23.13|?>>
+    <associate|eq 23.9.1|<tuple|23.16|?>>
+    <associate|lemma 23.10.2|<tuple|23.15|?>>
+    <associate|lemma 23.11.2|<tuple|23.16|?>>
+    <associate|lemma 23.13.2|<tuple|23.17|?>>
+    <associate|lemma 23.13.8|<tuple|23.13|?>>
+    <associate|lemma 23.35.9|<tuple|23.36|?>>
+    <associate|lemma 23.37.6|<tuple|23.42|?>>
+    <associate|lemma 23.39.6|<tuple|23.44|?>>
+    <associate|manifold C^m chart|<tuple|23.32|?>>
     <associate|manifold a topological manifold is locally
-    compact|<tuple|23.19|?>>
-    <associate|manifold atlas|<tuple|23.4|?>>
-    <associate|manifold canonical example|<tuple|23.10|?>>
-    <associate|manifold compatible atlas|<tuple|23.36|?>>
-    <associate|manifold compatible atlas (1)|<tuple|23.37|?>>
-    <associate|manifold connectivity properties|<tuple|23.18|?>>
-    <associate|manifold coordinate ball and cube|<tuple|23.7|?>>
-    <associate|manifold coordinate domain|<tuple|23.6|?>>
+    compact|<tuple|23.21|?>>
+    <associate|manifold atlas|<tuple|23.8|?>>
+    <associate|manifold canonical example|<tuple|23.12|?>>
+    <associate|manifold compatible atlas|<tuple|23.40|?>>
+    <associate|manifold compatible atlas (1)|<tuple|23.41|?>>
+    <associate|manifold connectivity properties|<tuple|23.20|?>>
+    <associate|manifold coordinate ball and cube|<tuple|23.6|?>>
+    <associate|manifold coordinate domain|<tuple|23.5|?>>
     <associate|manifold coordinate transforms are a
-    homeomorphism|<tuple|23.29|?>>
-    <associate|manifold cooridinate chart|<tuple|23.2|?>>
-    <associate|manifold diffentiable atlas|<tuple|23.32|?>>
-    <associate|manifold differentiable manifold|<tuple|23.35|?>>
-    <associate|manifold differentiable structure|<tuple|23.39|?>>
-    <associate|manifold existence of a maximal atlas|<tuple|23.41|?>>
-    <associate|manifold maximal atlas|<tuple|23.34|?>>
-    <associate|manifold open set is a sub manifold|<tuple|23.8|?>>
+    homeomorphism|<tuple|23.31|?>>
+    <associate|manifold cooridinate chart|<tuple|23.3|?>>
+    <associate|manifold cooridinate chart existence|<tuple|23.7|?>>
+    <associate|manifold diffentiable atlas|<tuple|23.34|?>>
+    <associate|manifold differentiability real function|<tuple|23.36|?>>
+    <associate|manifold differentiability real function (1)|<tuple|23.37|?>>
+    <associate|manifold differentiability real function'|<tuple|23.36|?>>
+    <associate|manifold differentiable manifold|<tuple|23.39|?>>
+    <associate|manifold differentiable structure|<tuple|23.43|?>>
+    <associate|manifold existence of a maximal atlas|<tuple|23.45|?>>
+    <associate|manifold maximal atlas|<tuple|23.38|?>>
+    <associate|manifold open set is a sub manifold|<tuple|23.10|?>>
     <associate|manifold real numbers form a topological
-    manifold|<tuple|23.9|?>>
-    <associate|manifold topological|<tuple|23.5|?>>
-    <associate|manifold topological manifold is paracompact|<tuple|23.23|?>>
-    <associate|manifold transition map|<tuple|23.27|?>>
-    <associate|note 23.31.6|<tuple|23.31|?>>
+    manifold|<tuple|23.11|?>>
+    <associate|manifold topological|<tuple|23.2|?>>
+    <associate|manifold topological (1)|<tuple|23.9|?>>
+    <associate|manifold topological manifold is paracompact|<tuple|23.25|?>>
+    <associate|manifold transition map|<tuple|23.29|?>>
+    <associate|note 23.31.6|<tuple|23.33|?>>
   </collection>
 </references>
 
@@ -3031,13 +3206,13 @@
     <\associate|idx>
       <tuple|<tuple|coordinate chart>|<pageref|auto-4>>
 
-      <tuple|<tuple|atlas>|<pageref|auto-5>>
+      <tuple|<tuple|coordinate domain>|<pageref|auto-5>>
 
-      <tuple|<tuple|coordinate domain>|<pageref|auto-6>>
+      <tuple|<tuple|coordinate ball>|<pageref|auto-6>>
 
-      <tuple|<tuple|coordinate ball>|<pageref|auto-7>>
+      <tuple|<tuple|coordinate cube>|<pageref|auto-7>>
 
-      <tuple|<tuple|coordinate cube>|<pageref|auto-8>>
+      <tuple|<tuple|atlas>|<pageref|auto-8>>
 
       <tuple|<tuple|differentiable atlas>|<pageref|auto-11>>
 
