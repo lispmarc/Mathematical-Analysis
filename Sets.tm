@@ -2967,8 +2967,6 @@
     <math|dom<around*|(|f|)>=A>
   </definition>
 
-  TODO
-
   <\theorem>
     <label|function from partial function>If <math|f:A\<rightarrow\>B> is a
     partial function then <math|f:dom<around*|(|f|)>\<rightarrow\>B> is a
@@ -5457,7 +5455,9 @@
 
       <item>If <math|D\<subseteq\>C> then
       <math|f<rsub|\|C><around*|(|D|)>=f<around*|(|D|)>> and
-      <math|<around*|(|f<rsub|\|C>|)><rsub|\|D>=f<rsub|\|D>>
+      <math|<around*|(|f<rsub|\|C>|)><rsub|\|D>=f<rsub|\|D>>. Further as
+      <math|C\<subseteq\>C> we have automatically that
+      <math|f<rsub|\|C><around*|(|C|)>=f<around*|(|C|)>>.
 
       <item>If <math|E\<subseteq\>B> then
       <math|<around*|(|f<rsub|\|C>|)><rsup|-1><around*|(|E|)>=C<big|cap>f<rsup|-1><around*|(|E|)>>
@@ -5555,6 +5555,12 @@
     <label|function restriction and domain>Let <math|f:A\<rightarrow\>B> be a
     <with|font-series|bold|partial> function and
     <math|dom<around*|(|f|)>\<subseteq\>C> then <math|f<rsub|\|C>=f>
+
+    <\note>
+      If <math|f:A\<rightarrow\>B> is a function then
+      <math|dom<around*|(|f|)>=A>. Hence if <math|A\<subseteq\>C> then
+      <math|f<rsub|\|C>=f> in this case.
+    </note>
   </theorem>
 
   <\proof>
@@ -5836,7 +5842,7 @@
     a injective function then we have\ 
 
     <\enumerate>
-      <item><math|g:C\<rightarrow\>f<around*|(|C|)>> is a bijection
+      <item><math|g:C\<rightarrow\>g<around*|(|C|)>> is a bijection
 
       <item><math|dom<around*|(|f\<circ\>g<rsup|-1>|)>=g<around*|(|A<big|cap>C|)>>
 
@@ -15651,38 +15657,38 @@
     <associate|equivalence relation partition|<tuple|3.6|?>>
     <associate|equivalence relation partition alternative|<tuple|3.8|?>>
     <associate|equivalence relation subsets|<tuple|3.20|?>>
-    <associate|family|<tuple|2.109|?>>
-    <associate|family and function composition|<tuple|2.118|?>>
-    <associate|family de Morgan|<tuple|2.139|?>>
-    <associate|family definition (2)|<tuple|2.115|?>>
-    <associate|family definition (3)|<tuple|2.116|?>>
-    <associate|family distributivity|<tuple|2.137|?>>
-    <associate|family empty family|<tuple|2.112|?>>
-    <associate|family empty family condition|<tuple|2.113|?>>
-    <associate|family image and preimage|<tuple|2.143|?>>
-    <associate|family index set is a product|<tuple|2.117|?>>
-    <associate|family intersection (2)|<tuple|2.130|?>>
-    <associate|family intersection is a set|<tuple|2.131|?>>
-    <associate|family intersection(1)|<tuple|2.129|?>>
-    <associate|family product and index transformation|<tuple|2.152|?>>
-    <associate|family properties (1)|<tuple|2.134|?>>
-    <associate|family properties (2)|<tuple|2.135|?>>
-    <associate|family properties (3)|<tuple|2.140|?>>
-    <associate|family range|<tuple|2.119|?>>
-    <associate|family range (1)|<tuple|2.120|?>>
-    <associate|family set|<tuple|2.121|?>>
-    <associate|family trivial|<tuple|2.132|?>>
-    <associate|family union (1)|<tuple|2.122|?>>
-    <associate|family union (2)|<tuple|2.125|?>>
-    <associate|family union condition set|<tuple|2.127|?>>
-    <associate|family union intersection and empty set|<tuple|2.141|?>>
-    <associate|family union intersection and inclusion|<tuple|2.136|?>>
-    <associate|family union of a empty set|<tuple|2.128|?>>
-    <associate|family union of family of families|<tuple|2.142|?>>
-    <associate|family union of family set and surjections|<tuple|2.126|?>>
-    <associate|family union of union of two families|<tuple|2.138|?>>
-    <associate|family union{A,B}|<tuple|2.133|?>>
-    <associate|family {x}xeA|<tuple|2.114|?>>
+    <associate|family|<tuple|2.110|?>>
+    <associate|family and function composition|<tuple|2.119|?>>
+    <associate|family de Morgan|<tuple|2.140|?>>
+    <associate|family definition (2)|<tuple|2.116|?>>
+    <associate|family definition (3)|<tuple|2.117|?>>
+    <associate|family distributivity|<tuple|2.138|?>>
+    <associate|family empty family|<tuple|2.113|?>>
+    <associate|family empty family condition|<tuple|2.114|?>>
+    <associate|family image and preimage|<tuple|2.144|?>>
+    <associate|family index set is a product|<tuple|2.118|?>>
+    <associate|family intersection (2)|<tuple|2.131|?>>
+    <associate|family intersection is a set|<tuple|2.132|?>>
+    <associate|family intersection(1)|<tuple|2.130|?>>
+    <associate|family product and index transformation|<tuple|2.153|?>>
+    <associate|family properties (1)|<tuple|2.135|?>>
+    <associate|family properties (2)|<tuple|2.136|?>>
+    <associate|family properties (3)|<tuple|2.141|?>>
+    <associate|family range|<tuple|2.120|?>>
+    <associate|family range (1)|<tuple|2.121|?>>
+    <associate|family set|<tuple|2.122|?>>
+    <associate|family trivial|<tuple|2.133|?>>
+    <associate|family union (1)|<tuple|2.123|?>>
+    <associate|family union (2)|<tuple|2.126|?>>
+    <associate|family union condition set|<tuple|2.128|?>>
+    <associate|family union intersection and empty set|<tuple|2.142|?>>
+    <associate|family union intersection and inclusion|<tuple|2.137|?>>
+    <associate|family union of a empty set|<tuple|2.129|?>>
+    <associate|family union of family of families|<tuple|2.143|?>>
+    <associate|family union of family set and surjections|<tuple|2.127|?>>
+    <associate|family union of union of two families|<tuple|2.139|?>>
+    <associate|family union{A,B}|<tuple|2.134|?>>
+    <associate|family {x}xeA|<tuple|2.115|?>>
     <associate|function|<tuple|2.24|?>>
     <associate|function A^empty is empty|<tuple|2.34|?>>
     <associate|function B^A|<tuple|2.32|?>>
@@ -15695,19 +15701,19 @@
     <associate|function bijection condition (2)|<tuple|2.73|?>>
     <associate|function bijection f,f-1|<tuple|2.71|?>>
     <associate|function bijection has a inverse|<tuple|2.69|?>>
-    <associate|function bijection removing element|<tuple|2.98|?>>
+    <associate|function bijection removing element|<tuple|2.99|?>>
     <associate|function characteristics function|<tuple|2.48|?>>
     <associate|function combining bijections|<tuple|2.87|?>>
     <associate|function combining functions (1)|<tuple|2.84|?>>
     <associate|function combining functions (2)|<tuple|2.86|?>>
-    <associate|function composition and restriction|<tuple|2.95|?>>
+    <associate|function composition and restriction|<tuple|2.96|?>>
     <associate|function composition injectivity, surjectivity and
     bijectivity|<tuple|2.77|?>>
     <associate|function composition injectivity, surjectivity and bijectivity
     (1)|<tuple|2.78|?>>
     <associate|function composition of Id function|<tuple|2.50|?>>
     <associate|function composition of function and inverse
-    function|<tuple|2.100|?>>
+    function|<tuple|2.101|?>>
     <associate|function composition of functions is a
     fucntion|<tuple|2.29|?>>
     <associate|function composition of functions is a fucntion
@@ -15722,21 +15728,21 @@
     <associate|function extending funtion domain|<tuple|2.88|?>>
     <associate|function f(x)|<tuple|2.41|?>>
     <associate|function from partial function|<tuple|2.25|?>>
-    <associate|function function and intersection and union|<tuple|2.102|?>>
+    <associate|function function and intersection and union|<tuple|2.103|?>>
     <associate|function identity function|<tuple|2.49|?>>
     <associate|function identity map is a bijection|<tuple|2.66|?>>
     <associate|function image preimage|<tuple|2.51|?>>
     <associate|function image preimage alternative|<tuple|2.45|?>>
     <associate|function inclusion function|<tuple|2.55|?>>
-    <associate|function indexed set|<tuple|2.106|?>>
-    <associate|function indexed set example|<tuple|2.108|?>>
-    <associate|function indexed set unique|<tuple|2.107|?>>
+    <associate|function indexed set|<tuple|2.107|?>>
+    <associate|function indexed set example|<tuple|2.109|?>>
+    <associate|function indexed set unique|<tuple|2.108|?>>
     <associate|function injection condition|<tuple|2.62|?>>
     <associate|function injective inverse is a function|<tuple|2.61|?>>
     <associate|function injectivity to bijection|<tuple|2.68|?>>
     <associate|function injectivity, surjectivity|<tuple|2.54|?>>
-    <associate|function inverse and restriction|<tuple|2.94|?>>
-    <associate|function inverse function and bijection|<tuple|2.99|?>>
+    <associate|function inverse and restriction|<tuple|2.95|?>>
+    <associate|function inverse function and bijection|<tuple|2.100|?>>
     <associate|function inverse function and f(x)|<tuple|2.72|?>>
     <associate|function inverse image preimage|<tuple|2.70|?>>
     <associate|function inverse of Id|<tuple|2.76|?>>
@@ -15744,16 +15750,16 @@
     <associate|function power of intersection|<tuple|2.38|?>>
     <associate|function preimage of image|<tuple|2.57|?>>
     <associate|function preimage of image (1)|<tuple|2.26|?>>
-    <associate|function properties (1)|<tuple|2.101|?>>
+    <associate|function properties (1)|<tuple|2.102|?>>
     <associate|function range restriction|<tuple|2.39|?>>
     <associate|function restricted function properties|<tuple|2.92|?>>
     <associate|function restriction and composition|<tuple|2.82|?>>
     <associate|function restriction and composition (1)|<tuple|2.83|?>>
     <associate|function restriction and domain|<tuple|2.93|?>>
-    <associate|function restriction of a function|<tuple|2.97|?>>
+    <associate|function restriction of a function|<tuple|2.98|?>>
     <associate|function restriction of a graph|<tuple|2.81|?>>
-    <associate|function simple definition|<tuple|2.103|?>>
-    <associate|function simple definition notation|<tuple|2.104|?>>
+    <associate|function simple definition|<tuple|2.104|?>>
+    <associate|function simple definition notation|<tuple|2.105|?>>
     <associate|function stitching of functions|<tuple|2.90|?>>
     <associate|function surjection and construction of inverse
     function|<tuple|3.105|?>>
@@ -15860,19 +15866,19 @@
     <associate|partial functions image/preimage properties|<tuple|2.17|?>>
     <associate|parttial function graph|<tuple|2.6|?>>
     <associate|power set|<tuple|1.69|?>>
-    <associate|product|<tuple|2.144|?>>
-    <associate|product and intersection|<tuple|2.149|?>>
-    <associate|product and power|<tuple|2.151|?>>
-    <associate|product extension|<tuple|2.154|?>>
-    <associate|product inclusion|<tuple|2.148|?>>
-    <associate|product intersection of a product|<tuple|2.150|?>>
-    <associate|product of a empty set is empty|<tuple|2.145|?>>
-    <associate|product of family with one element|<tuple|2.146|?>>
-    <associate|product of family with two classes|<tuple|2.147|?>>
+    <associate|product|<tuple|2.145|?>>
+    <associate|product and intersection|<tuple|2.150|?>>
+    <associate|product and power|<tuple|2.152|?>>
+    <associate|product extension|<tuple|2.155|?>>
+    <associate|product inclusion|<tuple|2.149|?>>
+    <associate|product intersection of a product|<tuple|2.151|?>>
+    <associate|product of a empty set is empty|<tuple|2.146|?>>
+    <associate|product of family with one element|<tuple|2.147|?>>
+    <associate|product of family with two classes|<tuple|2.148|?>>
     <associate|product product is not empty|<tuple|3.110|?>>
-    <associate|product projection function|<tuple|2.155|?>>
+    <associate|product projection function|<tuple|2.156|?>>
     <associate|product projection is surjective|<tuple|3.109|?>>
-    <associate|product sub-product|<tuple|2.153|?>>
+    <associate|product sub-product|<tuple|2.154|?>>
     <associate|relation|<tuple|3.1|?>>
     <associate|relation properties|<tuple|3.4|?>>
     <associate|relation trivial|<tuple|3.3|?>>

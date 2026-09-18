@@ -1873,8 +1873,6 @@
 
   \;
 
-  TODO
-
   As a application we proof that the intersection of two sets is a set
 
   \;
@@ -2969,6 +2967,35 @@
     <math|dom<around*|(|f|)>=A>
   </definition>
 
+  <\theorem>
+    <label|function from partial function>If <math|f:A\<rightarrow\>B> is a
+    partial function then <math|f:dom<around*|(|f|)>\<rightarrow\>B> is a
+    partial function
+  </theorem>
+
+  <\proof>
+    As <math|f:A\<rightarrow\>B> is a partial function we have that\ 
+
+    <\equation*>
+      f\<subseteq\>A\<times\>B<text| and >\<forall\><around*|(|x,y|)>,<around*|(|x,y<rprime|'>|)>\<in\>f<text|
+      we have >y=y<rprime|'>
+    </equation*>
+
+    Let <math|<around*|(|x,y|)>\<in\>f> then <math|x\<in\>dom<around*|(|f|)>>
+    and <math|y\<in\>B> so that <math|<around*|(|x,y|)>\<in\>dom<around*|(|f|)>\<times\>B>
+    which together with the above proves that\ 
+
+    <\equation*>
+      f:dom<around*|(|f|)>\<rightarrow\>B<text| is a partial function>
+    </equation*>
+
+    and thus by definition that\ 
+
+    <\equation*>
+      f:dom<around*|(|f|)>\<rightarrow\>B<text| is a function>
+    </equation*>
+  </proof>
+
   So every function is also a partial function, hence statements about
   partial functions applies also for functions. One special benefit of
   functions is the following.
@@ -3674,6 +3701,8 @@
     <\equation*>
       Id<rsub|A>=<around*|{|z<mid|\|>z=<around*|(|x,x|)>\<wedge\>x\<in\>A|}>
     </equation*>
+
+    is a function,
   </example>
 
   <\proof>
@@ -3762,8 +3791,6 @@
     This follows from \ <reference|partial functions image/preimage
     properties> taking in account that <math|A=dom<around*|(|f|)>>
   </proof>
-
-  \;
 
   <subsection|Injectivity, Surjectivity and bijectivity>
 
@@ -4122,7 +4149,7 @@
 
   <\definition>
     <label|bijection><index|bijection>A function <math|f:A\<rightarrow\>B> is
-    a <inactive|<with|font-series|bold|bijection>> iff the function is
+    a <with|font-series|bold|bijection> iff the function is
     <with|font-series|bold|injective> and <with|font-series|bold|surjective>.
   </definition>
 
@@ -4484,6 +4511,21 @@
         <around*|(|f<rsup|-1>|)><rsup|-1>=f
       </equation*>
     </enumerate>
+  </proof>
+
+  <\corollary>
+    <label|function inverse of Id>If <math|A> is a set then we have for the
+    bijection <math|Id<rsub|U>:A\<rightarrow\>A> [see theorem:
+    <reference|function identity map is a bijection>] that
+    <math|<around*|(|Id<rsub|U>|)><rsup|-1>=Id<rsub|U>>.
+  </corollary>
+
+  <\proof>
+    As we have for <math|Id<rsub|U>:A\<rightarrow\>A> that
+    <math|Id<rsub|A>\<circ\>Id<rsub|A><below|=|<text|[theorem:
+    <reference|function composition of Id function>]>>Id<rsub|A>> it follows
+    from [proposition: <reference|function inverse of a bijection is unique>]
+    that <math|<around*|(|Id<rsub|U>|)><rsup|-1>=Id<rsub|U>>.
   </proof>
 
   Composition preserves injectivity, surjectivity and <math|bijectivity>.
@@ -4859,63 +4901,135 @@
     <label|function restriction and composition>If <math|f:A\<rightarrow\>B>
     and <math|g:C\<rightarrow\>D> are functions [so that by [theorem:
     <reference|function composition of functions is a fucntion>]
-    <math|<rigid|g\<circ\>f:U<big|cap>f<rsup|-1><around*|(|V|)>\<rightarrow\>D>>
+    <math|<rigid|g\<circ\>f:A<big|cap>f<rsup|-1><around*|(|C|)>\<rightarrow\>D>>
     is a function] \ then
 
     <\equation*>
-      g\<circ\>f=g\<circ\>f<rsub|\|U<big|cap>f<rsup|-1><around*|(|V|)>>
+      g\<circ\>f=g\<circ\>f<rsub|\|A<big|cap>f<rsup|-1><around*|(|C|)>>
     </equation*>
 
     so that\ 
 
     <\equation*>
-      g\<circ\>f<rsub|\|U<big|cap>f<rsup|-1><around*|(|V|)>>:U<big|cap>f<rsup|-1><around*|(|V|)>\<rightarrow\>D
+      g\<circ\>f<rsub|\|A<big|cap>f<rsup|-1><around*|(|C|)>>:A<big|cap>f<rsup|-1><around*|(|C|)>\<rightarrow\>D
     </equation*>
 
     is also a function that is equal to the function
 
     <\equation*>
-      g\<circ\>f:U<big|cap>f<rsup|-1><around*|(|V|)>\<rightarrow\>D
+      g\<circ\>f:A<big|cap>f<rsup|-1><around*|(|C|)>\<rightarrow\>D
     </equation*>
   </theorem>
 
   <\proof>
     As by [theorem: <reference|function composition of functions is a
-    fucntion>] <math|g\<circ\>f:U<big|cap>f<rsup|-1><around*|(|V|)>\<rightarrow\>D>
+    fucntion>] <math|g\<circ\>f:A<big|cap>f<rsup|-1><around*|(|C|)>\<rightarrow\>D>
     is a function we have that
 
     <\equation*>
-      g\<circ\>f\<subseteq\><around*|(|U<big|cap>f<rsup|-1><around*|(|V|)>|)>\<times\>D
+      g\<circ\>f\<subseteq\><around*|(|A<big|cap>f<rsup|-1><around*|(|C|)>|)>\<times\>D
     </equation*>
 
     Let <math|<around*|(|x,y|)>\<in\>g\<circ\>f> then there exist a <math|z>
     such that <math|<around*|(|x,z|)>\<in\>f> and
     <math|<around*|(|z,y|)>\<in\>g>. Further, as
     <math|<around*|(|x,y|)>\<in\>g\<circ\>f> and
-    <math|g\<circ\>f\<subseteq\><around*|(|U<big|cap>f<rsup|-1><around*|(|V|)>|)>\<times\>D>,
-    it follows that <math|x\<in\>U<big|cap>f<rsup|-1><around*|(|V|)>>, so
-    that <math|<around*|(|x,z|)>\<in\>f<rsub|\|U<big|cap>f<rsup|-1><around*|(|V|)>>>
+    <math|g\<circ\>f\<subseteq\><around*|(|A<big|cap>f<rsup|-1><around*|(|C|)>|)>\<times\>D>,
+    it follows that <math|x\<in\>A<big|cap>f<rsup|-1><around*|(|C|)>>, so
+    that <math|<around*|(|x,z|)>\<in\>f<rsub|\|A<big|cap>f<rsup|-1><around*|(|C|)>>>
     and as <math|<around*|(|z,y|)>\<in\>g> that
-    <math|<around*|(|x,y|)>\<in\>g\<circ\>f<rsub|\|U<big|cap>f<rsup|-1><around*|(|V|)>>>.
+    <math|<around*|(|x,y|)>\<in\>g\<circ\>f<rsub|\|A<big|cap>f<rsup|-1><around*|(|C|)>>>.
     Hence we must conclude that\ 
 
     <\equation>
-      <label|eq 2.25.141>g\<circ\>f\<subseteq\>g\<circ\>f<rsub|\|U<big|cap>f<rsup|-1><around*|(|V|)>>
+      <label|eq 2.25.141>g\<circ\>f\<subseteq\>g\<circ\>f<rsub|\|A<big|cap>f<rsup|-1><around*|(|C|)>>
     </equation>
 
-    On the other hand if <math|<around*|(|x,y|)>\<in\>g\<circ\>f<rsub|\|U<big|cap>f<rsup|-1><around*|(|V|)>>>
+    On the other hand if <math|<around*|(|x,y|)>\<in\>g\<circ\>f<rsub|\|A<big|cap>f<rsup|-1><around*|(|C|)>>>
     then there exist a <math|z> such that
-    <math|<around*|(|x,z|)>\<in\>f<rsub|\|U<big|cap>f<rsup|-1><around*|(|V|)>>>
+    <math|<around*|(|x,z|)>\<in\>f<rsub|\|A<big|cap>f<rsup|-1><around*|(|C|)>>>
     and <math|<around*|(|z,x|)>\<in\>g>. Hence by the definition of
-    <math|f<rsub|\|U<big|cap>f<rsup|-1><around*|(|V|)>>> it follows that
+    <math|f<rsub|\|A<big|cap>f<rsup|-1><around*|(|C|)>>> it follows that
     <math|<around*|(|x,z|)>\<in\>f> so that, as
     <math|<around*|(|z,x|)>\<in\>g> it follows that
     <math|<around*|(|x,y|)>\<in\>g\<circ\>f>. Hence
-    <math|g\<circ\>f<rsub|\|U<big|cap>f<rsup|-1><around*|(|V|)>>\<subseteq\>g\<circ\>f>
+    <math|g\<circ\>f<rsub|\|A<big|cap>f<rsup|-1><around*|(|C|)>>\<subseteq\>g\<circ\>f>
     which combined with [eq: <reference|eq 2.25.141>] proves finally that\ 
 
     <\equation*>
-      g\<circ\>f=g\<circ\>f<rsub|\|U<big|cap>f<rsup|-1><around*|(|V|)>>
+      g\<circ\>f=g\<circ\>f<rsub|\|A<big|cap>f<rsup|-1><around*|(|C|)>>
+    </equation*>
+  </proof>
+
+  <\corollary>
+    <label|function restriction and composition (1)>If
+    <math|f:A\<rightarrow\>B> and <math|g:C\<rightarrow\>D> are functions
+    such that <math|C\<subseteq\>B> then\ 
+
+    <\equation*>
+      g\<circ\>f:f<rsup|-1><around*|(|C|)>\<rightarrow\>D<text| is a function
+      >
+    </equation*>
+
+    and
+
+    <\equation*>
+      g\<circ\>f=g\<circ\>f<rsub|\|f<rsup|-1><around*|(|C|)>>
+    </equation*>
+
+    so that
+
+    <\equation*>
+      g\<circ\>f<rsub|\|f<rsup|-1><around*|(|C|)>>:f<rsup|-1><around*|(|C|)>\<rightarrow\>D
+    </equation*>
+
+    is also a function that is equal to the function
+
+    <\equation*>
+      g\<circ\>f:f<rsup|-1><around*|(|C|)>\<rightarrow\>D
+    </equation*>
+  </corollary>
+
+  <\proof>
+    As <math|f:A\<rightarrow\>B> is a function it follows from [theorem:
+    <reference|function image preimage>(4)] that\ 
+
+    <\equation*>
+      A=f<rsup|-1><around*|(|B|)>
+    </equation*>
+
+    Further as <math|C\<subseteq\>B> it follows from [theorem:
+    <reference|partial functions image/preimage properties>(6)] that
+    <math|f<rsup|-1><around*|(|C|)>\<subseteq\>f<rsup|-1><around*|(|B|)>>
+    which by the above proves that\ 
+
+    <\equation*>
+      f<rsup|-1><around*|(|C|)>\<subseteq\>A
+    </equation*>
+
+    Hence using [theorem: <reference|class inclusion and union and
+    intersection>(2)] it follows that\ 
+
+    <\equation>
+      <label|eq 2.26\<point\>1>A<big|cap>f<rsup|-1><around*|(|C|)>=f<rsup|-1><around*|(|C|)>
+    </equation>
+
+    Now using [theorem: <reference|function composition of functions is a
+    fucntion>] <math|g\<circ\>f:A<big|cap>f<rsup|-1><around*|(|C|)>\<rightarrow\>D>
+    is a function so that by the above
+
+    <\equation*>
+      g\<circ\>f:f<rsup|-1><around*|(|C|)>\<rightarrow\>D<text| is a
+      function>
+    </equation*>
+
+    Further by the previous theorem [see theorem: <reference|function
+    restriction and composition>] we have that
+    <math|g\<circ\>f=g\<circ\>f<rsub|\|A<big|cap>f<rsup|-1><around*|(|C|)>>>
+    so that by [eq: <reference|eq 2.26\<point\>1>]\ 
+
+    <\equation*>
+      g\<circ\>f=g\<circ\>f<rsub|\|f<rsup|-1><around*|(|C|)>>
     </equation*>
   </proof>
 
@@ -4936,6 +5050,22 @@
       <item>If <math|f:A\<rightarrow\>C> and <math|g:B\<rightarrow\>C> are
       functions then <math|f<big|cup>g:A<big|cup>B\<rightarrow\>C> are
       functions
+
+      <\note>
+        If <math|x\<in\>A> then as <math|f> is a function there exist a
+        <math|y\<in\>C> such that <math|<around*|(|x,y|)>\<in\>f\<subseteq\>f<big|cup>g>
+        which is written as <math|y=f<around*|(|x|)>\<wedge\>y=<around*|(|f<big|cup>g|)><around*|(|x|)>>.
+        If <math|x\<in\>B> then as <math|g> is a function there exist a
+        <math|y\<in\>C> such that <math|<around*|(|x,y|)>\<in\>g\<subseteq\>f<big|cup>g>
+        which is written as <math|y=g<around*|(|x|)>\<wedge\>y=<around*|(|f<big|cup>g|)><around*|(|x|)>>.
+        Hence we can say that\ 
+
+        <\equation*>
+          f<big|cup>g:A<big|cup>B\<rightarrow\>C<text| is defined by
+          ><around*|(|f<big|cup>g|)><around*|(|x|)>=<choice|<tformat|<table|<row|<cell|f<around*|(|x|)><text|
+          if >x\<in\>A>>|<row|<cell|g<around*|(|x|)><text| if >x\<in\>B>>>>>
+        </equation*>
+      </note>
     </enumerate>
   </theorem>
 
@@ -5166,6 +5296,154 @@
   </proof>
 
   <\theorem>
+    <label|function stitching of functions>Let <math|f:A\<rightarrow\>C> and
+    <math|g:B\<rightarrow\>C> functions such that
+    <math|\<forall\>x\<in\>A<big|cap>B> we have
+    <rigid|<math|<around*|(|x,y|)>\<in\>f\<wedge\><around*|(|x,y<rprime|'>|)>\<in\>g>>
+    implies <math|y=y<rprime|'>> [which is equivalent with saying that
+    <math|\<forall\>x\<in\>A<big|cap>B> <math|f<around*|(|x|)>=g<around*|(|x|)>>]
+    then we have that:\ 
+
+    <\enumerate>
+      <item><math|f<big|cup>g:A<big|cup>B\<rightarrow\>C> is a function.
+
+      <item>If <math|D\<subseteq\>C> then
+      <math|<around*|(|f<big|cup>g|)><rsup|-1><around*|(|D|)>=f<rsup|-1><around*|(|D|)><big|cup>g<rsup|-1><around*|(|D|)>>.
+    </enumerate>
+
+    <\note>
+      If <math|x\<in\>A> then as <math|f> is a function there exist a
+      <math|y\<in\>C> such that <math|<around*|(|x,y|)>\<in\>f\<subseteq\>f<big|cup>g>
+      which is written as <math|y=f<around*|(|x|)>\<wedge\>y=<around*|(|f<big|cup>g|)><around*|(|x|)>>.
+      If <math|x\<in\>B> then as <math|g> is a function there exist a
+      <math|y\<in\>C> such that <math|<around*|(|x,y|)>\<in\>g\<subseteq\>f<big|cup>g>
+      which is written as <math|y=g<around*|(|x|)>\<wedge\>y=<around*|(|f<big|cup>g|)><around*|(|x|)>>.
+      Hence we can say that\ 
+
+      <\equation*>
+        f<big|cup>g:A<big|cup>B\<rightarrow\>C<text| is defined by
+        ><around*|(|f<big|cup>g|)><around*|(|x|)>=<choice|<tformat|<table|<row|<cell|f<around*|(|x|)><text|
+        if >x\<in\>A>>|<row|<cell|g<around*|(|x|)><text| if >x\<in\>B>>>>>
+      </equation*>
+    </note>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>First as <math|f\<subseteq\>A\<times\>C> and
+      <math|g\<subseteq\>B\<times\>C> then we have that\ 
+
+      <\equation*>
+        f<big|cup>g\<subseteq\><around*|(|A\<times\>C|)><big|cup><around*|(|B\<times\>C|)>\<equallim\><rsub|<text|[theorem:
+        <reference|cartesian product properties
+        (1)>]>><around*|(|A<big|cup>B|)>\<times\>C
+      </equation*>
+
+      Second if <math|<around*|(|x,y|)>,<around*|(|x,y<rprime|'>|)>\<in\>f<big|cup>g>
+      then we have either:\ 
+
+      <\description>
+        <item*|<math|x\<in\>A\\B>>Then <math|<around*|(|x,y|)>,<around*|(|x,y<rprime|'>|)>\<nin\>B\<times\>C\<Rightarrow\><around*|(|x,y|)>,<around*|(|x,y<rprime|'>|)>\<nin\>g>
+        so that <math|<around*|(|x,y|)>,<around*|(|x,y<rprime|'>|)>\<in\>f>
+        which as <math|f> is a function proves that <math|y=y<rprime|'>>.
+
+        <item*|<math|x\<in\>B\\A>>Then <math|<around*|(|x,y|)>,<around*|(|x,y<rprime|'>|)>\<nin\>A\<times\>C\<Rightarrow\><around*|(|x,y|)>,<around*|(|x,y<rprime|'>|)>\<nin\>f>
+        so that <math|<around*|(|x,y|)>,<around*|(|x,y<rprime|'>|)>\<in\>g>
+        which as <math|g> is a function proves that <math|y=y<rprime|'>>.
+
+        <item*|<math|x\<in\>B\\A>>As <math|<around*|(|x,y|)>,<around*|(|x,y<rprime|'>|)>\<in\>f<big|cup>g>
+        we have either:\ 
+
+        <\description>
+          <item*|<math|<around*|(|x,y|)>\<in\>f>>Then we have either:
+
+          <\description>
+            <item*|<math|<around*|(|x,y<rprime|'>|)>\<in\>f>>As <math|f> is a
+            function we have that <math|y=y<rprime|'>>
+
+            <item*|<math|<around*|(|x,y<rprime|'>|)>\<in\>g>>Then we have by
+            the extra condition on <math|x\<in\>A<big|cap>B> that
+            <math|y=y<rprime|'>>.
+          </description>
+
+          <item*|<math|<around*|(|x,y|)>\<in\>g>>Then we have either:
+
+          <\description>
+            <item*|<math|<around*|(|x,y<rprime|'>|)>\<in\>f>>Then we have by
+            the extra condition on <math|x\<in\>A<big|cap>B> that
+            <math|y=y<rprime|'>>.
+
+            <item*|<math|<around*|(|x,y<rprime|'>|)>\<in\>g>>As <math|g> is a
+            function we have that <math|y=y<rprime|'>>
+          </description>
+        </description>
+      </description>
+
+      So in all cases we have that <math|y=y<rprime|'>> which proves that\ 
+
+      <\equation*>
+        f<big|cup>g<text| is a partial function>
+      </equation*>
+
+      Let <math|x\<in\>A<big|cup>B> then we have either:\ 
+
+      <\description>
+        <item*|<math|x\<in\>A>>As <math|f> is a function there exist a
+        <math|y\<in\>C> such that <math|<around*|(|x,y|)>\<in\>f\<subseteq\>f<big|cup>g>.
+
+        <item*|<math|x\<in\>B>>As <math|g> is a function there exist a
+        <math|y\<in\>C> such that <math|<around*|(|x,y|)>\<in\>g\<subseteq\>f<big|cup>g>.
+      </description>
+
+      So in all cases we found a <math|y\<in\>C> such that
+      <math|<around*|(|x,y|)>\<in\>f<big|cup>g> which proves that\ 
+
+      <\equation*>
+        f<big|cup>g<text| is a function>
+      </equation*>
+
+      <item>Let <math|x\<in\><around*|(|f<big|cup>g|)><rsup|-1><around*|(|D|)>>
+      then there exist a <math|y\<in\>D> such that
+      <math|<around*|(|x,y|)>\<in\>f<big|cup>g>. Hence we have either
+      <math|<around*|(|x,y|)>\<in\>f\<Rightarrow\>x\<in\>f<rsup|-1><around*|(|D|)>>
+      or <math|<around*|(|x,y|)>\<in\>g\<Rightarrow\>x\<in\>g<rsup|-1><around*|(|D|)>>
+      so that <math|x\<in\>f<rsup|-1><around*|(|D|)>> or
+      <math|x\<in\>g<rsup|-1><around*|(|D|)>>. Hence we have proved that\ 
+
+      <\equation>
+        <label|eq 2.28.401><around*|(|f<big|cup>g|)><rsup|-1><around*|(|D|)>\<subseteq\>f<rsup|-1><around*|(|D|)><big|cup>g<rsup|-1><around*|(|D|)>
+      </equation>
+
+      On the other hand if <math|x\<in\>f<rsup|-1><around*|(|D|)><big|cup>g<rsup|-1><around*|(|D|)>>
+      then we have either:\ 
+
+      <\description>
+        <item*|<math|x\<in\>f<rsup|-1><around*|(|D|)>>>Then there exist a
+        <math|y\<in\>D> such that <math|<around*|(|x,y|)>\<in\>f\<subseteq\>f<big|cup>g\<Rightarrow\>x\<in\><around*|(|f<big|cup>g|)><rsup|-1><around*|(|D|)>>
+
+        <item*|<math|x\<in\>g<rsup|-1><around*|(|D|)>>>Then there exist a
+        <math|y\<in\>D> such that <math|<around*|(|x,y|)>\<in\>g\<subseteq\>f<big|cup>g\<Rightarrow\>x\<in\><around*|(|f<big|cup>g|)><rsup|-1><around*|(|D|)>>
+      </description>
+
+      hence in all possible cases we have
+      <math|x\<in\><around*|(|f<big|cup>g|)><rsup|-1><around*|(|D|)>> which
+      proves that
+
+      <\equation*>
+        f<rsup|-1><around*|(|D|)><big|cup>g<rsup|-1><around*|(|D|)>\<subseteq\><around*|(|f<big|cup>g|)><rsup|-1><around*|(|D|)>
+      </equation*>
+
+      which, combined with [eq: <reference|eq 2.28.401>], proves that
+
+      <\equation*>
+        <around*|(|f<big|cup>g|)><rsup|-1><around*|(|D|)>=f<rsup|-1><around*|(|D|)><big|cup>g<rsup|-1><around*|(|D|)>
+      </equation*>
+    </enumerate>
+  </proof>
+
+  <\theorem>
     <label|function restricted function properties>Let
     <math|f:A\<rightarrow\>B> be a partial function and <math|C\<subseteq\>A>
     a sub-class of <math|A> then we have:
@@ -5177,7 +5455,9 @@
 
       <item>If <math|D\<subseteq\>C> then
       <math|f<rsub|\|C><around*|(|D|)>=f<around*|(|D|)>> and
-      <math|<around*|(|f<rsub|\|C>|)><rsub|\|D>=f<rsub|\|D>>
+      <math|<around*|(|f<rsub|\|C>|)><rsub|\|D>=f<rsub|\|D>>. Further as
+      <math|C\<subseteq\>C> we have automatically that
+      <math|f<rsub|\|C><around*|(|C|)>=f<around*|(|C|)>>.
 
       <item>If <math|E\<subseteq\>B> then
       <math|<around*|(|f<rsub|\|C>|)><rsup|-1><around*|(|E|)>=C<big|cap>f<rsup|-1><around*|(|E|)>>
@@ -5273,21 +5553,28 @@
 
   <\theorem>
     <label|function restriction and domain>Let <math|f:A\<rightarrow\>B> be a
-    <with|font-series|bold|partial> function then
-    <math|f<rsub|\|dom<around*|(|f|)>>=f>
+    <with|font-series|bold|partial> function and
+    <math|dom<around*|(|f|)>\<subseteq\>C> then <math|f<rsub|\|C>=f>
+
+    <\note>
+      If <math|f:A\<rightarrow\>B> is a function then
+      <math|dom<around*|(|f|)>=A>. Hence if <math|A\<subseteq\>C> then
+      <math|f<rsub|\|C>=f> in this case.
+    </note>
   </theorem>
 
   <\proof>
     If <math|<around*|(|x,y|)>\<in\>f> then by definition
-    <math|x\<in\>dom<around*|(|f|)>> hence
-    <math|<around*|(|x,y|)>\<in\>f<rsub|\|dom<around*|(|f|)>>>, further if
-    <math|<around*|(|x,y|)>\<in\>f<rsub|\|dom<around*|(|f|)>>> then
-    <math|<around*|(|x,y|)>\<in\>f> and <math|x\<in\>dom<around*|(|f|)>>, so
-    evidently <math|<around*|(|x,y|)>\<in\>f>. Hence using the Axiom of
-    Extent [axiom: <reference|axiom of extent>] we have\ 
+    <math|x\<in\>dom<around*|(|f|)>> which as
+    <math|dom<around*|(|f|)>\<subseteq\>C> proves that <math|x\<in\>C> hence
+    <math|<around*|(|x,y|)>\<in\><around*|{|z\|z=<around*|(|x,y|)>\<in\>f\|x\<in\>C|}>=f<rsub|\|C>>.
+    Further if <math|<around*|(|x,y|)>\<in\>f<rsub|\|C>> then
+    <math|<around*|(|x,y|)>\<in\>f> and <math|x\<in\>C>, so evidently
+    <math|<around*|(|x,y|)>\<in\>f>. Hence using the Axiom of Extent [axiom:
+    <reference|axiom of extent>] we have\ 
 
     <\equation*>
-      f<rsub|\|dom<around*|(|f|)>>=f
+      f<rsub|\|C>=f
     </equation*>
   </proof>
 
@@ -5329,36 +5616,53 @@
   <\theorem>
     <label|function composition and restriction>Let <math|f:A\<rightarrow\>B>
     and <math|g:C\<rightarrow\>D> be <with|font-series|bold|partial>
-    functions and <math|E\<subseteq\>A> then
+    functions, <math|E\<subseteq\>A> and <math|f<around*|(|E|)>\<subseteq\>F>
+    then
 
     <\equation*>
-      <around*|(|g\<circ\>f|)><rsub|\|E>=g\<circ\>f<rsub|\|E>
+      <around*|(|g\<circ\>f|)><rsub|\|E>=g<rsub|\|F>\<circ\>f<rsub|\|E>
     </equation*>
+
+    <\note>
+      If <math|f<around*|(|E|)>\<subseteq\>dom<around*|(|g|)>> then, as by
+      [theorem: <reference|function restriction and domain>]
+      <math|g<rsub|\|dom<around*|(|g|)>>=g> we have in this special cases
+      that\ 
+
+      <\equation*>
+        <around*|(|g\<circ\>f|)><rsub|\|E>=g\<circ\>f<rsub|\|E>
+      </equation*>
+    </note>
   </theorem>
 
   <\proof>
-    Let <math|<around*|(|x,z|)>\<in\><around*|(|f\<circ\>g|)><rsub|\|E>> then
-    <math|<around*|(|x,z|)>\<in\>f\<circ\>g> and <math|x\<in\>E>, hence
-    <math|\<exists\>y> such that <math|<around*|(|x,y|)>\<in\>f\<wedge\><around*|(|y,z|)>\<in\>g>,
-    further, as <math|x\<in\>E>, \ it follows that
-    <math|<around*|(|x,y|)>\<in\>f<rsub|\|E>>. So we must conclude that
-    <math|<around*|(|x,z|)>\<in\>g\<circ\>f<rsub|\|E>> which proves that\ 
+    Let <math|<around*|(|x,y|)>\<in\><around*|(|g\<circ\>f|)><rsub|\|E>> then
+    <math|<around*|(|x,y|)>\<in\>g\<circ\>f> and <math|x\<in\>E>, hence
+    <math|\<exists\>y> such that <math|<around*|(|x,y|)>\<in\>f\<wedge\><around*|(|y,z|)>\<in\>g>.
+    As <math|x\<in\>E> it follows that <math|<around*|(|x,y|)>\<in\>f<rsub|\|E>>,
+    further from <math|x\<in\>E> and <math|<around*|(|x,y|)>\<in\>f> it
+    follows that <math|y\<in\>f<around*|(|E|)><below||>> or, \ as
+    <math|f<around*|(|E|)>\<subseteq\>F>, it follows that <math|y\<in\>F> so
+    that <math|<around*|(|y,z|)>\<in\>g<rsub|\|F>>. Hence we have that
+    <math|<around*|(|x,z|)>\<in\>g<rsub|\|F>\<circ\>f<rsub|\|E>> which proves
+    that\ 
 
     <\equation>
-      <label|eq 2.17.003><around*|(|g\<circ\>f|)><rsub|\|E>\<subseteq\>g\<circ\>f<rsub|\|E>
+      <label|eq 2.31.400><around*|(|g\<circ\>f|)><rsub|\|E>\<subseteq\>g<rsub|\|F>\<circ\>f<rsub|\|E>
     </equation>
 
-    If <math|<around*|(|x,z|)>\<in\>g\<circ\>f<rsub|\|E>> then there exist a
-    <math|y> such that <math|<around*|(|x,y|)>\<in\>f<rsub|\|E>\<wedge\><around*|(|y,z|)>\<in\>g>,
-    as <math|<around*|(|x,y|)>\<in\>f<rsub|\|E>> we must have that
-    <math|x\<in\>E> and <math|<around*|(|x,y|)>\<in\>f>. Hence
-    <math|<around*|(|x,z|)>\<in\>g\<circ\>f> and <math|x\<in\>E> proving that
-    <math|<around*|(|x,z|)>\<in\><around*|(|g\<circ\>f|)><rsub|\|E>> so that
-    <math|g\<circ\>f<rsub|\|E>\<subseteq\><around*|(|g\<circ\>f|)><rsub|\|E>>.
-    Combining this with [eq: <reference|eq 2.17.003>] proves finally that\ 
+    If <math|<around*|(|x,y|)>\<in\>g<rsub|\|F>\<circ\>f<rsub|\|E>> then
+    there exist a <math|y> such that <math|<around*|(|x,y|)>\<in\>f<rsub|\|E>>
+    and <math|<around*|(|y,z|)>\<in\>g<rsub|\|F>>. Hence
+    <math|<around*|(|x,y|)>\<in\>f\<wedge\>x\<in\>E> and
+    <math|<around*|(|y,z|)>\<in\>g> so that
+    <math|<around*|(|x,y|)>\<in\>g\<circ\>f> and <math|x\<in\>E> which proves
+    that <math|<around*|(|x,y|)>\<in\><around*|(|g\<circ\>f|)><rsub|\|E>>. So
+    <math|g<rsub|\|F>\<circ\>f<rsub|\|E>\<subseteq\><around*|(|g\<circ\>f|)><rsub|\|E>>
+    which combined with [eq: <reference|eq 2.31.400>] proves that\ 
 
     <\equation*>
-      <around*|(|g\<circ\>f|)><rsub|\|E>=g\<circ\>f<rsub|\|E>
+      <around*|(|g\<circ\>f|)><rsub|\|E>\<subseteq\>g<rsub|\|F>\<circ\>f<rsub|\|E>
     </equation*>
   </proof>
 
@@ -5530,22 +5834,26 @@
     </enumerate>
   </proof>
 
-  The following theorem will be useful for manifolds later
+  The following theorem will be useful for manifolds later:
 
   <\theorem>
-    Let <math|f:A\<rightarrow\>B> and <math|g:C\<rightarrow\>D> be injections
-    then we have\ 
+    <label|function composition of function and inverse function>Let
+    <math|f:A\<rightarrow\>B> be a function and <math|g:C\<rightarrow\>D> be
+    a injective function then we have\ 
 
     <\enumerate>
-      <item><math|f:A\<rightarrow\>f<around*|(|A|)>> and
-      <math|g:C\<rightarrow\>f<around*|(|C|)>> are bijections
+      <item><math|g:C\<rightarrow\>g<around*|(|C|)>> is a bijection
 
       <item><math|dom<around*|(|f\<circ\>g<rsup|-1>|)>=g<around*|(|A<big|cap>C|)>>
 
-      <item><math|f\<circ\>g<rsup|-1>:g<around*|(|A<big|cap>C|)>\<rightarrow\>f<around*|(|A<big|cap>C|)>>
+      <item><math|f\<circ\>g<rsup|-1>:g<around*|(|A<big|cap>C|)>\<rightarrow\>B<text|
+      is a function>>
+
+      <item>If <math|f> is a injection then
+      <math|f\<circ\>g<rsup|-1>:g<around*|(|A<big|cap>C|)>\<rightarrow\>f<around*|(|A<big|cap>C|)>>
       is a bijection
 
-      <item><math|f\<circ\>g<rsup|-1>=<around*|(|f\<circ\>g<rsup|-1>|)><rsub|\|g<around*|(|A<big|cap>C|)>><rsup|>=f<rsub|>\<circ\><around*|(|g<rsup|-1>|)><rsub|\|g<around*|(|A<big|cap>C|)>>=f\<circ\><around*|(|g<rsub|\|A<big|cap>C>|)><rsup|-1>>
+      <item><math|f\<circ\>g<rsup|-1>=<around*|(|f\<circ\>g<rsup|-1>|)><rsub|\|g<around*|(|A<big|cap>C|)>><rsup|>=f<rsub|\|A<big|cap>C><rsub|>\<circ\><around*|(|g<rsup|-1>|)><rsub|\|g<around*|(|A<big|cap>C|)>>=f<rsub|\|A<big|cap>C>\<circ\><around*|(|g<rsub|\|A<big|cap>C>|)><rsup|-1>>
     </enumerate>
   </theorem>
 
@@ -5576,15 +5884,30 @@
       <math|<around*|(|z,y|)>\<in\>g<rsup|-1>>. As <math|f> is a function we
       have that <math|A=dom<around*|(|f|)>>, hence as
       <math|y\<in\>A<big|cap>C\<Rightarrow\>y\<in\>A>, there exists a
-      <math|x> such that <math|<around*|(|y,x|)>\<in\>f>. As
+      <math|x> such that <math|<rigid|<around*|(|y,x|)>\<in\>f>>. As
       <math|<around*|(|z,y|)>\<in\>g<rsup|-1>> we have
       <math|<around*|(|z,x|)>\<in\>f\<circ\>g<rsup|-1>> proving that
       <math|z\<in\>dom<around*|(|f\<circ\>g<rsup|-1>|)>>. Hence
-      <math|g<around*|(|A<big|cap>C|)>\<subseteq\>dom<around*|(|g\<circ\>f<rsup|-1>|)>>
-      which combined with [eq: <reference|eq 2.16.003>].
+      <math|<rigid|g<around*|(|A<big|cap>C|)>\<subseteq\>dom<around*|(|g\<circ\>f<rsup|-1>|)>>>
+      which combined with [eq: <reference|eq 2.16.003>] proves that
 
       <\equation*>
         dom<around*|(|g\<circ\>f<rsup|-1>|)>=g<around*|(|A<big|cap>C|)>
+      </equation*>
+
+      <item>As <math|g> is injective it follows from [theorem:
+      <reference|partial function inverse if injective>] that
+      <math|g<rsup|-1>:D\<rightarrow\>C> is a partial function, hence, using
+      [theorem: <reference|partial function composition of partial
+      functions>], <math|f\<circ\>g<rsup|-1>:D\<rightarrow\>B> is a partial
+      function. Using [theorem: <reference|function from partial function>]
+      it follows that <math|f\<circ\>g<rsup|-1>:dom<around*|(|f\<circ\>g<rsup|-1>|)>\<rightarrow\>B>
+      is a function, further as by (2) <math|dom<around*|(|f\<circ\>g<rsup|-1>|)>=g<around*|(|A<big|cap>C|)>>
+      we must conclude that\ 
+
+      <\equation*>
+        f\<circ\>g<rsup|-1>:g<around*|(|A<big|cap>C|)>\<rightarrow\>B<text|
+        is a function>
       </equation*>
 
       <item>\ 
@@ -5595,9 +5918,10 @@
         <math|*<around*|(|x,z|)>,<around*|(|x<rprime|'>,z<rprime|'>|)>\<in\>f>
         and <math|<around*|(|z,y|)>,<around*|(|z<rprime|'>,y|)>\<in\>g<rsup|-1>>.
         Hence <math|<around*|(|y,z|)>,<around*|(|y,z<rprime|'>|)>\<in\>g> so
-        that <math|z=z<rprime|'>> [as <math|g<rsup|-1>> is a function] hence
-        <math|<around*|(|x,z|)>,<around*|(|x<rprime|'>,z|)>\<in\>f> giving
-        <math|x=x<rprime|'>>.
+        that <math|z=z<rprime|'>> [as <math|g<rsup|-1>:D\<rightarrow\>C> is a
+        partial function by [theorem: <reference|partial function inverse if
+        injective>]] hence <math|<around*|(|x,z|)>,<around*|(|x<rprime|'>,z|)>\<in\>f>
+        giving <math|x=x<rprime|'>> [as <math|f> is injective]
 
         <item*|<math|surjectivity>>If <math|y\<in\>f<around*|(|A<big|cap>C|)>>
         then <math|\<exists\>x\<in\>A<big|cap>C> such that
@@ -5615,14 +5939,16 @@
       <\eqnarray*>
         <tformat|<table|<row|<cell|<around*|(|f\<circ\>g<rsup|-1>|)>>|<cell|\<equallim\><rsub|<text|[theorem:
         <reference|function restriction and
-        domain>]>>>|<cell|<around*|(|f\<circ\>g<rsup|-1>|)><rsub|\|dom<around*|(|f\<circ\>g<rsup|-1>|)>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<around*|(|1|)><text|>>>|<cell|<around*|(|f\<circ\>g<rsup|-1>|)><rsub|\|g<around*|(|A<big|cap>C|)>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        domain>]>>>|<cell|<around*|(|f\<circ\>g<rsup|-1>|)><rsub|\|dom<around*|(|f\<circ\>g<rsup|-1>|)>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<around*|(|2|)><text|>>>|<cell|<around*|(|f\<circ\>g<rsup|-1>|)><rsub|\|g<around*|(|A<big|cap>C|)>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
         <reference|function composition and
-        restriction>]>>>|<cell|f\<circ\><around*|(|g<rsup|-1>|)><rsub|g<around*|(|A<big|cap>C|)>>>>|<row|<cell|>|<cell|\<equallim\><rsub|g<text|
-        is injective and [theorem: <reference|function preimage of
-        image>]>>>|<cell|f<rsub|>\<circ\><around*|(|g<rsup|-1>|)><rsub|\|g<around*|(|A<big|cap>C|)>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
-        <reference|function inverse and restriction>]>>>|<cell|f<rsub|>\<circ\><around*|(|g<rsub|\|A<big|cap>C>|)><rsup|-1>>>>>
+        restriction>]>>>|<cell|f<rsub|\|g<rsup|-1><around*|(|g<around*|(|A<big|cap>C|)>|)>>\<circ\><around*|(|g<rsup|-1>|)><rsub|\|g<around*|(|A<big|cap>C|)>>>>|<row|<cell|>|<cell|<below|=|<text|[proposition:
+        <reference|function preimage of image>]>>>|<cell|f<rsub|\|A<big|cap>C>\<circ\><around*|(|g<rsup|-1>|)><rsub|\|g<around*|(|A<big|cap>C|)>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|function inverse and restriction>]>\<wedge\>g<text| is
+        injective>>>|<cell|f<rsub|\|A<big|cap>C>\<circ\><around*|(|g<rsub|\|A<big|cap>C>|)><rsup|-1>>>>>
       </eqnarray*>
     </enumerate>
+
+    \;
   </proof>
 
   <subsection|Set operations and (Partial) Functions>
@@ -14971,7 +15297,7 @@
   <\collection>
     <associate|\<less\>A,B,C\<gtr\>=\<less\>D,E,F\<gtr\>=\<gtr\>A=E,B=D,C=F|<tuple|2.5|?>>
     <associate|\<less\>A,B\<gtr\>=\<less\>C,D\<gtr\>=\<gtr\>A=C,B=D|<tuple|2.3|?>>
-    <associate|Axiom of Replacement|<tuple|2.55|?>>
+    <associate|Axiom of Replacement|<tuple|2.56|?>>
     <associate|Russell's class|<tuple|1.12|?>>
     <associate|auto-1|<tuple|1|1>>
     <associate|auto-10|<tuple|1.3|?>>
@@ -15088,8 +15414,8 @@
     <associate|axiom of power|<tuple|1.70|?>>
     <associate|axiom of subsets|<tuple|1.8|?>>
     <associate|axiom of union|<tuple|1.67|?>>
-    <associate|bijection|<tuple|2.62|?>>
-    <associate|bijective classes|<tuple|2.63|?>>
+    <associate|bijection|<tuple|2.63|?>>
+    <associate|bijective classes|<tuple|2.64|?>>
     <associate|cartesian product|<tuple|1.51|?>>
     <associate|cartesian product and inclusion|<tuple|1.55|?>>
     <associate|cartesian product of the empty set|<tuple|1.53|?>>
@@ -15167,73 +15493,75 @@
     <associate|eq 2.12.002|<tuple|2.12|?>>
     <associate|eq 2.13.001|<tuple|2.21|?>>
     <associate|eq 2.13.002|<tuple|2.13|?>>
-    <associate|eq 2.14.001|<tuple|2.28|?>>
+    <associate|eq 2.14.001|<tuple|2.30|?>>
     <associate|eq 2.14.009|<tuple|2.18|?>>
     <associate|eq 2.14.141|<tuple|2.14|?>>
     <associate|eq 2.15.013|<tuple|2.19|?>>
     <associate|eq 2.15.141|<tuple|2.15|?>>
-    <associate|eq 2.16.003|<tuple|2.32|?>>
+    <associate|eq 2.16.003|<tuple|2.34|?>>
     <associate|eq 2.16.005|<tuple|2.22|?>>
     <associate|eq 2.16.141|<tuple|2.16|?>>
-    <associate|eq 2.17.002|<tuple|2.33|?>>
-    <associate|eq 2.17.003|<tuple|2.30|?>>
-    <associate|eq 2.17.004|<tuple|2.29|?>>
+    <associate|eq 2.17.002|<tuple|2.35|?>>
+    <associate|eq 2.17.004|<tuple|2.31|?>>
     <associate|eq 2.17.006|<tuple|2.23|?>>
     <associate|eq 2.17.141|<tuple|2.17|?>>
-    <associate|eq 2.18.002|<tuple|2.34|?>>
+    <associate|eq 2.18.002|<tuple|2.36|?>>
     <associate|eq 2.18.006|<tuple|2.24|?>>
-    <associate|eq 2.19.002|<tuple|2.35|?>>
+    <associate|eq 2.19.002|<tuple|2.37|?>>
     <associate|eq 2.2.001|<tuple|2.4|?>>
-    <associate|eq 2.20.002|<tuple|2.36|?>>
+    <associate|eq 2.20.002|<tuple|2.38|?>>
     <associate|eq 2.20.053|<tuple|3.75|?>>
-    <associate|eq 2.21.002|<tuple|2.37|?>>
-    <associate|eq 2.21.017|<tuple|2.26|?>>
+    <associate|eq 2.21.002|<tuple|2.39|?>>
+    <associate|eq 2.21.017|<tuple|2.27|?>>
     <associate|eq 2.21.053|<tuple|3.76|?>>
-    <associate|eq 2.22.017|<tuple|2.27|?>>
+    <associate|eq 2.22.017|<tuple|2.28|?>>
     <associate|eq 2.22.053|<tuple|3.77|?>>
     <associate|eq 2.23.053|<tuple|3.78|?>>
     <associate|eq 2.24.053|<tuple|3.79|?>>
-    <associate|eq 2.25.004|<tuple|2.39|?>>
+    <associate|eq 2.25.004|<tuple|2.41|?>>
     <associate|eq 2.25.053|<tuple|3.80|?>>
     <associate|eq 2.25.141|<tuple|2.25|?>>
-    <associate|eq 2.26.004|<tuple|2.40|?>>
+    <associate|eq 2.26.004|<tuple|2.42|?>>
     <associate|eq 2.26.053|<tuple|3.81|?>>
-    <associate|eq 2.27.004|<tuple|2.41|?>>
+    <associate|eq 2.26\<point\>1|<tuple|2.26|?>>
+    <associate|eq 2.27.004|<tuple|2.43|?>>
     <associate|eq 2.27.053|<tuple|3.82|?>>
-    <associate|eq 2.27.133|<tuple|2.31|?>>
-    <associate|eq 2.28.004|<tuple|2.42|?>>
-    <associate|eq 2.29.004|<tuple|2.44|?>>
-    <associate|eq 2.29.012|<tuple|2.38|?>>
+    <associate|eq 2.27.133|<tuple|2.33|?>>
+    <associate|eq 2.28.004|<tuple|2.44|?>>
+    <associate|eq 2.28.401|<tuple|2.29|?>>
+    <associate|eq 2.29.004|<tuple|2.46|?>>
+    <associate|eq 2.29.012|<tuple|2.40|?>>
     <associate|eq 2.3.001.2|<tuple|2.3|?>>
-    <associate|eq 2.30.004|<tuple|2.45|?>>
-    <associate|eq 2.31.004|<tuple|2.46|?>>
-    <associate|eq 2.31.010|<tuple|2.43|?>>
-    <associate|eq 2.32.004|<tuple|2.47|?>>
-    <associate|eq 2.34.005|<tuple|2.48|?>>
-    <associate|eq 2.35.005|<tuple|2.49|?>>
-    <associate|eq 2.38.006|<tuple|2.50|?>>
-    <associate|eq 2.39.006|<tuple|2.51|?>>
-    <associate|eq 2.40.006|<tuple|2.53|?>>
-    <associate|eq 2.40.007|<tuple|2.52|?>>
-    <associate|eq 2.41.006|<tuple|2.54|?>>
-    <associate|eq 2.42.006|<tuple|2.55|?>>
-    <associate|eq 2.43.006|<tuple|2.57|?>>
-    <associate|eq 2.44.006|<tuple|2.58|?>>
-    <associate|eq 2.44.007|<tuple|2.56|?>>
-    <associate|eq 2.45.006|<tuple|2.59|?>>
-    <associate|eq 2.48.007|<tuple|2.63|?>>
-    <associate|eq 2.48.008|<tuple|2.60|?>>
-    <associate|eq 2.49.007|<tuple|2.64|?>>
+    <associate|eq 2.30.004|<tuple|2.47|?>>
+    <associate|eq 2.31.004|<tuple|2.48|?>>
+    <associate|eq 2.31.010|<tuple|2.45|?>>
+    <associate|eq 2.31.400|<tuple|2.32|?>>
+    <associate|eq 2.32.004|<tuple|2.49|?>>
+    <associate|eq 2.34.005|<tuple|2.50|?>>
+    <associate|eq 2.35.005|<tuple|2.51|?>>
+    <associate|eq 2.38.006|<tuple|2.52|?>>
+    <associate|eq 2.39.006|<tuple|2.53|?>>
+    <associate|eq 2.40.006|<tuple|2.55|?>>
+    <associate|eq 2.40.007|<tuple|2.54|?>>
+    <associate|eq 2.41.006|<tuple|2.56|?>>
+    <associate|eq 2.42.006|<tuple|2.57|?>>
+    <associate|eq 2.43.006|<tuple|2.59|?>>
+    <associate|eq 2.44.006|<tuple|2.60|?>>
+    <associate|eq 2.44.007|<tuple|2.58|?>>
+    <associate|eq 2.45.006|<tuple|2.61|?>>
+    <associate|eq 2.48.007|<tuple|2.65|?>>
+    <associate|eq 2.48.008|<tuple|2.62|?>>
+    <associate|eq 2.49.007|<tuple|2.66|?>>
     <associate|eq 2.5.001.2|<tuple|2.5|?>>
-    <associate|eq 2.50.007|<tuple|2.65|?>>
-    <associate|eq 2.51.007|<tuple|2.70|?>>
-    <associate|eq 2.51.010|<tuple|2.61|?>>
-    <associate|eq 2.57.146|<tuple|2.62|?>>
-    <associate|eq 2.59.018|<tuple|2.68|?>>
-    <associate|eq 2.59.022|<tuple|2.66|?>>
+    <associate|eq 2.50.007|<tuple|2.67|?>>
+    <associate|eq 2.51.007|<tuple|2.72|?>>
+    <associate|eq 2.51.010|<tuple|2.63|?>>
+    <associate|eq 2.57.146|<tuple|2.64|?>>
+    <associate|eq 2.59.018|<tuple|2.70|?>>
+    <associate|eq 2.59.022|<tuple|2.68|?>>
     <associate|eq 2.6.001|<tuple|2.6|?>>
-    <associate|eq 2.60.018|<tuple|2.69|?>>
-    <associate|eq 2.60.022|<tuple|2.67|?>>
+    <associate|eq 2.60.018|<tuple|2.71|?>>
+    <associate|eq 2.60.022|<tuple|2.69|?>>
     <associate|eq 2.7.001|<tuple|2.7|?>>
     <associate|eq 2.8.001|<tuple|2.8|?>>
     <associate|eq 2.9.001|<tuple|2.9|?>>
@@ -15329,109 +15657,115 @@
     <associate|equivalence relation partition|<tuple|3.6|?>>
     <associate|equivalence relation partition alternative|<tuple|3.8|?>>
     <associate|equivalence relation subsets|<tuple|3.20|?>>
-    <associate|family|<tuple|2.102|?>>
-    <associate|family and function composition|<tuple|2.111|?>>
-    <associate|family de Morgan|<tuple|2.132|?>>
-    <associate|family definition (2)|<tuple|2.108|?>>
-    <associate|family definition (3)|<tuple|2.109|?>>
-    <associate|family distributivity|<tuple|2.130|?>>
-    <associate|family empty family|<tuple|2.105|?>>
-    <associate|family empty family condition|<tuple|2.106|?>>
-    <associate|family image and preimage|<tuple|2.136|?>>
-    <associate|family index set is a product|<tuple|2.110|?>>
-    <associate|family intersection (2)|<tuple|2.123|?>>
-    <associate|family intersection is a set|<tuple|2.124|?>>
-    <associate|family intersection(1)|<tuple|2.122|?>>
-    <associate|family product and index transformation|<tuple|2.145|?>>
-    <associate|family properties (1)|<tuple|2.127|?>>
-    <associate|family properties (2)|<tuple|2.128|?>>
-    <associate|family properties (3)|<tuple|2.133|?>>
-    <associate|family range|<tuple|2.112|?>>
-    <associate|family range (1)|<tuple|2.113|?>>
-    <associate|family set|<tuple|2.114|?>>
-    <associate|family trivial|<tuple|2.125|?>>
-    <associate|family union (1)|<tuple|2.115|?>>
-    <associate|family union (2)|<tuple|2.118|?>>
-    <associate|family union condition set|<tuple|2.120|?>>
-    <associate|family union intersection and empty set|<tuple|2.134|?>>
-    <associate|family union intersection and inclusion|<tuple|2.129|?>>
-    <associate|family union of a empty set|<tuple|2.121|?>>
-    <associate|family union of family of families|<tuple|2.135|?>>
-    <associate|family union of family set and surjections|<tuple|2.119|?>>
-    <associate|family union of union of two families|<tuple|2.131|?>>
-    <associate|family union{A,B}|<tuple|2.126|?>>
-    <associate|family {x}xeA|<tuple|2.107|?>>
+    <associate|family|<tuple|2.110|?>>
+    <associate|family and function composition|<tuple|2.119|?>>
+    <associate|family de Morgan|<tuple|2.140|?>>
+    <associate|family definition (2)|<tuple|2.116|?>>
+    <associate|family definition (3)|<tuple|2.117|?>>
+    <associate|family distributivity|<tuple|2.138|?>>
+    <associate|family empty family|<tuple|2.113|?>>
+    <associate|family empty family condition|<tuple|2.114|?>>
+    <associate|family image and preimage|<tuple|2.144|?>>
+    <associate|family index set is a product|<tuple|2.118|?>>
+    <associate|family intersection (2)|<tuple|2.131|?>>
+    <associate|family intersection is a set|<tuple|2.132|?>>
+    <associate|family intersection(1)|<tuple|2.130|?>>
+    <associate|family product and index transformation|<tuple|2.153|?>>
+    <associate|family properties (1)|<tuple|2.135|?>>
+    <associate|family properties (2)|<tuple|2.136|?>>
+    <associate|family properties (3)|<tuple|2.141|?>>
+    <associate|family range|<tuple|2.120|?>>
+    <associate|family range (1)|<tuple|2.121|?>>
+    <associate|family set|<tuple|2.122|?>>
+    <associate|family trivial|<tuple|2.133|?>>
+    <associate|family union (1)|<tuple|2.123|?>>
+    <associate|family union (2)|<tuple|2.126|?>>
+    <associate|family union condition set|<tuple|2.128|?>>
+    <associate|family union intersection and empty set|<tuple|2.142|?>>
+    <associate|family union intersection and inclusion|<tuple|2.137|?>>
+    <associate|family union of a empty set|<tuple|2.129|?>>
+    <associate|family union of family of families|<tuple|2.143|?>>
+    <associate|family union of family set and surjections|<tuple|2.127|?>>
+    <associate|family union of union of two families|<tuple|2.139|?>>
+    <associate|family union{A,B}|<tuple|2.134|?>>
+    <associate|family {x}xeA|<tuple|2.115|?>>
     <associate|function|<tuple|2.24|?>>
-    <associate|function A^empty is empty|<tuple|2.33|?>>
-    <associate|function B^A|<tuple|2.31|?>>
-    <associate|function B^A and inclusion|<tuple|2.35|?>>
-    <associate|function P(A)=2^A|<tuple|2.78|?>>
-    <associate|function alternative for composition|<tuple|2.43|?>>
-    <associate|function and power|<tuple|2.77|?>>
-    <associate|function between {0,1} and {A,B}|<tuple|2.27|?>>
-    <associate|function bijection and inverse|<tuple|2.73|?>>
-    <associate|function bijection condition (2)|<tuple|2.72|?>>
-    <associate|function bijection f,f-1|<tuple|2.70|?>>
-    <associate|function bijection has a inverse|<tuple|2.68|?>>
-    <associate|function bijection removing element|<tuple|2.91|?>>
-    <associate|function characteristics function|<tuple|2.47|?>>
-    <associate|function combining bijections|<tuple|2.83|?>>
-    <associate|function combining functions (1)|<tuple|2.81|?>>
-    <associate|function combining functions (2)|<tuple|2.82|?>>
-    <associate|function composition and restriction|<tuple|2.89|?>>
+    <associate|function A^empty is empty|<tuple|2.34|?>>
+    <associate|function B^A|<tuple|2.32|?>>
+    <associate|function B^A and inclusion|<tuple|2.36|?>>
+    <associate|function P(A)=2^A|<tuple|2.80|?>>
+    <associate|function alternative for composition|<tuple|2.44|?>>
+    <associate|function and power|<tuple|2.79|?>>
+    <associate|function between {0,1} and {A,B}|<tuple|2.28|?>>
+    <associate|function bijection and inverse|<tuple|2.74|?>>
+    <associate|function bijection condition (2)|<tuple|2.73|?>>
+    <associate|function bijection f,f-1|<tuple|2.71|?>>
+    <associate|function bijection has a inverse|<tuple|2.69|?>>
+    <associate|function bijection removing element|<tuple|2.99|?>>
+    <associate|function characteristics function|<tuple|2.48|?>>
+    <associate|function combining bijections|<tuple|2.87|?>>
+    <associate|function combining functions (1)|<tuple|2.84|?>>
+    <associate|function combining functions (2)|<tuple|2.86|?>>
+    <associate|function composition and restriction|<tuple|2.96|?>>
     <associate|function composition injectivity, surjectivity and
-    bijectivity|<tuple|2.75|?>>
+    bijectivity|<tuple|2.77|?>>
     <associate|function composition injectivity, surjectivity and bijectivity
-    (1)|<tuple|2.76|?>>
-    <associate|function composition of Id function|<tuple|2.49|?>>
+    (1)|<tuple|2.78|?>>
+    <associate|function composition of Id function|<tuple|2.50|?>>
+    <associate|function composition of function and inverse
+    function|<tuple|2.101|?>>
     <associate|function composition of functions is a
-    fucntion|<tuple|2.28|?>>
+    fucntion|<tuple|2.29|?>>
     <associate|function composition of functions is a fucntion
-    (1)|<tuple|2.29|?>>
-    <associate|function condition (1)|<tuple|2.26|?>>
-    <associate|function constant function|<tuple|2.46|?>>
-    <associate|function empty function|<tuple|2.45|?>>
-    <associate|function empty function bijection|<tuple|2.64|?>>
-    <associate|function equality (1)|<tuple|2.39|?>>
-    <associate|function equality (2)|<tuple|2.42|?>>
-    <associate|function extend target|<tuple|2.34|?>>
-    <associate|function extending funtion domain|<tuple|2.84|?>>
-    <associate|function f(x)|<tuple|2.40|?>>
-    <associate|function function and intersection and union|<tuple|2.95|?>>
-    <associate|function identity function|<tuple|2.48|?>>
-    <associate|function identity map is a bijection|<tuple|2.65|?>>
-    <associate|function image preimage|<tuple|2.50|?>>
-    <associate|function image preimage alternative|<tuple|2.44|?>>
-    <associate|function inclusion function|<tuple|2.54|?>>
-    <associate|function indexed set|<tuple|2.99|?>>
-    <associate|function indexed set example|<tuple|2.101|?>>
-    <associate|function indexed set unique|<tuple|2.100|?>>
-    <associate|function injection condition|<tuple|2.61|?>>
-    <associate|function injective inverse is a function|<tuple|2.60|?>>
-    <associate|function injectivity to bijection|<tuple|2.67|?>>
-    <associate|function injectivity, surjectivity|<tuple|2.53|?>>
-    <associate|function inverse and restriction|<tuple|2.88|?>>
-    <associate|function inverse function and bijection|<tuple|2.92|?>>
-    <associate|function inverse function and f(x)|<tuple|2.71|?>>
-    <associate|function inverse image preimage|<tuple|2.69|?>>
-    <associate|function inverse of a bijection is unique|<tuple|2.74|?>>
-    <associate|function power of intersection|<tuple|2.37|?>>
-    <associate|function preimage of image|<tuple|2.56|?>>
-    <associate|function preimage of image (1)|<tuple|2.25|?>>
-    <associate|function properties (1)|<tuple|2.94|?>>
-    <associate|function range restriction|<tuple|2.38|?>>
-    <associate|function restricted function properties|<tuple|2.86|?>>
-    <associate|function restriction and composition|<tuple|2.80|?>>
-    <associate|function restriction and domain|<tuple|2.87|?>>
-    <associate|function restriction of a function|<tuple|2.90|?>>
-    <associate|function restriction of a graph|<tuple|2.79|?>>
-    <associate|function simple definition|<tuple|2.96|?>>
-    <associate|function simple definition notation|<tuple|2.97|?>>
+    (1)|<tuple|2.30|?>>
+    <associate|function condition (1)|<tuple|2.27|?>>
+    <associate|function constant function|<tuple|2.47|?>>
+    <associate|function empty function|<tuple|2.46|?>>
+    <associate|function empty function bijection|<tuple|2.65|?>>
+    <associate|function equality (1)|<tuple|2.40|?>>
+    <associate|function equality (2)|<tuple|2.43|?>>
+    <associate|function extend target|<tuple|2.35|?>>
+    <associate|function extending funtion domain|<tuple|2.88|?>>
+    <associate|function f(x)|<tuple|2.41|?>>
+    <associate|function from partial function|<tuple|2.25|?>>
+    <associate|function function and intersection and union|<tuple|2.103|?>>
+    <associate|function identity function|<tuple|2.49|?>>
+    <associate|function identity map is a bijection|<tuple|2.66|?>>
+    <associate|function image preimage|<tuple|2.51|?>>
+    <associate|function image preimage alternative|<tuple|2.45|?>>
+    <associate|function inclusion function|<tuple|2.55|?>>
+    <associate|function indexed set|<tuple|2.107|?>>
+    <associate|function indexed set example|<tuple|2.109|?>>
+    <associate|function indexed set unique|<tuple|2.108|?>>
+    <associate|function injection condition|<tuple|2.62|?>>
+    <associate|function injective inverse is a function|<tuple|2.61|?>>
+    <associate|function injectivity to bijection|<tuple|2.68|?>>
+    <associate|function injectivity, surjectivity|<tuple|2.54|?>>
+    <associate|function inverse and restriction|<tuple|2.95|?>>
+    <associate|function inverse function and bijection|<tuple|2.100|?>>
+    <associate|function inverse function and f(x)|<tuple|2.72|?>>
+    <associate|function inverse image preimage|<tuple|2.70|?>>
+    <associate|function inverse of Id|<tuple|2.76|?>>
+    <associate|function inverse of a bijection is unique|<tuple|2.75|?>>
+    <associate|function power of intersection|<tuple|2.38|?>>
+    <associate|function preimage of image|<tuple|2.57|?>>
+    <associate|function preimage of image (1)|<tuple|2.26|?>>
+    <associate|function properties (1)|<tuple|2.102|?>>
+    <associate|function range restriction|<tuple|2.39|?>>
+    <associate|function restricted function properties|<tuple|2.92|?>>
+    <associate|function restriction and composition|<tuple|2.82|?>>
+    <associate|function restriction and composition (1)|<tuple|2.83|?>>
+    <associate|function restriction and domain|<tuple|2.93|?>>
+    <associate|function restriction of a function|<tuple|2.98|?>>
+    <associate|function restriction of a graph|<tuple|2.81|?>>
+    <associate|function simple definition|<tuple|2.104|?>>
+    <associate|function simple definition notation|<tuple|2.105|?>>
+    <associate|function stitching of functions|<tuple|2.90|?>>
     <associate|function surjection and construction of inverse
     function|<tuple|3.105|?>>
-    <associate|function surjection condition|<tuple|2.52|?>>
-    <associate|function trivial bijection|<tuple|2.66|?>>
-    <associate|function: A^B and sets|<tuple|2.36|?>>
+    <associate|function surjection condition|<tuple|2.53|?>>
+    <associate|function trivial bijection|<tuple|2.67|?>>
+    <associate|function: A^B and sets|<tuple|2.37|?>>
     <associate|generalized intervals and boundaries|<tuple|3.145|?>>
     <associate|interval and inf or sup|<tuple|3.143|?>>
     <associate|interval condition to be empty|<tuple|3.140|?>>
@@ -15524,27 +15858,27 @@
     <associate|partial function image|<tuple|2.13|?>>
     <associate|partial function image preimage of
     compositions|<tuple|2.23|?>>
-    <associate|partial function injectivity and surjectivity|<tuple|2.51|?>>
-    <associate|partial function inverse graph|<tuple|2.57|?>>
-    <associate|partial function inverse if injective|<tuple|2.58|?>>
+    <associate|partial function injectivity and surjectivity|<tuple|2.52|?>>
+    <associate|partial function inverse graph|<tuple|2.58|?>>
+    <associate|partial function inverse if injective|<tuple|2.59|?>>
     <associate|partial function preimage|<tuple|2.15|?>>
     <associate|partial function set domain range|<tuple|2.12|?>>
     <associate|partial functions image/preimage properties|<tuple|2.17|?>>
     <associate|parttial function graph|<tuple|2.6|?>>
     <associate|power set|<tuple|1.69|?>>
-    <associate|product|<tuple|2.137|?>>
-    <associate|product and intersection|<tuple|2.142|?>>
-    <associate|product and power|<tuple|2.144|?>>
-    <associate|product extension|<tuple|2.147|?>>
-    <associate|product inclusion|<tuple|2.141|?>>
-    <associate|product intersection of a product|<tuple|2.143|?>>
-    <associate|product of a empty set is empty|<tuple|2.138|?>>
-    <associate|product of family with one element|<tuple|2.139|?>>
-    <associate|product of family with two classes|<tuple|2.140|?>>
+    <associate|product|<tuple|2.145|?>>
+    <associate|product and intersection|<tuple|2.150|?>>
+    <associate|product and power|<tuple|2.152|?>>
+    <associate|product extension|<tuple|2.155|?>>
+    <associate|product inclusion|<tuple|2.149|?>>
+    <associate|product intersection of a product|<tuple|2.151|?>>
+    <associate|product of a empty set is empty|<tuple|2.146|?>>
+    <associate|product of family with one element|<tuple|2.147|?>>
+    <associate|product of family with two classes|<tuple|2.148|?>>
     <associate|product product is not empty|<tuple|3.110|?>>
-    <associate|product projection function|<tuple|2.148|?>>
+    <associate|product projection function|<tuple|2.156|?>>
     <associate|product projection is surjective|<tuple|3.109|?>>
-    <associate|product sub-product|<tuple|2.146|?>>
+    <associate|product sub-product|<tuple|2.154|?>>
     <associate|relation|<tuple|3.1|?>>
     <associate|relation properties|<tuple|3.4|?>>
     <associate|relation trivial|<tuple|3.3|?>>

@@ -7470,7 +7470,8 @@
       we have by \ [theorem: <reference|continuity continuous function (1)>]
       that <math|g\<circ\>f> is continuous.
 
-      <item>As <math|f:X\<rightarrow\>Y> is continuous we have by [theorem:
+      <item>As <math|f:X\<rightarrow\>Y> is continuous and
+      <math|f<around*|(|X|)>\<subseteq\>A> we have by [theorem:
       <reference|continuity and subspace topology (4)>] that
       <math|f:X\<rightarrow\>A> is continuous using the topologies
       <math|\<cal-T\><rsub|X>> on <math|X> and
@@ -8856,18 +8857,19 @@
     <label|continuity homeomorphism and restriction>Let
     <math|<around*|\<langle\>|X,\<cal-T\><rsub|X>|\<rangle\>>>,
     <math|<around*|\<langle\>|Y,\<cal-T\><rsub|Y>|\<rangle\>>> be two
-    topological spaces, <math|\<varnothing\>\<neq\>A\<subseteq\>X> a non
-    empty subset of <math|X>, <math|f:X\<rightarrow\>Y> a homeomorphism then
-    <math|f<rsub|\|A>:A\<rightarrow\>f<around*|(|A|)>> is a homeomorphism
-    [using the subspace topologies <math|<around*|(|\<cal-T\><rsub|X>|)><rsub|\|A>>
-    and <math|<around*|(|\<cal-T\><rsub|Y>|)><rsub|\|f<around*|(|A|)>>>
+    topological spaces, <math|A\<subseteq\>X> a subset of <math|X>,
+    <math|f:X\<rightarrow\>Y> a homeomorphism then
+    <math|f<rsub|\|A>:A\<rightarrow\>f<around*|(|A|)>=f<rsub|\|A><around*|(|A|)>>
+    is a homeomorphism [using the subspace topologies
+    <math|<around*|(|\<cal-T\><rsub|X>|)><rsub|\|A>> and
+    <math|<around*|(|\<cal-T\><rsub|Y>|)><rsub|\|f<around*|(|A|)>>>
   </theorem>
 
   <\proof>
     First, by [theorem: <reference|function restriction of a function>]
 
     <\equation>
-      <label|eq 14.47.147>f<rsub|\|A>:A\<rightarrow\>f<around*|(|A|)><text|
+      <label|eq 14.47.147>f<rsub|\|A>:A\<rightarrow\>f<around*|(|A|)>=f<rsub|\|A><around*|(|A|)><text|
       is a bijection>
     </equation>
 
@@ -26564,7 +26566,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|13>
-    <associate|page-first|685>
+    <associate|page-first|687>
     <associate|page-medium|papyrus>
     <associate|par-first|0tab>
     <associate|section-nr|0>
