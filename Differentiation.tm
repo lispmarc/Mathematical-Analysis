@@ -25061,6 +25061,63 @@
   </proof>
 
   <\example>
+    <label|diff diffeomorphism between R and R^1>Let
+    <math|<around*|\<langle\>|\<bbb-R\>,\<cal-T\><rsub|<around*|\|||\|>>|\<rangle\>>>
+    be the normed space of the real numbers,
+    <math|<around*|\<langle\>|\<bbb-R\><rsup|1>,\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|1>>|\<rangle\>>>
+    the normed space of <math|1>-tuples then
+    <math|\<varphi\>:\<bbb-R\>\<rightarrow\>\<bbb-R\><rsup|1>> defined by
+    <math|\<varphi\><around*|(|x|)>> is a diffeomorphisms of class
+    <math|C<rsup|\<infty\>>>.
+  </example>
+
+  <\proof>
+    First we have for <math|\<varphi\>:\<bbb-R\>\<rightarrow\>\<bbb-R\><rsup|1>>
+
+    <\description>
+      <item*|injectivity>If <math|\<varphi\><around*|(|x|)>=\<varphi\><around*|(|y|)>>
+      then <math|x=\<pi\><rsub|1><around*|(|<around*|(|x|)>|)>=\<pi\><rsub|1><around*|(|\<varphi\><around*|(|x|)>|)>=\<pi\><rsub|1><around*|(|\<varphi\><around*|(|y|)>|)>=\<pi\><rsub|1><around*|(|<around*|(|y|)>|)>=y>.
+
+      <item*|surjectivity>Let <math|<around*|(|x|)>\<in\>\<bbb-R\><rsup|1>>
+      then <math|\<varphi\><around*|(|x|)>=<around*|(|x|)>>
+    </description>
+
+    which proves that\ 
+
+    <\equation*>
+      \<varphi\><text| is a bijection>
+    </equation*>
+
+    Let <math|x,y\<in\>\<bbb-R\>> and <math|\<alpha\>\<in\>\<bbb-R\>> then\ 
+
+    <\equation*>
+      \<varphi\><around*|(|x+\<alpha\>\<cdot\>y|)>=<around*|(|x+\<alpha\>\<cdot\>y|)>=<around*|(|x|)>+\<alpha\>\<cdot\><around*|(|y|)>=\<varphi\><around*|(|x|)>+\<alpha\>\<cdot\>\<varphi\><around*|(|y|)>
+    </equation*>
+
+    proving that\ 
+
+    <\equation*>
+      \<varphi\>\<in\>Hom<around*|(|\<bbb-R\>,\<bbb-R\><rsup|1>|)>
+    </equation*>
+
+    Let <math|x\<in\>\<bbb-R\>> then
+
+    <\equation*>
+      <around*|\<\|\|\>|\<varphi\><around*|(|x|)>|\<\|\|\>><rsub|1>=<around*|\<\|\|\>|<around*|(|x|)>|\<\|\|\>><rsub|1>=max<around*|(|<around*|{|<around*|\||<around*|(|x|)><rsub|i>|\|>\|i\<in\><around*|{|1|}>|}>|)>=max<around*|(|<around*|\||<around*|(|x|)><rsub|1>|\|>|)>=<around*|\||x|\|>
+    </equation*>
+
+    so that by [theorem: <reference|continuity linear mapping (1)>]\ 
+
+    <\equation*>
+      \<varphi\>\<in\>L<around*|(|\<bbb-R\>,\<bbb-R\><rsup|1>|)>
+    </equation*>
+
+    Finally using [example: <reference|diff linear isomorphism between Banach
+    spaces are diffeomorphisms>] it follows that <math|\<varphi\>> is a
+    diffeomorphism of class <math|C<rsup|\<infty\>>>.
+  </proof>
+
+  <\example>
     <label|diff diffeomorphism identity>Let
     <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
     <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
@@ -31257,7 +31314,7 @@
 
 <\references>
   <\collection>
-    <associate|Taylor's theorem (II.3)|<tuple|16.383|?>>
+    <associate|Taylor's theorem (II.3)|<tuple|16.384|?>>
     <associate|auto-1|<tuple|16|?>>
     <associate|auto-10|<tuple|<with|mode|<quote|math>|\<cal-D\><rsub|f>>|?>>
     <associate|auto-100|<tuple|<with|mode|<quote|math>|D<rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f>|?>>
@@ -31393,11 +31450,11 @@
     <associate|auto-97|<tuple|16.5.2|?>>
     <associate|auto-98|<tuple|higher order partial differential|?>>
     <associate|auto-99|<tuple|<with|mode|<quote|math>|\<frak-D\><rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>,f>>|?>>
-    <associate|conjecture 16.245.136|<tuple|16.344|?>>
-    <associate|conjecture 16.246.136|<tuple|16.345|?>>
-    <associate|conjecture 16.247.136|<tuple|16.346|?>>
-    <associate|conjecture 16.248.136|<tuple|16.347|?>>
-    <associate|conjecture 16.252|<tuple|16.349|?>>
+    <associate|conjecture 16.245.136|<tuple|16.345|?>>
+    <associate|conjecture 16.246.136|<tuple|16.346|?>>
+    <associate|conjecture 16.247.136|<tuple|16.347|?>>
+    <associate|conjecture 16.248.136|<tuple|16.348|?>>
+    <associate|conjecture 16.252|<tuple|16.350|?>>
     <associate|continuity limit of composition of linear
     maps|<tuple|16.322|?>>
     <associate|convergence of a function to a point|<tuple|16.3|?>>
@@ -31426,17 +31483,17 @@
     <associate|diff Lagrange theorem|<tuple|16.207|?>>
     <associate|diff Lagrange theorem (1)|<tuple|16.209|?>>
     <associate|diff Rolle's theorem|<tuple|16.205|?>>
-    <associate|diff Taylor I|<tuple|16.355|?>>
-    <associate|diff Taylor I.1|<tuple|16.357|?>>
-    <associate|diff Taylor I.2|<tuple|16.360|?>>
-    <associate|diff Taylor I.3|<tuple|16.364|?>>
-    <associate|diff Taylor I.4|<tuple|16.371|?>>
-    <associate|diff Taylor II|<tuple|16.374|?>>
-    <associate|diff Taylor II.1|<tuple|16.382|?>>
-    <associate|diff Taylor II.2|<tuple|16.383|?>>
-    <associate|diff Taylor III|<tuple|16.386|?>>
-    <associate|diff Taylor series (1))|<tuple|16.389|?>>
-    <associate|diff Taylor series (IV)|<tuple|16.391|?>>
+    <associate|diff Taylor I|<tuple|16.356|?>>
+    <associate|diff Taylor I.1|<tuple|16.358|?>>
+    <associate|diff Taylor I.2|<tuple|16.361|?>>
+    <associate|diff Taylor I.3|<tuple|16.365|?>>
+    <associate|diff Taylor I.4|<tuple|16.372|?>>
+    <associate|diff Taylor II|<tuple|16.375|?>>
+    <associate|diff Taylor II.1|<tuple|16.383|?>>
+    <associate|diff Taylor II.2|<tuple|16.384|?>>
+    <associate|diff Taylor III|<tuple|16.387|?>>
+    <associate|diff Taylor series (1))|<tuple|16.390|?>>
+    <associate|diff Taylor series (IV)|<tuple|16.392|?>>
     <associate|diff Ux|<tuple|16.13|?>>
     <associate|diff Ux is open if U is open|<tuple|16.16|?>>
     <associate|diff Ux=-x+U=U-x|<tuple|16.15|?>>
@@ -31490,11 +31547,12 @@
     <associate|diff derivative on a open set (2)|<tuple|16.39|?>>
     <associate|diff derivatives and continuity|<tuple|16.33|?>>
     <associate|diff diffeomorphism|<tuple|16.331|?>>
-    <associate|diff diffeomorphism D(f@f^-1)|<tuple|16.338|?>>
-    <associate|diff diffeomorphism composition|<tuple|16.339|?>>
-    <associate|diff diffeomorphism identity|<tuple|16.335|?>>
+    <associate|diff diffeomorphism D(f@f^-1)|<tuple|16.339|?>>
+    <associate|diff diffeomorphism between R and R^1|<tuple|16.335|?>>
+    <associate|diff diffeomorphism composition|<tuple|16.340|?>>
+    <associate|diff diffeomorphism identity|<tuple|16.336|?>>
     <associate|diff diffeomorphism inverse|<tuple|16.332|?>>
-    <associate|diff diffeomorphism local condition|<tuple|16.337|?>>
+    <associate|diff diffeomorphism local condition|<tuple|16.338|?>>
     <associate|diff differentiability|<tuple|16.46|?>>
     <associate|diff differentiability alternative
     definitions|<tuple|16.61|?>>
@@ -31582,13 +31640,13 @@
     <associate|diff identity function is differentiable|<tuple|16.53|?>>
     <associate|diff identity function is infinite times
     differentiable|<tuple|16.181|?>>
-    <associate|diff implicit function theorem|<tuple|16.353|?>>
-    <associate|diff implicit function theorem (1)|<tuple|16.354|?>>
+    <associate|diff implicit function theorem|<tuple|16.354|?>>
+    <associate|diff implicit function theorem (1)|<tuple|16.355|?>>
     <associate|diff increasing decreasing function|<tuple|16.211|?>>
     <associate|diff inifint=ite differentiable|<tuple|16.139|?>>
     <associate|diff integration by part|<tuple|16.217|?>>
-    <associate|diff inverse function theorem|<tuple|16.341|?>>
-    <associate|diff inverse function theorem and Jacobian|<tuple|16.350|?>>
+    <associate|diff inverse function theorem|<tuple|16.342|?>>
+    <associate|diff inverse function theorem and Jacobian|<tuple|16.351|?>>
     <associate|diff inverse mapping on GL(X)|<tuple|16.330|?>>
     <associate|diff limit of a function|<tuple|16.11|?>>
     <associate|diff line segment [0,1]|<tuple|16.226|?>>
@@ -31600,9 +31658,9 @@
     <associate|diff linear to multilinear|<tuple|16.126|?>>
     <associate|diff linear to multilinear (1)|<tuple|16.262|?>>
     <associate|diff linesegement|<tuple|16.224|?>>
-    <associate|diff little o|<tuple|16.359|?>>
-    <associate|diff little o and limits|<tuple|16.361|?>>
-    <associate|diff local diffeomorphism|<tuple|16.340|?>>
+    <associate|diff little o|<tuple|16.360|?>>
+    <associate|diff little o and limits|<tuple|16.362|?>>
+    <associate|diff local diffeomorphism|<tuple|16.341|?>>
     <associate|diff mean value theorem (0)|<tuple|mean value theorem|?>>
     <associate|diff mean value theorem (1)|<tuple|16.219|?>>
     <associate|diff mean value theorem (2)|<tuple|16.222|?>>
@@ -31643,7 +31701,7 @@
     <associate|diff projection functon is infinite times
     differentiable|<tuple|16.185|?>>
     <associate|diff restriction of a diffeomorphism is a
-    diffeomorphism|<tuple|16.336|?>>
+    diffeomorphism|<tuple|16.337|?>>
     <associate|diff scalar product function has a derivate|<tuple|16.32|?>>
     <associate|diff second derivate convex concave|<tuple|16.214|?>>
     <associate|diff space of toplinear isomorphism|<tuple|16.320|?>>
@@ -32308,10 +32366,9 @@
     <associate|eq 16.98.8.1|<tuple|16.103|?>>
     <associate|eq 16.99.4|<tuple|16.68|?>>
     <associate|eq 16.99.6|<tuple|16.104|?>>
-    <associate|eq 6.466\<point\>1|<tuple|16.466|?>>
     <associate|fig 4.311|<tuple|16.4|?>>
     <associate|fig 5.311|<tuple|16.5|?>>
-    <associate|inverse function and derivate|<tuple|16.351|?>>
+    <associate|inverse function and derivate|<tuple|16.352|?>>
     <associate|lemma 16.101.194|<tuple|16.195|?>>
     <associate|lemma 16.104.194|<tuple|16.243|?>>
     <associate|lemma 16.105.194|<tuple|16.244|?>>
@@ -32345,22 +32402,22 @@
     <associate|lemma 16.229.127|<tuple|16.327|?>>
     <associate|lemma 16.232.301|<tuple|16.232|?>>
     <associate|lemma 16.24.178|<tuple|16.71|?>>
-    <associate|lemma 16.254.143|<tuple|16.352|?>>
+    <associate|lemma 16.254.143|<tuple|16.353|?>>
     <associate|lemma 16.313.310|<tuple|16.287|?>>
     <associate|lemma 16.314.320|<tuple|16.288|?>>
     <associate|lemma 16.315.320|<tuple|16.289|?>>
     <associate|lemma 16.316.320|<tuple|16.290|?>>
     <associate|lemma 16.318.320|<tuple|16.292|?>>
     <associate|lemma 16.37.4|<tuple|16.45|?>>
-    <associate|lemma 16.380.312|<tuple|16.384|?>>
-    <associate|lemma 16.380.315|<tuple|16.367|?>>
-    <associate|lemma 16.381.315|<tuple|16.368|?>>
-    <associate|lemma 16.382.315|<tuple|16.369|?>>
-    <associate|lemma 16.383.23|<tuple|16.390|?>>
-    <associate|lemma 16.383.315|<tuple|16.370|?>>
-    <associate|lemma 16.389.316|<tuple|16.378|?>>
-    <associate|lemma 16.391.316|<tuple|16.379|?>>
-    <associate|lemma 16.392.316|<tuple|16.380|?>>
+    <associate|lemma 16.380.312|<tuple|16.385|?>>
+    <associate|lemma 16.380.315|<tuple|16.368|?>>
+    <associate|lemma 16.381.315|<tuple|16.369|?>>
+    <associate|lemma 16.382.315|<tuple|16.370|?>>
+    <associate|lemma 16.383.23|<tuple|16.391|?>>
+    <associate|lemma 16.383.315|<tuple|16.371|?>>
+    <associate|lemma 16.389.316|<tuple|16.379|?>>
+    <associate|lemma 16.391.316|<tuple|16.380|?>>
+    <associate|lemma 16.392.316|<tuple|16.381|?>>
     <associate|lemma 16.51.186|<tuple|16.117|?>>
     <associate|lemma 16.53.186|<tuple|16.119|?>>
     <associate|lemma 16.54.187|<tuple|16.120|?>>
@@ -32379,8 +32436,8 @@
     <associate|lemma 16.98.194|<tuple|16.191|?>>
     <associate|normed space are assumed to be non trivial|<tuple|16.1|?>>
     <associate|note 16.210.127|<tuple|16.304|?>>
-    <associate|proposition 16.244.134|<tuple|16.343|?>>
-    <associate|proposition 16.249.138|<tuple|16.348|?>>
+    <associate|proposition 16.244.134|<tuple|16.344|?>>
+    <associate|proposition 16.249.138|<tuple|16.349|?>>
     <associate|toplinear isomorphism|<tuple|16.316|?>>
     <associate|topology every element of a generalized interval is a limit
     point|<tuple|16.10|?>>
