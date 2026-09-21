@@ -4274,8 +4274,9 @@
   that <math|f> is of class <math|C<rsup|r>> if <math|\<forall\>p\<in\>M>
   there exist a <math|<around*|(|U,\<varphi\>|)>\<in\>\<cal-A\>> such that
   <math|p\<in\>M> and <math|f\<circ\>\<varphi\><rsup|-1>> is of class
-  <math|C<rsup|r>> [see definition: <reference|manifold differentiability
-  real function>]. However <math|\<cal-M\><rsup|1><around*|\<langle\>|\<bbb-R\>,\<cal-T\><rsub|<around*|\|||\|>>,\<cal-M\><around*|[|<around*|{|<around*|(|\<bbb-R\>,Id<rsub|\<bbb-R\>>|)>|}>|]>|\<rangle\>>>
+  <math|C<rsup|r>> using <math|\<cal-A\>> [see definition:
+  <reference|manifold differentiability real function>]. However
+  <math|\<cal-M\><rsup|1><around*|\<langle\>|\<bbb-R\>,\<cal-T\><rsub|<around*|\|||\|>>,\<cal-M\><around*|[|<around*|{|<around*|(|\<bbb-R\>,Id<rsub|\<bbb-R\>>|)>|}>|]>|\<rangle\>>>
   is a <math|1>-dimensional <math|C<rsup|\<infty\>>> differentiable manifold
   [see examples: <reference|manifold real numbers are a differentiable
   manifold>] hence a <math|1>-<math|>dimensional <math|C<rsup|r>> manifold.
@@ -4298,9 +4299,10 @@
 
     <\eqnarray*>
       <tformat|<table|<row|<cell|>|<cell|f:M\<rightarrow\>\<bbb-R\><text| is
-      of class >C<rsup|r><text| using [definition: <reference|manifold
-      differentiability real function>]>>|<cell|>>|<row|<cell|>|<cell|\<Updownarrow\>>|<cell|>>|<row|<cell|>|<cell|f:M\<rightarrow\>\<bbb-R\><text|
-      is of class >C<rsup|r><text| using [definition: <reference|manifold
+      of class >C<rsup|r><text| using <math|\<cal-A\>> [see definition:
+      <reference|manifold differentiability real
+      function>]>>|<cell|>>|<row|<cell|>|<cell|\<Updownarrow\>>|<cell|>>|<row|<cell|>|<cell|f:M\<rightarrow\>\<bbb-R\><text|
+      is a mapping of class >C<rsup|r><text| [definition: <reference|manifold
       differentiable mappings>]>>|<cell|>>>>
     </eqnarray*>
   </theorem>
@@ -4338,35 +4340,67 @@
         is of class >C<rsup|r>
       </equation*>
 
-      which proves that <math|f> is of class <math|C<rsup|r>> using
+      which proves that <math|f> is a mapping of class <math|C<rsup|r>> using
       [definition: <reference|manifold differentiable mappings>].
 
-      <item*|<math|\<Leftarrow\>>>As <math|f> is of class <math|C<rsup|r>>
-      using [definition: <reference|manifold differentiable mappings>] it
-      follows from [theorem: <reference|manifold C^m mappings equivalences>]
-      and the fact that <math|<around*|{|<around*|(|R,\<varphi\>|)>|}>\<subseteq\>\<cal-M\><around*|[|<around*|{|<around*|(|\<bbb-R\>,\<varphi\>|)>|}>|]>>
+      <item*|<math|\<Leftarrow\>>>As <math|f> is mapping of class
+      <math|C<rsup|r>> using [definition: <reference|manifold differentiable
+      mappings>] it follows from [theorem: <reference|manifold C^m mappings
+      equivalences>] and the fact that <math|<around*|{|\<bbb-R\>,\<varphi\>|}>>
+      is a <math|C<rsup|r>> atlas with <math|<around*|{|<around*|\<nobracket\>|\<bbb-R\>,\<varphi\>|)>|}>\<subseteq\>\<cal-M\><around*|[|<around*|{|<around*|(|\<bbb-R\>,\<varphi\>|)>|}>|]>>
       that\ 
 
       <\equation*>
         f<text| is continuous>
       </equation*>
 
-      and <math|\<forall\><around*|(|V,\<psi\>|)>\<in\>\<cal-A\>>\ 
+      and <math|\<forall\><around*|(|W,\<gamma\>|)>\<in\>\<cal-A\>>\ 
 
       <\equation*>
-        \<varphi\>\<circ\>f\<circ\>\<psi\><rsup|-1>:\<psi\><around*|(|V<big|cap>f<rsup|-1><around*|(|\<bbb-R\>|)>|)>\<rightarrow\>\<bbb-R\><rsup|1><text|
+        \<varphi\>\<circ\>f\<circ\>\<gamma\><rsup|-1>:\<gamma\><around*|(|W<big|cap>f<rsup|-1><around*|(|\<bbb-R\>|)>|)>\<rightarrow\>\<bbb-R\><rsup|1><text|
         is of class >C<rsup|r>
       </equation*>
-    </description>
 
-    \;
+      As <math|f<rsup|-1><around*|(|\<bbb-R\>|)>=M> and <math|W\<subseteq\>M>
+      we have that <math|\<gamma\><around*|(|W<big|cap>f<rsup|-1><around*|(|\<bbb-R\>|)>|)>=\<gamma\><around*|(|W|)>>
+      which after substituting in the above gives\ 
+
+      <\equation*>
+        \<varphi\>\<circ\>f\<circ\>\<gamma\><rsup|-1>:\<gamma\><around*|(|W|)>\<rightarrow\>\<bbb-R\><rsup|1><text|
+        is of class >C<rsup|r>
+      </equation*>
+
+      By [example: <reference|diff diffeomorphism between R and R^1>]
+      <math|\<varphi\>:\<bbb-R\>\<rightarrow\>\<bbb-R\><rsup|1>> is a
+      diffeomorphism of class <math|C<rsup|r>> hence
+      <math|\<varphi\><rsup|-1>:\<bbb-R\><rsup|1>\<rightarrow\>\<bbb-R\>> is
+      of class <math|C<rsup|r>>. Using then the chain rule [see theorem:
+      <reference|diff chain rule higher order class>] it follows that\ 
+
+      <\equation*>
+        f\<circ\>\<gamma\><rsup|-1>=\<varphi\><rsup|-1>\<circ\>\<varphi\>\<circ\>f\<circ\>\<gamma\><rsup|-1>:\<gamma\><around*|(|W|)>\<rightarrow\>\<bbb-R\><rsup|1><text|
+        is of class >C<rsup|r>
+      </equation*>
+
+      As this is true for every <math|<around*|(|W,\<gamma\>|)>\<in\>\<cal-A\>>
+      it follows from [theorem: <reference|manifold differentiability real
+      function (1)>] that\ 
+
+      <\equation*>
+        f:M\<rightarrow\>\<bbb-R\><text| is of class >C<rsup|r><text| using
+        >\<cal-A\><text| [see definition: <reference|manifold
+        differentiability real function>]>
+      </equation*>
+    </description>
   </proof>
+
+  \;
 </body>
 
 <\initial>
   <\collection>
     <associate|chapter-nr|22>
-    <associate|page-first|1907>
+    <associate|page-first|1905>
     <associate|par-first|0>
     <associate|section-nr|2>
     <associate|subsection-nr|0>
