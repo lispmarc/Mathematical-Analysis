@@ -3118,6 +3118,7 @@
     <math|f:A\<rightarrow\>B> and <math|g:C\<rightarrow\>D> functions then
     <math|g\<circ\>f:A<big|cap>f<rsup|-1><around*|(|C|)>\<rightarrow\>D> is
     also a function with <math|range<around*|(|g\<circ\>f|)>=g<around*|(|range<around*|(|f|)>|)>>
+    and <math|dom<around*|(|g\<circ\>f|)>=A<big|cap>f<rsup|-1><around*|(|C|)>>
   </theorem>
 
   <\proof>
@@ -4546,8 +4547,8 @@
 
       <item>If <math|f:A\<rightarrow\>B> is a function and
       <math|g:C\<rightarrow\>D> a surjective function so that
-      <math|f<around*|(|A|)>=C> then <math|g\<circ\>f:A\<rightarrow\>D> is a
-      surjective function.
+      <math|f<around*|(|A|)>=C> then <math|<rigid|g\<circ\>f:A\<rightarrow\>>D>
+      is a surjective function.
 
       <item>If <math|f:A\<rightarrow\>B> is a injective function and
       <math|g:C\<rightarrow\>D> a bijective function so that
@@ -5854,6 +5855,9 @@
       is a bijection
 
       <item><math|f\<circ\>g<rsup|-1>=<around*|(|f\<circ\>g<rsup|-1>|)><rsub|\|g<around*|(|A<big|cap>C|)>><rsup|>=f<rsub|\|A<big|cap>C><rsub|>\<circ\><around*|(|g<rsup|-1>|)><rsub|\|g<around*|(|A<big|cap>C|)>>=f<rsub|\|A<big|cap>C>\<circ\><around*|(|g<rsub|\|A<big|cap>C>|)><rsup|-1>>
+
+      <item>If <math|C\<subseteq\>D> then
+      <math|f\<circ\>g<rsup|-1>=d=f<rsub|\|C>\<circ\>g<rsup|-1>>
     </enumerate>
   </theorem>
 
@@ -5946,9 +5950,16 @@
         <reference|function inverse and restriction>]>\<wedge\>g<text| is
         injective>>>|<cell|f<rsub|\|A<big|cap>C>\<circ\><around*|(|g<rsub|\|A<big|cap>C>|)><rsup|-1>>>>>
       </eqnarray*>
-    </enumerate>
 
-    \;
+      <item>Assume that <math|C\<subseteq\>A> and consider
+      <math|f<rsub|\|C>:C\<rightarrow\>B> then by (5) we have that\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|f<rsub|\|C>\<circ\>g<rsup|-1>>|<cell|<below|=|<around*|(|5|)>>>|<cell|<around*|(|f<rsub|\|C>|)><rsub|\|C>\<circ\><around*|(|g<rsub|\|C<big|cap>C>|)><rsup|-1>>>|<row|<cell|>|<cell|<below|=|<text|[theorem:
+        <reference|function restricted function
+        properties>(3)]>>>|<cell|f<rsub|\|C>\<circ\><around*|(|g<rsub|\|C>|)><rsup|-1>>>|<row|<cell|>|<cell|<below|=|C\<subseteq\>A>>|<cell|f<rsub|\|A<big|cap>C>\<circ\><around*|(|g<rsub|\|A<big|cap>C>|)><rsup|-1>>>|<row|<cell|>|<cell|<below|=|<around*|(|5|)>>>|<cell|f\<circ\>g<rsup|-1>>>>>
+      </eqnarray*>
+    </enumerate>
   </proof>
 
   <subsection|Set operations and (Partial) Functions>

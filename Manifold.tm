@@ -3587,6 +3587,7 @@
     <math|\<cal-M\><rsup|n><around*|\<langle\>|U,\<cal-T\><rsub|\|U>,\<cal-M\><around*|[|\<cal-A\><rsub|\|U>|]>|\<rangle\>>>
     is a <math|n>-dimensional <math|C<rsup|m>> differentiable manifold where
     <math|\<cal-A\><rsub|\|U>=<around*|{|<around*|(|U<big|cap>V,\<psi\><rsub|\|U<big|cap>V>|)>\|<around*|(|V,\<psi\>|)>\<in\>\<cal-A\>|}>>.
+    Further we have that <math|\<cal-A\><rsub|\|U>\<subseteq\>\<cal-A\>>.
   </example>
 
   <\proof>
@@ -3726,6 +3727,17 @@
     <\equation*>
       \<cal-M\><rsup|n><around*|\<langle\>|U,\<cal-T\><rsub|\|U>,\<cal-M\><around*|[|\<cal-A\><rsub|\|U>|]>|\<rangle\>><text|
       is a \ n-dimensional >C<rsup|m><text| differentiable manifold>
+    </equation*>
+
+    Further if <math|<around*|(|W,\<gamma\>|)>\<in\>\<cal-A\><rsub|\|U>> then
+    there exist a <math|<around*|(|V,\<psi\>|)>\<in\>\<cal-A\>> such that
+    <math|<around*|(|W,\<gamma\>|)>=<around*|(|U<big|cap>W,\<gamma\><rsub|\|>|)>>.
+    As <math|\<cal-A\>> is a maximal <math|C<rsup|r>> atlas it follows from
+    [theorem: <reference|manifold maximum atlas and sub charts>] that
+    <math|<around*|(|W,\<gamma\>|)>\<in\>\<cal-A\>>. Hence\ 
+
+    <\equation*>
+      \<cal-A\><rsub|\|U>\<subseteq\>\<cal-A\>
     </equation*>
   </proof>
 
@@ -4394,13 +4406,110 @@
     </description>
   </proof>
 
+  The following two theorem shows thst being of clsss <math|C<rsup|r>> is a
+  local property.
+
+  <\theorem>
+    <label|manifold C^r mspping id locsl>Let <math|n,m\<in\>\<bbb-N\>>,
+    <math|r\<in\>\<bbb-N\><rsub|0><big|cup><around*|{|\<infty\>|}>>,
+    <math|\<cal-M\><rsup|n><around*|\<langle\>|<rsup|>M,\<cal-T\><rsub|M>,\<cal-A\><rsub|M>|\<rangle\>>>
+    a <math|n>-dimensional <math|C<rsup|r>> differentiable manifold,
+    <math|\<cal-M\><rsup|m><around*|\<langle\>|N,\<cal-T\><rsub|N>,\<cal-A\><rsub|N>|)>>
+    a <math|m>-dimensional <math|C<rsup|r>> differentiable manifold and
+    <math|f:M\<rightarrow\>N> a function such that <math|\<forall\>p\<in\>M>
+    there exist a <math|U\<in\>\<cal-T\><rsub|M>> such that
+    <math|f<rsub|\|U>:U\<rightarrow\>N> is a mapping of class
+    <math|C<rsup|r>> between the <math|n>-dimensional <math|C<rsup|r>>
+    differentiable manifold <math|\<cal-M\><rsup|n><around*|\<langle\>|U,\<cal-T\><rsub|\|U>,M<around*|[|<around*|(|\<cal-A\><rsub|N>|)><rsub|\|U>|]>|\<rangle\>>>
+    [see example: <reference|manifold open subset of a differentiable
+    manifold>] and <rigid|<math|\<cal-M\><rsup|n><around*|[|N,\<cal-T\><rsub|N>,\<cal-A\><rsub|N>|]>>>
+    then <math|f> is a mapping of class <math|C<rsup|r>> between the
+    manifolds <math|\<cal-M\><rsup|n><around*|\<langle\>|<rsup|>M,\<cal-T\><rsub|M>,\<cal-A\><rsub|M>|\<rangle\>>>
+    and <math|\<cal-M\><rsup|m><around*|\<langle\>|N,\<cal-T\><rsub|N>,\<cal-A\><rsub|N>|)>>.
+  </theorem>
+
+  <\proof>
+    Let <math|p\<in\>M> then by the hypothesis there exist a
+    <math|U\<in\>\<cal-T\>> with <math|p\<in\>U> such that
+    <math|f<rsub|\|U>:U\<rightarrow\>N> is of class <math|C<rsup|r>>. Hence
+    there exist a <math|<around*|(|W,\<gamma\>|)>\<in\>\<cal-A\><rsub|\|U>>
+    with <math|p\<in\>W> and a <math|<around*|(|V,\<psi\>|)>\<in\>\<cal-A\><rsub|N>>
+    with <math|f<rsub|\|U><around*|(|p|)>\<in\>V> snd
+    <math|f<rsub|\|U><around*|(|W|)>\<subseteq\>V> such that
+
+    <\equation*>
+      \<psi\>\<circ\>f<rsub|\|U>\<circ\>\<gamma\><rsup|-1>:\<gamma\><around*|(|W|)>\<rightarrow\>\<psi\><around*|(|W|)><text|
+      is of class >C<rsup|r>
+    </equation*>
+
+    As <math|W\<subset\>\<cal-A\><rsub|U>> a atlas on <math|U> we have that
+    <math|W\<subseteq\>U> so that by [theorem: <reference|function
+    composition of function and inverse function>(6)]
+    <math|f<rsub|\|U>\<circ\>\<gamma\><rsup|-1>=f\<circ\>\<gamma\><rsup|-1>>
+    which after substituting this result in the above proves that\ 
+
+    <\equation*>
+      \<psi\>\<circ\>f\<circ\>\<gamma\><rsup|-1>:\<gamma\><around*|(|W|)>\<rightarrow\>\<psi\><around*|(|W|)><text|
+      is of class >C<rsup|r>
+    </equation*>
+
+    By [example: <reference|manifold open subset of a differentiable
+    manifold>] <math|\<cal-A\><rsub|\|U>\<subseteq\>\<cal-A\>> so that
+    <math|<around*|(|W,\<gamma\>|)>\<in\>\<cal-A\>>, further we have as
+    <math|p\<in\>U> that <math|f<around*|(|p|)>=f<rsub|\|U><around*|(|p|)>\<in\>V>
+    and <math|f<around*|(|W|)><below|=|W\<subseteq\>U\<wedge\><text|[theorem:
+    <reference|function restricted function
+    properties>(3)]>>f<rsub|\|U><around*|(|W|)>\<subseteq\>V>. To summarize
+    for every <math|p\<in\>M> we found a <math|<around*|(|W,\<gamma\>|)>\<in\>\<cal-A\>>
+    with <math|p\<in\>W>, a <math|<around*|(|V,\<psi\>|)>> with
+    <math|f<around*|(|p|)>\<in\>V> and <math|f<around*|(|W|)>\<subseteq\>V>
+    such that\ 
+
+    <\equation*>
+      \<psi\>\<circ\>f\<circ\>\<gamma\><rsup|-1>:\<gamma\><around*|(|W|)>\<rightarrow\>\<psi\><around*|(|W|)><text|
+      is of class >C<rsup|r>
+    </equation*>
+
+    Hence, using [definition: <reference|manifold differentiable mappings>]
+    it follows that\ 
+
+    <\equation*>
+      f<text| is a mapping of class >C<rsup|r>
+    </equation*>
+  </proof>
+
+  <\theorem>
+    <label|manifold C^r mspping id local (2)>Let <math|n,m\<in\>\<bbb-N\>>,
+    <math|r\<in\>\<bbb-N\><rsub|0><big|cup><around*|{|\<infty\>|}>>,
+    <math|\<cal-M\><rsup|n><around*|\<langle\>|<rsup|>M,\<cal-T\><rsub|M>,\<cal-A\><rsub|M>|\<rangle\>>>
+    a <math|n>-dimensional <math|C<rsup|r>> differentiable manifold,
+    <math|\<cal-M\><rsup|m><around*|\<langle\>|N,\<cal-T\><rsub|N>,\<cal-A\><rsub|N>|)>>
+    a <math|m>-dimensional <math|C<rsup|r>> differentiable manifold and
+    <math|f:M\<rightarrow\>N> a <math|C<rsup|r>> mapping between the
+    manifolds <math|\<cal-M\><rsup|n><around*|\<langle\>|<rsup|>M,\<cal-T\><rsub|M>,\<cal-A\><rsub|M>|\<rangle\>>>
+    and <math|\<cal-M\><rsup|m><around*|\<langle\>|N,\<cal-T\><rsub|N>,\<cal-A\><rsub|N>|)>>
+    then for every open set <math|U> in <math|M> then\ 
+
+    <\equation*>
+      f<rsub|\|U>:U\<rightarrow\>N
+    </equation*>
+
+    is a <math|C<rsup|r>> mapping between the manifolds
+    <math|\<cal-M\><rsup|n><around*|\<langle\>|U,\<cal-T\><rsub|\|U>,M<around*|[|<around*|(|\<cal-A\><rsub|N>|)><rsub|\|U>|]>|\<rangle\>>>
+    and <math|\<cal-M\><rsup|m><around*|\<langle\>|N,\<cal-T\><rsub|N>,\<cal-A\><rsub|N>|)>>.
+  </theorem>
+
+  <\proof>
+    \;
+  </proof>
+
   \;
 </body>
 
 <\initial>
   <\collection>
     <associate|chapter-nr|22>
-    <associate|page-first|1905>
+    <associate|page-first|1909>
     <associate|par-first|0>
     <associate|section-nr|2>
     <associate|subsection-nr|0>
@@ -4536,6 +4645,9 @@
     <associate|manifold C^m mappings are continuous|<tuple|23.65|?>>
     <associate|manifold C^m mappings equivalences|<tuple|23.66|?>>
     <associate|manifold C^r functions are C^r mappings|<tuple|23.68|?>>
+    <associate|manifold C^r mspping id local (2)|<tuple|23.70|?>>
+    <associate|manifold C^r mspping id locsl|<tuple|23.69|?>>
+    <associate|manifold C^r mspping id lovsl|<tuple|23.69|?>>
     <associate|manifold R^n is a differentiable manifold|<tuple|23.60|?>>
     <associate|manifold a topological manifold is locally
     compact|<tuple|23.25|?>>
@@ -4576,6 +4688,7 @@
     <associate|manifold topological manifold is paracompact|<tuple|23.29|?>>
     <associate|manifold transition map|<tuple|23.33|?>>
     <associate|manifold trivial example|<tuple|23.13|?>>
+    <associate|msnifold C^r mspping id lovsl|<tuple|23.69|?>>
     <associate|note 23.31.6|<tuple|23.37|?>>
   </collection>
 </references>
