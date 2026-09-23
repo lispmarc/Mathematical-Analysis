@@ -5856,8 +5856,8 @@
 
       <item><math|f\<circ\>g<rsup|-1>=<around*|(|f\<circ\>g<rsup|-1>|)><rsub|\|g<around*|(|A<big|cap>C|)>><rsup|>=f<rsub|\|A<big|cap>C><rsub|>\<circ\><around*|(|g<rsup|-1>|)><rsub|\|g<around*|(|A<big|cap>C|)>>=f<rsub|\|A<big|cap>C>\<circ\><around*|(|g<rsub|\|A<big|cap>C>|)><rsup|-1>>
 
-      <item>If <math|C\<subseteq\>D> then
-      <math|f\<circ\>g<rsup|-1>=d=f<rsub|\|C>\<circ\>g<rsup|-1>>
+      <item>If <math|C\<subseteq\>A> then
+      <math|f\<circ\>g<rsup|-1>=f<rsub|\|C>\<circ\>g<rsup|-1>>
     </enumerate>
   </theorem>
 
@@ -5955,7 +5955,7 @@
       <math|f<rsub|\|C>:C\<rightarrow\>B> then by (5) we have that\ 
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|f<rsub|\|C>\<circ\>g<rsup|-1>>|<cell|<below|=|<around*|(|5|)>>>|<cell|<around*|(|f<rsub|\|C>|)><rsub|\|C>\<circ\><around*|(|g<rsub|\|C<big|cap>C>|)><rsup|-1>>>|<row|<cell|>|<cell|<below|=|<text|[theorem:
+        <tformat|<table|<row|<cell|f<rsub|\|C>\<circ\>g<rsup|-1>>|<cell|<below|=|<around*|(|5|)>>>|<cell|<around*|(|f<rsub|\|C>|)><rsub|\|C<big|cap>C>\<circ\><around*|(|g<rsub|\|C<big|cap>C>|)><rsup|-1>>>|<row|<cell|>|<cell|<below|=|<text|[theorem:
         <reference|function restricted function
         properties>(3)]>>>|<cell|f<rsub|\|C>\<circ\><around*|(|g<rsub|\|C>|)><rsup|-1>>>|<row|<cell|>|<cell|<below|=|C\<subseteq\>A>>|<cell|f<rsub|\|A<big|cap>C>\<circ\><around*|(|g<rsub|\|A<big|cap>C>|)><rsup|-1>>>|<row|<cell|>|<cell|<below|=|<around*|(|5|)>>>|<cell|f\<circ\>g<rsup|-1>>>>>
       </eqnarray*>
