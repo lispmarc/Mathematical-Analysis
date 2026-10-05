@@ -4052,19 +4052,26 @@
     <\enumerate>
       <item><math|f:M\<rightarrow\>N> is a <math|C<rsup|r>> mapping\ 
 
-      <item><math|f> is continuous and there exist a <math|C<rsup|r>> mapping
-      <math|\<cal-B\><rsub|M>> on <math|<around*|\<langle\>|M,\<cal-T\><rsub|M>|\<rangle\>>>
-      and a <math|C<rsup|r>> mapping <math|\<cal-B\><rsub|N>> on
-      <math|<around*|(|N,\<cal-T\><rsub|N>|)>> with
-      <math|\<cal-B\><rsub|M>\<subseteq\>\<cal-A\><rsub|M>> and
-      <math|\<cal-B\><rsub|N>\<subseteq\>\<cal-A\><rsub|N>> such that
-      <math|\<forall\><around*|(|U,\<varphi\>|)>\<in\>\<cal-B\><rsub|M>>,
+      <item><math|f> is continuous and <math|\<forall\><around*|(|U,\<varphi\>|)>\<in\>\<cal-A\><rsub|M>>,
+      <math|\<forall\><around*|(|V,\<psi\>|)>\<in\>\<cal-A\><rsub|N>> with
+      <math|f<around*|(|U|)>\<subseteq\>V> we have that
+
+      <\equation*>
+        \<psi\>\<circ\>f\<circ\>\<varphi\><rsup|-1>:\<varphi\><around*|(|U|)>\<rightarrow\>\<bbb-R\><rsup|n><text|
+        is of class >C<rsup|r>
+      </equation*>
+
+      <item><math|f> is continuous and there exist a
+      <math|C<rsup|r><rsup|>>atlas <math|\<cal-B\><rsub|M>\<subseteq\>\<cal-A\><rsub|M>>
+      on <math|<around*|\<langle\>|M,\<cal-T\><rsub|M>|\<rangle\>>> and a
+      <math|C<rsup|r>> atlas <math|\<cal-B\><rsub|N>\<subseteq\>\<cal-A\><rsub|N>>
+      such that <math|\<forall\><around*|(|U,\<varphi\>|)>\<in\>\<cal-B\><rsub|M>>,
       <math|\<forall\><around*|(|V,\<psi\>|)>\<in\>\<cal-B\><rsub|N>> with
       <math|f<around*|(|U|)>\<subseteq\>V> we have that
 
       <\equation*>
         \<psi\>\<circ\>f\<circ\>\<varphi\><rsup|-1>:\<varphi\><around*|(|U|)>\<rightarrow\>\<bbb-R\><rsup|n><text|
-        is of class >C<rsup|n>
+        is of class >C<rsup|r>
       </equation*>
     </enumerate>
 
@@ -4083,10 +4090,7 @@
     \ 
 
     <\description>
-      <item*|<math|1\<Rightarrow\>2>>Take
-      <math|\<cal-B\><rsub|M>=\<cal-A\><rsub|M>> and
-      <math|\<cal-B\><rsub|N>=\<cal-A\><rsub|N>>. Let
-      <math|<around*|(|U,\<varphi\>|)>\<in\>\<cal-B\><rsub|M>>,
+      <item*|<math|1\<Rightarrow\>2>>Let <math|<around*|(|U,\<varphi\>|)>\<in\>\<cal-A\><rsub|M>>,
       <math|<around*|(|V,\<psi\>|)>\<in\>\<cal-A\><rsub|N>> with
       <math|f<around*|(|U|)>\<subseteq\>V> and consider the function
 
@@ -4097,9 +4101,9 @@
       Let <math|x\<in\>\<varphi\><around*|(|U|)>> then there exist a
       <math|p\<in\>U> such that <math|x=\<varphi\><around*|(|p|)>>. As
       <math|f:M\<rightarrow\>N> is a <math|C<rsup|r>> mapping there exist a
-      <math|<around*|(|U<rprime|'>,\<varphi\><rprime|'>|)>\<in\>\<cal-A\><rsub|M>=\<cal-B\><rsub|M>>
+      <math|<around*|(|U<rprime|'>,\<varphi\><rprime|'>|)>\<in\>\<cal-A\><rsub|M>>
       with <math|p\<in\>U<rprime|'>> and a
-      <math|<around*|(|V<rprime|'>,\<psi\><rprime|'>|)>\<in\>\<cal-A\><rsub|N>=\<cal-B\><rsub|N>>
+      <math|<around*|(|V<rprime|'>,\<psi\><rprime|'>|)>\<in\>\<cal-A\><rsub|N>>
       with <math|f<around*|(|p|)>\<in\>V<rprime|'>> and
       <math|f<around*|(|U<rprime|'>|)>\<subseteq\>V<rprime|'>> such that\ 
 
@@ -4136,7 +4140,7 @@
         is of class >C<rsup|r>
       </equation>
 
-      As <math|<around*|(|U,\<varphi\>|)>,<around*|(|U<rprime|'>,\<varphi\><rprime|'>|)>\<in\>\<cal-B\><rsub|M>>
+      As <math|<around*|(|U,\<varphi\>|)>,<around*|(|U<rprime|'>,\<varphi\><rprime|'>|)>\<in\>\<cal-A\><rsub|M>>
       a <math|C<rsup|r>> atlas on <math|<around*|\<langle\>|M,\<cal-T\><rsub|M>|\<rangle\>>>
       it follows that <math|<around*|(|U,\<varphi\>|)>> is <math|C<rsup|r>>
       compatible with <math|<around*|(|U<rprime|'>,\<varphi\><rprime|'>|)>>,
@@ -4165,7 +4169,7 @@
       </equation>
 
       Given that <math|<around*|(|V,\<psi\>|)>>,
-      <math|<around*|(|V<rprime|'>,\<psi\><rprime|'>|)>\<in\>\<cal-B\><rsub|N>>
+      <math|<around*|(|V<rprime|'>,\<psi\><rprime|'>|)>\<in\>\<cal-A\><rsub|N>>
       a <math|C<rsup|r>> atlas on <math|<around*|\<langle\>|N,\<cal-T\><rsub|N>|\<rangle\>>>
       it follows that <math|<around*|(|V,\<psi\>|)>> is <math|C<rsup|r>>
       compatible with <math|<around*|(|V<rprime|'>,\<psi\><rprime|'>|)>>.
@@ -4246,12 +4250,16 @@
         is of class >C<rsup|r>
       </equation*>
 
-      As this is true <math|\<forall\><around*|(|U,\<varphi\>|)>\<in\>\<cal-B\><rsub|M>,\<forall\><around*|(|V,\<psi\>|)>\<in\>\<cal-B\><rsub|N>>
+      As this is true <math|\<forall\><around*|(|U,\<varphi\>|)>\<in\>\<cal-A\><rsub|M>,\<forall\><around*|(|V,\<psi\>|)>\<in\>\<cal-A\><rsub|N>>
       with <math|f<around*|(|U|)>\<subseteq\>V> and <math|f> is continuous by
       [theorem: <reference|manifold C^m mappings are continuous>] (2)
       follows.
 
-      <item*|<math|2\<Rightarrow\>1>>Assume that there exist a
+      <item*|<math|2\<Rightarrow\>3>>Take
+      <math|\<cal-B\><rsub|M>=\<cal-A\><rsub|M>> and
+      <math|\<cal-B\><rsub|N>=\<cal-A\><rsub|N>> then (3) follows from (2)
+
+      <item*|<math|3\<Rightarrow\>1>>Assume that there exist a
       <math|C<rsup|r>> atlas on <math|<around*|\<langle\>|M,\<cal-T\><rsub|M>|\<rangle\>>>
       and a <math|C<rsup|r>> atlas on <math|<around*|\<langle\>|M,\<cal-T\><rsub|N>|\<rangle\>>>
       with <math|\<cal-B\><rsub|M>\<subseteq\>\<cal-A\><rsub|M>> and
@@ -4271,9 +4279,9 @@
       with <math|f<around*|(|p|)>\<in\>V>. As <math|f> is continuous
       <math|f<rsup|-1><around*|(|V|)>\<in\>\<cal-T\><rsub|M>> so that
       <math|U<big|cap>f<rsup|-1><around*|(|V|)>\<in\>\<cal-T\><rsub|M>>.
-      Using [example: <reference|manifold open subset of a differentiable
-      manifold>] <math|<around*|(|U<big|cap>f<rsup|-1><around*|(|V|)>,\<varphi\><rsub|\|U<big|cap>f<rsup|-1><around*|(|V|)>>|)>\<in\><around*|(|\<cal-A\><rsub|M>|)><rsub|\|U<big|cap>f<rsup|-1><around*|(|V|)>>\<subseteq\>\<cal-A\><rsub|M>>.
-      Take <math|<around*|(|W,\<gamma\>|)>=<around*|(|U<big|cap>f<rsup|-1><around*|(|V|)>,\<varphi\><rsub|\|U<big|cap>f<rsup|-1><around*|(|V|)>>|)>>
+      Using [theorem: <reference|manifold maximum atlas and sub charts>]
+      <math|<around*|(|U<big|cap>f<rsup|-1><around*|(|V|)>,\<varphi\><rsub|\|U<big|cap>f<rsup|-1><around*|(|V|)>>|)>\<in\>\<cal-A\><rsub|M>>.
+      Take <math|<rigid|<around*|(|W,\<gamma\>|)>=<around*|(|U<big|cap>f<rsup|-1><around*|(|V|)>,\<varphi\><rsub|\|U<big|cap>f<rsup|-1><around*|(|V|)>>|)>>>
       then <math|<around*|(|W,\<gamma\>|)>\<in\>\<cal-T\><rsub|M>>,
       <math|p\<in\>W> <rigid|[as <math|p\<in\>U>,
       <math|f<around*|(|p|)>\<in\>V\<Rightarrow\>p\<in\>f<rsup|-1><around*|(|V|)>>]>
@@ -4312,6 +4320,15 @@
       <math|U<big|cap>f<rsup|-1><around*|(|V|)>> is open in <math|M> and
       <math|\<psi\>\<circ\>f\<circ\>\<varphi\><rsup|-1>:\<varphi\><around*|(|U<big|cap>f<rsup|-1><around*|(|V|)>|)>\<rightarrow\>\<bbb-R\><rsup|n>>
       is of class <math|C<rsup|r>>.
+
+      <item><math|f> is continuous and <math|\<forall\><around*|(|U,\<varphi\>|)>\<in\>\<cal-A\><rsub|M>>
+      and <math|\<forall\><around*|(|V,\<psi\>|)>\<in\>\<cal-A\><rsub|N>> we
+      have that
+
+      <\equation*>
+        \<psi\>\<circ\>f\<circ\>\<varphi\><rsup|-1>:\<varphi\><around*|(|U<big|cap>f<rsup|-1><around*|(|V|)>|)>\<rightarrow\>\<bbb-R\><rsup|n><text|
+        is of class >C<rsup|r>
+      </equation*>
 
       <item><math|f> is continuous and there exist a <math|C<rsup|r>> atlas
       <math|\<cal-B\><rsub|M>\<subseteq\>\<cal-A\><rsub|M>> on
@@ -4507,10 +4524,8 @@
         <label|eq 23.74.10>f<text| is continous>
       </equation>
 
-      Let <math|\<cal-B\><rsub|M>=\<cal-A\><rsub|M>> and
-      <math|\<cal-B\><rsub|N>=\<cal-A\><rsub|N>> and take
-      <math|<around*|(|U,\<varphi\>|)>\<in\>\<cal-B\><rsub|M>>,
-      <math|<around*|(|V,\<psi\>|)>\<in\>\<cal-B\><rsub|N>> and consider the
+      Take <math|<around*|(|U,\<varphi\>|)>\<in\>\<cal-A\><rsub|M>>,
+      <math|<around*|(|V,\<psi\>|)>\<in\>\<cal-A\><rsub|N>> and consider the
       function
 
       <\equation*>
@@ -4551,9 +4566,9 @@
         <label|eq 23.78.10>x=\<varphi\><around*|(|p|)>\<in\>\<varphi\><around*|(|U<big|cap>U<rprime|'><big|cap>f<rsup|-1><around*|(|V<big|cap>V<rprime|'>|)>|)>
       </equation>
 
-      As <math|<around*|(|U,\<varphi\>|)>\<in\>\<cal-B\><rsub|M>=\<cal-A\><rsub|M>>,
-      <math|<around*|(|V,\<psi\>|)>\<in\>\<cal-B\><rsub|N>=\<cal-A\><rsub|N>>
-      we have, as <math|*<around*|(|U<rprime|'>,\<varphi\><rprime|'>|)>\<in\>\<cal-A\><rsub|M>>,
+      As <math|<around*|(|U,\<varphi\>|)>\<in\>\<cal-A\><rsub|M>>,
+      <math|<around*|(|V,\<psi\>|)>\<in\>\<cal-A\><rsub|N>> we have, as
+      <math|*<around*|(|U<rprime|'>,\<varphi\><rprime|'>|)>\<in\>\<cal-A\><rsub|M>>,
       <math|<around*|(|V<rprime|'>,\<psi\><rprime|'>|)>\<in\>\<cal-A\><rsub|N>>,
       that <math|<around*|(|U,\<varphi\>|)>> is <math|C<rsup|r>> compatible
       with <math|<around*|(|U<rprime|'>,\<varphi\><rprime|'>|)>> and
@@ -4682,11 +4697,15 @@
         is of class <math|C<rsup|r>>>
       </equation*>
 
-      As this is true <math|\<forall\><around*|(|U,\<varphi\>|)>\<in\>\<cal-B\><rsub|M>>
-      and <math|\<forall\><around*|(|V,\<psi\>|)>\<in\>\<cal-B\><rsub|N>> and
+      As this is true <math|\<forall\><around*|(|U,\<varphi\>|)>\<in\>\<cal-A\><rsub|M>>
+      and <math|\<forall\><around*|(|V,\<psi\>|)>\<in\>\<cal-A\><rsub|N>> and
       <math|f> is continuous [see eq: <reference|eq 23.74.10>] (3) follows.
 
-      <item*|<math|3\<Rightarrow\>2>>Assume that <math|f> is continuous and
+      <item*|<math|3\<Rightarrow\>4>>Take
+      <math|\<cal-B\><rsub|M>=\<cal-A\><rsub|M>> and
+      <math|\<cal-B\><rsub|N>=\<cal-A\><rsub|N>> then (4) follows from (3)
+
+      <item*|<math|4\<Rightarrow\>2>>Assume that <math|f> is continuous and
       there exist a <math|C<rsup|r>> atlas
       <math|\<cal-B\><rsub|N>\<subseteq\>\<cal-A\><rsub|N>> and a
       <math|C<rsup|r>> atlas <math|\<cal-B\><rsub|M>\<subseteq\>\<cal-A\><rsub|N>>
@@ -5306,6 +5325,30 @@
     </enumerate>
   </definition>
 
+  Just as a diffeormorphism between normed spaces is a homeomorphism [see
+  theorem: <reference|diff diffeomorphism is a homeomorphism>] a
+  diffeomorphism between differentiable manifolds is also a homeomorphism.
+
+  <\theorem>
+    <label|manifold diffeomorphism is a homeomorphism>Let
+    <math|n,m\<in\>\<bbb-N\>>, <math|q\<in\>\<bbb-N\><rsub|0><big|cup><around*|{|\<infty\>|}>>,
+    <math|\<cal-M\><rsup|m><around*|\<langle\>|M,\<cal-T\><rsub|M>,\<cal-A\><rsub|M>|\<rangle\>>>
+    a <math|m>-dimensional <math|C<rsup|q>> differentiabke manifold,
+    <math|\<cal-M\><rsup|n><around*|\<langle\>|N,\<cal-T\><rsub|N>,\<cal-A\><rsub|N>|\<rangle\>>>
+    a <math|n>-dimensional <math|C<rsup|q>> differentiable manifold and
+    <math|f:M\<rightarrow\>N> a <math|C<rsup|q>> diffeomorphism then
+    <math|f:M\<rightarrow\>N> is a homeomorphism.
+  </theorem>
+
+  <\proof>
+    As <math|f:M\<rightarrow\>N> is a homeomorphism we have that
+    <math|f:M\<rightarrow\>N> and <math|f<rsup|-1>:N\<rightarrow\>M> are
+    <math|C<rsup|q>> mapings. By [theorem: <reference|manifold C^m mappings
+    are continuous>] it follows then that <math|f:M\<rightarrow\>N> and
+    <math|f<rsup|-1>:N\<rightarrow\>M> are continuous. So by [definition:
+    <reference|continuity homeomorphism>] <math|f> is a homeomorphism.
+  </proof>
+
   We have the following equivalent definition of a <math|C<rsup|q>>
   differentiable mapping.
 
@@ -5323,13 +5366,142 @@
     <\eqnarray*>
       <tformat|<table|<row|<cell|>|<cell|f:M\<rightarrow\>N<text| is a
       >C<rsup|q><text| diffeomorphism>>|<cell|>>|<row|<cell|>|<cell|\<Updownarrow\>>|<cell|>>|<row|<cell|>|<cell|f<text|
-      is a homeomorphism and >\<forall\><around*|(|U,\<varphi\>|)>\<in\>\<cal-A\><rsub|M>,\<forall\><around*|(|V,\<psi\>|)>\<in\>\<cal-A\><rsub|N><text|>>|<cell|>>|<row|<cell|>|<cell|\<psi\>\<circ\>f\<circ\>\<varphi\><rsup|-1>:\<varphi\><around*|(|U<big|cap>f<rsup|-1><around*|(|V|)>|)>\<rightarrow\>>|<cell|>>>>
+      is a homeomorphism>>|<cell|>>|<row|<cell|>|<cell|and>|<cell|>>|<row|<cell|>|<cell|<text|<math|\<forall\>p\<in\>M>
+      >\<exists\><around*|(|U,\<varphi\>|)>\<in\>\<cal-A\><rsub|M> with
+      p\<in\>U,\<exists\><around*|(|V,\<psi\>|)>\<in\>\<cal-A\><rsub|N><text|
+      with >f<around*|(|p|)>\<in\>V<text| and
+      >f<around*|(|U|)>\<subseteq\>V>|<cell|>>|<row|<cell|>|<cell|such
+      that>|<cell|>>|<row|<cell|>|<cell|\<psi\>\<circ\>f\<circ\>\<varphi\><rsup|-1>:\<varphi\><around*|(|U|)>\<rightarrow\>\<psi\><around*|(|f<around*|(|U|)>|)><text|
+      is a diffeomorphism of class >C<rsup|q>>|<cell|>>>>
     </eqnarray*>
-
-    <\equation*>
-      \;
-    </equation*>
   </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>As <math|f:M\<rightarrow\>N> is a
+      <math|C<rsup|q>> diffeomorphism it follows from [theorem:
+      <reference|manifold diffeomorphism is a homeomorphism>] that\ 
+
+      <\equation>
+        <label|eq 23.117.14>f:M\<rightarrow\>N<text| is a homeomorphism>
+      </equation>
+
+      and by [definition: <reference|manifold diffeomorphism>] that\ 
+
+      <\equation>
+        <label|eq 23.118.14>f:M\<rightarrow\>N<text| is a bijection >
+      </equation>
+
+      <\equation>
+        <label|eq 23.119.14>f:M\<rightarrow\>N<text| is a >C<rsup|q><text|
+        mapping and >f<rsup|-1>:N\<rightarrow\>M<text| is a >C<rsup|q><text|
+        mapping>
+      </equation>
+
+      Let <math|p\<in\>M> then as <math|f:M\<rightarrow\>N> is a
+      <math|C<rsup|q>> mapping we have by [definition: <reference|manifold
+      differentiable mappings>] that there exist a
+      <math|<around*|(|U,\<varphi\>|)>\<in\>\<cal-A\><rsub|M>> with
+      <math|p\<in\>U> and a <math|<around*|(|V,\<psi\>|)>> with
+      <math|f<around*|(|p|)>\<in\>V> and <math|f<around*|(|U|)>\<subseteq\>V>
+      such that
+
+      <\equation>
+        <label|eq 23.120.14>\<psi\>\<circ\>f\<circ\>\<varphi\><rsup|-1>:\<varphi\><around*|(|U|)>\<rightarrow\>\<bbb-R\><rsup|n><text|
+        is of class >C<rsup|q>
+      </equation>
+
+      As <math|\<psi\>,f,\<varphi\>> are bijections hence injections it
+      follows from [theorem: <reference|function composition injectivity,
+      surjectivity and bijectivity>] that
+      <math|\<psi\>\<circ\>f\<circ\>\<varphi\><rsup|-1>> is injective.
+      Further <math|<around*|(|\<psi\>\<circ\>f\<circ\>\<varphi\><rsup|-1>|)><around*|(|\<varphi\><around*|(|U|)>|)>=\<psi\><around*|(|f<around*|(|<around*|(|\<varphi\><rsup|-1>|)><around*|(|\<varphi\><around*|(|U|)>|)>|)>|)>=\<psi\><around*|(|f<around*|(|U|)>|)>>
+      so that by [theorem: <reference|function injectivity to bijection>]\ 
+
+      <\equation>
+        <label|eq 23.121.14>\<psi\>\<circ\>f\<circ\>\<varphi\><rsup|-1>:\<varphi\><around*|(|U|)>\<rightarrow\>\<psi\><around*|(|f<around*|(|U|)>|)><text|
+        is a bijection>
+      </equation>
+
+      As <math|f> is a homeomorphism it follows that
+      <math|f<around*|(|U|)>\<in\>\<cal-T\><rsub|N>> so that by [theorem:
+      <reference|manifold maximum atlas and sub charts>]
+      <math|<rigid|<around*|(|V<big|cap>f<around*|(|U|)>,\<psi\><rsub|V<big|cap>f<around*|(|U|)>>|)>\<in\>\<cal-A\><rsub|N>>>,
+      as <math|f<around*|(|U|)>\<subseteq\>V> it follows that\ 
+
+      <\equation*>
+        <around*|(|f<around*|(|U|)>,\<psi\><rsub|\|f<around*|(|U|)>>|)>\<in\>\<cal-A\><rsub|N><text|
+        and ><around*|(|f<rsup|-1>|)><around*|(|f<around*|(|U|)>|)>=U
+      </equation*>
+
+      As <math|f<rsup|-1>:N\<rightarrow\>M> is a <math|C<rsup|q>> mapping
+      [see <reference|eq 23.119.14>], <math|f<rsup|-1>> is continuous [see
+      eq: <reference|eq 23.117.14>], <math|<around*|(|U,\<varphi\>|)>\<in\>\<cal-A\><rsub|N>>
+      it follows from the above and [theorem: <reference|manifold C^m
+      mappings equivalences (1)>] that\ 
+
+      <\equation>
+        <label|eq 23.122.14>\<varphi\>\<circ\>f<rsup|-1>\<circ\><around*|(|\<psi\><rsub|\|f<around*|(|U|)>>|)><rsup|-1>:\<psi\><around*|(|f<around*|(|U|)>|)>\<rightarrow\>\<bbb-R\><rsup|m><text|
+        is of class >C<rsup|q>
+      </equation>
+
+      Let <math|x\<in\>\<varphi\><around*|(|U|)>> then\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|<around*|(|\<varphi\>\<circ\>f<rsup|-1>\<circ\><around*|(|\<psi\><rsub|\|f<around*|(|U|)>>|)><rsup|-1>|)>\<circ\><around*|(|\<psi\>\<circ\>f\<circ\>\<varphi\><rsup|-1>|)>|)><around*|(|x|)>>|<cell|=>|<cell|>>|<row|<cell|\<varphi\><around*|(|f<rsup|-1><around*|(|<around*|(|\<psi\><rsub|\|f<around*|(|U|)>>|)><rsup|-1><around*|(|\<psi\><around*|(|f<around*|(|\<varphi\><rsup|-1><around*|(|x|)>|)>|)>|)>|)>|)>>|<cell|<below|=|<text|[theorem:
+        <reference|function inverse and restriction>]>>>|<cell|>>|<row|<cell|\<varphi\><around*|(|f<rsup|-1><around*|(|<around*|(|\<psi\><rsup|-1>|)><rsup|><rsub|\|\<psi\><around*|(|f<around*|(|U|)>|)>><around*|(|\<psi\><around*|(|f<around*|(|\<varphi\><rsup|-1><around*|(|x|)>|)>|)>|)>|)>|)>>|<cell|=>|<cell|>>|<row|<cell|\<varphi\><around*|(|f<rsup|-1><around*|(|f<around*|(|\<varphi\><rsup|-1><around*|(|x|)>|)>|)>|)>>|<cell|=>|<cell|>>|<row|<cell|\<varphi\><around*|(|\<varphi\><rsup|-1><around*|(|x|)>|)>>|<cell|=>|<cell|>>|<row|<cell|x>|<cell|<below|=|x\<in\>\<varphi\><around*|(|U|)>>>|<cell|>>|<row|<cell|Id<rsub|\<varphi\><around*|(|U|)>>>|<cell|>|<cell|>>>>
+      </eqnarray*>
+
+      which proves that\ 
+
+      <\equation>
+        <label|eq 23.123.14><around*|(|\<varphi\>\<circ\>f<rsup|-1>\<circ\><around*|(|\<psi\><rsub|\|f<around*|(|U|)>>|)><rsup|-1>|)>\<circ\><around*|(|\<psi\>\<circ\>f\<circ\>\<varphi\><rsup|-1>|)>=Id<rsub|\<varphi\><around*|(|U|)>>
+      </equation>
+
+      Likewise for <math|x\<in\>\<psi\><around*|(|f<around*|(|U|)>|)>> we
+      have that\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|<around*|(|\<psi\>\<circ\>f\<circ\>\<varphi\><rsup|-1>|)>\<circ\><around*|(|\<varphi\>\<circ\>f<rsup|-1>\<circ\><around*|(|\<psi\><rsub|\|f<around*|(|U|)>>|)><rsup|-1>|)>|)><around*|(|x|)>>|<cell|=>|<cell|>>|<row|<cell|\<psi\><around*|(|f<around*|(|\<varphi\><rsup|-1><around*|(|\<varphi\><around*|(|f<rsup|-1><around*|(|<around*|(|\<psi\><rsub|\|f<around*|(|U|)>>|)><rsup|-1><around*|(|x|)>|)>|)>|)>|)>|)>>|<cell|<below|=|<text|[theorem:
+        <reference|function inverse and restriction>]>>>|<cell|>>|<row|<cell|\<psi\><around*|(|f<around*|(|\<varphi\><rsup|-1><around*|(|\<varphi\><around*|(|f<rsup|-1><around*|(|<around*|(|\<psi\><rsup|-1>|)><rsub|\<psi\><around*|(|f<around*|(|U|)>|)>><around*|(|x|)>|)>|)>|)>|)>|)>>|<cell|=>|<cell|>>|<row|<cell|\<psi\><around*|(|f<around*|(|f<rsup|-1><around*|(|<around*|(|\<psi\><rsup|-1>|)><rsub|\<psi\><around*|(|f<around*|(|U|)>|)>><around*|(|x|)>|)>|)>|)>>|<cell|=>|<cell|>>|<row|<cell|\<psi\><around*|(|<around*|(|\<psi\><rsup|-1>|)><rsub|\<psi\><around*|(|f<around*|(|U|)>|)>><around*|(|x|)>|)>>|<cell|=>|<cell|>>|<row|<cell|\<psi\><around*|(|\<psi\><rsup|-1><around*|(|x|)>|)>>|<cell|=>|<cell|>>|<row|<cell|x>|<cell|=>|<cell|>>|<row|<cell|Id<rsub|\<psi\><around*|(|f<around*|(|U|)>|)>><around*|(|x|)>>|<cell|>|<cell|>>>>
+      </eqnarray*>
+
+      which proves that\ 
+
+      <\equation>
+        <label|eq 23.124.14><around*|(|\<psi\>\<circ\>f\<circ\>\<varphi\><rsup|-1>|)>\<circ\><around*|(|\<varphi\>\<circ\>f<rsup|-1>\<circ\><around*|(|\<psi\><rsub|\|f<around*|(|U|)>>|)><rsup|-1>|)>=Id<rsub|\<psi\><around*|(|f<around*|(|U|)>|)>>
+      </equation>
+
+      Combining [eq: <reference|eq 23.123.14>] and [eq: <reference|eq
+      23.124.14>] it follows that\ 
+
+      <\equation*>
+        <around*|(|\<psi\>\<circ\>f\<circ\>\<varphi\><rsup|-1>|)><rsup|-1>=\<varphi\>\<circ\>f<rsup|-1>\<circ\><around*|(|\<psi\><rsub|\|f<around*|(|U|)>>|)><rsup|-1>
+      </equation*>
+
+      so that we have, using [eq: <reference|eq 23.122.14>] that\ 
+
+      <\equation>
+        <label|eq 23.125.14><around*|(|\<psi\>\<circ\>f\<circ\>\<varphi\><rsup|-1>|)><rsup|-1>:\<psi\><around*|(|f<around*|(|U|)>|)>\<rightarrow\>\<bbb-R\><rsup|m><text|
+        is of class >C<rsup|q><text|>
+      </equation>
+
+      Finally we have by [definition: <reference|diff diffeomorphism>] and
+      [eqs: <reference|eq 23.120.14>, <reference|eq 23.121.14>,<reference|eq
+      23.125.14>] that\ 
+
+      <\equation*>
+        \<psi\>\<circ\>f\<circ\>\<varphi\><rsup|-1>:\<varphi\><around*|(|U|)>\<rightarrow\>\<psi\><around*|(|f<around*|(|U|)>|)><text|
+        is a diffeomorphism of class >C<rsup|q>
+      </equation*>
+
+      <item*|<math|\<Leftarrow\>>>
+    </description>
+
+    \;
+  </proof>
 
   \;
 
@@ -5387,6 +5559,15 @@
     <associate|eq 23.104.13|<tuple|23.114|?>>
     <associate|eq 23.105.13|<tuple|23.115|?>>
     <associate|eq 23.106.13|<tuple|23.116|?>>
+    <associate|eq 23.117.14|<tuple|23.117|?>>
+    <associate|eq 23.118.14|<tuple|23.118|?>>
+    <associate|eq 23.119.14|<tuple|23.119|?>>
+    <associate|eq 23.120.14|<tuple|23.120|?>>
+    <associate|eq 23.121.14|<tuple|23.121|?>>
+    <associate|eq 23.122.14|<tuple|23.122|?>>
+    <associate|eq 23.123.14|<tuple|23.123|?>>
+    <associate|eq 23.124.14|<tuple|23.124|?>>
+    <associate|eq 23.125.14|<tuple|23.125|?>>
     <associate|eq 23.13.3|<tuple|23.17|?>>
     <associate|eq 23.14.3|<tuple|23.18|?>>
     <associate|eq 23.15.2|<tuple|23.19|?>>
@@ -5532,7 +5713,8 @@
     <associate|manifold cooridinate chart existence|<tuple|23.10|?>>
     <associate|manifold diffentiable atlas|<tuple|23.40|?>>
     <associate|manifold diffeomorphism|<tuple|23.79|?>>
-    <associate|manifold diffeomorphism equivalence|<tuple|23.80|?>>
+    <associate|manifold diffeomorphism equivalence|<tuple|23.81|?>>
+    <associate|manifold diffeomorphism is a homeomorphism|<tuple|23.80|?>>
     <associate|manifold differentiability real function|<tuple|23.44|?>>
     <associate|manifold differentiability real function (1)|<tuple|23.46|?>>
     <associate|manifold differentiability real function (2)|<tuple|23.56|?>>
