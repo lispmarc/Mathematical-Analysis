@@ -5350,7 +5350,139 @@
   </proof>
 
   We have the following equivalent definition of a <math|C<rsup|q>>
-  differentiable mapping.
+  differentiable mapping. First we prove a little lemma about the composition
+  of bijections.
+
+  <\lemma>
+    <label|lemma 23.81.14>Let <math|X,Y,M,N> be sets, <math|U\<subseteq\>M>,
+    <math|V\<subseteq\>N>, <math|f:M\<rightarrow\>N> a bijection with
+    <math|f<around*|(|U|)>\<subseteq\>V>,
+    <rigid|<math|\<psi\>:U\<rightarrow\>X>> a injection and
+    <math|\<psi\>:V\<rightarrow\>Y> a injection then
+
+    <\equation*>
+      \<psi\>\<circ\>f\<circ\>\<varphi\><rsup|-1>:\<varphi\><around*|(|U|)>\<rightarrow\>\<psi\><around*|(|f<around*|(|U|)>|)><text|>
+    </equation*>
+
+    is a bijection with inverse\ 
+
+    <\equation*>
+      <around*|(|\<psi\>\<circ\>f\<circ\>\<varphi\><rsup|-1>|)><rsup|-1>=\<varphi\>\<circ\>f<rsup|-1>\<circ\><around*|(|\<psi\><rsub|\|f<around*|(|U|)>>|)><rsup|-1>:\<psi\><around*|(|f<around*|(|U|)>|)>\<rightarrow\>\<varphi\><around*|(|U|)>
+    </equation*>
+  </lemma>
+
+  <\proof>
+    As <math|<around*|(|\<varphi\><rsup|-1>|)><around*|(|\<varphi\><around*|(|U|)>|)><below|=|<text|[theorem:
+    <reference|function inverse image preimage>]>>U\<subseteq\>M>,
+    <math|\<varphi\>> is a injection and <math|f> is a injection [because
+    <math|f> is a bijection] it follows from [theorem: <reference|function
+    composition injectivity, surjectivity and bijectivity>] that
+    <math|f\<circ\>\<varphi\><rsup|-1>:\<varphi\><around*|(|U|)>\<rightarrow\>N>
+    is a injection. Further we have that <math|<around*|(|f\<circ\>\<varphi\><rsup|-1>|)><around*|(|\<varphi\><around*|(|U|)>|)>=f<around*|(|<around*|(|\<varphi\><rsup|-1>|)><around*|(|\<varphi\><around*|(|U|)>|)>|)>=f<around*|(|U|)>\<subseteq\>V>
+    so that, as <math|\<psi\>> is a injection, it follows from [theorem:
+    <reference|function composition injectivity, surjectivity and
+    bijectivity>] again that\ 
+
+    <\equation*>
+      \<psi\>\<circ\>f\<circ\>\<varphi\><rsup|-1>:\<varphi\><around*|(|U|)>\<rightarrow\>Y<text|
+      is a injection>
+    </equation*>
+
+    Further we have that\ 
+
+    <\equation*>
+      <around*|(|\<psi\>\<circ\>f\<circ\>\<varphi\><rsup|-1>|)><around*|(|\<varphi\><around*|(|U|)>|)>=\<psi\><around*|(|f<around*|(|<around*|(|\<varphi\><rsup|-1>|)><around*|(|\<varphi\><around*|(|U|)>|)>|)>|)>=\<psi\><around*|(|f<around*|(|U|)>|)>
+    </equation*>
+
+    so that\ 
+
+    <\equation>
+      <label|eq 23.117.14>\<psi\>\<circ\>f\<circ\>\<varphi\><rsup|-1>:\<varphi\><around*|(|U|)>\<rightarrow\>\<psi\><around*|(|f<around*|(|U|)>|)><text|
+      is a bijection>
+    </equation>
+
+    As <math|\<psi\>> is injective and <math|f<around*|(|U|)>\<subseteq\>V>
+    we have that
+
+    <\equation*>
+      \<psi\><rsub|\|f<around*|(|U|)>>:f<around*|(|U|)>\<rightarrow\>\<psi\><rsub|\|f<around*|(|U|)>><around*|(|f<around*|(|U|)>|)><below|=|<text|[theorem:
+      <reference|function restricted function
+      properties>]>>\<psi\><around*|(|f<around*|(|U|)>|)><text| is a
+      bijection>
+    </equation*>
+
+    with inverse
+
+    <\equation*>
+      <around*|(|\<psi\><rsub|\|f<around*|(|U|)>>|)><rsup|-1>:\<psi\><around*|(|f<around*|(|U|)>|)>\<rightarrow\>f<around*|(|U|)>
+    </equation*>
+
+    Given that <math|f<rsup|-1>:N\<rightarrow\>M> is a bijection hence
+    injective and <math|f<around*|(|U|)>\<subseteq\>V> it follows from
+    [theorem: <reference|function composition injectivity, surjectivity and
+    bijectivity>] that <math|f<rsup|-1>\<circ\><around*|(|\<psi\><rsub|\|f<around*|(|U|)>>|)><rsup|-1>:\<psi\><around*|(|f<around*|(|U|)>|)>\<rightarrow\>M>
+    is a injection. Now
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|(|f<rsup|-1>\<circ\><around*|(|\<psi\><rsub|\|f<around*|(|U|)>>|)><rsup|-1>|)><around*|(|\<psi\><around*|(|f<around*|(|U|)>|)>|)>>|<cell|=>|<cell|<around*|(|f<rsup|-1>|)><around*|(|<around*|(|\<psi\><rsub|\|f<around*|(|U|)>>|)><rsup|-1><around*|(|\<psi\><around*|(|f<around*|(|U|)>|)>|)>|)>>>|<row|<cell|>|<cell|<below|=|<text|[theorem:
+      <reference|function inverse and restriction>]>>>|<cell|<around*|(|f<rsup|-1>|)><around*|(|\<psi\><rsup|-1>|)><rsub|\|\<psi\><around*|(|f<around*|(|U|)>|)>><around*|(|\<psi\><around*|(|f<around*|(|U|)>|)>|)>>>|<row|<cell|>|<cell|<below|=|<text|[theorem:
+      <reference|function restricted function
+      properties>]>>>|<cell|<around*|(|f<rsup|-1>|)><around*|(|<around*|(|\<psi\><rsup|-1>|)><around*|(|\<psi\><around*|(|f<around*|(|U|)>|)>|)>|)>>>|<row|<cell|>|<cell|<below|=|<text|[theorem:
+      <reference|function inverse image preimage>]>>>|<cell|<around*|(|f<rsup|-1>|)><around*|(|f<around*|(|U|)>|)>>>|<row|<cell|>|<cell|<below|=|<text|[theorem:
+      <reference|function inverse image preimage>]>>>|<cell|U<eq-number><label|eq
+      23.118.14>>>>>
+    </eqnarray*>
+
+    it follows from [theorem: <reference|function composition injectivity,
+    surjectivity and bijectivity>] that <math|\<varphi\>\<circ\>f<rsup|-1>\<circ\><around*|(|\<psi\><rsub|\|f<around*|(|U|)>>|)><rsup|-1>:\<psi\><around*|(|f<around*|(|U|)>|)>\<rightarrow\>X>
+    is a injection. Further\ 
+
+    <\equation*>
+      <around*|(|\<varphi\>\<circ\>f<rsup|-1>\<circ\><around*|(|\<psi\><rsub|\|f<around*|(|U|)>>|)><rsup|-1>|)><around*|(|\<psi\><around*|(|f<around*|(|U|)>|)>|)>=\<varphi\><around*|(|<around*|(|f<rsup|-1>|)><around*|(|<around*|(|\<psi\><rsub|\|f<around*|(|U|)>>|)><rsup|-1><around*|(|\<psi\><around*|(|f<around*|(|U|)>|)>|)>|)>|)><below|=|<text|[eq:
+      <reference|eq 23.118.14>]>>\<varphi\><around*|(|U|)>
+    </equation*>
+
+    so that\ 
+
+    <\equation*>
+      \<varphi\>\<circ\>f<rsup|-1>\<circ\><around*|(|\<psi\><rsub|\|f<around*|(|U|)>>|)><rsup|-1>:\<psi\><around*|(|f*|)>\<rightarrow\>\<varphi\><around*|(|U|)><text|
+      is a bijection>
+    </equation*>
+
+    Let <math|x\<in\>\<varphi\><around*|(|U|)>> then
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|(|<around*|(|\<varphi\>\<circ\>f<rsup|-1>\<circ\><around*|(|\<psi\><rsub|\|f<around*|(|U|)>>|)><rsup|-1>|)>\<circ\><around*|(|\<psi\>\<circ\>f\<circ\>\<varphi\><rsup|-1>|)>|)><around*|(|x|)>>|<cell|=>|<cell|>>|<row|<cell|\<varphi\><around*|(|f<rsup|-1><around*|(|<around*|(|\<psi\><rsub|\|f<around*|(|U|)>>|)><rsup|-1><around*|(|\<psi\><around*|(|f<around*|(|\<varphi\><rsup|-1><around*|(|x|)>|)>|)>|)>|)>|)>>|<cell|<below|=|<text|[theorem:
+      <reference|function inverse and restriction>]>>>|<cell|>>|<row|<cell|\<varphi\><around*|(|f<rsup|-1><around*|(|<around*|(|\<psi\><rsup|-1>|)><rsup|><rsub|\|\<psi\><around*|(|f<around*|(|U|)>|)>><around*|(|\<psi\><around*|(|f<around*|(|\<varphi\><rsup|-1><around*|(|x|)>|)>|)>|)>|)>|)>>|<cell|=>|<cell|>>|<row|<cell|\<varphi\><around*|(|f<rsup|-1><around*|(|f<around*|(|\<varphi\><rsup|-1><around*|(|x|)>|)>|)>|)>>|<cell|=>|<cell|>>|<row|<cell|\<varphi\><around*|(|\<varphi\><rsup|-1><around*|(|x|)>|)>>|<cell|=>|<cell|>>|<row|<cell|x>|<cell|<below|=|x\<in\>\<varphi\><around*|(|U|)>>>|<cell|>>|<row|<cell|Id<rsub|\<varphi\><around*|(|U|)>>>|<cell|>|<cell|>>>>
+    </eqnarray*>
+
+    which proves that\ 
+
+    <\equation>
+      <label|eq 23.119.14><around*|(|\<varphi\>\<circ\>f<rsup|-1>\<circ\><around*|(|\<psi\><rsub|\|f<around*|(|U|)>>|)><rsup|-1>|)>\<circ\><around*|(|\<psi\>\<circ\>f\<circ\>\<varphi\><rsup|-1>|)>=Id<rsub|\<varphi\><around*|(|U|)>>
+    </equation>
+
+    Likewise for <math|x\<in\>\<psi\><around*|(|f<around*|(|U|)>|)>> we have
+    that\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|(|<around*|(|\<psi\>\<circ\>f\<circ\>\<varphi\><rsup|-1>|)>\<circ\><around*|(|\<varphi\>\<circ\>f<rsup|-1>\<circ\><around*|(|\<psi\><rsub|\|f<around*|(|U|)>>|)><rsup|-1>|)>|)><around*|(|x|)>>|<cell|=>|<cell|>>|<row|<cell|\<psi\><around*|(|f<around*|(|\<varphi\><rsup|-1><around*|(|\<varphi\><around*|(|f<rsup|-1><around*|(|<around*|(|\<psi\><rsub|\|f<around*|(|U|)>>|)><rsup|-1><around*|(|x|)>|)>|)>|)>|)>|)>>|<cell|<below|=|<text|[theorem:
+      <reference|function inverse and restriction>]>>>|<cell|>>|<row|<cell|\<psi\><around*|(|f<around*|(|\<varphi\><rsup|-1><around*|(|\<varphi\><around*|(|f<rsup|-1><around*|(|<around*|(|\<psi\><rsup|-1>|)><rsub|\<psi\><around*|(|f<around*|(|U|)>|)>><around*|(|x|)>|)>|)>|)>|)>|)>>|<cell|=>|<cell|>>|<row|<cell|\<psi\><around*|(|f<around*|(|f<rsup|-1><around*|(|<around*|(|\<psi\><rsup|-1>|)><rsub|\<psi\><around*|(|f<around*|(|U|)>|)>><around*|(|x|)>|)>|)>|)>>|<cell|=>|<cell|>>|<row|<cell|\<psi\><around*|(|<around*|(|\<psi\><rsup|-1>|)><rsub|\<psi\><around*|(|f<around*|(|U|)>|)>><around*|(|x|)>|)>>|<cell|=>|<cell|>>|<row|<cell|\<psi\><around*|(|\<psi\><rsup|-1><around*|(|x|)>|)>>|<cell|=>|<cell|>>|<row|<cell|x>|<cell|=>|<cell|>>|<row|<cell|Id<rsub|\<psi\><around*|(|f<around*|(|U|)>|)>><around*|(|x|)>>|<cell|>|<cell|>>>>
+    </eqnarray*>
+
+    Which proves that\ 
+
+    <\equation>
+      <label|eq 23.120.14><around*|(|\<psi\>\<circ\>f\<circ\>\<varphi\><rsup|-1>|)>\<circ\><around*|(|\<varphi\>\<circ\>f<rsup|-1>\<circ\><around*|(|\<psi\><rsub|\|f<around*|(|U|)>>|)><rsup|-1>|)>=Id<rsub|\<psi\><around*|(|f<around*|(|U|)>|)>>
+    </equation>
+
+    Combining [eqs: <reference|eq 23.119.14>,<reference|eq 23.120.14>] proves
+    that\ 
+
+    <\equation*>
+      <around*|(|\<psi\>\<circ\>f\<circ\>\<varphi\><rsup|-1>|)><rsup|-1>=\<varphi\>\<circ\>f<rsup|-1>\<circ\><around*|(|\<psi\><rsub|\|f<around*|(|U|)>>|)><rsup|-1>
+    </equation*>
+  </proof>
 
   TODO
 
@@ -5376,6 +5508,8 @@
     </eqnarray*>
   </theorem>
 
+  \;
+
   <\proof>
     \ 
 
@@ -5385,17 +5519,19 @@
       <reference|manifold diffeomorphism is a homeomorphism>] that\ 
 
       <\equation>
-        <label|eq 23.117.14>f:M\<rightarrow\>N<text| is a homeomorphism>
+        <label|eq 23.130.14>f:M\<rightarrow\>N<text| is a homeomorphism>
       </equation>
 
       and by [definition: <reference|manifold diffeomorphism>] that\ 
 
       <\equation>
-        <label|eq 23.118.14>f:M\<rightarrow\>N<text| is a bijection >
+        <label|eq 23.131.14>f:M\<rightarrow\>N<text| is a bijection >
       </equation>
 
+      and
+
       <\equation>
-        <label|eq 23.119.14>f:M\<rightarrow\>N<text| is a >C<rsup|q><text|
+        <label|eq 23.132.14>f:M\<rightarrow\>N<text| is a >C<rsup|q><text|
         mapping and >f<rsup|-1>:N\<rightarrow\>M<text| is a >C<rsup|q><text|
         mapping>
       </equation>
@@ -5409,98 +5545,149 @@
       such that
 
       <\equation>
-        <label|eq 23.120.14>\<psi\>\<circ\>f\<circ\>\<varphi\><rsup|-1>:\<varphi\><around*|(|U|)>\<rightarrow\>\<bbb-R\><rsup|n><text|
+        <label|eq 23.133.14>\<psi\>\<circ\>f\<circ\>\<varphi\><rsup|-1>:\<varphi\><around*|(|U|)>\<rightarrow\>\<bbb-R\><rsup|n><text|
         is of class >C<rsup|q>
       </equation>
 
-      As <math|\<psi\>,f,\<varphi\>> are bijections hence injections it
-      follows from [theorem: <reference|function composition injectivity,
-      surjectivity and bijectivity>] that
-      <math|\<psi\>\<circ\>f\<circ\>\<varphi\><rsup|-1>> is injective.
-      Further <math|<around*|(|\<psi\>\<circ\>f\<circ\>\<varphi\><rsup|-1>|)><around*|(|\<varphi\><around*|(|U|)>|)>=\<psi\><around*|(|f<around*|(|<around*|(|\<varphi\><rsup|-1>|)><around*|(|\<varphi\><around*|(|U|)>|)>|)>|)>=\<psi\><around*|(|f<around*|(|U|)>|)>>
-      so that by [theorem: <reference|function injectivity to bijection>]\ 
+      Using [lemma: <reference|lemma 23.81.14>]\ 
 
       <\equation>
-        <label|eq 23.121.14>\<psi\>\<circ\>f\<circ\>\<varphi\><rsup|-1>:\<varphi\><around*|(|U|)>\<rightarrow\>\<psi\><around*|(|f<around*|(|U|)>|)><text|
-        is a bijection>
+        <label|eq 23.134.14>\<psi\>\<circ\>f\<circ\>\<varphi\><rsup|-1>:\<varphi\><around*|(|U|)>\<rightarrow\>\<psi\><around*|(|f*<around*|(|U|)>|)><text|
+        is a bijection >
       </equation>
 
-      As <math|f> is a homeomorphism it follows that
+      with inverse\ 
+
+      <\equation>
+        <label|eq 23.135.14><around*|(|\<psi\>\<circ\>f\<circ\>\<varphi\><rsup|-1>|)><rsup|-1>=\<varphi\>\<circ\>f<rsup|-1>\<circ\><around*|(|\<psi\><rsub|\|f<around*|(|U|)>>|)><rsup|-1>:\<psi\><around*|(|f<around*|(|U|)>|)>\<rightarrow\>\<varphi\><around*|(|U|)>
+      </equation>
+
+      As <math|f> is a homeomorphism [see eq: <reference|eq 23.130.14>]
       <math|f<around*|(|U|)>\<in\>\<cal-T\><rsub|N>> so that by [theorem:
       <reference|manifold maximum atlas and sub charts>]
-      <math|<rigid|<around*|(|V<big|cap>f<around*|(|U|)>,\<psi\><rsub|V<big|cap>f<around*|(|U|)>>|)>\<in\>\<cal-A\><rsub|N>>>,
-      as <math|f<around*|(|U|)>\<subseteq\>V> it follows that\ 
 
       <\equation*>
-        <around*|(|f<around*|(|U|)>,\<psi\><rsub|\|f<around*|(|U|)>>|)>\<in\>\<cal-A\><rsub|N><text|
-        and ><around*|(|f<rsup|-1>|)><around*|(|f<around*|(|U|)>|)>=U
+        <rigid|<around*|(|f<around*|(|U|)>,\<psi\><rsub|\|f<around*|(|U|)>>|)><below|=|f<around*|(|U|)>\<subseteq\>V><around*|(|V<big|cap>f<around*|(|U|)>,\<psi\><rsub|V<big|cap>f<around*|(|U|)>>|)>\<in\>\<cal-A\><rsub|N>>
       </equation*>
 
       As <math|f<rsup|-1>:N\<rightarrow\>M> is a <math|C<rsup|q>> mapping
-      [see <reference|eq 23.119.14>], <math|f<rsup|-1>> is continuous [see
-      eq: <reference|eq 23.117.14>], <math|<around*|(|U,\<varphi\>|)>\<in\>\<cal-A\><rsub|N>>
-      it follows from the above and [theorem: <reference|manifold C^m
-      mappings equivalences (1)>] that\ 
+      [see eq: <reference|eq 23.132.14>] and
+      <math|<around*|(|f<rsup|-1>|)><around*|(|f<around*|(|U|)>|)><below|=|<text|[eq:
+      <reference|function inverse image preimage>]>>U>, <math|f<rsup|-1>> is
+      continuous [see eq: <reference|eq 23.130.14>],
+      <math|<around*|(|f<around*|(|U|)>,\<psi\><rsub|\|f<around*|(|U|)>>|)>\<in\>\<cal-A\><rsub|N>>
+      \ and <math|<around*|(|U,\<varphi\>|)>\<in\>\<cal-A\><rsub|N>> it
+      follows from \ [theorem: <reference|manifold C^m mappings equivalences
+      (1)>] that\ 
+
+      <\equation*>
+        \<varphi\>\<circ\>f<rsup|-1>\<circ\><around*|(|\<psi\><rsub|\|f<around*|(|U|)>>|)><rsup|-1>:\<psi\><around*|(|f<around*|(|U|)>|)>\<rightarrow\>\<bbb-R\><rsup|m><text|
+        is of class >C<rsup|q>
+      </equation*>
+
+      After substituting [eq: <reference|eq 23.135.14>] in the above it
+      follows that\ 
 
       <\equation>
-        <label|eq 23.122.14>\<varphi\>\<circ\>f<rsup|-1>\<circ\><around*|(|\<psi\><rsub|\|f<around*|(|U|)>>|)><rsup|-1>:\<psi\><around*|(|f<around*|(|U|)>|)>\<rightarrow\>\<bbb-R\><rsup|m><text|
+        <label|eq 23.136.14><around*|(|\<psi\>\<circ\>f\<circ\>\<varphi\><rsup|-1>|)><rsup|-1>:\<psi\><around*|(|f<around*|(|U|)>|)>\<rightarrow\>\<varphi\><around*|(|U|)><text|
         is of class >C<rsup|q>
       </equation>
 
-      Let <math|x\<in\>\<varphi\><around*|(|U|)>> then\ 
-
-      <\eqnarray*>
-        <tformat|<table|<row|<cell|<around*|(|<around*|(|\<varphi\>\<circ\>f<rsup|-1>\<circ\><around*|(|\<psi\><rsub|\|f<around*|(|U|)>>|)><rsup|-1>|)>\<circ\><around*|(|\<psi\>\<circ\>f\<circ\>\<varphi\><rsup|-1>|)>|)><around*|(|x|)>>|<cell|=>|<cell|>>|<row|<cell|\<varphi\><around*|(|f<rsup|-1><around*|(|<around*|(|\<psi\><rsub|\|f<around*|(|U|)>>|)><rsup|-1><around*|(|\<psi\><around*|(|f<around*|(|\<varphi\><rsup|-1><around*|(|x|)>|)>|)>|)>|)>|)>>|<cell|<below|=|<text|[theorem:
-        <reference|function inverse and restriction>]>>>|<cell|>>|<row|<cell|\<varphi\><around*|(|f<rsup|-1><around*|(|<around*|(|\<psi\><rsup|-1>|)><rsup|><rsub|\|\<psi\><around*|(|f<around*|(|U|)>|)>><around*|(|\<psi\><around*|(|f<around*|(|\<varphi\><rsup|-1><around*|(|x|)>|)>|)>|)>|)>|)>>|<cell|=>|<cell|>>|<row|<cell|\<varphi\><around*|(|f<rsup|-1><around*|(|f<around*|(|\<varphi\><rsup|-1><around*|(|x|)>|)>|)>|)>>|<cell|=>|<cell|>>|<row|<cell|\<varphi\><around*|(|\<varphi\><rsup|-1><around*|(|x|)>|)>>|<cell|=>|<cell|>>|<row|<cell|x>|<cell|<below|=|x\<in\>\<varphi\><around*|(|U|)>>>|<cell|>>|<row|<cell|Id<rsub|\<varphi\><around*|(|U|)>>>|<cell|>|<cell|>>>>
-      </eqnarray*>
-
-      which proves that\ 
-
-      <\equation>
-        <label|eq 23.123.14><around*|(|\<varphi\>\<circ\>f<rsup|-1>\<circ\><around*|(|\<psi\><rsub|\|f<around*|(|U|)>>|)><rsup|-1>|)>\<circ\><around*|(|\<psi\>\<circ\>f\<circ\>\<varphi\><rsup|-1>|)>=Id<rsub|\<varphi\><around*|(|U|)>>
-      </equation>
-
-      Likewise for <math|x\<in\>\<psi\><around*|(|f<around*|(|U|)>|)>> we
-      have that\ 
-
-      <\eqnarray*>
-        <tformat|<table|<row|<cell|<around*|(|<around*|(|\<psi\>\<circ\>f\<circ\>\<varphi\><rsup|-1>|)>\<circ\><around*|(|\<varphi\>\<circ\>f<rsup|-1>\<circ\><around*|(|\<psi\><rsub|\|f<around*|(|U|)>>|)><rsup|-1>|)>|)><around*|(|x|)>>|<cell|=>|<cell|>>|<row|<cell|\<psi\><around*|(|f<around*|(|\<varphi\><rsup|-1><around*|(|\<varphi\><around*|(|f<rsup|-1><around*|(|<around*|(|\<psi\><rsub|\|f<around*|(|U|)>>|)><rsup|-1><around*|(|x|)>|)>|)>|)>|)>|)>>|<cell|<below|=|<text|[theorem:
-        <reference|function inverse and restriction>]>>>|<cell|>>|<row|<cell|\<psi\><around*|(|f<around*|(|\<varphi\><rsup|-1><around*|(|\<varphi\><around*|(|f<rsup|-1><around*|(|<around*|(|\<psi\><rsup|-1>|)><rsub|\<psi\><around*|(|f<around*|(|U|)>|)>><around*|(|x|)>|)>|)>|)>|)>|)>>|<cell|=>|<cell|>>|<row|<cell|\<psi\><around*|(|f<around*|(|f<rsup|-1><around*|(|<around*|(|\<psi\><rsup|-1>|)><rsub|\<psi\><around*|(|f<around*|(|U|)>|)>><around*|(|x|)>|)>|)>|)>>|<cell|=>|<cell|>>|<row|<cell|\<psi\><around*|(|<around*|(|\<psi\><rsup|-1>|)><rsub|\<psi\><around*|(|f<around*|(|U|)>|)>><around*|(|x|)>|)>>|<cell|=>|<cell|>>|<row|<cell|\<psi\><around*|(|\<psi\><rsup|-1><around*|(|x|)>|)>>|<cell|=>|<cell|>>|<row|<cell|x>|<cell|=>|<cell|>>|<row|<cell|Id<rsub|\<psi\><around*|(|f<around*|(|U|)>|)>><around*|(|x|)>>|<cell|>|<cell|>>>>
-      </eqnarray*>
-
-      which proves that\ 
-
-      <\equation>
-        <label|eq 23.124.14><around*|(|\<psi\>\<circ\>f\<circ\>\<varphi\><rsup|-1>|)>\<circ\><around*|(|\<varphi\>\<circ\>f<rsup|-1>\<circ\><around*|(|\<psi\><rsub|\|f<around*|(|U|)>>|)><rsup|-1>|)>=Id<rsub|\<psi\><around*|(|f<around*|(|U|)>|)>>
-      </equation>
-
-      Combining [eq: <reference|eq 23.123.14>] and [eq: <reference|eq
-      23.124.14>] it follows that\ 
-
-      <\equation*>
-        <around*|(|\<psi\>\<circ\>f\<circ\>\<varphi\><rsup|-1>|)><rsup|-1>=\<varphi\>\<circ\>f<rsup|-1>\<circ\><around*|(|\<psi\><rsub|\|f<around*|(|U|)>>|)><rsup|-1>
-      </equation*>
-
-      so that we have, using [eq: <reference|eq 23.122.14>] that\ 
-
-      <\equation>
-        <label|eq 23.125.14><around*|(|\<psi\>\<circ\>f\<circ\>\<varphi\><rsup|-1>|)><rsup|-1>:\<psi\><around*|(|f<around*|(|U|)>|)>\<rightarrow\>\<bbb-R\><rsup|m><text|
-        is of class >C<rsup|q><text|>
-      </equation>
-
       Finally we have by [definition: <reference|diff diffeomorphism>] and
-      [eqs: <reference|eq 23.120.14>, <reference|eq 23.121.14>,<reference|eq
-      23.125.14>] that\ 
+      [eq: <reference|eq 23.132.14>, <reference|eq 23.133.14>, <reference|eq
+      23.136.14>] that\ 
 
       <\equation*>
         \<psi\>\<circ\>f\<circ\>\<varphi\><rsup|-1>:\<varphi\><around*|(|U|)>\<rightarrow\>\<psi\><around*|(|f<around*|(|U|)>|)><text|
         is a diffeomorphism of class >C<rsup|q>
       </equation*>
 
-      <item*|<math|\<Leftarrow\>>>
-    </description>
+      <item*|<math|\<Leftarrow\>>>By the hypothesis\ 
 
-    \;
+      <\equation*>
+        f:M\<rightarrow\>N<text| is a homeomorphism>
+      </equation*>
+
+      so that
+
+      <\equation>
+        <label|eq 23.128.15>f:M\<rightarrow\>N<text| is a bijection>
+      </equation>
+
+      Let <math|p\<in\>M> then by the hypothesis there exist a
+      <math|<around*|(|U,\<varphi\>|)>\<in\>\<cal-A\><rsub|M>> with
+      <math|p\<in\>U> and a <math|<around*|(|V,\<psi\>|)>\<in\>\<cal-A\><rsub|N>>
+      with <math|f<around*|(|p|)>\<in\>V> and
+      <math|f<around*|(|U|)>\<subseteq\>V> such that\ 
+
+      <\equation*>
+        f<around*|(|U|)>\<subseteq\>V<text| and
+        >\<psi\>\<circ\>f\<circ\>\<varphi\><rsup|-1>:\<varphi\><around*|(|U|)>\<rightarrow\>\<psi\><around*|(|f<around*|(|U|)>|)><text|
+        is a diffeomorphism>
+      </equation*>
+
+      Hence we have by [definition: <reference|diff diffeomorphism>] that\ 
+
+      <\equation>
+        <text| ><label|eq 23.128.14>\<psi\>\<circ\>f\<circ\>\<varphi\><rsup|-1>:\<varphi\><around*|(|U|)>\<rightarrow\>\<bbb-R\><rsup|n><text|
+        is of class >C<rsup|q>
+      </equation>
+
+      and\ 
+
+      <\equation>
+        <label|eq 23.129.14><around*|(|\<psi\>\<circ\>f\<circ\>\<varphi\><rsup|-1>|)><rsup|-1>:\<psi\><around*|(|f<around*|(|U|)>|)>\<rightarrow\>\<bbb-R\><rsup|m><text|
+        is of class >C<rsup|q>
+      </equation>
+
+      As <math|p\<in\>U>, <math|<around*|(|U,\<varphi\>|)>\<in\>\<cal-A\><rsub|M>>,
+      <math|f<around*|(|p|)>\<in\>V>, <math|f<around*|(|U|)>\<subseteq\>V>
+      and <math|><math|\<psi\>\<circ\>f\<circ\>\<varphi\><rsup|-1>> is of
+      class <math|C<rsup|q>> [see eq: <reference|eq 23.128.14>] it follows
+      from [definition: <reference|manifold differentiable mappings>] that\ 
+
+      <\equation>
+        <label|eq 23.130.14>f:M\<rightarrow\>N<text| is a >C<rsup|q><text|
+        mapping>
+      </equation>
+
+      Using [lemma: <reference|lemma 23.81.14>] we have that
+      <math|<around*|(|\<psi\>\<circ\>f\<circ\>\<varphi\><rsup|-1>|)><rsup|-1>=\<varphi\>\<circ\>f<rsup|-1>\<circ\><around*|(|\<psi\><rsub|\|f<around*|(|U|)>>|)><rsup|-1>>
+      which combined with [eq: <reference|eq 23.129.14>] proves that
+
+      <\equation>
+        <label|eq 23.131.14>\<varphi\>\<circ\>f<rsup|-1>\<circ\><around*|(|\<psi\><rsub|\|f<around*|(|U|)>>|)><rsup|-1>:\<psi\><around*|(|f<around*|(|U|)>|)>\<rightarrow\>\<bbb-R\><rsup|m><text|
+        is of class >C<rsup|q>
+      </equation>
+
+      As <math|f> is a homeomorphism <math|f<around*|(|U|)>\<in\>\<cal-T\><rsub|N>>
+      and <math|<around*|(|V,\<psi\>|)>\<in\>\<cal-A\><rsub|N>> is follows
+      from [theorem: <reference|manifold maximum atlas and sub charts>] that
+
+      <\equation*>
+        <around*|(|f<around*|(|U|)>,\<psi\><rsub|\|f<around*|(|U|)>>|)><below|=|f<around*|(|U|)>\<subseteq\>V><around*|(|V<big|cap>f<around*|(|U|)>,\<psi\><rsub|\|V<big|cap>f<rsup|-1><around*|(|U|)>>|)>\<in\>\<cal-A\><rsub|N>
+      </equation*>
+
+      further we have <math|f<around*|(|p|)><below|\<in\>|p\<in\>U>f<around*|(|U|)>>,
+      <math|f<rsup|-1><around*|(|f<around*|(|p|)>|)>=p\<in\>U>,
+      <math|<around*|(|f<rsup|-1>|)><around*|(|f<around*|(|U|)>|)><below|=|<text|[function:
+      <reference|function inverse image preimage>]>>U> so that by
+      [definition: <reference|manifold differentiable mappings>] and [eq:
+      <reference|eq 23.131.14>]\ 
+
+      <\equation>
+        <label|eq 23.133.15>f<rsup|-1>:N\<rightarrow\>M<text| is a
+        >C<rsup|q><text| mapping>
+      </equation>
+
+      Finally using [eqs: <reference|eq 23.128.15>, <reference|eq 23.131.14>,
+      <reference|eq 23.133.15>] it follows by [definition:<reference|manifold
+      diffeomorphism>] that\ 
+
+      <\equation*>
+        f:M\<rightarrow\>N<text| is a diffeomorphism>
+      </equation*>
+    </description>
   </proof>
 
   \;
@@ -5559,16 +5746,27 @@
     <associate|eq 23.104.13|<tuple|23.114|?>>
     <associate|eq 23.105.13|<tuple|23.115|?>>
     <associate|eq 23.106.13|<tuple|23.116|?>>
-    <associate|eq 23.117.14|<tuple|23.117|?>>
-    <associate|eq 23.118.14|<tuple|23.118|?>>
-    <associate|eq 23.119.14|<tuple|23.119|?>>
-    <associate|eq 23.120.14|<tuple|23.120|?>>
-    <associate|eq 23.121.14|<tuple|23.121|?>>
-    <associate|eq 23.122.14|<tuple|23.122|?>>
-    <associate|eq 23.123.14|<tuple|23.123|?>>
-    <associate|eq 23.124.14|<tuple|23.124|?>>
-    <associate|eq 23.125.14|<tuple|23.125|?>>
+    <associate|eq 23.117.14|<tuple|23.121|?>>
+    <associate|eq 23.118.14|<tuple|23.122|?>>
+    <associate|eq 23.119.14|<tuple|23.123|?>>
+    <associate|eq 23.120.14|<tuple|23.124|?>>
+    <associate|eq 23.121.14|<tuple|23.125|?>>
+    <associate|eq 23.122.14|<tuple|23.126|?>>
+    <associate|eq 23.123.14|<tuple|23.127|?>>
+    <associate|eq 23.124.14|<tuple|23.128|?>>
+    <associate|eq 23.125.14|<tuple|23.129|?>>
+    <associate|eq 23.128.14|<tuple|23.129|?>>
+    <associate|eq 23.128.15|<tuple|23.128|?>>
+    <associate|eq 23.129.14|<tuple|23.130|?>>
     <associate|eq 23.13.3|<tuple|23.17|?>>
+    <associate|eq 23.130.14|<tuple|23.131|?>>
+    <associate|eq 23.131.14|<tuple|23.132|?>>
+    <associate|eq 23.132.14|<tuple|23.123|?>>
+    <associate|eq 23.133.14|<tuple|23.124|?>>
+    <associate|eq 23.133.15|<tuple|23.133|?>>
+    <associate|eq 23.134.14|<tuple|23.125|?>>
+    <associate|eq 23.135.14|<tuple|23.126|?>>
+    <associate|eq 23.136.14|<tuple|23.127|?>>
     <associate|eq 23.14.3|<tuple|23.18|?>>
     <associate|eq 23.15.2|<tuple|23.19|?>>
     <associate|eq 23.16.2|<tuple|23.20|?>>
@@ -5682,6 +5880,7 @@
     <associate|lemma 23.39.6|<tuple|23.43|?>>
     <associate|lemma 23.40.9|<tuple|23.47|?>>
     <associate|lemma 23.5.10|<tuple|23.5|?>>
+    <associate|lemma 23.81.14|<tuple|23.81|?>>
     <associate|manifold C^m C^n atlas|<tuple|23.41|?>>
     <associate|manifold C^m C^n compatible|<tuple|23.38|?>>
     <associate|manifold C^m C^n manifold|<tuple|23.59|?>>
@@ -5713,7 +5912,7 @@
     <associate|manifold cooridinate chart existence|<tuple|23.10|?>>
     <associate|manifold diffentiable atlas|<tuple|23.40|?>>
     <associate|manifold diffeomorphism|<tuple|23.79|?>>
-    <associate|manifold diffeomorphism equivalence|<tuple|23.81|?>>
+    <associate|manifold diffeomorphism equivalence|<tuple|23.82|?>>
     <associate|manifold diffeomorphism is a homeomorphism|<tuple|23.80|?>>
     <associate|manifold differentiability real function|<tuple|23.44|?>>
     <associate|manifold differentiability real function (1)|<tuple|23.46|?>>

@@ -3997,6 +3997,8 @@
       <\equation*>
         D=f<around*|(|f<rsup|-1><around*|(|D|)>|)>
       </equation*>
+
+      <item>As <math|f> is bijective <math|f> is injective\ 
     </enumerate>
   </proof>
 
@@ -4259,16 +4261,24 @@
     is a function. Hence <math|f<rsup|-1>:B\<rightarrow\>A> is a function.
   </proof>
 
+  TODO
+
   <\theorem>
     <label|function inverse image preimage>If <math|f:A\<rightarrow\>B> is a
     bijection then for <math|f<rsup|-1>:B\<rightarrow\>A> we have\ 
 
     <\enumerate>
-      <item>If <math|C\<subseteq\>A> then
-      <math|<around*|(|f<rsup|-1>|)><around*|(|C|)>=f<rsup|-1><around*|(|C|)>>.
+      <item>If <math|C\<subseteq\>B> then
+      <math|<around*|(|f<rsup|-1>|)><around*|(|C|)>=f<rsup|-1><around*|(|C|)>>
 
       <item>If <math|C\<subseteq\>B> then
-      <math|<around*|(|f<rsup|-1>|)><rsup|-1><around*|(|C|)>=f<around*|(|C|)>>
+      <math|C=f<around*|(|f<rsup|-1><around*|(|C|)>|)>=f<around*|(|<around*|(|f<rsup|-1>|)><around*|(|C|)>|)>>
+
+      <item>If <math|C\<subseteq\>A> then
+      <math|<around*|(|f<rsup|-1>|)><rsup|-1><around*|(|C|)>=f<around*|(|C|)>>\ 
+
+      <item>If <math|C\<subseteq\>A> then
+      <math|C=f<rsup|-1><around*|(|f<around*|(|C|)>|)>=<around*|(|f<rsup|-1>|)><around*|(|f<around*|(|C|)>|)>>
     </enumerate>
   </theorem>
 
@@ -4297,6 +4307,13 @@
         <around*|(|f<rsup|-1>|)><around*|(|C|)>=f<rsup|-1><around*|(|C|)>
       </equation*>
 
+      <item>As <math|f> is a bijection <math|f> is surjective so that
+
+      <\equation*>
+        C<below|=|<text|[theorem: <reference|function preimage of
+        image>]>>f<around*|(|f<rsup|-1><around*|(|C|)>|)><below|=|<around*|(|1|)>>f<around*|(|<around*|(|f<rsup|-1>|)><around*|(|C|)>|)>
+      </equation*>
+
       <item>Let <math|x\<in\><around*|(|f<rsup|-1>|)><rsup|-1><around*|(|C|)>>
       then there exist a <math|y\<in\>C> such that
       <math|<around*|(|x,y|)>\<in\>f<rsup|-1>> hence
@@ -4316,6 +4333,13 @@
 
       <\equation*>
         <around*|(|f<rsup|-1>|)><rsup|-1><around*|(|C|)>=f<around*|(|C|)>
+      </equation*>
+
+      <item>As <math|f> is a bijection <math|f> is injective so that\ 
+
+      <\equation*>
+        C<below|=|<text|[theorem: <reference|function preimage of
+        image>]>>f<rsup|-1><around*|(|f<around*|(|C|)>|)><below|=|<around*|(|3|)>><around*|(|f<rsup|-1>|)><around*|(|f<around*|(|C|)>|)>
       </equation*>
     </enumerate>
   </proof>
