@@ -5325,6 +5325,19 @@
     </enumerate>
   </definition>
 
+  <\definition>
+    <label|manifold diffeomorphic manifolds>Let <math|n,m\<in\>\<bbb-N\>>,
+    <math|q\<in\>\<bbb-N\><rsub|0><big|cup><around*|{|\<infty\>|}>>,
+    <math|\<cal-M\><rsup|m><around*|\<langle\>|M,\<cal-T\><rsub|M>,\<cal-A\><rsub|M>|\<rangle\>>>
+    a <math|m>-dimensional <math|C<rsup|q>> differentiabke manifold,
+    <math|\<cal-M\><rsup|n><around*|\<langle\>|N,\<cal-T\><rsub|N>,\<cal-A\><rsub|N>|\<rangle\>>>
+    a <math|n>-dimensional <math|C<rsup|q>> differentiable manifold then
+    <math|<rigid|\<cal-M\><rsup|m><around*|\<langle\>|M,\<cal-T\><rsub|M>,\<cal-A\><rsub|M>|\<rangle\>>>>
+    and <math|\<cal-M\><rsup|n><around*|\<langle\>|N,\<cal-T\><rsub|N>,\<cal-A\><rsub|N>|\<rangle\>>>
+    are <math|C<rsup|q>> diffeomorphic if there exist a <math|C<rsup|q>>
+    diffeomorphism <math|f:M\<rightarrow\>N> between them.
+  </definition>
+
   Just as a diffeormorphism between normed spaces is a homeomorphism [see
   theorem: <reference|diff diffeomorphism is a homeomorphism>] a
   diffeomorphism between differentiable manifolds is also a homeomorphism.
@@ -5484,8 +5497,6 @@
     </equation*>
   </proof>
 
-  TODO
-
   <\theorem>
     <label|manifold diffeomorphism equivalence>Let <math|n,m\<in\>\<bbb-N\>>,
     <math|q\<in\>\<bbb-N\><rsub|0><big|cup><around*|{|\<infty\>|}>>,
@@ -5519,13 +5530,13 @@
       <reference|manifold diffeomorphism is a homeomorphism>] that\ 
 
       <\equation>
-        <label|eq 23.130.14>f:M\<rightarrow\>N<text| is a homeomorphism>
+        <label|eq 23.121.16>f:M\<rightarrow\>N<text| is a homeomorphism>
       </equation>
 
       and by [definition: <reference|manifold diffeomorphism>] that\ 
 
       <\equation>
-        <label|eq 23.131.14>f:M\<rightarrow\>N<text| is a bijection >
+        <label|eq 23.122.16>f:M\<rightarrow\>N<text| is a bijection >
       </equation>
 
       and
@@ -5562,7 +5573,7 @@
         <label|eq 23.135.14><around*|(|\<psi\>\<circ\>f\<circ\>\<varphi\><rsup|-1>|)><rsup|-1>=\<varphi\>\<circ\>f<rsup|-1>\<circ\><around*|(|\<psi\><rsub|\|f<around*|(|U|)>>|)><rsup|-1>:\<psi\><around*|(|f<around*|(|U|)>|)>\<rightarrow\>\<varphi\><around*|(|U|)>
       </equation>
 
-      As <math|f> is a homeomorphism [see eq: <reference|eq 23.130.14>]
+      As <math|f> is a homeomorphism [see eq: <reference|eq 23.121.16>]
       <math|f<around*|(|U|)>\<in\>\<cal-T\><rsub|N>> so that by [theorem:
       <reference|manifold maximum atlas and sub charts>]
 
@@ -5574,7 +5585,7 @@
       [see eq: <reference|eq 23.132.14>] and
       <math|<around*|(|f<rsup|-1>|)><around*|(|f<around*|(|U|)>|)><below|=|<text|[eq:
       <reference|function inverse image preimage>]>>U>, <math|f<rsup|-1>> is
-      continuous [see eq: <reference|eq 23.130.14>],
+      continuous [see eq: <reference|eq 23.121.16>,
       <math|<around*|(|f<around*|(|U|)>,\<psi\><rsub|\|f<around*|(|U|)>>|)>\<in\>\<cal-A\><rsub|N>>
       \ and <math|<around*|(|U,\<varphi\>|)>\<in\>\<cal-A\><rsub|N>> it
       follows from \ [theorem: <reference|manifold C^m mappings equivalences
@@ -5656,7 +5667,7 @@
       which combined with [eq: <reference|eq 23.129.14>] proves that
 
       <\equation>
-        <label|eq 23.131.14>\<varphi\>\<circ\>f<rsup|-1>\<circ\><around*|(|\<psi\><rsub|\|f<around*|(|U|)>>|)><rsup|-1>:\<psi\><around*|(|f<around*|(|U|)>|)>\<rightarrow\>\<bbb-R\><rsup|m><text|
+        <label|eq 23.132.17>\<varphi\>\<circ\>f<rsup|-1>\<circ\><around*|(|\<psi\><rsub|\|f<around*|(|U|)>>|)><rsup|-1>:\<psi\><around*|(|f<around*|(|U|)>|)>\<rightarrow\>\<bbb-R\><rsup|m><text|
         is of class >C<rsup|q>
       </equation>
 
@@ -5673,21 +5684,186 @@
       <math|<around*|(|f<rsup|-1>|)><around*|(|f<around*|(|U|)>|)><below|=|<text|[function:
       <reference|function inverse image preimage>]>>U> so that by
       [definition: <reference|manifold differentiable mappings>] and [eq:
-      <reference|eq 23.131.14>]\ 
+      <reference|eq 23.132.17>]\ 
 
       <\equation>
         <label|eq 23.133.15>f<rsup|-1>:N\<rightarrow\>M<text| is a
         >C<rsup|q><text| mapping>
       </equation>
 
-      Finally using [eqs: <reference|eq 23.128.15>, <reference|eq 23.131.14>,
+      Finally using [eqs: <reference|eq 23.128.15>, <reference|eq 23.130.14>,
       <reference|eq 23.133.15>] it follows by [definition:<reference|manifold
       diffeomorphism>] that\ 
 
       <\equation*>
-        f:M\<rightarrow\>N<text| is a diffeomorphism>
+        f:M\<rightarrow\>N<text| is a >C<rsup|q><text| diffeomorphism>
       </equation*>
     </description>
+  </proof>
+
+  <\theorem>
+    <label|manifold diffeomorphism equivalence (1)>Let
+    <math|n,m\<in\>\<bbb-N\>>, <math|q\<in\>\<bbb-N\><rsub|0><big|cup><around*|{|\<infty\>|}>>,
+    <math|\<cal-M\><rsup|m><around*|\<langle\>|M,\<cal-T\><rsub|M>,\<cal-A\><rsub|M>|\<rangle\>>>
+    a <math|m>-dimensional <math|C<rsup|q>> differentiabke manifold,
+    <math|\<cal-M\><rsup|n><around*|\<langle\>|N,\<cal-T\><rsub|N>,\<cal-A\><rsub|N>|\<rangle\>>>
+    a <math|n>-dimensional <math|C<rsup|q>> differentiable manifold and
+    <math|f:M\<rightarrow\>N> a mapping then we have
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|>|<cell|f:M\<rightarrow\>N<text| is a
+      >C<rsup|q><text| >diffeomorphism>|<cell|>>|<row|<cell|>|<cell|\<Updownarrow\>>|<cell|>>|<row|<cell|>|<cell|f<text|
+      is a homeomorphism>>|<cell|>>|<row|<cell|>|<cell|and>|<cell|>>|<row|<cell|>|<cell|\<forall\><around*|(|U,\<varphi\>|)>\<in\>\<cal-A\><rsub|M>,\<forall\><around*|(|V,\<psi\>|)>\<in\>\<cal-A\><rsub|N><text|
+      with <math|f<around*|(|U|)>\<subseteq\>V>>>|<cell|>>|<row|<cell|>|<cell|<text|we
+      have that>>|<cell|>>|<row|<cell|>|<cell|\<psi\>\<circ\>f\<circ\>\<varphi\><rsup|-1>:\<varphi\><around*|(|U|)>\<rightarrow\>\<psi\><around*|(|f<around*|(|U|)>|)><text|
+      is a diffeomorphism of class >C<rsup|q>>|<cell|>>>>
+    </eqnarray*>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>As <math|f:M\<rightarrow\>N> is a
+      <math|C<rsup|q>> diffeomorphism we have that\ 
+
+      <\equation>
+        <label|eq 23.134.16>f:M\<rightarrow\>N<text| is a bijection >
+      </equation>
+
+      <\equation>
+        <label|eq 23.135.16>f:M\<rightarrow\>N<text| is a >C<rsup|q><text|
+        mapping and >f<rsup|-1>:N\<rightarrow\>M<text| is a >C<rsup|q><text|
+        mapping>
+      </equation>
+
+      Further using [theorem: <reference|manifold diffeomorphism is a
+      homeomorphism>] it follows that\ 
+
+      <\equation>
+        <label|eq 23.136.16>f:M\<rightarrow\>N<text| is a homeomorphism>
+      </equation>
+
+      Let <math|<around*|(|U,\<varphi\>|)>\<in\>\<cal-A\><rsub|M>>,
+      <math|<around*|(|V,\<psi\>|)>\<in\>\<cal-A\><rsub|N>> with
+      <math|f<around*|(|U|)>\<subseteq\>V> then using [theorem:
+      <reference|manifold C^m mappings equivalences (1)>] on [eq:
+      <reference|eq 23.135.16>] it follows that\ 
+
+      <\equation>
+        <label|eq 23.137.16>\<psi\>\<circ\>f\<circ\>\<varphi\><rsup|-1>:\<varphi\><around*|(|U|)>\<rightarrow\>\<bbb-R\><rsup|n><text|
+        is a >C<rsup|q><text| mapping>
+      </equation>
+
+      Using [lemma: <reference|lemma 23.81.14>] it follows that\ 
+
+      <\equation>
+        <label|eq 23.138.16>\<psi\>\<circ\>f\<circ\>\<varphi\><rsup|-1>:\<varphi\><around*|(|U|)>\<rightarrow\>\<psi\><around*|(|f<around*|(|U|)>|)><text|
+        is a bijection >
+      </equation>
+
+      with inverse\ 
+
+      <\equation>
+        <label|eq 23.139.16><around*|(|\<psi\>\<circ\>f\<circ\>\<varphi\><rsup|-1>|)><rsup|-1>=\<varphi\>\<circ\>f<rsup|-1>\<circ\><around*|(|\<psi\><rsub|\|f<around*|(|U|)>>|)><rsup|-1>:\<psi\><around*|(|f<around*|(|U|)>|)>\<rightarrow\>\<varphi\><around*|(|U|)>
+      </equation>
+
+      As <math|f> is a homeomorphism [see eq: <reference|eq 23.136.16>]
+      <math|f<around*|(|U|)>\<in\>\<cal-T\><rsub|N>> so that by [theorem:
+      <reference|manifold maximum atlas and sub charts>]\ 
+
+      <\equation*>
+        <around*|(|f<around*|(|U|)>,\<psi\><rsub|\|f<around*|(|U|)>>|)><below|=|f<around*|(|U|)>\<subseteq\>V><around*|(|V<big|cap>f<around*|(|U|)>,\<varphi\><rsub|\|V<big|cap>f<around*|(|U|)>>|)>\<in\>\<cal-A\><rsub|N>
+      </equation*>
+
+      Using the fact that <math|f<rsup|-1>:N\<rightarrow\>M> is a
+      <math|C<rsup|q>> mapping [see eq: <reference|eq 23.135.16>],
+      <math|<around*|(|U.\<varphi\>|)>\<in\>\<cal-A\><rsub|M>>,
+      <math|<rigid|<around*|(|f<around*|(|U|)>,\<psi\><rsub|\|f<around*|(|U|)>>|)>\<in\>\<cal-A\><rsub|N>>>
+      and <math|<around*|(|f<rsup|-1>|)><around*|(|f<around*|(|U|)>|)>=U> it
+      follows from [theorem: <reference|manifold C^m mappings equivalences
+      (1)>] that
+
+      <\equation*>
+        \<varphi\>\<circ\>f<rsup|-1>\<circ\><around*|(|\<psi\><rsub|\|f<around*|(|U|)>>|)><rsup|-1>:\<psi\><around*|(|f<around*|(|U|)>|)>\<rightarrow\>\<bbb-R\><rsup|m><text|
+        is of class >C<rsup|q>
+      </equation*>
+
+      As by [eq: <reference|eq 23.139.16>]
+      <math|<around*|(|\<psi\>\<circ\>f\<circ\>\<varphi\><rsup|-1>|)><rsup|-1>=\<varphi\>\<circ\>f<rsup|-1>\<circ\><around*|(|\<psi\><rsub|\|f<around*|(|U|)>>|)><rsup|-1>>
+      it follows that\ 
+
+      <\equation*>
+        <around*|(|\<psi\>\<circ\>f\<circ\>\<varphi\><rsup|-1>|)><rsup|-1>:\<psi\><around*|(|f<around*|(|U|)>|)>\<rightarrow\>\<bbb-R\><rsup|m><text|
+        is of class >C<rsup|q>
+      </equation*>
+
+      Combining the above with [eqs: <reference|eq 23.137.16>, <reference|eq
+      23.138.16>] proves by [definition: <reference|diff diffeomorphism>]
+      that\ 
+
+      <\equation*>
+        \<psi\>\<circ\>f\<circ\>\<varphi\><rsup|-1>:\<varphi\><around*|(|U|)>\<rightarrow\>\<psi\><around*|(|f<around*|(|U|)>|)><text|
+        is a diffeomorphism of class >C<rsup|q>
+      </equation*>
+
+      <item*|<math|\<Leftarrow\>>>Let <math|p\<in\>M> then
+      <math|f<around*|(|p|)>\<in\>N> so that, as <math|\<cal-A\><rsub|M>> is
+      a <math|C<rsup|q>> atlas on <math|<around*|\<langle\>|M,\<cal-T\><rsub|M>|\<rangle\>>>
+      and <math|\<cal-A\><rsub|N>> is a <math|C<rsup|q>> atlas on
+      <math|<around*|\<langle\>|N,\<cal-T\><rsub|N>|\<rangle\>>> there exist
+      a <math|<around*|(|U,\<varphi\>|)>\<in\>\<cal-A\><rsub|M>> with
+      <math|p\<in\>U> and a <math|<around*|(|V,\<psi\>|)>\<in\>\<cal-A\><rsub|N>>
+      with <math|f<around*|(|p|)>\<in\>V>. As <math|f> is assumed to be a
+      homeomorphism <math|f<rsup|-1><around*|(|V|)>\<in\>\<cal-T\><rsub|M>>
+      so that by [theorem: <reference|manifold maximum atlas and sub charts>]
+
+      <\equation*>
+        <around*|(|U<big|cap>f<rsup|-1><around*|(|V|)>,\<varphi\><rsub|\|U<big|cap>f<rsup|-1><around*|(|V|)>>|)>\<in\>\<cal-A\><rsub|M>
+      </equation*>
+
+      Let <math|<around*|(|W,\<gamma\>|)>=<around*|(|U<big|cap>f<rsup|-1><around*|(|V|)>,\<varphi\><rsub|\|U<big|cap>f<rsup|-1><around*|(|V|)>>|)>>
+      then as <math|f<around*|(|p|)>\<in\>V\<Rightarrow\>p\<in\>f<rsup|-1><around*|(|V|)><below|=|p\<in\>U>p\<in\>U<big|cap>f<rsup|-1><around*|(|V|)>>
+      and <math|f<around*|(|U<big|cap>f<rsup|-1><around*|(|V|)>|)>\<subseteq\>f<around*|(|f<rsup|-1><around*|(|V|)>|)>\<subseteq\>V>
+      so that
+
+      <\equation*>
+        <around*|(|W,\<gamma\>|)>\<in\>\<cal-A\><rsub|M><text|,
+        >p\<in\>W<text| and >f<around*|(|W|)>\<subseteq\>V
+      </equation*>
+
+      Hence we have by the hypothesis that\ 
+
+      <\equation*>
+        \<psi\>\<circ\>f\<circ\>\<gamma\><rsup|-1>:\<gamma\><around*|(|W|)>\<rightarrow\>\<psi\><around*|(|f<around*|(|W|)>|)><text|
+        is a diffeomorphism of class >C<rsup|q>
+      </equation*>
+
+      As this is true for every <math|p\<in\>M> it follows from [theorem:
+      <reference|manifold diffeomorphism equivalence>] that
+
+      <\equation*>
+        f:M\<rightarrow\>N<text| is a >C<rsup|q><text| diffeomorphism>
+      </equation*>
+    </description>
+  </proof>
+
+  If two differentiable mainfolds are <math|C<rsup|q>> diffemorphic then they
+  have the same dimension.
+
+  <\theorem>
+    <label|manifold diffeomorphic manifolds have the same dimension>Let
+    <math|n,m\<in\>\<bbb-N\>>, <math|q\<in\>\<bbb-N\><big|cup><around*|{|\<infty\>|}>>
+    [so that <math|1\<leqslant\>q>], <math|\<cal-M\><rsup|m><around*|\<langle\>|M,\<cal-T\><rsub|M>,\<cal-A\><rsub|M>|\<rangle\>>>
+    a <math|m>-dimensional <math|C<rsup|q>> differentiable manifold that is
+    <math|C<rsup|q>> diffeomorphic with <math|\<cal-M\><rsup|n><around*|\<langle\>|N,\<cal-T\><rsub|N>,\<cal-A\><rsub|N>|\<rangle\>>>
+    a <math|n>-dimensional <math|C<rsup|q>> differentiable manifold then
+    <math|n=m>. In othere words diffeomorphic manifolds have the same
+    dimension.
+  </theorem>
+
+  <\proof>
+    \;
   </proof>
 
   \;
@@ -5746,15 +5922,12 @@
     <associate|eq 23.104.13|<tuple|23.114|?>>
     <associate|eq 23.105.13|<tuple|23.115|?>>
     <associate|eq 23.106.13|<tuple|23.116|?>>
-    <associate|eq 23.117.14|<tuple|23.121|?>>
-    <associate|eq 23.118.14|<tuple|23.122|?>>
-    <associate|eq 23.119.14|<tuple|23.123|?>>
-    <associate|eq 23.120.14|<tuple|23.124|?>>
-    <associate|eq 23.121.14|<tuple|23.125|?>>
-    <associate|eq 23.122.14|<tuple|23.126|?>>
-    <associate|eq 23.123.14|<tuple|23.127|?>>
-    <associate|eq 23.124.14|<tuple|23.128|?>>
-    <associate|eq 23.125.14|<tuple|23.129|?>>
+    <associate|eq 23.117.14|<tuple|23.117|?>>
+    <associate|eq 23.118.14|<tuple|23.118|?>>
+    <associate|eq 23.119.14|<tuple|23.119|?>>
+    <associate|eq 23.120.14|<tuple|23.120|?>>
+    <associate|eq 23.121.16|<tuple|23.121|?>>
+    <associate|eq 23.122.16|<tuple|23.122|?>>
     <associate|eq 23.128.14|<tuple|23.129|?>>
     <associate|eq 23.128.15|<tuple|23.128|?>>
     <associate|eq 23.129.14|<tuple|23.130|?>>
@@ -5762,11 +5935,18 @@
     <associate|eq 23.130.14|<tuple|23.131|?>>
     <associate|eq 23.131.14|<tuple|23.132|?>>
     <associate|eq 23.132.14|<tuple|23.123|?>>
+    <associate|eq 23.132.17|<tuple|23.132|?>>
     <associate|eq 23.133.14|<tuple|23.124|?>>
     <associate|eq 23.133.15|<tuple|23.133|?>>
     <associate|eq 23.134.14|<tuple|23.125|?>>
+    <associate|eq 23.134.16|<tuple|23.134|?>>
     <associate|eq 23.135.14|<tuple|23.126|?>>
+    <associate|eq 23.135.16|<tuple|23.135|?>>
     <associate|eq 23.136.14|<tuple|23.127|?>>
+    <associate|eq 23.136.16|<tuple|23.136|?>>
+    <associate|eq 23.137.16|<tuple|23.137|?>>
+    <associate|eq 23.138.16|<tuple|23.138|?>>
+    <associate|eq 23.139.16|<tuple|23.139|?>>
     <associate|eq 23.14.3|<tuple|23.18|?>>
     <associate|eq 23.15.2|<tuple|23.19|?>>
     <associate|eq 23.16.2|<tuple|23.20|?>>
@@ -5880,7 +6060,7 @@
     <associate|lemma 23.39.6|<tuple|23.43|?>>
     <associate|lemma 23.40.9|<tuple|23.47|?>>
     <associate|lemma 23.5.10|<tuple|23.5|?>>
-    <associate|lemma 23.81.14|<tuple|23.81|?>>
+    <associate|lemma 23.81.14|<tuple|23.82|?>>
     <associate|manifold C^m C^n atlas|<tuple|23.41|?>>
     <associate|manifold C^m C^n compatible|<tuple|23.38|?>>
     <associate|manifold C^m C^n manifold|<tuple|23.59|?>>
@@ -5911,9 +6091,14 @@
     <associate|manifold cooridinate chart|<tuple|23.3|?>>
     <associate|manifold cooridinate chart existence|<tuple|23.10|?>>
     <associate|manifold diffentiable atlas|<tuple|23.40|?>>
+    <associate|manifold diffeomorphic manifolds|<tuple|23.80|?>>
+    <associate|manifold diffeomorphic manifolds have the same
+    dimension|<tuple|23.85|?>>
     <associate|manifold diffeomorphism|<tuple|23.79|?>>
-    <associate|manifold diffeomorphism equivalence|<tuple|23.82|?>>
-    <associate|manifold diffeomorphism is a homeomorphism|<tuple|23.80|?>>
+    <associate|manifold diffeomorphism C^m C^n|<tuple|23.81|?>>
+    <associate|manifold diffeomorphism equivalence|<tuple|23.83|?>>
+    <associate|manifold diffeomorphism equivalence (1)|<tuple|23.84|?>>
+    <associate|manifold diffeomorphism is a homeomorphism|<tuple|23.81|?>>
     <associate|manifold differentiability real function|<tuple|23.44|?>>
     <associate|manifold differentiability real function (1)|<tuple|23.46|?>>
     <associate|manifold differentiability real function (2)|<tuple|23.56|?>>
