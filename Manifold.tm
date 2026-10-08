@@ -2058,7 +2058,7 @@
   exist a coordinate chart <math|<around*|(|U,\<varphi\>|)>> such that
   <math|m\<in\>U>. As <math|\<varphi\>:U\<rightarrow\>\<varphi\><around*|(|U|)>>
   is a homeomorphism and <math|\<varphi\><around*|(|U|)>> is open we can
-  consider the function <math|f\<circ\>\<varphi\><rsup|-1>:\<varphi\><around*|(|U|)>\<rightarrow\>\<infty\>>
+  consider the function <math|f\<circ\>\<varphi\><rsup|-1>:\<varphi\><around*|(|U|)>\<rightarrow\>\<bbb-R\>>
   and see if this function is of class <math|C<rsup|m>>. If so we can say
   that <math|f> is of class <math|C<rsup|m>> at <math|m>. However if we use
   this as a definition then <math|C<rsup|m>> differentiability at <math|m> is
@@ -2133,8 +2133,8 @@
     homeomorphism and restriction (1)>] it follows that\ 
 
     <\equation*>
-      <around*|(|\<varphi\><rsup|-1>|)><rsub|\|\<varphi\><around*|(|U<big|cap>V|)>>:\<varphi\><around*|(|U<big|cap>V|)>\<rightarrow\>\<varphi\><rsup|-1><around*|(|\<varphi\><around*|(|U<big|cap>V|)>|)><below|=|<text|[theorem:
-      <reference|function preimage of image>]>>U<big|cap>V<text| is a
+      <around*|(|\<varphi\><rsup|-1>|)><rsub|\|\<varphi\><around*|(|U<big|cap>V|)>>:\<varphi\><around*|(|U<big|cap>V|)>\<rightarrow\><around*|(|\<varphi\><rsup|-1>|)><around*|(|\<varphi\><around*|(|U<big|cap>V|)>|)><below|=|<text|[theorem:
+      <reference|function inverse image preimage>]>>U<big|cap>V<text| is a
       homeomorphism>
     </equation*>
 
@@ -3917,8 +3917,6 @@
     <\equation*>
       <around*|(|\<cal-A\><rsub|\|U>|)><rsup|<around*|{|m|}>>=\<cal-A\>
     </equation*>
-
-    \;
   </proof>
 
   <section|Differential mappings between manifolds>
@@ -3932,7 +3930,7 @@
     between manifolds>Let <math|n,m\<in\>\<bbb-N\>>,
     <math|r\<in\>\<bbb-N\><rsub|0><big|cup><around*|{|\<infty\>|}>>,
     <math|\<cal-M\><rsup|m><around*|\<langle\>|M,\<cal-T\><rsub|M>,\<cal-A\><rsub|M>|\<rangle\>>>
-    a <math|nm>-dimensional <math|C<rsup|r>> differentiable manifold,
+    a <math|m>-dimensional <math|C<rsup|r>> differentiable manifold,
     <math|\<cal-M\><rsup|n><around*|\<langle\>|N,\<cal-T\><rsub|N>,\<cal-A\><rsub|N>|)>>
     a <math|n>-dimensional <math|C<rsup|r>> differentiable manifold and
     <math|f:M\<rightarrow\>N> a function then <math|f> is a <math|C<rsup|r>>
@@ -3948,11 +3946,18 @@
     </equation*>
 
     <\note>
-      As <math|\<varphi\><rsup|-1><around*|(|\<varphi\><around*|(|U|)>|)>=U\<subseteq\>M>
-      it follows from [theorem: <reference|function composition of functions
-      is a fucntion (1)>] that <math|f\<circ\>\<varphi\><rsup|-1>:\<varphi\><around*|(|U|)>\<rightarrow\>N>
+      As <math|<around*|(|\<varphi\><rsup|-1>|)><around*|(|\<varphi\><around*|(|U|)>|)><below|=|<text|[theorem:
+      <reference|function inverse image preimage>]>>U\<subseteq\>M> it
+      follows from [theorem: <reference|function composition of functions is
+      a fucntion (1)>] that <math|<rigid|f\<circ\>\<varphi\><rsup|-1>:\<varphi\><around*|(|U|)>\<rightarrow\>N>>
       is a well defined function. Further as
-      <math|<around*|(|f\<circ\>\<varphi\><rsup|-1>|)><around*|(|\<varphi\><around*|(|U|)>|)>=f<around*|(|\<varphi\><rsup|-1><around*|(|\<varphi\><around*|(|U|)>|)>|)>=f<around*|(|U|)>\<subseteq\>V>
+
+      <\equation*>
+        <around*|(|f\<circ\>\<varphi\><rsup|-1>|)><around*|(|\<varphi\><around*|(|U|)>|)>=f<around*|(|<around*|(|\<varphi\><rsup|-1>|)><around*|(|\<varphi\><around*|(|U|)>|)>|)><below|=|<text|[theorem:
+        <reference|function inverse image
+        preimage>]>>f<around*|(|U|)>\<subseteq\>V
+      </equation*>
+
       it follows from [theorem: <reference|function composition of functions
       is a fucntion (1)>] that <math|\<psi\>\<circ\>f\<circ\>\<varphi\><rsup|-1>=\<psi\>\<circ\><around*|(|f\<circ\>\<varphi\><rsup|-1>|)>:\<varphi\><around*|(|U|)>\<rightarrow\>\<bbb-R\><rsup|n>>
       is a well defined function.
@@ -4006,7 +4011,8 @@
     is continuous. Further\ 
 
     <\equation*>
-      <around*|(|\<psi\>\<circ\>f\<circ\>\<varphi\><rsup|-1>|)><around*|(|\<varphi\><around*|(|U|)>|)>=\<psi\><around*|(|f<around*|(|\<varphi\><around*|(|\<varphi\><rsup|-1><around*|(|U|)>|)>|)>|)>=\<psi\><around*|(|f<around*|(|U|)>|)>\<subseteq\>\<psi\><around*|(|V|)>
+      <around*|(|\<psi\>\<circ\>f\<circ\>\<varphi\><rsup|-1>|)><around*|(|\<varphi\><around*|(|U|)>|)>=\<psi\><around*|(|f<around*|(|\<varphi\><around*|(|<around*|(|\<varphi\><rsup|-1>|)><around*|(|U|)>|)>|)>|)><below|=|<text|[theorem:
+      <reference|function inverse image preimage>]>>\<psi\><around*|(|f<around*|(|U|)>|)>\<subseteq\>\<psi\><around*|(|V|)>
     </equation*>
 
     so that by [theorem: <reference|continuity composition>]\ 
@@ -4038,8 +4044,6 @@
   We have the following equivalent definitions of a <math|C<rsup|r>> mapping
   between manifolds.
 
-  TODO check this
-
   <\theorem>
     <label|manifold C^m mappings equivalences (1)>Let
     <math|n,m\<in\>\<bbb-N\>>, <math|r\<in\>\<bbb-N\><rsub|0><big|cup><around*|{|\<infty\>|}>>,
@@ -4061,9 +4065,9 @@
         is of class >C<rsup|r>
       </equation*>
 
-      <item><math|f> is continuous and there exist a
-      <math|C<rsup|r><rsup|>>atlas <math|\<cal-B\><rsub|M>\<subseteq\>\<cal-A\><rsub|M>>
-      on <math|<around*|\<langle\>|M,\<cal-T\><rsub|M>|\<rangle\>>> and a
+      <item><math|f> is continuous and there exist a <math|C<rsup|r><rsup|>>
+      atlas <math|\<cal-B\><rsub|M>\<subseteq\>\<cal-A\><rsub|M>> on
+      <math|<around*|\<langle\>|M,\<cal-T\><rsub|M>|\<rangle\>>> and a
       <math|C<rsup|r>> atlas <math|\<cal-B\><rsub|N>\<subseteq\>\<cal-A\><rsub|N>>
       such that <math|\<forall\><around*|(|U,\<varphi\>|)>\<in\>\<cal-B\><rsub|M>>,
       <math|\<forall\><around*|(|V,\<psi\>|)>\<in\>\<cal-B\><rsub|N>> with
@@ -4076,12 +4080,14 @@
     </enumerate>
 
     <\note>
-      As <math|<around*|(|\<varphi\><rsup|-1>|)><around*|(|\<varphi\><around*|(|U|)>|)>=U\<subseteq\>M>
+      As <math|<around*|(|\<varphi\><rsup|-1>|)><around*|(|\<varphi\><around*|(|U|)>|)><below|=|<text|[theorem:
+      <reference|function inverse image preimage>]>>U\<subseteq\>M>
       <math|f\<circ\>\<varphi\><rsup|-1>:\<varphi\><around*|(|Y|)>\<rightarrow\>M>
       is a valid function [see theorem: <reference|function composition of
       functions is a fucntion (1)>]. Further
-      <math|<around*|(|f\<circ\>\<varphi\><rsup|-1>|)><around*|(|\<varphi\><around*|(|U|)>|)>=f<around*|(|<around*|(|\<varphi\><rsup|-1>|)><around*|(|\<varphi\><around*|(|U|)>|)>|)>=f<around*|(|U|)>\<subseteq\>V>
-      so that \ <math|\<psi\>\<circ\>f\<circ\>\<varphi\><rsup|-1>:\<varphi\><around*|(|U|)>\<rightarrow\>\<bbb-R\><rsup|n>>
+      <math|<around*|(|f\<circ\>\<varphi\><rsup|-1>|)><around*|(|\<varphi\><around*|(|U|)>|)>=f<around*|(|<around*|(|\<varphi\><rsup|-1>|)><around*|(|\<varphi\><around*|(|U|)>|)>|)><below|=|<text|[theorem:
+      <reference|function inverse image preimage>]>>f<around*|(|U|)>\<subseteq\>V>
+      so that \ <rigid|<math|\<psi\>\<circ\>f\<circ\>\<varphi\><rsup|-1>:\<varphi\><around*|(|U|)>\<rightarrow\>\<bbb-R\><rsup|n>>>
       is a well defined function.
     </note>
   </theorem>
@@ -4178,7 +4184,7 @@
       <math|V<big|cap>V<rprime|'>\<neq\>\<varnothing\>> so that\ 
 
       <\equation*>
-        \<psi\>\<circ\><around*|(|\<psi\><rprime|'>|)><rsup|-1>:\<psi\><rprime|'><around*|(|V<big|cap>V<rprime|'>|)>=\<psi\><rprime|'><around*|(|X|)>\<rightarrow\>\<psi\><around*|(|X|)><text|
+        \<psi\>\<circ\><around*|(|\<psi\><rprime|'>|)><rsup|-1>:\<psi\><rprime|'><around*|(|V<big|cap>V<rprime|'>|)>=\<psi\><rprime|'><around*|(|X|)>\<rightarrow\>\<psi\><around*|(|V<big|cap>V<rprime|'>|)>=\<psi\><around*|(|X|)><text|
         is a diffeomorphism of class >C<rsup|r>
       </equation*>
 
@@ -4192,9 +4198,13 @@
       Now\ 
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|<around*|(|<around*|(|\<psi\><rprime|'>\<circ\>f\<circ\><around*|(|\<varphi\><rprime|'>|)><rsup|-1>|)><rsub|\|\<varphi\><rprime|'><around*|(|W|)>>\<circ\><around*|(|\<varphi\><rprime|'>\<circ\>\<varphi\><rsup|-1>|)>|)><around*|(|\<varphi\><around*|(|W|)>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|\<psi\><rprime|'>\<circ\>f\<circ\><around*|(|\<varphi\><rprime|'>|)><rsup|-1>|)><rsub|\|\<varphi\><rprime|'><around*|(|W|)>><around*|(|<around*|(|\<varphi\><rprime|'>\<circ\>\<varphi\><rsup|-1>|)><around*|(|\<varphi\><around*|(|W|)>|)>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|\<psi\><rprime|'>\<circ\>f\<circ\><around*|(|\<varphi\><rprime|'>|)><rsup|-1>|)><rsub|\|\<varphi\><rprime|'><around*|(|W|)>><around*|(|\<varphi\><rprime|'><around*|(|\<varphi\><rsup|-1><around*|(|\<varphi\><around*|(|W|)>|)>|)>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|\<psi\><rprime|'>\<circ\>f\<circ\><around*|(|\<varphi\><rprime|'>|)><rsup|-1>|)><rsub|\|\<varphi\><rprime|'><around*|(|W|)>><around*|(|\<varphi\><rprime|'><around*|(|W|)>|)>>|<cell|<below|=|<text|[theorem:
+        <tformat|<table|<row|<cell|<around*|(|<around*|(|\<psi\><rprime|'>\<circ\>f\<circ\><around*|(|\<varphi\><rprime|'>|)><rsup|-1>|)><rsub|\|\<varphi\><rprime|'><around*|(|W|)>>\<circ\><around*|(|\<varphi\><rprime|'>\<circ\>\<varphi\><rsup|-1>|)>|)><around*|(|\<varphi\><around*|(|W|)>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|\<psi\><rprime|'>\<circ\>f\<circ\><around*|(|\<varphi\><rprime|'>|)><rsup|-1>|)><rsub|\|\<varphi\><rprime|'><around*|(|W|)>><around*|(|<around*|(|\<varphi\><rprime|'>\<circ\>\<varphi\><rsup|-1>|)><around*|(|\<varphi\><around*|(|W|)>|)>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|\<psi\><rprime|'>\<circ\>f\<circ\><around*|(|\<varphi\><rprime|'>|)><rsup|-1>|)><rsub|\|\<varphi\><rprime|'><around*|(|W|)>><around*|(|\<varphi\><rprime|'><around*|(|<around*|(|\<varphi\><rsup|-1>|)><around*|(|\<varphi\><around*|(|W|)>|)>|)>|)>>|<cell|<below|=|<text|[theorem:
+        <reference|function inverse image
+        preimage>]>>>|<cell|>>|<row|<cell|<around*|(|\<psi\><rprime|'>\<circ\>f\<circ\><around*|(|\<varphi\><rprime|'>|)><rsup|-1>|)><rsub|\|\<varphi\><rprime|'><around*|(|W|)>><around*|(|\<varphi\><rprime|'><around*|(|W|)>|)>>|<cell|<below|=|<text|[theorem:
         <reference|function restricted function
-        properties>]>>>|<cell|>>|<row|<cell|<around*|(|\<psi\><rprime|'>\<circ\>f\<circ\><around*|(|\<varphi\><rprime|'>|)><rsup|-1>|)><around*|(|\<varphi\><rprime|'><around*|(|W|)>|)>>|<cell|=>|<cell|>>|<row|<cell|\<psi\><rprime|'><around*|(|f<around*|(|<around*|(|\<varphi\><rprime|'>|)><rsup|-1><around*|(|\<varphi\><rprime|'><around*|(|W|)>|)>|)>|)>>|<cell|=>|<cell|>>|<row|<cell|\<psi\><rprime|'><around*|(|f<around*|(|W|)>|)>>|<cell|<below|\<subseteq\>|<text|[eq:
+        properties>]>>>|<cell|>>|<row|<cell|<around*|(|\<psi\><rprime|'>\<circ\>f\<circ\><around*|(|\<varphi\><rprime|'>|)><rsup|-1>|)><around*|(|\<varphi\><rprime|'><around*|(|W|)>|)>>|<cell|=>|<cell|>>|<row|<cell|\<psi\><rprime|'><around*|(|f<around*|(|<around*|(|\<varphi\><rprime|'>|)><rsup|-1><around*|(|\<varphi\><rprime|'><around*|(|W|)>|)>|)>|)>>|<cell|<below|=|<text|[theorem:
+        <reference|function inverse image
+        preimage>]>>>|<cell|>>|<row|<cell|\<psi\><rprime|'><around*|(|f<around*|(|W|)>|)>>|<cell|<below|\<subseteq\>|<text|[eq:
         <reference|eq 23.70.14>]>>>|<cell|>>|<row|<cell|\<psi\><rprime|'><around*|(|X|)>>|<cell|>|<cell|>>>>
       </eqnarray*>
 
@@ -4267,24 +4277,29 @@
 
       <\equation>
         <label|eq 23.78.14>\<forall\>*<around*|(|U,\<varphi\>|)>\<in\>\<cal-B\><rsub|M>,\<forall\><around*|(|V,\<psi\>|)>\<in\>\<cal-B\><rsub|N><text|
-        with >f<around*|(|U|)>\<subseteq\>V<text|
-        >\<psi\>\<circ\>f\<circ\>\<varphi\><rsup|-1>:\<varphi\><around*|(|U|)>\<rightarrow\>\<bbb-R\><rsup|n><text|
+        with >f<around*|(|U|)>\<subseteq\>V<text|<space|1em>>\<psi\>\<circ\>f\<circ\>\<varphi\><rsup|-1>:\<varphi\><around*|(|U|)>\<rightarrow\>\<bbb-R\><rsup|n><text|
         is of class >C<rsup|r>
       </equation>
 
-      Let <math|p\<in\>M> then as <math|\<cal-B\><rsub|M>> is a atlas there
-      exist a <math|<around*|(|U,\<varphi\>|)>\<in\>\<cal-B\><rsub|M>\<subseteq\>\<cal-A\><rsub|M>>
-      such that <math|p\<in\>U>, as <math|f<around*|(|p|)>\<in\>N> there
-      exist a <math|<around*|(|V,\<psi\>|)>\<in\>\<cal-B\><rsub|N>\<subseteq\>\<cal-A\><rsub|N>>
+      Let <math|p\<in\>M> then as <math|\<cal-B\><rsub|M>> is
+      <math|C<rsup|r>> a atlas there exist a
+      <math|<around*|(|U,\<varphi\>|)>\<in\>\<cal-B\><rsub|M>\<subseteq\>\<cal-A\><rsub|M>>
+      such that <math|p\<in\>U>, likewise, as <math|f<around*|(|p|)>\<in\>N>,
+      there exist a <math|<around*|(|V,\<psi\>|)>\<in\>\<cal-B\><rsub|N>\<subseteq\>\<cal-A\><rsub|N>>
       with <math|f<around*|(|p|)>\<in\>V>. As <math|f> is continuous
       <math|f<rsup|-1><around*|(|V|)>\<in\>\<cal-T\><rsub|M>> so that
       <math|U<big|cap>f<rsup|-1><around*|(|V|)>\<in\>\<cal-T\><rsub|M>>.
-      Using [theorem: <reference|manifold maximum atlas and sub charts>]
-      <math|<around*|(|U<big|cap>f<rsup|-1><around*|(|V|)>,\<varphi\><rsub|\|U<big|cap>f<rsup|-1><around*|(|V|)>>|)>\<in\>\<cal-A\><rsub|M>>.
+      Using [theorem: <reference|manifold maximum atlas and sub charts>] it
+      follows
+
+      <\equation*>
+        <around*|(|U<big|cap>f<rsup|-1><around*|(|V|)>,\<varphi\><rsub|\|U<big|cap>f<rsup|-1><around*|(|V|)>>|)>\<in\>\<cal-A\><rsub|M>.
+      </equation*>
+
       Take <math|<rigid|<around*|(|W,\<gamma\>|)>=<around*|(|U<big|cap>f<rsup|-1><around*|(|V|)>,\<varphi\><rsub|\|U<big|cap>f<rsup|-1><around*|(|V|)>>|)>>>
       then <math|<around*|(|W,\<gamma\>|)>\<in\>\<cal-T\><rsub|M>>,
-      <math|p\<in\>W> <rigid|[as <math|p\<in\>U>,
-      <math|f<around*|(|p|)>\<in\>V\<Rightarrow\>p\<in\>f<rsup|-1><around*|(|V|)>>]>
+      <math|p\<in\>W> [as <math|p\<in\>U>,
+      <math|f<around*|(|p|)>\<in\>V\<Rightarrow\><rigid|p\<in\>f<rsup|-1><around*|(|V|)>>>]
       and <math|f<around*|(|W|)>=f<around*|(|U<big|cap>f<rsup|-1><around*|(|V|)>|)>\<subseteq\>f<around*|(|f<rsup|-1><around*|(|V|)>|)>\<subseteq\>V>.
       Hence using [eq: <reference|eq 23.78.14>]\ 
 
@@ -4346,13 +4361,14 @@
     </enumerate>
 
     <\note>
-      As <math|\<varphi\><rsup|-1><around*|(|\<varphi\><around*|(|U<big|cap>f<rsup|-1><around*|(|V|)>|)>|)>=U<big|cap>f<rsup|-1><around*|(|V|)>\<subseteq\>M>
+      As <math|<around*|(|\<varphi\><rsup|-1>|)><around*|(|\<varphi\><around*|(|U<big|cap>f<rsup|-1><around*|(|V|)>|)>|)><below|=|<text|[theorem:
+      <reference|function inverse image preimage>]>>U<big|cap>f<rsup|-1><around*|(|V|)>\<subseteq\>M>
       it follows from [theorem: <reference|function composition of functions
       is a fucntion (1)>] that <math|f\<circ\>\<varphi\><rsup|-1>:\<varphi\><around*|(|U<big|cap>f<rsup|-1><around*|(|V|)>|)>\<rightarrow\>N>
       is a well defined function. Further as
 
       <\equation*>
-        <around*|(|f\<circ\>\<varphi\><rsup|-1>|)><around*|(|\<varphi\><around*|(|U<big|cap>f<rsup|-1><around*|(|V|)>|)>|)>=f<around*|(|\<varphi\><rsup|-1><around*|(|<around*|\<nobracket\>|\<varphi\><around*|(|U<big|cap>f<rsup|-1><around*|(|V|)>|\<nobracket\>>|)>|)>|)>=f<around*|(|U<big|cap>f<rsup|-1><around*|(|V|)>|)>\<subseteq\>f<around*|(|f<rsup|-1><around*|(|V|)>|)>\<subseteq\>V
+        <around*|(|f\<circ\>\<varphi\><rsup|-1>|)><around*|(|\<varphi\><around*|(|U<big|cap>f<rsup|-1><around*|(|V|)>|)>|)>=f<around*|(|<around*|(|\<varphi\><rsup|-1>|)><around*|(|<around*|\<nobracket\>|\<varphi\><around*|(|U<big|cap>f<rsup|-1><around*|(|V|)>|\<nobracket\>>|)>|)>|)>=f<around*|(|U<big|cap>f<rsup|-1><around*|(|V|)>|)>\<subseteq\>f<around*|(|f<rsup|-1><around*|(|V|)>|)>\<subseteq\>V
       </equation*>
 
       it follows from [theorem: <reference|function composition of functions
@@ -4360,7 +4376,7 @@
       is a well defined function. Further the concept of class
       <math|C<rsup|r>> in (2) and (3) is feasible because
       <math|U<big|cap>f<rsup|-1>> is open in <math|M> [assumed in (2) and
-      true for (3) because <math|f> is continuous].
+      true for (3,4) because <math|f> is continuous].
     </note>
   </theorem>
 
@@ -4384,14 +4400,9 @@
       is a continuous mapping so that, as <math|V\<in\>\<cal-T\><rsub|N>>
       [because <math|<around*|(|V,\<psi\>|)>> is a chart], it follows that
       <math|f<rsup|-1><around*|(|V|)>\<in\>\<cal-T\><rsub|M>>. Hence, as
-      <math|U\<in\>\<cal-T\><rsub|M>>. it follows that\ 
-
-      <\equation>
-        <label|eq 23.67.10>U<big|cap>f<rsup|-1><around*|(|V|)><text| is open
-        in >M
-      </equation>
-
-      So using [lemma: <reference|lemma 23.5.10>] it follows that
+      <math|U\<in\>\<cal-T\><rsub|M>>. it follows that
+      \ <math|U<big|cap>f<rsup|-1><around*|(|V|)><text|>> is open in
+      <math|M>. So using [lemma: <reference|lemma 23.5.10>] it follows that
       <math|\<varphi\><around*|(|U<big|cap>f<rsup|-1><around*|(|V|)>|)>> is a
       open set in <math|\<bbb-R\><rsup|m>>. Hence using [coollary:
       <reference|diff class C^n sub-sets>], it follows that\ 
@@ -4401,13 +4412,16 @@
         is of class >C<rsup|r>
       </equation>
 
-      As <math|\<varphi\><rsup|-1><around*|(|\<varphi\><around*|(|U<big|cap>f<rsup|-1><around*|(|V|)>|)>|)>=U<big|cap>f<rsup|-1><around*|(|V|)>\<subseteq\>M>
+      As <math|<around*|(|\<varphi\><rsup|-1>|)><around*|(|\<varphi\><around*|(|U<big|cap>f<rsup|-1><around*|(|V|)>|)>|)><below|=|<text|[theorem:
+      <reference|function inverse image preimage>]>>U<big|cap>f<rsup|-1><around*|(|V|)>\<subseteq\>M>
       it follows from [theorem: <reference|function composition of functions
       is a fucntion (1)>] that <math|<rigid|f\<circ\>\<varphi\><rsup|-1>:\<varphi\><around*|(|U<big|cap>f<rsup|-1><around*|(|V|)>|)>\<rightarrow\>N>>
       is a well defined function. Further as
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|<around*|(|f\<circ\>\<varphi\><rsup|-1>|)><around*|(|\<varphi\><around*|(|U<big|cap>f<rsup|-1><around*|(|V|)>|)>|)>>|<cell|=>|<cell|f<around*|(|\<varphi\><rsup|-1><around*|(|\<varphi\><around*|(|U<big|cap>f<rsup|-1><around*|(|V|)>|)>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|f<around*|(|U<big|cap>f<rsup|-1><around*|(|V|)>|)>\<subseteq\>f<around*|(|f<rsup|-1><around*|(|V|)>|)>\<subseteq\>V>>>>
+        <tformat|<table|<row|<cell|<around*|(|f\<circ\>\<varphi\><rsup|-1>|)><around*|(|\<varphi\><around*|(|U<big|cap>f<rsup|-1><around*|(|V|)>|)>|)>>|<cell|<below|=|<text|[theorem:
+        <reference|function inverse image
+        preimage>]>>>|<cell|f<around*|(|<around*|(|\<varphi\><rsup|-1>|)><around*|(|\<varphi\><around*|(|U<big|cap>f<rsup|-1><around*|(|V|)>|)>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|f<around*|(|U<big|cap>f<rsup|-1><around*|(|V|)>|)>>>|<row|<cell|>|<cell|\<subseteq\>>|<cell|f<around*|(|f<rsup|-1><around*|(|V|)>|)>>>|<row|<cell|>|<cell|\<subseteq\>>|<cell|V>>>>
       </eqnarray*>
 
       it follows from [theorem: <reference|function composition of functions
@@ -4471,7 +4485,7 @@
       is a well defined function. Further as\ 
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|f\<circ\><around*|(|\<varphi\><rsub|\|U<big|cap>f<rsup|-1><around*|(|V|)>>|)><rsup|-1><around*|(|\<varphi\><rsub|\|U<big|cap>f<rsup|-1><around*|(|V|)>><around*|(|U<big|cap>f<rsup|-1><around*|(|V|)>|)>|)>>|<cell|=>|<cell|>>|<row|<cell|f<around*|(|<around*|(|\<varphi\><rsub|\|U<big|cap>f<rsup|-1><around*|(|V|)>>|)><rsup|-1><around*|(|\<varphi\><rsub|\|U<big|cap>f<rsup|-1><around*|(|V|)>><around*|(|U<big|cap>f<rsup|-1><around*|(|V|)>|)>|)>|)>>|<cell|=>|<cell|>>|<row|<cell|f<around*|(|U<big|cap>f<rsup|-1><around*|(|V|)>|)>>|<cell|\<subseteq\>>|<cell|>>|<row|<cell|f<around*|(|f<rsup|-1><around*|(|V|)>|)>>|<cell|\<subseteq\>>|<cell|V>>>>
+        <tformat|<table|<row|<cell|f\<circ\><around*|(|\<varphi\><rsub|\|U<big|cap>f<rsup|-1><around*|(|V|)>>|)><rsup|-1><around*|(|\<varphi\><rsub|\|U<big|cap>f<rsup|-1><around*|(|V|)>><around*|(|U<big|cap>f<rsup|-1><around*|(|V|)>|)>|)>>|<cell|=>|<cell|>>|<row|<cell|f<around*|(|<around*|(|\<varphi\><rsub|\|U<big|cap>f<rsup|-1><around*|(|V|)>>|)><rsup|-1><around*|(|\<varphi\><rsub|\|U<big|cap>f<rsup|-1><around*|(|V|)>><around*|(|U<big|cap>f<rsup|-1><around*|(|V|)>|)>|)>|)>>|<cell|=>|<cell|>>|<row|<cell|f<around*|(|U<big|cap>f<rsup|-1><around*|(|V|)>|)>>|<cell|\<subseteq\>>|<cell|>>|<row|<cell|f<around*|(|f<rsup|-1><around*|(|V|)>|)>>|<cell|\<subseteq\>>|<cell|>>|<row|<cell|V>|<cell|>|<cell|>>>>
       </eqnarray*>
 
       it follows from [theorem: <reference|function composition of functions
@@ -4514,7 +4528,8 @@
         is of class >C<rsup|r>
       </equation*>
 
-      which proves that <math|f> is a <math|C<rsup|r>> mapping.
+      which proves that <math|f> is a <math|C<rsup|r>> mapping. TODO check
+      next
 
       <item*|<math|2\<Rightarrow\>3>>By <math|<around*|(|2\<Rightarrow\>1|)>>
       we have that <math|f> is a <math|C<rsup|r>> mapping so that by
@@ -5097,8 +5112,6 @@
     </equation*>
   </proof>
 
-  TODO
-
   We have also a variant of the chain rule for the composition of
   differentiable mappings between differentiable manifolds.
 
@@ -5337,6 +5350,72 @@
     are <math|C<rsup|q>> diffeomorphic if there exist a <math|C<rsup|q>>
     diffeomorphism <math|f:M\<rightarrow\>N> between them.
   </definition>
+
+  Just as the composition of diffeomorphisms between normed spaces is a
+  diffeomorphism the composition of diffeomorphisms between differentiable
+  manifol is again a differentiable manifold.
+
+  <\theorem>
+    <label|manifold diffeomorphism composition>Let
+    <math|n,m,p\<in\>\<bbb-N\>>, <math|q\<in\>\<bbb-N\><rsub|0><big|cup><around*|{|\<infty\>|}>>,
+    <math|\<cal-M\><rsup|m><around*|\<langle\>|M,\<cal-T\><rsub|M>,\<cal-A\><rsub|M>|\<rangle\>>>,
+    <math|\<cal-M\><rsup|n><around*|\<langle\>|N,\<cal-T\><rsub|N>|)>>,
+    <math|\<cal-M\><rsup|p><around*|\<langle\>|P,\<cal-T\><rsub|P>,\<cal-A\><rsub|p>|\<rangle\>>>
+    be differentiable manifolds, <math|f:M\<rightarrow\>N> a <math|C<rsup|q>>
+    diffeomorphism and <math|g:N\<rightarrow\>P> a <math|C<rsup|q>>
+    diffeomorphism then\ 
+
+    <\equation*>
+      g\<circ\>f:M\<rightarrow\>P<text| is a >C<rsup|q><text| diffeomorphism>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    As <math|f:M\<rightarrow\>N> and <math|g:N\<rightarrow\>P> are
+    <math|C<rsup|q>> diffeomorphism it follows that
+
+    <\equation*>
+      f<text| and >g<text| are bijections>
+    </equation*>
+
+    <\equation*>
+      f:M\<rightarrow\>N<text| is a >C<rsup|q><text| mapping and
+      >f<rsup|-1>:N\<rightarrow\>M<text| is a >C<rsup|q><text| mapping>
+    </equation*>
+
+    <\equation*>
+      g:N\<rightarrow\>P<text| is a >C<rsup|q><text| mapping and
+      >g<rsup|-1>:P\<rightarrow\>N<text| is a >C<rsup|q><text| mapping>
+    </equation*>
+
+    Using [theorem: <reference|function composition injectivity, surjectivity
+    and bijectivity>] it follows that\ 
+
+    <\equation*>
+      g\<circ\>f<around*|{|M\<rightarrow\>P<text| is a bijection>|}>
+    </equation*>
+
+    further we have by [theorem: <reference|manifold chain rule>] that\ 
+
+    <\equation*>
+      g\<circ\>f:M\<rightarrow\>P<text| is a >C<rsup|q><text| mapping >
+    </equation*>
+
+    and
+
+    <\equation*>
+      <around*|(|g\<circ\>f|)><rsup|-1><below|=|<text|[theorem:
+      <reference|function composition injectivity, surjectivity and
+      bijectivity>]>>f<rsup|-1>\<circ\>g<rsup|-1>:P\<rightarrow\>M<text| is a
+      >C<rsup|q><text| mapping>
+    </equation*>
+
+    which proves that\ 
+
+    <\equation*>
+      g\<circ\>f:M\<rightarrow\>P<text| is a >C<rsup|q><text| diffeomorphism>
+    </equation*>
+  </proof>
 
   Just as a diffeormorphism between normed spaces is a homeomorphism [see
   theorem: <reference|diff diffeomorphism is a homeomorphism>] a
@@ -5855,7 +5934,8 @@
     <label|manifold diffeomorphic manifolds have the same dimension>Let
     <math|n,m\<in\>\<bbb-N\>>, <math|q\<in\>\<bbb-N\><big|cup><around*|{|\<infty\>|}>>
     [so that <math|1\<leqslant\>q>], <math|\<cal-M\><rsup|m><around*|\<langle\>|M,\<cal-T\><rsub|M>,\<cal-A\><rsub|M>|\<rangle\>>>
-    a <math|m>-dimensional <math|C<rsup|q>> differentiable manifold that is
+    with <math|M\<neq\>\<varnothing\>> a <with|font-series|bold|non empty>
+    <math|m>-dimensional <math|C<rsup|q>> differentiable manifold that is
     <math|C<rsup|q>> diffeomorphic with <math|\<cal-M\><rsup|n><around*|\<langle\>|N,\<cal-T\><rsub|N>,\<cal-A\><rsub|N>|\<rangle\>>>
     a <math|n>-dimensional <math|C<rsup|q>> differentiable manifold then
     <math|n=m>. In othere words diffeomorphic manifolds have the same
@@ -5863,7 +5943,20 @@
   </theorem>
 
   <\proof>
-    \;
+    As <math|M\<neq\>\<varnothing\>> there exist a <math|p\<in\>M> so that by
+    [theorem: <reference|manifold diffeomorphism equivalence>] there exist a
+    <math|<around*|(|U,\<varphi\>|)>\<in\>\<cal-A\><rsub|M>> with
+    <math|x\<in\>U> and a <math|<around*|(|V,\<psi\>|)>\<in\>\<cal-A\><rsub|N>>
+    with <math|f<around*|(|p|)>\<in\>V> and
+    <math|f<around*|(|U|)>\<subseteq\>V> such that\ 
+
+    <\equation*>
+      \<psi\>\<circ\>f\<circ\>\<varphi\><rsup|-1>:\<varphi\><around*|(|U|)>\<subseteq\>\<bbb-R\><rsup|m>\<rightarrow\>\<psi\><around*|(|f<around*|(|U|)>|)>\<subseteq\>\<bbb-R\><rsup|n><text|
+      is a diffeomorphism of class >C<rsup|q>
+    </equation*>
+
+    Using now [theorem: <reference|diff diffeomorphism and dimension>] it
+    follows that <math|m=dim<around*|(|\<bbb-R\><rsup|m>|)>=dim<around*|(|\<bbb-R\><rsup|n>|)>=n>
   </proof>
 
   \;
@@ -5914,39 +6007,38 @@
     <associate|eq 23.1.1|<tuple|23.5|?>>
     <associate|eq 23.1.3|<tuple|23.2|?>>
     <associate|eq 23.1.4|<tuple|23.1|?>>
-    <associate|eq 23.100.12|<tuple|23.109|?>>
-    <associate|eq 23.101.12|<tuple|23.110|?>>
-    <associate|eq 23.102.12|<tuple|23.111|?>>
-    <associate|eq 23.103.12|<tuple|23.112|?>>
-    <associate|eq 23.104.12|<tuple|23.113|?>>
-    <associate|eq 23.104.13|<tuple|23.114|?>>
-    <associate|eq 23.105.13|<tuple|23.115|?>>
-    <associate|eq 23.106.13|<tuple|23.116|?>>
-    <associate|eq 23.117.14|<tuple|23.117|?>>
-    <associate|eq 23.118.14|<tuple|23.118|?>>
-    <associate|eq 23.119.14|<tuple|23.119|?>>
-    <associate|eq 23.120.14|<tuple|23.120|?>>
-    <associate|eq 23.121.16|<tuple|23.121|?>>
-    <associate|eq 23.122.16|<tuple|23.122|?>>
-    <associate|eq 23.128.14|<tuple|23.129|?>>
-    <associate|eq 23.128.15|<tuple|23.128|?>>
-    <associate|eq 23.129.14|<tuple|23.130|?>>
+    <associate|eq 23.100.12|<tuple|23.108|?>>
+    <associate|eq 23.101.12|<tuple|23.109|?>>
+    <associate|eq 23.102.12|<tuple|23.110|?>>
+    <associate|eq 23.103.12|<tuple|23.111|?>>
+    <associate|eq 23.104.12|<tuple|23.112|?>>
+    <associate|eq 23.104.13|<tuple|23.113|?>>
+    <associate|eq 23.105.13|<tuple|23.114|?>>
+    <associate|eq 23.106.13|<tuple|23.115|?>>
+    <associate|eq 23.117.14|<tuple|23.116|?>>
+    <associate|eq 23.118.14|<tuple|23.117|?>>
+    <associate|eq 23.119.14|<tuple|23.118|?>>
+    <associate|eq 23.120.14|<tuple|23.119|?>>
+    <associate|eq 23.121.16|<tuple|23.120|?>>
+    <associate|eq 23.122.16|<tuple|23.121|?>>
+    <associate|eq 23.128.14|<tuple|23.128|?>>
+    <associate|eq 23.128.15|<tuple|23.127|?>>
+    <associate|eq 23.129.14|<tuple|23.129|?>>
     <associate|eq 23.13.3|<tuple|23.17|?>>
-    <associate|eq 23.130.14|<tuple|23.131|?>>
-    <associate|eq 23.131.14|<tuple|23.132|?>>
-    <associate|eq 23.132.14|<tuple|23.123|?>>
-    <associate|eq 23.132.17|<tuple|23.132|?>>
-    <associate|eq 23.133.14|<tuple|23.124|?>>
-    <associate|eq 23.133.15|<tuple|23.133|?>>
-    <associate|eq 23.134.14|<tuple|23.125|?>>
-    <associate|eq 23.134.16|<tuple|23.134|?>>
-    <associate|eq 23.135.14|<tuple|23.126|?>>
-    <associate|eq 23.135.16|<tuple|23.135|?>>
-    <associate|eq 23.136.14|<tuple|23.127|?>>
-    <associate|eq 23.136.16|<tuple|23.136|?>>
-    <associate|eq 23.137.16|<tuple|23.137|?>>
-    <associate|eq 23.138.16|<tuple|23.138|?>>
-    <associate|eq 23.139.16|<tuple|23.139|?>>
+    <associate|eq 23.130.14|<tuple|23.130|?>>
+    <associate|eq 23.132.14|<tuple|23.122|?>>
+    <associate|eq 23.132.17|<tuple|23.131|?>>
+    <associate|eq 23.133.14|<tuple|23.123|?>>
+    <associate|eq 23.133.15|<tuple|23.132|?>>
+    <associate|eq 23.134.14|<tuple|23.124|?>>
+    <associate|eq 23.134.16|<tuple|23.133|?>>
+    <associate|eq 23.135.14|<tuple|23.125|?>>
+    <associate|eq 23.135.16|<tuple|23.134|?>>
+    <associate|eq 23.136.14|<tuple|23.126|?>>
+    <associate|eq 23.136.16|<tuple|23.135|?>>
+    <associate|eq 23.137.16|<tuple|23.136|?>>
+    <associate|eq 23.138.16|<tuple|23.137|?>>
+    <associate|eq 23.139.16|<tuple|23.138|?>>
     <associate|eq 23.14.3|<tuple|23.18|?>>
     <associate|eq 23.15.2|<tuple|23.19|?>>
     <associate|eq 23.16.2|<tuple|23.20|?>>
@@ -6008,49 +6100,49 @@
     <associate|eq 23.65\<point\>10|<tuple|23.68|?>>
     <associate|eq 23.66.10|<tuple|23.79|?>>
     <associate|eq 23.67.10|<tuple|23.80|?>>
-    <associate|eq 23.69.10|<tuple|23.82|?>>
+    <associate|eq 23.69.10|<tuple|23.81|?>>
     <associate|eq 23.69.14|<tuple|23.69|?>>
     <associate|eq 23.7.1|<tuple|23.14|?>>
     <associate|eq 23.7.2|<tuple|23.12|?>>
-    <associate|eq 23.70.10|<tuple|23.83|?>>
+    <associate|eq 23.70.10|<tuple|23.82|?>>
     <associate|eq 23.70.14|<tuple|23.70|?>>
-    <associate|eq 23.71.10|<tuple|23.84|?>>
-    <associate|eq 23.71.12|<tuple|23.81|?>>
+    <associate|eq 23.71.10|<tuple|23.83|?>>
+    <associate|eq 23.71.12|<tuple|23.80|?>>
     <associate|eq 23.71.14|<tuple|23.71|?>>
-    <associate|eq 23.72.10|<tuple|23.85|?>>
+    <associate|eq 23.72.10|<tuple|23.84|?>>
     <associate|eq 23.72.14|<tuple|23.72|?>>
-    <associate|eq 23.73.10|<tuple|23.86|?>>
+    <associate|eq 23.73.10|<tuple|23.85|?>>
     <associate|eq 23.73.14|<tuple|23.73|?>>
-    <associate|eq 23.74.10|<tuple|23.87|?>>
+    <associate|eq 23.74.10|<tuple|23.86|?>>
     <associate|eq 23.74.14|<tuple|23.74|?>>
-    <associate|eq 23.75.10|<tuple|23.88|?>>
+    <associate|eq 23.75.10|<tuple|23.87|?>>
     <associate|eq 23.75.14|<tuple|23.75|?>>
-    <associate|eq 23.76.10|<tuple|23.89|?>>
+    <associate|eq 23.76.10|<tuple|23.88|?>>
     <associate|eq 23.76.14|<tuple|23.76|?>>
-    <associate|eq 23.77.10|<tuple|23.90|?>>
+    <associate|eq 23.77.10|<tuple|23.89|?>>
     <associate|eq 23.77.14|<tuple|23.77|?>>
-    <associate|eq 23.78.10|<tuple|23.91|?>>
+    <associate|eq 23.78.10|<tuple|23.90|?>>
     <associate|eq 23.78.14|<tuple|23.78|?>>
-    <associate|eq 23.79.10|<tuple|23.92|?>>
+    <associate|eq 23.79.10|<tuple|23.91|?>>
     <associate|eq 23.8.1|<tuple|23.15|?>>
     <associate|eq 23.8.2|<tuple|23.13|?>>
-    <associate|eq 23.80.10|<tuple|23.93|?>>
-    <associate|eq 23.81.10|<tuple|23.94|?>>
-    <associate|eq 23.82.10|<tuple|23.95|?>>
-    <associate|eq 23.83.10|<tuple|23.96|?>>
-    <associate|eq 23.84.10|<tuple|23.97|?>>
-    <associate|eq 23.85.10|<tuple|23.98|?>>
-    <associate|eq 23.86.10|<tuple|23.99|?>>
-    <associate|eq 23.87.10|<tuple|23.100|?>>
-    <associate|eq 23.88.10|<tuple|23.101|?>>
+    <associate|eq 23.80.10|<tuple|23.92|?>>
+    <associate|eq 23.81.10|<tuple|23.93|?>>
+    <associate|eq 23.82.10|<tuple|23.94|?>>
+    <associate|eq 23.83.10|<tuple|23.95|?>>
+    <associate|eq 23.84.10|<tuple|23.96|?>>
+    <associate|eq 23.85.10|<tuple|23.97|?>>
+    <associate|eq 23.86.10|<tuple|23.98|?>>
+    <associate|eq 23.87.10|<tuple|23.99|?>>
+    <associate|eq 23.88.10|<tuple|23.100|?>>
     <associate|eq 23.9.1|<tuple|23.16|?>>
-    <associate|eq 23.92.12|<tuple|23.102|?>>
-    <associate|eq 23.93.12|<tuple|23.103|?>>
-    <associate|eq 23.94.12|<tuple|23.104|?>>
-    <associate|eq 23.96.12|<tuple|23.105|?>>
-    <associate|eq 23.97.12|<tuple|23.106|?>>
-    <associate|eq 23.98.12|<tuple|23.107|?>>
-    <associate|eq 23.99.12|<tuple|23.108|?>>
+    <associate|eq 23.92.12|<tuple|23.101|?>>
+    <associate|eq 23.93.12|<tuple|23.102|?>>
+    <associate|eq 23.94.12|<tuple|23.103|?>>
+    <associate|eq 23.96.12|<tuple|23.104|?>>
+    <associate|eq 23.97.12|<tuple|23.105|?>>
+    <associate|eq 23.98.12|<tuple|23.106|?>>
+    <associate|eq 23.99.12|<tuple|23.107|?>>
     <associate|lemma 23.10.2|<tuple|23.19|?>>
     <associate|lemma 23.11.2|<tuple|23.20|?>>
     <associate|lemma 23.13.2|<tuple|23.21|?>>
@@ -6060,7 +6152,7 @@
     <associate|lemma 23.39.6|<tuple|23.43|?>>
     <associate|lemma 23.40.9|<tuple|23.47|?>>
     <associate|lemma 23.5.10|<tuple|23.5|?>>
-    <associate|lemma 23.81.14|<tuple|23.82|?>>
+    <associate|lemma 23.81.14|<tuple|23.83|?>>
     <associate|manifold C^m C^n atlas|<tuple|23.41|?>>
     <associate|manifold C^m C^n compatible|<tuple|23.38|?>>
     <associate|manifold C^m C^n manifold|<tuple|23.59|?>>
@@ -6093,12 +6185,12 @@
     <associate|manifold diffentiable atlas|<tuple|23.40|?>>
     <associate|manifold diffeomorphic manifolds|<tuple|23.80|?>>
     <associate|manifold diffeomorphic manifolds have the same
-    dimension|<tuple|23.85|?>>
+    dimension|<tuple|23.86|?>>
     <associate|manifold diffeomorphism|<tuple|23.79|?>>
-    <associate|manifold diffeomorphism C^m C^n|<tuple|23.81|?>>
-    <associate|manifold diffeomorphism equivalence|<tuple|23.83|?>>
-    <associate|manifold diffeomorphism equivalence (1)|<tuple|23.84|?>>
-    <associate|manifold diffeomorphism is a homeomorphism|<tuple|23.81|?>>
+    <associate|manifold diffeomorphism composition|<tuple|23.81|?>>
+    <associate|manifold diffeomorphism equivalence|<tuple|23.84|?>>
+    <associate|manifold diffeomorphism equivalence (1)|<tuple|23.85|?>>
+    <associate|manifold diffeomorphism is a homeomorphism|<tuple|23.82|?>>
     <associate|manifold differentiability real function|<tuple|23.44|?>>
     <associate|manifold differentiability real function (1)|<tuple|23.46|?>>
     <associate|manifold differentiability real function (2)|<tuple|23.56|?>>
