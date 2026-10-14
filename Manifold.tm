@@ -4350,11 +4350,43 @@
 
   TODO
 
-  <\theorem>
-    <label|manifold finite dimensional vectorspace is a fifferentiable
+  <\example>
+    <label|manifold a finite dimensional vector space is a differentiable
     manifold>Let <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>> be a
-    finite dimensional vector space then\ 
-  </theorem>
+    finite dimensional vector space with <math|dim<around*|(|V|)>=n>. Let
+    <math|E=<around*|{|e<rsub|1>,\<ldots\>,e<rsub|n>|}>> be a basis on
+    <math|V> then by [example: <reference|inner euclidean norm on finite
+    dimensional spaces (real)>]\ 
+
+    <\equation*>
+      <around*|\<\|\|\>||\<\|\|\>><rsub|e>:V\<rightarrow\>\<bbb-R\><text|
+      defined by ><around*|\<\|\|\>|x|\<\|\|\>><rsub|e>=<sqrt|<big|sum><rsub|i=1><rsup|n>x<rsup|2><rsub|i>><text|
+      where >x=<big|sum><rsub|i=1><rsup|n>x<rsub|i>\<cdot\>e<rsub|i>
+    </equation*>
+
+    is a norm on <math|V>. Define
+
+    <\equation*>
+      \<psi\>:\<bbb-R\><rsup|n>\<rightarrow\>V<text| where
+      >\<psi\><around*|(|x|)>=<big|sum><rsub|i=1><rsup|n>x<rsub|i>\<cdot\>e<rsub|i><text|>
+    </equation*>
+
+    then <math|<around*|{|<around*|(|V.\<psi\><rsup|-1>|)>|}>> is a
+    <math|C<rsup|\<infty\>>> atlas on <math|<around*|\<langle\>|V,\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>>|\<rangle\>>>
+    msking <math|\<cal-M\><around*|\<langle\>|V,\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>>,<around*|{|<around*|(|V,\<psi\><rsup|-1>|)>|}><rsup|<around*|{|n|}>>|\<rangle\>>>
+    a <math|n>-dimensional <math|C<rsup|\<infty\>>> differentiable manifold.
+
+    <\note>
+      Using [corollary: <reference|normed norm on finite dimensional spaces
+      are equivalent>] all norms on <math|V> are equivalent hence if
+      <math|<around*|\<\|\|\>||\<\|\|\>>> is a norm on <math|V> then
+      <math|\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>>>=\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>>>.
+    </note>
+  </example>
+
+  <\proof>
+    First using [theorems:\ 
+  </proof>
 
   <section|Differential mappings between manifolds>
 
@@ -6609,25 +6641,27 @@
     <associate|lemma 23.39.6|<tuple|23.44|?>>
     <associate|lemma 23.40.9|<tuple|23.48|?>>
     <associate|lemma 23.5.10|<tuple|23.5|?>>
-    <associate|lemma 23.81.14|<tuple|23.85|?>>
+    <associate|lemma 23.81.14|<tuple|23.86|?>>
     <associate|manifold C^m C^n atlas|<tuple|23.42|?>>
     <associate|manifold C^m C^n compatible|<tuple|23.38|?>>
     <associate|manifold C^m C^n manifold|<tuple|23.60|?>>
-    <associate|manifold C^m C^n mapping|<tuple|23.79|?>>
+    <associate|manifold C^m C^n mapping|<tuple|23.80|?>>
     <associate|manifold C^m chart|<tuple|23.36|?>>
     <associate|manifold C^m compatibility and restriction|<tuple|23.39|?>>
-    <associate|manifold C^m mappings are continuous|<tuple|23.71|?>>
-    <associate|manifold C^m mappings equivalences|<tuple|23.74|?>>
-    <associate|manifold C^m mappings equivalences (1)|<tuple|23.72|?>>
-    <associate|manifold C^r functions are C^r mappings|<tuple|23.76|?>>
-    <associate|manifold C^r mspping id local (2)|<tuple|23.78|?>>
-    <associate|manifold C^r mspping id locsl|<tuple|23.77|?>>
+    <associate|manifold C^m mappings are continuous|<tuple|23.72|?>>
+    <associate|manifold C^m mappings equivalences|<tuple|23.75|?>>
+    <associate|manifold C^m mappings equivalences (1)|<tuple|23.73|?>>
+    <associate|manifold C^r functions are C^r mappings|<tuple|23.77|?>>
+    <associate|manifold C^r mspping id local (2)|<tuple|23.79|?>>
+    <associate|manifold C^r mspping id locsl|<tuple|23.78|?>>
     <associate|manifold R^n is a differentiable manifold|<tuple|23.64|?>>
+    <associate|manifold a finite dimensional vector space is a differentiable
+    manifold|<tuple|23.67|?>>
     <associate|manifold a topological manifold is locally
     compact|<tuple|23.25|?>>
     <associate|manifold atlas|<tuple|23.11|?>>
     <associate|manifold canonical example|<tuple|23.15|?>>
-    <associate|manifold chain rule|<tuple|23.81|?>>
+    <associate|manifold chain rule|<tuple|23.82|?>>
     <associate|manifold chart that is compatible with a
     atlas|<tuple|23.43|?>>
     <associate|manifold compatible atlas|<tuple|23.52|?>>
@@ -6640,25 +6674,24 @@
     <associate|manifold cooridinate chart|<tuple|23.3|?>>
     <associate|manifold cooridinate chart existence|<tuple|23.10|?>>
     <associate|manifold diffentiable atlas|<tuple|23.40|?>>
-    <associate|manifold diffentiable atlas (1)|<tuple|23.41|?>>
-    <associate|manifold diffeomorphic manifolds|<tuple|23.83|?>>
+    <associate|manifold diffeomorphic manifolds|<tuple|23.84|?>>
     <associate|manifold diffeomorphic manifolds have the same
-    dimension|<tuple|23.88|?>>
-    <associate|manifold diffeomorphism|<tuple|23.82|?>>
-    <associate|manifold diffeomorphism composition|<tuple|23.89|?>>
-    <associate|manifold diffeomorphism equivalence|<tuple|23.86|?>>
-    <associate|manifold diffeomorphism equivalence (1)|<tuple|23.87|?>>
-    <associate|manifold diffeomorphism is a homeomorphism|<tuple|23.84|?>>
+    dimension|<tuple|23.89|?>>
+    <associate|manifold diffeomorphism|<tuple|23.83|?>>
+    <associate|manifold diffeomorphism composition|<tuple|23.90|?>>
+    <associate|manifold diffeomorphism equivalence|<tuple|23.87|?>>
+    <associate|manifold diffeomorphism equivalence (1)|<tuple|23.88|?>>
+    <associate|manifold diffeomorphism is a homeomorphism|<tuple|23.85|?>>
     <associate|manifold differentiability real function|<tuple|23.45|?>>
     <associate|manifold differentiability real function (1)|<tuple|23.47|?>>
     <associate|manifold differentiability real function (2)|<tuple|23.57|?>>
     <associate|manifold differentiable atlas (1)|<tuple|23.41|?>>
     <associate|manifold differentiable manifold|<tuple|23.58|?>>
-    <associate|manifold differentiable mappings|<tuple|23.68|?>>
+    <associate|manifold differentiable mappings|<tuple|23.69|?>>
     <associate|manifold differentiable structure|<tuple|23.55|?>>
     <associate|manifold existence of a maximal atlas|<tuple|23.56|?>>
     <associate|manifold finite dimensional vectorspace is a fifferentiable
-    manifold|<tuple|23.67|?>>
+    manifold|<tuple|23.68|?>>
     <associate|manifold maximal atlas|<tuple|23.49|?>>
     <associate|manifold maximum atlas and sub charts|<tuple|23.50|?>>
     <associate|manifold open set is a sub manifold|<tuple|23.16|?>>

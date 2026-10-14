@@ -10430,8 +10430,6 @@
     </equation*>
   </proof>
 
-  TODO
-
   <\theorem>
     <label|linear mapping isomorphic spaces and dimension>Let
     <math|<around*|\<langle\>|X,+,\<cdot\>|\<rangle\>>>,
