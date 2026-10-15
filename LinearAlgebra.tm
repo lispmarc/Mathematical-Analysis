@@ -3327,7 +3327,7 @@
     <label|vector space function space><dueto|function space>Let
     <math|<around*|\<langle\>|V,\<oplus\>,\<odot\>|\<rangle\>>> be a vector
     space over <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>>, <math|X>
-    a set then and define for <math|V<rsup|X>=<around*|{|f\|f:X\<rightarrow\>V<text|
+    a set and define for <math|V<rsup|X>=<around*|{|f\|f:X\<rightarrow\>V<text|
     is a function>|}>> the following operations:
 
     <\equation*>
@@ -9614,7 +9614,8 @@
 
     Applying then [theorem: <reference|vector space sub-space is a vector
     space>] proves that <math|<around*|\<langle\>|Hom<around*|(|X,Y|)>,+,\<cdot\>|\<rangle\>>>
-    is vector space over the field <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>>.
+    is vector space over the field <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>>
+    with neutral element <math|C<rsub|0>>.
   </theorem>
 
   <\proof>
@@ -25460,7 +25461,7 @@
   <\collection>
     <associate|chapter-nr|10>
     <associate|item-nr|4>
-    <associate|page-first|348>
+    <associate|page-first|350>
     <associate|page-medium|papyrus>
     <associate|par-first|0tab>
     <associate|section-nr|5>

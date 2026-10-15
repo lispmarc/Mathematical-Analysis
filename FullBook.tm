@@ -3277,21 +3277,21 @@
     <associate|auto-825|<tuple|atlas|1916|Manifold.tm>>
     <associate|auto-826|<tuple|23.1.2|1926|Manifold.tm>>
     <associate|auto-827|<tuple|23.1.3|1932|Manifold.tm>>
-    <associate|auto-828|<tuple|differentiable atlas|1935|Manifold.tm>>
-    <associate|auto-829|<tuple|<with|mode|<quote|math>|\<Delta\><rsup|m><around*|[|M,\<cal-T\>|]>>|1935|Manifold.tm>>
+    <associate|auto-828|<tuple|differentiable atlas|1934|Manifold.tm>>
+    <associate|auto-829|<tuple|<with|mode|<quote|math>|\<Delta\><rsup|m><around*|[|M,\<cal-T\>|]>>|1934|Manifold.tm>>
     <associate|auto-83|<tuple|maximal element|97|Sets.tm>>
-    <associate|auto-830|<tuple|maximal atlas|1940|Manifold.tm>>
+    <associate|auto-830|<tuple|maximal atlas|1939|Manifold.tm>>
     <associate|auto-831|<tuple|differentiable structure|1942|Manifold.tm>>
     <associate|auto-832|<tuple|<with|mode|<quote|math>|\<cal-M\><around*|[|\<cal-A\>|]>>|1942|Manifold.tm>>
-    <associate|auto-833|<tuple|differentiable manifold|1945|Manifold.tm>>
-    <associate|auto-834|<tuple|<with|mode|<quote|math>|\<cal-M\><around*|\<langle\>|M,\<cal-T\>,\<cal-A\>|\<rangle\>>>|1945|Manifold.tm>>
+    <associate|auto-833|<tuple|differentiable manifold|1944|Manifold.tm>>
+    <associate|auto-834|<tuple|<with|mode|<quote|math>|\<cal-M\><around*|\<langle\>|M,\<cal-T\>,\<cal-A\>|\<rangle\>>>|1944|Manifold.tm>>
     <associate|auto-835|<tuple|<with|mode|<quote|math>|C<rsup|r>>
-    differentiable manifold|1945|Manifold.tm>>
+    differentiable manifold|1944|Manifold.tm>>
     <associate|auto-836|<tuple|23.2|1951|Manifold.tm>>
     <associate|auto-837|<tuple|<with|mode|<quote|math>|C<rsup|r>> mappings
     between manifolds|1951|Manifold.tm>>
     <associate|auto-838|<tuple|<with|mode|<quote|math>|C<rsup|q>>
-    diffeomorphism|1963|Manifold.tm>>
+    diffeomorphism|1962|Manifold.tm>>
     <associate|auto-839|<tuple|24|1969|ToDO.tm>>
     <associate|auto-84|<tuple|minimal element|97|Sets.tm>>
     <associate|auto-840|<tuple|24.1|1969|ToDO.tm>>
@@ -3492,11 +3492,11 @@
     <associate|compact limit point compact|<tuple|14.285|804|Topology.tm>>
     <associate|compact locally compact|<tuple|14.290|806|Topology.tm>>
     <associate|compact locally compact (1)|<tuple|14.291|806|Topology.tm>>
-    <associate|compact locally finite|<tuple|23.27|1930|Manifold.tm>>
-    <associate|compact paracompactness|<tuple|23.28|1930|Manifold.tm>>
+    <associate|compact locally finite|<tuple|23.27|1929|Manifold.tm>>
+    <associate|compact paracompactness|<tuple|23.28|1929|Manifold.tm>>
     <associate|compact precompact set|<tuple|14.266|798|Topology.tm>>
     <associate|compact rectangles are compact|<tuple|14.324|819|Topology.tm>>
-    <associate|compact refinement|<tuple|23.26|1930|Manifold.tm>>
+    <associate|compact refinement|<tuple|23.26|1929|Manifold.tm>>
     <associate|compact set|<tuple|14.265|798|Topology.tm>>
     <associate|compact set alternative definition|<tuple|14.268|798|Topology.tm>>
     <associate|compact set is closed in a Hausdorff
@@ -3785,6 +3785,8 @@
     <associate|continuity homeomorphism between K^n and finite dimensional
     space|<tuple|14.197|759|Topology.tm>>
     <associate|continuity homeomorphism composition|<tuple|14.192|756|Topology.tm>>
+    <associate|continuity homeomorphisms preserves topological
+    properties|<tuple|14.263|796|Topology.tm>>
     <associate|continuity identity function|<tuple|14.143|741|Topology.tm>>
     <associate|continuity identity function
     norm|<tuple|14.215|765|Topology.tm>>
@@ -3843,8 +3845,6 @@
     <associate|continuity pasting lemma|<tuple|14.155|744|Topology.tm>>
     <associate|continuity power of continuous
     functions|<tuple|14.169|750|Topology.tm>>
-    <associate|continuity preserves topological
-    properties|<tuple|14.263|796|Topology.tm>>
     <associate|continuity product and continuous
     functions|<tuple|14.161|746|Topology.tm>>
     <associate|continuity product of continuous
@@ -7388,27 +7388,27 @@
     <associate|eq 23.1.1|<tuple|23.5|1920|Manifold.tm>>
     <associate|eq 23.1.3|<tuple|23.2|1917|Manifold.tm>>
     <associate|eq 23.1.4|<tuple|23.1|1917|Manifold.tm>>
-    <associate|eq 23.100.12|<tuple|23.116|1962|Manifold.tm>>
-    <associate|eq 23.101.12|<tuple|23.117|1962|Manifold.tm>>
+    <associate|eq 23.100.12|<tuple|23.116|1961|Manifold.tm>>
+    <associate|eq 23.101.12|<tuple|23.117|1961|Manifold.tm>>
     <associate|eq 23.102.12|<tuple|23.118|1962|Manifold.tm>>
     <associate|eq 23.103.12|<tuple|23.119|1962|Manifold.tm>>
     <associate|eq 23.104.12|<tuple|23.120|1962|Manifold.tm>>
     <associate|eq 23.104.13|<tuple|23.121|1962|Manifold.tm>>
-    <associate|eq 23.105.13|<tuple|23.122|1963|Manifold.tm>>
-    <associate|eq 23.106.13|<tuple|23.123|1963|Manifold.tm>>
-    <associate|eq 23.117.14|<tuple|23.124|1964|Manifold.tm>>
-    <associate|eq 23.118.14|<tuple|23.125|1964|Manifold.tm>>
+    <associate|eq 23.105.13|<tuple|23.122|1962|Manifold.tm>>
+    <associate|eq 23.106.13|<tuple|23.123|1962|Manifold.tm>>
+    <associate|eq 23.117.14|<tuple|23.124|1963|Manifold.tm>>
+    <associate|eq 23.118.14|<tuple|23.125|1963|Manifold.tm>>
     <associate|eq 23.119.14|<tuple|23.126|1964|Manifold.tm>>
     <associate|eq 23.120.14|<tuple|23.127|1964|Manifold.tm>>
-    <associate|eq 23.121.16|<tuple|23.128|1965|Manifold.tm>>
-    <associate|eq 23.122.16|<tuple|23.129|1965|Manifold.tm>>
-    <associate|eq 23.128.14|<tuple|23.136|1966|Manifold.tm>>
-    <associate|eq 23.128.15|<tuple|23.135|1966|Manifold.tm>>
-    <associate|eq 23.129.14|<tuple|23.137|1966|Manifold.tm>>
+    <associate|eq 23.121.16|<tuple|23.128|1964|Manifold.tm>>
+    <associate|eq 23.122.16|<tuple|23.129|1964|Manifold.tm>>
+    <associate|eq 23.128.14|<tuple|23.136|1965|Manifold.tm>>
+    <associate|eq 23.128.15|<tuple|23.135|1965|Manifold.tm>>
+    <associate|eq 23.129.14|<tuple|23.137|1965|Manifold.tm>>
     <associate|eq 23.13.3|<tuple|23.17|1925|Manifold.tm>>
-    <associate|eq 23.130.14|<tuple|23.138|1966|Manifold.tm>>
-    <associate|eq 23.132.14|<tuple|23.130|1965|Manifold.tm>>
-    <associate|eq 23.132.17|<tuple|23.139|1966|Manifold.tm>>
+    <associate|eq 23.130.14|<tuple|23.138|1965|Manifold.tm>>
+    <associate|eq 23.132.14|<tuple|23.130|1964|Manifold.tm>>
+    <associate|eq 23.132.17|<tuple|23.139|1965|Manifold.tm>>
     <associate|eq 23.133.14|<tuple|23.131|1965|Manifold.tm>>
     <associate|eq 23.133.15|<tuple|23.140|1966|Manifold.tm>>
     <associate|eq 23.134.14|<tuple|23.132|1965|Manifold.tm>>
@@ -7417,120 +7417,120 @@
     <associate|eq 23.135.16|<tuple|23.142|1966|Manifold.tm>>
     <associate|eq 23.136.14|<tuple|23.134|1965|Manifold.tm>>
     <associate|eq 23.136.16|<tuple|23.143|1966|Manifold.tm>>
-    <associate|eq 23.137.16|<tuple|23.144|1967|Manifold.tm>>
-    <associate|eq 23.138.16|<tuple|23.145|1967|Manifold.tm>>
-    <associate|eq 23.139.16|<tuple|23.146|1967|Manifold.tm>>
+    <associate|eq 23.137.16|<tuple|23.144|1966|Manifold.tm>>
+    <associate|eq 23.138.16|<tuple|23.145|1966|Manifold.tm>>
+    <associate|eq 23.139.16|<tuple|23.146|1966|Manifold.tm>>
     <associate|eq 23.14.3|<tuple|23.18|1925|Manifold.tm>>
     <associate|eq 23.15.2|<tuple|23.19|1926|Manifold.tm>>
-    <associate|eq 23.16.2|<tuple|23.20|1927|Manifold.tm>>
+    <associate|eq 23.16.2|<tuple|23.20|1926|Manifold.tm>>
     <associate|eq 23.17.2|<tuple|23.22|1927|Manifold.tm>>
     <associate|eq 23.2.1|<tuple|23.6|1920|Manifold.tm>>
     <associate|eq 23.2.3|<tuple|23.3|1917|Manifold.tm>>
-    <associate|eq 23.21.6|<tuple|23.21|1927|Manifold.tm>>
+    <associate|eq 23.21.6|<tuple|23.21|1926|Manifold.tm>>
     <associate|eq 23.22.3|<tuple|23.23|1930|Manifold.tm>>
     <associate|eq 23.23.4|<tuple|23.24|1930|Manifold.tm>>
     <associate|eq 23.23.402|<tuple|23.25|1930|Manifold.tm>>
     <associate|eq 23.24.402|<tuple|23.26|1930|Manifold.tm>>
-    <associate|eq 23.25.3|<tuple|23.27|1931|Manifold.tm>>
+    <associate|eq 23.25.3|<tuple|23.27|1930|Manifold.tm>>
     <associate|eq 23.26.3|<tuple|23.30|1931|Manifold.tm>>
-    <associate|eq 23.27.3|<tuple|23.31|1932|Manifold.tm>>
+    <associate|eq 23.27.3|<tuple|23.31|1931|Manifold.tm>>
     <associate|eq 23.27.4|<tuple|23.28|1931|Manifold.tm>>
-    <associate|eq 23.28.3|<tuple|23.32|1932|Manifold.tm>>
+    <associate|eq 23.28.3|<tuple|23.32|1931|Manifold.tm>>
     <associate|eq 23.28.5|<tuple|23.29|1931|Manifold.tm>>
     <associate|eq 23.3.1|<tuple|23.7|1920|Manifold.tm>>
     <associate|eq 23.3.3|<tuple|23.4|1917|Manifold.tm>>
-    <associate|eq 23.31.4|<tuple|23.33|1932|Manifold.tm>>
+    <associate|eq 23.31.4|<tuple|23.33|1931|Manifold.tm>>
     <associate|eq 23.33.5|<tuple|23.34|1932|Manifold.tm>>
-    <associate|eq 23.35.10|<tuple|23.35|1935|Manifold.tm>>
-    <associate|eq 23.35.8|<tuple|23.46|1938|Manifold.tm>>
-    <associate|eq 23.35\<point\>6|<tuple|23.52|1941|Manifold.tm>>
-    <associate|eq 23.36.16|<tuple|23.36|1936|Manifold.tm>>
-    <associate|eq 23.36.6|<tuple|23.53|1941|Manifold.tm>>
-    <associate|eq 23.36.8|<tuple|23.47|1938|Manifold.tm>>
-    <associate|eq 23.37.16|<tuple|23.37|1936|Manifold.tm>>
+    <associate|eq 23.35.10|<tuple|23.35|1934|Manifold.tm>>
+    <associate|eq 23.35.8|<tuple|23.46|1937|Manifold.tm>>
+    <associate|eq 23.35\<point\>6|<tuple|23.52|1940|Manifold.tm>>
+    <associate|eq 23.36.16|<tuple|23.36|1935|Manifold.tm>>
+    <associate|eq 23.36.6|<tuple|23.53|1940|Manifold.tm>>
+    <associate|eq 23.36.8|<tuple|23.47|1937|Manifold.tm>>
+    <associate|eq 23.37.16|<tuple|23.37|1935|Manifold.tm>>
     <associate|eq 23.37.6|<tuple|23.55|1941|Manifold.tm>>
-    <associate|eq 23.37.8|<tuple|23.48|1938|Manifold.tm>>
-    <associate|eq 23.38.16|<tuple|23.38|1936|Manifold.tm>>
+    <associate|eq 23.37.8|<tuple|23.48|1937|Manifold.tm>>
+    <associate|eq 23.38.16|<tuple|23.38|1935|Manifold.tm>>
     <associate|eq 23.38.6|<tuple|23.56|1941|Manifold.tm>>
     <associate|eq 23.38.8|<tuple|23.49|1938|Manifold.tm>>
-    <associate|eq 23.39.16|<tuple|23.39|1936|Manifold.tm>>
+    <associate|eq 23.39.16|<tuple|23.39|1935|Manifold.tm>>
     <associate|eq 23.39.6|<tuple|23.57|1941|Manifold.tm>>
     <associate|eq 23.39.8|<tuple|23.50|1938|Manifold.tm>>
     <associate|eq 23.4.1|<tuple|23.8|1920|Manifold.tm>>
-    <associate|eq 23.40.16|<tuple|23.40|1936|Manifold.tm>>
+    <associate|eq 23.40.16|<tuple|23.40|1935|Manifold.tm>>
     <associate|eq 23.40.6|<tuple|23.58|1941|Manifold.tm>>
     <associate|eq 23.40.8|<tuple|23.51|1938|Manifold.tm>>
-    <associate|eq 23.41.16|<tuple|23.41|1936|Manifold.tm>>
-    <associate|eq 23.41.6|<tuple|23.59|1942|Manifold.tm>>
+    <associate|eq 23.41.16|<tuple|23.41|1935|Manifold.tm>>
+    <associate|eq 23.41.6|<tuple|23.59|1941|Manifold.tm>>
     <associate|eq 23.42.16|<tuple|23.42|1936|Manifold.tm>>
-    <associate|eq 23.42.6|<tuple|23.60|1942|Manifold.tm>>
-    <associate|eq 23.43.6|<tuple|23.61|1942|Manifold.tm>>
-    <associate|eq 23.44.6|<tuple|23.43|1937|Manifold.tm>>
-    <associate|eq 23.45.6|<tuple|23.44|1937|Manifold.tm>>
+    <associate|eq 23.42.6|<tuple|23.60|1941|Manifold.tm>>
+    <associate|eq 23.43.6|<tuple|23.61|1941|Manifold.tm>>
+    <associate|eq 23.44.6|<tuple|23.43|1936|Manifold.tm>>
+    <associate|eq 23.45.6|<tuple|23.44|1936|Manifold.tm>>
     <associate|eq 23.46.6|<tuple|23.45|1937|Manifold.tm>>
     <associate|eq 23.47.11|<tuple|23.54|1941|Manifold.tm>>
-    <associate|eq 23.47.6|<tuple|23.62|1943|Manifold.tm>>
+    <associate|eq 23.47.6|<tuple|23.62|1942|Manifold.tm>>
     <associate|eq 23.48.6|<tuple|23.64|1943|Manifold.tm>>
-    <associate|eq 23.48.7|<tuple|23.63|1943|Manifold.tm>>
+    <associate|eq 23.48.7|<tuple|23.63|1942|Manifold.tm>>
     <associate|eq 23.49.6|<tuple|23.65|1943|Manifold.tm>>
     <associate|eq 23.5.1|<tuple|23.9|1921|Manifold.tm>>
     <associate|eq 23.50.6|<tuple|23.66|1943|Manifold.tm>>
-    <associate|eq 23.52.7|<tuple|23.67|1944|Manifold.tm>>
-    <associate|eq 23.53.7|<tuple|23.68|1944|Manifold.tm>>
-    <associate|eq 23.54.7|<tuple|23.69|1944|Manifold.tm>>
+    <associate|eq 23.52.7|<tuple|23.67|1943|Manifold.tm>>
+    <associate|eq 23.53.7|<tuple|23.68|1943|Manifold.tm>>
+    <associate|eq 23.54.7|<tuple|23.69|1943|Manifold.tm>>
     <associate|eq 23.6.1|<tuple|23.11|1922|Manifold.tm>>
     <associate|eq 23.6.3|<tuple|23.10|1922|Manifold.tm>>
-    <associate|eq 23.61.10|<tuple|23.71|1947|Manifold.tm>>
-    <associate|eq 23.62.10|<tuple|23.72|1947|Manifold.tm>>
-    <associate|eq 23.63.10|<tuple|23.73|1947|Manifold.tm>>
-    <associate|eq 23.63.12|<tuple|23.70|1947|Manifold.tm>>
-    <associate|eq 23.64.10|<tuple|23.74|1947|Manifold.tm>>
+    <associate|eq 23.61.10|<tuple|23.71|1946|Manifold.tm>>
+    <associate|eq 23.62.10|<tuple|23.72|1946|Manifold.tm>>
+    <associate|eq 23.63.10|<tuple|23.73|1946|Manifold.tm>>
+    <associate|eq 23.63.12|<tuple|23.70|1946|Manifold.tm>>
+    <associate|eq 23.64.10|<tuple|23.74|1946|Manifold.tm>>
     <associate|eq 23.65\<point\>10|<tuple|23.75|1947|Manifold.tm>>
-    <associate|eq 23.66.10|<tuple|23.87|1955|Manifold.tm>>
+    <associate|eq 23.66.10|<tuple|23.87|1954|Manifold.tm>>
     <associate|eq 23.69.10|<tuple|23.89|1955|Manifold.tm>>
-    <associate|eq 23.69.14|<tuple|23.77|1953|Manifold.tm>>
+    <associate|eq 23.69.14|<tuple|23.77|1952|Manifold.tm>>
     <associate|eq 23.7.1|<tuple|23.14|1923|Manifold.tm>>
     <associate|eq 23.7.2|<tuple|23.12|1923|Manifold.tm>>
     <associate|eq 23.70.10|<tuple|23.90|1955|Manifold.tm>>
-    <associate|eq 23.70.14|<tuple|23.78|1953|Manifold.tm>>
-    <associate|eq 23.71.10|<tuple|23.91|1956|Manifold.tm>>
-    <associate|eq 23.71.12|<tuple|23.88|1955|Manifold.tm>>
-    <associate|eq 23.71.14|<tuple|23.79|1953|Manifold.tm>>
-    <associate|eq 23.72.10|<tuple|23.92|1956|Manifold.tm>>
-    <associate|eq 23.72.14|<tuple|23.80|1953|Manifold.tm>>
+    <associate|eq 23.70.14|<tuple|23.78|1952|Manifold.tm>>
+    <associate|eq 23.71.10|<tuple|23.91|1955|Manifold.tm>>
+    <associate|eq 23.71.12|<tuple|23.88|1954|Manifold.tm>>
+    <associate|eq 23.71.14|<tuple|23.79|1952|Manifold.tm>>
+    <associate|eq 23.72.10|<tuple|23.92|1955|Manifold.tm>>
+    <associate|eq 23.72.14|<tuple|23.80|1952|Manifold.tm>>
     <associate|eq 23.73.10|<tuple|23.93|1956|Manifold.tm>>
-    <associate|eq 23.73.14|<tuple|23.81|1953|Manifold.tm>>
+    <associate|eq 23.73.14|<tuple|23.81|1952|Manifold.tm>>
     <associate|eq 23.74.10|<tuple|23.94|1956|Manifold.tm>>
-    <associate|eq 23.74.14|<tuple|23.82|1953|Manifold.tm>>
+    <associate|eq 23.74.14|<tuple|23.82|1952|Manifold.tm>>
     <associate|eq 23.75.10|<tuple|23.95|1956|Manifold.tm>>
     <associate|eq 23.75.14|<tuple|23.83|1953|Manifold.tm>>
     <associate|eq 23.76.10|<tuple|23.96|1956|Manifold.tm>>
     <associate|eq 23.76.14|<tuple|23.84|1953|Manifold.tm>>
-    <associate|eq 23.76.17|<tuple|23.76|1951|Manifold.tm>>
+    <associate|eq 23.76.17|<tuple|23.76|1950|Manifold.tm>>
     <associate|eq 23.77.10|<tuple|23.97|1956|Manifold.tm>>
-    <associate|eq 23.77.14|<tuple|23.85|1954|Manifold.tm>>
-    <associate|eq 23.78.10|<tuple|23.98|1957|Manifold.tm>>
+    <associate|eq 23.77.14|<tuple|23.85|1953|Manifold.tm>>
+    <associate|eq 23.78.10|<tuple|23.98|1956|Manifold.tm>>
     <associate|eq 23.78.14|<tuple|23.86|1954|Manifold.tm>>
-    <associate|eq 23.79.10|<tuple|23.99|1957|Manifold.tm>>
+    <associate|eq 23.79.10|<tuple|23.99|1956|Manifold.tm>>
     <associate|eq 23.8.1|<tuple|23.15|1923|Manifold.tm>>
     <associate|eq 23.8.2|<tuple|23.13|1923|Manifold.tm>>
-    <associate|eq 23.80.10|<tuple|23.100|1957|Manifold.tm>>
-    <associate|eq 23.81.10|<tuple|23.101|1957|Manifold.tm>>
-    <associate|eq 23.82.10|<tuple|23.102|1957|Manifold.tm>>
-    <associate|eq 23.83.10|<tuple|23.103|1957|Manifold.tm>>
+    <associate|eq 23.80.10|<tuple|23.100|1956|Manifold.tm>>
+    <associate|eq 23.81.10|<tuple|23.101|1956|Manifold.tm>>
+    <associate|eq 23.82.10|<tuple|23.102|1956|Manifold.tm>>
+    <associate|eq 23.83.10|<tuple|23.103|1956|Manifold.tm>>
     <associate|eq 23.84.10|<tuple|23.104|1957|Manifold.tm>>
     <associate|eq 23.85.10|<tuple|23.105|1957|Manifold.tm>>
     <associate|eq 23.86.10|<tuple|23.106|1957|Manifold.tm>>
-    <associate|eq 23.87.10|<tuple|23.107|1958|Manifold.tm>>
-    <associate|eq 23.88.10|<tuple|23.108|1960|Manifold.tm>>
+    <associate|eq 23.87.10|<tuple|23.107|1957|Manifold.tm>>
+    <associate|eq 23.88.10|<tuple|23.108|1959|Manifold.tm>>
     <associate|eq 23.9.1|<tuple|23.16|1924|Manifold.tm>>
-    <associate|eq 23.92.12|<tuple|23.109|1961|Manifold.tm>>
+    <associate|eq 23.92.12|<tuple|23.109|1960|Manifold.tm>>
     <associate|eq 23.93.12|<tuple|23.110|1961|Manifold.tm>>
     <associate|eq 23.94.12|<tuple|23.111|1961|Manifold.tm>>
     <associate|eq 23.96.12|<tuple|23.112|1961|Manifold.tm>>
     <associate|eq 23.97.12|<tuple|23.113|1961|Manifold.tm>>
-    <associate|eq 23.98.12|<tuple|23.114|1962|Manifold.tm>>
-    <associate|eq 23.99.12|<tuple|23.115|1962|Manifold.tm>>
+    <associate|eq 23.98.12|<tuple|23.114|1961|Manifold.tm>>
+    <associate|eq 23.99.12|<tuple|23.115|1961|Manifold.tm>>
     <associate|eq 3.1.009|<tuple|3.1|89|Sets.tm>>
     <associate|eq 3.10.012|<tuple|3.10|102|Sets.tm>>
     <associate|eq 3.11.012|<tuple|3.11|102|Sets.tm>>
@@ -8636,10 +8636,10 @@
     <associate|lemma 23.11.2|<tuple|23.20|1926|Manifold.tm>>
     <associate|lemma 23.13.2|<tuple|23.21|1927|Manifold.tm>>
     <associate|lemma 23.13.8|<tuple|23.17|1918|Manifold.tm>>
-    <associate|lemma 23.37.6|<tuple|23.54|1941|Manifold.tm>>
-    <associate|lemma 23.37.9|<tuple|23.46|1938|Manifold.tm>>
-    <associate|lemma 23.39.6|<tuple|23.44|1937|Manifold.tm>>
-    <associate|lemma 23.40.9|<tuple|23.48|1939|Manifold.tm>>
+    <associate|lemma 23.37.6|<tuple|23.54|1940|Manifold.tm>>
+    <associate|lemma 23.37.9|<tuple|23.46|1937|Manifold.tm>>
+    <associate|lemma 23.39.6|<tuple|23.44|1936|Manifold.tm>>
+    <associate|lemma 23.40.9|<tuple|23.48|1938|Manifold.tm>>
     <associate|lemma 23.5.10|<tuple|23.5|1915|Manifold.tm>>
     <associate|lemma 23.81.14|<tuple|23.86|1963|Manifold.tm>>
     <associate|limit (-1)^/i|<tuple|14.367|834|Topology.tm>>
@@ -8793,35 +8793,35 @@
     <associate|linerar mapping between R^2 and
     C|<tuple|11.177|438|LinearAlgebra.tm>>
     <associate|manifold C^m C^n atlas|<tuple|23.42|1936|Manifold.tm>>
-    <associate|manifold C^m C^n compatible|<tuple|23.38|1934|Manifold.tm>>
+    <associate|manifold C^m C^n compatible|<tuple|23.38|1933|Manifold.tm>>
     <associate|manifold C^m C^n manifold|<tuple|23.60|1945|Manifold.tm>>
     <associate|manifold C^m C^n mapping|<tuple|23.80|1960|Manifold.tm>>
-    <associate|manifold C^m chart|<tuple|23.36|1934|Manifold.tm>>
+    <associate|manifold C^m chart|<tuple|23.36|1933|Manifold.tm>>
     <associate|manifold C^m compatibility and
     restriction|<tuple|23.39|1934|Manifold.tm>>
-    <associate|manifold C^m mappings are continuous|<tuple|23.72|1952|Manifold.tm>>
+    <associate|manifold C^m mappings are continuous|<tuple|23.72|1951|Manifold.tm>>
     <associate|manifold C^m mappings equivalences|<tuple|23.75|1954|Manifold.tm>>
     <associate|manifold C^m mappings equivalences
     (1)|<tuple|23.73|1952|Manifold.tm>>
     <associate|manifold C^r functions are C^r
     mappings|<tuple|23.77|1958|Manifold.tm>>
     <associate|manifold C^r mspping id local
-    (2)|<tuple|23.79|1960|Manifold.tm>>
+    (2)|<tuple|23.79|1959|Manifold.tm>>
     <associate|manifold C^r mspping id locsl|<tuple|23.78|1959|Manifold.tm>>
     <associate|manifold R^n is a differentiable
-    manifold|<tuple|23.64|1946|Manifold.tm>>
+    manifold|<tuple|23.64|1945|Manifold.tm>>
     <associate|manifold a finite dimensional vector space is a differentiable
-    manifold|<tuple|23.67|1951|Manifold.tm>>
+    manifold|<tuple|23.67|1950|Manifold.tm>>
     <associate|manifold a topological manifold is locally
     compact|<tuple|23.25|1929|Manifold.tm>>
     <associate|manifold atlas|<tuple|23.11|1916|Manifold.tm>>
     <associate|manifold canonical example|<tuple|23.15|1917|Manifold.tm>>
-    <associate|manifold chain rule|<tuple|23.82|1961|Manifold.tm>>
+    <associate|manifold chain rule|<tuple|23.82|1960|Manifold.tm>>
     <associate|manifold chart that is compatible with a
-    atlas|<tuple|23.43|1937|Manifold.tm>>
-    <associate|manifold compatible atlas|<tuple|23.52|1940|Manifold.tm>>
-    <associate|manifold compatible atlas (1)|<tuple|23.53|1940|Manifold.tm>>
-    <associate|manifold connectivity properties|<tuple|23.24|1929|Manifold.tm>>
+    atlas|<tuple|23.43|1936|Manifold.tm>>
+    <associate|manifold compatible atlas|<tuple|23.52|1939|Manifold.tm>>
+    <associate|manifold compatible atlas (1)|<tuple|23.53|1939|Manifold.tm>>
+    <associate|manifold connectivity properties|<tuple|23.24|1928|Manifold.tm>>
     <associate|manifold coordinate ball and
     cube|<tuple|23.9|1916|Manifold.tm>>
     <associate|manifold coordinate domain|<tuple|23.8|1916|Manifold.tm>>
@@ -8830,52 +8830,52 @@
     <associate|manifold cooridinate chart|<tuple|23.3|1915|Manifold.tm>>
     <associate|manifold cooridinate chart
     existence|<tuple|23.10|1916|Manifold.tm>>
-    <associate|manifold diffentiable atlas|<tuple|23.40|1935|Manifold.tm>>
-    <associate|manifold diffeomorphic manifolds|<tuple|23.84|1963|Manifold.tm>>
+    <associate|manifold diffentiable atlas|<tuple|23.40|1934|Manifold.tm>>
+    <associate|manifold diffeomorphic manifolds|<tuple|23.84|1962|Manifold.tm>>
     <associate|manifold diffeomorphic manifolds have the same
     dimension|<tuple|23.89|1967|Manifold.tm>>
-    <associate|manifold diffeomorphism|<tuple|23.83|1963|Manifold.tm>>
-    <associate|manifold diffeomorphism composition|<tuple|23.90|1968|Manifold.tm>>
-    <associate|manifold diffeomorphism equivalence|<tuple|23.87|1965|Manifold.tm>>
+    <associate|manifold diffeomorphism|<tuple|23.83|1962|Manifold.tm>>
+    <associate|manifold diffeomorphism composition|<tuple|23.90|1967|Manifold.tm>>
+    <associate|manifold diffeomorphism equivalence|<tuple|23.87|1964|Manifold.tm>>
     <associate|manifold diffeomorphism equivalence
     (1)|<tuple|23.88|1966|Manifold.tm>>
     <associate|manifold diffeomorphism is a
     homeomorphism|<tuple|23.85|1963|Manifold.tm>>
     <associate|manifold differentiability real
-    function|<tuple|23.45|1938|Manifold.tm>>
+    function|<tuple|23.45|1937|Manifold.tm>>
     <associate|manifold differentiability real function
-    (1)|<tuple|23.47|1939|Manifold.tm>>
+    (1)|<tuple|23.47|1938|Manifold.tm>>
     <associate|manifold differentiability real function
-    (2)|<tuple|23.57|1945|Manifold.tm>>
+    (2)|<tuple|23.57|1944|Manifold.tm>>
     <associate|manifold differentiable atlas
     (1)|<tuple|23.41|1935|Manifold.tm>>
-    <associate|manifold differentiable manifold|<tuple|23.58|1945|Manifold.tm>>
+    <associate|manifold differentiable manifold|<tuple|23.58|1944|Manifold.tm>>
     <associate|manifold differentiable mappings|<tuple|23.69|1951|Manifold.tm>>
     <associate|manifold differentiable structure|<tuple|23.55|1942|Manifold.tm>>
     <associate|manifold existence of a maximal
-    atlas|<tuple|23.56|1943|Manifold.tm>>
-    <associate|manifold maximal atlas|<tuple|23.49|1940|Manifold.tm>>
+    atlas|<tuple|23.56|1942|Manifold.tm>>
+    <associate|manifold maximal atlas|<tuple|23.49|1939|Manifold.tm>>
     <associate|manifold maximum atlas and sub
-    charts|<tuple|23.50|1940|Manifold.tm>>
+    charts|<tuple|23.50|1939|Manifold.tm>>
     <associate|manifold open set is a sub
     manifold|<tuple|23.16|1917|Manifold.tm>>
     <associate|manifold open subset of a differentiable
     manifold|<tuple|23.65|1946|Manifold.tm>>
     <associate|manifold real numbers are a differentiable
-    manifold|<tuple|23.63|1946|Manifold.tm>>
+    manifold|<tuple|23.63|1945|Manifold.tm>>
     <associate|manifold real numbers form a topological
     manifold|<tuple|23.14|1917|Manifold.tm>>
     <associate|manifold restriction of a chart is a
     chart|<tuple|23.7|1915|Manifold.tm>>
-    <associate|manifold singleton chart|<tuple|23.61|1946|Manifold.tm>>
+    <associate|manifold singleton chart|<tuple|23.61|1945|Manifold.tm>>
     <associate|manifold sphere is a differentiable
-    manifold|<tuple|23.66|1948|Manifold.tm>>
+    manifold|<tuple|23.66|1947|Manifold.tm>>
     <associate|manifold sphere is a topological
     manifold|<tuple|23.18|1919|Manifold.tm>>
     <associate|manifold topological|<tuple|23.2|1915|Manifold.tm>>
     <associate|manifold topological (1)|<tuple|23.12|1916|Manifold.tm>>
     <associate|manifold topological manifold is
-    paracompact|<tuple|23.29|1930|Manifold.tm>>
+    paracompact|<tuple|23.29|1929|Manifold.tm>>
     <associate|manifold transition map|<tuple|23.33|1933|Manifold.tm>>
     <associate|manifold trivial example|<tuple|23.13|1916|Manifold.tm>>
     <associate|mapping of N to a finite set
@@ -9516,7 +9516,7 @@
     <associate|note 16.210.127|<tuple|16.304|1128|Differentiation.tm>>
     <associate|note 20.198.210|<tuple|21.135|1522|Measure.tm>>
     <associate|note 21.231.300|<tuple|21.235|1592|Measure.tm>>
-    <associate|note 23.31.6|<tuple|23.37|1934|Manifold.tm>>
+    <associate|note 23.31.6|<tuple|23.37|1933|Manifold.tm>>
     <associate|operator|<tuple|4.1|135|NaturalNumbers.tm>>
     <associate|order A isomorphism B|<tuple|3.50|95|Sets.tm>>
     <associate|order a\<less\>=b\<less\>=c|<tuple|3.30|90|Sets.tm>>

@@ -3821,9 +3821,10 @@
     <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> a <math|n>-dimesional
     topological manifold with a singleton atlas
     <math|<rigid|\<cal-A\>=<around*|{|<around*|(|U,\<varphi\>|)>|}>>> then
-    <math|\<cal-M\><rsup|n><around*|\<langle\>|M,\<cal-T\>,<around*|{|<around*|(|U,\<varphi\>|)>|}><rsup|<around*|{|\<infty\>|}>>|\<rangle\>>>
-    is a <math|n>-dimensional <math|C<rsup|\<infty\>>> differentiable
-    manifold.
+    <math|<around*|{|<around*|(|U,\<varphi\>|)>|}>> is a
+    <math|C<rsup|\<infty\>>> atlas on <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>>
+    making \ <math|\<cal-M\><rsup|n><around*|\<langle\>|M,\<cal-T\>,<around*|{|<around*|(|U,\<varphi\>|)>|}><rsup|<around*|{|\<infty\>|}>>|\<rangle\>>>
+    a <math|n>-dimensional <math|C<rsup|\<infty\>>> differentiable manifold.
 
     <\note>
       If <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> is a second
@@ -4348,7 +4349,7 @@
     by [theorem: <reference|manifold differentiable atlas (1)>]
   </proof>
 
-  TODO
+  TODO check this example
 
   <\example>
     <label|manifold a finite dimensional vector space is a differentiable
@@ -4367,13 +4368,13 @@
     is a norm on <math|V>. Define
 
     <\equation*>
-      \<psi\>:\<bbb-R\><rsup|n>\<rightarrow\>V<text| where
-      >\<psi\><around*|(|x|)>=<big|sum><rsub|i=1><rsup|n>x<rsub|i>\<cdot\>e<rsub|i><text|>
+      \<varphi\>:\<bbb-R\><rsup|n>\<rightarrow\>V<text| where
+      >\<varphi\><around*|(|x|)>=<big|sum><rsub|i=1><rsup|n>x<rsub|i>\<cdot\>e<rsub|i><text|>
     </equation*>
 
-    then <math|<around*|{|<around*|(|V.\<psi\><rsup|-1>|)>|}>> is a
+    then <math|<around*|{|<around*|(|V,\<varphi\><rsup|-1>|)>|}>> is a
     <math|C<rsup|\<infty\>>> atlas on <math|<around*|\<langle\>|V,\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>>|\<rangle\>>>
-    msking <math|\<cal-M\><around*|\<langle\>|V,\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>>,<around*|{|<around*|(|V,\<psi\><rsup|-1>|)>|}><rsup|<around*|{|n|}>>|\<rangle\>>>
+    making <math|\<cal-M\><around*|\<langle\>|V,\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>>,<around*|{|<around*|(|V,\<varphi\><rsup|-1>|)>|}><rsup|<around*|{|n|}>>|\<rangle\>>>
     a <math|n>-dimensional <math|C<rsup|\<infty\>>> differentiable manifold.
 
     <\note>
@@ -4385,7 +4386,53 @@
   </example>
 
   <\proof>
-    First using [theorems:\ 
+    First we have by [theorem: <reference|separation metric spaces are
+    Hausdorff>] that\ 
+
+    <\equation*>
+      <around*|\<langle\>|V,\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>>|\<rangle\>><text|
+      is Hausdorff>
+    </equation*>
+
+    Second using [theorem: <reference|continuity homeomorphism between K^n
+    and finite dimensional space>]\ 
+
+    <\equation*>
+      \<varphi\>:\<bbb-R\><rsup|n>\<rightarrow\>V<text| is a homeomorphism>
+    </equation*>
+
+    so that by [example: <reference|separation R^n is second countable>] and
+    [theorem: <reference|continuity homeomorphisms preserves topological
+    properties>]\ 
+
+    <\equation*>
+      <around|\<langle\>|V,\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>>|\<rangle\>><text|
+      is second countable>
+    </equation*>
+
+    As <math|\<varphi\>> is a homeomorphism it follows that\ 
+
+    <\equation*>
+      \<varphi\><rsup|-1>:V\<rightarrow\>\<bbb-R\><rsup|n><text| is a
+      homeomorphism>
+    </equation*>
+
+    from which it follows that <math|<around*|(|V,\<varphi\><rsup|-1>|)>> is
+    a chart on <math|<around*|\<langle\>|V,\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>>|\<rangle\>>>
+    so that as <math|V=<big|cup><rsub|<around*|(|U,\<psi\>|)>\<in\><around*|{|<around*|(|V,\<varphi\><rsup|-1>|)>|}>>U>
+
+    <\equation*>
+      <around*|{|<around*|(|V,\<varphi\><rsup|-1>|)>|}><text| is a atlas on
+      ><around*|\<langle\>|V,\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>>|\<rangle\>>
+    </equation*>
+
+    Finally using [example: <reference|manifold singleton chart>] it follows
+    that\ 
+
+    <\equation*>
+      <around*|{|<around*|(|V,\<varphi\><rsup|-1>|)>|}><text| is a
+      >C<rsup|\<infty\>><text| atlas on ><around*|\<langle\>|V,\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>>>|\<rangle\>>
+    </equation*>
   </proof>
 
   <section|Differential mappings between manifolds>
@@ -6441,6 +6488,295 @@
     </equation*>
   </proof>
 
+  <section|Tangent vectors and <math|T<rsub|p>M>>
+
+  A differentiable manifold <math|\<cal-M\><around*|\<langle\>|M,\<cal-T\>,\<cal-A\>|\<rangle\>>>
+  is just a set <math|M> that is locally homeomorphic with
+  <math|\<bbb-R\><rsup|n>> allowing to define the concept of
+  differentiability of class <math|C<rsup|m>> for functions defined on
+  <math|M>. However <math|M> itself does not have the structure of a
+  vectorspace. In this section we will attach a vector space with each
+  element of <math|M>. First we define the space of all real valued functions
+  of class <math|C<rsup|m>> defined on a manifold.
+
+  <\definition>
+    <label|manifold C^m(M)>Let <math|m\<in\>\<bbb-N\>>,
+    <math|q\<in\>\<bbb-N\><rsub|0><big|cup><around*|{|\<infty\>|}>> and
+    <math|\<cal-M\><rsup|q><around*|\<langle\>|M,\<cal-T\>,\<cal-A\>|\<rangle\>>>
+    a <math|m>-dimensional <math|C<rsup|q>> differentiable manifold then we
+    define <math|C<rsup|q><around*|(|M|)>> as follows\ 
+
+    <\equation*>
+      C<rsup|q><around*|(|M|)>=<around*|{|f\<in\>\<bbb-R\><rsup|M>:f:M\<rightarrow\>\<bbb-R\><text|
+      is of class >C<rsup|q>|}><text| [see definition: <reference|manifold
+      differentiability real function>]>
+    </equation*>
+
+    In othere words <math|C<rsup|q><around*|(|M|)>> is the set of graphs of
+    real valued functions defined on <math|M> that are of class
+    <math|C<rsup|q>>.
+  </definition>
+
+  <\theorem>
+    <label|manifold C^q(M) is a vector space>Let <math|m\<in\>\<bbb-N\>>,
+    <math|q\<in\>\<bbb-N\><rsub|0><big|cup><around*|{|\<infty\>|}>> and
+    <math|\<cal-M\><rsup|q><around*|\<langle\>|M,\<cal-T\>,\<cal-A\>|\<rangle\>>>
+    a <math|m>-dimensional <math|C<rsup|q>> differentiable manifold then
+    <math|<around*|\<langle\>|C<rsup|q><around*|(|M|)>,+,\<cdot\>|\<rangle\>>>
+    is a real vector space with neutral element <math|C<rsub|0>> where we
+    define for <math|<rigid|f,g\<in\>C<rsup|q><around*|(|M|)>>> and
+    <math|\<alpha\>\<in\>\<bbb-R\>>
+
+    <\equation*>
+      f+g:M\<rightarrow\>\<bbb-R\><text| ><around*|(|f+g|)><around*|(|p|)>=f<around*|(|p|)>+g<around*|(|p|)>
+    </equation*>
+
+    <\equation*>
+      \<alpha\>\<cdot\>f:M\<rightarrow\>\<bbb-R\><text|
+      >\<alpha\>\<cdot\>f:M\<rightarrow\>\<bbb-R\><text|
+      ><around*|(|\<alpha\>\<cdot\>f|)><around*|(|p|)>=\<alpha\>\<cdot\>f<around*|(|p|)>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    First note that\ 
+
+    <\equation*>
+      C<rsup|q><around*|(|M|)>\<subseteq\>\<bbb-R\><rsup|M>
+    </equation*>
+
+    and by [theorem: <reference|vector space function space>] that\ 
+
+    <\equation*>
+      <around*|\<langle\>|\<bbb-R\><rsup|M>,+,\<cdot\>|\<rangle\>><text| is a
+      vector space over >\<bbb-R\><text| with neutral element >C<rsub|0>
+    </equation*>
+
+    Let <math|f,g\<in\>C<rsup|q><around*|(|M|)>>,
+    <math|\<alpha\>\<in\>\<bbb-R\>> then <math|f:M\<rightarrow\>\<bbb-R\>>
+    and <math|g:M\<rightarrow\>\<bbb-R\>> are of class <math|C<rsup|q>>. Let
+    <math|<around*|(|U,\<varphi\>|)>\<in\>\<cal-A\>> then by [theorem:
+    <reference|manifold differentiability real function (1)>]\ 
+
+    <\equation*>
+      f\<circ\>\<varphi\><rsup|-1>:\<varphi\><around*|(|U|)>\<rightarrow\>\<bbb-R\><text|
+      and >g\<circ\>\<varphi\><rsup|-1>:\<varphi\><around*|(|U|)>\<rightarrow\>\<bbb-R\><text|
+      are of class >C<rsup|q>
+    </equation*>
+
+    Using then [theorem: <reference|diff higher order differential is
+    linear>] it follows that\ 
+
+    <\equation*>
+      \<alpha\>\<cdot\><around*|(|f\<circ\>\<varphi\><rsup|-1>|)>+<around*|(|g\<circ\>\<varphi\><rsup|-1>|)>:\<varphi\><around*|(|U|)>\<rightarrow\>\<bbb-R\><text|
+      is of class >C<rsup|q>
+    </equation*>
+
+    Let <math|x\<in\>\<varphi\><around*|(|U|)>> then\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|(|\<alpha\>\<cdot\><around*|(|f\<circ\>\<varphi\><rsup|-1>|)>+<around*|(|g\<circ\>\<varphi\><rsup|-1>|)>|)><around*|(|x|)>>|<cell|=>|<cell|\<alpha\>\<cdot\><around*|(|f\<circ\>\<varphi\><rsup|-1>|)><around*|(|x|)>+<around*|(|g\<circ\>\<varphi\><rsup|-1>|)><around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|\<alpha\>\<cdot\>f<around*|(|\<varphi\><rsup|-1><around*|(|x|)>|)>+g<around*|(|\<varphi\><rsup|-1><around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|\<alpha\>\<cdot\>f+g|)><around*|(|\<varphi\><rsup|-1><around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<around*|(|\<alpha\>\<cdot\>f+g|)>\<circ\>\<varphi\><rsup|-1>|)><around*|(|x|)>>>>>
+    </eqnarray*>
+
+    which proves that <math|><math|\<alpha\>\<cdot\><around*|(|f\<circ\>\<varphi\><rsup|-1>|)>+<around*|(|g\<circ\>\<varphi\><rsup|-1>|)>=<around*|(|\<alpha\>\<cdot\>f+g|)>\<circ\>\<varphi\><rsup|-1>>
+    so that\ 
+
+    <\equation*>
+      <around*|(|\<alpha\>\<cdot\>f+g|)>\<circ\>\<varphi\><rsup|-1>:\<varphi\><around*|(|U|)>\<rightarrow\>\<bbb-R\><text|
+      is of class >C<rsup|q>
+    </equation*>
+
+    Hence as this is true for every <math|<around*|(|U,\<varphi\>|)>\<in\>\<cal-A\>>
+    it follows from [theorem: <reference|vector space function space>] that
+    <math|\<alpha\>\<cdot\>f+g:M\<rightarrow\>\<bbb-R\>> is of class
+    <math|C<rsup|q>>. Summarized we have that\ 
+
+    <\equation*>
+      \<forall\>f,g\<in\>C<rsup|q><around*|(|M|)><text|,
+      >\<alpha\>\<in\>\<bbb-R\><text| >\<alpha\>\<cdot\>f+g\<in\>C<rsup|q><around*|(|M|)>
+    </equation*>
+
+    Further we have for <math|C<rsub|0>:M\<rightarrow\>\<bbb-R\>> defined by
+    <math|C<rsub|0><around*|(|p|)>=0> that
+    <math|\<forall\><around*|(|U,\<varphi\>|)>\<in\>\<cal-A\>> we have that\ 
+
+    <\equation*>
+      C<rsub|0>\<circ\>\<varphi\><rsup|-1>:\<varphi\><around*|(|U|)>\<rightarrow\>\<bbb-R\><text|
+      <math|<around*|(|C<rsub|0>\<circ\>\<varphi\><rsup|-1>|)><around*|(|x|)>=C<rsub|0><around*|(|\<varphi\><rsup|-1><around*|(|x|)>|)>=0>>
+    </equation*>
+
+    so that by [theorem: <reference|diff constant function is infinitely
+    times differentiable>] <math|C<rsub|0>\<circ\>\<varphi\><rsup|-1>> is of
+    class <math|C<rsup|q>> which proves by [theorem: <reference|manifold
+    differentiability real function (1)>] that
+    <math|C<rsub|0>:M\<rightarrow\>\<bbb-R\>> is of class <math|C<rsup|q>>.
+    Hence we have that\ 
+
+    <\equation*>
+      C<rsub|0>\<in\>C<rsup|q><around*|(|M|)>\<Rightarrow\>C<rsup|q><around*|(|M|)>\<neq\>\<varnothing\>
+    </equation*>
+
+    Using then [definition:: <reference|vector space subspace>] it follows
+    that <math|<around*|\<langle\>|C<rsup|q><around*|(|M|)>,+,\<cdot\>|\<rangle\>>>
+    is a sub-space of <math|<around*|\<langle\>|\<bbb-R\><rsup|M>,+,\<cdot\>|\<rangle\>>>
+    so that by [theorem: <reference|vector space sub-space is a vector
+    space>]\ 
+
+    <\equation*>
+      <around*|\<langle\>|C<rsup|q><around*|(|M|)>,+,\<cdot\>|\<rangle\>><text|
+      is a real vector space with neutral element >C<rsub|0>
+    </equation*>
+  </proof>
+
+  <\theorem>
+    <label|manifold product of functions that are of class C^q>Let
+    <math|m\<in\>\<bbb-N\>>, <math|q\<in\>\<bbb-N\><rsub|0><big|cup><around*|{|\<infty\>|}>>
+    and <math|\<cal-M\><rsup|q><around*|\<langle\>|M,\<cal-T\>,\<cal-A\>|\<rangle\>>>
+    a <math|m>-dimensional <math|C<rsup|q>> differentiable manifold then
+    <math|\<forall\>f,g\<in\>C<rsup|q><around*|(|M|)>> we have that
+    <math|f\<cdot\>g\<in\>C<rsup|q><around*|(|M|)>>.
+  </theorem>
+
+  <\proof>
+    Let <math|f,g\<in\>C<rsup|q><around*|(|M|)>> then by [theorem:
+    <reference|manifold differentiability real function (1)>] we have
+    <math|\<forall\><around*|(|U,\<varphi\>|)>\<in\>\<cal-A\>> that\ 
+
+    <\equation*>
+      f\<circ\>\<varphi\><rsup|-1>:\<varphi\><around*|(|U|)>\<rightarrow\>\<bbb-R\><text|
+      and >g\<circ\>\<varphi\><rsup|-1>:\<varphi\><around*|(|U|)>\<rightarrow\>\<bbb-R\><text|
+      is of class >C<rsup|q>
+    </equation*>
+
+    so that by [theorem: <reference|diff higher order differential of a
+    product>] \ 
+
+    <\equation*>
+      <around*|(|f\<circ\>\<varphi\><rsup|-1>|)>\<cdot\><around*|(|g\<circ\>\<varphi\><rsup|-1>|)>:\<varphi\><around*|(|U|)>\<rightarrow\>\<bbb-R\><text|
+      is of class >C<rsup|q>
+    </equation*>
+
+    As <math|\<forall\>x\<in\>U> we have
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|(|<around*|(|f\<circ\>\<varphi\><rsup|-1>|)>\<cdot\><around*|(|g\<circ\>\<varphi\><rsup|-1>|)>|)><around*|(|x|)>>|<cell|=>|<cell|<around*|(|f\<circ\>\<varphi\><rsup|-1>|)><around*|(|x|)>\<cdot\><around*|(|g\<circ\>\<varphi\><rsup|-1>|)><around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|f<around*|(|\<varphi\><rsup|-1><around*|(|x|)>|)>\<cdot\>g<around*|(|\<varphi\><rsup|-1><around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|f\<cdot\>g|)><around*|(|\<varphi\><rsup|-1><around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<around*|(|f\<cdot\>g|)>\<circ\>\<varphi\><rsup|-1>|)><around*|(|x|)>>>>>
+    </eqnarray*>
+
+    which proves that <math|<around*|(|f\<circ\>\<varphi\><rsup|-1>|)>\<cdot\><around*|(|g\<circ\>\<varphi\><rsup|-1>|)>=<around*|(|f\<cdot\>g|)>\<circ\>\<varphi\><rsup|-1>>
+    so that\ 
+
+    <\equation*>
+      <around*|(|f\<cdot\>g|)>\<circ\>\<varphi\><rsup|-1>:\<varphi\><around*|(|U|)>\<rightarrow\>\<bbb-R\><text|
+      is of class >C<rsup|q>
+    </equation*>
+
+    Hence using [theorem: <reference|manifold differentiability real function
+    (1)>] <math|f\<cdot\>g:M\<rightarrow\>\<bbb-R\>> is of class
+    <math|C<rsup|q>> proving that\ 
+
+    <\equation*>
+      f\<cdot\>g\<in\>C<rsup|q><around*|(|M|)>
+    </equation*>
+  </proof>
+
+  We are now ready to define tangent vectors.
+
+  <\definition>
+    <label|manifold tangent vector><index|tangent
+    vector><index|<math|T<rsub|p>M>><dueto|Tangent space to <math|M>>Let
+    <math|m\<in\>\<bbb-N\>>, <math|q\<in\>\<bbb-N\><rsub|0><big|cup><around*|{|\<infty\>|}>>
+    and <math|\<cal-M\><rsup|q><around*|\<langle\>|M,\<cal-T\>,\<cal-A\>|\<rangle\>>>
+    a <math|m>-dimensional <math|C<rsup|q>> differentiable manifold and
+    <math|p\<in\>M> then a linear mapping
+    <math|v:C<rsup|q><around*|(|M|)>\<rightarrow\>\<bbb-R\>> is a
+    <with|font-series|bold|tangent vector at <math|p>> iff\ 
+
+    <\equation*>
+      \<forall\>f,g\<in\>C<rsup|q><around*|(|M|)><text| we have
+      >v<around*|(|f\<cdot\>g|)>=f<around*|(|p|)>\<cdot\>v<around*|(|g|)>+g<around*|(|p|)>\<cdot\>v<around*|(|f|)>
+    </equation*>
+
+    The set of all tangent vectors at <math|p> is noted as <math|T<rsub|p>M>,
+    hence <math|T<rsub|p>M> is defined by
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|T<rsub|p>M>|<cell|=>|<cell|<around*|{|v\<in\>Hom<around*|(|C<rsup|q><around*|(|M|)>,\<bbb-R\>|)>\|v<text|
+      is a tangent vector at >p|}>>>|<row|<cell|>|<cell|=>|<cell|<around*|{|v\<in\>Hom<around*|(|C<rsup|q><around*|(|M|)>,\<bbb-R\>|)>\|\<forall\>f,g\<in\>C<rsup|q><around*|(|M|)><text|
+      we have >v<around*|(|f\<cdot\>g|)>=f<around*|(|p|)>\<cdot\>v<around*|(|f|)>+g<around*|(|p|)>\<cdot\>v<around*|(|f|)>|}>>>>>
+    </eqnarray*>
+
+    <math|T<rsub|p>M> is called the <with|font-series|bold|tangent space to
+    <math|M>.>
+
+    <\note>
+      By [theorem: <reference|manifold C^q(M) is a vector space>]
+      <math|C<rsup|q><around*|(|M|)>> is a real vector space and by [theorem:
+      <reference|manifold product of functions that are of class C^q>]
+      <math|<rigid|f\<cdot\>g\<in\>C<rsup|q><around*|(|M|)>>> so that this
+      definition makes sense.
+    </note>
+
+    <\note>
+      The definition for a tangent vector is deliberative chosen to mimic the
+      product rule for differentiation.
+    </note>
+  </definition>
+
+  The use of space in the above definition suggests that <math|T<rsub|p>M> is
+  a vector space which is indeed correct.
+
+  <\theorem>
+    <label|manifold TpM is a vector space>Let <math|m\<in\>\<bbb-N\>>,
+    <math|q\<in\>\<bbb-N\><rsub|0><big|cup><around*|{|\<infty\>|}>> and
+    <math|\<cal-M\><rsup|q><around*|\<langle\>|M,\<cal-T\>,\<cal-A\>|\<rangle\>>>
+    a <math|m>-dimensional <math|C<rsup|q>> differentiable manifold and
+    <math|p\<in\>M> then <math|<around*|\<langle\>|T<rsub|p>M,+,\<cdot\>|\<rangle\>>>
+    is a vector space with neutral element <math|C<rsub|0>>.
+  </theorem>
+
+  <\proof>
+    Using [theorem: <reference|linear mapping Hom(X,Y)>] we have that\ 
+
+    <\equation*>
+      Hom<around*|(|C<rsup|q><around*|(|M|)>,\<bbb-R\>|)><text| is a vector
+      space with neutral element >C<rsub|0>
+    </equation*>
+
+    Let <math|f,g\<in\>C<rsup|q><around*|(|M|)>> then we have
+    <math|C<rsub|0><around*|(|f\<cdot\>g|)>=0=f<around*|(|p|)>\<cdot\>0+g<around*|(|p|)>\<cdot\>0=f<around*|(|p|)>\<cdot\>C<rsub|0><around*|(|g|)>+g<around*|(|p|)>\<cdot\>C<rsub|0><around*|(|g|)>>
+    so that\ 
+
+    <\equation*>
+      C<rsub|0>\<in\>T<rsub|p>M\<Rightarrow\>T<rsub|p>M\<neq\>\<varnothing\>
+    </equation*>
+
+    Let <math|v,w\<in\>C<rsup|q><around*|(|M|)>> and
+    <math|\<alpha\>\<in\>\<bbb-R\>> then we have
+    <math|\<forall\>f,g\<in\>C<rsup|q><around*|(|M|)>> that\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|*<around*|(|\<alpha\>\<cdot\>v+w|)><around*|(|f\<cdot\>g|)>>|<cell|=>|<cell|\<alpha\>\<cdot\>v<around*|(|f\<cdot\>g|)>+w<around*|(|f\<cdot\>g|)>>>|<row|<cell|>|<cell|=>|<cell|\<alpha\>\<cdot\>f<around*|(|p|)>\<cdot\>v<around*|(|g|)>+\<alpha\>\<cdot\>g<around*|(|p|)>\<cdot\>v<around*|(|f|)>+f<around*|(|p|)>\<cdot\>w<around*|(|g|)>+g<around*|(|p|)>\<cdot\>w<around*|(|f|)>>>|<row|<cell|>|<cell|=>|<cell|f<around*|(|p|)><around*|(|\<alpha\>\<cdot\>v<around*|(|g|)>+w<around*|(|g|)>|)>+g<around*|(|p|)>\<cdot\><around*|(|\<alpha\>\<cdot\>v<around*|(|f|)>+\<omega\><around*|(|f|)>|)>>>|<row|<cell|>|<cell|=>|<cell|f<around*|(|p|)>\<cdot\><around*|(|\<alpha\>\<cdot\>v+w|)><around*|(|g|)>+g<around*|(|p|)>\<cdot\><around*|(|\<alpha\>\<cdot\>v+w|)><around*|(|f|)>>>>>
+    </eqnarray*>
+
+    proving that \ <math|\<alpha\>\<cdot\>v+w\<in\>T<rsub|p>M>. Hemce by
+    [definition: <reference|vector space subspace>]\ 
+
+    <\equation*>
+      T<rsub|p>M<text| is a sub-space of >Hom<around*|(|C<rsup|q><around*|(|M|)>,\<bbb-R\>|)>
+    </equation*>
+
+    so that by [theorem: <reference|vector space sub-space is a vector
+    space>]\ 
+
+    <\equation*>
+      T<rsub|p>M<text| is a real vector space with neutral element >C<rsub|0>
+    </equation*>
+  </proof>
+
+  \;
+
+  \;
+
   \;
 
   \;
@@ -6449,7 +6785,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|22>
-    <associate|page-first|1911>
+    <associate|page-first|1915>
     <associate|par-first|0>
     <associate|section-nr|2>
     <associate|subsection-nr|0>
@@ -6475,6 +6811,9 @@
     between manifolds|?>>
     <associate|auto-21|<tuple|<with|mode|<quote|math>|C<rsup|q>>
     diffeomorphism|?>>
+    <associate|auto-22|<tuple|23.3|?>>
+    <associate|auto-23|<tuple|tangent vector|?>>
+    <associate|auto-24|<tuple|<with|mode|<quote|math>|T<rsub|p>M>|?>>
     <associate|auto-3|<tuple|23.1.1|?>>
     <associate|auto-4|<tuple|coordinate chart|?>>
     <associate|auto-5|<tuple|coordinate domain|?>>
@@ -6651,10 +6990,13 @@
     <associate|manifold C^m mappings are continuous|<tuple|23.72|?>>
     <associate|manifold C^m mappings equivalences|<tuple|23.75|?>>
     <associate|manifold C^m mappings equivalences (1)|<tuple|23.73|?>>
+    <associate|manifold C^m(M)|<tuple|23.92|?>>
+    <associate|manifold C^q(M) is a vector space|<tuple|23.93|?>>
     <associate|manifold C^r functions are C^r mappings|<tuple|23.77|?>>
     <associate|manifold C^r mspping id local (2)|<tuple|23.79|?>>
     <associate|manifold C^r mspping id locsl|<tuple|23.78|?>>
     <associate|manifold R^n is a differentiable manifold|<tuple|23.64|?>>
+    <associate|manifold TpM is a vector space|<tuple|23.98|?>>
     <associate|manifold a finite dimensional vector space is a differentiable
     manifold|<tuple|23.67|?>>
     <associate|manifold a topological manifold is locally
@@ -6690,13 +7032,13 @@
     <associate|manifold differentiable mappings|<tuple|23.69|?>>
     <associate|manifold differentiable structure|<tuple|23.55|?>>
     <associate|manifold existence of a maximal atlas|<tuple|23.56|?>>
-    <associate|manifold finite dimensional vectorspace is a fifferentiable
-    manifold|<tuple|23.68|?>>
     <associate|manifold maximal atlas|<tuple|23.49|?>>
     <associate|manifold maximum atlas and sub charts|<tuple|23.50|?>>
     <associate|manifold open set is a sub manifold|<tuple|23.16|?>>
     <associate|manifold open subset of a differentiable
     manifold|<tuple|23.65|?>>
+    <associate|manifold product of functions that are of class
+    C^q|<tuple|23.94|?>>
     <associate|manifold real numbers are a differentiable
     manifold|<tuple|23.63|?>>
     <associate|manifold real numbers form a topological
@@ -6705,6 +7047,8 @@
     <associate|manifold singleton chart|<tuple|23.61|?>>
     <associate|manifold sphere is a differentiable manifold|<tuple|23.66|?>>
     <associate|manifold sphere is a topological manifold|<tuple|23.18|?>>
+    <associate|manifold tangent vector|<tuple|23.95|?>>
+    <associate|manifold tangent vector at a point|<tuple|23.94|?>>
     <associate|manifold topological|<tuple|23.2|?>>
     <associate|manifold topological (1)|<tuple|23.12|?>>
     <associate|manifold topological manifold is paracompact|<tuple|23.29|?>>

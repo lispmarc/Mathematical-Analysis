@@ -13526,10 +13526,10 @@
   Topological properties like Hausdorff, regularity, normality, first
   countability and second countability are preserved by homeomorphisms.
 
-  TODO check this
+  TODO check this theorem
 
   <\theorem>
-    <label|continuity preserves topological properties>Let
+    <label|continuity homeomorphisms preserves topological properties>Let
     <math|<around*|\<langle\>|X,\<cal-T\><rsub|X>|\<rangle\>>> and
     <math|<around*|\<langle\>|Y,\<cal-T\><rsub|Y>|\<rangle\>>> be topological
     spaces that are homeomorphic then we have:\ 
@@ -27055,6 +27055,8 @@
     <associate|continuity homeomorphism between K^n and finite dimensional
     space|<tuple|14.197|?>>
     <associate|continuity homeomorphism composition|<tuple|14.192|?>>
+    <associate|continuity homeomorphisms preserves topological
+    properties|<tuple|14.263|?>>
     <associate|continuity identity function|<tuple|14.143|?>>
     <associate|continuity identity function norm|<tuple|14.215|?>>
     <associate|continuity identity map is linear and
@@ -27099,7 +27101,6 @@
     (1)|<tuple|14.234|?>>
     <associate|continuity pasting lemma|<tuple|14.155|?>>
     <associate|continuity power of continuous functions|<tuple|14.169|?>>
-    <associate|continuity preserves topological properties|<tuple|14.263|?>>
     <associate|continuity product and continuous functions|<tuple|14.161|?>>
     <associate|continuity product of continuous functions|<tuple|14.167|?>>
     <associate|continuity projection map is open and
