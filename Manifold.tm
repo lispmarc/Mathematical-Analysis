@@ -6490,7 +6490,7 @@
 
   <section|Tangent vectors and <math|T<rsub|p>M>>
 
-  A differentiable manifold <math|\<cal-M\><around*|\<langle\>|M,\<cal-T\>,\<cal-A\>|\<rangle\>>>
+  A differentiable manifold <math|\<cal-M\><rsup|m><around*|\<langle\>|M,\<cal-T\>,\<cal-A\>|\<rangle\>>>
   is just a set <math|M> that is locally homeomorphic with
   <math|\<bbb-R\><rsup|n>> allowing to define the concept of
   differentiability of class <math|C<rsup|m>> for functions defined on
@@ -6502,7 +6502,7 @@
   <\definition>
     <label|manifold C^m(M)>Let <math|m\<in\>\<bbb-N\>>,
     <math|q\<in\>\<bbb-N\><rsub|0><big|cup><around*|{|\<infty\>|}>> and
-    <math|\<cal-M\><rsup|q><around*|\<langle\>|M,\<cal-T\>,\<cal-A\>|\<rangle\>>>
+    <math|\<cal-M\><rsup|m><around*|\<langle\>|M,\<cal-T\>,\<cal-A\>|\<rangle\>>>
     a <math|m>-dimensional <math|C<rsup|q>> differentiable manifold then we
     define <math|C<rsup|q><around*|(|M|)>> as follows\ 
 
@@ -6628,10 +6628,42 @@
     </equation*>
   </proof>
 
+  The previous theorem shows that <math|C<rsub|0>> is the neutral element of
+  <math|C<rsup|q><around*|(|M|)>> from which it follows that
+  <math|C<rsub|0>\<in\>C<rsup|q><around*|(|M|)>>, actually every constant
+  function is a element of <math|C<rsup|q><around*|(|M|)>>.
+
+  <\proposition>
+    <label|manifold constant functions>Let <math|m\<in\>\<bbb-N\>>,
+    <math|q\<in\>\<bbb-N\><rsub|0><big|cup><around*|{|\<infty\>|}>> and
+    <math|\<cal-M\><rsup|m><around*|\<langle\>|M,\<cal-T\>,\<cal-A\>|\<rangle\>>>
+    a <math|m>-dimensional <math|C<rsup|q>> differentiable manifold then
+    <math|\<forall\>y\<in\>\<bbb-R\>> <math|C<rsub|y>\<in\>C<rsup|q><around*|(|M|)>>
+    where <math|C<rsub|y>:M\<rightarrow\>\<bbb-R\>> is defined by
+    <math|C<rsub|y><around*|(|p|)>=y>
+  </proposition>
+
+  <\proof>
+    Let <math|<around*|(|U,\<varphi\>|)>\<in\>\<cal-A\>> then we have that\ 
+
+    <\equation*>
+      C<rsub|y>\<circ\>\<varphi\><rsup|-1>:\<varphi\><around*|(|U|)>\<rightarrow\>\<bbb-R\><text|
+      is defined by ><around*|(|C<rsub|y>\<circ\>\<varphi\><rsup|-1>|)><around*|(|p|)>=C<rsub|y><around*|(|\<varphi\><rsup|-1><around*|(|p|)>|)>=y
+    </equation*>
+
+    proving that <math|C\<circ\>\<varphi\><rsup|-1>> is a constant function.
+    Hence by [theorem: <reference|diff constant function is infinitely times
+    differentiable>] <math|C<rsub|y>\<circ\>\<varphi\><rsup|-1>> is of class
+    <math|C<rsup|q>> which, as this is true for every
+    <math|<around*|(|U,\<varphi\>|)>\<in\>\<cal-A\>>, proves that
+    <math|C<rsub|y>> is of class <math|C<rsup|q>> so that
+    <math|C<rsub|y>\<in\>C<rsup|q><around*|(|M|)>>.
+  </proof>
+
   <\theorem>
     <label|manifold product of functions that are of class C^q>Let
     <math|m\<in\>\<bbb-N\>>, <math|q\<in\>\<bbb-N\><rsub|0><big|cup><around*|{|\<infty\>|}>>
-    and <math|\<cal-M\><rsup|q><around*|\<langle\>|M,\<cal-T\>,\<cal-A\>|\<rangle\>>>
+    and <math|\<cal-M\><rsup|m><around*|\<langle\>|M,\<cal-T\>,\<cal-A\>|\<rangle\>>>
     a <math|m>-dimensional <math|C<rsup|q>> differentiable manifold then
     <math|\<forall\>f,g\<in\>C<rsup|q><around*|(|M|)>> we have that
     <math|f\<cdot\>g\<in\>C<rsup|q><around*|(|M|)>>.
@@ -6684,8 +6716,8 @@
   <\definition>
     <label|manifold tangent vector><index|tangent
     vector><index|<math|T<rsub|p>M>><dueto|Tangent space to <math|M>>Let
-    <math|m\<in\>\<bbb-N\>>, <math|q\<in\>\<bbb-N\><rsub|0><big|cup><around*|{|\<infty\>|}>>
-    and <math|\<cal-M\><rsup|q><around*|\<langle\>|M,\<cal-T\>,\<cal-A\>|\<rangle\>>>
+    <math|m\<in\>\<bbb-N\>>, <math|q\<in\>\<bbb-N\><rsub|0><big|cup><around*|{|\<infty\>|}>>,
+    <math|\<cal-M\><rsup|m><around*|\<langle\>|M,\<cal-T\>,\<cal-A\>|\<rangle\>>>
     a <math|m>-dimensional <math|C<rsup|q>> differentiable manifold and
     <math|p\<in\>M> then a linear mapping
     <math|v:C<rsup|q><around*|(|M|)>\<rightarrow\>\<bbb-R\>> is a
@@ -6727,8 +6759,8 @@
 
   <\theorem>
     <label|manifold TpM is a vector space>Let <math|m\<in\>\<bbb-N\>>,
-    <math|q\<in\>\<bbb-N\><rsub|0><big|cup><around*|{|\<infty\>|}>> and
-    <math|\<cal-M\><rsup|q><around*|\<langle\>|M,\<cal-T\>,\<cal-A\>|\<rangle\>>>
+    <math|q\<in\>\<bbb-N\><rsub|0><big|cup><around*|{|\<infty\>|}>>,
+    <math|\<cal-M\><rsup|m><around*|\<langle\>|M,\<cal-T\>,\<cal-A\>|\<rangle\>>>
     a <math|m>-dimensional <math|C<rsup|q>> differentiable manifold and
     <math|p\<in\>M> then <math|<around*|\<langle\>|T<rsub|p>M,+,\<cdot\>|\<rangle\>>>
     is a vector space with neutral element <math|C<rsub|0>>.
@@ -6773,7 +6805,236 @@
     </equation*>
   </proof>
 
-  \;
+  <\theorem>
+    <label|manifold TpM properties>Let <math|m\<in\>\<bbb-N\>>,
+    <math|q\<in\>\<bbb-N\><rsub|0><big|cup><around*|{|\<infty\>|}>>,
+    <math|\<cal-M\><rsup|m><around*|\<langle\>|M,\<cal-T\>,\<cal-A\>|\<rangle\>>>
+    a <math|m>-dimensional <math|C<rsup|q>> differentiable manifold and
+    <math|p\<in\>M> then we have <math|\<forall\>v\<in\>T<rsub|p>M>\ 
+
+    <\enumerate>
+      <item>If <math|C<rsub|y>:M\<rightarrow\>\<bbb-R\>> is a constant
+      function [so that by [theorem: <reference|manifold constant functions>]
+      <math|C<rsub|y>\<in\>C<rsup|q><around*|(|M|)>>] then
+      <math|v<around*|(|C<rsub|y>|)>=0>.
+
+      <item><math|\<forall\>f,g\<in\>C<rsup|q><around*|(|M|)>> with
+      <math|f<around*|(|p|)>=0=g<around*|(|p|)>> then
+      <math|v<around*|(|f\<cdot\>g|)>=0>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>Using [theorem: <reference|manifold constant functions>]
+      <math|C<rsub|1>\<in\>C<rsup|q><around*|(|M|)>> further we have as
+      <math|\<forall\>x\<in\>M>
+
+      <\equation*>
+        <around*|(|C<rsub|1>\<cdot\>C<rsub|1>|)><around*|(|x|)>=C<rsub|1><around*|(|x|)>\<cdot\>C<rsub|1><around*|(|x|)>=1\<cdot\>1=1=C<rsub|1><around*|(|x|)>
+      </equation*>
+
+      so that\ 
+
+      <\equation*>
+        C<rsub|1>=C<rsub|1>\<cdot\>C<rsub|1>
+      </equation*>
+
+      Hence we have that\ 
+
+      <\equation*>
+        v<around*|(|C<rsub|1>|)>=v<around*|(|C<rsub|1>\<cdot\>C<rsub|1>|)>=C<rsub|1><around*|(|p|)>\<cdot\>v<around*|(|C<rsub|1>|)>+C<rsub|1><around*|(|p|)>\<cdot\>v<around*|(|C<rsub|1>|)>=1\<cdot\>v<around*|(|C<rsub|1>|)>+1\<cdot\>v<around*|(|C<rsub|1>|)>=2\<cdot\>v<around*|(|C<rsub|1>|)>
+      </equation*>
+
+      from which it follows that\ 
+
+      <\equation*>
+        v<around*|(|C<rsub|1>|)>=0
+      </equation*>
+
+      Let <math|y\<in\>\<bbb-R\>> then <math|\<forall\>x\<in\>M> we have
+      <math|<around*|(|y\<cdot\>C<rsub|1>|)><around*|(|x|)>=y\<cdot\>C<rsub|1><around*|(|x|)>=y\<cdot\>1=y=C<rsub|y><around*|(|x|)>>
+      which proves that <math|C<rsub|y>=y\<cdot\>C<rsub|1>>. Hence we have
+      that\ 
+
+      <\equation*>
+        v<around*|(|C<rsub|y>|)>=v<around*|(|y\<cdot\>C<rsub|1>|)><below|=|v<text|
+        is linear>>y\<cdot\>v<around*|(|C<rsub|1>|)>=v\<cdot\>0=0
+      </equation*>
+
+      <item>This follows trivially from\ 
+
+      <\equation*>
+        v<around*|(|f\<cdot\>g|)>=f<around*|(|p|)>\<cdot\>v<around*|(|g|)>+g<around*|(|p|)>\<cdot\>v<around*|(|f|)>=0\<cdot\>v<around*|(|g|)>+0\<cdot\>v<around*|(|g|)>=0
+      </equation*>
+    </enumerate>
+  </proof>
+
+  For functions between normed spaces the differential of a function
+  represents a approximation of this function by a linear mapping between the
+  normed spaces. So if a function is differentiable then we can approximate
+  the function by a linear mapping. Extending this to <math|C<rsup|r>>
+  mappings between manifolds we want to define also a linear mapping mapping
+  between the tangent spaces of these manifolds [not the manifolds because
+  they have no vector space structure so linearity of mappings makes no
+  sense].\ 
+
+  <\proposition>
+    <label|manifold composition of a C^r mapping and a mapping of class
+    C^r>Let <math|m,n\<in\>\<bbb-N\>>, <math|q\<in\>\<bbb-N\><rsub|0><big|cup><around*|{|\<infty\>|}>>,
+    <math|\<cal-M\><rsup|q><around*|\<langle\>|M,\<cal-T\>,\<cal-A\><rsub|M>|\<rangle\>>>
+    a <math|m>-dimensional <math|C<rsup|q>> differentiable manifold,
+    <math|\<cal-M\><rsup|n><around*|\<langle\>|N,\<cal-T\><rsub|N>,\<cal-A\><rsub|N>|\<rangle\>>>
+    a <math|n>-dimensional <math|C<rsup|q>> differentiable manifold,
+    <math|F:M\<rightarrow\>N> a <math|C<rsup|q>> mapping and
+    <math|f\<in\>C<rsup|q><around*|(|N|)>> then
+    <math|f\<circ\>F\<in\>C<rsup|q><around*|(|M|)>>.
+  </proposition>
+
+  <\proof>
+    As <math|f\<in\>C<rsup|q><around*|(|N|)>>
+
+    <\equation*>
+      f:N\<rightarrow\>\<bbb-R\><text| is of class >C<rsup|q><text| [see
+      definition: <reference|manifold differentiability real function>]>
+    </equation*>
+
+    is of class <math|C<rsup|q>> it follows from [theorem:
+    <reference|manifold C^r functions are C^r mappings>] that\ 
+
+    <\equation*>
+      f:N\<rightarrow\>\<bbb-R\><text| is a >C<rsup|q><text| mapping
+      [see><text| definition: <reference|manifold differentiable mappings>]>
+    </equation*>
+
+    As\ 
+
+    <\equation*>
+      F:M\<rightarrow\>N<text| is a >C<rsup|q><text| mapping [see definition:
+      <reference|manifold differentiable mappings>]>
+    </equation*>
+
+    it follows from the chain rule [theorem: <reference|manifold chain rule>]
+    that\ 
+
+    <\equation*>
+      f\<circ\>F:M\<rightarrow\>\<bbb-R\><text| is a >C<rsup|q><text| mapping
+      [see definition: <reference|manifold differentiable mappings>]>
+    </equation*>
+
+    Finally applying [theorem: <reference|manifold C^r functions are C^r
+    mappings>] again it follows that\ 
+
+    <\equation*>
+      f\<circ\>F:M\<rightarrow\>\<bbb-R\><text| is of class >C<rsup|q><text|
+      [see definition: <reference|manifold differentiability real function>]>
+    </equation*>
+
+    which proves that\ 
+
+    <\equation*>
+      f\<circ\>F\<in\>C<rsup|q><around*|(|M|)>
+    </equation*>
+  </proof>
+
+  <\definition>
+    <label|manifold differential><index|differential><index|<math|d
+    F<rsub|p>>>Let <math|m,n\<in\>\<bbb-N\>>,
+    <math|q\<in\>\<bbb-N\><rsub|0><big|cup><around*|{|\<infty\>|}>>,
+    <math|\<cal-M\><rsup|q><around*|\<langle\>|M,\<cal-T\>,\<cal-A\><rsub|M>|\<rangle\>>>
+    a <math|m>-dimensional <math|C<rsup|q>> differentiable manifold,
+    <math|\<cal-M\><rsup|n><around*|\<langle\>|N,\<cal-T\><rsub|N>,\<cal-A\><rsub|N>|\<rangle\>>>
+    a <math|n>-dimensional <math|C<rsup|q>> differentiable manifold,
+    <math|p\<in\>M> and <math|F:M\<rightarrow\>N> a <math|C<rsup|q>> mapping
+    then the <with|font-series|bold|differential of F at p> noted as
+    <math|<with|font-series|bold|d F<rsub|p>>> is the mapping\ 
+
+    <\equation*>
+      d F<rsub|p>:T<rsub|p>M\<rightarrow\>T<rsub|F<around*|(|p|)>>N<text|
+      where >d F<rsub|p><around*|(|v|)>:C<rsup|q><around*|(|N|)>\<rightarrow\>\<bbb-R\><text|
+      is defined by >d F<around*|(|v|)><around*|(|f|)>=v<around*|(|f\<circ\>F|)>
+    </equation*>
+  </definition>
+
+  <\proof>
+    Let <math|v\<in\>T<rsub|p>M>. Using [proposition: <reference|manifold
+    composition of a C^r mapping and a mapping of class C^r>] we have
+    <math|\<forall\>f\<in\>C<rsup|q><around*|(|N|)>> that
+    <math|f\<circ\>F\<in\>C<rsup|q><around*|(|M|)>> so that
+    <math|v<around*|(|f\<circ\>F|)>> is well defined. Hence\ 
+
+    <\equation*>
+      d F<around*|(|v|)>:C<rsup|q><around*|(|N|)>\<rightarrow\>\<bbb-R\><text|
+      where >d F<rsub|p><around*|(|v|)><around*|(|f|)>=v<around*|(|f\<circ\>F|)><text|
+      is a well defined function>
+    </equation*>
+
+    Let <math|f,g\<in\>C<rsup|q><around*|(|N|)>> and
+    <math|\<alpha\>\<in\>\<bbb-R\>> then we have <math|\<forall\>x\<in\>M>
+    that
+
+    <\equation*>
+      <around*|(|<around*|(|f+g|)>\<circ\>F|)><around*|(|x|)>=<around*|(|f+g|)><around*|(|F<around*|(|x|)>|)>=f<around*|(|F<around*|(|x|)>|)>+g<around*|(|F<around*|(|x|)>|)>=<around*|(|<around*|(|f\<circ\>F|)>+<around*|(|g\<circ\>F|)>|)><around*|(|x|)>
+    </equation*>
+
+    <\equation*>
+      <around*|(|<around*|(|\<alpha\>\<cdot\>f|)>\<circ\>F|)><around*|(|x|)>=<around*|(|\<alpha\>\<cdot\>f|)><around*|(|F<around*|(|x|)>|)>=\<alpha\>\<cdot\>f<around*|(|F<around*|(|x|)>|)>=\<alpha\>\<cdot\><around*|(|<around*|(|f\<circ\>F|)><around*|(|x|)>|)>=<around*|(|\<alpha\>\<cdot\><around*|(|f\<circ\>F|)>|)><around*|(|x|)>
+    </equation*>
+
+    <\equation*>
+      <around*|(|<around*|(|f\<cdot\>g|)>\<circ\>F|)><around*|(|x|)>=<around*|(|f\<cdot\>g|)><around*|(|F<around*|(|x|)>|)>=f<around*|(|F<around*|(|x|)>|)>\<cdot\>g<around*|(|F<around*|(|x|)>|)>=<around*|(|f\<circ\>F|)><around*|(|x|)>\<cdot\><around*|(|g\<circ\>F|)><around*|(|x|)>=<around*|(|<around*|(|f\<circ\>F|)>\<cdot\><around*|(|g\<circ\>F|)>|)><around*|(|x|)>
+    </equation*>
+
+    so that\ 
+
+    <\equation>
+      <label|eq 23.147.17><around*|(|f+g|)>\<circ\>F=f\<circ\>F+g\<circ\>F<text|
+      and ><around*|(|\<alpha\>\<cdot\>f|)>\<circ\>F=\<alpha\>\<cdot\><around*|(|f\<circ\>F|)><text|
+      and ><around*|(|f\<cdot\>g|)>\<circ\>F=<around*|(|f\<circ\>F|)>\<cdot\><around*|(|g\<circ\>F|)>
+    </equation>
+
+    Further if <math|f,g\<in\>C<rsup|q><around*|(|N|)>> and
+    <math|\<alpha\>\<in\>\<bbb-R\>> then\ 
+
+    <\equation*>
+      d F<rsub|p><around*|(|v|)><around*|(|f+g|)>=v<around*|(|<around*|(|f+g|)>\<circ\>F|)><below|=|<text|[eq:
+      <reference|eq 23.147.17>>>v<around*|(|f\<circ\>F+g\<circ\>F|)><below|=|v
+      is linear>v<around*|(|f\<circ\>F|)>+v<around*|(|g\<circ\>F|)>=d
+      F<rsub|p><around*|(|f|)>+d F<rsub|p><around*|(|g|)>
+    </equation*>
+
+    and
+
+    <\equation*>
+      d F<rsub|p><around*|(|v|)><around*|(|\<alpha\>\<cdot\>f|)>=v<around*|(|<around*|(|\<alpha\>\<cdot\>f|)>\<circ\>F|)><below|=|<text|[eq:
+      <reference|eq 23.147.17>>>v<around*|(|\<alpha\>\<cdot\><around*|(|f\<circ\>F|)>|)><below|=|v
+      is linear>\<alpha\>\<cdot\>v<around*|(|f\<circ\>F|)>=\<alpha\>\<cdot\>d
+      F<rsub|p><around*|(|f|)>
+    </equation*>
+
+    proving that\ 
+
+    <\equation*>
+      d F<rsub|p><around*|(|v|)>\<in\>Hom<around*|(|C<rsup|q><around*|(|N|)>,\<bbb-R\>|)>
+    </equation*>
+
+    Furher we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|d F<rsub|p><around*|(|v|)><around*|(|f\<cdot\>g|)>>|<cell|=>|<cell|v<around*|(|<around*|(|f\<cdot\>g|)>\<circ\>F|)>>>|<row|<cell|>|<cell|<below|=|<text|[eq:
+      <reference|eq 23.147.17>>>>|<cell|v<around*|(|<around*|(|f\<circ\>F|)>\<cdot\><around*|(|g\<circ\>F|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|f\<circ\>F|)><around*|(|p|)>\<cdot\>v<around*|(|g\<circ\>F|)>+<around*|(|g\<circ\>F|)><around*|(|p|)>\<cdot\>v<around*|(|f\<circ\>F|)>>>|<row|<cell|>|<cell|=>|<cell|f<around*|(|F<around*|(|p|)>|)>\<cdot\>v<around*|(|g\<circ\>F|)>+g<around*|(|F<around*|(|p|)>|)>\<cdot\>v<around*|(|f\<circ\>F|)>>>|<row|<cell|>|<cell|=>|<cell|f<around*|(|F<around*|(|p|)>|)>\<cdot\>d
+      F<rsub|p><around*|(|g|)>+g<around*|(|F<around*|(|p|)>|)>\<cdot\>d
+      F<rsub|p><around*|(|f|)>>>>>
+    </eqnarray*>
+
+    which proves that\ 
+
+    <\equation*>
+      d F<rsub|p><around*|(|v|)>\<in\>T<rsub|F<around*|(|p|)>><around*|(|N|)>
+    </equation*>
+  </proof>
 
   \;
 
@@ -6814,6 +7075,8 @@
     <associate|auto-22|<tuple|23.3|?>>
     <associate|auto-23|<tuple|tangent vector|?>>
     <associate|auto-24|<tuple|<with|mode|<quote|math>|T<rsub|p>M>|?>>
+    <associate|auto-25|<tuple|differential|?>>
+    <associate|auto-26|<tuple|<with|mode|<quote|math>|d F<rsub|p>>|?>>
     <associate|auto-3|<tuple|23.1.1|?>>
     <associate|auto-4|<tuple|coordinate chart|?>>
     <associate|auto-5|<tuple|coordinate domain|?>>
@@ -6861,6 +7124,7 @@
     <associate|eq 23.138.16|<tuple|23.145|?>>
     <associate|eq 23.139.16|<tuple|23.146|?>>
     <associate|eq 23.14.3|<tuple|23.18|?>>
+    <associate|eq 23.147.17|<tuple|23.147|?>>
     <associate|eq 23.15.2|<tuple|23.19|?>>
     <associate|eq 23.16.2|<tuple|23.20|?>>
     <associate|eq 23.17.2|<tuple|23.22|?>>
@@ -6996,7 +7260,8 @@
     <associate|manifold C^r mspping id local (2)|<tuple|23.79|?>>
     <associate|manifold C^r mspping id locsl|<tuple|23.78|?>>
     <associate|manifold R^n is a differentiable manifold|<tuple|23.64|?>>
-    <associate|manifold TpM is a vector space|<tuple|23.98|?>>
+    <associate|manifold TpM is a vector space|<tuple|23.99|?>>
+    <associate|manifold TpM properties|<tuple|23.100|?>>
     <associate|manifold a finite dimensional vector space is a differentiable
     manifold|<tuple|23.67|?>>
     <associate|manifold a topological manifold is locally
@@ -7008,7 +7273,10 @@
     atlas|<tuple|23.43|?>>
     <associate|manifold compatible atlas|<tuple|23.52|?>>
     <associate|manifold compatible atlas (1)|<tuple|23.53|?>>
+    <associate|manifold composition of a C^r mapping and a mapping of class
+    C^r|<tuple|23.101|?>>
     <associate|manifold connectivity properties|<tuple|23.24|?>>
+    <associate|manifold constant functions|<tuple|23.94|?>>
     <associate|manifold coordinate ball and cube|<tuple|23.9|?>>
     <associate|manifold coordinate domain|<tuple|23.8|?>>
     <associate|manifold coordinate transforms are a
@@ -7031,6 +7299,7 @@
     <associate|manifold differentiable manifold|<tuple|23.58|?>>
     <associate|manifold differentiable mappings|<tuple|23.69|?>>
     <associate|manifold differentiable structure|<tuple|23.55|?>>
+    <associate|manifold differential|<tuple|23.102|?>>
     <associate|manifold existence of a maximal atlas|<tuple|23.56|?>>
     <associate|manifold maximal atlas|<tuple|23.49|?>>
     <associate|manifold maximum atlas and sub charts|<tuple|23.50|?>>
@@ -7038,7 +7307,7 @@
     <associate|manifold open subset of a differentiable
     manifold|<tuple|23.65|?>>
     <associate|manifold product of functions that are of class
-    C^q|<tuple|23.94|?>>
+    C^q|<tuple|23.95|?>>
     <associate|manifold real numbers are a differentiable
     manifold|<tuple|23.63|?>>
     <associate|manifold real numbers form a topological
@@ -7047,8 +7316,7 @@
     <associate|manifold singleton chart|<tuple|23.61|?>>
     <associate|manifold sphere is a differentiable manifold|<tuple|23.66|?>>
     <associate|manifold sphere is a topological manifold|<tuple|23.18|?>>
-    <associate|manifold tangent vector|<tuple|23.95|?>>
-    <associate|manifold tangent vector at a point|<tuple|23.94|?>>
+    <associate|manifold tangent vector|<tuple|23.96|?>>
     <associate|manifold topological|<tuple|23.2|?>>
     <associate|manifold topological (1)|<tuple|23.12|?>>
     <associate|manifold topological manifold is paracompact|<tuple|23.29|?>>
@@ -7093,6 +7361,10 @@
 
       <tuple|<tuple|<with|mode|<quote|math>|C<rsup|q>>
       diffeomorphism>|<pageref|auto-21>>
+
+      <tuple|<tuple|tangent vector>|<pageref|auto-23>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|T<rsub|p>M>>|<pageref|auto-24>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|23<space|2spc>Differential
@@ -7118,6 +7390,10 @@
       23.2<space|2spc>Differential mappings between manifolds
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-19>
+
+      23.3<space|2spc>Tangent vectors and <with|mode|<quote|math>|T<rsub|p>M>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-22>
     </associate>
   </collection>
 </auxiliary>
