@@ -24981,13 +24981,12 @@
           <reference|function bijection and inverse>]
           <math|f<rsup|-1>:V\<rightarrow\>U> is a bijection.
 
-          <item><math|f<rsup|-1>:V\<rightarrow\>X> is diffeomorphism of class
+          <item><math|f<rsup|-1>:V\<rightarrow\>X> is of class
           <math|C<rsup|n>>.
 
           <item><math|<around*|(|f<rsup|-1>|)><rsup|-1><below|=|<text|[theorem:
           <reference|function inverse of a bijection is
-          unique>]>>f:U\<rightarrow\>Y> is diffeomorphism of class
-          <math|C<rsup|n>>.
+          unique>]>>f:U\<rightarrow\>Y> is of class <math|C<rsup|n>>.
         </enumerate>
 
         so that by definition <math|f<rsup|-1>> diffeomorphism of class
@@ -25009,10 +25008,10 @@
 
           <item>Then <math|f<below|=|<text|[theorem: <reference|function
           inverse of a bijection is unique>]>><around*|(|f<rsup|-1>|)><rsup|-1>:U\<rightarrow\>Y>
-          is diffeomorphism of class <math|C<rsup|n>>.
+          is of class <math|C<rsup|n>>.
 
-          <item>Then <math|f<rsup|-1>:V\<rightarrow\>X> is is a
-          diffeomorphism of class <math|C<rsup|n>>.
+          <item>Then <math|f<rsup|-1>:V\<rightarrow\>X> is a of class
+          <math|C<rsup|n>>.
         </enumerate>
 
         so that definition <math|f> is a diffeomorphism of class
@@ -31407,7 +31406,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|15>
-    <associate|page-first|925>
+    <associate|page-first|927>
     <associate|par-first|0>
     <associate|section-nr|0>
     <associate|subsection-nr|2>

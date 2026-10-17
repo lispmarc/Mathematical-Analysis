@@ -4485,6 +4485,54 @@
     </note>
   </definition>
 
+  <\example>
+    <label|manifold identity is a C^q mapping>Let <math|m\<in\>M>,
+    <math|r\<in\>\<bbb-N\><rsub|0><big|cup><around*|{|\<infty\>|}>>,
+    <math|\<cal-M\><rsup|m><around*|\<langle\>|M,\<cal-T\><rsub|M>,\<cal-A\><rsub|M>|\<rangle\>>>
+    a <math|m>-dimensional <math|C<rsup|r>> differentiable manifold then the
+    identity mapping
+
+    <\equation*>
+      Id<rsub|M>:M\<rightarrow\>M
+    </equation*>
+
+    is a <math|C<rsup|r>> mapping.
+  </example>
+
+  <\proof>
+    Let <math|p\<in\>M> then there exist a
+    <math|<around*|(|U,\<varphi\>|)>\<in\>\<cal-A\><rsub|M>> with
+    <math|p\<in\>M>. Trivially we have then also
+    <math|<rigid|Id<rsub|M><around*|(|p|)>=p\<in\>U>> and
+    <math|Id<rsub|M><around*|(|U|)>=U>. Further consider the function\ 
+
+    <\equation*>
+      \<varphi\>\<circ\>Id<rsub|M>\<circ\>\<varphi\><rsup|-1>:\<varphi\><around*|(|U|)>\<rightarrow\>\<bbb-R\><rsup|m>
+    </equation*>
+
+    Let <math|x\<in\>\<varphi\><around*|(|U|)>> then we have\ 
+
+    <\equation*>
+      <around*|(|\<varphi\>\<circ\>Id<rsub|M>\<circ\>\<varphi\><rsup|-1>|)><around*|(|x|)>=\<varphi\><around*|(|Id<rsub|M><around*|(|\<varphi\><rsup|-1><around*|(|x|)>|)>|)>=\<varphi\><around*|(|\<varphi\><rsup|-1><around*|(|x|)>|)>=Id<rsub|\<varphi\><around*|(|U|)>><around*|(|x|)>
+    </equation*>
+
+    so that <math|\<varphi\>\<circ\>Id<rsub|M>\<circ\>\<varphi\><rsup|-1>=Id<rsub|\<varphi\><around*|(|U|)>>>.
+    Using [theorem: <reference|diff identity function is infinite times
+    differentiable>] <math|Id<rsub|\<varphi\><around*|(|U|)>>> is of class
+    <math|C<rsup|r>> so that\ 
+
+    <\equation*>
+      \<varphi\>\<circ\>Id<rsub|M>\<circ\>\<varphi\><rsup|-1>:\<varphi\><around*|(|U|)>\<rightarrow\>\<bbb-R\><rsup|m><text|
+      is of class >C<rsup|r>
+    </equation*>
+
+    hence\ 
+
+    <\equation*>
+      Id<rsub|M>:M\<rightarrow\>M<text| is a >C<rsup|r><text| mapping>
+    </equation*>
+  </proof>
+
   Every <math|C<rsup|r>> mapping between differentiable manifolds is a
   continuous mapping.
 
@@ -5853,6 +5901,72 @@
     </enumerate>
   </definition>
 
+  <\theorem>
+    <label|manifold diffeomorphism and inverse>Let <math|n,m\<in\>\<bbb-N\>>,
+    <math|q\<in\>\<bbb-N\><rsub|0><big|cup><around*|{|\<infty\>|}>>,
+    <math|\<cal-M\><rsup|m><around*|\<langle\>|M,\<cal-T\><rsub|M>,\<cal-A\><rsub|M>|\<rangle\>>>
+    a <math|m>-dimensional <math|C<rsup|q>> differentiabke manifold,
+    <math|\<cal-M\><rsup|n><around*|\<langle\>|N,\<cal-T\><rsub|N>,\<cal-A\><rsub|N>|\<rangle\>>>
+    a <math|n>-dimensional <math|C<rsup|q>> differentiable manifold and
+    <math|<rigid|f:M\<rightarrow\>N>> a function then\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|>|<cell|f:M\<rightarrow\>N<text| is a
+      >C<rsup|q><text| diffeomorphism>>|<cell|>>|<row|<cell|>|<cell|\<Updownarrow\>>|<cell|>>|<row|<cell|>|<cell|f<rsup|-1>:N\<rightarrow\>M<text|
+      is a >C<rsup|q><text| diffeomorphism>>|<cell|>>>>
+    </eqnarray*>
+  </theorem>
+
+  <\proof>
+    \;
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>As <math|f> is a <math|C<rsup|q>>
+      diffeomorphism we have that:\ 
+
+      <\enumerate>
+        <item><math|f:M\<rightarrow\>N> is a bijection so that by [theorem:
+        <reference|function bijection and inverse>]
+        <math|f<rsup|-1>:N\<rightarrow\>M> is a bijection.
+
+        <item><math|f<rsup|-1>:N\<rightarrow\>M> is a <math|C<rsup|q>>
+        mapping.
+
+        <item><math|<around*|(|f<rsup|-1>|)><rsup|-1><below|=|<text|[theorem:
+        <reference|function inverse of a bijection is
+        unique>]>>f:M\<rightarrow\>N> is a <math|C<rsup|q>> mapping
+      </enumerate>
+
+      so that by definition <math|f<rsup|-1>> is a <math|C<rsup|q>>
+      diffeomorphism.
+
+      <item*|<math|\<Leftarrow\>>>As <math|f<rsup|-1>> is a <math|C<rsup|q>>
+      diffeomorphism we have that:\ 
+
+      <\enumerate>
+        <item><math|f<rsup|-1>:N\<rightarrow\>M> is a bijection so that by
+        [theorem: <reference|function bijection and inverse>]
+
+        <\equation*>
+          f<below|=|<text|[theorem: <reference|function inverse of a
+          bijection is unique>]>><around*|(|f<rsup|-1>|)><rsup|-1>:M\<rightarrow\>N
+        </equation*>
+
+        is a bijection.
+
+        <item>Then <math|f<below|=|<text|[theorem: <reference|function
+        inverse of a bijection is unique>]>><around*|(|f<rsup|-1>|)><rsup|-1>:M\<rightarrow\>N>
+        is a <math|C<rsup|q>> mapping<math|>.
+
+        <item>Then <math|f<rsup|-1>:V\<rightarrow\>X> is a <math|C<rsup|q>>
+        mapping.
+      </enumerate>
+
+      so that definition <math|f> is a diffeomorphism of class
+      <math|C<rsup|n>>.
+    </description>
+  </proof>
+
   <\definition>
     <label|manifold diffeomorphic manifolds>Let <math|n,m\<in\>\<bbb-N\>>,
     <math|q\<in\>\<bbb-N\><rsub|0><big|cup><around*|{|\<infty\>|}>>,
@@ -6884,7 +6998,7 @@
   <\proposition>
     <label|manifold composition of a C^r mapping and a mapping of class
     C^r>Let <math|m,n\<in\>\<bbb-N\>>, <math|q\<in\>\<bbb-N\><rsub|0><big|cup><around*|{|\<infty\>|}>>,
-    <math|\<cal-M\><rsup|q><around*|\<langle\>|M,\<cal-T\>,\<cal-A\><rsub|M>|\<rangle\>>>
+    <math|\<cal-M\><rsup|m><around*|\<langle\>|M,\<cal-T\>,\<cal-A\><rsub|M>|\<rangle\>>>
     a <math|m>-dimensional <math|C<rsup|q>> differentiable manifold,
     <math|\<cal-M\><rsup|n><around*|\<langle\>|N,\<cal-T\><rsub|N>,\<cal-A\><rsub|N>|\<rangle\>>>
     a <math|n>-dimensional <math|C<rsup|q>> differentiable manifold,
@@ -6943,7 +7057,7 @@
     <label|manifold differential><index|differential><index|<math|d
     F<rsub|p>>>Let <math|m,n\<in\>\<bbb-N\>>,
     <math|q\<in\>\<bbb-N\><rsub|0><big|cup><around*|{|\<infty\>|}>>,
-    <math|\<cal-M\><rsup|q><around*|\<langle\>|M,\<cal-T\>,\<cal-A\><rsub|M>|\<rangle\>>>
+    <math|\<cal-M\><rsup|m><around*|\<langle\>|M,\<cal-T\>,\<cal-A\><rsub|M>|\<rangle\>>>
     a <math|m>-dimensional <math|C<rsup|q>> differentiable manifold,
     <math|\<cal-M\><rsup|n><around*|\<langle\>|N,\<cal-T\><rsub|N>,\<cal-A\><rsub|N>|\<rangle\>>>
     a <math|n>-dimensional <math|C<rsup|q>> differentiable manifold,
@@ -7035,6 +7149,186 @@
       d F<rsub|p><around*|(|v|)>\<in\>T<rsub|F<around*|(|p|)>><around*|(|N|)>
     </equation*>
   </proof>
+
+  Differentials of mappings between differentiable manifolds have similar
+  properties as differentials of mappings between normed spaces.
+
+  <\theorem>
+    <label|manifold differential properties>Let <math|m,n,o\<in\>\<bbb-N\>>,
+    <math|q\<in\>\<bbb-N\><rsub|0><big|cup><around*|{|\<infty\>|}>>,
+    <math|\<cal-M\><rsup|m><around*|\<langle\>|M,\<cal-T\>,\<cal-A\><rsub|M>|\<rangle\>>>
+    a <math|m>-dimensional <math|C<rsup|q>> differentiable manifold,
+    <math|\<cal-M\><rsup|n><around*|\<langle\>|N,\<cal-T\><rsub|N>,\<cal-A\><rsub|N>|\<rangle\>>>
+    a <math|n>-dimensional <math|C<rsup|q>> differentiable manifold,
+    <math|\<cal-M\><rsup|o><around*|\<langle\>|O,\<cal-T\><rsub|O>,\<cal-A\><rsub|O>|\<rangle\>>>
+    a <math|o>-dimensional <math|C<rsup|q>> differentiable manifold,
+    <math|p\<in\>M>, <math|F:M\<rightarrow\>N> a <math|C<rsup|q>> mapping and
+    <math|G:N\<rightarrow\>O> then we have:\ 
+
+    <\enumerate>
+      <item><math|d F<rsub|p>:T<rsub|p>M\<rightarrow\>T<rsub|F<around*|(|p|)>>N>
+      is linear [or equivalently <math|d F<rsub|p>\<in\>Hom<around*|(|T<rsub|p>M,T<rsub|F<around*|(|p|)>>N|)>>].
+
+      <item><math|d <around*|(|G\<circ\>F|)><rsub|p>:T<rsub|p>M\<rightarrow\>T<rsub|<around*|(|G\<circ\>F|)><around*|(|p|)>>O>
+      is defined by <math|d <around*|(|G\<circ\>F|)><rsub|p>=d
+      G<rsub|F<around*|(|p|)>>\<circ\>d F<rsub|p>>.
+
+      <item><math|Id<rsub|M>:M\<rightarrow\>M> is a <math|C<rsup|q>>-mapping
+      and <math|d <around*|(|Id<rsub|M>|)><rsub|p>:T<rsub|p>M\<rightarrow\>T<rsub|p>M>
+      is defined by <math|d <around*|(|Id<rsub|M>|)><rsub|p>=Id<rsub|T<rsub|p>M>>.
+
+      <item>If <math|F:M\<rightarrow\>N> is a diffeomorphism [so that by
+      [theorem: <reference|manifold diffeomorphism and inverse>]
+      <math|F<rsup|-1>:N\<rightarrow\>M>] then <rigid|<math|d
+      F<rsub|p>:T<rsub|p>M\<rightarrow\>T<rsub|F<around*|(|p|)>>N>> is a
+      isomorphism and <math|d <around*|(|F<rsup|-1>|)><rsub|F<around*|(|p|)>>:T<rsub|F<around*|(|p|)>>N\<rightarrow\>T<rsub|p>M>
+      is defined by <math|d <around*|(|F<rsup|-1>|)><rsub|F<around*|(|p|)>>=<around*|(|d
+      F<rsub|p>|)><rsup|-1>>.
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>Let <math|v,w\<in\>T<rsub|p>M> and
+      <math|\<alpha\>\<in\>\<bbb-R\>> then we have
+      <math|\<forall\>f\<in\>C<rsup|q><around*|(|N|)>> that\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|<around*|(|d
+        F<rsub|p>|)><around*|(|v+w|)>|)><around*|(|f|)>>|<cell|=>|<cell|<around*|(|v+w|)><around*|(|f\<circ\>F|)>>>|<row|<cell|>|<cell|=>|<cell|v<around*|(|F\<circ\>f|)>+w<around*|(|F\<circ\>f|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|d
+        F<rsub|p><around*|(|v|)>|)><around*|(|f|)>+<around*|(|d
+        F<rsub|p><around*|(|w|)>|)><around*|(|f|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|d
+        F<rsub|p><around*|(|v|)>+d F<rsub|p><around*|(|w|)>|)><around*|(|f|)>>>|<row|<cell|<around*|(|<around*|(|d
+        F<rsub|p>|)><around*|(|\<alpha\>\<cdot\>v|)>|)><around*|(|f|)>>|<cell|=>|<cell|<around*|(|\<alpha\>\<cdot\>v|)><around*|(|f\<circ\>F|)>>>|<row|<cell|>|<cell|=>|<cell|\<alpha\>\<cdot\>v<around*|(|f\<circ\>F|)>>>|<row|<cell|>|<cell|=>|<cell|\<alpha\>\<cdot\><around*|(|d
+        F<rsub|p><around*|(|v|)>|)><around*|(|f|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|\<alpha\>\<cdot\>d
+        F<rsub|p><around*|(|v|)>|)><around*|(|f|)>>>>>
+      </eqnarray*>
+
+      from which it follows that
+
+      <\equation*>
+        <around*|(|d F<rsub|p>|)><around*|(|v+w|)>=d
+        F<rsub|p><around*|(|v|)>+d F<rsub|p><around*|(|w|)><text| and
+        ><around*|(|d F<rsub|p>|)><around*|(|\<alpha\>\<cdot\>v|)>=\<alpha\>\<cdot\>d
+        F<rsub|p><around*|(|v|)>
+      </equation*>
+
+      which proves that\ 
+
+      <\equation*>
+        d F<rsub|p><text| is a linear mapping>
+      </equation*>
+
+      <item>As <math|F:M\<rightarrow\>N> and <math|G:N\<rightarrow\>O> are
+      <math|C<rsup|q>> mappings it follow from the chain rule [theorem:
+      <reference|manifold chain rule>] that
+      <math|G\<circ\>F:M\<rightarrow\>O> is a <math|C<rsup|q>> mapping. Let
+      <math|v\<in\>T<rsub|p>M> then we have
+      <math|\<forall\>f\<in\>C<rsup|q><around*|(|O|)>> that
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|d
+        <around*|(|G\<circ\>F|)><rsub|p><around*|(|v|)>|)><around*|(|f|)>>|<cell|=>|<cell|v<around*|(|f\<circ\><around*|(|G\<circ\>F|)>|)>>>|<row|<cell|>|<cell|=>|<cell|v<around*|(|<around*|(|f\<circ\>G|)>\<circ\>F|)>>>|<row|<cell|>|<cell|<below|=|f\<circ\>G\<in\>C<rsup|q><around*|(|N|)><text|
+        by [<reference|manifold composition of a C^r mapping and a mapping of
+        class C^r>]>>>|<cell|<around*|(|d
+        F<rsub|p><around*|(|v|)>|)><around*|(|f\<circ\>G|)>>>|<row|<cell|>|<cell|<below|<below|=|d
+        F<rsub|p><around*|(|v|)>\<in\>T<rsub|F<around*|(|p|)>>N>|>>|<cell|<around*|(|d
+        G<rsub|F<around*|(|p|)>>|)><around*|(|d
+        F<rsub|p><around*|(|v|)>|)><around*|(|f|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<around*|(|d
+        G<rsub|F<around*|(|p|)>>\<circ\>d
+        F<rsub|p>|)><around*|(|v|)>|)><around*|(|f|)>>>>>
+      </eqnarray*>
+
+      so that\ 
+
+      <\equation*>
+        d <around*|(|G\<circ\>F|)><rsub|p><around*|(|v|)>=<around*|(|d
+        G<rsub|F<around*|(|p|)>>\<circ\>d F<rsub|p>|)><around*|(|v|)>
+      </equation*>
+
+      which as this is true for every <math|v\<in\>T<rsub|p>M> proves that\ 
+
+      <\equation*>
+        \ d <around*|(|G\<circ\>F|)><rsub|p>=d
+        G<rsub|F<around*|(|p|)>>\<circ\>d F<rsub|p>
+      </equation*>
+
+      <item>Using [example: <reference|manifold identity is a C^q mapping>]
+      it follows that\ 
+
+      <\equation*>
+        Id<rsub|M>:M\<rightarrow\>M<text| is a >C<rsup|q><text| mapping>
+      </equation*>
+
+      Let <math|v\<in\>T<rsub|p>M> then we have
+      <math|\<forall\>f\<in\>C<rsup|q><around*|(|M|)>> that\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|d
+        <around*|(|Id<rsub|M>|)><rsub|p><around*|(|v|)>|)><around*|(|f|)>>|<cell|=>|<cell|v<around*|(|f\<circ\>Id<rsub|M>|)>>>|<row|<cell|>|<cell|=>|<cell|v<around*|(|f|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|Id<rsub|T<rsub|p>M><around*|(|v|)>|)><around*|(|f|)>>>>>
+      </eqnarray*>
+
+      which proves that\ 
+
+      <\equation*>
+        d <around*|(|Id<rsub|M>|)><rsub|p><around*|(|v|)>=Id<rsub|T<rsub|p>M><around*|(|v|)>
+      </equation*>
+
+      As this is true for every <math|v\<in\>T<rsub|p>M>\ 
+
+      <\equation*>
+        d <around*|(|Id<rsub|M>|)><rsub|p>=Id<rsub|T<rsub|p>M>
+      </equation*>
+
+      <item>As <math|F:M\<rightarrow\>N> is a <math|C<rsup|r>> diffeomorphism
+      it follows that\ 
+
+      <\equation*>
+        F:M\<rightarrow\>N<text| and >F<rsup|-1>:N\<rightarrow\>M<text| are
+        >C<rsup|q><text| mappings >
+      </equation*>
+
+      then we have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|Id<rsub|T<rsub|p>M>>|<cell|<below|=|<around*|(|3|)>>>|<cell|d
+        <around*|(|Id<rsub|M>|)><rsub|p>>>|<row|<cell|>|<cell|=>|<cell|d
+        <around*|(|F<rsup|-1>\<circ\>F|)><rsub|p>>>|<row|<cell|>|<cell|<below|=|<around*|(|2|)>>>|<cell|d
+        <around*|(|F<rsup|-1>|)><rsub|F<around*|(|p|)>>\<circ\>d
+        F<rsub|p>>>>>
+      </eqnarray*>
+
+      and\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|Id<rsub|T<rsub|F<around*|(|p|)>>N>>|<cell|<below|=|<around*|(|3|)>>>|<cell|d
+        <around*|(|Id<rsub|N>|)><rsub|F<around*|(|p|)>>>>|<row|<cell|>|<cell|=>|<cell|d
+        <around*|(|F\<circ\>F<rsup|-1>|)><rsub|F<around*|(|p|)>>>>|<row|<cell|>|<cell|<below|=|<around*|(|2|)>>>|<cell|d
+        F<rsub|F<rsup|-1><around*|(|F<around*|(|p|)>|)>>\<circ\>d
+        <around*|(|F<rsup|-1>|)><rsub|F<around*|(|p|)>>>>|<row|<cell|>|<cell|=>|<cell|d
+        F<rsub|p>\<circ\>d <around*|(|F<rsup|-1>|)><rsub|F<around*|(|p|)>>>>>>
+      </eqnarray*>
+
+      Hence
+
+      <\equation*>
+        d F<rsub|p><text| is a bijection with ><around*|(|d
+        F<rsub|p>|)><rsup|-1>=d <around*|(|F<rsup|-1>|)><rsub|F<around*|(|p|)>>
+      </equation*>
+
+      Finally as by (1) <math|d F<rsub|p>> and <math|d
+      <around*|(|F<rsup|-1>|)><rsub|F<around*|(|p|)>>> are linear it follows
+      that\ 
+
+      <\equation*>
+        d F<rsub|p><text| is a isomorphism>
+      </equation*>
+    </enumerate>
+  </proof>
+
+  \;
 
   \;
 
@@ -7244,39 +7538,39 @@
     <associate|lemma 23.39.6|<tuple|23.44|?>>
     <associate|lemma 23.40.9|<tuple|23.48|?>>
     <associate|lemma 23.5.10|<tuple|23.5|?>>
-    <associate|lemma 23.81.14|<tuple|23.86|?>>
+    <associate|lemma 23.81.14|<tuple|23.88|?>>
     <associate|manifold C^m C^n atlas|<tuple|23.42|?>>
     <associate|manifold C^m C^n compatible|<tuple|23.38|?>>
     <associate|manifold C^m C^n manifold|<tuple|23.60|?>>
-    <associate|manifold C^m C^n mapping|<tuple|23.80|?>>
+    <associate|manifold C^m C^n mapping|<tuple|23.81|?>>
     <associate|manifold C^m chart|<tuple|23.36|?>>
     <associate|manifold C^m compatibility and restriction|<tuple|23.39|?>>
-    <associate|manifold C^m mappings are continuous|<tuple|23.72|?>>
-    <associate|manifold C^m mappings equivalences|<tuple|23.75|?>>
-    <associate|manifold C^m mappings equivalences (1)|<tuple|23.73|?>>
-    <associate|manifold C^m(M)|<tuple|23.92|?>>
-    <associate|manifold C^q(M) is a vector space|<tuple|23.93|?>>
-    <associate|manifold C^r functions are C^r mappings|<tuple|23.77|?>>
-    <associate|manifold C^r mspping id local (2)|<tuple|23.79|?>>
-    <associate|manifold C^r mspping id locsl|<tuple|23.78|?>>
+    <associate|manifold C^m mappings are continuous|<tuple|23.73|?>>
+    <associate|manifold C^m mappings equivalences|<tuple|23.76|?>>
+    <associate|manifold C^m mappings equivalences (1)|<tuple|23.74|?>>
+    <associate|manifold C^m(M)|<tuple|23.94|?>>
+    <associate|manifold C^q(M) is a vector space|<tuple|23.95|?>>
+    <associate|manifold C^r functions are C^r mappings|<tuple|23.78|?>>
+    <associate|manifold C^r mspping id local (2)|<tuple|23.80|?>>
+    <associate|manifold C^r mspping id locsl|<tuple|23.79|?>>
     <associate|manifold R^n is a differentiable manifold|<tuple|23.64|?>>
-    <associate|manifold TpM is a vector space|<tuple|23.99|?>>
-    <associate|manifold TpM properties|<tuple|23.100|?>>
+    <associate|manifold TpM is a vector space|<tuple|23.101|?>>
+    <associate|manifold TpM properties|<tuple|23.102|?>>
     <associate|manifold a finite dimensional vector space is a differentiable
     manifold|<tuple|23.67|?>>
     <associate|manifold a topological manifold is locally
     compact|<tuple|23.25|?>>
     <associate|manifold atlas|<tuple|23.11|?>>
     <associate|manifold canonical example|<tuple|23.15|?>>
-    <associate|manifold chain rule|<tuple|23.82|?>>
+    <associate|manifold chain rule|<tuple|23.83|?>>
     <associate|manifold chart that is compatible with a
     atlas|<tuple|23.43|?>>
     <associate|manifold compatible atlas|<tuple|23.52|?>>
     <associate|manifold compatible atlas (1)|<tuple|23.53|?>>
     <associate|manifold composition of a C^r mapping and a mapping of class
-    C^r|<tuple|23.101|?>>
+    C^r|<tuple|23.103|?>>
     <associate|manifold connectivity properties|<tuple|23.24|?>>
-    <associate|manifold constant functions|<tuple|23.94|?>>
+    <associate|manifold constant functions|<tuple|23.96|?>>
     <associate|manifold coordinate ball and cube|<tuple|23.9|?>>
     <associate|manifold coordinate domain|<tuple|23.8|?>>
     <associate|manifold coordinate transforms are a
@@ -7284,14 +7578,15 @@
     <associate|manifold cooridinate chart|<tuple|23.3|?>>
     <associate|manifold cooridinate chart existence|<tuple|23.10|?>>
     <associate|manifold diffentiable atlas|<tuple|23.40|?>>
-    <associate|manifold diffeomorphic manifolds|<tuple|23.84|?>>
+    <associate|manifold diffeomorphic manifolds|<tuple|23.86|?>>
     <associate|manifold diffeomorphic manifolds have the same
-    dimension|<tuple|23.89|?>>
-    <associate|manifold diffeomorphism|<tuple|23.83|?>>
-    <associate|manifold diffeomorphism composition|<tuple|23.90|?>>
-    <associate|manifold diffeomorphism equivalence|<tuple|23.87|?>>
-    <associate|manifold diffeomorphism equivalence (1)|<tuple|23.88|?>>
-    <associate|manifold diffeomorphism is a homeomorphism|<tuple|23.85|?>>
+    dimension|<tuple|23.91|?>>
+    <associate|manifold diffeomorphism|<tuple|23.84|?>>
+    <associate|manifold diffeomorphism and inverse|<tuple|23.85|?>>
+    <associate|manifold diffeomorphism composition|<tuple|23.92|?>>
+    <associate|manifold diffeomorphism equivalence|<tuple|23.89|?>>
+    <associate|manifold diffeomorphism equivalence (1)|<tuple|23.90|?>>
+    <associate|manifold diffeomorphism is a homeomorphism|<tuple|23.87|?>>
     <associate|manifold differentiability real function|<tuple|23.45|?>>
     <associate|manifold differentiability real function (1)|<tuple|23.47|?>>
     <associate|manifold differentiability real function (2)|<tuple|23.57|?>>
@@ -7299,15 +7594,17 @@
     <associate|manifold differentiable manifold|<tuple|23.58|?>>
     <associate|manifold differentiable mappings|<tuple|23.69|?>>
     <associate|manifold differentiable structure|<tuple|23.55|?>>
-    <associate|manifold differential|<tuple|23.102|?>>
+    <associate|manifold differential|<tuple|23.104|?>>
+    <associate|manifold differential properties|<tuple|23.105|?>>
     <associate|manifold existence of a maximal atlas|<tuple|23.56|?>>
+    <associate|manifold identity is a C^q mapping|<tuple|23.72|?>>
     <associate|manifold maximal atlas|<tuple|23.49|?>>
     <associate|manifold maximum atlas and sub charts|<tuple|23.50|?>>
     <associate|manifold open set is a sub manifold|<tuple|23.16|?>>
     <associate|manifold open subset of a differentiable
     manifold|<tuple|23.65|?>>
     <associate|manifold product of functions that are of class
-    C^q|<tuple|23.95|?>>
+    C^q|<tuple|23.97|?>>
     <associate|manifold real numbers are a differentiable
     manifold|<tuple|23.63|?>>
     <associate|manifold real numbers form a topological
@@ -7316,7 +7613,7 @@
     <associate|manifold singleton chart|<tuple|23.61|?>>
     <associate|manifold sphere is a differentiable manifold|<tuple|23.66|?>>
     <associate|manifold sphere is a topological manifold|<tuple|23.18|?>>
-    <associate|manifold tangent vector|<tuple|23.96|?>>
+    <associate|manifold tangent vector|<tuple|23.98|?>>
     <associate|manifold topological|<tuple|23.2|?>>
     <associate|manifold topological (1)|<tuple|23.12|?>>
     <associate|manifold topological manifold is paracompact|<tuple|23.29|?>>
@@ -7365,6 +7662,10 @@
       <tuple|<tuple|tangent vector>|<pageref|auto-23>>
 
       <tuple|<tuple|<with|mode|<quote|math>|T<rsub|p>M>>|<pageref|auto-24>>
+
+      <tuple|<tuple|differential>|<pageref|auto-25>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|d F<rsub|p>>>|<pageref|auto-26>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|23<space|2spc>Differential
