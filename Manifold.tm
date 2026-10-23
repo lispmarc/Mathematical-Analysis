@@ -6602,6 +6602,411 @@
     </equation*>
   </proof>
 
+  <section|Partitions of unity>
+
+  <\definition>
+    <label|diff left and right derivative>Let
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> be
+    a normed space, <math|A\<subseteq\>X>, <math|f:A\<rightarrow\>X> a
+    function then we say that\ 
+
+    <\enumerate>
+      <item><math|d\<in\>X> is a <with|font-series|bold|left derivative
+      ><with|font-series|bold|of <math|f> at <math|t>> if
+      <math|\<forall\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> there exist a
+      <math|\<delta\>\<in\>\<bbb-R\><rsup|+>> such that
+      <math|<rigid|\<forall\>h\<in\>A<rsub|t><big|cap><around*|]|-\<delta\>,0|[>>>
+      we have that\ 
+
+      <\equation*>
+        <around*|\<\|\|\>|<frac|f<around*|(|t+h|)>-f<around*|(|t|)>|h>-d|\<\|\|\>>\<less\>\<varepsilon\>
+      </equation*>
+
+      <item><math|d\<in\>X> is a <with|font-series|bold|right derivative of
+      <math|f> at <math|t>> if <math|\<forall\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>
+      there exist a <math|\<delta\>\<in\>\<bbb-R\><rsup|+>> such that
+      <math|<rigid|\<forall\>h\<in\>A<rsub|t><big|cap><around*|]|0,\<delta\>|[>>>
+      we have that\ 
+
+      <\equation*>
+        <around*|\<\|\|\>|<frac|f<around*|(|t+h|)>-f<around*|(|t|)>|h>-d|\<\|\|\>>\<less\>\<varepsilon\>
+      </equation*>
+    </enumerate>
+  </definition>
+
+  We prove now that for limit points the left and right derivative at this
+  point are unique if they exist.
+
+  <\theorem>
+    <label|diff left and right derivative are unique>Let
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> be
+    a normed space, <math|A\<subseteq\>X>, <math|f:A\<rightarrow\>X> a
+    function them we have:\ 
+
+    <\enumerate>
+      <item>If <math|t\<in\>A> is a limit point of
+      <math|A<big|cap><around*|]|-\<infty\>,t|]>> and
+      <math|d<rsub|1>,d<rsub|2>> are left derivatives of <math|f> at <math|t>
+      then <math|d<rsub|1>=d<rsub|2>>.
+
+      <item>If <math|t\<in\>A> is a limit point of
+      <math|A<big|cap><around*|[|t,\<infty\>|[>> and
+      <math|d<rsub|1>,d<rsub|2>> are right derivatives of <math|f> at
+      <math|t> then <math|d<rsub|1>=d<rsub|2>>.
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>We prove this by contradiction, so assume that
+      <math|d<rsub|1>\<neq\>d<rsub|2>> then
+      <math|<around*|\<\|\|\>|d<rsub|2>-d<rsub|1>|\<\|\|\>>\<neq\>0>. As
+      <math|d<rsub|1>,d<rsub|2>> are left derivatives at <math|t> there
+      exists <math|\<delta\><rsub|1>,\<delta\><rsub|2>\<in\>\<bbb-R\><rsup|+>>
+      such that\ 
+
+      <\equation>
+        <label|eq 23.147.18>\<forall\>h\<in\>A<rsub|t><big|cap><around*|]|-\<delta\><rsub|1>,0|[><text|
+        ><around*|\<\|\|\>|<frac|f<around*|(|t+h|)>-f<around*|(|t|)>|h>-d<rsub|1>|\<\|\|\>>\<less\><frac|<around*|\<\|\|\>|d<rsub|2>-d<rsub|1>|\<\|\|\>>|2>
+      </equation>
+
+      <\equation>
+        <label|eq 23.148.18>\<forall\>h\<in\>A<rsub|t><big|cap><around*|]|-\<delta\><rsub|2>,0|[><text|
+        ><around*|\<\|\|\>|<frac|f<around*|(|t+h|)>-f<around*|(|t|)>|h>-d<rsub|2>|\<\|\|\>>\<less\><frac|<around*|\<\|\|\>|d<rsub|2>-d<rsub|1>|\<\|\|\>>|2>
+      </equation>
+
+      Take <math|\<delta\>=min<around*|(|\<delta\><rsub|1>,\<delta\><rsub|2>|)>>.
+      As <math|t> is a limit point of <math|A<big|cap><around*|]|-\<infty\>,t|]>>
+      and <math|t\<in\>B<rsub|<around*|\|||\|>><around*|(|t,\<delta\>|)>> it
+      follows that
+
+      <\equation*>
+        <around*|(|<around*|(|A<big|cap><around*|]|-\<infty\>,t|]>|)>\\<around*|{|t|}>|)><big|cap>B<rsub|<around*|\|||\|>><around*|(|t,\<delta\>|)>\<neq\>\<varnothing\>
+      </equation*>
+
+      Hence there exist a <math|s\<in\>A> such that
+      <math|s\<in\>A\<wedge\>s\<less\>t<text| and
+      ><around*|\||s-t|\|>\<less\>\<delta\>>. Take <math|h=s-t> then
+      <math|t+h\<in\>A\<Rightarrow\>h\<in\>A<rsub|t>>, <math|h\<less\>0> and
+      <math|-h=<around*|\||h|\|>\<less\>\<delta\><rsub|1>,\<delta\><rsub|2>>
+      so that <math|h\<in\>A<rsub|t><big|cap><around*|]|-\<delta\><rsub|1>,0|[>>
+      and <math|h\<in\>A<rsub|t><big|cap><around*|]|-\<delta\><rsub|2>,0|[>>.
+      Now\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|\<\|\|\>|d<rsub|2>-d<rsub|1>|\<\|\|\>>>|<cell|=>|<cell|<around*|\<\|\|\>|d<rsub|2>-<frac|f<around*|(|t+h|)>-f<around*|(|t|)>|h>+<frac|f<around*|(|t+h|)>-f<around*|(|t|)>|h>-d<rsub|1>|\<\|\|\>>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<around*|\<\|\|\>|d<rsub|2>-<frac|f<around*|(|t+h|)>-f<around*|(|t|)>|h>|\<\|\|\>>+<around*|\<\|\|\>|<frac|f<around*|(|t+h|)>-f<around*|(|t|)>|h>-d<rsub|1>|\<\|\|\>>>>|<row|<cell|>|<cell|<below|\<less\>|<text|[eq:
+        <reference|eq 23.147.18>, <reference|eq
+        23.148.18>]>>>|<cell|<frac|<around*|\<\|\|\>|d<rsub|2>-d<rsub|1>|\<\|\|\>>|2>+<frac|<around*|\<\|\|\>|d<rsub|2>-d<rsub|1>|\<\|\|\>>|2>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|d<rsub|2>-d<rsub|1>|\<\|\|\>>>>>>
+      </eqnarray*>
+
+      leading to the contradiction <math|<around*|\<\|\|\>|d<rsub|2>-d<rsub|1>|\<\|\|\>>\<less\><around*|\<\|\|\>|d<rsub|2>-d<rsub|1>|\<\|\|\>>>.
+      Hence the assumption is false so that\ 
+
+      <\equation*>
+        d<rsub|1>=d<rsub|2>
+      </equation*>
+
+      <item>We prove this by contradiction, so assume that
+      <math|d<rsub|1>\<neq\>d<rsub|2>> then
+      <math|<around*|\<\|\|\>|d<rsub|2>-d<rsub|1>|\<\|\|\>>\<neq\>0>. As
+      <math|d<rsub|1>,d<rsub|2>> are right derivatives at <math|t> there
+      exists <math|\<delta\><rsub|1>,\<delta\><rsub|2>\<in\>\<bbb-R\><rsup|+>>
+      such that\ 
+
+      <\equation>
+        <label|eq 23.149.18>\<forall\>h\<in\>A<rsub|t><big|cap><around*|]|0,\<delta\><rsub|1>|[><text|
+        ><around*|\<\|\|\>|<frac|f<around*|(|t+h|)>-f<around*|(|t|)>|h>-d<rsub|1>|\<\|\|\>>\<less\><frac|<around*|\<\|\|\>|d<rsub|2>-d<rsub|1>|\<\|\|\>>|2>
+      </equation>
+
+      <\equation>
+        <label|eq 23.150.18>\<forall\>h\<in\>A<rsub|t><big|cap><around*|]|0,\<delta\><rsub|2>|[><text|
+        ><around*|\<\|\|\>|<frac|f<around*|(|t+h|)>-f<around*|(|t|)>|h>-d<rsub|2>|\<\|\|\>>\<less\><frac|<around*|\<\|\|\>|d<rsub|2>-d<rsub|1>|\<\|\|\>>|2>
+      </equation>
+
+      Take <math|\<delta\>=min<around*|(|\<delta\><rsub|1>,\<delta\><rsub|2>|)>>.
+      As <math|t> is a limit point of <math|A<big|cap><around*|[|t,\<infty\>|[>>
+      and <math|t\<in\>B<rsub|<around*|\|||\|>><around*|(|t,\<delta\>|)>> it
+      follows that
+
+      <\equation*>
+        <around*|(|<around*|(|A<big|cap><around*|[|t,\<infty\>|[>|)>\\<around*|{|t|}>|)><big|cap>B<rsub|<around*|\|||\|>><around*|(|t,\<delta\>|)>\<neq\>\<varnothing\>
+      </equation*>
+
+      Hence there exist a <math|s\<in\>A> such that
+      <math|s\<in\>A\<wedge\>t\<less\>s<text| and
+      ><around*|\||s-t|\|>\<less\>\<delta\>>. Take <math|h=s-t> then
+      <math|t+h\<in\>A\<Rightarrow\>h\<in\>A<rsub|t>>, <math|0\<less\>h> and
+      <math|0\<less\>h=<around*|\||h|\|>\<less\>\<delta\><rsub|1>,\<delta\><rsub|2>>
+      so that <math|h\<in\>A<rsub|t><big|cap><around*|]|0,\<delta\><rsub|1>|[>>
+      and <math|h\<in\>A<rsub|t><big|cap><around*|]|-0,\<delta\><rsub|2>|[>>.
+      Now\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|\<\|\|\>|d<rsub|2>-d<rsub|1>|\<\|\|\>>>|<cell|=>|<cell|<around*|\<\|\|\>|d<rsub|2>-<frac|f<around*|(|t+h|)>-f<around*|(|t|)>|h>+<frac|f<around*|(|t+h|)>-f<around*|(|t|)>|h>-d<rsub|1>|\<\|\|\>>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<around*|\<\|\|\>|d<rsub|2>-<frac|f<around*|(|t+h|)>-f<around*|(|t|)>|h>|\<\|\|\>>+<around*|\<\|\|\>|<frac|f<around*|(|t+h|)>-f<around*|(|t|)>|h>-d<rsub|1>|\<\|\|\>>>>|<row|<cell|>|<cell|<below|\<less\>|<text|[eq:
+        <reference|eq 23.149.18>, <reference|eq
+        23.150.18>]>>>|<cell|<frac|<around*|\<\|\|\>|d<rsub|2>-d<rsub|1>|\<\|\|\>>|2>+<frac|<around*|\<\|\|\>|d<rsub|2>-d<rsub|1>|\<\|\|\>>|2>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|d<rsub|2>-d<rsub|1>|\<\|\|\>>>>>>
+      </eqnarray*>
+
+      leading to the contradiction <math|<around*|\<\|\|\>|d<rsub|2>-d<rsub|1>|\<\|\|\>>\<less\><around*|\<\|\|\>|d<rsub|2>-d<rsub|1>|\<\|\|\>>>.
+      Hence the assumption is false so that\ 
+
+      <\equation*>
+        d<rsub|1>=d<rsub|2>
+      </equation*>
+    </enumerate>
+  </proof>
+
+  The above theorem allows us to finally define <math|f<rprime|'><rsub|+,t>>
+  and <math|f<rprime|'><rsub|-,t>>.
+
+  <\definition>
+    <label|diff left and right derivative (1)>Let
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> a
+    normed space,, <math|f:A\<rightarrow\>X> be a function and
+    <math|t\<in\>A> then we say that
+
+    <\enumerate>
+      <item><math|f> has a left derivative <math|f<rprime|'><rsub|-,t>> at
+      <math|t> iff\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|>|<cell|t<text| is a limit point of
+        >A<big|cap><around*|]|-\<infty\>,t|]>>|<cell|>>|<row|<cell|>|<cell|and>|<cell|>>|<row|<cell|>|<cell|\<forall\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+><text|
+        >\<exists\>\<delta\>\<in\>\<bbb-R\><rsup|+><text| such that
+        >\<forall\>h\<in\>A<rsub|t><big|cap><around*|[|-\<delta\>,0|[><text|
+        we have ><around*|\<\|\|\>|<frac|f<around*|(|t+h|)>-f<around*|(|t|)>|h>-f<rprime|'><rsub|-,t>|\<\|\|\>>\<less\>\<varepsilon\>>|<cell|>>>>
+      </eqnarray*>
+
+      <item><math|f> has a right derivative <math|f<rprime|'><rsub|+,t>> at
+      <math|t> iff\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|>|<cell|t<text| is a limit point of
+        >A<big|cap><around*|[|t,\<infty\>|[>>|<cell|>>|<row|<cell|>|<cell|and>|<cell|>>|<row|<cell|>|<cell|\<forall\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+><text|
+        >\<exists\>\<delta\>\<in\>\<bbb-R\><rsup|+><text| such that
+        >\<forall\>h\<in\>A<rsub|t><big|cap><around*|]|0,\<delta\>|[><text|
+        we have ><around*|\<\|\|\>|<frac|f<around*|(|t+h|)>-f<around*|(|t|)>|h>-f<rprime|'><rsub|+,t>|\<\|\|\>>\<less\>\<varepsilon\>>|<cell|>>>>
+      </eqnarray*>
+    </enumerate>
+
+    <\note>
+      If <math|A=\<bbb-R\>> then <math|A<big|cap><around*|]|-\<infty\>,t|]>=<around*|]|-\<infty\>,t|]>>
+      and <math|A<big|cap><around*|[|t,\<infty\>|[>=<around*|[|t,\<infty\>|[>>
+      so that by [theorem: <reference|topology every element of a generalized
+      interval is a limit point>] <math|t> is a limit point of
+      <math|A<big|cap><around*|]|-\<infty\>,t|]>> and
+      <math|A<big|cap><around*|[|t,\<infty\>|[>>. In other words if the
+      domain of <math|f> is the set for real numbers then the limit point
+      condition is automatical satisfied.
+    </note>
+  </definition>
+
+  <\theorem>
+    <label|diff derivative implies left and right derivative>Let
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> be
+    a normed space, <math|t\<in\>A> and <math|f:A\<rightarrow\>X> a function
+    that has a derivative <math|f<rprime|'><rsub|t>> at <math|t> then we
+    have:\ 
+
+    <\enumerate>
+      <item>If <math|t> is a limit point of
+      <math|A<big|cap><around*|]|-\<infty\>,t|]>> then
+      <math|f<rprime|'><rsub|-,t>> exist and
+      <math|f<rprime|'><rsub|t>=f<rprime|'><rsub|-,t>>.
+
+      <item>If <math|t> is a limit point of
+      <math|A<big|cap><around*|[|t,\<infty\>|[>> then
+      <math|f<rprime|'><rsub|+,t>> exists and
+      <math|f<rprime|'><rsub|t>=f<rprime|'><rsub|+,t>>.
+    </enumerate>
+
+    <\note>
+      As <math|f<rprime|'><rsub|t>> exists <math|t> is a limit point of
+      <math|A> but this does not mean that <math|t> is a limit point of
+      <math|A<big|cap><around*|]|-\<infty\>,t|]>> or is a limit point of
+      <math|<big|cap><around*|[|t,\<infty\>|[>> so we need the extra
+      condition about limits.
+    </note>
+
+    <\note>
+      If <math|A=\<bbb-R\>> then <math|A<big|cap><around*|]|-\<infty\>,t|]>=<around*|]|-\<infty\>,t|]>>
+      and <math|A<big|cap><around*|[|t,\<infty\>|[>=<around*|[|t,\<infty\>|[>>
+      so that by [theorem: <reference|topology every element of a generalized
+      interval is a limit point>] <math|t> is a limit point of
+      <math|A<big|cap><around*|]|-\<infty\>,t|]>> and
+      <math|A<big|cap><around*|[|t,\<infty\>|[>>. In other words if the
+      domain of <math|f> is the set for real numbers then the limit point
+      condition is automatical satisfied so that in that case
+
+      <\equation*>
+        f<rprime|'><rsub|-,t><text| and >f<rprime|'><rsub|+,t><text| exists
+        with >f<rprime|'><rsub|-,t>=f<rprime|'><rsub|t>=f<rprime|'><rsub|+,t>
+      </equation*>
+    </note>
+  </theorem>
+
+  <\proof>
+    \ Let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>. As
+    <math|f<rprime|'><rsub|t>> we have by [theorem: <reference|diff calculus
+    derivate>] that
+
+    <\equation*>
+      \<exists\>\<delta\>\<in\>\<bbb-R\><rsup|+><text| so that
+      >\<forall\>h\<in\>A<rsub|t><text| with
+      >0\<less\><around*|\||h|\|>\<less\>\<delta\><text| we have
+      ><around*|\||<frac|f<around*|(|t+h|)>-f<around*|(|t|)>|h>-f<rprime|'><rsub|t>|\|>\<less\>\<varepsilon\>
+    </equation*>
+
+    <\enumerate>
+      <item>Let <math|h\<in\>A<rsub|t><big|cap><around*|]|-\<delta\>,0|[>>
+      then <math|t\<in\>A<rsub|t>> with <math|0\<less\><around*|\||h|\|>\<less\>\<delta\>>
+      so that <math|<around*|\||<frac|f<around*|(|t+h|)>-f<around*|(|t|)>|h>-f<rprime|'><rsub|t>|\|>\<less\>\<varepsilon\>>
+      which as <math|t> is a limit point of
+      <math|A<big|cap><around*|]|-\<infty\>,t|]>> proves by definition that
+      <math|f<rprime|'><rsub|-,t>> exists and that
+      <math|f<rprime|'><rsub|-,t>=f<rprime|'><rsub|t>>.\ 
+
+      <item>Let <math|h\<in\>A<rsub|t><big|cap><around*|]|0,\<delta\>|[>>
+      then <math|t\<in\>A<rsub|t>> with <math|0\<less\><around*|\||h|\|>\<less\>\<delta\>>
+      so that <math|<around*|\||<frac|f<around*|(|t+h|)>-f<around*|(|t|)>|h>-f<rprime|'><rsub|t>|\|>\<less\>\<varepsilon\>>
+      which as <math|t> is a limit point of
+      <math|A<big|cap><around*|[|t,\<infty\>|[>> proves by definition that
+      <math|f<rprime|'><rsub|+,t>> exists and that
+      <math|f<rprime|'><rsub|+,t>=f<rprime|'><rsub|t>>.\ 
+    </enumerate>
+  </proof>
+
+  We have the opposite of the above theorem,\ 
+
+  <\theorem>
+    <label|diff existence of left and right derivative implies existance of
+    the derivative>Let <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
+    be a normed space, <math|A\<subseteq\>\<bbb-R\>>, <math|t\<in\>A> and
+    <math|f:A\<rightarrow\>X> a function that has a left and right derivative
+    at <math|t> with <math|f<rprime|'><rsub|-,t>=f<rprime|'><rsub|+,t> >then
+    we have that <math|f> has a derivative at <math|t> with
+    <math|f<rprime|'><rsub|t>=f<rprime|'><rsub|-,t>=f<rprime|'><rsub|+,t>>.
+  </theorem>
+
+  <\proof>
+    As <math|f> has a left derivative <math|f<rprime|'><rsub|-,t>> at
+    <math|t> it follows that <math|t> is a limit point of
+    <math|A<big|cap><around*|]|-\<infty\>,t|]>> so that
+    <math|t\<in\><around*|(|A<big|cap><around*|]|-\<infty\>,t|]>|)><rprime|'>>,
+    hence, as by [theorem: <reference|topology limit points and subsets>]
+    <math|<around*|(|A<big|cap><around*|]|-\<infty\>,t|]>|)><rprime|'>\<subseteq\>A<rprime|'>>,
+    it follows that\ 
+
+    <\equation*>
+      t<text| is a limit point of >A
+    </equation*>
+
+    Let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> then from the existance
+    of <math|f<rprime|'><rsub|-,t>> and <math|f<rprime|'><rsub|+,t>> it
+    follows that there exists <math|\<delta\><rsub|1>,\<delta\><rsub|2>\<in\>\<bbb-R\><rsup|+>>
+    such that\ 
+
+    <\equation*>
+      \<forall\>h\<in\>A<rsub|t><big|cap><around*|]|-\<delta\>,0|[><text|
+      ><around*|\||<frac|f<around*|(|t+h|)>-f<around*|(|t|)>|h>-f<rprime|'><rsub|-,t>|\|>\<less\>\<varepsilon\>
+    </equation*>
+
+    <\equation*>
+      \<forall\>h\<in\>A<rsub|t><big|cap><around*|]|0,\<delta\>|[><text|
+      ><around*|\||<frac|f<around*|(|t+h|)>-f<around*|(|t|)>|h>-f<rprime|'><rsub|-,t>|\|><below|=|f<rprime|'><rsub|-,t>=f<rprime|'><rsub|+,t>><around*|\||<frac|f<around*|(|t+h|)>-f<around*|(|t|)>|h>-f<rprime|'><rsub|+,t>|\|>\<less\>\<varepsilon\>
+    </equation*>
+
+    Let <math|h\<in\>A<rsub|t><text| with
+    <math|0\<less\><around*|\||h|\|>\<less\>\<delta\>>>> then we have the
+    following cases to consider for <math|h>
+
+    <\description>
+      <item*|<math|h\<less\>0>>Then <math|-h=<around*|\||h|\|>> so that
+      <math|0\<less\>-h\<less\>\<delta\>> from which it follows
+      <math|-\<delta\>\<less\>h\<less\>0>, hence
+      <math|h\<in\>A<rsub|t><big|cap><around*|]|-\<delta\>,0|[>> so that\ 
+
+      <\equation*>
+        <around*|\||<frac|f<around*|(|t+h|)>-f<around*|(|t|)>|h>-f<rprime|'><rsub|-,t>|\|>\<less\>\<varepsilon\>
+      </equation*>
+
+      <item*|<math|0\<less\>h>>Then <math|h=<around*|\||h|\|>> so that
+      <math|0\<less\>h\<less\>\<delta\>> or
+      <math|h\<in\>A<rsub|t><big|cap><around*|]|0,\<delta\>|[>> from which it
+      follows that
+
+      <\equation*>
+        <around*|\||<frac|f<around*|(|t+h|)>-f<around*|(|t|)>|h>-f<rprime|'><rsub|-,t>|\|>\<less\>\<varepsilon\>
+      </equation*>
+    </description>
+
+    So we have\ 
+
+    <\equation*>
+      \<forall\>h\<in\>A<rsub|t><text| with
+      >0\<less\><around*|\||h|\|>\<less\>\<delta\><text| we have
+      ><around*|\||<frac|f<around*|(|t+h|)>-f<around*|(|t|)>|h>-f<rprime|'><rsub|-,t>|\|>\<less\>\<varepsilon\>
+    </equation*>
+
+    which as <math|t> is a limit point of <math|A> proves that\ 
+
+    <\equation*>
+      f<rprime|'><rsub|+,t>=f<rprime|'><rsub|-,t><text| is the derivative of
+      >f
+    </equation*>
+  </proof>
+
+  <\lemma>
+    <math|\<forall\>k\<in\>\<bbb-N\>> <math|we have
+    \<forall\>t\<in\><around*|]|0,\<infty\>|[>> that\ 
+
+    <\equation*>
+      f:<around*|]|0,\<infty\>|[>\<rightarrow\>\<bbb-R\><text| defined by
+      >f<rsup|><around*|(|t|)>=exp<around*|(|-<frac|1|t>|)>
+    </equation*>
+
+    has a <math|k>-times derivstive <math|f<rsup|<around*|(|k|)>><rsub|t>> at
+    <math|t> with
+
+    <\equation*>
+      f<rsup|<around*|(|k|)>><rsub|t>=p<rsub|k><around*|(|t|)>\<cdot\><frac|exp<around*|(|-<frac|1|t>|)>|t<rsup|2\<cdot\>k>>
+    </equation*>
+
+    where\ 
+
+    <\equation*>
+      p<rsub|k>:<around*|]|0,\<infty\>|[>\<rightarrow\>\<bbb-R\><text| is of
+      the form >p<rsub|k>=<big|sum><rsub|i=1><rsup|k>\<alpha\><rsub|i>\<cdot\>t<rsup|k><text|
+      >
+    </equation*>
+
+    [in other words <math|p<rsub|k><text| is a polynomial of degree at most
+    <math|k>]>>.
+  </lemma>
+
+  <\proof>
+    We prove this by induction. So let <math|t\<in\><around*|]|0,\<infty\>|[>>
+    and define\ 
+
+    <\equation*>
+      S=<around*|{|k\<in\>\<bbb-N\>\|f<rsup|<around*|(|k|)>><rsub|t><text|
+      exists with >f<rsup|<around*|(|k|)>><rsub|t>=p<rsub|k><around*|(|t|)>\<cdot\><frac|exp<around*|(|-<frac|1|t>|)>|t<rsup|2\<cdot\>k>><text|
+      where >p<rsub|k><text| is a polynomial of degree at most >k|)>
+    </equation*>
+
+    then we have:\ 
+
+    <\description>
+      <item*|<math|1\<in\>S>>First note that by\ 
+
+      <item*|<math|k\<in\>S\<Rightarrow\>k+1\<in\>S>>
+    </description>
+
+    \;
+  </proof>
+
   <section|Tangent vectors and <math|T<rsub|p>M>>
 
   A differentiable manifold <math|\<cal-M\><rsup|m><around*|\<langle\>|M,\<cal-T\>,\<cal-A\>|\<rangle\>>>
@@ -7367,10 +7772,11 @@
     <associate|auto-21|<tuple|<with|mode|<quote|math>|C<rsup|q>>
     diffeomorphism|?>>
     <associate|auto-22|<tuple|23.3|?>>
-    <associate|auto-23|<tuple|tangent vector|?>>
-    <associate|auto-24|<tuple|<with|mode|<quote|math>|T<rsub|p>M>|?>>
-    <associate|auto-25|<tuple|differential|?>>
-    <associate|auto-26|<tuple|<with|mode|<quote|math>|d F<rsub|p>>|?>>
+    <associate|auto-23|<tuple|23.4|?>>
+    <associate|auto-24|<tuple|tangent vector|?>>
+    <associate|auto-25|<tuple|<with|mode|<quote|math>|T<rsub|p>M>|?>>
+    <associate|auto-26|<tuple|differential|?>>
+    <associate|auto-27|<tuple|<with|mode|<quote|math>|d F<rsub|p>>|?>>
     <associate|auto-3|<tuple|23.1.1|?>>
     <associate|auto-4|<tuple|coordinate chart|?>>
     <associate|auto-5|<tuple|coordinate domain|?>>
@@ -7382,6 +7788,13 @@
     <associate|compact paracompactness|<tuple|23.28|?>>
     <associate|compact refinement|<tuple|23.26|?>>
     <associate|continuity homeomorphism and restriction (1)|<tuple|23.31|?>>
+    <associate|diff derivative implies left and right
+    derivative|<tuple|23.98|?>>
+    <associate|diff existence of left and right derivative implies existance
+    of the derivative|<tuple|23.101|?>>
+    <associate|diff left and right derivative|<tuple|23.94|?>>
+    <associate|diff left and right derivative (1)|<tuple|23.96|?>>
+    <associate|diff left and right derivative are unique|<tuple|23.95|?>>
     <associate|eq 23.1.1|<tuple|23.5|?>>
     <associate|eq 23.1.3|<tuple|23.2|?>>
     <associate|eq 23.1.4|<tuple|23.1|?>>
@@ -7418,8 +7831,12 @@
     <associate|eq 23.138.16|<tuple|23.145|?>>
     <associate|eq 23.139.16|<tuple|23.146|?>>
     <associate|eq 23.14.3|<tuple|23.18|?>>
-    <associate|eq 23.147.17|<tuple|23.147|?>>
+    <associate|eq 23.147.17|<tuple|23.151|?>>
+    <associate|eq 23.147.18|<tuple|23.147|?>>
+    <associate|eq 23.148.18|<tuple|23.148|?>>
+    <associate|eq 23.149.18|<tuple|23.149|?>>
     <associate|eq 23.15.2|<tuple|23.19|?>>
+    <associate|eq 23.150.18|<tuple|23.150|?>>
     <associate|eq 23.16.2|<tuple|23.20|?>>
     <associate|eq 23.17.2|<tuple|23.22|?>>
     <associate|eq 23.2.1|<tuple|23.6|?>>
@@ -7548,14 +7965,14 @@
     <associate|manifold C^m mappings are continuous|<tuple|23.73|?>>
     <associate|manifold C^m mappings equivalences|<tuple|23.76|?>>
     <associate|manifold C^m mappings equivalences (1)|<tuple|23.74|?>>
-    <associate|manifold C^m(M)|<tuple|23.94|?>>
-    <associate|manifold C^q(M) is a vector space|<tuple|23.95|?>>
+    <associate|manifold C^m(M)|<tuple|23.103|?>>
+    <associate|manifold C^q(M) is a vector space|<tuple|23.104|?>>
     <associate|manifold C^r functions are C^r mappings|<tuple|23.78|?>>
     <associate|manifold C^r mspping id local (2)|<tuple|23.80|?>>
     <associate|manifold C^r mspping id locsl|<tuple|23.79|?>>
     <associate|manifold R^n is a differentiable manifold|<tuple|23.64|?>>
-    <associate|manifold TpM is a vector space|<tuple|23.101|?>>
-    <associate|manifold TpM properties|<tuple|23.102|?>>
+    <associate|manifold TpM is a vector space|<tuple|23.110|?>>
+    <associate|manifold TpM properties|<tuple|23.111|?>>
     <associate|manifold a finite dimensional vector space is a differentiable
     manifold|<tuple|23.67|?>>
     <associate|manifold a topological manifold is locally
@@ -7568,9 +7985,9 @@
     <associate|manifold compatible atlas|<tuple|23.52|?>>
     <associate|manifold compatible atlas (1)|<tuple|23.53|?>>
     <associate|manifold composition of a C^r mapping and a mapping of class
-    C^r|<tuple|23.103|?>>
+    C^r|<tuple|23.112|?>>
     <associate|manifold connectivity properties|<tuple|23.24|?>>
-    <associate|manifold constant functions|<tuple|23.96|?>>
+    <associate|manifold constant functions|<tuple|23.105|?>>
     <associate|manifold coordinate ball and cube|<tuple|23.9|?>>
     <associate|manifold coordinate domain|<tuple|23.8|?>>
     <associate|manifold coordinate transforms are a
@@ -7594,8 +8011,8 @@
     <associate|manifold differentiable manifold|<tuple|23.58|?>>
     <associate|manifold differentiable mappings|<tuple|23.69|?>>
     <associate|manifold differentiable structure|<tuple|23.55|?>>
-    <associate|manifold differential|<tuple|23.104|?>>
-    <associate|manifold differential properties|<tuple|23.105|?>>
+    <associate|manifold differential|<tuple|23.113|?>>
+    <associate|manifold differential properties|<tuple|23.114|?>>
     <associate|manifold existence of a maximal atlas|<tuple|23.56|?>>
     <associate|manifold identity is a C^q mapping|<tuple|23.72|?>>
     <associate|manifold maximal atlas|<tuple|23.49|?>>
@@ -7604,7 +8021,7 @@
     <associate|manifold open subset of a differentiable
     manifold|<tuple|23.65|?>>
     <associate|manifold product of functions that are of class
-    C^q|<tuple|23.97|?>>
+    C^q|<tuple|23.106|?>>
     <associate|manifold real numbers are a differentiable
     manifold|<tuple|23.63|?>>
     <associate|manifold real numbers form a topological
@@ -7613,7 +8030,7 @@
     <associate|manifold singleton chart|<tuple|23.61|?>>
     <associate|manifold sphere is a differentiable manifold|<tuple|23.66|?>>
     <associate|manifold sphere is a topological manifold|<tuple|23.18|?>>
-    <associate|manifold tangent vector|<tuple|23.98|?>>
+    <associate|manifold tangent vector|<tuple|23.107|?>>
     <associate|manifold topological|<tuple|23.2|?>>
     <associate|manifold topological (1)|<tuple|23.12|?>>
     <associate|manifold topological manifold is paracompact|<tuple|23.29|?>>
@@ -7659,13 +8076,13 @@
       <tuple|<tuple|<with|mode|<quote|math>|C<rsup|q>>
       diffeomorphism>|<pageref|auto-21>>
 
-      <tuple|<tuple|tangent vector>|<pageref|auto-23>>
+      <tuple|<tuple|tangent vector>|<pageref|auto-24>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|T<rsub|p>M>>|<pageref|auto-24>>
+      <tuple|<tuple|<with|mode|<quote|math>|T<rsub|p>M>>|<pageref|auto-25>>
 
-      <tuple|<tuple|differential>|<pageref|auto-25>>
+      <tuple|<tuple|differential>|<pageref|auto-26>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|d F<rsub|p>>>|<pageref|auto-26>>
+      <tuple|<tuple|<with|mode|<quote|math>|d F<rsub|p>>>|<pageref|auto-27>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|23<space|2spc>Differential
@@ -7692,9 +8109,13 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-19>
 
-      23.3<space|2spc>Tangent vectors and <with|mode|<quote|math>|T<rsub|p>M>
+      23.3<space|2spc>Partitions of unity
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-22>
+
+      23.4<space|2spc>Tangent vectors and <with|mode|<quote|math>|T<rsub|p>M>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-23>
     </associate>
   </collection>
 </auxiliary>

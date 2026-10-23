@@ -1471,8 +1471,65 @@
     </equation*>
   </proof>
 
-  A direct consequence of the above is that the exponential function is
-  continuous.
+  <\corollary>
+    <label|exp derivative (2)>Let <math|k\<in\>\<bbb-N\>> then
+    <math|\<forall\>x\<in\>\<bbb-R\>> we have that
+
+    <\equation*>
+      exp:\<bbb-C\>\<rightarrow\>\<bbb-C\>
+    </equation*>
+
+    has a <math|k>-times derivative <math|exp<rsup|<around*|(|k|)>><rsub|x>>
+    at <math|x> with\ 
+
+    <\equation*>
+      exp<rsup|<around*|(|k|)>><rsub|x>=exp<around*|(|x|)>
+    </equation*>
+
+    In other words we have that\ 
+
+    <\equation*>
+      exp<rsup|<around*|(|k|)>>=exp
+    </equation*>
+  </corollary>
+
+  <\proof>
+    This is proved trivially by recursion. So define\ 
+
+    <\equation*>
+      S=<around*|{|k\<in\>\<bbb-N\>\|\<forall\>x\<in\>\<bbb-R\><text|
+      >exp<rsup|<around*|(|k|)>><rsub|x><text| exist with
+      >*exp<rsup|<around*|(|k|)>><rsub|x>=exp<around*|(|x|)>|}>
+    </equation*>
+
+    then we have:\ 
+
+    <\description>
+      <item*|<math|1\<in\>S>>Using [theorem: <reference|exp derivative (1)>]
+      we have that <math|exp<rsup|<around*|(|1|)>><rsub|x><below|=|def>exp<rsub|x><rprime|'>>
+      exist with <math|><math|exp<rsup|<around*|(|1|)>><rsub|x><below|=|def>exp<rsub|x><rprime|'>=exp<around*|(|x|)>>
+      so that <math|1\<in\>S>.
+
+      <item*|<math|k\<in\>S\<Rightarrow\>k+1\<in\>S>>As <math|k\<in\>S> we
+      have that <math|\<forall\>x\<in\>\<bbb-R\>> that
+      <math|exp<rsup|<around*|(|k|)>><rsub|x>> exist with
+      <math|><math|<rigid|exp<rsup|<around*|(|k|)>><rsub|x>=exp<around*|(|x|)>>>
+      so that <math|exp<rsup|<around*|(|k|)>>=exp>. Hence by [theorem:
+      <reference|exp derivative (1)>] we have that
+      <math|\<forall\>x\<in\>\<bbb-R\>> <math|<around*|(|exp<rsup|<around*|(|k|)>>|)><rprime|'><rsub|x>>
+      exist with <math|<around*|(|exp<rsup|<around*|(|k|)>>|)><rprime|'><rsub|x>=exp<rprime|'><rsub|x>=exp<around*|(|x|)>>
+      which proves that <math|<around*|(|exp<rsub|\|\<bbb-R\>>|)><rsup|<around*|(|k+1|)>><rsub|x>>
+      exist with <math|<rigid|exp<rsup|<around*|(|k+1|)>><rsub|x>=<around*|(|exp<rsup|k>|)><rprime|'><rsub|x>=exp<rsub|><around*|(|x|)>>>.
+      Hence
+
+      <\equation*>
+        k+1\<in\>S
+      </equation*>
+    </description>
+  </proof>
+
+  A direct consequence of [theorem: <reference|exp derivative>] is that the
+  exponential function is continuous.
 
   <\theorem>
     <label|exp is continuous>For <math|exp:\<bbb-C\>\<rightarrow\>\<bbb-C\>>
@@ -1861,6 +1918,139 @@
       that by [theorem: <reference|diff second derivate convex concave>] is
       convex.
     </enumerate>
+  </proof>
+
+  <\theorem>
+    <label|exp derivative (1)><math|\<forall\>x\<in\>\<bbb-R\>> we have that
+    the restriction of <math|exp> to <math|\<bbb-R\>>
+
+    <\equation*>
+      exp<rsub|\|\<bbb-R\>>:\<bbb-R\>\<rightarrow\>\<bbb-R\>
+    </equation*>
+
+    has a derivative <math|<around*|(|exp<rsub|\|\<bbb-R\>>|)><rprime|'><rsub|x>>
+    at <math|x> with\ 
+
+    <\equation*>
+      <around*|(|exp<rsub|\|\<bbb-R\>>|)><rprime|'><rsub|x>=exp<around*|(|x|)><below|=|x\<in\>\<bbb-R\>>exp<rsub|\|\<bbb-R\>><around*|(|x|)>
+    </equation*>
+
+    In other words we have that\ 
+
+    <\equation*>
+      <around*|(|exp<rsub|<around*|\||\<bbb-R\>|\|>>|)><rprime|'>=exp<rsub|\|\<bbb-R\>>
+    </equation*>
+
+    <\note>
+      Using [theorem: <reference|exp properties>(4,5)] it follows that
+      <math|exp<around*|(|\<bbb-R\>|)>\<subseteq\><around*|]|1,\<infty\>|[>\<subseteq\>\<bbb-R\>>
+      so that <math|exp<rsub|\|\<bbb-R\>>:\<bbb-R\>\<rightarrow\>\<bbb-R\>>
+      is well defined.
+    </note>
+  </theorem>
+
+  <\proof>
+    To clarifyl the proof we use the followin notations.
+
+    <\equation*>
+      <around*|\|||\|><text| is the absolute value norm on >\<bbb-R\><text|
+      and let <math|<around*|\|||\|><rsub|c><text| be the complex value norm
+      on >\<bbb-C\>>>
+    </equation*>
+
+    then we have that
+
+    <\equation>
+      <label|eq 19.29.1>\<forall\>x\<in\>\<bbb-R\><text|
+      ><around*|\||x|\|><rsub|c>=<sqrt|Re<around*|(|x|)><rsup|2>+Img<around*|(|x|)><rsup|2>>=<sqrt|<around*|\||x|\|><rsup|2>>=<around*|\||x|\|>
+    </equation>
+
+    Let <math|x\<in\>\<bbb-R\>\<subseteq\>\<bbb-C\>> \ then by [theorem:
+    <reference|exp derivative>] <math|exp<rprime|'><rsub|x>> exist with
+    <math|exp<rprime|'><rsub|x>=exp<around*|(|x|)>>. Let
+    <math|\<varepsilon\>> then by [theorem: <reference|diff calculus
+    derivate>] there exist a <math|\<delta\>\<in\>\<bbb-R\><rsup|+>> such
+    that <math|\<forall\>h\<in\>\<bbb-C\><rsub|x>=\<bbb-C\>> with
+    <math|0\<less\><around*|\||h|\|><rsub|c>\<less\>\<delta\>> we have\ 
+
+    <\equation>
+      <label|eq 19.30.1><around*|\||<frac|exp<around*|(|x+h|)>-exp<around*|(|x|)>|h>-exp<around*|(|h|)>|\|><rsub|c>\<less\>\<varepsilon\>
+    </equation>
+
+    Let <math|h\<in\>\<bbb-R\>=\<bbb-R\><rsub|x>> with
+    <math|0\<less\><around*|\||h|\|>\<less\>\<delta\>> then
+    <math|0\<less\><around*|\||h|\|><rsub|c>\<less\>\<delta\>> so that\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|\||<frac|exp<rsub|\<bbb-R\>><around*|(|x+h|)>-exp<rsub|\<bbb-R\>><around*|(|x|)>|h>-exp<around*|(|x|)>|\|>>|<cell|<below|=|x+h,x\<in\>\<bbb-R\>>>|<cell|<around*|\||<frac|exp<around*|(|x+h|)>-exp<around*|(|x|)>|h>-exp<around*|(|x|)>|\|>>>|<row|<cell|>|<cell|<below|=|exp<around*|(|\<bbb-R\>|)>\<subseteq\>\<bbb-R\>\<wedge\><text|[exp:
+      <reference|eq 19.29.1>]>>>|<cell|<around*|\||<frac|exp<around*|(|x+h|)>-exp<around*|(|x|)>|h>-exp<around*|(|x|)>|\|><rsub|c>>>|<row|<cell|>|<cell|\<less\>>|<cell|\<varepsilon\>>>>>
+    </eqnarray*>
+
+    So that by [theorem: <reference|diff calculus derivate>]
+    <math|<around*|(|exp<rsub|\<bbb-R\>>|)><rprime|'><rsub|x>> with\ 
+
+    <\equation*>
+      <around*|(|exp<rsub|\<bbb-R\>>|)><rprime|'><rsub|x>=exp<around*|(|x|)>
+    </equation*>
+  </proof>
+
+  <\corollary>
+    <label|exp derivative (3)>Let <math|k\<in\>\<bbb-N\>> then
+    <math|\<forall\>x\<in\>\<bbb-R\>> we have that the restriction of
+    <math|exp> to <math|\<bbb-R\>>
+
+    <\equation*>
+      exp<rsub|\|\<bbb-R\>>:\<bbb-R\>\<rightarrow\>\<bbb-R\>
+    </equation*>
+
+    has a <math|k>-times derivative <math|<around*|(|exp<rsub|\|\<bbb-R\>>|)><rsup|<around*|(|k|)>><rsub|x>>
+    at <math|x> with\ 
+
+    <\equation*>
+      <around*|(|exp<rsub|\|\<bbb-R\>>|)><rsup|<around*|(|k|)>><rsub|x>=exp<rsub|\|\<bbb-R\>><around*|(|x|)>
+    </equation*>
+
+    In other words we have that\ 
+
+    <\equation*>
+      <around*|(|exp<rsub|<around*|\||\<bbb-R\>|\<nobracket\>>>|)><rsup|<around*|(|k|)>>=exp<rsub|\|\<bbb-R\>>
+    </equation*>
+  </corollary>
+
+  <\proof>
+    This is proved trivially by recursion. So define\ 
+
+    <\equation*>
+      S=<around*|{|k\<in\>\<bbb-N\>\|\<forall\>x\<in\>\<bbb-R\><text|
+      ><around*|(|exp<rsub|\<bbb-R\>>|)><rsup|<around*|(|k|)>><rsub|x><text|
+      exist with >*<around*|(|exp<rsub|\<bbb-R\>>|)><rsup|<around*|(|k|)>><rsub|x>=exp<rsub|\<bbb-R\>><around*|(|x|)>|}>
+    </equation*>
+
+    then we have:\ 
+
+    <\description>
+      <item*|<math|1\<in\>S>>Using [theorem: <reference|exp derivative (1)>]
+      we have that <math|<around*|(|exp<rsub|\|\<bbb-R\>>|)><rsup|<around*|(|1|)>><rsub|x><below|=|def><around*|(|exp<rsup|><rsub|\|\<bbb-R\>>|)><rsub|x><rprime|'>>
+      exist with <math|><math|<around*|(|exp<rsub|\|\<bbb-R\>>|)><rsup|<around*|(|1|)>><rsub|x><below|=|def><around*|(|exp<rsup|><rsub|\|\<bbb-R\>>|)><rsub|x><rprime|'>=exp<rsub|\|\<bbb-R\>><around*|(|x|)>>
+      so that <math|1\<in\>S>.
+
+      <item*|<math|k\<in\>S\<Rightarrow\>k+1\<in\>S>>As <math|k\<in\>S> we
+      have that <math|\<forall\>x\<in\>\<bbb-R\>> that
+      <math|<around*|(|exp<rsub|\|\<bbb-R\>>|)><rsup|<around*|(|k|)>><rsub|x>>
+      exist with <math|><math|<rigid|<around*|(|exp<rsub|\|\<bbb-R\>>|)><rsup|<around*|(|k|)>><rsub|x>=exp<rsub|\|\<bbb-R\>><around*|(|x|)>>>
+      so that <math|<around*|(|exp<rsub|\|\<bbb-R\>>|)><rsup|<around*|(|k|)>>=exp<rsub|\|\<bbb-R\>>>.
+      Hence by [theorem: <reference|exp derivative (1)>] we have that
+      <rigid|<math|\<forall\>x\<in\>\<bbb-R\>>
+      <math|<around*|(|<around*|(|exp<rsub|\|\<bbb-R\>>|)><rsup|<around*|(|k|)>>|)><rprime|'><rsub|x>>>
+      exist with <math|<around*|(|<around*|(|exp<rsub|\|\<bbb-R\>>|)><rsup|<around*|(|k|)>>|)><rprime|'><rsub|x>=<around*|(|exp<rsub|<mid|\|>\<bbb-R\>>|)><rprime|'><rsub|x>=exp<rsub|\|\<bbb-R\>><around*|(|x|)>>
+      which proves that <math|<around*|(|exp<rsub|\|\<bbb-R\>>|)><rsup|<around*|(|k+1|)>><rsub|x>>
+      exist with <math|<rigid|<around*|(|exp<rsub|\|\<bbb-R\>>|)><rsup|<around*|(|k+1|)>><rsub|x>=<around*|(|<around*|(|exp<rsub|\|\<bbb-R\>>|)><rsup|k>|)><rprime|'><rsub|x>=exp<rsub|\|\<bbb-R\>><around*|(|x|)>>>.
+      Hence
+
+      <\equation*>
+        k+1\<in\>S
+      </equation*>
+    </description>
   </proof>
 
   We introduce now what is probably the most interesting number in
@@ -4832,7 +5022,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|18>
-    <associate|page-first|1313>
+    <associate|page-first|1321>
     <associate|page-medium|papyrus>
     <associate|section-nr|4>
     <associate|subsection-nr|4>
@@ -4898,101 +5088,106 @@
     <associate|eq 19.26.151|<tuple|19.26|?>>
     <associate|eq 19.27.151|<tuple|19.27|?>>
     <associate|eq 19.28.151|<tuple|19.28|?>>
-    <associate|eq 19.29.151|<tuple|19.29|?>>
+    <associate|eq 19.29.1|<tuple|19.29|?>>
+    <associate|eq 19.29.151|<tuple|19.31|?>>
     <associate|eq 19.3.150|<tuple|19.3|?>>
-    <associate|eq 19.30.151|<tuple|19.30|?>>
-    <associate|eq 19.31.151|<tuple|19.31|?>>
-    <associate|eq 19.32.151|<tuple|19.32|?>>
-    <associate|eq 19.33.151|<tuple|19.33|?>>
-    <associate|eq 19.34.151|<tuple|19.34|?>>
-    <associate|eq 19.35.151|<tuple|19.35|?>>
-    <associate|eq 19.36.151|<tuple|19.36|?>>
-    <associate|eq 19.37.152|<tuple|19.37|?>>
-    <associate|eq 19.38.152|<tuple|19.38|?>>
-    <associate|eq 19.39.152|<tuple|19.39|?>>
+    <associate|eq 19.30.1|<tuple|19.30|?>>
+    <associate|eq 19.30.151|<tuple|19.32|?>>
+    <associate|eq 19.31.151|<tuple|19.33|?>>
+    <associate|eq 19.32.151|<tuple|19.34|?>>
+    <associate|eq 19.33.151|<tuple|19.35|?>>
+    <associate|eq 19.34.151|<tuple|19.36|?>>
+    <associate|eq 19.35.151|<tuple|19.37|?>>
+    <associate|eq 19.36.151|<tuple|19.38|?>>
+    <associate|eq 19.37.152|<tuple|19.39|?>>
+    <associate|eq 19.38.152|<tuple|19.40|?>>
+    <associate|eq 19.39.152|<tuple|19.41|?>>
     <associate|eq 19.4.150|<tuple|19.4|?>>
-    <associate|eq 19.40.152|<tuple|19.40|?>>
-    <associate|eq 19.41.152|<tuple|19.41|?>>
-    <associate|eq 19.42.152|<tuple|19.42|?>>
-    <associate|eq 19.43.152|<tuple|19.43|?>>
-    <associate|eq 19.44.152|<tuple|19.44|?>>
-    <associate|eq 19.45.152|<tuple|19.45|?>>
-    <associate|eq 19.46\<point\>152|<tuple|19.46|?>>
-    <associate|eq 19.47.152|<tuple|19.47|?>>
-    <associate|eq 19.48.152|<tuple|19.48|?>>
-    <associate|eq 19.49.152|<tuple|19.49|?>>
+    <associate|eq 19.40.152|<tuple|19.42|?>>
+    <associate|eq 19.41.152|<tuple|19.43|?>>
+    <associate|eq 19.42.152|<tuple|19.44|?>>
+    <associate|eq 19.43.152|<tuple|19.45|?>>
+    <associate|eq 19.44.152|<tuple|19.46|?>>
+    <associate|eq 19.45.152|<tuple|19.47|?>>
+    <associate|eq 19.46\<point\>152|<tuple|19.48|?>>
+    <associate|eq 19.47.152|<tuple|19.49|?>>
+    <associate|eq 19.48.152|<tuple|19.50|?>>
+    <associate|eq 19.49.152|<tuple|19.51|?>>
     <associate|eq 19.5.150|<tuple|19.5|?>>
-    <associate|eq 19.50.152|<tuple|19.50|?>>
-    <associate|eq 19.51.152|<tuple|19.51|?>>
-    <associate|eq 19.52.153|<tuple|19.52|?>>
-    <associate|eq 19.53.153|<tuple|19.53|?>>
+    <associate|eq 19.50.152|<tuple|19.52|?>>
+    <associate|eq 19.51.152|<tuple|19.53|?>>
+    <associate|eq 19.52.153|<tuple|19.54|?>>
+    <associate|eq 19.53.153|<tuple|19.55|?>>
     <associate|eq 19.6.150|<tuple|19.8|?>>
     <associate|eq 19.6.151|<tuple|19.6|?>>
-    <associate|eq 19.60.152|<tuple|19.65|?>>
+    <associate|eq 19.60.152|<tuple|19.69|?>>
     <associate|eq 19.7.150|<tuple|19.9|?>>
     <associate|eq 19.7.151|<tuple|19.7|?>>
     <associate|eq 19.8.150|<tuple|19.10|?>>
     <associate|eq 19.9.150|<tuple|19.11|?>>
     <associate|exp|<tuple|19.22|?>>
-    <associate|exp (*)^x is continuous|<tuple|19.55|?>>
+    <associate|exp (*)^x is continuous|<tuple|19.59|?>>
     <associate|exp 0 is in convergence domain|<tuple|19.4|?>>
     <associate|exp Abel Dirichlet|<tuple|19.18|?>>
-    <associate|exp Euler's equation|<tuple|19.70|?>>
-    <associate|exp Euler's number|<tuple|19.33|?>>
-    <associate|exp Mertens theorem|<tuple|19.29|?>>
-    <associate|exp Young's inequality|<tuple|19.58|?>>
-    <associate|exp arccosine arcsine|<tuple|19.72|?>>
-    <associate|exp arccosine arcsine properties|<tuple|19.73|?>>
-    <associate|exp arctan|<tuple|19.77|?>>
+    <associate|exp Euler's equation|<tuple|19.74|?>>
+    <associate|exp Euler's number|<tuple|19.37|?>>
+    <associate|exp Mertens theorem|<tuple|19.30|?>>
+    <associate|exp Young's inequality|<tuple|19.62|?>>
+    <associate|exp arccosine arcsine|<tuple|19.76|?>>
+    <associate|exp arccosine arcsine properties|<tuple|19.77|?>>
+    <associate|exp arctan|<tuple|19.81|?>>
     <associate|exp ball extensions|<tuple|19.11|?>>
     <associate|exp ball of convergence|<tuple|19.7|?>>
     <associate|exp balls inclucsion|<tuple|19.14|?>>
-    <associate|exp bijection|<tuple|19.36|?>>
-    <associate|exp complement and absolute norm|<tuple|19.60|?>>
+    <associate|exp bijection|<tuple|19.40|?>>
+    <associate|exp complement and absolute norm|<tuple|19.64|?>>
     <associate|exp convergence domain|<tuple|19.3|?>>
     <associate|exp convergence domain (1)|<tuple|19.6|?>>
     <associate|exp convergence domains and balls (1)|<tuple|19.10|?>>
     <associate|exp convergence domains and balls (2)|<tuple|19.13|?>>
     <associate|exp convergence domains property|<tuple|19.5|?>>
     <associate|exp convergion radius|<tuple|19.8|?>>
-    <associate|exp cos , sin bijection|<tuple|19.71|?>>
-    <associate|exp cos has a zero element|<tuple|19.64|?>>
-    <associate|exp cos/sin in range 0 to pi/2|<tuple|19.68|?>>
+    <associate|exp cos , sin bijection|<tuple|19.75|?>>
+    <associate|exp cos has a zero element|<tuple|19.68|?>>
+    <associate|exp cos/sin in range 0 to pi/2|<tuple|19.72|?>>
     <associate|exp d'Alembert|<tuple|19.20|?>>
     <associate|exp derivative|<tuple|19.27|?>>
-    <associate|exp derivative of (*)^x|<tuple|19.50|?>>
-    <associate|exp derivative of (*)^x higher order|<tuple|19.51|?>>
+    <associate|exp derivative (1)|<tuple|19.34|?>>
+    <associate|exp derivative (2)|<tuple|19.28|?>>
+    <associate|exp derivative (3)|<tuple|19.36|?>>
+    <associate|exp derivative of (*)^x|<tuple|19.54|?>>
+    <associate|exp derivative of (*)^x higher order|<tuple|19.55|?>>
     <associate|exp derivative of a power series|<tuple|19.26|?>>
-    <associate|exp derivative of cos(x) and sin(x)|<tuple|19.63|?>>
-    <associate|exp derivative of x^(*)|<tuple|19.54|?>>
+    <associate|exp derivative of cos(x) and sin(x)|<tuple|19.67|?>>
+    <associate|exp derivative of x^(*)|<tuple|19.58|?>>
     <associate|exp derived power series|<tuple|19.24|?>>
     <associate|exp derived power service properties|<tuple|19.25|?>>
     <associate|exp exp series|<tuple|19.21|?>>
-    <associate|exp exp tends to infinity|<tuple|19.35|?>>
-    <associate|exp exp(x+y)=exp(x).exp(y)|<tuple|19.31|?>>
-    <associate|exp generalized power|<tuple|19.39|?>>
-    <associate|exp generalized power properties|<tuple|19.42|?>>
+    <associate|exp exp tends to infinity|<tuple|19.39|?>>
+    <associate|exp exp(x+y)=exp(x).exp(y)|<tuple|19.32|?>>
+    <associate|exp generalized power|<tuple|19.43|?>>
+    <associate|exp generalized power properties|<tuple|19.46|?>>
     <associate|exp inequality of Abel|<tuple|19.17|?>>
-    <associate|exp is continuous|<tuple|19.28|?>>
-    <associate|exp logarithm properties|<tuple|19.38|?>>
-    <associate|exp natural logarithm|<tuple|19.37|?>>
-    <associate|exp of natural numbers|<tuple|19.34|?>>
-    <associate|exp pi|<tuple|19.66|?>>
+    <associate|exp is continuous|<tuple|19.29|?>>
+    <associate|exp logarithm properties|<tuple|19.42|?>>
+    <associate|exp natural logarithm|<tuple|19.41|?>>
+    <associate|exp of natural numbers|<tuple|19.38|?>>
+    <associate|exp pi|<tuple|19.70|?>>
     <associate|exp power function|<tuple|19.15|?>>
     <associate|exp power series|<tuple|19.1|?>>
-    <associate|exp product of power series|<tuple|19.30|?>>
-    <associate|exp properties|<tuple|19.32|?>>
-    <associate|exp square root|<tuple|19.49|?>>
-    <associate|exp square root derivates|<tuple|19.53|?>>
-    <associate|exp square root is continuous|<tuple|19.56|?>>
-    <associate|exp tangent|<tuple|19.74|?>>
-    <associate|exp tangent properties|<tuple|19.76|?>>
-    <associate|exp triginiometric function|<tuple|19.61|?>>
-    <associate|exp trigoniometric properties|<tuple|19.62|?>>
-    <associate|exp trigoniometric properties (1)|<tuple|19.69|?>>
+    <associate|exp product of power series|<tuple|19.31|?>>
+    <associate|exp properties|<tuple|19.33|?>>
+    <associate|exp square root|<tuple|19.53|?>>
+    <associate|exp square root derivates|<tuple|19.57|?>>
+    <associate|exp square root is continuous|<tuple|19.60|?>>
+    <associate|exp tangent|<tuple|19.78|?>>
+    <associate|exp tangent properties|<tuple|19.80|?>>
+    <associate|exp triginiometric function|<tuple|19.65|?>>
+    <associate|exp trigoniometric properties|<tuple|19.66|?>>
+    <associate|exp trigoniometric properties (1)|<tuple|19.73|?>>
     <associate|lemma 19.15.150|<tuple|19.16|?>>
     <associate|lemma 19.18.150|<tuple|19.19|?>>
-    <associate|lemma 19.51.151|<tuple|19.57|?>>
+    <associate|lemma 19.51.151|<tuple|19.61|?>>
   </collection>
 </references>
 
