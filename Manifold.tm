@@ -6958,54 +6958,624 @@
     </equation*>
   </proof>
 
+  \;
+
   <\lemma>
-    <math|\<forall\>k\<in\>\<bbb-N\>> <math|we have
-    \<forall\>t\<in\><around*|]|0,\<infty\>|[>> that\ 
+    <label|lemma 23.102.20>Let <math|f:\<bbb-R\>\<rightarrow\>\<bbb-R\>> be a
+    continuous function such that
+
+    <\enumerate>
+      <item><math|\<forall\>t\<in\><around*|]|-\<infty\>,0|]>> <math|f=0>
+
+      <item><math|\<forall\>t\<in\><around*|]|0,\<infty\>|[>>
+      <math|f<rprime|'><rsub|t>> exist and
+      <math|\<forall\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> there exist a
+      <math|\<delta\>\<in\>\<bbb-R\><rsup|+>> such that
+      <math|\<forall\>t\<in\><around*|]|0,\<delta\>|[>> we have
+      <math|<around*|\||f<rprime|'><rsub|t>|\|>\<less\>\<varepsilon\>>
+    </enumerate>
+
+    then\ 
+
+    <\equation*>
+      \<forall\>t\<in\>\<bbb-R\><text| >f<rprime|'><rsub|t><text| exists with
+      >\<forall\>t\<in\><around*|]|-\<infty\>,0|]> f<rprime|'><rsub|t>=0
+    </equation*>
+  </lemma>
+
+  <\proof>
+    Let <math|t\<in\><around*|]|-\<infty\>,0|[>>. As
+    <math|<around*|]|-\<infty\>,0|[>> is open \ [see theorem:
+    <reference|normed generalized intervals that are open>] there exist a
+    <math|\<delta\>\<in\>\<bbb-R\><rsup|+>> such that
+    <math|B<rsub|<around*|\|||\|>><around*|(|t,\<delta\>|)>\<subseteq\><around*|]|-\<infty\>,0|[>>.
+    Let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> then for
+    <math|h\<in\>\<bbb-R\><rsub|t>> with <math|0\<less\><around*|\||h|\|>\<less\>\<delta\>>
+    we have that <math|<around*|\||t+h-t|\|>\<less\>\<delta\>\<Rightarrow\>t+h\<in\>B<rsub|<around*|\|||\|>><around*|(|t,\<delta\>|)>\<subseteq\><around*|]|-\<infty\>,0|[>>
+    and\ 
+
+    <\equation*>
+      <around*|\||<frac|f<around*|(|t+h|)>-f<around*|(|t|)>|h>-0|\|><below|<below|=|t,t+h\<in\><around*|]|-\<infty\>,0|[>\<subseteq\><around*|]|-\<infty\>,0|]>>|><around*|\||<frac|0-0|h>=0|\|>=0\<less\>\<varepsilon\>
+    </equation*>
+
+    proving by [theorem: <reference|diff calculus derivate>] that
+    <math|f<rprime|'><rsub|t>> exist with <math|f<rprime|'><rsub|t>=0>. As by
+    the hypothesis <math|\<forall\>t\<in\><around*|]|0,\<infty\>|[>>
+    <math|f<rprime|'><rsub|t>> exist it follows that
+
+    <\equation*>
+      \<forall\>t\<in\>\<bbb-R\>\\<around*|{|0|}><text|
+      >f<rprime|'><rsub|t><text| exist and
+      >\<forall\>t\<in\><around*|]|-\<infty\>,0|[><text|
+      >f<rprime|'><rsub|t>=0
+    </equation*>
+
+    So it remains to prove that <math|f<rprime|'><rsub|0>> exists with
+    <math|f<rprime|'><rsub|0>=0>. Let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>
+    then by the hypothesis there exist a <math|\<delta\>\<in\>\<bbb-R\><rsup|+>>
+    such that\ 
+
+    <\equation>
+      <label|eq 21.156.1>\<forall\>t\<in\><around*|]|0,\<delta\>|[><text|
+      ><around*|\||f<rprime|'><rsub|t>|\|>\<less\>\<varepsilon\>
+    </equation>
+
+    Let <math|h\<in\>\<bbb-R\><rsub|0>> with
+    <math|0\<less\><around*|\||h|\|>\<less\>\<delta\>> then we have either:\ 
+
+    <\description>
+      <item*|<math|h\<less\>0>>Then we have\ 
+
+      <\equation*>
+        <around*|\||<frac|f<around*|(|0+h|)>-f<around*|(|0|)>|h>-0|\|>=<around*|\||<frac|0-0|h>-0|\|>=0\<less\>\<varepsilon\>
+      </equation*>
+
+      <item*|<math|0\<less\>h>>Then <math|0\<less\>h\<less\>\<delta\>>. As
+      <math|f> is continous it follows from [theorem: <reference|continuity
+      and subspace topology (1)>] that\ 
+
+      <\equation*>
+        f<rsub|\|<around*|[|0,h|]>><text| is continuous>
+      </equation*>
+
+      Further, as <math|\<forall\>t\<in\><around*|]|0,\<infty\>|[>>
+      <math|f<rprime|'><rsub|t>> exist, it follows from [theorem:
+      <reference|diff derivative and restriction>], that\ 
+
+      <\equation*>
+        \<forall\>t\<in\><around*|]|0,h|[><text|
+        ><around*|(|f<rsub|\|<around*|[|0,h|]>>|)><rprime|'><rsub|t><text|
+        exists with ><around*|(|f<rsub|\|<around*|]|0,h|[>>|)><rprime|'><rsub|t>=f<rprime|'><rsub|t>
+      </equation*>
+
+      Hence we can use Lagranges' mean value theorem [theorem:
+      <reference|diff Lagrange theorem>] that there exist a
+      <math|\<zeta\>\<in\><around*|]|0,h|[>> such that
+      <math|f<rsub|\|<around*|]|o,h|[>><around*|(|h|)>-f<rsub|<around*|]|0,h|[>><around*|(|h|)>=<around*|(|f<rsub|\|<around*|]|0,h|[>>|)><rprime|'><rsub|\<zeta\>>\<cdot\><around*|(|h-0|)>>.
+      As <math|f<rsub|\|<around*|]|0,h|[>><around*|(|h|)>=f<around*|(|h|)>>,
+      <math|f<rsub|\|<around*|]|0,h|[>><around*|(|0|)>=0> and
+      <math|><math|<around*|(|f<rsub|\|<around*|]|0,h|[>>|)><rprime|'><rsub|\<zeta\>>=f<rprime|'><rsub|\<zeta\>>>
+      it follows that\ 
+
+      <\equation*>
+        <frac|f<around*|(|h|)>|h>=f<rprime|'><rsub|\<zeta\>>
+      </equation*>
+
+      As <math|\<zeta\>\<in\><around*|]|0,h|[>\<subseteq\><around*|]|0,\<delta\>|[>>
+      it follows that\ 
+
+      <\equation*>
+        <around*|\||<frac|f<around*|(|h|)>|h>|\|>=<around*|\||f<rprime|'><rsub|\<zeta\>>|\|>\<less\>\<varepsilon\>
+      </equation*>
+
+      Hence we have that\ 
+
+      <\equation*>
+        <around*|\||<frac|f<around*|(|0+h|)>-f<around*|(|0|)>|h>-0|\|>=<around*|\||<frac|f<around*|(|h|)>-0|h>-0|\|>=<around*|\||<frac|f<around*|(|h|)>|h>|\|>\<less\>\<varepsilon\>
+      </equation*>
+    </description>
+
+    To summarize the above, we have <math|\<forall\>h\<in\>\<bbb-R\><rsub|0><rsub|>>
+    with <math|0\<less\><around*|\||h|\|>\<less\>\<delta\>> that
+    <math|<around*|\||<frac|f<around*|(|0+h|)>-f<around*|(|0|)>|h>-0|\|>\<less\>\<varepsilon\>>
+    which proves that\ 
+
+    <\equation*>
+      f<rprime|'><rsub|0><text| exist and >f<rprime|'><rsub|0>=0
+    </equation*>
+  </proof>
+
+  <\lemma>
+    <label|lemma 23.103.20>Let <math|k\<in\>\<bbb-N\><rsub|0>>,
+    <math|p<rsub|k>:\<bbb-R\>\<rightarrow\>\<bbb-R\>> defined by
+    <math|p<rsub|k><around*|(|t|)>=<big|sum><rsup|k><rsub|i=0>\<alpha\><rsub|i>\<cdot\>t<rsup|i>>
+    then\ 
 
     <\equation*>
       f:<around*|]|0,\<infty\>|[>\<rightarrow\>\<bbb-R\><text| defined by
-      >f<rsup|><around*|(|t|)>=exp<around*|(|-<frac|1|t>|)>
+      >f*<around*|(|t|)>=p<rsub|k><around*|(|t|)>\<cdot\><frac|exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>|t<rsup|2\<cdot\>k>>
     </equation*>
 
-    has a <math|k>-times derivstive <math|f<rsup|<around*|(|k|)>><rsub|t>> at
-    <math|t> with
+    has <math|\<forall\>t\<in\><around*|]|0,\<infty\>|[>> a derivative
+    <math|f<rprime|'><rsub|t>> with\ 
 
     <\equation*>
-      f<rsup|<around*|(|k|)>><rsub|t>=p<rsub|k><around*|(|t|)>\<cdot\><frac|exp<around*|(|-<frac|1|t>|)>|t<rsup|2\<cdot\>k>>
+      f<rprime|'><rsub|t>=p<rsub|k+1><around*|(|t|)>\<cdot\><frac|exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>|t<rsup|2\<cdot\><around*|(|k+1|)>>>
     </equation*>
 
     where\ 
 
     <\equation*>
-      p<rsub|k>:<around*|]|0,\<infty\>|[>\<rightarrow\>\<bbb-R\><text| is of
-      the form >p<rsub|k>=<big|sum><rsub|i=1><rsup|k>\<alpha\><rsub|i>\<cdot\>t<rsup|k><text|
-      >
+      p<rsub|k+1>:<around*|]|0,\<infty\>|[>\<rightarrow\>\<bbb-R\><text| is
+      defined by >p<rsub|k+1><around*|(|t|)>=<big|sum><rsub|i=0><rsup|k+1>\<beta\><rsub|i>\<cdot\>t<rsup|i>
     </equation*>
-
-    [in other words <math|p<rsub|k><text| is a polynomial of degree at most
-    <math|k>]>>.
   </lemma>
 
   <\proof>
-    We prove this by induction. So let <math|t\<in\><around*|]|0,\<infty\>|[>>
-    and define\ 
+    Define\ 
+
+    <\equation>
+      <label|eq 23.157.20>-<frac|1|\<ast\>>:<around*|]|0,\<infty\>|[>\<rightarrow\>\<bbb-R\><text|
+      by ><around*|(|-<frac|1|t>|)><around*|(|\<ast\>|)>=-<frac|1|t>
+    </equation>
+
+    <\equation>
+      <label|eq 23.158.20><frac|1|\<ast\><rsup|2\<cdot\>k>>:<around*|]|0,\<infty\>|[>\<rightarrow\>\<bbb-R\><text|
+      by ><around*|(|<frac|1|\<ast\><rsup|2\<cdot\>k>>|)><around*|(|t|)>=<frac|1|t<rsup|2\<cdot\>k>>
+    </equation>
+
+    then we have that <math|\<forall\>t\<in\><around*|]|0,\<infty\>|]>> that
+    <math|p<rsub|k>\<cdot\><frac|1|\<star\><rsup|2\<cdot\>k>>\<cdot\><around*|(|exp<rsub|\|\<bbb-R\>>\<circ\><around*|(|-<frac|1|\<ast\>>|)>|)>=p<rsub|k>\<cdot\><frac|1|t<rsup|2\<cdot\>k>>\<cdot\>exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>=f<around*|(|t|)>>
+    so that\ 
+
+    <\equation>
+      <label|eq 23.159.20>f=p<rsub|k>\<cdot\><frac|1|\<star\><rsup|2\<cdot\>k>>\<cdot\><around*|(|exp<rsub|\|\<bbb-R\>>\<circ\><around*|(|-<frac|1|\<ast\>>|)>|)>
+    </equation>
+
+    Using [theorems: <reference|diff (f+g)'=f'+g'>,<reference|diff derivative
+    and restriction>,<reference|diff derivate of inverse function>] on [eq:
+    <reference|eq 23.157.20>] it follows that\ 
+
+    <\equation>
+      <label|eq 23.160.20>\<forall\>t\<in\><around*|]|0,\<infty\>|[><text|
+      <math|<around*|(|-<frac|1|\<ast\>>|)><rprime|'><rsub|t><text| exists
+      with ><around*|(|-<frac|1|\<ast\>>|)><rprime|'><rsub|t>=<frac|1|t<rsup|2>>>>
+    </equation>
+
+    By [theorem: <reference|diff derivative and restriction>, <reference|diff
+    power>] it follows that
+
+    <\equation>
+      <label|eq 23.161.20>\<forall\>t\<in\><around*|]|0,\<infty\>|[><text|
+      ><around*|(|<frac|1|\<ast\><rsup|2\<cdot\>k>>|)><rprime|'><rsub|t><text|
+      exists with ><text| ><around*|(|<frac|1|\<ast\><rsup|2\<cdot\>k>>|)><rprime|'><rsub|t>=-2\<cdot\>k\<cdot\><frac|1|t<rsup|2\<cdot\>k+1>>
+    </equation>
+
+    Using [theorem: <reference|exp derivative (1)>] we have\ 
+
+    <\equation>
+      <label|eq 23.162.20>\<forall\>t\<in\><around*|]|0,\<infty\>|[><text|
+      ><around*|(|exp<rsub|\|\<bbb-R\>>|)><rprime|'><rsub|t><text| exists
+      with ><around*|(|exp<rsub|\|\<bbb-R\>>|)><rprime|'><rsub|t>=exp<rsub|\|\<bbb-R\>><around*|(|t|)>
+    </equation>
+
+    By [theorems: <reference|diff (f+g)'=f'+g'>, <reference|diff derivative
+    and restriction>, <reference|diff power>] \ it follows that
+
+    <\equation>
+      <label|eq 23.163.20>\<forall\>t\<in\><around*|]|0,\<infty\>|[><text|
+      ><around*|(|p<rsub|k>|)><rprime|'><rsub|t><text| exists with
+      ><around*|(|p<rsub|k>|)><rprime|'><rsub|t>=<around*|(|\<alpha\><rsub|0>+<big|sum><rsub|i=1><rsup|k>\<alpha\><rsub|i>\<cdot\>t<rsup|k>|)><rprime|'><rsub|t>=<big|sum><rsub|i=1><rsup|k>i\<cdot\>\<alpha\><rsub|i>\<cdot\>t<rsup|i-1>
+    </equation>
+
+    Using now the chain rule [see theorem: <reference|diff chain rule
+    calculus>] and the product rule [see theorem: <reference|diff derivative
+    of a scalar product>] on [eq: <reference|eq 23.159.20>] proves that
+    <math|\<forall\>t\<in\><around*|]|0,\<infty\>|[>>
+    <math|f<rprime|'><rsub|t>> exists with\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|f<rprime|'><rsub|t>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|p<rsub|k>\<cdot\><frac|1|\<star\><rsup|2\<cdot\>k>>\<cdot\><around*|(|exp<rsub|\|\<bbb-R\>>\<circ\><around*|(|-<frac|1|\<ast\>>|)>|)>|)><rprime|'><rsub|t>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|p<rsub|k>|)><rprime|'><rsub|t>\<cdot\><around*|(|<frac|1|\<star\><rsup|2\<cdot\>k>>\<cdot\><around*|(|exp<rsub|\|\<bbb-R\>>\<circ\><around*|(|-<frac|1|\<ast\>>|)>|)>|)><around*|(|t|)>+p<rsub|k><around*|(|t|)>\<cdot\><around*|(|<frac|1|\<star\><rsup|2\<cdot\>k>>\<cdot\><around*|(|exp<rsub|\|\<bbb-R\>>\<circ\><around*|(|-<frac|1|\<ast\>>|)>|)>|)><rprime|'><rsub|t>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|p<rsub|k>|)><rprime|'><rsub|t>\<cdot\><frac|1|t<rsup|2\<cdot\>k>>\<cdot\>exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>+p<rsub|k><around*|(|t|)>\<cdot\><around*|(|<frac|1|\<star\><rsup|2\<cdot\>k>>\<cdot\><around*|(|exp<rsub|\|\<bbb-R\>>\<circ\><around*|(|-<frac|1|\<ast\>>|)>|)>|)><rprime|'><rsub|t>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|p<rsub|k>|)><rprime|'><rsub|t>\<cdot\><frac|1|t<rsup|2\<cdot\>k>>\<cdot\>exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>+p<rsub|k><around*|(|t|)>\<cdot\><around*|(|<around*|(|<frac|1|\<ast\><rsup|2\<cdot\>k>>|)><rprime|'><rsub|t>\<cdot\><around*|(|exp<rsub|\|\<bbb-R\>>\<circ\><around*|(|-<frac|1|\<ast\>>|)>|)><around*|(|t|)>+<rigid|<around*|(|<frac|1|\<ast\><rsup|2\<cdot\>k>>|)><around*|(|t|)>\<cdot\><around*|(|exp<rsub|\|\<bbb-R\>>\<circ\><around*|(|-<frac|1|\<ast\>>|)>|)><rprime|'><rsub|t>>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|p<rsub|k>|)><rprime|'><rsub|t>\<cdot\><frac|1|t<rsup|2\<cdot\>k>>\<cdot\>exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>+p<rsub|k><around*|(|t|)>\<cdot\><around*|(|<around*|(|<frac|1|\<ast\><rsup|2\<cdot\>k>>|)><rprime|'><rsub|t>\<cdot\>exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>+<frac|1|t<rsup|2\<cdot\>k>>\<cdot\><around*|(|exp<rsub|\|\<bbb-R\>>\<circ\><around*|(|-<frac|1|\<ast\>>|)>|)><rprime|'><rsub|t>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|p<rsub|k>|)><rprime|'><rsub|t>\<cdot\><frac|1|t<rsup|2\<cdot\>k>>\<cdot\>exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>+p<rsub|k><around*|(|t|)>\<cdot\><around*|(|<around*|(|<frac|1|\<ast\><rsup|2\<cdot\>k>>|)><rprime|'><rsub|t>\<cdot\>exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>+<frac|1|t<rsup|2\<cdot\>k>>\<cdot\><around*|(|exp<rsub|\|\<bbb-R\>>|)><rprime|'><rsub|<around*|(|-<frac|1|\<ast\>>|)><around*|(|t|)>>\<cdot\><around*|(|-<frac|1|\<ast\>>|)><rprime|'><rsub|t>|)>>|<cell|<below|=|<text|[eq:
+      <reference|eq 23.161.20>]>>>|<cell|>>|<row|<cell|<around*|(|p<rsub|k>|)><rprime|'><rsub|t>\<cdot\><frac|1|t<rsup|2\<cdot\>k>>\<cdot\>exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>+p<rsub|k><around*|(|t|)>\<cdot\><around*|(|-2\<cdot\>k\<cdot\><frac|1|t<rsup|2\<cdot\>k+1>>\<cdot\>exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>+<rigid|<frac|1|t<rsup|2\<cdot\>k>>\<cdot\><around*|(|exp<rsub|\|\<bbb-R\>>|)><rprime|'><rsub|<around*|(|-<frac|1|\<ast\>>|)><around*|(|t|)>>\<cdot\><around*|(|-<frac|1|\<ast\>>|)><rprime|'><rsub|t>>|)>>|<cell|<below|=|<text|[eq:
+      <reference|eq 23.162.20>]>>>|<cell|>>|<row|<cell|<around*|(|p<rsub|k>|)><rprime|'><rsub|t>\<cdot\><frac|1|t<rsup|2\<cdot\>k>>\<cdot\>exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>+p<rsub|k><around*|(|t|)>\<cdot\><around*|(|-2\<cdot\>k\<cdot\><frac|1|t<rsup|2\<cdot\>k+1>>\<cdot\>exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>+<rigid|<frac|1|t<rsup|2\<cdot\>k>>\<cdot\>exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>\<cdot\><around*|(|-<frac|1|\<ast\>>|)><rprime|'><rsub|t>>|)>>|<cell|<below|=|<text|[eq:
+      <reference|eq 23.160.20>]>>>|<cell|>>|<row|<cell|<around*|(|p<rsub|k>|)><rprime|'><rsub|t>\<cdot\><frac|1|t<rsup|2\<cdot\>k>>\<cdot\>exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>+p<rsub|k><around*|(|t|)>\<cdot\><around*|(|-2\<cdot\>k\<cdot\><frac|1|t<rsup|2\<cdot\>k+1>>\<cdot\>exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>+<frac|1|t<rsup|2\<cdot\>k>>\<cdot\>exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>\<cdot\><frac|1|t<rsup|2>>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|<around*|(|p<rsub|k>|)><rprime|'><rsub|t>\<cdot\><frac|1|t<rsup|2\<cdot\>k>>+p<rsub|k><around*|(|t|)>\<cdot\><around*|(|-2\<cdot\>k\<cdot\><frac|1|t<rsup|2\<cdot\>k+1>>+<frac|1|t<rsup|2\<cdot\>k>>\<cdot\><frac|1|t<rsup|2>>|)>|)>\<cdot\>exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|<around*|(|p<rsub|k>|)><rprime|'><rsub|t>\<cdot\>t<rsup|2>\<cdot\><frac|1|t<rsup|2\<cdot\>k+2>>+p<rsub|k><around*|(|t|)>\<cdot\><around*|(|-2\<cdot\>k\<cdot\>t\<cdot\><frac|1|t<rsup|2\<cdot\>k+2>>+<frac|1|t<rsup|2\<cdot\>k+2>>|)>|)>\<cdot\>exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|<around*|(|p<rsub|k>|)><rprime|'><rsub|t>\<cdot\>t<rsup|2>+p<rsub|k><around*|(|t|)>\<cdot\><around*|(|-2\<cdot\>k\<cdot\>t+1|)>|)>\<cdot\><frac|exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>|t<rsup|2\<cdot\>k+2>>>|<cell|<below|=|<text|[eq:
+      <reference|eq 23.163.20>]>>>|<cell|>>|<row|<cell|<around*|(|<around*|(|<big|sum><rsub|i=1><rsup|k>i\<cdot\>\<alpha\><rsub|i>\<cdot\>t<rsup|i-1>|)>\<cdot\>t<rsup|2>+p<rsub|k><around*|(|t|)>\<cdot\><around*|(|-2\<cdot\>k\<cdot\>t+1|)>|)>\<cdot\><frac|exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>|t<rsup|2\<cdot\>k+2>>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|<around*|(|<big|sum><rsub|i=1><rsup|k>i\<cdot\>\<alpha\><rsub|i>\<cdot\>t<rsup|i-1>|)>\<cdot\>t<rsup|2>+<around*|(|<big|sum><rsub|i=0><rsup|k>\<alpha\><rsub|i>\<cdot\>t<rsup|i>|)>\<cdot\><around*|(|-2\<cdot\>k\<cdot\>t+1|)>|)>\<cdot\><frac|exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>|t<rsup|2\<cdot\>k+2>>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|<big|sum><rsub|i=1><rsup|k>i\<cdot\>\<alpha\><rsub|i>\<cdot\>t<rsup|i+1>+<big|sum><rsub|i=0><rsup|k><around*|(|-2|)>\<cdot\>k\<cdot\>\<alpha\><rsub|i>\<cdot\>t<rsup|i+1>+<big|sum><rsub|i=0><rsup|k>\<alpha\><rsub|i>\<cdot\>t<rsup|i>|)>\<cdot\><frac|exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>|t<rsup|2\<cdot\>k+2>>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|<big|sum><rsub|j=2><rsup|k+1><around*|(|j-1|)>\<cdot\>\<alpha\><rsub|j-1>\<cdot\>t<rsup|j>+<big|sum><rsub|j=1><rsup|k+1><around*|(|-2|)>\<cdot\>k\<cdot\>\<alpha\><rsub|j-1>\<cdot\>t<rsup|j>+<big|sum><rsub|i=0><rsup|k>\<alpha\><rsub|i>\<cdot\>t<rsup|i>|)>\<cdot\><frac|exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>|t<rsup|2\<cdot\>k+2>>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|<around*|(|k+1-1|)>\<cdot\>\<alpha\><rsub|k+1-1>\<cdot\>t<rsup|k+1>+<around*|(|<big|sum><rsub|j=2><rsup|k><around*|(|j-1|)>\<cdot\>\<alpha\><rsub|j-1>\<cdot\>t<rsup|j>|)>+<around*|(|-2|)>\<cdot\>k\<cdot\>\<alpha\><rsub|1-1>\<cdot\>t<rsup|1>+<rigid|<around*|(|-2|)>\<cdot\>k\<cdot\>\<alpha\><rsub|k+1-1>\<cdot\>t<rsup|k+1>>+<around*|(|<big|sum><rsub|j=2><rsup|k><around*|(|-2|)>\<cdot\>k\<cdot\>\<alpha\><rsub|j-1>\<cdot\>t<rsup|j>|)>+\<alpha\><rsub|0>\<cdot\>t<rsup|0>+\<alpha\><rsub|1>\<cdot\>t<rsup|1>+\<alpha\><rsub|2>\<cdot\>t<rsup|2>+<rigid|<around*|(|<big|sum><rsub|j=0><rsup|k>\<alpha\><rsub|j>\<cdot\>t<rsup|i>|)>>|)>\<cdot\><frac|exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>|t<rsup|2\<cdot\>k+2>>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|k\<cdot\>\<alpha\><rsub|k>\<cdot\>t<rsup|k+1>+<around*|(|<big|sum><rsub|j=2><rsup|k><around*|(|j-1|)>\<cdot\>\<alpha\><rsub|j-1>\<cdot\>t<rsup|j>|)>+<around*|(|-2|)>\<cdot\>k\<cdot\>\<alpha\><rsub|0>\<cdot\>t<rsup|1>+<around*|(|-2|)>\<cdot\>k\<cdot\>\<alpha\><rsub|k>\<cdot\>t<rsup|k+1>+<rigid|<around*|(|<big|sum><rsub|j=2><rsup|k><around*|(|-2|)>\<cdot\>k\<cdot\>\<alpha\><rsub|j-1>\<cdot\>t<rsup|j>|)>>+\<alpha\><rsub|0>\<cdot\>t<rsup|0>+\<alpha\><rsub|1>\<cdot\>t<rsup|1>+\<alpha\><rsub|2>\<cdot\>t<rsup|2>+<around*|(|<big|sum><rsub|j=2><rsup|k>\<alpha\><rsub|j>\<cdot\>t<rsup|i>|)>|)>\<cdot\><frac|exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>|t<rsup|2\<cdot\>k+2>>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|\<alpha\><rsub|0>\<cdot\>t<rsup|0>+<around*|(|-2|)>\<cdot\>k\<cdot\>\<alpha\><rsub|0>\<cdot\>t<rsup|1>+\<alpha\><rsub|1>\<cdot\>t<rsup|1>+\<alpha\><rsub|2>\<cdot\>t<rsup|2>+k\<cdot\>\<alpha\><rsub|k>\<cdot\>t<rsup|k+1>+<around*|(|<big|sum><rsub|j=2><rsup|k><around*|(|j-1|)>\<cdot\>\<alpha\><rsub|j-1>\<cdot\>t<rsup|j>|)>+<around*|(|<big|sum><rsub|j=2><rsup|k><around*|(|-2|)>\<cdot\>k\<cdot\>\<alpha\><rsub|j-1>\<cdot\>t<rsup|j>|)>+<around*|(|<big|sum><rsub|j=2><rsup|k>\<alpha\><rsub|j>\<cdot\>t<rsup|i>|)>|)>\<cdot\><frac|exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>|t<rsup|2\<cdot\>k+2>>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|\<alpha\><rsub|0>\<cdot\>t<rsup|0>+<around*|(|<around*|(|-2|)>\<cdot\>k\<cdot\>\<alpha\><rsub|0>+\<alpha\><rsub|1>|)>\<cdot\>t<rsup|1>+\<alpha\><rsub|2>\<cdot\>t<rsup|2>+k\<cdot\>\<alpha\><rsub|k>\<cdot\>t<rsup|k+1>+<rigid|<big|sum><rsub|j=2><rsup|k><around*|(|<around*|(|j-1|)>\<cdot\>\<alpha\><rsub|j-1>+<around*|(|-2|)>\<cdot\>k\<cdot\>\<alpha\><rsub|j-1>+\<alpha\><rsub|j>|)>\<cdot\>t<rsup|j>>|)>\<cdot\><frac|exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>|t<rsup|2\<cdot\>k+2>>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|<big|sum><rsub|j=0><rsup|k+1>\<beta\><rsub|j>\<cdot\>t<rsup|j>|)>\<cdot\><frac|exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>|t<rsup|2\<cdot\>k+2>>>|<cell|>|<cell|>>>>
+    </eqnarray*>
+
+    where\ 
 
     <\equation*>
-      S=<around*|{|k\<in\>\<bbb-N\>\|f<rsup|<around*|(|k|)>><rsub|t><text|
-      exists with >f<rsup|<around*|(|k|)>><rsub|t>=p<rsub|k><around*|(|t|)>\<cdot\><frac|exp<around*|(|-<frac|1|t>|)>|t<rsup|2\<cdot\>k>><text|
-      where >p<rsub|k><text| is a polynomial of degree at most >k|)>
+      <around*|{|\<beta\><rsub|j>|}><rsub|j\<in\><around*|{|0,\<ldots\>,k+1|}>><text|
+      is defined by >\<beta\><rsub|j>=<choice|<tformat|<table|<row|<cell|\<alpha\><rsub|0><text|
+      if >j=0>>|<row|<cell|<around*|(|-2|)>\<cdot\>k\<cdot\>\<alpha\><rsub|0>+\<alpha\><rsub|1><text|
+      if >j=1>>|<row|<cell|\<alpha\><rsub|2><text| if
+      >j=2>>|<row|<cell|<around*|(|j-1|)>\<cdot\>\<alpha\><rsub|j-1>+<around*|(|-2|)>\<cdot\>k\<cdot\>\<alpha\><rsub|j-1>+\<alpha\><rsub|j><text|
+      if >j\<in\><around*|{|3,\<ldots\>,k|}>>>|<row|<cell|k\<cdot\>\<alpha\><rsub|k><text|
+      if >j=k+1>>>>>
     </equation*>
 
-    then we have:\ 
+    So if we define
 
-    <\description>
-      <item*|<math|1\<in\>S>>First note that by\ 
+    <\equation*>
+      p<rsub|k+1>:<around*|]|0,\<infty\>|[>\<rightarrow\>\<bbb-R\><text| by
+      >p<rsub|k+1>=<big|sum><rsub|i=0><rsup|k+1>\<beta\><rsub|i>\<cdot\>t<rsup|i>
+    </equation*>
 
-      <item*|<math|k\<in\>S\<Rightarrow\>k+1\<in\>S>>
-    </description>
+    then we have\ 
+
+    <\equation*>
+      f<rprime|'><rsub|t>=p<rsub|k+1><around*|(|t|)>\<cdot\><frac|exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>|t<rsup|2\<cdot\>k+2>>=p<rsub|k+1><around*|(|t|)>\<cdot\><frac|exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>|t<rsup|2\<cdot\><around*|(|k+1|)>>>
+    </equation*>
+  </proof>
+
+  <\lemma>
+    <label|lemma 23.104.20>Let <math|k\<in\>\<bbb-N\><rsub|0>>,
+    <math|p<rsub|k>:\<bbb-R\>\<rightarrow\>\<bbb-R\>> defined by
+    <math|p<rsub|k><around*|(|t|)>=<big|sum><rsup|k><rsub|i=0>\<alpha\><rsub|i>\<cdot\>t<rsup|i>>
+    then we have for \ 
+
+    <\equation*>
+      f:\<bbb-R\>\<rightarrow\>\<bbb-R\><text| defined by
+      >f<around*|(|t|)>=<choice|<tformat|<table|<row|<cell|p<rsub|k><around*|(|t|)>\<cdot\><frac|exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>|t<rsup|2\<cdot\>k>><text|
+      if >t\<in\><around*|]|0,\<infty\>|[>>>|<row|<cell|0<text| if
+      >t\<in\><around*|]|-\<infty\>,0|]><text|>>>>>>
+    </equation*>
+
+    that:
+
+    <\enumerate>
+      <item><math|\<forall\>t\<in\><around*|]|0,\<infty\>|[>>
+      <math|f<rprime|'><rsub|t>> exist with\ 
+
+      <\equation*>
+        f<rprime|'><rsub|t>=p<rsub|k+1><around*|(|t|)>\<cdot\><frac|exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>|t<rsup|2\<cdot\><around*|(|k+1|)>>>
+      </equation*>
+
+      where\ 
+
+      <\equation*>
+        p<rsub|k>=<big|sum><rsub|i=0><rsup|k+1>\<beta\><rsub|i>\<cdot\>t<rsup|i>
+      </equation*>
+
+      <item><math|\<forall\>t\<in\><around*|]|-\<infty\>,0|[>>
+      <math|f<rprime|'><rsub|t>> exist with\ 
+
+      <\equation*>
+        f<rprime|'><rsub|t>=0
+      </equation*>
+    </enumerate>
+  </lemma>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>Let <math|t\<in\><around*|]|0,\<infty\>|[>>. As
+      <math|f<rsub|\|<around*|]||[>0,\<infty\>>:<around*|]|0,\<infty\>|[>\<rightarrow\>\<bbb-R\>>
+      is defined by <math|f<rsub|<around*|]|0,\<infty\>|[>><around*|(|t|)>=f<around*|(|t|)>=p<rsub|k><around*|(|t|)>\<cdot\><frac|exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>|tt<rsup|2\<cdot\>k>>>
+      it follows from [lemma: <reference|lemma 23.103.20>] that
+      <math|<around*|(|f<rsub|\|<around*|]|0,\<infty\>|[>>|)><rprime|'><rsub|t>>
+      exist with
+
+      <\equation*>
+        <around*|(|f<rsub|\|<around*|]|0,\<infty\>|[>>|)><rprime|'><rsub|t>=p<rsub|k+1><around*|(|t|)>\<cdot\><frac|exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>|t<rsup|2\<cdot\><around*|(|k+1|)>>>
+      </equation*>
+
+      where <math|p<rsub|k+1><around*|(|t|)>> is of the form\ 
+
+      <\equation*>
+        p<rsub|k+1><around*|(|t|)>=<big|sum><rsub|i=1><rsup|k+1>\<beta\><rsub|i>\<cdot\>t<rsup|i>
+      </equation*>
+
+      So as <math|<around*|]|0,\<infty\>|[>> is open it follows from
+      [theorem: <reference|diff derivative and restriction>] that
+      <math|f<rprime|'><rsub|t>> exist with\ 
+
+      <\equation*>
+        f<rprime|'><rsub|t>=<around*|(|f<rsub|\|<around*|]|0,\<infty\>|[>>|)><rprime|'><rsub|t>=p<rsub|k+1><around*|(|t|)>\<cdot\><frac|exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>|t<rsup|2\<cdot\><around*|(|k+1|)>>>
+      </equation*>
+
+      <item>Let <math|t\<in\><around*|]|-\<infty\>,0|[>>. As
+      <math|<around*|]|-\<infty\>,0|[>> is open [see theorem:
+      <reference|normed generalized intervals that are open>] there exist a
+      <math|\<delta\>\<in\>\<bbb-R\><rsup|+>> such that
+      <math|B<rsub|<around*|\|||\|>><around*|(|t,\<delta\>|)>\<subseteq\><around*|]|-\<infty\>,0|[>>.
+      Let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> then for
+      <math|h\<in\>\<bbb-R\><rsub|t>> with
+      <math|0\<less\><around*|\||h|\|>\<less\>\<delta\>> we have that
+      <math|<around*|\||t+h-t|\|>\<less\>\<delta\>\<Rightarrow\>t+h\<in\>B<rsub|<around*|\|||\|>><around*|(|t,\<delta\>|)>\<subseteq\><around*|]|-\<infty\>,0|[>>
+      and\ 
+
+      <\equation*>
+        <around*|\||<frac|f<around*|(|t+h|)>-f<around*|(|t|)>|h>-0|\|><below|<below|=|t,t+h\<in\><around*|]|-\<infty\>,0|[>\<subseteq\><around*|]|-\<infty\>,0|]>>|><around*|\||<frac|0-0|h>=0|\|>=0\<less\>\<varepsilon\>
+      </equation*>
+
+      proving by [theorem: <reference|diff calculus derivate>] that
+      <math|f<rprime|'><rsub|t>> exist with <math|f<rprime|'><rsub|t>=0>.
+    </enumerate>
+  </proof>
+
+  <\lemma>
+    <label|lemma 23.105.20>Let <math|k\<in\>\<bbb-N\><rsub|0>> then
+    <math|\<forall\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> there
+    <math|\<exists\>\<delta\>\<in\>\<bbb-R\><rsup|+>> such that
+    <math|\<forall\>t\<in\><around*|]|0,\<delta\>|[>>\ 
+
+    <\equation*>
+      0\<less\><frac|exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>|t<rsup|k>>\<less\>\<varepsilon\>
+    </equation*>
+  </lemma>
+
+  <\proof>
+    By [theorem: <reference|complex power and inequality>]
+    <math|0\<less\><frac|1|t<rsup|k>>> and by [theorem: <reference|exp
+    properties>] that <math|0\<less\>exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>=exp<around*|(|-<frac|1|t>|)>>
+    so that\ 
+
+    <\equation*>
+      0\<less\><frac|exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>|t<rsup|k>>
+    </equation*>
+
+    Let <math|t\<in\><around*|]|0,\<infty\>|[>> then by [definition:
+    <reference|exp>]
+
+    <\equation*>
+      exp<around*|(|<frac|1|t>|)>=<big|sum><rsub|i=0><rsup|\<infty\>><frac|1|i!>\<cdot\><around*|(|<frac|1|t>|)><rsup|i>
+    </equation*>
+
+    Using [theorem: <reference|series partition series>]\ 
+
+    <\equation>
+      <label|eq 23.159.21><big|sum><rsub|i=k+2><rsup|\<infty\>><frac|1|k!>\<cdot\><around*|(|<frac|1|t>|)><rsup|i><text|
+      exists and ><big|sum><rsub|i=0><rsup|\<infty\>><frac|1|k!>\<cdot\><around*|(|<frac|1|t>|)><rsup|k>=<big|sum><rsub|i=0><rsup|k+1><frac|1|k!>\<cdot\><around*|(|<frac|1|t>|)><rsup|k>+<big|sum><rsub|i=k+2><rsup|\<infty\>><frac|1|k!>\<cdot\><around*|(|<frac|1|t>|)><rsup|i>
+    </equation>
+
+    further using [theorem: <reference|series non negative numbers strict
+    positive term>] we have that\ 
+
+    <\equation>
+      <label|eq 23.160.21>0\<less\><big|sum><rsub|i=k+2><rsup|\<infty\>><frac|1|k!>\<cdot\><around*|(|<frac|1|t>|)><rsup|i>
+    </equation>
+
+    Now
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<frac|1|<around*|(|k+1|)>!>\<cdot\><frac|1|t<rsup|k+1>>>|<cell|\<leqslant\>>|<cell|<big|sum><rsub|i=0><rsup|k+1><frac|1|k!>\<cdot\><around*|(|<frac|1|t>|)><rsup|k>>>|<row|<cell|>|<cell|<below|\<less\>|<text|[eq:
+      <reference|eq 23.160.20>]>>>|<cell|<big|sum><rsub|i=0><rsup|k+1><frac|1|k!>\<cdot\><around*|(|<frac|1|t>|)><rsup|k>+<big|sum><rsub|i=k+2><rsup|\<infty\>><frac|1|k!>\<cdot\><around*|(|<frac|1|t>|)><rsup|i>>>|<row|<cell|>|<cell|<below|=|<text|[eq:
+      <reference|eq 23.159.21>]>>>|<cell|exp<around*|(|<frac|1|t>|)>>>|<row|<cell|>|<cell|<below|=|<text|[theorem:
+      <reference|exp properties>]>>>|<cell|<frac|1|exp<around*|(|-<frac|1|t>|)>>>>|<row|<cell|>|<cell|<below|=|t\<in\>\<bbb-R\>>>|<cell|<frac|1|exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>>>>>>
+    </eqnarray*>
+
+    so that
+
+    <\equation*>
+      <frac|exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>|t<rsup|k>>\<less\><around*|(|k+1|)>!\<cdot\>t
+    </equation*>
+
+    Let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> and take
+    <math|\<delta\>=<frac|\<varepsilon\>|2\<cdot\><around*|(|k+1|)>!>\<in\>\<bbb-R\><rsup|+>>
+    then we have that\ 
+
+    <\equation*>
+      <frac|exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>|t<rsup|k>>\<less\><around*|(|k+1|)>!\<cdot\><frac|\<varepsilon\>|<around*|(|k+1|)>!>=\<varepsilon\>
+    </equation*>
+
+    Hence we have proved that\ 
+
+    <\equation*>
+      0\<less\><frac|exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>|t<rsup|k>>\<less\>\<varepsilon\>
+    </equation*>
 
     \;
   </proof>
+
+  <\lemma>
+    <label|lemma 23.106.20>Let <math|k\<in\>\<bbb-N\><rsub|0>>,
+    <math|p<rsub|k>:\<bbb-R\>\<rightarrow\>\<bbb-R\>> defined by
+    <math|p<rsub|k><around*|(|t|)>=<big|sum><rsup|k><rsub|i=0>\<alpha\><rsub|i>\<cdot\>t<rsup|i>>
+    then\ 
+
+    <\equation*>
+      f:\<bbb-R\>\<rightarrow\>\<bbb-R\><text| defined by
+      >f<around*|(|t|)>=<choice|<tformat|<table|<row|<cell|p<rsub|k><around*|(|t|)>\<cdot\><frac|exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>|t<rsup|2\<cdot\>k>><text|
+      if >t\<in\><around*|]|0,\<infty\>|[>>>|<row|<cell|0<text| if
+      >t\<in\><around*|]|-\<infty\>,0|]><text|>>>>>>
+    </equation*>
+
+    is continuous.
+  </lemma>
+
+  <\proof>
+    Let <math|t\<in\>\<bbb-R\>> then we have either:\ 
+
+    <\description>
+      <item*|<math|t\<in\><around*|]|-\<infty\>,0|[>>>Using [lemma:
+      <reference|lemma 23.104.20>] <math|f<rprime|'><rsub|t>> exist so that
+      by [theorem: <reference|diff derivatives and continuity>] <math|f> is
+      continuous at <math|t>.
+
+      <item*|<math|t\<in\><around*|]|0,\<infty\>|[>>>Using [lemma:
+      <reference|lemma 23.104.20>] <math|f<rprime|'><rsub|t>> exist so that
+      by [theorem: <reference|diff derivatives and continuity>] <math|f> is
+      continuous at <math|t>.
+
+      <item*|<math|t=0>>Let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>. Let
+      <math|s\<in\><around*|]|0,1|[>> then we have as\ 
+
+      <\equation*>
+        <around*|\||p<rsub|k><around*|(|s|)>|\|>=<around*|\||<big|sum><rsub|i=0><rsup|k>\<alpha\><rsub|i>\<cdot\>s<rsup|i>|\|>\<leqslant\><big|sum><rsub|i=0><rsup|k><around*|\||\<alpha\><rsub|i>\<cdot\>s<rsup|i>|\|>=<big|sum><rsub|i=0><rsup|k><around*|\||\<alpha\><rsub|i>|\|>\<cdot\><around*|\||s<rsup|i>|\|><below|\<less\>|0\<less\>s\<less\>1\<wedge\><text|[theorem:
+        <reference|complex power and inequality>]>><big|sum><rsub|i=0><rsup|k><around*|\||\<alpha\><rsub|i>|\|>
+      </equation*>
+
+      so that if we define <math|M=<big|sum><rsub|i=0><rsup|k><around*|\||\<alpha\><rsub|i>|\|>>
+      that\ 
+
+      <\equation>
+        <label|eq 23.161.21>0\<leqslant\>M<text| and
+        >\<forall\>s\<in\><around*|]|0,1|[><text|
+        ><around*|\||p<rsub|k><around*|(|s|)>|\|>\<less\>M
+      </equation>
+
+      Let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> then by [lemma:
+      <reference|lemma 23.105.20>] there exist a
+      <math|\<delta\><rsub|1>\<in\>\<bbb-R\><rsup|+>> such that\ 
+
+      <\equation>
+        <label|eq 23.162.21>s\<in\><around*|]|0,\<delta\><rsub|1>|[><text|
+        >0\<less\><frac|exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|s>|)>|s<rsup|2\<cdot\>k>>\<less\><frac|\<varepsilon\>|M+1>
+      </equation>
+
+      Take <math|\<delta\>=min<around*|(|1,\<delta\><rsub|1>|)>\<in\>\<bbb-R\><rsup|+>>
+      then for <math|s\<in\>\<bbb-R\>> with
+      <math|<around*|\||s|\|>=<around*|\||s-0|\|>\<less\>\<delta\>> we have
+      either:\ 
+
+      <\description>
+        <item*|<math|0\<less\>s>>Then <math|s=<around*|\||s|\|>\<less\>\<delta\>\<leqslant\>\<delta\><rsub|1>\<Rightarrow\>s\<in\><around*|]|0.\<delta\><rsub|1>|[>>
+        so that\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<around*|\||f<around*|(|s|)>-f<around*|(|0|)>|\|>>|<cell|=>|<cell|<around*|\||p<rsub|k><around*|(|s|)>\<cdot\><frac|exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|s>|)>|s<rsup|2\<cdot\>k>>-0|\|>>>|<row|<cell|>|<cell|=>|<cell|<around*|\||p<rsub|k><around*|(|s|)>|\|>\<cdot\><around*|\||<frac|exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|s>|)>|s<rsup|2\<cdot\>k>>|\|>>>|<row|<cell|>|<cell|<below|\<leqslant\>|<text|[eq:
+          <reference|eq 23.161.21>]>>>|<cell|M\<cdot\><around*|\||<frac|exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|s>|)>|s<rsup|2\<cdot\>k>>|\|>>>|<row|<cell|>|<cell|<below|\<less\>|<text|[eq:
+          <reference|eq 23.162.21>]>>>|<cell|M\<cdot\><frac|\<varepsilon\>|M+1>>>|<row|<cell|>|<cell|\<less\>>|<cell|\<varepsilon\>>>>>
+        </eqnarray*>
+
+        <item*|<math|s\<leqslant\>0>>Then we have that
+
+        <\equation*>
+          <around*|\||f<around*|(|s|)>-f<around*|(|0|)>|\|>=<around*|\||0-0|\|>=0\<less\>\<varepsilon\>
+        </equation*>
+      </description>
+
+      Summarized <math|\<forall\>e\<in\>\<bbb-R\><rsup|+>> we found a
+      <math|\<delta\>\<in\>\<bbb-R\><rsup|+>> such that
+      <math|\<forall\>s\<in\>\<bbb-R\>> such that
+      <math|<around*|\||s-0|\|>\<less\>\<delta\>> we have
+      <math|<around*|\||f<around*|(|s|)>-f<around*|(|0|)>|\|>\<less\>\<varepsilon\>>
+      which proves that <math|f> is continuous at <math|0>.
+    </description>
+
+    So in all cases for <math|t\<in\>\<bbb-R\>> <math|f> is continuous at
+    <math|t> which proves that\ 
+
+    <\equation*>
+      f<text| is continuous>
+    </equation*>
+  </proof>
+
+  <\lemma>
+    <label|lemma 23.107.21>Let <math|k\<in\>\<bbb-N\><rsub|0>>,
+    <math|p<rsub|k>:\<bbb-R\>\<rightarrow\>\<bbb-R\>> defined by
+    <math|p<rsub|k><around*|(|t|)>=<big|sum><rsup|k><rsub|i=0>\<alpha\><rsub|i>\<cdot\>t<rsup|i>>
+    then for
+
+    <\equation*>
+      f:\<bbb-R\>\<rightarrow\>\<bbb-R\><text| defined by
+      >f<around*|(|t|)>=<choice|<tformat|<table|<row|<cell|p<rsub|k><around*|(|t|)>\<cdot\><frac|exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>|t<rsup|2\<cdot\>k>><text|
+      if >t\<in\><around*|]|0,\<infty\>|[>>>|<row|<cell|0<text| if
+      >t\<in\><around*|]|-\<infty\>,0|]><text|>>>>>>
+    </equation*>
+
+    we have\ 
+
+    <\equation*>
+      \<forall\>t\<in\>\<bbb-R\><text| >f<rprime|'><rsub|t><text| exists>
+      with f<rprime|'><rsub|t>==<choice|<tformat|<table|<row|<cell|p<rsub|k+1><around*|(|t|)>\<cdot\><frac|exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>|t<rsup|2\<cdot\><around*|(|k+1|)>>><text|
+      if >t\<in\><around*|]|0,\<infty\>|[>>>|<row|<cell|0<text| if
+      >t\<in\><around*|]|-\<infty\>,0|]><text|>>>>>>
+    </equation*>
+
+    where <math|p<rsub|k+1><around*|(|t|)>=<big|sum><rsup|k+1><rsub|i=0>\<beta\><rsub|i>\<cdot\>t<rsup|i>>.
+  </lemma>
+
+  <\proof>
+    By [lemma: <reference|lemma 23.106.20>]\ 
+
+    <\equation*>
+      f<text| is continuous>
+    </equation*>
+
+    further, using [lemma: <reference|lemma 23.104.20>] we have that\ 
+
+    <\equation>
+      <label|eq 23.163.21>\<forall\>t\<in\><around*|]|0,\<infty\>|[><text|
+      >f<rprime|'><rsub|t><text| exists with
+      >f<rprime|'><rsub|t>=p<rsub|k+1><around*|(|t|)>\<cdot\><frac|exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>|t<rsup|2\<cdot\><around*|(|k+1|)>>><text|
+      if >t\<in\><around*|]|0,\<infty\>|[><text| where
+      >p<rsub|k+1><around*|(|t|)>=<big|sum><rsub|i=0><rsup|k+1>\<beta\><rsub|i>\<cdot\>t<rsup|i>
+    </equation>
+
+    <\equation*>
+      \<forall\>t\<in\><around*|]|-\<infty\>,0|[><text|
+      >f<rprime|'><rsub|t><text| exists with >f<rprime|'><rsub|t>=0
+    </equation*>
+
+    As <math|\<forall\>t\<subset\><around*|]|-\<infty\>,0|]>> <math|f=0> it
+    follows from [eq: <reference|eq 23.163.21>] by [lemma: <reference|lemma
+    23.102.20>] that
+
+    <\equation*>
+      \<forall\>t\<in\><around*|]|-\<infty\>,0|]>
+    </equation*>
+
+    Combining the above with [eq: <reference|eq 23.163.21>] proves that\ 
+
+    <\equation*>
+      \<forall\>t\<in\>\<bbb-R\><text| >f<rprime|'><rsub|t><text| exists
+      with> f<rprime|'><rsub|t>==<choice|<tformat|<table|<row|<cell|p<rsub|k+1><around*|(|t|)>\<cdot\><frac|exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>|t<rsup|2\<cdot\><around*|(|k+1|)>>><text|
+      if >t\<in\><around*|]|0,\<infty\>|[>>>|<row|<cell|0<text| if
+      >t\<in\><around*|]|-\<infty\>,0|]><text|>>>>>>
+    </equation*>
+  </proof>
+
+  <\lemma>
+    <label|lemma 23.108.21>Consider the function\ 
+
+    <\equation*>
+      f:\<bbb-R\>\<rightarrow\>\<bbb-R\><text| defined by
+      >f<around*|(|t|)>=<choice|<tformat|<table|<row|<cell|exp<rsub|<mid|\|>\<bbb-R\>><around*|(|-<frac|1|t>|)><text|
+      if >t\<in\><around*|]|0,\<infty\>|[>>>|<row|<cell|0<text| if
+      >t\<in\><around*|]|-\<infty\>,0|]>>>>>>
+    </equation*>
+
+    then <math|\<forall\>n\<in\>\<bbb-N\>> we have for
+    <math|\<cal-D\><rsup|n><rsub|f>=<around*|{|t\<in\>\<bbb-R\>\|f<rsup|<around*|(|n|)>><rsub|t><text|
+    exists>|}>> [see definition: <reference|diff higher order derivative
+    function>[ that
+
+    <\equation*>
+      \<cal-D\><rsup|n><rsub|f>=\<bbb-R\>
+    </equation*>
+
+    In other words <math|\<forall\>n\<in\>\<bbb-N\>> we have
+    <math|\<forall\>t\<in\>\<bbb-R\>> that
+    <math|f<rsup|<around*|(|n|)>><rsub|t>> exists.
+  </lemma>
+
+  <\proof>
+    We use induction to prove this, so let\ 
+
+    <\equation*>
+      S<rsub|f>=<around*|{|n\<in\>\<bbb-N\>\|\<cal-D\><rsup|n><rsub|f>=\<bbb-R\><text|
+      and for >f<rsup|<around*|(|n|)>>:\<bbb-R\>=\<cal-D\><rsup|n><rsub|f>\<rightarrow\>\<bbb-R\><text|
+      defined by >f<rsup|<around*|(|n|)>><around*|(|t|)>=f<rsup|<around*|(|n|)>><rsub|t><text|
+      we have >\<forall\>t\<in\>\<bbb-R\><text| that
+      >f<rsup|<around*|(|n|)>>=<choice|<tformat|<table|<row|<cell|p<rsub|k><around*|(|t|)>\<cdot\><frac|exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>|t<rsup|2\<cdot\>k>><text|
+      if >t\<in\><around*|]|0,\<infty\>|[>>>|<row|<cell|0<text| if
+      >t\<in\><around*|]|-\<infty\>,0|]>>>>>><text| where
+      >p<rsub|k><around*|(|t|)>=<big|sum><rsub|i=1><rsup|k>\<alpha\><rsub|i>\<cdot\>t<rsup|i>|}>
+    </equation*>
+
+    then we have:
+
+    <\description>
+      <item*|<math|1\<in\>S<rsub|f>>>
+
+      <item*|<math|n\<in\>S<rsub|f>\<Rightarrow\>n+1\<in\>S<rsub|f>>>
+    </description>
+  </proof>
+
+  \;
 
   <section|Tangent vectors and <math|T<rsub|p>M>>
 
@@ -7745,7 +8315,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|22>
-    <associate|page-first|1915>
+    <associate|page-first|1913>
     <associate|par-first|0>
     <associate|section-nr|2>
     <associate|subsection-nr|0>
@@ -7795,6 +8365,7 @@
     <associate|diff left and right derivative|<tuple|23.94|?>>
     <associate|diff left and right derivative (1)|<tuple|23.96|?>>
     <associate|diff left and right derivative are unique|<tuple|23.95|?>>
+    <associate|eq 21.156.1|<tuple|23.151|?>>
     <associate|eq 23.1.1|<tuple|23.5|?>>
     <associate|eq 23.1.3|<tuple|23.2|?>>
     <associate|eq 23.1.4|<tuple|23.1|?>>
@@ -7831,13 +8402,25 @@
     <associate|eq 23.138.16|<tuple|23.145|?>>
     <associate|eq 23.139.16|<tuple|23.146|?>>
     <associate|eq 23.14.3|<tuple|23.18|?>>
-    <associate|eq 23.147.17|<tuple|23.151|?>>
+    <associate|eq 23.147.17|<tuple|23.164|?>>
     <associate|eq 23.147.18|<tuple|23.147|?>>
     <associate|eq 23.148.18|<tuple|23.148|?>>
     <associate|eq 23.149.18|<tuple|23.149|?>>
     <associate|eq 23.15.2|<tuple|23.19|?>>
     <associate|eq 23.150.18|<tuple|23.150|?>>
+    <associate|eq 23.157.20|<tuple|23.152|?>>
+    <associate|eq 23.158.20|<tuple|23.153|?>>
+    <associate|eq 23.159.20|<tuple|23.154|?>>
+    <associate|eq 23.159.21|<tuple|23.159|?>>
     <associate|eq 23.16.2|<tuple|23.20|?>>
+    <associate|eq 23.160.20|<tuple|23.155|?>>
+    <associate|eq 23.160.21|<tuple|23.160|?>>
+    <associate|eq 23.161.20|<tuple|23.156|?>>
+    <associate|eq 23.161.21|<tuple|23.161|?>>
+    <associate|eq 23.162.20|<tuple|23.157|?>>
+    <associate|eq 23.162.21|<tuple|23.162|?>>
+    <associate|eq 23.163.20|<tuple|23.158|?>>
+    <associate|eq 23.163.21|<tuple|23.163|?>>
     <associate|eq 23.17.2|<tuple|23.22|?>>
     <associate|eq 23.2.1|<tuple|23.6|?>>
     <associate|eq 23.2.3|<tuple|23.3|?>>
@@ -7896,6 +8479,7 @@
     <associate|eq 23.6.1|<tuple|23.11|?>>
     <associate|eq 23.6.3|<tuple|23.10|?>>
     <associate|eq 23.61.10|<tuple|23.71|?>>
+    <associate|eq 23.61.21|<tuple|23.161|?>>
     <associate|eq 23.62.10|<tuple|23.72|?>>
     <associate|eq 23.63.10|<tuple|23.73|?>>
     <associate|eq 23.63.12|<tuple|23.70|?>>
@@ -7947,6 +8531,13 @@
     <associate|eq 23.98.12|<tuple|23.114|?>>
     <associate|eq 23.99.12|<tuple|23.115|?>>
     <associate|lemma 23.10.2|<tuple|23.19|?>>
+    <associate|lemma 23.102.20|<tuple|23.102|?>>
+    <associate|lemma 23.103.20|<tuple|23.103|?>>
+    <associate|lemma 23.104.20|<tuple|23.104|?>>
+    <associate|lemma 23.105.20|<tuple|23.105|?>>
+    <associate|lemma 23.106.20|<tuple|23.106|?>>
+    <associate|lemma 23.107.21|<tuple|23.107|?>>
+    <associate|lemma 23.108.21|<tuple|23.108|?>>
     <associate|lemma 23.11.2|<tuple|23.20|?>>
     <associate|lemma 23.13.2|<tuple|23.21|?>>
     <associate|lemma 23.13.8|<tuple|23.17|?>>
@@ -7965,14 +8556,14 @@
     <associate|manifold C^m mappings are continuous|<tuple|23.73|?>>
     <associate|manifold C^m mappings equivalences|<tuple|23.76|?>>
     <associate|manifold C^m mappings equivalences (1)|<tuple|23.74|?>>
-    <associate|manifold C^m(M)|<tuple|23.103|?>>
-    <associate|manifold C^q(M) is a vector space|<tuple|23.104|?>>
+    <associate|manifold C^m(M)|<tuple|23.109|?>>
+    <associate|manifold C^q(M) is a vector space|<tuple|23.110|?>>
     <associate|manifold C^r functions are C^r mappings|<tuple|23.78|?>>
     <associate|manifold C^r mspping id local (2)|<tuple|23.80|?>>
     <associate|manifold C^r mspping id locsl|<tuple|23.79|?>>
     <associate|manifold R^n is a differentiable manifold|<tuple|23.64|?>>
-    <associate|manifold TpM is a vector space|<tuple|23.110|?>>
-    <associate|manifold TpM properties|<tuple|23.111|?>>
+    <associate|manifold TpM is a vector space|<tuple|23.116|?>>
+    <associate|manifold TpM properties|<tuple|23.117|?>>
     <associate|manifold a finite dimensional vector space is a differentiable
     manifold|<tuple|23.67|?>>
     <associate|manifold a topological manifold is locally
@@ -7985,9 +8576,9 @@
     <associate|manifold compatible atlas|<tuple|23.52|?>>
     <associate|manifold compatible atlas (1)|<tuple|23.53|?>>
     <associate|manifold composition of a C^r mapping and a mapping of class
-    C^r|<tuple|23.112|?>>
+    C^r|<tuple|23.118|?>>
     <associate|manifold connectivity properties|<tuple|23.24|?>>
-    <associate|manifold constant functions|<tuple|23.105|?>>
+    <associate|manifold constant functions|<tuple|23.111|?>>
     <associate|manifold coordinate ball and cube|<tuple|23.9|?>>
     <associate|manifold coordinate domain|<tuple|23.8|?>>
     <associate|manifold coordinate transforms are a
@@ -8011,8 +8602,8 @@
     <associate|manifold differentiable manifold|<tuple|23.58|?>>
     <associate|manifold differentiable mappings|<tuple|23.69|?>>
     <associate|manifold differentiable structure|<tuple|23.55|?>>
-    <associate|manifold differential|<tuple|23.113|?>>
-    <associate|manifold differential properties|<tuple|23.114|?>>
+    <associate|manifold differential|<tuple|23.119|?>>
+    <associate|manifold differential properties|<tuple|23.120|?>>
     <associate|manifold existence of a maximal atlas|<tuple|23.56|?>>
     <associate|manifold identity is a C^q mapping|<tuple|23.72|?>>
     <associate|manifold maximal atlas|<tuple|23.49|?>>
@@ -8021,7 +8612,7 @@
     <associate|manifold open subset of a differentiable
     manifold|<tuple|23.65|?>>
     <associate|manifold product of functions that are of class
-    C^q|<tuple|23.106|?>>
+    C^q|<tuple|23.112|?>>
     <associate|manifold real numbers are a differentiable
     manifold|<tuple|23.63|?>>
     <associate|manifold real numbers form a topological
@@ -8030,7 +8621,7 @@
     <associate|manifold singleton chart|<tuple|23.61|?>>
     <associate|manifold sphere is a differentiable manifold|<tuple|23.66|?>>
     <associate|manifold sphere is a topological manifold|<tuple|23.18|?>>
-    <associate|manifold tangent vector|<tuple|23.107|?>>
+    <associate|manifold tangent vector|<tuple|23.113|?>>
     <associate|manifold topological|<tuple|23.2|?>>
     <associate|manifold topological (1)|<tuple|23.12|?>>
     <associate|manifold topological manifold is paracompact|<tuple|23.29|?>>
