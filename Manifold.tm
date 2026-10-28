@@ -7538,29 +7538,29 @@
       >t\<in\><around*|]|-\<infty\>,0|]>>>>>>
     </equation*>
 
-    then <math|\<forall\>n\<in\>\<bbb-N\>> we have for
-    <math|\<cal-D\><rsup|n><rsub|f>=<around*|{|t\<in\>\<bbb-R\>\|f<rsup|<around*|(|n|)>><rsub|t><text|
-    exists>|}>> [see definition: <reference|diff higher order derivative
-    function>[ that
+    then <math|\<forall\>k\<in\>\<bbb-N\>> we have for
+    <math|\<cal-D\><rsup|n><rsub|k>=<around*|{|t\<in\>\<bbb-R\>\|f<rsup|<around*|(|k|)>><rsub|t><text|
+    exists>|}>> [see definition: <reference|diff higher order derivative at a
+    point>[ that
 
     <\equation*>
-      \<cal-D\><rsup|n><rsub|f>=\<bbb-R\>
+      \<cal-D\><rsup|k><rsub|f>=\<bbb-R\>
     </equation*>
 
-    In other words <math|\<forall\>n\<in\>\<bbb-N\>> we have
+    In other words <math|\<forall\>k\<in\>\<bbb-N\>> we have
     <math|\<forall\>t\<in\>\<bbb-R\>> that
-    <math|f<rsup|<around*|(|n|)>><rsub|t>> exists.
+    <math|f<rsup|<around*|(|k|)>><rsub|t>> exists.
   </lemma>
 
   <\proof>
     We use induction to prove this, so let\ 
 
     <\equation*>
-      S<rsub|f>=<around*|{|n\<in\>\<bbb-N\>\|\<cal-D\><rsup|n><rsub|f>=\<bbb-R\><text|
-      and for >f<rsup|<around*|(|n|)>>:\<bbb-R\>=\<cal-D\><rsup|n><rsub|f>\<rightarrow\>\<bbb-R\><text|
-      defined by >f<rsup|<around*|(|n|)>><around*|(|t|)>=f<rsup|<around*|(|n|)>><rsub|t><text|
+      S<rsub|f>=<around*|{|k\<in\>\<bbb-N\>\|\<cal-D\><rsup|k><rsub|f>=\<bbb-R\><text|
+      and for >f<rsup|<around*|(|k|)>>:\<bbb-R\>=\<cal-D\><rsup|k><rsub|f>\<rightarrow\>\<bbb-R\><text|
+      defined by >f<rsup|<around*|(|k|)>><around*|(|t|)>=f<rsup|<around*|(|k|)>><rsub|t><text|
       we have >\<forall\>t\<in\>\<bbb-R\><text| that
-      >f<rsup|<around*|(|n|)>>=<choice|<tformat|<table|<row|<cell|p<rsub|k><around*|(|t|)>\<cdot\><frac|exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>|t<rsup|2\<cdot\>k>><text|
+      >f<rsup|<around*|(|k|)>>=<choice|<tformat|<table|<row|<cell|p<rsub|k><around*|(|t|)>\<cdot\><frac|exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>|t<rsup|2\<cdot\>k>><text|
       if >t\<in\><around*|]|0,\<infty\>|[>>>|<row|<cell|0<text| if
       >t\<in\><around*|]|-\<infty\>,0|]>>>>>><text| where
       >p<rsub|k><around*|(|t|)>=<big|sum><rsub|i=1><rsup|k>\<alpha\><rsub|i>\<cdot\>t<rsup|i>|}>
@@ -7569,9 +7569,77 @@
     then we have:
 
     <\description>
-      <item*|<math|1\<in\>S<rsub|f>>>
+      <item*|<math|1\<in\>S<rsub|f>>>Take <math|k=0\<in\>\<bbb-N\><rsub|0>>
+      and define <math|p<rsub|k>=p<rsub|0>=<big|sum><rsup|0><rsub|i=0>\<alpha\><rsub|i><rsup|>\<cdot\>t<rsup|i>>
+      by <math|\<alpha\><rsub|i>=1>. Then we have\ 
 
-      <item*|<math|n\<in\>S<rsub|f>\<Rightarrow\>n+1\<in\>S<rsub|f>>>
+      <\equation*>
+        \<forall\>t\<in\>\<bbb-R\><text| >f<around*|(|t|)>=<choice|<tformat|<table|<row|<cell|exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)><text|
+        if >t\<in\><around*|]|0,\<infty\>|[>>>|<row|<cell|0<text| if
+        >t\<in\><around*|]|-\<infty\>,0|]><text|>>>>>>=<choice|<tformat|<table|<row|<cell|p<rsub|0><around*|(|t|)>\<cdot\><frac|exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>|t<rsup|2\<cdot\>0>><text|
+        if >t\<in\><around*|]|0,\<infty\>|[>>>|<row|<cell|0<text| if
+        >t\<in\><around*|]|-\<infty\>,0|]><text|>>>>>>
+      </equation*>
+
+      Using [lemma: <reference|lemma 23.107.21>] on the above gives that
+
+      <\equation*>
+        \<forall\>t\<in\>\<bbb-R\><text| >f<rsup|<around*|(|1|)>><rsub|t>=f<rprime|'><rsub|t><text|
+        exists with >f<rsup|<around*|(|1|)>><rsub|t>=f<rprime|'><rsub|t>=<choice|<tformat|<table|<row|<cell|p<rsub|1><around*|(|t|)>\<cdot\><frac|exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>|t<rsup|2\<cdot\>1>><text|
+        if >t\<in\><around*|]|0,\<infty\>|[>>>|<row|<cell|0<text| if
+        >t\<in\><around*|]|-\<infty\>,0|]><text|>>>>>>
+      </equation*>
+
+      where <math|p<rsub|1><around*|(|t|)>=<big|sum><rsub|i=0><rsup|1>\<beta\><rsub|i>\<cdot\>t<rsup|i>>.
+      Hence it follows that\ 
+
+      <\equation*>
+        1\<in\>S<rsub|f>
+      </equation*>
+
+      <item*|<math|k\<in\>S<rsub|f>\<Rightarrow\>k+1\<in\>S<rsub|f>>>As
+      <math|k\<in\>S<rsub|f>> it follows that\ 
+
+      <\equation*>
+        \<cal-D\><rsup|k><rsub|f>=<around*|{|t\<in\>\<bbb-R\>\|f<rsup|<around*|(|k|)>><rsub|t><text|
+        exists >|}>=\<bbb-R\>
+      </equation*>
+
+      and\ 
+
+      <\equation*>
+        f<rsup|<around*|(|k|)>>:\<bbb-R\>\<rightarrow\>\<bbb-R\><text| is
+        defined by >f<rsup|<around*|(|k|)>><around*|(|t|)>=f<rsup|<around*|(|k|)>><rsub|t>=<choice|<tformat|<table|<row|<cell|p<rsub|k><around*|(|t|)>\<cdot\><frac|exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>|t<rsup|2\<cdot\>k>><text|
+        if >t\<in\><around*|]|0,\<infty\>|[>>>|<row|<cell|0<text| if
+        >t\<in\><around*|]|-\<infty\>,0|]><text|>>>>>>
+      </equation*>
+
+      where <math|p<rsub|k><around*|(|t|)>=<big|sum><rsub|i=1><rsup|k>\<alpha\><rsub|i>\<cdot\>t<rsup|i>>.
+      Using now [lemma: <reference|lemma 23.107.21>] it follows that\ 
+
+      <\equation*>
+        \<forall\>t\<in\>\<bbb-R\><text| ><around*|(|f<rsup|<around*|(|k|)>>|)><rprime|'><rsub|t><text|
+        exists with ><around*|(|f<rsup|<around*|(|k|)>>|)><rprime|'><rsub|t>=<choice|<tformat|<table|<row|<cell|p<rsub|k+1><around*|(|t|)>\<cdot\><frac|exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>|t<rsup|2\<cdot\><around*|(|k+1|)>>><text|
+        if >t\<in\><around*|]|0,\<infty\>|[>>>|<row|<cell|0<text| if
+        >t\<in\><around*|]|-\<infty\>,0|]><text|>>>>>>
+      </equation*>
+
+      where <math|p<rsub|k+1><around*|(|t|)>=<big|sum><rsub|i=0><rsup|k+1>\<beta\><rsub|i>\<cdot\>t<rsup|i>>.
+      Hence it follows that\ 
+
+      <\equation*>
+        \<forall\>t\<in\>\<bbb-R\><text| >f<rsup|<around*|(|k+1|)>><rsub|t><text|
+        exists [so that <math|\<cal-D\><rsup|k+1><rsub|f>=\<bbb-R\>>] with
+        >f<rsup|<around*|(|k+1|)>><rsub|t>=<choice|<tformat|<table|<row|<cell|p<rsub|k+1><around*|(|t|)>\<cdot\><frac|exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>|t<rsup|2\<cdot\><around*|(|k+1|)>>><text|
+        if >t\<in\><around*|]|0,\<infty\>|[>>>|<row|<cell|0<text| if
+        >t\<in\><around*|]|-\<infty\>,0|]><text|>>>>>>
+      </equation*>
+
+      which proves that\ 
+
+      <\equation*>
+        k+1\<in\>S<rsub|f>
+      </equation*>
     </description>
   </proof>
 
@@ -8315,7 +8383,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|22>
-    <associate|page-first|1913>
+    <associate|page-first|1915>
     <associate|par-first|0>
     <associate|section-nr|2>
     <associate|subsection-nr|0>
@@ -8479,7 +8547,6 @@
     <associate|eq 23.6.1|<tuple|23.11|?>>
     <associate|eq 23.6.3|<tuple|23.10|?>>
     <associate|eq 23.61.10|<tuple|23.71|?>>
-    <associate|eq 23.61.21|<tuple|23.161|?>>
     <associate|eq 23.62.10|<tuple|23.72|?>>
     <associate|eq 23.63.10|<tuple|23.73|?>>
     <associate|eq 23.63.12|<tuple|23.70|?>>

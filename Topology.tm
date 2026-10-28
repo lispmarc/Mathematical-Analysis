@@ -11264,6 +11264,22 @@
     </description>
   </proof>
 
+  <\definition>
+    <label|multilinear continuous mapping
+    space><index|<math|L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>>Let
+    <math|n\<in\>\<bbb-N\>>, \ <math|<around*|{|<around*|\<langle\>|X<rsub|i>,<around*|\<\|\|\>||\<\|\|\>><rsub|i>|\<rangle\>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+    be a family of normed spaces and <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    a normed space then the set of the graphs of multilinear continuous
+    mappings between <math|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>
+    and <math|Y> is noted as <math|L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>
+    hence\ 
+
+    <\equation*>
+      L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>=<around*|{|L\<in\>Hom<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>\|L<text|
+      is continuous>|}>
+    </equation*>
+  </definition>
+
   <\example>
     <label|continuity K^n>Let <math|n\<in\>\<bbb-N\>>,
     <math|<around*|\<langle\>|\<bbb-K\>,\<\|\|\>|\<rangle\>>> be the complex
@@ -11277,14 +11293,14 @@
       <math|g<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>=<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>x<rsub|i>>
       is multilinear and continuous [using the norms
       <math|<around*|\|||\|><rsub|n>=max<around*|(|<around*|{|<around*|\||x<rsub|i>|\|>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>|)>>
-      and <math|<around*|\|||\|>>.
+      and <math|<around*|\|||\|>>.\ 
 
       <item>Let <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>
       be a normed space and <math|z\<in\>X> then
 
       <\equation*>
         h<rsub|z>:\<bbb-K\><rsup|n>\<rightarrow\>X<text| defined by
-        >h<rsub|z><around*|(|x|)>=z\<cdot\>g<around*|(|x|)>=<around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>x<rsub|i>|)>\<cdot\>z
+        >h<rsub|z><around*|(|x|)>=g<around*|(|x|)>\<cdot\>z=<around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>x<rsub|i>|)>\<cdot\>z
       </equation*>
 
       is multilinear and continuous [using the norms
@@ -11376,21 +11392,7 @@
     </enumerate>
   </proof>
 
-  <\definition>
-    <label|multilinear continuous mapping
-    space><index|<math|L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>>Let
-    <math|n\<in\>\<bbb-N\>>, \ <math|<around*|{|<around*|\<langle\>|X<rsub|i>,<around*|\<\|\|\>||\<\|\|\>><rsub|i>|\<rangle\>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
-    be a family of normed spaces and <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
-    a normed space then the set of the graphs of multilinear continuous
-    mappings between <math|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>
-    and <math|Y> is noted as <math|L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>
-    hence\ 
-
-    <\equation*>
-      L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>=<around*|{|L\<in\>Hom<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>\|L<text|
-      is continuous>|}>
-    </equation*>
-  </definition>
+  \;
 
   <\theorem>
     <label|continuity multilinear mappings vector space>Let
@@ -26765,7 +26767,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|13>
-    <associate|page-first|689>
+    <associate|page-first|687>
     <associate|page-medium|papyrus>
     <associate|par-first|0tab>
     <associate|section-nr|0>
@@ -26797,6 +26799,8 @@
     <associate|auto-115|<tuple|disconnected space|?>>
     <associate|auto-116|<tuple|intermediate value theorem|?>>
     <associate|auto-117|<tuple|14.11.2|?>>
+    <associate|auto-118|<tuple|<with|mode|<quote|math>|L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>|?>>
+    <associate|auto-119|<tuple|<with|mode|<quote|math>|L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>|?>>
     <associate|auto-12|<tuple|box topology|?>>
     <associate|auto-13|<tuple|14.1.3|?>>
     <associate|auto-14|<tuple|dense set|?>>
@@ -27008,7 +27012,7 @@
     <associate|continuity 1/f is continuous|<tuple|14.171|?>>
     <associate|continuity 1/f^2 is continuous|<tuple|14.172|?>>
     <associate|continuity Id is a homeomorphism|<tuple|14.188|?>>
-    <associate|continuity K^n|<tuple|14.229|?>>
+    <associate|continuity K^n|<tuple|14.230|?>>
     <associate|continuity K^n norm|<tuple|14.236|?>>
     <associate|continuity L(X,L(Y,Z)) is isometric with
     L(X,Y;Z)|<tuple|14.239|?>>
@@ -27563,7 +27567,7 @@
     <associate|metric subtopology|<tuple|14.70|?>>
     <associate|metric topology|<tuple|14.67|?>>
     <associate|metric topology (1)|<tuple|14.68|?>>
-    <associate|multilinear continuous mapping space|<tuple|14.230|?>>
+    <associate|multilinear continuous mapping space|<tuple|14.229|?>>
     <associate|normed absolute value norm differences|<tuple|14.91|?>>
     <associate|normed all norms in the set of complex numbers are
     equivalent|<tuple|14.123|?>>
