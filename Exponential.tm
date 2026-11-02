@@ -2938,9 +2938,9 @@
       <around*|(|<sqrt|\<ast\>>|)><rsup|n><rsub|y>=<around*|(|<big|prod><rsup|n-1><rsub|i=0><around*|(|<frac|1|2>-1|)>|)>\<cdot\><around*|(|\<ast\>|)><rsup|<frac|1|2>-n>
     </equation*>
 
-    Using [theorem: <reference|diff higher order derivate and differential>]
-    it follows that <math|\<forall\>n\<in\>\<bbb-N\>> and
-    <math|\<forall\>y\<in\><around*|]|0,\<infty\>|[>> that
+    Using [theorem: <reference|diff higher order derivate implies the higher
+    order differential>] it follows that <math|\<forall\>n\<in\>\<bbb-N\>>
+    and <math|\<forall\>y\<in\><around*|]|0,\<infty\>|[>> that
     <math|<sqrt|\<ast\>>> is <math|n>-times differentiable at <math|y>. Hence
     using [theorem: <reference|diff C-infinity condition>]
     <math|<sqrt|\<ast\>>> is of class <math|C<rsup|\<infty\>>>.
@@ -5022,7 +5022,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|18>
-    <associate|page-first|1321>
+    <associate|page-first|1323>
     <associate|page-medium|papyrus>
     <associate|section-nr|4>
     <associate|subsection-nr|4>

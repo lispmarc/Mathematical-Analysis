@@ -4349,14 +4349,12 @@
     by [theorem: <reference|manifold differentiable atlas (1)>]
   </proof>
 
-  TODO check this example
-
   <\example>
     <label|manifold a finite dimensional vector space is a differentiable
     manifold>Let <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>> be a
     finite dimensional vector space with <math|dim<around*|(|V|)>=n>. Let
-    <math|E=<around*|{|e<rsub|1>,\<ldots\>,e<rsub|n>|}>> be a basis on
-    <math|V> then by [example: <reference|inner euclidean norm on finite
+    <math|<rigid|E=<around*|{|e<rsub|1>,\<ldots\>,e<rsub|n>|}>>> be a basis
+    on <math|V> then by [example: <reference|inner euclidean norm on finite
     dimensional spaces (real)>]\ 
 
     <\equation*>
@@ -4379,7 +4377,7 @@
 
     <\note>
       Using [corollary: <reference|normed norm on finite dimensional spaces
-      are equivalent>] all norms on <math|V> are equivalent hence if
+      are equivalent>] all norms on <math|V> are equivalent, hence if
       <math|<around*|\<\|\|\>||\<\|\|\>>> is a norm on <math|V> then
       <math|\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>>>=\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>>>.
     </note>
@@ -4419,7 +4417,7 @@
 
     from which it follows that <math|<around*|(|V,\<varphi\><rsup|-1>|)>> is
     a chart on <math|<around*|\<langle\>|V,\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>>|\<rangle\>>>
-    so that as <math|V=<big|cup><rsub|<around*|(|U,\<psi\>|)>\<in\><around*|{|<around*|(|V,\<varphi\><rsup|-1>|)>|}>>U>
+    so that, as <math|V=<big|cup><rsub|<around*|(|U,\<psi\>|)>\<in\><around*|{|<around*|(|V,\<varphi\><rsup|-1>|)>|}>>U>,
 
     <\equation*>
       <around*|{|<around*|(|V,\<varphi\><rsup|-1>|)>|}><text| is a atlas on
@@ -7307,10 +7305,9 @@
   We are now ready to proof that there exist a cutoff function of class
   <math|C<rsup|\<infty\>>>.
 
-  TODO
-
   <\theorem>
-    Let <math|a,b\<in\>\<bbb-R\>> with <math|a\<less\>b> then there exist a
+    <label|manifold cutoff function existence>Let <math|a,b\<in\>\<bbb-R\>>
+    with <math|a\<less\>b> then there exist a
     <math|h:\<bbb-R\>\<rightarrow\>\<bbb-R\>> of class
     <math|C<rsup|\<infty\>>> such that\ 
 
@@ -7320,6 +7317,11 @@
       we have >0\<less\>h<around*|(|t|)>\<less\>1>|<cell|>>|<row|<cell|>|<cell|\<forall\>t\<in\><around*|[|b,\<infty\>|[><text|
       we have >h<around*|(|t|)>=0>|<cell|>>>>
     </eqnarray*>
+
+    <\note>
+      Using [definition: <reference|manifold cutoff function>] <math|h> is a
+      cutoff function.
+    </note>
   </theorem>
 
   <\proof>
@@ -7328,13 +7330,12 @@
     <\equation*>
       f:\<bbb-R\>\<rightarrow\>\<bbb-R\><text| by
       >f<around*|(|t|)>=<choice|<tformat|<table|<row|<cell|exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)><text|
-      if >t\<in\><around*|]|-<frac|1|t>|[><text| if
-      >t\<in\><around*|]|0,\<infty\>|[>>>|<row|<cell|0<text| if
+      ><text|if >t\<in\><around*|]|0,\<infty\>|[>>>|<row|<cell|0<text| if
       >t\<in\><around*|]|-\<infty\>,0|]>>>>>>
     </equation*>
 
     By [theorem: <reference|exp properties>(5)] we have
-    <math|\<forall\>t\<in\><around*|]|0,\<infty\>|[>>
+    <math|\<forall\>t\<in\><around*|]|0,\<infty\>|[>> that
     <math|0\<less\>exp<around*|(|t|)>=exp<rsub|\|\<bbb-R\>><around*|(|t|)><rsub|>>
     so that\ 
 
@@ -7377,9 +7378,10 @@
         0\<less\><frac|f<around*|(|b-t|)>|f<around*|(|b-t|)>+f<around*|(|t-a|)>>\<less\>1
       </equation*>
 
-      <item*|<math|b\<less\>t>>Then we have as <math|a\<less\>b\<less\>t>
-      that <math|0\<less\>t-a\<Rightarrow\>0\<less\>f<around*|(|t-a|)>> and
-      <math|b-t\<less\>0\<Rightarrow\>f<around*|(|b-t|)>=0> so that\ 
+      <item*|<math|b\<leqslant\>t>>Then we have as
+      <math|a\<less\>b\<leqslant\>t> that
+      <math|0\<less\>t-a\<Rightarrow\>0\<less\>f<around*|(|t-a|)>> and
+      <math|b-t\<leqslant\>0\<Rightarrow\>f<around*|(|b-t|)>=0> so that\ 
 
       <\equation*>
         0\<less\>f<around*|(|b-t|)>+f<around*|(|t-a|)>
@@ -7435,7 +7437,7 @@
 
     <\equation*>
       \<forall\>k\<in\>\<bbb-N\>,\<forall\>t\<in\>\<bbb-R\><text|
-      >D<rsup|<around*|[|k|]>><rsub|t>t<rsub|1>,D<rsup|<around*|[|k|]>><rsub|t>t<rsub|3><text|
+      >D<rsup|<around*|[|k|]>><rsub|t>t<rsub|1>,D<rsup|<around*|[|k|]>><rsub|t>t<rsub|2><text|
       exists >
     </equation*>
 
@@ -7450,8 +7452,8 @@
     higher order differential>]\ 
 
     <\equation*>
-      \<forall\>t\<in\>\<bbb-R\><text| >D<rsup|<around*|(|k|)>><rsub|t>f<text|
-      exist>
+      \<forall\>k\<in\>\<bbb-N\>,\<forall\>t\<in\>\<bbb-R\><text|
+      >D<rsup|<around*|(|k|)>><rsub|t>f<text| exist>
     </equation*>
 
     Using the chain rule [see theorem <reference|diff chain rule higher
@@ -7461,7 +7463,7 @@
     <\equation*>
       \<forall\>k\<in\>\<bbb-N\>,\<forall\>t\<in\>\<bbb-R\><text|
       >D<rsup|<around*|[|k|]>><rsub|t><around*|(|f\<circ\>t<rsub|1>|)><text|
-      and >D<rsup|<around*|[|k|]>><rsub|t><around*|(|f\<circ\>t<rsub|1>+f\<circ\>t<rsub|3>|)><text|
+      exist and >D<rsup|<around*|[|k|]>><rsub|t><around*|(|f\<circ\>t<rsub|1>+f\<circ\>t<rsub|3>|)><text|
       exists>
     </equation*>
 
@@ -7484,8 +7486,9 @@
       exist>
     </equation*>
 
-    Hence using [theorems: <reference|diff higher order derivate and
-    differential>,<reference|diff C-infinity condition>] it follows that\ 
+    Hence using [theorems: <reference|diff higher order derivate implies the
+    higher order differential>,<reference|diff C-infinity condition>] it
+    follows that\ 
 
     <\equation*>
       <frac|f\<circ\>t<rsub|1>|f\<circ\>t<rsub|1>+f\<circ\>t<rsub|2>><text|
@@ -7506,6 +7509,244 @@
       h<text| is of class >C<rsup|\<infty\>>
     </equation*>
   </proof>
+
+  We use now the above function to define a function of class
+  <math|C<rsup|\<infty\>>> that is equal to <math|1> on a given set and is
+  equal <math|0> outside a open neighborhood of this set. First we need a
+  little lemma that proves that the euclidean norm is <math|\<infty\>> times
+  differentiable at every non zero point.
+
+  <\lemma>
+    <label|lemma 23.104.22>Let <math|n\<in\>\<bbb-N\>> then we have for\ 
+
+    <\equation*>
+      <around*|\<\|\|\>|\<ast\>|\<\|\|\>><rsub|e>:\<bbb-R\><rsup|n>\<rightarrow\>\<bbb-R\><text|
+      defined by ><around*|\<\|\|\>|\<ast\>|\<\|\|\>><rsub|e><around*|(|x|)>=<sqrt|<big|sum><rsub|i=1><rsup|n>x<rsup|2><rsub|i>>
+    </equation*>
+
+    that <math|\<forall\>x\<in\>\<bbb-R\><rsup|n>\\<around*|{|0|}>>
+    <math|<around*|\<\|\|\>|\<ast\>|\<\|\|\>><rsub|e>> is
+    <math|\<infty\>>-times differentiable at <math|x>
+  </lemma>
+
+  <\proof>
+    Let <math|i\<in\><around*|{|1,\<ldots\>,n|}>> then by [theorem:
+    <reference|diff projection functon is infinite times differentiable>]
+    <math|\<pi\><rsub|i>:\<bbb-R\><rsup|n>\<rightarrow\>\<bbb-R\>> is
+    <math|\<infty\>>-times differentiable on <math|\<bbb-R\><rsup|n>> so that
+    by [theorem: <reference|diff higher order power function>]
+    <math|<around*|(|\<pi\><rsub|i>|)><rsup|2>> is <math|\<infty\>>-times
+    differentiable on <math|\<bbb-R\><rsup|n>>. Hence using [theorem:
+    <reference|diff higher order differential is linear>] it follows that\ 
+
+    <\equation*>
+      <big|sum><rsub|i=1><rsup|n><around*|(|\<pi\><rsub|i>|)><rsup|2><text|
+      is >\<infty\><text|-times differentiable on >\<bbb-R\><rsup|n>
+    </equation*>
+
+    As <math|\<bbb-R\><rsup|n>\\<around*|{|0|}>> is open in <math|\<bbb-R\>>
+    [see theorems: <reference|separation metric spaces are Hausdorff>,
+    <reference|separation Hausdorff every finite set is closed>] it follows
+    from [theorem: <reference|diff higher order differentiation is local
+    (1)>] that\ 
+
+    <\equation>
+      <label|eq 23.160.22><around*|(|<big|sum><rsub|i=1><rsup|n><around*|(|\<pi\><rsub|i>|)><rsup|2>|)><rsub|\|\<bbb-R\><rsup|n>\\<around*|{|0|}>><text|
+      is >\<infty\><text|-times differentiable on
+      >\<bbb-R\><rsup|n>\\<around*|{|0|}>
+    </equation>
+
+    Further if <math|x\<in\>\<bbb-R\><rsup|n>\\<around*|{|0|}>> then there
+    exist a <math|i\<in\><around*|{|1,\<ldots\>,n|}>> such that
+    <math|\<pi\><rsub|i><around*|(|x|)>=x<rsub|i>\<neq\>0> hence\ 
+
+    <\equation*>
+      0\<less\><around*|(|\<pi\><rsub|i><around*|(|x|)>|)><rsup|2>\<leqslant\><big|sum><rsub|i=1><rsup|n><around*|(|\<pi\><rsub|i><around*|(|x|)>|)><rsup|2>=<around*|(|<big|sum><rsub|i=1><rsup|n><around*|(|\<pi\><rsub|i>|)><rsup|2>|)><rsub|\|\<bbb-R\><rsup|n>\\<around*|{|0|}>><around*|(|x|)>
+    </equation*>
+
+    so that\ 
+
+    <\equation>
+      <label|eq 23.161.22><around*|(|<big|sum><rsub|i=1><rsup|n><around*|(|\<pi\><rsub|i>|)><rsup|2>|)><rsub|\|\<bbb-R\><rsup|n>\\<around*|{|0|}>><around*|(|\<bbb-R\><rsup|n>\\<around*|{|0|}>|)>\<subseteq\><around*|]|0,\<infty\>|[>
+    </equation>
+
+    By [theorem: <reference|exp square root derivates>] we have that\ 
+
+    <\equation>
+      <label|eq 23.162.22><sqrt|\<ast\>>:<around*|]|0,\<infty\>|[>\<rightarrow\>\<bbb-R\><text|
+      defined by ><sqrt|<around*|(|\<star\>|)>><around*|(|x|)>=<sqrt|x><text|
+      is >\<infty\><text|-times differentiable on ><around*|]|0,\<infty\>|[>
+    </equation>
+
+    Using the chain rule [see theorem: <reference|diff chain rule higher
+    order>] on [eqs: <reference|eq 23.160.22>, <reference|eq 23.161.22> and
+    <reference|eq 23.162.22>] proves that\ 
+
+    <\equation>
+      <label|eq 23.163.22><sqrt|\<star\>>\<circ\><around*|(|<big|sum><rsub|i=1><rsup|n><around*|(|\<pi\><rsub|i>|)><rsup|2>|)><rsub|\|\<bbb-R\><rsup|n>\\<around*|{|0|}>><text|
+      is >\<infty\><text|-times differentiable on
+      >\<bbb-R\><rsup|n>\\<around*|{|0|}>
+    </equation>
+
+    Now <math|\<forall\>x\<in\>\<bbb-R\><rsup|n>\\<around*|{|0|}>> we have
+    that
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|(|<sqrt|\<star\>>\<circ\><around*|(|<big|sum><rsub|i=1><rsup|n><around*|(|\<pi\><rsub|i>|)><rsup|2>|)><rsub|\|\<bbb-R\><rsup|n>\\<around*|{|0|}>>|)><around*|(|x|)>>|<cell|=>|<cell|<sqrt|\<ast\>><around*|(|<around*|(|<big|sum><rsub|i=1><rsup|n><around*|(|\<pi\><rsub|i>|)><rsup|2>|)><rsub|\|\<bbb-R\><rsup|n>\\<around*|{|0|}>><around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<sqrt|<around*|(|<big|sum><rsub|i=1><rsup|n><around*|(|\<pi\><rsub|i>|)><rsup|2>|)><around*|(|x|)>>>>|<row|<cell|>|<cell|=>|<cell|<sqrt|<big|sum><rsub|i=1><rsup|n>x<rsub|i><rsup|2>>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<around*|\<\|\|\>|\<ast\>|\<\|\|\>><rsub|e>|)><rsub|\|\<bbb-R\><rsup|n>\\<around*|{|0|}>><around*|(|x|)>>>>>
+    </eqnarray*>
+
+    which proves that\ 
+
+    <\equation*>
+      <label|eq 23.163.22><sqrt|\<star\>>\<circ\><around*|(|<big|sum><rsub|i=1><rsup|n><around*|(|\<pi\><rsub|i>|)><rsup|2>|)><rsub|\|\<bbb-R\><rsup|n>\\<around*|{|0|}>>=<around*|(|<around*|\<\|\|\>|\<ast\>|\<\|\|\>><rsub|e>|)><rsub|\|\<bbb-R\><rsup|n>\\<around*|{|0|}>>
+    </equation*>
+
+    so that by [eq: <reference|eq 23.163.22>]
+    <math|<around*|(|<around*|\<\|\|\>|\<ast\>|\<\|\|\>><rsub|e>|)><rsub|\|\<bbb-R\><rsup|n>\\<around*|{|0|}>>>
+    is <math|\<infty\>>-times differentiable on
+    <math|\<bbb-R\><rsup|n>\\<around*|{|0|}>>. Finally using [theorem:
+    <reference|diff higher order differentiation is local (1)>] it follows
+    that\ 
+
+    <\equation*>
+      <around*|\<\|\|\>|\<ast\>|\<\|\|\>><rsub|e><text| is
+      >\<infty\><text|-times differentiable on >\<bbb-R\>\\<around*|{|0|}>
+    </equation*>
+  </proof>
+
+  <\theorem>
+    <label|manifold bumper function>Let <math|\<delta\>,\<rho\>\<in\>\<bbb-R\><rsup|+>>
+    with <math|\<delta\>\<less\>\<rho\>> then there exist a function
+    <math|f:\<bbb-R\><rsup|n>\<rightarrow\>\<bbb-R\>> of class
+    <math|C<rsup|\<infty\>>> such that\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|>|<cell|\<forall\>x\<in\><wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,\<delta\>|)>|\<wide-bar\>><text|
+      >>|<cell|f<around*|(|x|)>=1>>|<row|<cell|>|<cell|\<forall\>x\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,\<rho\>|)>\\<wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,\<delta\>|)>|\<wide-bar\>>>|<cell|0\<less\>f<around*|(|x|)>\<less\>1>>|<row|<cell|>|<cell|\<forall\>x\<in\>\<bbb-R\><rsup|n>\\B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,0|)>>|<cell|f<around*|(|x|)>=1>>>>
+    </eqnarray*>
+
+    <\note>
+      This function is a example of a bump function, that is a function whose
+      values lies in the interval <math|<around*|]|0,1|]>> that is equal to
+      <math|1> on a specified set and equal to <math|0> outside a open
+      neighborhood ontaining the specified set.
+    </note>
+  </theorem>
+
+  <\proof>
+    Let <math|\<delta\>,\<rho\>\<in\>\<bbb-R\><rsup|+>> with
+    <math|\<delta\>\<less\>\<rho\>>. Using [theorem: <reference|manifold
+    cutoff function existence>] there exist function
+    <math|h:\<bbb-R\>\<rightarrow\>\<bbb-R\>> of class
+    <math|C<rsup|\<infty\>>> such that
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|>|<cell|\<forall\>t\<in\><around*|]|-\<infty\>,\<delta\>|]>>|<cell|h<around*|(|t|)>=1<eq-number><label|eq
+      23.164.22>>>|<row|<cell|>|<cell|\<forall\>t\<in\><around*|]|\<delta\>,\<rho\>|[>>|<cell|0\<less\>h<around*|(|t|)>\<less\>1<eq-number><label|eq
+      23.165.22>>>|<row|<cell|>|<cell|\<forall\>t\<in\><around*|[|\<rho\>,\<infty\>|[>>|<cell|h<around*|(|t|)>=0<eq-number><label|eq
+      23.166.22>>>>>
+    </eqnarray*>
+
+    Using the previous lemma [see lemma: <reference|lemma 23.104.22>] we have
+    that\ 
+
+    <\equation*>
+      <around*|\<\|\|\>|\<ast\>|\<\|\|\>><rsub|e>:\<bbb-R\>\<rightarrow\>\<bbb-R\><text|
+      defined by ><around*|\<\|\|\>|\<ast\>|\<\|\|\>><rsub|e><around*|(|x|)>=<sqrt|<big|sum><rsub|i=1><rsup|n>x<rsup|2><rsub|i>><text|
+      is >\<infty\><text|-times differentiable on
+      >\<bbb-R\><rsup|n>\\<around*|{|0|}>
+    </equation*>
+
+    Define\ 
+
+    <\equation*>
+      f=h\<circ\><around*|\<\|\|\>|\<ast\>|\<\|\|\>><rsub|e>:\<bbb-R\><rsup|n>\<rightarrow\>\<bbb-R\>
+    </equation*>
+
+    Let <math|t\<in\>\<bbb-R\><rsup|n>> then we have either:\ 
+
+    <\description>
+      <item*|<math|t=0>>Consider the open set
+      <math|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,\<delta\>|)>>
+      then <math|t=0\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|\<varepsilon\>>><around*|(|0,\<delta\>|)>>.
+      Further we have <math|\<forall\>s\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,\<delta\>|)>>
+      that <math|<around*|(|h\<circ\><around*|\<\|\|\>|\<star\>|\<\|\|\>><rsub|e>|)><around*|(|s|)>=h<around*|(|<around*|\<\|\|\>|s|\<\|\|\>><rsub|e>|)><below|=|<around*|\<\|\|\>|s|\<\|\|\>><rsub|e>\<less\>\<delta\>\<wedge\><text|[eq:
+      <reference|eq 23.164.22>]>>1> so that
+      <math|<around*|(|h\<circ\><around*|\<\|\|\>|\<ast\>|\<\|\|\>><rsub|e>|)><rsub|\|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,\<delta\>|)>>=C<rsub|1>>.
+      Using [theorem: <reference|diff constant function is infinitely times
+      differentiable>] it follows that <math|C<rsub|1>> is
+      <math|\<infty\>>-times differentiable at <math|t=0> so that
+      <math|<around*|(|h\<circ\><around*|\<\|\|\>|\<ast\>|\<\|\|\>><rsub|e>|)><rsub|\|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,\<delta\>|)>>>
+      is <math|\<infty\>>-times differentiable at <math|t=0>. Using the the
+      fact that differentiability is a local property [see theorem:
+      <reference|diff higher order differentiation is local>] it follows thay
+
+      <\equation*>
+        f=h\<circ\><around*|\<\|\|\>|\<ast\>|\<\|\|\>><text| is
+        >\<infty\><text|-times diferentiable at >t
+      </equation*>
+
+      <item*|<math|t\<in\>\<bbb-R\><rsup|n>\\<around*|{|0|}>>>As
+      <math|<around*|\<\|\|\>|\<ast\>|\<\|\|\>><rsub|e>> is
+      <math|\<infty\>>-times differentiable on
+      <math|\<bbb-R\><rsup|n>\\<around*|{|0|}>>
+      <math|<around*|\<\|\|\>|\<ast\>|\<\|\|\>><rsub|e>> is
+      <math|\<infty\>>-times differentiable at <math|t>, further, as <math|h>
+      is of class <math|C<rsup|\<infty\>>>, <math|h> is
+      <math|\<infty\>>-times differentiable at
+      <math|<around*|\<\|\|\>|\<star\>|\<\|\|\>><rsub|e><around*|(|x|)>>.
+      Hence using the chain rule [see theorem: <reference|diff chain rule>]
+      it follows that\ 
+
+      <\equation*>
+        f=h\<circ\><around*|\<\|\|\>|\<ast\>|\<\|\|\>><text| is
+        >\<infty\><text|-times diferentiable at >t
+      </equation*>
+    </description>
+
+    From the above it follows that <math|f> is <math|\<infty\>>-times
+    differentiabke on <math|\<bbb-R\>> so that by [theorem: <reference|diff
+    C-infinity condition>]\ 
+
+    <\equation*>
+      f<text| is of class >C<rsup|\<infty\>>
+    </equation*>
+
+    Let <math|x\<in\><wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,\<delta\>|)>|\<wide-bar\>>>
+    then <math|<around*|\<\|\|\>|x|\<\|\|\>><rsub|e>\<leqslant\>\<delta\>> so
+    that by [eq: <reference|eq 23.164.22>]
+    <math|f<around*|(|x|)>=h<around*|(|<around*|\<\|\|\>|x|\<\|\|\>><rsub|e>|)>=1>
+    proving\ 
+
+    <\equation*>
+      \<forall\>x\<in\><wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,\<delta\>|)>|\<wide-bar\>><text|
+      >f<around*|(|x|)>=1
+    </equation*>
+
+    Let <math|x\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,\<rho\>|)>\\><math|<wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,\<delta\>|)>|\<wide-bar\>>>
+    then <math|\<delta\>\<less\>x\<less\>\<rho\>> so that by [eq:
+    <reference|eq 23.165.22>] <math|f<around*|(|x|)>=h<around*|(|<around*|\<\|\|\>|x|\<\|\|\>><rsub|e>|)>\<in\><around*|]|0,1|[>>
+    proving\ 
+
+    <\equation*>
+      \<forall\>x\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,\<rho\>|)>\\<wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,\<delta\>|)>|\<wide-bar\>><text|
+      >0\<less\>f<around*|(|x|)>\<less\>1
+    </equation*>
+
+    Finally if <math|x\<in\>\<bbb-R\><rsup|n>\\B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,\<rho\>|)>>
+    then <math|\<rho\>\<leqslant\>x> so that by [eq: <reference|eq
+    23.166.22>] <math|f<around*|(|x|)>=h<around*|(|<around*|\<\|\|\>|x|\<\|\|\>><rsub|e>|)>=0>
+    proving
+
+    <\equation*>
+      \<forall\>x\<in\>\<bbb-R\><rsup|n>\\B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,\<rho\>|)><text|
+      >f<around*|(|x|)>=0
+    </equation*>
+  </proof>
+
+  \;
+
+  \;
 
   \;
 
@@ -8329,7 +8570,7 @@
     <associate|eq 23.138.16|<tuple|23.145|?>>
     <associate|eq 23.139.16|<tuple|23.146|?>>
     <associate|eq 23.14.3|<tuple|23.18|?>>
-    <associate|eq 23.147.17|<tuple|23.160|?>>
+    <associate|eq 23.147.17|<tuple|23.167|?>>
     <associate|eq 23.15.2|<tuple|23.19|?>>
     <associate|eq 23.157.20|<tuple|23.148|?>>
     <associate|eq 23.158.20|<tuple|23.149|?>>
@@ -8338,12 +8579,19 @@
     <associate|eq 23.16.2|<tuple|23.20|?>>
     <associate|eq 23.160.20|<tuple|23.151|?>>
     <associate|eq 23.160.21|<tuple|23.156|?>>
+    <associate|eq 23.160.22|<tuple|23.160|?>>
     <associate|eq 23.161.20|<tuple|23.152|?>>
     <associate|eq 23.161.21|<tuple|23.157|?>>
+    <associate|eq 23.161.22|<tuple|23.161|?>>
     <associate|eq 23.162.20|<tuple|23.153|?>>
     <associate|eq 23.162.21|<tuple|23.158|?>>
+    <associate|eq 23.162.22|<tuple|23.162|?>>
     <associate|eq 23.163.20|<tuple|23.154|?>>
     <associate|eq 23.163.21|<tuple|23.159|?>>
+    <associate|eq 23.163.22|<tuple|23.163|?>>
+    <associate|eq 23.164.22|<tuple|23.164|?>>
+    <associate|eq 23.165.22|<tuple|23.165|?>>
+    <associate|eq 23.166.22|<tuple|23.166|?>>
     <associate|eq 23.17.2|<tuple|23.22|?>>
     <associate|eq 23.2.1|<tuple|23.6|?>>
     <associate|eq 23.2.3|<tuple|23.3|?>>
@@ -8457,6 +8705,7 @@
     <associate|lemma 23.102.20|<tuple|23.95|?>>
     <associate|lemma 23.103.20|<tuple|23.96|?>>
     <associate|lemma 23.104.20|<tuple|23.97|?>>
+    <associate|lemma 23.104.22|<tuple|23.104|?>>
     <associate|lemma 23.105.20|<tuple|23.98|?>>
     <associate|lemma 23.106.20|<tuple|23.99|?>>
     <associate|lemma 23.107.21|<tuple|23.100|?>>
@@ -8478,19 +8727,20 @@
     <associate|manifold C^m mappings are continuous|<tuple|23.73|?>>
     <associate|manifold C^m mappings equivalences|<tuple|23.76|?>>
     <associate|manifold C^m mappings equivalences (1)|<tuple|23.74|?>>
-    <associate|manifold C^m(M)|<tuple|23.103|?>>
-    <associate|manifold C^q(M) is a vector space|<tuple|23.104|?>>
+    <associate|manifold C^m(M)|<tuple|23.107|?>>
+    <associate|manifold C^q(M) is a vector space|<tuple|23.108|?>>
     <associate|manifold C^r functions are C^r mappings|<tuple|23.78|?>>
     <associate|manifold C^r mspping id local (2)|<tuple|23.80|?>>
     <associate|manifold C^r mspping id locsl|<tuple|23.79|?>>
     <associate|manifold R^n is a differentiable manifold|<tuple|23.64|?>>
-    <associate|manifold TpM is a vector space|<tuple|23.110|?>>
-    <associate|manifold TpM properties|<tuple|23.111|?>>
+    <associate|manifold TpM is a vector space|<tuple|23.114|?>>
+    <associate|manifold TpM properties|<tuple|23.115|?>>
     <associate|manifold a finite dimensional vector space is a differentiable
     manifold|<tuple|23.67|?>>
     <associate|manifold a topological manifold is locally
     compact|<tuple|23.25|?>>
     <associate|manifold atlas|<tuple|23.11|?>>
+    <associate|manifold bumper function|<tuple|23.105|?>>
     <associate|manifold canonical example|<tuple|23.15|?>>
     <associate|manifold chain rule|<tuple|23.83|?>>
     <associate|manifold chart that is compatible with a
@@ -8498,9 +8748,9 @@
     <associate|manifold compatible atlas|<tuple|23.52|?>>
     <associate|manifold compatible atlas (1)|<tuple|23.53|?>>
     <associate|manifold composition of a C^r mapping and a mapping of class
-    C^r|<tuple|23.112|?>>
+    C^r|<tuple|23.116|?>>
     <associate|manifold connectivity properties|<tuple|23.24|?>>
-    <associate|manifold constant functions|<tuple|23.105|?>>
+    <associate|manifold constant functions|<tuple|23.109|?>>
     <associate|manifold coordinate ball and cube|<tuple|23.9|?>>
     <associate|manifold coordinate domain|<tuple|23.8|?>>
     <associate|manifold coordinate transforms are a
@@ -8508,6 +8758,7 @@
     <associate|manifold cooridinate chart|<tuple|23.3|?>>
     <associate|manifold cooridinate chart existence|<tuple|23.10|?>>
     <associate|manifold cutoff function|<tuple|23.94|?>>
+    <associate|manifold cutoff function existence|<tuple|23.102|?>>
     <associate|manifold diffentiable atlas|<tuple|23.40|?>>
     <associate|manifold diffeomorphic manifolds|<tuple|23.86|?>>
     <associate|manifold diffeomorphic manifolds have the same
@@ -8525,8 +8776,8 @@
     <associate|manifold differentiable manifold|<tuple|23.58|?>>
     <associate|manifold differentiable mappings|<tuple|23.69|?>>
     <associate|manifold differentiable structure|<tuple|23.55|?>>
-    <associate|manifold differential|<tuple|23.113|?>>
-    <associate|manifold differential properties|<tuple|23.114|?>>
+    <associate|manifold differential|<tuple|23.117|?>>
+    <associate|manifold differential properties|<tuple|23.118|?>>
     <associate|manifold existence of a maximal atlas|<tuple|23.56|?>>
     <associate|manifold identity is a C^q mapping|<tuple|23.72|?>>
     <associate|manifold maximal atlas|<tuple|23.49|?>>
@@ -8535,7 +8786,7 @@
     <associate|manifold open subset of a differentiable
     manifold|<tuple|23.65|?>>
     <associate|manifold product of functions that are of class
-    C^q|<tuple|23.106|?>>
+    C^q|<tuple|23.110|?>>
     <associate|manifold real numbers are a differentiable
     manifold|<tuple|23.63|?>>
     <associate|manifold real numbers form a topological
@@ -8544,7 +8795,7 @@
     <associate|manifold singleton chart|<tuple|23.61|?>>
     <associate|manifold sphere is a differentiable manifold|<tuple|23.66|?>>
     <associate|manifold sphere is a topological manifold|<tuple|23.18|?>>
-    <associate|manifold tangent vector|<tuple|23.107|?>>
+    <associate|manifold tangent vector|<tuple|23.111|?>>
     <associate|manifold topological|<tuple|23.2|?>>
     <associate|manifold topological (1)|<tuple|23.12|?>>
     <associate|manifold topological manifold is paracompact|<tuple|23.29|?>>
