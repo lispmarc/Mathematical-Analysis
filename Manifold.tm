@@ -6603,7 +6603,7 @@
   <section|Partitions of unity>
 
   <\definition>
-    <label|manifold cutoff function>A function
+    <index|cutoff function><label|manifold cutoff function>A function
     <math|h:\<bbb-R\>\<rightarrow\>\<bbb-R\>> is a
     <with|font-series|bold|cutoff> function iff there exist
     <math|a,b\<in\>\<bbb-R\>> with <math|a\<less\>b> such that
@@ -7744,9 +7744,117 @@
     </equation*>
   </proof>
 
-  \;
+  <\definition>
+    <label|manifold support><index|support of a function><index|<math|sup
+    f>>Let <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> be a
+    topological space and <math|f:X\<rightarrow\>\<bbb-R\>> a function then
+    the support of <math|f> noted as <math|sup f> is the closure of the set
+    of points where <math|f> is nonzero. In other words
 
-  \;
+    <\equation*>
+      sup f=<wide|<around*|{|x\<in\>X\|f<around*|(|x|)>\<neq\>0|}>|\<wide-bar\>>=<wide|X\\f<rsup|-1><around*|(|<around*|{|0|}>|)>|\<wide-bar\>>
+    </equation*>
+  </definition>
+
+  <\definition>
+    <label|manifold supported in a set>Let
+    <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> be a topological
+    space, <math|A\<subseteq\>X> and <math|f:X\<rightarrow\>\<bbb-R\>> a
+    function then <math|f> is supported in <math|A> iff <math|sup
+    f\<subseteq\>A>.
+  </definition>
+
+  <\definition>
+    <label|manifold compact support><index|compact support>Let
+    <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> be a topological space
+    then <math|f:X\<rightarrow\>\<infty\>> has compact support if <math|sup
+    f> is a compact set.
+  </definition>
+
+  We define now the concept of a partition of unity subordinate to a family
+  of sets.
+
+  <\definition>
+    <label|manifold partition of unity>Let
+    <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> be a topological
+    space, <math|<around*|{|U<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-T\>>
+    a family of open sets such that <math|X=<big|cup><rsub|i\<in\>I>U<rsub|i>>
+    then a family <math|<around*|{|\<varphi\><rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<bbb-R\><rsup|X>>
+    such that:
+
+    <\enumerate>
+      <item><math|\<forall\>i\<in\>I> <math|\<varphi\><rsub|i>:X\<rightarrow\>\<bbb-R\>>
+      is a continuous function.
+
+      <item><math|\<forall\>i\<in\>I> <math|\<varphi\><rsub|i><around*|(|X|)>\<subseteq\><around*|[|0,1|]>>
+
+      <item><math|\<forall\>i\<in\>I> <math|sup
+      \<varphi\><rsub|i>\<subseteq\>U<rsub|i>>
+
+      <item><math|\<forall\>x\<in\>X> there <math|\<exists\>V\<in\>\<cal-T\>>
+      with <math|x\<in\>V> such that <math|<around*|{|i\<in\>I\|sup
+      \<varphi\><rsub|i><big|cap>V\<neq\>\<varnothing\>|}>> is finite [in
+      other words <math|<around*|{|sup \<varphi\><rsub|i>\|i\<in\>I|}>> is
+      locally finite [see definition: <reference|compact locally finite>].
+
+      <item><math|\<forall\>x\<in\>X> <math|<big|sum><rsub|j\<in\><around*|{|i\<in\>I\|\<varphi\><rsub|i><around*|(|x|)>\<neq\>0|}>>\<varphi\><rsub|i><around*|(|x|)>=1>
+
+      <\note>
+        By <math|<around*|(|4|)>> there exist a open set <math|V> with
+        <math|x\<in\>V> such that
+
+        <\equation*>
+          <around*|{|i\<in\>I\|sup \<varphi\><rsub|i><big|cap>V\<neq\>\<varnothing\>|}><text|
+          is finite>
+        </equation*>
+
+        \ If <math|j\<in\><around*|{|i\<in\>I\|\<varphi\><rsub|j><around*|(|x|)>\<neq\>0|}>>
+        then <math|\<varphi\><rsub|j><around*|(|x|)>\<neq\>\<varnothing\>> so
+        that
+
+        <\equation*>
+          x\<in\><around*|{|x\<in\>X\|\<varphi\><rsub|j><around*|(|x|)>\<neq\>0|}>\<subseteq\><wide|<around*|{|x\<in\>X\|\<varphi\><rsub|j><around*|(|x|)>\<neq\>0|}>|\<wide-bar\>>=sup
+          \<varphi\><rsub|j>
+        </equation*>
+
+        Hence <math|x\<in\>sup \<varphi\><rsub|j><big|cap>V> so that
+        <math|sup \<varphi\><rsub|j><big|cap>V\<neq\>\<varnothing\>> which
+        proves that <math|j\<in\><around*|{|i\<in\>I\|sup
+        \<varphi\><rsub|i><big|cap>V\<neq\>\<varnothing\>|}>> from which it
+        follows that <math|<rigid|<around*|{|i\<in\>I\|\<varphi\><rsub|j><around*|(|x|)>\<neq\>0|}>\<subseteq\><around*|{|i\<in\>I\|sup
+        \<varphi\><rsub|i><big|cap>V|}>>> a finite set hence, using [theorem:
+        <reference|subset of finite sets>],
+        <math|<around*|{|i\<in\>I\|\<varphi\><rsub|j><around*|(|x|)>\<neq\>0|}>>
+        is a finite set so that <math|<big|sum><rsub|j\<in\><around*|{|i\<in\>I\|\<varphi\><rsub|i><around*|(|x|)>\<neq\>0|}>>\<varphi\><rsub|i><around*|(|x|)>>
+        is well defined.
+      </note>
+    </enumerate>
+
+    is called a <with|font-series|bold|partition of unity subordinate to
+    <math|<around*|{|U<rsub|i>|}><rsub|i\<in\>I>s>>
+  </definition>
+
+  <\definition>
+    <label|manifold smooth partition of unity>Let <math|m\<in\>\<bbb-N\>>,
+    <math|q\<in\>\<bbb-N\><rsub|0><big|cup><around*|{|\<infty\>|}>>,
+    <math|\<cal-M\><rsup|m><around*|\<langle\>|M,\<cal-T\>,\<cal-A\>|\<rangle\>>>
+    be a <math|m>-dimensional <math|C<rsup|q>> differentiable manifold and
+    <math|<around*|{|U<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-T\>> a
+    family of open sets such that <math|M=<big|cup><rsub|i\<in\>I>U<rsub|i>>
+    then a family <math|<around*|{|\<varphi\><rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<bbb-R\><rsup|M>>
+    is a smooth partition of unity subordinate to
+    <math|<around*|{|U<rsub|i>|}><rsub|i\<in\>I>> iff
+
+    <\enumerate>
+      <item><math|<around*|{|\<varphi\><rsub|i>|}><rsub|i\<in\>I>> is a
+      partition of unity subordinate to <math|<around*|{|U<rsub|i>|}><rsub|i\<in\>I>>
+
+      <item><math|\<forall\>i\<in\>I> <math|\<varphi\><rsub|i>:M\<rightarrow\>\<bbb-R\>>
+      is a <math|C<rsup|q>> mapping
+    </enumerate>
+  </definition>
+
+  TODO
 
   \;
 
@@ -8517,12 +8625,16 @@
     <associate|auto-21|<tuple|<with|mode|<quote|math>|C<rsup|q>>
     diffeomorphism|?>>
     <associate|auto-22|<tuple|23.3|?>>
-    <associate|auto-23|<tuple|23.4|?>>
-    <associate|auto-24|<tuple|tangent vector|?>>
-    <associate|auto-25|<tuple|<with|mode|<quote|math>|T<rsub|p>M>|?>>
-    <associate|auto-26|<tuple|differential|?>>
-    <associate|auto-27|<tuple|<with|mode|<quote|math>|d F<rsub|p>>|?>>
+    <associate|auto-23|<tuple|cutoff function|?>>
+    <associate|auto-24|<tuple|support of a function|?>>
+    <associate|auto-25|<tuple|<with|mode|<quote|math>|sup f>|?>>
+    <associate|auto-26|<tuple|compact support|?>>
+    <associate|auto-27|<tuple|23.4|?>>
+    <associate|auto-28|<tuple|tangent vector|?>>
+    <associate|auto-29|<tuple|<with|mode|<quote|math>|T<rsub|p>M>|?>>
     <associate|auto-3|<tuple|23.1.1|?>>
+    <associate|auto-30|<tuple|differential|?>>
+    <associate|auto-31|<tuple|<with|mode|<quote|math>|d F<rsub|p>>|?>>
     <associate|auto-4|<tuple|coordinate chart|?>>
     <associate|auto-5|<tuple|coordinate domain|?>>
     <associate|auto-6|<tuple|coordinate ball|?>>
@@ -8727,14 +8839,14 @@
     <associate|manifold C^m mappings are continuous|<tuple|23.73|?>>
     <associate|manifold C^m mappings equivalences|<tuple|23.76|?>>
     <associate|manifold C^m mappings equivalences (1)|<tuple|23.74|?>>
-    <associate|manifold C^m(M)|<tuple|23.107|?>>
-    <associate|manifold C^q(M) is a vector space|<tuple|23.108|?>>
+    <associate|manifold C^m(M)|<tuple|23.113|?>>
+    <associate|manifold C^q(M) is a vector space|<tuple|23.114|?>>
     <associate|manifold C^r functions are C^r mappings|<tuple|23.78|?>>
     <associate|manifold C^r mspping id local (2)|<tuple|23.80|?>>
     <associate|manifold C^r mspping id locsl|<tuple|23.79|?>>
     <associate|manifold R^n is a differentiable manifold|<tuple|23.64|?>>
-    <associate|manifold TpM is a vector space|<tuple|23.114|?>>
-    <associate|manifold TpM properties|<tuple|23.115|?>>
+    <associate|manifold TpM is a vector space|<tuple|23.120|?>>
+    <associate|manifold TpM properties|<tuple|23.121|?>>
     <associate|manifold a finite dimensional vector space is a differentiable
     manifold|<tuple|23.67|?>>
     <associate|manifold a topological manifold is locally
@@ -8745,19 +8857,20 @@
     <associate|manifold chain rule|<tuple|23.83|?>>
     <associate|manifold chart that is compatible with a
     atlas|<tuple|23.43|?>>
+    <associate|manifold compact support|<tuple|23.109|?>>
     <associate|manifold compatible atlas|<tuple|23.52|?>>
     <associate|manifold compatible atlas (1)|<tuple|23.53|?>>
     <associate|manifold composition of a C^r mapping and a mapping of class
-    C^r|<tuple|23.116|?>>
+    C^r|<tuple|23.122|?>>
     <associate|manifold connectivity properties|<tuple|23.24|?>>
-    <associate|manifold constant functions|<tuple|23.109|?>>
+    <associate|manifold constant functions|<tuple|23.115|?>>
     <associate|manifold coordinate ball and cube|<tuple|23.9|?>>
     <associate|manifold coordinate domain|<tuple|23.8|?>>
     <associate|manifold coordinate transforms are a
     homeomorphism|<tuple|23.35|?>>
     <associate|manifold cooridinate chart|<tuple|23.3|?>>
     <associate|manifold cooridinate chart existence|<tuple|23.10|?>>
-    <associate|manifold cutoff function|<tuple|23.94|?>>
+    <associate|manifold cutoff function|<tuple|cutoff function|?>>
     <associate|manifold cutoff function existence|<tuple|23.102|?>>
     <associate|manifold diffentiable atlas|<tuple|23.40|?>>
     <associate|manifold diffeomorphic manifolds|<tuple|23.86|?>>
@@ -8776,8 +8889,8 @@
     <associate|manifold differentiable manifold|<tuple|23.58|?>>
     <associate|manifold differentiable mappings|<tuple|23.69|?>>
     <associate|manifold differentiable structure|<tuple|23.55|?>>
-    <associate|manifold differential|<tuple|23.117|?>>
-    <associate|manifold differential properties|<tuple|23.118|?>>
+    <associate|manifold differential|<tuple|23.123|?>>
+    <associate|manifold differential properties|<tuple|23.124|?>>
     <associate|manifold existence of a maximal atlas|<tuple|23.56|?>>
     <associate|manifold identity is a C^q mapping|<tuple|23.72|?>>
     <associate|manifold maximal atlas|<tuple|23.49|?>>
@@ -8785,17 +8898,21 @@
     <associate|manifold open set is a sub manifold|<tuple|23.16|?>>
     <associate|manifold open subset of a differentiable
     manifold|<tuple|23.65|?>>
+    <associate|manifold partition of unity|<tuple|23.110|?>>
     <associate|manifold product of functions that are of class
-    C^q|<tuple|23.110|?>>
+    C^q|<tuple|23.116|?>>
     <associate|manifold real numbers are a differentiable
     manifold|<tuple|23.63|?>>
     <associate|manifold real numbers form a topological
     manifold|<tuple|23.14|?>>
     <associate|manifold restriction of a chart is a chart|<tuple|23.7|?>>
     <associate|manifold singleton chart|<tuple|23.61|?>>
+    <associate|manifold smooth partition of unity|<tuple|23.112|?>>
     <associate|manifold sphere is a differentiable manifold|<tuple|23.66|?>>
     <associate|manifold sphere is a topological manifold|<tuple|23.18|?>>
-    <associate|manifold tangent vector|<tuple|23.111|?>>
+    <associate|manifold support|<tuple|23.107|?>>
+    <associate|manifold supported in a set|<tuple|23.108|?>>
+    <associate|manifold tangent vector|<tuple|23.117|?>>
     <associate|manifold topological|<tuple|23.2|?>>
     <associate|manifold topological (1)|<tuple|23.12|?>>
     <associate|manifold topological manifold is paracompact|<tuple|23.29|?>>
@@ -8841,13 +8958,21 @@
       <tuple|<tuple|<with|mode|<quote|math>|C<rsup|q>>
       diffeomorphism>|<pageref|auto-21>>
 
-      <tuple|<tuple|tangent vector>|<pageref|auto-24>>
+      <tuple|<tuple|cutoff function>|<pageref|auto-23>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|T<rsub|p>M>>|<pageref|auto-25>>
+      <tuple|<tuple|support of a function>|<pageref|auto-24>>
 
-      <tuple|<tuple|differential>|<pageref|auto-26>>
+      <tuple|<tuple|<with|mode|<quote|math>|sup f>>|<pageref|auto-25>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|d F<rsub|p>>>|<pageref|auto-27>>
+      <tuple|<tuple|compact support>|<pageref|auto-26>>
+
+      <tuple|<tuple|tangent vector>|<pageref|auto-28>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|T<rsub|p>M>>|<pageref|auto-29>>
+
+      <tuple|<tuple|differential>|<pageref|auto-30>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|d F<rsub|p>>>|<pageref|auto-31>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|23<space|2spc>Differential
@@ -8880,7 +9005,7 @@
 
       23.4<space|2spc>Tangent vectors and <with|mode|<quote|math>|T<rsub|p>M>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-23>
+      <no-break><pageref|auto-27>
     </associate>
   </collection>
 </auxiliary>
