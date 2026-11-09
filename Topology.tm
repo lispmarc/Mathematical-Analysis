@@ -17017,7 +17017,7 @@
       Further we have by [corollary: <reference|topology on R^n>] that\ 
 
       <\equation*>
-        \<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>>>=\<cal-T\><rsub|n>
+        \<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>>>=\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n>>
       </equation*>
 
       Let <math|x\<in\>\<bbb-R\><rsup|n>> and
@@ -26799,8 +26799,6 @@
     <associate|auto-115|<tuple|disconnected space|?>>
     <associate|auto-116|<tuple|intermediate value theorem|?>>
     <associate|auto-117|<tuple|14.11.2|?>>
-    <associate|auto-118|<tuple|<with|mode|<quote|math>|L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>|?>>
-    <associate|auto-119|<tuple|<with|mode|<quote|math>|L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>|?>>
     <associate|auto-12|<tuple|box topology|?>>
     <associate|auto-13|<tuple|14.1.3|?>>
     <associate|auto-14|<tuple|dense set|?>>

@@ -26522,6 +26522,52 @@
   </proof>
 
   <\example>
+    <label|diff f(x)=x-a is a diffeomorphism>Let
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> is
+    a normed space, <math|b\<in\>X> then <math|f:X\<rightarrow\>X> defined by
+    <math|f<around*|(|x|)>=x-n> is a diffeomorphism of class
+    <math|C<rsup|\<infty\>>>.
+  </example>
+
+  <\proof>
+    Define
+
+    <\equation*>
+      g:X\<rightarrow\>X<text| by >g<around*|(|x|)>=x+b
+    </equation*>
+
+    then we have for <math|x\<in\>X>
+
+    <\equation*>
+      <around*|(|g\<circ\>f|)><around*|(|x|)>=g<around*|(|f<around*|(|x|)>|)>=f<around*|(|x|)>+b=x-b+b=x=Id<rsub|X><around*|(|x|)>
+    </equation*>
+
+    <\equation*>
+      <around*|(|f\<circ\>g|)><around*|(|x|)>=f<around*|(|g<around*|(|x|)>|)>=g<around*|(|x|)>-b=x+b-b=x=Id<rsub|X><around*|(|x|)>
+    </equation*>
+
+    so that\ 
+
+    <\equation*>
+      g\<circ\>f=Id<rsub|X>=f\<circ\>g
+    </equation*>
+
+    which proves that\ 
+
+    <\equation*>
+      f<text| is a bijection with <math|f<rsup|-1>=g>>
+    </equation*>
+
+    Finaly using [example: <reference|diff f(t)=a.x+y is infinite
+    differentiable>] it follows that <math|f,f<rsup|-1>> are of class
+    <math|C<rsup|\<infty\>>> which proves that\ 
+
+    <\equation*>
+      f<text| is a diffeomorphism of class >C<rsup|\<infty\>>
+    </equation*>
+  </proof>
+
+  <\example>
     <label|diff homeomorphism is a diffeomorphism of class C^0>Let
     <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
     <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
@@ -32846,148 +32892,148 @@
 
 <\references>
   <\collection>
-    <associate|Taylor's theorem (II.3)|<tuple|16.402|?>>
+    <associate|Taylor's theorem (II.3)|<tuple|16.403|?>>
     <associate|auto-1|<tuple|16|?>>
     <associate|auto-10|<tuple|<with|mode|<quote|math>|\<cal-D\><rsub|f>>|?>>
-    <associate|auto-100|<tuple|<with|mode|<quote|math>|D<rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f>|?>>
-    <associate|auto-101|<tuple|higher order partial differential at a
+    <associate|auto-100|<tuple|<with|mode|<quote|math>|\<frak-D\><rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>,f>>|?>>
+    <associate|auto-101|<tuple|<with|mode|<quote|math>|D<rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f>|?>>
+    <associate|auto-102|<tuple|higher order partial differential at a
     point|?>>
-    <associate|auto-102|<tuple|<with|mode|<quote|math>|D<rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f>|?>>
-    <associate|auto-103|<tuple|16.5.3|?>>
-    <associate|auto-104|<tuple|higher order partial derivative|?>>
-    <associate|auto-105|<tuple|<with|mode|<quote|math>|\<cal-D\><rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>,f>>|?>>
-    <associate|auto-106|<tuple|<with|mode|<quote|math>|\<partial\><rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f>|?>>
-    <associate|auto-107|<tuple|higher partial derivative at a point|?>>
-    <associate|auto-108|<tuple|<with|mode|<quote|math>|\<partial\><rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f>|?>>
-    <associate|auto-109|<tuple|16.6|?>>
+    <associate|auto-103|<tuple|<with|mode|<quote|math>|D<rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f>|?>>
+    <associate|auto-104|<tuple|16.5.3|?>>
+    <associate|auto-105|<tuple|higher order partial derivative|?>>
+    <associate|auto-106|<tuple|<with|mode|<quote|math>|\<cal-D\><rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>,f>>|?>>
+    <associate|auto-107|<tuple|<with|mode|<quote|math>|\<partial\><rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f>|?>>
+    <associate|auto-108|<tuple|higher partial derivative at a point|?>>
+    <associate|auto-109|<tuple|<with|mode|<quote|math>|\<partial\><rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f>|?>>
     <associate|auto-11|<tuple|derivative|?>>
-    <associate|auto-110|<tuple|16.6.1|?>>
-    <associate|auto-111|<tuple|topological vector space|?>>
-    <associate|auto-112|<tuple|toplinear isomorphism|?>>
-    <associate|auto-113|<tuple|<with|mode|<quote|math>|\<cal-G\>L<around*|(|X|)>>|?>>
-    <associate|auto-114|<tuple|<with|mode|<quote|math>|H<rsup|n>>|?>>
-    <associate|auto-115|<tuple|diff diffeomorphism|?>>
-    <associate|auto-116|<tuple|local diffeomorphism|?>>
-    <associate|auto-117|<tuple|inverse function theorem|?>>
-    <associate|auto-118|<tuple|16.6.2|?>>
-    <associate|auto-119|<tuple|16.4|?>>
+    <associate|auto-110|<tuple|16.6|?>>
+    <associate|auto-111|<tuple|16.6.1|?>>
+    <associate|auto-112|<tuple|topological vector space|?>>
+    <associate|auto-113|<tuple|toplinear isomorphism|?>>
+    <associate|auto-114|<tuple|<with|mode|<quote|math>|\<cal-G\>L<around*|(|X|)>>|?>>
+    <associate|auto-115|<tuple|<with|mode|<quote|math>|H<rsup|n>>|?>>
+    <associate|auto-116|<tuple|diff diffeomorphism|?>>
+    <associate|auto-117|<tuple|local diffeomorphism|?>>
+    <associate|auto-118|<tuple|inverse function theorem|?>>
+    <associate|auto-119|<tuple|16.6.2|?>>
     <associate|auto-12|<tuple|<with|mode|<quote|math>|f<rprime|'>>|?>>
-    <associate|auto-120|<tuple|16.5|?>>
-    <associate|auto-121|<tuple|implicit function theorem (1)|?>>
-    <associate|auto-122|<tuple|implict function theorem (2)|?>>
-    <associate|auto-123|<tuple|16.7|?>>
-    <associate|auto-124|<tuple|Taylor's theorem (I)|?>>
-    <associate|auto-125|<tuple|Taylor's theorem (I.1)|?>>
-    <associate|auto-126|<tuple|<with|mode|<quote|math>|<below|ord|x<below|\<rightarrow\>|A>x<rsub|0>>g<around*|(|x|)>>|?>>
-    <associate|auto-127|<tuple|Taylor's theorem (I.2)|?>>
-    <associate|auto-128|<tuple|Taylor's theorem (I.3)|?>>
-    <associate|auto-129|<tuple|Taylor's theorem (I.4)|?>>
+    <associate|auto-120|<tuple|16.4|?>>
+    <associate|auto-121|<tuple|16.5|?>>
+    <associate|auto-122|<tuple|implicit function theorem (1)|?>>
+    <associate|auto-123|<tuple|implict function theorem (2)|?>>
+    <associate|auto-124|<tuple|16.7|?>>
+    <associate|auto-125|<tuple|Taylor's theorem (I)|?>>
+    <associate|auto-126|<tuple|Taylor's theorem (I.1)|?>>
+    <associate|auto-127|<tuple|<with|mode|<quote|math>|<below|ord|x<below|\<rightarrow\>|A>x<rsub|0>>g<around*|(|x|)>>|?>>
+    <associate|auto-128|<tuple|Taylor's theorem (I.2)|?>>
+    <associate|auto-129|<tuple|Taylor's theorem (I.3)|?>>
     <associate|auto-13|<tuple|16.1.2|?>>
-    <associate|auto-130|<tuple|Taylor's theorem (II.1)|?>>
-    <associate|auto-131|<tuple|Taylor's theorem (II.2)|?>>
-    <associate|auto-132|<tuple|Taylor's theorem (III)|?>>
-    <associate|auto-133|<tuple|Taylor's theorem (IV)|?>>
-    <associate|auto-135|<tuple|16.1.3|?>>
-    <associate|auto-14|<tuple|16.1.4|?>>
-    <associate|auto-15|<tuple|differentiability|?>>
-    <associate|auto-16|<tuple|<with|mode|<quote|math>|\<frak-D\><rsub|f>>|?>>
-    <associate|auto-17|<tuple|<with|mode|<quote|math>|D f>|?>>
-    <associate|auto-18|<tuple|differential|?>>
-    <associate|auto-19|<tuple|<with|mode|<quote|math>|\<varepsilon\>>-mapping|?>>
+    <associate|auto-130|<tuple|Taylor's theorem (I.4)|?>>
+    <associate|auto-131|<tuple|Taylor's theorem (II.1)|?>>
+    <associate|auto-132|<tuple|Taylor's theorem (II.2)|?>>
+    <associate|auto-133|<tuple|Taylor's theorem (III)|?>>
+    <associate|auto-134|<tuple|Taylor's theorem (IV)|?>>
+    <associate|auto-14|<tuple|16.1.3|?>>
+    <associate|auto-15|<tuple|16.1.4|?>>
+    <associate|auto-16|<tuple|differentiability|?>>
+    <associate|auto-17|<tuple|<with|mode|<quote|math>|\<frak-D\><rsub|f>>|?>>
+    <associate|auto-18|<tuple|<with|mode|<quote|math>|D f>|?>>
+    <associate|auto-19|<tuple|differential|?>>
     <associate|auto-2|<tuple|16.1|?>>
-    <associate|auto-20|<tuple|16.1.5|?>>
-    <associate|auto-21|<tuple|Chain rule|?>>
-    <associate|auto-22|<tuple|16.1.6|?>>
-    <associate|auto-23|<tuple|<with|mode|<quote|math>|I<rsup|<around*|[|i,x|]>>>|?>>
-    <associate|auto-24|<tuple|partial differential at a point|?>>
-    <associate|auto-25|<tuple|<with|mode|<quote|math>|D<rsub|x,i>f>|?>>
-    <associate|auto-26|<tuple|partial differential|?>>
-    <associate|auto-27|<tuple|<with|mode|<quote|math>|D<rsub|i,x>f>|?>>
-    <associate|auto-28|<tuple|<with|mode|<quote|math>|\<frak-D\><rsub|i,f>>|?>>
-    <associate|auto-29|<tuple|16.1.7|?>>
+    <associate|auto-20|<tuple|<with|mode|<quote|math>|\<varepsilon\>>-mapping|?>>
+    <associate|auto-21|<tuple|16.1.5|?>>
+    <associate|auto-22|<tuple|Chain rule|?>>
+    <associate|auto-23|<tuple|16.1.6|?>>
+    <associate|auto-24|<tuple|<with|mode|<quote|math>|I<rsup|<around*|[|i,x|]>>>|?>>
+    <associate|auto-25|<tuple|partial differential at a point|?>>
+    <associate|auto-26|<tuple|<with|mode|<quote|math>|D<rsub|x,i>f>|?>>
+    <associate|auto-27|<tuple|partial differential|?>>
+    <associate|auto-28|<tuple|<with|mode|<quote|math>|D<rsub|i,x>f>|?>>
+    <associate|auto-29|<tuple|<with|mode|<quote|math>|\<frak-D\><rsub|i,f>>|?>>
     <associate|auto-3|<tuple|16.1.1|?>>
-    <associate|auto-30|<tuple|partial derivate|?>>
-    <associate|auto-31|<tuple|<with|mode|<quote|math>|\<partial\><rsub|x,i>f>|?>>
-    <associate|auto-32|<tuple|partial derivative at a point|?>>
-    <associate|auto-33|<tuple|partial derivative|?>>
-    <associate|auto-34|<tuple|<with|mode|<quote|math>|\<partial\><rsub|f>f>|?>>
-    <associate|auto-35|<tuple|<with|mode|<quote|math>|\<cal-D\><rsub|i,f>>|?>>
-    <associate|auto-36|<tuple|16.1.8|?>>
-    <associate|auto-37|<tuple|<with|mode|<quote|math>|<around*|(|f<rsub|1>,\<ldots\>,f<rsub|n>|)>>|?>>
-    <associate|auto-38|<tuple|Jacobian matrix|?>>
-    <associate|auto-39|<tuple|<with|mode|<quote|math>|<around*|[|<frac|\<partial\><around*|(|f<rsub|1>\<ldots\>,f<rsub|m>|)>|\<partial\><around*|(|1,\<ldots\>,n|)>>|]><rsub|x>>|?>>
+    <associate|auto-30|<tuple|16.1.7|?>>
+    <associate|auto-31|<tuple|partial derivate|?>>
+    <associate|auto-32|<tuple|<with|mode|<quote|math>|\<partial\><rsub|x,i>f>|?>>
+    <associate|auto-33|<tuple|partial derivative at a point|?>>
+    <associate|auto-34|<tuple|partial derivative|?>>
+    <associate|auto-35|<tuple|<with|mode|<quote|math>|\<partial\><rsub|f>f>|?>>
+    <associate|auto-36|<tuple|<with|mode|<quote|math>|\<cal-D\><rsub|i,f>>|?>>
+    <associate|auto-37|<tuple|16.1.8|?>>
+    <associate|auto-38|<tuple|<with|mode|<quote|math>|<around*|(|f<rsub|1>,\<ldots\>,f<rsub|n>|)>>|?>>
+    <associate|auto-39|<tuple|Jacobian matrix|?>>
     <associate|auto-4|<tuple|convergence of a function|?>>
-    <associate|auto-40|<tuple|16.1.9|?>>
-    <associate|auto-41|<tuple|16.2|?>>
-    <associate|auto-42|<tuple|16.2.1|?>>
-    <associate|auto-43|<tuple|<with|mode|<quote|math>|L<rsub|n><around*|(|X;Y|)>>|?>>
-    <associate|auto-44|<tuple|<with|mode|<quote|math>|L<around*|(|x<rsub|1>:\<ldots\>:x<rsub|n>|)>>|?>>
-    <associate|auto-45|<tuple|16.2.2|?>>
-    <associate|auto-46|<tuple|<with|mode|<quote|math>|D<rsup|<around*|[|n|]>>f>|?>>
-    <associate|auto-47|<tuple|<with|mode|<quote|math>|\<frak-D\><rsup|n><rsub|f>>|?>>
-    <associate|auto-48|<tuple|higher order differential|?>>
-    <associate|auto-49|<tuple|<with|mode|<quote|math>|D<rsup|n>f<around*|(|x|)>>|?>>
+    <associate|auto-40|<tuple|<with|mode|<quote|math>|<around*|[|<frac|\<partial\><around*|(|f<rsub|1>\<ldots\>,f<rsub|m>|)>|\<partial\><around*|(|1,\<ldots\>,n|)>>|]><rsub|x>>|?>>
+    <associate|auto-41|<tuple|16.1.9|?>>
+    <associate|auto-42|<tuple|16.2|?>>
+    <associate|auto-43|<tuple|16.2.1|?>>
+    <associate|auto-44|<tuple|<with|mode|<quote|math>|L<rsub|n><around*|(|X;Y|)>>|?>>
+    <associate|auto-45|<tuple|<with|mode|<quote|math>|L<around*|(|x<rsub|1>:\<ldots\>:x<rsub|n>|)>>|?>>
+    <associate|auto-46|<tuple|16.2.2|?>>
+    <associate|auto-47|<tuple|<with|mode|<quote|math>|D<rsup|<around*|[|n|]>>f>|?>>
+    <associate|auto-48|<tuple|<with|mode|<quote|math>|\<frak-D\><rsup|n><rsub|f>>|?>>
+    <associate|auto-49|<tuple|higher order differential|?>>
     <associate|auto-5|<tuple|<with|mode|<quote|math>|U<rsub|x>>|?>>
-    <associate|auto-50|<tuple|higher order differential at a point|?>>
-    <associate|auto-51|<tuple|<with|mode|<quote|math>|D<rsup|<around*|[|n|]>><rsub|x>f>|?>>
-    <associate|auto-52|<tuple|<with|mode|<quote|math>|\<infty\>>-times
+    <associate|auto-50|<tuple|<with|mode|<quote|math>|D<rsup|n>f<around*|(|x|)>>|?>>
+    <associate|auto-51|<tuple|higher order differential at a point|?>>
+    <associate|auto-52|<tuple|<with|mode|<quote|math>|D<rsup|<around*|[|n|]>><rsub|x>f>|?>>
+    <associate|auto-53|<tuple|<with|mode|<quote|math>|\<infty\>>-times
     differentibility|?>>
-    <associate|auto-53|<tuple|<with|mode|<quote|math>|C<rsup|n>>|?>>
-    <associate|auto-54|<tuple|<with|mode|<quote|math>|C<rsup|0>>|?>>
-    <associate|auto-55|<tuple|<with|mode|<quote|math>|C<rsup|\<infty\>>>|?>>
-    <associate|auto-56|<tuple|16.2.3|?>>
-    <associate|auto-57|<tuple|higher order derivative|?>>
-    <associate|auto-58|<tuple|<with|mode|<quote|math>|\<cal-D\><rsup|n><rsub|f>>|?>>
-    <associate|auto-59|<tuple|<with|mode|<quote|math>|f<rsup|<around*|(|n|)>>>|?>>
+    <associate|auto-54|<tuple|<with|mode|<quote|math>|C<rsup|n>>|?>>
+    <associate|auto-55|<tuple|<with|mode|<quote|math>|C<rsup|0>>|?>>
+    <associate|auto-56|<tuple|<with|mode|<quote|math>|C<rsup|\<infty\>>>|?>>
+    <associate|auto-57|<tuple|16.2.3|?>>
+    <associate|auto-58|<tuple|higher order derivative|?>>
+    <associate|auto-59|<tuple|<with|mode|<quote|math>|\<cal-D\><rsup|n><rsub|f>>|?>>
     <associate|auto-6|<tuple|<with|mode|<quote|math>|f<rprime|'><rsub|x>>|?>>
-    <associate|auto-60|<tuple|higher order derivative at a point|?>>
-    <associate|auto-61|<tuple|<with|mode|<quote|math>|f<rsup|<around*|(|n|)>><rsub|x>>|?>>
-    <associate|auto-62|<tuple|16.2.4|?>>
-    <associate|auto-63|<tuple|16.2.5|?>>
-    <associate|auto-64|<tuple|16.2.6|?>>
-    <associate|auto-65|<tuple|chain rule higher order differentiation|?>>
-    <associate|auto-66|<tuple|higher order differentiation chain rule|?>>
-    <associate|auto-67|<tuple|16.3|?>>
-    <associate|auto-68|<tuple|16.3.1|?>>
-    <associate|auto-69|<tuple|local weak minimum|?>>
+    <associate|auto-60|<tuple|<with|mode|<quote|math>|f<rsup|<around*|(|n|)>>>|?>>
+    <associate|auto-61|<tuple|higher order derivative at a point|?>>
+    <associate|auto-62|<tuple|<with|mode|<quote|math>|f<rsup|<around*|(|n|)>><rsub|x>>|?>>
+    <associate|auto-63|<tuple|16.2.4|?>>
+    <associate|auto-64|<tuple|16.2.5|?>>
+    <associate|auto-65|<tuple|16.2.6|?>>
+    <associate|auto-66|<tuple|chain rule higher order differentiation|?>>
+    <associate|auto-67|<tuple|higher order differentiation chain rule|?>>
+    <associate|auto-68|<tuple|16.3|?>>
+    <associate|auto-69|<tuple|16.3.1|?>>
     <associate|auto-7|<tuple||?>>
-    <associate|auto-70|<tuple|local weak maximum|?>>
-    <associate|auto-71|<tuple|local extremum|?>>
-    <associate|auto-72|<tuple|16.1|?>>
-    <associate|auto-73|<tuple|16.2|?>>
-    <associate|auto-74|<tuple|concave function|?>>
-    <associate|auto-75|<tuple|convex function|?>>
-    <associate|auto-76|<tuple|16.3|?>>
-    <associate|auto-77|<tuple|16.3.2|?>>
-    <associate|auto-78|<tuple|fundamental theorem of calculus (I)|?>>
-    <associate|auto-79|<tuple|fundamental theorem of calculus (II)|?>>
+    <associate|auto-70|<tuple|local weak minimum|?>>
+    <associate|auto-71|<tuple|local weak maximum|?>>
+    <associate|auto-72|<tuple|local extremum|?>>
+    <associate|auto-73|<tuple|16.1|?>>
+    <associate|auto-74|<tuple|16.2|?>>
+    <associate|auto-75|<tuple|concave function|?>>
+    <associate|auto-76|<tuple|convex function|?>>
+    <associate|auto-77|<tuple|16.3|?>>
+    <associate|auto-78|<tuple|16.3.2|?>>
+    <associate|auto-79|<tuple|fundamental theorem of calculus (I)|?>>
     <associate|auto-8|<tuple|derivative at a point|?>>
-    <associate|auto-80|<tuple|integration by parts|?>>
-    <associate|auto-81|<tuple|16.3.3|?>>
-    <associate|auto-82|<tuple|mean value theorem (I)|?>>
-    <associate|auto-83|<tuple|convex set|?>>
-    <associate|auto-84|<tuple|mean value theorem|?>>
-    <associate|auto-85|<tuple|mean value theorem (III)|?>>
-    <associate|auto-86|<tuple|mean value theorem (IV)|?>>
-    <associate|auto-87|<tuple|mean value theorem (V)|?>>
-    <associate|auto-88|<tuple|mean value theorem (VI)|?>>
-    <associate|auto-89|<tuple|mean value theorem (VII)|?>>
+    <associate|auto-80|<tuple|fundamental theorem of calculus (II)|?>>
+    <associate|auto-81|<tuple|integration by parts|?>>
+    <associate|auto-82|<tuple|16.3.3|?>>
+    <associate|auto-83|<tuple|mean value theorem (I)|?>>
+    <associate|auto-84|<tuple|convex set|?>>
+    <associate|auto-85|<tuple|mean value theorem|?>>
+    <associate|auto-86|<tuple|mean value theorem (III)|?>>
+    <associate|auto-87|<tuple|mean value theorem (IV)|?>>
+    <associate|auto-88|<tuple|mean value theorem (V)|?>>
+    <associate|auto-89|<tuple|mean value theorem (VI)|?>>
     <associate|auto-9|<tuple|<with|mode|<quote|math>|f<rprime|'><around*|(|x|)>>|?>>
-    <associate|auto-90|<tuple|16.4|?>>
-    <associate|auto-91|<tuple|<with|mode|<quote|math>|ev<rsub|v<rsub|1>,\<ldots\>,v<rsub|n>>>|?>>
-    <associate|auto-92|<tuple|evaluation operator|?>>
-    <associate|auto-93|<tuple|16.5|?>>
-    <associate|auto-94|<tuple|16.5.1|?>>
-    <associate|auto-95|<tuple|<with|mode|<quote|math>|L<rsub|n><around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>|?>>
-    <associate|auto-96|<tuple|<with|mode|<quote|math>|L<around*|(|x<rsub|1>:\<ldots\>:x<rsub|n>|)>>|?>>
-    <associate|auto-97|<tuple|16.5.2|?>>
-    <associate|auto-98|<tuple|higher order partial differential|?>>
-    <associate|auto-99|<tuple|<with|mode|<quote|math>|\<frak-D\><rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>,f>>|?>>
-    <associate|conjecture 16.245.136|<tuple|16.363|?>>
-    <associate|conjecture 16.246.136|<tuple|16.364|?>>
-    <associate|conjecture 16.247.136|<tuple|16.365|?>>
-    <associate|conjecture 16.248.136|<tuple|16.366|?>>
-    <associate|conjecture 16.252|<tuple|16.368|?>>
+    <associate|auto-90|<tuple|mean value theorem (VII)|?>>
+    <associate|auto-91|<tuple|16.4|?>>
+    <associate|auto-92|<tuple|<with|mode|<quote|math>|ev<rsub|v<rsub|1>,\<ldots\>,v<rsub|n>>>|?>>
+    <associate|auto-93|<tuple|evaluation operator|?>>
+    <associate|auto-94|<tuple|16.5|?>>
+    <associate|auto-95|<tuple|16.5.1|?>>
+    <associate|auto-96|<tuple|<with|mode|<quote|math>|L<rsub|n><around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>|?>>
+    <associate|auto-97|<tuple|<with|mode|<quote|math>|L<around*|(|x<rsub|1>:\<ldots\>:x<rsub|n>|)>>|?>>
+    <associate|auto-98|<tuple|16.5.2|?>>
+    <associate|auto-99|<tuple|higher order partial differential|?>>
+    <associate|conjecture 16.245.136|<tuple|16.364|?>>
+    <associate|conjecture 16.246.136|<tuple|16.365|?>>
+    <associate|conjecture 16.247.136|<tuple|16.366|?>>
+    <associate|conjecture 16.248.136|<tuple|16.367|?>>
+    <associate|conjecture 16.252|<tuple|16.369|?>>
     <associate|continuity limit of composition of linear
     maps|<tuple|16.336|?>>
     <associate|convergence of a function to a point|<tuple|16.3|?>>
@@ -33016,17 +33062,17 @@
     <associate|diff Lagrange theorem|<tuple|16.221|?>>
     <associate|diff Lagrange theorem (1)|<tuple|16.223|?>>
     <associate|diff Rolle's theorem|<tuple|16.219|?>>
-    <associate|diff Taylor I|<tuple|16.374|?>>
-    <associate|diff Taylor I.1|<tuple|16.376|?>>
-    <associate|diff Taylor I.2|<tuple|16.379|?>>
-    <associate|diff Taylor I.3|<tuple|16.383|?>>
-    <associate|diff Taylor I.4|<tuple|16.390|?>>
-    <associate|diff Taylor II|<tuple|16.393|?>>
-    <associate|diff Taylor II.1|<tuple|16.401|?>>
-    <associate|diff Taylor II.2|<tuple|16.402|?>>
-    <associate|diff Taylor III|<tuple|16.405|?>>
-    <associate|diff Taylor series (1))|<tuple|16.408|?>>
-    <associate|diff Taylor series (IV)|<tuple|16.410|?>>
+    <associate|diff Taylor I|<tuple|16.375|?>>
+    <associate|diff Taylor I.1|<tuple|16.377|?>>
+    <associate|diff Taylor I.2|<tuple|16.380|?>>
+    <associate|diff Taylor I.3|<tuple|16.384|?>>
+    <associate|diff Taylor I.4|<tuple|16.391|?>>
+    <associate|diff Taylor II|<tuple|16.394|?>>
+    <associate|diff Taylor II.1|<tuple|16.402|?>>
+    <associate|diff Taylor II.2|<tuple|16.403|?>>
+    <associate|diff Taylor III|<tuple|16.406|?>>
+    <associate|diff Taylor series (1))|<tuple|16.409|?>>
+    <associate|diff Taylor series (IV)|<tuple|16.411|?>>
     <associate|diff Ux|<tuple|16.14|?>>
     <associate|diff Ux is open if U is open|<tuple|16.18|?>>
     <associate|diff Ux=-x+U=U-x|<tuple|16.17|?>>
@@ -33083,14 +33129,14 @@
     <associate|diff derivatives and continuity|<tuple|16.36|?>>
     <associate|diff diffeomorphism|<tuple|16.345|?>>
     <associate|diff diffeomorphism C^n C^m|<tuple|16.347|?>>
-    <associate|diff diffeomorphism D(f@f^-1)|<tuple|16.356|?>>
-    <associate|diff diffeomorphism and dimension|<tuple|16.357|?>>
-    <associate|diff diffeomorphism between R and R^1|<tuple|16.352|?>>
-    <associate|diff diffeomorphism composition|<tuple|16.358|?>>
-    <associate|diff diffeomorphism identity|<tuple|16.353|?>>
+    <associate|diff diffeomorphism D(f@f^-1)|<tuple|16.357|?>>
+    <associate|diff diffeomorphism and dimension|<tuple|16.358|?>>
+    <associate|diff diffeomorphism between R and R^1|<tuple|16.353|?>>
+    <associate|diff diffeomorphism composition|<tuple|16.359|?>>
+    <associate|diff diffeomorphism identity|<tuple|16.354|?>>
     <associate|diff diffeomorphism inverse|<tuple|16.346|?>>
     <associate|diff diffeomorphism is a homeomorphism|<tuple|16.348|?>>
-    <associate|diff diffeomorphism local condition|<tuple|16.355|?>>
+    <associate|diff diffeomorphism local condition|<tuple|16.356|?>>
     <associate|diff diffeomorphism of class C^q 1\<less\>=q is a
     diffeomorphism|<tuple|16.349|?>>
     <associate|diff differentiability|<tuple|16.58|?>>
@@ -33113,6 +33159,7 @@
     <associate|diff existence of left and right derivative implies existance
     of the derivative|<tuple|16.54|?>>
     <associate|diff f(t)=a.x+y is infinite differentiable|<tuple|16.195|?>>
+    <associate|diff f(x)=x-a is a diffeomorphism|<tuple|16.350|?>>
     <associate|diff fundamental theorem of calculus (1)|<tuple|16.229|?>>
     <associate|diff fundamental theorem of calculus (2)|<tuple|16.230|?>>
     <associate|diff higher order class condition|<tuple|16.171|?>>
@@ -33182,17 +33229,17 @@
     set|<tuple|16.283|?>>
     <associate|diff higher order power function|<tuple|16.214|?>>
     <associate|diff homeomorphism is a diffeomorphism of class
-    C^0|<tuple|16.350|?>>
+    C^0|<tuple|16.351|?>>
     <associate|diff identity function is differentiable|<tuple|16.65|?>>
     <associate|diff identity function is infinite times
     differentiable|<tuple|16.194|?>>
-    <associate|diff implicit function theorem|<tuple|16.372|?>>
-    <associate|diff implicit function theorem (1)|<tuple|16.373|?>>
+    <associate|diff implicit function theorem|<tuple|16.373|?>>
+    <associate|diff implicit function theorem (1)|<tuple|16.374|?>>
     <associate|diff increasing decreasing function|<tuple|16.225|?>>
     <associate|diff inifint=ite differentiable|<tuple|16.151|?>>
     <associate|diff integration by part|<tuple|16.231|?>>
-    <associate|diff inverse function theorem|<tuple|16.360|?>>
-    <associate|diff inverse function theorem and Jacobian|<tuple|16.369|?>>
+    <associate|diff inverse function theorem|<tuple|16.361|?>>
+    <associate|diff inverse function theorem and Jacobian|<tuple|16.370|?>>
     <associate|diff inverse mapping on GL(X)|<tuple|16.344|?>>
     <associate|diff left and right derivative|<tuple|16.47|?>>
     <associate|diff left and right derivative (1)|<tuple|16.49|?>>
@@ -33201,16 +33248,16 @@
     <associate|diff limit of a function properties|<tuple|16.13|?>>
     <associate|diff line segment [0,1]|<tuple|16.240|?>>
     <associate|diff linear isomorphism between Banach spaces are
-    diffeomorphisms|<tuple|16.351|?>>
+    diffeomorphisms|<tuple|16.352|?>>
     <associate|diff linear mapping is infinite times
     differentiable|<tuple|16.193|?>>
     <associate|diff linear mappings are differentiable|<tuple|16.67|?>>
     <associate|diff linear to multilinear|<tuple|16.138|?>>
     <associate|diff linear to multilinear (1)|<tuple|16.276|?>>
     <associate|diff linesegement|<tuple|16.238|?>>
-    <associate|diff little o|<tuple|16.378|?>>
-    <associate|diff little o and limits|<tuple|16.380|?>>
-    <associate|diff local diffeomorphism|<tuple|16.359|?>>
+    <associate|diff little o|<tuple|16.379|?>>
+    <associate|diff little o and limits|<tuple|16.381|?>>
+    <associate|diff local diffeomorphism|<tuple|16.360|?>>
     <associate|diff mean value theorem (0)|<tuple|mean value theorem|?>>
     <associate|diff mean value theorem (1)|<tuple|16.233|?>>
     <associate|diff mean value theorem (2)|<tuple|16.236|?>>
@@ -33251,7 +33298,7 @@
     <associate|diff projection functon is infinite times
     differentiable|<tuple|16.198|?>>
     <associate|diff restriction of a diffeomorphism is a
-    diffeomorphism|<tuple|16.354|?>>
+    diffeomorphism|<tuple|16.355|?>>
     <associate|diff scalar product function has a derivate|<tuple|16.35|?>>
     <associate|diff second derivate convex concave|<tuple|16.228|?>>
     <associate|diff space of toplinear isomorphism|<tuple|16.334|?>>
@@ -33938,7 +33985,7 @@
     <associate|eq 23.150.18|<tuple|16.16|?>>
     <associate|fig 4.311|<tuple|16.4|?>>
     <associate|fig 5.311|<tuple|16.5|?>>
-    <associate|inverse function and derivate|<tuple|16.370|?>>
+    <associate|inverse function and derivate|<tuple|16.371|?>>
     <associate|lemma 16.101.194|<tuple|16.208|?>>
     <associate|lemma 16.104.194|<tuple|16.257|?>>
     <associate|lemma 16.105.194|<tuple|16.258|?>>
@@ -33972,22 +34019,22 @@
     <associate|lemma 16.229.127|<tuple|16.341|?>>
     <associate|lemma 16.232.301|<tuple|16.246|?>>
     <associate|lemma 16.24.178|<tuple|16.83|?>>
-    <associate|lemma 16.254.143|<tuple|16.371|?>>
+    <associate|lemma 16.254.143|<tuple|16.372|?>>
     <associate|lemma 16.313.310|<tuple|16.301|?>>
     <associate|lemma 16.314.320|<tuple|16.302|?>>
     <associate|lemma 16.315.320|<tuple|16.303|?>>
     <associate|lemma 16.316.320|<tuple|16.304|?>>
     <associate|lemma 16.318.320|<tuple|16.306|?>>
     <associate|lemma 16.37.4|<tuple|16.57|?>>
-    <associate|lemma 16.380.312|<tuple|16.403|?>>
-    <associate|lemma 16.380.315|<tuple|16.386|?>>
-    <associate|lemma 16.381.315|<tuple|16.387|?>>
-    <associate|lemma 16.382.315|<tuple|16.388|?>>
-    <associate|lemma 16.383.23|<tuple|16.409|?>>
-    <associate|lemma 16.383.315|<tuple|16.389|?>>
-    <associate|lemma 16.389.316|<tuple|16.397|?>>
-    <associate|lemma 16.391.316|<tuple|16.398|?>>
-    <associate|lemma 16.392.316|<tuple|16.399|?>>
+    <associate|lemma 16.380.312|<tuple|16.404|?>>
+    <associate|lemma 16.380.315|<tuple|16.387|?>>
+    <associate|lemma 16.381.315|<tuple|16.388|?>>
+    <associate|lemma 16.382.315|<tuple|16.389|?>>
+    <associate|lemma 16.383.23|<tuple|16.410|?>>
+    <associate|lemma 16.383.315|<tuple|16.390|?>>
+    <associate|lemma 16.389.316|<tuple|16.398|?>>
+    <associate|lemma 16.391.316|<tuple|16.399|?>>
+    <associate|lemma 16.392.316|<tuple|16.400|?>>
     <associate|lemma 16.51.186|<tuple|16.129|?>>
     <associate|lemma 16.53.186|<tuple|16.131|?>>
     <associate|lemma 16.54.187|<tuple|16.132|?>>
@@ -34006,8 +34053,8 @@
     <associate|lemma 16.98.194|<tuple|16.204|?>>
     <associate|normed space are assumed to be non trivial|<tuple|16.1|?>>
     <associate|note 16.210.127|<tuple|16.318|?>>
-    <associate|proposition 16.244.134|<tuple|16.362|?>>
-    <associate|proposition 16.249.138|<tuple|16.367|?>>
+    <associate|proposition 16.244.134|<tuple|16.363|?>>
+    <associate|proposition 16.249.138|<tuple|16.368|?>>
     <associate|toplinear isomorphism|<tuple|16.330|?>>
     <associate|topology every element of a generalized interval is a limit
     point|<tuple|16.10|?>>
@@ -34028,19 +34075,19 @@
 <\auxiliary>
   <\collection>
     <\associate|figure>
-      <tuple|normal|<surround|<hidden-binding|<tuple>|16.1>||>|<pageref|auto-72>>
+      <tuple|normal|<surround|<hidden-binding|<tuple>|16.1>||>|<pageref|auto-73>>
 
-      <tuple|normal|<surround|<hidden-binding|<tuple>|16.2>||>|<pageref|auto-73>>
+      <tuple|normal|<surround|<hidden-binding|<tuple>|16.2>||>|<pageref|auto-74>>
 
-      <tuple|normal|<surround|<hidden-binding|<tuple>|16.3>||>|<pageref|auto-76>>
+      <tuple|normal|<surround|<hidden-binding|<tuple>|16.3>||>|<pageref|auto-77>>
 
       <tuple|normal|<\surround|<hidden-binding|<tuple>|16.4>|>
         \;
-      </surround>|<pageref|auto-119>>
+      </surround>|<pageref|auto-120>>
 
       <tuple|normal|<\surround|<hidden-binding|<tuple>|16.5>|>
         \;
-      </surround>|<pageref|auto-120>>
+      </surround>|<pageref|auto-121>>
     </associate>
     <\associate|idx>
       <tuple|<tuple|convergence of a function>|<pageref|auto-4>>
@@ -34061,187 +34108,187 @@
 
       <tuple|<tuple|<with|mode|<quote|math>|f<rprime|'>>>|<pageref|auto-12>>
 
-      <tuple|<tuple|differentiability>|<pageref|auto-15>>
+      <tuple|<tuple|differentiability>|<pageref|auto-16>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|\<frak-D\><rsub|f>>>|<pageref|auto-16>>
+      <tuple|<tuple|<with|mode|<quote|math>|\<frak-D\><rsub|f>>>|<pageref|auto-17>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|D f>>|<pageref|auto-17>>
+      <tuple|<tuple|<with|mode|<quote|math>|D f>>|<pageref|auto-18>>
 
-      <tuple|<tuple|differential>|<pageref|auto-18>>
+      <tuple|<tuple|differential>|<pageref|auto-19>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|\<varepsilon\>>-mapping>|<pageref|auto-19>>
+      <tuple|<tuple|<with|mode|<quote|math>|\<varepsilon\>>-mapping>|<pageref|auto-20>>
 
-      <tuple|<tuple|Chain rule>|<pageref|auto-21>>
+      <tuple|<tuple|Chain rule>|<pageref|auto-22>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|I<rsup|<around*|[|i,x|]>>>>|<pageref|auto-23>>
+      <tuple|<tuple|<with|mode|<quote|math>|I<rsup|<around*|[|i,x|]>>>>|<pageref|auto-24>>
 
-      <tuple|<tuple|partial differential at a point>|<pageref|auto-24>>
+      <tuple|<tuple|partial differential at a point>|<pageref|auto-25>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|D<rsub|x,i>f>>|<pageref|auto-25>>
+      <tuple|<tuple|<with|mode|<quote|math>|D<rsub|x,i>f>>|<pageref|auto-26>>
 
-      <tuple|<tuple|partial differential>|<pageref|auto-26>>
+      <tuple|<tuple|partial differential>|<pageref|auto-27>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|D<rsub|i,x>f>>|<pageref|auto-27>>
+      <tuple|<tuple|<with|mode|<quote|math>|D<rsub|i,x>f>>|<pageref|auto-28>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|\<frak-D\><rsub|i,f>>>|<pageref|auto-28>>
+      <tuple|<tuple|<with|mode|<quote|math>|\<frak-D\><rsub|i,f>>>|<pageref|auto-29>>
 
-      <tuple|<tuple|partial derivate>|<pageref|auto-30>>
+      <tuple|<tuple|partial derivate>|<pageref|auto-31>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|\<partial\><rsub|x,i>f>>|<pageref|auto-31>>
+      <tuple|<tuple|<with|mode|<quote|math>|\<partial\><rsub|x,i>f>>|<pageref|auto-32>>
 
-      <tuple|<tuple|partial derivative at a point>|<pageref|auto-32>>
+      <tuple|<tuple|partial derivative at a point>|<pageref|auto-33>>
 
-      <tuple|<tuple|partial derivative>|<pageref|auto-33>>
+      <tuple|<tuple|partial derivative>|<pageref|auto-34>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|\<partial\><rsub|f>f>>|<pageref|auto-34>>
+      <tuple|<tuple|<with|mode|<quote|math>|\<partial\><rsub|f>f>>|<pageref|auto-35>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|\<cal-D\><rsub|i,f>>>|<pageref|auto-35>>
+      <tuple|<tuple|<with|mode|<quote|math>|\<cal-D\><rsub|i,f>>>|<pageref|auto-36>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|<around*|(|f<rsub|1>,\<ldots\>,f<rsub|n>|)>>>|<pageref|auto-37>>
+      <tuple|<tuple|<with|mode|<quote|math>|<around*|(|f<rsub|1>,\<ldots\>,f<rsub|n>|)>>>|<pageref|auto-38>>
 
-      <tuple|<tuple|Jacobian matrix>|<pageref|auto-38>>
+      <tuple|<tuple|Jacobian matrix>|<pageref|auto-39>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|<around*|[|<frac|\<partial\><around*|(|f<rsub|1>\<ldots\>,f<rsub|m>|)>|\<partial\><around*|(|1,\<ldots\>,n|)>>|]><rsub|x>>>|<pageref|auto-39>>
+      <tuple|<tuple|<with|mode|<quote|math>|<around*|[|<frac|\<partial\><around*|(|f<rsub|1>\<ldots\>,f<rsub|m>|)>|\<partial\><around*|(|1,\<ldots\>,n|)>>|]><rsub|x>>>|<pageref|auto-40>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|L<rsub|n><around*|(|X;Y|)>>>|<pageref|auto-43>>
+      <tuple|<tuple|<with|mode|<quote|math>|L<rsub|n><around*|(|X;Y|)>>>|<pageref|auto-44>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|L<around*|(|x<rsub|1>:\<ldots\>:x<rsub|n>|)>>>|<pageref|auto-44>>
+      <tuple|<tuple|<with|mode|<quote|math>|L<around*|(|x<rsub|1>:\<ldots\>:x<rsub|n>|)>>>|<pageref|auto-45>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|D<rsup|<around*|[|n|]>>f>>|<pageref|auto-46>>
+      <tuple|<tuple|<with|mode|<quote|math>|D<rsup|<around*|[|n|]>>f>>|<pageref|auto-47>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|\<frak-D\><rsup|n><rsub|f>>>|<pageref|auto-47>>
+      <tuple|<tuple|<with|mode|<quote|math>|\<frak-D\><rsup|n><rsub|f>>>|<pageref|auto-48>>
 
-      <tuple|<tuple|higher order differential>|<pageref|auto-48>>
+      <tuple|<tuple|higher order differential>|<pageref|auto-49>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|D<rsup|n>f<around*|(|x|)>>>|<pageref|auto-49>>
+      <tuple|<tuple|<with|mode|<quote|math>|D<rsup|n>f<around*|(|x|)>>>|<pageref|auto-50>>
 
-      <tuple|<tuple|higher order differential at a point>|<pageref|auto-50>>
+      <tuple|<tuple|higher order differential at a point>|<pageref|auto-51>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|D<rsup|<around*|[|n|]>><rsub|x>f>>|<pageref|auto-51>>
+      <tuple|<tuple|<with|mode|<quote|math>|D<rsup|<around*|[|n|]>><rsub|x>f>>|<pageref|auto-52>>
 
       <tuple|<tuple|<with|mode|<quote|math>|\<infty\>>-times
-      differentibility>|<pageref|auto-52>>
+      differentibility>|<pageref|auto-53>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|C<rsup|n>>>|<pageref|auto-53>>
+      <tuple|<tuple|<with|mode|<quote|math>|C<rsup|n>>>|<pageref|auto-54>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|C<rsup|0>>>|<pageref|auto-54>>
+      <tuple|<tuple|<with|mode|<quote|math>|C<rsup|0>>>|<pageref|auto-55>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|C<rsup|\<infty\>>>>|<pageref|auto-55>>
+      <tuple|<tuple|<with|mode|<quote|math>|C<rsup|\<infty\>>>>|<pageref|auto-56>>
 
-      <tuple|<tuple|higher order derivative>|<pageref|auto-57>>
+      <tuple|<tuple|higher order derivative>|<pageref|auto-58>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|\<cal-D\><rsup|n><rsub|f>>>|<pageref|auto-58>>
+      <tuple|<tuple|<with|mode|<quote|math>|\<cal-D\><rsup|n><rsub|f>>>|<pageref|auto-59>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|f<rsup|<around*|(|n|)>>>>|<pageref|auto-59>>
+      <tuple|<tuple|<with|mode|<quote|math>|f<rsup|<around*|(|n|)>>>>|<pageref|auto-60>>
 
-      <tuple|<tuple|higher order derivative at a point>|<pageref|auto-60>>
+      <tuple|<tuple|higher order derivative at a point>|<pageref|auto-61>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|f<rsup|<around*|(|n|)>><rsub|x>>>|<pageref|auto-61>>
+      <tuple|<tuple|<with|mode|<quote|math>|f<rsup|<around*|(|n|)>><rsub|x>>>|<pageref|auto-62>>
 
       <tuple|<tuple|chain rule higher order
-      differentiation>|<pageref|auto-65>>
+      differentiation>|<pageref|auto-66>>
 
       <tuple|<tuple|higher order differentiation chain
-      rule>|<pageref|auto-66>>
+      rule>|<pageref|auto-67>>
 
-      <tuple|<tuple|local weak minimum>|<pageref|auto-69>>
+      <tuple|<tuple|local weak minimum>|<pageref|auto-70>>
 
-      <tuple|<tuple|local weak maximum>|<pageref|auto-70>>
+      <tuple|<tuple|local weak maximum>|<pageref|auto-71>>
 
-      <tuple|<tuple|local extremum>|<pageref|auto-71>>
+      <tuple|<tuple|local extremum>|<pageref|auto-72>>
 
-      <tuple|<tuple|concave function>|<pageref|auto-74>>
+      <tuple|<tuple|concave function>|<pageref|auto-75>>
 
-      <tuple|<tuple|convex function>|<pageref|auto-75>>
+      <tuple|<tuple|convex function>|<pageref|auto-76>>
 
-      <tuple|<tuple|fundamental theorem of calculus (I)>|<pageref|auto-78>>
+      <tuple|<tuple|fundamental theorem of calculus (I)>|<pageref|auto-79>>
 
-      <tuple|<tuple|fundamental theorem of calculus (II)>|<pageref|auto-79>>
+      <tuple|<tuple|fundamental theorem of calculus (II)>|<pageref|auto-80>>
 
-      <tuple|<tuple|integration by parts>|<pageref|auto-80>>
+      <tuple|<tuple|integration by parts>|<pageref|auto-81>>
 
-      <tuple|<tuple|mean value theorem (I)>|<pageref|auto-82>>
+      <tuple|<tuple|mean value theorem (I)>|<pageref|auto-83>>
 
-      <tuple|<tuple|convex set>|<pageref|auto-83>>
+      <tuple|<tuple|convex set>|<pageref|auto-84>>
 
-      <tuple|<tuple|mean value theorem>|<pageref|auto-84>>
+      <tuple|<tuple|mean value theorem>|<pageref|auto-85>>
 
-      <tuple|<tuple|mean value theorem (III)>|<pageref|auto-85>>
+      <tuple|<tuple|mean value theorem (III)>|<pageref|auto-86>>
 
-      <tuple|<tuple|mean value theorem (IV)>|<pageref|auto-86>>
+      <tuple|<tuple|mean value theorem (IV)>|<pageref|auto-87>>
 
-      <tuple|<tuple|mean value theorem (V)>|<pageref|auto-87>>
+      <tuple|<tuple|mean value theorem (V)>|<pageref|auto-88>>
 
-      <tuple|<tuple|mean value theorem (VI)>|<pageref|auto-88>>
+      <tuple|<tuple|mean value theorem (VI)>|<pageref|auto-89>>
 
-      <tuple|<tuple|mean value theorem (VII)>|<pageref|auto-89>>
+      <tuple|<tuple|mean value theorem (VII)>|<pageref|auto-90>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|ev<rsub|v<rsub|1>,\<ldots\>,v<rsub|n>>>>|<pageref|auto-91>>
+      <tuple|<tuple|<with|mode|<quote|math>|ev<rsub|v<rsub|1>,\<ldots\>,v<rsub|n>>>>|<pageref|auto-92>>
 
-      <tuple|<tuple|evaluation operator>|<pageref|auto-92>>
+      <tuple|<tuple|evaluation operator>|<pageref|auto-93>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|L<rsub|n><around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>>|<pageref|auto-95>>
+      <tuple|<tuple|<with|mode|<quote|math>|L<rsub|n><around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>>|<pageref|auto-96>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|L<around*|(|x<rsub|1>:\<ldots\>:x<rsub|n>|)>>>|<pageref|auto-96>>
+      <tuple|<tuple|<with|mode|<quote|math>|L<around*|(|x<rsub|1>:\<ldots\>:x<rsub|n>|)>>>|<pageref|auto-97>>
 
-      <tuple|<tuple|higher order partial differential>|<pageref|auto-98>>
+      <tuple|<tuple|higher order partial differential>|<pageref|auto-99>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|\<frak-D\><rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>,f>>>|<pageref|auto-99>>
+      <tuple|<tuple|<with|mode|<quote|math>|\<frak-D\><rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>,f>>>|<pageref|auto-100>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|D<rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f>>|<pageref|auto-100>>
+      <tuple|<tuple|<with|mode|<quote|math>|D<rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f>>|<pageref|auto-101>>
 
       <tuple|<tuple|higher order partial differential at a
-      point>|<pageref|auto-101>>
+      point>|<pageref|auto-102>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|D<rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f>>|<pageref|auto-102>>
+      <tuple|<tuple|<with|mode|<quote|math>|D<rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f>>|<pageref|auto-103>>
 
-      <tuple|<tuple|higher order partial derivative>|<pageref|auto-104>>
+      <tuple|<tuple|higher order partial derivative>|<pageref|auto-105>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|\<cal-D\><rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>,f>>>|<pageref|auto-105>>
+      <tuple|<tuple|<with|mode|<quote|math>|\<cal-D\><rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>,f>>>|<pageref|auto-106>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|\<partial\><rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f>>|<pageref|auto-106>>
+      <tuple|<tuple|<with|mode|<quote|math>|\<partial\><rsub|<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f>>|<pageref|auto-107>>
 
-      <tuple|<tuple|higher partial derivative at a point>|<pageref|auto-107>>
+      <tuple|<tuple|higher partial derivative at a point>|<pageref|auto-108>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|\<partial\><rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f>>|<pageref|auto-108>>
+      <tuple|<tuple|<with|mode|<quote|math>|\<partial\><rsub|x,<around*|[|i<rsub|1>\<ldots\>i<rsub|m>|]>>f>>|<pageref|auto-109>>
 
-      <tuple|<tuple|topological vector space>|<pageref|auto-111>>
+      <tuple|<tuple|topological vector space>|<pageref|auto-112>>
 
-      <tuple|<tuple|toplinear isomorphism>|<pageref|auto-112>>
+      <tuple|<tuple|toplinear isomorphism>|<pageref|auto-113>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|\<cal-G\>L<around*|(|X|)>>>|<pageref|auto-113>>
+      <tuple|<tuple|<with|mode|<quote|math>|\<cal-G\>L<around*|(|X|)>>>|<pageref|auto-114>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|H<rsup|n>>>|<pageref|auto-114>>
+      <tuple|<tuple|<with|mode|<quote|math>|H<rsup|n>>>|<pageref|auto-115>>
 
-      <tuple|<tuple|diff diffeomorphism>|<pageref|auto-115>>
+      <tuple|<tuple|diff diffeomorphism>|<pageref|auto-116>>
 
-      <tuple|<tuple|local diffeomorphism>|<pageref|auto-116>>
+      <tuple|<tuple|local diffeomorphism>|<pageref|auto-117>>
 
-      <tuple|<tuple|inverse function theorem>|<pageref|auto-117>>
+      <tuple|<tuple|inverse function theorem>|<pageref|auto-118>>
 
-      <tuple|<tuple|implicit function theorem (1)>|<pageref|auto-121>>
+      <tuple|<tuple|implicit function theorem (1)>|<pageref|auto-122>>
 
-      <tuple|<tuple|implict function theorem (2)>|<pageref|auto-122>>
+      <tuple|<tuple|implict function theorem (2)>|<pageref|auto-123>>
 
-      <tuple|<tuple|Taylor's theorem (I)>|<pageref|auto-124>>
+      <tuple|<tuple|Taylor's theorem (I)>|<pageref|auto-125>>
 
-      <tuple|<tuple|Taylor's theorem (I.1)>|<pageref|auto-125>>
+      <tuple|<tuple|Taylor's theorem (I.1)>|<pageref|auto-126>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|<below|ord|x<below|\<rightarrow\>|A>x<rsub|0>>g<around*|(|x|)>>>|<pageref|auto-126>>
+      <tuple|<tuple|<with|mode|<quote|math>|<below|ord|x<below|\<rightarrow\>|A>x<rsub|0>>g<around*|(|x|)>>>|<pageref|auto-127>>
 
-      <tuple|<tuple|Taylor's theorem (I.2)>|<pageref|auto-127>>
+      <tuple|<tuple|Taylor's theorem (I.2)>|<pageref|auto-128>>
 
-      <tuple|<tuple|Taylor's theorem (I.3)>|<pageref|auto-128>>
+      <tuple|<tuple|Taylor's theorem (I.3)>|<pageref|auto-129>>
 
-      <tuple|<tuple|Taylor's theorem (I.4)>|<pageref|auto-129>>
+      <tuple|<tuple|Taylor's theorem (I.4)>|<pageref|auto-130>>
 
-      <tuple|<tuple|Taylor's theorem (II.1)>|<pageref|auto-130>>
+      <tuple|<tuple|Taylor's theorem (II.1)>|<pageref|auto-131>>
 
-      <tuple|<tuple|Taylor's theorem (II.2)>|<pageref|auto-131>>
+      <tuple|<tuple|Taylor's theorem (II.2)>|<pageref|auto-132>>
 
-      <tuple|<tuple|Taylor's theorem (III)>|<pageref|auto-132>>
+      <tuple|<tuple|Taylor's theorem (III)>|<pageref|auto-133>>
 
-      <tuple|<tuple|Taylor's theorem (IV)>|<pageref|auto-133>>
+      <tuple|<tuple|Taylor's theorem (IV)>|<pageref|auto-134>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|16<space|2spc>Differentiation
@@ -34260,110 +34307,114 @@
       derivative <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-13>>
 
-      <with|par-left|<quote|1tab>|16.1.3<space|2spc>Fréchet differential of a
-      function <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|16.1.3<space|2spc>Left and Right
+      derivatives <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-14>>
 
-      <with|par-left|<quote|1tab>|16.1.4<space|2spc>Properties of the Fréchet
+      <with|par-left|<quote|1tab>|16.1.4<space|2spc>Fréchet differential of a
+      function <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-15>>
+
+      <with|par-left|<quote|1tab>|16.1.5<space|2spc>Properties of the Fréchet
       differential. <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-20>>
+      <no-break><pageref|auto-21>>
 
-      <with|par-left|<quote|1tab>|16.1.5<space|2spc>Partial differentials
+      <with|par-left|<quote|1tab>|16.1.6<space|2spc>Partial differentials
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-22>>
+      <no-break><pageref|auto-23>>
 
-      <with|par-left|<quote|1tab>|16.1.6<space|2spc>Partial Derivatives
+      <with|par-left|<quote|1tab>|16.1.7<space|2spc>Partial Derivatives
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-29>>
+      <no-break><pageref|auto-30>>
 
-      <with|par-left|<quote|1tab>|16.1.7<space|2spc>Differentiation of vector
+      <with|par-left|<quote|1tab>|16.1.8<space|2spc>Differentiation of vector
       valued functions <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-36>>
+      <no-break><pageref|auto-37>>
 
-      <with|par-left|<quote|1tab>|16.1.8<space|2spc>Usefully derivatives
+      <with|par-left|<quote|1tab>|16.1.9<space|2spc>Usefully derivatives
       \ <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-40>>
+      <no-break><pageref|auto-41>>
 
       16.2<space|2spc>Higher order differentials
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-41>
+      <no-break><pageref|auto-42>
 
       <with|par-left|<quote|1tab>|16.2.1<space|2spc>Linear mappings and
       multi-linear mappings <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-42>>
+      <no-break><pageref|auto-43>>
 
       <with|par-left|<quote|1tab>|16.2.2<space|2spc>Higher order Fréchet
       differentiation. <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-45>>
+      <no-break><pageref|auto-46>>
 
       <with|par-left|<quote|1tab>|16.2.3<space|2spc>Higher order derivatives
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-56>>
+      <no-break><pageref|auto-57>>
 
       <with|par-left|<quote|1tab>|16.2.4<space|2spc>Properties of higher
       order differentials and derivatives.
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-62>>
+      <no-break><pageref|auto-63>>
 
       <with|par-left|<quote|1tab>|16.2.5<space|2spc>Examples of
       <with|mode|<quote|math>|\<infty\>>-times differentiable functions
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-63>>
+      <no-break><pageref|auto-64>>
 
       <with|par-left|<quote|1tab>|16.2.6<space|2spc>The chain rule for higher
       order differentials an derivatives <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-64>>
+      <no-break><pageref|auto-65>>
 
       16.3<space|2spc>Intermediate value and main value theorems.
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-67>
+      <no-break><pageref|auto-68>
 
       <with|par-left|<quote|1tab>|16.3.1<space|2spc>Derivatives, extremums,
       concavity, and convexity <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-68>>
+      <no-break><pageref|auto-69>>
 
       <with|par-left|<quote|1tab>|16.3.2<space|2spc>Fundamental theorem of
       Calculus for the Riemann Integral <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-77>>
+      <no-break><pageref|auto-78>>
 
       <with|par-left|<quote|1tab>|16.3.3<space|2spc>Mean Value Theorems
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-81>>
+      <no-break><pageref|auto-82>>
 
       16.4<space|2spc>Symmetry of Higher Order Differentials
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-90>
+      <no-break><pageref|auto-91>
 
       16.5<space|2spc>Higher Order Partial Differentiation
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-93>
+      <no-break><pageref|auto-94>
 
       <with|par-left|<quote|1tab>|16.5.1<space|2spc>Linear and multilinear
       mappings. <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-94>>
+      <no-break><pageref|auto-95>>
 
       <with|par-left|<quote|1tab>|16.5.2<space|2spc>Higher Order Partial
       Differentiation <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-97>>
+      <no-break><pageref|auto-98>>
 
       <with|par-left|<quote|1tab>|16.5.3<space|2spc>Higher Order Partial
       Derivatives <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-103>>
+      <no-break><pageref|auto-104>>
 
       16.6<space|2spc>Inverse Function Theorem
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-109>
+      <no-break><pageref|auto-110>
 
       <with|par-left|<quote|1tab>|16.6.1<space|2spc>Prerequisites
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-110>>
+      <no-break><pageref|auto-111>>
 
       <with|par-left|<quote|1tab>|16.6.2<space|2spc>Implicit Function Theorem
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-118>>
+      <no-break><pageref|auto-119>>
 
       16.7<space|2spc>Taylor Expansion <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-123>
+      <no-break><pageref|auto-124>
     </associate>
   </collection>
 </auxiliary>
