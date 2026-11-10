@@ -5698,6 +5698,35 @@
     </equation*>
   </proof>
 
+  We have a similar result for real valued functions of class
+  <math|C<rsup|r>.>
+
+  TODO
+
+  <\corollary>
+    Let <math|m\<in\>\<bbb-N\>>, <math|r\<in\>\<bbb-N\><rsub|0><big|cup><around*|{|\<infty\>|}>>
+    a <math|\<cal-M\><rsup|m><around*|\<langle\>|<rsup|>M,\<cal-T\>,\<cal-A\><rsub|>|\<rangle\>>>
+    a <math|m>-dimensional <math|C<rsup|r>> differentiable manifold and
+    <math|f:M\<rightarrow\>\<bbb-R\>> a function such that
+    <math|\<forall\>p\<in\>M> there exist a <math|U\<in\>\<cal-T\>> with
+    <math|p\<in\>U> such that
+
+    <\equation*>
+      f<rsub|\|U>:U\<rightarrow\>\<bbb-R\><text| is of class >C<rsup|r><text|
+      [using <math|\<cal-M\><rsup|m><around*|\<langle\>|U,\<cal-T\><rsub|\|U>,\<cal-A\><rsub|\|U>|\<rangle\>><text|>>>
+    </equation*>
+
+    then\ 
+
+    <\equation*>
+      f:M\<rightarrow\>\<bbb-R\><text| is of class >C<rsup|r>
+    </equation*>
+  </corollary>
+
+  <\proof>
+    TODO
+  </proof>
+
   <\theorem>
     <label|manifold C^r mspping id local (2)>Let <math|n,m\<in\>\<bbb-N\>>,
     <math|r\<in\>\<bbb-N\><rsub|0><big|cup><around*|{|\<infty\>|}>>,
@@ -7986,42 +8015,67 @@
   bump functions [see definitions: <reference|manifold bump function on
   manifold>] at every point of a manifold.
 
+  TODO recheck this theorem
+
   <\theorem>
     <label|manifold existence of a bump function>Let <math|m\<in\>\<bbb-N\>>,
     <math|k\<in\>\<bbb-N\><rsub|0><big|cup><around*|{|\<infty\>|}>>,
     <math|\<cal-M\><rsup|m><around*|\<langle\>|M,\<cal-T\>,\<cal-A\>|\<rangle\>>>
     a <math|m>-dimensional <math|C<rsup|k>> differentiable manifold,
     <math|p\<in\>M> and <math|U\<in\>\<cal-T\>> with <math|p\<in\>U>
-    <math|>then there exist a <math|C<rsup|k>> bump function at <math|p>
-    supported in <math|U>.
+    <math|>then there exist a function
+
+    <\equation*>
+      h:M\<rightarrow\>\<bbb-R\>
+    </equation*>
+
+    such that:\ 
+
+    <\enumerate>
+      <item><math|h> is of class <math|C<rsup|k>>
+
+      <item><math|h<around*|(|M|)>\<subseteq\><around*|[|0,1|]>>
+
+      <item><math|\<exists\>V\<in\>\<cal-T\>> with <math|p\<in\>V> and
+      <math|V\<subseteq\>U> such that <math|\<forall\>q\<in\>V>
+      <math|f<around*|(|q|)>=1>
+
+      <item><math|supp f\<subseteq\>U>
+    </enumerate>
+
+    <\note>
+      Using [definition: <reference|manifold bump function on manifold>] it
+      follows that <math|h> is a <with|font-series|bold|<math|C<rsup|k>> bump
+      function at <math|p> supported in <math|U>>.
+    </note>
   </theorem>
 
   <\proof>
     Using [corollary: <reference|manifold chart centered at a point>] there
     exist a <math|<around*|(|W,\<varphi\>|)>> with <math|p\<in\>W> such that
-    <math|\<psi\><around*|(|p|)>=0>. Let <math|<rigid|V=U<big|cap>W\<in\>T>>
-    and <math|\<psi\>=\<varphi\><rsub|\|V>> then by [theorem:
+    <math|\<psi\><around*|(|p|)>=0>. Let <math|<rigid|R=U<big|cap>W\<in\>T>>
+    and <math|\<psi\>=\<varphi\><rsub|\|R>> then by [theorem:
     <reference|manifold maximum atlas and sub charts>]
-    <math|<around*|(|V,\<psi\>|)>\<in\>\<cal-A\>> further, as
-    <math|p\<in\>U>, <math|p\<in\>V> and <math|\<psi\><around*|(|p|)>=\<varphi\><rsub|\|V><around*|(|p|)>=\<varphi\><around*|(|p|)>=0>.
+    <math|<around*|(|R,\<psi\>|)>\<in\>\<cal-A\>> further, as
+    <math|p\<in\>U>, <math|p\<in\>R> and <math|\<psi\><around*|(|p|)>=\<varphi\><rsub|\|R><around*|(|p|)>=\<varphi\><around*|(|p|)>=0>.
     To summarize we have\ 
 
-    <\equation*>
-      <around*|(|V,\<psi\>|)>\<in\>\<cal-A\><text|,
-      >p\<in\>V\<subseteq\>U<text|, >\<psi\><around*|(|p|)>=0\<in\>\<psi\><around*|(|V|)>
-    </equation*>
+    <\equation>
+      <label|eq 23.169.25><around*|(|R,\<psi\>|)>\<in\>\<cal-A\><text|,
+      >p\<in\>R\<subseteq\>U<text|, >\<psi\><around*|(|p|)>=0\<in\>\<psi\><around*|(|R|)>
+    </equation>
 
-    As <math|\<psi\><around*|(|V|)>> is a open set there exist a
+    As <math|\<psi\><around*|(|R|)>> is a open set there exist a
     <math|r\<in\>\<bbb-R\><rsup|+>> such that\ 
 
     <\equation*>
-      \<psi\><around*|(|p|)>=0\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,r|)>\<subseteq\>\<psi\><around*|(|V|)>
+      \<psi\><around*|(|p|)>=0\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,r|)>\<subseteq\>\<psi\><around*|(|R|)>
     </equation*>
 
     Then we have\ 
 
     <\equation>
-      <label|eq 23.169.24><wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,<frac|r|4>|)>|\<wide-bar\>>\<subseteq\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,<frac|r|2>|)>\<subseteq\><wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,<frac|r|2>|)>|\<wide-bar\>>\<subseteq\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,r|)>\<subseteq\>\<psi\><around*|(|V|)>
+      <label|eq 23.169.24><wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,<frac|r|4>|)>|\<wide-bar\>>\<subseteq\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,<frac|r|2>|)>\<subseteq\><wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,<frac|r|2>|)>|\<wide-bar\>>\<subseteq\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,r|)>\<subseteq\>\<psi\><around*|(|R|)>
     </equation>
 
     Using [theorem: <reference|manifold bump function (1)>] there exist a
@@ -8047,21 +8101,53 @@
 
     <\equation>
       <label|eq 23.173.24>h:M\<rightarrow\>\<bbb-R\><text| by
-      >h<around*|(|y|)>=<choice|<tformat|<table|<row|<cell|f<around*|(|\<psi\><around*|(|y|)>|)><text|
-      if >y\<in\>V>>|<row|<cell|0<text| if >y\<in\>M\\V>>>>>
+      >h<around*|(|q|)>=<choice|<tformat|<table|<row|<cell|f<around*|(|\<psi\><around*|(|q|)>|)><text|
+      if >q\<in\>R>>|<row|<cell|0<text| if >q\<in\>M\\R>>>>>
+    </equation>
+
+    By [corollary: <reference|compact ball in R^n>]
+    <math|><math|<wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,<frac|r|2>|)>|\<wide-bar\>>>
+    is compact, using <math|\<cal-T\><rsub|\<bbb-R\><rsup|m>>>, as
+    <math|><math|<wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,<frac|r|2>|)>|\<wide-bar\>>\<subseteq\>\<psi\><around*|(|R|)>>
+    it follows then by [theorem: <reference|compact subspace equivalences>]
+    <math|> <math|><math|<wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,<frac|r|2>|)>|\<wide-bar\>>>
+    is compact using the subspace topology
+    <math|<around*|(|\<cal-T\><rsub|\<bbb-R\><rsup|m>>|)><rsub|\|\<psi\><around*|(|R|)>>>.
+    Given that <math|\<psi\><rsup|-1>> is continuous [because <math|\<psi\>>
+    is a homeomorphism] it follows that <math|<around*|(|\<psi\><rsup|-1>|)><around*|(|<wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,<frac|r|2>|)>|\<wide-bar\>>|)>>
+    is compact using the subspacce topology <math|\<cal-T\><rsub|\|R>> so
+    that by [theorem: <reference|compact subspace equivalences>]
+    <math|<around*|(|\<psi\><rsup|-1>|)><around*|(|<wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,<frac|r|2>|)>|\<wide-bar\>>|)>>
+    is compact using the topology <math|\<cal-T\>>. As <math|\<cal-T\>> is
+    Hausdorff it follows by [theorem: <reference|compact set is closed in a
+    Hausdorff space>] that <math|><math|<around*|(|\<psi\><rsup|-1>|)><around*|(|<wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,<frac|r|2>|)>|\<wide-bar\>>|)>>
+    is closed. Now by [theorem: <reference|function inverse image preimage>]
+    <math|\<psi\><rsup|-1><around*|(|<wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,<frac|r|2>|)>|\<wide-bar\>>|)>=<around*|(|\<psi\><rsup|-1>|)><around*|(|<wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,<frac|r|2>|)>|\<wide-bar\>>|)>>
+    from which it follows that\ 
+
+    <\equation>
+      <label|eq 23.175.25>\<psi\><rsup|-1><around*|(|<wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,<frac|r|2>|)>|\<wide-bar\>>|)><text|
+      is closed using >\<cal-T\>
+    </equation>
+
+    so that\ 
+
+    <\equation>
+      <label|eq 23.174.24>M\\\<psi\><rsup|-1><around*|(|<wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,<frac|r|2>|)>|\<wide-bar\>>|)><text|
+      is a open set in >\<cal-T\>
     </equation>
 
     Let <math|q\<in\>M> then we have for <math|q> either:
 
     <\description>
-      <item*|<math|q\<in\>V>>Consider the function
+      <item*|<math|q\<in\>R>>Consider the function
 
       <\equation*>
-        h\<circ\>\<psi\><rsup|-1>:\<psi\><around*|(|V|)>\<rightarrow\>\<bbb-R\>
+        h\<circ\>\<psi\><rsup|-1>:\<psi\><around*|(|R|)>\<rightarrow\>\<bbb-R\>
       </equation*>
 
-      then <math|\<forall\>z\<in\>\<psi\><around*|(|V|)>> we have
-      <math|\<psi\><rsup|-1><around*|(|z|)>\<in\>V> so that
+      then <math|\<forall\>z\<in\>\<psi\><around*|(|R|)>> we have
+      <math|\<psi\><rsup|-1><around*|(|z|)>\<in\>R> so that
 
       <\equation*>
         <around*|(|h\<circ\>\<psi\><rsup|-1>|)><around*|(|z|)>=h<around*|(|\<psi\><rsup|-1><around*|(|z|)>|)><below|=|<text|[eq:
@@ -8073,54 +8159,21 @@
       is of class. To summarize\ 
 
       <\equation*>
-        <around*|(|V,\<psi\>|)>\<in\>\<cal-A\><text|, >q\<in\>V<text| and
-        >h\<circ\>\<psi\><rsup|-1>:\<psi\><around*|(|V|)>\<rightarrow\>\<bbb-R\><text|
+        <around*|(|R,\<psi\>|)>\<in\>\<cal-A\><text|, >q\<in\>R<text| and
+        >h\<circ\>\<psi\><rsup|-1>:\<psi\><around*|(|R|)>\<rightarrow\>\<bbb-R\><text|
         is of class >C<rsup|k>
       </equation*>
 
-      <item*|<math|q\<in\>M\\V>>By [corollary: <reference|compact ball in
-      R^n>] <math|><math|<wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,<frac|r|2>|)>|\<wide-bar\>>>
-      is compact, using <math|\<cal-T\><rsub|\<bbb-R\><rsup|m>>>, as
-      <math|><math|<wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,<frac|r|2>|)>|\<wide-bar\>>\<subseteq\>\<psi\><around*|(|V|)>>
-      it follows then by [theorem: <reference|compact subspace equivalences>]
-      <math|> <math|><math|<wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,<frac|r|2>|)>|\<wide-bar\>>>
-      is compact using the subspace topology
-      <math|<around*|(|\<cal-T\><rsub|\<bbb-R\><rsup|m>>|)><rsub|\|\<psi\><around*|(|V|)>>>.
-      Given that <math|\<psi\><rsup|-1>> is continuous [because
-      <math|\<psi\>> is a homeomorphism] it follows that
-      <math|<around*|(|\<psi\><rsup|-1>|)><around*|(|<wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,<frac|r|2>|)>|\<wide-bar\>>|)>>
-      is compact using the subspacce topology <math|\<cal-T\><rsub|\|V>> so
-      that by [theorem: <reference|compact subspace equivalences>]
-      <math|<around*|(|\<psi\><rsup|-1>|)><around*|(|<wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,<frac|r|2>|)>|\<wide-bar\>>|)>>
-      is compact using the topology <math|\<cal-T\>>. As <math|\<cal-T\>> is
-      Hausdorff it follows by [theorem: <reference|compact set is closed in a
-      Hausdorff space>] that <math|><math|<around*|(|\<psi\><rsup|-1>|)><around*|(|<wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,<frac|r|2>|)>|\<wide-bar\>>|)>>
-      is closed. Now by [theorem: <reference|function inverse image
-      preimage>] <math|\<psi\><rsup|-1><around*|(|<wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,<frac|r|2>|)>|\<wide-bar\>>|)>=<around*|(|\<psi\><rsup|-1>|)><around*|(|<wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,<frac|r|2>|)>|\<wide-bar\>>|)>>
-      from which it follows that\ 
-
-      <\equation*>
-        \<psi\><rsup|-1><around*|(|<wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,<frac|r|2>|)>|\<wide-bar\>>|)><text|
-        is closed using >\<cal-T\>
-      </equation*>
-
+      <item*|<math|q\<in\>M\\R>>As <math|><math|<wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,<frac|r|2>|)>|\<wide-bar\>><below|\<subseteq\>|<text|[eq:
+      <reference|eq 23.169.24>]>>\<psi\><around*|(|R|)>> it follows that
+      <math|\<psi\><rsup|-1><around*|(|<wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,<frac|r|2>|)>|\<wide-bar\>>|)>\<subseteq\>\<psi\><rsup|-1><around*|(|\<psi\><around*|(|R|)>|)>=R>
       so that\ 
 
       <\equation>
-        <label|eq 23.174.24>M\\\<psi\><rsup|-1><around*|(|<wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,<frac|r|2>|)>|\<wide-bar\>>|)><text|
-        is a open set in >\<cal-T\>
+        <label|eq 23.175.24>M\\R\<subseteq\>M\\\<psi\><rsup|-1><around*|(|<wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,<frac|r|2>|)>|\<wide-bar\>>|)>
       </equation>
 
-      As <math|><math|<wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,<frac|r|2>|)>|\<wide-bar\>><below|\<subseteq\>|<text|[eq:
-      <reference|eq 23.169.24>]>>\<psi\><around*|(|V|)>> it follows that
-      <math|\<psi\><rsup|-1><around*|(|<wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,<frac|r|2>|)>|\<wide-bar\>>|)>\<subseteq\>\<psi\><rsup|-1><around*|(|\<psi\><around*|(|V|)>|)>=V>
-      so that\ 
-
-      <\equation>
-        <label|eq 23.175.24>M\\V\<subseteq\>M\\\<psi\><rsup|-1><around*|(|<wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,<frac|r|2>|)>|\<wide-bar\>>|)>
-      </equation>
-
-      As <math|q\<in\>M\\V> it follows from the above that
+      As <math|q\<in\>M\\R> it follows from the above that
 
       <\equation>
         <label|eq 23.176.24>q\<in\>M\\\<psi\><rsup|-1><around*|(|<wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,<frac|r|2>|)>|\<wide-bar\>>|)>
@@ -8159,7 +8212,7 @@
       <math|\<gamma\><rsup|-1><around*|(|z|)>> either:\ 
 
       <\description>
-        <item*|<math|\<gamma\><rsup|-1><around*|(|z|)>\<in\>V>>As
+        <item*|<math|\<gamma\><rsup|-1><around*|(|z|)>\<in\>R>>As
         <math|z\<in\>\<gamma\><around*|(|Q|)>> we have that
         <math|\<gamma\><rsup|-1><around*|(|z|)>\<in\>Q\<subseteq\>M\\\<psi\><rsup|-1><around*|(|<wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,<frac|r|2>|)>|\<wide-bar\>>|)>>
         so that <math|<rigid|\<psi\><around*|(|\<gamma\><rsup|-1><around*|(|z|)>|)>\<nin\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,<frac|r|2>|)>>>,
@@ -8176,7 +8229,7 @@
           <reference|eq 23.173.24>]>>f<around*|(|\<psi\><around*|(|\<gamma\><rsup|-1><around*|(|z|)>|)>|)>=0
         </equation*>
 
-        <item*|<math|\<gamma\><rsup|-1><around*|(|z|)>\<in\>M\\V>>Then
+        <item*|<math|\<gamma\><rsup|-1><around*|(|z|)>\<in\>M\\R>>Then
 
         <\equation*>
           <around*|(|h\<circ\>\<gamma\><rsup|-1>|)><around*|(|z|)>=h<around*|(|\<gamma\><rsup|-1><around*|(|z|)>|)><below|=|<text|[eq:
@@ -8206,8 +8259,156 @@
       >C<rsup|k>
     </equation>
 
-    TODO
+    Let
+
+    <\equation*>
+      V=\<psi\><rsup|-1><around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,<frac|r|4>|)>|)>
+    </equation*>
+
+    As <math|\<psi\>> is a homeomorphism <math|\<psi\><rsup|-1><around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,<frac|r|4>|)>|)>\<in\>\<cal-T\><rsub|\|R><below||>>
+    which as <math|R\<in\>\<cal-T\>> proves by [theorem: <reference|topology
+    subspace topology open subset>] that <math|\<psi\><rsup|-1><around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,<frac|r|4>|)>|)>\<in\>\<cal-T\>>
+    so that\ 
+
+    <\equation*>
+      V\<in\>\<cal-T\>
+    </equation*>
+
+    As <math|\<psi\><around*|(|p|)>=0\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,<frac|r|4>|)>>
+    <math|p\<in\>\<psi\><rsup|-1><around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,<frac|r|4>|)>|)>>
+    so that\ 
+
+    <\equation*>
+      p\<in\>V
+    </equation*>
+
+    Further <math|\<forall\>q\<in\>M> we have
+
+    <\equation*>
+      h<around*|(|q|)>=<choice|<tformat|<table|<row|<cell|f<around*|(|\<psi\><around*|(|q|)>|)><text|
+      if >q\<in\>R>>|<row|<cell|0<text| if
+      >q\<in\>M\\R>>>>><below|\<in\>|<text|[eqs: <reference|eq
+      23.170.24>,<reference|eq 23.171.24>,<reference|eq
+      23.172.24>]>><choice|<tformat|<table|<row|<cell|<around*|[|0,1|]><text|
+      if >q\<in\>R>>|<row|<cell|<around*|[|0,1|]><text| if
+      >x\<in\>M\\R>>>>>\<in\><around*|[|0,1|]>
+    </equation*>
+
+    so that\ 
+
+    <\equation>
+      <label|eq 23.180.26>h<around*|(|M|)>\<subseteq\><around*|[|0,1|]>
+    </equation>
+
+    Let <math|q\<in\>V=\<psi\><rsup|-1><around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,<frac|r|4>|)>|)><below|\<subseteq\>|<text|[eq:
+    <reference|eq 23.169.24>]>>\<psi\><rsup|-1><around*|(|\<psi\><around*|(|R|)>|)>=R>
+    then <math|\<psi\><around*|(|q|)>\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,<frac|r|4>|)>>
+    and <math|q\<in\>R> so that <math|h<around*|(|q|)>=f<around*|(|\<psi\><around*|(|q|)>|)><below|\<in\>|<text|[eq:
+    <reference|eq 23.170.24>]>>1>. Hence we have\ 
+
+    <\equation>
+      <label|eq 23.181.26>\<forall\>q\<in\>V<text| >h<around*|(|q|)>=1
+    </equation>
+
+    Let <math|q\<in\><around*|{|q\<in\>M\|h<around*|(|q|)>\<neq\>0|}>> then
+    <math|q\<in\>R> [for if <math|q\<in\>M\\R> then <math|h<around*|(|q|)>=0>
+    by [eq: <reference|eq 23.173.24>]. Assume that
+    <math|\<psi\><around*|(|q|)>\<nin\><wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,<frac|r|2>|)>|\<wide-bar\>>>
+    then by [eq: <reference|eq 23.172.24>]
+    <math|h<around*|(|q|)>=f<around*|(|\<psi\><around*|(|q|)>|)>=0>
+    contradicting <math|q\<in\><around*|{|q\<in\>M\|h<around*|(|q|)>\<neq\>0|}>>.
+    Hence we have that <math|\<psi\><around*|(|q|)>\<in\><wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,<frac|r|2>|)>|\<wide-bar\>>>.
+    This proves tha <math|\<psi\><around*|(|<around*|{|q\<in\>M\|h<around*|(|q|)>\<neq\>0|}>|)>\<subseteq\><wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,<frac|r|2>|)>|\<wide-bar\>><below|\<subseteq\>|<text|[eq:
+    <reference|eq 23.169.24>]>>\<psi\><around*|(|R|)>> so that\ 
+
+    <\equation*>
+      <around*|{|q\<in\>M\|h<around*|(|q|)>\<neq\>0|}>\<subseteq\>\<psi\><rsup|-1><around*|(|<wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,<frac|r|2>|)>|\<wide-bar\>>|)>\<subseteq\>\<psi\><rsup|-1><around*|(|\<psi\><around*|(|R|)>|)>=R<below|\<subseteq\>|<text|[eq:
+      <reference|eq 23.169.25>]>>U
+    </equation*>
+
+    As by [eq: <reference|eq 23.175.25>] <math|\<psi\><rsup|-1><around*|(|<wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,<frac|r|2>|)>|\<wide-bar\>>|)>>
+    is closed we have that
+
+    <\equation*>
+      <wide|<around*|{|q\<in\>M\|h<around*|(|q|)>\<neq\>0|}>|\<wide-bar\>>\<subseteq\><wide|\<psi\><rsup|-1><around*|(|<wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,<frac|r|2>|)>|\<wide-bar\>>|)>|\<wide-bar\>><below|=|<text|[theorem:
+      <reference|topology closed set and closure>]>>\<psi\><rsup|-1><around*|(|<wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,<frac|r|2>|)>|\<wide-bar\>>|)>\<subseteq\>U
+    </equation*>
+
+    so that
+
+    <\equation>
+      <label|eq 23.182.26>supp h\<subseteq\>U
+    </equation>
+
+    So (1),(2),(3) and (4) are proved by [eqs: <reference|eq 23.177.24>,
+    <reference|eq 23.180.26>, <reference|eq 23.169.25>, <reference|eq
+    23.181.26> and <reference|eq 23.182.26>]
   </proof>
+
+  One use of a bump function is to 'extend' a <math|C<rsup|q>> function
+  defined on a open neighborhood of a point to a <math|C<rsup|q>> defined on
+  <math|M>. The extension is not absolute the function and the extension
+  agree only on a open neighborhood of the point that is a subset of the
+  original open neighborhood.
+
+  <\theorem>
+    <label|manifold extension of local functions><dueto|<math|C<rsup|q><text|
+    extensions>>>Let <math|m\<in\>\<bbb-N\>>,
+    <math|k\<in\>\<bbb-N\><rsub|0><big|cup><around*|{|\<infty\>|}>>,
+    <math|\<cal-M\><rsup|m><around*|\<langle\>|M,\<cal-T\>,\<cal-A\>|\<rangle\>>>
+    a <math|m>-dimensional <math|C<rsup|k>> differentiable manifold,
+    <math|p\<in\>M>, <math|U\<in\>\<cal-T\>> with <math|p\<in\>U> and
+
+    <\equation*>
+      f:U\<rightarrow\>\<bbb-R\><text| a function of class >C<rsup|k>
+    </equation*>
+
+    [using the manifold <math|\<cal-M\><rsup|k><around*|\<langle\>|U,\<cal-T\><rsub|\|U>,\<cal-A\><rsub|\|U>|\<rangle\>>>
+    [see example: <reference|manifold open subset of a differentiable
+    manifold>]] then there exist a <math|V\<in\>\<cal-T\>> with
+    <math|p\<in\>V\<subseteq\>U> and a function
+
+    <\equation*>
+      <wide|f|\<wide-bar\>>:M\<rightarrow\>\<bbb-R\><text| a function of
+      class >C<rsup|k>
+    </equation*>
+
+    such that\ 
+
+    <\equation*>
+      \<forall\>q\<in\>V<text| >f<around*|(|x|)>=<wide|f|\<wide-bar\>><around*|(|x|)>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    Using the previous theorem [theorem: <reference|manifold existence of a
+    bump function>] there exist a <math|V\<in\>\<cal-T\>> with
+    <math|x\<in\>V\<subseteq\>U> and a function
+    <math|h:M\<rightarrow\>\<bbb-R\>> of class <math|C<rsup|k>> such that\ 
+
+    <\equation*>
+      \<forall\>q\<in\>V<text| >h<around*|(|x|)>=1<text| and >supp
+      h\<subseteq\>U
+    </equation*>
+
+    Define now
+
+    <\equation*>
+      <wide|f|\<wide-bar\>>:M\<rightarrow\>\<bbb-R\><text| where
+      ><wide|f|\<wide-bar\>><around*|(|q|)>=<choice|<tformat|<table|<row|<cell|h<around*|(|q|)>\<cdot\>f<around*|(|q|)><text|
+      if >q\<in\>U>>|<row|<cell|0<text| if >q\<in\>M\\U>>>>>
+    </equation*>
+
+    TODO
+
+    <\equation*>
+      \;
+    </equation*>
+
+    \;
+  </proof>
+
+  \;
 
   We define now the concept of a partition of unity subordinate to a family
   of sets.
@@ -9118,7 +9319,7 @@
     <associate|eq 23.138.16|<tuple|23.147|?>>
     <associate|eq 23.139.16|<tuple|23.148|?>>
     <associate|eq 23.14.3|<tuple|23.18|?>>
-    <associate|eq 23.147.17|<tuple|23.178|?>>
+    <associate|eq 23.147.17|<tuple|23.183|?>>
     <associate|eq 23.15.2|<tuple|23.19|?>>
     <associate|eq 23.157.20|<tuple|23.150|?>>
     <associate|eq 23.158.20|<tuple|23.151|?>>
@@ -9140,16 +9341,21 @@
     <associate|eq 23.164.22|<tuple|23.166|?>>
     <associate|eq 23.165.22|<tuple|23.167|?>>
     <associate|eq 23.166.22|<tuple|23.168|?>>
-    <associate|eq 23.169.24|<tuple|23.169|?>>
+    <associate|eq 23.169.24|<tuple|23.170|?>>
+    <associate|eq 23.169.25|<tuple|23.169|?>>
     <associate|eq 23.17.2|<tuple|23.22|?>>
-    <associate|eq 23.170.24|<tuple|23.170|?>>
-    <associate|eq 23.171.24|<tuple|23.171|?>>
-    <associate|eq 23.172.24|<tuple|23.172|?>>
-    <associate|eq 23.173.24|<tuple|23.173|?>>
-    <associate|eq 23.174.24|<tuple|23.174|?>>
-    <associate|eq 23.175.24|<tuple|23.175|?>>
-    <associate|eq 23.176.24|<tuple|23.176|?>>
-    <associate|eq 23.177.24|<tuple|23.177|?>>
+    <associate|eq 23.170.24|<tuple|23.171|?>>
+    <associate|eq 23.171.24|<tuple|23.172|?>>
+    <associate|eq 23.172.24|<tuple|23.173|?>>
+    <associate|eq 23.173.24|<tuple|23.174|?>>
+    <associate|eq 23.174.24|<tuple|23.176|?>>
+    <associate|eq 23.175.24|<tuple|23.177|?>>
+    <associate|eq 23.175.25|<tuple|23.175|?>>
+    <associate|eq 23.176.24|<tuple|23.178|?>>
+    <associate|eq 23.177.24|<tuple|23.179|?>>
+    <associate|eq 23.180.26|<tuple|23.180|?>>
+    <associate|eq 23.181.26|<tuple|23.181|?>>
+    <associate|eq 23.182.26|<tuple|23.182|?>>
     <associate|eq 23.2.1|<tuple|23.6|?>>
     <associate|eq 23.2.3|<tuple|23.3|?>>
     <associate|eq 23.21.6|<tuple|23.21|?>>
@@ -9260,14 +9466,14 @@
     <associate|eq 23.98.12|<tuple|23.116|?>>
     <associate|eq 23.99.12|<tuple|23.117|?>>
     <associate|lemma 23.10.2|<tuple|23.19|?>>
-    <associate|lemma 23.101.2|<tuple|23.107|?>>
-    <associate|lemma 23.102.20|<tuple|23.101|?>>
-    <associate|lemma 23.103.20|<tuple|23.102|?>>
-    <associate|lemma 23.104.20|<tuple|23.103|?>>
-    <associate|lemma 23.104.22|<tuple|23.110|?>>
-    <associate|lemma 23.105.20|<tuple|23.104|?>>
-    <associate|lemma 23.106.20|<tuple|23.105|?>>
-    <associate|lemma 23.107.21|<tuple|23.106|?>>
+    <associate|lemma 23.101.2|<tuple|23.108|?>>
+    <associate|lemma 23.102.20|<tuple|23.102|?>>
+    <associate|lemma 23.103.20|<tuple|23.103|?>>
+    <associate|lemma 23.104.20|<tuple|23.104|?>>
+    <associate|lemma 23.104.22|<tuple|23.111|?>>
+    <associate|lemma 23.105.20|<tuple|23.105|?>>
+    <associate|lemma 23.106.20|<tuple|23.106|?>>
+    <associate|lemma 23.107.21|<tuple|23.107|?>>
     <associate|lemma 23.11.2|<tuple|23.20|?>>
     <associate|lemma 23.13.2|<tuple|23.21|?>>
     <associate|lemma 23.13.8|<tuple|23.17|?>>
@@ -9276,43 +9482,43 @@
     <associate|lemma 23.39.6|<tuple|23.44|?>>
     <associate|lemma 23.40.9|<tuple|23.48|?>>
     <associate|lemma 23.5.10|<tuple|23.5|?>>
-    <associate|lemma 23.81.14|<tuple|23.90|?>>
+    <associate|lemma 23.81.14|<tuple|23.91|?>>
     <associate|manifold C^m C^n atlas|<tuple|23.42|?>>
     <associate|manifold C^m C^n compatible|<tuple|23.38|?>>
     <associate|manifold C^m C^n manifold|<tuple|23.62|?>>
-    <associate|manifold C^m C^n mapping|<tuple|23.83|?>>
+    <associate|manifold C^m C^n mapping|<tuple|23.84|?>>
     <associate|manifold C^m chart|<tuple|23.36|?>>
     <associate|manifold C^m compatibility and restriction|<tuple|23.39|?>>
     <associate|manifold C^m mappings are continuous|<tuple|23.75|?>>
     <associate|manifold C^m mappings equivalences|<tuple|23.78|?>>
     <associate|manifold C^m mappings equivalences (1)|<tuple|23.76|?>>
-    <associate|manifold C^m(M)|<tuple|23.117|?>>
-    <associate|manifold C^q(M) is a vector space|<tuple|23.118|?>>
+    <associate|manifold C^m(M)|<tuple|23.120|?>>
+    <associate|manifold C^q(M) is a vector space|<tuple|23.121|?>>
     <associate|manifold C^r functions are C^r mappings|<tuple|23.80|?>>
-    <associate|manifold C^r mspping id local (2)|<tuple|23.82|?>>
+    <associate|manifold C^r mspping id local (2)|<tuple|23.83|?>>
     <associate|manifold C^r mspping id locsl|<tuple|23.81|?>>
     <associate|manifold R^n is a differentiable manifold|<tuple|23.66|?>>
-    <associate|manifold TpM is a vector space|<tuple|23.124|?>>
-    <associate|manifold TpM properties|<tuple|23.125|?>>
+    <associate|manifold TpM is a vector space|<tuple|23.127|?>>
+    <associate|manifold TpM properties|<tuple|23.128|?>>
     <associate|manifold a finite dimensional vector space is a differentiable
     manifold|<tuple|23.69|?>>
     <associate|manifold a topological manifold is locally
     compact|<tuple|23.25|?>>
     <associate|manifold atlas|<tuple|23.11|?>>
-    <associate|manifold bump function (1)|<tuple|23.111|?>>
-    <associate|manifold bump function on manifold|<tuple|23.99|?>>
+    <associate|manifold bump function (1)|<tuple|23.112|?>>
+    <associate|manifold bump function on manifold|<tuple|23.100|?>>
     <associate|manifold canonical example|<tuple|23.15|?>>
-    <associate|manifold chain rule|<tuple|23.85|?>>
+    <associate|manifold chain rule|<tuple|23.86|?>>
     <associate|manifold chart centered at a point|<tuple|23.51|?>>
     <associate|manifold chart that is compatible with a
     atlas|<tuple|23.43|?>>
-    <associate|manifold compact support|<tuple|23.98|?>>
+    <associate|manifold compact support|<tuple|23.99|?>>
     <associate|manifold compatible atlas|<tuple|23.54|?>>
     <associate|manifold compatible atlas (1)|<tuple|23.55|?>>
     <associate|manifold composition of a C^r mapping and a mapping of class
-    C^r|<tuple|23.126|?>>
+    C^r|<tuple|23.129|?>>
     <associate|manifold connectivity properties|<tuple|23.24|?>>
-    <associate|manifold constant functions|<tuple|23.119|?>>
+    <associate|manifold constant functions|<tuple|23.122|?>>
     <associate|manifold coordinate ball and cube|<tuple|23.9|?>>
     <associate|manifold coordinate domain|<tuple|23.8|?>>
     <associate|manifold coordinate transforms are a
@@ -9320,17 +9526,17 @@
     <associate|manifold cooridinate chart|<tuple|23.3|?>>
     <associate|manifold cooridinate chart existence|<tuple|23.10|?>>
     <associate|manifold cutoff function|<tuple|cutoff function|?>>
-    <associate|manifold cutoff function existence|<tuple|23.108|?>>
+    <associate|manifold cutoff function existence|<tuple|23.109|?>>
     <associate|manifold diffentiable atlas|<tuple|23.40|?>>
-    <associate|manifold diffeomorphic manifolds|<tuple|23.88|?>>
+    <associate|manifold diffeomorphic manifolds|<tuple|23.89|?>>
     <associate|manifold diffeomorphic manifolds have the same
-    dimension|<tuple|23.93|?>>
-    <associate|manifold diffeomorphism|<tuple|23.86|?>>
-    <associate|manifold diffeomorphism and inverse|<tuple|23.87|?>>
-    <associate|manifold diffeomorphism composition|<tuple|23.94|?>>
-    <associate|manifold diffeomorphism equivalence|<tuple|23.91|?>>
-    <associate|manifold diffeomorphism equivalence (1)|<tuple|23.92|?>>
-    <associate|manifold diffeomorphism is a homeomorphism|<tuple|23.89|?>>
+    dimension|<tuple|23.94|?>>
+    <associate|manifold diffeomorphism|<tuple|23.87|?>>
+    <associate|manifold diffeomorphism and inverse|<tuple|23.88|?>>
+    <associate|manifold diffeomorphism composition|<tuple|23.95|?>>
+    <associate|manifold diffeomorphism equivalence|<tuple|23.92|?>>
+    <associate|manifold diffeomorphism equivalence (1)|<tuple|23.93|?>>
+    <associate|manifold diffeomorphism is a homeomorphism|<tuple|23.90|?>>
     <associate|manifold differentiability real function|<tuple|23.45|?>>
     <associate|manifold differentiability real function (1)|<tuple|23.47|?>>
     <associate|manifold differentiability real function (2)|<tuple|23.59|?>>
@@ -9338,10 +9544,11 @@
     <associate|manifold differentiable manifold|<tuple|23.60|?>>
     <associate|manifold differentiable mappings|<tuple|23.71|?>>
     <associate|manifold differentiable structure|<tuple|23.57|?>>
-    <associate|manifold differential|<tuple|23.127|?>>
-    <associate|manifold differential properties|<tuple|23.128|?>>
-    <associate|manifold existence of a bump function|<tuple|23.113|?>>
+    <associate|manifold differential|<tuple|23.130|?>>
+    <associate|manifold differential properties|<tuple|23.131|?>>
+    <associate|manifold existence of a bump function|<tuple|23.114|?>>
     <associate|manifold existence of a maximal atlas|<tuple|23.58|?>>
+    <associate|manifold extension of local functions|<tuple|23.116|?>>
     <associate|manifold identity is a C^q mapping|<tuple|23.74|?>>
     <associate|manifold maximal atlas|<tuple|23.49|?>>
     <associate|manifold maximal atlas composition with a
@@ -9350,21 +9557,21 @@
     <associate|manifold open set is a sub manifold|<tuple|23.16|?>>
     <associate|manifold open subset of a differentiable
     manifold|<tuple|23.67|?>>
-    <associate|manifold partition of unity|<tuple|23.114|?>>
+    <associate|manifold partition of unity|<tuple|23.117|?>>
     <associate|manifold product of functions that are of class
-    C^q|<tuple|23.120|?>>
+    C^q|<tuple|23.123|?>>
     <associate|manifold real numbers are a differentiable
     manifold|<tuple|23.65|?>>
     <associate|manifold real numbers form a topological
     manifold|<tuple|23.14|?>>
     <associate|manifold restriction of a chart is a chart|<tuple|23.7|?>>
     <associate|manifold singleton chart|<tuple|23.63|?>>
-    <associate|manifold smooth partition of unity|<tuple|23.116|?>>
+    <associate|manifold smooth partition of unity|<tuple|23.119|?>>
     <associate|manifold sphere is a differentiable manifold|<tuple|23.68|?>>
     <associate|manifold sphere is a topological manifold|<tuple|23.18|?>>
-    <associate|manifold support|<tuple|23.96|?>>
-    <associate|manifold supported in a set|<tuple|23.97|?>>
-    <associate|manifold tangent vector|<tuple|23.121|?>>
+    <associate|manifold support|<tuple|23.97|?>>
+    <associate|manifold supported in a set|<tuple|23.98|?>>
+    <associate|manifold tangent vector|<tuple|23.124|?>>
     <associate|manifold topological|<tuple|23.2|?>>
     <associate|manifold topological (1)|<tuple|23.12|?>>
     <associate|manifold topological manifold is paracompact|<tuple|23.29|?>>
