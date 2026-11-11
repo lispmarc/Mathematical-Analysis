@@ -4081,11 +4081,10 @@
     <math|\<cal-M\><rsup|n><around*|\<langle\>|M,\<cal-T\>,\<cal-A\>|\<rangle\>>>
     be a <math|n>-dimensional <math|C<rsup|m>> differentiable manifold and
     <math|U\<in\>\<cal-T\>> a open set in <math|M> then
-    <math|\<cal-M\><rsup|n><around*|\<langle\>|U,\<cal-T\><rsub|\|U>,<around*|(|\<cal-A\><rsub|\|U>|)><rsup|<around*|{|m|}>>|\<rangle\>>>
-    is a <math|n>-dimensional <math|C<rsup|m>> differentiable manifold where
-    <math|\<cal-A\><rsub|\|U>=<around*|{|<around*|(|U<big|cap>V,\<psi\><rsub|\|U<big|cap>V>|)>\|<around*|(|V,\<psi\>|)>\<in\>\<cal-A\>|}>>.
-    Further we have that <math|\<cal-A\><rsub|\|U>\<subseteq\>\<cal-A\>> and
-    <math|<around*|(|\<cal-A\><rsub|\|U>|)><rsup|<around*|{|m|}>>=\<cal-A\>>.
+    <math|\<cal-A\><rsub|\|U>=<around*|{|<around*|(|U<big|cap>V,\<psi\><rsub|\|U<big|cap>V>|)>\|<around*|(|V,\<psi\>|)>\<in\>\<cal-A\>|}>>
+    is a <math|C<rsup|m>> atlas making <math|\<cal-M\><rsup|n><around*|\<langle\>|U,\<cal-T\><rsub|\|U>,<around*|(|\<cal-A\><rsub|\|U>|)><rsup|<around*|{|m|}>>|\<rangle\>>>
+    a <math|n>-dimensional <math|C<rsup|m>> differentiable manifold. Further
+    we have that <math|\<cal-A\><rsub|\|U>\<subseteq\>\<cal-A\>>.
   </example>
 
   <\proof>
@@ -4242,17 +4241,6 @@
 
     <\equation*>
       \<cal-A\><rsub|\|U>\<subseteq\>\<cal-A\>
-    </equation*>
-
-    Using then [theorem: <reference|manifold existence of a maximal
-    atlas>(4)] it follows that <math|<around*|(|\<cal-A\><rsub|\|U>|)><rsup|<around*|{|m|}>>=\<cal-A\><rsup|<around*|{|m|}>>>.
-    As <math|\<cal-A\>> is a maximal atlas containing itself we have by
-    [theorem: <reference|manifold existence of a maximal atlas>(2)]
-    <math|\<cal-A\>=\<cal-A\><rsup|<around*|{|m|}>>> from which it follows
-    that\ 
-
-    <\equation*>
-      <around*|(|\<cal-A\><rsub|\|U>|)><rsup|<around*|{|m|}>>=\<cal-A\>
     </equation*>
   </proof>
 
@@ -5700,32 +5688,6 @@
 
   We have a similar result for real valued functions of class
   <math|C<rsup|r>.>
-
-  TODO
-
-  <\corollary>
-    Let <math|m\<in\>\<bbb-N\>>, <math|r\<in\>\<bbb-N\><rsub|0><big|cup><around*|{|\<infty\>|}>>
-    a <math|\<cal-M\><rsup|m><around*|\<langle\>|<rsup|>M,\<cal-T\>,\<cal-A\><rsub|>|\<rangle\>>>
-    a <math|m>-dimensional <math|C<rsup|r>> differentiable manifold and
-    <math|f:M\<rightarrow\>\<bbb-R\>> a function such that
-    <math|\<forall\>p\<in\>M> there exist a <math|U\<in\>\<cal-T\>> with
-    <math|p\<in\>U> such that
-
-    <\equation*>
-      f<rsub|\|U>:U\<rightarrow\>\<bbb-R\><text| is of class >C<rsup|r><text|
-      [using <math|\<cal-M\><rsup|m><around*|\<langle\>|U,\<cal-T\><rsub|\|U>,\<cal-A\><rsub|\|U>|\<rangle\>><text|>>>
-    </equation*>
-
-    then\ 
-
-    <\equation*>
-      f:M\<rightarrow\>\<bbb-R\><text| is of class >C<rsup|r>
-    </equation*>
-  </corollary>
-
-  <\proof>
-    TODO
-  </proof>
 
   <\theorem>
     <label|manifold C^r mspping id local (2)>Let <math|n,m\<in\>\<bbb-N\>>,
@@ -8351,6 +8313,8 @@
   agree only on a open neighborhood of the point that is a subset of the
   original open neighborhood.
 
+  TODO check this\ 
+
   <\theorem>
     <label|manifold extension of local functions><dueto|<math|C<rsup|q><text|
     extensions>>>Let <math|m\<in\>\<bbb-N\>>,
@@ -8363,7 +8327,7 @@
       f:U\<rightarrow\>\<bbb-R\><text| a function of class >C<rsup|k>
     </equation*>
 
-    [using the manifold <math|\<cal-M\><rsup|k><around*|\<langle\>|U,\<cal-T\><rsub|\|U>,\<cal-A\><rsub|\|U>|\<rangle\>>>
+    [using the manifold <math|\<cal-M\><rsup|k><around*|\<langle\>|U,\<cal-T\><rsub|\|U>,<around*|(|\<cal-A\><rsub|\|U>|)><rsup|<around*|{|m|}>>|\<rangle\>>>
     [see example: <reference|manifold open subset of a differentiable
     manifold>]] then there exist a <math|V\<in\>\<cal-T\>> with
     <math|p\<in\>V\<subseteq\>U> and a function
@@ -8383,32 +8347,155 @@
   <\proof>
     Using the previous theorem [theorem: <reference|manifold existence of a
     bump function>] there exist a <math|V\<in\>\<cal-T\>> with
-    <math|x\<in\>V\<subseteq\>U> and a function
-    <math|h:M\<rightarrow\>\<bbb-R\>> of class <math|C<rsup|k>> such that\ 
 
-    <\equation*>
-      \<forall\>q\<in\>V<text| >h<around*|(|x|)>=1<text| and >supp
-      h\<subseteq\>U
-    </equation*>
+    <\equation>
+      <label|eq 23.183.26>p\<in\>V\<subseteq\>U
+    </equation>
+
+    and a function <math|h:M\<rightarrow\>\<bbb-R\>> of class
+    <math|C<rsup|k>> such that\ 
+
+    <\equation>
+      <label|eq 23.184.26>\<forall\>q\<in\>V<text| >h<around*|(|x|)>=1<text|
+      and >supp h\<subseteq\>U
+    </equation>
 
     Define now
 
-    <\equation*>
-      <wide|f|\<wide-bar\>>:M\<rightarrow\>\<bbb-R\><text| where
-      ><wide|f|\<wide-bar\>><around*|(|q|)>=<choice|<tformat|<table|<row|<cell|h<around*|(|q|)>\<cdot\>f<around*|(|q|)><text|
+    <\equation>
+      <label|eq 23.183.25><wide|f|\<wide-bar\>>:M\<rightarrow\>\<bbb-R\><text|
+      where ><wide|f|\<wide-bar\>><around*|(|q|)>=<choice|<tformat|<table|<row|<cell|h<around*|(|q|)>\<cdot\>f<around*|(|q|)><text|
       if >q\<in\>U>>|<row|<cell|0<text| if >q\<in\>M\\U>>>>>
-    </equation*>
+    </equation>
 
-    TODO
+    Let <math|q\<in\>M> then we have either:\ 
+
+    <\description>
+      <item*|<math|q\<in\>U>>By [example: <reference|manifold open subset of
+      a differentiable manifold>] <math|\<cal-A\><rsub|\|U>> is a
+      <math|C<rsup|k>> atlas on <math|U> with
+      <math|\<cal-A\><rsub|\|U>\<subseteq\>\<cal-A\>>, Hence there exist a
+      <rigid|<math|<around*|(|W,\<varphi\>|)>\<in\>\<cal-A\><rsub|\|U>\<subseteq\>\<cal-A\>>>
+      with <math|q\<in\>W> and <math|W\<subseteq\>U>. As <math|f> is of class
+      <math|C<rsup|k>> it follows from [theorem: <reference|lemma 23.37.9>]
+      that
+
+      <\equation*>
+        f\<circ\>\<varphi\><rsup|-1>:\<varphi\><around*|(|W|)>\<rightarrow\>\<bbb-R\><text|
+        is of class >C<rsup|k>
+      </equation*>
+
+      Further as <math|h> is of class <math|C<rsup|k>> and
+      <math|<around*|(|U,\<varphi\>|)>\<in\>\<cal-A\>> it follows from
+      [theorem: <reference|lemma 23.37.9>] that
+
+      <\equation*>
+        h\<circ\>\<varphi\><rsup|-1>:\<varphi\><around*|(|W|)>\<rightarrow\>\<bbb-R\><text|
+        is of class >C<rsup|k>
+      </equation*>
+
+      Hence using [theorem: <reference|diff higher order differential of a
+      product (1)>] it follows that\ 
+
+      <\equation*>
+        <around*|(|f\<circ\>\<varphi\><rsup|-1>|)>\<cdot\><around*|(|h\<circ\>\<varphi\><rsup|-1>|)>:\<varphi\><around*|(|W|)>\<rightarrow\>\<bbb-R\><text|
+        is of class >C<rsup|k>
+      </equation*>
+
+      Let <math|x\<in\>\<varphi\><around*|(|W|)>> then
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|<around*|(|f\<circ\>\<varphi\><rsup|-1>|)>\<cdot\><around*|(|h\<circ\>\<varphi\><rsup|-1>|)>|)><around*|(|x|)>>|<cell|=>|<cell|<around*|(|f\<circ\>\<varphi\><rsup|-1>|)><around*|(|x|)>\<cdot\><around*|(|h\<circ\>\<varphi\><rsup|-1>|)><around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|f<around*|(|\<varphi\><rsup|-1><around*|(|x|)>|)>\<cdot\>h<around*|(|\<varphi\><rsup|-1><around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|f\<cdot\>h|)><around*|(|\<varphi\><rsup|-1><around*|(|x|)>|)>>>|<row|<cell|>|<cell|<below|=|x\<in\>\<varphi\><around*|(|W|)>\<subseteq\>U>>|<cell|<wide|f|\<wide-bar\>><around*|(|\<varphi\><rsup|-1><around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<wide|f|\<wide-bar\>>\<circ\>\<varphi\><rsup|-1>|)><around*|(|x|)>>>>>
+      </eqnarray*>
+
+      which proves that <math|<around*|(|f\<circ\>\<varphi\><rsup|-1>|)>\<cdot\><around*|(|h\<circ\>\<varphi\><rsup|-1>|)>=<wide|f|\<wide-bar\>>\<circ\>\<varphi\><rsup|-1>>.
+      Hence we found a <math|<around*|(|W,\<varphi\>|)>\<in\>\<cal-A\>> such
+      that\ 
+
+      <\equation*>
+        <wide|f|\<wide-bar\>>\<circ\>\<varphi\><rsup|-1>:\<varphi\><around*|(|W|)>\<rightarrow\>\<bbb-R\><text|
+        is of class >C<rsup|k>
+      </equation*>
+
+      <item*|<math|q\<in\>M\\U>>As <math|\<cal-A\>> is a <math|C<rsup|k>>
+      atlas on <math|M> there exist a <math|<around*|(|Z,\<psi\>|)>\<in\>\<cal-A\>>
+      with <math|q\<in\>Z>. As <math|supp h> is closed it follows that
+      <math|M\\<around*|(|supp \ h|)>> is a open set, further, as <math|supp
+      h\<subseteq\>U>, it follows that <math|M\\U\<subseteq\>M\\<around*|(|supp
+      h|)>> so that <math|q\<in\>M\\<around*|(|supp h|)>>. Define
+      <math|W=Z<big|cap><around*|(|M\\<around*|(|supp h|)>|)>> and
+      <math|\<varphi\>=\<psi\><rsub|\|W>> then\ 
+
+      <\equation*>
+        q\<in\>W<infix-and>by <text|[theorem: <reference|manifold maximum
+        atlas and sub charts>] <math|<around*|(|W,\<varphi\>|)>\<in\>\<cal-A\>>>
+      </equation*>
+
+      Consider now the function\ 
+
+      <\equation*>
+        <wide|f|\<wide-bar\>>\<circ\>\<varphi\><rsup|-1>:\<varphi\><around*|(|W|)>\<rightarrow\>\<bbb-R\>
+      </equation*>
+
+      then <math|\<forall\>x\<in\>\<varphi\><around*|(|W|)>> we have for
+      <math|\<varphi\><rsup|-1><around*|(|x|)>> either:
+
+      <\description>
+        <item*|<math|\<varphi\><rsup|-1><around*|(|x|)>\<in\>U>>As
+        <math|\<varphi\><rsup|-1><around*|(|x|)>\<in\>\<varphi\><rsup|-1><around*|(|\<varphi\><around*|(|W|)>|)>=W=Z<big|cap><around*|(|M\\<around*|(|supp
+        h|)>|)>> so that <math|\<varphi\><rsup|-1><around*|(|x|)>\<nin\>supp
+        h> so that <math|h<around*|(|\<varphi\><rsup|-1><around*|(|x|)>|)>=0>.
+        Hence we have that
+
+        <\equation*>
+          <around*|(|<wide|f|\<wide-bar\>>\<circ\>\<varphi\><rsup|-1>|)><around*|(|x|)>=<wide|f|\<wide-bar\>><around*|(|\<psi\><rsup|-1><around*|(|x|)>|)><below|=|<text|[eq:
+          <reference|eq 23.183.25>]>>h<around*|(|\<psi\><rsup|-1><around*|(|x|)>|)>\<cdot\>f<around*|(|\<psi\><rsup|-1><around*|(|x|)>|)>=0\<cdot\>f<around*|(|\<varphi\><rsup|-1><around*|(|x|)>|)>=0
+        </equation*>
+
+        <item*|<math|\<varphi\><rsup|-1><around*|(|x|)>\<in\>M\\U>>Then\ 
+
+        <\equation*>
+          <around*|(|<wide|f|\<wide-bar\>>\<circ\>\<varphi\><rsup|-1>|)><around*|(|x|)>=<wide|f|\<wide-bar\>><around*|(|\<psi\><rsup|-1><around*|(|x|)>|)><below|=|<text|[eq:
+          <reference|eq 23.183.25>]>>0
+        </equation*>
+      </description>
+
+      which proves that <math|<wide||\<wide-bar\>><wide|f|\<wide-bar\>>\<circ\>\<varphi\><rsup|-1>=C<rsub|0>>.
+      Using now [example: <reference|diff constant function is infinitely
+      times differentiable>] it follows that
+      <math|<wide|f|\<wide-bar\>>\<circ\>\<varphi\><rsup|-1>> is of class
+      <math|C<rsup|k>>. Hence we found a <math|<around*|(|W,\<varphi\>|)>\<in\>\<cal-A\>>
+      with <math|q\<in\>W> such that\ 
+
+      <\equation*>
+        <wide|f|\<wide-bar\>>\<circ\>\<varphi\><rsup|-1>:\<varphi\><around*|(|W|)>\<rightarrow\>\<bbb-R\><text|
+        is of class >C<rsup|k>
+      </equation*>
+    </description>
+
+    As the above is true for every <math|q\<in\>M> it follow from
+    [definition: <reference|manifold differentiability real function>] that\ 
 
     <\equation*>
-      \;
+      <wide|f|\<wide-bar\>>:M\<rightarrow\>\<bbb-R\><text| is of class
+      >C<rsup|k>
     </equation*>
 
-    \;
-  </proof>
+    Finally let <math|q\<in\>V> then as <math|V\<subseteq\>U> [see eq:
+    <reference|eq 23.183.26>] <math|q\<in\>U> so that\ 
 
-  \;
+    <\equation*>
+      <wide|f|\<wide-bar\>><around*|(|q|)><below|=|<text|[eq: <reference|eq
+      23.183.25>]>>=h<around*|(|q|)>\<cdot\>f<around*|(|q|)><below|=|<text|[eq:
+      <reference|eq 23.184.26>]>>1\<cdot\>f<around*|(|x|)>=f<around*|(|x|)>
+    </equation*>
+
+    which proves that\ 
+
+    <\equation*>
+      \<forall\>q\<in\>V<text| we have ><wide|f|\<wide-bar\>><around*|(|q|)>=f<around*|(|q|)>
+    </equation*>
+  </proof>
 
   We define now the concept of a partition of unity subordinate to a family
   of sets.
@@ -9319,7 +9406,7 @@
     <associate|eq 23.138.16|<tuple|23.147|?>>
     <associate|eq 23.139.16|<tuple|23.148|?>>
     <associate|eq 23.14.3|<tuple|23.18|?>>
-    <associate|eq 23.147.17|<tuple|23.183|?>>
+    <associate|eq 23.147.17|<tuple|23.186|?>>
     <associate|eq 23.15.2|<tuple|23.19|?>>
     <associate|eq 23.157.20|<tuple|23.150|?>>
     <associate|eq 23.158.20|<tuple|23.151|?>>
@@ -9356,6 +9443,9 @@
     <associate|eq 23.180.26|<tuple|23.180|?>>
     <associate|eq 23.181.26|<tuple|23.181|?>>
     <associate|eq 23.182.26|<tuple|23.182|?>>
+    <associate|eq 23.183.25|<tuple|23.185|?>>
+    <associate|eq 23.183.26|<tuple|23.183|?>>
+    <associate|eq 23.184.26|<tuple|23.184|?>>
     <associate|eq 23.2.1|<tuple|23.6|?>>
     <associate|eq 23.2.3|<tuple|23.3|?>>
     <associate|eq 23.21.6|<tuple|23.21|?>>
@@ -9466,14 +9556,14 @@
     <associate|eq 23.98.12|<tuple|23.116|?>>
     <associate|eq 23.99.12|<tuple|23.117|?>>
     <associate|lemma 23.10.2|<tuple|23.19|?>>
-    <associate|lemma 23.101.2|<tuple|23.108|?>>
-    <associate|lemma 23.102.20|<tuple|23.102|?>>
-    <associate|lemma 23.103.20|<tuple|23.103|?>>
-    <associate|lemma 23.104.20|<tuple|23.104|?>>
-    <associate|lemma 23.104.22|<tuple|23.111|?>>
-    <associate|lemma 23.105.20|<tuple|23.105|?>>
-    <associate|lemma 23.106.20|<tuple|23.106|?>>
-    <associate|lemma 23.107.21|<tuple|23.107|?>>
+    <associate|lemma 23.101.2|<tuple|23.107|?>>
+    <associate|lemma 23.102.20|<tuple|23.101|?>>
+    <associate|lemma 23.103.20|<tuple|23.102|?>>
+    <associate|lemma 23.104.20|<tuple|23.103|?>>
+    <associate|lemma 23.104.22|<tuple|23.110|?>>
+    <associate|lemma 23.105.20|<tuple|23.104|?>>
+    <associate|lemma 23.106.20|<tuple|23.105|?>>
+    <associate|lemma 23.107.21|<tuple|23.106|?>>
     <associate|lemma 23.11.2|<tuple|23.20|?>>
     <associate|lemma 23.13.2|<tuple|23.21|?>>
     <associate|lemma 23.13.8|<tuple|23.17|?>>
@@ -9482,43 +9572,43 @@
     <associate|lemma 23.39.6|<tuple|23.44|?>>
     <associate|lemma 23.40.9|<tuple|23.48|?>>
     <associate|lemma 23.5.10|<tuple|23.5|?>>
-    <associate|lemma 23.81.14|<tuple|23.91|?>>
+    <associate|lemma 23.81.14|<tuple|23.90|?>>
     <associate|manifold C^m C^n atlas|<tuple|23.42|?>>
     <associate|manifold C^m C^n compatible|<tuple|23.38|?>>
     <associate|manifold C^m C^n manifold|<tuple|23.62|?>>
-    <associate|manifold C^m C^n mapping|<tuple|23.84|?>>
+    <associate|manifold C^m C^n mapping|<tuple|23.83|?>>
     <associate|manifold C^m chart|<tuple|23.36|?>>
     <associate|manifold C^m compatibility and restriction|<tuple|23.39|?>>
     <associate|manifold C^m mappings are continuous|<tuple|23.75|?>>
     <associate|manifold C^m mappings equivalences|<tuple|23.78|?>>
     <associate|manifold C^m mappings equivalences (1)|<tuple|23.76|?>>
-    <associate|manifold C^m(M)|<tuple|23.120|?>>
-    <associate|manifold C^q(M) is a vector space|<tuple|23.121|?>>
+    <associate|manifold C^m(M)|<tuple|23.119|?>>
+    <associate|manifold C^q(M) is a vector space|<tuple|23.120|?>>
     <associate|manifold C^r functions are C^r mappings|<tuple|23.80|?>>
-    <associate|manifold C^r mspping id local (2)|<tuple|23.83|?>>
+    <associate|manifold C^r mspping id local (2)|<tuple|23.82|?>>
     <associate|manifold C^r mspping id locsl|<tuple|23.81|?>>
     <associate|manifold R^n is a differentiable manifold|<tuple|23.66|?>>
-    <associate|manifold TpM is a vector space|<tuple|23.127|?>>
-    <associate|manifold TpM properties|<tuple|23.128|?>>
+    <associate|manifold TpM is a vector space|<tuple|23.126|?>>
+    <associate|manifold TpM properties|<tuple|23.127|?>>
     <associate|manifold a finite dimensional vector space is a differentiable
     manifold|<tuple|23.69|?>>
     <associate|manifold a topological manifold is locally
     compact|<tuple|23.25|?>>
     <associate|manifold atlas|<tuple|23.11|?>>
-    <associate|manifold bump function (1)|<tuple|23.112|?>>
-    <associate|manifold bump function on manifold|<tuple|23.100|?>>
+    <associate|manifold bump function (1)|<tuple|23.111|?>>
+    <associate|manifold bump function on manifold|<tuple|23.99|?>>
     <associate|manifold canonical example|<tuple|23.15|?>>
-    <associate|manifold chain rule|<tuple|23.86|?>>
+    <associate|manifold chain rule|<tuple|23.85|?>>
     <associate|manifold chart centered at a point|<tuple|23.51|?>>
     <associate|manifold chart that is compatible with a
     atlas|<tuple|23.43|?>>
-    <associate|manifold compact support|<tuple|23.99|?>>
+    <associate|manifold compact support|<tuple|23.98|?>>
     <associate|manifold compatible atlas|<tuple|23.54|?>>
     <associate|manifold compatible atlas (1)|<tuple|23.55|?>>
     <associate|manifold composition of a C^r mapping and a mapping of class
-    C^r|<tuple|23.129|?>>
+    C^r|<tuple|23.128|?>>
     <associate|manifold connectivity properties|<tuple|23.24|?>>
-    <associate|manifold constant functions|<tuple|23.122|?>>
+    <associate|manifold constant functions|<tuple|23.121|?>>
     <associate|manifold coordinate ball and cube|<tuple|23.9|?>>
     <associate|manifold coordinate domain|<tuple|23.8|?>>
     <associate|manifold coordinate transforms are a
@@ -9526,17 +9616,17 @@
     <associate|manifold cooridinate chart|<tuple|23.3|?>>
     <associate|manifold cooridinate chart existence|<tuple|23.10|?>>
     <associate|manifold cutoff function|<tuple|cutoff function|?>>
-    <associate|manifold cutoff function existence|<tuple|23.109|?>>
+    <associate|manifold cutoff function existence|<tuple|23.108|?>>
     <associate|manifold diffentiable atlas|<tuple|23.40|?>>
-    <associate|manifold diffeomorphic manifolds|<tuple|23.89|?>>
+    <associate|manifold diffeomorphic manifolds|<tuple|23.88|?>>
     <associate|manifold diffeomorphic manifolds have the same
-    dimension|<tuple|23.94|?>>
-    <associate|manifold diffeomorphism|<tuple|23.87|?>>
-    <associate|manifold diffeomorphism and inverse|<tuple|23.88|?>>
-    <associate|manifold diffeomorphism composition|<tuple|23.95|?>>
-    <associate|manifold diffeomorphism equivalence|<tuple|23.92|?>>
-    <associate|manifold diffeomorphism equivalence (1)|<tuple|23.93|?>>
-    <associate|manifold diffeomorphism is a homeomorphism|<tuple|23.90|?>>
+    dimension|<tuple|23.93|?>>
+    <associate|manifold diffeomorphism|<tuple|23.86|?>>
+    <associate|manifold diffeomorphism and inverse|<tuple|23.87|?>>
+    <associate|manifold diffeomorphism composition|<tuple|23.94|?>>
+    <associate|manifold diffeomorphism equivalence|<tuple|23.91|?>>
+    <associate|manifold diffeomorphism equivalence (1)|<tuple|23.92|?>>
+    <associate|manifold diffeomorphism is a homeomorphism|<tuple|23.89|?>>
     <associate|manifold differentiability real function|<tuple|23.45|?>>
     <associate|manifold differentiability real function (1)|<tuple|23.47|?>>
     <associate|manifold differentiability real function (2)|<tuple|23.59|?>>
@@ -9544,11 +9634,11 @@
     <associate|manifold differentiable manifold|<tuple|23.60|?>>
     <associate|manifold differentiable mappings|<tuple|23.71|?>>
     <associate|manifold differentiable structure|<tuple|23.57|?>>
-    <associate|manifold differential|<tuple|23.130|?>>
-    <associate|manifold differential properties|<tuple|23.131|?>>
-    <associate|manifold existence of a bump function|<tuple|23.114|?>>
+    <associate|manifold differential|<tuple|23.129|?>>
+    <associate|manifold differential properties|<tuple|23.130|?>>
+    <associate|manifold existence of a bump function|<tuple|23.113|?>>
     <associate|manifold existence of a maximal atlas|<tuple|23.58|?>>
-    <associate|manifold extension of local functions|<tuple|23.116|?>>
+    <associate|manifold extension of local functions|<tuple|23.115|?>>
     <associate|manifold identity is a C^q mapping|<tuple|23.74|?>>
     <associate|manifold maximal atlas|<tuple|23.49|?>>
     <associate|manifold maximal atlas composition with a
@@ -9557,21 +9647,21 @@
     <associate|manifold open set is a sub manifold|<tuple|23.16|?>>
     <associate|manifold open subset of a differentiable
     manifold|<tuple|23.67|?>>
-    <associate|manifold partition of unity|<tuple|23.117|?>>
+    <associate|manifold partition of unity|<tuple|23.116|?>>
     <associate|manifold product of functions that are of class
-    C^q|<tuple|23.123|?>>
+    C^q|<tuple|23.122|?>>
     <associate|manifold real numbers are a differentiable
     manifold|<tuple|23.65|?>>
     <associate|manifold real numbers form a topological
     manifold|<tuple|23.14|?>>
     <associate|manifold restriction of a chart is a chart|<tuple|23.7|?>>
     <associate|manifold singleton chart|<tuple|23.63|?>>
-    <associate|manifold smooth partition of unity|<tuple|23.119|?>>
+    <associate|manifold smooth partition of unity|<tuple|23.118|?>>
     <associate|manifold sphere is a differentiable manifold|<tuple|23.68|?>>
     <associate|manifold sphere is a topological manifold|<tuple|23.18|?>>
-    <associate|manifold support|<tuple|23.97|?>>
-    <associate|manifold supported in a set|<tuple|23.98|?>>
-    <associate|manifold tangent vector|<tuple|23.124|?>>
+    <associate|manifold support|<tuple|23.96|?>>
+    <associate|manifold supported in a set|<tuple|23.97|?>>
+    <associate|manifold tangent vector|<tuple|23.123|?>>
     <associate|manifold topological|<tuple|23.2|?>>
     <associate|manifold topological (1)|<tuple|23.12|?>>
     <associate|manifold topological manifold is paracompact|<tuple|23.29|?>>
