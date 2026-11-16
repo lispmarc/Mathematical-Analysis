@@ -11367,6 +11367,85 @@
     </enumerate>
   </proof>
 
+  Induction is also used to prove that every subset of the natural numbers
+  has a minimum.
+
+  <\theorem>
+    <label|complex every set of natural numbers has a minimum>Let
+    <math|A\<subseteq\>\<bbb-N\><rsub|0,\<bbb-C\>>> be such that
+    <math|A\<neq\>\<varnothing\>> then <math|min<around*|(|A|)>> exists.
+  </theorem>
+
+  <\proof>
+    We prove this by contradiction. So assume that\ 
+
+    <\equation>
+      <label|eq 10.48.1>\<forall\>x\<in\>A<text| >\<exists\>y\<in\>A<text|
+      with >y\<less\>x
+    </equation>
+
+    then we prove by induction that <math|\<forall\>n\<in\><around*|{|0,\<ldots\>,\<infty\>|}><text|
+    we have ><around*|{|1,\<ldots\>,n|}><big|cap>A=\<varnothing\>>. So define
+
+    <\equation*>
+      S=<around*|{|n\<in\>\<bbb-N\><rsub|0,\<bbb-C\>>\|<around*|{|0,\<ldots\>,n|}><big|cap>A=\<varnothing\>|}><text|
+      then we have>
+    </equation*>
+
+    <\description>
+      <item*|<math|0\<in\>S>>Assume that <math|0\<in\>A> then by [eq:
+      <reference|eq 10.48.1>] there exist a
+      <math|y\<in\>A\<subseteq\>\<bbb-N\><rsub|0><text| such that
+      >y\<less\>0>, by [theorem: <reference|complex NC contains non negative
+      values>] <math|0\<leqslant\>y> so that we reach the contradiction
+      <math|0\<less\>0>. Hence the assumption is wrong and we must have that
+      <math|0\<nin\>A> or <math|<around*|{|0|}><big|cap>A=\<varnothing\>>
+      which proves that\ 
+
+      <\equation*>
+        0\<in\>S
+      </equation*>
+
+      <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>As <math|n\<in\>S> we
+      have that\ 
+
+      <\equation*>
+        <around*|{|0,\<ldots\>,n|}><big|cap>A=\<varnothing\>
+      </equation*>
+
+      Assume that <math|n+1\<in\>A> then by [eq: <reference|eq 10.48.1>]
+      there exist a <math|y\<in\>A> with <math|y\<less\>n+1>, as
+      <math|><math|<rigid|<around*|{|0,\<ldots\>,n|}><big|cap>A=\<varnothing\>>>
+      it follows that <math|n\<less\>y\<Rightarrow\>n+1\<leqslant\>y>, hence
+      we reach the contradiction <rigid|<math|n+1\<less\>n+1>>. So the
+      assumption is wrong and we must have that <math|n+1\<nin\>S> which
+      proves that\ 
+
+      <\equation*>
+        <around*|{|0,\<ldots\>,n+1|}><big|cap>A=\<varnothing\>
+      </equation*>
+
+      or\ 
+
+      <\equation*>
+        n+1\<in\>S
+      </equation*>
+    </description>
+
+    Mathematical induction proves then that <math|S=\<bbb-N\><rsub|0>> hence
+    if <math|n\<in\>A\<subseteq\>\<bbb-N\><rsub|n>> then
+    <math|<around*|{|1,\<ldots\>,n|}><big|cap>A=\<varnothing\>> so that
+    <math|n\<nin\>A>, a contradiction. So the assumption in [eq:
+    <reference|eq 10.48.1>] is wrong and we have instead that\ 
+
+    <\equation*>
+      \<exists\>x\<in\>A<text| with >\<forall\>y\<in\>A<text| we have that
+      >x\<leqslant\>y
+    </equation*>
+
+    which proves that <math|x=min<around*|(|A|)>> exists.
+  </proof>
+
   We turn now to recursion.
 
   <\theorem>
@@ -14507,13 +14586,13 @@
     <associate|auto-7|<tuple|absolute value|?>>
     <associate|auto-8|<tuple|<with|mode|<quote|math>|<around*|\||x|\|>>|?>>
     <associate|auto-9|<tuple|<with|mode|<quote|math>|m\|n>|?>>
-    <associate|complex (x^n)^m|<tuple|10.53|?>>
-    <associate|complex (x^n-1)\<gtr\>=n.(x-1)|<tuple|10.59|?>>
+    <associate|complex (x^n)^m|<tuple|10.54|?>>
+    <associate|complex (x^n-1)\<gtr\>=n.(x-1)|<tuple|10.60|?>>
     <associate|complex 0\<less\>1|<tuple|10.10|?>>
     <associate|complex 0\<less\>=x\<less\>=z then
-    x^2\<less\>=y^2|<tuple|10.50|?>>
-    <associate|complex 0\<less\>x^n\<less\>e|<tuple|10.64|?>>
-    <associate|complex 1\<less\>x then a\<less\>x^n|<tuple|10.61|?>>
+    x^2\<less\>=y^2|<tuple|10.51|?>>
+    <associate|complex 0\<less\>x^n\<less\>e|<tuple|10.65|?>>
+    <associate|complex 1\<less\>x then a\<less\>x^n|<tuple|10.62|?>>
     <associate|complex Archimedean property|<tuple|10.29|?>>
     <associate|complex Archimedean property consequence (1)|<tuple|10.30|?>>
     <associate|complex Archimedean property consequence (2)|<tuple|10.31|?>>
@@ -14524,76 +14603,78 @@
     <associate|complex RC order (1)|<tuple|10.7|?>>
     <associate|complex RC order (2)|<tuple|10.8|?>>
     <associate|complex RC order properties|<tuple|10.14|?>>
-    <associate|complex a\<less\>2^n|<tuple|10.58|?>>
-    <associate|complex cardinality|<tuple|10.89|?>>
-    <associate|complex cardinality adding element|<tuple|10.93|?>>
-    <associate|complex cardinality alternative|<tuple|10.90|?>>
-    <associate|complex cardinality and finite family|<tuple|10.96|?>>
-    <associate|complex cardinality equality and subset|<tuple|10.95|?>>
-    <associate|complex cardinality properties|<tuple|10.92|?>>
-    <associate|complex cardinality removing a element|<tuple|10.94|?>>
-    <associate|complex conjugate|<tuple|10.82|?>>
-    <associate|complex conjugate properties|<tuple|10.83|?>>
-    <associate|complex definition by recursion (1)|<tuple|10.42|?>>
-    <associate|complex definition by recursion (2)|<tuple|10.43|?>>
-    <associate|complex definition recursion finite|<tuple|10.44|?>>
+    <associate|complex a\<less\>2^n|<tuple|10.59|?>>
+    <associate|complex cardinality|<tuple|10.90|?>>
+    <associate|complex cardinality adding element|<tuple|10.94|?>>
+    <associate|complex cardinality alternative|<tuple|10.91|?>>
+    <associate|complex cardinality and finite family|<tuple|10.97|?>>
+    <associate|complex cardinality equality and subset|<tuple|10.96|?>>
+    <associate|complex cardinality properties|<tuple|10.93|?>>
+    <associate|complex cardinality removing a element|<tuple|10.95|?>>
+    <associate|complex conjugate|<tuple|10.83|?>>
+    <associate|complex conjugate properties|<tuple|10.84|?>>
+    <associate|complex definition by recursion (1)|<tuple|10.43|?>>
+    <associate|complex definition by recursion (2)|<tuple|10.44|?>>
+    <associate|complex definition recursion finite|<tuple|10.45|?>>
     <associate|complex densitiy theorem|<tuple|10.32|?>>
     <associate|complex embedding|<tuple|10.5|?>>
+    <associate|complex every set of natural numbers has a
+    minimum|<tuple|10.37|?>>
     <associate|complex field|<tuple|10.2|?>>
-    <associate|complex finite lemma|<tuple|10.86|?>>
-    <associate|complex finite set condition|<tuple|10.87|?>>
-    <associate|complex finite set condition (1)|<tuple|10.88|?>>
-    <associate|complex finite subset|<tuple|10.91|?>>
-    <associate|complex i^2=-1|<tuple|10.76|?>>
+    <associate|complex finite lemma|<tuple|10.87|?>>
+    <associate|complex finite set condition|<tuple|10.88|?>>
+    <associate|complex finite set condition (1)|<tuple|10.89|?>>
+    <associate|complex finite subset|<tuple|10.92|?>>
+    <associate|complex i^2=-1|<tuple|10.77|?>>
     <associate|complex integers are conditional complete|<tuple|10.16|?>>
     <associate|complex irrational numbers|<tuple|10.20|?>>
     <associate|complex mathematical induction|<tuple|10.35|?>>
     <associate|complex max(S+T),min(S+T)|<tuple|10.25|?>>
     <associate|complex max(S+s), min(S+s)|<tuple|10.26|?>>
     <associate|complex max(a.x) 0\<less\>=a|<tuple|10.27|?>>
-    <associate|complex n\<less\>2^n|<tuple|10.57|?>>
+    <associate|complex n\<less\>2^n|<tuple|10.58|?>>
     <associate|complex n\<less\>m and 0\<less\>x\<less\>1 then
-    x^n\<less\>x^m|<tuple|10.62|?>>
-    <associate|complex n\<less\>m and 1\<less\>=x then
     x^n\<less\>x^m|<tuple|10.63|?>>
-    <associate|complex norm|<tuple|10.84|?>>
-    <associate|complex norm properties|<tuple|10.85|?>>
+    <associate|complex n\<less\>m and 1\<less\>=x then
+    x^n\<less\>x^m|<tuple|10.64|?>>
+    <associate|complex norm|<tuple|10.85|?>>
+    <associate|complex norm properties|<tuple|10.86|?>>
     <associate|complex notation|<tuple|10.3|?>>
-    <associate|complex notation (0)|<tuple|10.77|?>>
+    <associate|complex notation (0)|<tuple|10.78|?>>
     <associate|complex numbers|<tuple|10.1|?>>
     <associate|complex order isomorphisms|<tuple|10.9|?>>
-    <associate|complex power|<tuple|10.48|?>>
-    <associate|complex power and inequality|<tuple|10.56|?>>
-    <associate|complex power is internal|<tuple|10.51|?>>
-    <associate|complex power of i|<tuple|10.81|?>>
-    <associate|complex power of inverse|<tuple|10.54|?>>
-    <associate|complex power properties|<tuple|10.55|?>>
+    <associate|complex power|<tuple|10.49|?>>
+    <associate|complex power and inequality|<tuple|10.57|?>>
+    <associate|complex power is internal|<tuple|10.52|?>>
+    <associate|complex power of i|<tuple|10.82|?>>
+    <associate|complex power of inverse|<tuple|10.55|?>>
+    <associate|complex power properties|<tuple|10.56|?>>
     <associate|complex rational numbers specification|<tuple|10.6|?>>
-    <associate|complex real imaginair|<tuple|10.79|?>>
-    <associate|complex real. imaginair properties|<tuple|10.80|?>>
-    <associate|complex recursion|<tuple|10.37|?>>
-    <associate|complex recursion iteration|<tuple|10.38|?>>
-    <associate|complex recursion step|<tuple|10.39|?>>
-    <associate|complex recursion step (2)|<tuple|10.40|?>>
-    <associate|complex recursion step form finite|<tuple|10.41|?>>
-    <associate|complex root is strictly increasing|<tuple|10.71|?>>
-    <associate|complex sqrt x\<less\>sqrt x^2|<tuple|10.73|?>>
-    <associate|complex sqrt(0) and sqrt(1)|<tuple|10.69|?>>
-    <associate|complex square operator is a bijection|<tuple|10.66|?>>
-    <associate|complex square root|<tuple|10.67|?>>
-    <associate|complex square root norm|<tuple|10.75|?>>
-    <associate|complex square root of 2 is irational|<tuple|10.70|?>>
-    <associate|complex square root of product|<tuple|10.74|?>>
-    <associate|complex square root properties (1)|<tuple|10.72|?>>
+    <associate|complex real imaginair|<tuple|10.80|?>>
+    <associate|complex real. imaginair properties|<tuple|10.81|?>>
+    <associate|complex recursion|<tuple|10.38|?>>
+    <associate|complex recursion iteration|<tuple|10.39|?>>
+    <associate|complex recursion step|<tuple|10.40|?>>
+    <associate|complex recursion step (2)|<tuple|10.41|?>>
+    <associate|complex recursion step form finite|<tuple|10.42|?>>
+    <associate|complex root is strictly increasing|<tuple|10.72|?>>
+    <associate|complex sqrt x\<less\>sqrt x^2|<tuple|10.74|?>>
+    <associate|complex sqrt(0) and sqrt(1)|<tuple|10.70|?>>
+    <associate|complex square operator is a bijection|<tuple|10.67|?>>
+    <associate|complex square root|<tuple|10.68|?>>
+    <associate|complex square root norm|<tuple|10.76|?>>
+    <associate|complex square root of 2 is irational|<tuple|10.71|?>>
+    <associate|complex square root of product|<tuple|10.75|?>>
+    <associate|complex square root properties (1)|<tuple|10.73|?>>
     <associate|complex sup(-S),inf(-S)|<tuple|10.21|?>>
     <associate|complex sup(S+T) and inf(S+T)|<tuple|10.23|?>>
     <associate|complex sup(S+s) inf(T+t)|<tuple|10.24|?>>
     <associate|complex sup(a.x) inf(a.x)|<tuple|10.22|?>>
     <associate|complex x\<less\>x+1 and x-1\<less\>x|<tuple|10.15|?>>
     <associate|complex x\<less\>y=\<gtr\>x+1\<less\>=y|<tuple|10.28|?>>
-    <associate|complex x^(m+n)=x^n.x^m|<tuple|10.52|?>>
-    <associate|complex x^0,z^1,z^2|<tuple|10.49|?>>
-    <associate|complex x^n\<gtr\>n if x\<gtr\>1 (R)|<tuple|10.60|?>>
+    <associate|complex x^(m+n)=x^n.x^m|<tuple|10.53|?>>
+    <associate|complex x^0,z^1,z^2|<tuple|10.50|?>>
+    <associate|complex x^n\<gtr\>n if x\<gtr\>1 (R)|<tuple|10.61|?>>
     <associate|complex {n,..,m}|<tuple|10.34|?>>
     <associate|eq 10.1.048|<tuple|10.1|?>>
     <associate|eq 10.10.048|<tuple|10.10|?>>
@@ -14623,14 +14704,14 @@
     <associate|eq 10.23.050|<tuple|10.34|?>>
     <associate|eq 10.23.153|<tuple|10.25|?>>
     <associate|eq 10.23.155|<tuple|10.23|?>>
-    <associate|eq 10.24.049|<tuple|10.48|?>>
+    <associate|eq 10.24.049|<tuple|10.49|?>>
     <associate|eq 10.24.050|<tuple|10.35|?>>
-    <associate|eq 10.25.049|<tuple|10.49|?>>
+    <associate|eq 10.25.049|<tuple|10.50|?>>
     <associate|eq 10.25.050|<tuple|10.36|?>>
-    <associate|eq 10.26.049|<tuple|10.50|?>>
+    <associate|eq 10.26.049|<tuple|10.51|?>>
     <associate|eq 10.26.050|<tuple|10.37|?>>
     <associate|eq 10.26.146|<tuple|10.30|?>>
-    <associate|eq 10.27.049|<tuple|10.51|?>>
+    <associate|eq 10.27.049|<tuple|10.52|?>>
     <associate|eq 10.27.050|<tuple|10.38|?>>
     <associate|eq 10.27.146|<tuple|10.31|?>>
     <associate|eq 10.28.050|<tuple|10.39|?>>
@@ -14641,26 +14722,27 @@
     <associate|eq 10.30.050|<tuple|10.41|?>>
     <associate|eq 10.31.050|<tuple|10.42|?>>
     <associate|eq 10.4.048|<tuple|10.4|?>>
-    <associate|eq 10.42.050|<tuple|10.54|?>>
-    <associate|eq 10.43.050|<tuple|10.55|?>>
-    <associate|eq 10.44.050|<tuple|10.56|?>>
-    <associate|eq 10.44.053|<tuple|10.52|?>>
-    <associate|eq 10.45.050|<tuple|10.57|?>>
-    <associate|eq 10.45.053|<tuple|10.53|?>>
-    <associate|eq 10.46.050|<tuple|10.58|?>>
-    <associate|eq 10.47.050|<tuple|10.59|?>>
-    <associate|eq 10.48|<tuple|10.60|?>>
-    <associate|eq 10.49.050|<tuple|10.61|?>>
+    <associate|eq 10.42.050|<tuple|10.55|?>>
+    <associate|eq 10.43.050|<tuple|10.56|?>>
+    <associate|eq 10.44.050|<tuple|10.57|?>>
+    <associate|eq 10.44.053|<tuple|10.53|?>>
+    <associate|eq 10.45.050|<tuple|10.58|?>>
+    <associate|eq 10.45.053|<tuple|10.54|?>>
+    <associate|eq 10.46.050|<tuple|10.59|?>>
+    <associate|eq 10.47.050|<tuple|10.60|?>>
+    <associate|eq 10.48|<tuple|10.61|?>>
+    <associate|eq 10.48.1|<tuple|10.48|?>>
+    <associate|eq 10.49.050|<tuple|10.62|?>>
     <associate|eq 10.5.048|<tuple|10.5|?>>
-    <associate|eq 10.50.050|<tuple|10.62|?>>
-    <associate|eq 10.51.050|<tuple|10.63|?>>
-    <associate|eq 10.52.050|<tuple|10.64|?>>
-    <associate|eq 10.53.050|<tuple|10.65|?>>
-    <associate|eq 10.54.050|<tuple|10.66|?>>
-    <associate|eq 10.55.050|<tuple|10.67|?>>
-    <associate|eq 10.56.050|<tuple|10.68|?>>
-    <associate|eq 10.57|<tuple|10.69|?>>
-    <associate|eq 10.58.051|<tuple|10.70|?>>
+    <associate|eq 10.50.050|<tuple|10.63|?>>
+    <associate|eq 10.51.050|<tuple|10.64|?>>
+    <associate|eq 10.52.050|<tuple|10.65|?>>
+    <associate|eq 10.53.050|<tuple|10.66|?>>
+    <associate|eq 10.54.050|<tuple|10.67|?>>
+    <associate|eq 10.55.050|<tuple|10.68|?>>
+    <associate|eq 10.56.050|<tuple|10.69|?>>
+    <associate|eq 10.57|<tuple|10.70|?>>
+    <associate|eq 10.58.051|<tuple|10.71|?>>
     <associate|eq 10.6.048|<tuple|10.6|?>>
     <associate|eq 10.7.048|<tuple|10.7|?>>
     <associate|eq 10.8.048|<tuple|10.8|?>>
@@ -14806,9 +14888,9 @@
     <associate|eq 9.82.036|<tuple|9.82|?>>
     <associate|eq 9.89.047|<tuple|9.83|?>>
     <associate|eq 9.90.047|<tuple|9.84|?>>
-    <associate|extended reals existence|<tuple|10.98|?>>
-    <associate|field with characteristics zero|<tuple|10.47|?>>
-    <associate|finite power of a set|<tuple|10.99|?>>
+    <associate|extended reals existence|<tuple|10.99|?>>
+    <associate|field with characteristics zero|<tuple|10.48|?>>
+    <associate|finite power of a set|<tuple|10.100|?>>
     <associate|integeres order|<tuple|7.21|?>>
     <associate|integers|<tuple|7.2|?>>
     <associate|integers 0\<less\>1 and 0\<less\>2|<tuple|7.25|?>>
@@ -14962,7 +15044,7 @@
     <associate|reals the set of reals are non empty|<tuple|9.5|?>>
     <associate|recursion order|<tuple|10.36|?>>
     <associate|sign function|<tuple|8.15|?>>
-    <associate|sorting of a finite set|<tuple|10.97|?>>
+    <associate|sorting of a finite set|<tuple|10.98|?>>
   </collection>
 </references>
 

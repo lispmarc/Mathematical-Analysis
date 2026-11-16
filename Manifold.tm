@@ -1409,9 +1409,49 @@
   </proof>
 
   <\theorem>
-    Let <math|n\<in\>\<bbb-N\>> and <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>>
+    <label|manifold countable basis of precompact sets>Let
+    <math|n\<in\>\<bbb-N\>> and <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>>
     a <math|n>-dimensional topological manifold then <math|\<cal-T\>> has a
-    countable basis of precompact coordinate balls.
+    countable basis <math|\<cal-B\>\<subseteq\>\<cal-T\>> of precompact
+    coordinate balls.
+
+    <\note>
+      As <math|\<cal-B\>> is countable there exist a bijection
+      <math|\<beta\>:\<bbb-N\>\<rightarrow\>\<cal-B\>> allowing us to define
+      a family\ 
+
+      <\equation*>
+        <around*|{|B<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-T\><text|
+        where >B<rsub|i>=\<beta\><around*|(|i|)>
+      </equation*>
+
+      Using this family we have then that\ 
+
+      <\equation*>
+        \<forall\>i\<in\>\<bbb-N\><text| >B<rsub|i>\<in\>\<cal-T\><text| and
+        >B<rsub|i><text| is precompact or
+        ><wide|B<rsub|i>|\<wide-bar\>><text| is compact>
+      </equation*>
+
+      Further if <math|V\<in\>\<cal-T\>> then for every <math|x\<in\>V> there
+      exist a <math|W\<in\>\<cal-B\>> such that <math|x\<in\>W\<subseteq\>V>.
+      Hence there exist a <math|i\<in\>\<bbb-N\>> such that
+      <math|W=\<beta\><around*|(|i|)>=B<rsub|i>>. In other words
+
+      <\equation*>
+        \<forall\>V\<in\>\<cal-T\><text| we have >\<forall\>x\<in\>V<text|
+        >\<exists\>i\<in\>\<bbb-N\><text| such that
+        >x\<in\>B<rsub|i>\<subseteq\>V
+      </equation*>
+
+      Let <math|x\<in\>M> then by the above there exists a
+      <math|i\<in\>\<bbb-N\>> such that <math|x\<in\>B<rsub|i>\<subseteq\><big|cup><rsub|i\<in\>\<bbb-N\>>B<rsub|i>\<subseteq\>M>
+      which proves that\ 
+
+      <\equation*>
+        M=<big|cup><rsub|i\<in\>\<bbb-N\>>B<rsub|i>
+      </equation*>
+    </note>
   </theorem>
 
   <\proof>
@@ -6799,6 +6839,63 @@
 
   TODO
 
+  <\theorem>
+    <label|manifold support of a family>Let <math|n\<in\>\<bbb-N\>>,
+    <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> a topological space
+    and <math|<around*|{|f<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<bbb-R\><rsup|X>>a
+    family of real valued functions then\ 
+
+    <\equation*>
+      supp <around*|(|<big|sum><rsub|i=1><rsup|n>f<rsub|i>|)>\<subseteq\><big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>supp
+      f<rsub|i>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    Let <math|x\<in\><around*|{|y\<in\>X\|<around*|(|<big|sum><rsub|i=1><rsup|n>f<rsub|i>|)><around*|(|y|)>\<neq\>0|}>>.
+    Assume that <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
+    <math|f<rsub|i><around*|(|x|)>=0> then we have
+    <math|<rigid|<around*|(|<big|sum><rsub|i=1><rsup|n>f<rsub|i>|)><around*|(|x|)>=<big|sum><rsub|i=1><rsup|n>f<rsub|i><around*|(|x|)>=0>>
+    contradicting <math|x\<in\><around*|{|y\<in\>X\|<around*|(|<big|sum><rsub|i=1><rsup|n>f<rsub|i>|)><around*|(|y|)>\<neq\>0|}>>.
+    Hence there exist a <math|i\<in\><around*|{|1,\<ldots\>,n|}>> such that
+    <math|f<rsub|i><around*|(|x|)>\<neq\>0> so that
+    <math|x\<in\><around*|{|y\<in\>X\|f<rsub|i><around*|(|y|)>\<neq\>0|}>\<in\><wide|<around*|{|y\<in\>X\|f<rsub|i><around*|(|y|)>\<neq\>0|}>|\<wide-bar\>>=supp
+    f<rsub|i>> which proves that\ 
+
+    <\equation>
+      <label|eq 23.119.27><around*|{|y\<in\>X\|<around*|(|<big|sum><rsub|i=1><rsup|n>f<rsub|i>|)><around*|(|y|)>\<neq\>0|}>\<subseteq\><big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>supp
+      f<rsub|i>
+    </equation>
+
+    As \ <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>> <math|supp
+    f<rsub|i>> is closed set it follows from [theorem: <reference|closed set
+    properties>] that\ 
+
+    <\equation>
+      <label|eq 23.150.27><big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>supp
+      f<rsub|i><text| is closed>
+    </equation>
+
+    Hence we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|supp <big|sum><rsub|i=1><rsup|n>f<rsub|i>>|<cell|=>|<cell|<wide|<around*|{|y\<in\>X\|<around*|(|<big|sum><rsub|i=1><rsup|n>f<rsub|i>|)><around*|(|y|)>\<neq\>0|}>|\<wide-bar\>>>>|<row|<cell|>|<cell|<below|<below|\<subseteq\>|<text|[theorem:
+      <reference|topology closure inclusion>]>\<wedge\><text|[eq:
+      <reference|eq 23.149.18>]>>|>>|<cell|<wide||\<wide-bar\>><wide|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>supp
+      f<rsub|i>|\<wide-bar\>>>>|<row|<cell|>|<cell|<below|=|<text|[theorem:
+      <reference|topology closed set and closure>]>\<wedge\><text|[eq:
+      <reference|eq 23.150.27>]>>>|<cell|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>supp
+      f<rsub|i>>>>>
+    </eqnarray*>
+
+    which proves that\ 
+
+    <\equation*>
+      supp <around*|(|<big|sum><rsub|i=1><rsup|n>f<rsub|i>|)>\<subseteq\><big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>supp
+      f<rsub|i>
+    </equation*>
+  </proof>
+
   <\definition>
     <label|manifold bump function on manifold>Let <math|m\<in\>\<bbb-N\>>,
     <math|q\<in\>\<bbb-N\><rsub|0><big|cup><around*|{|\<infty\>|}>>,
@@ -8568,7 +8665,7 @@
     <math|<around*|{|U<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-T\>> a
     family of open sets such that <math|M=<big|cup><rsub|i\<in\>I>U<rsub|i>>
     then a family <math|<around*|{|\<varphi\><rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<bbb-R\><rsup|M>>
-    is a smooth partition of unity subordinate to
+    is a <math|C<rsup|q>> partition of unity subordinate to
     <math|<around*|{|U<rsub|i>|}><rsub|i\<in\>I>> iff
 
     <\enumerate>
@@ -8579,6 +8676,246 @@
       is a <math|C<rsup|q>> mapping
     </enumerate>
   </definition>
+
+  <\lemma>
+    Let <math|m\<in\>\<bbb-N\>>, <math|q\<in\>\<bbb-N\><rsub|0><big|cup><around*|{|\<infty\>|}>>,
+    <math|\<cal-M\><rsup|m><around*|\<langle\>|M,\<cal-T\>,\<cal-A\>|\<rangle\>>>
+    a <math|m>-dimensional <math|C<rsup|q>> differentuable manifold then
+    there exists a <math|<around*|{|V<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-P\><around*|(|M|)>>
+    such that we have <math|\<forall\>i\<in\>\<bbb-N\>>\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|>|<cell|V<rsub|i><text| is open and
+      ><wide|V<rsub|i>|\<wide-bar\>><text| is
+      compact>>|<cell|>>|<row|<cell|>|<cell|V<rsub|i>\<subseteq\><wide|V<rsub|i>|\<wide-bar\>>\<subseteq\>V<rsub|i+1>>|<cell|>>>>
+    </eqnarray*>
+
+    and\ 
+
+    <\equation*>
+      M=<big|cup><rsub|i\<in\>\<bbb-N\>>V<rsub|i>
+    </equation*>
+  </lemma>
+
+  <\proof>
+    Using [theorem: <reference|manifold countable basis of precompact sets>]
+    there exist a countable family <math|<around*|{|B<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-T\>>
+    such that\ 
+
+    <\equation*>
+      \<forall\>i\<in\>\<bbb-N\><text| >B<rsub|i>\<in\>\<cal-T\><text| and
+      ><wide|B<rsub|i>|\<wide-bar\>> is compact
+    </equation*>
+
+    and
+
+    <\equation*>
+      M=<big|cup><rsub|i\<in\>\<bbb-N\>>B<rsub|i>
+    </equation*>
+
+    We define now recursively a family <math|<around*|{|<around*|(|V<rsub|i>,\<beta\><rsub|i>|)>|}><rsub|i\<in\>\<bbb-N\>>>
+    such that
+
+    <\equation*>
+      \<forall\>i\<in\>\<bbb-N\><text| >i+1\<leqslant\>\<beta\><rsub|i><text|,
+      <math|V<rsub|i>\<in\>\<cal-T\><text|, ><wide|V<rsub|i>|\<wide-bar\>>>
+      is compact, ><wide|V<rsub|i>|\<wide-bar\>>\<subseteq\><big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,\<beta\><rsub|i>|}>>B<rsub|j>
+    </equation*>
+
+    and\ 
+
+    <\equation*>
+      \<forall\>i\<in\><around*|{|2,\<ldots\>,\<infty\>|}><text| we have
+      ><wide|V<rsub|i-1>|\<wide-bar\>>\<subseteq\>V<rsub|i>
+    </equation*>
+
+    <\equation*>
+      <text|>
+    </equation*>
+
+    recursively as follows:\ 
+
+    <\description>
+      <item*|<math|m=1>>As <math|<wide|B<rsub|1>|\<wide-bar\>>> is compact
+      and <math|<wide|B<rsub|1>|\<wide-bar\>>\<subseteq\>M\<subseteq\><big|cup><rsub|i\<in\>\<bbb-N\>>B<rsub|i>>
+      there exist a finite set <math|I\<subseteq\>\<bbb-N\>> such that
+      <math|<wide|B<rsub|1>|\<wide-bar\>>\<subseteq\><big|cup><rsub|i\<in\>I>B<rsub|i>>.
+      By [theorem: <reference|finite ordered sets have a maximum and
+      minimum>] <math|m=max<around*|(|I|)>> exist so that
+      <math|I\<subseteq\><around*|{|1,\<ldots\>,m|}>>, hence we have that\ 
+
+      <\equation*>
+        <wide|B<rsub|1>|\<wide-bar\>>\<subseteq\><big|cup><rsub|i\<in\>I>B<rsub|i>\<subseteq\><big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>>B<rsub|i>
+      </equation*>
+
+      Hence we have that
+
+      <\equation*>
+        <around*|{|n\<in\><around*|{|1,\<ldots\>,\<infty\>|}>\|<wide|B<rsub|1>|\<wide-bar\>>\<subseteq\><big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>B<rsub|i>|}>\<neq\>\<varnothing\>
+      </equation*>
+
+      Using [theorem: <reference|complex every set of natural numbers has a
+      minimum>] <math|min<around*|(|<around*|{|n\<in\><around*|{|1,\<ldots\>,\<infty\>|}>\|<wide|B<rsub|1>|\<wide-bar\>>\<subseteq\><big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>B<rsub|i>|}>|)>>
+      exist. Set\ 
+
+      <\equation*>
+        \<beta\><rsub|1>=max<around*|(|2,min<around*|(|<around*|{|n\<in\><around*|{|1,\<ldots\>,\<infty\>|}>\|<wide|B<rsub|1>|\<wide-bar\>>\<subseteq\><big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>B<rsub|i>|}>|)>|)>
+      </equation*>
+
+      then we have if we take <math|V<rsub|1>=B<rsub|1>> we have that
+
+      <\equation*>
+        1+1=2\<leqslant\>\<beta\><rsub|1><text|,
+        <math|V<rsub|1>\<in\>\<cal-T\><text|, ><wide|V<rsub|1>|\<wide-bar\>>>
+        is compact and ><wide|V<rsub|1>|\<wide-bar\>>=<wide|B<rsub|1>|\<wide-bar\>>\<subseteq\><big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,\<beta\><rsub|1>|}>>B<rsub|j>
+      </equation*>
+
+      <item*|1\<less\>m>Assume that <math|<around*|{|<around*|(|V<rsub|i>,\<beta\><rsub|i>|)>|}><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>>>
+      is defined with \ 
+
+      <\equation*>
+        \<forall\>i\<in\><around*|{|1,\<ldots\>,m|}><text|
+        >V<rsub|1>\<in\>\<cal-T\><text|, ><wide|V<rsub|i>|\<wide-bar\>><text|
+        is compact, ><wide|V<rsub|i>|\<wide-bar\>>\<subseteq\><big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,\<beta\><rsub|i>|}>>B<rsub|j>
+      </equation*>
+
+      Using [theorem: <reference|compact finite union of compact sets>] it
+      follows then that\ 
+
+      <\equation>
+        <big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,\<beta\><rsub|m>|}>><wide|V<rsub|j>|\<wide-bar\>><text|
+        is >compact
+      </equation>
+
+      Now we have that\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<wide|<big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,\<beta\><rsub|m>|}>>V<rsub|j>|\<wide-bar\>>>|<cell|<below|\<subseteq\>|<text|[theorem:
+        <reference|topology closure inclusion>]>>>|<cell|<wide|<big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,\<beta\><rsub|m>|}>><wide|V<rsub|j>|\<wide-bar\>>|\<wide-bar\>>>>|<row|<cell|>|<cell|<below|=|<text|[theoremx:
+        <reference|closed set properties>,<reference|topology closed set and
+        closure>]>>>|<cell|<big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,\<beta\><rsub|m>|}>><wide|V<rsub|j>|\<wide-bar\>>>>>>
+      </eqnarray*>
+
+      Using [theorem: <reference|compact every closed subset of a compact set
+      is compact>] on the above it follows that\ 
+
+      <\equation*>
+        <wide|<big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,\<beta\><rsub|m>|}>>V<rsub|j>|\<wide-bar\>><text|
+        is compact>
+      </equation*>
+
+      Lete <math|V<rsub|m+1>=<big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,\<beta\><rsub|m>|}>>V<rsub|j>>
+      then we have that\ 
+
+      <\equation*>
+        V<rsub|m+1>\<in\>\<cal-T\><text| and
+        ><wide|V<rsub|m+1>|\<wide-bar\>><text| is compact>
+      </equation*>
+
+      As <math|<wide|V<rsub|m+1>|\<wide-bar\>>\<subseteq\>M=<big|cup><rsub|i\<in\>\<bbb-N\>>B<rsub|i>>
+      there exist a finite set <math|I\<subseteq\>\<bbb-N\>> such that
+      <math|> <math|<rigid|<wide|V<rsub|m+1>|\<wide-bar\>>\<subseteq\><big|cup><rsub|j\<in\>I>B<rsub|j>>>.
+      Hence if we take <math|k=max<around*|(|I|)>> then we have
+      <math|I\<subseteq\><around*|{|1,\<ldots\>,k|}>> so that
+
+      <\equation*>
+        <rigid|<wide|V<rsub|m+1>|\<wide-bar\>>\<subseteq\><big|cup><rsub|j\<in\>I>B<rsub|j>>\<subseteq\><big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,k|}>>B<rsub|j>
+      </equation*>
+
+      Hence we have that\ 
+
+      <\equation*>
+        <around*|{|n\<in\>\<bbb-N\>\|<wide|V<rsub|m+1>|\<wide-bar\>>\<subseteq\><big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,k|}>>B<rsub|i>|}>\<neq\>\<emptyset\>
+      </equation*>
+
+      so that by [theorem: <reference|complex every set of natural numbers
+      has a minimum>] <math|min<around*|(|<around*|{|n\<in\>\<bbb-N\>\|<wide|V<rsub|m+1>|\<wide-bar\>>\<subseteq\><big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,k|}>>B<rsub|i>|}>|)>>
+      exist. Take\ 
+
+      <\equation*>
+        \<beta\><rsub|m+1>=max<around*|(|m+1,\<beta\><rsub|m-1>,min<around*|(|<around*|{|n\<in\>\<bbb-N\>\|<wide|V<rsub|m+1>|\<wide-bar\>>\<subseteq\><big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,k|}>>B<rsub|i>|}>|)>|)>
+      </equation*>
+
+      then we have\ 
+
+      <\equation*>
+        m+1\<leqslant\>\<beta\><rsub|m+1><text|,
+        >\<beta\><rsub|m-1>\<leqslant\>\<beta\><rsub|m+1><text| and
+        ><wide|V<rsub|m+1>|\<wide-bar\>>\<subseteq\><big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,\<beta\><rsub|m+1>|}>>B<rsub|i>
+      </equation*>
+
+      Further as\ 
+
+      \ 
+    </description>
+
+    \;
+
+    \;
+
+    \;
+
+    \;
+
+    <\description>
+      <item*|<math|base case>>Set
+
+      <\equation*>
+        V<rsub|1>=B<rsub|1>
+      </equation*>
+
+      As <math|<wide|B<rsub|1>|\<wide-bar\>>> is compact and
+      <math|<wide|B<rsub|1>|\<wide-bar\>>\<subseteq\>M\<subseteq\><big|cup><rsub|i\<in\>\<bbb-N\>>B<rsub|i>>
+      there exist a finite set <math|I> such that
+      <math|<wide|B<rsub|1>|\<wide-bar\>>\<subseteq\><big|cup><rsub|i\<in\>I>B<rsub|i>>.
+      By [theorem: <reference|finite ordered sets have a maximum and
+      minimum>] <math|m=max<around*|(|I|)>> exist so that
+      <math|I\<subseteq\><around*|{|1,\<ldots\>,m|}>\<subseteq\><around*|{|1,\<ldots\>,max<around*|(|m,2|)>|}>>,
+      hence we have that\ 
+
+      <\equation*>
+        <wide|B<rsub|1>|\<wide-bar\>>\<subseteq\><big|cup><rsub|i\<in\>I>B<rsub|i>\<subseteq\><big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,max<around*|(|m,2|)>|}>>B<rsub|i>
+      </equation*>
+
+      Hence we have that
+
+      <\equation*>
+        <around*|{|n\<in\><around*|{|2,\<ldots\>,\<infty\>|}>\|<wide|B<rsub|1>|\<wide-bar\>>\<subseteq\><big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>B<rsub|i>|}>\<neq\>\<varnothing\>
+      </equation*>
+
+      Using [theorem: <reference|complex every set of natural numbers has a
+      minimum>] <math|min<around*|(|<around*|{|n\<in\><around*|{|2,\<ldots\>,\<infty\>|}>\|<wide|B<rsub|1>|\<wide-bar\>>\<subseteq\><big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>B<rsub|i>|}>|)>>
+      exist. Set\ 
+
+      <\equation*>
+        \<beta\><rsub|1>=min<around*|(|<around*|{|n\<in\><around*|{|2,\<ldots\>,\<infty\>|}>\|<wide|B<rsub|1>|\<wide-bar\>>\<subseteq\><big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>B<rsub|i>|}>|)>
+      </equation*>
+
+      Then we have for <math|<around*|(|V<rsub|1>,\<beta\><rsub|1>|)>> that\ 
+
+      <\equation*>
+        V<rsub|1>\<subseteq\><wide|V<rsub|1>|\<wide-bar\>>\<subseteq\><big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,\<beta\><rsub|1>|}>>B<rsub|i><text|
+        and >2\<leqslant\>\<beta\><rsub|1>
+      </equation*>
+
+      <item*|<math|recursive case>>Given <math|<around*|{|<around*|(|V<rsub|i>,\<beta\><rsub|i>|)>|}><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>>\<subseteq\>\<cal-T\>>
+      such that
+
+      <\equation*>
+        \<forall\>i\<in\><around*|{|1,\<ldots\>,m|}><text|
+        >V<rsub|i>\<in\>\<cal-T\><text| and ><wide|Vi|\<wide-bar\>><text| is
+        compact >
+      </equation*>
+
+      <\equation*>
+        \<forall\>i\<in\><around*|{|1,\<ldots\>,m-1|}><text|
+        ><wide|V<rsub|i>|\<wide-bar\>>\<subseteq\>V<rsub|i+1><text| and
+        >i+1\<leqslant\>\<beta\><rsub|i>
+      </equation*>
+    </description>
+
+    \;
+  </proof>
 
   TODO
 
@@ -9365,11 +9702,11 @@
     <associate|auto-7|<tuple|coordinate cube|?>>
     <associate|auto-8|<tuple|atlas|?>>
     <associate|auto-9|<tuple|23.1.2|?>>
-    <associate|compact locally finite|<tuple|23.27|?>>
-    <associate|compact paracompactness|<tuple|23.28|?>>
-    <associate|compact refinement|<tuple|23.26|?>>
-    <associate|continuity homeomorphism and restriction (1)|<tuple|23.31|?>>
-    <associate|eq 21.156.1|<tuple|23.149|?>>
+    <associate|compact locally finite|<tuple|23.28|?>>
+    <associate|compact paracompactness|<tuple|23.29|?>>
+    <associate|compact refinement|<tuple|23.27|?>>
+    <associate|continuity homeomorphism and restriction (1)|<tuple|23.32|?>>
+    <associate|eq 21.156.1|<tuple|23.151|?>>
     <associate|eq 23.1.1|<tuple|23.5|?>>
     <associate|eq 23.1.3|<tuple|23.2|?>>
     <associate|eq 23.1.4|<tuple|23.1|?>>
@@ -9384,6 +9721,7 @@
     <associate|eq 23.117.14|<tuple|23.126|?>>
     <associate|eq 23.118.14|<tuple|23.127|?>>
     <associate|eq 23.119.14|<tuple|23.128|?>>
+    <associate|eq 23.119.27|<tuple|23.149|?>>
     <associate|eq 23.120.14|<tuple|23.129|?>>
     <associate|eq 23.121.16|<tuple|23.130|?>>
     <associate|eq 23.122.16|<tuple|23.131|?>>
@@ -9406,46 +9744,47 @@
     <associate|eq 23.138.16|<tuple|23.147|?>>
     <associate|eq 23.139.16|<tuple|23.148|?>>
     <associate|eq 23.14.3|<tuple|23.18|?>>
-    <associate|eq 23.147.17|<tuple|23.186|?>>
+    <associate|eq 23.147.17|<tuple|23.189|?>>
     <associate|eq 23.15.2|<tuple|23.19|?>>
-    <associate|eq 23.157.20|<tuple|23.150|?>>
-    <associate|eq 23.158.20|<tuple|23.151|?>>
-    <associate|eq 23.159.20|<tuple|23.152|?>>
-    <associate|eq 23.159.21|<tuple|23.157|?>>
+    <associate|eq 23.150.27|<tuple|23.150|?>>
+    <associate|eq 23.157.20|<tuple|23.152|?>>
+    <associate|eq 23.158.20|<tuple|23.153|?>>
+    <associate|eq 23.159.20|<tuple|23.154|?>>
+    <associate|eq 23.159.21|<tuple|23.159|?>>
     <associate|eq 23.16.2|<tuple|23.20|?>>
-    <associate|eq 23.160.20|<tuple|23.153|?>>
-    <associate|eq 23.160.21|<tuple|23.158|?>>
-    <associate|eq 23.160.22|<tuple|23.162|?>>
-    <associate|eq 23.161.20|<tuple|23.154|?>>
-    <associate|eq 23.161.21|<tuple|23.159|?>>
-    <associate|eq 23.161.22|<tuple|23.163|?>>
-    <associate|eq 23.162.20|<tuple|23.155|?>>
-    <associate|eq 23.162.21|<tuple|23.160|?>>
-    <associate|eq 23.162.22|<tuple|23.164|?>>
-    <associate|eq 23.163.20|<tuple|23.156|?>>
-    <associate|eq 23.163.21|<tuple|23.161|?>>
-    <associate|eq 23.163.22|<tuple|23.165|?>>
-    <associate|eq 23.164.22|<tuple|23.166|?>>
-    <associate|eq 23.165.22|<tuple|23.167|?>>
-    <associate|eq 23.166.22|<tuple|23.168|?>>
-    <associate|eq 23.169.24|<tuple|23.170|?>>
-    <associate|eq 23.169.25|<tuple|23.169|?>>
+    <associate|eq 23.160.20|<tuple|23.155|?>>
+    <associate|eq 23.160.21|<tuple|23.160|?>>
+    <associate|eq 23.160.22|<tuple|23.164|?>>
+    <associate|eq 23.161.20|<tuple|23.156|?>>
+    <associate|eq 23.161.21|<tuple|23.161|?>>
+    <associate|eq 23.161.22|<tuple|23.165|?>>
+    <associate|eq 23.162.20|<tuple|23.157|?>>
+    <associate|eq 23.162.21|<tuple|23.162|?>>
+    <associate|eq 23.162.22|<tuple|23.166|?>>
+    <associate|eq 23.163.20|<tuple|23.158|?>>
+    <associate|eq 23.163.21|<tuple|23.163|?>>
+    <associate|eq 23.163.22|<tuple|23.167|?>>
+    <associate|eq 23.164.22|<tuple|23.168|?>>
+    <associate|eq 23.165.22|<tuple|23.169|?>>
+    <associate|eq 23.166.22|<tuple|23.170|?>>
+    <associate|eq 23.169.24|<tuple|23.172|?>>
+    <associate|eq 23.169.25|<tuple|23.171|?>>
     <associate|eq 23.17.2|<tuple|23.22|?>>
-    <associate|eq 23.170.24|<tuple|23.171|?>>
-    <associate|eq 23.171.24|<tuple|23.172|?>>
-    <associate|eq 23.172.24|<tuple|23.173|?>>
-    <associate|eq 23.173.24|<tuple|23.174|?>>
-    <associate|eq 23.174.24|<tuple|23.176|?>>
-    <associate|eq 23.175.24|<tuple|23.177|?>>
-    <associate|eq 23.175.25|<tuple|23.175|?>>
-    <associate|eq 23.176.24|<tuple|23.178|?>>
-    <associate|eq 23.177.24|<tuple|23.179|?>>
-    <associate|eq 23.180.26|<tuple|23.180|?>>
-    <associate|eq 23.181.26|<tuple|23.181|?>>
-    <associate|eq 23.182.26|<tuple|23.182|?>>
-    <associate|eq 23.183.25|<tuple|23.185|?>>
-    <associate|eq 23.183.26|<tuple|23.183|?>>
-    <associate|eq 23.184.26|<tuple|23.184|?>>
+    <associate|eq 23.170.24|<tuple|23.173|?>>
+    <associate|eq 23.171.24|<tuple|23.174|?>>
+    <associate|eq 23.172.24|<tuple|23.175|?>>
+    <associate|eq 23.173.24|<tuple|23.176|?>>
+    <associate|eq 23.174.24|<tuple|23.178|?>>
+    <associate|eq 23.175.24|<tuple|23.179|?>>
+    <associate|eq 23.175.25|<tuple|23.177|?>>
+    <associate|eq 23.176.24|<tuple|23.180|?>>
+    <associate|eq 23.177.24|<tuple|23.181|?>>
+    <associate|eq 23.180.26|<tuple|23.182|?>>
+    <associate|eq 23.181.26|<tuple|23.183|?>>
+    <associate|eq 23.182.26|<tuple|23.184|?>>
+    <associate|eq 23.183.25|<tuple|23.187|?>>
+    <associate|eq 23.183.26|<tuple|23.185|?>>
+    <associate|eq 23.184.26|<tuple|23.186|?>>
     <associate|eq 23.2.1|<tuple|23.6|?>>
     <associate|eq 23.2.3|<tuple|23.3|?>>
     <associate|eq 23.21.6|<tuple|23.21|?>>
@@ -9556,118 +9895,120 @@
     <associate|eq 23.98.12|<tuple|23.116|?>>
     <associate|eq 23.99.12|<tuple|23.117|?>>
     <associate|lemma 23.10.2|<tuple|23.19|?>>
-    <associate|lemma 23.101.2|<tuple|23.107|?>>
-    <associate|lemma 23.102.20|<tuple|23.101|?>>
-    <associate|lemma 23.103.20|<tuple|23.102|?>>
-    <associate|lemma 23.104.20|<tuple|23.103|?>>
-    <associate|lemma 23.104.22|<tuple|23.110|?>>
-    <associate|lemma 23.105.20|<tuple|23.104|?>>
-    <associate|lemma 23.106.20|<tuple|23.105|?>>
-    <associate|lemma 23.107.21|<tuple|23.106|?>>
+    <associate|lemma 23.101.2|<tuple|23.109|?>>
+    <associate|lemma 23.102.20|<tuple|23.103|?>>
+    <associate|lemma 23.103.20|<tuple|23.104|?>>
+    <associate|lemma 23.104.20|<tuple|23.105|?>>
+    <associate|lemma 23.104.22|<tuple|23.112|?>>
+    <associate|lemma 23.105.20|<tuple|23.106|?>>
+    <associate|lemma 23.106.20|<tuple|23.107|?>>
+    <associate|lemma 23.107.21|<tuple|23.108|?>>
     <associate|lemma 23.11.2|<tuple|23.20|?>>
     <associate|lemma 23.13.2|<tuple|23.21|?>>
     <associate|lemma 23.13.8|<tuple|23.17|?>>
-    <associate|lemma 23.37.6|<tuple|23.56|?>>
-    <associate|lemma 23.37.9|<tuple|23.46|?>>
-    <associate|lemma 23.39.6|<tuple|23.44|?>>
-    <associate|lemma 23.40.9|<tuple|23.48|?>>
+    <associate|lemma 23.37.6|<tuple|23.57|?>>
+    <associate|lemma 23.37.9|<tuple|23.47|?>>
+    <associate|lemma 23.39.6|<tuple|23.45|?>>
+    <associate|lemma 23.40.9|<tuple|23.49|?>>
     <associate|lemma 23.5.10|<tuple|23.5|?>>
-    <associate|lemma 23.81.14|<tuple|23.90|?>>
-    <associate|manifold C^m C^n atlas|<tuple|23.42|?>>
-    <associate|manifold C^m C^n compatible|<tuple|23.38|?>>
-    <associate|manifold C^m C^n manifold|<tuple|23.62|?>>
-    <associate|manifold C^m C^n mapping|<tuple|23.83|?>>
-    <associate|manifold C^m chart|<tuple|23.36|?>>
-    <associate|manifold C^m compatibility and restriction|<tuple|23.39|?>>
-    <associate|manifold C^m mappings are continuous|<tuple|23.75|?>>
-    <associate|manifold C^m mappings equivalences|<tuple|23.78|?>>
-    <associate|manifold C^m mappings equivalences (1)|<tuple|23.76|?>>
-    <associate|manifold C^m(M)|<tuple|23.119|?>>
-    <associate|manifold C^q(M) is a vector space|<tuple|23.120|?>>
-    <associate|manifold C^r functions are C^r mappings|<tuple|23.80|?>>
-    <associate|manifold C^r mspping id local (2)|<tuple|23.82|?>>
-    <associate|manifold C^r mspping id locsl|<tuple|23.81|?>>
-    <associate|manifold R^n is a differentiable manifold|<tuple|23.66|?>>
-    <associate|manifold TpM is a vector space|<tuple|23.126|?>>
-    <associate|manifold TpM properties|<tuple|23.127|?>>
+    <associate|lemma 23.81.14|<tuple|23.91|?>>
+    <associate|manifold C^m C^n atlas|<tuple|23.43|?>>
+    <associate|manifold C^m C^n compatible|<tuple|23.39|?>>
+    <associate|manifold C^m C^n manifold|<tuple|23.63|?>>
+    <associate|manifold C^m C^n mapping|<tuple|23.84|?>>
+    <associate|manifold C^m chart|<tuple|23.37|?>>
+    <associate|manifold C^m compatibility and restriction|<tuple|23.40|?>>
+    <associate|manifold C^m mappings are continuous|<tuple|23.76|?>>
+    <associate|manifold C^m mappings equivalences|<tuple|23.79|?>>
+    <associate|manifold C^m mappings equivalences (1)|<tuple|23.77|?>>
+    <associate|manifold C^m(M)|<tuple|23.122|?>>
+    <associate|manifold C^q(M) is a vector space|<tuple|23.123|?>>
+    <associate|manifold C^r functions are C^r mappings|<tuple|23.81|?>>
+    <associate|manifold C^r mspping id local (2)|<tuple|23.83|?>>
+    <associate|manifold C^r mspping id locsl|<tuple|23.82|?>>
+    <associate|manifold R^n is a differentiable manifold|<tuple|23.67|?>>
+    <associate|manifold TpM is a vector space|<tuple|23.129|?>>
+    <associate|manifold TpM properties|<tuple|23.130|?>>
     <associate|manifold a finite dimensional vector space is a differentiable
-    manifold|<tuple|23.69|?>>
+    manifold|<tuple|23.70|?>>
     <associate|manifold a topological manifold is locally
-    compact|<tuple|23.25|?>>
+    compact|<tuple|23.26|?>>
     <associate|manifold atlas|<tuple|23.11|?>>
-    <associate|manifold bump function (1)|<tuple|23.111|?>>
-    <associate|manifold bump function on manifold|<tuple|23.99|?>>
+    <associate|manifold bump function (1)|<tuple|23.113|?>>
+    <associate|manifold bump function on manifold|<tuple|23.101|?>>
     <associate|manifold canonical example|<tuple|23.15|?>>
-    <associate|manifold chain rule|<tuple|23.85|?>>
-    <associate|manifold chart centered at a point|<tuple|23.51|?>>
+    <associate|manifold chain rule|<tuple|23.86|?>>
+    <associate|manifold chart centered at a point|<tuple|23.52|?>>
     <associate|manifold chart that is compatible with a
-    atlas|<tuple|23.43|?>>
-    <associate|manifold compact support|<tuple|23.98|?>>
-    <associate|manifold compatible atlas|<tuple|23.54|?>>
-    <associate|manifold compatible atlas (1)|<tuple|23.55|?>>
+    atlas|<tuple|23.44|?>>
+    <associate|manifold compact support|<tuple|23.99|?>>
+    <associate|manifold compatible atlas|<tuple|23.55|?>>
+    <associate|manifold compatible atlas (1)|<tuple|23.56|?>>
     <associate|manifold composition of a C^r mapping and a mapping of class
-    C^r|<tuple|23.128|?>>
-    <associate|manifold connectivity properties|<tuple|23.24|?>>
-    <associate|manifold constant functions|<tuple|23.121|?>>
+    C^r|<tuple|23.131|?>>
+    <associate|manifold connectivity properties|<tuple|23.25|?>>
+    <associate|manifold constant functions|<tuple|23.124|?>>
     <associate|manifold coordinate ball and cube|<tuple|23.9|?>>
     <associate|manifold coordinate domain|<tuple|23.8|?>>
     <associate|manifold coordinate transforms are a
-    homeomorphism|<tuple|23.35|?>>
+    homeomorphism|<tuple|23.36|?>>
     <associate|manifold cooridinate chart|<tuple|23.3|?>>
     <associate|manifold cooridinate chart existence|<tuple|23.10|?>>
+    <associate|manifold countable basis of precompact sets|<tuple|23.23|?>>
     <associate|manifold cutoff function|<tuple|cutoff function|?>>
-    <associate|manifold cutoff function existence|<tuple|23.108|?>>
-    <associate|manifold diffentiable atlas|<tuple|23.40|?>>
-    <associate|manifold diffeomorphic manifolds|<tuple|23.88|?>>
+    <associate|manifold cutoff function existence|<tuple|23.110|?>>
+    <associate|manifold diffentiable atlas|<tuple|23.41|?>>
+    <associate|manifold diffeomorphic manifolds|<tuple|23.89|?>>
     <associate|manifold diffeomorphic manifolds have the same
-    dimension|<tuple|23.93|?>>
-    <associate|manifold diffeomorphism|<tuple|23.86|?>>
-    <associate|manifold diffeomorphism and inverse|<tuple|23.87|?>>
-    <associate|manifold diffeomorphism composition|<tuple|23.94|?>>
-    <associate|manifold diffeomorphism equivalence|<tuple|23.91|?>>
-    <associate|manifold diffeomorphism equivalence (1)|<tuple|23.92|?>>
-    <associate|manifold diffeomorphism is a homeomorphism|<tuple|23.89|?>>
-    <associate|manifold differentiability real function|<tuple|23.45|?>>
-    <associate|manifold differentiability real function (1)|<tuple|23.47|?>>
-    <associate|manifold differentiability real function (2)|<tuple|23.59|?>>
-    <associate|manifold differentiable atlas (1)|<tuple|23.41|?>>
-    <associate|manifold differentiable manifold|<tuple|23.60|?>>
-    <associate|manifold differentiable mappings|<tuple|23.71|?>>
-    <associate|manifold differentiable structure|<tuple|23.57|?>>
-    <associate|manifold differential|<tuple|23.129|?>>
-    <associate|manifold differential properties|<tuple|23.130|?>>
-    <associate|manifold existence of a bump function|<tuple|23.113|?>>
-    <associate|manifold existence of a maximal atlas|<tuple|23.58|?>>
-    <associate|manifold extension of local functions|<tuple|23.115|?>>
-    <associate|manifold identity is a C^q mapping|<tuple|23.74|?>>
-    <associate|manifold maximal atlas|<tuple|23.49|?>>
+    dimension|<tuple|23.94|?>>
+    <associate|manifold diffeomorphism|<tuple|23.87|?>>
+    <associate|manifold diffeomorphism and inverse|<tuple|23.88|?>>
+    <associate|manifold diffeomorphism composition|<tuple|23.95|?>>
+    <associate|manifold diffeomorphism equivalence|<tuple|23.92|?>>
+    <associate|manifold diffeomorphism equivalence (1)|<tuple|23.93|?>>
+    <associate|manifold diffeomorphism is a homeomorphism|<tuple|23.90|?>>
+    <associate|manifold differentiability real function|<tuple|23.46|?>>
+    <associate|manifold differentiability real function (1)|<tuple|23.48|?>>
+    <associate|manifold differentiability real function (2)|<tuple|23.60|?>>
+    <associate|manifold differentiable atlas (1)|<tuple|23.42|?>>
+    <associate|manifold differentiable manifold|<tuple|23.61|?>>
+    <associate|manifold differentiable mappings|<tuple|23.72|?>>
+    <associate|manifold differentiable structure|<tuple|23.58|?>>
+    <associate|manifold differential|<tuple|23.132|?>>
+    <associate|manifold differential properties|<tuple|23.133|?>>
+    <associate|manifold existence of a bump function|<tuple|23.115|?>>
+    <associate|manifold existence of a maximal atlas|<tuple|23.59|?>>
+    <associate|manifold extension of local functions|<tuple|23.117|?>>
+    <associate|manifold identity is a C^q mapping|<tuple|23.75|?>>
+    <associate|manifold maximal atlas|<tuple|23.50|?>>
     <associate|manifold maximal atlas composition with a
-    diffeomorphism|<tuple|23.50|?>>
-    <associate|manifold maximum atlas and sub charts|<tuple|23.52|?>>
+    diffeomorphism|<tuple|23.51|?>>
+    <associate|manifold maximum atlas and sub charts|<tuple|23.53|?>>
     <associate|manifold open set is a sub manifold|<tuple|23.16|?>>
     <associate|manifold open subset of a differentiable
-    manifold|<tuple|23.67|?>>
-    <associate|manifold partition of unity|<tuple|23.116|?>>
+    manifold|<tuple|23.68|?>>
+    <associate|manifold partition of unity|<tuple|23.118|?>>
     <associate|manifold product of functions that are of class
-    C^q|<tuple|23.122|?>>
+    C^q|<tuple|23.125|?>>
     <associate|manifold real numbers are a differentiable
-    manifold|<tuple|23.65|?>>
+    manifold|<tuple|23.66|?>>
     <associate|manifold real numbers form a topological
     manifold|<tuple|23.14|?>>
     <associate|manifold restriction of a chart is a chart|<tuple|23.7|?>>
-    <associate|manifold singleton chart|<tuple|23.63|?>>
-    <associate|manifold smooth partition of unity|<tuple|23.118|?>>
-    <associate|manifold sphere is a differentiable manifold|<tuple|23.68|?>>
+    <associate|manifold singleton chart|<tuple|23.64|?>>
+    <associate|manifold smooth partition of unity|<tuple|23.120|?>>
+    <associate|manifold sphere is a differentiable manifold|<tuple|23.69|?>>
     <associate|manifold sphere is a topological manifold|<tuple|23.18|?>>
-    <associate|manifold support|<tuple|23.96|?>>
-    <associate|manifold supported in a set|<tuple|23.97|?>>
-    <associate|manifold tangent vector|<tuple|23.123|?>>
+    <associate|manifold support|<tuple|23.97|?>>
+    <associate|manifold support of a family|<tuple|23.100|?>>
+    <associate|manifold supported in a set|<tuple|23.98|?>>
+    <associate|manifold tangent vector|<tuple|23.126|?>>
     <associate|manifold topological|<tuple|23.2|?>>
     <associate|manifold topological (1)|<tuple|23.12|?>>
-    <associate|manifold topological manifold is paracompact|<tuple|23.29|?>>
-    <associate|manifold transition map|<tuple|23.33|?>>
+    <associate|manifold topological manifold is paracompact|<tuple|23.30|?>>
+    <associate|manifold transition map|<tuple|23.34|?>>
     <associate|manifold trivial example|<tuple|23.13|?>>
-    <associate|note 23.31.6|<tuple|23.37|?>>
+    <associate|note 23.31.6|<tuple|23.38|?>>
   </collection>
 </references>
 
