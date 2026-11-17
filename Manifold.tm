@@ -1433,19 +1433,10 @@
         ><wide|B<rsub|i>|\<wide-bar\>><text| is compact>
       </equation*>
 
-      Further if <math|V\<in\>\<cal-T\>> then for every <math|x\<in\>V> there
-      exist a <math|W\<in\>\<cal-B\>> such that <math|x\<in\>W\<subseteq\>V>.
-      Hence there exist a <math|i\<in\>\<bbb-N\>> such that
-      <math|W=\<beta\><around*|(|i|)>=B<rsub|i>>. In other words
-
-      <\equation*>
-        \<forall\>V\<in\>\<cal-T\><text| we have >\<forall\>x\<in\>V<text|
-        >\<exists\>i\<in\>\<bbb-N\><text| such that
-        >x\<in\>B<rsub|i>\<subseteq\>V
-      </equation*>
-
-      Let <math|x\<in\>M> then by the above there exists a
-      <math|i\<in\>\<bbb-N\>> such that <math|x\<in\>B<rsub|i>\<subseteq\><big|cup><rsub|i\<in\>\<bbb-N\>>B<rsub|i>\<subseteq\>M>
+      Further for every <math|x\<in\>M> there exist a <math|W\<in\>\<cal-B\>>
+      such that <math|x\<in\>W\<subseteq\>M> [because <math|\<cal-B\>> is a
+      basis]. Hence there exist a <math|i\<in\>\<bbb-N\>> such that
+      <math|W=\<beta\><around*|(|i|)>=B<rsub|i>\<subseteq\><big|cup><rsub|i\<in\>\<bbb-N\>>B<rsub|i>\<subseteq\>M>
       which proves that\ 
 
       <\equation*>
@@ -8594,25 +8585,21 @@
     </equation*>
   </proof>
 
-  We define now the concept of a partition of unity subordinate to a family
-  of sets.
+  We define now the concept of partitions of unity\ 
 
   <\definition>
-    <label|manifold partition of unity>Let
-    <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> be a topological
-    space, <math|<around*|{|U<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-T\>>
-    a family of open sets such that <math|X=<big|cup><rsub|i\<in\>I>U<rsub|i>>
-    then a family <math|<around*|{|\<varphi\><rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<bbb-R\><rsup|X>>
-    such that:
+    <label|manifold partition of unity>Let <math|m\<in\>\<bbb-N\>>,
+    <math|q\<in\>\<bbb-N\><rsub|0><big|cup><around*|{|\<infty\>|}>>,
+    <math|\<cal-M\><rsup|m><around*|\<langle\>|M,\<cal-T\>,\<cal-A\>|\<rangle\>>>
+    be a <math|m>-dimensional <math|C<rsup|q>> differentiable manifold then a
+    family <with|font-series|bold|<math|<around*|{|\<varphi\><rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<bbb-R\><rsup|M>>
+    is a <math|C<rsup|q>> partition of unity> iff\ 
 
     <\enumerate>
-      <item><math|\<forall\>i\<in\>I> <math|\<varphi\><rsub|i>:X\<rightarrow\>\<bbb-R\>>
-      is a continuous function.
+      <item><math|\<forall\>i\<in\>I> <math|\<varphi\><rsub|i>:M\<rightarrow\>\<bbb-R\>>
+      is of class <math|C<rsup|q>>
 
-      <item><math|\<forall\>i\<in\>I> <math|\<varphi\><rsub|i><around*|(|X|)>\<subseteq\><around*|[|0,1|]>>
-
-      <item><math|\<forall\>i\<in\>I> <math|supp
-      \<varphi\><rsub|i>\<subseteq\>U<rsub|i>>
+      <item><math|\<forall\>i\<in\>I> <math|\<varphi\><rsub|i><around*|(|M|)>\<subseteq\><around*|[|0,\<infty\>|[>>
 
       <item><math|\<forall\>x\<in\>X> there <math|\<exists\>V\<in\>\<cal-T\>>
       with <math|x\<in\>V> such that <math|<around*|{|i\<in\>I\|supp
@@ -8653,85 +8640,57 @@
       </note>
     </enumerate>
 
-    is called a <with|font-series|bold|partition of unity subordinate to
-    <math|<around*|{|U<rsub|i>|}><rsub|i\<in\>I>>>
-  </definition>
-
-  <\definition>
-    <label|manifold smooth partition of unity>Let <math|m\<in\>\<bbb-N\>>,
-    <math|q\<in\>\<bbb-N\><rsub|0><big|cup><around*|{|\<infty\>|}>>,
-    <math|\<cal-M\><rsup|m><around*|\<langle\>|M,\<cal-T\>,\<cal-A\>|\<rangle\>>>
-    be a <math|m>-dimensional <math|C<rsup|q>> differentiable manifold and
-    <math|<around*|{|U<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-T\>> a
-    family of open sets such that <math|M=<big|cup><rsub|i\<in\>I>U<rsub|i>>
-    then a family <math|<around*|{|\<varphi\><rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<bbb-R\><rsup|M>>
-    is a <math|C<rsup|q>> partition of unity subordinate to
-    <math|<around*|{|U<rsub|i>|}><rsub|i\<in\>I>> iff
-
-    <\enumerate>
-      <item><math|<around*|{|\<varphi\><rsub|i>|}><rsub|i\<in\>I>> is a
-      partition of unity subordinate to <math|<around*|{|U<rsub|i>|}><rsub|i\<in\>I>>
-
-      <item><math|\<forall\>i\<in\>I> <math|\<varphi\><rsub|i>:M\<rightarrow\>\<bbb-R\>>
-      is a <math|C<rsup|q>> mapping
-    </enumerate>
-  </definition>
-
-  <\lemma>
-    Let <math|m\<in\>\<bbb-N\>>, <math|q\<in\>\<bbb-N\><rsub|0><big|cup><around*|{|\<infty\>|}>>,
-    <math|\<cal-M\><rsup|m><around*|\<langle\>|M,\<cal-T\>,\<cal-A\>|\<rangle\>>>
-    a <math|m>-dimensional <math|C<rsup|q>> differentuable manifold then
-    there exists a <math|<around*|{|V<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-P\><around*|(|M|)>>
-    such that we have <math|\<forall\>i\<in\>\<bbb-N\>>\ 
-
-    <\eqnarray*>
-      <tformat|<table|<row|<cell|>|<cell|V<rsub|i><text| is open and
-      ><wide|V<rsub|i>|\<wide-bar\>><text| is
-      compact>>|<cell|>>|<row|<cell|>|<cell|V<rsub|i>\<subseteq\><wide|V<rsub|i>|\<wide-bar\>>\<subseteq\>V<rsub|i+1>>|<cell|>>>>
-    </eqnarray*>
-
-    and\ 
+    If <math|<around*|{|U|}><rsub|i\<in\>I>\<subseteq\>\<cal-T\>> is a open
+    cover of <math|M> [in other words <math|M=<big|cup><rsub|i\<in\>I>U<rsub|i>>
+    then a partition of unity <math|<around*|{|\<varphi\><rsub|i>|}><rsub|i\<in\>I>>
+    is <with|font-series|bold|subordinate to
+    <math|<around*|{|U<rsub|i>|}><rsub|i\<in\>I>>> if we have\ 
 
     <\equation*>
-      M=<big|cup><rsub|i\<in\>\<bbb-N\>>V<rsub|i>
+      \<forall\>i\<in\>I<text| we have >supp
+      \<varphi\><rsub|i>\<subseteq\>U<rsub|i>
     </equation*>
+  </definition>
+
+  We prove now the existence of partitions of unity.
+
+  <\lemma>
+    <label|lemma 23.120.28>Let <math|m\<in\>\<bbb-N\>>,
+    <math|q\<in\>\<bbb-N\><rsub|0><big|cup><around*|{|\<infty\>|}>>,
+    <math|\<cal-M\><rsup|m><around*|\<langle\>|M,\<cal-T\>,\<cal-A\>|\<rangle\>>>
+    a <math|m>-dimensional <math|C<rsup|q>> differentuable manifold then
+    there exists a <math|<around*|{|V<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>> such
+    that we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|>|<cell|\<forall\>i\<in\>\<bbb-N\><text| we
+      have >V<rsub|i><text| is open, ><wide|V<rsub|i>|\<wide-bar\>><text| is
+      compact>>|<cell|>>|<row|<cell|>|<cell|\<forall\>i\<in\><around*|{|2,\<ldots\>,\<infty\>|}><text|
+      we have ><wide|V<rsub|i-1>|\<wide-bar\>>\<subseteq\>V<rsub|i>>|<cell|>>|<row|<cell|>|<cell|M=<big|cup><rsub|i\<in\>\<bbb-N\>>V<rsub|i>>|<cell|>>>>
+    </eqnarray*>
   </lemma>
 
   <\proof>
     Using [theorem: <reference|manifold countable basis of precompact sets>]
-    there exist a countable family <math|<around*|{|B<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-T\>>
+    there exist a countable family of open set
+    <math|<around*|{|B<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-T\>>
     such that\ 
 
     <\equation*>
-      \<forall\>i\<in\>\<bbb-N\><text| >B<rsub|i>\<in\>\<cal-T\><text| and
-      ><wide|B<rsub|i>|\<wide-bar\>> is compact
-    </equation*>
-
-    and
-
-    <\equation*>
-      M=<big|cup><rsub|i\<in\>\<bbb-N\>>B<rsub|i>
+      \<forall\>i\<in\>\<bbb-N\><text| ><wide|B<rsub|i>|\<wide-bar\>> is
+      compact<infix-and>M=<big|cup><rsub|i\<in\>\<bbb-N\>>B<rsub|i>
     </equation*>
 
     We define now recursively a family <math|<around*|{|<around*|(|V<rsub|i>,\<beta\><rsub|i>|)>|}><rsub|i\<in\>\<bbb-N\>>>
     such that
 
-    <\equation*>
-      \<forall\>i\<in\>\<bbb-N\><text| >i+1\<leqslant\>\<beta\><rsub|i><text|,
-      <math|V<rsub|i>\<in\>\<cal-T\><text|, ><wide|V<rsub|i>|\<wide-bar\>>>
-      is compact, ><wide|V<rsub|i>|\<wide-bar\>>\<subseteq\><big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,\<beta\><rsub|i>|}>>B<rsub|j>
-    </equation*>
-
-    and\ 
-
-    <\equation*>
-      \<forall\>i\<in\><around*|{|2,\<ldots\>,\<infty\>|}><text| we have
-      ><wide|V<rsub|i-1>|\<wide-bar\>>\<subseteq\>V<rsub|i>
-    </equation*>
-
-    <\equation*>
-      <text|>
-    </equation*>
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|>|<cell|\<forall\>i\<in\>\<bbb-N\><text| we
+      have <math|V<rsub|i>\<in\>\<cal-T\><text|,
+      >B<rsub|i>\<subseteq\>V<rsub|i><text|, ><wide|V<rsub|i>|\<wide-bar\>>>
+      is compact, ><wide|V<rsub|i>|\<wide-bar\>>\<subseteq\><big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,\<beta\><rsub|i>|}>>B<rsub|j>>|<cell|>>|<row|<cell|>|<cell|and>|<cell|>>|<row|<cell|>|<cell|\<forall\>i\<in\><around*|{|2,\<ldots\>,\<infty\>|}><text|
+      we have ><wide|V<rsub|i-1>|\<wide-bar\>>\<subseteq\>V<rsub|i>>|<cell|>>>>
+    </eqnarray*>
 
     recursively as follows:\ 
 
@@ -8741,11 +8700,11 @@
       there exist a finite set <math|I\<subseteq\>\<bbb-N\>> such that
       <math|<wide|B<rsub|1>|\<wide-bar\>>\<subseteq\><big|cup><rsub|i\<in\>I>B<rsub|i>>.
       By [theorem: <reference|finite ordered sets have a maximum and
-      minimum>] <math|m=max<around*|(|I|)>> exist so that
-      <math|I\<subseteq\><around*|{|1,\<ldots\>,m|}>>, hence we have that\ 
+      minimum>] <math|k=max<around*|(|I|)>> exist so that
+      <math|I\<subseteq\><around*|{|1,\<ldots\>,k|}>>, hence we have that\ 
 
       <\equation*>
-        <wide|B<rsub|1>|\<wide-bar\>>\<subseteq\><big|cup><rsub|i\<in\>I>B<rsub|i>\<subseteq\><big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>>B<rsub|i>
+        <wide|B<rsub|1>|\<wide-bar\>>\<subseteq\><big|cup><rsub|i\<in\>I>B<rsub|i>\<subseteq\><big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>B<rsub|i>
       </equation*>
 
       Hence we have that
@@ -8759,165 +8718,233 @@
       exist. Set\ 
 
       <\equation*>
-        \<beta\><rsub|1>=max<around*|(|2,min<around*|(|<around*|{|n\<in\><around*|{|1,\<ldots\>,\<infty\>|}>\|<wide|B<rsub|1>|\<wide-bar\>>\<subseteq\><big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>B<rsub|i>|}>|)>|)>
+        \<beta\><rsub|1>=min<around*|(|<around*|{|n\<in\><around*|{|1,\<ldots\>,\<infty\>|}>\|<wide|B<rsub|1>|\<wide-bar\>>\<subseteq\><big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>B<rsub|i>|}>|)>
       </equation*>
 
-      then we have if we take <math|V<rsub|1>=B<rsub|1>> we have that
+      then we have, if we take <math|V<rsub|1>=B<rsub|1>>, that
+
+      <\equation>
+        <label|eq 23.188.28><text|<math|V<rsub|1>\<in\>\<cal-T\><text|,
+        >B<rsub|1>\<subseteq\>V<rsub|1><text|,
+        ><wide|V<rsub|1>|\<wide-bar\>>> is compact and
+        ><wide|V<rsub|1>|\<wide-bar\>>=<wide|B<rsub|1>|\<wide-bar\>>\<subseteq\><big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,\<beta\><rsub|1>|}>>B<rsub|j>
+      </equation>
+
+      <item*|1\<less\>m>Assume that <math|<around*|{|<around*|(|V<rsub|i>,\<beta\><rsub|i>|)>|}><rsub|i\<in\><around*|{|1,\<ldots\>,m-1|}>>>
+      is already defined with \ 
 
       <\equation*>
-        1+1=2\<leqslant\>\<beta\><rsub|1><text|,
-        <math|V<rsub|1>\<in\>\<cal-T\><text|, ><wide|V<rsub|1>|\<wide-bar\>>>
-        is compact and ><wide|V<rsub|1>|\<wide-bar\>>=<wide|B<rsub|1>|\<wide-bar\>>\<subseteq\><big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,\<beta\><rsub|1>|}>>B<rsub|j>
-      </equation*>
-
-      <item*|1\<less\>m>Assume that <math|<around*|{|<around*|(|V<rsub|i>,\<beta\><rsub|i>|)>|}><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>>>
-      is defined with \ 
-
-      <\equation*>
-        \<forall\>i\<in\><around*|{|1,\<ldots\>,m|}><text|
-        >V<rsub|1>\<in\>\<cal-T\><text|, ><wide|V<rsub|i>|\<wide-bar\>><text|
-        is compact, ><wide|V<rsub|i>|\<wide-bar\>>\<subseteq\><big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,\<beta\><rsub|i>|}>>B<rsub|j>
+        \<forall\>i\<in\><around*|{|1,\<ldots\>,m-1|}><text|
+        >V<rsub|i>\<in\>\<cal-T\><text|, >B<rsub|i>\<subseteq\>V<rsub|i><text|,
+        ><wide|V<rsub|i>|\<wide-bar\>><text| is compact and
+        ><wide|V<rsub|i>|\<wide-bar\>>\<subseteq\><big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,\<beta\><rsub|i>|}>>B<rsub|j>
       </equation*>
 
       Using [theorem: <reference|compact finite union of compact sets>] it
       follows then that\ 
 
       <\equation>
-        <big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,\<beta\><rsub|m>|}>><wide|V<rsub|j>|\<wide-bar\>><text|
+        <big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,\<beta\><rsub|m-1>|}>><wide|V<rsub|j>|\<wide-bar\>><text|
         is >compact
       </equation>
 
       Now we have that\ 
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|<wide|<big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,\<beta\><rsub|m>|}>>V<rsub|j>|\<wide-bar\>>>|<cell|<below|\<subseteq\>|<text|[theorem:
-        <reference|topology closure inclusion>]>>>|<cell|<wide|<big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,\<beta\><rsub|m>|}>><wide|V<rsub|j>|\<wide-bar\>>|\<wide-bar\>>>>|<row|<cell|>|<cell|<below|=|<text|[theoremx:
+        <tformat|<table|<row|<cell|<wide|<big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,\<beta\><rsub|m-1>|}>>V<rsub|j>|\<wide-bar\>>>|<cell|<below|\<subseteq\>|<text|[theorem:
+        <reference|topology closure inclusion>]>>>|<cell|<wide|<big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,\<beta\><rsub|m-1>|}>><wide|V<rsub|j>|\<wide-bar\>>|\<wide-bar\>>>>|<row|<cell|>|<cell|<below|=|<text|[theoremx:
         <reference|closed set properties>,<reference|topology closed set and
-        closure>]>>>|<cell|<big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,\<beta\><rsub|m>|}>><wide|V<rsub|j>|\<wide-bar\>>>>>>
+        closure>]>>>|<cell|<big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,\<beta\><rsub|m-1>|}>><wide|V<rsub|j>|\<wide-bar\>>>>>>
       </eqnarray*>
 
       Using [theorem: <reference|compact every closed subset of a compact set
-      is compact>] on the above it follows that\ 
+      is compact>] on the above it follows. as
+      <math|<big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,\<beta\><rsub|m-1>|}>><wide|V<rsub|j>|\<wide-bar\>><text|
+      is >compact>, that\ 
 
       <\equation*>
-        <wide|<big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,\<beta\><rsub|m>|}>>V<rsub|j>|\<wide-bar\>><text|
+        <wide|<big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,\<beta\><rsub|m-1>|}>>V<rsub|j>|\<wide-bar\>><text|
         is compact>
       </equation*>
 
-      Lete <math|V<rsub|m+1>=<big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,\<beta\><rsub|m>|}>>V<rsub|j>>
+      Let <math|V<rsub|m>=<big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,\<beta\><rsub|m-1>|}>>V<rsub|j>>
       then we have that\ 
 
-      <\equation*>
-        V<rsub|m+1>\<in\>\<cal-T\><text| and
-        ><wide|V<rsub|m+1>|\<wide-bar\>><text| is compact>
-      </equation*>
+      <\equation>
+        <label|eq 23.189.27>V<rsub|m>\<in\>\<cal-T\><text| and
+        ><wide|V<rsub|m>|\<wide-bar\>><text| is compact>
+      </equation>
 
-      As <math|<wide|V<rsub|m+1>|\<wide-bar\>>\<subseteq\>M=<big|cup><rsub|i\<in\>\<bbb-N\>>B<rsub|i>>
-      there exist a finite set <math|I\<subseteq\>\<bbb-N\>> such that
-      <math|> <math|<rigid|<wide|V<rsub|m+1>|\<wide-bar\>>\<subseteq\><big|cup><rsub|j\<in\>I>B<rsub|j>>>.
+      As <math|<wide|V<rsub|m>|\<wide-bar\>>\<subseteq\>M=<big|cup><rsub|i\<in\>\<bbb-N\>>B<rsub|i>>
+      there exist by compactness a finite set <math|I\<subseteq\>\<bbb-N\>>
+      such that <math|> <math|<rigid|<wide|V<rsub|m>|\<wide-bar\>>\<subseteq\><big|cup><rsub|j\<in\>I>B<rsub|j>>>.
       Hence if we take <math|k=max<around*|(|I|)>> then we have
       <math|I\<subseteq\><around*|{|1,\<ldots\>,k|}>> so that
 
       <\equation*>
-        <rigid|<wide|V<rsub|m+1>|\<wide-bar\>>\<subseteq\><big|cup><rsub|j\<in\>I>B<rsub|j>>\<subseteq\><big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,k|}>>B<rsub|j>
+        <rigid|<wide|V<rsub|m>|\<wide-bar\>>\<subseteq\><big|cup><rsub|j\<in\>I>B<rsub|j>>\<subseteq\><big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,k|}>>B<rsub|j>
       </equation*>
 
-      Hence we have that\ 
+      which proves that\ 
 
       <\equation*>
-        <around*|{|n\<in\>\<bbb-N\>\|<wide|V<rsub|m+1>|\<wide-bar\>>\<subseteq\><big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,k|}>>B<rsub|i>|}>\<neq\>\<emptyset\>
+        <around*|{|n\<in\>\<bbb-N\>\|<wide|V<rsub|m>|\<wide-bar\>>\<subseteq\><big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>B<rsub|i>|}>\<neq\>\<emptyset\>
       </equation*>
 
-      so that by [theorem: <reference|complex every set of natural numbers
-      has a minimum>] <math|min<around*|(|<around*|{|n\<in\>\<bbb-N\>\|<wide|V<rsub|m+1>|\<wide-bar\>>\<subseteq\><big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,k|}>>B<rsub|i>|}>|)>>
+      Hence using [theorem: <reference|complex every set of natural numbers
+      has a minimum>] is proved that <math|min<around*|(|<around*|{|n\<in\>\<bbb-N\>\|<wide|V<rsub|m>|\<wide-bar\>>\<subseteq\><big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,k|}>>B<rsub|i>|}>|)>>
       exist. Take\ 
 
       <\equation*>
-        \<beta\><rsub|m+1>=max<around*|(|m+1,\<beta\><rsub|m-1>,min<around*|(|<around*|{|n\<in\>\<bbb-N\>\|<wide|V<rsub|m+1>|\<wide-bar\>>\<subseteq\><big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,k|}>>B<rsub|i>|}>|)>|)>
+        \<beta\><rsub|m>=max<around*|(|m,\<beta\><rsub|m-1>,min<around*|(|<around*|{|n\<in\>\<bbb-N\>\|<wide|V<rsub|m>|\<wide-bar\>>\<subseteq\><big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>B<rsub|i>|}>|)>|)>
       </equation*>
 
       then we have\ 
 
+      <\equation>
+        <label|eq 23.190.27>m\<leqslant\>\<beta\><rsub|m><text|,
+        >\<beta\><rsub|m-1>\<leqslant\>\<beta\><rsub|m><text| and
+        ><wide|V<rsub|m>|\<wide-bar\>>\<subseteq\><big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,\<beta\><rsub|m>|}>>B<rsub|i>
+      </equation>
+
+      Further we have\ 
+
       <\equation*>
-        m+1\<leqslant\>\<beta\><rsub|m+1><text|,
-        >\<beta\><rsub|m-1>\<leqslant\>\<beta\><rsub|m+1><text| and
-        ><wide|V<rsub|m+1>|\<wide-bar\>>\<subseteq\><big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,\<beta\><rsub|m+1>|}>>B<rsub|i>
+        <wide|V<rsub|m-1>|\<wide-bar\>>\<subseteq\><big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,\<beta\><rsub|m-1>|}>>B<rsub|i><below|\<subseteq\>|\<beta\><rsub|m-1>\<leqslant\>\<beta\><rsub|m>><big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,\<beta\><rsub|m>|}>>B<rsub|j>=V<rsub|m>
       </equation*>
 
-      Further as\ 
+      or
 
-      \ 
-    </description>
+      <\equation>
+        <label|eq 23.191.27><wide|V<rsub|m-1>|\<wide-bar\>>\<subseteq\>V<rsub|m>
+      </equation>
 
-    \;
+      Also\ 
 
-    \;
+      <\equation>
+        <label|eq 23.193.28>B<rsub|m>\<subseteq\><big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,m|}>>B<rsub|j><below|\<subseteq\>|m\<leqslant\>\<beta\><rsub|m>><big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,\<beta\><rsub|m>|}>>B<rsub|j>=V<rsub|m>
+      </equation>
 
-    \;
-
-    \;
-
-    <\description>
-      <item*|<math|base case>>Set
-
-      <\equation*>
-        V<rsub|1>=B<rsub|1>
-      </equation*>
-
-      As <math|<wide|B<rsub|1>|\<wide-bar\>>> is compact and
-      <math|<wide|B<rsub|1>|\<wide-bar\>>\<subseteq\>M\<subseteq\><big|cup><rsub|i\<in\>\<bbb-N\>>B<rsub|i>>
-      there exist a finite set <math|I> such that
-      <math|<wide|B<rsub|1>|\<wide-bar\>>\<subseteq\><big|cup><rsub|i\<in\>I>B<rsub|i>>.
-      By [theorem: <reference|finite ordered sets have a maximum and
-      minimum>] <math|m=max<around*|(|I|)>> exist so that
-      <math|I\<subseteq\><around*|{|1,\<ldots\>,m|}>\<subseteq\><around*|{|1,\<ldots\>,max<around*|(|m,2|)>|}>>,
-      hence we have that\ 
+      To summarize [eqs: <reference|eq 23.189.27>, <reference|eq 23.190.27>,
+      <reference|eq 23.191.27> and <reference|eq 23.193.28>] we have
+      constructed a <math|<around*|(|V<rsub|m>,\<beta\><rsub|m>|)>> such that\ 
 
       <\equation*>
-        <wide|B<rsub|1>|\<wide-bar\>>\<subseteq\><big|cup><rsub|i\<in\>I>B<rsub|i>\<subseteq\><big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,max<around*|(|m,2|)>|}>>B<rsub|i>
-      </equation*>
-
-      Hence we have that
-
-      <\equation*>
-        <around*|{|n\<in\><around*|{|2,\<ldots\>,\<infty\>|}>\|<wide|B<rsub|1>|\<wide-bar\>>\<subseteq\><big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>B<rsub|i>|}>\<neq\>\<varnothing\>
-      </equation*>
-
-      Using [theorem: <reference|complex every set of natural numbers has a
-      minimum>] <math|min<around*|(|<around*|{|n\<in\><around*|{|2,\<ldots\>,\<infty\>|}>\|<wide|B<rsub|1>|\<wide-bar\>>\<subseteq\><big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>B<rsub|i>|}>|)>>
-      exist. Set\ 
-
-      <\equation*>
-        \<beta\><rsub|1>=min<around*|(|<around*|{|n\<in\><around*|{|2,\<ldots\>,\<infty\>|}>\|<wide|B<rsub|1>|\<wide-bar\>>\<subseteq\><big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>B<rsub|i>|}>|)>
-      </equation*>
-
-      Then we have for <math|<around*|(|V<rsub|1>,\<beta\><rsub|1>|)>> that\ 
-
-      <\equation*>
-        V<rsub|1>\<subseteq\><wide|V<rsub|1>|\<wide-bar\>>\<subseteq\><big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,\<beta\><rsub|1>|}>>B<rsub|i><text|
-        and >2\<leqslant\>\<beta\><rsub|1>
-      </equation*>
-
-      <item*|<math|recursive case>>Given <math|<around*|{|<around*|(|V<rsub|i>,\<beta\><rsub|i>|)>|}><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>>\<subseteq\>\<cal-T\>>
-      such that
-
-      <\equation*>
-        \<forall\>i\<in\><around*|{|1,\<ldots\>,m|}><text|
-        >V<rsub|i>\<in\>\<cal-T\><text| and ><wide|Vi|\<wide-bar\>><text| is
-        compact >
-      </equation*>
-
-      <\equation*>
-        \<forall\>i\<in\><around*|{|1,\<ldots\>,m-1|}><text|
-        ><wide|V<rsub|i>|\<wide-bar\>>\<subseteq\>V<rsub|i+1><text| and
-        >i+1\<leqslant\>\<beta\><rsub|i>
+        V<rsub|m>\<in\>\<cal-T\><text|, >B<rsub|m>\<subseteq\>V<rsub|m><text|,
+        ><wide|V<rsub|m>|\<wide-bar\>><text| is compact,
+        ><wide|V<rsub|m>|\<wide-bar\>>\<subseteq\><big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,\<beta\><rsub|m>|}>>B<rsub|j><text|
+        and ><wide|V<rsub|m-1>|\<wide-bar\>>\<leqslant\>V<rsub|m>
       </equation*>
     </description>
+
+    Consider the above constructed <math|<around*|{|V<rsub|i>,\<beta\><rsub|i>|}><rsub|i\<in\>\<bbb-N\>>>
+    then we have <math|\<forall\>i\<in\>\<bbb-N\>>
+    <math|B<rsub|i>\<subseteq\>V<rsub|i>\<subseteq\>M> so that
+    <math|<rigid|M=<big|cup><rsub|i\<in\>\<bbb-N\>>B<rsub|i>\<subseteq\><big|cup><rsub|i\<in\>\<bbb-N\>>V<rsub|i>\<subseteq\>M>>
+    which proves that\ 
+
+    <\equation*>
+      M=<big|cup><rsub|i\<in\>\<bbb-N\>>V<rsub|i>
+    </equation*>
+
+    Further by the above construction we have\ 
+
+    <\equation*>
+      \<forall\>i\<in\>\<bbb-N\><text| >V<rsub|i>\<in\>\<bbb-N\><text|,
+      ><wide|V<rsub|i>|\<wide-bar\>><text| is compact,
+      ><wide|V<rsub|i>|\<wide-bar\>>\<subseteq\>V<rsub|i+1>
+    </equation*>
+  </proof>
+
+  <\theorem>
+    <label|manifold existence of partition of unity>Let
+    <math|m\<in\>\<bbb-N\>>, <math|q\<in\>\<bbb-N\><rsub|0><big|cup><around*|{|\<infty\>|}>>
+    and <math|\<cal-M\><rsup|m><around*|\<langle\>|M,\<cal-T\>,\<cal-A\>|\<rangle\>>>
+    a <math|m>-dimensional <math|C<rsup|q>> differentiable manifold and let
+    <math|<around*|{|U<rsub|i>|}><rsub|i\<in\>I>> be a arbitrary family of
+    opem sets in <math|M> then there ex\ 
+
+    <\enumerate>
+      <item>There exist a <math|C<rsup|q>> partition of unity
+      <math|<around*|{|\<varphi\><rsub|i>|}><rsub|i\<in\>\<bbb-N\>>> such
+      that
+
+      <\equation*>
+        \<forall\>i\<in\>I<text| >supp \<varphi\><rsub|i><text| is compact
+        and >\<exists\>\<alpha\>\<in\>I<text| such that >supp
+        \<varphi\><rsub|\<alpha\>>\<subseteq\>U<rsub|\<alpha\>>
+      </equation*>
+
+      <item>There exist a <math|C<rsup|q>> partition of unity
+      <math|<around*|{|\<rho\><rsub|i>|}><rsub|i\<in\>I>> subordinate to
+      <math|<around*|{|U<rsub|i>|}><rsub|i\<in\>I>>
+    </enumerate>
+  </theorem>
+
+  TODO
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>Using [lemma: <reference|lemma 23.120.28>] there exists a
+      <math|<around*|{|V<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-T\>>
+      such that\ 
+
+      <\equation*>
+        M=<big|cup><rsub|i\<in\>\<bbb-N\>>V<rsub|i><text| and
+        >\<forall\>i\<in\>\<bbb-N\><text|
+        ><wide|V<rsub|i>|\<wide-bar\>><text| is compact and
+        ><wide|V<rsub|i>|\<wide-bar\>>\<subseteq\>V<rsub|i+1>
+      </equation*>
+
+      Take <math|V<rsub|0>=\<varnothing\>> then, as
+      <math|<wide|V<rsub|0>|\<wide-bar\>>=<wide|\<varnothing\>|\<wide-bar\>><below|=|\<varnothing\><text|
+      is closed>>\<varnothing\>>, <math|<wide|V<rsub|0>|\<wide-bar\>>\<subseteq\>V<rsub|1>>
+      and <math|<wide|V<rsub|0>|\<wide-bar\>>> is compact [see example:
+      <reference|compact empty set>], hence we have that\ 
+
+      <\equation*>
+        <around*|{|V<rsub|i>|}><rsub|i\<in\>\<bbb-N\><rsub|0>>\<subseteq\>\<cal-T\><text|,
+        <math|M=<big|cup><rsub|i\<in\>\<bbb-N\><rsub|0>>V<rsub|i>> and
+        >\<forall\>i\<in\>\<bbb-N\><text|
+        ><wide|V<rsub|i>|\<wide-bar\>><text| is compact and
+        ><wide|V<rsub|i>|\<wide-bar\>>\<subseteq\>V<rsub|i>
+      </equation*>
+
+      Let <math|i\<in\>\<bbb-N\><rsub|0>> then
+      <math|<wide|V<rsub|i+1>|\<wide-bar\>>\\V<rsub|i>> is closed and <math|>
+      <math|<wide|V<rsub|i+1>|\<wide-bar\>>\\V<rsub|i>\<subseteq\><wide|V<rsub|i+1>|\<wide-bar\>>>
+      a compact set, hence, using [theorem: <reference|compact every closed
+      subset of a compact set is compact>],
+      <math|><math|<wide|V<rsub|i+1>|\<wide-bar\>>\\V<rsub|i>> is compact.
+      Hence we have\ 
+
+      <\equation*>
+        \<forall\>i\<in\>\<bbb-N\><rsub|0><text|
+        ><wide|V<rsub|i+1>|\<wide-bar\>>\\V<rsub|i><text| is compact>
+      </equation*>
+
+      If <math|p\<in\>M=<big|cup><rsub|i\<in\>\<bbb-N\><rsub|0>>V<rsub|i>>
+      then <math|\<exists\>i\<in\>\<bbb-N\><rsub|0>> such that
+      <math|p\<in\>V<rsub|i>\<subseteq\><wide|V<rsub|i>|\<wide-bar\>>\<subseteq\>V<rsub|i+1>>
+      so that <math|<around*|{|i\<in\>\<bbb-N\><rsub|0>\|p\<in\>V<rsub|i+1>|}>\<neq\>\<varnothing\>>.
+      By [theorem: <reference|complex every set of natural numbers has a
+      minimum>] <math|m=min*<around*|(|<around*|{|i\<in\>\<bbb-N\><rsub|0>\|p\<in\>V<rsub|i+1>|}>|)>>
+      exist so that <math|p\<in\>V<rsub|m+1>\<subseteq\><wide|V<rsub|m+1>|\<wide-bar\>>>
+      and <math|p\<nin\>V<rsub|<around*|(|m+1|)>-1>> or
+      <math|p\<in\><wide|V<rsub|m+1>|\<wide-bar\>>\\V<rsub|m>\<in\><big|cup><rsub|i\<in\>\<bbb-N\><rsub|0>><around*|(|<wide|V<rsub|i+1>|\<wide-bar\>>\\V<rsub|i>|)>>.
+      Hence we have that\ 
+
+      <\equation*>
+        M=<big|cup><rsub|i\<in\>\<bbb-N\><rsub|0>><around*|(|<wide|V<rsub|i+1>|\<wide-bar\>>\\V<rsub|i>|)>
+      </equation*>
+
+      <item>
+    </enumerate>
 
     \;
   </proof>
-
-  TODO
 
   <section|Tangent vectors and <math|T<rsub|p>M>>
 
@@ -9744,7 +9771,7 @@
     <associate|eq 23.138.16|<tuple|23.147|?>>
     <associate|eq 23.139.16|<tuple|23.148|?>>
     <associate|eq 23.14.3|<tuple|23.18|?>>
-    <associate|eq 23.147.17|<tuple|23.189|?>>
+    <associate|eq 23.147.17|<tuple|23.194|?>>
     <associate|eq 23.15.2|<tuple|23.19|?>>
     <associate|eq 23.150.27|<tuple|23.150|?>>
     <associate|eq 23.157.20|<tuple|23.152|?>>
@@ -9785,6 +9812,11 @@
     <associate|eq 23.183.25|<tuple|23.187|?>>
     <associate|eq 23.183.26|<tuple|23.185|?>>
     <associate|eq 23.184.26|<tuple|23.186|?>>
+    <associate|eq 23.188.28|<tuple|23.188|?>>
+    <associate|eq 23.189.27|<tuple|23.190|?>>
+    <associate|eq 23.190.27|<tuple|23.191|?>>
+    <associate|eq 23.191.27|<tuple|23.192|?>>
+    <associate|eq 23.193.28|<tuple|23.193|?>>
     <associate|eq 23.2.1|<tuple|23.6|?>>
     <associate|eq 23.2.3|<tuple|23.3|?>>
     <associate|eq 23.21.6|<tuple|23.21|?>>
@@ -9904,6 +9936,7 @@
     <associate|lemma 23.106.20|<tuple|23.107|?>>
     <associate|lemma 23.107.21|<tuple|23.108|?>>
     <associate|lemma 23.11.2|<tuple|23.20|?>>
+    <associate|lemma 23.120.28|<tuple|23.120|?>>
     <associate|lemma 23.13.2|<tuple|23.21|?>>
     <associate|lemma 23.13.8|<tuple|23.17|?>>
     <associate|lemma 23.37.6|<tuple|23.57|?>>
@@ -9978,6 +10011,7 @@
     <associate|manifold differential properties|<tuple|23.133|?>>
     <associate|manifold existence of a bump function|<tuple|23.115|?>>
     <associate|manifold existence of a maximal atlas|<tuple|23.59|?>>
+    <associate|manifold existence of partition of unity|<tuple|23.121|?>>
     <associate|manifold extension of local functions|<tuple|23.117|?>>
     <associate|manifold identity is a C^q mapping|<tuple|23.75|?>>
     <associate|manifold maximal atlas|<tuple|23.50|?>>
@@ -9996,7 +10030,6 @@
     manifold|<tuple|23.14|?>>
     <associate|manifold restriction of a chart is a chart|<tuple|23.7|?>>
     <associate|manifold singleton chart|<tuple|23.64|?>>
-    <associate|manifold smooth partition of unity|<tuple|23.120|?>>
     <associate|manifold sphere is a differentiable manifold|<tuple|23.69|?>>
     <associate|manifold sphere is a topological manifold|<tuple|23.18|?>>
     <associate|manifold support|<tuple|23.97|?>>
