@@ -4687,7 +4687,7 @@
     </equation*>
   </proof>
 
-  We show now that differentisbility of class <math|C<rsup|q>> of real
+  We show now that differentiability of class <math|C<rsup|q>> of real
   functions is a local property.
 
   TODO check
@@ -4883,16 +4883,180 @@
     \ TODO
 
     <\enumerate>
-      <item>
+      <item>Let <math|p\<in\>M> then, as <math|f> is of class
+      <math|C<rsup|q>>, there exists by [definition: <reference|manifold
+      differentiability real function>] a
+      <math|<around*|(|U,\<varphi\>|)>\<in\>\<cal-A\>> with <math|p\<in\>U>
+      such that\ 
 
-      <item>
+      <\equation*>
+        f\<circ\>\<varphi\><rsup|-1>:\<varphi\><around*|(|U|)>\<rightarrow\>\<bbb-R\><text|
+        is of class >C<rsup|q>
+      </equation*>
 
-      <item>
+      As <math|g> is of class <math|C<rsup|q>> it follows from [theorem:
+      <reference|manifold differentiability real function (1)>] that\ 
 
-      <item>
+      <\equation*>
+        g\<circ\>\<varphi\><rsup|-1>:\<varphi\><around*|(|U|)>\<rightarrow\>\<bbb-R\><text|
+        is of class >C<rsup|q>
+      </equation*>
 
-      <item>
+      Using the properties of functions of class <math|C<rsup|q>> [see
+      theorem: <reference|diff higher order differential is linear>] proves
+      then that
+
+      <\equation>
+        <label|eq 23.83.29>f\<circ\>\<varphi\><rsup|-1>+g\<circ\>\<varphi\><rsup|-1>:\<varphi\><around*|(|U|)>\<rightarrow\>\<bbb-R\><text|
+        is of class >C<rsup|q>
+      </equation>
+
+      Now <math|\<forall\>x\<in\>\<varphi\><around*|(|U|)>> we have
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|f\<circ\>\<varphi\><rsup|-1>+g\<circ\>\<varphi\><rsup|-1>|)><around*|(|x|)>>|<cell|=>|<cell|<around*|(|f\<circ\>\<varphi\><rsup|-1>|)><around*|(|x|)>+<around*|(|g\<circ\>\<varphi\><rsup|-1>|)><around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|f<around*|(|\<varphi\><rsup|-1><around*|(|x|)>|)>+<around*|(|g<around*|(|\<varphi\><rsup|-1><around*|(|x|)>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|f+g|)><around*|(|\<varphi\><rsup|-1><around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<around*|(|f+g|)>\<circ\>\<varphi\><rsup|-1>|)><around*|(|x|)>>>>>
+      </eqnarray*>
+
+      which proves that <math|f\<circ\>\<varphi\><rsup|-1>+g\<circ\>\<varphi\>=<around*|(|f+g|)>\<circ\>\<varphi\><rsup|-1>>.
+      Substituting this in [eq: <reference|eq 23.83.29>] proves that\ 
+
+      <\equation*>
+        <around*|(|f+g|)>\<circ\>\<varphi\><rsup|-1>:\<varphi\><around*|(|U|)>\<rightarrow\>\<bbb-R\><text|
+        is of class >C<rsup|q>
+      </equation*>
+
+      As this is true for every <math|p\<in\>M> it follows from [definition:
+      <reference|manifold differentiability real function>] that\ 
+
+      <\equation*>
+        f+g:M\<rightarrow\>\<bbb-R\><text| is of class >C<rsup|q>
+      </equation*>
+
+      <item>This is easely proved by mathematical induction. So let\ 
+
+      <\equation*>
+        S=<around*|{|k\<in\>\<bbb-N\>\|<text|If
+        ><around*|{|f<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>><text|
+        is such that >\<forall\>i\<in\><around*|{|1,\<ldots\>,k|}><text|
+        >f<rsub|i>:M\<rightarrow\>\<bbb-R\><text| is of class
+        >C<rsup|q><text| then <math|<big|sum><rsub|i=1><rsup|k>f<rsub|i>> is
+        of class >C<rsup|q>|}>\ 
+      </equation*>
+
+      then we have that:
+
+      <\description>
+        <item*|<math|1\<in\>S>>Let <math|<around*|{|f<rsub|i>|}><rsub|i\<in\><around*|{|1|}>>>
+        be such that <math|f<rsub|1>:M\<rightarrow\>\<bbb-R\>> is of class
+        <math|C<rsup|q>> then, as <math|<big|sum><rsub|i=1><rsup|1>f<rsub|i>=f<rsub|1>>,
+        it follows that <math|<big|sum><rsub|i=1><rsup|k>f<rsub|i>:M\<rightarrow\>\<bbb-R\>>
+        is of class <math|C<rsup|q>> which proves that <math|1\<in\>S>.
+
+        <item*|<math|k\<in\>S\<Rightarrow\>k+1\<in\>S>>Let
+        <math|<around*|{|f<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,k+1|}>>>
+        be such that <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,k+1|}>>
+        <math|f<rsub|i>:M\<rightarrow\>\<bbb-R\>> is of class
+        <math|C<rsup|q>>. As <math|k\<in\>S>
+        <math|<big|sum><rsub|i=1><rsup|k>f<rsub|i>> is of class
+        <math|C<rsup|q>> so that by (1) <math|f<rsub|k+1>+<big|sum><rsub|i=1><rsup|k>f<rsub|i>>
+        is of class <math|C<rsup|q>>. As <math|<big|sum><rsub|i=1><rsup|k+1>f<rsub|i>=f<rsub|k+1>+<big|sum><rsub|i=1><rsup|k>f<rsub|i>>
+        it follows that <math|<big|sum><rsub|i=1><rsup|k+1>f<rsub|i>> is of
+        class <math|C<rsup|q>> which proves that <math|n+1\<in\>S>.
+      </description>
+
+      <item>Let <math|p\<in\>M>. As <math|f:M\<rightarrow\>\<bbb-R\>> is of
+      class it follows from [definition: <reference|manifold
+      differentiability real function>] that there exist a
+      <math|<around*|(|U,\<varphi\>|)>\<in\>\<cal-A\>> with <math|p\<in\>U>
+      such that\ 
+
+      <\equation*>
+        f\<circ\>\<varphi\><rsup|-1>:\<varphi\><around*|(|U|)>\<rightarrow\>\<bbb-R\><text|
+        is of class >C<rsup|q>
+      </equation*>
+
+      Using [theorem: <reference|diff higher order differential is linear>]
+      it follows that\ 
+
+      <\equation*>
+        \<alpha\>\<cdot\><around*|(|f\<circ\>\<varphi\><rsup|-1>|)>:\<varphi\><around*|(|U|)>\<rightarrow\>\<bbb-R\><text|
+        is of class >C<rsup|q>
+      </equation*>
+
+      Now <math|\<forall\>x\<in\>\<varphi\><around*|(|U|)>>
+
+      <\equation*>
+        <around*|(|\<alpha\>\<cdot\><around*|(|f\<circ\>\<varphi\><rsup|-1>|)>|)><around*|(|x|)>=\<alpha\>\<cdot\><around*|(|f\<circ\>\<varphi\><rsup|-1>|)><around*|(|x|)>=\<alpha\>\<cdot\>f<around*|(|\<varphi\><rsup|-1><around*|(|x|)>|)>=<around*|(|\<alpha\>\<cdot\>f|)><around*|(|\<varphi\><rsup|-1><around*|(|x|)>|)>=<around*|(|<around*|(|\<alpha\>\<cdot\>f|)>\<circ\>\<varphi\><rsup|-1>|)><around*|(|x|)>
+      </equation*>
+
+      from which it follows that <math|\<alpha\>\<cdot\><around*|(|f\<circ\>\<varphi\><rsup|-1>|)>=<around*|(|\<alpha\>\<cdot\>f|)>\<circ\>\<varphi\><rsup|-1>>.
+      Hence we must conclude that
+
+      <\equation*>
+        <around*|(|\<alpha\>\<cdot\>f|)>\<circ\>\<varphi\><rsup|-1>:\<varphi\><around*|(|U|)>\<rightarrow\>\<bbb-R\><text|
+        is of class >C<rsup|q>
+      </equation*>
+
+      As this is true for every <math|p\<in\>M> it follows from [definition:
+      <reference|manifold differentiability real function>] that\ 
+
+      <\equation*>
+        \<alpha\>\<cdot\>f:M\<rightarrow\>\<bbb-R\><text| is of class
+        >C<rsup|q>
+      </equation*>
+
+      <item>Let <math|p\<in\>M> then, as <math|f> is of class
+      <math|C<rsup|q>>, there exists by [definition: <reference|manifold
+      differentiability real function>] a
+      <math|<around*|(|U,\<varphi\>|)>\<in\>\<cal-A\>> with <math|p\<in\>U>
+      such that\ 
+
+      <\equation*>
+        f\<circ\>\<varphi\><rsup|-1>:\<varphi\><around*|(|U|)>\<rightarrow\>\<bbb-R\><text|
+        is of class >C<rsup|q>
+      </equation*>
+
+      As <math|g> is of class <math|C<rsup|q>> it follows from [theorem:
+      <reference|manifold differentiability real function (1)>] that\ 
+
+      <\equation*>
+        g\<circ\>\<varphi\><rsup|-1>:\<varphi\><around*|(|U|)>\<rightarrow\>\<bbb-R\><text|
+        is of class >C<rsup|q>
+      </equation*>
+
+      Using [theorem: <reference|diff higher order differential of a product
+      (1)>] it follows then that\ 
+
+      <\equation>
+        <label|eq 23.84.29><around*|(|f\<circ\>\<varphi\><rsup|-1>|)>\<cdot\><around*|(|g\<circ\>\<varphi\><rsup|-1>|)>:M\<rightarrow\>\<bbb-R\><text|
+        is of class >C<rsup|q>
+      </equation>
+
+      Now we have <math|\<forall\>x\<in\>\<varphi\><around*|(|U|)>> that\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|<around*|(|f\<circ\>\<varphi\><rsup|-1>|)>\<cdot\><around*|(|g\<circ\>\<varphi\><rsup|-1>|)>|)><around*|(|x|)>>|<cell|=>|<cell|<around*|(|<around*|(|f\<circ\>\<varphi\><rsup|-1>|)><around*|(|x|)>|)>\<cdot\><around*|(|<around*|(|g\<circ\>\<varphi\><rsup|-1>|)><around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|f<around*|(|\<varphi\><rsup|-1><around*|(|x|)>|)>|)>\<cdot\><around*|(|g<around*|(|\<varphi\><rsup|-1><around*|(|x|)>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|f\<cdot\>g|)><around*|(|\<varphi\><rsup|-1><around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<around*|(|f\<cdot\>g|)>\<circ\>\<varphi\><rsup|-1>|)><around*|(|x|)>>>>>
+      </eqnarray*>
+
+      which proves that <math|<around*|(|f\<circ\>\<varphi\><rsup|-1>|)>\<cdot\><around*|(|g\<circ\>\<varphi\><rsup|-1>|)>=<around*|(|f\<cdot\>g|)>\<circ\>\<varphi\><rsup|-1>>.
+      Substituting this result in produces\ 
+
+      <\equation*>
+        <around*|(|f\<cdot\>g|)>\<circ\>\<varphi\><rsup|-1>:\<varphi\><around*|(|U|)>\<rightarrow\>\<bbb-R\><text|
+        is of class >C<rsup|q>
+      </equation*>
+
+      As this is valid for every <math|p\<in\>M> it follows from [definition:
+      <reference|manifold differentiability real function>] that\ 
+
+      <\equation*>
+        f\<cdot\>g:M\<rightarrow\>\<bbb-R\><text| is of class >C<rsup|q>
+      </equation*>
+
+      <item>TODO
     </enumerate>
+
+    \;
   </proof>
 
   <section|Differential mappings between manifolds>
@@ -8664,6 +8828,8 @@
   agree only on a open neighborhood of the point that is a subset of the
   original open neighborhood.
 
+  \;
+
   TODO check this\ 
 
   <\theorem>
@@ -10077,90 +10243,90 @@
     <associate|compact paracompactness|<tuple|23.29|?>>
     <associate|compact refinement|<tuple|23.27|?>>
     <associate|continuity homeomorphism and restriction (1)|<tuple|23.32|?>>
-    <associate|eq 21.156.1|<tuple|23.155|?>>
+    <associate|eq 21.156.1|<tuple|23.157|?>>
     <associate|eq 23.1.1|<tuple|23.5|?>>
     <associate|eq 23.1.3|<tuple|23.2|?>>
     <associate|eq 23.1.4|<tuple|23.1|?>>
-    <associate|eq 23.100.12|<tuple|23.122|?>>
-    <associate|eq 23.101.12|<tuple|23.123|?>>
-    <associate|eq 23.102.12|<tuple|23.124|?>>
-    <associate|eq 23.103.12|<tuple|23.125|?>>
-    <associate|eq 23.104.12|<tuple|23.126|?>>
-    <associate|eq 23.104.13|<tuple|23.127|?>>
-    <associate|eq 23.105.13|<tuple|23.128|?>>
-    <associate|eq 23.106.13|<tuple|23.129|?>>
-    <associate|eq 23.117.14|<tuple|23.130|?>>
-    <associate|eq 23.118.14|<tuple|23.131|?>>
-    <associate|eq 23.119.14|<tuple|23.132|?>>
-    <associate|eq 23.119.27|<tuple|23.153|?>>
-    <associate|eq 23.120.14|<tuple|23.133|?>>
-    <associate|eq 23.121.16|<tuple|23.134|?>>
-    <associate|eq 23.122.16|<tuple|23.135|?>>
-    <associate|eq 23.128.14|<tuple|23.142|?>>
-    <associate|eq 23.128.15|<tuple|23.141|?>>
-    <associate|eq 23.129.14|<tuple|23.143|?>>
+    <associate|eq 23.100.12|<tuple|23.124|?>>
+    <associate|eq 23.101.12|<tuple|23.125|?>>
+    <associate|eq 23.102.12|<tuple|23.126|?>>
+    <associate|eq 23.103.12|<tuple|23.127|?>>
+    <associate|eq 23.104.12|<tuple|23.128|?>>
+    <associate|eq 23.104.13|<tuple|23.129|?>>
+    <associate|eq 23.105.13|<tuple|23.130|?>>
+    <associate|eq 23.106.13|<tuple|23.131|?>>
+    <associate|eq 23.117.14|<tuple|23.132|?>>
+    <associate|eq 23.118.14|<tuple|23.133|?>>
+    <associate|eq 23.119.14|<tuple|23.134|?>>
+    <associate|eq 23.119.27|<tuple|23.155|?>>
+    <associate|eq 23.120.14|<tuple|23.135|?>>
+    <associate|eq 23.121.16|<tuple|23.136|?>>
+    <associate|eq 23.122.16|<tuple|23.137|?>>
+    <associate|eq 23.128.14|<tuple|23.144|?>>
+    <associate|eq 23.128.15|<tuple|23.143|?>>
+    <associate|eq 23.129.14|<tuple|23.145|?>>
     <associate|eq 23.13.3|<tuple|23.17|?>>
-    <associate|eq 23.130.14|<tuple|23.144|?>>
-    <associate|eq 23.132.14|<tuple|23.136|?>>
-    <associate|eq 23.132.17|<tuple|23.145|?>>
-    <associate|eq 23.133.14|<tuple|23.137|?>>
-    <associate|eq 23.133.15|<tuple|23.146|?>>
-    <associate|eq 23.134.14|<tuple|23.138|?>>
-    <associate|eq 23.134.16|<tuple|23.147|?>>
-    <associate|eq 23.135.14|<tuple|23.139|?>>
-    <associate|eq 23.135.16|<tuple|23.148|?>>
-    <associate|eq 23.136.14|<tuple|23.140|?>>
-    <associate|eq 23.136.16|<tuple|23.149|?>>
-    <associate|eq 23.137.16|<tuple|23.150|?>>
-    <associate|eq 23.138.16|<tuple|23.151|?>>
-    <associate|eq 23.139.16|<tuple|23.152|?>>
+    <associate|eq 23.130.14|<tuple|23.146|?>>
+    <associate|eq 23.132.14|<tuple|23.138|?>>
+    <associate|eq 23.132.17|<tuple|23.147|?>>
+    <associate|eq 23.133.14|<tuple|23.139|?>>
+    <associate|eq 23.133.15|<tuple|23.148|?>>
+    <associate|eq 23.134.14|<tuple|23.140|?>>
+    <associate|eq 23.134.16|<tuple|23.149|?>>
+    <associate|eq 23.135.14|<tuple|23.141|?>>
+    <associate|eq 23.135.16|<tuple|23.150|?>>
+    <associate|eq 23.136.14|<tuple|23.142|?>>
+    <associate|eq 23.136.16|<tuple|23.151|?>>
+    <associate|eq 23.137.16|<tuple|23.152|?>>
+    <associate|eq 23.138.16|<tuple|23.153|?>>
+    <associate|eq 23.139.16|<tuple|23.154|?>>
     <associate|eq 23.14.3|<tuple|23.18|?>>
-    <associate|eq 23.147.17|<tuple|23.198|?>>
+    <associate|eq 23.147.17|<tuple|23.200|?>>
     <associate|eq 23.15.2|<tuple|23.19|?>>
-    <associate|eq 23.150.27|<tuple|23.154|?>>
-    <associate|eq 23.157.20|<tuple|23.156|?>>
-    <associate|eq 23.158.20|<tuple|23.157|?>>
-    <associate|eq 23.159.20|<tuple|23.158|?>>
-    <associate|eq 23.159.21|<tuple|23.163|?>>
+    <associate|eq 23.150.27|<tuple|23.156|?>>
+    <associate|eq 23.157.20|<tuple|23.158|?>>
+    <associate|eq 23.158.20|<tuple|23.159|?>>
+    <associate|eq 23.159.20|<tuple|23.160|?>>
+    <associate|eq 23.159.21|<tuple|23.165|?>>
     <associate|eq 23.16.2|<tuple|23.20|?>>
-    <associate|eq 23.160.20|<tuple|23.159|?>>
-    <associate|eq 23.160.21|<tuple|23.164|?>>
-    <associate|eq 23.160.22|<tuple|23.168|?>>
-    <associate|eq 23.161.20|<tuple|23.160|?>>
-    <associate|eq 23.161.21|<tuple|23.165|?>>
-    <associate|eq 23.161.22|<tuple|23.169|?>>
-    <associate|eq 23.162.20|<tuple|23.161|?>>
-    <associate|eq 23.162.21|<tuple|23.166|?>>
-    <associate|eq 23.162.22|<tuple|23.170|?>>
-    <associate|eq 23.163.20|<tuple|23.162|?>>
-    <associate|eq 23.163.21|<tuple|23.167|?>>
-    <associate|eq 23.163.22|<tuple|23.171|?>>
-    <associate|eq 23.164.22|<tuple|23.172|?>>
-    <associate|eq 23.165.22|<tuple|23.173|?>>
-    <associate|eq 23.166.22|<tuple|23.174|?>>
-    <associate|eq 23.169.24|<tuple|23.176|?>>
-    <associate|eq 23.169.25|<tuple|23.175|?>>
+    <associate|eq 23.160.20|<tuple|23.161|?>>
+    <associate|eq 23.160.21|<tuple|23.166|?>>
+    <associate|eq 23.160.22|<tuple|23.170|?>>
+    <associate|eq 23.161.20|<tuple|23.162|?>>
+    <associate|eq 23.161.21|<tuple|23.167|?>>
+    <associate|eq 23.161.22|<tuple|23.171|?>>
+    <associate|eq 23.162.20|<tuple|23.163|?>>
+    <associate|eq 23.162.21|<tuple|23.168|?>>
+    <associate|eq 23.162.22|<tuple|23.172|?>>
+    <associate|eq 23.163.20|<tuple|23.164|?>>
+    <associate|eq 23.163.21|<tuple|23.169|?>>
+    <associate|eq 23.163.22|<tuple|23.173|?>>
+    <associate|eq 23.164.22|<tuple|23.174|?>>
+    <associate|eq 23.165.22|<tuple|23.175|?>>
+    <associate|eq 23.166.22|<tuple|23.176|?>>
+    <associate|eq 23.169.24|<tuple|23.178|?>>
+    <associate|eq 23.169.25|<tuple|23.177|?>>
     <associate|eq 23.17.2|<tuple|23.22|?>>
-    <associate|eq 23.170.24|<tuple|23.177|?>>
-    <associate|eq 23.171.24|<tuple|23.178|?>>
-    <associate|eq 23.172.24|<tuple|23.179|?>>
-    <associate|eq 23.173.24|<tuple|23.180|?>>
-    <associate|eq 23.174.24|<tuple|23.182|?>>
-    <associate|eq 23.175.24|<tuple|23.183|?>>
-    <associate|eq 23.175.25|<tuple|23.181|?>>
-    <associate|eq 23.176.24|<tuple|23.184|?>>
-    <associate|eq 23.177.24|<tuple|23.185|?>>
-    <associate|eq 23.180.26|<tuple|23.186|?>>
-    <associate|eq 23.181.26|<tuple|23.187|?>>
-    <associate|eq 23.182.26|<tuple|23.188|?>>
-    <associate|eq 23.183.25|<tuple|23.191|?>>
-    <associate|eq 23.183.26|<tuple|23.189|?>>
-    <associate|eq 23.184.26|<tuple|23.190|?>>
-    <associate|eq 23.188.28|<tuple|23.192|?>>
-    <associate|eq 23.189.27|<tuple|23.194|?>>
-    <associate|eq 23.190.27|<tuple|23.195|?>>
-    <associate|eq 23.191.27|<tuple|23.196|?>>
-    <associate|eq 23.193.28|<tuple|23.197|?>>
+    <associate|eq 23.170.24|<tuple|23.179|?>>
+    <associate|eq 23.171.24|<tuple|23.180|?>>
+    <associate|eq 23.172.24|<tuple|23.181|?>>
+    <associate|eq 23.173.24|<tuple|23.182|?>>
+    <associate|eq 23.174.24|<tuple|23.184|?>>
+    <associate|eq 23.175.24|<tuple|23.185|?>>
+    <associate|eq 23.175.25|<tuple|23.183|?>>
+    <associate|eq 23.176.24|<tuple|23.186|?>>
+    <associate|eq 23.177.24|<tuple|23.187|?>>
+    <associate|eq 23.180.26|<tuple|23.188|?>>
+    <associate|eq 23.181.26|<tuple|23.189|?>>
+    <associate|eq 23.182.26|<tuple|23.190|?>>
+    <associate|eq 23.183.25|<tuple|23.193|?>>
+    <associate|eq 23.183.26|<tuple|23.191|?>>
+    <associate|eq 23.184.26|<tuple|23.192|?>>
+    <associate|eq 23.188.28|<tuple|23.194|?>>
+    <associate|eq 23.189.27|<tuple|23.196|?>>
+    <associate|eq 23.190.27|<tuple|23.197|?>>
+    <associate|eq 23.191.27|<tuple|23.198|?>>
+    <associate|eq 23.193.28|<tuple|23.199|?>>
     <associate|eq 23.2.1|<tuple|23.6|?>>
     <associate|eq 23.2.3|<tuple|23.3|?>>
     <associate|eq 23.21.6|<tuple|23.21|?>>
@@ -10225,55 +10391,57 @@
     <associate|eq 23.63.12|<tuple|23.72|?>>
     <associate|eq 23.64.10|<tuple|23.76|?>>
     <associate|eq 23.65\<point\>10|<tuple|23.77|?>>
-    <associate|eq 23.66.10|<tuple|23.93|?>>
-    <associate|eq 23.69.10|<tuple|23.95|?>>
-    <associate|eq 23.69.14|<tuple|23.83|?>>
+    <associate|eq 23.66.10|<tuple|23.95|?>>
+    <associate|eq 23.69.10|<tuple|23.97|?>>
+    <associate|eq 23.69.14|<tuple|23.85|?>>
     <associate|eq 23.7.1|<tuple|23.14|?>>
     <associate|eq 23.7.2|<tuple|23.12|?>>
-    <associate|eq 23.70.10|<tuple|23.96|?>>
-    <associate|eq 23.70.14|<tuple|23.84|?>>
-    <associate|eq 23.71.10|<tuple|23.97|?>>
-    <associate|eq 23.71.12|<tuple|23.94|?>>
-    <associate|eq 23.71.14|<tuple|23.85|?>>
-    <associate|eq 23.72.10|<tuple|23.98|?>>
-    <associate|eq 23.72.14|<tuple|23.86|?>>
-    <associate|eq 23.73.10|<tuple|23.99|?>>
-    <associate|eq 23.73.14|<tuple|23.87|?>>
-    <associate|eq 23.74.10|<tuple|23.100|?>>
-    <associate|eq 23.74.14|<tuple|23.88|?>>
-    <associate|eq 23.75.10|<tuple|23.101|?>>
-    <associate|eq 23.75.14|<tuple|23.89|?>>
-    <associate|eq 23.76.10|<tuple|23.102|?>>
-    <associate|eq 23.76.14|<tuple|23.90|?>>
+    <associate|eq 23.70.10|<tuple|23.98|?>>
+    <associate|eq 23.70.14|<tuple|23.86|?>>
+    <associate|eq 23.71.10|<tuple|23.99|?>>
+    <associate|eq 23.71.12|<tuple|23.96|?>>
+    <associate|eq 23.71.14|<tuple|23.87|?>>
+    <associate|eq 23.72.10|<tuple|23.100|?>>
+    <associate|eq 23.72.14|<tuple|23.88|?>>
+    <associate|eq 23.73.10|<tuple|23.101|?>>
+    <associate|eq 23.73.14|<tuple|23.89|?>>
+    <associate|eq 23.74.10|<tuple|23.102|?>>
+    <associate|eq 23.74.14|<tuple|23.90|?>>
+    <associate|eq 23.75.10|<tuple|23.103|?>>
+    <associate|eq 23.75.14|<tuple|23.91|?>>
+    <associate|eq 23.76.10|<tuple|23.104|?>>
+    <associate|eq 23.76.14|<tuple|23.92|?>>
     <associate|eq 23.76.17|<tuple|23.82|?>>
-    <associate|eq 23.77.10|<tuple|23.103|?>>
-    <associate|eq 23.77.14|<tuple|23.91|?>>
-    <associate|eq 23.78.10|<tuple|23.104|?>>
-    <associate|eq 23.78.14|<tuple|23.92|?>>
+    <associate|eq 23.77.10|<tuple|23.105|?>>
+    <associate|eq 23.77.14|<tuple|23.93|?>>
+    <associate|eq 23.78.10|<tuple|23.106|?>>
+    <associate|eq 23.78.14|<tuple|23.94|?>>
     <associate|eq 23.78.29|<tuple|23.78|?>>
-    <associate|eq 23.79.10|<tuple|23.105|?>>
+    <associate|eq 23.79.10|<tuple|23.107|?>>
     <associate|eq 23.79.29|<tuple|23.79|?>>
     <associate|eq 23.8.1|<tuple|23.15|?>>
     <associate|eq 23.8.2|<tuple|23.13|?>>
-    <associate|eq 23.80.10|<tuple|23.106|?>>
+    <associate|eq 23.80.10|<tuple|23.108|?>>
     <associate|eq 23.80.29|<tuple|23.80|?>>
-    <associate|eq 23.81.10|<tuple|23.107|?>>
+    <associate|eq 23.81.10|<tuple|23.109|?>>
     <associate|eq 23.81.29|<tuple|23.81|?>>
-    <associate|eq 23.82.10|<tuple|23.108|?>>
-    <associate|eq 23.83.10|<tuple|23.109|?>>
-    <associate|eq 23.84.10|<tuple|23.110|?>>
-    <associate|eq 23.85.10|<tuple|23.111|?>>
-    <associate|eq 23.86.10|<tuple|23.112|?>>
-    <associate|eq 23.87.10|<tuple|23.113|?>>
-    <associate|eq 23.88.10|<tuple|23.114|?>>
+    <associate|eq 23.82.10|<tuple|23.110|?>>
+    <associate|eq 23.83.10|<tuple|23.111|?>>
+    <associate|eq 23.83.29|<tuple|23.83|?>>
+    <associate|eq 23.84.10|<tuple|23.112|?>>
+    <associate|eq 23.84.29|<tuple|23.84|?>>
+    <associate|eq 23.85.10|<tuple|23.113|?>>
+    <associate|eq 23.86.10|<tuple|23.114|?>>
+    <associate|eq 23.87.10|<tuple|23.115|?>>
+    <associate|eq 23.88.10|<tuple|23.116|?>>
     <associate|eq 23.9.1|<tuple|23.16|?>>
-    <associate|eq 23.92.12|<tuple|23.115|?>>
-    <associate|eq 23.93.12|<tuple|23.116|?>>
-    <associate|eq 23.94.12|<tuple|23.117|?>>
-    <associate|eq 23.96.12|<tuple|23.118|?>>
-    <associate|eq 23.97.12|<tuple|23.119|?>>
-    <associate|eq 23.98.12|<tuple|23.120|?>>
-    <associate|eq 23.99.12|<tuple|23.121|?>>
+    <associate|eq 23.92.12|<tuple|23.117|?>>
+    <associate|eq 23.93.12|<tuple|23.118|?>>
+    <associate|eq 23.94.12|<tuple|23.119|?>>
+    <associate|eq 23.96.12|<tuple|23.120|?>>
+    <associate|eq 23.97.12|<tuple|23.121|?>>
+    <associate|eq 23.98.12|<tuple|23.122|?>>
+    <associate|eq 23.99.12|<tuple|23.123|?>>
     <associate|lemma 23.10.2|<tuple|23.19|?>>
     <associate|lemma 23.101.2|<tuple|23.112|?>>
     <associate|lemma 23.102.20|<tuple|23.106|?>>
