@@ -35,7 +35,7 @@
   </notation>
 
   We define now a topological manifold which is a topological space that is
-  locally homeomorph with <math|<around*|\<langle\>|\<bbb-R\><rsup|n>,\<cal-T\><rsub|\<bbb-R\><rsup|n>>|\<rangle\>>>.
+  locally homeomorphic with <math|<around*|\<langle\>|\<bbb-R\><rsup|n>,\<cal-T\><rsub|\<bbb-R\><rsup|n>>|\<rangle\>>>.
 
   <\definition>
     <label|manifold topological><dueto|Topological Manifold>A topological
@@ -45,7 +45,7 @@
     <reference|separation Hausdorff>, <reference|separation second countable
     topological space>] such that <math|\<forall\>m\<in\>M> there exist a
     open set <math|U\<in\>\<cal-T\><rsub|\<bbb-R\><rsup|n>>> with
-    <math|m\<in\>U> that is homeomorph with a open set
+    <math|m\<in\>U> that is homeomorphic with a open set
     <math|V\<in\>\<cal-T\><rsub|\<bbb-R\><rsup|n>>> [using the subspace
     topologies <math|\<cal-T\><rsub|\|U>> and
     <math|<around*|(|\<cal-T\><rsub|\<bbb-R\><rsup|n>><rsub|>|)><rsub|\|U>>.
@@ -237,7 +237,7 @@
   </proof>
 
   A trivial example of a <math|n>-dimensional topological manifold is a
-  second countable Hausdorf topological space that is homeomorphic to a open
+  second countable Hausdorff topological space that is homeomorphic to a open
   subset of <math|\<bbb-R\><rsup|n>>.\ 
 
   <\example>
@@ -260,7 +260,7 @@
 
     <\equation*>
       <around*|\<langle\>|M,\<cal-T\>|\<rangle\>><text| is a
-      >n<text|-dimensional topolofical manifold with atlas
+      >n<text|-dimensional topological manifold with atlas
       ><around*|{|<around*|(|M,\<varphi\>|)>|}>
     </equation*>
   </proof>
@@ -268,7 +268,7 @@
   <\example>
     <label|manifold real numbers form a topological
     manifold><math|<around*|\<langle\>|\<bbb-R\>,\<cal-T\><rsub|<around*|\|||\|>>|)>>
-    is a <math|1>-dimesional topological manifold and
+    is a <math|1>-dimensional topological manifold and
     <math|<around*|{|<around*|(|\<bbb-R\>,\<varphi\>|)>|}>> is a atlas on
     <math|<around*|\<langle\>|\<bbb-R\>,\<cal-T\><rsub|<around*|\|||\|>>|\<rangle\>>>
     where\ 
@@ -342,7 +342,7 @@
     <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> be a
     <math|n>-dimensional topological manifold and <math|U\<in\>\<cal-T\>> a
     open subset of <math|M> then <math|<around*|\<langle\>|U,\<cal-T\><rsub|\|U>|\<rangle\>>>
-    is a <math|n>-dimensional toplogical manifold. Further if
+    is a <math|n>-dimensional topological manifold. Further if
     <math|<around*|\<langle\>|V,\<varphi\>|\<rangle\>>> is a coordinate chart
     on <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> then
     <math|<around*|\<langle\>|V<big|cap>U,\<varphi\><rsub|\|U<big|cap>V>|\<rangle\>>>
@@ -519,7 +519,7 @@
       <around*|(|C<rsub|1>-<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|(|\<pi\><rsub|i>|)><rsup|2>|)><rsub|\|<around*|{|x\<in\>\<bbb-R\><rsup|n>\|<around*|\<\|\|\>|x|\<\|\|\>><rsup|2><rsub|e>\<less\>1|}>><around*|(|<around*|{|x\<in\>\<bbb-R\><rsup|n>\|<around*|\<\|\|\>|x|\<\|\|\>><rsup|2><rsub|e>\<less\>1|}>|)>\<subseteq\><around*|]|0,\<infty\>|[>
     </equation*>
 
-    As by [corollar:y <reference|exp square root derivates>]
+    As by [corollary:y <reference|exp square root derivates>]
     <math|<sqrt|\<ast\>>:<around*|]|0,\<infty\>|[>\<rightarrow\>\<bbb-R\>> is
     of class <math|C<rsup|\<infty\>>> it follows from the chain rule [see
     theorem: <reference|diff chain rule higher order class>] that\ 
@@ -789,7 +789,7 @@
       \<psi\><rsup|-><rsub|i>=<around*|(|\<psi\><rsub|i>|)><rsub|\|S<rsup|n><big|cap>V<rsup|+><rsub|i>>:S<rsup|n><big|cap>V<rsup|-><rsub|i>\<rightarrow\><around*|{|x\<in\>\<bbb-R\><rsup|n>\|<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>x<rsub|j><rsup|2>\<less\>1|}>
     </equation*>
 
-    As <math|\<psi\><rsub|i>> is continous it follows from [theorems:
+    As <math|\<psi\><rsub|i>> is continuous it follows from [theorems:
     <reference|continuity and subspace topology (2)>, <reference|continuity
     and subspace topology (4)>] that\ 
 
@@ -1114,7 +1114,7 @@
   topological manifold. In proving these properties it will turn out that the
   requirements for a topological manifold to be Hausdorff and second
   countable are necessary. In this section we will cover topological
-  properties like compactness, connectness and paracompactness. First
+  properties like compactness, connectedness and paracompactness. First
   remember that <math|\<bbb-Q\><rsup|n>> is dense in <math|\<bbb-R\><rsup|n>>
   using the norm <math|<around*|\<\|\|\>||\<\|\|\>><rsub|e>> as the next
   lemma shows.
@@ -1256,7 +1256,7 @@
 
     Further we have also <math|x\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|q,<frac|r<rprime|'>|4>|)>=B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|q,r|)>=B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|q,<frac|r<rprime|'>|4>|)><below|\<subseteq\>|<text|[eq:
     <reference|eq 23.17.2>]>>V> which as <math|V\<in\><around*|(|\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>>|)><rsub|\|U>>
-    and <math|x\<in\>V> was choosen arbitrary proves by [theorem:
+    and <math|x\<in\>V> was chosen arbitrary proves by [theorem:
     <reference|topology basis alternative definition>] that\ 
 
     <\equation*>
@@ -1286,7 +1286,7 @@
     <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> we have that
     <math|U\<in\>\<cal-T\>>, <math|\<varphi\><around*|(|U|)>\<in\>\<cal-T\><rsub|\<bbb-R\><rsup|n>>=\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>>>
     and <math|<rigid|\<varphi\>:U\<rightarrow\>\<varphi\><around*|(|U|)>>> is
-    a homeomorphism using the toppologies <math|\<cal-T\><rsub|\|U>> and
+    a homeomorphism using the topologies <math|\<cal-T\><rsub|\|U>> and
     <math|<around*|(|\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>>|)><rsub|\|\<varphi\><around*|(|U|)>>>.
     Using the previous lemma [see lemma: <reference|lemma 23.11.2>] we have
     that\ 
@@ -1342,12 +1342,12 @@
     </equation*>
 
     Hence we have by [definition: <reference|compact precompact set>] that
-    <math|\<varphi\><rsup|-1><around*|(|B|)>> is precompact using the
+    <math|\<varphi\><rsup|-1><around*|(|B|)>> is pre-compact using the
     topology <math|\<cal-T\><rsub|\|U>>. Using now [theorem:
     <reference|topology precompact and subspace topology>] it follows that
 
     <\equation*>
-      \<varphi\><rsup|-1><around*|(|B|)><text| is precompact using the
+      \<varphi\><rsup|-1><around*|(|B|)><text| is pre-compact using the
       topology >\<cal-T\>
     </equation*>
 
@@ -1381,7 +1381,7 @@
 
     <\equation*>
       \<cal-B\>=<around*|{|\<varphi\><rsup|-1><around*|(|B|)>\|B\<in\>\<cal-B\>|}><text|
-      is a countable set of precompact [using the topology <math|\<cal-T\>>]
+      is a countable set of pre-compact [using the topology <math|\<cal-T\>>]
       coordinate balls>
     </equation*>
 
@@ -1412,7 +1412,7 @@
     <label|manifold countable basis of precompact sets>Let
     <math|n\<in\>\<bbb-N\>> and <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>>
     a <math|n>-dimensional topological manifold then <math|\<cal-T\>> has a
-    countable basis <math|\<cal-B\>\<subseteq\>\<cal-T\>> of precompact
+    countable basis <math|\<cal-B\>\<subseteq\>\<cal-T\>> of pre-compact
     coordinate balls.
 
     <\note>
@@ -1429,7 +1429,7 @@
 
       <\equation*>
         \<forall\>i\<in\>\<bbb-N\><text| >B<rsub|i>\<in\>\<cal-T\><text| and
-        >B<rsub|i><text| is precompact or
+        >B<rsub|i><text| is pre-compact or
         ><wide|B<rsub|i>|\<wide-bar\>><text| is compact>
       </equation*>
 
@@ -1447,7 +1447,7 @@
 
   <\proof>
     As <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> is a topological
-    manifold <math|\<cal-T\>> is a Hausdorff second countable toplogy and
+    manifold <math|\<cal-T\>> is a Hausdorff second countable topology and
     there exist <math|\<forall\>x\<in\>M> a coordinate chart
     <math|<around*|\<langle\>|\<varphi\><rsub|x>,U<rsub|x>|\<rangle\>>> with
     <math|x\<in\>U<rsub|x>\<in\>\<cal-T\>>. Hence we have that\ 
@@ -1467,7 +1467,7 @@
     By the previous lemma [lemma: <reference|lemma 23.13.2>] we have
     <math|\<forall\>x\<in\>\<cal-C\>> a countable basis
     <math|\<cal-B\><rsub|x>> [in the topology
-    <math|\<cal-T\><rsub|\|U<rsub|x>>>] of precompact [using the topology
+    <math|\<cal-T\><rsub|\|U<rsub|x>>>] of pre-compact [using the topology
     <math|\<cal-T\>>] coordinate balls. Take\ 
 
     <\equation*>
@@ -1565,7 +1565,7 @@
       is continuous it follows from [theorem: <reference|connected image of a
       path connected set by a continuous function is path connected>] that
       <math|B> is path connected. So we have proved that <math|\<cal-T\>> has
-      a basis of path connected sets wich by [definition:
+      a basis of path connected sets which by [definition:
       <reference|connected local path connected>] proves that\ 
 
       <\equation*>
@@ -1600,7 +1600,7 @@
       <math|<around*|\<langle\>|M,\<b-cal-T\>|\<rangle\>>> is second
       countable [see definition: <reference|manifold topological>] it follows
       from [theorem: <reference|separation second countable and covering>]
-      thatthere exist a countable <math|\<cal-A\>\<subseteq\>M/\<sim\>> such
+      that-there exist a countable <math|\<cal-A\>\<subseteq\>M/\<sim\>> such
       that\ 
 
       <\equation*>
@@ -1634,14 +1634,14 @@
   </theorem>
 
   <\proof>
-    As <math|\<cal-T\>> is Hausdorf and by [theorem: <reference|lemma
+    As <math|\<cal-T\>> is Hausdorff and by [theorem: <reference|lemma
     23.13.2>] <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> has
     pre-compact base, it follows from [theorem: <reference|compact locally
     compact (1)>] that <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> is
     locally compact.
   </proof>
 
-  Next we define the concept of a paracompact spaces.
+  Next we define the concept of a para-compact spaces.
 
   <\definition>
     <label|compact refinement><dueto|refinement>Let <math|\<cal-U\>> be a
@@ -1662,8 +1662,8 @@
   </definition>
 
   <\definition>
-    <label|compact paracompactness><dueto|Paracompact Spaces>A topological
-    space <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> is paracompact
+    <label|compact paracompactness><dueto|Para-compact Spaces>A topological
+    space <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> is para-compact
     if <math|\<forall\>\<cal-U\>\<subseteq\>\<cal-T\>> with
     <math|X=<big|cup><rsub|U\<in\>\<cal-U\>>U> there exist a locally finite
     refinement <math|\<cal-V\>\<subseteq\>\<cal-T\>> of <math|\<cal-U\>> such
@@ -1673,7 +1673,7 @@
 
   <\theorem>
     <label|manifold topological manifold is paracompact><dueto|Topological
-    Manifolds are Paracompact>Let <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>>
+    Manifolds are Para-compact>Let <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>>
     be a topological manifold, let <math|\<cal-U\>\<subseteq\>\<cal-T\>> be
     such that <math|M=<big|cup><rsub|U\<in\>\<cal-U\>>U> and <math|\<cal-B\>>
     a basis for <math|\<cal-T\>> then there exist a countable locally finite
@@ -1684,7 +1684,7 @@
       As by [example: <reference|topology basis topology is a basis>]
       <math|\<cal-T\>> is a basis of itself it follows from the previous
       definition [see definition: <reference|compact paracompactness>] that
-      <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> is paracompact.
+      <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> is para-compact.
     </note>
   </theorem>
 
@@ -1995,7 +1995,7 @@
   <subsection|Differential structure on a topological manifold>
 
   As we have to deal with homeomorphisms between subsets the following
-  theorem and convention will be usefull.
+  theorem and convention will be usefully.
 
   <\theorem>
     <label|continuity homeomorphism and restriction (1)>Let
@@ -2004,7 +2004,7 @@
     and <math|B\<subseteq\>A\<subseteq\>X>, <math|C\<subseteq\>Y> and
 
     <\equation*>
-      f:A\<rightarrow\>C<text| a homeomorphism using the toplogies
+      f:A\<rightarrow\>C<text| a homeomorphism using the topologies
       ><around*|(|\<cal-T\><rsub|X>|)><rsub|\|A><text| and
       ><around*|(|\<cal-T\><rsub|Y>|)><rsub|\|C>
     </equation*>
@@ -2083,7 +2083,7 @@
 
   We sketch now how the fact that a topological manifold is locally
   homeomorphic with a open set of <math|\<bbb-R\><rsup|n>> can be used to
-  define differentiability for functions whose domain is in the manifolf. Let
+  define differentiability for functions whose domain is in the manifold. Let
   <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> be a
   <math|n>-dimensional topological manifold,
   <math|f:M\<rightarrow\>\<bbb-R\>> a function and <math|m\<in\>M> then there
@@ -2100,7 +2100,7 @@
   is not of class <math|C<rsup|m>>. To solve this we must require that
   <math|f\<circ\>\<psi\><rsup|-1>:\<psi\><around*|(|V|)>\<rightarrow\>\<bbb-R\>>
   is also of class <math|C<rsup|m>>. By [corollary: <reference|diff class C^n
-  sub-sets>] it followss that \ <math|<around*|(|f\<circ\>\<varphi\><rsup|-1>|)><rsub|\|\<varphi\><around*|(|U<big|cap>V|)>>>
+  sub-sets>] it follows that \ <math|<around*|(|f\<circ\>\<varphi\><rsup|-1>|)><rsub|\|\<varphi\><around*|(|U<big|cap>V|)>>>
   is of class <math|C<rsup|m>> on <math|\<varphi\><around*|(|U<big|cap>V|)>>
   and that <math|<around*|(|f\<circ\>\<psi\><rsup|-1>|)><rsub|\|\<psi\><around*|(|U<big|cap>V|)>>>
   must be of class <math|C<rsup|m>> on <math|\<psi\><around*|(|U<big|cap>V|)>>.
@@ -2122,7 +2122,7 @@
   is of class <math|C<rsup|m>> automatically ensures that
   \ <math|<around*|(|f\<circ\>\<psi\><rsup|-1>|)><rsub|\|\<psi\><around*|(|U<big|cap>V|)>>>
   is of class <math|C<rsup|m>>. The above discussion motivates the concept of
-  <math|C<rsup|m>>-compatible charts and <math|C<rsup|m>> atlasses.
+  <math|C<rsup|m>>-compatible charts and <math|C<rsup|m>> atlases.
 
   <\definition>
     <label|manifold transition map>Let <math|n\<in\>\<bbb-N\>> and
@@ -2408,7 +2408,7 @@
       <math|<around*|(|V,\<psi\>|)>> are <math|C<rsup|m>> compatible.
     </enumerate>
 
-    The set of all <math|C<rsup|m>>-atlasses on
+    The set of all <math|C<rsup|m>>-atlases on
     <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> is noted as
     <math|\<Delta\><rsup|m><around*|[|M,\<cal-T\>|]>> in other words\ 
 
@@ -2449,7 +2449,7 @@
       diffentiable atlas>] that\ 
 
       <\equation*>
-        \<cal-A\><text| is a altlas on ><around*|\<langle\>|M,\<cal-T\>|\<rangle\>>
+        \<cal-A\><text| is a atlas on ><around*|\<langle\>|M,\<cal-T\>|\<rangle\>>
       </equation*>
 
       Let <math|<around*|(|U,\<varphi\>|)>,<around*|(|V,\<psi\>|)>\<in\>\<cal-A\>>
@@ -2580,7 +2580,7 @@
     <label|manifold C^m C^n atlas>Let <math|n\<in\>\<bbb-N\>>,
     <math|m\<in\>\<bbb-N\><rsub|0><big|cup><around*|{|\<infty\>|}>>,
     <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> a <math|n>-dimensional
-    topological manifold and <math|\<cal-A\>> a <math|C<rsup|m>> atlass on
+    topological manifold and <math|\<cal-A\>> a <math|C<rsup|m>> atlas on
     <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> then
     <math|\<forall\>r\<in\><around*|{|0,\<ldots\>,m|}>> <math|\<cal-A\>> is a
     <math|C<rsup|r>> atlas on <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>>.
@@ -2652,7 +2652,7 @@
 
     <\description>
       <item*|<math|<around*|(|V,\<psi\>|)>=<around*|(|U,\<varphi\>|)>>>Then
-      as <math|<around*|(|U,\<varphi\>|)>> is a coordiate on
+      as <math|<around*|(|U,\<varphi\>|)>> is a coordinate on
       <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> chart
       <math|<around*|(|V,\<psi\>|)>> is a coordinate chart on
       <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>>.
@@ -2660,7 +2660,7 @@
       <item*|<math|<around*|(|V,\<psi\>|)>\<in\>\<cal-A\>>>Then as
       <math|\<cal-A\>> is a <math|C<rsup|m>> atlas on
       <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>>
-      <math|<around*|\<langle\>|V,\<psi\>|\<rangle\>>> is a coordicate chart
+      <math|<around*|\<langle\>|V,\<psi\>|\<rangle\>>> is a coordinate chart
       on <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>>
     </description>
 
@@ -2874,7 +2874,7 @@
   </render-proof>
 
   We can now use the previous lemma to prove that <math|C<rsup|m>>
-  compatibility using a <math|C<rsup|m>> atlas is esssentially independent of
+  compatibility using a <math|C<rsup|m>> atlas is essentially independent of
   the choice of a chart.
 
   <\theorem>
@@ -2915,7 +2915,7 @@
       there exist a <math|<around*|(|U,\<varphi\>|)>\<in\>\<cal-A\>> such
       that <math|x\<in\>U> and by the hypothesis we have also that
       <math|f\<circ\>\<varphi\><rsup|-1>:\<varphi\><around*|(|U|)>\<rightarrow\>\<bbb-R\>>
-      is of class <math|C<rsup|m>>. As <math|p\<in\>M> has been choosen
+      is of class <math|C<rsup|m>>. As <math|p\<in\>M> has been chosen
       arbitrary if follows that <math|f:M\<rightarrow\>\<bbb-R\>> is of class
       <math|C<rsup|m>>.
     </description>
@@ -2997,9 +2997,9 @@
     </description>
   </proof>
 
-  The above lemma shows that many atlasses produces the same set of functions
+  The above lemma shows that many atlases produces the same set of functions
   that are of class <math|C<rsup|m>>. To avoid this extra complication we
-  introduct the concept of a maximal atlas.
+  introduce the concept of a maximal atlas.
 
   <\definition>
     <label|manifold maximal atlas><index|maximal atlas><dueto|maximal
@@ -3009,7 +3009,7 @@
     <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> is
     <with|font-series|bold|maximal> if for every coordinate chart
     <math|<around*|(|U,\<varphi\>|)>> on <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>>
-    that is <math|C<rsup|m>> compatable with <math|\<cal-A\>> we have that
+    that is <math|C<rsup|m>> compatible with <math|\<cal-A\>> we have that
     <math|<around*|(|U,\<varphi\>|)>\<in\>\<cal-A\>>.\ 
   </definition>
 
@@ -3052,7 +3052,7 @@
     </equation*>
 
     As <math|\<varphi\><around*|(|U|)>> is open and <math|f> is a open
-    function <math|f<around*|(|\<varphi\><around*|(|U|)>|)>> ia open so that\ 
+    function <math|f<around*|(|\<varphi\><around*|(|U|)>|)>> is open so that\ 
 
     <\equation*>
       <around*|(|f\<circ\>\<varphi\>|)><around*|(|U|)><text| is open>
@@ -3223,14 +3223,14 @@
 
   Given a <math|C<rsup|m>> atlas on a topological manifold we can create a
   unique maximal atlas that contains this atlas. To do this we define a
-  equivalence relation between atlasses and construct the maximal atlas from
-  a equivalence class.
+  equivalence relation between atlases and construct the maximal atlas from a
+  equivalence class.
 
   <\definition>
     <label|manifold compatible atlas>Let <math|n\<in\>\<bbb-N\>>,
     <math|m\<in\>\<bbb-N\><rsub|0><big|cup><around*|{|\<infty\>|}>>,
     <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> a <math|n>-dimensional
-    topological manifold then two <math|C<rsup|m>>-atlasses
+    topological manifold then two <math|C<rsup|m>>-atlases
     <math|\<cal-A\>\<in\>\<Delta\><rsup|m><around*|[|M,\<cal-T\>|]>> and
     <math|\<cal-B\>\<in\>\<Delta\><rsup|m><around*|[|M,\<cal-T\>|]>> on
     <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> are
@@ -3238,7 +3238,7 @@
     <math|\<cal-A\><big|cup>\<cal-B\>> is a <math|C<rsup|m>>-atlas.\ 
   </definition>
 
-  We have then the following equivalent definition of compatible atlasses.
+  We have then the following equivalent definition of compatible atlases.
 
   <\theorem>
     <label|manifold compatible atlas (1)>Let <math|n\<in\>\<bbb-N\>>,
@@ -3246,7 +3246,7 @@
     <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> a <math|n>-dimensional
     topological manifold and <math|\<cal-A\>\<in\>\<Delta\><rsup|m><around*|[|M,\<cal-T\>|]>>,
     <math|\<cal-B\>\<in\>\<Delta\><rsup|m><around*|[|M,\<cal-T\>|]>> two
-    <math|C<rsup|m>>-atlasses on <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>>
+    <math|C<rsup|m>>-atlases on <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>>
     then we have\ 
 
     <\equation*>
@@ -3330,7 +3330,7 @@
       <\equation*>
         \<forall\><around*|(|U,\<varphi\>|)>\<in\>\<cal-A\><big|cup>\<cal-B\>,\<forall\><around*|(|V,\<psi\>|)>\<in\>\<cal-A\><big|cup>\<cal-B\><text|
         we have that ><around*|(|U,\<varphi\>|)><text| and
-        ><around*|(|V,\<psi\>|)><text| is >C<rsup|m><text| compatable>
+        ><around*|(|V,\<psi\>|)><text| is >C<rsup|m><text| compatible>
       </equation*>
 
       Hence if follows that\ 
@@ -3342,7 +3342,7 @@
   </proof>
 
   We show now that the relation <with|font-series|bold|<math| is
-  C<rsup|m><text| >>compatible> between atlasses is a equivalence relation.
+  C<rsup|m><text| >>compatible> between atlases is a equivalence relation.
 
   <\lemma>
     <label|lemma 23.37.6>Let <math|n\<in\>\<bbb-N\>>,
@@ -3364,7 +3364,7 @@
       <math|\<cal-A\><big|cup>\<cal-A\>> is a <math|C<rsup|m>>-atlas which
       proves that <math|\<cal-A\>\<approx\><rsub|m>\<cal-A\>>.
 
-      <item*|symetricity>If <math|\<cal-A\>\<approx\><rsub|m>\<cal-B\>> then
+      <item*|symmetry>If <math|\<cal-A\>\<approx\><rsub|m>\<cal-B\>> then
       <math|\<cal-A\><big|cup>\<b-B\>> is a <math|C<rsup|m>>-atlas from which
       it follows that <math|\<cal-B\><big|cup>\<cal-A\>> is a
       <math|C<rsup|m>>-atlas proving that
@@ -3426,7 +3426,7 @@
           As <math|\<cal-A\>\<approx\><rsub|m>\<cal-B\>> and
           <math|\<cal-B\>\<approx\><rsub|m>\<cal-C\>> it follows that
           <math|\<cal-A\><big|cup>\<cal-B\>> and
-          <math|\<cal-B\><big|cup>\<cal-C\>> are <math|C<rsup|m>> atlasses so
+          <math|\<cal-B\><big|cup>\<cal-C\>> are <math|C<rsup|m>> atlases so
           that
 
           <\equation>
@@ -3590,7 +3590,7 @@
 
     <\equation*>
       \<approx\><rsub|m><around*|[|\<cal-A\>|]><below|=|def><around*|{|\<cal-B\>\<in\>\<Delta\><rsup|m><around*|[|M,\<cal-T\>|]>\|\<cal-A\>\<approx\><rsub|m>\<cal-B\>|}>=<around*|{|\<cal-B\>\<in\>\<Delta\><rsup|m><around*|[|M,\<cal-T\>|]>\|\<cal-A\><text|
-      is >C<rsup|m><text| compatable with >\<cal-B\>|}>
+      is >C<rsup|m><text| compatible with >\<cal-B\>|}>
     </equation*>
   </definition>
 
@@ -3777,12 +3777,12 @@
         \<cal-B\>=\<cal-A\><rsup|<around*|{|m|}>>
       </equation*>
 
-      <item> Let <math|\<cal-A\>,\<cal-B\>> be two <math|C<rsup|m>> atlasses
+      <item> Let <math|\<cal-A\>,\<cal-B\>> be two <math|C<rsup|m>> atlases
       on <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>>
 
       <\description>
         <item*|<math|\<Rightarrow\>>>As <math|\<cal-A\>> and <math|\<cal-B\>>
-        are atlasses, hence collections of coordinate charts, it follows that\ 
+        are atlases, hence collections of coordinate charts, it follows that\ 
 
         <\equation>
           <label|eq 23.53.7>\<forall\><around*|(|U,\<varphi\>|)>\<in\>\<cal-A\><big|cup>\<cal-B\><text|
@@ -4026,7 +4026,7 @@
 
   <\example>
     <label|manifold singleton chart>Let <math|n\<in\>\<bbb-N\>> and
-    <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> a <math|n>-dimesional
+    <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>> a <math|n>-dimensional
     topological manifold with a singleton atlas
     <math|<rigid|\<cal-A\>=<around*|{|<around*|(|U,\<varphi\>|)>|}>>> then
     <math|<around*|{|<around*|(|U,\<varphi\>|)>|}>> is a
@@ -4058,7 +4058,7 @@
     <math|<around*|{|<around*|(|U,\<varphi\>|)>|}>> is a atlas on
     <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>>] it follows from
     \ [example: <reference|diff diffeomorphism identity>] that
-    <math|Id<rsub|\<varphi\><around*|(|U|)>>> is a diffeormorphism of class
+    <math|Id<rsub|\<varphi\><around*|(|U|)>>> is a diffeomorphism of class
     <math|C<rsup|\<infty\>>>, which proves that
     <math|<around*|{|<around*|(|U,\<varphi\>|)>|}>> is a
     <math|C<rsup|\<infty\>>> atlas on <math|<around*|\<langle\>|M,\<cal-T\>|\<rangle\>>>.
@@ -4157,7 +4157,7 @@
 
     <\equation*>
       \<gamma\><rprime|'>\<circ\><around*|(|\<psi\><rprime|'>|)><rsup|-1>:\<psi\><rprime|'><around*|(|V<rprime|'><big|cap>W<rprime|'>|)>\<rightarrow\>\<gamma\><rprime|'><around*|(|V<rprime|'><big|cap>W<rprime|'>|)><text|
-      is a >C<rsup|m><text| diffeormorphism>
+      is a >C<rsup|m><text| diffeomorphism>
     </equation*>
 
     As <math|\<cal-A\><rsub|\|U>> is a atlas it follows that
@@ -4243,7 +4243,7 @@
 
     <\equation*>
       \<gamma\>\<circ\>\<psi\><rsup|-1>:\<psi\><around*|(|V<big|cap>W|)>\<rightarrow\>\<gamma\><around*|(|V<big|cap>W|)><text|
-      is differomorphism of class >C<rsup|m>
+      is diffeomorphisms of class >C<rsup|m>
     </equation*>
 
     As this is true for every <math|<around*|(|V,\<psi\>|)>,<around*|(|W,\<gamma\>|)>\<in\>\<cal-A\><rsub|\|U>>
@@ -4313,7 +4313,7 @@
 
     <\equation*>
       \<psi\>\<circ\>\<gamma\><rsup|-1>:\<gamma\><around*|(|W<big|cap>V|)>\<rightarrow\>\<psi\><around*|(|W<big|cap>V|)><text|
-      is >C<rsup|m><text| diffeormorphism>
+      is >C<rsup|m><text| diffeomorphism>
     </equation*>
 
     proving that\ 
@@ -4481,7 +4481,7 @@
           >j\<in\><around*|{|k+1,\<ldots\>,n+1|}>>>>>>>>|<row|<cell|>|<cell|=>|<cell|x<rsub|j-1>>>|<row|<cell|>|<cell|=>|<cell|\<pi\><rsub|j-1><around*|(|x|)>>>>>
         </eqnarray*>
 
-        wiich proves that <math|><math|\<pi\><rsub|j>\<circ\><around*|(|\<psi\><rsup|\<pm\>><rsub|l>\<circ\><around*|(|\<psi\><rsup|\<pm\>><rsub|k>|)><rsup|-1>|)>=\<pi\><rsub|j-1>>
+        which proves that <math|><math|\<pi\><rsub|j>\<circ\><around*|(|\<psi\><rsup|\<pm\>><rsub|l>\<circ\><around*|(|\<psi\><rsup|\<pm\>><rsub|k>|)><rsup|-1>|)>=\<pi\><rsub|j-1>>
         so that by [example: <reference|diff projection functon is infinite
         times differentiable>]\ 
 
@@ -4546,7 +4546,7 @@
           >j+1\<in\><around*|{|k+1,\<ldots\>,n+1|}>>>>>>>>|<row|<cell|>|<cell|=>|<cell|x<rsub|J>>>|<row|<cell|>|<cell|=>|<cell|\<pi\><rsub|j><around*|(|x|)>>>>>
         </eqnarray*>
 
-        wiich proves that <math|><math|\<pi\><rsub|j>\<circ\><around*|(|\<psi\><rsup|\<pm\>><rsub|l>\<circ\><around*|(|\<psi\><rsup|\<pm\>><rsub|k>|)><rsup|-1>|)>=\<pi\><rsub|j>>
+        which proves that <math|><math|\<pi\><rsub|j>\<circ\><around*|(|\<psi\><rsup|\<pm\>><rsub|l>\<circ\><around*|(|\<psi\><rsup|\<pm\>><rsub|k>|)><rsup|-1>|)>=\<pi\><rsub|j>>
         so that by [example: <reference|diff projection functon is infinite
         times differentiable>]\ 
 
@@ -4690,8 +4690,6 @@
   We show now that differentiability of class <math|C<rsup|q>> of real
   functions is a local property.
 
-  TODO check
-
   <\theorem>
     <label|manifold class C^q differentiability is local (1)>Let
     <math|m\<in\>\<bbb-N\>>, <math|q\<in\>\<bbb-N\><big|cup><around*|{|\<infty\>|}>>,
@@ -4721,7 +4719,7 @@
     a atlas on <math|U> we have that <math|W\<subseteq\>U\<subseteq\>M> so
     that by [theorem: <reference|function composition of function and inverse
     function>(6)] <math|f<rsub|\|U>\<circ\>\<gamma\><rsup|-1>=f\<circ\>\<gamma\><rsup|-1>>
-    which after substituting this result in the above proves that\ 
+    which, after substituting this result in the above, proves that\ 
 
     <\equation*>
       f\<circ\>\<gamma\><rsup|-1>:\<gamma\><around*|(|W|)>\<rightarrow\>\<bbb-R\><text|
@@ -4744,33 +4742,31 @@
     </equation*>
   </proof>
 
-  TODO check this
-
   <\theorem>
     <label|manifold class C^q differentiability is local (2)>Let
     <math|m\<in\>\<bbb-N\>>, <math|q\<in\>\<bbb-N\><big|cup><around*|{|\<infty\>|}>>,
     <math|\<cal-M\><rsup|m><around*|\<langle\>|M,\<b-T\>,\<cal-A\>|\<rangle\>>>
     a <math|m>-dimensional <math|C<rsup|q>> differentiable manifold and
-    <math|f:M\<rightarrow\>\<bbb-R\>> that is of class <math|C<rsup|q>> then
-    <math|\<forall\>U\<in\>\<cal-T\>> we have that
+    <math|f:M\<rightarrow\>\<bbb-R\>> a fnnction of class <math|C<rsup|q>>
+    then <math|\<forall\>U\<in\>\<cal-T\>> we have that
     <math|f<rsub|\|U>:U\<rightarrow\>\<bbb-R\>> is of class <math|C<rsup|q>>
-    [using <math|\<cal-M\><rsup|m><around*|\<langle\>|U,\<cal-T\><rsub|\|U>,<around*|(|\<cal-A\><rsub|U>|)><rsup|<around*|{|m|}>>|\<rangle\>>>.
+    [using <math|\<cal-M\><rsup|m><around*|\<langle\>|U,\<cal-T\><rsub|\|U>,<around*|(|\<cal-A\><rsub|\|U>|)><rsup|<around*|{|q|}>>|\<rangle\>>>.
   </theorem>
 
   <\proof>
-    Let <math|p\<in\>M>. As <math|f> is of class <math|C<rsup|q>> there exist
-    a <math|<around*|(|W,\<varphi\>|)>\<in\>\<cal-A\>> with <math|p\<in\>W>
-    such that\ 
+    Let <math|p\<in\>U\<subseteq\>M>. As <math|f> is of class
+    <math|C<rsup|q>> there exist a <math|<around*|(|W,\<varphi\>|)>\<in\>\<cal-A\>>
+    with <math|p\<in\>W> such that\ 
 
     <\equation*>
       f\<circ\>\<varphi\><rsup|-1>:\<varphi\><around*|(|W|)>\<rightarrow\>\<bbb-R\><text|
       is of class >C<rsup|q>
     </equation*>
 
-    As <math|U<big|cap>W\<in\>\<cal-T\>> it follows from [lemma:
-    <reference|lemma 23.5.10>] that <math|\<varphi\><around*|(|U<big|cap>W|)>>
-    is open in <math|\<bbb-R\><rsup|m>>, hence it follows from [theorem:
-    <reference|diff class C^n sub-sets>] that\ 
+    As <math|U\<in\>\<cal-T\>> it follows from [lemma: <reference|lemma
+    23.5.10>] that <math|\<varphi\><around*|(|U<big|cap>W|)>> is open in
+    <math|\<bbb-R\><rsup|m>>, hence it follows from [theorem: <reference|diff
+    class C^n sub-sets>] that\ 
 
     <\equation*>
       <around*|(|f\<circ\>\<varphi\><rsup|-1>|)><rsub|\|\<varphi\><around*|(|U<big|cap>W|)>>:\<varphi\><around*|(|U<big|cap>W|)>\<rightarrow\>\<bbb-R\><text|
@@ -4804,10 +4800,10 @@
     Further\ 
 
     <\equation*>
-      <around*|(|U<big|cap>W.\<varphi\><rsub|\|U<big|cap>W>|)>\<in\>\<cal-A\><rsub|\|U>
+      <around*|(|U<big|cap>W,\<varphi\><rsub|\|U<big|cap>W>|)>\<in\>\<cal-A\><rsub|\|U>
     </equation*>
 
-    As this is true for every <math|p\<in\>M> it follows from [definition:
+    As this is true for every <math|p\<in\>U> it follows from [definition:
     <reference|manifold differentiability real function>] that\ 
 
     <\equation*>
@@ -4821,7 +4817,7 @@
   <\theorem>
     <label|manfold real valued functions properties>Let
     <math|m\<in\>\<bbb-N\>>, <math|q\<in\>\<bbb-N\><big|cup><around*|{|\<infty\>|}>>,
-    <math|\<cal-M\><rsup|m><around*|\<langle\>|M,\<b-T\>,\<cal-A\>|\<rangle\>>>
+    <math|\<cal-M\><rsup|m><around*|\<langle\>|M,\<cal-T\>,\<cal-A\>|\<rangle\>>>
     a <math|m>-dimensional <math|C<rsup|q>> differentiable manifold then we
     have:
 
@@ -4880,7 +4876,7 @@
   </theorem>
 
   <\proof>
-    \ TODO
+    \ 
 
     <\enumerate>
       <item>Let <math|p\<in\>M> then, as <math|f> is of class
@@ -4932,7 +4928,7 @@
         f+g:M\<rightarrow\>\<bbb-R\><text| is of class >C<rsup|q>
       </equation*>
 
-      <item>This is easely proved by mathematical induction. So let\ 
+      <item>This is easily proved by mathematical induction. So let\ 
 
       <\equation*>
         S=<around*|{|k\<in\>\<bbb-N\>\|<text|If
@@ -4961,7 +4957,7 @@
         <math|C<rsup|q>> so that by (1) <math|f<rsub|k+1>+<big|sum><rsub|i=1><rsup|k>f<rsub|i>>
         is of class <math|C<rsup|q>>. As <math|<big|sum><rsub|i=1><rsup|k+1>f<rsub|i>=f<rsub|k+1>+<big|sum><rsub|i=1><rsup|k>f<rsub|i>>
         it follows that <math|<big|sum><rsub|i=1><rsup|k+1>f<rsub|i>> is of
-        class <math|C<rsup|q>> which proves that <math|n+1\<in\>S>.
+        class <math|C<rsup|q>> which proves that <math|k+1\<in\>S>.
       </description>
 
       <item>Let <math|p\<in\>M>. As <math|f:M\<rightarrow\>\<bbb-R\>> is of
@@ -5028,7 +5024,7 @@
       (1)>] it follows then that\ 
 
       <\equation>
-        <label|eq 23.84.29><around*|(|f\<circ\>\<varphi\><rsup|-1>|)>\<cdot\><around*|(|g\<circ\>\<varphi\><rsup|-1>|)>:M\<rightarrow\>\<bbb-R\><text|
+        <label|eq 23.84.29><around*|(|f\<circ\>\<varphi\><rsup|-1>|)>\<cdot\><around*|(|g\<circ\>\<varphi\><rsup|-1>|)>:\<varphi\><around*|(|U|)>\<rightarrow\>\<bbb-R\><text|
         is of class >C<rsup|q>
       </equation>
 
@@ -5072,11 +5068,17 @@
         is of class >C<rsup|q>
       </equation*>
 
+      Further we have
+
+      <\equation*>
+        <around*|(|g\<circ\>\<varphi\><rsup|-1>|)><around*|(|\<varphi\><around*|(|U|)>|)>=g<around*|(|\<varphi\><rsup|-1><around*|(|\<varphi\><around*|(|U|)>|)>|)>\<subseteq\>\<bbb-R\>\\<around*|{|0|}>
+      </equation*>
+
       Using [theorem: <reference|diff higher order differential of quotient>]
       it follows then that\ 
 
       <\equation>
-        <label|eq 23.85.29><frac|f\<circ\>\<varphi\><rsup|-1>|g\<circ\>\<varphi\><rsup|-1>>:M\<rightarrow\>\<bbb-R\><text|
+        <label|eq 23.85.29><frac|f\<circ\>\<varphi\><rsup|-1>|g\<circ\>\<varphi\><rsup|-1>>:\<varphi\><around*|(|U|)>\<rightarrow\>\<bbb-R\><text|
         is of class >C<rsup|q>
       </equation>
 
@@ -5636,7 +5638,7 @@
       \ <math|U<big|cap>f<rsup|-1><around*|(|V|)><text|>> is open in
       <math|M>. So using [lemma: <reference|lemma 23.5.10>] it follows that
       <math|\<varphi\><around*|(|U<big|cap>f<rsup|-1><around*|(|V|)>|)>> is a
-      open set in <math|\<bbb-R\><rsup|m>>. Hence using [coollary:
+      open set in <math|\<bbb-R\><rsup|m>>. Hence using [corollary:
       <reference|diff class C^n sub-sets>], it follows that\ 
 
       <\equation>
@@ -5767,7 +5769,7 @@
       [theorem: <reference|manifold C^m mappings are continuous>]\ 
 
       <\equation>
-        <label|eq 23.74.10>f<text| is continous>
+        <label|eq 23.74.10>f<text| is continuous>
       </equation>
 
       Take <math|<around*|(|U,\<varphi\>|)>\<in\>\<cal-A\><rsub|M>>,
@@ -5830,7 +5832,7 @@
 
       <\equation*>
         \<psi\>\<circ\><around*|(|\<psi\><rprime|'>|)><rsup|-1>:\<psi\><rprime|'><around*|(|V<big|cap>V<rprime|'>|)>\<rightarrow\>\<psi\><around*|(|V<big|cap>V<rprime|'>|)><text|
-        is a >C<rsup|r><text| diffeormorphism>
+        is a >C<rsup|r><text| diffeomorphism>
       </equation*>
 
       so that \ 
@@ -5989,7 +5991,7 @@
 
   If <math|\<cal-M\><rsup|n><around*|\<langle\>|M,\<cal-T\>,\<cal-A\>|\<rangle\>>>
   is a <math|m>-dimensional <math|C<rsup|r>> differentiable manifold and
-  <math|f:M\<rightarrow\>\<bbb-R\>> is a real valued fumction then we say
+  <math|f:M\<rightarrow\>\<bbb-R\>> is a real valued function then we say
   that <math|f> is of class <math|C<rsup|r>> using <math|\<cal-A\>> \ if
   <math|\<forall\>p\<in\>M> there exist a
   <math|<around*|(|U,\<varphi\>|)>\<in\>\<cal-A\>> such that
@@ -6119,7 +6121,7 @@
 
   Mappings of class <math|C<rsup|r>> between manifolds have similar
   properties as mappings of class <math|C<rsup|r>> between normed spaces. For
-  example beeing of class <math|C<rsup|r>> is a local property.
+  example being of class <math|C<rsup|r>> is a local property.
 
   <\theorem>
     <label|manifold C^r mspping id locsl>Let <math|n,m\<in\>\<bbb-N\>>,
@@ -6555,7 +6557,7 @@
     <label|manifold diffeomorphism><index|<math|C<rsup|q>> diffeomorphism>Let
     <math|n,m\<in\>\<bbb-N\>>, <math|q\<in\>\<bbb-N\><rsub|0><big|cup><around*|{|\<infty\>|}>>,
     <math|\<cal-M\><rsup|m><around*|\<langle\>|M,\<cal-T\><rsub|M>,\<cal-A\><rsub|M>|\<rangle\>>>
-    a <math|m>-dimensional <math|C<rsup|q>> differentiabke manifold,
+    a <math|m>-dimensional <math|C<rsup|q>> differentiable manifold,
     <math|\<cal-M\><rsup|n><around*|\<langle\>|N,\<cal-T\><rsub|N>,\<cal-A\><rsub|N>|\<rangle\>>>
     a <math|n>-dimensional <math|C<rsup|q>> differentiable manifold then a
     mapping <math|<rigid|f:M\<rightarrow\>N>> is a <math|C<rsup|q>>
@@ -6573,7 +6575,7 @@
     <label|manifold diffeomorphism and inverse>Let <math|n,m\<in\>\<bbb-N\>>,
     <math|q\<in\>\<bbb-N\><rsub|0><big|cup><around*|{|\<infty\>|}>>,
     <math|\<cal-M\><rsup|m><around*|\<langle\>|M,\<cal-T\><rsub|M>,\<cal-A\><rsub|M>|\<rangle\>>>
-    a <math|m>-dimensional <math|C<rsup|q>> differentiabke manifold,
+    a <math|m>-dimensional <math|C<rsup|q>> differentiable manifold,
     <math|\<cal-M\><rsup|n><around*|\<langle\>|N,\<cal-T\><rsub|N>,\<cal-A\><rsub|N>|\<rangle\>>>
     a <math|n>-dimensional <math|C<rsup|q>> differentiable manifold and
     <math|<rigid|f:M\<rightarrow\>N>> a function then\ 
@@ -6639,7 +6641,7 @@
     <label|manifold diffeomorphic manifolds>Let <math|n,m\<in\>\<bbb-N\>>,
     <math|q\<in\>\<bbb-N\><rsub|0><big|cup><around*|{|\<infty\>|}>>,
     <math|\<cal-M\><rsup|m><around*|\<langle\>|M,\<cal-T\><rsub|M>,\<cal-A\><rsub|M>|\<rangle\>>>
-    a <math|m>-dimensional <math|C<rsup|q>> differentiabke manifold,
+    a <math|m>-dimensional <math|C<rsup|q>> differentiable manifold,
     <math|\<cal-M\><rsup|n><around*|\<langle\>|N,\<cal-T\><rsub|N>,\<cal-A\><rsub|N>|\<rangle\>>>
     a <math|n>-dimensional <math|C<rsup|q>> differentiable manifold then
     <math|<rigid|\<cal-M\><rsup|m><around*|\<langle\>|M,\<cal-T\><rsub|M>,\<cal-A\><rsub|M>|\<rangle\>>>>
@@ -6648,7 +6650,7 @@
     diffeomorphism <math|f:M\<rightarrow\>N> between them.
   </definition>
 
-  Just as a diffeormorphism between normed spaces is a homeomorphism [see
+  Just as a diffeomorphism between normed spaces is a homeomorphism [see
   theorem: <reference|diff diffeomorphism is a homeomorphism>] a
   diffeomorphism between differentiable manifolds is also a homeomorphism.
 
@@ -6656,7 +6658,7 @@
     <label|manifold diffeomorphism is a homeomorphism>Let
     <math|n,m\<in\>\<bbb-N\>>, <math|q\<in\>\<bbb-N\><rsub|0><big|cup><around*|{|\<infty\>|}>>,
     <math|\<cal-M\><rsup|m><around*|\<langle\>|M,\<cal-T\><rsub|M>,\<cal-A\><rsub|M>|\<rangle\>>>
-    a <math|m>-dimensional <math|C<rsup|q>> differentiabke manifold,
+    a <math|m>-dimensional <math|C<rsup|q>> differentiable manifold,
     <math|\<cal-M\><rsup|n><around*|\<langle\>|N,\<cal-T\><rsub|N>,\<cal-A\><rsub|N>|\<rangle\>>>
     a <math|n>-dimensional <math|C<rsup|q>> differentiable manifold and
     <math|f:M\<rightarrow\>N> a <math|C<rsup|q>> diffeomorphism then
@@ -6666,7 +6668,7 @@
   <\proof>
     As <math|f:M\<rightarrow\>N> is a <math|C<rsup|q>> diffeomorphism we have
     that <math|f:M\<rightarrow\>N> and <math|f<rsup|-1>:N\<rightarrow\>M> are
-    <math|C<rsup|q>> mapings. By [theorem: <reference|manifold C^m mappings
+    <math|C<rsup|q>> mappings. By [theorem: <reference|manifold C^m mappings
     are continuous>] it follows then that <math|f:M\<rightarrow\>N> and
     <math|f<rsup|-1>:N\<rightarrow\>M> are continuous. So by [definition:
     <reference|continuity homeomorphism>] <math|f> is a homeomorphism.
@@ -6811,7 +6813,7 @@
     <label|manifold diffeomorphism equivalence>Let <math|n,m\<in\>\<bbb-N\>>,
     <math|q\<in\>\<bbb-N\><rsub|0><big|cup><around*|{|\<infty\>|}>>,
     <math|\<cal-M\><rsup|m><around*|\<langle\>|M,\<cal-T\><rsub|M>,\<cal-A\><rsub|M>|\<rangle\>>>
-    a <math|m>-dimensional <math|C<rsup|q>> differentiabke manifold,
+    a <math|m>-dimensional <math|C<rsup|q>> differentiable manifold,
     <math|\<cal-M\><rsup|n><around*|\<langle\>|N,\<cal-T\><rsub|N>,\<cal-A\><rsub|N>|\<rangle\>>>
     a <math|n>-dimensional <math|C<rsup|q>> differentiable manifold and
     <math|f:M\<rightarrow\>N> a mapping then we have\ 
@@ -7018,7 +7020,7 @@
     <label|manifold diffeomorphism equivalence (1)>Let
     <math|n,m\<in\>\<bbb-N\>>, <math|q\<in\>\<bbb-N\><rsub|0><big|cup><around*|{|\<infty\>|}>>,
     <math|\<cal-M\><rsup|m><around*|\<langle\>|M,\<cal-T\><rsub|M>,\<cal-A\><rsub|M>|\<rangle\>>>
-    a <math|m>-dimensional <math|C<rsup|q>> differentiabke manifold,
+    a <math|m>-dimensional <math|C<rsup|q>> differentiable manifold,
     <math|\<cal-M\><rsup|n><around*|\<langle\>|N,\<cal-T\><rsub|N>,\<cal-A\><rsub|N>|\<rangle\>>>
     a <math|n>-dimensional <math|C<rsup|q>> differentiable manifold and
     <math|f:M\<rightarrow\>N> a mapping then we have
@@ -7161,8 +7163,8 @@
     </description>
   </proof>
 
-  If two differentiable mainfolds are <math|C<rsup|q>> diffemorphic then they
-  have the same dimension.
+  If two differentiable manifolds are <math|C<rsup|q>> diffeomorphic then
+  they have the same dimension.
 
   <\theorem>
     <label|manifold diffeomorphic manifolds have the same dimension>Let
@@ -7172,7 +7174,7 @@
     <math|m>-dimensional <math|C<rsup|q>> differentiable manifold that is
     <math|C<rsup|q>> diffeomorphic with <math|\<cal-M\><rsup|n><around*|\<langle\>|N,\<cal-T\><rsub|N>,\<cal-A\><rsub|N>|\<rangle\>>>
     a <math|n>-dimensional <math|C<rsup|q>> differentiable manifold then
-    <math|n=m>. In othere words diffeomorphic manifolds have the same
+    <math|n=m>. In other words diffeomorphic manifolds have the same
     dimension.
   </theorem>
 
@@ -7195,7 +7197,7 @@
 
   Just as the composition of diffeomorphisms between normed spaces is a
   diffeomorphism the composition of diffeomorphisms between differentiable
-  manifol is again a differentiable manifold.
+  manifold is again a differentiable manifold.
 
   \;
 
@@ -7299,8 +7301,6 @@
     f> is a compact set.
   </definition>
 
-  TODO
-
   <\theorem>
     <label|manifold support of a family>Let <math|n\<in\>\<bbb-N\>>,
     <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> a topological space
@@ -7330,8 +7330,8 @@
     </equation>
 
     As \ <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>> <math|supp
-    f<rsub|i>> is closed set it follows from [theorem: <reference|closed set
-    properties>] that\ 
+    f<rsub|i>> is a closed set it follows from [theorem: <reference|closed
+    set properties>] that\ 
 
     <\equation>
       <label|eq 23.150.27><big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>supp
@@ -7381,13 +7381,13 @@
     </enumerate>
   </definition>
 
-  We prove now that for every point <math|p> in a manifold and a open
-  neighborhood <math|U> of this point there exist a <math|C<rsup|q>> bump
-  function at <math|p> supported in <math|U>. For this we start with cutoff
-  functions between <math|\<bbb-R\>> and <math|\<bbb-R\>>, use this to create
-  a 'bump function' between <math|\<bbb-R\><rsup|n>> and <math|\<bbb-R\>> and
-  finally use this function to create a bump function between a manifold and
-  <math|\<bbb-R\>>.
+  We prove now that for every point <math|p> in a differentiable manifold and
+  a open neighborhood <math|U> of this point there exist a <math|C<rsup|q>>
+  bump function at <math|p> supported in <math|U>. For this we start with
+  cutoff functions between <math|\<bbb-R\>> and <math|\<bbb-R\>>, use this to
+  create a 'bump function' between <math|\<bbb-R\><rsup|n>> and
+  <math|\<bbb-R\>> and finally use this function to create a bump function
+  between a manifold and <math|\<bbb-R\>>.
 
   <\definition>
     <index|cutoff function><label|manifold cutoff function>A function
@@ -7398,7 +7398,7 @@
     <\eqnarray*>
       <tformat|<table|<row|<cell|>|<cell|\<forall\>t\<in\><around*|]|\<infty\>,a|]><text|
       we have >h<around*|(|t|)>=1>|<cell|>>|<row|<cell|>|<cell|\<forall\>t\<in\><around*|]|a,b|[><text|
-      we have >0\<less\>h<around*|(|t|)>\<less\>1>|<cell|>>|<row|<cell|>|<cell|\<forall\>t\<in\><around*|[|bm\<infty\>|[><text|
+      we have >0\<less\>h<around*|(|t|)>\<less\>1>|<cell|>>|<row|<cell|>|<cell|\<forall\>t\<in\><around*|[|b,\<infty\>|[><text|
       we have >h<around*|(|t|)>=0>|<cell|>>>>
     </eqnarray*>
   </definition>
@@ -7411,7 +7411,8 @@
     continuous function such that
 
     <\enumerate>
-      <item><math|\<forall\>t\<in\><around*|]|-\<infty\>,0|]>> <math|f=0>
+      <item><math|\<forall\>t\<in\><around*|]|-\<infty\>,0|]>>
+      <math|f<around*|(|t|)>=0>
 
       <item><math|\<forall\>t\<in\><around*|]|0,\<infty\>|[>>
       <math|f<rprime|'><rsub|t>> exist and
@@ -7434,7 +7435,7 @@
     <math|<around*|]|-\<infty\>,0|[>> is open \ [see theorem:
     <reference|normed generalized intervals that are open>] there exist a
     <math|\<delta\>\<in\>\<bbb-R\><rsup|+>> such that
-    <math|B<rsub|<around*|\|||\|>><around*|(|t,\<delta\>|)>\<subseteq\><around*|]|-\<infty\>,0|[>>.
+    <math|<rigid|B<rsub|<around*|\|||\|>><around*|(|t,\<delta\>|)>\<subseteq\><around*|]|-\<infty\>,0|[>>>.
     Let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> then for
     <math|h\<in\>\<bbb-R\><rsub|t>> with <math|0\<less\><around*|\||h|\|>\<less\>\<delta\>>
     we have that <math|<around*|\||t+h-t|\|>\<less\>\<delta\>\<Rightarrow\>t+h\<in\>B<rsub|<around*|\|||\|>><around*|(|t,\<delta\>|)>\<subseteq\><around*|]|-\<infty\>,0|[>>
@@ -7477,7 +7478,7 @@
       </equation*>
 
       <item*|<math|0\<less\>h>>Then <math|0\<less\>h\<less\>\<delta\>>. As
-      <math|f> is continous it follows from [theorem: <reference|continuity
+      <math|f> is continuous it follows from [theorem: <reference|continuity
       and subspace topology (1)>] that\ 
 
       <\equation*>
@@ -7497,10 +7498,10 @@
       Hence we can use Lagrange's mean value theorem [theorem:
       <reference|diff Lagrange theorem>] that there exist a
       <math|\<zeta\>\<in\><around*|]|0,h|[>> such that
-      <math|f<rsub|\|<around*|]|o,h|[>><around*|(|h|)>-f<rsub|<around*|]|0,h|[>><around*|(|h|)>=<around*|(|f<rsub|\|<around*|]|0,h|[>>|)><rprime|'><rsub|\<zeta\>>\<cdot\><around*|(|h-0|)>>.
-      As <math|f<rsub|\|<around*|]|0,h|[>><around*|(|h|)>=f<around*|(|h|)>>,
-      <math|f<rsub|\|<around*|]|0,h|[>><around*|(|0|)>=0> and
-      <math|><math|<around*|(|f<rsub|\|<around*|]|0,h|[>>|)><rprime|'><rsub|\<zeta\>>=f<rprime|'><rsub|\<zeta\>>>
+      <math|f<rsub|\|<around*|[|0,h|]>><around*|(|h|)>-f<rsub|<around*|[|0,h|]>><around*|(|0|)>=<around*|(|f<rsub|\|<around*|[|0,h|]>>|)><rprime|'><rsub|\<zeta\>>\<cdot\><around*|(|h-0|)>>.
+      As <math|f<rsub|\|<around*|[|0,h|]>><around*|(|h|)>=f<around*|(|h|)>>,
+      <math|f<rsub|\|<around*|[|0,h|]>><around*|(|0|)>=f<around*|(|0|)>=0>
+      and <math|><math|<around*|(|f<rsub|\|<around*|[|0,h|]>>|)><rprime|'><rsub|\<zeta\>>=f<rprime|'><rsub|\<zeta\>>>
       it follows that\ 
 
       <\equation*>
@@ -7533,8 +7534,8 @@
 
   <\lemma>
     <label|lemma 23.103.20>Let <math|k\<in\>\<bbb-N\><rsub|0>>,
-    <math|p<rsub|k>:\<bbb-R\>\<rightarrow\>\<bbb-R\>> defined by
-    <math|p<rsub|k><around*|(|t|)>=<big|sum><rsup|k><rsub|i=0>\<alpha\><rsub|i>\<cdot\>t<rsup|i>>
+    <math|p<rsub|k>:<around*|]|0,\<infty\>|[>\<rightarrow\>\<bbb-R\>> defined
+    by <math|p<rsub|k><around*|(|t|)>=<big|sum><rsup|k><rsub|i=0>\<alpha\><rsub|i>\<cdot\>t<rsup|i>>
     then\ 
 
     <\equation*>
@@ -7562,7 +7563,7 @@
 
     <\equation>
       <label|eq 23.157.20>-<frac|1|\<ast\>>:<around*|]|0,\<infty\>|[>\<rightarrow\>\<bbb-R\><text|
-      by ><around*|(|-<frac|1|t>|)><around*|(|\<ast\>|)>=-<frac|1|t>
+      by ><around*|(|-<frac|1|t>|)><around*|(|t|)>=-<frac|1|t>
     </equation>
 
     <\equation>
@@ -7571,7 +7572,7 @@
     </equation>
 
     then we have that <math|\<forall\>t\<in\><around*|]|0,\<infty\>|]>> that
-    <math|p<rsub|k>\<cdot\><frac|1|\<star\><rsup|2\<cdot\>k>>\<cdot\><around*|(|exp<rsub|\|\<bbb-R\>>\<circ\><around*|(|-<frac|1|\<ast\>>|)>|)>=p<rsub|k>\<cdot\><frac|1|t<rsup|2\<cdot\>k>>\<cdot\>exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>=f<around*|(|t|)>>
+    <math|<around*|(|p<rsub|k>\<cdot\><frac|1|\<star\><rsup|2\<cdot\>k>>\<cdot\><around*|(|exp<rsub|\|\<bbb-R\>>\<circ\><around*|(|-<frac|1|\<ast\>>|)>|)>|)><around*|(|t|)>=p<rsub|k><around*|(|t|)>\<cdot\><frac|1|t<rsup|2\<cdot\>k>>\<cdot\>exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>=f<around*|(|t|)>>
     so that\ 
 
     <\equation>
@@ -7588,8 +7589,8 @@
       with ><around*|(|-<frac|1|\<ast\>>|)><rprime|'><rsub|t>=<frac|1|t<rsup|2>>>>
     </equation>
 
-    By [theorem: <reference|diff derivative and restriction>, <reference|diff
-    power>] it follows that
+    By [theorems: <reference|diff derivative and restriction>,
+    <reference|diff power>] it follows that
 
     <\equation>
       <label|eq 23.161.20>\<forall\>t\<in\><around*|]|0,\<infty\>|[><text|
@@ -7611,7 +7612,7 @@
     <\equation>
       <label|eq 23.163.20>\<forall\>t\<in\><around*|]|0,\<infty\>|[><text|
       ><around*|(|p<rsub|k>|)><rprime|'><rsub|t><text| exists with
-      ><around*|(|p<rsub|k>|)><rprime|'><rsub|t>=<around*|(|\<alpha\><rsub|0>+<big|sum><rsub|i=1><rsup|k>\<alpha\><rsub|i>\<cdot\>t<rsup|k>|)><rprime|'><rsub|t>=<big|sum><rsub|i=1><rsup|k>i\<cdot\>\<alpha\><rsub|i>\<cdot\>t<rsup|i-1>
+      ><around*|(|p<rsub|k>|)><rprime|'><rsub|t>=<around*|(|\<alpha\><rsub|0>+<big|sum><rsub|i=1><rsup|k>\<alpha\><rsub|i>\<cdot\><around*|(|\<ast\>|)><rsup|i>|)><rprime|'><rsub|t>=<big|sum><rsub|i=1><rsup|k>i\<cdot\>\<alpha\><rsub|i>\<cdot\>t<rsup|i-1>
     </equation>
 
     Using now the chain rule [see theorem: <reference|diff chain rule
@@ -7697,8 +7698,8 @@
 
     <\enumerate>
       <item>Let <math|t\<in\><around*|]|0,\<infty\>|[>>. As
-      <math|f<rsub|\|<around*|]||[>0,\<infty\>>:<around*|]|0,\<infty\>|[>\<rightarrow\>\<bbb-R\>>
-      is defined by <math|f<rsub|<around*|]|0,\<infty\>|[>><around*|(|t|)>=f<around*|(|t|)>=p<rsub|k><around*|(|t|)>\<cdot\><frac|exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>|tt<rsup|2\<cdot\>k>>>
+      <math|f<rsub|\|0,\<infty\>>:<around*|]|0,\<infty\>|[>\<rightarrow\>\<bbb-R\>>
+      is defined by <math|f<rsub|<around*|]|0,\<infty\>|[>><around*|(|t|)>=f<around*|(|t|)>=p<rsub|k><around*|(|t|)>\<cdot\><frac|exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>|t<rsup|2\<cdot\>k>>>
       it follows from [lemma: <reference|lemma 23.103.20>] that
       <math|<around*|(|f<rsub|\|<around*|]|0,\<infty\>|[>>|)><rprime|'><rsub|t>>
       exist with
@@ -7799,8 +7800,8 @@
     </equation*>
 
     Let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> and take
-    <math|\<delta\>=<frac|\<varepsilon\>|2\<cdot\><around*|(|k+1|)>!>\<in\>\<bbb-R\><rsup|+>>
-    then we have that\ 
+    <math|\<delta\>=<frac|\<varepsilon\>|<around*|(|k+1|)>!>\<in\>\<bbb-R\><rsup|+>>
+    then we have for <math|t\<in\><around*|]|0,\<delta\>|[>> that\ 
 
     <\equation*>
       <frac|exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>|t<rsup|k>>\<less\><around*|(|k+1|)>!\<cdot\><frac|\<varepsilon\>|<around*|(|k+1|)>!>=\<varepsilon\>
@@ -7810,6 +7811,52 @@
 
     <\equation*>
       0\<less\><frac|exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>|t<rsup|k>>\<less\>\<varepsilon\>
+    </equation*>
+  </proof>
+
+  <\lemma>
+    <label|lemma 23.110.20>Let <math|k\<in\>\<bbb-N\><rsub|0>>,
+    <math|p<rsub|k+1>:<around*|]|0,\<infty\>|[>\<rightarrow\>\<bbb-R\>>
+    defined by <math|p<rsub|k+1><around*|(|t|)>=<big|sum><rsub|i=0><rsup|k+1>\<alpha\><rsub|i>\<cdot\>t<rsup|i>>
+    then <math|\<forall\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> there exist a
+    <math|\<delta\>\<in\>\<bbb-R\><rsup|+>> such that
+    <math|\<forall\>t\<in\><around*|]|0,\<delta\>|[>> we have that\ 
+
+    <\equation*>
+      <around*|\||p<rsub|k+1><around*|(|t|)>\<cdot\><frac|exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>|t<rsup|2\<cdot\>k>>|\|>\<less\>\<varepsilon\>
+    </equation*>
+  </lemma>
+
+  <\proof>
+    Let <math|t\<in\><around*|]|0,1|[>> then we have\ 
+
+    <\equation*>
+      <around*|\||p<rsub|k+1><around*|(|t|)>|\|>=<around*|\||<big|sum><rsub|i=0><rsup|k+1>\<alpha\><rsub|i>\<cdot\>t<rsup|i>|\|>\<leqslant\><big|sum><rsub|i=0><rsup|k+1><around*|\||\<alpha\><rsub|i>\<cdot\>t<rsup|i>|\|>=<big|sum><rsub|i=0><rsup|k+1><around*|\||\<alpha\><rsub|i>|\|>\<cdot\><around*|\||t<rsup|i>|\|><below|\<less\>|0\<less\>s\<less\>1\<wedge\><text|[theorem:
+      <reference|complex power and inequality>]>><big|sum><rsub|i=0><rsup|k+1><around*|\||\<alpha\><rsub|i>|\|>
+    </equation*>
+
+    So if we let <math|M=><math|<big|sum><rsub|i=0><rsup|k+1><around*|\||\<alpha\><rsub|i>|\|>>
+    then we have\ 
+
+    <\equation*>
+      \<forall\>t\<in\><around*|]|0,1|[><text| that
+      >0\<leqslant\><around*|\||p<rsub|k+1><around*|(|t|)>|\|>\<less\>M
+    </equation*>
+
+    Let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> then using [lemma:
+    <reference|lemma 23.105.20>] there exist a
+    <math|\<delta\><rsub|1>\<in\>\<bbb-R\><rsup|+>> such that\ 
+
+    <\equation*>
+      \<forall\>t\<in\><around*|]|0,\<delta\><rsub|1>|[><text| we have
+      ><around*|\||<frac|exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>|t<rsup|2\<cdot\>k>>|\|>\<less\><frac|\<varepsilon\>|M+1>
+    </equation*>
+
+    Hence if we take <math|\<delta\>=min<around*|(|t,\<delta\><rsub|1>|)>>
+    then we have <math|\<forall\>t\<in\><around*|]|0,1|[>>\ 
+
+    <\equation*>
+      <around*|\||p<rsub|k+1><around*|(|t|)>\<cdot\><frac|exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>|t<rsup|2\<cdot\>k>>|\|>=<around*|\||p<rsub|k+1><around*|(|t|)>|\|>\<cdot\><around*|\||<frac|exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>|t<rsup|2\<cdot\>k>>|\|>\<less\>M\<cdot\><frac|\<varepsilon\>|M+1>\<less\>\<varepsilon\>
     </equation*>
 
     \;
@@ -7846,15 +7893,15 @@
       continuous at <math|t>.
 
       <item*|<math|t=0>>Let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>. Let
-      <math|s\<in\><around*|]|0,1|[>> then we have as\ 
+      <math|s\<in\><around*|]|0,1|[>> then we have
 
       <\equation*>
         <around*|\||p<rsub|k><around*|(|s|)>|\|>=<around*|\||<big|sum><rsub|i=0><rsup|k>\<alpha\><rsub|i>\<cdot\>s<rsup|i>|\|>\<leqslant\><big|sum><rsub|i=0><rsup|k><around*|\||\<alpha\><rsub|i>\<cdot\>s<rsup|i>|\|>=<big|sum><rsub|i=0><rsup|k><around*|\||\<alpha\><rsub|i>|\|>\<cdot\><around*|\||s<rsup|i>|\|><below|\<less\>|0\<less\>s\<less\>1\<wedge\><text|[theorem:
         <reference|complex power and inequality>]>><big|sum><rsub|i=0><rsup|k><around*|\||\<alpha\><rsub|i>|\|>
       </equation*>
 
-      so that if we define <math|M=<big|sum><rsub|i=0><rsup|k><around*|\||\<alpha\><rsub|i>|\|>>
-      that\ 
+      So if we let <math|M=<big|sum><rsub|i=0><rsup|k><around*|\||\<alpha\><rsub|i>|\|>>
+      we have that\ 
 
       <\equation>
         <label|eq 23.161.21>0\<leqslant\>M<text| and
@@ -7867,7 +7914,7 @@
       <math|\<delta\><rsub|1>\<in\>\<bbb-R\><rsup|+>> such that\ 
 
       <\equation>
-        <label|eq 23.162.21>s\<in\><around*|]|0,\<delta\><rsub|1>|[><text|
+        <label|eq 23.162.21>\<forall\>s\<in\><around*|]|0,\<delta\><rsub|1>|[><text|
         >0\<less\><frac|exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|s>|)>|s<rsup|2\<cdot\>k>>\<less\><frac|\<varepsilon\>|M+1>
       </equation>
 
@@ -7877,7 +7924,7 @@
       either:\ 
 
       <\description>
-        <item*|<math|0\<less\>s>>Then <math|s=<around*|\||s|\|>\<less\>\<delta\>\<leqslant\>\<delta\><rsub|1>\<Rightarrow\>s\<in\><around*|]|0.\<delta\><rsub|1>|[>>
+        <item*|<math|0\<less\>s>>Then <math|s=<around*|\||s|\|>\<less\>\<delta\>\<leqslant\>\<delta\><rsub|1>\<Rightarrow\>s\<in\><around*|]|0,\<delta\><rsub|1>|[>>
         so that\ 
 
         <\eqnarray*>
@@ -7909,6 +7956,8 @@
     </equation*>
   </proof>
 
+  TODO
+
   <\lemma>
     <label|lemma 23.107.21>Let <math|k\<in\>\<bbb-N\><rsub|0>>,
     <math|p<rsub|k>:\<bbb-R\>\<rightarrow\>\<bbb-R\>> defined by
@@ -7926,7 +7975,7 @@
 
     <\equation*>
       \<forall\>t\<in\>\<bbb-R\><text| >f<rprime|'><rsub|t><text| exists>
-      with f<rprime|'><rsub|t>==<choice|<tformat|<table|<row|<cell|p<rsub|k+1><around*|(|t|)>\<cdot\><frac|exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>|t<rsup|2\<cdot\><around*|(|k+1|)>>><text|
+      with f<rprime|'><rsub|t>=<choice|<tformat|<table|<row|<cell|p<rsub|k+1><around*|(|t|)>\<cdot\><frac|exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>|t<rsup|2\<cdot\><around*|(|k+1|)>>><text|
       if >t\<in\><around*|]|0,\<infty\>|[>>>|<row|<cell|0<text| if
       >t\<in\><around*|]|-\<infty\>,0|]><text|>>>>>>
     </equation*>
@@ -7935,44 +7984,47 @@
   </lemma>
 
   <\proof>
-    By [lemma: <reference|lemma 23.106.20>]\ 
+    By [lemma: <reference|lemma 23.106.20>]
 
     <\equation*>
       f<text| is continuous>
     </equation*>
 
-    further, using [lemma: <reference|lemma 23.104.20>] we have that\ 
-
-    <\equation>
-      <label|eq 23.163.21>\<forall\>t\<in\><around*|]|0,\<infty\>|[><text|
-      >f<rprime|'><rsub|t><text| exists with
-      >f<rprime|'><rsub|t>=p<rsub|k+1><around*|(|t|)>\<cdot\><frac|exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>|t<rsup|2\<cdot\><around*|(|k+1|)>>><text|
-      if >t\<in\><around*|]|0,\<infty\>|[><text| where
-      >p<rsub|k+1><around*|(|t|)>=<big|sum><rsub|i=0><rsup|k+1>\<beta\><rsub|i>\<cdot\>t<rsup|i>
-    </equation>
+    Using [lemma: <reference|lemma 23.104.20>]\ 
 
     <\equation*>
-      \<forall\>t\<in\><around*|]|-\<infty\>,0|[><text|
-      >f<rprime|'><rsub|t><text| exists with >f<rprime|'><rsub|t>=0
+      \<forall\>t\<in\><around*|]|0,\<infty\>|[> f<rprime|'><rsub|t><text|
+      exist with >f<rprime|'><rsub|t>=p<rsub|k+1><around*|(|t|)>\<cdot\><frac|exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>|t<rsup|2\<cdot\><around*|(|k+1|)>>><text|><text|
+      where >p<rsub|k+1><around*|(|t|)>=<big|sum><rsub|i=0><rsup|k+1>\<beta\><rsub|i>\<cdot\>t<rsup|i>
     </equation*>
 
-    As <math|\<forall\>t\<subset\><around*|]|-\<infty\>,0|]>> <math|f=0> it
-    follows from [eq: <reference|eq 23.163.21>] by [lemma: <reference|lemma
-    23.102.20>] that
+    Further using [lemma: <reference|lemma 23.110.20>] we have
 
     <\equation*>
-      \<forall\>t\<in\><around*|]|-\<infty\>,0|]>
+      \<forall\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+><text|
+      >\<exists\>\<delta\>\<in\>\<bbb-R\><rsup|+><text| such that
+      >\<forall\>t\<in\><around*|]|0,\<delta\>|[><text|
+      ><around*|\||f<rprime|'><rsub|t>|\|>=<around*|\||p<rsub|k+1><around*|(|t|)>\<cdot\><frac|exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>|t<rsup|2\<cdot\><around*|(|k+1|)>>>|\|>\<less\>\<varepsilon\>
     </equation*>
 
-    Combining the above with [eq: <reference|eq 23.163.21>] proves that\ 
+    Further we have\ 
 
     <\equation*>
-      \<forall\>t\<in\>\<bbb-R\><text| >f<rprime|'><rsub|t><text| exists
-      with> f<rprime|'><rsub|t>==<choice|<tformat|<table|<row|<cell|p<rsub|k+1><around*|(|t|)>\<cdot\><frac|exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>|t<rsup|2\<cdot\><around*|(|k+1|)>>><text|
+      \<forall\>t\<in\><around*|]|-\<infty\>,0|]><text| that
+      >f<around*|(|t|)>=0
+    </equation*>
+
+    Hence using [lemma: <reference|lemma 23.102.20>] we have that\ 
+
+    <\equation*>
+      \<forall\>t\<in\>\<bbb-R\><text| >f<rprime|'><rsub|t><text| exists with
+      >f<rprime|'><rsub|t>=<choice|<tformat|<table|<row|<cell|p<rsub|k+1><around*|(|t|)>\<cdot\><frac|exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>|t<rsup|2\<cdot\><around*|(|k+1|)>>><text|
       if >t\<in\><around*|]|0,\<infty\>|[>>>|<row|<cell|0<text| if
       >t\<in\><around*|]|-\<infty\>,0|]><text|>>>>>>
     </equation*>
   </proof>
+
+  TODO
 
   <\lemma>
     <label|lemma 23.101.2>Consider the function\ 
@@ -8417,7 +8469,7 @@
       This function is a example of a bump function, that is a function whose
       values lies in the interval <math|<around*|]|0,1|]>> that is equal to
       <math|1> on a specified set and equal to <math|0> outside a open
-      neighborhood ontaining the specified set.
+      neighborhood containing the specified set.
     </note>
   </theorem>
 
@@ -8467,11 +8519,11 @@
       <math|<around*|(|h\<circ\><around*|\<\|\|\>|\<ast\>|\<\|\|\>><rsub|e>|)><rsub|\|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,\<delta\>|)>>>
       is <math|\<infty\>>-times differentiable at <math|t=0>. Using the the
       fact that differentiability is a local property [see theorem:
-      <reference|diff higher order differentiation is local>] it follows thay
+      <reference|diff higher order differentiation is local>] it follows that
 
       <\equation*>
         f=h\<circ\><around*|\<\|\|\>|\<ast\>|\<\|\|\>><text| is
-        >\<infty\><text|-times diferentiable at >t
+        >\<infty\><text|-times differentiable at >t
       </equation*>
 
       <item*|<math|t\<in\>\<bbb-R\><rsup|n>\\<around*|{|0|}>>>As
@@ -8488,12 +8540,12 @@
 
       <\equation*>
         f=h\<circ\><around*|\<\|\|\>|\<ast\>|\<\|\|\>><text| is
-        >\<infty\><text|-times diferentiable at >t
+        >\<infty\><text|-times differentiable at >t
       </equation*>
     </description>
 
     From the above it follows that <math|f> is <math|\<infty\>>-times
-    differentiabke on <math|\<bbb-R\>> so that by [theorem: <reference|diff
+    differentiable on <math|\<bbb-R\>> so that by [theorem: <reference|diff
     C-infinity condition>]\ 
 
     <\equation*>
@@ -8636,8 +8688,8 @@
     <math|<around*|(|\<cal-T\><rsub|\<bbb-R\><rsup|m>>|)><rsub|\|\<psi\><around*|(|R|)>>>.
     Given that <math|\<psi\><rsup|-1>> is continuous [because <math|\<psi\>>
     is a homeomorphism] it follows that <math|<around*|(|\<psi\><rsup|-1>|)><around*|(|<wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,<frac|r|2>|)>|\<wide-bar\>>|)>>
-    is compact using the subspacce topology <math|\<cal-T\><rsub|\|R>> so
-    that by [theorem: <reference|compact subspace equivalences>]
+    is compact using the subspace topology <math|\<cal-T\><rsub|\|R>> so that
+    by [theorem: <reference|compact subspace equivalences>]
     <math|<around*|(|\<psi\><rsup|-1>|)><around*|(|<wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,<frac|r|2>|)>|\<wide-bar\>>|)>>
     is compact using the topology <math|\<cal-T\>>. As <math|\<cal-T\>> is
     Hausdorff it follows by [theorem: <reference|compact set is closed in a
@@ -8839,7 +8891,7 @@
     <math|h<around*|(|q|)>=f<around*|(|\<psi\><around*|(|q|)>|)>=0>
     contradicting <math|q\<in\><around*|{|q\<in\>M\|h<around*|(|q|)>\<neq\>0|}>>.
     Hence we have that <math|\<psi\><around*|(|q|)>\<in\><wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,<frac|r|2>|)>|\<wide-bar\>>>.
-    This proves tha <math|\<psi\><around*|(|<around*|{|q\<in\>M\|h<around*|(|q|)>\<neq\>0|}>|)>\<subseteq\><wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,<frac|r|2>|)>|\<wide-bar\>><below|\<subseteq\>|<text|[eq:
+    This proves that <math|\<psi\><around*|(|<around*|{|q\<in\>M\|h<around*|(|q|)>\<neq\>0|}>|)>\<subseteq\><wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,<frac|r|2>|)>|\<wide-bar\>><below|\<subseteq\>|<text|[eq:
     <reference|eq 23.169.24>]>>\<psi\><around*|(|R|)>> so that\ 
 
     <\equation*>
@@ -9116,7 +9168,7 @@
     </equation*>
 
     Using the above it follows that <math|<big|cup><rsub|q\<in\>V<rsub|p>><around*|{|i\<in\>I\|f<rsub|i><around*|(|q|)>\<neq\>0|}>>
-    ia finite. As <math|p\<in\>M> has been chosen arbitrary it we have proved
+    is finite. As <math|p\<in\>M> has been chosen arbitrary it we have proved
     that
 
     <\equation>
@@ -9263,7 +9315,7 @@
     <label|lemma 23.120.28>Let <math|m\<in\>\<bbb-N\>>,
     <math|q\<in\>\<bbb-N\><rsub|0><big|cup><around*|{|\<infty\>|}>>,
     <math|\<cal-M\><rsup|m><around*|\<langle\>|M,\<cal-T\>,\<cal-A\>|\<rangle\>>>
-    a <math|m>-dimensional <math|C<rsup|q>> differentuable manifold then
+    a <math|m>-dimensional <math|C<rsup|q>> differentiable manifold then
     there exists a <math|<around*|{|V<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>> such
     that we have\ 
 
@@ -9357,7 +9409,7 @@
 
       <\eqnarray*>
         <tformat|<table|<row|<cell|<wide|<big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,\<beta\><rsub|m-1>|}>>V<rsub|j>|\<wide-bar\>>>|<cell|<below|\<subseteq\>|<text|[theorem:
-        <reference|topology closure inclusion>]>>>|<cell|<wide|<big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,\<beta\><rsub|m-1>|}>><wide|V<rsub|j>|\<wide-bar\>>|\<wide-bar\>>>>|<row|<cell|>|<cell|<below|=|<text|[theoremx:
+        <reference|topology closure inclusion>]>>>|<cell|<wide|<big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,\<beta\><rsub|m-1>|}>><wide|V<rsub|j>|\<wide-bar\>>|\<wide-bar\>>>>|<row|<cell|>|<cell|<below|=|<text|[theorem:
         <reference|closed set properties>,<reference|topology closed set and
         closure>]>>>|<cell|<big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,\<beta\><rsub|m-1>|}>><wide|V<rsub|j>|\<wide-bar\>>>>>>
       </eqnarray*>
@@ -9467,7 +9519,7 @@
     and <math|\<cal-M\><rsup|m><around*|\<langle\>|M,\<cal-T\>,\<cal-A\>|\<rangle\>>>
     a <math|m>-dimensional <math|C<rsup|q>> differentiable manifold and let
     <math|<around*|{|U<rsub|i>|}><rsub|i\<in\>I>> be a arbitrary family of
-    opem sets in <math|M> then there ex\ 
+    open sets in <math|M> then there ex\ 
 
     <\enumerate>
       <item>There exist a <math|C<rsup|q>> partition of unity
@@ -9557,10 +9609,10 @@
   is just a set <math|M> that is locally homeomorphic with
   <math|\<bbb-R\><rsup|n>> allowing to define the concept of
   differentiability of class <math|C<rsup|m>> for functions defined on
-  <math|M>. However <math|M> itself does not have the structure of a
-  vectorspace. In this section we will attach a vector space with each
-  element of <math|M>. First we define the space of all real valued functions
-  of class <math|C<rsup|m>> defined on a manifold.
+  <math|M>. However <math|M> itself does not have the structure of a vector
+  space. In this section we will attach a vector space with each element of
+  <math|M>. First we define the space of all real valued functions of class
+  <math|C<rsup|m>> defined on a manifold.
 
   <\definition>
     <label|manifold C^m(M)>Let <math|m\<in\>\<bbb-N\>>,
@@ -9575,7 +9627,7 @@
       differentiability real function>]>
     </equation*>
 
-    In othere words <math|C<rsup|q><around*|(|M|)>> is the set of graphs of
+    In other words <math|C<rsup|q><around*|(|M|)>> is the set of graphs of
     real valued functions defined on <math|M> that are of class
     <math|C<rsup|q>>.
   </definition>
@@ -9853,7 +9905,7 @@
       <tformat|<table|<row|<cell|*<around*|(|\<alpha\>\<cdot\>v+w|)><around*|(|f\<cdot\>g|)>>|<cell|=>|<cell|\<alpha\>\<cdot\>v<around*|(|f\<cdot\>g|)>+w<around*|(|f\<cdot\>g|)>>>|<row|<cell|>|<cell|=>|<cell|\<alpha\>\<cdot\>f<around*|(|p|)>\<cdot\>v<around*|(|g|)>+\<alpha\>\<cdot\>g<around*|(|p|)>\<cdot\>v<around*|(|f|)>+f<around*|(|p|)>\<cdot\>w<around*|(|g|)>+g<around*|(|p|)>\<cdot\>w<around*|(|f|)>>>|<row|<cell|>|<cell|=>|<cell|f<around*|(|p|)><around*|(|\<alpha\>\<cdot\>v<around*|(|g|)>+w<around*|(|g|)>|)>+g<around*|(|p|)>\<cdot\><around*|(|\<alpha\>\<cdot\>v<around*|(|f|)>+\<omega\><around*|(|f|)>|)>>>|<row|<cell|>|<cell|=>|<cell|f<around*|(|p|)>\<cdot\><around*|(|\<alpha\>\<cdot\>v+w|)><around*|(|g|)>+g<around*|(|p|)>\<cdot\><around*|(|\<alpha\>\<cdot\>v+w|)><around*|(|f|)>>>>>
     </eqnarray*>
 
-    proving that \ <math|\<alpha\>\<cdot\>v+w\<in\>T<rsub|p>M>. Hemce by
+    proving that \ <math|\<alpha\>\<cdot\>v+w\<in\>T<rsub|p>M>. Hence by
     [definition: <reference|vector space subspace>]\ 
 
     <\equation*>
@@ -10083,7 +10135,7 @@
       d F<rsub|p><around*|(|v|)>\<in\>Hom<around*|(|C<rsup|q><around*|(|N|)>,\<bbb-R\>|)>
     </equation*>
 
-    Furher we have\ 
+    Further we have\ 
 
     <\eqnarray*>
       <tformat|<table|<row|<cell|d F<rsub|p><around*|(|v|)><around*|(|f\<cdot\>g|)>>|<cell|=>|<cell|v<around*|(|<around*|(|f\<cdot\>g|)>\<circ\>F|)>>>|<row|<cell|>|<cell|<below|=|<text|[eq:
@@ -10376,7 +10428,7 @@
     <associate|eq 23.138.16|<tuple|23.154|?>>
     <associate|eq 23.139.16|<tuple|23.155|?>>
     <associate|eq 23.14.3|<tuple|23.18|?>>
-    <associate|eq 23.147.17|<tuple|23.202|?>>
+    <associate|eq 23.147.17|<tuple|23.201|?>>
     <associate|eq 23.15.2|<tuple|23.19|?>>
     <associate|eq 23.150.27|<tuple|23.157|?>>
     <associate|eq 23.157.20|<tuple|23.159|?>>
@@ -10386,43 +10438,42 @@
     <associate|eq 23.16.2|<tuple|23.20|?>>
     <associate|eq 23.160.20|<tuple|23.162|?>>
     <associate|eq 23.160.21|<tuple|23.167|?>>
-    <associate|eq 23.160.22|<tuple|23.171|?>>
+    <associate|eq 23.160.22|<tuple|23.170|?>>
     <associate|eq 23.161.20|<tuple|23.163|?>>
     <associate|eq 23.161.21|<tuple|23.168|?>>
-    <associate|eq 23.161.22|<tuple|23.172|?>>
+    <associate|eq 23.161.22|<tuple|23.171|?>>
     <associate|eq 23.162.20|<tuple|23.164|?>>
     <associate|eq 23.162.21|<tuple|23.169|?>>
-    <associate|eq 23.162.22|<tuple|23.173|?>>
+    <associate|eq 23.162.22|<tuple|23.172|?>>
     <associate|eq 23.163.20|<tuple|23.165|?>>
-    <associate|eq 23.163.21|<tuple|23.170|?>>
-    <associate|eq 23.163.22|<tuple|23.174|?>>
-    <associate|eq 23.164.22|<tuple|23.175|?>>
-    <associate|eq 23.165.22|<tuple|23.176|?>>
-    <associate|eq 23.166.22|<tuple|23.177|?>>
-    <associate|eq 23.169.24|<tuple|23.179|?>>
-    <associate|eq 23.169.25|<tuple|23.178|?>>
+    <associate|eq 23.163.22|<tuple|23.173|?>>
+    <associate|eq 23.164.22|<tuple|23.174|?>>
+    <associate|eq 23.165.22|<tuple|23.175|?>>
+    <associate|eq 23.166.22|<tuple|23.176|?>>
+    <associate|eq 23.169.24|<tuple|23.178|?>>
+    <associate|eq 23.169.25|<tuple|23.177|?>>
     <associate|eq 23.17.2|<tuple|23.22|?>>
-    <associate|eq 23.170.24|<tuple|23.180|?>>
-    <associate|eq 23.171.24|<tuple|23.181|?>>
-    <associate|eq 23.172.24|<tuple|23.182|?>>
-    <associate|eq 23.173.24|<tuple|23.183|?>>
-    <associate|eq 23.174.24|<tuple|23.185|?>>
-    <associate|eq 23.175.24|<tuple|23.186|?>>
-    <associate|eq 23.175.25|<tuple|23.184|?>>
-    <associate|eq 23.176.24|<tuple|23.187|?>>
-    <associate|eq 23.177.24|<tuple|23.188|?>>
-    <associate|eq 23.180.26|<tuple|23.189|?>>
-    <associate|eq 23.181.26|<tuple|23.190|?>>
-    <associate|eq 23.182.26|<tuple|23.191|?>>
-    <associate|eq 23.183.25|<tuple|23.194|?>>
-    <associate|eq 23.183.26|<tuple|23.192|?>>
-    <associate|eq 23.184.26|<tuple|23.193|?>>
-    <associate|eq 23.188.28|<tuple|23.196|?>>
-    <associate|eq 23.189.27|<tuple|23.198|?>>
-    <associate|eq 23.190.27|<tuple|23.199|?>>
-    <associate|eq 23.191.27|<tuple|23.200|?>>
-    <associate|eq 23.193.28|<tuple|23.201|?>>
-    <associate|eq 23.195.29|<tuple|23.195|?>>
+    <associate|eq 23.170.24|<tuple|23.179|?>>
+    <associate|eq 23.171.24|<tuple|23.180|?>>
+    <associate|eq 23.172.24|<tuple|23.181|?>>
+    <associate|eq 23.173.24|<tuple|23.182|?>>
+    <associate|eq 23.174.24|<tuple|23.184|?>>
+    <associate|eq 23.175.24|<tuple|23.185|?>>
+    <associate|eq 23.175.25|<tuple|23.183|?>>
+    <associate|eq 23.176.24|<tuple|23.186|?>>
+    <associate|eq 23.177.24|<tuple|23.187|?>>
+    <associate|eq 23.180.26|<tuple|23.188|?>>
+    <associate|eq 23.181.26|<tuple|23.189|?>>
+    <associate|eq 23.182.26|<tuple|23.190|?>>
+    <associate|eq 23.183.25|<tuple|23.193|?>>
+    <associate|eq 23.183.26|<tuple|23.191|?>>
+    <associate|eq 23.184.26|<tuple|23.192|?>>
+    <associate|eq 23.188.28|<tuple|23.195|?>>
+    <associate|eq 23.189.27|<tuple|23.197|?>>
+    <associate|eq 23.190.27|<tuple|23.198|?>>
+    <associate|eq 23.191.27|<tuple|23.199|?>>
+    <associate|eq 23.193.28|<tuple|23.200|?>>
+    <associate|eq 23.195.29|<tuple|23.194|?>>
     <associate|eq 23.2.1|<tuple|23.6|?>>
     <associate|eq 23.2.3|<tuple|23.3|?>>
     <associate|eq 23.21.6|<tuple|23.21|?>>
@@ -10540,16 +10591,17 @@
     <associate|eq 23.98.12|<tuple|23.123|?>>
     <associate|eq 23.99.12|<tuple|23.124|?>>
     <associate|lemma 23.10.2|<tuple|23.19|?>>
-    <associate|lemma 23.101.2|<tuple|23.112|?>>
+    <associate|lemma 23.101.2|<tuple|23.113|?>>
     <associate|lemma 23.102.20|<tuple|23.106|?>>
     <associate|lemma 23.103.20|<tuple|23.107|?>>
     <associate|lemma 23.104.20|<tuple|23.108|?>>
-    <associate|lemma 23.104.22|<tuple|23.115|?>>
+    <associate|lemma 23.104.22|<tuple|23.116|?>>
     <associate|lemma 23.105.20|<tuple|23.109|?>>
-    <associate|lemma 23.106.20|<tuple|23.110|?>>
-    <associate|lemma 23.107.21|<tuple|23.111|?>>
+    <associate|lemma 23.106.20|<tuple|23.111|?>>
+    <associate|lemma 23.107.21|<tuple|23.112|?>>
     <associate|lemma 23.11.2|<tuple|23.20|?>>
-    <associate|lemma 23.120.28|<tuple|23.124|?>>
+    <associate|lemma 23.110.20|<tuple|23.110|?>>
+    <associate|lemma 23.120.28|<tuple|23.125|?>>
     <associate|lemma 23.13.2|<tuple|23.21|?>>
     <associate|lemma 23.13.8|<tuple|23.17|?>>
     <associate|lemma 23.37.6|<tuple|23.57|?>>
@@ -10568,20 +10620,20 @@
     <associate|manifold C^m mappings are continuous|<tuple|23.79|?>>
     <associate|manifold C^m mappings equivalences|<tuple|23.82|?>>
     <associate|manifold C^m mappings equivalences (1)|<tuple|23.80|?>>
-    <associate|manifold C^m(M)|<tuple|23.126|?>>
-    <associate|manifold C^q(M) is a vector space|<tuple|23.127|?>>
+    <associate|manifold C^m(M)|<tuple|23.127|?>>
+    <associate|manifold C^q(M) is a vector space|<tuple|23.128|?>>
     <associate|manifold C^r functions are C^r mappings|<tuple|23.84|?>>
     <associate|manifold C^r mspping id local (2)|<tuple|23.86|?>>
     <associate|manifold C^r mspping id locsl|<tuple|23.85|?>>
     <associate|manifold R^n is a differentiable manifold|<tuple|23.67|?>>
-    <associate|manifold TpM is a vector space|<tuple|23.133|?>>
-    <associate|manifold TpM properties|<tuple|23.134|?>>
+    <associate|manifold TpM is a vector space|<tuple|23.134|?>>
+    <associate|manifold TpM properties|<tuple|23.135|?>>
     <associate|manifold a finite dimensional vector space is a differentiable
     manifold|<tuple|23.70|?>>
     <associate|manifold a topological manifold is locally
     compact|<tuple|23.26|?>>
     <associate|manifold atlas|<tuple|23.11|?>>
-    <associate|manifold bump function (1)|<tuple|23.116|?>>
+    <associate|manifold bump function (1)|<tuple|23.117|?>>
     <associate|manifold bump function on manifold|<tuple|23.104|?>>
     <associate|manifold canonical example|<tuple|23.15|?>>
     <associate|manifold chain rule|<tuple|23.89|?>>
@@ -10596,9 +10648,9 @@
     <associate|manifold compatible atlas|<tuple|23.55|?>>
     <associate|manifold compatible atlas (1)|<tuple|23.56|?>>
     <associate|manifold composition of a C^r mapping and a mapping of class
-    C^r|<tuple|23.135|?>>
+    C^r|<tuple|23.136|?>>
     <associate|manifold connectivity properties|<tuple|23.25|?>>
-    <associate|manifold constant functions|<tuple|23.128|?>>
+    <associate|manifold constant functions|<tuple|23.129|?>>
     <associate|manifold coordinate ball and cube|<tuple|23.9|?>>
     <associate|manifold coordinate domain|<tuple|23.8|?>>
     <associate|manifold coordinate transforms are a
@@ -10607,7 +10659,7 @@
     <associate|manifold cooridinate chart existence|<tuple|23.10|?>>
     <associate|manifold countable basis of precompact sets|<tuple|23.23|?>>
     <associate|manifold cutoff function|<tuple|cutoff function|?>>
-    <associate|manifold cutoff function existence|<tuple|23.113|?>>
+    <associate|manifold cutoff function existence|<tuple|23.114|?>>
     <associate|manifold diffentiable atlas|<tuple|23.41|?>>
     <associate|manifold diffeomorphic manifolds|<tuple|23.92|?>>
     <associate|manifold diffeomorphic manifolds have the same
@@ -10625,12 +10677,12 @@
     <associate|manifold differentiable manifold|<tuple|23.61|?>>
     <associate|manifold differentiable mappings|<tuple|23.75|?>>
     <associate|manifold differentiable structure|<tuple|23.58|?>>
-    <associate|manifold differential|<tuple|23.136|?>>
-    <associate|manifold differential properties|<tuple|23.137|?>>
-    <associate|manifold existence of a bump function|<tuple|23.118|?>>
+    <associate|manifold differential|<tuple|23.137|?>>
+    <associate|manifold differential properties|<tuple|23.138|?>>
+    <associate|manifold existence of a bump function|<tuple|23.119|?>>
     <associate|manifold existence of a maximal atlas|<tuple|23.59|?>>
-    <associate|manifold existence of partition of unity|<tuple|23.125|?>>
-    <associate|manifold extension of local functions|<tuple|23.120|?>>
+    <associate|manifold existence of partition of unity|<tuple|23.126|?>>
+    <associate|manifold extension of local functions|<tuple|23.121|?>>
     <associate|manifold identity is a C^q mapping|<tuple|23.78|?>>
     <associate|manifold maximal atlas|<tuple|23.50|?>>
     <associate|manifold maximal atlas composition with a
@@ -10639,9 +10691,9 @@
     <associate|manifold open set is a sub manifold|<tuple|23.16|?>>
     <associate|manifold open subset of a differentiable
     manifold|<tuple|23.68|?>>
-    <associate|manifold partition of unity|<tuple|23.122|?>>
+    <associate|manifold partition of unity|<tuple|23.123|?>>
     <associate|manifold product of functions that are of class
-    C^q|<tuple|23.129|?>>
+    C^q|<tuple|23.130|?>>
     <associate|manifold real numbers are a differentiable
     manifold|<tuple|23.66|?>>
     <associate|manifold real numbers form a topological
@@ -10653,7 +10705,7 @@
     <associate|manifold support|<tuple|23.100|?>>
     <associate|manifold support of a family|<tuple|23.103|?>>
     <associate|manifold supported in a set|<tuple|23.101|?>>
-    <associate|manifold tangent vector|<tuple|23.130|?>>
+    <associate|manifold tangent vector|<tuple|23.131|?>>
     <associate|manifold topological|<tuple|23.2|?>>
     <associate|manifold topological (1)|<tuple|23.12|?>>
     <associate|manifold topological manifold is paracompact|<tuple|23.30|?>>

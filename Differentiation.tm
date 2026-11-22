@@ -35,22 +35,22 @@
     <frac|f<around*|(|x+h|)>-f<around*|(|x|)>|h>
   </equation*>
 
-  we want to extend this rate of change over a interval to the instantaneus
+  we want to extend this rate of change over a interval to the instantaneous
   rate of change at <math|x>
 
   represents the rate of change of <math|f> when it's argument changes from
   <math|x> to <math|x+h>. To do this we take the limit of
   <math|<frac|f<around*|(|x+h|)>-f<around*|(|x|)>|h>> where <math|h>
-  approches <math|0>. In other words the instantaneus rate of change at
+  approaches <math|0>. In other words the instantaneous rate of change at
   <math|x> is\ 
 
   <\equation*>
     <below|lim|h\<rightarrow\>0><frac|f<around*|(|x+h|)>-f<around*|(|x|)>|h>
   </equation*>
 
-  of course this makes only sense if this limit exist. This instantaneus rate
-  of change (if it exist) is called the derivative of <math|f> at <math|x>
-  and noted as <math|f<rprime|'><rsub|x>>. In other words
+  of course this makes only sense if this limit exist. This instantaneous
+  rate of change (if it exist) is called the derivative of <math|f> at
+  <math|x> and noted as <math|f<rprime|'><rsub|x>>. In other words
 
   <\equation*>
     f<rprime|'><rsub|x>=<below|lim|h\<rightarrow\>0><frac|f<around*|(|x+h|)>-f<around*|(|x|)>|h>
@@ -2044,19 +2044,17 @@
 
   <subsection|Left and Right derivatives>
 
-  TODO check everything about left and right derivatives
-
   Let <math|A\<subseteq\>\<bbb-R\>> [not <math|\<bbb-K\>>] and
   <math|f:A\<rightarrow\>X> a function that has a derivative at
   <math|x\<in\>A> then by the alternative definition of the derivative [see
-  theorem: <reference|diff calculus derivate (2)>] we have\ 
+  theorem: <reference|diff calculus derivate>] we have\ 
 
   <\equation*>
     \<forall\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+><text|
-    >\<exists\>\<delta\>\<in\>\<bbb-R\><text| such that
+    >\<exists\>\<delta\>\<in\>\<bbb-R\><rsup|+><text| such that
     >\<forall\>h\<in\>A<rsub|x><text| with
     >0\<less\><around*|\||h|\|>\<less\>\<delta\><text| we have
-    ><around*|\<\|\|\>|<frac|f<around*|(|x+h|)>-f<around*|(|x|)>|h>-f<rprime|'><rsub|x>|\<\|\|\>>\<leqslant\>\<varepsilon\>\<cdot\><around*|\||h|\|>
+    ><around*|\<\|\|\>|<frac|f<around*|(|x+h|)>-f<around*|(|x|)>|h>-f<rprime|'><rsub|x>|\<\|\|\>>\<less\>\<varepsilon\>\<cdot\><around*|\||h|\|>
   </equation*>
 
   Note that <math|0\<less\><around*|\||h|\|>\<less\>\<delta\>> is equivalent
@@ -2064,7 +2062,7 @@
   hence <math|h> can be positive or negative. In essence if
   <math|f<rprime|'><rsub|x>> exist then <math|f<rprime|'><rsub|x>> is the
   limit of <math|<frac|f<around*|(|x+h|)>-f<around*|(|x|)>|h>> if <math|h>
-  aproacheds <math|0> via the left side of <math|0> and via the right side of
+  approaches <math|0> via the left side of <math|0> and via the right side of
   <math|0>. What if we approach <math|0> only via the left side of <math|0>
   or only via the right side of <math|0>. This is the idea of the left and
   right derivatives which can exist even if the derivative does not exist.\ 
@@ -2125,7 +2123,7 @@
     \ 
 
     <\enumerate>
-      <item>We prove this by contradiction, so assume that
+      <item>We prove this by contradiction. Assume that
       <math|d<rsub|1>\<neq\>d<rsub|2>> then
       <math|<around*|\<\|\|\>|d<rsub|2>-d<rsub|1>|\<\|\|\>>\<neq\>0>. As
       <math|d<rsub|1>,d<rsub|2>> are left derivatives at <math|t> there
@@ -2240,7 +2238,7 @@
         <tformat|<table|<row|<cell|>|<cell|t<text| is a limit point of
         >A<big|cap><around*|]|-\<infty\>,t|]>>|<cell|>>|<row|<cell|>|<cell|and>|<cell|>>|<row|<cell|>|<cell|\<forall\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+><text|
         >\<exists\>\<delta\>\<in\>\<bbb-R\><rsup|+><text| such that
-        >\<forall\>h\<in\>A<rsub|t><big|cap><around*|[|-\<delta\>,0|[><text|
+        >\<forall\>h\<in\>A<rsub|t><big|cap><around*|]|-\<delta\>,0|[><text|
         we have ><around*|\<\|\|\>|<frac|f<around*|(|t+h|)>-f<around*|(|t|)>|h>-f<rprime|'><rsub|-,t>|\<\|\|\>>\<less\>\<varepsilon\>>|<cell|>>>>
       </eqnarray*>
 
@@ -2263,8 +2261,8 @@
       interval is a limit point>] <math|t> is a limit point of
       <math|A<big|cap><around*|]|-\<infty\>,t|]>> and
       <math|A<big|cap><around*|[|t,\<infty\>|[>>. In other words if the
-      domain of <math|f> is the set for real numbers then the limit point
-      condition is automatical satisfied.
+      domain of <math|f> is the set of real numbers then the limit point
+      condition is automatically satisfied.
     </note>
   </definition>
 
@@ -2288,9 +2286,9 @@
     </enumerate>
 
     <\note>
-      As <math|f<rprime|'><rsub|t>> exists <math|t> is a limit point of
-      <math|A> but this does not mean that <math|t> is a limit point of
-      <math|A<big|cap><around*|]|-\<infty\>,t|]>> or is a limit point of
+      As <math|f<rprime|'><rsub|t>> exist <math|t> is a limit point of
+      <math|A>. Unfortunately this does not mean that <math|t> is a limit
+      point of <math|A<big|cap><around*|]|-\<infty\>,t|]>> or of
       <math|<big|cap><around*|[|t,\<infty\>|[>> so we need the extra
       condition about limits.
     </note>
@@ -2302,8 +2300,8 @@
       interval is a limit point>] <math|t> is a limit point of
       <math|A<big|cap><around*|]|-\<infty\>,t|]>> and
       <math|A<big|cap><around*|[|t,\<infty\>|[>>. In other words if the
-      domain of <math|f> is the set for real numbers then the limit point
-      condition is automatical satisfied so that in that case
+      domain of <math|f> is the set of real numbers then the limit point
+      condition is automatically satisfied so that in that case
 
       <\equation*>
         f<rprime|'><rsub|-,t><text| and >f<rprime|'><rsub|+,t><text| exists
@@ -2326,7 +2324,7 @@
 
     <\enumerate>
       <item>Let <math|h\<in\>A<rsub|t><big|cap><around*|]|-\<delta\>,0|[>>
-      then <math|t\<in\>A<rsub|t>> with <math|0\<less\><around*|\||h|\|>\<less\>\<delta\>>
+      then <math|h\<in\>A<rsub|t>> with <math|0\<less\><around*|\||h|\|>\<less\>\<delta\>>
       so that <math|<around*|\||<frac|f<around*|(|t+h|)>-f<around*|(|t|)>|h>-f<rprime|'><rsub|t>|\|>\<less\>\<varepsilon\>>
       which as <math|t> is a limit point of
       <math|A<big|cap><around*|]|-\<infty\>,t|]>> proves by definition that
@@ -2334,7 +2332,7 @@
       <math|f<rprime|'><rsub|-,t>=f<rprime|'><rsub|t>>.\ 
 
       <item>Let <math|h\<in\>A<rsub|t><big|cap><around*|]|0,\<delta\>|[>>
-      then <math|t\<in\>A<rsub|t>> with <math|0\<less\><around*|\||h|\|>\<less\>\<delta\>>
+      then <math|h\<in\>A<rsub|t>> with <math|0\<less\><around*|\||h|\|>\<less\>\<delta\>>
       so that <math|<around*|\||<frac|f<around*|(|t+h|)>-f<around*|(|t|)>|h>-f<rprime|'><rsub|t>|\|>\<less\>\<varepsilon\>>
       which as <math|t> is a limit point of
       <math|A<big|cap><around*|[|t,\<infty\>|[>> proves by definition that
@@ -2343,7 +2341,7 @@
     </enumerate>
   </proof>
 
-  We have the opposite of the above theorem,\ 
+  We have the opposite of the above theorem.
 
   <\theorem>
     <label|diff existence of left and right derivative implies existance of
@@ -2362,13 +2360,13 @@
     <math|t\<in\><around*|(|A<big|cap><around*|]|-\<infty\>,t|]>|)><rprime|'>>,
     hence, as by [theorem: <reference|topology limit points and subsets>]
     <math|<around*|(|A<big|cap><around*|]|-\<infty\>,t|]>|)><rprime|'>\<subseteq\>A<rprime|'>>,
-    it follows that\ 
+    it follows that <math|t\<in\>A<rprime|'>> or
 
     <\equation*>
       t<text| is a limit point of >A
     </equation*>
 
-    Let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> then from the existance
+    Let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> then from the existence
     of <math|f<rprime|'><rsub|-,t>> and <math|f<rprime|'><rsub|+,t>> it
     follows that there exists <math|\<delta\><rsub|1>,\<delta\><rsub|2>\<in\>\<bbb-R\><rsup|+>>
     such that\ 
@@ -2380,7 +2378,7 @@
 
     <\equation*>
       \<forall\>h\<in\>A<rsub|t><big|cap><around*|]|0,\<delta\>|[><text|
-      ><around*|\||<frac|f<around*|(|t+h|)>-f<around*|(|t|)>|h>-f<rprime|'><rsub|-,t>|\|><below|=|f<rprime|'><rsub|-,t>=f<rprime|'><rsub|+,t>><around*|\||<frac|f<around*|(|t+h|)>-f<around*|(|t|)>|h>-f<rprime|'><rsub|+,t>|\|>\<less\>\<varepsilon\>
+      ><around*|\||<frac|f<around*|(|t+h|)>-f<around*|(|t|)>|h>-f<rprime|'><rsub|+,t>|\|><below|=|f<rprime|'><rsub|-,t>=f<rprime|'><rsub|+,t>><around*|\||<frac|f<around*|(|t+h|)>-f<around*|(|t|)>|h>-f<rprime|'><rsub|-,t>|\|>\<less\>\<varepsilon\>
     </equation*>
 
     Let <math|h\<in\>A<rsub|t><text| with
@@ -9619,7 +9617,7 @@
         <\equation>
           <label|eq 16.101.5>x\<in\>V<rsub|x>\<subseteq\>\<frak-D\><rsup|n><rsub|f><text|
           and ><around*|(|D<rsup|<around*|[|n|]>>f|)><rsub|\|V<rsub|X>><text|
-          is continous>
+          is continues>
         </equation>
 
         As <math|\<forall\>x\<in\>U> <math|x\<in\>V<rsub|x>\<subseteq\><big|cup><rsub|x\<in\>U>V<rsub|x>\<subseteq\>U>
@@ -10591,7 +10589,7 @@
 
   so that <math|<around*|(|\<cal-D\><rsup|n-1><rsub|f>|)><rsup|\<circ\>>=U<rsup|\<circ\>><below|=|<text|[theorem:
   <reference|topology open set and interior>]>>dom<around*|(|f|)>>. So in
-  this case we have thst <math|x\<in\><around*|(|\<cal-D\><rsup|n-1><rsub|f>|)><rsup|\<circ\>>>
+  this case we have that <math|x\<in\><around*|(|\<cal-D\><rsup|n-1><rsub|f>|)><rsup|\<circ\>>>
   and as the following theorem shows we have the opposite of the previous
   theorem.
 
@@ -10688,7 +10686,7 @@
         point>]>><around*|(|<big|prod><rsub|i=1><rsup|n+1>h<rsub|i>|)>\<cdot\>f<rsup|<around*|(|n+1|)>><around*|(|x|)>
       </equation*>
 
-      then by [theorem: <reference|continuity K^n>] <math|L> is multiliear
+      then by [theorem: <reference|continuity K^n>] <math|L> is multilinear
       and continuous, hence <math|L\<in\>L<rsup|n+1><around*|(|\<bbb-K\><rsup|>;X|)>>.
       Using [theorem: <reference|diff linear to multilinear>] it follows that
       for <math|H=\<cal-I\><rsub|n+<lprime|`>.\<bbb-K\>,X><rsup|-1><around*|(|H|)>>
@@ -10740,7 +10738,7 @@
         <reference|eq 16.124.1>]>>>|<cell|>>|<row|<cell|\<varepsilon\>\<cdot\><around*|\||h|\|>>|<cell|>|<cell|>>>>
       </eqnarray*>
 
-      To sumarize we have proved that <math|\<forall\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>
+      To summarize we have proved that <math|\<forall\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>
       there <math|\<exists\>\<delta\>\<in\>\<bbb-R\><rsup|+>> such that
       <math|\<forall\>h\<in\>U<rsub|x>> with
       <math|<around*|\||h|\|>\<less\>\<delta\>> we have that\ 
@@ -12415,7 +12413,7 @@
 
   <\proof>
     \ First note that by [theorem: <reference|separation Hausdorff every
-    finite set is closed>] <math|\<bbb-R\>\\<around*|{|0|}>> is a open set ib
+    finite set is closed>] <math|\<bbb-R\>\\<around*|{|0|}>> is a open set in
     <math|\<bbb-R\>> which is needed in some of the theorems we refer to.
 
     <\enumerate>
@@ -14740,7 +14738,7 @@
       <\description>
         <item*|<math|1\<in\>S>>Let <math|x\<in\>A> then, as <math|f> and
         <math|g> have <math|1>-times derivatives on <math|A>, it follows from
-        [defintion: <reference|diff higher order derivative on a set>] that
+        [definition: <reference|diff higher order derivative on a set>] that
         <math|f<rsup|<around*|(|1|)>><rsub|x>> and
         <math|g<rsup|<around*|(|1|)>><rsub|x>> exists. Using [theorem:
         <reference|diff higher order derivative at a point (1)>] it follows
@@ -14841,7 +14839,7 @@
 
       <\equation*>
         S=<around*|{|n\<in\>\<bbb-N\>\|<text|If
-        >f:A\<rightarrow\>\<bbb-K\><text| haa >n<text|-times derivatives on
+        >f:A\<rightarrow\>\<bbb-K\><text| has >n<text|-times derivatives on
         >A<text| then >\<alpha\>\<cdot\>f<text| has >n<text|-times
         derivatives on >A such that \<forall\>x\<in\>A
         <around*|(|\<alpha\>\<cdot\>f|)><rsup|<around*|(|n|)>><rsub|x>=\<alpha\>\<cdot\>f<rsup|<around*|(|n|)>><rsub|x>|}>
@@ -14956,7 +14954,7 @@
       <\description>
         <item*|<math|1\<in\>S>>Let <math|x\<in\>A> then, as <math|f> and
         <math|g> have <math|1>-times derivatives on <math|A>, it follows from
-        [defintion: <reference|diff higher order derivative on a set>] that
+        [definition: <reference|diff higher order derivative on a set>] that
         <math|f<rsup|<around*|(|1|)>><rsub|x>> and
         <math|g<rsup|<around*|(|1|)>><rsub|x>> exists. Using [theorem:
         <reference|diff higher order derivative at a point (1)>] it follows
@@ -15117,7 +15115,7 @@
       <\description>
         <item*|<math|1\<in\>S>>Let <math|x\<in\>A>. As <math|f> and <math|g>
         have <math|1>-times derivatives on <math|A>, it follows from
-        [defintion: <reference|diff higher order derivative on a set>] that
+        [definition: <reference|diff higher order derivative on a set>] that
         <math|f<rsup|<around*|(|1|)>><rsub|x>> and
         <math|g<rsup|<around*|(|1|)>><rsub|x>> exist. Using [theorem:
         <reference|diff higher order derivative at a point (1)>] it follows
@@ -15189,7 +15187,7 @@
 
         <\equation>
           <label|eq 16.216.1>f<rsup|<around*|(|1|)>><text| and
-          >g<rsup|<around*|(|1|)>><text| have >n<text|-times derivastives on
+          >g<rsup|<around*|(|1|)>><text| have >n<text|-times derivatives on
           >A
         </equation>
 
@@ -15214,7 +15212,7 @@
           have >n<text|-times derivatives on >A
         </equation>
 
-        Further from (4) and [eq: <reference|eq 16.217.1>] it folllows that\ 
+        Further from (4) and [eq: <reference|eq 16.217.1>] it follows that\ 
 
         <\equation>
           <label|eq 16.219.1>g<rsup|<around*|(|2|)>><text| has >n<text|-times
@@ -26707,7 +26705,7 @@
     </equation*>
 
     so that by [definition: <reference|diff class C^n>]
-    <math|f:U\<rightarrow\>Y> is <math|1>-timese differentiable hence
+    <math|f:U\<rightarrow\>Y> is <math|1>-times differentiable hence
     differentiable on <math|U >and <math|f<rsup|-1>:V\<rightarrow\>X> is
     <math|1>-times differentiable hence differentiable on <math|V>. From this
     we conclude that\ 
@@ -26754,7 +26752,7 @@
       f<text| is a bijection with <math|f<rsup|-1>=g>>
     </equation*>
 
-    Finaly using [example: <reference|diff f(t)=a.x+y is infinite
+    Finally using [example: <reference|diff f(t)=a.x+y is infinite
     differentiable>] it follows that <math|f,f<rsup|-1>> are of class
     <math|C<rsup|\<infty\>>> which proves that\ 
 
