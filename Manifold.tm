@@ -4115,7 +4115,9 @@
     <math|\<cal-A\><rsub|\|U>=<around*|{|<around*|(|U<big|cap>V,\<psi\><rsub|\|U<big|cap>V>|)>\|<around*|(|V,\<psi\>|)>\<in\>\<cal-A\>|}>>
     is a <math|C<rsup|m>> atlas making <math|\<cal-M\><rsup|n><around*|\<langle\>|U,\<cal-T\><rsub|\|U>,<around*|(|\<cal-A\><rsub|\|U>|)><rsup|<around*|{|m|}>>|\<rangle\>>>
     a <math|n>-dimensional <math|C<rsup|m>> differentiable manifold. Further
-    we have that <math|<around*|(|\<cal-A\><rsub|\|U>|)><rsup|<around*|{|m|}>>\<subseteq\>\<cal-A\>>.
+    we have that <math|\<cal-A\><rsub|\|U><below|\<subseteq\>|<text|[theorem:
+    <reference|manifold existence of a bump
+    function>]>><around*|(|\<cal-A\><rsub|\|U>|)><rsup|<around*|{|m|}>>\<subseteq\>\<cal-A\>>.
   </example>
 
   <\proof>
@@ -7390,7 +7392,7 @@
   between a manifold and <math|\<bbb-R\>>.
 
   <\definition>
-    <index|cutoff function><label|manifold cutoff function>A function
+    <label|manifold cutoff function><index|cutoff function>A function
     <math|h:\<bbb-R\>\<rightarrow\>\<bbb-R\>> is a
     <with|font-series|bold|cutoff> function iff there exist
     <math|a,b\<in\>\<bbb-R\>> with <math|a\<less\>b> such that
@@ -7533,7 +7535,7 @@
   </proof>
 
   <\lemma>
-    <label|lemma 23.103.20>Let <math|k\<in\>\<bbb-N\><rsub|0>>,
+    <label|lemma 23.108.22>Let <math|k\<in\>\<bbb-N\>>,
     <math|p<rsub|k>:<around*|]|0,\<infty\>|[>\<rightarrow\>\<bbb-R\>> defined
     by <math|p<rsub|k><around*|(|t|)>=<big|sum><rsup|k><rsub|i=0>\<alpha\><rsub|i>\<cdot\>t<rsup|i>>
     then\ 
@@ -7653,6 +7655,112 @@
     <\equation*>
       f<rprime|'><rsub|t>=p<rsub|k+1><around*|(|t|)>\<cdot\><frac|exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>|t<rsup|2\<cdot\>k+2>>=p<rsub|k+1><around*|(|t|)>\<cdot\><frac|exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>|t<rsup|2\<cdot\><around*|(|k+1|)>>>
     </equation*>
+  </proof>
+
+  We extend now the previous lemma from <math|k\<in\>\<bbb-N\>> to
+  <math|k=\<bbb-N\><rsub|0>> by adding the special case where <math|k=0>.
+
+  <\lemma>
+    <label|lemma 23.103.20>Let <math|k\<in\>\<bbb-N\><rsub|0>>,
+    <math|p<rsub|k>:<around*|]|0,\<infty\>|[>\<rightarrow\>\<bbb-R\>> defined
+    by <math|p<rsub|k><around*|(|t|)>=<big|sum><rsup|k><rsub|i=0>\<alpha\><rsub|i>\<cdot\>t<rsup|i>>
+    then\ 
+
+    <\equation*>
+      f:<around*|]|0,\<infty\>|[>\<rightarrow\>\<bbb-R\><text| defined by
+      >f*<around*|(|t|)>=p<rsub|k><around*|(|t|)>\<cdot\><frac|exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>|t<rsup|2\<cdot\>k>>
+    </equation*>
+
+    has <math|\<forall\>t\<in\><around*|]|0,\<infty\>|[>> a derivative
+    <math|f<rprime|'><rsub|t>> with\ 
+
+    <\equation*>
+      f<rprime|'><rsub|t>=p<rsub|k+1><around*|(|t|)>\<cdot\><frac|exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>|t<rsup|2\<cdot\><around*|(|k+1|)>>>
+    </equation*>
+
+    where\ 
+
+    <\equation*>
+      p<rsub|k+1>:<around*|]|0,\<infty\>|[>\<rightarrow\>\<bbb-R\><text| is
+      defined by >p<rsub|k+1><around*|(|t|)>=<big|sum><rsub|i=0><rsup|k+1>\<beta\><rsub|i>\<cdot\>t<rsup|i>
+    </equation*>
+  </lemma>
+
+  <\proof>
+    For <math|k\<in\>\<bbb-N\><rsub|0>> we have to consider two cases:\ 
+
+    <\description>
+      <item*|<math|k=0>>Then <math|p<rsub|0>=<big|sum><rsub|i=0><rsup|0>\<alpha\><rsub|i>\<cdot\>t<rsup|i>=\<alpha\><rsub|0>>
+      and <math|\<forall\>t\<in\><around*|]|0,\<infty\>|[>> we have
+
+      <\equation*>
+        f<around*|(|t|)>=p<rsub|k><around*|(|t|)>\<cdot\><frac|exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>|t<rsup|2\<cdot\>k>>=\<alpha\><rsub|0>\<cdot\>exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>=<around*|(|\<alpha\><rsub|0>\<cdot\><around*|(|exp<rsub|\|\<bbb-R\>>\<circ\><around*|(|-<frac|1|\<ast\>>|)>|)>|)><around*|(|t|)>
+      </equation*>
+
+      which proves that\ 
+
+      <\equation*>
+        f=\<alpha\><rsub|0>\<cdot\><around*|(|exp<rsub|\|\<bbb-R\>>\<circ\><around*|(|-<frac|1|\<ast\>>|)>|)>
+      </equation*>
+
+      Using theorems: <reference|diff (f+g)'=f'+g'>,<reference|diff
+      derivative and restriction>,<reference|diff derivate of inverse
+      function>] we have that\ 
+
+      <\equation*>
+        \<forall\>t\<in\><around*|]|0,\<infty\>|[><text| that
+        ><around*|(|-<frac|1|\<ast\>>|)><rprime|'><rsub|t><text| exists with
+        ><around*|(|-<frac|1|t>|)><rprime|'><rsub|t>=<frac|1|t<rsup|2>>
+      </equation*>
+
+      further, using [theorem: <reference|exp derivative (1)>], we have\ 
+
+      <\equation*>
+        \<forall\>t\<in\><around*|]|0,\<infty\>|[><text|
+        ><around*|(|exp<rsub|\|\<bbb-R\>>|)><rprime|'><rsub|t><text| exists
+        with ><around*|(|exp<rsub|\|\<bbb-R\>>|)><rprime|'><rsub|t>=exp<rsub|\|\<bbb-R\>><around*|(|t|)>
+      </equation*>
+
+      Using now the chain rule [see theorem: <reference|diff chain rule
+      calculus>] on the above proves that
+      <math|\<forall\>t\<in\><around*|]|0,1|[>>
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|f<rprime|'><rsub|t>>|<cell|=>|<cell|<around*|(|\<alpha\><rsub|0>\<cdot\><around*|(|exp<rsub|\|\<bbb-R\>>\<circ\><around*|(|-<frac|1|\<ast\>>|)>|)>|)><rprime|'><rsub|t>>>|<row|<cell|>|<cell|<below|=|<text|[theorem:
+        <reference|diff (f+g)'=f'+g'>]>>>|<cell|\<alpha\><rsub|0>\<cdot\><around*|(|exp<rsub|\|\<bbb-R\>>\<circ\><around*|(|-<frac|1|\<ast\>>|)>|)><rprime|'><rsub|t>>>|<row|<cell|>|<cell|<below|=|<text|[theorem:
+        <reference|diff chain rule calculus>]>>>|<cell|\<alpha\><rsub|0>\<cdot\><around*|(|-<frac|1|\<ast\>>|)><rprime|'><rsub|t>\<cdot\><around*|(|exp<rsub|\<bbb-R\>>|)><rprime|'><rsub|<around*|(|-<frac|1|\<ast\>>|)><around*|(|t|)>>>>|<row|<cell|>|<cell|=>|<cell|\<alpha\><rsub|0>\<cdot\><frac|1|t<rsup|2>>\<cdot\>exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|\<alpha\><rsub|0>\<cdot\>t<rsup|0>+0\<cdot\>t<rsup|1>|)>\<cdot\><frac|exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>|t<rsup|2\<cdot\><around*|(|0+1|)>>>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<big|sum><rsub|i=0><rsup|1>\<beta\><rsub|i><rsup|>\<cdot\>t<rsup|i>|)>\<cdot\><frac|exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>|t<rsup|2\<cdot\><around*|(|0+1|)>>>>>>>
+      </eqnarray*>
+
+      where\ 
+
+      <\equation*>
+        <around*|{|\<beta\><rsub|i>|}><rsub|i\<in\><around*|{|0,\<ldots\>,1|}>><text|
+        is defined by >\<beta\><rsub|i>=<choice|<tformat|<table|<row|<cell|\<alpha\><rsub|0><text|
+        if >i=0>>|<row|<cell|0<text| if >i=1>>>>>
+      </equation*>
+
+      So if we define <math|p<rsub|1>:<around*|]|0,\<infty\>|[>\<rightarrow\>\<bbb-R\>
+      by p<rsub|1><around*|(|t|)>=<big|sum><rsub|i=0><rsup|0+1>\<beta\><rsub|i>\<cdot\>t<rsup|i>>
+      then we have that\ 
+
+      <\equation*>
+        f<rprime|'><rsub|t>=p<rsub|1><around*|(|t|)>\<cdot\><frac|exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>|t<rsup|2\<cdot\><around*|(|0+1|)>>>
+      </equation*>
+
+      <item*|<math|k\<in\>\<bbb-N\>>>Using the previous lemma [see lemma:
+      <reference|lemma 23.107.21>] it follows that\ 
+
+      <\equation*>
+        \<forall\>t\<in\><around*|]|0,\<infty\>|[><text|
+        <math|f<rprime|'><rsub|t><text| exists with
+        <math|f<rprime|'><rsub|t>=p<rsub|k+1><around*|(|t|)>\<cdot\><frac|exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>|t<rsup|2\<cdot\><around*|(|k+1|)>>>>>>>
+      </equation*>
+
+      where <math|p<rsub|k+1>:<around*|]|0,\<infty\>|[>\<rightarrow\>\<bbb-R\><text|
+      by >p<rsub|k+1>=<big|sum><rsub|i=0><rsup|k+1>\<beta\><rsub|i>\<cdot\>t<rsup|i>>
+    </description>
+
+    \;
   </proof>
 
   <\lemma>
@@ -7816,14 +7924,14 @@
 
   <\lemma>
     <label|lemma 23.110.20>Let <math|k\<in\>\<bbb-N\><rsub|0>>,
-    <math|p<rsub|k+1>:<around*|]|0,\<infty\>|[>\<rightarrow\>\<bbb-R\>>
-    defined by <math|p<rsub|k+1><around*|(|t|)>=<big|sum><rsub|i=0><rsup|k+1>\<alpha\><rsub|i>\<cdot\>t<rsup|i>>
+    <math|p<rsub|k>:<around*|]|0,\<infty\>|[>\<rightarrow\>\<bbb-R\>> defined
+    by <math|p<rsub|k><around*|(|t|)>=<big|sum><rsub|i=0><rsup|k>\<alpha\><rsub|i>\<cdot\>t<rsup|i>>
     then <math|\<forall\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> there exist a
     <math|\<delta\>\<in\>\<bbb-R\><rsup|+>> such that
     <math|\<forall\>t\<in\><around*|]|0,\<delta\>|[>> we have that\ 
 
     <\equation*>
-      <around*|\||p<rsub|k+1><around*|(|t|)>\<cdot\><frac|exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>|t<rsup|2\<cdot\>k>>|\|>\<less\>\<varepsilon\>
+      <around*|\||p<rsub|k><around*|(|t|)>\<cdot\><frac|exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>|t<rsup|2\<cdot\>k>>|\|>\<less\>\<varepsilon\>
     </equation*>
   </lemma>
 
@@ -7831,16 +7939,16 @@
     Let <math|t\<in\><around*|]|0,1|[>> then we have\ 
 
     <\equation*>
-      <around*|\||p<rsub|k+1><around*|(|t|)>|\|>=<around*|\||<big|sum><rsub|i=0><rsup|k+1>\<alpha\><rsub|i>\<cdot\>t<rsup|i>|\|>\<leqslant\><big|sum><rsub|i=0><rsup|k+1><around*|\||\<alpha\><rsub|i>\<cdot\>t<rsup|i>|\|>=<big|sum><rsub|i=0><rsup|k+1><around*|\||\<alpha\><rsub|i>|\|>\<cdot\><around*|\||t<rsup|i>|\|><below|\<less\>|0\<less\>s\<less\>1\<wedge\><text|[theorem:
-      <reference|complex power and inequality>]>><big|sum><rsub|i=0><rsup|k+1><around*|\||\<alpha\><rsub|i>|\|>
+      <around*|\||p<rsub|k><around*|(|t|)>|\|>=<around*|\||<big|sum><rsub|i=0><rsup|k>\<alpha\><rsub|i>\<cdot\>t<rsup|i>|\|>\<leqslant\><big|sum><rsub|i=0><rsup|k><around*|\||\<alpha\><rsub|i>\<cdot\>t<rsup|i>|\|>=<big|sum><rsub|i=0><rsup|k><around*|\||\<alpha\><rsub|i>|\|>\<cdot\><around*|\||t<rsup|i>|\|><below|\<less\>|0\<less\>s\<less\>1\<wedge\><text|[theorem:
+      <reference|complex power and inequality>]>><big|sum><rsub|i=0><rsup|k><around*|\||\<alpha\><rsub|i>|\|>
     </equation*>
 
-    So if we let <math|M=><math|<big|sum><rsub|i=0><rsup|k+1><around*|\||\<alpha\><rsub|i>|\|>>
+    So if we let <math|M=><math|<big|sum><rsub|i=0><rsup|k><around*|\||\<alpha\><rsub|i>|\|>>
     then we have\ 
 
     <\equation*>
       \<forall\>t\<in\><around*|]|0,1|[><text| that
-      >0\<leqslant\><around*|\||p<rsub|k+1><around*|(|t|)>|\|>\<less\>M
+      >0\<leqslant\><around*|\||p<rsub|k><around*|(|t|)>|\|>\<less\>M
     </equation*>
 
     Let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> then using [lemma:
@@ -7856,7 +7964,7 @@
     then we have <math|\<forall\>t\<in\><around*|]|0,1|[>>\ 
 
     <\equation*>
-      <around*|\||p<rsub|k+1><around*|(|t|)>\<cdot\><frac|exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>|t<rsup|2\<cdot\>k>>|\|>=<around*|\||p<rsub|k+1><around*|(|t|)>|\|>\<cdot\><around*|\||<frac|exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>|t<rsup|2\<cdot\>k>>|\|>\<less\>M\<cdot\><frac|\<varepsilon\>|M+1>\<less\>\<varepsilon\>
+      <around*|\||p<rsub|k><around*|(|t|)>\<cdot\><frac|exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>|t<rsup|2\<cdot\>k>>|\|>=<around*|\||p<rsub|k><around*|(|t|)>|\|>\<cdot\><around*|\||<frac|exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)>|t<rsup|2\<cdot\>k>>|\|>\<less\>M\<cdot\><frac|\<varepsilon\>|M+1>\<less\>\<varepsilon\>
     </equation*>
 
     \;
@@ -7956,8 +8064,6 @@
     </equation*>
   </proof>
 
-  TODO
-
   <\lemma>
     <label|lemma 23.107.21>Let <math|k\<in\>\<bbb-N\><rsub|0>>,
     <math|p<rsub|k>:\<bbb-R\>\<rightarrow\>\<bbb-R\>> defined by
@@ -8024,8 +8130,6 @@
     </equation*>
   </proof>
 
-  TODO
-
   <\lemma>
     <label|lemma 23.101.2>Consider the function\ 
 
@@ -8069,7 +8173,7 @@
     <\description>
       <item*|<math|1\<in\>S<rsub|f>>>Take <math|k=0\<in\>\<bbb-N\><rsub|0>>
       and define <math|p<rsub|k>=p<rsub|0>=<big|sum><rsup|0><rsub|i=0>\<alpha\><rsub|i><rsup|>\<cdot\>t<rsup|i>>
-      by <math|\<alpha\><rsub|i>=1>. Then we have\ 
+      by <math|\<alpha\><rsub|0>=1>. Then we have\ 
 
       <\equation*>
         \<forall\>t\<in\>\<bbb-R\><text| >f<around*|(|t|)>=<choice|<tformat|<table|<row|<cell|exp<rsub|\|\<bbb-R\>><around*|(|-<frac|1|t>|)><text|
@@ -8100,7 +8204,7 @@
 
       <\equation*>
         \<cal-D\><rsup|k><rsub|f>=<around*|{|t\<in\>\<bbb-R\>\|f<rsup|<around*|(|k|)>><rsub|t><text|
-        exists >|}>=\<bbb-R\>
+        exists>|}>=\<bbb-R\>
       </equation*>
 
       and\ 
@@ -8151,7 +8255,7 @@
     <math|C<rsup|\<infty\>>> such that\ 
 
     <\eqnarray*>
-      <tformat|<table|<row|<cell|>|<cell|\<forall\>t\<in\><around*|]|\<infty\>,a|]><text|
+      <tformat|<table|<row|<cell|>|<cell|\<forall\>t\<in\><around*|]|-\<infty\>,a|]><text|
       we have >h<around*|(|t|)>=1>|<cell|>>|<row|<cell|>|<cell|\<forall\>t\<in\><around*|]|a,b|[><text|
       we have >0\<less\>h<around*|(|t|)>\<less\>1>|<cell|>>|<row|<cell|>|<cell|\<forall\>t\<in\><around*|[|b,\<infty\>|[><text|
       we have >h<around*|(|t|)>=0>|<cell|>>>>
@@ -8174,13 +8278,13 @@
     </equation*>
 
     By [theorem: <reference|exp properties>(5)] we have
-    <math|\<forall\>t\<in\><around*|]|0,\<infty\>|[>> that
-    <math|0\<less\>exp<around*|(|t|)>=exp<rsub|\|\<bbb-R\>><around*|(|t|)><rsub|>>
+    <math|\<forall\>t\<in\>\<bbb-R\>> that
+    <math|0\<less\>exp<around*|(|-<frac|1|t>|)>=exp<rsub|\|\<bbb-R\>><around*|(|t|)><rsub|>>
     so that\ 
 
     <\equation*>
       \<forall\>t\<in\><around*|]|0,\<infty\>|[><text| we have
-      >1\<less\>f<around*|(|t|)>
+      >0\<less\>f<around*|(|t|)>
     </equation*>
 
     Let <math|t\<in\>\<bbb-R\>> then we have either:
@@ -8199,7 +8303,7 @@
       is well defined with
 
       <\equation*>
-        <frac|f<around*|(|b-t|)>|f<around*|(|b-t|)>+f<around*|(|t-a|)>>=<frac|f<around*|(|b-t|)>|f<around*|(|b-t|)>>=1
+        0\<less\><frac|f<around*|(|b-t|)>|f<around*|(|b-t|)>+f<around*|(|t-a|)>>=<frac|f<around*|(|b-t|)>|f<around*|(|b-t|)>>=1
       </equation*>
 
       <item*|<math|a\<less\>t\<less\>b>>Then we have
@@ -8217,8 +8321,8 @@
         0\<less\><frac|f<around*|(|b-t|)>|f<around*|(|b-t|)>+f<around*|(|t-a|)>>\<less\>1
       </equation*>
 
-      <item*|<math|b\<leqslant\>t>>Then we have as
-      <math|a\<less\>b\<leqslant\>t> that
+      <item*|<math|b\<leqslant\>t>>Then we have, as
+      <math|a\<less\>b\<leqslant\>t>, that
       <math|0\<less\>t-a\<Rightarrow\>0\<less\>f<around*|(|t-a|)>> and
       <math|b-t\<leqslant\>0\<Rightarrow\>f<around*|(|b-t|)>=0> so that\ 
 
@@ -8334,9 +8438,9 @@
       is of class >C<rsup|\<infty\>>
     </equation*>
 
-    Finally as <math|\<forall\>t\<in\>\<bbb-R\>>
-    <math|<frac|f\<circ\>t<rsub|1>|f\<circ\>t<rsub|1>+f\<circ\>t<rsub|2>><around*|(|t|)>=<frac|f<around*|(|t<rsub|1><around*|(|t|)>|)>|f<around*|(|t<rsub|1><around*|(|t|)>|)>+f<around*|(|t<rsub|2><around*|(|t|)>|)>>=<frac|f<around*|(|b-t|)>|f<around*|(|b-t|)>+f<around*|(|t-a|)>>=h<around*|(|t|)>>
-    so that\ 
+    Finally, as <math|\<forall\>t\<in\>\<bbb-R\>>
+    <math|<frac|f\<circ\>t<rsub|1>|f\<circ\>t<rsub|1>+f\<circ\>t<rsub|2>><around*|(|t|)>=<frac|f<around*|(|t<rsub|1><around*|(|t|)>|)>|f<around*|(|t<rsub|1><around*|(|t|)>|)>+f<around*|(|t<rsub|2><around*|(|t|)>|)>>=<frac|f<around*|(|b-t|)>|f<around*|(|b-t|)>+f<around*|(|t-a|)>>=h<around*|(|t|)>>,
+    we have\ 
 
     <\equation*>
       h=<frac|f\<circ\>t<rsub|1>|f\<circ\>t<rsub|1>+f\<circ\>t<rsub|2>>
@@ -8588,8 +8692,6 @@
   bump functions [see definitions: <reference|manifold bump function on
   manifold>] at every point of a manifold.
 
-  TODO recheck this theorem
-
   <\theorem>
     <label|manifold existence of a bump function>Let <math|m\<in\>\<bbb-N\>>,
     <math|k\<in\>\<bbb-N\><rsub|0><big|cup><around*|{|\<infty\>|}>>,
@@ -8680,15 +8782,16 @@
 
     By [corollary: <reference|compact ball in R^n>]
     <math|><math|<wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,<frac|r|2>|)>|\<wide-bar\>>>
-    is compact, using <math|\<cal-T\><rsub|\<bbb-R\><rsup|m>>>, as
+    is compact using <math|\<cal-T\><rsub|\<bbb-R\><rsup|m>>>, as
     <math|><math|<wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,<frac|r|2>|)>|\<wide-bar\>>\<subseteq\>\<psi\><around*|(|R|)>>
     it follows then by [theorem: <reference|compact subspace equivalences>]
     <math|> <math|><math|<wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,<frac|r|2>|)>|\<wide-bar\>>>
     is compact using the subspace topology
     <math|<around*|(|\<cal-T\><rsub|\<bbb-R\><rsup|m>>|)><rsub|\|\<psi\><around*|(|R|)>>>.
     Given that <math|\<psi\><rsup|-1>> is continuous [because <math|\<psi\>>
-    is a homeomorphism] it follows that <math|<around*|(|\<psi\><rsup|-1>|)><around*|(|<wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,<frac|r|2>|)>|\<wide-bar\>>|)>>
-    is compact using the subspace topology <math|\<cal-T\><rsub|\|R>> so that
+    is a homeomorphism] it follows from [theorem: <reference|compact and
+    continuous functions>] that <math|<around*|(|\<psi\><rsup|-1>|)><around*|(|<wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,<frac|r|2>|)>|\<wide-bar\>>|)>>
+    is compact using the subspace topology <math|\<cal-T\><rsub|\|R>>, hence
     by [theorem: <reference|compact subspace equivalences>]
     <math|<around*|(|\<psi\><rsup|-1>|)><around*|(|<wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,<frac|r|2>|)>|\<wide-bar\>>|)>>
     is compact using the topology <math|\<cal-T\>>. As <math|\<cal-T\>> is
@@ -8757,7 +8860,7 @@
       <math|q\<in\>P>. Let
 
       <\equation*>
-        Q=P<big|cap><around*|(|q\<in\>M\\\<psi\><rsup|-1><around*|(|<wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,<frac|r|2>|)>|\<wide-bar\>>|)>|)><text|
+        Q=P<big|cap><around*|(|M\\\<psi\><rsup|-1><around*|(|<wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,<frac|r|2>|)>|\<wide-bar\>>|)>|)><text|
         and >\<gamma\>=\<chi\><rsub|\|Q>
       </equation*>
 
@@ -8788,7 +8891,7 @@
         <item*|<math|\<gamma\><rsup|-1><around*|(|z|)>\<in\>R>>As
         <math|z\<in\>\<gamma\><around*|(|Q|)>> we have that
         <math|\<gamma\><rsup|-1><around*|(|z|)>\<in\>Q\<subseteq\>M\\\<psi\><rsup|-1><around*|(|<wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,<frac|r|2>|)>|\<wide-bar\>>|)>>
-        so that <math|<rigid|\<psi\><around*|(|\<gamma\><rsup|-1><around*|(|z|)>|)>\<nin\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,<frac|r|2>|)>>>,
+        so that <math|<rigid|\<psi\><around*|(|\<gamma\><rsup|-1><around*|(|z|)>|)>\<nin\><wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,<frac|r|2>|)>|\<wide-bar\>>>>,
         hence by [eq: <reference|eq 23.172.24>]\ 
 
         <\equation*>
@@ -8799,7 +8902,7 @@
 
         <\equation*>
           <around*|(|h\<circ\>\<gamma\><rsup|-1>|)><around*|(|z|)>=h<around*|(|\<gamma\><rsup|-1><around*|(|z|)>|)><below|=|<text|[eq:
-          <reference|eq 23.173.24>]>>f<around*|(|\<psi\><around*|(|\<gamma\><rsup|-1><around*|(|z|)>|)>|)>=0
+          <reference|eq 23.173.24>]>\<wedge\>\<gamma\><rsup|-1><around*|(|z|)>\<in\>R>f<around*|(|\<psi\><around*|(|\<gamma\><rsup|-1><around*|(|z|)>|)>|)>=0
         </equation*>
 
         <item*|<math|\<gamma\><rsup|-1><around*|(|z|)>\<in\>M\\R>>Then
@@ -8824,7 +8927,7 @@
       </equation*>
     </description>
 
-    Using the above it follows by [definition: <reference|manifold
+    Using the two cases above it follows by [definition: <reference|manifold
     differentiability real function>] that\ 
 
     <\equation>
@@ -8855,6 +8958,14 @@
       p\<in\>V
     </equation*>
 
+    Next <math|V=><math|\<psi\><rsup|-1><around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,<frac|r|4>|)>|)>\<subseteq\>\<psi\><rsup|-1><around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,<frac|r|2>|)>|)><below|\<subseteq\>|<text|[eq:
+    <reference|eq 23.169.24>]>>\<psi\><rsup|-1><around*|(|\<psi\><around*|(|R|)>|)>=R<below|\<subseteq\>|<text|[eq:
+    <reference|eq 23.169.25>]>>U> or\ 
+
+    <\equation>
+      <label|eq 23.188.22>V\<subseteq\>U
+    </equation>
+
     Further <math|\<forall\>q\<in\>M> we have
 
     <\equation*>
@@ -8863,8 +8974,7 @@
       >q\<in\>M\\R>>>>><below|\<in\>|<text|[eqs: <reference|eq
       23.170.24>,<reference|eq 23.171.24>,<reference|eq
       23.172.24>]>><choice|<tformat|<table|<row|<cell|<around*|[|0,1|]><text|
-      if >q\<in\>R>>|<row|<cell|<around*|[|0,1|]><text| if
-      >x\<in\>M\\R>>>>>\<in\><around*|[|0,1|]>
+      if >q\<in\>R>>|<row|<cell|<around*|[|0,1|]><text| if >x\<in\>M\\R>>>>>
     </equation*>
 
     so that\ 
@@ -8875,8 +8985,8 @@
 
     Let <math|q\<in\>V=\<psi\><rsup|-1><around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,<frac|r|4>|)>|)><below|\<subseteq\>|<text|[eq:
     <reference|eq 23.169.24>]>>\<psi\><rsup|-1><around*|(|\<psi\><around*|(|R|)>|)>=R>
-    then <math|\<psi\><around*|(|q|)>\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,<frac|r|4>|)>>
-    and <math|q\<in\>R> so that <math|h<around*|(|q|)>=f<around*|(|\<psi\><around*|(|q|)>|)><below|\<in\>|<text|[eq:
+    then <math|\<psi\><around*|(|q|)>\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,<frac|r|4>|)>\<subseteq\><wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,<frac|r|4>|)>|\<wide-bar\>>>
+    and <math|q\<in\>R> so that <math|h<around*|(|q|)>=f<around*|(|\<psi\><around*|(|q|)>|)><below|=|<text|[eq:
     <reference|eq 23.170.24>]>>1>. Hence we have\ 
 
     <\equation>
@@ -8888,7 +8998,7 @@
     by [eq: <reference|eq 23.173.24>]. Assume that
     <math|\<psi\><around*|(|q|)>\<nin\><wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,<frac|r|2>|)>|\<wide-bar\>>>
     then by [eq: <reference|eq 23.172.24>]
-    <math|h<around*|(|q|)>=f<around*|(|\<psi\><around*|(|q|)>|)>=0>
+    <math|h<around*|(|q|)><below|=|q\<in\>R>f<around*|(|\<psi\><around*|(|q|)>|)>=0>
     contradicting <math|q\<in\><around*|{|q\<in\>M\|h<around*|(|q|)>\<neq\>0|}>>.
     Hence we have that <math|\<psi\><around*|(|q|)>\<in\><wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,<frac|r|2>|)>|\<wide-bar\>>>.
     This proves that <math|\<psi\><around*|(|<around*|{|q\<in\>M\|h<around*|(|q|)>\<neq\>0|}>|)>\<subseteq\><wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,<frac|r|2>|)>|\<wide-bar\>><below|\<subseteq\>|<text|[eq:
@@ -8914,7 +9024,7 @@
     </equation>
 
     So (1),(2),(3) and (4) are proved by [eqs: <reference|eq 23.177.24>,
-    <reference|eq 23.180.26>, <reference|eq 23.169.25>, <reference|eq
+    <reference|eq 23.180.26>, <reference|eq 23.188.22>, <reference|eq
     23.181.26> and <reference|eq 23.182.26>]
   </proof>
 
@@ -8923,10 +9033,6 @@
   <math|M>. The extension is not absolute the function and the extension
   agree only on a open neighborhood of the point that is a subset of the
   original open neighborhood.
-
-  \;
-
-  TODO check this\ 
 
   <\theorem>
     <label|manifold extension of local functions><dueto|<math|C<rsup|q><text|
@@ -8999,8 +9105,9 @@
       </equation*>
 
       Further as <math|h> is of class <math|C<rsup|k>> and
-      <math|<around*|(|U,\<varphi\>|)>\<in\>\<cal-A\>> it follows from
-      [theorem: <reference|lemma 23.37.9>] that
+      <math|<around*|(|W,\<varphi\>|)>\<in\>\<cal-A\><rsub|\|U>\<subseteq\>\<cal-A\>>
+      it follows from [theorem: <reference|manifold differentiability real
+      function (1)>] that
 
       <\equation*>
         h\<circ\>\<varphi\><rsup|-1>:\<varphi\><around*|(|W|)>\<rightarrow\>\<bbb-R\><text|
@@ -9018,12 +9125,12 @@
       Let <math|x\<in\>\<varphi\><around*|(|W|)>> then
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|<around*|(|<around*|(|f\<circ\>\<varphi\><rsup|-1>|)>\<cdot\><around*|(|h\<circ\>\<varphi\><rsup|-1>|)>|)><around*|(|x|)>>|<cell|=>|<cell|<around*|(|f\<circ\>\<varphi\><rsup|-1>|)><around*|(|x|)>\<cdot\><around*|(|h\<circ\>\<varphi\><rsup|-1>|)><around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|f<around*|(|\<varphi\><rsup|-1><around*|(|x|)>|)>\<cdot\>h<around*|(|\<varphi\><rsup|-1><around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|f\<cdot\>h|)><around*|(|\<varphi\><rsup|-1><around*|(|x|)>|)>>>|<row|<cell|>|<cell|<below|=|x\<in\>\<varphi\><around*|(|W|)>\<subseteq\>U>>|<cell|<wide|f|\<wide-bar\>><around*|(|\<varphi\><rsup|-1><around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<wide|f|\<wide-bar\>>\<circ\>\<varphi\><rsup|-1>|)><around*|(|x|)>>>>>
+        <tformat|<table|<row|<cell|<around*|(|<around*|(|f\<circ\>\<varphi\><rsup|-1>|)>\<cdot\><around*|(|h\<circ\>\<varphi\><rsup|-1>|)>|)><around*|(|x|)>>|<cell|=>|<cell|<around*|(|f\<circ\>\<varphi\><rsup|-1>|)><around*|(|x|)>\<cdot\><around*|(|h\<circ\>\<varphi\><rsup|-1>|)><around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|f<around*|(|\<varphi\><rsup|-1><around*|(|x|)>|)>\<cdot\>h<around*|(|\<varphi\><rsup|-1><around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|f\<cdot\>h|)><around*|(|\<varphi\><rsup|-1><around*|(|x|)>|)>>>|<row|<cell|>|<cell|<below|=|\<varphi\><rsup|-1><around*|(|z|)>\<in\>\<varphi\><rsup|-1><around*|(|\<varphi\><around*|(|W|)>|)>=W\<subseteq\>U>>|<cell|<wide|f|\<wide-bar\>><around*|(|\<varphi\><rsup|-1><around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<wide|f|\<wide-bar\>>\<circ\>\<varphi\><rsup|-1>|)><around*|(|x|)>>>>>
       </eqnarray*>
 
       which proves that <math|<around*|(|f\<circ\>\<varphi\><rsup|-1>|)>\<cdot\><around*|(|h\<circ\>\<varphi\><rsup|-1>|)>=<wide|f|\<wide-bar\>>\<circ\>\<varphi\><rsup|-1>>.
-      Hence we found a <math|<around*|(|W,\<varphi\>|)>\<in\>\<cal-A\>> such
-      that\ 
+      Hence we found a <math|<around*|(|W,\<varphi\>|)>\<in\>\<cal-A\>> with
+      <math|q\<in\>W> such that\ 
 
       <\equation*>
         <wide|f|\<wide-bar\>>\<circ\>\<varphi\><rsup|-1>:\<varphi\><around*|(|W|)>\<rightarrow\>\<bbb-R\><text|
@@ -9057,18 +9164,18 @@
         <item*|<math|\<varphi\><rsup|-1><around*|(|x|)>\<in\>U>>As
         <math|\<varphi\><rsup|-1><around*|(|x|)>\<in\>\<varphi\><rsup|-1><around*|(|\<varphi\><around*|(|W|)>|)>=W=Z<big|cap><around*|(|M\\<around*|(|supp
         h|)>|)>> so that <math|\<varphi\><rsup|-1><around*|(|x|)>\<nin\>supp
-        h> so that <math|h<around*|(|\<varphi\><rsup|-1><around*|(|x|)>|)>=0>.
+        h> from which it follow that <math|h<around*|(|\<varphi\><rsup|-1><around*|(|x|)>|)>=0>.
         Hence we have that
 
         <\equation*>
-          <around*|(|<wide|f|\<wide-bar\>>\<circ\>\<varphi\><rsup|-1>|)><around*|(|x|)>=<wide|f|\<wide-bar\>><around*|(|\<psi\><rsup|-1><around*|(|x|)>|)><below|=|<text|[eq:
-          <reference|eq 23.183.25>]>>h<around*|(|\<psi\><rsup|-1><around*|(|x|)>|)>\<cdot\>f<around*|(|\<psi\><rsup|-1><around*|(|x|)>|)>=0\<cdot\>f<around*|(|\<varphi\><rsup|-1><around*|(|x|)>|)>=0
+          <around*|(|<wide|f|\<wide-bar\>>\<circ\>\<varphi\><rsup|-1>|)><around*|(|x|)>=<wide|f|\<wide-bar\>><around*|(|\<varphi\><rsup|-1><around*|(|x|)>|)><below|=|<text|[eq:
+          <reference|eq 23.183.25>]>>h<around*|(|\<varphi\><rsup|-1><around*|(|x|)>|)>\<cdot\>f<around*|(|\<psi\><rsup|-1><around*|(|x|)>|)>=0\<cdot\>f<around*|(|\<varphi\><rsup|-1><around*|(|x|)>|)>=0
         </equation*>
 
         <item*|<math|\<varphi\><rsup|-1><around*|(|x|)>\<in\>M\\U>>Then\ 
 
         <\equation*>
-          <around*|(|<wide|f|\<wide-bar\>>\<circ\>\<varphi\><rsup|-1>|)><around*|(|x|)>=<wide|f|\<wide-bar\>><around*|(|\<psi\><rsup|-1><around*|(|x|)>|)><below|=|<text|[eq:
+          <around*|(|<wide|f|\<wide-bar\>>\<circ\>\<varphi\><rsup|-1>|)><around*|(|x|)>=<wide|f|\<wide-bar\>><around*|(|\<varphi\><rsup|-1><around*|(|x|)>|)><below|=|<text|[eq:
           <reference|eq 23.183.25>]>>0
         </equation*>
       </description>
@@ -10373,13 +10480,13 @@
     <associate|auto-23|<tuple|support of a function|?>>
     <associate|auto-24|<tuple|<with|mode|<quote|math>|sup f>|?>>
     <associate|auto-25|<tuple|compact support|?>>
-    <associate|auto-26|<tuple|cutoff function|?>>
     <associate|auto-27|<tuple|23.4|?>>
     <associate|auto-28|<tuple|tangent vector|?>>
     <associate|auto-29|<tuple|<with|mode|<quote|math>|T<rsub|p>M>|?>>
     <associate|auto-3|<tuple|23.1.1|?>>
     <associate|auto-30|<tuple|differential|?>>
     <associate|auto-31|<tuple|<with|mode|<quote|math>|d F<rsub|p>>|?>>
+    <associate|auto-32|<tuple|cutoff function|?>>
     <associate|auto-4|<tuple|coordinate chart|?>>
     <associate|auto-5|<tuple|coordinate domain|?>>
     <associate|auto-6|<tuple|coordinate ball|?>>
@@ -10428,7 +10535,7 @@
     <associate|eq 23.138.16|<tuple|23.154|?>>
     <associate|eq 23.139.16|<tuple|23.155|?>>
     <associate|eq 23.14.3|<tuple|23.18|?>>
-    <associate|eq 23.147.17|<tuple|23.201|?>>
+    <associate|eq 23.147.17|<tuple|23.202|?>>
     <associate|eq 23.15.2|<tuple|23.19|?>>
     <associate|eq 23.150.27|<tuple|23.157|?>>
     <associate|eq 23.157.20|<tuple|23.159|?>>
@@ -10462,18 +10569,19 @@
     <associate|eq 23.175.25|<tuple|23.183|?>>
     <associate|eq 23.176.24|<tuple|23.186|?>>
     <associate|eq 23.177.24|<tuple|23.187|?>>
-    <associate|eq 23.180.26|<tuple|23.188|?>>
-    <associate|eq 23.181.26|<tuple|23.189|?>>
-    <associate|eq 23.182.26|<tuple|23.190|?>>
-    <associate|eq 23.183.25|<tuple|23.193|?>>
-    <associate|eq 23.183.26|<tuple|23.191|?>>
-    <associate|eq 23.184.26|<tuple|23.192|?>>
-    <associate|eq 23.188.28|<tuple|23.195|?>>
-    <associate|eq 23.189.27|<tuple|23.197|?>>
-    <associate|eq 23.190.27|<tuple|23.198|?>>
-    <associate|eq 23.191.27|<tuple|23.199|?>>
-    <associate|eq 23.193.28|<tuple|23.200|?>>
-    <associate|eq 23.195.29|<tuple|23.194|?>>
+    <associate|eq 23.180.26|<tuple|23.189|?>>
+    <associate|eq 23.181.26|<tuple|23.190|?>>
+    <associate|eq 23.182.26|<tuple|23.191|?>>
+    <associate|eq 23.183.25|<tuple|23.194|?>>
+    <associate|eq 23.183.26|<tuple|23.192|?>>
+    <associate|eq 23.184.26|<tuple|23.193|?>>
+    <associate|eq 23.188.22|<tuple|23.188|?>>
+    <associate|eq 23.188.28|<tuple|23.196|?>>
+    <associate|eq 23.189.27|<tuple|23.198|?>>
+    <associate|eq 23.190.27|<tuple|23.199|?>>
+    <associate|eq 23.191.27|<tuple|23.200|?>>
+    <associate|eq 23.193.28|<tuple|23.201|?>>
+    <associate|eq 23.195.29|<tuple|23.195|?>>
     <associate|eq 23.2.1|<tuple|23.6|?>>
     <associate|eq 23.2.3|<tuple|23.3|?>>
     <associate|eq 23.21.6|<tuple|23.21|?>>
@@ -10591,17 +10699,18 @@
     <associate|eq 23.98.12|<tuple|23.123|?>>
     <associate|eq 23.99.12|<tuple|23.124|?>>
     <associate|lemma 23.10.2|<tuple|23.19|?>>
-    <associate|lemma 23.101.2|<tuple|23.113|?>>
+    <associate|lemma 23.101.2|<tuple|23.114|?>>
     <associate|lemma 23.102.20|<tuple|23.106|?>>
-    <associate|lemma 23.103.20|<tuple|23.107|?>>
-    <associate|lemma 23.104.20|<tuple|23.108|?>>
-    <associate|lemma 23.104.22|<tuple|23.116|?>>
-    <associate|lemma 23.105.20|<tuple|23.109|?>>
-    <associate|lemma 23.106.20|<tuple|23.111|?>>
-    <associate|lemma 23.107.21|<tuple|23.112|?>>
+    <associate|lemma 23.103.20|<tuple|23.108|?>>
+    <associate|lemma 23.104.20|<tuple|23.109|?>>
+    <associate|lemma 23.104.22|<tuple|23.117|?>>
+    <associate|lemma 23.105.20|<tuple|23.110|?>>
+    <associate|lemma 23.106.20|<tuple|23.112|?>>
+    <associate|lemma 23.107.21|<tuple|23.113|?>>
+    <associate|lemma 23.108.22|<tuple|23.107|?>>
     <associate|lemma 23.11.2|<tuple|23.20|?>>
-    <associate|lemma 23.110.20|<tuple|23.110|?>>
-    <associate|lemma 23.120.28|<tuple|23.125|?>>
+    <associate|lemma 23.110.20|<tuple|23.111|?>>
+    <associate|lemma 23.120.28|<tuple|23.126|?>>
     <associate|lemma 23.13.2|<tuple|23.21|?>>
     <associate|lemma 23.13.8|<tuple|23.17|?>>
     <associate|lemma 23.37.6|<tuple|23.57|?>>
@@ -10620,20 +10729,20 @@
     <associate|manifold C^m mappings are continuous|<tuple|23.79|?>>
     <associate|manifold C^m mappings equivalences|<tuple|23.82|?>>
     <associate|manifold C^m mappings equivalences (1)|<tuple|23.80|?>>
-    <associate|manifold C^m(M)|<tuple|23.127|?>>
-    <associate|manifold C^q(M) is a vector space|<tuple|23.128|?>>
+    <associate|manifold C^m(M)|<tuple|23.128|?>>
+    <associate|manifold C^q(M) is a vector space|<tuple|23.129|?>>
     <associate|manifold C^r functions are C^r mappings|<tuple|23.84|?>>
     <associate|manifold C^r mspping id local (2)|<tuple|23.86|?>>
     <associate|manifold C^r mspping id locsl|<tuple|23.85|?>>
     <associate|manifold R^n is a differentiable manifold|<tuple|23.67|?>>
-    <associate|manifold TpM is a vector space|<tuple|23.134|?>>
-    <associate|manifold TpM properties|<tuple|23.135|?>>
+    <associate|manifold TpM is a vector space|<tuple|23.135|?>>
+    <associate|manifold TpM properties|<tuple|23.136|?>>
     <associate|manifold a finite dimensional vector space is a differentiable
     manifold|<tuple|23.70|?>>
     <associate|manifold a topological manifold is locally
     compact|<tuple|23.26|?>>
     <associate|manifold atlas|<tuple|23.11|?>>
-    <associate|manifold bump function (1)|<tuple|23.117|?>>
+    <associate|manifold bump function (1)|<tuple|23.118|?>>
     <associate|manifold bump function on manifold|<tuple|23.104|?>>
     <associate|manifold canonical example|<tuple|23.15|?>>
     <associate|manifold chain rule|<tuple|23.89|?>>
@@ -10648,9 +10757,9 @@
     <associate|manifold compatible atlas|<tuple|23.55|?>>
     <associate|manifold compatible atlas (1)|<tuple|23.56|?>>
     <associate|manifold composition of a C^r mapping and a mapping of class
-    C^r|<tuple|23.136|?>>
+    C^r|<tuple|23.137|?>>
     <associate|manifold connectivity properties|<tuple|23.25|?>>
-    <associate|manifold constant functions|<tuple|23.129|?>>
+    <associate|manifold constant functions|<tuple|23.130|?>>
     <associate|manifold coordinate ball and cube|<tuple|23.9|?>>
     <associate|manifold coordinate domain|<tuple|23.8|?>>
     <associate|manifold coordinate transforms are a
@@ -10658,8 +10767,8 @@
     <associate|manifold cooridinate chart|<tuple|23.3|?>>
     <associate|manifold cooridinate chart existence|<tuple|23.10|?>>
     <associate|manifold countable basis of precompact sets|<tuple|23.23|?>>
-    <associate|manifold cutoff function|<tuple|cutoff function|?>>
-    <associate|manifold cutoff function existence|<tuple|23.114|?>>
+    <associate|manifold cutoff function|<tuple|23.105|?>>
+    <associate|manifold cutoff function existence|<tuple|23.115|?>>
     <associate|manifold diffentiable atlas|<tuple|23.41|?>>
     <associate|manifold diffeomorphic manifolds|<tuple|23.92|?>>
     <associate|manifold diffeomorphic manifolds have the same
@@ -10677,12 +10786,12 @@
     <associate|manifold differentiable manifold|<tuple|23.61|?>>
     <associate|manifold differentiable mappings|<tuple|23.75|?>>
     <associate|manifold differentiable structure|<tuple|23.58|?>>
-    <associate|manifold differential|<tuple|23.137|?>>
-    <associate|manifold differential properties|<tuple|23.138|?>>
-    <associate|manifold existence of a bump function|<tuple|23.119|?>>
+    <associate|manifold differential|<tuple|23.138|?>>
+    <associate|manifold differential properties|<tuple|23.139|?>>
+    <associate|manifold existence of a bump function|<tuple|23.120|?>>
     <associate|manifold existence of a maximal atlas|<tuple|23.59|?>>
-    <associate|manifold existence of partition of unity|<tuple|23.126|?>>
-    <associate|manifold extension of local functions|<tuple|23.121|?>>
+    <associate|manifold existence of partition of unity|<tuple|23.127|?>>
+    <associate|manifold extension of local functions|<tuple|23.122|?>>
     <associate|manifold identity is a C^q mapping|<tuple|23.78|?>>
     <associate|manifold maximal atlas|<tuple|23.50|?>>
     <associate|manifold maximal atlas composition with a
@@ -10691,9 +10800,9 @@
     <associate|manifold open set is a sub manifold|<tuple|23.16|?>>
     <associate|manifold open subset of a differentiable
     manifold|<tuple|23.68|?>>
-    <associate|manifold partition of unity|<tuple|23.123|?>>
+    <associate|manifold partition of unity|<tuple|23.124|?>>
     <associate|manifold product of functions that are of class
-    C^q|<tuple|23.130|?>>
+    C^q|<tuple|23.131|?>>
     <associate|manifold real numbers are a differentiable
     manifold|<tuple|23.66|?>>
     <associate|manifold real numbers form a topological
@@ -10705,7 +10814,7 @@
     <associate|manifold support|<tuple|23.100|?>>
     <associate|manifold support of a family|<tuple|23.103|?>>
     <associate|manifold supported in a set|<tuple|23.101|?>>
-    <associate|manifold tangent vector|<tuple|23.131|?>>
+    <associate|manifold tangent vector|<tuple|23.132|?>>
     <associate|manifold topological|<tuple|23.2|?>>
     <associate|manifold topological (1)|<tuple|23.12|?>>
     <associate|manifold topological manifold is paracompact|<tuple|23.30|?>>
