@@ -8693,7 +8693,7 @@
   manifold>] at every point of a manifold.
 
   <\theorem>
-    <label|manifold existence of a bump function>Let <math|m\<in\>\<bbb-N\>>,
+    <label|manifold bump function existence>Let <math|m\<in\>\<bbb-N\>>,
     <math|k\<in\>\<bbb-N\><rsub|0><big|cup><around*|{|\<infty\>|}>>,
     <math|\<cal-M\><rsup|m><around*|\<langle\>|M,\<cal-T\>,\<cal-A\>|\<rangle\>>>
     a <math|m>-dimensional <math|C<rsup|k>> differentiable manifold,
@@ -9220,8 +9220,9 @@
   We define now the concept of partitions of unity\ 
 
   <\lemma>
-    Let <math|m\<in\>\<bbb-N\>>, <math|k\<in\>\<bbb-N\><rsub|0><big|cup><around*|{|\<infty\>|}>>
-    and <math|\<cal-M\><rsup|m><around*|\<langle\>|M,\<cal-T\>,\<cal-A\>|\<rangle\>>>
+    <label|lemma 23.123.23>Let <math|m\<in\>\<bbb-N\>>,
+    <math|k\<in\>\<bbb-N\><rsub|0><big|cup><around*|{|\<infty\>|}>> and
+    <math|\<cal-M\><rsup|m><around*|\<langle\>|M,\<cal-T\>,\<cal-A\>|\<rangle\>>>
     a <math|m>-dimensional <math|C<rsup|k>> differentiable manifold and
     <math|<around*|{|f<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<bbb-R\><rsup|M>>
     such that\ 
@@ -9242,8 +9243,6 @@
     is a <with|font-series|bold|well defined><with|font-series|bold| function
     of class <math|C<rsup|k>>>
   </lemma>
-
-  TODO check this proof
 
   <\proof>
     Let <math|p\<in\>M> then by the hypothesis there exist exist a
@@ -9274,8 +9273,10 @@
       f<rsub|i><big|cap>V<rsub|p>\<neq\>\<varnothing\>|}><text| a finite set>
     </equation*>
 
-    Using the above it follows that <math|<big|cup><rsub|q\<in\>V<rsub|p>><around*|{|i\<in\>I\|f<rsub|i><around*|(|q|)>\<neq\>0|}>>
-    is finite. As <math|p\<in\>M> has been chosen arbitrary it we have proved
+    Using the above it follows that <math|<big|cup><rsub|q\<in\>V<rsub|p>><around*|{|i\<in\>I\|f<rsub|i><around*|(|q|)>\<neq\>0|}>\<subseteq\><around*|{|i\<in\>I\|supp
+    f<rsub|i><big|cap>V<rsub|p>\<neq\>\<varnothing\>|}>> a finite set so that
+    <math|<big|cup><rsub|q\<in\>V<rsub|p>><around*|{|i\<in\>I\|f<rsub|i><around*|(|q|)>\<neq\>0|}>>
+    is finite. As <math|p\<in\>M> has been chosen arbitrary we have proved
     that
 
     <\equation>
@@ -9318,7 +9319,7 @@
     so that by [theorem: <reference|sum bijection on index>]\ 
 
     <\equation*>
-      f<rsub|\|V<rsub|p>><around*|(|q|)>=<big|sum><rsub|j=1><rsup|n<rsub|p>><around*|(|f<rsub|\<beta\><around*|(|j|)>>|)><rsub|\|V<rsub|p>><around*|(|q|)>=<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,n<rsub|p>|}>><around*|(|f<rsub|\<beta\><around*|(|j|)>>|)><rsub|\|V<rsub|p>><around*|(|q|)>=<big|sum><rsub|j\<in\><big|cup><rsub|r\<in\>V<rsub|p>><around*|{|i\<in\>I\|f<rsub|i><around*|(|r|)>\<neq\>0|}>><around*|(|f<rsub|\<beta\><around*|(|j|)>>|)><rsub|\|V<rsub|p>><around*|(|q|)>
+      <big|sum><rsub|j=1><rsup|n<rsub|p>><around*|(|f<rsub|\<beta\><around*|(|j|)>>|)><rsub|\|V<rsub|p>><around*|(|q|)>=<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,n<rsub|p>|}>><around*|(|f<rsub|\<beta\><around*|(|j|)>>|)><rsub|\|V<rsub|p>><around*|(|q|)>=<big|sum><rsub|j\<in\><big|cup><rsub|r\<in\>V<rsub|p>><around*|{|i\<in\>I\|f<rsub|i><around*|(|r|)>\<neq\>0|}>><around*|(|f<rsub|j>|)><rsub|\|V<rsub|p>><around*|(|q|)>=f<rsub|\|V<rsub|p>><around*|(|q|)>
     </equation*>
 
     As this is true <math|\<forall\>q\<in\>V<rsub|p>> it follows that\ 
@@ -9332,7 +9333,7 @@
     using [theorem: <reference|manifold class C^q differentiability is local
     (2)>] it follows then that <math|<around*|(|f<rsub|\<beta\><around*|(|j|)>>|)><rsub|\|V<rsub|p>>>
     is of class <math|C<rsup|k>>. Applying then [theorem <reference|manfold
-    real valued functions properties>] proves that
+    real valued functions properties>] on the above proves that
     <math|<big|sum><rsub|j=1><rsup|n<rsub|p>><around*|(|f<rsub|\<beta\><around*|(|j|)>>|)><rsub|\|V<rsub|p>>>
     is of class <math|C<rsup|k>> so that <math|f<rsub|\|V<rsub|p>>> is of
     class <math|C<rsup|k>>. To summarize we have proved that\ 
@@ -9369,45 +9370,22 @@
       with <math|p\<in\>V> such that <math|<around*|{|i\<in\>I\|supp
       \<varphi\><rsub|i><big|cap>V\<neq\>\<varnothing\>|}>> is finite [in
       other words <math|<around*|{|supp \<varphi\><rsub|i>\|i\<in\>I|}>> is
-      locally finite [see definition: <reference|compact locally finite>].
+      locally finite [see definition: <reference|compact locally finite>]].
 
       <item><math|\<forall\>p\<in\>M> <math|<big|sum><rsub|j\<in\><around*|{|i\<in\>I\|\<varphi\><rsub|i><around*|(|x|)>\<neq\>0|}>>\<varphi\><rsub|i><around*|(|p|)>=1>
 
       <\note>
-        By <math|<around*|(|4|)>> there exist a open set <math|V> with
-        <math|p\<in\>V> such that
-
-        <\equation*>
-          <around*|{|i\<in\>I\|supp \<varphi\><rsub|i><big|cap>V\<neq\>\<varnothing\>|}><text|
-          is finite>
-        </equation*>
-
-        \ If <math|j\<in\><around*|{|i\<in\>I\|\<varphi\><rsub|j><around*|(|p|)>\<neq\>0|}>>
-        then <math|\<varphi\><rsub|j><around*|(|p|)>\<neq\>\<varnothing\>> so
-        that
-
-        <\equation*>
-          p\<in\><around*|{|x\<in\>X\|\<varphi\><rsub|j><around*|(|x|)>\<neq\>0|}>\<subseteq\><wide|<around*|{|x\<in\>X\|\<varphi\><rsub|j><around*|(|x|)>\<neq\>0|}>|\<wide-bar\>>=supp
-          \<varphi\><rsub|j>
-        </equation*>
-
-        Hence <math|x\<in\>supp \<varphi\><rsub|j><big|cap>V> so that
-        <math|supp \<varphi\><rsub|j><big|cap>V\<neq\>\<varnothing\>> which
-        proves that <math|j\<in\><around*|{|i\<in\>I\|supp
-        \<varphi\><rsub|i><big|cap>V\<neq\>\<varnothing\>|}>> from which it
-        follows that <math|<rigid|<around*|{|i\<in\>I\|\<varphi\><rsub|j><around*|(|x|)>\<neq\>0|}>\<subseteq\><around*|{|i\<in\>I\|supp
-        \<varphi\><rsub|i><big|cap>V|}>>> a finite set hence, using [theorem:
-        <reference|subset of finite sets>],
-        <math|<around*|{|i\<in\>I\|\<varphi\><rsub|j><around*|(|x|)>\<neq\>0|}>>
-        is a finite set so that <math|<big|sum><rsub|j\<in\><around*|{|i\<in\>I\|\<varphi\><rsub|i><around*|(|x|)>\<neq\>0|}>>\<varphi\><rsub|i><around*|(|x|)>>
-        is well defined.
+        By [lemma: <reference|lemma 23.123.23>]
+        <math|<big|sum><rsub|j\<in\><around*|{|i\<in\>I\|\<varphi\><rsub|i><around*|(|x|)>\<neq\>0|}>>\<varphi\><rsub|i><around*|(|p|)>>
+        is a well defined finite sum.
       </note>
     </enumerate>
 
     If <math|<around*|{|U|}><rsub|i\<in\>I>\<subseteq\>\<cal-T\>> is a open
     cover of <math|M> [in other words <math|M=<big|cup><rsub|i\<in\>I>U<rsub|i>>
-    then a partition of unity <math|<around*|{|\<varphi\><rsub|i>|}><rsub|i\<in\>I>>
-    is <with|font-series|bold|subordinate to
+    then a <math|C<rsup|q>> partition of unity
+    <math|<around*|{|\<varphi\><rsub|i>|}><rsub|i\<in\>I>> is
+    <with|font-series|bold|subordinate to
     <math|<around*|{|U<rsub|i>|}><rsub|i\<in\>I>>> if we have\ 
 
     <\equation*>
@@ -9423,12 +9401,12 @@
     <math|q\<in\>\<bbb-N\><rsub|0><big|cup><around*|{|\<infty\>|}>>,
     <math|\<cal-M\><rsup|m><around*|\<langle\>|M,\<cal-T\>,\<cal-A\>|\<rangle\>>>
     a <math|m>-dimensional <math|C<rsup|q>> differentiable manifold then
-    there exists a <math|<around*|{|V<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>> such
-    that we have\ 
+    there exists a family <math|<around*|{|V<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-T\>>
+    of open sets such that\ 
 
     <\eqnarray*>
       <tformat|<table|<row|<cell|>|<cell|\<forall\>i\<in\>\<bbb-N\><text| we
-      have >V<rsub|i><text| is open, ><wide|V<rsub|i>|\<wide-bar\>><text| is
+      have ><wide|V<rsub|i>|\<wide-bar\>><text| is
       compact>>|<cell|>>|<row|<cell|>|<cell|\<forall\>i\<in\><around*|{|2,\<ldots\>,\<infty\>|}><text|
       we have ><wide|V<rsub|i-1>|\<wide-bar\>>\<subseteq\>V<rsub|i>>|<cell|>>|<row|<cell|>|<cell|M=<big|cup><rsub|i\<in\>\<bbb-N\>>V<rsub|i>>|<cell|>>>>
     </eqnarray*>
@@ -9436,7 +9414,7 @@
 
   <\proof>
     Using [theorem: <reference|manifold countable basis of precompact sets>]
-    there exist a countable family of open set
+    there exist a countable family of open sets
     <math|<around*|{|B<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-T\>>
     such that\ 
 
@@ -9460,7 +9438,7 @@
 
     <\description>
       <item*|<math|m=1>>As <math|<wide|B<rsub|1>|\<wide-bar\>>> is compact
-      and <math|<wide|B<rsub|1>|\<wide-bar\>>\<subseteq\>M\<subseteq\><big|cup><rsub|i\<in\>\<bbb-N\>>B<rsub|i>>
+      and <math|<wide|B<rsub|1>|\<wide-bar\>>\<subseteq\>M=<big|cup><rsub|i\<in\>\<bbb-N\>>B<rsub|i>>
       there exist a finite set <math|I\<subseteq\>\<bbb-N\>> such that
       <math|<wide|B<rsub|1>|\<wide-bar\>>\<subseteq\><big|cup><rsub|i\<in\>I>B<rsub|i>>.
       By [theorem: <reference|finite ordered sets have a maximum and
@@ -9597,7 +9575,7 @@
         V<rsub|m>\<in\>\<cal-T\><text|, >B<rsub|m>\<subseteq\>V<rsub|m><text|,
         ><wide|V<rsub|m>|\<wide-bar\>><text| is compact,
         ><wide|V<rsub|m>|\<wide-bar\>>\<subseteq\><big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,\<beta\><rsub|m>|}>>B<rsub|j><text|
-        and ><wide|V<rsub|m-1>|\<wide-bar\>>\<leqslant\>V<rsub|m>
+        and ><wide|V<rsub|m-1>|\<wide-bar\>>\<subseteq\>V<rsub|m>
       </equation*>
     </description>
 
@@ -9611,14 +9589,23 @@
       M=<big|cup><rsub|i\<in\>\<bbb-N\>>V<rsub|i>
     </equation*>
 
-    Further by the above construction we have\ 
+    Further by the above construction we have that\ 
 
     <\equation*>
-      \<forall\>i\<in\>\<bbb-N\><text| >V<rsub|i>\<in\>\<bbb-N\><text|,
-      ><wide|V<rsub|i>|\<wide-bar\>><text| is compact,
-      ><wide|V<rsub|i>|\<wide-bar\>>\<subseteq\>V<rsub|i+1>
+      <around*|{|V<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-T\><text|,
+      >\<forall\>i\<in\>\<bbb-N\><text| ><wide|V<rsub|i>|\<wide-bar\>><text|
+      is compact>
+    </equation*>
+
+    and
+
+    <\equation*>
+      \<forall\>i\<in\><around*|{|2,\<ldots\>,\<infty\>|}><text| we have
+      ><wide|V<rsub|i-1>|\<wide-bar\>>\<subseteq\>V<rsub|i>
     </equation*>
   </proof>
+
+  TODO
 
   <\theorem>
     <label|manifold existence of partition of unity>Let
@@ -9626,7 +9613,8 @@
     and <math|\<cal-M\><rsup|m><around*|\<langle\>|M,\<cal-T\>,\<cal-A\>|\<rangle\>>>
     a <math|m>-dimensional <math|C<rsup|q>> differentiable manifold and let
     <math|<around*|{|U<rsub|i>|}><rsub|i\<in\>I>> be a arbitrary family of
-    open sets in <math|M> then there ex\ 
+    open sets in <math|M> such that <math|M=<big|cup><rsub|i\<in\>I>U<rsub|i>
+    >then\ 
 
     <\enumerate>
       <item>There exist a <math|C<rsup|q>> partition of unity
@@ -9666,7 +9654,7 @@
       <math|<wide|V<rsub|0>|\<wide-bar\>>=<wide|\<varnothing\>|\<wide-bar\>><below|=|\<varnothing\><text|
       is closed>>\<varnothing\>>, <math|<wide|V<rsub|0>|\<wide-bar\>>\<subseteq\>V<rsub|1>>
       and <math|<wide|V<rsub|0>|\<wide-bar\>>> is compact [see example:
-      <reference|compact empty set>], hence we have that\ 
+      <reference|compact empty set>], we have that\ 
 
       <\equation*>
         <around*|{|V<rsub|i>|}><rsub|i\<in\>\<bbb-N\><rsub|0>>\<subseteq\>\<cal-T\><text|,
@@ -9681,13 +9669,24 @@
       <math|<wide|V<rsub|i+1>|\<wide-bar\>>\\V<rsub|i>\<subseteq\><wide|V<rsub|i+1>|\<wide-bar\>>>
       a compact set, hence, using [theorem: <reference|compact every closed
       subset of a compact set is compact>],
-      <math|><math|<wide|V<rsub|i+1>|\<wide-bar\>>\\V<rsub|i>> is compact.
-      Hence we have\ 
+      <math|><math|<wide|V<rsub|i+1>|\<wide-bar\>>\\V<rsub|i>> is compact. So
+      we have\ 
 
-      <\equation*>
-        \<forall\>i\<in\>\<bbb-N\><rsub|0><text|
+      <\equation>
+        <label|eq 23.202.23>\<forall\>i\<in\>\<bbb-N\><rsub|0><text|
         ><wide|V<rsub|i+1>|\<wide-bar\>>\\V<rsub|i><text| is compact>
-      </equation*>
+      </equation>
+
+      Further <math|\<forall\>i\<in\>\<bbb-N\>> we have
+      <math|<wide|V<rsub|i+1>|\<wide-bar\>>\<subseteq\>V<rsub|i+2>> and
+      <math|<wide|V<rsub|i-1>|\<wide-bar\>>\<subseteq\>V<rsub|i>> so that
+      <math|<wide|V<rsub|i+1>|\<wide-bar\>>\\V<rsub|i>\<subseteq\>V<rsub|i+2>\\V<rsub|i>\<subseteq\>V<rsub|i+2>\\<wide|V<rsub|i-1>|\<wide-bar\>>>
+      a open set. Hence we have\ 
+
+      <\equation>
+        <label|eq 23.203.23>\<forall\>i\<in\>\<bbb-N\><text| we have
+        ><wide|V<rsub|i+1>|\<wide-bar\>>\\V<rsub|i>\<subseteq\>V<rsub|i+2>\\<wide|V<rsub|i-1>|\<wide-bar\>>\<in\>\<cal-T\>
+      </equation>
 
       If <math|p\<in\>M=<big|cup><rsub|i\<in\>\<bbb-N\><rsub|0>>V<rsub|i>>
       then <math|\<exists\>i\<in\>\<bbb-N\><rsub|0>> such that
@@ -9701,8 +9700,103 @@
       Hence we have that\ 
 
       <\equation*>
-        M=<big|cup><rsub|i\<in\>\<bbb-N\><rsub|0>><around*|(|<wide|V<rsub|i+1>|\<wide-bar\>>\\V<rsub|i>|)>
+        <label|eq 23.302.23>M=<big|cup><rsub|i\<in\>\<bbb-N\><rsub|0>><around*|(|<wide|V<rsub|i+1>|\<wide-bar\>>\\V<rsub|i>|)>
       </equation*>
+
+      Fix <math|i\<in\>\<bbb-N\>>. Let <math|p\<in\><wide|V<rsub|i+1>|\<wide-bar\>>\\V<rsub|i>\<subseteq\>M<below|=|hypothesis><big|cup><rsub|j\<in\>I>U<rsub|j>>
+      then there exist a <math|\<alpha\><rsub|i>\<in\>I> such that
+      <math|p\<in\>U<rsub|\<alpha\><rsub|i>>> so that
+      <math|p\<in\>U<rsub|\<alpha\><rsub|i>><big|cap><around*|(|<wide|V<rsub|i+1>|\<wide-bar\>>\\V<rsub|i>|)><below|\<subseteq\>|<text|[eq:
+      <reference|eq 23.203.23>]>>U<rsub|\<alpha\><rsub|i>><big|cap><around*|(|V<rsub|i+2>\\<wide|V<rsub|i-1>|\<wide-bar\>>|)>>
+      so that\ 
+
+      <\equation*>
+        p\<in\>U<rsub|\<alpha\><rsub|i>><big|cap><around*|(|V<rsub|i+2>\\<wide|V<rsub|i-1>|\<wide-bar\>>|)><text|
+        a open set>
+      </equation*>
+
+      Using [theorem: <reference|manifold bump function existence>] there
+      exist a function <math|\<psi\><rsup|i><rsub|p>:M\<rightarrow\>\<bbb-R\>>
+      and a <math|W<rsup|i><rsub|p>\<in\>\<cal-T\>> such that
+
+      <\equation>
+        <label|eq 23.204.23>\<psi\><rsup|i><rsub|p>:M\<rightarrow\>\<bbb-R\><text|
+        is of class >C<rsup|q>
+      </equation>
+
+      <\equation>
+        <label|eq 23.205.23>\<psi\><rsup|i><rsub|p><around*|(|M|)>\<subseteq\><around*|[|0,1|]>
+      </equation>
+
+      <\equation>
+        <label|eq 23.206.23>p\<in\>W<rsup|i><rsub|p>\<subseteq\>U<rsub|\<alpha\><rsub|i>><big|cap><around*|(|V<rsub|i+2>\\<wide|V<rsub|i-1>|\<wide-bar\>>|)><text|
+        and >\<forall\>r\<in\>W<rsup|i><rsub|p><around*|(|r|)>=1\<gtr\>0
+      </equation>
+
+      <\equation>
+        <label|eq 23.207.23>supp \<psi\><rsup|i><rsub|p>\<subseteq\>U<rsub|\<alpha\><rsub|i>><big|cap><around*|(|V<rsub|i+2>\\<wide|V<rsub|i-1>|\<wide-bar\>>|)>
+      </equation>
+
+      As <math|supp \<psi\><rsup|i><rsub|p>> is closed and <math|supp
+      \<psi\><rsup|i><rsub|p>\<subseteq\>U<rsub|\<alpha\><rsub|i>><big|cap><around*|(|V<rsub|i+2>\\<wide|V<rsub|i-1>|\<wide-bar\>>|)>\<subseteq\>V<rsub|i+2>\<subseteq\><wide|V<rsub|i+1>|\<wide-bar\>>>
+      a compact set it follows from [theorem: <reference|compact every closed
+      subset of a compact set is compact>] that
+
+      <\equation>
+        <label|eq 23.208.23>supp \<psi\><rsup|i><rsub|p><text| is compact>
+      </equation>
+
+      Now <math|\<forall\>p\<in\><wide|V<rsub|i+1>|\<wide-bar\>>\\V<rsub|i>>
+      we have by [eq: <reference|eq 23.206.23>] that
+      <math|p\<in\>W<rsup|i><rsub|p>> so that
+      <math|<wide|V<rsub|i+1>|\<wide-bar\>>\\V<rsub|i>\<subseteq\><big|cup><rsub|p\<in\><wide|V<rsub|i+1>|\<wide-bar\>>\\V<rsub|i>>W<rsup|i><rsub|p>>,
+      as by [eq: <reference|eq 23.202.23>]
+      <math|<wide|V<rsub|i+1>|\<wide-bar\>>\\V<rsub|i>> is compact there
+      exist a finite <math|<around*|{|p<rsub|1>,\<ldots\>,p<rsub|m<rsub|i>>|}>\<subseteq\><wide|V<rsub|i+1>|\<wide-bar\>>\\V<rsub|i>>
+      such that\ 
+
+      <\equation>
+        <label|eq 23.209.23><wide|V<rsub|i+1>|\<wide-bar\>>\\V<rsub|i>\<subseteq\><big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,m<rsub|i>|}>>W<rsup|i><rsub|p<rsub|j>>
+      </equation>
+
+      Summarizing [eqs: <reference|eq 23.204.23>, <reference|eq 23.205.23>,
+      <reference|eq 23.206.23>, <reference|eq 23.207.23>, <reference|eq
+      23.208.23> and <reference|eq 23.209.23>].
+      <math|\<forall\>i\<in\>\<bbb-N\>> we have found
+      <math|<around*|{|W<rsup|i><rsub|p<rsub|j>>|}><rsub|j\<in\><around*|{|1,\<ldots\>,m<rsub|i>|}>>>
+      and <math|<around*|{|\<psi\><rsup|i><rsub|p<rsub|j>>|}><rsub|j\<in\><around*|{|1,\<ldots\>,m<rsub|i>|}>>>
+      such that
+
+      <\equation>
+        <label|eq 23.210.23><wide|V<rsub|i+1>|\<wide-bar\>>\\V<rsub|i>\<subseteq\><big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,m<rsub|i>|}>>W<rsup|i><rsub|p<rsub|j>>
+      </equation>
+
+      and <math|<rigid|\<forall\>j\<in\><around*|{|1,\<ldots\>,m<rsub|i>|}>>>
+
+      <\equation>
+        <label|eq 23.211.23>\<psi\><rsup|i><rsub|p<rsub|j>>:M\<rightarrow\>\<bbb-R\><text|
+        is of class >C<rsup|q>
+      </equation>
+
+      <\equation>
+        <label|eq 23.212.23>\<psi\><rsup|i><rsub|p<rsub|j>><around*|(|M|)>\<subseteq\><around*|[|0,1|]>
+      </equation>
+
+      <\equation>
+        <label|eq 23.213.23>W<rsup|i><rsub|p<rsub|j>>\<subseteq\>U<rsub|\<alpha\><rsub|i>><big|cap><around*|(|V<rsub|i+2>\\<wide|V<rsub|i-1>|\<wide-bar\>>|)><text|
+        and >\<forall\>r\<in\>W<rsup|i><rsub|p<rsub|j>><around*|(|r|)>=1\<gtr\>0
+      </equation>
+
+      <\equation>
+        <label|eq 23.214.23>supp \<psi\><rsup|i><rsub|p<rsub|j>>\<subseteq\>U<rsub|\<alpha\><rsub|i>><big|cap><around*|(|V<rsub|i+2>\\<wide|V<rsub|i-1>|\<wide-bar\>>|)>
+      </equation>
+
+      <\equation>
+        <label|eq 23.215.23>supp \<psi\><rsup|i><rsub|p<rsub|j>><text| is
+        compact>
+      </equation>
+
+      \ Let <math|i\<in\>>
 
       <item>
     </enumerate>
@@ -10480,13 +10574,13 @@
     <associate|auto-23|<tuple|support of a function|?>>
     <associate|auto-24|<tuple|<with|mode|<quote|math>|sup f>|?>>
     <associate|auto-25|<tuple|compact support|?>>
+    <associate|auto-26|<tuple|cutoff function|?>>
     <associate|auto-27|<tuple|23.4|?>>
     <associate|auto-28|<tuple|tangent vector|?>>
     <associate|auto-29|<tuple|<with|mode|<quote|math>|T<rsub|p>M>|?>>
     <associate|auto-3|<tuple|23.1.1|?>>
     <associate|auto-30|<tuple|differential|?>>
     <associate|auto-31|<tuple|<with|mode|<quote|math>|d F<rsub|p>>|?>>
-    <associate|auto-32|<tuple|cutoff function|?>>
     <associate|auto-4|<tuple|coordinate chart|?>>
     <associate|auto-5|<tuple|coordinate domain|?>>
     <associate|auto-6|<tuple|coordinate ball|?>>
@@ -10535,7 +10629,7 @@
     <associate|eq 23.138.16|<tuple|23.154|?>>
     <associate|eq 23.139.16|<tuple|23.155|?>>
     <associate|eq 23.14.3|<tuple|23.18|?>>
-    <associate|eq 23.147.17|<tuple|23.202|?>>
+    <associate|eq 23.147.17|<tuple|23.216|?>>
     <associate|eq 23.15.2|<tuple|23.19|?>>
     <associate|eq 23.150.27|<tuple|23.157|?>>
     <associate|eq 23.157.20|<tuple|23.159|?>>
@@ -10584,7 +10678,21 @@
     <associate|eq 23.195.29|<tuple|23.195|?>>
     <associate|eq 23.2.1|<tuple|23.6|?>>
     <associate|eq 23.2.3|<tuple|23.3|?>>
+    <associate|eq 23.202.23|<tuple|23.202|?>>
+    <associate|eq 23.203.23|<tuple|23.203|?>>
+    <associate|eq 23.204.23|<tuple|23.204|?>>
+    <associate|eq 23.205.23|<tuple|23.205|?>>
+    <associate|eq 23.206.23|<tuple|23.206|?>>
+    <associate|eq 23.207.23|<tuple|23.207|?>>
+    <associate|eq 23.208.23|<tuple|23.208|?>>
+    <associate|eq 23.209.23|<tuple|23.209|?>>
     <associate|eq 23.21.6|<tuple|23.21|?>>
+    <associate|eq 23.210.23|<tuple|23.210|?>>
+    <associate|eq 23.211.23|<tuple|23.211|?>>
+    <associate|eq 23.212.23|<tuple|23.212|?>>
+    <associate|eq 23.213.23|<tuple|23.213|?>>
+    <associate|eq 23.214.23|<tuple|23.214|?>>
+    <associate|eq 23.215.23|<tuple|23.215|?>>
     <associate|eq 23.22.3|<tuple|23.23|?>>
     <associate|eq 23.23.4|<tuple|23.24|?>>
     <associate|eq 23.23.402|<tuple|23.25|?>>
@@ -10597,6 +10705,7 @@
     <associate|eq 23.28.5|<tuple|23.29|?>>
     <associate|eq 23.3.1|<tuple|23.7|?>>
     <associate|eq 23.3.3|<tuple|23.4|?>>
+    <associate|eq 23.302.23|<tuple|23.203|?>>
     <associate|eq 23.31.4|<tuple|23.33|?>>
     <associate|eq 23.33.5|<tuple|23.34|?>>
     <associate|eq 23.35.10|<tuple|23.35|?>>
@@ -10711,6 +10820,7 @@
     <associate|lemma 23.11.2|<tuple|23.20|?>>
     <associate|lemma 23.110.20|<tuple|23.111|?>>
     <associate|lemma 23.120.28|<tuple|23.126|?>>
+    <associate|lemma 23.123.23|<tuple|23.123|?>>
     <associate|lemma 23.13.2|<tuple|23.21|?>>
     <associate|lemma 23.13.8|<tuple|23.17|?>>
     <associate|lemma 23.37.6|<tuple|23.57|?>>
@@ -10743,6 +10853,7 @@
     compact|<tuple|23.26|?>>
     <associate|manifold atlas|<tuple|23.11|?>>
     <associate|manifold bump function (1)|<tuple|23.118|?>>
+    <associate|manifold bump function existence|<tuple|23.120|?>>
     <associate|manifold bump function on manifold|<tuple|23.104|?>>
     <associate|manifold canonical example|<tuple|23.15|?>>
     <associate|manifold chain rule|<tuple|23.89|?>>
@@ -10788,7 +10899,6 @@
     <associate|manifold differentiable structure|<tuple|23.58|?>>
     <associate|manifold differential|<tuple|23.138|?>>
     <associate|manifold differential properties|<tuple|23.139|?>>
-    <associate|manifold existence of a bump function|<tuple|23.120|?>>
     <associate|manifold existence of a maximal atlas|<tuple|23.59|?>>
     <associate|manifold existence of partition of unity|<tuple|23.127|?>>
     <associate|manifold extension of local functions|<tuple|23.122|?>>
