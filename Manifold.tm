@@ -9645,7 +9645,7 @@
 
       <\equation*>
         M=<big|cup><rsub|i\<in\>\<bbb-N\>>V<rsub|i><text| and
-        >\<forall\>i\<in\>\<bbb-N\><text|
+        >\<forall\>i\<in\>\<bbb-N\><text| >V<rsub|i>\<in\>\<cal-T\><text|,
         ><wide|V<rsub|i>|\<wide-bar\>><text| is compact and
         ><wide|V<rsub|i>|\<wide-bar\>>\<subseteq\>V<rsub|i+1>
       </equation*>
@@ -9656,13 +9656,13 @@
       and <math|<wide|V<rsub|0>|\<wide-bar\>>> is compact [see example:
       <reference|compact empty set>], we have that\ 
 
-      <\equation*>
-        <around*|{|V<rsub|i>|}><rsub|i\<in\>\<bbb-N\><rsub|0>>\<subseteq\>\<cal-T\><text|,
-        <math|M=<big|cup><rsub|i\<in\>\<bbb-N\><rsub|0>>V<rsub|i>> and
-        >\<forall\>i\<in\>\<bbb-N\><text|
+      <\equation>
+        <label|eq 23.202.24><around*|{|V<rsub|i>|}><rsub|i\<in\>\<bbb-N\><rsub|0>>\<subseteq\>\<cal-T\><text|,
+        <math|M=<big|cup><rsub|i\<in\>\<bbb-N\><rsub|0>>V<rsub|i>=<big|cup><rsub|i\<in\>\<bbb-N\>>V<rsub|i>>
+        and >\<forall\>i\<in\>\<bbb-N\><text|
         ><wide|V<rsub|i>|\<wide-bar\>><text| is compact and
         ><wide|V<rsub|i>|\<wide-bar\>>\<subseteq\>V<rsub|i>
-      </equation*>
+      </equation>
 
       Let <math|i\<in\>\<bbb-N\><rsub|0>> then
       <math|<wide|V<rsub|i+1>|\<wide-bar\>>\\V<rsub|i>> is closed and <math|>
@@ -9730,7 +9730,8 @@
 
       <\equation>
         <label|eq 23.206.23>p\<in\>W<rsup|i><rsub|p>\<subseteq\>U<rsub|\<alpha\><rsub|i>><big|cap><around*|(|V<rsub|i+2>\\<wide|V<rsub|i-1>|\<wide-bar\>>|)><text|
-        and >\<forall\>r\<in\>W<rsup|i><rsub|p><around*|(|r|)>=1\<gtr\>0
+        and >\<forall\>r\<in\>W<rsup|i><rsub|p><around*|(|r|)><text| we have
+        >\<psi\><rsup|i><rsub|p><around*|(|r|)>=1\<gtr\>0
       </equation>
 
       <\equation>
@@ -9752,51 +9753,220 @@
       <math|<wide|V<rsub|i+1>|\<wide-bar\>>\\V<rsub|i>\<subseteq\><big|cup><rsub|p\<in\><wide|V<rsub|i+1>|\<wide-bar\>>\\V<rsub|i>>W<rsup|i><rsub|p>>,
       as by [eq: <reference|eq 23.202.23>]
       <math|<wide|V<rsub|i+1>|\<wide-bar\>>\\V<rsub|i>> is compact there
-      exist a finite <math|<around*|{|p<rsub|1>,\<ldots\>,p<rsub|m<rsub|i>>|}>\<subseteq\><wide|V<rsub|i+1>|\<wide-bar\>>\\V<rsub|i>>
+      exist a finite <math|<around*|{|p<rsub|<around*|(|i,1|)>>,\<ldots\>,p<rsub|<around*|(|i,m<rsub|i>|)>>|}>\<subseteq\><wide|V<rsub|i+1>|\<wide-bar\>>\\V<rsub|i>>
       such that\ 
 
       <\equation>
-        <label|eq 23.209.23><wide|V<rsub|i+1>|\<wide-bar\>>\\V<rsub|i>\<subseteq\><big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,m<rsub|i>|}>>W<rsup|i><rsub|p<rsub|j>>
+        <label|eq 23.209.23><wide|V<rsub|i+1>|\<wide-bar\>>\\V<rsub|i>\<subseteq\><big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,m<rsub|i>|}>>W<rsup|i><rsub|p<rsub|<around*|(|i,j|)>>>
       </equation>
 
       Summarizing [eqs: <reference|eq 23.204.23>, <reference|eq 23.205.23>,
       <reference|eq 23.206.23>, <reference|eq 23.207.23>, <reference|eq
-      23.208.23> and <reference|eq 23.209.23>].
-      <math|\<forall\>i\<in\>\<bbb-N\>> we have found
-      <math|<around*|{|W<rsup|i><rsub|p<rsub|j>>|}><rsub|j\<in\><around*|{|1,\<ldots\>,m<rsub|i>|}>>>
-      and <math|<around*|{|\<psi\><rsup|i><rsub|p<rsub|j>>|}><rsub|j\<in\><around*|{|1,\<ldots\>,m<rsub|i>|}>>>
-      such that
+      23.208.23> and <reference|eq 23.209.23>]. We have if we define\ 
+
+      <\equation*>
+        I=<big|cup><rsub|i\<in\>\<bbb-N\>><around*|(|<around*|{|i|}>\<times\><around*|{|1,\<ldots\>,m<rsub|i>|}>|)>
+      </equation*>
+
+      found two families \ <math|<around|{|W<rsup|i><rsub|p<rsub|<around*|(|i,j|)>>>|}><rsub|<around*|(|i,j|)>\<in\>I>>
+      and <math|<around*|{|\<psi\><rsup|i><rsub|p<rsub|<around*|(|i,j|)>>>|}><rsub|<around*|(|i,j|)>\<in\>I>>
+      such that <math|\<forall\>i\<in\>\<bbb-N\>>
 
       <\equation>
-        <label|eq 23.210.23><wide|V<rsub|i+1>|\<wide-bar\>>\\V<rsub|i>\<subseteq\><big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,m<rsub|i>|}>>W<rsup|i><rsub|p<rsub|j>>
+        <label|eq 23.210.23><wide|V<rsub|i+1>|\<wide-bar\>>\\V<rsub|i>\<subseteq\><big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,m<rsub|i>|}>>W<rsup|i><rsub|p<rsub|<around*|(|i,j|)>>>
       </equation>
 
-      and <math|<rigid|\<forall\>j\<in\><around*|{|1,\<ldots\>,m<rsub|i>|}>>>
+      and <math|<rigid|\<forall\><around*|(|i,j|)>\<in\>I>>
 
       <\equation>
-        <label|eq 23.211.23>\<psi\><rsup|i><rsub|p<rsub|j>>:M\<rightarrow\>\<bbb-R\><text|
+        <label|eq 23.211.23>\<psi\><rsup|i><rsub|p<rsub|<around*|(|i,j|)>>>:M\<rightarrow\>\<bbb-R\><text|
         is of class >C<rsup|q>
       </equation>
 
       <\equation>
-        <label|eq 23.212.23>\<psi\><rsup|i><rsub|p<rsub|j>><around*|(|M|)>\<subseteq\><around*|[|0,1|]>
+        <label|eq 23.212.23>\<psi\><rsup|i><rsub|p<rsub|<around*|(|i,j|)>>><around*|(|M|)>\<subseteq\><around*|[|0,1|]>
       </equation>
 
       <\equation>
-        <label|eq 23.213.23>W<rsup|i><rsub|p<rsub|j>>\<subseteq\>U<rsub|\<alpha\><rsub|i>><big|cap><around*|(|V<rsub|i+2>\\<wide|V<rsub|i-1>|\<wide-bar\>>|)><text|
-        and >\<forall\>r\<in\>W<rsup|i><rsub|p<rsub|j>><around*|(|r|)>=1\<gtr\>0
+        <label|eq 23.213.23>p<rsub|<around*|(|i,j|)>>\<in\>W<rsup|i><rsub|p<rsub|<around*|(|i,j|)>>>\<subseteq\>U<rsub|\<alpha\><rsub|i>><big|cap><around*|(|V<rsub|i+2>\\<wide|V<rsub|i-1>|\<wide-bar\>>|)><text|
+        and >\<forall\>r\<in\>W<rsup|i><rsub|p<rsub|<around*|(|i,j|)>>><around*|(|r|)><text|
+        >\<psi\><rsup|i><rsub|p<rsub|<around*|(|i,j|)>>><around*|(|r|)>=1\<gtr\>0
       </equation>
 
       <\equation>
-        <label|eq 23.214.23>supp \<psi\><rsup|i><rsub|p<rsub|j>>\<subseteq\>U<rsub|\<alpha\><rsub|i>><big|cap><around*|(|V<rsub|i+2>\\<wide|V<rsub|i-1>|\<wide-bar\>>|)>
+        <label|eq 23.214.23>supp \<psi\><rsup|i><rsub|p<rsub|<around*|(|i,j|)>>>\<subseteq\>U<rsub|\<alpha\><rsub|i>><big|cap><around*|(|V<rsub|i+2>\\<wide|V<rsub|i-1>|\<wide-bar\>>|)>
       </equation>
 
       <\equation>
-        <label|eq 23.215.23>supp \<psi\><rsup|i><rsub|p<rsub|j>><text| is
-        compact>
+        <label|eq 23.215.23>supp \<psi\><rsup|i><rsub|p<rsub|<around*|(|i,j|)>>><text|
+        is compact>
       </equation>
 
-      \ Let <math|i\<in\>>
+      Let <math|i\<in\>\<bbb-N\>> and assume that
+      <math|<around*|{|<around*|(|k,l|)>\<in\>I\|supp
+      \<psi\><rsup|k><rsub|p<rsub|<around*|(|k,l|)>>><big|cap>V<rsub|i>\<neq\>\<varnothing\>|}>\<nsubseteq\><big|cup><rsub|k\<in\><around*|{|i,\<ldots\>,\<infty\>|}>><around*|(|<around*|{|k|}>\<times\><around*|{|1,\<ldots\>,m<rsub|k>|}>|)>>
+      then there exist a <math|<around*|(|k,l|)>\<in\>I\\<big|cup><rsub|k\<in\><around*|{|i,\<ldots\>,\<infty\>|}>><around*|(|<around*|{|k|}>\<times\><around*|{|1,\<ldots\>,m<rsub|k>|}>|)>>
+      such that\ 
+
+      <\equation*>
+        <around*|(|k,j|)>\<in\><around*|{|<around*|(|k,l|)>\<in\>I\|supp
+        \<psi\><rsup|k><rsub|p<rsub|k,l>><big|cap>V<rsub|i>\<neq\>\<varnothing\>|}>
+      </equation*>
+
+      As <math|<around*|(|k,l|)>\<in\>I\\<big|cup><rsub|k\<in\><around*|{|i,\<ldots\>,\<infty\>|}>><around*|(|<around*|{|k|}>\<times\><around*|{|1,\<ldots\>,m<rsub|k>|}>|)>>
+      we have that <math|k\<gtr\>i> so that <math|k-1\<geqslant\>i>. Hence we
+      have <math|V<rsub|i>\<subseteq\>V<rsub|k-1>\<subseteq\><wide|V<rsub|k-1>|\<wide-bar\>>>
+      so that <math|V<rsub|k+2>\\<wide|V<rsub|k-1>|\<wide-bar\>>\<subseteq\>V<rsub|k+2>\\V<rsub|i>>.
+      As by [eq: <reference|eq 23.214.23>] <math|supp
+      \<psi\><rsup|k><rsub|p<rsub|<around*|(|k,l|)>>>\<subseteq\>V<rsub|k+2>\\<wide|V<rsub|k-1>|\<wide-bar\>>>
+      it follows <math|supp \<psi\><rsup|k><rsub|p<rsub|<around*|(|k,l|)>>>\<subseteq\>V<rsub|k+2>\\V<rsub|i>>
+      so that\ 
+
+      <\equation*>
+        supp \<psi\><rsup|k><rsub|p<rsub|<around*|(|k,l|)>><rsub|>><big|cap>V<rsub|i>=\<varnothing\>
+      </equation*>
+
+      contradicting <math|<around*|(|k,l|)>\<in\><around*|{|<around*|(|k,l|)>\<in\>I\|supp
+      \<psi\><rsup|k><rsub|p<rsub|<around*|(|k,l|)>>><big|cap>V<rsub|i>\<neq\>\<varnothing\>|}>>.
+      Hence the assumption is wrong and we nust have that\ 
+
+      <\equation*>
+        <around*|{|<around*|(|k,l|)>\<in\>I\|supp
+        \<psi\><rsup|k><rsub|p<rsub|<around*|(|k,l|)>>><big|cap>V<rsub|i>\<neq\>\<varnothing\>|}>\<subseteq\><big|cup><rsub|k\<in\><around*|{|i,\<ldots\>,\<infty\>|}>><around*|(|<around*|{|k|}>\<times\><around*|{|1,\<ldots\>,m<rsub|k>|}>|)>
+      </equation*>
+
+      Using [theorems: <reference|product of finite sets>, <reference|finite
+      union of finite sets is finite> and <reference|subset of finite sets>]
+      it follows that <math|><math|<around*|{|<around*|(|k,l|)>\<in\>I\|supp
+      \<psi\><rsup|k><rsub|p<rsub|<around*|(|k,l|)>>><big|cap>V<rsub|i>\<neq\>\<varnothing\>|}>>
+      is finite. To summarize we hsve that\ 
+
+      <\equation>
+        <label|eq 23.217.24>\<forall\>i\<in\>\<bbb-N\><text|
+        ><around*|{|<around*|(|k,l|)>\<in\>I\|supp
+        \<psi\><rsup|k><rsub|p<rsub|<around*|(|k,l|)>>><big|cap>V<rsub|i>\<neq\>\<varnothing\>|}><text|
+        is finite>
+      </equation>
+
+      By [theorem: <reference|union of {i}x{1,..,ni}>]
+      <math|I=<big|cup><rsub|i\<in\>\<bbb-N\>><around*|(|<around*|{|i|}>\<times\><around*|{|1,\<ldots\>,m<rsub|i>|}>|)>>
+      is denumerable hence there exist a bijection such that
+      <math|\<beta\>:\<bbb-N\>\<rightarrow\>I>. Define now\ 
+
+      <\equation*>
+        <around*|{|\<psi\><rsub|k>|}><rsub|k\<in\>\<bbb-N\>><text| by
+        >\<psi\><rsub|k>=\<psi\><rsup|\<beta\><around*|(|k|)><rsub|1>><rsub|p<rsub|\<beta\><around*|(|k|)>>><text|
+        and ><around*|{|W<rsub|k>|}><rsub|k\<in\>\<bbb-N\>><text| by
+        >W<rsub|k>=W<rsup|\<beta\><around*|(|k|)><rsub|1>><rsub|p<rsub|\<beta\><around*|(|k|)>>>
+      </equation*>
+
+      Let <math|i\<in\>\<bbb-N\>>. If <math|k\<in\><around*|{|k\<in\>\<bbb-N\>\|supp
+      \<psi\><rsub|k><big|cap>V<rsub|i>\<neq\>\<varnothing\>|}>> then
+      <math|supp \<psi\><rsub|k><big|cap>V<rsub|i>\<neq\>\<varnothing\>>, as
+      <math|\<psi\><rsub|k>=\<psi\><rsup|\<beta\><around*|(|k|)><rsub|1>><rsub|p<rsub|\<beta\><around*|(|k|)><rsub|2>>>>,
+      it follows that \ <math|supp \<psi\><rsup|\<beta\><around*|(|k|)><rsub|1>><rsub|p<rsub|\<beta\><around*|(|k|)><rsub|2>>><big|cap>V<rsub|i>\<neq\>\<varnothing\>>
+      so that <math|\<beta\><around*|(|k|)>\<in\><around*|{|<around*|(|k,l|)>\<in\>I\|supp
+      \<psi\><rsup|k><rsub|p<rsub|l>><big|cap>V<rsub|i>\<neq\>\<varnothing\>|}>>
+      which proves that\ 
+
+      <\equation*>
+        \<beta\><around*|(|<around*|{|k\<in\>\<bbb-N\>\|supp
+        \<psi\><rsub|k><big|cap>V<rsub|i>\<neq\>\<varnothing\>|}>|)>\<subseteq\><around*|{|<around*|(|k,l|)>\<in\>I\|supp
+        \<psi\><rsup|k><rsub|p<rsub|l>><big|cap>V<rsub|i>\<neq\>\<varnothing\>|}><text|
+        a finite set>
+      </equation*>
+
+      Hence <math|><math|\<beta\><around*|(|<around*|{|k\<in\>\<bbb-N\>\|supp
+      \<psi\><rsub|k><big|cap>V<rsub|i>\<neq\>\<varnothing\>|}>|)>> is finite
+      so that, as <math|\<beta\>> is a bijection
+      <math|><math|<rigid|<around*|{|k\<in\>\<bbb-N\>\|supp
+      \<psi\><rsub|k><big|cap>V<rsub|i>\<neq\>\<varnothing\>|}>>> is finite.
+      Hence we have\ 
+
+      <\equation*>
+        \<forall\>i\<in\>\<bbb-N\><text| that
+        ><around*|{|k\<in\>\<bbb-N\>\|supp
+        \<psi\><rsub|k><big|cap>V<rsub|i>\<neq\>\<varnothing\>|}><text| is
+        finite>
+      </equation*>
+
+      Let <math|p\<in\>M> then by [eq: <reference|eq 23.202.24>] there exist
+      a <math|i\<in\>\<bbb-N\>> such that
+      <math|p\<in\>V<rsub|i>\<in\>\<cal-T\>> which using the above proves
+      that\ 
+
+      <\equation>
+        <label|eq 23.218.24>\<forall\>p\<in\>M<text|
+        >\<exists\>V\<in\>\<cal-T\><text| such that
+        ><around*|{|k\<in\>\<bbb-N\>\|supp
+        \<psi\><rsub|k><big|cap>V\<neq\>\<varnothing\>|}><text| is finite >
+      </equation>
+
+      Using [eq: <reference|eq 23.211.23>] it follows that\ 
+
+      <\equation>
+        <label|eq 23.219.24>\<forall\>k\<in\>\<bbb-N\><text|
+        >\<psi\><rsub|k>:M\<rightarrow\>\<bbb-R\><text| is of class
+        >C<rsup|q>
+      </equation>
+
+      By [lemma: <reference|lemma 23.123.23>] we have that\ 
+
+      <\equation>
+        <label|eq 23.220.24>\<psi\>:M\<rightarrow\>\<bbb-R\><text| where
+        >\<psi\><around*|(|p|)>=<big|sum><rsub|i\<in\><around*|{|k\<in\>\<bbb-N\>\|supp
+        \<psi\><rsub|k><big|cap>V<rsub|k>\<neq\>\<varnothing\>|}>>\<psi\><rsub|i><around*|(|p|)><text|
+        is well defined and of class >C<rsup|q>
+      </equation>
+
+      Let <math|i\<in\>\<bbb-N\>> then <math|\<psi\><rsub|i><around*|(|M|)>=\<psi\><rsup|\<beta\><around*|(|i|)><rsub|1>><rsub|p<rsub|\<beta\><around*|(|i|)>>><around*|(|M|)><below|\<subseteq\>|<text|[eq:
+      <reference|eq 23.212.23>]>><around*|[|0,1|]>> so that\ 
+
+      <\equation>
+        <label|eq 23.221.24>\<forall\>i\<in\>\<bbb-N\><text| we have
+        >\<psi\><rsub|i><around*|(|M|)>\<subseteq\><around*|[|0,1|]>
+      </equation>
+
+      Further <math|<around*|(|1,1|)>\<in\><big|cup><rsub|i\<in\>\<bbb-N\>><around*|(|<around*|{|1|}>\<times\><around*|{|1,\<ldots\>,m<rsub|1>|}>|)>>
+      then by [eq: <reference|eq 23.213.23>]
+      <math|p<rsub|<around*|(|1,1|)>>\<in\>W<rsup|1><rsub|p<rsub|<around*|(|1,1|)>>>>
+      and <math|<rigid|\<psi\><rsup|1><rsub|p<rsub|<around*|(|1,1|)>>><around*|(|p<rsub|<around*|(|1,1|)>>|)>=1\<gtr\>0>>
+      so that for <math|k=\<beta\><rsup|-1><around*|(|<around*|(|1,1|)>|)>>
+      we have that <math|\<psi\><rsub|k><around*|(|p<rsub|k>|)>=1>. In other
+      words\ 
+
+      <\equation*>
+        \<exists\>p<rsub|k>\<in\>M<text| such that
+        >0\<less\>\<psi\><rsub|k><around*|(|p<rsub|k>|)>
+      </equation*>
+
+      Using the above together with [eqs: <reference|eq 23.220.24>,
+      <reference|eq 23.221.24>] proves that\ 
+
+      <\equation*>
+        \<forall\>p\<in\>M<text| we have >0\<less\>\<psi\><around*|(|p|)>
+      </equation*>
+
+      So, using the above, [eqs: <reference|eq 23.218.24>, <reference|eq
+      23.220.24>] and [theorem: <reference|manfold real valued functions
+      properties>] it follows that for\ 
+
+      <\equation*>
+        <around*|{|\<varphi\><rsub|i>|}><rsub|i\<in\>\<bbb-N\>><text| defined
+        by >\<varphi\><rsub|i>=<frac|\<psi\><rsub|i>|\<psi\>>
+      </equation*>
+
+      we have that\ 
+
+      <\equation*>
+        \<forall\>i\<in\>\<bbb-N\><text| >\<varphi\><rsub|i>:M\<rightarrow\>\<bbb-R\><text|
+        is of class >C<rsup|q>
+      </equation*>
+
+      TODO proof locally finite od <math|\<varphi\><rsub|i>> and
+      <math|<big|sum>\<varphi\><rsub|i>=1>
+
+      \;
 
       <item>
     </enumerate>
@@ -10629,7 +10799,7 @@
     <associate|eq 23.138.16|<tuple|23.154|?>>
     <associate|eq 23.139.16|<tuple|23.155|?>>
     <associate|eq 23.14.3|<tuple|23.18|?>>
-    <associate|eq 23.147.17|<tuple|23.216|?>>
+    <associate|eq 23.147.17|<tuple|23.222|?>>
     <associate|eq 23.15.2|<tuple|23.19|?>>
     <associate|eq 23.150.27|<tuple|23.157|?>>
     <associate|eq 23.157.20|<tuple|23.159|?>>
@@ -10678,22 +10848,28 @@
     <associate|eq 23.195.29|<tuple|23.195|?>>
     <associate|eq 23.2.1|<tuple|23.6|?>>
     <associate|eq 23.2.3|<tuple|23.3|?>>
-    <associate|eq 23.202.23|<tuple|23.202|?>>
-    <associate|eq 23.203.23|<tuple|23.203|?>>
-    <associate|eq 23.204.23|<tuple|23.204|?>>
-    <associate|eq 23.205.23|<tuple|23.205|?>>
-    <associate|eq 23.206.23|<tuple|23.206|?>>
-    <associate|eq 23.207.23|<tuple|23.207|?>>
-    <associate|eq 23.208.23|<tuple|23.208|?>>
-    <associate|eq 23.209.23|<tuple|23.209|?>>
+    <associate|eq 23.202.23|<tuple|23.203|?>>
+    <associate|eq 23.202.24|<tuple|23.202|?>>
+    <associate|eq 23.203.23|<tuple|23.204|?>>
+    <associate|eq 23.204.23|<tuple|23.205|?>>
+    <associate|eq 23.205.23|<tuple|23.206|?>>
+    <associate|eq 23.206.23|<tuple|23.207|?>>
+    <associate|eq 23.207.23|<tuple|23.208|?>>
+    <associate|eq 23.208.23|<tuple|23.209|?>>
+    <associate|eq 23.209.23|<tuple|23.210|?>>
     <associate|eq 23.21.6|<tuple|23.21|?>>
-    <associate|eq 23.210.23|<tuple|23.210|?>>
-    <associate|eq 23.211.23|<tuple|23.211|?>>
-    <associate|eq 23.212.23|<tuple|23.212|?>>
-    <associate|eq 23.213.23|<tuple|23.213|?>>
-    <associate|eq 23.214.23|<tuple|23.214|?>>
-    <associate|eq 23.215.23|<tuple|23.215|?>>
+    <associate|eq 23.210.23|<tuple|23.211|?>>
+    <associate|eq 23.211.23|<tuple|23.212|?>>
+    <associate|eq 23.212.23|<tuple|23.213|?>>
+    <associate|eq 23.213.23|<tuple|23.214|?>>
+    <associate|eq 23.214.23|<tuple|23.215|?>>
+    <associate|eq 23.215.23|<tuple|23.216|?>>
+    <associate|eq 23.217.24|<tuple|23.217|?>>
+    <associate|eq 23.218.24|<tuple|23.218|?>>
+    <associate|eq 23.219.24|<tuple|23.219|?>>
     <associate|eq 23.22.3|<tuple|23.23|?>>
+    <associate|eq 23.220.24|<tuple|23.220|?>>
+    <associate|eq 23.221.24|<tuple|23.221|?>>
     <associate|eq 23.23.4|<tuple|23.24|?>>
     <associate|eq 23.23.402|<tuple|23.25|?>>
     <associate|eq 23.24.402|<tuple|23.26|?>>
@@ -10705,7 +10881,7 @@
     <associate|eq 23.28.5|<tuple|23.29|?>>
     <associate|eq 23.3.1|<tuple|23.7|?>>
     <associate|eq 23.3.3|<tuple|23.4|?>>
-    <associate|eq 23.302.23|<tuple|23.203|?>>
+    <associate|eq 23.302.23|<tuple|23.204|?>>
     <associate|eq 23.31.4|<tuple|23.33|?>>
     <associate|eq 23.33.5|<tuple|23.34|?>>
     <associate|eq 23.35.10|<tuple|23.35|?>>
